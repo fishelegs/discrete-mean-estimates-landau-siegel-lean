@@ -5,7 +5,7 @@ Primary source: [Zhang, arXiv:2211.02515v1](https://arxiv.org/pdf/2211.02515v1),
 
 ## Scope and status discipline
 
-The baseline ledger has **24/51 reported complete, 1 partial (5.6), 26 unstarted**. This audit inspected statements, selected proof implementations, foundational definitions, source imports, the ledger, and all numbered-result locations/dependency references in the paper. It did **not** rebuild Lean, rerun the axiom checker, or independently revalidate all 24 old completions. “Complete” in the graph therefore means **historically reported complete**, not a fresh audit verdict. Subsequent cloud milestones completed original Lemmas11.1,3.6 and17.1: see CLOUD_LEMMA111_STATUS.md, CLOUD_LEMMA36_STATUS.md and CLOUD_LEMMA171_STATUS.md for fresh kernel, regression and axiom evidence. The current ledger is27/51 complete; baseline provenance remains distinguished from these new checks.
+The baseline ledger has **24/51 reported complete, 1 partial (5.6), 26 unstarted**. This audit inspected statements, selected proof implementations, foundational definitions, source imports, the ledger, and all numbered-result locations/dependency references in the paper. It did **not** rebuild Lean, rerun the axiom checker, or independently revalidate all 24 old completions. “Complete” in the graph therefore means **historically reported complete**, not a fresh audit verdict. Subsequent cloud milestones completed original Lemmas11.1,3.6,17.1 and Proposition2.1: see CLOUD_LEMMA111_STATUS.md, CLOUD_LEMMA36_STATUS.md and CLOUD_LEMMA171_STATUS.md and CLOUD_PROPOSITION21_STATUS.md for fresh kernel, regression and axiom evidence. The current ledger is28/51 complete; baseline provenance remains distinguished from these new checks.
 
 Use evidence content rather than the largest step number. `audit/STEP137_STATUS.md` and `audit/lean_kernel_verification.txt` report a complete 3.2 and a 2026-10-02 11:01:20–11:17:46 UTC full PASS on Lean 4.30.0, arm64 macOS. Root `STEP141_STATUS.md` describes older temporary work against a frozen Step127 tree and still calls 3.2 unproved. It is not newer mathematical status and is not evidence of a current Linux build.
 
@@ -19,7 +19,7 @@ The JSON has exactly 51 result nodes. Edges point prerequisite → consumer and 
 4. **Lemma 8.1, contour-to-discrete-zero identity** (pp42–44). Its needed numbered inputs are completed 2.2, 5.2, 5.9, 6.1 and 3.3. Θ₁ in its conclusion is an actual contour integral definition, so **8.1 does not require the arithmetic evaluation in 7.1**. New work includes genuine finite zero sums, uniform coefficient bounds, boundary choice, residues, reflection and aggregate moments. Larger scope than 11.1, but independently schedulable.
 5. **Lemma 8.2** (p45) is another independent contour/Taylor branch, provided its contour errors are proved directly and the erroneous-looking 5.6 citation is not accepted as a black box. Completed 5.8 gives the needed local L-linearization.
 
-With the original3.6 target now freshly verified, **Proposition 2.1** is the immediate finite-union/counting assembly from 3.4, 3.5 and 3.6. Then 7.1 and 14.1 can share generic character-averaging, conductor and large-sieve infrastructure. Their statements do not need to be proved in paper order; 14.1 references the *method* of 7.1, while its actual exceptional-set prerequisite is 2.1.
+**Proposition 2.1 is now verified** by the actual finite-union/counting assembly from3.4,3.5 and3.6, including the exact Psi2 complement bridge. The next7.1 and14.1 branches can share generic character-averaging, conductor and large-sieve infrastructure. Their statements do not need to be proved in paper order; 14.1 references the *method* of 7.1, while its actual exceptional-set prerequisite is 2.1.
 
 ## Lemma 5.6: principal-character obstruction and circularity
 
@@ -59,7 +59,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 |---|---|---|---|
 | Theorem 1 | 3 / 11 | U | P2.4, P2.5, P2.6, ~L2.3, ~L5.7 |
 | Theorem 2 | 3 / 3 | U | T1 |
-| Proposition 2.1 | 6 / 16 | U | L3.4, L3.5, L3.6 |
+| Proposition 2.1 | 6 / 16 | V | L3.4, L3.5, L3.6 |
 | Proposition 2.2 | 6 / 16–23 | C | L4.5, L4.6, L4.7, ~L4.2 |
 | Lemma 2.3 | 8 / 11–12 | C | ~P2.2 |
 | Proposition 2.4 | 11 / 53–62 | U | L8.1, P7.1, L10.1, L10.2, ~L8.2, ~L8.3, ~L8.4, ~L5.7 |
@@ -92,7 +92,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 | Proposition 7.1 | 33 / 34–42 | U | P2.1, L5.3, L5.4, L5.6 |
 | Lemma 8.1 | 42 / 42–44 | U | P2.2, L5.2, L5.9, L6.1, L3.3 |
 | Lemma 8.2 | 45 / 45 | U | ~L5.8 |
-| Lemma 8.3 | 46 / 101–103 | U | — |
+| Lemma 8.3 | 46 / 101–103 | P* | — |
 | Lemma 8.4 | 46 / 46–47 | U | L8.3, L5.5, ~L5.8 |
 | Lemma 10.1 | 53 / 53–55 | U | L5.8 |
 | Lemma 10.2 | 55 / 55–57 | U | L5.8, ~L8.3, ~L8.4 |

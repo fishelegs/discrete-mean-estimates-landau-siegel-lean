@@ -1,5 +1,7 @@
 # 张益唐论文 Lean 形式化进度
 
+云端里程碑（2026-10-02）：[完整 Proposition 2.1](ZhangLS/Spec/Proposition21.lean) 已证明并核验。真实Ψ₂被严格识别为Ψ中Ψ₁的补集，由已完成3.4、3.5、3.6的三个实际坏集并集界导出原文C𝒫L^-739，保留(A)和统一C/D₀量词。1模块及依赖、5回归、5标准公理接口、独立语义审查通过；新完整lake build PASS（4911项）。累计 **28/51完成，3项进行中（5.6、8.1、8.3），20项未开始**。详见[核验证据](audit/CLOUD_PROPOSITION21_STATUS.md)。
+
 云端里程碑（2026-10-02）：[完整 Lemma 17.1](ZhangLS/Spec/Lemma171.lean) 已证明并通过中央核验：保留原文严格 n<D⁴、实际 a=(6/π²)L′(1,χ)²∏p/(p+1)、原始(A)和统一 ε/D₀ 量词，得到绝对 a+o(1)。真实Euler乘积、Mellin交换、留数及误差、有限/无限移线、左积分和去平滑均已证明，未把它们作为最终前提。20模块、15展开回归、143标准公理接口及独立语义审查通过；新完整lake build PASS（4910项）。累计 **27/51完成，3项进行中（2.1、5.6、8.1），21项未开始**。详见[核验证据与范围](audit/CLOUD_LEMMA171_STATUS.md)。
 
 云端里程碑（2026-10-02）：[完整 Lemma 3.6](ZhangLS/Spec/Lemma36.lean) 的 `lemma36_proved : Lemma36Target` 已通过内核及原文语义检查。真实截断卷积满足 |varsigma(n)|≤|ν(n)|τ₂(n)，已完成3.2与3.3的实际均值接合；4L权重积分和34L²均方损失导出原文异常数≤C𝒫L^-739。6模块及依赖、16个回归、45个标准公理接口通过。累计 **26/51完成，4项进行中（2.1、5.6、8.1、17.1），21项未开始**。新引理、所需依赖及新云端完整lake build（4881项，含两层聚合）均通过；逐Spec重检和全部旧回归遍历仍另行进行。详见[证据与范围](audit/CLOUD_LEMMA36_STATUS.md)。
@@ -128,7 +130,7 @@ Step 78 最终接合已通过单文件 Lean 内核检查、模块构建及新增
 |---|---|---|---|
 | Theorem 1 | §1，\(L(1,\chi)>c_1(\log D)^{-2022}\) | ⚪ 未开始 | [可信目标](ZhangLS/Spec/PaperTheorems.lean) 已定义；未证明。旧版 [Theorem1.lean](ZhangLS/Theorem1.lean) 不是该目标的证明。 |
 | Theorem 2 | §1，实轴零点排除区域 | ⚪ 未开始 | [可信目标](ZhangLS/Spec/PaperTheorems.lean) 已定义；未证明。 |
-| Proposition 2.1 | §2，集合 \(\Psi_2\) 的估计 | 🟡 进行中 | 已证三个实际坏集的并集上界；正在核验真实Ψ₂=Ψ\Ψ₁的精确成员桥及原文完整目标，尚未计作完成。 |
+| Proposition 2.1 | §2，真实Ψ₂补集计数 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Proposition21.lean)，`proposition21_proved : Proposition21Target`。真实Ψ₂=Ψ\Ψ₁与三个实际坏集并集等价，接合已证3.4/3.5/3.6，原始(A)、𝒫及统一量词保留。1模块及依赖、5回归、5标准公理接口、独立语义审查与4911项完整构建通过。[核验范围](audit/CLOUD_PROPOSITION21_STATUS.md)。 |
 | Proposition 2.2 | §2，\(\Psi_1\) 的零点性质 | ✅ 完成 | [Proposition22.lean](ZhangLS/Spec/Proposition22.lean)，`proposition22_proved : Proposition22Target`：真实 Ψ₁、原始完整 Ω 内实际乘积零点均在临界线且为单根；任意相邻零点满足 \(\lvert\gamma'-\gamma-\alpha\rvert\le C\alpha^2\mathcal L\)。常数／充分大模数阈值统一存在；闭薄层等号、实际乘积导数、邻近零点 Rouché 及 Ω 高度边界均已闭合。模块、原始陈述／闭边界回归和十项公理检查通过，Step 83 全量审计 PASS。 |
 | Lemma 2.3 | §2，零点相关估计 | ✅ 完成 | [Lemma23.lean](ZhangLS/Spec/Lemma23.lean)，`lemma23_proved : Lemma23Target`：真实 Ψ₁、原始较小零点区域内实际 L 函数零点，原文三个位移与实际 M′ 分母下，证明 C* 为实且非负，并证明 M′≠0。统一误差常数同时满足严格的 Proposition 2.2 间距界；三个连续后继零点、两个无零区间、L′≠0、实际分支及系数接合均已闭合。分支存在且对每个有效分支成立，不外加位置、单根、间距或无零区间结论。四个模块、展开原始陈述回归和八项公理检查通过；Step 84 全量审计 PASS。 |
 | Proposition 2.4 | §2，主要均值下界 | ⚪ 未开始 | [旧版占位](ZhangLS/MainTerms.lean) 含关键结论作为前提；不算证明。 |
@@ -161,7 +163,7 @@ Step 78 最终接合已通过单文件 Lean 内核检查、模块构建及新增
 | Proposition 7.1 | §7，均值公式 I | ⚪ 未开始 | — |
 | Lemma 8.1 | §8，\(\Xi_{11}\) 估计 | 🟡 进行中 | 独立推进真实零点和到 Θ₁ 轮廓积分的解析桥；不依赖 Proposition 7.1 的算术求值。原文共轭和零点集合语义正在核对，尚未完成。 |
 | Lemma 8.2 | §8，\(\Xi_{11}\) 估计 | ⚪ 未开始 | — |
-| Lemma 8.3 | §8，\(\Xi_{11}\) 估计；证明见附录 A | ⚪ 未开始 | — |
+| Lemma 8.3 | §8，\(\Xi_{11}\) 估计；附录A | 🟡 进行中 | 独立推进原§7实际κ/λ/ξ系数、Euler局部因子和解析延拓；保留加性误差、闭小位移圆盘及χ(2)=1分支，完整目标尚未证明。 |
 | Lemma 8.4 | §8，\(\Xi_{11}\) 估计 | ⚪ 未开始 | — |
 | Lemma 10.1 | §10，Proposition 2.4 的证明 | ⚪ 未开始 | — |
 | Lemma 10.2 | §10，Proposition 2.4 的证明 | ⚪ 未开始 | — |

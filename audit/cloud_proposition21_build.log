@@ -1,0 +1,9 @@
+VERIFICATION=PASS
+command=lake build +ZhangLS.Spec.Proposition21:olean
+exit_code=0
+complete_log_sha256=f591144ad33762e81b212f671664d99dd2a9fce28c5f78dabf44f12adaca8777
+complete_log_bytes=111277
+summary_note=Repeated old linter output omitted; complete new source and regression/axiom output retained.
+
+✔ [4639/4639] Built ZhangLS.Spec.Proposition21 (4.2s)
+Build completed successfully (4639 jobs).

@@ -1,0 +1,11 @@
+VERIFICATION=PASS
+command=lake build
+exit_code=0
+complete_log_sha256=ff1f27c15f5eef5ca645be53986e47a91941717a7f08306ed5daecdbd9f78825
+complete_log_bytes=165383
+summary_note=Repeated old linter output omitted; complete new source and regression/axiom output retained.
+
+✔ [4908/4911] Built ZhangLS.Spec.All (2.3s)
+✔ [4909/4911] Built ZhangLS.All (2.3s)
+✔ [4910/4911] Built ZhangLS (2.6s)
+Build completed successfully (4911 jobs).
