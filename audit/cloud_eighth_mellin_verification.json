@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T18:33:59.615162+00:00",
+  "base_commit": "449946188bcd0b4d8ad76f8791ba361f4c10cc08",
+  "completion_kind": "shared_actual_kernel_analysis",
+  "numbered_completion_count_change": 0,
+  "production_modules": 7,
+  "audit_modules": 1,
+  "public_declaration_axiom_checks": 65,
+  "semantic_regressions": 4,
+  "dependency_build_jobs": 3713,
+  "full_project_jobs": 5158,
+  "source_files": 1277,
+  "spec_imports": 904,
+  "full_project_imports": 1169,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 388,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 1,
+  "new_candidate_review": "EighthHeightTail:110 returns the locally derived central-window weighted inequality after simplification, not an assumed tail or Mellin estimate.",
+  "semantic_review": "Central inspection of actual I0=Delta bridge, dominated derivatives, vanishing endpoints, eight IBP steps, genuine eighth moment, exact frequency norm, and finite-height/tail separation.",
+  "logs": {
+    "eighth-mellin-integration-build.log": {
+      "bytes": 23648,
+      "sha256": "18cfbf5abd08620fbb6ae6a72979d62640a526b8a7260551d734b311f70a9a20"
+    },
+    "eighth-mellin-integration-axioms.log": {
+      "bytes": 100178,
+      "sha256": "4084d3da9c8846db7d42ae2d5a0c79c947cfb7b03a0cb55d1284a7777a666619"
+    },
+    "eighth-mellin-full-project.log": {
+      "bytes": 216191,
+      "sha256": "5235ef433a56e04e0cbd85a495fb07b421a2c577d857aeec044984954be099b3"
+    },
+    "eighth-mellin-strict-audit.log": {
+      "bytes": 39687,
+      "sha256": "9497865260b5bc331137a30b4e945e597cec1dfbe1bcebbb7bcb8d71e9d89fd2"
+    }
+  }
+}

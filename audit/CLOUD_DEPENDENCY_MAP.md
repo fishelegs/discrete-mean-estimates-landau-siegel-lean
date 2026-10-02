@@ -155,3 +155,5 @@ Original16.1 is [centrally verified](CLOUD_LEMMA161_STATUS.md), including its ex
 [Original10.1](CLOUD_LEMMA101_STATUS.md) is now centrally verified with four exact clauses and a literal infinite-sum bridge. Count36/51 means34 original statements plus2 explicit repairs. Existential asymptotic thresholds are not effective-computability certificates.15.3 shifted residues and8.4 actual weighted errors are priority compatibility audits, not presumed consequences of repaired labels.
 
 [8.4 actual contour/quantitative component](CLOUD_LEMMA84_QUANTITATIVE_STATUS.md) is verified. Original uniformL^-6 remains open; the weakerL^-5 statement is not counted as a numbered completion. The real Section8 weighted and cutoff-boundary obligations remain active. Ledger still36/51 (34 original+2 repaired).
+
+[Actual eighth-order delta Mellin decay](CLOUD_EIGHTH_MELLIN_STATUS.md) is now verified shared support for7.1/14.1. It supplies a genuine H^-7 tail while preserving finite-height cancellation scope. No numbered conclusion is added; ledger remains36/51.

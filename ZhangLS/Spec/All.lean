@@ -512,6 +512,13 @@ import ZhangLS.Spec.Lemma54CentralWindow
 import ZhangLS.Spec.Lemma54DerivativeBounds
 import ZhangLS.Spec.Lemma54DerivativeDecay
 import ZhangLS.Spec.Lemma54DiskErrorAbsorption
+import ZhangLS.Spec.Lemma54EighthContour
+import ZhangLS.Spec.Lemma54EighthContourEstimates
+import ZhangLS.Spec.Lemma54EighthHeightTail
+import ZhangLS.Spec.Lemma54EighthIntegrals
+import ZhangLS.Spec.Lemma54EighthMellin
+import ZhangLS.Spec.Lemma54EighthMoment
+import ZhangLS.Spec.Lemma54EighthWeightedKernels
 import ZhangLS.Spec.Lemma54FullDiskBudget
 import ZhangLS.Spec.Lemma54GaussianConcentration
 import ZhangLS.Spec.Lemma54GaussianMoments

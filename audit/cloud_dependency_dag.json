@@ -1939,7 +1939,7 @@
       },
       "scheduling_phase": "proof",
       "active_work": "Original discrete-mean target and actual arithmetic/character-averaging proof are under construction.",
-      "shared_support_active": "All-moduli primitive-character large sieve now centrally verified; applications and full conductor/error assembly remain."
+      "shared_support_active": "All-moduli weighted primitive large sieve and genuine eighth-order actual delta Mellin decay now centrally verified. Actual prime/kernel glue, outer averages and l-tails remain separate."
     },
     {
       "id": "L8.1",
@@ -2613,7 +2613,7 @@
       },
       "scheduling_phase": "proof",
       "active_work": "Original Section14 discrete-mean definitions and product-character primitive-inducer cancellation are being proved.",
-      "shared_support_active": "All-moduli primitive-character large sieve now centrally verified; applications and full conductor/error assembly remain."
+      "shared_support_active": "All-moduli weighted primitive large sieve and genuine eighth-order actual delta Mellin decay now centrally verified. Actual prime/kernel glue, outer averages and l-tails remain separate."
     },
     {
       "id": "L15.1",
@@ -3877,11 +3877,11 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T18:24:31.824552+00:00",
+    "verified_at_utc": "2026-10-02T18:33:59.615162+00:00",
     "completed": 36,
     "in_progress": 4,
     "unstarted": 10,
-    "note": "36=34 original+2 repaired. Genuine8.4 contour and quantitative component verified without increasing count; actual weighted compatibility and15.3 shifted residue remain priority ongoing audits.",
+    "note": "36=34 original+2 repaired. Stronger genuine eighth-order Mellin decay verified as shared support. Priority15.3 residue and8.4 weighted compatibility bridges remain separately tracked.",
     "original_completed": 34,
     "repaired_completed": 2,
     "partial": 1
@@ -3949,6 +3949,20 @@
       "public_declaration_checks": 226,
       "semantic_regressions": 13,
       "downstream_application_proved": false
+    },
+    {
+      "id": "actual_eighth_mellin_decay",
+      "status": "verified",
+      "report": "audit/CLOUD_EIGHTH_MELLIN_STATUS.md",
+      "original_numbered_result_completed": false,
+      "assumption_A": false,
+      "new_modules": 7,
+      "public_declaration_checks": 65,
+      "semantic_regressions": 4,
+      "consumers": [
+        "P7.1",
+        "P14.1"
+      ]
     }
   ],
   "repair_discipline": {
