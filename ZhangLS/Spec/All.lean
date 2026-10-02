@@ -8,6 +8,12 @@ import ZhangLS.Spec.AdditiveReciprocity
 import ZhangLS.Spec.AllModuliFractions
 import ZhangLS.Spec.AllModuliGaussParseval
 import ZhangLS.Spec.AllModuliLargeSieve
+import ZhangLS.Spec.BCoefficientBounds
+import ZhangLS.Spec.BFinitePolynomial
+import ZhangLS.Spec.BProductBridge
+import ZhangLS.Spec.BRatioConvolution
+import ZhangLS.Spec.BSourceKernels
+import ZhangLS.Spec.BSourceRegressions
 import ZhangLS.Spec.CharacterAbelAnalyticContinuation
 import ZhangLS.Spec.CharacterAbelIntegralBound
 import ZhangLS.Spec.CharacterLSeriesAbel

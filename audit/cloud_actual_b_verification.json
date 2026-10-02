@@ -1,0 +1,38 @@
+{
+  "status": "PASS_ACTUAL_B_COEFFICIENT_AND_RATIO_BRIDGE",
+  "verified_at_utc": "2026-10-02T22:27:09.793719+00:00",
+  "prior_component_report": "audit/CLOUD_MEAN_VALUE_STATUS.md",
+  "completion_kind": "partial_exact_source_coefficient_bridge",
+  "numbered_completion_count_change": 0,
+  "production_modules": 6,
+  "public_declarations": 87,
+  "proof_declarations": 71,
+  "standalone_axiom_audits": 1,
+  "serial_module_targets_passed": 6,
+  "full_project_jobs": 5337,
+  "source_files": 1482,
+  "spec_imports": 1083,
+  "full_project_imports": 1348,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 413,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "lemma151_complete": false,
+  "original_B_function_unchanged": true,
+  "all_four_iota_coefficients_unchanged": true,
+  "actual_final_mean_matrix_proved": false,
+  "logs": {
+    "actual-b-integration-axioms.log": {
+      "bytes": 8437,
+      "sha256": "b8f671bdd7dc8f57e61a7f36076167196a34d988dc2ec9cae23ab75daa694c27"
+    },
+    "actual-b-full-project.log": {
+      "bytes": 239995,
+      "sha256": "f9aad4b80525678f204fc6ac1132ac1db8e3355d5be848221b17204ab320c2e6"
+    },
+    "actual-b-strict-audit.log": {
+      "bytes": 41949,
+      "sha256": "1ef6c979727badf0987f113cff5dd7aea7867af516799a525bce7b8c896a04ee"
+    }
+  }
+}
