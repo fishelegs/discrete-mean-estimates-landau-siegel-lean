@@ -2484,7 +2484,7 @@
         "url": "https://arxiv.org/pdf/2211.02515v1#page=76"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "unstarted",
+      "working_status": "in_progress",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 175,
@@ -2511,9 +2511,9 @@
         "P7.1_proof_method_not_logical_result_dependency",
         "generic_all_moduli_large_sieve_not_just_L3.3"
       ],
-      "scheduling_status": "dependency-audit",
-      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
-      "proof_status": "unstarted",
+      "scheduling_status": "active",
+      "dispatch_reason": "Independent discrete-mean frontier; shares generic Gauss/conductor interfaces with7.1 without assuming its final theorem.",
+      "proof_status": "in_progress",
       "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [
@@ -2526,7 +2526,9 @@
           "Twisted mean formula, Gauss reciprocity, conductor splitting and large sieve",
           "Actual Theta2 and kappa*/a* assumptions; separate shared core from P7.1"
         ]
-      }
+      },
+      "scheduling_phase": "proof",
+      "active_work": "Original Section14 discrete-mean definitions and product-character primitive-inducer cancellation are being proved."
     },
     {
       "id": "L15.1",
@@ -2702,28 +2704,27 @@
         "proof_section": "Appendix A"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "in_progress",
+      "working_status": "complete_fresh_kernel_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 179,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
-        "trusted_capstone_found": false
+        "trusted_capstone_found": true,
+        "capstone": "lemma161_original_proved",
+        "verification_report": "audit/CLOUD_LEMMA161_STATUS.md",
+        "axiom_report": "audit/cloud_lemma161_axioms.log"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
-      "missing_mathematics": [
-        "Euler correction product near one with special prime 2"
-      ],
-      "missing_specification_or_engineering": [
-        "Actual M2*, pconstant, and both chi(2) branches"
-      ],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
       "semantic_issue_ids": [
         "chi_two_equals_one_euler_factor_exception"
       ],
-      "scheduling_status": "active",
-      "dispatch_reason": "Original16.1 actual one-shift Euler normalization proof started; preserve the exceptional prime2 replacement and prove explicit L^-8 without undefined alpha-one.",
-      "proof_status": "in_progress",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original target completed directly from a summable O(alpha) perturbation; undefined alpha-one is not used.",
+      "proof_status": "complete",
       "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [],
@@ -2733,8 +2734,9 @@
           "Near-one correction product and uniform error bounds"
         ]
       },
-      "active_work": "Full proof package frozen; central integration and independent semantic acceptance pending. Not counted complete yet.",
-      "scheduling_phase": "central_verification"
+      "active_work": "Original M2-star normalization, actual Dirichlet bridge, original L^-8 error and uniform nonzero consequence verified.",
+      "scheduling_phase": "done",
+      "completion_kind": "original_statement"
     },
     {
       "id": "L16.2",
@@ -3762,12 +3764,12 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T16:46:22Z",
-    "completed": 32,
+    "verified_at_utc": "2026-10-02T17:07:43Z",
+    "completed": 33,
     "in_progress": 6,
-    "unstarted": 13,
-    "note": "31 original statements+1 repaired15.2.16.1/8.1 accepted independently and pending live integration;7.1/8.4/15.3 continue.",
-    "original_completed": 31,
+    "unstarted": 12,
+    "note": "32 original statements+1 explicit repaired15.2.8.1 in live integration;7.1/14.1/8.4/15.3 continue with exact source/error issues visible.",
+    "original_completed": 32,
     "repaired_completed": 1
   },
   "scheduling_semantics": {
@@ -3812,7 +3814,7 @@
   ],
   "repair_discipline": {
     "authorized": "Evidence-based source repairs allowed; retain original and repaired statement distinctions.",
-    "original_completed": 31,
+    "original_completed": 32,
     "repaired_completed": 1,
     "unresolved_alpha_one": "audit/CLOUD_ERROR_SCALE_RECONSTRUCTION.md",
     "no_axiom_or_sorry": true

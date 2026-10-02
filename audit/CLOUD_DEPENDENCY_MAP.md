@@ -105,7 +105,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 | Lemma 15.1 | 86 / 106–108 | U | ~L3.1, ~L3.2 |
 | Lemma 15.2 | 87 / 103–104 | U | — |
 | Lemma 15.3 | 87 / 105 | U | — |
-| Lemma 16.1 | 92 / 105 | U | — |
+| Lemma 16.1 | 92 / 105 | V | — |
 | Lemma 16.2 | 94 / 105–106 | U | ~L16.1 |
 | Lemma 17.1 | 96 / 108–109 | V | L3.1, ~L5.8 |
 
@@ -141,3 +141,5 @@ Original11.2 is now [centrally verified](CLOUD_LEMMA112_STATUS.md), bringing the
 [15.2 with proved O(alpha)](CLOUD_LEMMA152_REPAIRED_STATUS.md) is centrally verified. The count is30 original statements plus1 repaired statement, not31 verbatim originals. Genuine M1 coefficients, continuation and the exact main product are unchanged.8.1,8.2 and16.1 are frozen and in central acceptance; active proof work continues on7.1,8.4 and repaired15.3, with a shared quantitative reciprocal-L helper.
 
 Original8.2 is [centrally verified](CLOUD_LEMMA82_STATUS.md) by actual Abel tails and Taylor estimates, bringing the ledger to31 original statements plus1 explicit repaired statement.16.1 and8.1 are the next accepted packages in integration.
+
+Original16.1 is [centrally verified](CLOUD_LEMMA161_STATUS.md), including its exact exceptional-prime normalization and original L^-8 error. Ledger:32 original statements plus1 explicit repair. Independent7.1 and14.1 are now active, alongside8.4 and15.3;8.1 is the next accepted package in live integration.

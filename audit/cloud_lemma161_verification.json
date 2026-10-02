@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T17:07:43Z",
+  "base_commit": "b037d23a3ff22c0bf950c767974387a2e9ee6597",
+  "completion_kind": "original_statement",
+  "production_modules": 20,
+  "audit_modules": 1,
+  "public_theorem_axiom_checks": 106,
+  "named_regressions": 5,
+  "semantic_examples": 2,
+  "dependency_build_jobs": 3937,
+  "full_project_jobs": 5023,
+  "source_files": 1136,
+  "spec_imports": 769,
+  "full_project_imports": 1034,
+  "independent_review": "ACCEPT",
+  "strict_candidates": 372,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 2,
+  "new_candidate_review": "Lemma161MainTerm.lean:100,110 merely return the immediately proved numeric lower bounds after rewriting the actual chi=+1/-1 rational factor into real form. No lower bound is assumed.",
+  "logs": {
+    "lemma161-integration-build.log": {
+      "bytes": 43488,
+      "sha256": "74b284582876c8de9232edaa7cd7058d65170bc63910002daba0f83091fa4e49"
+    },
+    "lemma161-integration-axioms.log": {
+      "bytes": 11092,
+      "sha256": "34934d98284f0abb34cdb2f8d05f748542fb68319c58548911bbf168a5d9a421"
+    },
+    "lemma161-full-project.log": {
+      "bytes": 200096,
+      "sha256": "2ff21a2366361c8c0bc6f31f2bf23cd8777c45df491e414ed7a54a7aab775745"
+    },
+    "lemma161-strict-audit.log": {
+      "bytes": 38280,
+      "sha256": "3251bcc92812b8116c05c5aa49dd4b57c6042f839eee52b9a0d1c54267f689f5"
+    }
+  }
+}
