@@ -1,0 +1,233 @@
+{
+  "status": "PASS_ACTUAL_MEAN_FRONT_ZETA_AND_CONDUCTOR_COMPONENTS",
+  "verified_at_utc": "2026-10-02T23:01:05.096771+00:00",
+  "base_commit": "f50d1fd0a29cdedbbe8fb4fe8588eabf688db59d",
+  "production_modules": 48,
+  "new_modules": 41,
+  "identical_published_modules": 7,
+  "standalone_audit_files": 7,
+  "public_declaration_checks": 239,
+  "zero_axiom_declarations": 1,
+  "original_example_regressions": 43,
+  "source_dependency_closure": 906,
+  "full_project_jobs": 5407,
+  "source_files": 1561,
+  "spec_imports": 1153,
+  "full_imports": 1418,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 418,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 4,
+  "numbered_completion_count_change": 0,
+  "proposition71_complete": false,
+  "proposition141_complete": false,
+  "formal_numerical_effectivity_complete": false,
+  "logs": {
+    "mean-front-full-project.log": {
+      "bytes": 246421,
+      "sha256": "b9e763758846cd849dd9a79a8e060e020462c9167a6688fa552f413ddf4440a8"
+    },
+    "mean-front-strict-audit.log": {
+      "bytes": 42418,
+      "sha256": "93f29735c8b33a3b58dd873b8bd7470146ae497990a5759a2df47836cb0a5b37"
+    },
+    "CloudMeanFrontP141FamilyRegression.log": {
+      "bytes": 4124,
+      "sha256": "72e6f7d34b927c763f83ba2bfeaf83fc5df3781eff8decb7b610ff42328db49f"
+    },
+    "CloudMeanFrontP141GcdRegression.log": {
+      "bytes": 771,
+      "sha256": "e208baad748cb5f6b20ab00ccea0aa47c40bebcafdffdbd3efaef6b750ec0894"
+    },
+    "CloudMeanFrontP141LargeRegression.log": {
+      "bytes": 7563,
+      "sha256": "5529559fc6a2269e335202df1c17ae48026dffe8e9f088b2df86db4ac3e0ac23"
+    },
+    "CloudMeanFrontP71ExceptionalRegression.log": {
+      "bytes": 216533,
+      "sha256": "024f0d2144d87cb2b57f098535f2c3f1d6bcd75dc7d53956fa68dbb98f290188"
+    },
+    "CloudMeanFrontP71FrontRegression.log": {
+      "bytes": 327735,
+      "sha256": "b6f74f787ec19ba213cc6f2b61802bc99a25f6e9bc393674807dc27fe9147f16"
+    },
+    "CloudMeanFrontP71ZetaRegression.log": {
+      "bytes": 722531,
+      "sha256": "524c7254705b13d295f7813ba3382dfa25267bac0dff5876eeea3b543501f5c6"
+    },
+    "CloudMeanFrontPublicAxioms.log": {
+      "bytes": 26659,
+      "sha256": "a827b1ccca3f20d3fd5d829eaa1bf9d7754d60bd9d75f413d6d8f21aaa9705b0"
+    },
+    "ConductorTotientWeight.log": {
+      "bytes": 107,
+      "sha256": "43ee7453b5bf038c6aa08fe18f4c9fe988496059c539ebcd8528a3c44c2ba911"
+    },
+    "PolynomialLogDecay.log": {
+      "bytes": 103,
+      "sha256": "b722d3d3bf056a589b8649b089a48be5dad7a2f52a636f90b87fab9e030a2341"
+    },
+    "PositiveGcdReindex.log": {
+      "bytes": 257,
+      "sha256": "d811f43cba1e6cc5f5b6e40ccd66716827aadf32e932974454d9ddae08d6adac"
+    },
+    "PrimitiveConductorFamily.log": {
+      "bytes": 1067,
+      "sha256": "5dc44861fc2f4e451700741b0f529537b705645754ed02b865b3e71336d195b0"
+    },
+    "PrimitiveConductorGaussBound.log": {
+      "bytes": 2950,
+      "sha256": "c77523d64caea85a69dc0fea713a1618f03fb8b6227aa07f142fcaa53ee9b65b"
+    },
+    "Proposition141DivisorWeightedBudget.log": {
+      "bytes": 18873,
+      "sha256": "0a3b8c9ce17d03d79e7e69a6f86c261f59786f6119ebdd8abd7d6d86e7b99eee"
+    },
+    "Proposition141DyadicCover.log": {
+      "bytes": 3239,
+      "sha256": "fb3c791d3ef997160aa378db7d44941e5aae44da3a841d690656a9451018ff38"
+    },
+    "Proposition141LargeAggregateRate.log": {
+      "bytes": 129629,
+      "sha256": "1823bd06550661662440dc2c662de1bb148048dde5937942aa25de010cb6e11e"
+    },
+    "Proposition141LargeConductorBlock.log": {
+      "bytes": 129630,
+      "sha256": "b25ba91f0bcdf5c8506571e59177ce84281cabd8dc5341c2190b883290259ba1"
+    },
+    "Proposition141LargeConductorSaving.log": {
+      "bytes": 129631,
+      "sha256": "e042fc82d6e2f79bd26df8bed355768fcc6ca433b9e4fbed76036a24493f3dd0"
+    },
+    "Proposition141LargeMellinMean.log": {
+      "bytes": 129625,
+      "sha256": "5741db81b0f9e208cb34c01ade9eb165a38741d4b5555e508faba1707309f6fa"
+    },
+    "Proposition141LocalizedGeometry.log": {
+      "bytes": 123964,
+      "sha256": "dda8288d06489d15c8e7dd0ca96b8ff0edcc38b0cf015a5374aa1b153eac5a75"
+    },
+    "Proposition141LocalizedLargeMean.log": {
+      "bytes": 129629,
+      "sha256": "351325180016f62a7d81d5cef8bf091b753958b9284f88f22ec2061a2f3da9c8"
+    },
+    "Proposition141NormalizedLargeAggregate.log": {
+      "bytes": 129635,
+      "sha256": "0ac402a1ed9495d6bb9232aa6fe2033bd6f60726216d1ed2c1f82569ae9d082f"
+    },
+    "Proposition141SourceLargeAggregate.log": {
+      "bytes": 129631,
+      "sha256": "4031dc86a926df512ff320792846bc8c8760968284724ccea417f32a17648446"
+    },
+    "Proposition141SourceLargeBlock.log": {
+      "bytes": 129627,
+      "sha256": "7ab2b35cc5b814b977bd9c167ea578fdf14dea0528098ae6394ab60d3c2b440a"
+    },
+    "Proposition141SourceOuterSupport.log": {
+      "bytes": 129629,
+      "sha256": "aba71f5ca9e5f1693fcb61b2be3f73fd540b4530236429e341d328680376ad19"
+    },
+    "Proposition141UniformLargeSaving.log": {
+      "bytes": 129629,
+      "sha256": "87a973ffad6e4aa65cab5a5286f16316c25764934e880fc146b2f4a502667363"
+    },
+    "Proposition141WeightedSmallAggregate.log": {
+      "bytes": 129858,
+      "sha256": "0dfb952ff0f6c426571dd5c7f9bf2d49adbfe0005ab9c729dd408414c036ae14"
+    },
+    "Proposition71DeltaOneDoubleSeries.log": {
+      "bytes": 23838,
+      "sha256": "73077decf0ff4f45796ba38e22b7899e7897e37f99dd428925a9b89227b45eef"
+    },
+    "Proposition71DeltaOneSeries.log": {
+      "bytes": 23832,
+      "sha256": "c4c7967cdfe0f8e4862259d38624ca7eb0d7d0767f2262bfaef7a9f3b8944809"
+    },
+    "Proposition71FrontCoefficientBounds.log": {
+      "bytes": 5810,
+      "sha256": "f2b902c2f2e5fdb82d1ecf73ccdd731df65c414c62011b4d7400532abe59f180"
+    },
+    "Proposition71FrontContourObjects.log": {
+      "bytes": 25862,
+      "sha256": "f7fddde07a30a548611d1339a4e58b1cf59babcef511262c5a8eb4c72c1a1330"
+    },
+    "Proposition71FrontFamilyRate.log": {
+      "bytes": 26427,
+      "sha256": "3a3147cfa0e5020ee2d29f1e8ca17a2f4811128f4173cf1f38b8c3b52492253a"
+    },
+    "Proposition71FrontIntegrands.log": {
+      "bytes": 24591,
+      "sha256": "d3fd3cfa8a3abad64b8deaf2c3736ac2c276b1d531cd51d2df5d4d567fece556"
+    },
+    "Proposition71FrontSegment.log": {
+      "bytes": 24588,
+      "sha256": "47cd937b25e9524942ebc6fac17e64888f1da2bc81b1901837e88ff5ea108b7c"
+    },
+    "Proposition71FrontUniformRate.log": {
+      "bytes": 24798,
+      "sha256": "19697c1e33a524cea94ec2803338b7a6647192711518a007521bbab31b71f18e"
+    },
+    "Proposition71GammaLineBound.log": {
+      "bytes": 11137,
+      "sha256": "344913bc9c09f0378733084979d595ffd4ea2a58ecf2424d6248ac06f3f1afde"
+    },
+    "Proposition71GammaOmegaTail.log": {
+      "bytes": 23832,
+      "sha256": "8b0c1b2253d8446f260dae832b51969598365b6e28338ac2b6d7557cfe92813b"
+    },
+    "Proposition71GenericExceptionalMoments.log": {
+      "bytes": 118543,
+      "sha256": "d553827f707ee01a4dbddf840355c7c6054cb0d87511226206042d540aeac0e9"
+    },
+    "Proposition71GenericExceptionalSaving.log": {
+      "bytes": 118756,
+      "sha256": "3f24300eaa4ecc357c77f6e2705e6d791b57a15aaf95fa90a16762b2256e883f"
+    },
+    "Proposition71HorizontalLogNorm.log": {
+      "bytes": 13080,
+      "sha256": "628956daafcf6d11a240f0e78302f04ca75ca148efae9ac28c6443a7b4225aa4"
+    },
+    "Proposition71OriginalFrontTransform.log": {
+      "bytes": 24598,
+      "sha256": "5c44bcbd68de7816c1f90a97606fc0f6f314dbc22b3fe8977177ba005a84f869"
+    },
+    "Proposition71ReciprocalGamma.log": {
+      "bytes": 9565,
+      "sha256": "80cd4a3ed7731460f23a8f3ed429aa49f5eef4d7863824f27632496cd234e57e"
+    },
+    "Proposition71ReciprocalGammaNorm.log": {
+      "bytes": 11678,
+      "sha256": "4b0041f10cd55f05e3a4599e59d185452d2f07c105b40838f7fe0f73f3164767"
+    },
+    "Proposition71ZetaAuxiliaryHeight.log": {
+      "bytes": 19907,
+      "sha256": "4306fe383fa920d25b18aa4f11dd3a2e049549fd0d18d6bf08fc5a9ae645d45a"
+    },
+    "Proposition71ZetaAuxiliaryStrip.log": {
+      "bytes": 21324,
+      "sha256": "723fc51c671e3cc5a145c2dc1ccd52c86e28411a47c5d1a0efa1f986d99384fe"
+    },
+    "Proposition71ZetaPaperStrip.log": {
+      "bytes": 21790,
+      "sha256": "e995dacb8756c0a2570e85785ae4b4944cda7941bece7fbc0692ce0988467273"
+    },
+    "Proposition71ZetaRegularizedReciprocal.log": {
+      "bytes": 21801,
+      "sha256": "364734db8b9ed13784eee452b3fe5bdd844b927a0ef0c2f055756c188c08f169"
+    },
+    "Proposition71ZetaRightAnchor.log": {
+      "bytes": 2833,
+      "sha256": "8b238b988e8135d4e31aae6544528fd0958e65079e1a1a0d3e441c4f9a0450c5"
+    },
+    "Proposition71ZetaStripBounds.log": {
+      "bytes": 21724,
+      "sha256": "c3c14fa935e5990bceda59e6a577febe2bac902b0a9102f51e5b06d1f82c6578"
+    }
+  },
+  "strict_new_review": {
+    "Proposition71FrontUniformRate:50": "Returns the locally derived exponential domination of L^1838.",
+    "Proposition71GammaOmegaTail:27": "Transports proved actual Mellin integrability through the exact x=1 identity.",
+    "Proposition71GenericExceptionalSaving:76": "Returns the third power of the proved actual prime-mass lower bound.",
+    "Proposition71ZetaRightAnchor:25": "Applies norm to the genuine real-zeta Dirichlet-series identity."
+  }
+}
