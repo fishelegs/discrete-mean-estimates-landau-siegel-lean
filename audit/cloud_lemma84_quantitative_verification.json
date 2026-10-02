@@ -1,0 +1,47 @@
+{
+  "status": "PASS_AS_COMPONENT",
+  "verified_at_utc": "2026-10-02T18:24:31.824552+00:00",
+  "base_commit": "ee6207328a93c6f2e9cd596f37424b285ce0c6ce",
+  "completion_kind": "verified_quantitative_component_original_target_open",
+  "numbered_completion_count_change": 0,
+  "production_modules": 41,
+  "own_modules": 33,
+  "shared_helper_modules": 8,
+  "deduplicated_existing_modules": 3,
+  "audit_modules": 1,
+  "public_declaration_axiom_checks": 226,
+  "audit_examples": 5,
+  "named_contour_regressions": 4,
+  "helper_genuine_object_regressions": 4,
+  "dependency_build_jobs": 3962,
+  "full_project_jobs": 5151,
+  "source_files": 1269,
+  "spec_imports": 897,
+  "full_project_imports": 1162,
+  "independent_review": "ACCEPT AS COMPONENT, not original8.4 completion",
+  "original_target_proved": false,
+  "repaired_L5_theorem_proved": true,
+  "downstream_weighted_error_proved": false,
+  "strict_candidates": 387,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 1,
+  "new_candidate_review": "ChiReciprocalStrip:58 returns the proved standard norm<=abs(real)+abs(im) inequality after rewriting the actual disk center coordinates; no reciprocal estimate is assumed.",
+  "logs": {
+    "lemma84-integration-build.log": {
+      "bytes": 35838,
+      "sha256": "eeda1fdcc21fbd4037a908baddea1cecf27e8918404bf6384ee6f1c3dafe2e45"
+    },
+    "lemma84-integration-axioms.log": {
+      "bytes": 23902,
+      "sha256": "15399e97a438e077f7b02470885b5ce24812fb676783ec0a6d27c9f0382d879e"
+    },
+    "lemma84-full-project.log": {
+      "bytes": 215098,
+      "sha256": "81643e512862a9ba14c623687fd475078b772f8173c55e9f9fa3ed6f7e80682d"
+    },
+    "lemma84-strict-audit.log": {
+      "bytes": 39599,
+      "sha256": "a4d21a81f9ccf0e16e44a12e857047f2b17c8c118713c922e3664ccda732a8a5"
+    }
+  }
+}

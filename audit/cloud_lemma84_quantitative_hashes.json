@@ -1,0 +1,211 @@
+[
+  {
+    "path": "ZhangLS/Spec/ChiUniformLBound.lean",
+    "draft_sha256": "d18f14e047670b0b18ea39b1b2b78c72e0b72426817bf665fc9c221805d60538",
+    "promoted_sha256": "d18f14e047670b0b18ea39b1b2b78c72e0b72426817bf665fc9c221805d60538"
+  },
+  {
+    "path": "ZhangLS/Spec/ChiEulerAnchor.lean",
+    "draft_sha256": "10b6389aa7a23c8dac3303df1ee811218d3ace5174f5c4f2894378f062b1ceb5",
+    "promoted_sha256": "10b6389aa7a23c8dac3303df1ee811218d3ace5174f5c4f2894378f062b1ceb5"
+  },
+  {
+    "path": "ZhangLS/Spec/ChiBorelReciprocal.lean",
+    "draft_sha256": "910ce419934efa87d9bb78d684c97b3454ca8a02f38945f5b18c252a2a784f9b",
+    "promoted_sha256": "910ce419934efa87d9bb78d684c97b3454ca8a02f38945f5b18c252a2a784f9b"
+  },
+  {
+    "path": "ZhangLS/Spec/ChiExceptionalRemoval.lean",
+    "draft_sha256": "00bc292a8539b973e2c659ae68d121984ba07f0a7d645cdf15bbca0787088d6e",
+    "promoted_sha256": "00bc292a8539b973e2c659ae68d121984ba07f0a7d645cdf15bbca0787088d6e"
+  },
+  {
+    "path": "ZhangLS/Spec/ChiReciprocalStrip.lean",
+    "draft_sha256": "50bfd6bd1df1db89484099d5962f959c96d5550367224224ff824ec2cdd03625",
+    "promoted_sha256": "50bfd6bd1df1db89484099d5962f959c96d5550367224224ff824ec2cdd03625"
+  },
+  {
+    "path": "ZhangLS/Spec/ChiReciprocalContour.lean",
+    "draft_sha256": "e2ae5c0a5d8431bd7db9f29ac33a62fe16248f9d21a50c138f013fac36034bd0",
+    "promoted_sha256": "e2ae5c0a5d8431bd7db9f29ac33a62fe16248f9d21a50c138f013fac36034bd0"
+  },
+  {
+    "path": "ZhangLS/Spec/ChiReciprocalRegression.lean",
+    "draft_sha256": "23e33e861d0d85513327495b48b4eea4461c88f8443ec795f08f883c70d1f651",
+    "promoted_sha256": "23e33e861d0d85513327495b48b4eea4461c88f8443ec795f08f883c70d1f651"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84ContourBridge.lean",
+    "draft_sha256": "e39c2821dba4141aaff572fe0cd5e22aba0b54c33cedaa9497f438eff7db1aa9",
+    "promoted_sha256": "e39c2821dba4141aaff572fe0cd5e22aba0b54c33cedaa9497f438eff7db1aa9"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84Definitions.lean",
+    "draft_sha256": "dc3f9673156c12fa7e5fbbd25497054da4ab6e67f6f591b970a173e9bd8fd0ce",
+    "promoted_sha256": "dc3f9673156c12fa7e5fbbd25497054da4ab6e67f6f591b970a173e9bd8fd0ce"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84LogPerronLaplace.lean",
+    "draft_sha256": "dd99586f9e83269a26a8374cf79b36e16226c1fed1ca7ff73a9b0fb52807d8ac",
+    "promoted_sha256": "dd99586f9e83269a26a8374cf79b36e16226c1fed1ca7ff73a9b0fb52807d8ac"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84LogPerronKernel.lean",
+    "draft_sha256": "20b3f99ca78d9c43caf215c9cea5380bafa1403611e1aee0b5077e4ed59efb0d",
+    "promoted_sha256": "20b3f99ca78d9c43caf215c9cea5380bafa1403611e1aee0b5077e4ed59efb0d"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84Residue.lean",
+    "draft_sha256": "4552f4bbc92ffe470ab9a8d5daf3869aa19852565ebf7cea893fdef3db063c62",
+    "promoted_sha256": "4552f4bbc92ffe470ab9a8d5daf3869aa19852565ebf7cea893fdef3db063c62"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84PaperResidue.lean",
+    "draft_sha256": "0143dcb9204838c2864e3be5c23eabe1d243394622822dc95c59b676be745aa5",
+    "promoted_sha256": "0143dcb9204838c2864e3be5c23eabe1d243394622822dc95c59b676be745aa5"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84LogPerronShift.lean",
+    "draft_sha256": "ed15b5f34980c8c8ddc4eca8b7a7d458ff78bc09022318ae9131ff3138f6a20b",
+    "promoted_sha256": "ed15b5f34980c8c8ddc4eca8b7a7d458ff78bc09022318ae9131ff3138f6a20b"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84LogPerronTerms.lean",
+    "draft_sha256": "36941aeb3eb8baa597044e43ac7059959e61b058eff8b934170be0d1f05868a7",
+    "promoted_sha256": "36941aeb3eb8baa597044e43ac7059959e61b058eff8b934170be0d1f05868a7"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84DirichletBridge.lean",
+    "draft_sha256": "8a0e551f2fb64913890a9e12bd8296c369108647d5396819fd74c3c0e8bbbbde",
+    "promoted_sha256": "8a0e551f2fb64913890a9e12bd8296c369108647d5396819fd74c3c0e8bbbbde"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84QuotientAlgebra.lean",
+    "draft_sha256": "216c86fdede6dcb289d9fbff8d367b3eb2f27a899f6617e1126b8089542af943",
+    "promoted_sha256": "216c86fdede6dcb289d9fbff8d367b3eb2f27a899f6617e1126b8089542af943"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84CircleQuotient.lean",
+    "draft_sha256": "267365ef39d927afba0029bcc2bf27f6ee892e180a1e662dfbda87ed36b7011a",
+    "promoted_sha256": "267365ef39d927afba0029bcc2bf27f6ee892e180a1e662dfbda87ed36b7011a"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84CircleError.lean",
+    "draft_sha256": "6390f922ff38a3164c016a1784859ddb2a6c3a84be0a062fa4c305ed4b9817b7",
+    "promoted_sha256": "6390f922ff38a3164c016a1784859ddb2a6c3a84be0a062fa4c305ed4b9817b7"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84CircleApproximation.lean",
+    "draft_sha256": "1e17b0bad05f9c7298f4f9c528db784698d239f34f61595491c22eb68b887396",
+    "promoted_sha256": "1e17b0bad05f9c7298f4f9c528db784698d239f34f61595491c22eb68b887396"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84LogPerronSeries.lean",
+    "draft_sha256": "5d0344e9f29bfa6cf1978f6c007aebde082e5c784dd547cd13dbe0799a0ed347",
+    "promoted_sha256": "5d0344e9f29bfa6cf1978f6c007aebde082e5c784dd547cd13dbe0799a0ed347"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84TwoPoleRemoval.lean",
+    "draft_sha256": "b8064f18b6cfdff5926e519520a6ea04cdf30c284b119973a1298ff3b7472067",
+    "promoted_sha256": "b8064f18b6cfdff5926e519520a6ea04cdf30c284b119973a1298ff3b7472067"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84ActualPoleStructure.lean",
+    "draft_sha256": "22907b697355017119d0bc149245bb9e12ee0eb92c9467d192c43e72e8b76051",
+    "promoted_sha256": "22907b697355017119d0bc149245bb9e12ee0eb92c9467d192c43e72e8b76051"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84ContourGeometry.lean",
+    "draft_sha256": "ca908f7396eaa77d34c5677eaf7611589b882fcdc5ebce80819fb4f382cb222a",
+    "promoted_sha256": "ca908f7396eaa77d34c5677eaf7611589b882fcdc5ebce80819fb4f382cb222a"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84ArithmeticCircle.lean",
+    "draft_sha256": "72d3414497efbf23469efc8b4d83ca7a8628b1996c5e6a5028d36beb68db40ba",
+    "promoted_sha256": "72d3414497efbf23469efc8b4d83ca7a8628b1996c5e6a5028d36beb68db40ba"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84FiniteContour.lean",
+    "draft_sha256": "aee02fa5ed21bfa2620f304f4c7305c24581362e707ee18425210abc0d5ec389",
+    "promoted_sha256": "aee02fa5ed21bfa2620f304f4c7305c24581362e707ee18425210abc0d5ec389"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84NearOnePrimeProduct.lean",
+    "draft_sha256": "2623ad0235364b0b1d9aaf8924fd81e93452edce9ea863e2b19af3ac7ab899e3",
+    "promoted_sha256": "2623ad0235364b0b1d9aaf8924fd81e93452edce9ea863e2b19af3ac7ab899e3"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84UContourBound.lean",
+    "draft_sha256": "2edf739bef9fc4c192772f120e1e24be783dead6b72771e0eb8ad2a388b09f5c",
+    "promoted_sha256": "2edf739bef9fc4c192772f120e1e24be783dead6b72771e0eb8ad2a388b09f5c"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84RightLineBounds.lean",
+    "draft_sha256": "fc60419b0f24045d39de95f776909dc23e035c50a65d0040b4897999105a0caa",
+    "promoted_sha256": "fc60419b0f24045d39de95f776909dc23e035c50a65d0040b4897999105a0caa"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84ContourKernelBounds.lean",
+    "draft_sha256": "e388aaf752b3374c96e64360b9b0e688a899ec808b07863a55ba6f464734cbd8",
+    "promoted_sha256": "e388aaf752b3374c96e64360b9b0e688a899ec808b07863a55ba6f464734cbd8"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84RightTailBounds.lean",
+    "draft_sha256": "2ac5acc3ab1e928ab3cc06c3fdfc2cb91a0e52197ef8be996bca437f92548e12",
+    "promoted_sha256": "2ac5acc3ab1e928ab3cc06c3fdfc2cb91a0e52197ef8be996bca437f92548e12"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84InfiniteContourAlgebra.lean",
+    "draft_sha256": "58923a562a82971b7a73f0d17320d328faecd7fd3a5634f4f638c21b3973143a",
+    "promoted_sha256": "58923a562a82971b7a73f0d17320d328faecd7fd3a5634f4f638c21b3973143a"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84NearContourBounds.lean",
+    "draft_sha256": "d40423f7d321732824146ddaf945f260bb550efabf3bddd672b0d2c515f536e1",
+    "promoted_sha256": "d40423f7d321732824146ddaf945f260bb550efabf3bddd672b0d2c515f536e1"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84BoundaryIntegralBounds.lean",
+    "draft_sha256": "7d7a4f2b1d4bd5d666f1316caeee850b8ca25356a79e9b67b084ca64b66c1373",
+    "promoted_sha256": "7d7a4f2b1d4bd5d666f1316caeee850b8ca25356a79e9b67b084ca64b66c1373"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84ContourErrorBudget.lean",
+    "draft_sha256": "e836a5f969505c2d0ac81206eecde62d49bd3dfd70176ed36310e11b2974c2d1",
+    "promoted_sha256": "e836a5f969505c2d0ac81206eecde62d49bd3dfd70176ed36310e11b2974c2d1"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84ActualBoundaryBounds.lean",
+    "draft_sha256": "78b9a2fe2c40739080e1082a375f6cb382dfa79c660e08ad522aab4909b99a54",
+    "promoted_sha256": "78b9a2fe2c40739080e1082a375f6cb382dfa79c660e08ad522aab4909b99a54"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84CircleBudget.lean",
+    "draft_sha256": "e5ed12f30e5f6197b2cd5104c3acc6f08a40c482eed30a9f81744b4500dd1336",
+    "promoted_sha256": "e5ed12f30e5f6197b2cd5104c3acc6f08a40c482eed30a9f81744b4500dd1336"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84SumCircleQuantitative.lean",
+    "draft_sha256": "8a5982030dbe9bbed26faaae9afb53ae4cfa86626937951ef7b47ad11ad4d09b",
+    "promoted_sha256": "8a5982030dbe9bbed26faaae9afb53ae4cfa86626937951ef7b47ad11ad4d09b"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84ScalarContourBudget.lean",
+    "draft_sha256": "3fb7bb968fb391675e180540403df2cabacd33355429ea2b121bf72c07232aaa",
+    "promoted_sha256": "3fb7bb968fb391675e180540403df2cabacd33355429ea2b121bf72c07232aaa"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84SumCirclePolynomial.lean",
+    "draft_sha256": "b443dcfbd6e320fabbc334f7be549def6e776785214233051fc7d2796c0bd65c",
+    "promoted_sha256": "b443dcfbd6e320fabbc334f7be549def6e776785214233051fc7d2796c0bd65c"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma84Repaired.lean",
+    "draft_sha256": "61becf3971a3f6c8faa0beabdaa1e9d19a3876a439f7b5e9afbecbbe37b65012",
+    "promoted_sha256": "61becf3971a3f6c8faa0beabdaa1e9d19a3876a439f7b5e9afbecbbe37b65012"
+  },
+  {
+    "path": "audit/CloudLemma84QuantitativeRegression.lean",
+    "promoted_sha256": "815e8814d9eb449b5b6f1eb48639b255354216a18ad72b1af33c08c1dfa13946"
+  }
+]

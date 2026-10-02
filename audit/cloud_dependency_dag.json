@@ -2125,13 +2125,16 @@
         "url": "https://arxiv.org/pdf/2211.02515v1#page=46"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "in_progress",
+      "working_status": "quantitative_component_verified_original_target_open",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 167,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
-        "trusted_capstone_found": false
+        "trusted_capstone_found": false,
+        "component_report": "audit/CLOUD_LEMMA84_QUANTITATIVE_STATUS.md",
+        "component_axiom_report": "audit/cloud_lemma84_quantitative_axioms.log",
+        "original_target_proved": false
       },
       "known_numbered_dependencies": [
         "L8.3",
@@ -2141,11 +2144,10 @@
         "L5.8"
       ],
       "missing_mathematics": [
-        "L-ratio contour identity, zero exclusion, linearization and residues"
+        "Original uniform L^-6 requires controlling the exposed Pi multiplier or a sharper Taylor/joint estimate.",
+        "Actual weighted Section8 application includes both cutoff boundary layers and later arithmetic approximations."
       ],
-      "missing_specification_or_engineering": [
-        "Actual U/Pi and strict cutoff; use corrected references"
-      ],
+      "missing_specification_or_engineering": [],
       "semantic_issue_ids": [
         "paper_L5.6_linearization_likely_L5.8"
       ],
@@ -2165,7 +2167,26 @@
         ]
       },
       "scheduling_phase": "downstream_weighted_budget_audit",
-      "active_work": "Actual Pi-dependent error and explicit L^-5 repair frozen; original L^-6 target still unproved. Independent actual Section8 weighted-error audit is active, including cutoff boundary layers."
+      "active_work": "Pi-dependent error, actual Perron-to-circle L^-6 transfer, explicit L^-5 repair and Pi=0 branch centrally verified; actual downstream weighted budget under proof.",
+      "ports": {
+        "actual_contour_transfer": {
+          "status": "complete_fresh_kernel_verified",
+          "symbol": "lemma84_actual_sum_circle_transfer"
+        },
+        "pi_dependent_error": {
+          "status": "complete_fresh_kernel_verified",
+          "symbol": "lemma84_genuine_error_with_pi"
+        },
+        "explicit_L5_repair": {
+          "status": "complete_fresh_kernel_verified",
+          "symbol": "lemma84_repaired_L5",
+          "counts_as_numbered_completion": false
+        },
+        "original_uniform_L6": {
+          "status": "unproved",
+          "target": "Lemma84Target"
+        }
+      }
     },
     {
       "id": "L10.1",
@@ -3856,11 +3877,11 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T18:14:35.317481+00:00",
+    "verified_at_utc": "2026-10-02T18:24:31.824552+00:00",
     "completed": 36,
     "in_progress": 4,
     "unstarted": 10,
-    "note": "36=34 original+2 repaired. Priority compatibility audits: shifted-L15.3 residue and actual8.4 weighted error.7.1/14.1 and12.1 continue; no final-paper claim.",
+    "note": "36=34 original+2 repaired. Genuine8.4 contour and quantitative component verified without increasing count; actual weighted compatibility and15.3 shifted residue remain priority ongoing audits.",
     "original_completed": 34,
     "repaired_completed": 2,
     "partial": 1
@@ -3917,6 +3938,17 @@
         "P7.1",
         "P14.1"
       ]
+    },
+    {
+      "id": "L8.4_actual_contour_and_quantitative_error",
+      "status": "verified",
+      "report": "audit/CLOUD_LEMMA84_QUANTITATIVE_STATUS.md",
+      "original_numbered_result_completed": false,
+      "assumption_A": true,
+      "new_modules": 41,
+      "public_declaration_checks": 226,
+      "semantic_regressions": 13,
+      "downstream_application_proved": false
     }
   ],
   "repair_discipline": {
