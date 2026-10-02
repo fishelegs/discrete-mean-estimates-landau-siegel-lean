@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T18:05:14.875750+00:00",
+  "base_commit": "2fe656d7a447efdcf46699b0632fcf44cf6aa15d",
+  "completion_kind": "shared_mathematical_component",
+  "numbered_completion_count_change": 0,
+  "production_modules": 4,
+  "audit_modules": 1,
+  "public_theorem_axiom_checks": 21,
+  "semantic_examples": 17,
+  "dependency_build_jobs": 3594,
+  "full_project_jobs": 5104,
+  "source_files": 1220,
+  "spec_imports": 850,
+  "full_project_imports": 1115,
+  "strict_candidates": 386,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 3,
+  "new_candidate_review": "GaussParseval:72 returns a proved norm-square equality; LargeSieve:127,219 return the established subtype-family sieve after a proved reindexing. No desired estimate is assumed.",
+  "semantic_review": "Central line-by-line review of true primitive Gauss normalization, composite unit/nonunit Parseval, distinct reduced fractions, frequency translation, support energy and q/phi(q) weights.",
+  "logs": {
+    "all-moduli-integration-build.log": {
+      "bytes": 3366,
+      "sha256": "8492653634f2837a0b10760580acacd2a8b4e4f72ba784a51efc4c501bafa741"
+    },
+    "all-moduli-integration-axioms.log": {
+      "bytes": 2266,
+      "sha256": "ebefafb72981435a5f7e1de9c1c4cc41b87e8b1e60ec001921f395cd330cc307"
+    },
+    "all-moduli-full-project.log": {
+      "bytes": 210164,
+      "sha256": "a86ce20587077e69ba739776f989270dcd50649e70af5fb3a8d1e9aad4565e50"
+    },
+    "all-moduli-strict-audit.log": {
+      "bytes": 39517,
+      "sha256": "4fba8b72a5fb953b6a9e2c12fc0d525a89ad0a8fef60ebb9630d3015b7af6a92"
+    }
+  }
+}

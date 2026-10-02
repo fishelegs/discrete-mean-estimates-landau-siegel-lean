@@ -21,6 +21,63 @@
       "L11.1",
       "L11.2",
       "L15.2",
+      "L16.1",
+      "L16.2",
+      "L3.1",
+      "L3.2",
+      "L15.1",
+      "L3.3",
+      "L3.4",
+      "L3.5",
+      "L3.6",
+      "L4.1",
+      "L4.2",
+      "L4.3",
+      "L4.4",
+      "L4.5",
+      "L4.6",
+      "L4.7",
+      "L4.8",
+      "L5.1",
+      "L5.2",
+      "L5.3",
+      "L5.4",
+      "L5.7",
+      "L5.5",
+      "L5.6",
+      "L5.8",
+      "L12.1",
+      "L17.1",
+      "L6.1",
+      "L8.2",
+      "L10.1",
+      "L8.3",
+      "L12.3",
+      "L15.3",
+      "L8.4",
+      "L10.2",
+      "L12.2",
+      "P2.1",
+      "P14.1",
+      "P2.2",
+      "L2.3",
+      "L5.9",
+      "L8.1",
+      "P7.1",
+      "P2.4",
+      "P2.5",
+      "P2.6",
+      "T1",
+      "T2"
+    ],
+    "baseline_local_import_module_count": 894,
+    "baseline_local_import_cycles": false,
+    "post_integration_acyclic": true,
+    "current_edge_count": 106,
+    "baseline_topological_order": [
+      "L11.1",
+      "L11.2",
+      "L15.2",
       "L15.3",
       "L16.1",
       "L3.1",
@@ -69,11 +126,7 @@
       "P2.6",
       "T1",
       "T2"
-    ],
-    "baseline_local_import_module_count": 894,
-    "baseline_local_import_cycles": false,
-    "post_integration_acyclic": true,
-    "current_edge_count": 106
+    ]
   },
   "frontiers": [
     {
@@ -1886,7 +1939,7 @@
       },
       "scheduling_phase": "proof",
       "active_work": "Original discrete-mean target and actual arithmetic/character-averaging proof are under construction.",
-      "shared_support_active": "Genuine all-moduli primitive-character large sieve; separate from either final proposition."
+      "shared_support_active": "All-moduli primitive-character large sieve now centrally verified; applications and full conductor/error assembly remain."
     },
     {
       "id": "L8.1",
@@ -2164,8 +2217,8 @@
           "Actual ftilde and V1j; exact rational endpoints"
         ]
       },
-      "scheduling_phase": "proof",
-      "active_work": "Original four-range target frozen; exact actual-sum to Abel-polynomial bridge checked; endpoint/Taylor bounds in progress."
+      "scheduling_phase": "independent_semantic_review",
+      "active_work": "Complete original four-clause proof frozen, six modules/17 regressions/66 axiom checks; central independent semantic review in progress, not yet counted complete."
     },
     {
       "id": "L10.2",
@@ -2340,7 +2393,7 @@
         "url": "https://arxiv.org/pdf/2211.02515v1#page=68"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "unstarted",
+      "working_status": "in_progress",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 172,
@@ -2359,10 +2412,10 @@
         "Actual kappa13 and exact P-double-prime endpoints"
       ],
       "semantic_issue_ids": [],
-      "scheduling_status": "queued",
-      "dispatch_reason": "Next independent frontier after a slot frees; actual shifted-chi sums can share established Abel estimates with10.1.",
-      "proof_status": "unstarted",
-      "queue_priority": 1,
+      "scheduling_status": "active",
+      "dispatch_reason": "Independent frontier using5.8 and actual Abel tails; precise phase/endpoint audit may expose a required source repair.",
+      "proof_status": "in_progress",
+      "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [
           "L5.8"
@@ -2371,7 +2424,9 @@
           "Truncated shifted-chi sums via L5.8 and contour/tail estimates",
           "Actual kappa13 and exact P-double-prime endpoints"
         ]
-      }
+      },
+      "scheduling_phase": "source_audit_and_exact_phase_proof",
+      "active_work": "Original truncated sum and exact phase main term under proof. Printed10^-5 phase linearization budget requires rigorous checking; no actual character counterexample or completed original claim is asserted."
     },
     {
       "id": "L12.2",
@@ -2535,7 +2590,7 @@
       },
       "scheduling_phase": "proof",
       "active_work": "Original Section14 discrete-mean definitions and product-character primitive-inducer cancellation are being proved.",
-      "shared_support_active": "Genuine all-moduli primitive-character large sieve; separate from either final proposition."
+      "shared_support_active": "All-moduli primitive-character large sieve now centrally verified; applications and full conductor/error assembly remain."
     },
     {
       "id": "L15.1",
@@ -3798,11 +3853,11 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T17:50:16.839775+00:00",
+    "verified_at_utc": "2026-10-02T18:05:14.875750+00:00",
     "completed": 35,
-    "in_progress": 4,
-    "unstarted": 11,
-    "note": "33 original statements incl8.1 notation clarification +2 repaired15.2/15.3. Active7.1/14.1/8.4/10.1; shared all-moduli large sieve;12.1 next queued.",
+    "in_progress": 5,
+    "unstarted": 10,
+    "note": "35=33 original+2 repaired. Four-module genuine all-moduli sieve verified as shared support.10.1 in review,12.1 active phase audit;7.1/14.1/8.4 active.",
     "original_completed": 33,
     "repaired_completed": 2,
     "partial": 1
@@ -3845,6 +3900,20 @@
       "original_numbered_result_completed": false,
       "theorem_interfaces": 6,
       "semantic_regressions": 3
+    },
+    {
+      "id": "all_moduli_primitive_large_sieve",
+      "status": "verified",
+      "report": "audit/CLOUD_ALL_MODULI_LARGE_SIEVE_STATUS.md",
+      "original_numbered_result_completed": false,
+      "assumption_A": false,
+      "new_modules": 4,
+      "theorem_interfaces": 21,
+      "semantic_regressions": 17,
+      "consumers": [
+        "P7.1",
+        "P14.1"
+      ]
     }
   ],
   "repair_discipline": {
