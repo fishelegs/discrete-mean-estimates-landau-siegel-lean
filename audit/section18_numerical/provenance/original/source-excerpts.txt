@@ -1,0 +1,910 @@
+
+===== Source lines 358–403 =====
+  358   certain discrete means that is employed in the present work (the reader is also referred to [3]).
+  359  
+  360   The initial part of this paper consists in relating the lower bound for $L(1,\chi)$ to the distribution 
+  361   of zeros of the function $L\sp L(s,\psi\chi)$, with $\psi$ belonging to a large 
+  362   set $\Psi$ of primitive characters, in a domain $\Omega$.  Thus we introduce
+  363  $$
+  364  P=\exp\{\l^{9}\}.\eqno(2.6)
+  365  $$
+  366  For notational simplicity we write
+  367  $$
+  368  p\sim P\quad\text{for}\quad P<p<P(1+\l^{-68}).
+  369  $$
+  370  Let $\Psi$ be the set of all primitive characters $\psi(\bmod\,p)$ with $p\sim P$, and let
+  371  $$
+  372  \Omega=\big\{s:\quad |\Re(s-s_0)|<1/2,\quad |\Im(s-s_0)|<\l_1+2\big\}\eqno(2.7)
+  373  $$
+  374  where
+  375  $$
+  376  \l_1=\l^{405},\quad s_0=\frac12+2\pi it_0\quad\text{with}\quad t_0=\l^{519}.\eqno(2.8)
+  377  $$
+  378  Throughout, we will assume that $p\sim P$ and $\psi$ is a primitive characters $(\bmod\,p)$, i.e., $\psi\in\Psi$. 
+  379  Note that
+  380  $$
+  381  \p:=\sum_{p\sim P}p=(1+o(1))P^2\l^{-77}.\eqno(2.9)
+  382  $$
+  383    In Section 3 we shall introduce a subset $\Psi_1$ of $\Psi$  and prove 
+  384  \medskip\noindent
+  385  
+  386  {\bf Proposition 2.1.}\,\, {\it Let $\Psi_2$ be the complement of $\Psi_1$ in $\Psi$. If (A) holds, then}
+  387  $$
+  388  \sum_{\psi\in\Psi_2}1\ll \p\l^{-739}.
+  389  $$
+  390  \medskip\noindent
+  391  
+  392  
+  393  
+  394  For $\psi(\bmod\,p)\in \Psi$, the average gap between consecutive zeros of $L(s,\psi)L(s,\psi\chi)$ in $\Omega$
+  395  is
+  396  $$
+  397  \simeq\frac{2\pi}{\log(Dp^2t_0^2)}=\al(1+O(\al\l)).
+  398  $$
+  399  where
+  400  $$
+  401  \al=\frac{\pi}{\log P}.\eqno(2.10)
+  402  $$
+  403  In Section 4 we  shall prove
+
+===== Source lines 463–473 =====
+  463  The gap assertion (iii) of Proposition 2.2  can be restated as follows. If  $\psi\in\Psi_1$ and $(1/2+i\gamma, 1/2+i\gamma')$ is a pair of consecutive zeros of $L\sp L(s,\pc)$ in $\Omega$ with  $\gamma'>\gamma$, then for some (large) constant $c'>0$,
+  464  $$
+  465  |\gamma'-\gamma-\al|<c'\al^2\l.
+  466  $$
+  467  Write
+  468  $$
+  469  \be_1=i\al(1-5c'\al\l),\qquad\be_2=2 i\al(1+c'\al\l),\qquad \be_3=3 i\al(1-c'\al\l).\eqno(2.13)
+  470  $$
+  471  In what follows we  assume $\psi\in\Psi_1$. Let $\z(\psi)$ denote the set of zeros of $L\sp$ in the region $$|\sigma-1/2|<1/2,\qquad |t-2\pi t_0|<\l_1\eqno(2.14)$$ 
+  472  (this is slightly smaller than $\Omega$).
+  473  Assume  $\rho\in\z(\psi)$. Note that  $$M'\ss=Y\ss L'\ss\ne 0.$$ Write
+
+===== Source lines 585–622 =====
+  585  $$
+  586  H_{12}\sp=\sum_{n<P_2}\frac{\pc(n)}{n^s}\bigg(1-\frac{\log n}{\log P_2}\bigg)\bigg(\frac{P_2}{n}\bigg)^{\be_7},\eqno(2.24)
+  587  $$
+  588  $$
+  589  H_{13}\sp=\sum_{n<P_3}\frac{\pc(n)}{n^s}\bigg(1-\frac{\log n}{\log P_3}\bigg)\bigg(\frac{P_3}{n}\bigg)^{\be_6}\eqno(2.25)
+  590  $$
+  591  (these sums are written as  $H_{1j}\sp$ rather than $H_{1j}(s,\pc)$). We also introduce the numerical constants
+  592  $$
+  593  \iota_2=0.94977-1.38995i,\quad\iota_3=-1.00635-0.22789i,\quad\iota_4=-0.68738+1.60688i.\eqno(2.26)
+  594  $$
+  595  We define
+  596  $$
+  597  H_1\sp=H_{11}\sp+\iota_2 H_{12}\sp,\quad H_2\sp=\bar{\iota}_3H_{13}\sp+\bar{\iota}_4 H_{12}\sp.\eqno(2.27)
+  598  $$ 
+  599  Let $\tilde{f}(z)$ be given by
+  600  $$
+  601  \tilde{f}(z)=
+  602  \begin{cases}
+  603  500(z-0.5)&\quad\text{if}\quad 0.5\le z\le 0.502\\
+  604  500(0.504-z)&\quad\text{if}\quad 0.502\le z\le 0.504\\
+  605  0&\quad\text{otherwise}.
+  606  \end{cases}\eqno(2.28)
+  607  $$
+  608  We define
+  609  $$
+  610  J_1\sp=\sum_n\frac{\pc(n)}{n^s}\tilde{f}\bigg(\frac{\log n}{\log P}\bigg),\eqno(2.29)
+  611  $$
+  612  $$
+  613  J_2\sp=\sum_n\frac{\pc(n)}{n^s}\tilde{f}\bigg(\frac{\log n}{\log P}+0.004-\tilde{\al}\bigg)\quad\text{with} \quad \tilde{\al}=\frac{\log D t_0}{\log P}.\eqno(2.30)
+  614  $$
+  615  
+  616  
+  617  
+  618  
+  619  
+  620  Let
+  621  $$
+  622  \aa=\frac{6}{\pi^2}L'(1,\chi)^2\prod_{q|D}\frac{q}{q+1}.\eqno(2.31)
+
+===== Source lines 682–695 =====
+  682  $$
+  683   This completes the proof. $\Box$
+  684  \medskip\noindent
+  685  
+  686  {\it Remark.}\,\,  It is implied in the proof of Lemma 2.3  that
+  687  $$
+  688  \bigg|\frac{L(\rho+\be_1,\psi)}{L'\ss}\bigg|=-i\frac{M(\rho+\be_1,\psi)}{M'\ss}\eqno(2.34)
+  689  $$
+  690  for $\psi\in\Psi_1$ and $\rho\in\tz(\psi)$.
+  691  
+  692  
+  693  
+  694  
+  695  
+
+===== Source lines 1822–1854 =====
+ 1822  A(\bold{a};s,\psi)=\sum_n\frac{a(n)\psi(n))}{n^s},\quad A(\bold{a};1-s,\bp)=\sum_n\frac{a(n)\bp(n)}{n^{1-s}}.
+ 1823  $$
+ 1824  Let $\j(z)$ denote the segment $[s_0+z-i\l_1,\,s_0+z+i\l_1]$.
+ 1825  
+ 1826  The goal of this section is to prove
+ 1827  \medskip\noindent
+ 1828  
+ 1829  
+ 1830  
+ 1831  
+ 1832  {\bf Proposition 7.1.}\,\,{\it Assume $\bold{a}_1$ and $\bold{a}_2$ satisfy (7.2).
+ 1833  We have
+ 1834  $$\aligned
+ 1835  \Theta_1(\bold{a}_1,\bold{a}_2):&=\sum_{\psi\in\Psi_1}\,\frac{1}{2\pi i}\int_{\j(1)}\c\sp A(\bold{a}_1;s,\psi)A(\bold{a}_2;1-s,\bp)\omega(s)\,ds\\=&\frac{1}{\al}\bigg(
+ 1836  \frac12S_{1}(\bold{a}_1,\bold{a}_2)
+ 1837  +2S_{2}(\bold{a}_1,\bold{a}_2)+\frac32S_{3}(\bold{a}_1,\bold{a}_2)\bigg)\p\\
+ 1838  &+O(E(\bold{a}_1, \bold{a}_2))+o(\p),
+ 1839  \endaligned
+ 1840  $$
+ 1841  where
+ 1842  $$
+ 1843  \p=\sum_{p\sim P}p,
+ 1844  $$
+ 1845  $$
+ 1846  S_{j}(\bold{a}_1,\bold{a}_2)=\sum_{d}\sum_{r}\frac{|\mu(r)|\la_{0j}(dr)}{dr\varphi(r)}\bigg(\sum_m\frac{a_1(drm)}{m^{1-\be_j}}\bigg)\bigg(\sum_n\frac{a_2(drn)\xi_{0j}(n;d,r)}{n}\bigg),
+ 1847  $$ 
+ 1848  and}
+ 1849  $$
+ 1850  E(\bold{a}_1, \bold{a}_2)=\p\l^2\sum_{ 1\le j\le 3}|S_{j}(\bold{a}_1,\bold{a}_2)|.
+ 1851  $$
+ 1852  
+ 1853   In this and the next two sections we assume that  $1\le j\le 3$.
+ 1854  \medskip\noindent
+
+===== Source lines 2266–2321 =====
+ 2266     Recall that $H_1\sp$ and $H_2\sp$ are given by (2.27). Write
+ 2267  $$
+ 2268  \Xi_1=\sum_{\psi\in\Psi_1}\,\sum_{\rho\in\z(\psi)}\c^*\ss \big|H_1\ss+Z(\rho,\pc)\overline{H_2\sp}\big|^2\omega(\rho).
+ 2269  $$
+ 2270  Since $|Z(s,\pc)|=1$ if $\sigma=1/2$, it follows that
+ 2271  $$
+ 2272  \Xi_1=\Xi_{11}+\Xi_{12}+2\Re\{\Xi_{13}\}\eqno(8.2)
+ 2273  $$
+ 2274  where
+ 2275  $$
+ 2276  \Xi_{11}=\sum_{\psi\in\Psi_1}\,\sum_{\rho\in\z(\psi)}\c^*\ss|H_1\ss|^2\omega(\rho),\eqno(8.3)
+ 2277  $$
+ 2278  $$
+ 2279  \Xi_{12}=\sum_{\psi\in\Psi_1}\,\sum_{\rho\in\z(\psi)}\c^*\ss |{H_2\ss}|^2\omega(\rho),\eqno(8.4)
+ 2280  $$
+ 2281  $$
+ 2282  \Xi_{13}=\sum_{\psi\in\Psi_1}\,\sum_{\rho\in\z(\psi)}\c^*\ss Z(\rho,\pc)^{-1}H_1\ss H_2\ss\omega(\rho).\eqno(8.5)
+ 2283  $$
+ 2284  
+ 2285   We may write
+ 2286    $$
+ 2287  H_{1j}\sp=\sum_n\frac{\vk_j(n)\pc(n)}{n^s}\eqno(8.6)
+ 2288  $$
+ 2289  where
+ 2290  $$
+ 2291  \vk_1(n)=
+ 2292  \begin{cases}
+ 2293  (1-\log n/\log P_1)(P_1/n)^{\be_6}&\quad\text{if}\quad n<P_1,\\
+ 2294  0&\quad\text{otherwise},
+ 2295  \end{cases}
+ 2296  $$
+ 2297  $$
+ 2298  \vk_2(n)=
+ 2299  \begin{cases}
+ 2300  (1-\log n/\log P_2)(P_2/n)^{\be_7}&\quad\text{if}\quad n<P_2,\\
+ 2301  0&\quad\text{otherwise},
+ 2302  \end{cases}
+ 2303  $$
+ 2304  $$
+ 2305  \vk_3(n)=
+ 2306  \begin{cases}
+ 2307  (1-\log n/\log P_3)(P_3/n)^{\be_6}&\quad\text{if}\quad n<P_3,\\
+ 2308  0&\quad\text{otherwise}.
+ 2309  \end{cases}
+ 2310  $$
+ 2311  
+ 2312    
+ 2313      
+ 2314    In this section we evaluate $\Xi_{11}$. By Lemma 8.1,
+ 2315  $$
+ 2316  \Xi_{11}=2\Re\{\Theta_1(\bold{a}_{11},\bold{a}_{21})\}+o(\p)\eqno(8.7)
+ 2317  $$
+ 2318  with 
+ 2319  $$
+ 2320  a_{11}(n)=\chi(n)\big(\vk_1(n)+\iota_2\vk_2(n)\big),\quad a_{21}(n)=\overline{a_{11}(n)}.\eqno(8.8)
+ 2321  $$
+
+===== Source lines 2485–2680 =====
+ 2485  $$
+ 2486  where
+ 2487  $$
+ 2488  \ff_{16}(z)=\bigg(1+\frac{\pi i}{2}z\bigg)e^{(3\pi i/2)z},\quad \gh_{16}(z)=\frac83+\bigg(-\frac53-\frac{\pi i}{2}z\bigg)e^{(-3\pi i/2)z},
+ 2489  \eqno(8.13)$$
+ 2490  $$
+ 2491  \ff_{26}(z)=\bigg(1-\frac{\pi i}{2}z\bigg)e^{(3\pi i/2)z},\quad \gh_{26}(z)=\frac43+\bigg(-\frac13+\frac{\pi i}{2}z\bigg)e^{(-3\pi i/2)z},
+ 2492  \eqno(8.14)$$
+ 2493  $$
+ 2494  \ff_{36}(z)=\bigg(1-\frac{3\pi i}{2}z\bigg)e^{(3\pi i/2)z},\quad \gh_{36}(z)=\frac89+\bigg(\frac19+\frac{\pi i}{6}z\bigg)e^{(-3\pi i/2)z}.
+ 2495  \eqno(8.15)$$
+ 2496  $$
+ 2497  \ff_{17}(z)=\bigg(1+\frac{3\pi i}{2}z\bigg)e^{(5\pi i/2)z},\quad \gh_{17}(z)=\frac{24}{25}+\bigg(\frac{1}{25}+\frac{\pi i}{10}z\bigg)e^{(-5\pi i/2)z},
+ 2498  \eqno(8.16)$$
+ 2499  $$
+ 2500  \ff_{27}(z)=\bigg(1+\frac{\pi i}{2}z\bigg)e^{(5\pi i/2)z},\quad \gh_{27}(z)=\frac{12}{25}+\bigg(\frac{13}{25}+\frac{3\pi i}{10}z\bigg)e^{(-5\pi i/2)z},
+ 2501  \eqno(8.17)$$
+ 2502  $$
+ 2503  \ff_{37}(z)=\bigg(1-\frac{\pi i}{2}z\bigg)e^{(5\pi i/2)z},\quad \gh_{37}(z)=\frac{8}{25}+\bigg(\frac{17}{25}-\frac{3\pi i}{10}z\bigg)e^{(-5\pi i/2)z}.
+ 2504  \eqno(8.18)$$
+ 2505  Substituting $x=P^z$ we obtain
+ 2506  $$
+ 2507  \frac{1}{(\log P_1)^2}\int_{1}^{P_1}\frac{\f_{j6}(x)\g_{j6}(x)}{x}\,dx=\frac{1}{(0.504)^2\log P}\int_{0}^{0.504}\ff_{j6}(z)\mathfrak{g}_{j6}(z)\,dz+o(\al),
+ 2508  $$
+ 2509  $$
+ 2510  \frac{1}{(\log P_2)^2}\int_{1}^{P_2}\frac{\f_{j7}(x)\g_{j7}(x)}{x}\,dx=\frac{1}{(0.5)^2\log P}\int_{0}^{0.5}\ff_{j7}(z)\mathfrak{g}_{j7}(z)\,dz+o(\al),
+ 2511  $$
+ 2512  $$\aligned
+ 2513  \frac{1}{(\log P_1)(\log P_2)}&\int_{1}^{P_2}\frac{\f_{j7}(x)\g_{j6}(P^{0.004}T^{10}x)}{x}\,dx\\
+ 2514  &=\frac{1}{(0.5)(0.504)\log P}\int_{0}^{0.5}\ff_{j7}(z)\mathfrak{g}_{j6}(z+0.004)\,dz+o(\al),
+ 2515  \endaligned
+ 2516  $$
+ 2517  $$\aligned
+ 2518  \frac{1}{(\log P_1)(\log P_2)}&\int_{1}^{P_2}\frac{\f_{j6}(P^{0.004}T^{10}x)\g_{j7}(x))}{x}\,dx\\
+ 2519  &=\frac{1}{(0.5)(0.504)\log P}\int_{0}^{0.5}\ff_{j6}(z+0.004)\mathfrak{g}_{j7}(z)\,dz+o(\al).
+ 2520  \endaligned
+ 2521  $$
+ 2522  Inserting these into (8.13) we obtain
+ 2523  $$
+ 2524  \frac{1}{2\al}S_1(\bold{a}_{11},\bold{a}_{21})+\frac{2}{\al}S_2(\bold{a}_{11},\bold{a}_{21})+\frac{3}{2\al}S_3(\bold{a}_{11},\bold{a}_{21})=\aa
+ 2525  \big(b_{11}+\iota_2b_{21}+\bar{\iota}_2b_{12}+|\iota_2|^2b_{22}\big)+o(1)
+ 2526  $$
+ 2527  where
+ 2528  $$
+ 2529  b_{11}=\frac{1}{0.504^2\pi}\int_0^{0.504}\bigg(\frac12\ff_{16}(z)\gh_{16}(z)+2\ff_{26}(z)\gh_{26}(z)+\frac32\ff_{36}(z)\gh_{36}(z)\bigg)\,dz,\eqno(8.19)
+ 2530  $$
+ 2531  $$
+ 2532  b_{22}=\frac{1}{0.5^2\pi}\int_0^{0.5}\bigg(\frac12\ff_{17}(z)\gh_{17}(z)+2\ff_{27}(z)\gh_{27}(z)+\frac32\ff_{37}(z)\gh_{37}(z)\bigg)\,dz,\eqno(8.20)
+ 2533  $$
+ 2534  $$\aligned
+ 2535  b_{21}=&\frac{1}{(0.504)(0.5)\pi}\\
+ 2536  &\times\int_{0}^{0.5}\bigg(\frac12\ff_{17}(z)\gh_{16}(z+0.004)+2\ff_{27}(z)\gh_{26}(z+0.004)
+ 2537  +\frac32\ff_{37}(z)\gh_{36}(z+0.004)\bigg)\,dz.
+ 2538  \endaligned\eqno(8.21)
+ 2539  $$
+ 2540  $$\aligned
+ 2541  b_{12}=&\frac{1}{(0.504)(0.5)\pi}\\
+ 2542  &\times\int_{0}^{0.5}\bigg(\frac12\ff_{16}(z+0.004)\gh_{17}(z)+2\ff_{26}(z+0.004)\gh_{27}(z)
+ 2543  +\frac32\ff_{36}(z+0.004)\gh_{37}(z)\bigg)\,dz.\endaligned\eqno(8.22)
+ 2544  $$
+ 2545  It follows by Proposition 7.1 that
+ 2546  $$
+ 2547  \Theta_1(\bold{a}_{11},\bold{a}_{21})=\big(b_{11}+\iota_2b_{21}+\overline{\iota_2}b_{12}+|\iota_2|^2b_{22}\big)\aa\p+o(\p).
+ 2548  $$
+ 2549  This yields, by (8.7),
+ 2550  $$
+ 2551  \Xi_{11}=\mathfrak{c}_1\aa\p+o(\p)\eqno(8.23)
+ 2552  $$
+ 2553  where
+ 2554  $$
+ 2555  \mathfrak{c}_1=c_{11}+\iota_2c_{21}+\overline{\iota_2}c_{12}+|\iota_2|^2c_{22}
+ 2556  $$
+ 2557  with
+ 2558  $$
+ 2559  c_{11}=b_{11}+\overline{b_{11}},
+ 2560  $$
+ 2561  $$
+ 2562  c_{22}=b_{22}+\overline{b_{22}},
+ 2563  $$
+ 2564  $$
+ 2565  c_{12}=b_{12}+\overline{b_{21}},
+ 2566  $$
+ 2567  $$
+ 2568  c_{21}=\overline{c_{12}}.
+ 2569  $$
+ 2570  Let $\epsilon$ be a complex number satisfying $|\epsilon|<10^{-5}$, not necessarily the same in each occurrence.  
+ 2571  Numerical calculation shows that
+ 2572  $$
+ 2573  c_{11}=3.61226+\epsilon/2,
+ 2574  $$
+ 2575  $$
+ 2576  c_{22}=1.32215+\epsilon/2,
+ 2577  $$
+ 2578  $$
+ 2579  c_{12}=-0.45757-0.18179i+\epsilon/\sqrt{2}.
+ 2580  $$
+ 2581  It follows that
+ 2582  $$
+ 2583  \mathfrak{c}_1<6.9955.\eqno(8.24)
+ 2584  $$
+ 2585  
+ 2586   \section  *{\centerline{9. Evaluation of $\Xi_{12}$}}
+ 2587  
+ 2588    In this section we evaluate $\Xi_{12}$. By Lemma 8.1,
+ 2589    $$
+ 2590    \Xi_{12}=2\Re\{\Theta_1(\bold{a}_{12},\bold{a}_{22})\}+o(\p)\eqno(9.1)
+ 2591    $$
+ 2592   with
+ 2593   with 
+ 2594  $$
+ 2595  a_{12}(n)=\chi(n)\big(\bar{\iota}_3{\vk}_3(n)+\bar{\iota}_4\vk_2(n)\big),\quad a_{22}(n)=\overline{a_{21}(n)}.\eqno(9.2)
+ 2596  $$
+ 2597  Hence
+ 2598    $$\aligned
+ 2599  S_{j}(\bold{a}_{12},\bold{a}_{22})=&\sum_{d}\,\frac{|\chi(d)||\mu\chi(r)|\la_{0j}(dr)}{dr\varphi(r)}\bigg(\sum_m\frac{\chi(m)\big(
+ 2600  \bar{\iota}_3\vk_3(drm)+\bar{\iota}_4\vk_2(drm)\big)}{m^{1-\be_j}}\bigg)\\
+ 2601  &\times\bigg(\sum_n\frac{\chi(n)\big(\iota_3\bar{\vk}_3(drn)+\iota_4\bar{\vk}_2(drn)\big)\xi_{0j}(n;d,r)}{n}\bigg).
+ 2602  \endaligned
+ 2603  $$
+ 2604  
+ 2605  By Lemma 8.2 and 8.4, for $dr<P_3/T$,
+ 2606  $$
+ 2607  \sum_m\frac{\chi(m)\vk_3(drm)}{m^{1-\be_j}}=\frac{L'(1,\chi)}{\log P_3}\f_{j6}(P_3/dr)+O(\l^{-6})
+ 2608  $$
+ 2609  and
+ 2610  $$
+ 2611  \sum_n\frac{\chi(n)\bar{\vk}_3(drn)\xi_{0j}(n;d,r)}{n}=\frac{L'(1,\chi)\Pi(d,r)}{\log P_3}\g_{j6}(P_3/dr)+O(\l^{-6}).
+ 2612  $$
+ 2613  Thus, in a way similar to the proof of (8.12), we deduce that
+ 2614  $$\aligned
+ 2615  S_{j}(\bold{a}_{12},\bold{a}_{22})=&\aa\sum_{r<D}\int_{1}^{P_3}\bigg(\bar{\iota}_3\frac{\f_{j6}(P_3/x)}{\log P_3}+\bar{\iota}_4\frac{\f_{j7}(P_2/x)}{\log P_2}\bigg)\bigg(\iota_3\frac{\g_{j6}(P_3/x)}{\log P_3}+\iota_4\frac{\g_{j7}(P_2/x)}{\log P_2}\bigg)\,\frac{dx}{x}\\
+ 2616  &+\frac{|\iota_4|^2\aa}{(\log P_2)^2} \int_{P_3}^{P_2}\f_{j7}(P_2/x)\g_{j7}(P_2/x)\,\frac{dx}{x}+o(\al).
+ 2617  \endaligned
+ 2618  $$
+ 2619  It follows, by the change of variables $x\to P_2/x$ or $x\to P_3/x$, that
+ 2620  $$\aligned
+ 2621  S_{j}(\bold{a}_{12},\bold{a}_{22})=&\frac{\aa|\iota_3|^2}{(\log P_3)^2}\int_{1}^{P_3}\frac{\f_{j6}(x)\g_{j6}(x)}{x}\,dx+\frac{\aa|\iota_4|^2}{(\log P_2)^2}\int_{1}^{P_2}\frac{\f_{j7}(x)\g_{j7}(x)}{x}\,dx\\
+ 2622  &+\frac{\aa\bar{\iota}_3\iota_4}{(\log P_2)(\log P_3)}\int_{1}^{P_3}\frac{\f_{j6}(x)\g_{j7}(P^{0.002}T^{-10}x)}{x}\,dx\\
+ 2623  &+\frac{\aa\bar{\iota}_4\iota_3}{(\log P_2)(\log P_3)}\int_{1}^{P_3}\frac{\f_{j7}(P^{0.002}T^{-10}x)\g_{j6}(x)}{x}\,dx+o(\al),
+ 2624  \endaligned
+ 2625  $$
+ 2626  since $P_2/P_3=P^{0.002}T^{-10}$. This yields, by substituting $x=P^z$,
+ 2627  $$
+ 2628  \frac{1}{2\al}S_1(\bold{a}_{12},\bold{a}_{22})+\frac{2}{\al}S_2(\bold{a}_{12},\bold{a}_{22})+\frac{3}{2\al}S_3(\bold{a}_{12},\bold{a}_{22})=\aa
+ 2629  \big(|\iota_3|^2b_{33}+\iota_3\bar{\iota}_4b_{34}+\iota_4\bar{\iota_3}b_{43}+|\iota_4|^2b_{44}\big)+o(1)
+ 2630  $$
+ 2631  where
+ 2632  $$
+ 2633  b_{33}=\frac{1}{0.498^2\pi}\int_0^{0.498}\bigg(\frac12\ff_{16}(z)\gh_{16}(z)+2\ff_{26}(z)\gh_{26}(z)+\frac32\ff_{36}(z)\gh_{36}(z)\bigg)\,dz,\eqno(9.3)
+ 2634  $$
+ 2635  $$
+ 2636  b_{44}=b_{22},\eqno(9.4)
+ 2637  $$
+ 2638  $$
+ 2639  b_{34}=\frac{1}{(0.504)(0.498)\pi}\int_{0}^{0.498}\bigg(\frac12\ff_{17}(z+0.002)\gh_{16}(z)+2\ff_{27}(z+0.002)\gh_{26}(z)
+ 2640  +\frac32\ff_{37}(z+0.002)\gh_{36}(z)\bigg)\,dz,\eqno(9.5)
+ 2641  $$
+ 2642  $$
+ 2643  b_{43}=\frac{1}{(0.504)(0.498)\pi}\int_{0}^{0.498}\bigg(\frac12\ff_{16}(z)\gh_{17}(z+0.002)+2\ff_{26}(z)\gh_{27}(z+0.002)
+ 2644  +\frac32\ff_{36}(z)\gh_{37}(z+0.002)\bigg)\,dz.\eqno(9.6)
+ 2645  $$
+ 2646  It follows by Proposition 7.1 that
+ 2647  $$
+ 2648  \Theta_1(\bold{a}_{12},\bold{a}_{22})=\big(|\iota_3|^2b_{33}+\iota_3\bar{\iota}_4b_{34}+\iota_4\bar{\iota}_3b_{43}+|\iota_4|^2b_{44}\big)\aa\p+o(\p)
+ 2649  $$
+ 2650  This yields
+ 2651  $$\Xi_{12}=\mathfrak{c}_2\aa\p+o(\p)\eqno(9.7)
+ 2652  $$
+ 2653  where
+ 2654  $$
+ 2655  \mathfrak{c}_2=|\iota_3|^2c_{33}+\iota_3\bar{\iota}_4c_{34}+\iota_4\bar{\iota}_3c_{43}+|\iota_4|^2c_{44}
+ 2656  $$
+ 2657  with
+ 2658  $$
+ 2659  c_{33}=b_{33}+\overline{b_{33}},
+ 2660  $$
+ 2661  $$
+ 2662  c_{44}=c_{22},
+ 2663  $$
+ 2664  $$
+ 2665  c_{34}=b_{34}+\overline{b_{43}},
+ 2666  $$
+ 2667  $$
+ 2668  c_{43}=\overline{c_{34}}.
+ 2669  $$
+ 2670  Numerical calculation shows that
+ 2671  $$
+ 2672  c_{33}=3.69507+\epsilon/2,
+ 2673  $$
+ 2674  $$
+ 2675  c_{34}=-0.4526+0.19474i+\epsilon/\sqrt{2}.
+ 2676  $$
+ 2677  It follows that
+ 2678  $$
+ 2679  \mathfrak{c}_2<6.9955.\eqno(9.8)
+ 2680  $$
+
+===== Source lines 3360–3385 =====
+ 3360  The sum $H_{11}\sp$ is split into
+ 3361  $$
+ 3362  H_{11}\sp=\sum_{n<P^{1/2}}+\sum_{P^{1/2}\le n<P_1}=H_{14}\sp+H_{15}\sp,\quad\text{say}.\eqno(12.1)
+ 3363  $$
+ 3364  We can write
+ 3365  $$
+ 3366  H_1\sp H_2\sp=B\sp+H_{15}\sp H_2\sp
+ 3367  $$
+ 3368  with
+ 3369  $$
+ 3370  B\sp=(H_{14}\sp+\iota_2H_{12}\sp)H_2\sp.\eqno(12.2)
+ 3371  $$
+ 3372  Accordingly we have
+ 3373  $$
+ 3374  \Xi_{13}=\Xi_{14}+\Xi_{15}\eqno(12.3)
+ 3375  $$
+ 3376  with
+ 3377  $$
+ 3378  \Xi_{14}=\sum_{\psi\in\Psi_1}\,\sum_{\rho\in\tz(\psi)}\c^*\ss Z(\rho,\pc)^{-1}B\ss\omega(\rho),\eqno(12.4)
+ 3379  $$
+ 3380  $$
+ 3381  \Xi_{15}=\sum_{\psi\in\Psi_1}\,\sum_{\rho\in\tz(\psi)}\c^*\ss Z(\rho,\pc)^{-1}H_{15}\ss H_2\ss\omega(\rho).\eqno(12.5)
+ 3382  $$
+ 3383  The goal of this section is to evaluate $\Xi_{15}$.
+ 3384  
+ 3385  Write
+
+===== Source lines 3486–3511 =====
+ 3486  $$
+ 3487  \sum_l\frac{\chi(l)\vk_{13}(dl)}{l^{1-\be_j}}=\frac{L'(1,\chi)}{\log P_1}\big(-1+(2\be_6-\be_j)\log(d/P''_1)+\epsilon_{1j}(d)\big),\quad |\epsilon_{1j}(d)|<10^{-5},
+ 3488  $$
+ 3489  if} $P''_1<d<P_2$,. 
+ 3490  \medskip\noindent
+ 3491  
+ 3492  {\it Proof.} Note that $\vk_{13}(n)\ll\al_1$ if $P''_1/T\le n\le P''_1T$. In the case $d\le P''_1$ the results follow by the Polya-Vinogradov inequality and partial summation. On the other hand, in the case $P''_1<d<P_2$ the sum becomes
+ 3493  $$\aligned
+ 3494  \frac{(d/P''_1)^{-\be_6}\log(d/P''_1)}{\log P_1}&\sum_{l<P''_2/d}\frac{\chi(l)}{l^{1+\be_6-\be_j}}+\frac{(d/P''_1)^{-\be_6}}{\log P_1}\sum_{l<P''_2/d}\frac{\chi(l)\log l}{l^{1+\be_6-\be_j}}+O(T^{-c})\\
+ 3495  =&\frac{L'(1,\chi)(d/P''_1)^{-\be_6}}{\log P_1}\big(-1+(\be_6-\be_j)\log(d/P''_1)\big)+O(\l^{-15}).
+ 3496  \endaligned
+ 3497  $$
+ 3498  Since $P''_2/d>T^{10}$ and $(d/P''_1)^{-\be_6}=1-\be_6\log(d/P''_1)+...$,
+ 3499   the result follows by Lemma 5.8 and a simple estimates. $\Box$
+ 3500  \medskip\noindent
+ 3501  
+ 3502  {\bf Lemma 12.2.}\,\,{\it If $dr<P''_1/T$, then
+ 3503  $$
+ 3504  \sum_l\frac{\chi(l)\bar{\vk}_{13}(drl)\xi_{j}(l;d,r)}{l}=b^*L'(1,\chi)\Pi(d,r)(\log P)\be_{j+1}\be_{j+2}+O\eqno(12.10)
+ 3505  $$
+ 3506  with
+ 3507  $$
+ 3508  b^*=\frac{1}{0.504}\int_0^{0.004}ze^{3\pi iz/2}\,dz.
+ 3509  $$
+ 3510  If $P''_1/T\le n\le P''_1$, then}
+ 3511  $$
+
+===== Source lines 3569–3717 =====
+ 3569  $$
+ 3570  By direct calculation,
+ 3571  $$\aligned
+ 3572  \tp\int_{|s|=5\al}&\frac{(s+w-\be_6+\be_{j+1})(s+w-\be_6+\be_{j+2})}{s+w-\be_6}\,\frac{(P''_2/dr)^s}{s}\,ds\\
+ 3573  &=w-\be_6+\be_{j+1}+\be_{j+2}+\be_{j+1}\be_{j+2}\int_{1}^{P''/dr}y^{\be_6-w-1}\,dy,
+ 3574  \endaligned
+ 3575  $$
+ 3576  and the derivative of 
+ 3577  $$
+ 3578  (dr/P''_1)^{\be_6-w}\bigg(w-\be_6+\be_{j+1}+\be_{j+2}+\be_{j+1}\be_{j+2}\int_{1}^{P_2''/dr}y^{\be_6-w-1}\,dy\bigg)
+ 3579  $$
+ 3580  at $w=0$ is equal to
+ 3581  $$\aligned
+ 3582  (dr/P''_1)^{\be_6}&\bigg(1-\be_{j+1}\be_{j+2}\int_{1}^{P_2''/dr}y^{\be_6-1}\log y\,dy\bigg)\\
+ 3583  &-(dr/P''_1)^{\be_6}\log(dr/P''_1)\bigg(-\be_6+\be_{j+1}+\be_{j+2}+\be_{j+1}\be_{j+2}\int_{1}^{P_2''/dr}y^{\be_6-1}\,dy\bigg).
+ 3584  \endaligned
+ 3585  $$
+ 3586  This can be written as the form
+ 3587  $$
+ 3588  1-(-2\be_6+\be_{j+1}+\be_{j+2})\log(dr/P''_1)-\epsilon_{2j}(dr),
+ 3589  $$
+ 3590  since $(dr/P''_1)^{\be_6}=1+\be_6\log(dr/P''_1)+...$. $\Box$
+ 3591  
+ 3592  \medskip\noindent
+ 3593  
+ 3594  
+ 3595  {\it Evaluation of $\Theta_1(\bold{a}_{12},\bold{a}_{25})$.}
+ 3596  
+ 3597  \medskip\noindent
+ 3598  
+ 3599  We have
+ 3600  $$\aligned
+ 3601  S_{j}(\bold{a}_{12},\bold{a}_{25})=&\sum_{r}\,\sum_d\frac{|\chi(d)||\mu\chi(r)|\la_{0j}(dr)}{dr\varphi(r)}\bigg(\sum_m\frac{\chi(m)\big(\bar{\iota}_3
+ 3602  \vk_3(drm)+\bar{\iota}_4\vk_2(drm)\big)}{m^{1-\be_j}}\bigg)\\
+ 3603  &\times\bigg(\sum_n\frac{\chi(n)\bar{\vk}_{13}(n)\xi_{0j}(n;d,r)}{n}\bigg).
+ 3604  \endaligned
+ 3605  $$
+ 3606  The sum is split into three sums according to $dr\le P_1''/T$, $P_1''/T< dr\le P''_1$ and $P_1''< dr<P_2$. By lemma 8.2, 8.3 and 12.1,the sum over $P_1''/T< dr\le P''_1$ contributes $o(\al)$; the sum over $dr\le P_1''/T$ is equal to
+ 3607  $$\aligned
+ 3608  L'(1,\chi)^2&b^*\be_{j+1}\be_{j+2}\sum_{n<P^{0.496}}\frac{|\chi(n)|\la_{0j}(n)}{\varphi(n)}
+ 3609  \bigg(\frac{\bar{\iota}_3\f_{j6}(P^{0.498}/n)}{0.498}+\frac{\bar{\iota}_4\f_{j7}(P^{0.5}/n)}{0.5}\bigg)+o(\al)\\
+ 3610  =&\aa b^*(\log P)\be_{j+1}\be_{j+2}\int_0^{0.496}\bigg(\frac{\bar{\iota}_3\ff_{j6}(0.498-z)}{0.498}+\frac{\bar{\iota}_4\ff_{j7}(0.5-z)}{0.5}\bigg)\,dz+o(\al).
+ 3611  \endaligned\eqno(12.12)
+ 3612  $$
+ 3613  By lemma 8.2, 8.3 and 12.3, the sum over $P_1''< dr<P_2$ is equal to
+ 3614  $$\aligned
+ 3615  &\frac{L'(1,\chi)^2\bar{\iota}_3}{(0.504)(0.498)\log^2 P}\sum_{P^{0.496}<n<P^{0.498}}\frac{|\chi(n)|\la_{0j}(n)}{\varphi(n)}
+ 3616  \f_{j6}(P^{0.498}/n)\w_j(n)
+ 3617  \\&+\frac{L'(1,\chi)^2\bar{\iota}_4}{(0.504)(0.5)\log^2 P}\sum_{P^{0.496}<n<P^{0.5}}\frac{|\chi(n)|\la_{0j}(n)}{\varphi(n)}
+ 3618  \f_{j7}(P^{0.5}/n)\w_j(n)+o(\al)\\
+ 3619  =&\frac{\aa\bar{\iota}_3}{(0.504)(0.498)\log P}\int_{0.496}^{0.498}\ff_{j6}(0.498-z)\w_j(P^z)\,dz
+ 3620  \\&+\frac{\aa\bar{\iota}_4}{(0.504)(0.5)\log P}\int_{0.496}^{0.5}\ff_{j7}(0.5-z)\w_j(P^z)\,dz+o(\al).
+ 3621  \endaligned\eqno(12.13)
+ 3622  $$
+ 3623  where
+ 3624  $$
+ 3625  \w_j(n)=-1+(-2\be_6+\be_{j+1}+\be_{j+2})\log(n/P''_1)+\epsilon_{2j}(n).
+ 3626  $$
+ 3627  For $0\le z\le 0.002$, a good approximation to $\ff_{j6}(z)$ is 
+ 3628  $$
+ 3629  1+\pi i(3-j)z\simeq 1+(2\be_6-\be_j)(\log P)z.
+ 3630  $$
+ 3631  Since 
+ 3632  $$
+ 3633  4\be_6-\be_1-\be_2-\be_3\simeq 0,
+ 3634  $$
+ 3635  it follows by simple calculation that
+ 3636  $$
+ 3637  \int_{0.496}^{0.498}\ff_{j6}(0.498-z)\w_j(P^z)\,dz=-0.002+\epsilon/10.
+ 3638  $$
+ 3639  For $0\le z\le 0.004$, a good approximation to $\ff_{j7}(z)$ is
+ 3640  $$
+ 3641  1+\pi i(5-j)z\simeq 1+(2\be_7-\be_j)(\log P)z.
+ 3642  $$
+ 3643  Thus, for $0.496\le z\le 0.5$, the function $\ff_{j7}(0.5-z)\w_j(P^z)$ can be well approximated by
+ 3644  $$
+ 3645  -1-(2\be_7-\be_j)(\log P)(0.5-z)-(2\be_6-\be_{j+1}-\be_{j+2})(\log P)(z-0.496).
+ 3646  $$
+ 3647  Since 
+ 3648  $$
+ 3649  (2\be_6+2\be_7-\be_1-\be_2-\be_3)\log P\simeq 2\pi i,
+ 3650  $$
+ 3651  it follows that
+ 3652  $$
+ 3653  \int_{0.496}^{0.5}\ff_{j6}(0.5-z)\w_j(P^z)\,dz=-0.004-\frac{\pi i}{250^2}+\epsilon/10.
+ 3654  $$
+ 3655  inserting these results into (12.13), we find that the sum over $P_1''< dr<P_2$ is equal to
+ 3656  $$
+ 3657  \frac{\aa}{0.504\log P}\bigg(-\frac{0.002\bar{\iota}_3}{0.498}-0.008\bar{\iota}_4-\frac{2\pi i\bar{\iota}_4}{250^2}+\epsilon/4\bigg).
+ 3658  \eqno(12.14)$$
+ 3659  It follows from (12.12) and (12.14) that
+ 3660  $$
+ 3661  \frac{1}{2\al}S_{1}(\bold{a}_{12},\bold{a}_{25})+\frac{2}{\al}S_{2}(\bold{a}_{12},\bold{a}_{25})+\frac{3}{2\al}S_{3}(\bold{a}_{12},\bold{a}_{25})=\aa(e_1^*+e_2^*+\epsilon/2)\eqno(12.15)
+ 3662  $$
+ 3663  where
+ 3664  $$
+ 3665  e_1^*=-\pi b^*(3e_{11}^*+6e_{12}^*+3e_{13}^*)
+ 3666  $$
+ 3667  with
+ 3668  $$
+ 3669  e_{1j}^*=\int_0^{0.496}\bigg(\frac{\bar{\iota}_3\ff_{j6}(0.498-z)}{0.498}+\frac{\bar{\iota}_4\ff_{j7}(0.5-z)}{0.5}\bigg)\,dz,
+ 3670  $$
+ 3671  and
+ 3672  $$
+ 3673  e_2^*=\frac{4}{0.504\pi}\bigg(-\frac{0.002\bar{\iota}_3}{0.498}-0.008\bar{\iota}_4-\frac{2\pi i\bar{\iota}_4}{250^2}\bigg).
+ 3674  $$
+ 3675  
+ 3676  \medskip\noindent
+ 3677  
+ 3678  {\it Evaluation of $\Theta_1(\bold{a}_{15},\bold{a}_{22})$.}
+ 3679  
+ 3680  \medskip\noindent
+ 3681  
+ 3682  We have
+ 3683  $$\aligned
+ 3684  S_{j}(\bold{a}_{15},\bold{a}_{22})=&\sum_{r}\,\sum_d\frac{|\chi(d)||\mu\chi(r)|\la_{0j}(dr)}{dr\varphi(r)}\bigg(\sum_m\frac{\chi(m)\vk_{13}(m)}{m^{1-\be_j}}\bigg)\\
+ 3685  &\times\bigg(\sum_n\frac{\chi(n)\big(\iota_3
+ 3686  \bar{\vk}_3(drn)+\iota_4\bar{\vk}_2(drn)\big)\xi_{0j}(n;d,r)}{n}\bigg).
+ 3687  \endaligned
+ 3688  $$
+ 3689  The sum is split into two sums according to  $ dr\le P''_1$ and $P_1''< dr<P_2$. By lemma 8.2, 8.3 and 12.1, the first sum contributes $o(\al)$; the second sum  is equal to
+ 3690  $$
+ 3691  \aa b^*\int_0^{0.496}\big(\bar{\iota}_3\ff_j6(0.498-z)+\bar{\iota}_4\ff_j6(0.5-z)\big)\,dz+o(\al).
+ 3692  $$
+ 3693  By lemma 8.2, 8.3 and 12.3, the sum over $P_1''< dr<P_2$ is equal to
+ 3694  $$\aligned
+ 3695  &\frac{L'(1,\chi)^2\iota_3}{(0.504)(0.498)\log^2 P}\sum_{P^{0.496}<n<P^{0.498}}\frac{|\chi(n)|\la_{0j}(n)}{\varphi(n)}
+ 3696  \g_{j6}(P^{0.498}/n)\w^*_j(n)
+ 3697  \\&+\frac{L'(1,\chi)^2\iota_4}{(0.504)(0.5)\log^2 P}\sum_{P^{0.496}<n<P^{0.5}}\frac{|\chi(n)|\la_{0j}(n)}{\varphi(n)}
+ 3698  \g_{j7}(P^{0.5}/n)\w^*_j(n)+o(\al)\\
+ 3699  =&\frac{\aa\iota_3}{(0.504)(0.498)\log P}\int_{0.496}^{0.498}\gh_{j6}(0.498-z)\w^*_j(P^z)\,dz
+ 3700  \\&+\frac{\aa\iota_4}{(0.504)(0.5)\log P}\int_{0.496}^{0.5}\gh_{j7}(0.5-z)\w^*_j(P^z)\,dz+o(\al).
+ 3701  \endaligned
+ 3702  $$
+ 3703  where
+ 3704  $$
+ 3705  \w^*(n)=-1+(2\be_6-\be_j)\log(n/P''_1)+\epsilon_{1j}(n).
+ 3706  $$
+ 3707  For $0\le z\le 0.004$ and $\mu=6,7$, the function $\gh_{j\mu}(z)$ is well-approximated by
+ 3708  $$1-(2\be_\mu-\be_{j+1}-\be_{j+2})(\log P)z.$$
+ 3709  Thus, in a way similar to the evaluation of $\Theta_1(\bold{a}_{12},\bold{a}_{25})$, we deduce that
+ 3710  $$
+ 3711  \frac{1}{2\al}S_{1}(\bold{a}_{15},\bold{a}_{23})+\frac{2}{\al}S_{2}(\bold{a}_{15},\bold{a}_{22})+\frac{3}{2\al}S_{3}(\bold{a}_{15},\bold{a}_{22})=\aa(\overline{e_2^*}+\epsilon/2)\eqno(12.16).
+ 3712  $$
+ 3713  
+ 3714  Finally, by (12.9), (12.15) and (12.16) we conclude
+ 3715  $$
+ 3716  \Xi_{15}=(e_1^*+2e_2^*+\epsilon)\aa\p.\eqno(12.17)
+ 3717  $$
+
+===== Source lines 3778–3805 =====
+ 3778  where
+ 3779  $$
+ 3780  \k^*_1\ss=Z(\rho,\pc)^{-1}\frac{L(\rho+\be_1,\psi)L(\rho+\be_2,\psi)}{L'\ss}B\ss K(1-\rho-\be_3,\bp),\eqno(13.4)
+ 3781  $$
+ 3782  $$
+ 3783  \k^*_2\ss=Z(\rho,\pc)^{-1}\frac{L(\rho+\be_1,\psi)}{L'\ss}B\ss N(\rho+\be_3,\psi)K(1-\rho-\be_2,\bp),\eqno(13.5)
+ 3784  $$
+ 3785  $$
+ 3786  \k^*_3\ss=\frac{L(\rho+\be_1,\psi)}{L'\ss}B\ss G\ss N(\rho+\be_2,\psi) N(\rho+\be_3,\psi)F(1-\rho,\bp),\eqno(13.6)
+ 3787  $$
+ 3788  Inserting this into (12.4) we obtain
+ 3789  $$
+ 3790  \Xi_{14}=-i\big(\Phi_1+\Phi_2-\Phi_3\big)+O(\e)\eqno(13.7)
+ 3791  $$
+ 3792  where
+ 3793  $$
+ 3794  \Phi_1=\sum_{\psi\in\Psi_1}\,\sum_{\rho\in\z(\psi)}\k^*_1\ss\omega(\rho),\eqno(13.8)
+ 3795  $$
+ 3796  $$
+ 3797  \Phi_2=\sum_{\psi\in\Psi_1}(p_\psi t_0)^{\be_1}\,\sum_{\rho\in\z(\psi)}\k^*_2\ss\omega(\rho),\eqno(13.9)
+ 3798  $$
+ 3799  $$
+ 3800  \Phi_3=\sum_{\psi\in\Psi_1}(p_\psi t_0)^{\be_3}\,\sum_{\rho\in\z(\psi)}\k^*_3\ss\omega(\rho),\eqno(13.10)
+ 3801  $$
+ 3802  and
+ 3803  $$
+ 3804  \e=\sum_{\psi\in\Psi_1}\,\sum_{\rho\in\z(\psi)}E_1^*\ss |B\ss|\omega(\rho).
+ 3805  $$
+
+===== Source lines 4270–4297 =====
+ 4270  \medskip\noindent
+ 4271  
+ 4272  
+ 4273  {\bf Lemma 15.1.}\,\,{\it Suppose $n_1\in\n(\q)$ and $n_1<T$. Then
+ 4274  $$
+ 4275  \sum_{(n,\q)=1}\frac{b(n_1n)\chi(n)\varrho_j^*(n)}{n}=\chi(n_1)\tau_2(n_1)\mathfrak{e}_j+O\big(\al_1\tau_2(n_1)\big)
+ 4276  $$
+ 4277  where
+ 4278  $$
+ 4279  \mathfrak{e}_j=(e_{1j}+\iota_2 e_{2j})(\bar{\iota}_3e_{3j}+\bar{\iota}_4e_{2j})
+ 4280  $$
+ 4281  with
+ 4282  $$
+ 4283  e_{2j}=\bigg(1-\frac{2j}{5}+\frac{8j}{25\pi i}\bigg)\exp\{5\pi i/4\}-\frac{8j}{25\pi i},
+ 4284  $$
+ 4285  $$
+ 4286  e_{3j}=\bigg(1-\frac{2j}{3}+\frac{j}{1.1205\pi i}\bigg)\exp\{0.747\pi i\}-\frac{j}{1.1205\pi i}
+ 4287  $$
+ 4288  and}
+ 4289  $$
+ 4290  e_{1j}=e_{1j}'-e_{1j}'',
+ 4291  $$
+ 4292  $$ e_{1j}'=\bigg(1-\frac{2j}{3}+\frac{j}{1.134\pi i}\bigg)\exp\{0.756\pi i\}-\frac{j}{1.134\pi i},
+ 4293  $$
+ 4294  $$
+ 4295  e_{1j}''=\frac{j}{0.756}\int_{0}^{0.004}\big(
+ 4296  \exp\{(3/2)(0.504-z)\pi i\}-\exp\{(3/4)\pi i\}\big)\,dz.
+ 4297  $$
+
+===== Source lines 4380–4397 =====
+ 4380  and
+ 4381  $$
+ 4382  \r_{1j}=\frac{P_4^{\be_3-\be_j}}{(\be_{j+1}-\be_j)(\be_{j+2}-\be_j)L'(1,\chi)}+O(1/\l^3).
+ 4383  $$
+ 4384  Hence, by direct calculation,
+ 4385  $$
+ 4386  \r_1^*\r_{11}=1+O(1/\l),
+ 4387  $$
+ 4388  $$
+ 4389  \r_1^*\r_{12}=2+O(1/\l),
+ 4390  $$
+ 4391  $$
+ 4392  \r_1^*\r_{13}=1+O(1/\l).
+ 4393  $$
+ 4394  Combining these relations with  (15.23) , (15.17) and (15.6) we conclude
+ 4395  $$
+ 4396  \Phi_1=\big(\mathfrak{e}_1+2\mathfrak{e}_2+\mathfrak{e}_3\big)\aa\p+o(\p)\eqno(15.24)
+ 4397  $$
+
+===== Source lines 4673–4689 =====
+ 4673  $$
+ 4674  On the other hand, by Lemma 5.8 and direct calculation,
+ 4675  $$
+ 4676  \r_2^*=\be_1+O(1/\l^{10}),\quad \r_{2j}=-\frac{1}{\be_1L'(1,\chi)}+O(\l^6),\quad j=1,2,
+ 4677  $$
+ 4678  so that
+ 4679  $$
+ 4680  \r_2^*\r_{2j}=-\frac{1}{L'(1,\chi)}+O(\l^{-1}L'(1,\chi)^{-1}).
+ 4681  $$
+ 4682  This together with (16.16) and (16.12) yields
+ 4683  $$
+ 4684  \Phi_2(p)=-(\mathfrak{e}_1+\mathfrak{e}_2)\aa p+o(p).
+ 4685  $$
+ 4686  Since $(pt_0)^{\be_1}=-1+O(\al_1)$, it follows by (16.2) that
+ 4687  $$
+ 4688  \Phi_2=(\mathfrak{e}_1+\mathfrak{e}_2)\aa \p+o(\p).\eqno(16.17)
+ 4689  $$
+
+===== Source lines 4694–4766 =====
+ 4694   \section  *{\centerline{17. Evaluation of $\Phi_3$}}
+ 4695  \medskip\noindent
+ 4696  
+ 4697  Recall that $\Phi_3$ is given by (13.10). Write
+ 4698  $$
+ 4699  \k_3\sp=\frac{L(s+\be_1,\psi)}{L\sp}B\sp G\sp N(s+\be_2,\psi) N(s+\be_3,\psi)F(1-s,\bp)
+ 4700  $$
+ 4701  and
+ 4702  $$
+ 4703  I_4^\pm(\psi)=\tp\int_{\j(\pm\al)}\k_3\sp\omega(s)\,ds.
+ 4704  $$
+ 4705  Similar to the treatment of $\Phi_2$, we have
+ 4706  $$
+ 4707  \Phi_3=\sum_{\psi\in\Psi_1}(p_\psi t_0)^{\be_3}\big(I_4^+(\psi)-I_4^-(\psi)\big)+O(\ep).\eqno(17.1)
+ 4708  $$
+ 4709  
+ 4710  To treat the sum of  $I_4^+(\psi)$ we move the segment $\j(\al)$ to $\j(1)$, and then extend the sum over $\Psi_1$ to the sum over $\Psi$ with an acceptable error. Hence
+ 4711  $$
+ 4712  \sum_{\psi\in\Psi_1}(p_\psi t_0)^{\be_3}I_4^+(\psi)=\sum_{p\sim P}(p t_0)^{\be_3}\Phi_3^+(p)+o(\p)\eqno(17.2)
+ 4713  $$
+ 4714  where
+ 4715  $$
+ 4716  \Phi_3^+(p)=\sideset{}{^*}\sum_{\psi\bmod\,p}\tp\int_{\j(1)}\k_3\sp\,\omega(s)\,ds.
+ 4717  $$
+ 4718  For $\sigma>1$ we can write
+ 4719  $$
+ 4720  \frac{L(s+\be_1,\psi)}{L\sp}B\sp G\sp N(s+\be_2,\psi) N(s+\be_3,\psi)=\sum_m\frac{\nu^*(m)\psi(m)}{m^s}.
+ 4721  $$
+ 4722  Thus, replacing the segment $\j(1)$ by the line $\sigma=3/2$ and integrating term by term give
+ 4723  $$
+ 4724  \Phi_3^+(p)=\sum_m\,\sum_{n<D^4}\frac{\nu^*(m)\nu(n)}{n}\bigg(\frac{n}{m}\bigg)^{s_0}
+ 4725  \bigg(\sideset{}{^*}\sum_{\psi\bmod\,p}\psi(m)\bp(n)\bigg)\exp\bigg\{-\l^2_2\log^2\frac{n}{m}\bigg\}+O(\ep).
+ 4726  $$
+ 4727  By trivial estimation, the contribution from the terms with $m\ne n$ above is $o(p)$. Hence
+ 4728  $$
+ 4729  \Phi_3^+(p)=p\sum_{n<D^4}\frac{\nu^*(n)\nu(n)}{n}+o(p).\eqno(17.3)
+ 4730  $$
+ 4731  Note that for $n<D^4$
+ 4732  $$
+ 4733  \nu^*(n)=\sum_{n=n_1...n_6}\kappa_2(n_1)\chi(n_2n_3)\big(\vk_1(n_2)+\iota_2\vk_2(n_2)\big)
+ 4734  \big(\bar{\iota}_3\vk_3(n_3)+\bar{\iota_4}\vk_4(n_3)\big)\upsilon(n_4)\tilde{g}_2(n_5)\tilde{g}_3(n_6).
+ 4735  $$
+ 4736  A detailed analysis shows that (17.2) remains valid if, in the expression for $\nu^*(n)$, the factor $\kappa_2(n_1)$is replaced by $(1*\mu)(n_1)$, the factor 
+ 4737  $$\chi(n_2n_3)\big(\vk_1(n_2)+\iota_2\vk_2(n_2)\big)
+ 4738  \big(\bar{\iota}_3\vk_3(n_3)+\bar{\iota_4}\vk_4(n_3)\big)
+ 4739  $$
+ 4740  is replaced by $\mathfrak{e}_0\chi(n_2n_3)$ with
+ 4741  $$
+ 4742  \mathfrak{e}_0=\big(\vk_1(1)+\iota_2\vk_2(1)\big)
+ 4743  \big(\bar{\iota}_3\vk_3(1)+\bar{\iota_4}\vk_4(1)\big),\eqno(17.4)
+ 4744  $$
+ 4745  and the factors $\tilde{g}_2(n_5)$ and $\tilde{g}_3(n_6)$ are replaced by $1$ respectively. Since
+ 4746  $$
+ 4747  1*\mu*\chi*\chi*\upsilon*1*1=\nu,
+ 4748  $$
+ 4749  it follows that
+ 4750  $$
+ 4751  \Phi_3^+(p)=\mathfrak{e}_0p\sum_{n<D^4}\frac{\nu(n)^2}{n}+o(p).\eqno(17.5)
+ 4752  $$
+ 4753  The following lemma will be proved in Appendix B.
+ 4754  
+ 4755  \medskip\noindent
+ 4756  
+ 4757  {\bf Lemma 17.1.}\,\,{\it We have}
+ 4758  $$
+ 4759  \sum_{n<D^4}\frac{\nu(n)^2}{n}=\mathfrak{a}+o(1)
+ 4760  $$
+ 4761  
+ 4762  Since $(pt_0)^{\be_3}=-1+O(\al_1)$, it follows by (17.5), (17.2) and Lemma 17.1 that
+ 4763  $$
+ 4764  \sum_{\psi\in\Psi_1}(p_\psi t_0)^{\be_3}I_3^+(\psi)=-\mathfrak{e}_0\aa\p+o(\p).\eqno(17.6)
+ 4765  $$
+ 4766  
+
+===== Source lines 4844–4909 =====
+ 4844  Inserting this into (17.8) gives
+ 4845  $$
+ 4846  \Phi_3^-(p)=\mathfrak{e}_1\aa p+o(p).
+ 4847  $$
+ 4848  Since $(pt_0)^{\be_2}=1+O(\al_1)$, it follows by (17.7) that
+ 4849  $$
+ 4850  \sum_{\psi\in\Psi_1}(p_\psi t_0)^{\be_3}I_3^-(\psi)=\mathfrak{e}_1\aa\p+o(\p). \eqno(17.9)
+ 4851  $$
+ 4852  
+ 4853  Finally, from (17.1), (17.6) and (17.9) we conclude
+ 4854  $$
+ 4855  \Phi_3=-(\mathfrak{e}_0+\mathfrak{e}_1)\aa\p+o(\p). \eqno(17.10)
+ 4856  $$
+ 4857  
+ 4858  
+ 4859  
+ 4860  \medskip\noindent
+ 4861  \medskip\noindent
+ 4862  
+ 4863  
+ 4864   \section  *{\centerline{18. Proof of Proposition 2.5}}
+ 4865  \medskip\noindent
+ 4866  
+ 4867  By the discussion at the end of Section 2, it suffices to prove (2.32) and (2.33).
+ 4868  \medskip\noindent
+ 4869  
+ 4870  {\it Proof of (2.32).}
+ 4871  \medskip\noindent
+ 4872  
+ 4873  By (12.3), (12,17), (13.7), (15.24), (16.17) and (17.10),
+ 4874  $$
+ 4875  \Xi_{13}=\mathfrak{c}_3\aa\p\eqno(18.1)
+ 4876  $$
+ 4877  with
+ 4878  $$
+ 4879  \mathfrak{c}_3=-i(3\mathfrak{e}_1+3\mathfrak{e}_2+\mathfrak{e}_3+\mathfrak{e}_0)+e^*_1+2e^*_2
+ 4880  +\epsilon.
+ 4881  $$
+ 4882  In view of (15.), we can write
+ 4883  $$
+ 4884  \mathfrak{e}_j=\mathfrak{e}'_j-\mathfrak{e}''_j,\quad 1\le j\le 3
+ 4885  $$
+ 4886  with
+ 4887  $$
+ 4888  \mathfrak{e}_j'=(e_{1j}'+\iota_2 e_{2j})(\bar{\iota}_3e_{3j}+\bar{\iota}_4e_{2j})
+ 4889  $$
+ 4890  $$
+ 4891  \mathfrak{e}_j''=e_{1j}''(\bar{\iota}_3e_{3j}+\bar{\iota}_4e_{2j}).
+ 4892  $$
+ 4893  By calculation (there is a theoretical interpretation),
+ 4894  $$
+ 4895  i(3\mathfrak{e}''_1+3\mathfrak{e}''_2+\mathfrak{e}''_3)+e^*_1=\epsilon.
+ 4896  $$
+ 4897  Hence
+ 4898  $$
+ 4899  \mathfrak{c}_3=-i(3\mathfrak{e}'_1+3\mathfrak{e}'_2+\mathfrak{e}'_3+\mathfrak{e}_0)+2e^*_2
+ 4900  +2\epsilon.
+ 4901  $$
+ 4902  Direct calculation shows that
+ 4903  $$
+ 4904  \Re\{\mathfrak{c}_3\}<-6.9951 \eqno(18.2)
+ 4905  $$
+ 4906  
+ 4907  It follows from (8.24), (9.8) and (18.2) that
+ 4908  $$
+ 4909  \mathfrak{c}_1+\mathfrak{c}_2+2\Re\{\mathfrak{c}_3\}<0.001.
+
+===== Source lines 5285–5335 =====
+ 5285  
+ 5286  
+ 5287  We proceed  to prove theassertion with $\mu=2$. Since
+ 5288  $$
+ 5289  \sum_l\frac{\varrho_j(l)}{l^s}=\frac{\zeta(s)}{\zeta(s-\be_j)}
+ 5290  $$
+ 5291  for $\sigma>1$ and 
+ 5292  $$
+ 5293  \vk_2(m)=\tp\int_{(1)}\frac{(P_2/m)^s}{(\log P_2)(s-\be_7)^2}\,ds,
+ 5294  $$
+ 5295  it follows that
+ 5296  $$
+ 5297  \sum_{l}\frac{\vk_{2}(l_1l)\varrho_j(l)}{l}=\tp\int_{(1)}\frac{\zeta(1+s)}{\zeta(1+s-\be_j)}\frac{(P_2/l_1)^s}{(\log P_2)(s-\be_7)^2}\,ds.
+ 5298  $$
+ 5299  In a way similar to the proof of Lemma 8.1, we see that the right side is equal to the sum of the residues of the integrand at $s=0$ and $s=\be_7$ plus an acceptable error. By direct calculation, the residue at $s=0$ is
+ 5300  $$
+ 5301  -\frac{\be_j}{\be_7^2\log P_2}=-\frac{8j}{25\pi i}+O(\al_1);
+ 5302  $$
+ 5303  the residue at $s=\be_7$ is, by the Cauchy integral formula,
+ 5304  $$\aligned
+ 5305  \frac{\zeta(1+\be_7)}{\zeta(1+\be_7-\be_j)}&\frac{\log(P_2/l_1)}{\log P_2}\bigg(\frac{P_2}{l_1}\bigg)^{\be_7}+\frac{1}{\log P_2}\bigg(\frac{P_2}{l_1}\bigg)^{\be_7}\frac{d}{ds}\frac{\zeta(1+s)}{\zeta(1+s-\be_j)}|_{s=\be_7}\\
+ 5306  =&\bigg(1-\frac{2j}{5}+\frac{8j}{25\pi i}\bigg)\exp\{5\pi i/4\}+O(\al_1).
+ 5307  \endaligned
+ 5308  $$
+ 5309  These together  complete the proof in case $\mu=2$.
+ 5310  In case  $\mu=3$ the proof  can be obtained with $\be_6$ and $P_3$ in place of $\be_7$ and $P_2$ respectively. The same argument also gives
+ 5311  $$
+ 5312  \sum_{l}\frac{\vk_{1}(l_1l)\varrho_j(l)}{l}=\bigg(1-\frac{2j}{3}+\frac{j}{1.134\pi i}\bigg)\exp\{0.756\pi i\}
+ 5313  -\frac{j}{1.134\pi i}+O(\al_1).
+ 5314  $$
+ 5315  For $\mu=1$ the proof  is therefore reduced to showing that
+ 5316  $$
+ 5317  \sum_{l>P^{12}/l_1}\frac{\vk_{1}(l_1l)\varrho_j(l)}{l}=\frac{j}{0.756}\int_{0}^{0.004}\big(
+ 5318  \exp\{(3/2)(0.504-z)\pi i\}-\exp\{(3/4)\pi i\}\big)\,dz+O(\al_1).\eqno(B.3)
+ 5319  $$
+ 5320  
+ 5321  By (4.2) and (4.3), the left side of (B.3) is equal to
+ 5322  $$
+ 5323  \sum_{l}\frac{\varrho_j(l)}{l}\bigg(\frac{P_1}{l_1l}\bigg)^{\be_6}\frac{1}{0.504}\int_{0.5}^{0.504}\bigg\{g\bigg(\frac{P^z}{l_1l}\bigg)-g\bigg(\frac{P^{0.5}}{l_1l}\bigg)\bigg\}\,dz+O(\al_1).
+ 5324  $$
+ 5325  By a change of variable, for $0.5\le z\le 0.504$,
+ 5326  $$
+ 5327  \bigg(\frac{P_1}{y}\bigg)^{\be_6}\bigg\{g\bigg(\frac{P^z}{y}\bigg)-g\bigg(\frac{P^{0.5}}{y}\bigg)\bigg\}=\tp\int_{(1)}\big(P^{\be_6(0.504-z)}P^{zs}-P^{0.004\be_6}P^{0.5s}\big)\frac{\omega_1(s-\be_6)\,ds}{y^{s}(s-\be_6)}.
+ 5328  $$
+ 5329  Hence, in a way similar to the proof of, we find that the left side of (B.3) is
+ 5330  $$\aligned
+ 5331  \frac{1}{0.504}&\int_{0.5}^{0.504}\,\bigg\{\tp\int_{(1)}\big(P^{\be_6(0.504-z)}P^{zs}-P^{0.004\be_6}P^{0.5s}\big)
+ 5332  \frac{\zeta(1+s)}{\zeta(1+s-\be_j)}\frac{\omega_1(s-\be_6)\,ds}{l_1^{s}(s-\be_6)}\bigg\}dz+O\\
+ 5333  =&\frac{1}{0.504}\frac{\be_j}{\be_6}\int_{0.5}^{0.504}\big(P^{\be_6(0.504-z)}-P^{0.004\be_6}\big)\,dz+O(\al_1).\quad\Box
+ 5334  \endaligned
+ 5335  $$

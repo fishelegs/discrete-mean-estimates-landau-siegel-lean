@@ -1,0 +1,127 @@
+{
+  "audit": "Independent Section18 fixed-normalization Hermitian model audit",
+  "status": "frozen",
+  "source": {
+    "url": "https://arxiv.org/abs/2211.02515v1",
+    "pdf_url": "https://arxiv.org/pdf/2211.02515v1",
+    "tex_path": "/tmp/zhang-2211.02515-source.tex",
+    "tex_sha256": "5dc202bdc414fb743004ae32e8dec0dd284636f7197b1cab78a46336e0cde30b",
+    "pdf_sha256": "4e38ecfe1a6d3a93494e2f5cc5a3336c33b9d0981e8d5ccfcd8d8dec3e5ab713"
+  },
+  "scope": {
+    "normalization": "coefficient of H11 is exactly 1",
+    "free_variables": [
+      "iota2 complex",
+      "iota3 complex",
+      "iota4 complex"
+    ],
+    "common_kernel_interpretation": "Section17 kappa4 replaced by kappa2, as forced by B/H2 coefficient expansion",
+    "branches": {
+      "denominator": [
+        ".504 literal",
+        ".5 upstream-derived"
+      ],
+      "high": [
+        "2e2star printed",
+        "A+conj(B) exact residue model"
+      ],
+      "tail": [
+        "printed e1jdoubleprime",
+        "collapsed cancellation comparison",
+        "upstream AppendixB-derived -i*pi*j*bstar"
+      ]
+    },
+    "claims": [
+      "At original iotas, every branch Q>.05",
+      "For every complex iota2,iota3,iota4, every branch model Q>.024 with H11=1",
+      "Most upstream-supported branch Q in [.0553415395252549996131,.0553415395252549996132]",
+      "Most upstream-supported branch minimum in [.0249294244390953127716,.0249294244390953127717]"
+    ],
+    "not_claimed": [
+      "Actual character-mean asymptotic from this model",
+      "Validity of pending Section12 and global analytic bridges",
+      "Impossibility of repairs changing analytic formulas, other mollifier parameters, or construction",
+      "Falsehood of the Landau-Siegel theorem",
+      "Any argument based on vacuity of (A)"
+    ]
+  },
+  "certificate": {
+    "arithmetic": "directed fixed-point rational intervals of denominator 10^55",
+    "pi": "Machin identity with alternating-tail enclosures",
+    "exponential_degree": 80,
+    "linear_algebra": "Hermitian LDL in order (1,2,3,0), all pivots positive; last pivot bounds exact constrained minimum",
+    "dependencies": "Python standard library only",
+    "independent_check": "separately implemented mpmath 70-digit quadrature and eigensystem; all stored scalars and matrix entries contained in certificate intervals"
+  },
+  "replay": [
+    {
+      "command": "python /tmp/section18-quadratic-audit/certify_independent.py",
+      "purpose": "Produce exact endpoints and assert twelve-branch numerical bounds"
+    },
+    {
+      "command": "python /tmp/section18-quadratic-audit/check_replay.py",
+      "purpose": "Replay exact certificate and compare stored independent numerical scalars and matrices"
+    },
+    {
+      "command": "python /tmp/section18-quadratic-audit/explore_independent.py",
+      "purpose": "Optional fresh mpmath quadrature/spectral calculation; non-certifying"
+    }
+  ],
+  "files": [
+    {
+      "name": "CERTIFICATE_METHOD.md",
+      "sha256": "a0c47f644603f4552325ccc04cc0c1a8d6e7434a67e52c34bb268302f152232b",
+      "bytes": 4605
+    },
+    {
+      "name": "DERIVATION.md",
+      "sha256": "98fda9f4cf64188876cce06b838b1ea29aad4121f7464f4b0722b0fb4254004a",
+      "bytes": 7151
+    },
+    {
+      "name": "README.md",
+      "sha256": "850308b6d11c192aabe039ea6efb6f3975c8d066082ff1d7dab214095a6c8955",
+      "bytes": 5352
+    },
+    {
+      "name": "certified.json",
+      "sha256": "cbc3bcc982f46c81572e246b9fbd66645a02ef4c91ebc748ce706d8c45481441",
+      "bytes": 200207
+    },
+    {
+      "name": "certified.txt",
+      "sha256": "2d3b27529ef4641db5b5f0c5e4d272b3d023d5688bdec996722c5bd9bc14679c",
+      "bytes": 2135
+    },
+    {
+      "name": "certify_independent.py",
+      "sha256": "b2a0384c446d8597eb2b7f35bcd61d26bf36406a89ac852f2901e4332ccd5140",
+      "bytes": 9295
+    },
+    {
+      "name": "check_replay.py",
+      "sha256": "6106e8c8db8acf8339b84defc2b0d5e35c716404cf272c7b921d433446fa7022",
+      "bytes": 1337
+    },
+    {
+      "name": "exploratory.json",
+      "sha256": "82e728becb598fedac421fe8a32177488bf5c4054525252aec68ebd051f95c0e",
+      "bytes": 64658
+    },
+    {
+      "name": "exploratory.txt",
+      "sha256": "a379902434c6e61f02af32e4a8af9ed63e05d45dfb21e6030865ae6b29959fac",
+      "bytes": 2759
+    },
+    {
+      "name": "explore_independent.py",
+      "sha256": "5803b7176209d30e417f4a2c631db185713a84c255c1b069ef2a52b673a251ea",
+      "bytes": 4182
+    },
+    {
+      "name": "source-excerpts.txt",
+      "sha256": "433ce7d837fd94c8a3b03312e504737b1ae57c1e10c1ab770c672734d5f22eb0",
+      "bytes": 37060
+    }
+  ]
+}

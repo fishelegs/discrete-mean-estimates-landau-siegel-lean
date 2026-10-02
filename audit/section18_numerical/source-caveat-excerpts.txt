@@ -1,0 +1,123 @@
+Supplementary excerpts from the hash-verified official arXiv:2211.02515v1 TeX.
+
+===== Source lines 40–46 =====
+   40  \def\z{\mathcal{Z}}
+   41  
+   42  \def\sp{(s,\psi)}
+   43  \def\ss{(\rho,\psi)}
+   44  \def\bp{\bar{\psi}}
+   45  \def\pc{\chi\psi}
+   46  \def\tp{\frac{1}{2\pi i}}
+
+===== Source lines 2532–2545 =====
+ 2532  b_{22}=\frac{1}{0.5^2\pi}\int_0^{0.5}\bigg(\frac12\ff_{17}(z)\gh_{17}(z)+2\ff_{27}(z)\gh_{27}(z)+\frac32\ff_{37}(z)\gh_{37}(z)\bigg)\,dz,\eqno(8.20)
+ 2533  $$
+ 2534  $$\aligned
+ 2535  b_{21}=&\frac{1}{(0.504)(0.5)\pi}\\
+ 2536  &\times\int_{0}^{0.5}\bigg(\frac12\ff_{17}(z)\gh_{16}(z+0.004)+2\ff_{27}(z)\gh_{26}(z+0.004)
+ 2537  +\frac32\ff_{37}(z)\gh_{36}(z+0.004)\bigg)\,dz.
+ 2538  \endaligned\eqno(8.21)
+ 2539  $$
+ 2540  $$\aligned
+ 2541  b_{12}=&\frac{1}{(0.504)(0.5)\pi}\\
+ 2542  &\times\int_{0}^{0.5}\bigg(\frac12\ff_{16}(z+0.004)\gh_{17}(z)+2\ff_{26}(z+0.004)\gh_{27}(z)
+ 2543  +\frac32\ff_{36}(z+0.004)\gh_{37}(z)\bigg)\,dz.\endaligned\eqno(8.22)
+ 2544  $$
+ 2545  It follows by Proposition 7.1 that
+
+===== Source lines 3977–3985 =====
+ 3977   
+ 3978   
+ 3979   Recall that $\Phi_1$ is given by (13.8).  In view of (12.2), $B\sp$ can be written as
+ 3980  $$
+ 3981  B\sp=\sum_n\frac{b(n)\pc(n)}{n^s}\eqno(15.1)$$
+ 3982  with 
+ 3983  $$
+ 3984  b(n)\ll\tau_2(n), \qquad b(n)=0\quad\text{if}\quad n>PT^{-2}\eta_+.\eqno(15.2)
+ 3985  $$ 
+
+===== Source lines 4064–4087 =====
+ 4064   Let $\kappa_1(m)$ be given by
+ 4065  $$
+ 4066  \frac{\zeta(s+\be_1)\zeta(s+\be_2)}{\zeta(s)}=\sum_m\frac{\kappa_1(m)}{m^s},\quad \sigma>1.
+ 4067  $$
+ 4068  Regarding $b$ as an arithmetic function, for $\sigma>1$ we have
+ 4069  $$
+ 4070  \frac{L(s+\be_1,\psi)L(s+\be_2,\psi)B\sp}{L\sp}=\sum_m\frac{(\kappa_1*b)(m)\psi(m)}{m^s}.
+ 4071  $$
+ 4072   On the other hand, we can write
+ 4073   $$
+ 4074   K(1-s-\be_3,\bp)=\sum_n\frac{\tg_3(n)\bp(n)}{n^{1-s}}
+ 4075  $$
+ 4076  with
+ 4077   $$
+ 4078  \tg_3(y)=y^{\be_3}g^*(P_4/y).
+ 4079  $$
+ 4080   Hence, moving the segment $\j(\al)$ to $\j(1)$ with a negligible error, we obtain
+ 4081   $$
+ 4082   \sum_{\psi\in\Psi_1}I_{2}^+(\psi)=\Theta_2(0,\bold{k}^*_1,\bold{a}_1^*)+O(\ep)\eqno(15.5)
+ 4083   $$
+ 4084   with
+ 4085  $$
+ 4086   \kappa^*_1(m)=(\kappa_1*b)(m),\quad a^*_1(n)=\tg_3(n).
+ 4087   $$
+
+===== Source lines 4270–4297 =====
+ 4270  \medskip\noindent
+ 4271  
+ 4272  
+ 4273  {\bf Lemma 15.1.}\,\,{\it Suppose $n_1\in\n(\q)$ and $n_1<T$. Then
+ 4274  $$
+ 4275  \sum_{(n,\q)=1}\frac{b(n_1n)\chi(n)\varrho_j^*(n)}{n}=\chi(n_1)\tau_2(n_1)\mathfrak{e}_j+O\big(\al_1\tau_2(n_1)\big)
+ 4276  $$
+ 4277  where
+ 4278  $$
+ 4279  \mathfrak{e}_j=(e_{1j}+\iota_2 e_{2j})(\bar{\iota}_3e_{3j}+\bar{\iota}_4e_{2j})
+ 4280  $$
+ 4281  with
+ 4282  $$
+ 4283  e_{2j}=\bigg(1-\frac{2j}{5}+\frac{8j}{25\pi i}\bigg)\exp\{5\pi i/4\}-\frac{8j}{25\pi i},
+ 4284  $$
+ 4285  $$
+ 4286  e_{3j}=\bigg(1-\frac{2j}{3}+\frac{j}{1.1205\pi i}\bigg)\exp\{0.747\pi i\}-\frac{j}{1.1205\pi i}
+ 4287  $$
+ 4288  and}
+ 4289  $$
+ 4290  e_{1j}=e_{1j}'-e_{1j}'',
+ 4291  $$
+ 4292  $$ e_{1j}'=\bigg(1-\frac{2j}{3}+\frac{j}{1.134\pi i}\bigg)\exp\{0.756\pi i\}-\frac{j}{1.134\pi i},
+ 4293  $$
+ 4294  $$
+ 4295  e_{1j}''=\frac{j}{0.756}\int_{0}^{0.004}\big(
+ 4296  \exp\{(3/2)(0.504-z)\pi i\}-\exp\{(3/4)\pi i\}\big)\,dz.
+ 4297  $$
+
+===== Source lines 5309–5335 =====
+ 5309  These together  complete the proof in case $\mu=2$.
+ 5310  In case  $\mu=3$ the proof  can be obtained with $\be_6$ and $P_3$ in place of $\be_7$ and $P_2$ respectively. The same argument also gives
+ 5311  $$
+ 5312  \sum_{l}\frac{\vk_{1}(l_1l)\varrho_j(l)}{l}=\bigg(1-\frac{2j}{3}+\frac{j}{1.134\pi i}\bigg)\exp\{0.756\pi i\}
+ 5313  -\frac{j}{1.134\pi i}+O(\al_1).
+ 5314  $$
+ 5315  For $\mu=1$ the proof  is therefore reduced to showing that
+ 5316  $$
+ 5317  \sum_{l>P^{12}/l_1}\frac{\vk_{1}(l_1l)\varrho_j(l)}{l}=\frac{j}{0.756}\int_{0}^{0.004}\big(
+ 5318  \exp\{(3/2)(0.504-z)\pi i\}-\exp\{(3/4)\pi i\}\big)\,dz+O(\al_1).\eqno(B.3)
+ 5319  $$
+ 5320  
+ 5321  By (4.2) and (4.3), the left side of (B.3) is equal to
+ 5322  $$
+ 5323  \sum_{l}\frac{\varrho_j(l)}{l}\bigg(\frac{P_1}{l_1l}\bigg)^{\be_6}\frac{1}{0.504}\int_{0.5}^{0.504}\bigg\{g\bigg(\frac{P^z}{l_1l}\bigg)-g\bigg(\frac{P^{0.5}}{l_1l}\bigg)\bigg\}\,dz+O(\al_1).
+ 5324  $$
+ 5325  By a change of variable, for $0.5\le z\le 0.504$,
+ 5326  $$
+ 5327  \bigg(\frac{P_1}{y}\bigg)^{\be_6}\bigg\{g\bigg(\frac{P^z}{y}\bigg)-g\bigg(\frac{P^{0.5}}{y}\bigg)\bigg\}=\tp\int_{(1)}\big(P^{\be_6(0.504-z)}P^{zs}-P^{0.004\be_6}P^{0.5s}\big)\frac{\omega_1(s-\be_6)\,ds}{y^{s}(s-\be_6)}.
+ 5328  $$
+ 5329  Hence, in a way similar to the proof of, we find that the left side of (B.3) is
+ 5330  $$\aligned
+ 5331  \frac{1}{0.504}&\int_{0.5}^{0.504}\,\bigg\{\tp\int_{(1)}\big(P^{\be_6(0.504-z)}P^{zs}-P^{0.004\be_6}P^{0.5s}\big)
+ 5332  \frac{\zeta(1+s)}{\zeta(1+s-\be_j)}\frac{\omega_1(s-\be_6)\,ds}{l_1^{s}(s-\be_6)}\bigg\}dz+O\\
+ 5333  =&\frac{1}{0.504}\frac{\be_j}{\be_6}\int_{0.5}^{0.504}\big(P^{\be_6(0.504-z)}-P^{0.004\be_6}\big)\,dz+O(\al_1).\quad\Box
+ 5334  \endaligned
+ 5335  $$
+

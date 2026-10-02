@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "verification_date": "2026-10-02",
+  "python_version": "3.12.14",
+  "original_checksums": {
+    "sha256sums_entries": 12,
+    "manifest_file_entries": 11,
+    "all_match": true,
+    "original_files_preserved": 13
+  },
+  "source_checks": {
+    "official_tex_sha256_matches": true,
+    "official_pdf_sha256_matches": true,
+    "original_excerpt_lines_verified_against_tex": 876,
+    "section8_shift_locators": "TeX 2536–2543; (8.21), (8.22)",
+    "coefficient_basis_reconstruction": "pending; no confirmed source error asserted"
+  },
+  "portable_replay": {
+    "command": "python -S audit/section18_numerical/check_replay.py",
+    "python_standard_library_only": true,
+    "result": "PASS: exact certificate replay and independent 70-digit results agree in all 12 branches",
+    "relocation_test": {
+      "copied_scripts_and_stored_independent_json_only": true,
+      "working_directory": "/",
+      "outputs_written_next_to_scripts": true,
+      "outputs_identical_to_original": true
+    }
+  },
+  "certificate_checks": {
+    "branches": 12,
+    "all_paper_coefficient_Q_gt": "0.05",
+    "all_fixed_H11_global_minima_gt": "0.024",
+    "positive_LDL_pivots_per_branch": 4,
+    "independent_containment_per_branch": {
+      "matrix_real_or_imag_entries": 32,
+      "reported_scalar_real_or_imag_entries": 10
+    }
+  },
+  "scripts": {
+    "two_output_path_only_edits_verified": true,
+    "check_replay_byte_for_byte_original": true,
+    "fresh_mpmath_recomputation_run": false,
+    "fresh_mpmath_note": "Not needed: stored original independent results were checked for interval containment."
+  },
+  "numeric_artifact_sha256": {
+    "certified.json": "cbc3bcc982f46c81572e246b9fbd66645a02ef4c91ebc748ce706d8c45481441",
+    "certified.txt": "2d3b27529ef4641db5b5f0c5e4d272b3d023d5688bdec996722c5bd9bc14679c",
+    "exploratory.json": "82e728becb598fedac421fe8a32177488bf5c4054525252aec68ebd051f95c0e",
+    "exploratory.txt": "a379902434c6e61f02af32e4a8af9ed63e05d45dfb21e6030865ae6b29959fac"
+  },
+  "limits": [
+    "Numerical finite models only; not equality to actual character means.",
+    "Not Lean-certified arithmetic asymptotics.",
+    "Coefficient-basis and tail-endpoint reconstruction remain pending.",
+    "No exclusion of other analytic corrections, parameters, mollifiers, constructions, or proofs.",
+    "No disproof of the main theorem."
+  ],
+  "execution_scope": {
+    "live_repository_modified": false,
+    "lean_run": false,
+    "github_access_or_push": false
+  }
+}
