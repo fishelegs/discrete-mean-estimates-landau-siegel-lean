@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T16:46:22Z",
+  "base_commit": "3f84439830641f90903c6f34818e7c5190e89beb",
+  "completion_kind": "original_statement",
+  "production_modules": 8,
+  "audit_modules": 1,
+  "public_declarations": 53,
+  "named_regressions": 13,
+  "dependency_build_jobs": 3810,
+  "full_project_jobs": 5003,
+  "source_files": 1115,
+  "spec_imports": 749,
+  "full_project_imports": 1014,
+  "independent_review": "ACCEPT",
+  "strict_candidates": 370,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "logs": {
+    "lemma82-integration-build.log": {
+      "bytes": 16251,
+      "sha256": "b3ca58777d4e736efbb95551029090f162d7b7482283f925b95ecf52a8bac3db"
+    },
+    "lemma82-integration-axioms.log": {
+      "bytes": 5328,
+      "sha256": "778d7cbbee2f58d7ba23786795522086b35a80603e98bf994c65a18ee4b31758"
+    },
+    "lemma82-full-project.log": {
+      "bytes": 191206,
+      "sha256": "ccc983f39f45a044dfd8df7899bb97beafdf54c03320ca943f6120eb59fc2583"
+    },
+    "lemma82-strict-audit.log": {
+      "bytes": 38116,
+      "sha256": "b9eddcccc0e13e3e97254d239a9d43aaf2d3f1dc237576c77b58f0632c279dc8"
+    }
+  }
+}

@@ -91,7 +91,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 | Lemma 6.1 | 30 / 30–32 | C | L5.1 |
 | Proposition 7.1 | 33 / 34–42 | U | P2.1, L5.3, L5.4, L5.6 |
 | Lemma 8.1 | 42 / 42–44 | U | P2.2, L5.2, L5.9, L6.1, L3.3 |
-| Lemma 8.2 | 45 / 45 | U | ~L5.8 |
+| Lemma 8.2 | 45 / 45 | V | ~L5.8 |
 | Lemma 8.3 | 46 / 101–103 | V | — |
 | Lemma 8.4 | 46 / 46–47 | U | L8.3, L5.5, ~L5.8 |
 | Lemma 10.1 | 53 / 53–55 | U | L5.8 |
@@ -139,3 +139,5 @@ Original11.2 is now [centrally verified](CLOUD_LEMMA112_STATUS.md), bringing the
 ## Explicitly repaired15.2 verified
 
 [15.2 with proved O(alpha)](CLOUD_LEMMA152_REPAIRED_STATUS.md) is centrally verified. The count is30 original statements plus1 repaired statement, not31 verbatim originals. Genuine M1 coefficients, continuation and the exact main product are unchanged.8.1,8.2 and16.1 are frozen and in central acceptance; active proof work continues on7.1,8.4 and repaired15.3, with a shared quantitative reciprocal-L helper.
+
+Original8.2 is [centrally verified](CLOUD_LEMMA82_STATUS.md) by actual Abel tails and Taylor estimates, bringing the ledger to31 original statements plus1 explicit repaired statement.16.1 and8.1 are the next accepted packages in integration.

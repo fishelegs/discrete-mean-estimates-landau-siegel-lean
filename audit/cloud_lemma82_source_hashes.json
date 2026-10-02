@@ -1,0 +1,47 @@
+[
+  {
+    "path": "ZhangLS/Spec/Lemma82FiniteAbel.lean",
+    "original_sha256": "0451c7e53d47062b66d8821fd0e689025a0ce35e5a14fb36b3233682a822af2a",
+    "promoted_sha256": "0451c7e53d47062b66d8821fd0e689025a0ce35e5a14fb36b3233682a822af2a"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma82ScaledTail.lean",
+    "original_sha256": "0c999c15af439cf8f49ba32f5c339fc2da583683bae4b56bd655cb81c4c19b60",
+    "promoted_sha256": "0c999c15af439cf8f49ba32f5c339fc2da583683bae4b56bd655cb81c4c19b60"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma82WeightedAbel.lean",
+    "original_sha256": "8abda39552e81a737997c336d1758b8483d8fc9dd2ced1173128d4efeddb1d54",
+    "promoted_sha256": "8abda39552e81a737997c336d1758b8483d8fc9dd2ced1173128d4efeddb1d54"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma82Definitions.lean",
+    "original_sha256": "4ffd3814318f306430d3e5fd2a45b4690a5b319df8aa644ea2b35367aa880a8f",
+    "promoted_sha256": "4ffd3814318f306430d3e5fd2a45b4690a5b319df8aa644ea2b35367aa880a8f"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma82OriginalBridge.lean",
+    "original_sha256": "d30656edb7a199a3ac4b502df154aafdb34a3fb7a0c4ea988e43ee7408bb3d2d",
+    "promoted_sha256": "d30656edb7a199a3ac4b502df154aafdb34a3fb7a0c4ea988e43ee7408bb3d2d"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma82LocalMainTerm.lean",
+    "original_sha256": "5dca1d950a3d698c5019d79b18a6d06c1391c1fc4151283aaec833d9ad47bae2",
+    "promoted_sha256": "5dca1d950a3d698c5019d79b18a6d06c1391c1fc4151283aaec833d9ad47bae2"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma82UniformThreshold.lean",
+    "original_sha256": "460554fe04d27b2a2d978bfcd636d2e80ab53312581ca35fea0af4fec113d344",
+    "promoted_sha256": "460554fe04d27b2a2d978bfcd636d2e80ab53312581ca35fea0af4fec113d344"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma82.lean",
+    "original_sha256": "bb9a29a07615acdbb072cafcc699d8d728d29b4ad8804c745276a9b222247270",
+    "promoted_sha256": "bb9a29a07615acdbb072cafcc699d8d728d29b4ad8804c745276a9b222247270"
+  },
+  {
+    "path": "audit/CloudLemma82Regression.lean",
+    "promoted_sha256": "f19f176b04530e35d3135d9fb923a15c4567b8323c9b4301021a2fc76ed7799e",
+    "audit_composition": "self-contained regression plus53 print-axioms commands; no audit-module import"
+  }
+]

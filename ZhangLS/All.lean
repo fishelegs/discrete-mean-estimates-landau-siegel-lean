@@ -952,6 +952,14 @@ import ZhangLS.Spec.Lemma81ZetaLocalRealPart
 import ZhangLS.Spec.Lemma81ZetaPerronBounds
 import ZhangLS.Spec.Lemma81ZetaThinStrip
 import ZhangLS.Spec.Lemma81ZetaThreeFourOne
+import ZhangLS.Spec.Lemma82
+import ZhangLS.Spec.Lemma82Definitions
+import ZhangLS.Spec.Lemma82FiniteAbel
+import ZhangLS.Spec.Lemma82LocalMainTerm
+import ZhangLS.Spec.Lemma82OriginalBridge
+import ZhangLS.Spec.Lemma82ScaledTail
+import ZhangLS.Spec.Lemma82UniformThreshold
+import ZhangLS.Spec.Lemma82WeightedAbel
 import ZhangLS.Spec.Lemma83
 import ZhangLS.Spec.Lemma83ContinuationAgreement
 import ZhangLS.Spec.Lemma83ConverseEuler
