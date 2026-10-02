@@ -1,0 +1,26 @@
+{
+  "kernel_exit_code": 0,
+  "checked_at_utc": "2026-10-01T16:19:49.438780+00:00",
+  "sha256": "2e540e8d4bebafc189ff8464b1f3b5baa97ef37d1d5396732036b763e1df476d",
+  "interface_count": 16,
+  "expanded_examples": 6,
+  "proved_interfaces": [
+    "lemma59_extended_center_displacement_le_three",
+    "lemma59_extended_center_displacement_le",
+    "lemma59_extended_power_kernel_le",
+    "lemma59_extended_FG_bound",
+    "lemma59_extended_product_bound",
+    "lemma59_extended_L227_error_lt_half",
+    "lemma59_extended_F_two_sided",
+    "lemma59_extended_F_ne_zero",
+    "lemma59_extended_disk_subset_omega1",
+    "lemma59_extended_F_logDeriv_bound",
+    "lemma59_alpha_bounds",
+    "lemma59_original_region_in_extended",
+    "lemma59_zero_separated_LFunction_ne_zero",
+    "lemma59_uniform_extended_F_inputs",
+    "lemma59_paper_offset_one_bounds",
+    "lemma59_original_shift_in_extended"
+  ],
+  "scope": "Auxiliary original closed-region polynomial and actual shift inputs, with full L quotient target retained unproved."
+}

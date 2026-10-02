@@ -1,0 +1,32 @@
+audit/Step94Lemma54GaussianRegression.lean:33:9: warning: unused variable `x`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'ZhangLS.Spec.lemma54_gaussian_density_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_gaussian_density_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_actual_omega_eq_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_actual_gaussian_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_gaussian_quadratic_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_gaussian_quadratic_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_gaussian_quadratic_integral_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_gaussian_exterior_pointwise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_gaussian_exterior_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_gaussian_exterior_quadratic_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_window_x_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_window_log_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_disk_closed_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_disk_window_exponent_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_actual_gaussian_exterior_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_actual_gaussian_exterior_quadratic_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma54_actual_gaussian_window_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_disk_window_weight_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_disk_window_weighted_error_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_disk_window_weighted_error_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_disk_window_gaussian_mellin_normalization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma54_disk_window_delta_error_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma54_disk_window_actual_mellin_normalization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

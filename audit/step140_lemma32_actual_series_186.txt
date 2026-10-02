@@ -1,0 +1,57 @@
+import ZhangMathStep185Lemma32LocalSeriesDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_local_series_of_neg_one {D p : ℕ} (χ : RealPrimitiveCharacter D)
+    (hp : p.Prime) (h : χ.evalNat p = -1) (z : ℂ) (hz : ‖z‖ < 1) :
+    HasSum (fun e : ℕ => (lemma32ActualCoefficient χ (p^e) : ℂ)*z^e)
+      ((1+6*z^2+z^4)/(1-z^2)^3) := by
+  have he := lemma32_actual_even_local_series_of_neg_one χ hp h z hz
+  have ho : HasSum (fun e : ℕ => (lemma32ActualCoefficient χ (p^(2*e+1)) : ℂ)*z^(2*e+1)) 0 := by
+    convert (hasSum_zero : HasSum (fun _ : ℕ => (0 : ℂ)) 0) using 1
+    funext e
+    rw [lemma32_actual_coefficient_prime_power_of_neg_one χ hp h (2*e+1)]
+    have hh : Even (2*e+1+1) := ⟨e+1,by omega⟩
+    simp [hh]
+  simpa only [add_zero] using (HasSum.even_add_odd
+    (f := fun e : ℕ => (lemma32ActualCoefficient χ (p^e) : ℂ)*z^e) he ho)
+
+noncomputable def lemma32LocalCorrection {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (p : ℕ) (z : ℂ) : ℂ :=
+  (1-z)^8*(1-χ.evalNat p*z)^8*∑' e : ℕ, (lemma32ActualCoefficient χ (p^e) : ℂ)*z^e
+
+lemma lemma32_local_correction_of_one {D p : ℕ} (χ : RealPrimitiveCharacter D)
+    (hp : p.Prime) (h : χ.evalNat p = 1) (z : ℂ) (hz : ‖z‖ < 1) :
+    lemma32LocalCorrection χ p z = (1-z)^11*(1+11*z+11*z^2+z^3) := by
+  unfold lemma32LocalCorrection
+  rw [h,(lemma32_actual_local_series_of_one χ hp h z hz).tsum_eq]
+  have hn : 1-z ≠ 0 := sub_ne_zero.mpr (by intro h; rw [← h] at hz; norm_num at hz)
+  simp only [one_mul]
+  field_simp
+  all_goals ring
+
+lemma lemma32_local_correction_of_zero {D p : ℕ} (χ : RealPrimitiveCharacter D)
+    (hp : p.Prime) (h : χ.evalNat p = 0) (z : ℂ) (hz : ‖z‖ < 1) :
+    lemma32LocalCorrection χ p z = (1-z)^5*(1+z) := by
+  unfold lemma32LocalCorrection
+  rw [h,(lemma32_actual_local_series_of_zero χ hp h z hz).tsum_eq]
+  have hn : 1-z ≠ 0 := sub_ne_zero.mpr (by intro h; rw [← h] at hz; norm_num at hz)
+  simp only [zero_mul,sub_zero,one_pow,mul_one]
+  field_simp
+  all_goals ring
+
+lemma lemma32_local_correction_of_neg_one {D p : ℕ} (χ : RealPrimitiveCharacter D)
+    (hp : p.Prime) (h : χ.evalNat p = -1) (z : ℂ) (hz : ‖z‖ < 1) :
+    lemma32LocalCorrection χ p z = (1-z^2)^5*(1+6*z^2+z^4) := by
+  unfold lemma32LocalCorrection
+  rw [h,(lemma32_actual_local_series_of_neg_one χ hp h z hz).tsum_eq]
+  have hzz : ‖z^2‖ < 1 := by rw [norm_pow]; nlinarith [norm_nonneg z]
+  have hn : 1-z^2 ≠ 0 := sub_ne_zero.mpr (by intro h; rw [← h] at hzz; norm_num at hzz)
+  simp only [neg_one_mul,sub_neg_eq_add]
+  field_simp
+  all_goals ring
+
+end ZhangLS.Spec

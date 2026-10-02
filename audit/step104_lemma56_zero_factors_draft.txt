@@ -1,0 +1,1176 @@
+import ZhangLS.Spec.Lemma56JensenBounds
+import ZhangLS.Spec.Lemma55CombinedPowerUpperBound
+import Mathlib.Analysis.Complex.AbsMax
+import ZhangLS.Spec.Lemma23BorelCaratheodory
+import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
+import Mathlib.Analysis.SpecificLimits.Normed
+import Mathlib.Analysis.Calculus.IteratedDeriv.WithinZpow
+
+namespace ZhangLS.Spec
+open Complex Metric Set Filter MeromorphicOn
+open scoped Topology Real
+set_option maxHeartbeats 1000000
+
+noncomputable def lemma56LocalZeroFinset {r : ℕ} [NeZero r]
+    (θ : DirichletCharacter ℂ r) (t : ℝ) : Finset ℂ :=
+  ((divisor (DirichletCharacter.LFunction θ)
+    (closedBall (lemma55JensenCenter t) (5 / 4 : ℝ))).finiteSupport
+      (isCompact_closedBall _ _)).toFinset
+
+theorem lemma56_actual_analytic_order_finite
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (ρ : ℂ) :
+    analyticOrderAt (DirichletCharacter.LFunction θ) ρ ≠ ⊤ := by
+  have ha := lemma56_actual_L_analyticOnNhd θ hθ
+  have htwo : analyticOrderAt (DirichletCharacter.LFunction θ) (lemma55JensenCenter 0) = 0 :=
+    (ha _ (mem_univ _)).analyticOrderAt_eq_zero.mpr
+      (lemma56_actual_jensen_center_ne_zero θ 0)
+  exact ha.analyticOrderAt_ne_top_of_isPreconnected isPreconnected_univ
+    (mem_univ _) (mem_univ _) (by rw [htwo]; simp)
+
+theorem lemma56_actual_local_divisor_eq_order
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1)
+    {t : ℝ} {ρ : ℂ} (hρ : ρ ∈ closedBall (lemma55JensenCenter t) (5 / 4 : ℝ)) :
+    divisor (DirichletCharacter.LFunction θ) (closedBall (lemma55JensenCenter t) (5 / 4 : ℝ)) ρ =
+      (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℤ) := by
+  have ha := (lemma56_actual_L_analyticOnNhd θ hθ).mono
+    (subset_univ (closedBall (lemma55JensenCenter t) (5 / 4 : ℝ)))
+  rw [ha.divisor_apply hρ, ← Nat.cast_analyticOrderNatAt
+    (lemma56_actual_analytic_order_finite θ hθ ρ)]
+  simp
+
+theorem lemma56_mem_actual_local_zero_finset
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) (ρ : ℂ) :
+    ρ ∈ lemma56LocalZeroFinset θ t ↔
+      ρ ∈ closedBall (lemma55JensenCenter t) (5 / 4 : ℝ) ∧ DirichletCharacter.LFunction θ ρ = 0 := by
+  classical
+  let d := divisor (DirichletCharacter.LFunction θ) (closedBall (lemma55JensenCenter t) (5 / 4 : ℝ))
+  have hmem : ρ ∈ lemma56LocalZeroFinset θ t ↔ ρ ∈ Function.support d := by
+    simp [lemma56LocalZeroFinset, d]
+  rw [hmem]
+  constructor
+  · intro hsupp
+    have hρ : ρ ∈ closedBall (lemma55JensenCenter t) (5 / 4 : ℝ) :=
+      d.supportWithinDomain hsupp
+    have hNZ : analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ ≠ 0 := by
+      intro hzero
+      have hd := lemma56_actual_local_divisor_eq_order θ hθ hρ
+      rw [hzero, Nat.cast_zero] at hd
+      exact hsupp hd
+    exact ⟨hρ, apply_eq_zero_of_analyticOrderNatAt_ne_zero hNZ⟩
+  · rintro ⟨hρ, hzero⟩
+    change d ρ ≠ 0
+    dsimp [d]
+    rw [lemma56_actual_local_divisor_eq_order θ hθ hρ]
+    have hNZ : analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ ≠ 0 := by
+      intro hnat
+      have ho : analyticOrderAt (DirichletCharacter.LFunction θ) ρ = 0 := by
+        rw [← Nat.cast_analyticOrderNatAt (lemma56_actual_analytic_order_finite θ hθ ρ), hnat]
+        rfl
+      have haρ := lemma56_actual_L_analyticOnNhd θ hθ ρ (mem_univ ρ)
+      exact (haρ.analyticOrderAt_eq_zero.mp ho) hzero
+    exact_mod_cast hNZ
+
+theorem lemma56_actual_local_zero_order_pos
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) {t : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ lemma56LocalZeroFinset θ t) :
+    1 ≤ analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ := by
+  have hzero := (lemma56_mem_actual_local_zero_finset θ hθ t ρ).mp hρ
+  apply Nat.one_le_iff_ne_zero.mpr
+  intro hnat
+  have ho : analyticOrderAt (DirichletCharacter.LFunction θ) ρ = 0 := by
+    rw [← Nat.cast_analyticOrderNatAt (lemma56_actual_analytic_order_finite θ hθ ρ), hnat]
+    rfl
+  have haρ := lemma56_actual_L_analyticOnNhd θ hθ ρ (mem_univ ρ)
+  exact (haρ.analyticOrderAt_eq_zero.mp ho) hzero.2
+
+theorem lemma56_actual_multiplicity_count_eq_sum_orders
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) :
+    lemma56JensenMultiplicityCount θ t =
+      ∑ ρ ∈ lemma56LocalZeroFinset θ t, (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℤ) := by
+  classical
+  let d := divisor (DirichletCharacter.LFunction θ) (closedBall (lemma55JensenCenter t) (5 / 4 : ℝ))
+  have heq : lemma56JensenMultiplicityCount θ t = ∑ ρ ∈ lemma56LocalZeroFinset θ t, d ρ := by
+    exact finsum_eq_sum d (d.finiteSupport (isCompact_closedBall _ _))
+  rw [heq]
+  apply Finset.sum_congr rfl
+  intro ρ hρ
+  exact lemma56_actual_local_divisor_eq_order θ hθ
+    ((lemma56_mem_actual_local_zero_finset θ hθ t ρ).mp hρ).1
+
+theorem lemma56_actual_local_zero_card_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) :
+    ((lemma56LocalZeroFinset θ t).card : ℝ) ≤
+      6 * Real.log (8 * (r : ℝ) * (7 / 2 + |t|)) := by
+  have hsum : ∑ ρ ∈ lemma56LocalZeroFinset θ t, (1 : ℤ) ≤
+      ∑ ρ ∈ lemma56LocalZeroFinset θ t, (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℤ) := by
+    apply Finset.sum_le_sum
+    intro ρ hρ
+    exact_mod_cast lemma56_actual_local_zero_order_pos θ hθ hρ
+  rw [← lemma56_actual_multiplicity_count_eq_sum_orders θ hθ t] at hsum
+  have hcard : ((lemma56LocalZeroFinset θ t).card : ℝ) ≤
+      (lemma56JensenMultiplicityCount θ t : ℝ) := by
+    have hi : ((lemma56LocalZeroFinset θ t).card : ℤ) ≤ lemma56JensenMultiplicityCount θ t := by
+      simpa using hsum
+    exact_mod_cast hi
+  exact hcard.trans (lemma56_actual_jensen_multiplicity_bound θ hθ t)
+
+noncomputable def lemma56LocalZeroFactor {r : ℕ} [NeZero r]
+    (θ : DirichletCharacter ℂ r) (t : ℝ) : ℂ → ℂ :=
+  ∏ᶠ ρ : ℂ, (· - ρ) ^ divisor (DirichletCharacter.LFunction θ)
+    (closedBall (lemma55JensenCenter t) (5 / 4 : ℝ)) ρ
+
+noncomputable def lemma56ZeroRemovedL {r : ℕ} [NeZero r]
+    (θ : DirichletCharacter ℂ r) (t : ℝ) : ℂ → ℂ :=
+  toMeromorphicNFOn (DirichletCharacter.LFunction θ / lemma56LocalZeroFactor θ t) univ
+
+theorem lemma56_actual_meromorphic_order_eq_nat
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (z : ℂ) :
+    meromorphicOrderAt (DirichletCharacter.LFunction θ) z =
+      ((analyticOrderNatAt (DirichletCharacter.LFunction θ) z : ℤ) : WithTop ℤ) := by
+  rw [(lemma56_actual_L_analyticOnNhd θ hθ z (mem_univ z)).meromorphicOrderAt_eq,
+    ← Nat.cast_analyticOrderNatAt (lemma56_actual_analytic_order_finite θ hθ z)]
+  simp
+
+theorem lemma56_actual_zero_factor_analytic
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) :
+    AnalyticOnNhd ℂ (lemma56LocalZeroFactor θ t) univ := by
+  intro z _
+  exact Function.FactorizedRational.analyticAt
+    (((lemma56_actual_L_analyticOnNhd θ hθ).mono (subset_univ _)).divisor_nonneg z)
+
+theorem lemma56_actual_zero_factor_order
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (t : ℝ) (z : ℂ) :
+    meromorphicOrderAt (lemma56LocalZeroFactor θ t) z =
+      (divisor (DirichletCharacter.LFunction θ)
+        (closedBall (lemma55JensenCenter t) (5 / 4 : ℝ)) z : WithTop ℤ) :=
+  Function.FactorizedRational.meromorphicOrderAt_eq _
+    ((divisor (DirichletCharacter.LFunction θ)
+      (closedBall (lemma55JensenCenter t) (5 / 4 : ℝ))).finiteSupport
+        (isCompact_closedBall _ _))
+
+theorem lemma56_actual_zero_removed_order
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) (z : ℂ) :
+    meromorphicOrderAt (lemma56ZeroRemovedL θ t) z =
+      (((analyticOrderNatAt (DirichletCharacter.LFunction θ) z : ℤ) -
+        divisor (DirichletCharacter.LFunction θ)
+          (closedBall (lemma55JensenCenter t) (5 / 4 : ℝ)) z : ℤ) : WithTop ℤ) := by
+  have hmer : MeromorphicOn (DirichletCharacter.LFunction θ / lemma56LocalZeroFactor θ t) univ :=
+    (lemma56_actual_L_analyticOnNhd θ hθ).meromorphicOn.div
+      (lemma56_actual_zero_factor_analytic θ hθ t).meromorphicOn
+  rw [lemma56ZeroRemovedL, meromorphicOrderAt_toMeromorphicNFOn hmer (mem_univ z),
+    meromorphicOrderAt_div
+      ((lemma56_actual_L_analyticOnNhd θ hθ z (mem_univ z)).meromorphicAt)
+      ((lemma56_actual_zero_factor_analytic θ hθ t z (mem_univ z)).meromorphicAt),
+    lemma56_actual_meromorphic_order_eq_nat θ hθ z,
+    lemma56_actual_zero_factor_order θ t z,
+    WithTop.LinearOrderedAddCommGroup.coe_sub]
+
+theorem lemma56_actual_zero_removed_analytic
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) :
+    AnalyticOnNhd ℂ (lemma56ZeroRemovedL θ t) univ := by
+  intro z _
+  apply (meromorphicNFOn_toMeromorphicNFOn _ univ (mem_univ z)).meromorphicOrderAt_nonneg_iff_analyticAt.mp
+  change 0 ≤ meromorphicOrderAt (lemma56ZeroRemovedL θ t) z
+  rw [lemma56_actual_zero_removed_order θ hθ t z]
+  by_cases hz : z ∈ closedBall (lemma55JensenCenter t) (5 / 4 : ℝ)
+  · rw [lemma56_actual_local_divisor_eq_order θ hθ hz]
+    simp
+  · simp [hz]
+
+theorem lemma56_actual_zero_removed_ne_zero
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) {t : ℝ} {z : ℂ}
+    (hz : z ∈ closedBall (lemma55JensenCenter t) (5 / 4 : ℝ)) :
+    lemma56ZeroRemovedL θ t z ≠ 0 := by
+  apply (meromorphicNFOn_toMeromorphicNFOn _ univ (mem_univ z)).meromorphicOrderAt_eq_zero_iff.mp
+  change meromorphicOrderAt (lemma56ZeroRemovedL θ t) z = 0
+  rw [lemma56_actual_zero_removed_order θ hθ t z,
+    lemma56_actual_local_divisor_eq_order θ hθ hz]
+  simp
+
+theorem lemma56_actual_zero_removed_eq_quotient
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) {t : ℝ} {z : ℂ}
+    (hP : lemma56LocalZeroFactor θ t z ≠ 0) :
+    lemma56ZeroRemovedL θ t z = DirichletCharacter.LFunction θ z / lemma56LocalZeroFactor θ t z := by
+  have hmer : MeromorphicOn (DirichletCharacter.LFunction θ / lemma56LocalZeroFactor θ t) univ :=
+    (lemma56_actual_L_analyticOnNhd θ hθ).meromorphicOn.div
+      (lemma56_actual_zero_factor_analytic θ hθ t).meromorphicOn
+  have ha := (lemma56_actual_L_analyticOnNhd θ hθ z (mem_univ z)).div
+    (lemma56_actual_zero_factor_analytic θ hθ t z (mem_univ z)) hP
+  rw [lemma56ZeroRemovedL, toMeromorphicNFOn_eq_toMeromorphicNFAt hmer (mem_univ z),
+    toMeromorphicNFAt_eq_self.mpr ha.meromorphicNFAt]
+  rfl
+
+theorem lemma56_actual_zero_factorization
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) (z : ℂ) :
+    DirichletCharacter.LFunction θ z = lemma56LocalZeroFactor θ t z * lemma56ZeroRemovedL θ t z := by
+  by_cases hP : lemma56LocalZeroFactor θ t z = 0
+  · let d := divisor (DirichletCharacter.LFunction θ)
+      (closedBall (lemma55JensenCenter t) (5 / 4 : ℝ))
+    have hd : d z ≠ 0 := by
+      intro hd0
+      exact Function.FactorizedRational.ne_zero hd0 hP
+    have hz := d.supportWithinDomain hd
+    have hn : analyticOrderNatAt (DirichletCharacter.LFunction θ) z ≠ 0 := by
+      intro hn0
+      have heq := lemma56_actual_local_divisor_eq_order θ hθ hz
+      rw [hn0, Nat.cast_zero] at heq
+      exact hd heq
+    rw [apply_eq_zero_of_analyticOrderNatAt_ne_zero hn, hP, zero_mul]
+  · rw [lemma56_actual_zero_removed_eq_quotient θ hθ hP]
+    exact (mul_div_cancel₀ (DirichletCharacter.LFunction θ z) hP).symm
+
+noncomputable def lemma56LocalMultiplicity {r : ℕ} [NeZero r]
+    (θ : DirichletCharacter ℂ r) (t : ℝ) : ℕ :=
+  ∑ ρ ∈ lemma56LocalZeroFinset θ t, analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ
+
+theorem lemma56_actual_zero_factor_eq_product
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) (z : ℂ) :
+    lemma56LocalZeroFactor θ t z =
+      ∏ ρ ∈ lemma56LocalZeroFinset θ t, (z - ρ) ^ analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ := by
+  classical
+  unfold lemma56LocalZeroFactor
+  rw [finprod_eq_prod_of_mulSupport_subset (s := lemma56LocalZeroFinset θ t)]
+  · rw [Finset.prod_apply]
+    apply Finset.prod_congr rfl
+    intro ρ hρ
+    rw [lemma56_actual_local_divisor_eq_order θ hθ
+      ((lemma56_mem_actual_local_zero_finset θ hθ t ρ).mp hρ).1]
+    simp
+  · rw [Function.FactorizedRational.mulSupport]
+    simp [lemma56LocalZeroFinset]
+
+theorem lemma56_actual_local_multiplicity_eq_count
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) :
+    (lemma56LocalMultiplicity θ t : ℤ) = lemma56JensenMultiplicityCount θ t := by
+  rw [lemma56_actual_multiplicity_count_eq_sum_orders θ hθ t]
+  simp [lemma56LocalMultiplicity]
+
+theorem lemma56_actual_zero_factor_center_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) :
+    ‖lemma56LocalZeroFactor θ t (lemma55JensenCenter t)‖ ≤
+      (5 / 4 : ℝ) ^ lemma56LocalMultiplicity θ t := by
+  classical
+  rw [lemma56_actual_zero_factor_eq_product θ hθ t, norm_prod]
+  calc
+    _ ≤ ∏ ρ ∈ lemma56LocalZeroFinset θ t,
+        (5 / 4 : ℝ) ^ analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ := by
+      apply Finset.prod_le_prod
+      · intro ρ _
+        positivity
+      · intro ρ hρ
+        rw [norm_pow]
+        apply pow_le_pow_left₀ (norm_nonneg _)
+        have hb := ((lemma56_mem_actual_local_zero_finset θ hθ t ρ).mp hρ).1
+        rw [mem_closedBall_iff_norm, norm_sub_rev] at hb
+        exact hb
+    _ = (5 / 4 : ℝ) ^ lemma56LocalMultiplicity θ t :=
+      Finset.prod_pow_eq_pow_sum _ _ _
+
+theorem lemma56_actual_zero_factor_outer_lower_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) {t : ℝ} {z : ℂ}
+    (hz : z ∈ sphere (lemma55JensenCenter t) (3 / 2 : ℝ)) :
+    (1 / 4 : ℝ) ^ lemma56LocalMultiplicity θ t ≤ ‖lemma56LocalZeroFactor θ t z‖ := by
+  classical
+  rw [lemma56_actual_zero_factor_eq_product θ hθ t, norm_prod]
+  rw [lemma56LocalMultiplicity, ← Finset.prod_pow_eq_pow_sum]
+  apply Finset.prod_le_prod
+  · intro ρ _
+    positivity
+  · intro ρ hρ
+    rw [norm_pow]
+    apply pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 1 / 4)
+    have hr := ((lemma56_mem_actual_local_zero_finset θ hθ t ρ).mp hρ).1
+    have hdρ : ‖ρ - lemma55JensenCenter t‖ ≤ (5 : ℝ) / 4 := mem_closedBall_iff_norm.mp hr
+    have hdz : ‖z - lemma55JensenCenter t‖ = (3 : ℝ) / 2 := mem_sphere_iff_norm.mp hz
+    have htri := norm_add_le (z - ρ) (ρ - lemma55JensenCenter t)
+    rw [sub_add_sub_cancel, hdz] at htri
+    linarith only [htri, hdρ]
+
+theorem lemma56_actual_zero_factor_outer_ne_zero
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) {t : ℝ} {z : ℂ}
+    (hz : z ∈ sphere (lemma55JensenCenter t) (3 / 2 : ℝ)) :
+    lemma56LocalZeroFactor θ t z ≠ 0 := by
+  have hb := lemma56_actual_zero_factor_outer_lower_bound θ hθ hz
+  have hp : 0 < (1 / 4 : ℝ) ^ lemma56LocalMultiplicity θ t := by positivity
+  exact norm_pos_iff.mp (hp.trans_le hb)
+
+theorem lemma56_actual_local_multiplicity_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) :
+    (lemma56LocalMultiplicity θ t : ℝ) ≤
+      6 * Real.log (8 * (r : ℝ) * (7 / 2 + |t|)) := by
+  have hb := lemma56_actual_jensen_multiplicity_bound θ hθ t
+  rw [← lemma56_actual_local_multiplicity_eq_count θ hθ t] at hb
+  exact_mod_cast hb
+
+theorem lemma56_actual_zero_removed_outer_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1)
+    {t : ℝ} {z : ℂ}
+    (hz : z ∈ sphere (lemma55JensenCenter t) (3 / 2 : ℝ)) :
+    ‖lemma56ZeroRemovedL θ t z‖ ≤
+      2 * (r : ℝ) * (7 / 2 + |t|) * (4 : ℝ) ^ lemma56LocalMultiplicity θ t := by
+  have hP := lemma56_actual_zero_factor_outer_ne_zero θ hθ hz
+  have hp := lemma56_actual_zero_factor_outer_lower_bound θ hθ hz
+  have hinv : ‖lemma56LocalZeroFactor θ t z‖⁻¹ ≤
+      (4 : ℝ) ^ lemma56LocalMultiplicity θ t := by
+    have h := one_div_le_one_div_of_le
+      (by positivity : 0 < (1 / 4 : ℝ) ^ lemma56LocalMultiplicity θ t) hp
+    simpa [one_div_pow, one_div] using h
+  rw [lemma56_actual_zero_removed_eq_quotient θ hθ hP, norm_div, div_eq_mul_inv]
+  exact mul_le_mul
+    (lemma56_actual_jensen_disk_bound θ hθ (sphere_subset_closedBall hz)) hinv
+    (by positivity) (by positivity)
+
+theorem lemma56_actual_zero_removed_closed_disk_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1)
+    {t : ℝ} {z : ℂ}
+    (hz : z ∈ closedBall (lemma55JensenCenter t) (3 / 2 : ℝ)) :
+    ‖lemma56ZeroRemovedL θ t z‖ ≤
+      2 * (r : ℝ) * (7 / 2 + |t|) * (4 : ℝ) ^ lemma56LocalMultiplicity θ t := by
+  have hd : Differentiable ℂ (lemma56ZeroRemovedL θ t) := fun z =>
+    (lemma56_actual_zero_removed_analytic θ hθ t z (mem_univ z)).differentiableAt
+  apply Complex.norm_le_of_forall_mem_frontier_norm_le (isBounded_ball)
+    hd.diffContOnCl
+  · intro w hw
+    rw [frontier_ball (lemma55JensenCenter t) (by norm_num : (3 / 2 : ℝ) ≠ 0)] at hw
+    exact lemma56_actual_zero_removed_outer_bound θ hθ hw
+  · rw [closure_ball (lemma55JensenCenter t) (by norm_num : (3 / 2 : ℝ) ≠ 0)]
+    exact hz
+
+theorem lemma56_actual_zero_removed_center_lower_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) :
+    (1 : ℝ) / (4 * (5 / 4 : ℝ) ^ lemma56LocalMultiplicity θ t) ≤
+      ‖lemma56ZeroRemovedL θ t (lemma55JensenCenter t)‖ := by
+  have hL := lemma56_actual_jensen_center_lower_bound θ t
+  rw [lemma56_actual_zero_factorization θ hθ t (lemma55JensenCenter t), norm_mul] at hL
+  have hP := lemma56_actual_zero_factor_center_bound θ hθ t
+  have hprod := mul_le_mul_of_nonneg_right hP
+    (norm_nonneg (lemma56ZeroRemovedL θ t (lemma55JensenCenter t)))
+  apply (div_le_iff₀ (by positivity)).mpr
+  nlinarith only [hL, hprod]
+
+noncomputable def lemma56JensenLogSize {r : ℕ} [NeZero r]
+    (θ : DirichletCharacter ℂ r) (t : ℝ) : ℝ :=
+  Real.log (8 * (r : ℝ) * (7 / 2 + |t|))
+
+noncomputable def lemma56ZeroRemovedRatioBound {r : ℕ} [NeZero r]
+    (θ : DirichletCharacter ℂ r) (t : ℝ) : ℝ :=
+  8 * (r : ℝ) * (7 / 2 + |t|) * (5 : ℝ) ^ lemma56LocalMultiplicity θ t
+
+lemma lemma56_jensen_log_size_pos {r : ℕ} [NeZero r]
+    (θ : DirichletCharacter ℂ r) (t : ℝ) : 0 < lemma56JensenLogSize θ t := by
+  have hr1 : (1 : ℝ) ≤ r := by exact_mod_cast Nat.pos_of_ne_zero (NeZero.ne r)
+  apply Real.log_pos
+  nlinarith only [hr1, abs_nonneg t]
+
+theorem lemma56_zero_removed_ratio_bound_gt_one
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (t : ℝ) :
+    1 < lemma56ZeroRemovedRatioBound θ t := by
+  have hr1 : (1 : ℝ) ≤ r := by exact_mod_cast Nat.pos_of_ne_zero (NeZero.ne r)
+  have hpow : (1 : ℝ) ≤ 5 ^ lemma56LocalMultiplicity θ t := one_le_pow₀ (by norm_num)
+  have hX : 1 < 8 * (r : ℝ) * (7 / 2 + |t|) := by nlinarith only [hr1, abs_nonneg t]
+  unfold lemma56ZeroRemovedRatioBound
+  nlinarith only [hX, hpow]
+
+theorem lemma56_actual_zero_removed_ratio_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1)
+    {t : ℝ} {z : ℂ}
+    (hz : z ∈ closedBall (lemma55JensenCenter t) (3 / 2 : ℝ)) :
+    ‖lemma56ZeroRemovedL θ t z /
+      lemma56ZeroRemovedL θ t (lemma55JensenCenter t)‖ ≤
+        lemma56ZeroRemovedRatioBound θ t := by
+  have hc := lemma56_actual_zero_removed_center_lower_bound θ hθ t
+  have hcp : 0 < ‖lemma56ZeroRemovedL θ t (lemma55JensenCenter t)‖ :=
+    (by positivity : 0 < (1 : ℝ) / (4 * (5 / 4 : ℝ) ^ lemma56LocalMultiplicity θ t)).trans_le hc
+  have hinv : ‖lemma56ZeroRemovedL θ t (lemma55JensenCenter t)‖⁻¹ ≤
+      4 * (5 / 4 : ℝ) ^ lemma56LocalMultiplicity θ t := by
+    have h := one_div_le_one_div_of_le
+      (by positivity : 0 < (1 : ℝ) / (4 * (5 / 4 : ℝ) ^ lemma56LocalMultiplicity θ t)) hc
+    simpa [one_div] using h
+  rw [norm_div, div_eq_mul_inv]
+  calc
+    _ ≤ (2 * (r : ℝ) * (7 / 2 + |t|) * (4 : ℝ) ^ lemma56LocalMultiplicity θ t) *
+        (4 * (5 / 4 : ℝ) ^ lemma56LocalMultiplicity θ t) :=
+      mul_le_mul (lemma56_actual_zero_removed_closed_disk_bound θ hθ hz) hinv
+        (by positivity) (by positivity)
+    _ = lemma56ZeroRemovedRatioBound θ t := by
+      unfold lemma56ZeroRemovedRatioBound
+      rw [show (5 / 4 : ℝ) = 5 * 4⁻¹ by norm_num, mul_pow, inv_pow]
+      have h4 : (4 : ℝ) ^ lemma56LocalMultiplicity θ t ≠ 0 := by positivity
+      field_simp
+      ring
+
+theorem lemma56_actual_zero_removed_log_ratio_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) :
+    Real.log (lemma56ZeroRemovedRatioBound θ t) ≤ 25 * lemma56JensenLogSize θ t := by
+  have hrp : (0 : ℝ) < r := by exact_mod_cast Nat.pos_of_ne_zero (NeZero.ne r)
+  have hN := lemma56_actual_local_multiplicity_bound θ hθ t
+  have h5 : Real.log (5 : ℝ) ≤ 4 := by
+    linarith only [Real.log_le_sub_one_of_pos (by norm_num : (0 : ℝ) < 5)]
+  unfold lemma56ZeroRemovedRatioBound
+  rw [Real.log_mul (by positivity) (by positivity), Real.log_pow]
+  have hmul := mul_le_mul_of_nonneg_left h5
+    (Nat.cast_nonneg (lemma56LocalMultiplicity θ t) : (0 : ℝ) ≤ _)
+  change Real.log (8 * (r : ℝ) * (7 / 2 + |t|)) + _ ≤ _
+  dsimp [lemma56JensenLogSize]
+  nlinarith only [hN, hmul]
+
+def Lemma56ZeroRemovedLogData {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r)
+    (t : ℝ) (ℓ : ℂ → ℂ) : Prop :=
+  ContinuousOn ℓ (ball (0 : ℂ) (5 / 4 : ℝ)) ∧ ℓ 0 = 0 ∧
+    ∀ z ∈ ball (0 : ℂ) (5 / 4 : ℝ), exp (ℓ z) =
+      lemma56ZeroRemovedL θ t (lemma55JensenCenter t + z) /
+        lemma56ZeroRemovedL θ t (lemma55JensenCenter t)
+
+theorem lemma56_actual_zero_removed_log_exists
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) :
+    ∃ ℓ : ℂ → ℂ, Lemma56ZeroRemovedLogData θ t ℓ := by
+  let U : Set ℂ := ball 0 (5 / 4 : ℝ)
+  let q : ℂ → ℂ := fun z => lemma56ZeroRemovedL θ t (lemma55JensenCenter t + z) /
+    lemma56ZeroRemovedL θ t (lemma55JensenCenter t)
+  have h0 : (0 : ℂ) ∈ U := by simp [U]
+  have hc : lemma56ZeroRemovedL θ t (lemma55JensenCenter t) ≠ 0 :=
+    lemma56_actual_zero_removed_ne_zero θ hθ (mem_closedBall_self (by norm_num))
+  have hshift {z : ℂ} (hz : z ∈ U) :
+      lemma55JensenCenter t + z ∈ closedBall (lemma55JensenCenter t) (5 / 4 : ℝ) := by
+    simpa [mem_ball_iff_norm, mem_closedBall_iff_norm] using (mem_ball_zero_iff.mp hz).le
+  have hqne : ∀ z ∈ U, q z ≠ 0 := fun z hz =>
+    div_ne_zero (lemma56_actual_zero_removed_ne_zero θ hθ (hshift hz)) hc
+  have hqdif : ∀ z ∈ U, DifferentiableAt ℂ q z := by
+    intro z _
+    exact ((lemma56_actual_zero_removed_analytic θ hθ t _ (mem_univ _)).differentiableAt.comp z
+      (by fun_prop)).div_const _
+  have hUc : IsSimplyConnected U := by
+    letI : ContractibleSpace U := (convex_ball (0 : ℂ) (5 / 4 : ℝ)).contractibleSpace ⟨0, h0⟩
+    change SimplyConnectedSpace U
+    infer_instance
+  obtain ⟨ℓ₀, hcont, hlift, _hderiv⟩ := lemma23_exists_analytic_log_branch hUc isOpen_ball
+    (fun z hz => (hqdif z hz).continuousAt.continuousWithinAt) hqne hqdif
+  refine ⟨fun z => ℓ₀ z - ℓ₀ 0, hcont.sub continuousOn_const, by simp, ?_⟩
+  intro z hz
+  rw [exp_sub, hlift z hz, hlift 0 h0]
+  simp [q, hc]
+
+theorem lemma56_actual_zero_removed_log_hasDerivAt
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1)
+    {t : ℝ} {ℓ : ℂ → ℂ} (hℓ : Lemma56ZeroRemovedLogData θ t ℓ)
+    {z : ℂ} (hz : z ∈ ball (0 : ℂ) (5 / 4 : ℝ)) :
+    HasDerivAt ℓ (logDeriv (lemma56ZeroRemovedL θ t) (lemma55JensenCenter t + z)) z := by
+  let q : ℂ → ℂ := fun w => lemma56ZeroRemovedL θ t (lemma55JensenCenter t + w) /
+    lemma56ZeroRemovedL θ t (lemma55JensenCenter t)
+  have hc : lemma56ZeroRemovedL θ t (lemma55JensenCenter t) ≠ 0 :=
+    lemma56_actual_zero_removed_ne_zero θ hθ (mem_closedBall_self (by norm_num))
+  have hs : lemma55JensenCenter t + z ∈ closedBall (lemma55JensenCenter t) (5 / 4 : ℝ) := by
+    simpa [mem_closedBall_iff_norm] using (mem_ball_zero_iff.mp hz).le
+  have hqne : q z ≠ 0 := div_ne_zero (lemma56_actual_zero_removed_ne_zero θ hθ hs) hc
+  have hd : HasDerivAt q (deriv (lemma56ZeroRemovedL θ t) (lemma55JensenCenter t + z) /
+      lemma56ZeroRemovedL θ t (lemma55JensenCenter t)) z := by
+    have h₀ := (lemma56_actual_zero_removed_analytic θ hθ t
+      (lemma55JensenCenter t + z) (mem_univ _)).differentiableAt.hasDerivAt
+    have h := h₀.comp z ((hasDerivAt_id z).const_add (lemma55JensenCenter t))
+    simpa [q] using h.div_const (lemma56ZeroRemovedL θ t (lemma55JensenCenter t))
+  have hdℓ := lemma23_hasDerivAt_of_continuous_exp_lift isOpen_ball hz hℓ.1 hℓ.2.2 hd hqne
+  simpa [q, logDeriv_apply, div_div_div_cancel_right₀ hc] using hdℓ
+
+theorem lemma56_actual_zero_removed_log_closed_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1)
+    {t : ℝ}
+    {ℓ : ℂ → ℂ} (hℓ : Lemma56ZeroRemovedLogData θ t ℓ) {z : ℂ}
+    (hz : z ∈ closedBall (0 : ℂ) (9 / 8 : ℝ)) :
+    ‖ℓ z‖ ≤ 450 * lemma56JensenLogSize θ t := by
+  have hLp : 0 < lemma56JensenLogSize θ t := lemma56_jensen_log_size_pos θ t
+  have hdiff : DifferentiableOn ℂ ℓ (ball (0 : ℂ) (5 / 4 : ℝ)) := fun w hw =>
+    (lemma56_actual_zero_removed_log_hasDerivAt θ hθ hℓ hw).differentiableAt.differentiableWithinAt
+  have hRe : MapsTo ℓ (ball (0 : ℂ) (5 / 4 : ℝ)) {w : ℂ | w.re ≤ 25 * lemma56JensenLogSize θ t} := by
+    intro w hw
+    change (ℓ w).re ≤ 25 * lemma56JensenLogSize θ t
+    have hs : lemma55JensenCenter t + w ∈ closedBall (lemma55JensenCenter t) (3 / 2 : ℝ) := by
+      simp only [mem_closedBall_iff_norm, add_sub_cancel_left]
+      linarith only [mem_ball_zero_iff.mp hw]
+    have hn := lemma56_actual_zero_removed_ratio_bound θ hθ hs
+    rw [← hℓ.2.2 w hw, norm_exp] at hn
+    have hlog : (ℓ w).re ≤ Real.log (lemma56ZeroRemovedRatioBound θ t) :=
+      (Real.le_log_iff_exp_le (lt_trans (by norm_num) (lemma56_zero_removed_ratio_bound_gt_one θ t))).mpr hn
+    exact hlog.trans (lemma56_actual_zero_removed_log_ratio_bound θ hθ t)
+  have hnorm : ‖z‖ ≤ (9 : ℝ) / 8 := by simpa using mem_closedBall_iff_norm.mp hz
+  have hzin : z ∈ ball (0 : ℂ) (5 / 4 : ℝ) := mem_ball_zero_iff.mpr (by linarith only [hnorm])
+  have hb := Complex.borelCaratheodory_zero (by positivity : 0 < 25 * lemma56JensenLogSize θ t)
+    hdiff hRe (by norm_num : (0 : ℝ) < 5 / 4) hzin hℓ.2.1
+  apply hb.trans
+  apply (div_le_iff₀ (by linarith only [hnorm] : (0 : ℝ) < 5 / 4 - ‖z‖)).mpr
+  nlinarith only [hnorm, hLp]
+
+theorem lemma56_actual_zero_removed_log_cauchy_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1)
+    {t : ℝ}
+    {ℓ : ℂ → ℂ} (hℓ : Lemma56ZeroRemovedLogData θ t ℓ) (n : ℕ) :
+    ‖iteratedDeriv n ℓ 0‖ ≤
+      n.factorial * (450 * lemma56JensenLogSize θ t) / (9 / 8 : ℝ) ^ n := by
+  have hdiff : DifferentiableOn ℂ ℓ (ball (0 : ℂ) (5 / 4 : ℝ)) := fun w hw =>
+    (lemma56_actual_zero_removed_log_hasDerivAt θ hθ hℓ hw).differentiableAt.differentiableWithinAt
+  have hclosure : closure (ball (0 : ℂ) (9 / 8 : ℝ)) ⊆ ball (0 : ℂ) (5 / 4 : ℝ) :=
+    (closure_ball_subset_closedBall).trans (closedBall_subset_ball (by norm_num))
+  exact Complex.norm_iteratedDeriv_le_of_forall_mem_sphere_norm_le n (by norm_num)
+    (hdiff.mono hclosure).diffContOnCl (fun w hw =>
+      lemma56_actual_zero_removed_log_closed_bound θ hθ hℓ (sphere_subset_closedBall hw))
+
+theorem lemma56_actual_zero_factor_logDeriv
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) {t : ℝ} {z : ℂ}
+    (hP : lemma56LocalZeroFactor θ t z ≠ 0) :
+    logDeriv (lemma56LocalZeroFactor θ t) z =
+      ∑ ρ ∈ lemma56LocalZeroFinset θ t,
+        (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℂ) / (z - ρ) := by
+  classical
+  have heq : lemma56LocalZeroFactor θ t = fun w =>
+      ∏ ρ ∈ lemma56LocalZeroFinset θ t,
+        (w - ρ) ^ analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ :=
+    funext (lemma56_actual_zero_factor_eq_product θ hθ t)
+  have hterms : ∀ ρ ∈ lemma56LocalZeroFinset θ t,
+      (z - ρ) ^ analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ ≠ 0 := by
+    apply Finset.prod_ne_zero_iff.mp
+    rwa [← lemma56_actual_zero_factor_eq_product θ hθ t z]
+  rw [heq, logDeriv_prod hterms (fun ρ _ => by fun_prop)]
+  apply Finset.sum_congr rfl
+  intro ρ _
+  have hderiv : deriv (fun w : ℂ => w - ρ) z = 1 := by
+    simpa using ((hasDerivAt_id z).sub_const ρ).deriv
+  rw [logDeriv_fun_pow (by fun_prop), logDeriv_apply, hderiv]
+  ring
+
+theorem lemma56_actual_local_logDeriv_formula
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) {z : ℂ}
+    (hLz : DirichletCharacter.LFunction θ z ≠ 0) :
+    logDeriv (DirichletCharacter.LFunction θ) z =
+      (∑ ρ ∈ lemma56LocalZeroFinset θ t,
+        (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℂ) / (z - ρ)) +
+          logDeriv (lemma56ZeroRemovedL θ t) z := by
+  have heq : DirichletCharacter.LFunction θ = fun w =>
+      lemma56LocalZeroFactor θ t w * lemma56ZeroRemovedL θ t w :=
+    funext (lemma56_actual_zero_factorization θ hθ t)
+  have hn : lemma56LocalZeroFactor θ t z ≠ 0 ∧ lemma56ZeroRemovedL θ t z ≠ 0 := by
+    apply mul_ne_zero_iff.mp
+    rwa [← lemma56_actual_zero_factorization θ hθ t z]
+  nth_rw 1 [heq]
+  rw [logDeriv_mul z hn.1 hn.2
+    (lemma56_actual_zero_factor_analytic θ hθ t z (mem_univ z)).differentiableAt
+    (lemma56_actual_zero_removed_analytic θ hθ t z (mem_univ z)).differentiableAt]
+  rw [lemma56_actual_zero_factor_logDeriv θ hθ hn.1]
+
+noncomputable def lemma56LocalZeroLogDerivative {r : ℕ} [NeZero r]
+    (θ : DirichletCharacter ℂ r) (t : ℝ) (z : ℂ) : ℂ :=
+  ∑ ρ ∈ lemma56LocalZeroFinset θ t,
+    (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℂ) / (z - ρ)
+
+theorem lemma56_actual_zero_removed_higher_logDeriv_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1)
+    {t : ℝ} (n : ℕ) :
+    ‖iteratedDeriv n (logDeriv (lemma56ZeroRemovedL θ t)) (lemma55JensenCenter t)‖ ≤
+      (n + 1).factorial * (450 * lemma56JensenLogSize θ t) / (9 / 8 : ℝ) ^ (n + 1) := by
+  obtain ⟨ℓ, hℓ⟩ := lemma56_actual_zero_removed_log_exists θ hθ t
+  have heq : deriv ℓ =ᶠ[𝓝 (0 : ℂ)] fun z =>
+      logDeriv (lemma56ZeroRemovedL θ t) (lemma55JensenCenter t + z) := by
+    filter_upwards [isOpen_ball.mem_nhds (by simp : (0 : ℂ) ∈ ball (0 : ℂ) (5 / 4 : ℝ))] with z hz
+    exact (lemma56_actual_zero_removed_log_hasDerivAt θ hθ hℓ hz).deriv
+  have hj : iteratedDeriv n (deriv ℓ) 0 =
+      iteratedDeriv n (logDeriv (lemma56ZeroRemovedL θ t)) (lemma55JensenCenter t) := by
+    simpa only [iteratedDeriv_comp_const_add, add_zero] using heq.iteratedDeriv_eq n
+  rw [← hj, ← iteratedDeriv_succ']
+  exact lemma56_actual_zero_removed_log_cauchy_bound θ hθ hℓ (n + 1)
+
+theorem lemma56_actual_higher_logDeriv_remainder_eq
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1) (t : ℝ) (n : ℕ) :
+    iteratedDeriv n (logDeriv (DirichletCharacter.LFunction θ)) (lemma55JensenCenter t) -
+      iteratedDeriv n (lemma56LocalZeroLogDerivative θ t) (lemma55JensenCenter t) =
+        iteratedDeriv n (logDeriv (lemma56ZeroRemovedL θ t)) (lemma55JensenCenter t) := by
+  let c := lemma55JensenCenter t
+  have hf := lemma56_actual_jensen_center_ne_zero θ t
+  have hP : lemma56LocalZeroFactor θ t c ≠ 0 := by
+    intro hz
+    apply hf
+    rw [lemma56_actual_zero_factorization θ hθ t c, hz, zero_mul]
+  have haF : AnalyticAt ℂ (logDeriv (DirichletCharacter.LFunction θ)) c :=
+    (lemma56_actual_L_analyticOnNhd θ hθ c (mem_univ c)).deriv.div
+      (lemma56_actual_L_analyticOnNhd θ hθ c (mem_univ c)) hf
+  have haP : AnalyticAt ℂ (logDeriv (lemma56LocalZeroFactor θ t)) c :=
+    (lemma56_actual_zero_factor_analytic θ hθ t c (mem_univ c)).deriv.div
+      (lemma56_actual_zero_factor_analytic θ hθ t c (mem_univ c)) hP
+  have hfn : ∀ᶠ z in 𝓝 c, DirichletCharacter.LFunction θ z ≠ 0 :=
+    (lemma56_actual_L_analyticOnNhd θ hθ c (mem_univ c)).continuousAt.eventually_ne hf
+  have hPn : ∀ᶠ z in 𝓝 c, lemma56LocalZeroFactor θ t z ≠ 0 :=
+    (lemma56_actual_zero_factor_analytic θ hθ t c (mem_univ c)).continuousAt.eventually_ne hP
+  have hsum : logDeriv (lemma56LocalZeroFactor θ t) =ᶠ[𝓝 c]
+      lemma56LocalZeroLogDerivative θ t := by
+    filter_upwards [hPn] with z hz
+    exact lemma56_actual_zero_factor_logDeriv θ hθ hz
+  have heq : (logDeriv (DirichletCharacter.LFunction θ) - logDeriv (lemma56LocalZeroFactor θ t))
+      =ᶠ[𝓝 c] logDeriv (lemma56ZeroRemovedL θ t) := by
+    filter_upwards [hfn, hPn] with z hz hp
+    change logDeriv (DirichletCharacter.LFunction θ) z - logDeriv (lemma56LocalZeroFactor θ t) z = _
+    rw [lemma56_actual_local_logDeriv_formula θ hθ t hz,
+      lemma56_actual_zero_factor_logDeriv θ hθ hp, add_sub_cancel_left]
+  have hj := heq.iteratedDeriv_eq n
+  rw [iteratedDeriv_sub haF.contDiffAt haP.contDiffAt, hsum.iteratedDeriv_eq n] at hj
+  exact hj
+
+theorem lemma56_actual_higher_logDeriv_remainder_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1)
+    {t : ℝ} (n : ℕ) :
+    ‖iteratedDeriv n (logDeriv (DirichletCharacter.LFunction θ)) (lemma55JensenCenter t) -
+      iteratedDeriv n (lemma56LocalZeroLogDerivative θ t) (lemma55JensenCenter t)‖ ≤
+        (n + 1).factorial * (450 * lemma56JensenLogSize θ t) / (9 / 8 : ℝ) ^ (n + 1) := by
+  rw [lemma56_actual_higher_logDeriv_remainder_eq θ hθ t n]
+  exact lemma56_actual_zero_removed_higher_logDeriv_bound θ hθ n
+
+theorem lemma56_actual_normalized_logDeriv_remainder_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1)
+    {t : ℝ} (n : ℕ) :
+    ‖iteratedDeriv n (logDeriv (DirichletCharacter.LFunction θ)) (lemma55JensenCenter t) -
+      iteratedDeriv n (lemma56LocalZeroLogDerivative θ t) (lemma55JensenCenter t)‖ /
+        (n.factorial : ℝ) ≤
+          450 * ((n : ℝ) + 1) * lemma56JensenLogSize θ t * (8 / 9 : ℝ) ^ (n + 1) := by
+  apply (div_le_iff₀ (by positivity : (0 : ℝ) < n.factorial)).mpr
+  calc
+    _ ≤ (n + 1).factorial * (450 * lemma56JensenLogSize θ t) / (9 / 8 : ℝ) ^ (n + 1) :=
+      lemma56_actual_higher_logDeriv_remainder_bound θ hθ n
+    _ = _ := by
+      rw [Nat.factorial_succ, Nat.cast_mul, Nat.cast_add, Nat.cast_one,
+        div_eq_mul_inv, ← inv_pow, inv_div]
+      ring
+
+theorem lemma56_actual_logDeriv_remainder_sum_bound
+    {r : ℕ} [NeZero r] (θ : DirichletCharacter ℂ r) (hθ : θ ≠ 1)
+    {t : ℝ} (S : Finset ℕ) :
+    (∑ n ∈ S,
+      ‖iteratedDeriv n (logDeriv (DirichletCharacter.LFunction θ)) (lemma55JensenCenter t) -
+        iteratedDeriv n (lemma56LocalZeroLogDerivative θ t) (lemma55JensenCenter t)‖ /
+          (n.factorial : ℝ)) ≤ 32400 * lemma56JensenLogSize θ t := by
+  have hr : ‖(8 / 9 : ℝ)‖ < 1 := by norm_num
+  have hs : HasSum (fun n : ℕ => ((n : ℝ) + 1) * (8 / 9 : ℝ) ^ n) (81 : ℝ) := by
+    convert (hasSum_coe_mul_geometric_of_norm_lt_one hr).add (hasSum_geometric_of_norm_lt_one hr) using 1
+    · ext n
+      ring
+    · norm_num
+  have hsum : (∑ n ∈ S, ((n : ℝ) + 1) * (8 / 9 : ℝ) ^ n) ≤ 81 := by
+    calc
+      _ ≤ ∑' n : ℕ, ((n : ℝ) + 1) * (8 / 9 : ℝ) ^ n :=
+        hs.summable.sum_le_tsum S (fun n _ => by positivity)
+      _ = 81 := hs.tsum_eq
+  have hLp : 0 < lemma56JensenLogSize θ t := lemma56_jensen_log_size_pos θ t
+  calc
+    _ ≤ ∑ n ∈ S, (400 * lemma56JensenLogSize θ t) * (((n : ℝ) + 1) * (8 / 9 : ℝ) ^ n) := by
+      apply Finset.sum_le_sum
+      intro n _
+      have hb := lemma56_actual_normalized_logDeriv_remainder_bound θ hθ (t := t) n
+      apply hb.trans_eq
+      rw [pow_succ]
+      ring
+    _ = (400 * lemma56JensenLogSize θ t) * ∑ n ∈ S, ((n : ℝ) + 1) * (8 / 9 : ℝ) ^ n := by
+      rw [Finset.mul_sum]
+    _ ≤ (400 * lemma56JensenLogSize θ t) * 81 :=
+      mul_le_mul_of_nonneg_left hsum (by positivity)
+    _ = 32400 * lemma56JensenLogSize θ t := by ring
+
+noncomputable def lemma56LocalZeroPowerSum {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) (t : ℝ) (k : ℕ) : ℂ :=
+  ∑ ρ ∈ lemma56LocalZeroFinset θ t,
+    (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℂ) /
+      (lemma55JensenCenter t - ρ) ^ k
+
+theorem lemma56_actual_local_zero_higher_derivative
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1) (t : ℝ) (n : ℕ) :
+    iteratedDeriv n (lemma56LocalZeroLogDerivative θ t) (lemma55JensenCenter t) =
+      (-1 : ℂ) ^ n * (n.factorial : ℂ) * lemma56LocalZeroPowerSum θ t (n + 1) := by
+  classical
+  have hne : ∀ ρ ∈ lemma56LocalZeroFinset θ t, lemma55JensenCenter t - ρ ≠ 0 := by
+    intro ρ hρ hzero
+    apply lemma56_actual_jensen_center_ne_zero θ t
+    rw [sub_eq_zero.mp hzero]
+    exact ((lemma56_mem_actual_local_zero_finset θ hθ t ρ).mp hρ).2
+  have ha : ∀ ρ ∈ lemma56LocalZeroFinset θ t,
+      ContDiffAt ℂ n (fun w : ℂ =>
+        (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℂ) / (w - ρ))
+          (lemma55JensenCenter t) := by
+    intro ρ hρ
+    exact (analyticAt_const.div (analyticAt_id.sub analyticAt_const) (hne ρ hρ)).contDiffAt
+  unfold lemma56LocalZeroLogDerivative lemma56LocalZeroPowerSum
+  rw [iteratedDeriv_fun_sum ha, Finset.mul_sum]
+  apply Finset.sum_congr rfl
+  intro ρ hρ
+  rw [lemma55_iterated_deriv_weighted_inverse_pole]
+  have he : (-1 - (n : ℤ)) = -((n + 1 : ℕ) : ℤ) := by omega
+  rw [he, zpow_neg, zpow_natCast, div_eq_mul_inv]
+  ring
+
+theorem lemma56_actual_power_sum_remainder_norm_eq
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1) (t : ℝ) (n : ℕ) :
+    ‖lemma56NormalizedDerivative θ t n - lemma56LocalZeroPowerSum θ t (n + 1)‖ =
+      ‖iteratedDeriv n (logDeriv (DirichletCharacter.LFunction θ)) (lemma55JensenCenter t) -
+        iteratedDeriv n (lemma56LocalZeroLogDerivative θ t) (lemma55JensenCenter t)‖ /
+          (n.factorial : ℝ) := by
+  have hn : (n.factorial : ℂ) ≠ 0 := by exact_mod_cast Nat.factorial_ne_zero n
+  have he : (-1 : ℂ) ^ n * (-1 : ℂ) ^ n = 1 := by
+    rw [← mul_pow]
+    norm_num
+  have hid : lemma56NormalizedDerivative θ t n - lemma56LocalZeroPowerSum θ t (n + 1) =
+      ((-1 : ℂ) ^ n / (n.factorial : ℂ)) *
+        (iteratedDeriv n (logDeriv (DirichletCharacter.LFunction θ)) (lemma55JensenCenter t) -
+          iteratedDeriv n (lemma56LocalZeroLogDerivative θ t) (lemma55JensenCenter t)) := by
+    rw [lemma56_actual_local_zero_higher_derivative θ hθ t n]
+    unfold lemma56NormalizedDerivative
+    field_simp
+    linear_combination (lemma56LocalZeroPowerSum θ t (n + 1) * (n.factorial : ℂ)) * he
+  rw [hid, norm_mul, norm_div, norm_pow]
+  simp only [norm_neg, norm_one, one_pow, norm_natCast]
+  ring
+
+theorem lemma56_actual_power_sum_remainder_bound
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1)
+    {t : ℝ} (n : ℕ) :
+    ‖lemma56NormalizedDerivative θ t n - lemma56LocalZeroPowerSum θ t (n + 1)‖ ≤
+      450 * ((n : ℝ) + 1) * lemma56JensenLogSize θ t * (8 / 9 : ℝ) ^ (n + 1) := by
+  rw [lemma56_actual_power_sum_remainder_norm_eq θ hθ t n]
+  exact lemma56_actual_normalized_logDeriv_remainder_bound θ hθ n
+
+theorem lemma56_actual_power_sum_remainder_sum_bound
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1)
+    {t : ℝ} (S : Finset ℕ) :
+    (∑ n ∈ S,
+      ‖lemma56NormalizedDerivative θ t n - lemma56LocalZeroPowerSum θ t (n + 1)‖) ≤
+        32400 * lemma56JensenLogSize θ t := by
+  simp_rw [lemma56_actual_power_sum_remainder_norm_eq θ hθ t]
+  exact lemma56_actual_logDeriv_remainder_sum_bound θ hθ S
+
+open Finset
+
+noncomputable def lemma56WeightedZeroPowerSum {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) (t r : ℝ) (v : ℂ) (J : ℕ) : ℂ :=
+  ∑ j ∈ range J, (lemma55FejerDetectionWeight v J j : ℂ) *
+    lemma56LocalZeroPowerSum θ t (2 * (j + 1)) / (r : ℂ) ^ (j + 1)
+
+noncomputable def lemma56WeightedLogDerivative {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) (t r : ℝ) (v : ℂ) (J : ℕ) : ℂ :=
+  ∑ j ∈ range J, (lemma55FejerDetectionWeight v J j : ℂ) *
+    lemma56NormalizedDerivative θ t (2 * j + 1) / (r : ℂ) ^ (j + 1)
+
+theorem lemma56_actual_normalized_odd_power_error_bound
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1)
+    {L : ℝ} (hL : 2000 ≤ L) {t : ℝ}
+    {r : ℝ} (hr : 0 < r) (hlower : ((1 + 2 / L)⁻¹) ^ 2 ≤ r) (j : ℕ) :
+    ‖(lemma56NormalizedDerivative θ t (2 * j + 1) -
+      lemma56LocalZeroPowerSum θ t (2 * (j + 1))) / (r : ℂ) ^ (j + 1)‖ ≤
+        (720 * lemma56JensenLogSize θ t) * (((j : ℝ) + 1) * (4 / 5 : ℝ) ^ j) := by
+  have hLp : 0 < lemma56JensenLogSize θ t := lemma56_jensen_log_size_pos θ t
+  have hb := lemma56_actual_power_sum_remainder_bound θ hθ (t := t) (2 * j + 1)
+  have hn : 2 * j + 1 + 1 = 2 * (j + 1) := by omega
+  rw [hn] at hb
+  have hq := lemma55_normalized_remainder_geometric_ratio hL hr hlower
+  rw [norm_div, norm_pow, norm_real, Real.norm_eq_abs, abs_of_pos hr,
+    div_eq_mul_inv, ← inv_pow]
+  calc
+    _ ≤ (450 * (((2 * j + 1 : ℕ) : ℝ) + 1) * lemma56JensenLogSize θ t *
+        (8 / 9 : ℝ) ^ (2 * (j + 1))) * r⁻¹ ^ (j + 1) :=
+      mul_le_mul_of_nonneg_right hb (by positivity)
+    _ = (900 * ((j : ℝ) + 1) * lemma56JensenLogSize θ t) *
+        ((64 / 81 : ℝ) * r⁻¹) ^ (j + 1) := by
+      rw [pow_mul, mul_pow]
+      push_cast
+      norm_num only [show (8 / 9 : ℝ) ^ 2 = 64 / 81 by norm_num]
+      ring
+    _ ≤ (900 * ((j : ℝ) + 1) * lemma56JensenLogSize θ t) * (4 / 5 : ℝ) ^ (j + 1) :=
+      mul_le_mul_of_nonneg_left (pow_le_pow_left₀ (by positivity) hq (j + 1)) (by positivity)
+    _ = _ := by rw [pow_succ]; ring
+
+theorem lemma56_actual_weighted_power_error_uniform_bound
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1)
+    {L : ℝ} (hL : 2000 ≤ L) {t : ℝ}
+    {r : ℝ} (hr : 0 < r) (hlower : ((1 + 2 / L)⁻¹) ^ 2 ≤ r)
+    {v : ℂ} (hv : ‖v‖ ≤ 1) (J : ℕ) :
+    ‖lemma56WeightedLogDerivative θ t r v J - lemma56WeightedZeroPowerSum θ t r v J‖ ≤
+      36000 * lemma56JensenLogSize θ t := by
+  have hLp : 0 < lemma56JensenLogSize θ t := lemma56_jensen_log_size_pos θ t
+  unfold lemma56WeightedLogDerivative lemma56WeightedZeroPowerSum
+  rw [← sum_sub_distrib]
+  calc
+    _ ≤ ∑ j ∈ range J,
+        ‖(lemma55FejerDetectionWeight v J j : ℂ) * lemma56NormalizedDerivative θ t (2 * j + 1) /
+            (r : ℂ) ^ (j + 1) -
+          (lemma55FejerDetectionWeight v J j : ℂ) * lemma56LocalZeroPowerSum θ t (2 * (j + 1)) /
+            (r : ℂ) ^ (j + 1)‖ := norm_sum_le _ _
+    _ ≤ ∑ j ∈ range J, (1440 * lemma56JensenLogSize θ t) * (((j : ℝ) + 1) * (4 / 5 : ℝ) ^ j) := by
+      apply sum_le_sum
+      intro j _
+      have hw := lemma55_fejer_detection_weight_bounds hv J j
+      have he : (lemma55FejerDetectionWeight v J j : ℂ) * lemma56NormalizedDerivative θ t (2 * j + 1) /
+          (r : ℂ) ^ (j + 1) -
+        (lemma55FejerDetectionWeight v J j : ℂ) * lemma56LocalZeroPowerSum θ t (2 * (j + 1)) /
+          (r : ℂ) ^ (j + 1) =
+        (lemma55FejerDetectionWeight v J j : ℂ) *
+          ((lemma56NormalizedDerivative θ t (2 * j + 1) -
+            lemma56LocalZeroPowerSum θ t (2 * (j + 1))) / (r : ℂ) ^ (j + 1)) := by ring
+      rw [he, norm_mul, norm_real, Real.norm_eq_abs, abs_of_nonneg hw.1]
+      have hb := lemma56_actual_normalized_odd_power_error_bound θ hθ hL (t := t) hr hlower j
+      calc
+        _ ≤ 2 * ((720 * lemma56JensenLogSize θ t) * (((j : ℝ) + 1) * (4 / 5 : ℝ) ^ j)) :=
+          mul_le_mul hw.2 hb (norm_nonneg _) (by norm_num)
+        _ = _ := by ring
+    _ = (1440 * lemma56JensenLogSize θ t) * ∑ j ∈ range J, ((j : ℝ) + 1) * (4 / 5 : ℝ) ^ j := by rw [mul_sum]
+    _ ≤ (1440 * lemma56JensenLogSize θ t) * 25 := mul_le_mul_of_nonneg_left
+      (lemma55_successor_geometric_finite_bound (range J)) (by positivity)
+    _ = _ := by ring
+
+theorem lemma56_actual_weighted_real_power_error_uniform_bound
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1)
+    {L : ℝ} (hL : 2000 ≤ L) {t : ℝ}
+    {r : ℝ} (hr : 0 < r) (hlower : ((1 + 2 / L)⁻¹) ^ 2 ≤ r)
+    {v : ℂ} (hv : ‖v‖ ≤ 1) (J : ℕ) :
+    |(lemma56WeightedLogDerivative θ t r v J).re -
+      (lemma56WeightedZeroPowerSum θ t r v J).re| ≤ 36000 * lemma56JensenLogSize θ t := by
+  have h := abs_re_le_norm (lemma56WeightedLogDerivative θ t r v J -
+    lemma56WeightedZeroPowerSum θ t r v J)
+  rw [sub_re] at h
+  exact h.trans (lemma56_actual_weighted_power_error_uniform_bound θ hθ hL hr hlower hv J)
+
+theorem lemma56_actual_zero_re_lt_one
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1) {ρ : ℂ}
+    (hρ : DirichletCharacter.LFunction θ ρ = 0) : ρ.re < 1 := by
+  by_contra hnot
+  exact (DirichletCharacter.LFunction_ne_zero_of_one_le_re θ (.inl hθ) (le_of_not_gt hnot)) hρ
+
+theorem lemma56_actual_local_zero_center_distance
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1) {t : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ lemma56LocalZeroFinset θ t) :
+    1 < ‖lemma55JensenCenter t - ρ‖ := by
+  have hr := lemma56_actual_zero_re_lt_one θ hθ
+    ((lemma56_mem_actual_local_zero_finset θ hθ t ρ).mp hρ).2
+  have hn := re_le_norm (lemma55JensenCenter t - ρ)
+  rw [sub_re, lemma55_jensen_center_re] at hn
+  linarith only [hr, hn]
+
+theorem lemma56_actual_inverse_square_norm_bounds
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1) {t : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ lemma56LocalZeroFinset θ t) :
+    0 < ‖lemma55ZeroInverseSquare t ρ‖ ∧ ‖lemma55ZeroInverseSquare t ρ‖ < 1 := by
+  have hd := lemma56_actual_local_zero_center_distance θ hθ hρ
+  have hdpos : 0 < ‖lemma55JensenCenter t - ρ‖ := by linarith only [hd]
+  have hi : 0 < ‖lemma55JensenCenter t - ρ‖⁻¹ := inv_pos.mpr hdpos
+  have hi1 : ‖lemma55JensenCenter t - ρ‖⁻¹ < 1 :=
+    (inv_lt_one₀ hdpos).mpr hd
+  unfold lemma55ZeroInverseSquare
+  rw [norm_pow, norm_inv]
+  exact ⟨by positivity, by nlinarith only [hi, hi1]⟩
+
+theorem lemma56_actual_subset_max_inverse_square
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1) (t : ℝ) (S : Finset ℂ)
+    (hS : S ⊆ lemma56LocalZeroFinset θ t) (hne : S.Nonempty) :
+    ∃ ρ₀ ∈ S, 0 < ‖lemma55ZeroInverseSquare t ρ₀‖ ∧
+      ‖lemma55ZeroInverseSquare t ρ₀‖ < 1 ∧
+      ∀ ρ ∈ S, ‖lemma55ZeroInverseSquare t ρ‖ ≤ ‖lemma55ZeroInverseSquare t ρ₀‖ := by
+  obtain ⟨ρ₀, hρ₀, hmax⟩ := S.exists_max_image (fun ρ => ‖lemma55ZeroInverseSquare t ρ‖) hne
+  have hb := lemma56_actual_inverse_square_norm_bounds θ hθ (hS hρ₀)
+  exact ⟨ρ₀, hρ₀, hb.1, hb.2, hmax⟩
+
+noncomputable def lemma56SubsetZeroPowerSum {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) (t : ℝ) (S : Finset ℂ) (k : ℕ) : ℂ :=
+  ∑ ρ ∈ S, (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℂ) /
+    (lemma55JensenCenter t - ρ) ^ k
+
+lemma lemma56_normalized_inverse_square_power_sum {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) (t : ℝ) (S : Finset ℂ) (r : ℝ) (k : ℕ) :
+    (∑ ρ ∈ S, (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℝ) *
+      ((lemma55ZeroInverseSquare t ρ / (r : ℂ)) ^ k).re) =
+        (lemma56SubsetZeroPowerSum θ t S (2 * k) / (r : ℂ) ^ k).re := by
+  unfold lemma56SubsetZeroPowerSum lemma55ZeroInverseSquare
+  rw [sum_div, Complex.re_sum]
+  apply sum_congr rfl
+  intro ρ _
+  rw [div_pow, ← pow_mul, inv_pow]
+  have he : ((analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℂ) /
+      (lemma55JensenCenter t - ρ) ^ (2 * k)) / (r : ℂ) ^ k =
+        (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℂ) *
+          (((lemma55JensenCenter t - ρ) ^ (2 * k))⁻¹ / (r : ℂ) ^ k) := by ring
+  rw [he]
+  simp only [mul_re, natCast_re, natCast_im, zero_mul, sub_zero]
+
+theorem lemma56_actual_subset_weighted_power_detection
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1) (t : ℝ) (S : Finset ℂ)
+    (hS : S ⊆ lemma56LocalZeroFinset θ t) {ρ₀ : ℂ} (hρ₀ : ρ₀ ∈ S)
+    (hmax : ∀ ρ ∈ S, ‖lemma55ZeroInverseSquare t ρ‖ ≤ ‖lemma55ZeroInverseSquare t ρ₀‖)
+    (J : ℕ) :
+    (J : ℝ) / 4 - ∑ ρ ∈ S, (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℝ) ≤
+      ∑ j ∈ range J,
+        lemma55FejerDetectionWeight
+          (lemma55ZeroInverseSquare t ρ₀ / (‖lemma55ZeroInverseSquare t ρ₀‖ : ℂ))⁻¹ J j *
+          (lemma56SubsetZeroPowerSum θ t S (2 * (j + 1)) /
+            (‖lemma55ZeroInverseSquare t ρ₀‖ : ℂ) ^ (j + 1)).re := by
+  have hr := (lemma56_actual_inverse_square_norm_bounds θ hθ (hS hρ₀)).1
+  have hm : 1 ≤ (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ₀ : ℝ) := by
+    exact_mod_cast lemma56_actual_local_zero_order_pos θ hθ (hS hρ₀)
+  have h := lemma55_fejer_finite_weighted_power_detection S
+    (fun ρ => (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℝ))
+    (fun ρ => lemma55ZeroInverseSquare t ρ / (‖lemma55ZeroInverseSquare t ρ₀‖ : ℂ))
+    hρ₀ (fun _ _ => Nat.cast_nonneg _) hm
+    (fun ρ hρ => lemma55_normalized_inverse_square_le_one t ρ ρ₀ hr (hmax ρ hρ))
+    (lemma55_normalized_inverse_square_unit t ρ₀ hr) J
+  simpa only [lemma56_normalized_inverse_square_power_sum] using h
+
+theorem lemma56_actual_subset_weighted_detection_log_bound
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1)
+    {t : ℝ} (S : Finset ℂ)
+    (hS : S ⊆ lemma56LocalZeroFinset θ t) {ρ₀ : ℂ} (hρ₀ : ρ₀ ∈ S)
+    (hmax : ∀ ρ ∈ S, ‖lemma55ZeroInverseSquare t ρ‖ ≤ ‖lemma55ZeroInverseSquare t ρ₀‖)
+    (J : ℕ) :
+    (J : ℝ) / 4 - 6 * lemma56JensenLogSize θ t ≤
+      ∑ j ∈ range J,
+        lemma55FejerDetectionWeight
+          (lemma55ZeroInverseSquare t ρ₀ / (‖lemma55ZeroInverseSquare t ρ₀‖ : ℂ))⁻¹ J j *
+          (lemma56SubsetZeroPowerSum θ t S (2 * (j + 1)) /
+            (‖lemma55ZeroInverseSquare t ρ₀‖ : ℂ) ^ (j + 1)).re := by
+  have hN : ∑ ρ ∈ S, (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℝ) ≤
+      6 * lemma56JensenLogSize θ t := by
+    calc
+      _ ≤ ∑ ρ ∈ lemma56LocalZeroFinset θ t,
+          (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℝ) :=
+        sum_le_sum_of_subset_of_nonneg hS (fun _ _ _ => Nat.cast_nonneg _)
+      _ = (lemma56LocalMultiplicity θ t : ℝ) := by simp [lemma56LocalMultiplicity]
+      _ ≤ _ := lemma56_actual_local_multiplicity_bound θ hθ t
+  have hd := lemma56_actual_subset_weighted_power_detection θ hθ t S hS hρ₀ hmax J
+  linarith only [hN, hd]
+
+theorem lemma56_near_one_zero_in_own_local_disk
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1) {ρ : ℂ}
+    {ε : ℝ} (hε : ε ≤ 1 / 4) (hre : 1 - ε < ρ.re)
+    (hzero : DirichletCharacter.LFunction θ ρ = 0) :
+    ρ ∈ lemma56LocalZeroFinset θ ρ.im := by
+  have hr := lemma56_actual_zero_re_lt_one θ hθ hzero
+  apply (lemma56_mem_actual_local_zero_finset θ hθ ρ.im ρ).mpr
+  refine ⟨?_, hzero⟩
+  rw [mem_closedBall_iff_norm, norm_sub_rev, lemma55_jensen_center_at_zero_height,
+    norm_real, Real.norm_eq_abs, abs_of_pos (by linarith only [hr] : 0 < 2 - ρ.re)]
+  linarith only [hre, hε]
+
+theorem lemma56_near_one_zero_inverse_square_lower_bound
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1) {ρ : ℂ}
+    {ε : ℝ} (hε : 0 ≤ ε) (hre : 1 - ε < ρ.re)
+    (hzero : DirichletCharacter.LFunction θ ρ = 0) :
+    ((1 + ε)⁻¹) ^ 2 ≤ ‖lemma55ZeroInverseSquare ρ.im ρ‖ := by
+  have hr := lemma56_actual_zero_re_lt_one θ hθ hzero
+  have hd : 0 < 2 - ρ.re := by linarith only [hr]
+  have ha : 2 - ρ.re ≤ 1 + ε := by linarith only [hre]
+  have hi : (1 + ε)⁻¹ ≤ (2 - ρ.re)⁻¹ :=
+    (inv_le_inv₀ (by positivity : 0 < 1 + ε) hd).mpr ha
+  unfold lemma55ZeroInverseSquare
+  rw [norm_pow, norm_inv, lemma55_jensen_center_at_zero_height,
+    norm_real, Real.norm_eq_abs, abs_of_pos hd]
+  exact pow_le_pow_left₀ (by positivity) hi 2
+
+noncomputable def lemma56MixedRemainingPower {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q)
+    (t R : ℝ) (β v : ℂ) (J : ℕ) : ℂ :=
+  letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+  (lemma55WeightedRemainingZeroPowerSum χ 0 R β v J + lemma55ZetaWeightedZeroPowerSum 0 R v J) +
+    (lemma56WeightedZeroPowerSum θ t R v J + lemma56WeightedZeroPowerSum (lemma44CharacterTwist χ θ) t R v J)
+
+noncomputable def lemma56MixedRemovedDerivative {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q)
+    (t R : ℝ) (β v : ℂ) (J : ℕ) : ℂ :=
+  letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+  (lemma55WeightedRemovedLogDerivative χ 0 R β v J + lemma55ZetaWeightedRemovedLogDerivative 0 R v J) +
+    (lemma56WeightedLogDerivative θ t R v J + lemma56WeightedLogDerivative (lemma44CharacterTwist χ θ) t R v J)
+
+lemma lemma56_actual_mixed_remaining_error_bound {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q)
+    (hθ : θ ≠ 1) (htwist : lemma44CharacterTwist χ θ ≠ 1)
+    (hD : 1 < D) (hL : 2000 ≤ Real.log (D : ℝ)) (t : ℝ)
+    {β : ℂ} (hzero : dirichletLFunction χ β = 0) (hderiv : deriv (dirichletLFunction χ) β ≠ 0)
+    {R : ℝ} (hR : 0 < R) (hlower : ((1 + 2 / Real.log (D : ℝ))⁻¹) ^ 2 ≤ R)
+    {v : ℂ} (hv : ‖v‖ ≤ 1) (J : ℕ) :
+    letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+    ‖lemma56MixedRemovedDerivative χ θ t R β v J - lemma56MixedRemainingPower χ θ t R β v J‖ ≤
+      187200 * Real.log (D : ℝ) + 36000 * lemma56JensenLogSize θ t +
+        36000 * lemma56JensenLogSize (lemma44CharacterTwist χ θ) t := by
+  letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+  have hχ0 := lemma55_actual_weighted_remaining_error_uniform_bound χ hD hL (by simp : |(0 : ℝ)| ≤ 2 * D)
+    hR hlower hzero hderiv hv J
+  have hζ0 := lemma55_actual_zeta_weighted_power_error_uniform_bound hD hL (by simp : |(0 : ℝ)| ≤ 2 * D)
+    hR hlower hv J
+  have hθt := lemma56_actual_weighted_power_error_uniform_bound θ hθ hL (t := t) hR hlower hv J
+  have htw := lemma56_actual_weighted_power_error_uniform_bound (lemma44CharacterTwist χ θ) htwist hL
+    (t := t) hR hlower hv J
+  have heq : lemma56MixedRemovedDerivative χ θ t R β v J - lemma56MixedRemainingPower χ θ t R β v J =
+      ((lemma55WeightedRemovedLogDerivative χ 0 R β v J - lemma55WeightedRemainingZeroPowerSum χ 0 R β v J) +
+        (lemma55ZetaWeightedRemovedLogDerivative 0 R v J - lemma55ZetaWeightedZeroPowerSum 0 R v J)) +
+      ((lemma56WeightedLogDerivative θ t R v J - lemma56WeightedZeroPowerSum θ t R v J) +
+        (lemma56WeightedLogDerivative (lemma44CharacterTwist χ θ) t R v J -
+          lemma56WeightedZeroPowerSum (lemma44CharacterTwist χ θ) t R v J)) := by
+    unfold lemma56MixedRemovedDerivative lemma56MixedRemainingPower
+    ring
+  rw [heq]
+  apply (norm_add_le _ _).trans
+  have h0 := (norm_add_le _ _).trans (add_le_add hχ0 hζ0)
+  have ht := (norm_add_le _ _).trans (add_le_add hθt htw)
+  exact (add_le_add h0 ht).trans_eq (by ring)
+
+lemma lemma56_actual_mixed_removed_derivative_nonpos {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q) (t : ℝ)
+    {R : ℝ} (hR : 0 < R) (β : ℂ) {v : ℂ} (hv : ‖v‖ ≤ 1) (J : ℕ) :
+    (lemma56MixedRemovedDerivative χ θ t R β v J - lemma55WeightedLocalPoleDifference χ 0 R β v J).re ≤ 0 := by
+  letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+  have heq : lemma56MixedRemovedDerivative χ θ t R β v J - lemma55WeightedLocalPoleDifference χ 0 R β v J =
+      ∑ j ∈ Finset.range J, (lemma55FejerDetectionWeight v J j : ℂ) *
+        (lemma55NormalizedLogDerivative χ 0 (2 * j + 1) + lemma55ZetaNormalizedLogDerivative 0 (2 * j + 1) +
+          (lemma56NormalizedDerivative θ t (2 * j + 1) +
+            lemma56NormalizedDerivative (lemma44CharacterTwist χ θ) t (2 * j + 1))) /
+              (R : ℂ) ^ (j + 1) := by
+    unfold lemma56MixedRemovedDerivative
+    rw [lemma55_actual_removed_pair_pole_identity]
+    unfold lemma56WeightedLogDerivative
+    rw [← sum_add_distrib]
+    have hsum : (∑ j ∈ range J, (lemma55FejerDetectionWeight v J j : ℂ) *
+      (lemma55NormalizedLogDerivative χ 0 (2 * j + 1) + lemma55ZetaNormalizedLogDerivative 0 (2 * j + 1)) /
+        (R : ℂ) ^ (j + 1)) +
+      (∑ j ∈ range J, ((lemma55FejerDetectionWeight v J j : ℂ) * lemma56NormalizedDerivative θ t (2 * j + 1) /
+        (R : ℂ) ^ (j + 1) + (lemma55FejerDetectionWeight v J j : ℂ) *
+        lemma56NormalizedDerivative (lemma44CharacterTwist χ θ) t (2 * j + 1) / (R : ℂ) ^ (j + 1))) =
+      ∑ j ∈ range J, (lemma55FejerDetectionWeight v J j : ℂ) *
+        (lemma55NormalizedLogDerivative χ 0 (2 * j + 1) + lemma55ZetaNormalizedLogDerivative 0 (2 * j + 1) +
+          (lemma56NormalizedDerivative θ t (2 * j + 1) +
+            lemma56NormalizedDerivative (lemma44CharacterTwist χ θ) t (2 * j + 1))) /
+              (R : ℂ) ^ (j + 1) := by
+      rw [← sum_add_distrib]
+      apply sum_congr rfl
+      intro j _
+      ring
+    linear_combination hsum
+  rw [heq]
+  exact lemma56_actual_weighted_four_function_nonpos χ θ t hR hv J
+
+lemma lemma56_actual_mixed_remaining_real_upper_bound {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q)
+    (hθ : θ ≠ 1) (htwist : lemma44CharacterTwist χ θ ≠ 1)
+    (hD : 1 < D) (hL : 2000 ≤ Real.log (D : ℝ)) (t : ℝ)
+    {β R U : ℝ} (hβ : β ≤ 1) (hzero : dirichletLFunction χ (β : ℂ) = 0)
+    (hderiv : deriv (dirichletLFunction χ) (β : ℂ) ≠ 0)
+    (hmem : (β : ℂ) ∈ lemma55LocalZeroFinset χ 0) (hR : 0 < R)
+    (hlower : ((1 + 2 / Real.log (D : ℝ))⁻¹) ^ 2 ≤ R)
+    (hU : 0 < U) (hUlower : ((1 + 2 / U)⁻¹) ^ 2 ≤ R)
+    {v : ℂ} (hv : ‖v‖ ≤ 1) (J : ℕ) :
+    letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+    (lemma56MixedRemainingPower χ θ t R (β : ℂ) v J).re ≤
+      187200 * Real.log (D : ℝ) + 36000 * lemma56JensenLogSize θ t +
+        36000 * lemma56JensenLogSize (lemma44CharacterTwist χ θ) t +
+          2 * (1 - β) * (J : ℝ) * ((J : ℝ) + 1) * Real.exp (4 * (J : ℝ) / U) := by
+  letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+  have he := (abs_re_le_norm (lemma56MixedRemovedDerivative χ θ t R (β : ℂ) v J -
+    lemma56MixedRemainingPower χ θ t R (β : ℂ) v J)).trans
+      (lemma56_actual_mixed_remaining_error_bound χ θ hθ htwist hD hL t hzero hderiv hR hlower hv J)
+  rw [sub_re] at he
+  have hb := lemma56_actual_mixed_removed_derivative_nonpos χ θ t hR (β : ℂ) hv J
+  rw [sub_re] at hb
+  have hp := lemma55_weighted_exceptional_pole_difference_bound 0 β hβ hU hR hUlower hv J
+  have hlocal : lemma55WeightedLocalPoleDifference χ 0 R (β : ℂ) v J =
+      lemma55WeightedExceptionalPoleDifference 0 β R v J := by
+    rw [lemma55_actual_local_pole_difference_eq, if_pos hmem, add_zero]
+  rw [← hlocal] at hp
+  have h0 := (re_le_norm (lemma55WeightedLocalPoleDifference χ 0 R (β : ℂ) v J)).trans hp
+  linarith only [(abs_le.mp he).1, hb, h0]
+
+end ZhangLS.Spec
+
+#print axioms ZhangLS.Spec.lemma56_actual_analytic_order_finite
+#print axioms ZhangLS.Spec.lemma56_actual_local_divisor_eq_order
+#print axioms ZhangLS.Spec.lemma56_mem_actual_local_zero_finset
+#print axioms ZhangLS.Spec.lemma56_actual_local_zero_order_pos
+#print axioms ZhangLS.Spec.lemma56_actual_multiplicity_count_eq_sum_orders
+#print axioms ZhangLS.Spec.lemma56_actual_local_zero_card_bound
+#print axioms ZhangLS.Spec.lemma56_actual_meromorphic_order_eq_nat
+#print axioms ZhangLS.Spec.lemma56_actual_zero_factor_analytic
+#print axioms ZhangLS.Spec.lemma56_actual_zero_factor_order
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_order
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_analytic
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_ne_zero
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_eq_quotient
+#print axioms ZhangLS.Spec.lemma56_actual_zero_factorization
+#print axioms ZhangLS.Spec.lemma56_actual_zero_factor_eq_product
+#print axioms ZhangLS.Spec.lemma56_actual_local_multiplicity_eq_count
+#print axioms ZhangLS.Spec.lemma56_actual_zero_factor_center_bound
+#print axioms ZhangLS.Spec.lemma56_actual_zero_factor_outer_lower_bound
+#print axioms ZhangLS.Spec.lemma56_actual_zero_factor_outer_ne_zero
+#print axioms ZhangLS.Spec.lemma56_actual_local_multiplicity_bound
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_outer_bound
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_closed_disk_bound
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_center_lower_bound
+#print axioms ZhangLS.Spec.lemma56_jensen_log_size_pos
+#print axioms ZhangLS.Spec.lemma56_zero_removed_ratio_bound_gt_one
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_ratio_bound
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_log_ratio_bound
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_log_exists
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_log_hasDerivAt
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_log_closed_bound
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_log_cauchy_bound
+#print axioms ZhangLS.Spec.lemma56_actual_zero_factor_logDeriv
+#print axioms ZhangLS.Spec.lemma56_actual_local_logDeriv_formula
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_higher_logDeriv_bound
+#print axioms ZhangLS.Spec.lemma56_actual_higher_logDeriv_remainder_eq
+#print axioms ZhangLS.Spec.lemma56_actual_higher_logDeriv_remainder_bound
+#print axioms ZhangLS.Spec.lemma56_actual_normalized_logDeriv_remainder_bound
+#print axioms ZhangLS.Spec.lemma56_actual_logDeriv_remainder_sum_bound
+#print axioms ZhangLS.Spec.lemma56_actual_local_zero_higher_derivative
+#print axioms ZhangLS.Spec.lemma56_actual_power_sum_remainder_norm_eq
+#print axioms ZhangLS.Spec.lemma56_actual_power_sum_remainder_bound
+#print axioms ZhangLS.Spec.lemma56_actual_power_sum_remainder_sum_bound
+#print axioms ZhangLS.Spec.lemma56_actual_normalized_odd_power_error_bound
+#print axioms ZhangLS.Spec.lemma56_actual_weighted_power_error_uniform_bound
+#print axioms ZhangLS.Spec.lemma56_actual_weighted_real_power_error_uniform_bound
+#print axioms ZhangLS.Spec.lemma56_actual_zero_re_lt_one
+#print axioms ZhangLS.Spec.lemma56_actual_local_zero_center_distance
+#print axioms ZhangLS.Spec.lemma56_actual_inverse_square_norm_bounds
+#print axioms ZhangLS.Spec.lemma56_actual_subset_max_inverse_square
+#print axioms ZhangLS.Spec.lemma56_normalized_inverse_square_power_sum
+#print axioms ZhangLS.Spec.lemma56_actual_subset_weighted_power_detection
+#print axioms ZhangLS.Spec.lemma56_actual_subset_weighted_detection_log_bound
+#print axioms ZhangLS.Spec.lemma56_near_one_zero_in_own_local_disk
+#print axioms ZhangLS.Spec.lemma56_near_one_zero_inverse_square_lower_bound
+#print axioms ZhangLS.Spec.lemma56_actual_mixed_remaining_error_bound
+#print axioms ZhangLS.Spec.lemma56_actual_mixed_removed_derivative_nonpos
+#print axioms ZhangLS.Spec.lemma56_actual_mixed_remaining_real_upper_bound
+
+open Complex Metric Set ZhangLS.Spec
+
+example {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1) (t : ℝ) (z : ℂ) :
+    DirichletCharacter.LFunction θ z = lemma56LocalZeroFactor θ t z * lemma56ZeroRemovedL θ t z :=
+  lemma56_actual_zero_factorization θ hθ t z
+
+example {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1)
+    {t : ℝ} {ρ : ℂ} (hρ : ‖ρ - lemma55JensenCenter t‖ = (5 / 4 : ℝ))
+    (hzero : DirichletCharacter.LFunction θ ρ = 0) :
+    lemma56ZeroRemovedL θ t ρ ≠ 0 ∧ lemma56LocalZeroFactor θ t ρ = 0 := by
+  have hQ := lemma56_actual_zero_removed_ne_zero θ hθ (mem_closedBall_iff_norm.mpr hρ.le)
+  refine ⟨hQ, ?_⟩
+  have he := lemma56_actual_zero_factorization θ hθ t ρ
+  rw [hzero] at he
+  exact (mul_eq_zero.mp he.symm).resolve_right hQ
+
+example {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1) (t : ℝ) (n : ℕ) :
+    ‖((-1 : ℂ) ^ n * iteratedDeriv n (logDeriv (DirichletCharacter.LFunction θ))
+      (lemma55JensenCenter t) / (n.factorial : ℂ)) -
+      (∑ ρ ∈ lemma56LocalZeroFinset θ t, (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℂ) /
+        (lemma55JensenCenter t - ρ) ^ (n + 1))‖ ≤
+      450 * ((n : ℝ) + 1) * Real.log (8 * (q : ℝ) * (7 / 2 + |t|)) * (8 / 9 : ℝ) ^ (n + 1) :=
+  lemma56_actual_power_sum_remainder_bound θ hθ n
+
+example {D q : ℕ} [NeZero q] (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q)
+    (hθ : θ ≠ 1) (htwist : lemma44CharacterTwist χ θ ≠ 1)
+    (hD : 1 < D) (hL : 2000 ≤ Real.log (D : ℝ)) (t : ℝ)
+    {β R : ℝ} (hβ : β ≤ 1) (hzero : dirichletLFunction χ (β : ℂ) = 0)
+    (hderiv : deriv (dirichletLFunction χ) (β : ℂ) ≠ 0)
+    (hmem : (β : ℂ) ∈ lemma55LocalZeroFinset χ 0) (hR : 0 < R)
+    (hlower : ((1 + 2 / Real.log (D : ℝ))⁻¹) ^ 2 ≤ R)
+    (hUlower : ((1 + 2 / (Real.log (D : ℝ)) ^ 4)⁻¹) ^ 2 ≤ R)
+    {v : ℂ} (hv : ‖v‖ ≤ 1) (J : ℕ) :
+    letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+    (lemma56MixedRemainingPower χ θ t R (β : ℂ) v J).re ≤
+      187200 * Real.log (D : ℝ) + 36000 * Real.log (8 * (q : ℝ) * (7 / 2 + |t|)) +
+        36000 * Real.log (8 * ((D * q : ℕ) : ℝ) * (7 / 2 + |t|)) +
+          2 * (1 - β) * (J : ℝ) * ((J : ℝ) + 1) * Real.exp (4 * (J : ℝ) / (Real.log (D : ℝ)) ^ 4) := by
+  have hLp : 0 < Real.log (D : ℝ) := by linarith
+  exact lemma56_actual_mixed_remaining_real_upper_bound χ θ hθ htwist hD hL t hβ hzero hderiv hmem hR
+    hlower (pow_pos hLp 4) hUlower hv J

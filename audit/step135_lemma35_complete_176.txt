@@ -1,0 +1,51 @@
+import ZhangMathStep175Lemma35PrimeMassDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex MeasureTheory Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma35_actual_X3_mean_of_inputs {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (hL : 3 ≤ lemma23PaperL D) (hA : NormalizedAssumptionA χ)
+    (hAbs : (Real.sqrt (D : ℝ))⁻¹ ≤ lemma23PaperL D^(-2013 : ℤ))
+    (hm : (1/4 : ℝ)*lemma23PaperP D^2/lemma23PaperL D^77 ≤ lemma33ActualPrimeMass D)
+    (x : ℝ) (hx : x ≤ lemma23PaperP D^2) :
+    (∑ ψ ∈ lemma33ActualFamily D, ‖lemma23ActualX3 χ ψ.2 x‖^2) ≤
+      5040*(32+Real.pi^2)*lemma33ActualPrimeMass D*lemma23PaperL D^(-1934 : ℤ) := by
+  have hl0 : 0 < lemma23PaperL D := by linarith
+  have hn := lemma31_actual_square_paper_tail_le χ hD (by linarith) hA hAbs
+  have hmean := lemma35_actual_X3_mean_energy_le χ hL x hx
+  have hmass := lemma35_prime_mass_scale_of_lower hl0 hm
+  have hK : 0 ≤ 1260*(32+Real.pi^2) := by positivity
+  calc
+    _ ≤ (32+Real.pi^2)*lemma23PaperP D^2*
+        (∑ n ∈ Finset.Ioc (D^4) ⌊lemma23PaperP D^2⌋₊,
+          ‖lemma23NuArithmeticFunction χ n‖^2*(n : ℝ)⁻¹) := hmean
+    _ ≤ (32+Real.pi^2)*lemma23PaperP D^2*(1260*lemma23PaperL D^(-2011 : ℤ)) :=
+      mul_le_mul_of_nonneg_left hn (mul_nonneg (by positivity) (sq_nonneg _))
+    _ = (1260*(32+Real.pi^2))*lemma23PaperP D^2*lemma23PaperL D^(-2011 : ℤ) := by ring
+    _ ≤ (1260*(32+Real.pi^2))*(4*lemma33ActualPrimeMass D*lemma23PaperL D^77)*
+        lemma23PaperL D^(-2011 : ℤ) := mul_le_mul_of_nonneg_right
+      (mul_le_mul_of_nonneg_left hmass hK) (zpow_pos hl0 _).le
+    _ = 5040*(32+Real.pi^2)*lemma33ActualPrimeMass D*
+        (lemma23PaperL D^77*lemma23PaperL D^(-2011 : ℤ)) := by ring
+    _ = _ := by rw [lemma35_mean_scale_identity _ hl0]
+
+lemma lemma35_uniform_actual_X3_mean :
+    ∃ D₀ : ℕ, ∀ D : ℕ, D₀ ≤ D → 1 < D ∧ 3 ≤ lemma23PaperL D ∧
+      ∀ χ : RealPrimitiveCharacter D, NormalizedAssumptionA χ →
+        ∀ x : ℝ, x ≤ lemma23PaperP D^2 →
+          (∑ ψ ∈ lemma33ActualFamily D, ‖lemma23ActualX3 χ ψ.2 x‖^2) ≤
+            5040*(32+Real.pi^2)*lemma33ActualPrimeMass D*lemma23PaperL D^(-1934 : ℤ) := by
+  obtain ⟨Da,ha⟩ := lemma31_exponential_absorption_threshold
+  obtain ⟨Dm,hm⟩ := lemma56_uniform_actual_prime_mass_lower
+  refine ⟨max Da Dm,?_⟩
+  intro D hD
+  have hp := ha D ((le_max_left _ _).trans hD)
+  refine ⟨hp.1,hp.2.1,?_⟩
+  intro χ hA x hx
+  have hl := hm χ ((le_max_right _ _).trans hD) hp.1 hA
+  rw [← lemma35_actual_prime_mass_eq] at hl
+  exact lemma35_actual_X3_mean_of_inputs χ hp.1 hp.2.1 hA hp.2.2 hl x hx
+
+end ZhangLS.Spec

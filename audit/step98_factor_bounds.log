@@ -1,0 +1,24 @@
+⚠ [1279/1367] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✖ [3471/3471] Building ZhangLS.Spec.Lemma55ZeroFactorBounds (1.9s)
+trace: .> LEAN_PATH=/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Cli/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/batteries/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Qq/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/aesop/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/importGraph/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/plausible/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/mathlib/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/keyishen/Documents/ChatGPT/zhangmath/ZhangLS/Spec/Lemma55ZeroFactorBounds.lean -o /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/Lemma55ZeroFactorBounds.olean -i /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/Lemma55ZeroFactorBounds.ilean -c /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/Lemma55ZeroFactorBounds.c --setup /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/Lemma55ZeroFactorBounds.setup.json --json
+error: ZhangLS/Spec/Lemma55ZeroFactorBounds.lean:78:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?a ^ ∑ i ∈ ?s, ?f i
+in the target expression
+  (1 / 4) ^ lemma55LocalMultiplicity χ t ≤
+    ∏ b ∈ lemma55LocalZeroFinset χ t, ‖(z - b) ^ analyticOrderNatAt (dirichletLFunction χ) b‖
+
+D : ℕ
+χ : RealPrimitiveCharacter D
+hD : 1 < D
+t : ℝ
+z : ℂ
+hz : z ∈ sphere (lemma55JensenCenter t) (3 / 2)
+⊢ (1 / 4) ^ lemma55LocalMultiplicity χ t ≤
+    ∏ b ∈ lemma55LocalZeroFinset χ t, ‖(z - b) ^ analyticOrderNatAt (dirichletLFunction χ) b‖
+error: Lean exited with code 1
+Some required targets logged failures:
+- ZhangLS.Spec.Lemma55ZeroFactorBounds
+error: build failed

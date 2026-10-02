@@ -1,0 +1,4 @@
+ZhangLS/Spec/Lemma57QuadraticConductorThreshold.lean:63:4: warning: exponent 10000000 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold
+ZhangLS/Spec/Lemma57QuadraticConductorThreshold.lean:136:18: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

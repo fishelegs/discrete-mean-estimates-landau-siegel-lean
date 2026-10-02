@@ -1,0 +1,28 @@
+import ZhangMathStep257Lemma32LeftKernelContinuityDraft
+import ZhangMathStep256Lemma32BurgessAbelScaleDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_smoothing_left_line_bound (L t : ℝ) (hL : 0 ≤ L) :
+    ‖lemma32SmoothingDifference L (lemma32LeftLine t)‖ ≤ 2*Real.exp (-L) := by
+  have h8 : ‖Complex.exp (8*(L : ℂ)*lemma32LeftLine t)‖ ≤ Real.exp (-L) := by
+    rw [Complex.norm_exp]
+    apply Real.exp_le_exp.mpr
+    norm_num [lemma32LeftLine,Complex.mul_re,Complex.mul_im]
+    linarith
+  have h4 : ‖Complex.exp (4*(L : ℂ)*lemma32LeftLine t)‖ = Real.exp (-L) := by
+    rw [Complex.norm_exp]
+    congr 1
+    norm_num [lemma32LeftLine,Complex.mul_re,Complex.mul_im]
+    ring
+  unfold lemma32SmoothingDifference
+  calc
+    _ ≤ ‖Complex.exp (8*(L : ℂ)*lemma32LeftLine t)‖+
+      ‖Complex.exp (4*(L : ℂ)*lemma32LeftLine t)‖ := norm_sub_le _ _
+    _ ≤ Real.exp (-L)+Real.exp (-L) := add_le_add h8 h4.le
+    _ = _ := by ring
+
+end ZhangLS.Spec

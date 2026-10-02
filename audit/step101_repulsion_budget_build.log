@@ -1,0 +1,150 @@
+⚠ [1859/1888] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3502/3591] Replayed ZhangLS.Spec.Lemma23AnalyticLogBranch
+warning: ZhangLS/Spec/Lemma23AnalyticLogBranch.lean:42:53: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ZhangLS/Spec/Lemma23AnalyticLogBranch.lean:67:44: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3509/3591] Replayed ZhangLS.Spec.Lemma55LocalLogDerivative
+warning: ZhangLS/Spec/Lemma55LocalLogDerivative.lean:36:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3518/3591] Replayed ZhangLS.Spec.Lemma23DirichletConjugation
+warning: ZhangLS/Spec/Lemma23DirichletConjugation.lean:23:0: automatically included section variable(s) unused in theorem `ZhangLS.Spec.dirichletLSeries_inv_eq_conj_at_conj`:
+  [NeZero N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3521/3591] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3525/3591] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:101:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:102:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3526/3591] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3531/3591] Replayed ZhangLS.Spec.Lemma57SmoothedSum
+warning: ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3540/3591] Replayed ZhangLS.Spec.Lemma57GaussianGlobal
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:55:58: unused variable `ha`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:13: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:34: unused variable `hx`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3541/3591] Replayed ZhangLS.Spec.Lemma57SmoothedSummability
+warning: ZhangLS/Spec/Lemma57SmoothedSummability.lean:20:52: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3546/3591] Replayed ZhangLS.Spec.Lemma57GaussianMellinTransform
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:67:63: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:145:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:326:4: Try `simp at hs` instead of `simpa using hs`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3552/3591] Replayed ZhangLS.Spec.RiemannZetaCriticalLineBound
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:99:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:124:13: unused variable `hs`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:152:6: unused variable `n`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:156:20: unused variable `k`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:161:8: This simp argument is unused:
+  sum_one_Icc
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵s̵u̵m̵_̵o̵n̵e̵_̵I̵c̵c̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:242:12: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:242:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:219:41: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:303:8: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:303:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:394:12: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:475:75: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3553/3591] Replayed ZhangLS.Spec.Lemma57CriticalStripGrowth
+warning: ZhangLS/Spec/Lemma57CriticalStripGrowth.lean:270:14: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3566/3591] Replayed ZhangLS.Spec.Lemma57QuadraticConductorThreshold
+warning: ZhangLS/Spec/Lemma57QuadraticConductorThreshold.lean:63:4: exponent 10000000 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold
+warning: ZhangLS/Spec/Lemma57QuadraticConductorThreshold.lean:136:18: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3584/3591] Replayed ZhangLS.Spec.Lemma55ZetaLocalLogDerivative
+warning: ZhangLS/Spec/Lemma55ZetaLocalLogDerivative.lean:33:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✖ [3591/3591] Building ZhangLS.Spec.Lemma55UniformRepulsionBudget (17s)
+trace: .> LEAN_PATH=/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Cli/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/batteries/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Qq/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/aesop/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/importGraph/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/plausible/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/mathlib/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/keyishen/Documents/ChatGPT/zhangmath/ZhangLS/Spec/Lemma55UniformRepulsionBudget.lean -o /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/Lemma55UniformRepulsionBudget.olean -i /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/Lemma55UniformRepulsionBudget.ilean -c /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/Lemma55UniformRepulsionBudget.c --setup /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/Lemma55UniformRepulsionBudget.setup.json --json
+error: ZhangLS/Spec/Lemma55UniformRepulsionBudget.lean:56:8: Type mismatch
+  hclose
+has type
+  δ ≤ 64 * L ^ (-2022)
+but is expected to have type
+  ↑(lemma55RepulsionDegree L) ≤ 2000001 * L
+error: ZhangLS/Spec/Lemma55UniformRepulsionBudget.lean:57:8: Type mismatch
+  hj.right.left
+has type
+  ↑(lemma55RepulsionDegree L) ≤ 2000001 * L
+but is expected to have type
+  ↑(lemma55RepulsionDegree L) + 1 ≤ 2000002 * L
+error: ZhangLS/Spec/Lemma55UniformRepulsionBudget.lean:58:6: No goals to be solved
+error: Lean exited with code 1
+Some required targets logged failures:
+- ZhangLS.Spec.Lemma55UniformRepulsionBudget
+error: build failed

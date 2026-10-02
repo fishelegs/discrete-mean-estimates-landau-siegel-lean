@@ -1,0 +1,167 @@
+import ZhangLS.Spec.Lemma59FiniteZeroProducts
+import Mathlib.NumberTheory.Harmonic.Bounds
+import Mathlib.Data.Finset.Sort
+
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+set_option maxHeartbeats 2000000
+set_option maxRecDepth 4096
+
+lemma lemma59_relaxed_rank_scalar {a ε : ℝ} (ha : 0 < a) (hε : 0 ≤ ε) :
+    1 + (1 + ε) / a ≤ (1 + a⁻¹) * Real.exp (ε / a) := by
+  have hx : 0 ≤ ε / a := div_nonneg hε ha.le
+  have hi : 0 ≤ a⁻¹ := inv_nonneg.mpr ha.le
+  have he := Real.add_one_le_exp (ε / a)
+  calc
+    _ ≤ (1 + a⁻¹) * (1 + ε / a) := by
+      rw [add_div]
+      simp only [one_div]
+      nlinarith only [mul_nonneg hi hx]
+    _ ≤ _ := mul_le_mul_of_nonneg_left (by linarith only [he]) (by positivity)
+
+lemma lemma59_relaxed_ranked_zero_product_bound {N : ℕ} {z : ℂ} {ρ : ℕ → ℂ}
+    {g δ ε : ℝ} (hg : 0 < g) (hδ : 0 ≤ δ) (hε : 0 ≤ ε)
+    (hshift : δ ≤ (1 + ε) * g)
+    (hgap : ∀ k ∈ range N, ((k : ℝ) + 1) * g ≤ ‖z - ρ k‖) :
+    ‖∏ k ∈ range N, (z + I * (δ : ℂ) - ρ k) / (z - ρ k)‖ ≤
+      ((N : ℝ) + 1) * Real.exp (ε * (harmonic N : ℝ)) := by
+  have hpoint (k : ℕ) (hk : k ∈ range N) :
+      ‖(z + I * (δ : ℂ) - ρ k) / (z - ρ k)‖ ≤
+      (((k : ℝ) + 2) / ((k : ℝ) + 1)) * Real.exp (ε / ((k : ℝ) + 1)) := by
+    have hp : 0 < (k : ℝ) + 1 := by positivity
+    have ha : 0 < (1 + ε) / ((k : ℝ) + 1) := div_pos (by linarith only [hε]) hp
+    have hd : δ / ((1 + ε) / ((k : ℝ) + 1)) ≤ ‖z - ρ k‖ := by
+      apply (div_le_iff₀ ha).mpr
+      apply hshift.trans
+      rw [← mul_div_assoc]
+      apply (le_div_iff₀ hp).mpr
+      have hm := mul_le_mul_of_nonneg_left (hgap k hk) (by linarith only [hε] : 0 ≤ 1 + ε)
+      nlinarith only [hm]
+    have hn : z ≠ ρ k := sub_ne_zero.mp (norm_pos_iff.mp ((mul_pos hp hg).trans_le (hgap k hk)))
+    have h := (lemma59_shift_factor_bound hδ ha hd hn).trans (lemma59_relaxed_rank_scalar hp hε)
+    have he : 1 + ((k : ℝ) + 1)⁻¹ = ((k : ℝ) + 2) / ((k : ℝ) + 1) := by field_simp; ring
+    simpa only [he] using h
+  rw [norm_prod]
+  calc
+    _ ≤ ∏ k ∈ range N, (((k : ℝ) + 2) / ((k : ℝ) + 1)) * Real.exp (ε / ((k : ℝ) + 1)) :=
+      prod_le_prod (fun _ _ => norm_nonneg _) hpoint
+    _ = (∏ k ∈ range N, (((k : ℝ) + 2) / ((k : ℝ) + 1))) *
+        Real.exp (∑ k ∈ range N, ε / ((k : ℝ) + 1)) := by
+      rw [prod_mul_distrib, Real.exp_sum]
+    _ = _ := by
+      rw [lemma59_linear_telescoping_product]
+      congr 2
+      simp only [harmonic,Rat.cast_sum,Rat.cast_inv,Rat.cast_natCast,Nat.cast_add,Nat.cast_one]
+      simp_rw [div_eq_mul_inv]
+      rw [mul_sum]
+      simp only [Rat.cast_add,Rat.cast_natCast,Rat.cast_one]
+
+lemma lemma59_exceptional_zero_product_bound_three (S : Finset ℂ) {z : ℂ} {δ η : ℝ}
+    (hδ : 0 < δ) (hη : 0 < η) (hcard : S.card ≤ 3)
+    (hgap : ∀ ρ ∈ S, η * δ ≤ ‖z - ρ‖) :
+    ‖∏ ρ ∈ S, (z + I * (δ : ℂ) - ρ) / (z - ρ)‖ ≤ (1 + η⁻¹) ^ 3 := by
+  have hb : 1 ≤ 1 + η⁻¹ := by linarith only [le_of_lt (inv_pos.mpr hη)]
+  rw [norm_prod]
+  calc
+    _ ≤ ∏ _ρ ∈ S, (1 + η⁻¹) :=
+      prod_le_prod (fun _ _ => norm_nonneg _) (fun ρ hρ => lemma59_near_zero_factor_bound hδ hη (hgap ρ hρ))
+    _ = (1 + η⁻¹) ^ S.card := by simp
+    _ ≤ _ := pow_le_pow_right₀ hb hcard
+
+
+lemma lemma59_ordered_separated_rank {S : Finset ℝ} {g a : ℝ}
+    (hbase : ∀ x ∈ S, a ≤ x)
+    (hgap : ∀ x ∈ S, ∀ y ∈ S, x < y → g ≤ y - x) :
+    ∀ k : ℕ, ∀ hk : k < S.card,
+      a + (k : ℝ) * g ≤ S.orderEmbOfFin rfl ⟨k,hk⟩ := by
+  intro k
+  induction k with
+  | zero =>
+    intro hk
+    simpa only [Nat.cast_zero,zero_mul,add_zero] using
+      hbase (S.orderEmbOfFin rfl ⟨0,hk⟩) (S.orderEmbOfFin_mem rfl ⟨0,hk⟩)
+  | succ k ih =>
+    intro hk
+    have hkp : k < S.card := by omega
+    have hm : S.orderEmbOfFin rfl ⟨k,hkp⟩ < S.orderEmbOfFin rfl ⟨k+1,hk⟩ :=
+      (S.orderEmbOfFin rfl).strictMono (by exact Nat.lt_succ_self k)
+    have hg := hgap _ (S.orderEmbOfFin_mem rfl ⟨k,hkp⟩) _
+      (S.orderEmbOfFin_mem rfl ⟨k+1,hk⟩) hm
+    have hi := ih hkp
+    push_cast
+    linarith only [hi,hg]
+
+lemma lemma59_near_real_zero_card_le_three {S : Finset ℝ} {g a b : ℝ}
+    (hregion : ∀ x ∈ S, a < x ∧ x < b) (hwidth : b - a ≤ 3 * g)
+    (hgap : ∀ x ∈ S, ∀ y ∈ S, x < y → g ≤ y - x) : S.card ≤ 3 := by
+  by_contra hc
+  have h3 : 3 < S.card := by omega
+  have hr := lemma59_ordered_separated_rank (S := S)
+    (fun x hx => (hregion x hx).1.le) hgap 3 h3
+  have hu := (hregion _ (S.orderEmbOfFin_mem rfl ⟨3,h3⟩)).2
+  norm_num at hr
+  linarith only [hr,hu,hwidth]
+
+
+lemma lemma59_sorted_real_zero_product_bound (S : Finset ℝ) {z : ℂ} {g δ ε : ℝ}
+    (hg : 0 < g) (hδ : 0 ≤ δ) (hε : 0 ≤ ε) (hshift : δ ≤ (1 + ε) * g)
+    (hbase : ∀ x ∈ S, g - z.im ≤ x)
+    (hgap : ∀ x ∈ S, ∀ y ∈ S, x < y → g ≤ y - x) :
+    ‖∏ x ∈ S, (z + I * (δ : ℂ) - ((1 / 2 : ℂ) - I * (x : ℂ))) /
+      (z - ((1 / 2 : ℂ) - I * (x : ℂ)))‖ ≤
+    ((S.card : ℝ) + 1) * Real.exp (ε * (harmonic S.card : ℝ)) := by
+  classical
+  let e := S.orderEmbOfFin rfl
+  let ρ : ℕ → ℂ := fun k => if hk : k < S.card then
+    (1 / 2 : ℂ) - I * (e ⟨k,hk⟩ : ℂ) else 0
+  let f : ℝ → ℂ := fun x =>
+    (z + I * (δ : ℂ) - ((1 / 2 : ℂ) - I * (x : ℂ))) /
+      (z - ((1 / 2 : ℂ) - I * (x : ℂ)))
+  have hrank : ∀ k ∈ range S.card, ((k : ℝ) + 1) * g ≤ ‖z - ρ k‖ := by
+    intro k hk
+    have hkn := mem_range.mp hk
+    have hr := lemma59_ordered_separated_rank hbase hgap k hkn
+    have hn := (le_abs_self (z.im + e ⟨k,hkn⟩)).trans
+      (show |z.im + e ⟨k,hkn⟩| ≤ ‖z - ((1 / 2 : ℂ) - I * (e ⟨k,hkn⟩ : ℂ))‖ by
+        simpa using Complex.abs_im_le_norm (z - ((1 / 2 : ℂ) - I * (e ⟨k,hkn⟩ : ℂ))))
+    simp only [ρ,dif_pos hkn]
+    change g - z.im + (k : ℝ) * g ≤ e ⟨k,hkn⟩ at hr
+    linarith only [hr,hn]
+  have hp : (∏ x ∈ S, f x) = ∏ i : Fin S.card, f (e i) := by
+    calc
+      _ = ∏ x ∈ image e univ, f x := congrArg (fun T : Finset ℝ => ∏ x ∈ T, f x)
+        (S.image_orderEmbOfFin_univ rfl).symm
+      _ = _ := prod_image (fun i _ j _ hij => e.injective hij)
+  have hpr : (∏ i : Fin S.card, f (e i)) =
+      ∏ k ∈ range S.card, (z + I * (δ : ℂ) - ρ k) / (z - ρ k) := by
+    rw [prod_fin_eq_prod_range]
+    apply prod_congr rfl
+    intro k hk
+    simp only [dif_pos (mem_range.mp hk),ρ,f]
+  change ‖∏ x ∈ S, f x‖ ≤ _
+  rw [hp,hpr]
+  exact lemma59_relaxed_ranked_zero_product_bound hg hδ hε hshift hrank
+
+
+example (S : Finset ℝ) {z : ℂ} {g δ ε : ℝ}
+    (hg : 0 < g) (hδ : 0 ≤ δ) (hε : 0 ≤ ε) (hshift : δ ≤ (1 + ε) * g)
+    (hbase : ∀ x ∈ S, g - z.im ≤ x)
+    (hgap : ∀ x ∈ S, ∀ y ∈ S, x < y → g ≤ y - x) :
+    ‖∏ x ∈ S, (z + I * (δ : ℂ) - ((1 / 2 : ℂ) - I * (x : ℂ))) /
+      (z - ((1 / 2 : ℂ) - I * (x : ℂ)))‖ ≤
+      ((S.card : ℝ) + 1) * Real.exp (ε * (harmonic S.card : ℝ)) :=
+  lemma59_sorted_real_zero_product_bound S hg hδ hε hshift hbase hgap
+
+example {S : Finset ℝ} {g a b : ℝ}
+    (hregion : ∀ x ∈ S, a < x ∧ x < b) (hwidth : b - a ≤ 3 * g)
+    (hgap : ∀ x ∈ S, ∀ y ∈ S, x < y → g ≤ y - x) : S.card ≤ 3 :=
+  lemma59_near_real_zero_card_le_three hregion hwidth hgap
+
+#print axioms lemma59_relaxed_rank_scalar
+#print axioms lemma59_relaxed_ranked_zero_product_bound
+#print axioms lemma59_exceptional_zero_product_bound_three
+#print axioms lemma59_ordered_separated_rank
+#print axioms lemma59_near_real_zero_card_le_three
+#print axioms lemma59_sorted_real_zero_product_bound
+end ZhangLS.Spec

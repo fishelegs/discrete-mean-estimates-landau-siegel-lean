@@ -1,0 +1,16 @@
+{
+  "kernel_exit_code": 0,
+  "checked_at_utc": "2026-10-01T17:58:30.968100+00:00",
+  "sha256": "055b97e595934ef021275d6a1f4210aa637297ebe3822e7b9b82fb4976c9ffbd",
+  "interface_count": 6,
+  "expanded_examples": 2,
+  "proved_interfaces": [
+    "lemma59_relaxed_rank_scalar",
+    "lemma59_relaxed_ranked_zero_product_bound",
+    "lemma59_exceptional_zero_product_bound_three",
+    "lemma59_ordered_separated_rank",
+    "lemma59_near_real_zero_card_le_three",
+    "lemma59_sorted_real_zero_product_bound"
+  ],
+  "scope": "Auxiliary finite-product geometry. Shift delta <=(1+epsilon)g and ranked g-distance imply actual complex factor product <=(N+1)exp(epsilon H_N). Finite real sets are sorted by their genuine order embedding; ordered gap implies rank distance. Any open interval of width <=3g contains at most three g-separated points. Six standard-axiom interfaces and two expanded examples pass independently; no original numbered target claimed."
+}

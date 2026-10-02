@@ -1,0 +1,36 @@
+import ZhangMathStep391Lemma32ActualUniformBurgessDraft
+import ZhangMathStep264Lemma32BurgessReductionDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+open scoped Classical
+
+lemma lemma32_actual_interval_prefix_sum {D : ℕ} (χ : RealPrimitiveCharacter D) (N : ℕ) :
+    lemma32BurgessIntervalSum χ 1 N=∑ n ∈ Finset.Icc 1 N, χ.evalNat n := by
+  unfold lemma32BurgessIntervalSum
+  have he (i : Fin N) : χ.chi (((1+(i.val : ℤ)) : ℤ) : ZMod D)=χ.evalNat (i.val+1) := by
+    simp only [RealPrimitiveCharacter.evalNat, Int.cast_add, Int.cast_one,
+      Int.cast_natCast, Nat.cast_add, Nat.cast_one, add_comm]
+  simp_rw [he]
+  rw [Fin.sum_univ_eq_sum_range (fun n => χ.evalNat (n+1)) N,
+    Finset.range_eq_Ico, Finset.sum_Ico_add' (fun n => χ.evalNat n) 0 N 1]
+  have hi : Finset.Ico (0+1) (N+1)=Finset.Icc 1 N := by
+    ext n
+    simp only [Finset.mem_Ico, Finset.mem_Icc]
+    omega
+  rw [hi]
+
+lemma lemma32_actual_uniform_burgess_partial_sums (D : ℕ) (hD : 2≤D)
+    (χ : RealPrimitiveCharacter D) (N : ℕ) :
+    ‖∑ n ∈ Finset.Icc 1 N, χ.evalNat n‖ ≤
+      (lemma32BurgessGlobalConstant*Real.exp ((25/128)*lemma23PaperL D))*(N : ℝ)^(1/2 : ℝ) := by
+  letI : NeZero D := ⟨χ.modulus_ne_zero⟩
+  have hb := lemma32_actual_uniform_burgess_interval χ (by omega : 1<D) N 1
+  rw [lemma32_actual_interval_prefix_sum] at hb
+  simpa only [lemma32BurgessPower, lemma23PaperL, Real.sqrt_eq_rpow] using hb
+
+lemma lemma32_proved : Lemma32Target :=
+  lemma32_target_of_uniform_burgess_partial_sums lemma32BurgessGlobalConstant
+    lemma32_burgess_global_constant_bounds.1 lemma32_actual_uniform_burgess_partial_sums
+
+end ZhangLS.Spec

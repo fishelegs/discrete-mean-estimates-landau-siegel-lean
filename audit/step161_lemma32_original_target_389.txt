@@ -1,0 +1,48 @@
+import ZhangMathStep388Lemma32BurgessGlobalConstantDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+
+noncomputable def lemma32BurgessNormalizedAmplitude {D : ℕ}
+    (χ : RealPrimitiveCharacter D) (M : ℤ) (N : ℕ) : ℝ :=
+  lemma32BurgessShiftAbsoluteSum χ M (lemma32BurgessMultiplierLength D N) N (lemma32BurgessBlockLength D)/
+    (((lemma32BurgessUnitMultipliers D (lemma32BurgessMultiplierLength D N)).card : ℝ)*
+      (lemma32BurgessBlockLength D : ℝ))
+
+lemma lemma32_actual_burgess_amplitude_half_bound {D N : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (hD : 1≤D)
+    (hN : lemma32BurgessSmallRangeConstant*lemma32BurgessPower D (25/64)<(N : ℝ))
+    (hupper : (N : ℝ)≤lemma32BurgessPower D (79/128)) (M : ℤ) :
+    lemma32BurgessNormalizedAmplitude χ M N ≤
+      (lemma32BurgessGlobalConstant/2)*lemma32BurgessPower D (25/128)*Real.sqrt (N : ℝ) := by
+  have hb := lemma32_actual_burgess_normalized_amplitude_fourth χ hD hN hupper M
+  change (lemma32BurgessNormalizedAmplitude χ M N)^4≤
+    lemma32BurgessAmplitudeConstant*lemma32BurgessPower D (197/256)*(N : ℝ)^2 at hb
+  have hm := mul_le_mul_of_nonneg_right
+    (mul_le_mul_of_nonneg_left
+      (lemma32_burgess_power_mono hD (by norm_num : (197/256 : ℝ)≤25/32))
+      lemma32_burgess_amplitude_constant_pos.le) (sq_nonneg (N : ℝ))
+  have hk := lemma32_burgess_global_constant_bounds.2.2.2
+  have hc := mul_le_mul_of_nonneg_right hk
+    (mul_nonneg (lemma32_burgess_power_pos D (25/32)).le (sq_nonneg (N : ℝ)))
+  have hp : (lemma32BurgessPower D (25/128))^4=lemma32BurgessPower D (25/32) := by
+    rw [lemma32_burgess_power_nat_pow]
+    norm_num
+  have hs : (Real.sqrt (N : ℝ))^4=(N : ℝ)^2 := by
+    calc
+      _ = ((Real.sqrt (N : ℝ))^2)^2 := by ring
+      _ = _ := by rw [Real.sq_sqrt (Nat.cast_nonneg N)]
+  have he : ((lemma32BurgessGlobalConstant/2)*lemma32BurgessPower D (25/128)*Real.sqrt (N : ℝ))^4 =
+      (lemma32BurgessGlobalConstant/2)^4*lemma32BurgessPower D (25/32)*(N : ℝ)^2 := by
+    rw [mul_pow, mul_pow, hp, hs]
+  have hC : 0≤lemma32BurgessGlobalConstant/2 := by linarith [lemma32_burgess_global_constant_bounds.1]
+  have htarget : 0≤(lemma32BurgessGlobalConstant/2)*lemma32BurgessPower D (25/128)*Real.sqrt (N : ℝ) :=
+    mul_nonneg (mul_nonneg hC (lemma32_burgess_power_pos D (25/128)).le) (Real.sqrt_nonneg _)
+  apply le_of_pow_le_pow_left₀ (by decide : (4 : ℕ)≠0) htarget
+  rw [he]
+  have hc' : lemma32BurgessAmplitudeConstant*lemma32BurgessPower D (25/32)*(N : ℝ)^2 ≤
+      (lemma32BurgessGlobalConstant/2)^4*lemma32BurgessPower D (25/32)*(N : ℝ)^2 := by
+    simpa only [mul_assoc] using hc
+  exact (hb.trans hm).trans hc'
+
+end ZhangLS.Spec

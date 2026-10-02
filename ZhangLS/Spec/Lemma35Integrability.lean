@@ -1,0 +1,63 @@
+import ZhangLS.Spec.Lemma35UniformMean
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex MeasureTheory Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma35ActualTailCoefficient {D q : ℕ} (χ : RealPrimitiveCharacter D)
+    (ψ : DirichletCharacter ℂ q) (n : ℕ) : ℂ :=
+  if D^4 < n then lemma23NuArithmeticFunction χ n * ψ (n : ZMod q) *
+    Complex.exp (-lemma23PaperCenter D * (Real.log (n : ℝ) : ℂ)) else 0
+
+lemma lemma35_actual_X3_eq_partial_sum {D q : ℕ} (χ : RealPrimitiveCharacter D)
+    (ψ : DirichletCharacter ℂ q) (x : ℝ) :
+    lemma23ActualX3 χ ψ x =
+      ∑ n ∈ Finset.Icc 0 ⌊x⌋₊, lemma35ActualTailCoefficient χ ψ n := by
+  have hs : {n ∈ Finset.Icc 0 ⌊x⌋₊ | D^4 < n} = Finset.Ioc (D^4) ⌊x⌋₊ := by
+    ext n
+    simp only [Finset.mem_filter,Finset.mem_Icc,Finset.mem_Ioc]
+    omega
+  unfold lemma23ActualX3 lemma35ActualTailCoefficient
+  rw [← Finset.sum_filter,hs]
+
+lemma lemma35_actual_X3_measurable {D q : ℕ} (χ : RealPrimitiveCharacter D)
+    (ψ : DirichletCharacter ℂ q) : Measurable (fun t : ℝ => lemma23ActualX3 χ ψ t) := by
+  have he : (fun t : ℝ => lemma23ActualX3 χ ψ t) =
+      (fun t : ℝ => ∑ n ∈ Finset.Icc 0 ⌊t⌋₊, lemma35ActualTailCoefficient χ ψ n) := by
+    funext t
+    exact lemma35_actual_X3_eq_partial_sum χ ψ t
+  rw [he]
+  exact (measurable_of_countable
+    (fun N : ℕ => ∑ n ∈ Finset.Icc 0 N, lemma35ActualTailCoefficient χ ψ n)).comp Nat.measurable_floor
+
+lemma lemma35_actual_X3_partial_norm_bound {D q : ℕ} (χ : RealPrimitiveCharacter D)
+    (ψ : DirichletCharacter ℂ q) (t : ℝ) (ht : t ≤ lemma23PaperP D^2) :
+    ‖lemma23ActualX3 χ ψ t‖ ≤
+      ∑ n ∈ Finset.Icc 0 ⌊lemma23PaperP D^2⌋₊, ‖lemma35ActualTailCoefficient χ ψ n‖ := by
+  rw [lemma35_actual_X3_eq_partial_sum]
+  apply (norm_sum_le _ _).trans
+  exact Finset.sum_le_sum_of_subset_of_nonneg
+    (Finset.Icc_subset_Icc_right (Nat.floor_le_floor ht)) (by intros; positivity)
+
+lemma lemma35_actual_X3_power_weighted_integrable {D q : ℕ} (χ : RealPrimitiveCharacter D)
+    (ψ : DirichletCharacter ℂ q) (hD : 1 ≤ D) (m : ℕ) :
+    IntegrableOn (fun t : ℝ => ‖lemma23ActualX3 χ ψ t‖^m/t)
+      (Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2)) := by
+  let B : ℝ := ∑ n ∈ Finset.Icc 0 ⌊lemma23PaperP D^2⌋₊, ‖lemma35ActualTailCoefficient χ ψ n‖
+  have hm : Measurable (fun t : ℝ => ‖lemma23ActualX3 χ ψ t‖^m/t) :=
+    ((lemma35_actual_X3_measurable χ ψ).norm.pow_const m).div measurable_id
+  have hb : IntegrableOn (fun _ : ℝ => B^m)
+      (Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2)) := continuous_const.integrableOn_Ioc
+  have hd : (1 : ℝ) ≤ D := by exact_mod_cast hD
+  have hd4 : (1 : ℝ) ≤ (D : ℝ)^4 := one_le_pow₀ hd
+  apply hb.mono' hm.aestronglyMeasurable
+  filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
+  have ht1 : 1 ≤ t := hd4.trans ht.1.le
+  have ht0 : 0 < t := by linarith
+  have hn := lemma35_actual_X3_partial_norm_bound χ ψ t ht.2
+  have hp := pow_le_pow_left₀ (norm_nonneg _) hn m
+  rw [Real.norm_of_nonneg (div_nonneg (pow_nonneg (norm_nonneg _) _) ht0.le)]
+  exact (div_le_self (pow_nonneg (norm_nonneg _) _) ht1).trans hp
+
+end ZhangLS.Spec

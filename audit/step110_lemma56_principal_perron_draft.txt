@@ -1,0 +1,253 @@
+import ZhangLS.Spec.Lemma56ZetaLogDerivativeLeft
+import ZhangLS.Spec.Lemma56PrimeMassNormalization
+import ZhangLS.Spec.Lemma44LocalRectangle
+
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set Metric
+set_option maxHeartbeats 1000000
+set_option maxRecDepth 4096
+
+lemma lemma56_positive_right_rectangle_inv {a b H : ℝ}
+    (ha : a < 0) (hb : 1 ≤ b) (hH : 0 < H) :
+    lemma44GeneralRectangleBoundaryIntegral (fun w : ℂ => w⁻¹) a b H =
+      2 * (Real.pi : ℂ) * I := by
+  by_cases hh : a ≤ -1 / 2
+  · exact lemma44_general_rectangle_inv hh hb hH
+  have hbase := lemma44_general_rectangle_inv (a := (-1 / 2 : ℝ)) (by rfl) hb hH
+  have hHalf : (-1 / 2 : ℝ) ≤ a := (lt_of_not_ge hh).le
+  have hc := lemma44_local_rectangle_cauchy (fun w : ℂ => w⁻¹) hHalf hH.le
+    (by
+      intro w hw
+      have hwre : w.re ≤ a := hw.1.2
+      have hne : w ≠ 0 := by
+        intro he
+        simp only [he, zero_re] at hwre
+        linarith only [hwre, ha]
+      exact (differentiableAt_id.inv hne).differentiableWithinAt)
+  have hbottom : Continuous (fun x : ℝ => ((x : ℂ) - (H : ℂ) * I)⁻¹) := by
+    apply Continuous.inv₀ (by fun_prop)
+    intro x hx
+    have hi := congrArg Complex.im hx
+    simp at hi
+    linarith only [hi, hH]
+  have htop : Continuous (fun x : ℝ => ((x : ℂ) + (H : ℂ) * I)⁻¹) := by
+    apply Continuous.inv₀ (by fun_prop)
+    intro x hx
+    have hi := congrArg Complex.im hx
+    simp at hi
+    linarith only [hi, hH]
+  have hbott := intervalIntegral.integral_add_adjacent_intervals
+    (hbottom.intervalIntegrable (μ := volume) (-1 / 2) a) (hbottom.intervalIntegrable a b)
+  have htopt := intervalIntegral.integral_add_adjacent_intervals
+    (htop.intervalIntegrable (μ := volume) (-1 / 2) a) (htop.intervalIntegrable a b)
+  unfold lemma44GeneralRectangleBoundaryIntegral at hbase hc ⊢
+  rw [← hbott, ← htopt] at hbase
+  linear_combination hbase - hc
+
+theorem lemma56_positive_right_simple_pole_rectangle (N : ℂ → ℂ) {a b T : ℝ}
+    (ha : a < 0) (hb : 1 ≤ b) (hT : 0 < T)
+    (hN : DifferentiableOn ℂ N (lemma44ClosedRectangle a b T)) :
+    lemma44GeneralRectangleBoundaryIntegral (fun w => N w / w) a b T =
+      2 * (Real.pi : ℂ) * I * N 0 := by
+  let S := lemma44ClosedRectangle a b T
+  have hab : a ≤ b := by linarith
+  have hn : S ∈ nhds (0 : ℂ) := by
+    rw [← mem_interior_iff_mem_nhds]
+    simp only [S, lemma44ClosedRectangle, interior_reProdIm, interior_Icc,
+      mem_reProdIm, mem_Ioo, zero_re, zero_im]
+    constructor <;> constructor <;> linarith
+  let R := dslope N 0
+  have hR : DifferentiableOn ℂ R S := (Complex.differentiableOn_dslope hn).2 hN
+  have heq (w : ℂ) (hw : w ≠ 0) : N w / w = N 0 * w⁻¹ + R w := by
+    dsimp [R]
+    rw [dslope_of_ne _ hw, slope_def_field]
+    simp only [sub_zero]
+    field_simp
+    ring
+  have hsplit (γ : ℝ → ℂ) (hγ : Continuous γ) (hγne : ∀ t, γ t ≠ 0)
+      (u v : ℝ) (hm : MapsTo γ (uIcc u v) S) :
+      (∫ t : ℝ in u..v, N (γ t) / γ t) =
+        N 0 * (∫ t : ℝ in u..v, (γ t)⁻¹) + (∫ t : ℝ in u..v, R (γ t)) := by
+    have hq : IntervalIntegrable (fun t => N 0 * (γ t)⁻¹) volume u v :=
+      ((hγ.inv₀ hγne).const_mul (N 0)).intervalIntegrable u v
+    have hr : IntervalIntegrable (fun t => R (γ t)) volume u v :=
+      (hR.continuousOn.comp hγ.continuousOn hm).intervalIntegrable
+    calc
+      _ = ∫ t : ℝ in u..v, (N 0 * (γ t)⁻¹ + R (γ t)) := by
+        apply intervalIntegral.integral_congr
+        intro t _
+        exact heq (γ t) (hγne t)
+      _ = _ := by rw [intervalIntegral.integral_add hq hr,
+        intervalIntegral.integral_const_mul]
+  have hbottom := hsplit (fun x => (x : ℂ) - (T : ℂ) * I) (by fun_prop)
+    (by intro x hx; have hi := congrArg Complex.im hx; simp at hi; linarith) a b
+    (by
+      intro x hx
+      rw [uIcc_of_le hab] at hx
+      change _ ∈ Icc a b ×ℂ Icc (-T) T
+      simp only [mem_reProdIm, mem_Icc, sub_re, sub_im, ofReal_re, ofReal_im,
+        mul_re, mul_im, I_re, I_im, mul_zero, zero_mul, mul_one, zero_add, sub_zero]
+      exact ⟨hx, by constructor <;> linarith⟩)
+  have htop := hsplit (fun x => (x : ℂ) + (T : ℂ) * I) (by fun_prop)
+    (by intro x hx; have hi := congrArg Complex.im hx; simp at hi; linarith) a b
+    (by
+      intro x hx
+      rw [uIcc_of_le hab] at hx
+      change _ ∈ Icc a b ×ℂ Icc (-T) T
+      simpa [mem_reProdIm] using And.intro hx (show -T ≤ T ∧ T ≤ T by constructor <;> linarith))
+  have hright := hsplit (fun y => (b : ℂ) + (y : ℂ) * I) (by fun_prop)
+    (by intro y hy; have hr := congrArg Complex.re hy; simp at hr; linarith) (-T) T
+    (by
+      intro y hy
+      rw [uIcc_of_le (by linarith : -T ≤ T)] at hy
+      change _ ∈ Icc a b ×ℂ Icc (-T) T
+      simpa [mem_reProdIm] using And.intro (show a ≤ b ∧ b ≤ b by constructor; exact hab; rfl) hy)
+  have hleft := hsplit (fun y => (a : ℂ) + (y : ℂ) * I) (by fun_prop)
+    (by intro y hy; have hr := congrArg Complex.re hy; simp at hr; linarith) (-T) T
+    (by
+      intro y hy
+      rw [uIcc_of_le (by linarith : -T ≤ T)] at hy
+      change _ ∈ Icc a b ×ℂ Icc (-T) T
+      simpa [mem_reProdIm] using And.intro (show a ≤ a ∧ a ≤ b by constructor; rfl; exact hab) hy)
+  calc
+    _ = N 0 * lemma44GeneralRectangleBoundaryIntegral (fun w : ℂ => w⁻¹) a b T +
+        lemma44GeneralRectangleBoundaryIntegral R a b T := by
+      unfold lemma44GeneralRectangleBoundaryIntegral
+      rw [hbottom, htop, hright, hleft]
+      ring
+    _ = _ := by
+      rw [lemma56_positive_right_rectangle_inv ha hb hT,
+        lemma44_local_rectangle_cauchy R hab hT.le hR]
+      ring
+
+
+noncomputable def lemma56PerronComplexKernel (B x : ℝ) (s : ℂ) : ℂ :=
+  (x : ℂ) ^ s * Complex.exp (s ^ 2 / (4 * (B : ℂ) ^ 2)) / s
+
+lemma lemma56_perron_complex_kernel_at_line (B x σ t : ℝ) :
+    lemma56PerronComplexKernel B x ((σ : ℂ) + (t : ℂ) * I) =
+      lemma56PerronKernel B σ x t := rfl
+
+lemma lemma56_perron_complex_kernel_analytic {x : ℝ} (hx : 0 < x) (B : ℝ)
+    {s : ℂ} (hs : s ≠ 0) : AnalyticAt ℂ (lemma56PerronComplexKernel B x) s := by
+  have hpower : AnalyticAt ℂ (fun z : ℂ => (x : ℂ) ^ z) s := by
+    have he : (fun z : ℂ => (x : ℂ) ^ z) = fun z => Complex.exp (Complex.log (x : ℂ) * z) := by
+      funext z
+      exact Complex.cpow_def_of_ne_zero (ofReal_ne_zero.mpr hx.ne') z
+    rw [he]
+    fun_prop
+  have hExp : AnalyticAt ℂ (fun z : ℂ => Complex.exp (z ^ 2 / (4 * (B : ℂ) ^ 2))) s := by
+    fun_prop
+  exact (hpower.mul hExp).div analyticAt_id hs
+
+lemma lemma56_perron_complex_kernel_at_one (B x : ℝ) :
+    lemma56PerronComplexKernel B x 1 =
+      ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ) := by
+  unfold lemma56PerronComplexKernel
+  rw [Complex.cpow_one, one_pow, div_one]
+  have he : (1 : ℂ) / (4 * (B : ℂ) ^ 2) = ((1 / (4 * B ^ 2) : ℝ) : ℂ) := by
+    push_cast
+    rfl
+  rw [he, ← Complex.ofReal_exp, ← Complex.ofReal_mul]
+
+lemma lemma56_rectangle_translation_one (f : ℂ → ℂ) (a H : ℝ) :
+    lemma44GeneralRectangleBoundaryIntegral (fun w => f (w + 1)) (a - 1) 1 H =
+      lemma44GeneralRectangleBoundaryIntegral f a 2 H := by
+  have hp (u : ℝ) : ((u : ℂ) + (H : ℂ) * I) + 1 = ((u + 1 : ℝ) : ℂ) + (H : ℂ) * I := by
+    push_cast
+    ring
+  have hm (u : ℝ) : ((u : ℂ) - (H : ℂ) * I) + 1 = ((u + 1 : ℝ) : ℂ) - (H : ℂ) * I := by
+    push_cast
+    ring
+  have hv (u t : ℝ) : (((u - 1 : ℝ) : ℂ) + (t : ℂ) * I) + 1 = (u : ℂ) + (t : ℂ) * I := by
+    push_cast
+    ring
+  have hb := intervalIntegral.integral_comp_add_right (fun u : ℝ => f ((u : ℂ) - (H : ℂ) * I))
+    (a := a - 1) (b := 1) 1
+  have ht := intervalIntegral.integral_comp_add_right (fun u : ℝ => f ((u : ℂ) + (H : ℂ) * I))
+    (a := a - 1) (b := 1) 1
+  norm_num only [sub_add_cancel, one_add_one_eq_two] at hb ht
+  unfold lemma44GeneralRectangleBoundaryIntegral
+  have hright (t : ℝ) : (((1 : ℝ) : ℂ) + (t : ℂ) * I) + 1 = ((2 : ℝ) : ℂ) + (t : ℂ) * I := by
+    push_cast
+    ring
+  simp only [hm, hp, hright, hv]
+  rw [hb, ht]
+
+lemma lemma56_actual_perron_pole_rectangle {x a H : ℝ} (hx : 0 < x)
+    (ha0 : 0 < a) (ha1 : a < 1) (hH : 0 < H) (B : ℝ) :
+    lemma44GeneralRectangleBoundaryIntegral
+      (fun s => lemma56PerronComplexKernel B x s / (s - 1)) a 2 H =
+        2 * (Real.pi : ℂ) * I * ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ) := by
+  let N : ℂ → ℂ := fun w => lemma56PerronComplexKernel B x (w + 1)
+  have hN : DifferentiableOn ℂ N (lemma44ClosedRectangle (a - 1) 1 H) := by
+    intro w hw
+    have hp : 0 < (w + 1).re := by
+      have hre := hw.1.1
+      simp only [add_re, one_re]
+      linarith only [hre, ha0]
+    have hn : w + 1 ≠ 0 := by intro he; simp [he] at hp
+    have ha := (lemma56_perron_complex_kernel_analytic hx B hn).differentiableAt
+    exact (ha.comp w (differentiableAt_id.add_const 1)).differentiableWithinAt
+  have hr := lemma56_positive_right_simple_pole_rectangle N
+    (by linarith only [ha1] : a - 1 < 0) (by norm_num : (1 : ℝ) ≤ 1) hH hN
+  have hf : (fun w : ℂ => N w / w) =
+      fun w => (lemma56PerronComplexKernel B x (w + 1) / ((w + 1) - 1)) := by
+    funext w
+    simp [N]
+  rw [hf] at hr
+  rw [lemma56_rectangle_translation_one (fun s : ℂ => lemma56PerronComplexKernel B x s / (s - 1)) a H] at hr
+  simpa only [N, zero_add, lemma56_perron_complex_kernel_at_one] using hr
+
+lemma lemma56_actual_principal_perron_mellin_identity {B x : ℝ} (hB : 0 < B) (hx : 0 < x) :
+    ((1 / (2 * Real.pi) : ℝ) : ℂ) * ∫ t : ℝ,
+      -(logDeriv riemannZeta ((2 : ℂ) + (t : ℂ) * I)) * lemma56PerronKernel B 2 x t =
+        lemma56PerronMangoldtSum (1 : DirichletCharacter ℂ 1) B x 0 := by
+  have hi := lemma56_actual_perron_mellin_identity (1 : DirichletCharacter ℂ 1) hB hx 0
+  rw [DirichletCharacter.LFunction_modOne_eq] at hi
+  simpa only [ofReal_zero, zero_mul, sub_zero] using hi
+
+example {x a H : ℝ} (hx : 0 < x) (ha0 : 0 < a) (ha1 : a < 1) (hH : 0 < H) (B : ℝ) :
+    lemma44GeneralRectangleBoundaryIntegral
+      (fun s : ℂ => ((x : ℂ) ^ s * Complex.exp (s ^ 2 / (4 * (B : ℂ) ^ 2)) / s) / (s - 1)) a 2 H =
+        2 * (Real.pi : ℂ) * I * ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ) := by
+  simpa only [lemma56PerronComplexKernel] using lemma56_actual_perron_pole_rectangle hx ha0 ha1 hH B
+
+example {L x H : ℝ} (hL : 2000 ≤ L) (hx : 0 < x) (hH : 0 < H) (B : ℝ) :
+    lemma44GeneralRectangleBoundaryIntegral
+      (fun s : ℂ => lemma56PerronComplexKernel B x s / (s - 1)) (1 - 1 / L) 2 H =
+        2 * (Real.pi : ℂ) * I * ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ) := by
+  have hLp : 0 < L := by linarith only [hL]
+  have hp : 0 < 1 / L := by positivity
+  have hi : 1 / L ≤ (1 / 2 : ℝ) := by
+    apply (div_le_div_iff₀ hLp (by norm_num)).mpr
+    linarith only [hL]
+  exact lemma56_actual_perron_pole_rectangle hx (by linarith only [hi]) (by linarith only [hp]) hH B
+
+example {B x : ℝ} (hB : 0 < B) (hx : 0 < x) :
+    ((1 / (2 * Real.pi) : ℝ) : ℂ) * ∫ t : ℝ,
+      -(deriv riemannZeta ((2 : ℂ) + (t : ℂ) * I) / riemannZeta ((2 : ℂ) + (t : ℂ) * I)) *
+        ((x : ℂ) ^ ((2 : ℂ) + (t : ℂ) * I) *
+          Complex.exp (((2 : ℂ) + (t : ℂ) * I) ^ 2 / (4 * (B : ℂ) ^ 2)) /
+          ((2 : ℂ) + (t : ℂ) * I)) =
+        lemma56PerronMangoldtSum (1 : DirichletCharacter ℂ 1) B x 0 := by
+  simpa only [logDeriv_apply, lemma56PerronKernel] using
+    lemma56_actual_principal_perron_mellin_identity hB hx
+
+example {L H : ℝ} (hL : 2000 ≤ L) (hH : 0 < H) :
+    lemma44GeneralRectangleBoundaryIntegral (fun w : ℂ => w⁻¹) (-1 / L) 1 H =
+      2 * (Real.pi : ℂ) * I := by
+  have hLp : 0 < L := by linarith only [hL]
+  exact lemma56_positive_right_rectangle_inv (div_neg_of_neg_of_pos (by norm_num) hLp) (by norm_num) hH
+
+#print axioms lemma56_positive_right_rectangle_inv
+#print axioms lemma56_positive_right_simple_pole_rectangle
+#print axioms lemma56_perron_complex_kernel_at_line
+#print axioms lemma56_perron_complex_kernel_analytic
+#print axioms lemma56_perron_complex_kernel_at_one
+#print axioms lemma56_rectangle_translation_one
+#print axioms lemma56_actual_perron_pole_rectangle
+#print axioms lemma56_actual_principal_perron_mellin_identity
+
+end ZhangLS.Spec

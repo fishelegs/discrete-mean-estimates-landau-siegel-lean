@@ -1,0 +1,55 @@
+import ZhangMathStep198Lemma32AnalyticCorrectionDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex Filter Topology Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_negative_power_small (L : ℝ) (hL : 3 ≤ L) (k : ℕ) (hk : 2 ≤ k) :
+    L^(-(k : ℤ)) ≤ 1/9 := by
+  have hl0 : 0 < L := by linarith
+  have hl1 : 1 ≤ L := by linarith
+  have hp : L^(-(k : ℤ))*L^2 ≤ 1 := by
+    calc
+      _ = L^(-(k : ℤ)+2) := by
+        simpa only [zpow_ofNat] using (zpow_add₀ (ne_of_gt hl0) (-(k : ℤ)) 2).symm
+      _ ≤ L^(0 : ℤ) := zpow_le_zpow_right₀ hl1 (by omega)
+      _ = 1 := zpow_zero _
+  have hg : 0 ≤ L^2-9 := by nlinarith
+  nlinarith [mul_nonneg (zpow_pos hl0 (-(k : ℤ))).le hg]
+
+lemma lemma32_residue_disk_parameters {D : ℕ} (hL : 3 ≤ lemma23PaperL D)
+    (s : ℂ) (hs : ‖s-1‖ ≤ lemma23PaperL D^(-2024 : ℤ)) :
+    3/4 ≤ s.re ∧ |s.im| * lemma23PaperL D ≤ 1 ∧
+      ‖s-1‖ ≤ 1/(4*lemma23PaperL D) := by
+  let L := lemma23PaperL D
+  have hl0 : 0 < L := by dsimp [L]; linarith
+  have hr : L^(-2024 : ℤ) ≤ 1/9 := lemma32_negative_power_small L hL 2024 (by norm_num)
+  have hrL : L^(-2024 : ℤ)*L ≤ 1/9 := by
+    calc
+      _ = L^(-2023 : ℤ) := by
+        simpa only [Int.reduceAdd,zpow_one] using (zpow_add₀ (ne_of_gt hl0) (-2024 : ℤ) 1).symm
+      _ ≤ 1/9 := lemma32_negative_power_small L hL 2023 (by norm_num)
+  have hre := (Complex.abs_re_le_norm (s-1)).trans hs
+  have him := (Complex.abs_im_le_norm (s-1)).trans hs
+  simp only [Complex.sub_re,Complex.one_re] at hre
+  simp only [Complex.sub_im,Complex.one_im,sub_zero] at him
+  refine ⟨?_,?_,?_⟩
+  · have hh := abs_le.mp hre
+    change ‖s-1‖ ≤ L^(-2024 : ℤ) at hs
+    dsimp [L] at hr
+    linarith
+  · have hi := mul_le_mul_of_nonneg_right him hl0.le
+    change |s.im| * L ≤ 1
+    nlinarith
+  · apply hs.trans
+    apply (le_div_iff₀ (by positivity : 0 < 4*L)).mpr
+    nlinarith
+
+lemma lemma32_analytic_correction_residue_disk_bound {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hL : 3 ≤ lemma23PaperL D) (s : ℂ) (hs : ‖s-1‖ ≤ lemma23PaperL D^(-2024 : ℤ)) :
+    ‖lemma32AnalyticCorrection χ s‖ ≤ lemma32RegularProductBound (3/4) := by
+  have hp := lemma32_residue_disk_parameters hL s hs
+  exact lemma32_analytic_correction_sector_bound χ (3/4) (by norm_num) s hp.1 hp.2.1
+
+end ZhangLS.Spec

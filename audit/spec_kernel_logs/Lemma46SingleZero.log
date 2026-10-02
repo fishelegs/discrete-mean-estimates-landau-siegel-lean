@@ -1,0 +1,14 @@
+ZhangLS/Spec/Lemma46SingleZero.lean:33:10: warning: This simp argument is unused:
+  mem_sphere
+
+Hint: Omit it from the simp argument list.
+  simp [m̵e̵m̵_̵s̵p̵h̵e̵r̵e̵,̵ ̵dist_zero_right, abs_of_pos hR]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma46SingleZero.lean:33:22: warning: This simp argument is unused:
+  dist_zero_right
+
+Hint: Omit it from the simp argument list.
+  simp [mem_sphere, d̵i̵s̵t̵_̵z̵e̵r̵o̵_̵r̵i̵g̵h̵t̵,̵ ̵abs_of_pos hR]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

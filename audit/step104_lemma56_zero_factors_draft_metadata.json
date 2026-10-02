@@ -1,0 +1,12 @@
+{
+  "source_sha256": "2e7c079234e275cd1f32bc2e29a19061f011d2fb1b1f7f9c54df57ab1b9cca1a",
+  "draft_kernel_exit_code": 0,
+  "axiom_interfaces": 57,
+  "expanded_examples": 4,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": "Independent next-step draft; outside the frozen Step 103 repository gate."
+}

@@ -1,0 +1,53 @@
+import ZhangLS.Spec.Lemma32QuarticCubicSubstitution
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_quadratic_quartic_cubic_punctured_sum {F : Type*} [Field F] [Fintype F]
+    (χ : MulChar F ℂ) (hq : χ^2=1) (a b c d : F) :
+    (∑ x ∈ Finset.univ \ {-a}, χ (lemma32QuarticRootProduct a b c d x)) =
+      ∑ u ∈ Finset.univ \ {0}, χ (lemma32TransformedCubic a b c d u) := by
+  refine Finset.sum_bij' (fun x hx => (x+a)⁻¹) (fun u hu => u⁻¹-a) ?_ ?_ ?_ ?_ ?_
+  · intro x hx
+    simp only [mem_sdiff,mem_univ,mem_singleton,true_and] at hx ⊢
+    apply inv_ne_zero
+    intro h
+    exact hx (eq_neg_iff_add_eq_zero.mpr h)
+  · intro u hu
+    simp only [mem_sdiff,mem_univ,mem_singleton,true_and] at hu ⊢
+    intro h
+    apply inv_ne_zero hu
+    linear_combination h
+  · intro x hx
+    simp only [inv_inv,add_sub_cancel_right]
+  · intro u hu
+    simp only [sub_add_cancel,inv_inv]
+  · intro x hx
+    have hu : (x+a)⁻¹ ≠ 0 := by
+      apply inv_ne_zero
+      intro h
+      have hx0 : x ≠ -a := by simpa only [mem_sdiff,mem_univ,mem_singleton,true_and] using hx
+      exact hx0 (eq_neg_iff_add_eq_zero.mpr h)
+    have h := lemma32_quadratic_quartic_cubic_point_identity χ hq a b c d ((x+a)⁻¹) hu
+    simpa only [inv_inv,add_sub_cancel_right] using h
+
+lemma lemma32_quadratic_quartic_cubic_sum_identity {F : Type*} [Field F] [Fintype F]
+    (χ : MulChar F ℂ) (hq : χ^2=1) (a b c d : F) :
+    (∑ x : F, χ (lemma32QuarticRootProduct a b c d x)) =
+      (∑ u : F, χ (lemma32TransformedCubic a b c d u))-1 := by
+  have hf : (∑ x : F, χ (lemma32QuarticRootProduct a b c d x)) =
+      ∑ x ∈ Finset.univ \ {-a}, χ (lemma32QuarticRootProduct a b c d x) := by
+    rw [sum_eq_sum_diff_singleton_add (mem_univ (-a))
+      (fun x => χ (lemma32QuarticRootProduct a b c d x))]
+    simp [lemma32QuarticRootProduct,χ.map_zero]
+  have hg := sum_eq_sum_diff_singleton_add (mem_univ (0 : F))
+    (fun u => χ (lemma32TransformedCubic a b c d u))
+  have hz : χ (lemma32TransformedCubic a b c d 0)=1 := by
+    simp [lemma32TransformedCubic]
+  rw [hz] at hg
+  rw [hf,lemma32_quadratic_quartic_cubic_punctured_sum χ hq a b c d]
+  linear_combination -hg
+
+end ZhangLS.Spec

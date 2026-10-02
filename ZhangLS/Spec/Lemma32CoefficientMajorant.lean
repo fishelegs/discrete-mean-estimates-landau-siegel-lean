@@ -1,0 +1,118 @@
+import ZhangLS.Spec.Lemma32PrimeCoefficients
+import ZhangLS.Spec.Lemma34DivisorSquare
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped ArithmeticFunction.zeta
+set_option maxHeartbeats 2000000
+
+lemma lemma32_multichoose_2_square_le_4 (e : ℕ) :
+    Nat.multichoose 2 e ^ 2 ≤ Nat.multichoose 4 e := by
+  induction e with
+  | zero => simp
+  | succ e ih =>
+    have h2 := lemma34_multichoose_recurrence 2 e (by norm_num)
+    have h4 := lemma34_multichoose_recurrence 4 e (by norm_num)
+    have hc : (e+2) ^ 2 ≤ (e+1) * (e+4) := by nlinarith
+    have hh : (e+1) ^ 2 * Nat.multichoose 2 (e+1) ^ 2 ≤
+        (e+1) ^ 2 * Nat.multichoose 4 (e+1) := by
+      calc
+        _ = ((e+2) * Nat.multichoose 2 e) ^ 2 := by rw [← mul_pow,h2]
+        _ ≤ ((e+1)*(e+4)) * Nat.multichoose 4 e := by
+          rw [mul_pow]
+          exact Nat.mul_le_mul hc ih
+        _ = (e+1) * ((e+4) * Nat.multichoose 4 e) := by ring
+        _ = (e+1) * ((e+1) * Nat.multichoose 4 (e+1)) := by rw [← h4]
+        _ = _ := by ring
+    exact (mul_le_mul_iff_right₀ (by positivity : 0 < (e+1)^2)).mp hh
+
+
+lemma lemma32_multichoose_4_square_le_16 (e : ℕ) :
+    Nat.multichoose 4 e ^ 2 ≤ Nat.multichoose 16 e := by
+  induction e with
+  | zero => simp
+  | succ e ih =>
+    have h4 := lemma34_multichoose_recurrence 4 e (by norm_num)
+    have h16 := lemma34_multichoose_recurrence 16 e (by norm_num)
+    have hc : (e+4) ^ 2 ≤ (e+1) * (e+16) := by nlinarith
+    have hh : (e+1) ^ 2 * Nat.multichoose 4 (e+1) ^ 2 ≤
+        (e+1) ^ 2 * Nat.multichoose 16 (e+1) := by
+      calc
+        _ = ((e+4) * Nat.multichoose 4 e) ^ 2 := by rw [← mul_pow,h4]
+        _ ≤ ((e+1)*(e+16)) * Nat.multichoose 16 e := by
+          rw [mul_pow]
+          exact Nat.mul_le_mul hc ih
+        _ = (e+1) * ((e+16) * Nat.multichoose 16 e) := by ring
+        _ = (e+1) * ((e+1) * Nat.multichoose 16 (e+1)) := by rw [← h16]
+        _ = _ := by ring
+    exact (mul_le_mul_iff_right₀ (by positivity : 0 < (e+1)^2)).mp hh
+
+
+lemma lemma32_tau2_square_le_tau4 (n : ℕ) :
+    lemma34Tau 2 n ^ 2 ≤ lemma34Tau 4 n := by
+  classical
+  by_cases hn : n = 0
+  · subst n
+    simp [lemma34Tau]
+  · unfold lemma34Tau
+    rw [(lemma34_tau_multiplicative 2).multiplicative_factorization _ hn,
+      (lemma34_tau_multiplicative 4).multiplicative_factorization _ hn]
+    simp only [Finsupp.prod]
+    rw [← Finset.prod_pow]
+    apply Finset.prod_le_prod'
+    intro p hp
+    have hp' : p.Prime := Nat.prime_of_mem_primeFactors hp
+    change lemma34Tau 2 (p ^ n.factorization p) ^ 2 ≤
+      lemma34Tau 4 (p ^ n.factorization p)
+    rw [lemma34_tau_prime_power hp' 1,lemma34_tau_prime_power hp' 3]
+    exact lemma32_multichoose_2_square_le_4 _
+
+
+lemma lemma32_tau4_square_le_tau16 (n : ℕ) :
+    lemma34Tau 4 n ^ 2 ≤ lemma34Tau 16 n := by
+  classical
+  by_cases hn : n = 0
+  · subst n
+    simp [lemma34Tau]
+  · unfold lemma34Tau
+    rw [(lemma34_tau_multiplicative 4).multiplicative_factorization _ hn,
+      (lemma34_tau_multiplicative 16).multiplicative_factorization _ hn]
+    simp only [Finsupp.prod]
+    rw [← Finset.prod_pow]
+    apply Finset.prod_le_prod'
+    intro p hp
+    have hp' : p.Prime := Nat.prime_of_mem_primeFactors hp
+    change lemma34Tau 4 (p ^ n.factorization p) ^ 2 ≤
+      lemma34Tau 16 (p ^ n.factorization p)
+    rw [lemma34_tau_prime_power hp' 3,lemma34_tau_prime_power hp' 15]
+    exact lemma32_multichoose_4_square_le_16 _
+
+
+lemma lemma32_tau_two_eq_card_divisors (n : ℕ) :
+    lemma34Tau 2 n = n.divisors.card := by
+  unfold lemma34Tau
+  rw [pow_two,ArithmeticFunction.zeta_mul_apply]
+  calc
+    _ = ∑ d ∈ n.divisors, (1 : ℕ) := by
+      apply Finset.sum_congr rfl
+      intro d hd
+      simp [ArithmeticFunction.zeta_apply,(Nat.pos_of_mem_divisors hd).ne']
+    _ = _ := by simp
+
+lemma lemma32_actual_coefficient_le_tau_sixteen {D : ℕ} (χ : RealPrimitiveCharacter D) (n : ℕ) :
+    lemma32ActualCoefficient χ n ≤ (lemma34Tau 16 n : ℝ) := by
+  have hn := lemma23NuArithmeticFunction_norm_le_card_divisors χ n
+  rw [← lemma32_tau_two_eq_card_divisors n] at hn
+  have ht : lemma34Tau 2 n ^ 4 ≤ lemma34Tau 16 n := by
+    calc
+      _ = (lemma34Tau 2 n ^ 2)^2 := by ring
+      _ ≤ lemma34Tau 4 n ^ 2 := Nat.pow_le_pow_left (lemma32_tau2_square_le_tau4 n) 2
+      _ ≤ _ := lemma32_tau4_square_le_tau16 n
+  calc
+    _ ≤ (lemma34Tau 2 n : ℝ)^4 := by
+      unfold lemma32ActualCoefficient
+      calc
+        _ ≤ ((lemma34Tau 2 n : ℝ)^2)*(lemma34Tau 2 n : ℝ)^2 := by gcongr
+        _ = _ := by ring
+    _ ≤ _ := by exact_mod_cast ht
+
+end ZhangLS.Spec

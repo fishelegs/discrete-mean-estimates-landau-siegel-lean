@@ -1,0 +1,51 @@
+import ZhangMathStep158Lemma31HyperbolaInputsDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+set_option maxHeartbeats 2000000
+
+lemma lemma31_floor_div_real_error_le (N n : ℕ) (hn : 0 < n) :
+    |((N/n : ℕ) : ℝ) - (N : ℝ)/(n : ℝ)| ≤ 1 := by
+  have hp : (0 : ℝ) < n := by exact_mod_cast hn
+  have he : (N : ℝ) = (N%n : ℕ) + (n : ℝ)*((N/n : ℕ) : ℝ) := by
+    exact_mod_cast (Nat.mod_add_div N n).symm
+  have hform : ((N/n : ℕ) : ℝ) - (N : ℝ)/(n : ℝ) = -((N%n : ℕ) : ℝ)/(n : ℝ) := by
+    field_simp
+    nlinarith [he]
+  rw [hform,abs_div,abs_neg,abs_of_nonneg (Nat.cast_nonneg _),abs_of_pos hp]
+  apply (div_le_one hp).mpr
+  exact_mod_cast (Nat.mod_lt N hn).le
+
+lemma lemma31_hyperbola_short_error_le {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (N Y : ℕ) :
+    ‖(∑ n ∈ Finset.Icc 1 Y, χ.evalNat n * (N/n : ℕ)) -
+      (N : ℂ)*(∑ n ∈ Finset.Icc 1 Y, (n : ℂ)⁻¹ * χ.evalNat n)‖ ≤ (Y : ℝ) := by
+  have he : (∑ n ∈ Finset.Icc 1 Y, χ.evalNat n * (N/n : ℕ)) -
+      (N : ℂ)*(∑ n ∈ Finset.Icc 1 Y, (n : ℂ)⁻¹ * χ.evalNat n) =
+      ∑ n ∈ Finset.Icc 1 Y,
+        χ.evalNat n * (((N/n : ℕ) : ℂ) - (N : ℂ)*(n : ℂ)⁻¹) := by
+    rw [Finset.mul_sum,← Finset.sum_sub_distrib]
+    apply Finset.sum_congr rfl
+    intro n hn
+    ring
+  rw [he]
+  calc
+    _ ≤ ∑ n ∈ Finset.Icc 1 Y,
+        ‖χ.evalNat n * (((N/n : ℕ) : ℂ) - (N : ℂ)*(n : ℂ)⁻¹)‖ := norm_sum_le _ _
+    _ ≤ ∑ n ∈ Finset.Icc 1 Y, (1 : ℝ) := by
+      apply Finset.sum_le_sum
+      intro n hn
+      have hp : 0 < n := by have := (Finset.mem_Icc.mp hn).1; omega
+      have hnorm : ‖(((N/n : ℕ) : ℂ) - (N : ℂ)*(n : ℂ)⁻¹)‖ =
+          |((N/n : ℕ) : ℝ) - (N : ℝ)/(n : ℝ)| := by
+        simpa only [Complex.ofReal_sub,Complex.ofReal_div,Complex.ofReal_natCast,
+          Complex.ofReal_mul,Complex.ofReal_inv,
+          Real.norm_eq_abs,div_eq_mul_inv] using
+          (Complex.norm_real (((N/n : ℕ) : ℝ) - (N : ℝ)/(n : ℝ)))
+      rw [norm_mul,hnorm]
+      have hh := mul_le_mul (χ.evalNat_norm_le_one n) (lemma31_floor_div_real_error_le N n hp)
+        (abs_nonneg _) (by norm_num : (0 : ℝ) ≤ 1)
+      simpa using hh
+    _ = _ := by simp
+
+end ZhangLS.Spec

@@ -1,0 +1,220 @@
+import ZhangLS.Spec.Lemma55ExceptionalZeroRemoval
+import ZhangLS.Spec.RiemannZetaCriticalLineBound
+
+/-!
+# Actual zeta data on the full height-disk family
+
+The existing actual pole-removed zeta is analytic on Re s>0 and has
+value one at the removed pole. Its actual zeros, higher pole derivatives
+and Jensen multiplicities are controlled uniformly for |t|≤2D.
+-/
+
+namespace ZhangLS.Spec
+open Complex Metric Set Filter
+open scoped Topology
+
+noncomputable def lemma55ZetaTrivialCharacter : RealPrimitiveCharacter 1 where
+  chi := 1
+  primitive := DirichletCharacter.isPrimitive_one_level_one
+  real_valued := by
+    intro a
+    have he : a = (1 : ZMod 1) := Subsingleton.elim _ _
+    rw [he]
+    simp
+  quadratic := by simp
+  modulus_pos := by norm_num
+
+lemma lemma55_zeta_trivial_L_eq : dirichletLFunction lemma55ZetaTrivialCharacter = riemannZeta := by
+  unfold dirichletLFunction
+  exact DirichletCharacter.LFunction_modOne_eq
+
+lemma lemma55_actual_zeta_norm_lower {z : ℂ} (hz : 2 ≤ z.re) :
+    (1 : ℝ) / 4 ≤ ‖riemannZeta z‖ := by
+  rw [← lemma55_zeta_trivial_L_eq]
+  exact lemma55_actual_L_norm_lower_bound lemma55ZetaTrivialCharacter hz
+
+lemma lemma55_actual_zeta_pole_removed_analyticAt {z : ℂ} (hz : 0 < z.re) :
+    AnalyticAt ℂ zetaPoleRemoved z := by
+  have hnear : ∀ᶠ w in 𝓝 z, DifferentiableAt ℂ zetaPoleRemoved w := by
+    filter_upwards [(isOpen_lt continuous_const continuous_re).mem_nhds hz] with w hw
+    have hwne : w ≠ 0 := by intro h; simp [h] at hw
+    exact (((differentiableAt_id.sub_const 1).mul
+      (differentiable_completedZeta₀.differentiableAt.sub (differentiableAt_inv hwne))).add_const 1).mul
+        differentiable_Gammaℝ_inv.differentiableAt
+  exact analyticAt_iff_eventually_differentiableAt.mpr hnear
+
+lemma lemma55_actual_zeta_pole_removed_at_one : zetaPoleRemoved 1 = 1 := by
+  simp [zetaPoleRemoved, Gammaℝ_one]
+
+lemma lemma55_actual_zeta_pole_removed_center_lower (t : ℝ) :
+    (1 : ℝ) / 4 ≤ ‖zetaPoleRemoved (lemma55JensenCenter t)‖ := by
+  have hc0 : lemma55JensenCenter t ≠ 0 := by intro h; have hh:=congrArg Complex.re h; simp at hh
+  have hc1 : lemma55JensenCenter t ≠ 1 := by intro h; have hh:=congrArg Complex.re h; simp at hh
+  rw [zetaPoleRemoved_eq_mul_riemannZeta hc0 hc1, norm_mul]
+  have hζ := lemma55_actual_zeta_norm_lower (by simp : 2 ≤ (lemma55JensenCenter t).re)
+  have hdist : 1 ≤ ‖lemma55JensenCenter t - 1‖ := by
+    have h := re_le_norm (lemma55JensenCenter t - 1)
+    rw [sub_re, lemma55_jensen_center_re, one_re] at h
+    linarith only [h]
+  calc
+    (1 : ℝ) / 4 = 1 * (1 / 4) := by ring
+    _ ≤ _ := mul_le_mul hdist hζ (by norm_num) (norm_nonneg _)
+
+lemma lemma55_actual_zeta_pole_removed_disk_bound {D : ℕ} (hD : 1 < D)
+    {t : ℝ} (ht : |t| ≤ 2 * (D : ℝ)) {z : ℂ}
+    (hz : z ∈ closedBall (lemma55JensenCenter t) (3 / 2 : ℝ)) :
+    ‖zetaPoleRemoved z‖ ≤ 64 * (D : ℝ) ^ 2 := by
+  have hD2 : (2 : ℝ) ≤ D := by exact_mod_cast hD
+  have hre : (1 : ℝ) / 2 ≤ z.re := lemma55_jensen_disk_re_lower_bound hz
+  have hzp : 0 < z.re := by linarith only [hre]
+  have hnorm : ‖z‖ ≤ 4 * (D : ℝ) := by
+    have hb := mem_closedBall_iff_norm.mp hz
+    have hc := lemma55_jensen_center_norm_le t
+    have htri := norm_add_le (z - lemma55JensenCenter t) (lemma55JensenCenter t)
+    rw [sub_add_cancel] at htri
+    linarith only [hb, hc, htri, ht, hD2]
+  have hnorm1 : ‖z - 1‖ ≤ 5 * (D : ℝ) := by
+    have h := norm_sub_le z (1 : ℂ)
+    rw [norm_one] at h
+    linarith only [h, hnorm, hD2]
+  have hM := norm_mellin_zetaFractionalPart_le hzp
+  have hM2 : ‖mellin zetaFractionalPart (-z)‖ ≤ 2 := by
+    apply hM.trans
+    apply (div_le_iff₀ hzp).mpr
+    linarith only [hre]
+  rw [zetaPoleRemoved_eq_regularizedAbel_of_pos_re hzp]
+  calc
+    _ ≤ ‖z‖ + ‖z * (z - 1) * mellin zetaFractionalPart (-z)‖ := norm_sub_le _ _
+    _ = ‖z‖ + ‖z‖ * ‖z - 1‖ * ‖mellin zetaFractionalPart (-z)‖ := by rw [norm_mul, norm_mul]
+    _ ≤ 4 * (D : ℝ) + (4 * (D : ℝ)) * (5 * (D : ℝ)) * 2 := by gcongr
+    _ ≤ _ := by nlinarith only [hD2]
+
+lemma lemma55_actual_zeta_pole_removed_zero_iff {z : ℂ} (hz : 0 < z.re) :
+    zetaPoleRemoved z = 0 ↔ riemannZeta z = 0 := by
+  by_cases h1 : z = 1
+  · subst z
+    simp [lemma55_actual_zeta_pole_removed_at_one, riemannZeta_one_ne_zero]
+  · have h0 : z ≠ 0 := by intro h; simp [h] at hz
+    rw [zetaPoleRemoved_eq_mul_riemannZeta h0 h1, mul_eq_zero]
+    simp only [sub_eq_zero, h1, false_or]
+
+lemma lemma55_actual_zeta_pole_removed_zero_re_lt_one {z : ℂ}
+    (hzero : zetaPoleRemoved z = 0) : z.re < 1 := by
+  by_contra hnot
+  have hre : 1 ≤ z.re := le_of_not_gt hnot
+  have hζ := riemannZeta_ne_zero_of_one_le_re hre
+  exact hζ ((lemma55_actual_zeta_pole_removed_zero_iff (by linarith only [hre])).mp hzero)
+
+lemma lemma55_actual_zeta_pole_removed_order_finite {z : ℂ} (hz : 0 < z.re) :
+    analyticOrderAt zetaPoleRemoved z ≠ ⊤ := by
+  have ha : AnalyticOnNhd ℂ zetaPoleRemoved {w : ℂ | 0 < w.re} :=
+    fun w hw => lemma55_actual_zeta_pole_removed_analyticAt hw
+  have htwo : analyticOrderAt zetaPoleRemoved (lemma55JensenCenter 0) = 0 :=
+    (lemma55_actual_zeta_pole_removed_analyticAt (by simp)).analyticOrderAt_eq_zero.mpr
+      (norm_pos_iff.mp (by linarith only [lemma55_actual_zeta_pole_removed_center_lower 0]))
+  exact ha.analyticOrderAt_ne_top_of_isPreconnected (convex_halfSpace_re_gt 0).isPreconnected
+    (show lemma55JensenCenter 0 ∈ {w : ℂ | 0 < w.re} by simp) hz (by rw [htwo]; simp)
+
+lemma lemma55_actual_zeta_pole_removed_logDeriv {z : ℂ} (hz : 0 < z.re)
+    (hz1 : z ≠ 1) (hζ : riemannZeta z ≠ 0) :
+    logDeriv zetaPoleRemoved z = 1 / (z - 1) + logDeriv riemannZeta z := by
+  have hz0 : z ≠ 0 := by intro h; simp [h] at hz
+  have heq : zetaPoleRemoved =ᶠ[𝓝 z] fun w : ℂ => (w - 1) * riemannZeta w := by
+    filter_upwards [continuousAt_id.eventually_ne hz0, continuousAt_id.eventually_ne hz1] with w hw0 hw1
+    exact zetaPoleRemoved_eq_mul_riemannZeta hw0 hw1
+  have hl : logDeriv zetaPoleRemoved z = logDeriv (fun w : ℂ => (w - 1) * riemannZeta w) z := by
+    change deriv zetaPoleRemoved z / zetaPoleRemoved z = _
+    rw [heq.deriv_eq, heq.self_of_nhds]
+    rfl
+  rw [hl, logDeriv_mul (f := fun w : ℂ => w - 1) (g := riemannZeta) z
+    (sub_ne_zero.mpr hz1) hζ (differentiableAt_id.sub_const 1) (differentiableAt_riemannZeta hz1)]
+  have hd : deriv (fun w : ℂ => w - 1) z = 1 := by
+    exact ((hasDerivAt_id z).sub_const 1).deriv
+  have hp : logDeriv (fun w : ℂ => w - 1) z = 1 / (z - 1) := by
+    rw [logDeriv_apply, hd]
+  rw [hp]
+
+lemma lemma55_actual_zeta_pole_removed_higher_logDeriv (t : ℝ) (n : ℕ) :
+    iteratedDeriv n (logDeriv zetaPoleRemoved) (lemma55JensenCenter t) =
+      iteratedDeriv n (logDeriv riemannZeta) (lemma55JensenCenter t) +
+        (-1 : ℂ) ^ n * (n.factorial : ℂ) * (lemma55JensenCenter t - 1) ^ (-1 - (n : ℤ)) := by
+  let c := lemma55JensenCenter t
+  have hc1 : c ≠ 1 := by intro h; have hh:=congrArg Complex.re h; simp [c] at hh
+  have hζ : riemannZeta c ≠ 0 := norm_pos_iff.mp (by
+    have hb := lemma55_actual_zeta_norm_lower (by simp [c] : 2 ≤ c.re)
+    linarith only [hb])
+  have hnear : logDeriv zetaPoleRemoved =ᶠ[𝓝 c] fun w : ℂ =>
+      logDeriv riemannZeta w + 1 / (w - 1) := by
+    filter_upwards [(isOpen_lt continuous_const continuous_re).mem_nhds
+      (by simp [c] : 1 < c.re)] with w hw
+    have hw1 : w ≠ 1 := by intro h; simp [h] at hw
+    rw [lemma55_actual_zeta_pole_removed_logDeriv (by linarith only [hw]) hw1
+      (riemannZeta_ne_zero_of_one_lt_re hw), add_comm]
+  have haζ : AnalyticAt ℂ (logDeriv riemannZeta) c :=
+    (analyticOn_riemannZeta c hc1).deriv.div (analyticOn_riemannZeta c hc1) hζ
+  have haP : AnalyticAt ℂ (fun w : ℂ => 1 / (w - 1)) c :=
+    analyticAt_const.div (analyticAt_id.sub analyticAt_const) (sub_ne_zero.mpr hc1)
+  rw [hnear.iteratedDeriv_eq n]
+  change iteratedDeriv n (logDeriv riemannZeta + fun w : ℂ => 1 / (w - 1)) c = _
+  rw [iteratedDeriv_add haζ.contDiffAt haP.contDiffAt, lemma55_iterated_deriv_inverse_pole]
+
+noncomputable def lemma55ZetaJensenMultiplicityCount (t : ℝ) : ℤ :=
+  ∑ᶠ ρ : ℂ, MeromorphicOn.divisor zetaPoleRemoved
+    (closedBall (lemma55JensenCenter t) (5 / 4 : ℝ)) ρ
+
+lemma lemma55_actual_zeta_jensen_multiplicity_bound {D : ℕ} (hD : 1 < D)
+    (hL : 2000 ≤ Real.log (D : ℝ)) {t : ℝ} (ht : |t| ≤ 2 * (D : ℝ)) :
+    (lemma55ZetaJensenMultiplicityCount t : ℝ) ≤ 18 * Real.log (D : ℝ) := by
+  have hD2 : (2 : ℝ) ≤ D := by exact_mod_cast hD
+  have hDp : (0 : ℝ) < D := by linarith only [hD2]
+  have hM : 1 ≤ 64 * (D : ℝ) ^ 2 := by nlinarith only [hD2]
+  have hMpos : 0 < 64 * (D : ℝ) ^ 2 := by positivity
+  have ha : AnalyticOnNhd ℂ zetaPoleRemoved
+      (closedBall (lemma55JensenCenter t) |(3 / 2 : ℝ)|) := by
+    intro z hz
+    rw [abs_of_pos (by norm_num : (0 : ℝ) < 3 / 2)] at hz
+    apply lemma55_actual_zeta_pole_removed_analyticAt
+    have hre := lemma55_jensen_disk_re_lower_bound hz
+    linarith only [hre]
+  have hcenter := lemma55_actual_zeta_pole_removed_center_lower t
+  have hcenterpos : 0 < ‖zetaPoleRemoved (lemma55JensenCenter t)‖ := by linarith only [hcenter]
+  have hJ := ha.sum_divisor_le (r := (5 / 4 : ℝ)) (R := (3 / 2 : ℝ))
+    (M := 64 * (D : ℝ) ^ 2) (by norm_num) (by norm_num) hM
+    (norm_pos_iff.mp hcenterpos)
+    (fun z hz => lemma55_actual_zeta_pole_removed_disk_bound hD ht (by
+      have hz' := sphere_subset_closedBall hz
+      rw [abs_of_pos (by norm_num : (0 : ℝ) < 3 / 2)] at hz'
+      exact hz'))
+  rw [abs_of_pos (by norm_num : (0 : ℝ) < 5 / 4),
+    show (3 / 2 : ℝ) / (5 / 4) = 6 / 5 by norm_num] at hJ
+  have hJ' : (lemma55ZetaJensenMultiplicityCount t : ℝ) ≤
+      Real.log ((64 * (D : ℝ) ^ 2) / ‖zetaPoleRemoved (lemma55JensenCenter t)‖) /
+        Real.log (6 / 5 : ℝ) := hJ
+  have hratio : (64 * (D : ℝ) ^ 2) / ‖zetaPoleRemoved (lemma55JensenCenter t)‖ ≤
+      256 * (D : ℝ) ^ 2 := by
+    apply (div_le_iff₀ hcenterpos).mpr
+    have hscaled := mul_le_mul_of_nonneg_left hcenter
+      (by positivity : 0 ≤ 256 * (D : ℝ) ^ 2)
+    nlinarith only [hscaled]
+  have hlog : Real.log ((64 * (D : ℝ) ^ 2) / ‖zetaPoleRemoved (lemma55JensenCenter t)‖) ≤
+      2 * Real.log (D : ℝ) + 255 := by
+    calc
+      _ ≤ Real.log (256 * (D : ℝ) ^ 2) := Real.log_le_log (div_pos hMpos hcenterpos) hratio
+      _ = Real.log 256 + 2 * Real.log (D : ℝ) := by
+        rw [Real.log_mul (by norm_num) (pow_ne_zero 2 hDp.ne'), Real.log_pow]
+        norm_num
+      _ ≤ 2 * Real.log (D : ℝ) + 255 := by
+        have h := Real.log_le_sub_one_of_pos (by norm_num : (0 : ℝ) < 256)
+        linarith only [h]
+  have hden : (1 : ℝ) / 6 ≤ Real.log (6 / 5 : ℝ) := by
+    have h := Real.one_sub_inv_le_log_of_pos (by norm_num : (0 : ℝ) < 6 / 5)
+    norm_num at h
+    exact h
+  have hdenpos : 0 < Real.log (6 / 5 : ℝ) := by linarith only [hden]
+  apply hJ'.trans
+  apply (div_le_iff₀ hdenpos).mpr
+  have hscaled := mul_le_mul_of_nonneg_left hden
+    (by linarith only [hL] : 0 ≤ 18 * Real.log (D : ℝ))
+  linarith only [hlog, hscaled, hL]
+
+end ZhangLS.Spec

@@ -1,0 +1,46 @@
+import ZhangMathStep347Lemma32BurgessMultiplicityDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+open scoped Classical
+
+lemma lemma32_unit_ratio_eq_iff {D : ℕ} (u v x y : ZMod D)
+    (hu : IsUnit u) (hv : IsUnit v) :
+    u⁻¹*x=v⁻¹*y ↔ u*y=v*x := by
+  constructor
+  · intro h
+    calc
+      u*y = u*(v*(v⁻¹*y)) := by rw [← mul_assoc v v⁻¹ y, ZMod.mul_inv_of_unit _ hv, one_mul]
+      _ = u*(v*(u⁻¹*x)) := by rw [← h]
+      _ = v*((u*u⁻¹)*x) := by ring
+      _ = v*x := by rw [ZMod.mul_inv_of_unit _ hu, one_mul]
+  · intro h
+    calc
+      u⁻¹*x = u⁻¹*((v⁻¹*v)*x) := by rw [ZMod.inv_mul_of_unit _ hv, one_mul]
+      _ = (u⁻¹*v⁻¹)*(v*x) := by ring
+      _ = (u⁻¹*v⁻¹)*(u*y) := by rw [← h]
+      _ = v⁻¹*((u⁻¹*u)*y) := by ring
+      _ = v⁻¹*y := by rw [ZMod.inv_mul_of_unit _ hu, one_mul]
+
+lemma lemma32_actual_burgess_residue_collision {D A N : ℕ} (M : ℤ)
+    (p q : Fin A × Fin N) (hp : p ∈ lemma32BurgessMultiplierPairs D A N)
+    (hq : q ∈ lemma32BurgessMultiplierPairs D A N) :
+    lemma32BurgessNormalizedResidue D M p=lemma32BurgessNormalizedResidue D M q ↔
+      (D : ℤ) ∣ (((p.1.val+1 : ℕ) : ℤ)*(M+(q.2.val : ℤ))-
+        ((q.1.val+1 : ℕ) : ℤ)*(M+(p.2.val : ℤ))) := by
+  have hpunit : (p.1.val+1).Coprime D :=
+    (Finset.mem_filter.mp (Finset.mem_product.mp hp).1).2
+  have hqunit : (q.1.val+1).Coprime D :=
+    (Finset.mem_filter.mp (Finset.mem_product.mp hq).1).2
+  unfold lemma32BurgessNormalizedResidue
+  rw [lemma32_unit_ratio_eq_iff _ _ _ _
+    ((ZMod.isUnit_iff_coprime _ _).mpr hpunit) ((ZMod.isUnit_iff_coprime _ _).mpr hqunit)]
+  have he : ((((p.1.val+1 : ℕ) : ℤ)*(M+(q.2.val : ℤ))-
+      ((q.1.val+1 : ℕ) : ℤ)*(M+(p.2.val : ℤ)) : ℤ) : ZMod D) =
+      ((p.1.val+1 : ℕ) : ZMod D)*((M+(q.2.val : ℤ) : ℤ) : ZMod D)-
+      ((q.1.val+1 : ℕ) : ZMod D)*((M+(p.2.val : ℤ) : ℤ) : ZMod D) := by
+    push_cast
+    rfl
+  rw [← sub_eq_zero, ← he, ZMod.intCast_zmod_eq_zero_iff_dvd]
+
+end ZhangLS.Spec

@@ -1,0 +1,37 @@
+import ZhangLS.Spec.Lemma32PrimitiveCRTNontrivial
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_changeLevel_factorsThrough_conductor {d M : ℕ} (hd : d ∣ M)
+    (χ : DirichletCharacter ℂ d) :
+    (DirichletCharacter.changeLevel hd χ).FactorsThrough χ.conductor := by
+  obtain ⟨hc,χ₀,he⟩ := χ.factorsThrough_conductor
+  refine ⟨hc.trans hd,χ₀,?_⟩
+  exact (congrArg (DirichletCharacter.changeLevel hd) he).trans
+    (DirichletCharacter.changeLevel_trans χ₀ hc hd).symm
+
+lemma lemma32_changeLevel_conductor_dvd {d M : ℕ} [NeZero M] (hd : d ∣ M)
+    (χ : DirichletCharacter ℂ d) :
+    (DirichletCharacter.changeLevel hd χ).conductor ∣ χ.conductor :=
+  DirichletCharacter.conductor_dvd_of_mem_conductorSet _
+    (lemma32_changeLevel_factorsThrough_conductor hd χ)
+
+lemma lemma32_actual_CRT_changeLevel_product {m n : ℕ} (h : m.Coprime n)
+    (χ : DirichletCharacter ℂ (m*n)) :
+    χ = DirichletCharacter.changeLevel (Nat.dvd_mul_right m n) (lemma32CRTCharacterLeft h χ)*
+      DirichletCharacter.changeLevel (Nat.dvd_mul_left n m) (lemma32CRTCharacterRight h χ) := by
+  apply MulChar.ext
+  intro a
+  rw [MulChar.mul_apply,DirichletCharacter.changeLevel_eq_cast_of_dvd,
+    DirichletCharacter.changeLevel_eq_cast_of_dvd]
+  have he := lemma32_actual_CRT_character_factorization h χ (a : ZMod (m*n))
+  have hf : (ZMod.chineseRemainder h (a : ZMod (m*n))).1 =
+      (ZMod.cast (a : ZMod (m*n)) : ZMod m) := Prod.fst_zmod_cast _
+  have hs : (ZMod.chineseRemainder h (a : ZMod (m*n))).2 =
+      (ZMod.cast (a : ZMod (m*n)) : ZMod n) := Prod.snd_zmod_cast _
+  rw [hf,hs] at he
+  exact he
+
+end ZhangLS.Spec

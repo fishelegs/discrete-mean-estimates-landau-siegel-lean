@@ -1,0 +1,6 @@
+ZhangLS/Spec/Lemma59ExtendedActualZeros.lean:17:5: warning: unused variable `hm`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ZhangLS/Spec/Lemma59ExtendedActualZeros.lean:235:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

@@ -1,0 +1,6 @@
+ZhangLS/Spec/Lemma56PrincipalMassContourBudget.lean:66:29: warning: 'norm_num' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ZhangLS/Spec/Lemma56PrincipalMassContourBudget.lean:146:40: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

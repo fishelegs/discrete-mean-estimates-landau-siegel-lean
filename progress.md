@@ -1,0 +1,488 @@
+# 张益唐论文 Lean 形式化进度
+
+本轮 Step 137 已完成完整 Lemma 3.2：`lemma32_proved : Lemma32Target` 保留原文实际ν²τ₂²、D⁴<n≤D⁸、归一化(A)、统一正绝对常数及充分大模数阈值。实际统一 Burgess 区间／部分和界由强归纳证明，Hasse界、CRT、复合四阶矩、放大、Fourier补全和区间边界均已接通；未假设最终算术界。13新模块、26接口、6定义，合计514个算术接口、两个Hasse最终定理和137个回归通过标准公理检查。Step137全量内核核验 **PASS**（628个逐模块Spec检查、Spec聚合、893个项目导入的构建、86个回归文件；982源码指纹不变；2026-10-02 19:01:20–2026-10-02 19:17:46 Asia/Shanghai）。严格审计357个已审查候选完全不变，非零退出保留。正式账本 **24/51完成、1项进行中、26项未开始**，5.6模数1情形仍待证明。详见[Step137状态](audit/STEP137_STATUS.md)。
+
+本轮 Step 136 已正式接入 Fourier 补全和两端区间估计：10模块、33新接口、2定义；实际实二次 Gauss 和模长为√D，实际区间字符和≤2√D(1+logD)，小区间和N≥D^(79/128)的大区间均已达到D^(25/128)√N尺度。4858项构建、488个算术接口、两个Hasse最终定理及131个回归PASS；968源码指纹不变，955旧非聚合源码未变。增量检查承接Step135与Step130全量PASS，未运行968源码逐模块全量遍历；严格审计357候选／非零退出保留。中间区间Burgess归纳、统一部分和及完整3.2仍UNPROVED。账本23/51完成、2项进行中、26项未开始。详见[Step136状态](audit/STEP136_STATUS.md)。
+
+本轮 Step 135 已正式接入 Burgess 放大组件：23模块、62新接口、10定义；实际重数质量≤AN、平方和≤3AN(1+logA)，实际移位和的加权四阶矩、互素乘子计数及D^(1/2048)密度控制、区间边界和有限平均均已证明。4848项构建、455个算术接口、两个Hasse最终定理及125个回归PASS；957源码指纹不变，931旧非聚合源码未变。增量检查承接Step134与Step130全量PASS，未运行957源码逐模块全量遍历；严格审计354候选／非零退出保留。Burgess参数选择与归纳、长区间估计、统一部分和及完整3.2仍UNPROVED。账本23/51完成、2项进行中、26项未开始。详见[Step135状态](audit/STEP135_STATUS.md)。
+
+本轮 Step 134 已正式接入复合模数相关和、约数／根差平均及统一四阶矩：15模块、36新接口、7定义；实际原始实二次字符的四阶矩≤3DH²+C D^(17/32)H⁴，显式C=256·192^(192^32)。4817项构建、393个算术接口、两个Hasse最终定理与115个回归PASS；933源码指纹不变，915旧非聚合源码未变。增量检查承接Step133与Step130全量PASS，未运行933源码逐模块全量遍历；严格审计353候选／非零退出保留。Burgess放大、重数二阶矩、统一部分和及完整3.2仍UNPROVED。账本23/51完成、2项进行中、26项未开始。详见[Step134状态](audit/STEP134_STATUS.md)。
+
+本轮 Step 133 已正式接入实际 Hasse 界与素数四阶矩：187个清理并重新编译的外部模块及5个算术模块，新增11接口；357个算术接口、两个Hasse最终定理和107个回归通过标准公理检查，项目4802项构建PASS。外部7900声明无非标准公理或未完成证明依赖。实际素数四阶矩≤3pH²+12H³+H⁴(2√p+1)，非配对相关和≤3√p。917源码指纹不变；本轮为承接Step132及Step130全量PASS的增量检查，未运行917源码逐模块全量遍历。严格审计350候选和非零退出保留。复合模数推广、Burgess放大、统一算术输入及完整3.2仍UNPROVED；账本23/51完成、2项进行中、26项未开始。详见[Step133状态](audit/STEP133_STATUS.md)。
+
+本轮 Step 132 接入实际 CRT 分解与原始二次字符模数结构：16 个新模块、40 个接口、10 个定义，合计346项标准公理接口／101个回归及项目构建PASS。局部字符保留原始性、实值性和二次性；实际四次相关和按CRT分解；模数D=2^e m，其中e≤3、m为奇数且平方自由。724源码在增量检查期间指纹不变，705旧非聚合源码未变；未运行724源码的逐模块全量遍历，承接Step131增量检查和Step130全量PASS。Hasse最终定理及素数四阶矩已在独立临时环境通过标准公理检查，清理源码后的重编译及正式接入待完成。复合模数相关和界、Burgess放大、统一算术输入及完整3.2仍UNPROVED。账本23/51完成、2项进行中、26项未开始。详见[Step132状态](audit/STEP132_STATUS.md)。
+
+本轮 Step 131 接入 Lemma 3.2 的全部重复根相关和与实际点数余项：8 个新模块、20 个新接口、3 个定义，合计306项标准公理接口／72个回归及项目构建通过。素数模数、H≤p 时，四阶矩≤3pH²+12H³加实际互异根余项；余项准确等于∑|#E(𝔽p)−p−2|。增量检查承接刚完成的Step130全量PASS；707源码在增量检查期间指纹不变，696个旧非聚合源码未变。未重复运行707源码的逐模块全量遍历。Hasse界、复合模数推广、Burgess放大及完整Lemma3.2仍UNPROVED。账本23/51完成、2项进行中、26项未开始。详见[Step131状态](audit/STEP131_STATUS.md)。
+
+本轮 Step 130 接合 Lemma 3.2 的显式算术归约与实际有限域字符和：33 个新增模块、80 个新增接口、20 个定义；合计286项标准公理接口和61个回归、正式构建均PASS。实际字符部分和的统一 Burgess 界可推出实际左积分界并闭合原始尾和目标，但该算术输入仍UNPROVED。已无条件证明四阶矩展开、配对项≤3DH²、重复根相关和，以及四次字符和到实际椭圆曲线点数的精确恒等式。Step 130 全量内核验证 **PASS**（538模块、616导入、698源码、79回归，全部指纹不变；2026-10-02 13:22:29–2026-10-02 14:12:17 Asia/Shanghai）。完整 Lemma3.2 **UNPROVED**：四异根界、复合模数推广和 Burgess 放大仍缺。账本 **23/51完成、2项进行中、26项未开始**。详见 [Step 130 状态](audit/STEP130_STATUS.md)。
+
+本轮 Step 129 接合 Lemma 3.2 的实际无限移线与原始尾和归约：19 个新增模块、58 个新增接口、8 个定义；合计206项标准公理接口和39个回归已通过正式检查。平滑差等于实际留数加实际左竖线积分；原始尾和乘正绝对常数≤C L^-2007加左竖线积分模长。修正因子在Re s≥3/4上统一≤Cφ D^(1/128)。Step 129 全量内核验证 **PASS**（505模块、583导入、664源码、78回归，全部指纹不变；2026-10-02 12:09:14–2026-10-02 12:54:39 Asia/Shanghai）。完整 Lemma3.2 **UNPROVED**：实际左竖线积分的统一小量界仍缺。账本 **23/51完成、2项进行中、26项未开始**。详见 [Step 129 状态](audit/STEP129_STATUS.md)。
+
+此前 Step 128 接合 Lemma 3.2 的实际级数、Mellin 恒等式、尾和比较和留数：18 个新增模块、63 个新增辅助定理、9 个定义；与此前 Euler／圆积分基础合计148项标准公理接口和24个回归已独立检查。原始尾和乘正绝对常数不超过实际平滑差；实际留数等于正则分子的七阶导数除以7!，并有 C L^-2007 界。正式构建及148标准公理/24回归PASS。Step 128 全量内核验证 **PASS**（486模块、564导入、644源码、77回归，全部指纹不变；2026-10-02 11:11:06–2026-10-02 11:53:44 Asia/Shanghai）。完整 Lemma3.2 **UNPROVED**：全局移线及导出误差界、平滑差上界仍缺。账本 **23/51完成、2项进行中、26项未开始**。详见 [Step 128 状态](audit/STEP128_STATUS.md)。
+
+此前 Step 127 接合 Lemma 3.2 的实际 Euler 修正与圆积分界：22 模块、85 个辅助定理、14 个定义及 8 个回归例已独立通过内核；原始(A)下、半径 L^-2024、原文 D^(8w)-D^(4w) 的归一化圆积分 ≤ C L^-2007，C 为正绝对常数。正式构建与85标准公理/8回归通过。Step 127 全量内核验证 **PASS**（468模块、546导入、625源码、76回归，全部指纹不变；2026-10-02 10:19:44–2026-10-02 11:06:01 Asia/Shanghai）。完整 Lemma3.2 **UNPROVED**：实际加权 Dirichlet 级数等式、全局 Mellin 与移线误差、原始尾和连接仍缺。账本 **23/51完成、2项进行中、26项未开始**。详见 [Step 127 状态](audit/STEP127_STATUS.md)。
+
+此前 Step 126 已接合 [完整 Lemma 3.5](ZhangLS/Spec/Lemma35.lean)：`lemma35_proved : Lemma35Target` 保留原始Ψ、严格素数区间、实际X₃及中心s₀、P²端点与D⁴到P²积分、严格L^-585条件、原文𝒫、归一化(A)与统一C/D₀量词。显式C=50400(32+π²)，D₀由3.1指数吸收和实际素数质量下界推出；可积性、均方与质量比较全部已证。计数界L^-746强于原文L^-739。8模块、29标准公理接口、6回归（5原文展开）通过；602源码无占位、结构通过，严格审计126个候选完全不变，退出码1保留。Step 126 全量内核验证 **PASS**（446模块、524导入、602源码、75回归，全部指纹不变；2026-10-02 09:29:14–2026-10-02 10:11:22 Asia/Shanghai）。完整3.5已完成；账本 **23/51完成、1项进行中、27项未开始**，5.6模数1仍待证明。详见 [Step 126 状态](audit/STEP126_STATUS.md)。
+
+此前 Step 125 已接合 [完整 Lemma 3.1](ZhangLS/Spec/Lemma31.lean)：`lemma31_proved : Lemma31Target` 保留原始ν、D⁴<n≤P²、实际L(1,χ)、原始归一化(A)与统一C/D₀量词。显式C=1260，D₀由指数衰减统一推出；平方卷积上界、实际字符调和截断2D/N、累计和6√D√N、一次尾和21L^-2013及总和30L²均已证明。23模块、76标准公理接口、7回归（6原文展开）通过；593源码无占位、结构通过，严格审计126个候选（旧125不变、新1为局部推导的有限Abel恒等式）且退出码1保留。Step 125 全量内核验证 **PASS**（438模块、516导入、593源码、74回归，全部指纹不变；2026-10-02 08:46:07–2026-10-02 09:26:35 Asia/Shanghai）。完整3.1已完成；账本 **22/51完成、1项进行中、28项未开始**，5.6模数1仍待证明。详见 [Step 125 状态](audit/STEP125_STATUS.md)。
+
+此前 Step 124 已接合 [完整 Lemma 3.4](ZhangLS/Spec/Lemma34.lean)：`lemma34_proved : Lemma34Target` 保留原始Ψ、严格素数区间、实际ν20/υ20、中心s0、D80端点和积分、原始严格B阈值及原文𝒫。显式C=51208·81^1600，D₀=ceil(exp3)，无需(A)。13模块、44标准公理接口、4原文展开回归通过；569源码无占位、结构通过，严格审计125个旧候选不变且退出码1保留。Step 124 全量内核验证 **PASS**（415模块、493导入、569源码、73回归，全部指纹不变；2026-10-02 07:33:50–2026-10-02 08:09:46 Asia/Shanghai）。完整3.4已完成；账本 **21/51完成、1项进行中、29项未开始**，5.6模数1仍待证明。详见 [Step 124 状态](audit/STEP124_STATUS.md)。
+
+此前 Step 123 已接合 [完整 Lemma 3.3](ZhangLS/Spec/Lemma33.lean)：`lemma33_proved : Lemma33Target` 保留原始Ψ、严格素数区间、实际Dirichlet和、原文𝒫、两条长度与实幂能量及统一量词次序。第一条常数1；第二条由已证采样／Fourier／分数分离／Gauss转换给出；共同C=32+π²、D₀=ceil(exp3)，无需(A)。8模块、44标准公理接口、3原文展开回归通过，555源码无占位且结构通过。严格静态审计125个已审查候选（旧124不变，新增1个为已推导对数阈值），退出码1保留。Step 123 全量内核验证 **PASS**（402模块、480导入、555源码、72回归，全部指纹不变；2026-10-02 06:31:56–2026-10-02 07:04:54 Asia/Shanghai）。完整3.3已完成；账本 **20/51完成、1项进行中、30项未开始**，5.6模数1仍待证明。详见 [Step 123 状态](audit/STEP123_STATUS.md)。
+
+此前 Step 122 已接合 [完整 Lemma 6.1](ZhangLS/Spec/Lemma61.lean)：`lemma61_proved : Lemma61Target` 已通过内核与原文展开回归，保留原始Ψ、严格区域、实际L／K／N／E1及统一量词次序；有限Gaussian短和、原左侧对偶主项、实际尾和／Z误差、完整L水平边及统一常数／阈值均已证明。k=1/8，D₀=ceil(exp64)+1，C为显式正绝对常数。11模块、36标准公理接口、3展开回归通过；546源码无占位、结构通过，严格静态审计仍124个已审查候选。Step 122 全量内核验证 **PASS**（394模块、472导入、546源码、71回归，全部指纹不变；2026-10-02 05:54:47–2026-10-02 06:27:22 Asia/Shanghai）。完整6.1已完成；账本 **19/51完成、1项进行中、31项未开始**，5.6模数1仍待证明。详见 [Step 122 状态](audit/STEP122_STATUS.md)。
+
+此前 Step 121 推进 [Lemma 6.1 的原左侧实际Z误差](ZhangLS/Spec/Lemma61OriginalLeftError.lean)：零点处可去的正则部分、实际误差积分可积性（含Re s=1/2）、精确反射误差路径移线及水平边预算已证明；原左侧归一化Z误差 ≤(35exp(246π+1)+16exp(2+4π))E₁(1/8)，L≥64。四模块、19项标准公理接口、3项展开回归通过；534源码无占位、结构通过，严格静态审计仍124个已审查候选。Step 121 全量内核验证 **PASS**（383模块、461导入、534源码、70回归，全部指纹不变；2026-10-02 05:18:02–2026-10-02 05:49:34 Asia/Shanghai）。完整6.1仍待有限对偶短和的Gaussian关系、完整L水平边预算及统一常数／阈值组合；账本 **18/51完成、2项进行中、31项未开始**，5.6模数1仍待证明。详见 [Step 121 状态](audit/STEP121_STATUS.md)。
+
+此前 Step 120 推进 [Lemma 6.1 的实际对偶尾和截断](ZhangLS/Spec/Lemma61ReciprocalTailTruncation.lean)：原文 n<T³／n≥T³ 精确拆分、宽矩形中实际Z与P₄抵消、远左实际尾积分、两条水平边及实际Cauchy关系已证明；原左侧归一化尾积分 ≤2exp(2+4π)(M₂+M₅/₄)exp(−L¹⁰/8)，L≥64。五模块、24项标准公理接口、3项展开回归通过；529源码无占位、结构通过，静态审计仍124个已审查候选。Step 120 全量内核验证 **PASS**（379模块、457导入、529源码、69回归，全部指纹不变；2026-10-02 04:43:22–2026-10-02 05:14:33 Asia/Shanghai）。完整6.1仍待有限对偶短和的误差路径移线、完整水平边预算及统一常数／阈值组合；账本 **18/51完成、2项进行中、31项未开始**，5.6模数1仍待证明。详见 [Step 120 状态](audit/STEP120_STATUS.md)。
+
+此前 Step 119 推进 [Lemma 6.1 的实际单L留数](ZhangLS/Spec/Lemma61SingleResidue.lean) 与 [右侧Gaussian截断](ZhangLS/Spec/Lemma61RightTruncation.lean)：原始Ψ下的实际功能方程、Re w=−1到2的实际留数和四边有限积分恒等式已证明；实际单L绝对级数给出统一上界，右侧有限归一化积分与实际K之差 ≤9M₂ exp(−L¹⁰/8)，L≥64。两模块、15项标准公理接口、3项展开回归通过；523源码无占位、结构通过，静态审计仍124个已审查候选。Step 119 全量内核验证 **PASS**（374模块、452导入、523源码、68回归，全部指纹不变；2026-10-02 04:09:35–2026-10-02 04:40:07 Asia/Shanghai）。完整6.1仍待左侧对偶积分、对偶尾和截断及水平边预算；账本 **18/51完成、2项进行中、31项未开始**，5.6模数1仍待证明。详见 [Step 119 状态](audit/STEP119_STATUS.md)。
+
+此前 Step 118 推进 [Lemma 6.1 的实际Z误差](ZhangLS/Spec/Lemma61ActualZError.lean)：任意实部的锐利Gamma对数导数、原始Ψ下宽区域归一化Z界、实际水平模长模型、小复位移差商及闭位移端点均已证明。路径 Re w=1−2Re s 将对偶短和精确转为原文 n<T³ 的有限和；实际误差积分及归一化积分均 ≤35exp(246π+1) E1。五模块、28项标准公理接口、3项展开回归通过；520源码无占位、结构通过，静态审计仍124个已审查候选。Step 118 全量内核验证 **PASS**（372模块、450导入、520源码、67回归，全部指纹不变；2026-10-02 03:35:16–2026-10-02 04:06:10 Asia/Shanghai）。完整6.1仍待实际轮廓关系、对偶尾和截断、水平边及竖直尾预算；账本 **18/51完成、2项进行中、31项未开始**，5.6模数1仍待证明。详见 [Step 118 状态](audit/STEP118_STATUS.md)。
+
+此前 Step 117 推进 [Lemma 6.1 的实际 Gaussian 输入](ZhangLS/Spec/Lemma61GaussianCutoff.lean)：原文 g*、P4、K、N、严格 n<T³ 的 E1 与原始Ψ／严格区域已定义；有限支撑恒等式、整函数性、E1正性／可积性、实际单个L的Gaussian Mellin恒等式和实际K／对偶N截断误差 ≤绝对常数 exp(−L¹⁰) 均已证明。四模块、32项标准公理接口、3项展开回归通过；514源码无占位、结构通过，静态审计仍124个已审查候选。Step 117 全量内核验证 **PASS**（367模块、445导入、514源码、66回归，全部指纹不变；2026-10-02 03:01:07–2026-10-02 03:32:21 Asia/Shanghai）。完整6.1仍待轮廓移动、对偶有限和截断及Z差的原文E1界，账本 **18/51完成、2项进行中、31项未开始**；5.6模数1仍待证明。详见 [Step 117 状态](audit/STEP117_STATUS.md)。
+
+此前 Step 116 已接合 [完整 Lemma 5.9](ZhangLS/Spec/Lemma59.lean)：`lemma59_proved : Lemma59Target` 保留实际 L、原始 Ψ1、原文闭区域、全部实际零点的分离条件及统一常数／阈值。扩大近似函数方程、实际零点临界线／重数1／间距、真实排序乘积与数值预算均已证明。11模块、108项标准公理接口、3项原文及闭边界回归通过；509个源码无占位、结构通过，严格静态审计124个已审查候选。Step 116 全量内核验证 **PASS**（363模块、441导入、509源码、65回归，全部指纹不变；2026-10-02 02:24:29–2026-10-02 02:58:00 Asia/Shanghai）。完整Lemma5.9正式完成，账本 **18/51完成、1项进行中、32项未开始**；5.6模数1仍待证明。详见 [Step 116 状态](audit/STEP116_STATUS.md)。
+
+此前 Step 115 已接入 [Lemma 5.9 的实际零点因子与剩余函数界](ZhangLS/Spec/Lemma59ZeroRemovedShift.lean)：实际 L=P Q 包括被移除零点；原始 Ψ1 下，Q 的原文第一位移商统一 ≤exp(166400π)，实际 L 商等于带真实解析重数的零点乘积乘 Q 商。五模块、33 项标准公理接口、5 项展开回归通过；497 个源码无占位、结构检查通过，严格静态审计 118 个已审查候选。Step 115 全量内核验证 **PASS**（352 模块、430 导入、497 源码、64 回归，全部指纹不变；2026-10-02 01:47:11–2026-10-02 02:18:15 Asia/Shanghai）。扩大近似函数方程和零点结构草稿已独立验证，尚未计入本轮覆盖。完整 Lemma 5.9 商及 Lemma 5.6 模数 1 仍未证明；账本 **17/51 完成、2 项进行中、32 项未开始**。详见 [Step 115 状态](audit/STEP115_STATUS.md)。
+
+更新日期：2026-10-02。对照来源：[Zhang, *Discrete mean estimates and the Landau–Siegel zero*, arXiv:2211.02515v1](https://arxiv.org/pdf/2211.02515)（2022-11-04，111 页）。本表按该版本正文中编号的 **2 个 Theorem、42 个 Lemma、7 个 Proposition** 列出；附录 A/B 是若干正文引理的证明，没有另起编号的引理。若改用修订版，须重新核对编号与陈述。
+
+## 状态口径
+
+- **✅ 完成**：论文原命题已准确表述为可信 Lean 定理，保留原有假设（如 (A)、\(\psi\in\Psi_1\) 及充分大模数），但不外加待证结论作为前提；全部新增证明义务均已闭合，且通过内核检查。
+- **🟡 进行中**：已有可信 Lean 定义或证明片段，但论文原命题仍缺关键证明。仅有条件化的“若……则……”定理，不算完成。
+- **⚪ 未开始**：尚无针对该编号论文命题的可信证明。旧版模型中的同名文件也不算完成。
+
+目前：**51 项中 23 项完成、2 项进行中、26 项未开始**。完成项为 Proposition 2.2、Lemma 2.3、Lemma 3.1、Lemma 3.3–3.5、Lemma 4.1–4.8、Lemma 5.1–5.5、Lemma 5.7–5.9 和 Lemma 6.1。Step 74 已构造真实 \(\Psi_1\) 定义，从其 (3.4)–(3.6) 条件推出完整 \(\Omega_1\) 上 \(|F|+|G|\le2\mathcal L^{79}\)、\(|FG-1|\le4\mathcal L^{-227}\) 和 \(F\) 的双边界／无零性，再证明 \(\Omega_2\) 的 Cauchy 圆盘包含于 \(\Omega_1\)，得到 \(\|F'/F\|\le140800\mathcal L\)。Lemma 4.1–4.5、Lemma 4.8 及 Lemma 5.1 均可采用统一的闭式可计算阈值 \(D_0=3^{3^{200}}\)；Lemma 2.3、Lemma 4.6–4.7、Lemma 5.2、Lemma 5.4、Lemma 5.5 与 Proposition 2.2 的充分大模数阈值以统一存在性给出（Lemma 5.2 的误差常数为显式 126π，Lemma 5.4 可取显式 C=C_M+C_disk、c=3200，Lemma 5.5 的零点距离常数为 64；所列其他结果的绝对常数以统一存在性给出），当前不宣称沿用该闭式阈值；Lemma 5.7 与 Lemma 5.8 的阈值均可取 \(3^{10{,}000{,}000}\)。
+
+**依赖勘误**：Lemma 2.3 假定 \(\psi\in\Psi_1\)，(3.4)–(3.6) 是集合定义，不需要先证明其例外集计数。Step 73 的 \(\tau_{40}\) 均方路线属于 Lemma 3.4／Proposition 2.1 的集合大小分析，不是 Lemma 2.3 的当前前置障碍。(4.6) 在 Step 75 闭合；Step 76 已取得实际 \(\widetilde Z\) 局部模长、Gaussian 平滑长和及中段截断积分的 \(O(\mathcal L^{-179})\) 界。Step 77 已证明完整乘积 Mellin 展开、右侧积分对 \(F\) 的 \(O(\mathcal L^{-180})\) 近似及实际有限矩形轮廓移动。Step 78 已闭合反射短段／尾项、全部水平边和右竖线截断误差并完成最终接合，证明完整 Lemma 4.4。完整 (4.5) 的渐近未被宣称为已证明。Step 79 已在 Lemma 4.5 原始区域闭合实际归一化误差 (4.10) 和右侧无零结论；Step 80 已闭合实际 (4.11)、内圆盘模型误差、严格 Rouché 比较与完整 Lemma 4.6。Step 81 已证明 Lemma 4.7 的实际扩张圆三零点计数；Step 82 已闭合原始 Ω 内实际乘积零点处的 Lemma 4.8 逆因子近似；Step 83 已完成 Proposition 2.2 的完整区域、单根性和相邻零点双边间距接合；Step 84 已闭合 Lemma 2.3 的实际连续后继零点、两个无零区间与最终系数非负性；Step 85 已闭合 Lemma 5.1 的实际 Gamma 精细渐近、单因子统一模长、竖直积分和四个原始位移估计；Step 86 已闭合 Lemma 5.2 的实际分支对数导数、三位移精确求和与原始乘积相对误差。
+
+Step 114 已接入 [Lemma 5.9 的实际局部零点与重数界](ZhangLS/Spec/Lemma59LocalZeroBudgets.lean)：半径 7/4 闭圆盘上的真实零点集、实际解析重数之和及精确成员条件已证明；原始 Ψ1 下，两项统一 ≤30log P，覆盖扩大闭高度窗口的两个端点。两模块、12 项标准公理检查、5 项展开回归通过，491 个源码无占位、结构检查通过。Step 114 全量内核验证 **PASS**（347 个可信模块、425 个导入、491 个源码、63 个回归；全部指纹不变；2026-10-02 01:11:10–2026-10-02 01:43:28 Asia/Shanghai）。严格静态审计为 116 个已审查候选。完整 Lemma 5.9 商和 Lemma 5.6 模数 1 情形仍未证明，账本 **17/51 完成、2 项进行中、32 项未开始**。独立实际因子草稿已通过 45 接口（33 个新增）和 5 项展开回归，证明 L=P Q、实际 Q 原文第一位移的统一绝对界及带真实重数的商恒等式，尚未计入本轮全量覆盖。详见 [Step 114 状态](audit/STEP114_STATUS.md)。
+
+此前 Step 113 已接入 [Lemma 5.9 的原文闭区域辅助证明](ZhangLS/Spec/Lemma59UniformPolynomialInputs.lean) 和 [有限零点乘积界](ZhangLS/Spec/Lemma59FiniteZeroProducts.lean)：实际 F 的两侧界、非零性及 F′/F≤140800L 已从原始 Ψ1 推出，完整闭高度窗口与原文第一位移保留；实际零点分离推出 L 分母非零。零点按序距离给出望远镜乘积 N+1，上方零点因子 ≤1，至多两个近零因子的成本 ≤(1+η^-1)^2。五个辅助模块、27 项标准公理检查和 8 项展开回归已通过，488 个源码无占位、结构检查通过。Step 113 全量内核验证 **PASS**（345 个可信模块、423 个导入、488 个源码、62 个回归；全部指纹不变；2026-10-02 00:32:35–2026-10-02 01:03:17 Asia/Shanghai）。严格静态审计为 115 个已审查候选。完整 Lemma 5.9 商估计尚未证明，仍需实际扩大区域的零点结构与真实 L 因子接合；完整 Lemma 5.6 的模数 1 情形也保留待证。当前账本 **17/51 完成、2 项进行中、32 项未开始**。详见 [Step 113 状态](audit/STEP113_STATUS.md)。
+
+此前 Step 112 推进 [Lemma 5.6 的实际素数质量与归一化](ZhangLS/Spec/Lemma56ActualPrimeMassNormalization.lean)：原始 (A) 下，实际严格窗口的 log p 质量 ≥P/(2L^68)，实际 p 质量 ≥P²/(4L^77)，并证明质量为正、窗口非空。用实际下截断 floor(P)+1 精确保留原文两个严格素数端点；实际主项与两项前缀误差给出上述下界。原文 q>1 本原特征的归一化指数估计已闭合，不添加质量下界假设，统一常数／阈值先于全部参数，保留闭振荡端点。四个新增可信模块、14 项标准公理接口、6 项展开回归通过。Step 112 全量内核验证 **PASS**（340 个可信模块、418 个导入、482 个源码、61 个回归；全部指纹不变；2026-10-01 23:52:35–2026-10-02 00:27:16 Asia/Shanghai）。严格静态审计为 114 个已审查候选，新增一处为局部已证实数下界的返回。完整 Lemma 5.6 的忠实模数 1 主特征目标仍待证明，账本 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 112 状态](audit/STEP112_STATUS.md)。
+
+此前 Step 111 推进 [Lemma 5.6 的主特征质量尺度误差](ZhangLS/Spec/Lemma56PrincipalMassSharpPrime.lean)：在 B=exp(L/3)、H=D/2 上，实际平滑 Mangoldt 和的主项误差已吸收为 Cmass P L^-197。实际去平滑误差对包括模数 1 在内的所有复特征 ≤Cuns P L^-191，实际素数幂剔除误差 ≤1728P L^-191。原始 (A) 下的实际严格素数对数前缀和减精确主项 x exp(1/(4B²))，统一 ≤Cprime P L^-191，覆盖整个 1≤x≤2P。常数显式，统一阈值先于全部 D、χ、x。6 个新增可信模块、29 项标准公理接口、6 项展开回归通过。Step 111 全量内核验证 **PASS**（336 个可信模块、414 个导入、477 个源码、60 个回归；全部指纹不变；2026-10-01 23:17:56–23:48:28 Asia/Shanghai）。严格静态审计仍为 113 个已审查候选，输出完全不变。完整 Lemma 5.6 保持进行中，账本 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 111 状态](audit/STEP111_STATUS.md)。
+
+独立 [下一步实际素数质量草稿](audit/step112_lemma56_actual_prime_mass_draft.txt) 已通过 14 项标准公理接口和 6 项展开回归：原始 (A) 下，实际严格窗口的 log p 质量 ≥P/(2L^68)，实际 p 质量 ≥P²/(4L^77)，质量为正且窗口非空。实际下截断 floor(P)+1 精确保留严格下端点；原文 q>1 本原特征的归一化指数界已闭合，未添加质量下界假设。统一阈值先于全部参数，闭振荡端点保留。该草稿独立于本轮全量项目验证，未计入 336 个可信模块。忠实模数 1 主特征目标仍未证明，完整 Lemma 5.6 不计作完成。
+
+此前 Step 110 推进 [Lemma 5.6 的实际主特征主项误差](ZhangLS/Spec/Lemma56PrincipalPerronMainError.lean)：原始 (A) 下，实际 ζ 算术有限轮廓与精确极点主项 2πi x exp(1/(4B²)) 已接合；实际主特征平滑 Mangoldt 和减 x exp(1/(4B²))，由明确的左竖边、两个水平边及右尾误差控制。统一阈值先于全部 D、χ、B、x、H，覆盖 B>0、x≥1、1≤H≤D。6 个新增可信模块、14 项标准公理接口、4 项展开回归通过。Step 110 全量内核验证 **PASS**（330 个可信模块、408 个项目导入、470 个源码、59 个回归；全部指纹不变；2026-10-01 22:42:59–23:12:25 Asia/Shanghai）。严格静态审计仍为 113 个已审查候选，输出完全不变。论文尺度误差吸收、实际去平滑后的素数质量下界与忠实模数 1 主特征目标仍未证明，完整 Lemma 5.6 保持进行中，账本 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 110 状态](audit/STEP110_STATUS.md)。
+
+此前 Step 109 推进 [Lemma 5.6 的实际质量与 ζ 解析输入](ZhangLS/Spec/Lemma56PrimeMassNormalization.lean)：实际素数质量与 log p 总质量的有限关系、L^77 的指数损失吸收及条件归一化已接入可信层；质量下界仍是明确的待证假设。原始 (A) 下，实际去极点 ζ 和实际 riemannZeta 在 Re s>1−2/log D、闭 |Im s|≤2D 中无零点。实际去极点对数导数在 1−1/L≤Re s≤2、闭 |Im s|≤D 上 ≤18L²+21600L；实际 ζ′/ζ 在左边界 ≤18L²+21601L。已精确保留主特征 Perron 核在 1 处的值 x exp(1/(4B²))，并证明该极点项的实际有限矩形留数与实际主特征 Mellin 恒等式。全部常数／阈值先于所需参数，均使用真实有限和、真实 ζ 与实际导数。11 个新增可信模块、27 项标准公理接口、16 项展开回归通过。Step 109 全量内核验证 **PASS**（324 个可信模块、402 个项目导入、463 个源码、58 个回归；全部指纹不变；2026-10-01 18:13:33–18:42:13 Asia/Shanghai）。严格静态审计为 113 个已审查候选，新增两处均为局部已证对数／极点距离返回。实际素数质量下界与忠实模数 1 主特征目标仍未证明，完整 Lemma 5.6 保持进行中，账本 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 109 状态](audit/STEP109_STATUS.md)。
+
+此前 Step 108 推进 [Lemma 5.6 的原文素数权与绝对指数界](ZhangLS/Spec/Lemma56PrimeWindowAbsolute.lean)：十二个新增可信模块闭合实际去平滑和素数幂剔除，随后用有限 Abel 求和及 x/log x 单调性，把 log p 权精确转换为 p^(1+iτ) 权。原始 (A) 下，对 r>1、r<T、θ≠χ 的本原特征，实际严格素数窗口上的原文和满足 C P² exp(−7U/6)，覆盖 |τ|≤D 的两个闭端点；常数和模数阈值先于全部 D、特征、τ。24 项标准公理接口、12 项展开回归通过。Step 108 全量内核验证 **PASS**（313 个可信模块、391 个项目导入、451 个源码、57 个回归；全部指纹不变；2026-10-01 17:20:18–17:51:15 Asia/Shanghai）。严格静态审计为 111 个已审查候选，新增三处均为局部已证对数／幂界。实际素数质量下界和忠实模数 1 主特征边界仍待闭合；完整 Lemma 5.6 保持进行中，总账本 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 108 状态](audit/STEP108_STATUS.md)。
+
+此前 Step 107 推进 [Lemma 5.6 的实际累积 Mangoldt 和与去平滑误差](ZhangLS/Spec/Lemma56PerronMangoldtWindow.lean)：十五个新增可信模块在原始 (A) 下闭合非主本原特征、全部 1≤x≤2P、|τ|≤D 上的实际累积和 C P exp(−7U/6) 界，两个水平边与右尾均已预算。所有复特征（包括模数 1 主特征）的实际权重满足 0≤g_B≤1、反射恒等式和半值端点；实际平滑和减严格截断和的误差已精确分为可求和远项和有限近项，得到带窗口长度与高斯尾的定量界。55 项标准公理接口、14 项展开回归通过；Step 107 全量内核验证 **PASS**（301 个可信模块、379 个项目导入、438 个源码、56 个回归；全部指纹不变；2026-10-01 16:33:40–16:58:53 Asia/Shanghai）。严格静态审计仍为 108 个已审查候选，无新增。完整素数短区间目标仍待权重转换、实际素数质量归一化和主特征边界；去平滑与素数幂后续草稿已独立验证，尚未接入本轮覆盖；账本保持 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 107 状态](audit/STEP107_STATUS.md)。
+
+此前 Step 106 推进 [Lemma 5.6 的振荡参数与累积 Perron 恒等式](ZhangLS/Spec/Lemma56PerronMellinIdentity.lean)：十七个新增可信模块证明实际 n^(iτ) Mangoldt 高斯和与累积 Perron 和的精确 Mellin 恒等式、独立收敛和求和积分交换，恒等式允许包括模数 1 主特征在内的全部复特征。原始 (A) 下，非主本原特征的实际有限矩形移线覆盖 |τ|≤D、H≤exp(2U)/2 的闭端点并保留水平边；累积核的左线成本仅为 6M log(1+H)，实际归一化左线积分 ≤2017218816exp(1/4)P exp(−7U/6)。实际点高斯右线的两个无限尾项界也已证明。61 项标准公理接口、15 项展开回归通过；Step 106 全量内核验证 **PASS**（286 个可信模块、364 个项目导入、422 个源码、55 个回归；全部指纹不变；2026-10-01 15:43:30–16:08:18 Asia/Shanghai）。完整素数短区间估计、去平滑、素数幂剔除、素数质量归一化和主特征边界仍待闭合；账本保持 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 106 状态](audit/STEP106_STATUS.md)。
+
+此前 Step 105 推进 [Lemma 5.6 的高高度无零性与实际高斯积分](ZhangLS/Spec/Lemma56GaussianContour.lean)：十二个新增可信模块在原始 (A) 下证明 Re s>1−2/V、abs(Im s)≤2exp(2U) 内的非主本原特征无零性，并在闭矩形内给出实际 L'/L 界 24V²+28800V，其中 U=(log D)^4.5、V=3U/4。已证明实际 Mangoldt 高斯加权和的精确 Mellin 恒等式、两边收敛与求和积分交换，以及带全部水平边的有限矩形移线。37 项标准公理接口和 11 项展开回归通过；Step 105 全量内核验证 **PASS**（269 个可信模块、347 个项目导入、404 个源码、54 个回归；全部指纹不变；2026-10-01 14:49:47–15:13:26 Asia/Shanghai）。另有独立振荡参数草稿通过 26 项接口与 5 项回归，实际归一化左竖线积分 ≤4150656exp(1/4)P exp(−7U/6)，尚未接入项目。完整素数短区间估计与主特征边界仍待闭合；总账本保持 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 105 状态](audit/STEP105_STATUS.md)。
+
+此前 Step 104 推进 [Lemma 5.6 的实际零点排斥](ZhangLS/Spec/Lemma56WeakZeroExclusion.lean)：十五个新增可信模块闭合实际零点因子分解、全阶余项、四组零点共同极值检测和统一严格预算。在原始 (A) 下，对所有 r>1、r<T、θ≠χ 的本原 θ，一个先于全部模数、特征和点的统一阈值保证 Re s>1−2/(log D)^4、abs(Im s)≤2D 内无零点；两个高度端点均保留。实际乘积 χθ 允许非本原，模数允许不互素。11 项展开回归和 81 项标准公理检查通过；Step 104 全量内核验证 **PASS**（257 个可信模块、335 个项目导入、391 个源码、53 个回归；全部源码指纹不变；2026-10-01 14:03:29–14:25:35 Asia/Shanghai）。完整素数短区间指数估计和忠实目标中的模数 1 情形仍待闭合，总账本保持 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 104 状态](audit/STEP104_STATUS.md)。
+
+此前 Step 103 正在推进 [Lemma 5.6](ZhangLS/Spec/Lemma56.lean)：保留原始严格素数区间、r<T、θ≠χ、(A)、闭高度端点和模数 1 的忠实目标。九个可信模块已证明任意复特征的实际 von Mangoldt 正性、乘积特征分类、整周期抵消、整个 Re s>0 的 Abel 表示／增长界、Re s≥2 的 1/4 下界及实际 Jensen 重数界 ≤24L^1.1。乘积 χθ 允许非本原且 D、r 允许不互素。17 项展开回归和 60 项标准公理检查通过；375 个源码无占位、结构检查通过。Step 103 全量验证 **PASS**（242 个可信模块、320 个项目导入、375 个源码、52 个回归；全部源码指纹保持不变；2026-10-01 13:25:59–13:46:27 Asia/Shanghai），未计为完整引理；零点排斥和实际素数和指数衰减仍待证明。详见 [Step 103 状态](audit/STEP103_STATUS.md)。
+
+此前 Step 102 已完成[完整 Lemma 5.8](ZhangLS/Spec/Lemma58.lean)：`lemma58_proved : Lemma58Target` 保留实际 L 函数及导数、原文闭环域 α≤|s−1|≤10α、(A) 和先于全部 D、χ、s 选择的常数／阈值。实际 α=π/L^9，误差 ≤(1+128e(10π)^2)L^-15，显式阈值可取 3^10000000。整个闭半径 10α 圆盘的更强结论、L(1,χ) 的实际范数界和 Taylor 预算均已证明。模块构建、四项展开原文及边界回归和七项标准公理检查通过。Step 102 全量内核核验 **PASS**：233 个可信模块、311 个项目导入、365 个源码、51 个回归；全部 Lean 指纹在核验期间保持不变。时间 2026-10-01 12:38:43–13:00:25 Asia/Shanghai。总进度 **17/51 完成、0 项进行中、34 项未开始**。另有 Lemma 5.6 的实际算术正性、边界审计和乘积特征基础独立草稿，未计为完整引理。详见[Step 102 状态](audit/STEP102_STATUS.md)。
+
+此前 Step 101 已完成[完整 Lemma 5.5](ZhangLS/Spec/Lemma55FullZeroExclusion.lean)：`lemma55_proved : Lemma55Target` 保留原有 (A)、充分大模数和整个 Re s>1−2/log D、|Im s|<2D 区域；实际简单实零点距 1 的常数取 64，模数阈值统一存在。四组实际零点的共同最大项检测给出 J/4−62log D，下界与已证算术上界在统一阈值下严格冲突。七模块、十项展开原文／高度两端／重合高度回归及 50 项标准公理检查通过。Step 101 全量内核核验 **PASS**，覆盖 232 个可信模块、310 个项目导入、363 个源文件及 50 个回归；核验期间所有 Lean 指纹保持不变。核验时间 2026-10-01 12:13:18–12:35:57 Asia/Shanghai。进度提升为 **16/51 完成、0 项进行中、35 项未开始**。另有 Lemma 5.8 的完整原文及边界独立草稿已通过内核，尚未接入项目，未计入账本。详见[Step 101 状态](audit/STEP101_STATUS.md)。
+
+此前 Step 100 已闭合 [实际 ζ 局部公式与统一加权误差](ZhangLS/Spec/Lemma55ZetaWeightedPowerError.lean)：实际去极点函数在 Re s>0 解析，1 处值为 1；闭局部圆盘的零点集与重数等于真实 ζ 零点及其解析阶数，总重数 ≤18log D，覆盖全部 |t|≤2D。实际因子分解包含可去零点取值；归一化解析对数在闭半径 9/8 圆盘内 ≤1350log D。实际高阶 ζ 对数导数保留 1 处极点的每阶精确贡献；归一化 Fejér 加权误差在所有 J 上 ≤108000log D。十个新增模块、十二项实际对象／闭边界／高度两端／零阶回归及 66 项标准公理检查通过。覆盖 225 个可信模块、303 个项目导入、355 个源文件和 49 个回归；严格静态候选 99 个，新增四处均已审查。Step 100 全量内核核验 **PASS**：2026-10-01 11:29:29–11:49:34（北京时间），覆盖全部新增源码；355 个 Lean 文件的指纹在核验期间保持不变。另有 28 项标准公理接口的独立草稿，已证明实际 von Mangoldt 正性、圆盘外例外项 ≤4 及四组零点和上界 374400log D+8+4(1−β)J(J+1)exp(4J/log D)；该草稿尚未接入可信项目，未计入本轮模块覆盖。共同最大项的四组零点检测及统一阈值反证仍待闭合；完整 Lemma 5.5 和总账本保持 **15/51 完成、1 项进行中、35 项未开始**。详见 [Step 100 记录](audit/STEP100_STATUS.md)。
+
+Step 99 已证明 [真实零点的 Fejér 检测](ZhangLS/Spec/Lemma55ExceptionalZeroRemoval.lean)：任意不同于指定简单实零点的原文区域实际零点，产生移除该零点后的最大逆平方项及归一化半径 r≥(1+2/L)^−2，全部 J 的加权偶次幂和实部 ≥J/4−13L。实际高阶对数导数与逆幂和、真实重数一和精确局部移除均已证明。[归一化后仍可求和的误差](ZhangLS/Spec/Lemma55WeightedPowerError.lean) 在所有 J 上 ≤79200L，权重介于 0 和 2，移除后误差保持不变；实零点与 1 处极点的加权差 ≤2(1−β)J(J+1)exp(4J/L)。八个新增模块、实际对象／闭单位圆边界／两端高度／零移除／全检测阶数回归及 60 项标准公理检查通过。覆盖为 215 个可信模块、293 个项目导入、344 个源文件和 48 个回归；静态候选为 95 个，新增一处为实际 mathlib 高阶逆函数导数的局部应用，已审查。Step 99 全量内核核验 **PASS**：2026-10-01 10:48:30–11:07:43（北京时间）；可信模块、Spec 聚合、完整项目和全部回归均通过。ζ 的实际局部公式、von Mangoldt 正性上界及统一阈值反证仍待证明，完整 Lemma 5.5 和总账本保持 **15/51 完成、1 项进行中、35 项未开始**。详见 [Step 99 记录](audit/STEP99_STATUS.md)。
+
+Step 98 推进 Lemma 5.5 的实际零点排斥前置工具：[实际零点因子分解](ZhangLS/Spec/Lemma55ZeroFactorization.lean) 给出全平面 L=P Q（包含被移除零点），Q 整解析且在完整闭局部圆盘内非零；实际总重数 N≤13log D，归一化商的对数上界 ≤55log D。[实际归一化解析对数](ZhangLS/Spec/Lemma55ZeroRemovedLog.lean) 在闭半径 9/8 圆盘内有界 990log D，取得全阶 Cauchy 界。[实际对数导数公式](ZhangLS/Spec/Lemma55LocalLogDerivative.lean) 的中心余项 ≤176log D；[全阶归一化余项](ZhangLS/Spec/Lemma55HigherLogDerivative.lean) ≤990(n+1)log D (8/9)^(n+1)，任意有限组阶数的总和 ≤71280log D，均覆盖高度的两个端点。六个新增模块、实际对象／可去零点／闭边界／全阶回归及 33 项标准公理检查通过。覆盖为 207 个可信模块、285 个项目导入、335 个源文件和 47 个回归；静态候选为 94 个，新增三处已逐一审查。Step 98 全量内核核验 **PASS**：2026-10-01 10:01:34–10:20:09（北京时间）；可信模块、Spec 聚合、完整项目及全部回归均通过。完整 Lemma 5.5 的全区域无其他零点仍待证明，账本保持 **15/51 完成、1 项进行中、35 项未开始**。详见 [Step 98 记录](audit/STEP98_STATUS.md)。
+
+Step 97 继续原文完整区域的零点分析：[右半平面下界](ZhangLS/Spec/Lemma55NearTwoBound.lean) 在 Re s≥2 上给出 |L(s,χ)|≥1/4；[高处 Jensen 重数界](ZhangLS/Spec/Lemma55JensenZeroCount.lean) 在全部 |t|≤2D 的闭圆盘内给出 ≤13log D，并证明其等于实际解析阶数之和。[完整原文区域零点集](ZhangLS/Spec/Lemma55OriginalRegionZeros.lean) 的成员恰好是 Re s>1−2/L、|Im s|<2D 中的实际零点，其个数 ≤13(8D+1)log D；在 (A) 下，已构造的简单实零点属于此集合，实部最大的实际零点存在。六个新增模块、实际对象／两端高度／重数／全区域回归及 27 项标准公理检查通过。覆盖为 201 个可信模块、279 个项目导入、328 个源文件和 46 个回归；静态候选为 91 个，新增四处已逐一审查。Step 97 全量内核审计 **PASS**：2026-10-01 09:22:21–09:39:55（北京时间）。完整 Lemma 5.5 的全区域排斥仍未证明，账本保持 **15/51 完成、1 项进行中、35 项未开始**。详见 [Step 97 记录](audit/STEP97_STATUS.md)。
+
+Step 96 已证明 Lemma 5.5 的第一项原始结论：[实际简单实零点](ZhangLS/Spec/Lemma55SimpleRealZero.lean) 满足 0<1−ρ≤64L^−2022，实际复导数不为零；[局部唯一性](ZhangLS/Spec/Lemma55LocalUniqueness.lean) 覆盖完整闭复圆盘 |s−1|≤64L^−2022。阈值沿用 Lemma 5.7 的 D≥3^10,000,000。实际 Abel 积分在 D 处分段给出 |L(s,χ)|≤4eL；Cauchy 给出 |L″|≤128eL³、一阶导数变化界和二次 Taylor 余项。六个新增模块、原始对象／闭边界回归及 19 项标准公理检查通过；Step 96 全量审计 **PASS**：195 个可信模块、273 个项目导入、321 个源文件和 45 个回归，2026-10-01 08:41:30–08:57:52（北京时间）。完整 [Lemma55Target](ZhangLS/Spec/Lemma55.lean) 仍保留 Re s>1−2/L、|Im s|<2D，尚缺此全区域内无其他零点，账本为 **15/51 完成、1 项进行中、35 项未开始**。详见 [Step 96 记录](audit/STEP96_STATUS.md)。
+
+Step 95 已证明完整 [Lemma 5.4](ZhangLS/Spec/Lemma54.lean) 的 `lemma54_proved : Lemma54Target`。实际正轴积分在零点附近、小范围窗口外及两个大范围尾项均有统一定量界；[完整圆盘预算](ZhangLS/Spec/Lemma54FullDiskBudget.lean) 与 [指数误差吸收](ZhangLS/Spec/Lemma54DiskErrorAbsorption.lean) 闭合第二项。两项共用显式正绝对常数 C=C_M+C_disk，c=3200，模数阈值在全部 D 和 s 之前统一存在。六模块构建、展开原始完整陈述回归和 19 项标准公理检查通过；189 个可信模块、267 个项目导入、314 个源文件、44 个回归，严格静态候选数仍为 87 且无新增。Step 95 全量内核审计 **PASS**：2026-10-01 08:04:34–08:20:21（北京时间）；完整 Lemma 5.4 正式完成，进度增至 **15/51 完成、0 项进行中、36 项未开始**。详见 [Step 95 记录](audit/STEP95_STATUS.md)。
+
+Step 94 继续原始圆盘归一化：[实际 Gaussian 总质量](ZhangLS/Spec/Lemma54GaussianNormalization.lean) 为 1；[实际加权集中性](ZhangLS/Spec/Lemma54ActualGaussianConcentration.lean) 给出窗口外二次加权质量 ≤144L^1838 exp(-L^10/2)。[中心 Mellin 权](ZhangLS/Spec/Lemma54CentralMellinWeight.lean) 在完整 |s−1|<10α 上的误差积分 ≤10400α log L；[实际 Δ 的中心窗口归一化](ZhangLS/Spec/Lemma54CentralDeltaApproximation.lean) 已接合，保留原始 L^405 窗口及两个闭端点。七模块、原始对象回归和 23 项标准公理检查通过；307 个源文件、183 个可信模块、261 个项目导入和 43 个回归，静态启发式仍为 87 个候选且未新增。Step 94 全量内核审计 **PASS**：2026-10-01 07:31:12–07:46:47（北京时间）。尚缺正轴窗口外的实际加权积分、指数误差吸收和共同常数；完整 `Lemma54Target` 未证明，账本仍为 **14/51 完成、1 项进行中、36 项未开始**。详见 [Step 94 记录](audit/STEP94_STATUS.md)。
+
+Step 93 已闭合 Lemma 5.4 的第一项原始定量估计：[实际二阶矩](ZhangLS/Spec/Lemma54UniformSecondMoment.lean) 在完整闭条带 1/2≤σ≤2 上一致满足 M_D(σ)≤C_M L^3200，因此 |δ(s)|≤C_M L^3200/|s|²。C_M 为显式正绝对常数，单一自然数模数阈值先于所有 D 和 s 选择；同时保留整个 Re s>0 的实际 Mellin 解析性。五个新增模块、原始积分／闭端点回归和十三项标准公理检查通过。尚缺原始圆盘内 δ(s)=1+O(α log L) 与共同常数接合，完整 `Lemma54Target` 未证明。账本保持 **14/51 完成、1 项进行中、36 项未开始**。Step 93 全量内核审计 **PASS**：2026-10-01 06:52:46–07:07:34（北京时间；日志使用 UTC）。新增覆盖为 176 个可信模块、254 个项目导入、299 个源文件和 42 个回归；静态启发式扫描仍为 87 个候选，本轮未新增。详见 [Step 93 记录](audit/STEP93_STATUS.md)。
+
+Step 77 已新增六个通过内核检查和全量审计的可信模块：[完整乘积 Mellin](ZhangLS/Spec/Lemma44ProductMellin.lean)、[短段平滑误差](ZhangLS/Spec/Lemma44SmoothedTruncation.lean)、[原始无限平滑尾](ZhangLS/Spec/Lemma44SmoothedTail.lean)、[完整右侧积分近似](ZhangLS/Spec/Lemma44RightMellinApproximation.lean)、[实际留数](ZhangLS/Spec/Lemma44ProductResidue.lean) 和 [有限轮廓移动／反射级数](ZhangLS/Spec/Lemma44FiniteProductShift.lean)。右侧积分在整个 \(\Omega_3\) 上等于 \(F+O(\mathcal L^{-180})\)，轮廓可精确移至 \(\Re w=-\Re s-1/2\)，其反射级数实部为 \(3/2\) 且绝对收敛。水平边在恒等式中保留为显式误差，尚未估计。新增回归及本轮全量审计通过，Lemma 4.4 保持进行中，详见 [Step 77 记录](audit/STEP77_STATUS.md)。
+
+Step 78 继续推进：[反射级数尾](ZhangLS/Spec/Lemma44ReflectedTail.lean)、[初始左轮廓估计](ZhangLS/Spec/Lemma44InitialLeftEstimates.lean) 和 [反射尾积分](ZhangLS/Spec/Lemma44ReflectedTailContour.lean) 已通过单模块内核检查及构建。尾和以实部 \(5/4\) 的固定绝对收敛约数级数为主控，取得 \(P^{-1/2}\) 因子；左侧 \(\widetilde Z B^w\) 至多损失 \(e^{3\mathcal L+9\pi/5}P^{1/5}\)，合并留下 \(P^{-3/10}\)。已证明实际尾积分可积，其归一化积分 \(\le4C_d e^{1+9\pi/5}\mathcal L^{-180}\)，其中 \(C_d\) 是与所有模数／特征无关的收敛约数级数常数。本阶段新增内容已随 Step 78 通过全量审计。
+
+Step 78 随后完成 [复特征 Abel 界](ZhangLS/Spec/Lemma44ComplexCharacterAbel.lean) 及 [实际乘积增长界](ZhangLS/Spec/Lemma44HorizontalGrowth.lean)，单模块检查和构建通过。非平凡复特征在右半平面满足 \(|L(s,\psi)|\le |s|N/\Re s\)；结合实际函数方程与局部 Gamma 因子界，控制完整有限矩形上的真实乘积，不外加增长假设。新增 [局部矩形留数](ZhangLS/Spec/Lemma44LocalRectangle.lean)，只要求分子在当前矩形解析，已通过检查和构建。[右竖线截断](ZhangLS/Spec/Lemma44RightVerticalTruncation.lean) 和 [有限多项式粗界](ZhangLS/Spec/Lemma44PolynomialGrowth.lean) 已通过单文件内核检查；前者把完整右竖线积分截到 \(T=\mathcal L^{20}\)，误差 \(\le8C_d e\mathcal L^{-180}\)。水平边积分、反射短／中段的实际变形连接及最终统一误差已全部闭合，详见下方最终定理。
+
+## 论文编号清单
+
+Step 78 最终接合已通过单文件 Lean 内核检查、模块构建及新增回归：[Lemma44ApproximateFunctionalEquation.lean](ZhangLS/Spec/Lemma44ApproximateFunctionalEquation.lean) 证明原文两短多项式近似，绝对误差常数为 `lemma44ErrorConstant`，指数为 \(-179\)，阈值仍为 \(3^{3^{200}}\)。反射短／长段的有限移线、所有水平边和两类无限尾均已闭合；没有额外的增长、轮廓、留数或误差假设。十一个主要接口的公理依赖仅为 `propext`、`Classical.choice`、`Quot.sound`。209 个源文件的占位与结构检查通过；101 个可信模块、179 个项目导入和 27 个回归的完整审计全部 PASS，Lemma 4.4 正式更新为 ✅ 完成。详见 [Step 78 记录](audit/STEP78_STATUS.md)。
+
+补充：Lemma 2.3 的模型一/三零点重数和与 Rouché 专门化列于 [Lemma23ModelRouche.lean](ZhangLS/Spec/Lemma23ModelRouche.lean)；Step 80–81 已将两种严格边界比较从论文 Section 4 的真实对象推出。
+
+| 论文结果 | 位置／主题 | 状态 | Lean 对照与缺口 |
+|---|---|---|---|
+| Theorem 1 | §1，\(L(1,\chi)>c_1(\log D)^{-2022}\) | ⚪ 未开始 | [可信目标](ZhangLS/Spec/PaperTheorems.lean) 已定义；未证明。旧版 [Theorem1.lean](ZhangLS/Theorem1.lean) 不是该目标的证明。 |
+| Theorem 2 | §1，实轴零点排除区域 | ⚪ 未开始 | [可信目标](ZhangLS/Spec/PaperTheorems.lean) 已定义；未证明。 |
+| Proposition 2.1 | §2，集合 \(\Psi_2\) 的估计 | ⚪ 未开始 | — |
+| Proposition 2.2 | §2，\(\Psi_1\) 的零点性质 | ✅ 完成 | [Proposition22.lean](ZhangLS/Spec/Proposition22.lean)，`proposition22_proved : Proposition22Target`：真实 Ψ₁、原始完整 Ω 内实际乘积零点均在临界线且为单根；任意相邻零点满足 \(\lvert\gamma'-\gamma-\alpha\rvert\le C\alpha^2\mathcal L\)。常数／充分大模数阈值统一存在；闭薄层等号、实际乘积导数、邻近零点 Rouché 及 Ω 高度边界均已闭合。模块、原始陈述／闭边界回归和十项公理检查通过，Step 83 全量审计 PASS。 |
+| Lemma 2.3 | §2，零点相关估计 | ✅ 完成 | [Lemma23.lean](ZhangLS/Spec/Lemma23.lean)，`lemma23_proved : Lemma23Target`：真实 Ψ₁、原始较小零点区域内实际 L 函数零点，原文三个位移与实际 M′ 分母下，证明 C* 为实且非负，并证明 M′≠0。统一误差常数同时满足严格的 Proposition 2.2 间距界；三个连续后继零点、两个无零区间、L′≠0、实际分支及系数接合均已闭合。分支存在且对每个有效分支成立，不外加位置、单根、间距或无零区间结论。四个模块、展开原始陈述回归和八项公理检查通过；Step 84 全量审计 PASS。 |
+| Proposition 2.4 | §2，主要均值下界 | ⚪ 未开始 | [旧版占位](ZhangLS/MainTerms.lean) 含关键结论作为前提；不算证明。 |
+| Proposition 2.5 | §2，后续均值估计 | ⚪ 未开始 | [旧版占位](ZhangLS/MainTerms.lean) 未证明论文命题。 |
+| Proposition 2.6 | §2，后续均值估计 | ⚪ 未开始 | [旧版占位](ZhangLS/MainTerms.lean) 未证明论文命题。 |
+| Lemma 3.1 | §3，实际ν平方尾和 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma31.lean) 的 `lemma31_proved : Lemma31Target` 保留原始ν、D⁴<n≤P²、实际L(1,χ)、归一化(A)及统一C/D₀量词；C=1260，阈值从指数衰减推出。平方卷积、字符调和截断、累计和、一次尾和与总和全部导出；23模块、76标准公理接口、7回归（6原文展开）及Step125全量PASS（438模块、516导入、593源码、74回归），指纹不变。 |
+| Lemma 3.2 | §3，实际ν²τ₂²加权尾和 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma32OriginalTargetClosure.lean)，`lemma32_proved : Lemma32Target`。实际统一Burgess部分和由强归纳无条件证明，结合实际Euler/Mellin/留数/移线估计，闭合原文归一化(A)下的D⁴<n≤D⁸实际加权尾和≤C(logD)^−2007，C与D₀先于所有D和χ。Step137全量PASS：628个Spec逐模块检查、Spec聚合、项目构建和86个回归文件；982源码指纹不变，514个算术接口、两个Hasse最终定理和137个专项回归通过。 |
+| Lemma 3.3 | §3，正交均值与大筛估计 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma33.lean) 的 `lemma33_proved : Lemma33Target` 保留原始Ψ、严格素数区间、实际Dirichlet和、原文𝒫、两条原始长度／能量及统一量词次序。第一条常数1；第二条由真实采样／Fourier／分数分离／Gauss转换闭合。共同C=32+π²，D₀=ceil(exp3)，无需(A)。8模块、44标准公理接口、3原文展开回归通过；Step123全量PASS（402模块、480导入、555源码、72回归，指纹不变）。 |
+| Lemma 3.4 | §3，条件(3.4)异常集计数 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma34.lean) 的 `lemma34_proved : Lemma34Target` 保留原始Ψ、严格素数区间、实际ν20/υ20、s0、D80端点和积分、原始严格B阈值及原文𝒫。完整B均方界由约数卷积、加权调和数界、实际字符正交性和加权柯西推出；异常数≤C𝒫L^-740，C=51208·81^1600、D₀=ceil(exp3)，无需(A)。13模块、44标准公理接口、4原文展开回归及Step124全量PASS（415模块、493导入、569源码、73回归），指纹不变。 |
+| Lemma 3.5 | §3，实际X₃异常集 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma35.lean) 的 `lemma35_proved : Lemma35Target` 保留原始Ψ、实际X₃端点/积分、严格L^-585条件、𝒫、(A)与统一量词。C=50400(32+π²)，阈值由既有估计推出；可积性、质量比较与均方均已导出，计数L^-746蕴含原文L^-739。8模块、29标准公理接口、6回归（5原文展开）及Step126全量PASS（446模块、524导入、602源码、75回归），全部指纹不变。 |
+| Lemma 3.6 | §3，\(\Psi_1\) 的估计 | ⚪ 未开始 | — |
+| Lemma 4.1 | §4，\(F,G\) 的统一界 | ✅ 完成 | [Lemma23GoodSet.lean](ZhangLS/Spec/Lemma23GoodSet.lean)，`lemma23_lemma41`：真实 \(\psi\in\Psi_1\)、完整 \(\Omega_1\)、\(\log D\ge3\) 下，\(|F|+|G|\le2\mathcal L^{79}\)。实际展开、积分可积性、核界和虚部余量均已证明。 |
+| Lemma 4.2 | §4，截断乘积近似 \(1\) | ✅ 完成 | [Lemma23ProductApproximation.lean](ZhangLS/Spec/Lemma23ProductApproximation.lean)，`lemma23_lemma42`：同一区域内 \(|FG-1|\le4\mathcal L^{-227}\)。真实 \(\varsigma\) 混合卷积、低次系数消去、\(X_4\) 与 Abel 尾和均已证明；输入仅为 \(\Psi_1\) 的定义条件。 |
+| Lemma 4.3 | §4，\(F'/F=O(\mathcal L)\) | ✅ 完成 | [Lemma23SectionFourLogDerivative.lean](ZhangLS/Spec/Lemma23SectionFourLogDerivative.lean)，`lemma23_lemma43_at_explicit_threshold`：\(D\ge3^{3^{200}}\)、真实 \(\psi\in\Psi_1\)、完整 \(\Omega_2\) 下，\(\|F'/F\|\le140800\mathcal L\)。双边界、无零性、圆盘包含关系和对数阈值均已提供；未把这些结论作为输入。 |
+| Lemma 4.4 | §4，实际近似函数方程 | ✅ 完成 | [最终定理](ZhangLS/Spec/Lemma44ApproximateFunctionalEquation.lean)，`lemma44_actual_approximate_functional_equation` / `lemma44_uniform_error_constant`：真实 \(\psi\in\Psi_1\)、完整 \(\Omega_3\) 和显式阈值 \(D\ge3^{3^{200}}\) 下，实际 \(L(s,\psi)L(s,\chi\psi)=F(s,\psi)+\widetilde Z(s,\psi)F(1-s,\bar\psi)+O(\mathcal L^{-179})\)，误差常数对所有模数与特征一致。全部 Mellin 展开、有限移线、短段留数、反射中段、水平边与两类无限尾均已证明；无额外待证结论假设。Step 78 全量审计 PASS。 |
+| Lemma 4.5 | §4，右侧零点排除 | ✅ 完成 | [Lemma45ZeroFree.lean](ZhangLS/Spec/Lemma45ZeroFree.lean)，`lemma45_actual_A_ne_zero` / `lemma45_actual_product_ne_zero`：真实 \(\psi\in\Psi_1\)、显式阈值 \(D\ge3^{3^{200}}\) 及原文 \(1/2+\alpha^2<\sigma<1\)、\(\lvert t-2\pi t_0\rvert<\mathcal L^{405}+2\) 下，证明 \(\|A(s,\psi)\|\ge1/(4\mathcal L^9)>0\)。实际 (4.10)、反射短和共轭、两区域的反射项衰减、级数常数和误差预算均已闭合；未外加增长、无零性、误差或逆特征好集条件。单模块、构建、回归及公理检查通过，Step 79 全量审计 PASS。 |
+| Lemma 4.6 | §4，零点分析 | ✅ 完成 | [Lemma46ZeroAnalysis.lean](ZhangLS/Spec/Lemma46ZeroAnalysis.lean)，`lemma46_proved : Lemma46Target`：保留真实 Ψ₁、原始零点区域和充分大模数约定，统一选择绝对常数及阈值，证明 β=1/2、A′(ρ)≠0 和 0<‖w‖<α(1−c′αL) 时无零；并保证半径为正。实际对数导数、模型误差、严格 Rouché 比较、反射对称和重数提取均已闭合。Step 80 全量审计 PASS。 |
+| Lemma 4.7 | §4，零点分析 | ✅ 完成 | [Lemma47ThreeZeros.lean](ZhangLS/Spec/Lemma47ThreeZeros.lean)，`lemma47_proved : Lemma47Target`：真实 Ψ₁、原始临界线零点及高度区域下，统一选择绝对常数和充分大模数阈值，证明 α(1+c′αL) 圆内恰有三个零点（按重数计）及圆周无零性。真实反射误差、完整半径 2α 的模型比较、外边界下界和严格 Rouché 传递均已闭合。模块构建、原始陈述回归和十项公理检查通过；Step 81 全量审计 PASS。 |
+| Lemma 4.8 | §4，零点处的逆因子近似 | ✅ 完成 | [Lemma48InverseFactor.lean](ZhangLS/Spec/Lemma48InverseFactor.lean)，`lemma48_proved : Lemma48Target`：真实 Ψ₁、原始 Ω 内的实际乘积零点处，Z̃⁻¹ + GF(1−ρ,ψ̄) 的模长 ≤3⁶⁵L⁻¹⁰⁰，显式阈值 D₀=3^(3^200)。反射零点定位、Ω₁/Ω₃ 包含和逆因子界 ≤exp(3) 均由原始假设推出；两模块及原始陈述／十项公理回归通过。Step 82 全量审计 PASS。 |
+| Lemma 5.1 | §5，Gamma 因子竖直位移 | ✅ 完成 | [Lemma51.lean](ZhangLS/Spec/Lemma51.lean)，`lemma51_proved : Lemma51Target` 已闭合四个原始实际 Z 位移估计，统一常数 22exp(600π)、阈值 3^(3^200)。保留真实 Ψ、闭实部边界与完整高度／位移窗口；八模块、展开原始陈述／闭边界／零位移回归及十项标准公理检查通过。Step 85 全量内核审计 PASS（137 个可信模块、215 个项目导入、252 个源文件、34 个回归；2026-10-01 01:27:45–01:39:42 北京时间）。 |
+| Lemma 5.2 | §5，解析辅助引理 | ✅ 完成 | [Lemma52.lean](ZhangLS/Spec/Lemma52.lean)，`lemma52_proved : Lemma52Target` 已闭合原始三位移实际 Y 乘积公式。沿用 Lemma 2.3 的同一位移常数，保留真实 Ψ、闭实部边界和完整高度窗口；分支存在且对每个有效连续分支成立。相对误差常数 126π、指数 −123，充分大模数阈值统一存在。五模块构建、展开原始陈述／闭边界／分支变号回归与十项标准公理检查通过；Step 86 全量审计 PASS（142 个可信模块、220 个项目导入、258 个源文件、35 个回归；2026-10-01 02:35:17–02:48:37 北京时间）。 |
+| Lemma 5.3 | §5，平滑核估计 | ✅ 完成 | [Lemma53.lean](ZhangLS/Spec/Lemma53.lean)，`lemma53_proved : Lemma53Target` 已闭合实际逆 Mellin 核的完整原始两范围估计，含 x=t₀^(51/50) 等号端点和大 x 两项原始指数尾界。实际有限／无限移线、三段积分界、右端趋零、绝对收敛和最终接合均已证明。统一常数 C=4(e+1)+2+2+e+sqrt(π)exp(2)、k=1/2，充分大模数阈值统一存在。三个新增模块、展开原始陈述回归及十二项标准公理检查通过；Step 90 全量审计 PASS（159 个可信模块、237 个项目导入、279 个源文件、39 个回归；2026-10-01 05:13:29–05:26:53 北京时间）。 |
+| Lemma 5.4 | §5，解析辅助引理 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma54.lean) 的 `lemma54_proved : Lemma54Target` 保留真实逆 Mellin Δ、完整 Re s>0 解析性、1/2≤Re s≤2 两个闭端点及完整 |s−1|<10α。全部正轴外部积分和指数误差吸收已证明；两项共用显式正绝对常数 C=C_M+C_disk，c=3200，一个统一存在的模数阈值先于所有 D、s。六个新增模块、完整原始陈述回归和 19 项标准公理检查通过；Step 95 全量审计 PASS（2026-10-01 08:04:34–08:20:21 北京时间）。 |
+| Lemma 5.5 | §5，L(s,χ) 的实零点与零点排斥 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma55FullZeroExclusion.lean) 的 `lemma55_proved : Lemma55Target` 闭合原文全区域：实际简单实零点 β 满足 0<1−β≤64(log D)^−2022，Re s>1−2/log D、abs(Im s)<2D 内无其他零点。保持 (A)，统一模数阈值先于全部 D、χ、s；未宣称闭式数值阈值。实际算术正性、四组零点共同检测、真实重数和严格统一预算均已证明。七模块、十项展开原文及边界回归、50 项标准公理检查通过。Step 101 全量内核核验 PASS（232 个可信模块、310 个项目导入、363 个源码、50 个回归）。 |
+| Lemma 5.6 | §5，其他原始特征的估计 | 🟡 进行中 | [实际素数质量与归一化](ZhangLS/Spec/Lemma56ActualPrimeMassNormalization.lean) 已证明原始 (A) 下的实际 log p 质量 P/(2L^68)、实际 p 质量 P²/(4L^77)、正性与窗口非空，原文 q>1 归一化指数界无质量假设。四模块、14 接口、6 回归通过；Step 112 全量 PASS（340 模块、418 导入、482 源码、61 回归，指纹不变）。[忠实目标](ZhangLS/Spec/Lemma56.lean) 的模数 1 主特征情形仍待证明。 |
+| Lemma 5.7 | §5，\(L'(1,\chi)\gg D/\varphi(D)\) | ✅ 完成 | [目标规格](ZhangLS/Spec/Lemma57.lean)、[显式误差阈值](ZhangLS/Spec/Lemma57QuadraticConductorThreshold.lean)、[最终闭合定理](ZhangLS/Spec/Lemma57LeftQuadraticGrowth.lean)。统一阈值为 \(D_0=3^{10{,}000{,}000}\)，结论常数为 \(1/16\)，Lean 证明对所有 \(D\ge D_0\) 一致成立。 |
+| Lemma 5.8 | §5，实际 L 函数的线性展开 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma58.lean) 的 `lemma58_proved : Lemma58Target` 闭合原文 α≤abs(s−1)≤10α 的实际 L 函数线性误差 O(L^-15)，保留两个闭端点和实际导数。显式 C=1+128e(10π)^2、阈值 D₀=3^10000000，二者先于全部 D、χ、s；实际更强闭圆盘界、范数／Taylor／几何预算均已证明。四项原文／端点／中心回归和七项标准公理检查通过。Step 102 全量内核核验 PASS（233 个可信模块、311 个项目导入、365 个源码、51 个回归）。 |
+| Lemma 5.9 | §5，远离零点的 L 函数商 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma59.lean) 的 `lemma59_proved : Lemma59Target` 保留原始Ψ1、实际L、原文闭区域、全部实际零点分离条件及先于D、χ、ψ、s的统一常数／阈值。扩大实际零点结构、解析重数1、排序乘积和数值预算全部闭合；11模块、108标准公理接口、3原文／闭边界回归通过。Step116全量PASS（363模块、441导入、509源码、65回归，指纹不变）。 |
+| Lemma 6.1 | §6，\(L(s,\psi)\) 近似公式 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma61.lean) 的 `lemma61_proved : Lemma61Target` 保留原始Ψ、严格区域、实际L／K／N／E1及统一量词次序。有限Gaussian短和、原左侧对偶主项、实际尾和／Z误差、完整L水平边、统一常数／阈值全部闭合；k=1/8，D₀=ceil(exp64)+1。11模块、36标准公理接口、3原文展开回归通过；Step122全量PASS（394模块、472导入、546源码、71回归，指纹不变）。 |
+| Proposition 7.1 | §7，均值公式 I | ⚪ 未开始 | — |
+| Lemma 8.1 | §8，\(\Xi_{11}\) 估计 | ⚪ 未开始 | — |
+| Lemma 8.2 | §8，\(\Xi_{11}\) 估计 | ⚪ 未开始 | — |
+| Lemma 8.3 | §8，\(\Xi_{11}\) 估计；证明见附录 A | ⚪ 未开始 | — |
+| Lemma 8.4 | §8，\(\Xi_{11}\) 估计 | ⚪ 未开始 | — |
+| Lemma 10.1 | §10，Proposition 2.4 的证明 | ⚪ 未开始 | — |
+| Lemma 10.2 | §10，Proposition 2.4 的证明 | ⚪ 未开始 | — |
+| Lemma 11.1 | §11，Proposition 2.6 的证明 | ⚪ 未开始 | — |
+| Lemma 11.2 | §11，Proposition 2.6 的证明 | ⚪ 未开始 | — |
+| Lemma 12.1 | §12，\(\Xi_{15}\) 估计 | ⚪ 未开始 | — |
+| Lemma 12.2 | §12，\(\Xi_{15}\) 估计 | ⚪ 未开始 | — |
+| Lemma 12.3 | §12，\(\Xi_{15}\) 估计 | ⚪ 未开始 | — |
+| Proposition 14.1 | §14，均值公式 II | ⚪ 未开始 | — |
+| Lemma 15.1 | §15，\(\Phi_1\) 估计；证明见附录 B | ⚪ 未开始 | — |
+| Lemma 15.2 | §15，\(\Phi_1\) 估计；证明见附录 A | ⚪ 未开始 | — |
+| Lemma 15.3 | §15，\(\Phi_1\) 估计；证明见附录 A | ⚪ 未开始 | — |
+| Lemma 16.1 | §16，\(\Phi_2\) 估计；证明见附录 A | ⚪ 未开始 | — |
+| Lemma 16.2 | §16，\(\Phi_2\) 估计；证明见附录 A | ⚪ 未开始 | — |
+| Lemma 17.1 | §17，\(\Phi_3\) 估计；证明见附录 B | ⚪ 未开始 | — |
+
+§9、§13、§18 没有新编号的 Lemma／Theorem／Proposition；这些章节仍含大量未形式化的正文推导。
+
+## Lemma 5.7：可信证明记录
+
+可信 `ZhangLS.Spec` 证明链现已闭合：真实原始 Dirichlet 特征与 \(L\) 函数；约数项非负性与倒数约数和下界；高斯 Mellin 核、平滑和及 Mellin 恒等式；有限矩形留数与无穷轮廓移动；实际 \(L(1,\chi)>0\)；留数修正预算；Abel 延拓、zeta/L 临界条带增长；左移直线二次增长及高斯误差闭合。最终结论是对显式阈值 \(D_0=3^{10{,}000{,}000}\) 以上的模数，统一有 \(L'(1,\chi)\ge (1/16)D/\varphi(D)\)，见 [`lemma57_one_sixteenth_at_explicit_threshold`](ZhangLS/Spec/Lemma57LeftQuadraticGrowth.lean) 和打包定理 [`lemma57_target_proved`](ZhangLS/Spec/Lemma57LeftQuadraticGrowth.lean)。参见 [阶段计划](FORMALIZATION_PLAN.md) 和 [可信模块列表](ZhangLS/Spec/All.lean)。
+
+下列 Step 51–53 条目保留各阶段的历史记录；其中当时列出的临界线延拓与增长缺口已在 Step 54–55 闭合。
+
+2026-09-28 新增 [CharacterPeriodSum.lean](ZhangLS/Spec/CharacterPeriodSum.lean)：证明非平凡原始特征一个周期求和为零，以及任意长度 \(N\) 的部分和满足 \(\left|\sum_{n<N}\chi(n)\right|\le D\)。这是**无条件**的真实特征结论；尚须将这种抵消转化成目标临界线的有效增长估计。单文件与全项目核检查均已通过。
+
+继续新增 [CharacterLSeriesAbel.lean](ZhangLS/Spec/CharacterLSeriesAbel.lean)：把部分和的显式 \(D\) 界转成 Abel 求和所需的 \(O(1)\) 条件，并在 \(\Re s>1\) 证明真实 \(L(s,\chi)\) 的 Abel 积分恒等式。单文件及全项目核检查均已通过；尚未证明该积分在 \(\Re s>0\) 与 \(L(s,\chi)\) 相等，也尚未提取临界线的有效模数常数。
+
+Step 53 新增 [CharacterAbelIntegralBound.lean](ZhangLS/Spec/CharacterAbelIntegralBound.lean)：证明 Abel 积分在 \(\Re s>0\) 绝对可积且范数不超过 \(D/\Re s\)，并在已知恒等式的 \(\Re s>1\) 区域得到真实 \(L(s,\chi)\) 的显式增长界 \(\lvert L(s,\chi)\rvert\le \lvert s\rvert D/\Re s\)。单文件及全项目核检查已通过；这**不是**临界线上的 \(L\) 函数界，因为延拓恒等式尚未证明。
+
+Step 55 新增 [RiemannZetaCriticalLineBound.lean](ZhangLS/Spec/RiemannZetaCriticalLineBound.lean)：将截断分数部分的 Mellin 表示用解析恒等定理延伸到 \(\Re s>0\)，证明 \(\|\zeta(s)\|\le 1+2\|s\|\)（\(\Re s=1/2\)），并给出避开极点时可用于整个右半平面的分母型范数估计。与 Step 54 的特征 Abel 界结合后，[Lemma57CriticalStripGrowth.lean](ZhangLS/Spec/Lemma57CriticalStripGrowth.lean) 无条件证明轮廓所需的临界半条带指数增长，进而证明完整的无限轮廓移动恒等式；同时得到更强的二次多项式界 \(\|\zeta(1+s)L(1+s,\chi)/s\|\le288D(1+t^2)\)。
+
+Step 56 新增 [Lemma57LeftQuadraticGrowth.lean](ZhangLS/Spec/Lemma57LeftQuadraticGrowth.lean)：证明左移直线上的二次增长界，并接入显式高斯二次矩与对数阈值，推出在 Assumption (A) 下、对充分大的模数有 \(L'(1,\chi)\ge (1/16)D/\varphi(D)\)。
+
+Step 57 核对论文原文后修正了规格：论文 §2 已约定后续均取充分大的模数，Lemma 5.7 省略该前提；因此 `Lemma57AtConstant` 显式量化一个统一阈值，而非错误地要求所有 \(D>1\)。这次收尾进一步把阈值显式化为 \(D_0=3^{10{,}000{,}000}\)：从 \(\log D\ge10{,}000{,}000\) 推出二次高斯余项不超过 \(1/32\)，与留数项预算合并后得到 [`lemma57_one_sixteenth_at_explicit_threshold`](ZhangLS/Spec/Lemma57LeftQuadraticGrowth.lean)，即对所有 \(D\ge D_0\)，在 (A) 下 \(L'(1,\chi)\ge (1/16)D/\varphi(D)\)。这是一个很大的闭式、可计算自然数阈值，不再依赖从趋零结论中抽取的非显式见证。整体验证状态以本次审计为准，记录见 [审计日志](audit/lean_kernel_verification.txt)。
+
+Step 58–59（2026-09-29）继续 Lemma 2.3。新增 [Lemma23DirichletConjugation.lean](ZhangLS/Spec/Lemma23DirichletConjugation.lean)，从 Dirichlet 级数项逐项共轭、再以解析延拓恒等定理，证明实际 \(L_{\chi^{-1}}(s)=\overline{L_\chi(\bar s)}\)；新增 [Lemma23DirichletFunctionalEquation.lean](ZhangLS/Spec/Lemma23DirichletFunctionalEquation.lean)，把 mathlib 原始特征完成函数方程除去伽马因子，得到论文的未完成函数方程与 \(Z(s,\chi)\)；新增 [Lemma23PrimitiveGaussSum.lean](ZhangLS/Spec/Lemma23PrimitiveGaussSum.lean)，以有限 Fourier 变换平方恒等式证明 \(\tau(\chi)\tau(\chi^{-1})=N\chi(-1)\)，并推出 root number 模长为 1；新增 [Lemma23DirichletUnitModulus.lean](ZhangLS/Spec/Lemma23DirichletUnitModulus.lean)，证明伽马因子共轭对称、\(Z\) 在上半平面非零且在临界线上模长为 1，并给出实际 Dirichlet \(L\)-函数的条件化系数非负定理。
+
+再新增 [Lemma23DirichletBranch.lean](ZhangLS/Spec/Lemma23DirichletBranch.lean)：证明 \(Z\) 在上半平面可微/连续非零，利用该域单连通构造实际连续平方根；局部化平方根导数引理，使平方根方程只需在开域上成立；以右侧实值性推出 \(iM'(\rho)\) 实，并把 \(M=YL\) 和系数结论实际接通。该模块及本轮 `tools/verify_all_lean.sh` 全量核验均通过。剩余数学缺口不是平方根或函数方程，而是 Proposition 2.2 的定量零点间距及其对 \((0,\beta_1]\)、\([\beta_2,\beta_3]\) 无零性的保证；目前没有把 Section 4 的零点分析变成可信 Lean 定理，因此 Lemma 2.3 仍标记为进行中，不能据此称完全证明。
+
+Step 60（2026-09-29）新增 [Lemma23ZeroGapArithmetic.lean](ZhangLS/Spec/Lemma23ZeroGapArithmetic.lean) 与 [Lemma23ZeroGapDirichlet.lean](ZhangLS/Spec/Lemma23ZeroGapDirichlet.lean)。第一份证明：若三个间隔 \(g_j\) 满足 \(\alpha(1-\delta)<g_j<\alpha(1+\delta)\)（第三个上界不需要），且 \(0\le\delta<1/5\)，则 \(\beta_1=\alpha(1-5\delta)\) 在第一间隔内，\(\beta_2=2\alpha(1+\delta)\) 在第二零点之后，\(\beta_3=3\alpha(1-\delta)\) 在第三零点之前，并有 \(0<\beta_1<\beta_2<\beta_3\)。第二份将两段连续零点间的乘积无零性转成目标 Dirichlet 因子的无零区间，再调用此前实际平方根/系数定理，得到论文型 \(\mathcal C^*\) 实且非负的存在性结论。两个模块已通过单文件构建；本轮全量 `tools/verify_all_lean.sh` 也通过，52 个 Spec 模块、聚合入口、全项目及回归模块的内核验证均 PASS（详见审计日志）。剩余工作明确为 Proposition 2.2 的解析部分：证明适用区域里确有足够多的连续零点、这些区间的乘积无零性，以及简单性与间距界。
+
+Step 61（2026-09-29）重新核对 [论文 §2 Proposition 2.2 与 §4 证明](https://arxiv.org/html/2211.02515)：实际证明先用 Lemma 4.5 排除临界线右侧零点，再由 Lemma 4.6 的局部零点计数推出临界线位置、简单性和最小间距；Lemma 4.7 再在半径约为 \(\alpha\) 的圆内计数恰好三个零点，给出目标最大间距。后两个步骤都明确调用 Rouché 定理。检查当前 Mathlib 源码未找到现成 Rouché/argument-principle 零点计数接口，因此这是目前真正的形式化瓶颈：需要先开发复解析零点计数工具（至少可用于圆盘的 Rouché 定理及参考函数 \(1-P^{-2w}\) 的零点计数），之后才能把论文这段解析论证接到 Step 60 的零点间距接口。Defuddle CLI 当前未安装，本轮按技能说明改用 arXiv HTML 页面核对；这一点不影响 Lean 验证。
+
+Step 62（2026-09-29）新增 [Lemma23ModelZeros.lean](ZhangLS/Spec/Lemma23ModelZeros.lean)：把比较函数写成 \(1-\exp(-2w\log P)\)，从复指数等式刻画其全部零点为间距 \(\alpha=\pi/\log P\) 的纯虚数格点；证明任意 \(\alpha<R<2\alpha\) 的开圆盘里零点集恰为 \(0,\pm i\alpha\)，并用导数非零及 Mathlib 的解析阶数定理证明这些零点都是单根。这闭合了 Rouché 证明中“参考函数本身有三个简单零点”的算术/解析子目标，但不证明近似函数具有相同零点数。进一步检查发现 Mathlib 有有限除子分解 `MeromorphicOn.extract_zeros_poles` 和 Cauchy 圆积分公式，可作为自建辐角原理的构件；仍缺关键的边界同伦不变性／Rouché 零点数传递定理。新模块已通过单独 `lake build`，随后本轮全量审计也通过（53 个 Spec 模块、156 个 Lean 源文件、`LEAN_KERNEL_VERIFICATION=PASS`），审计时间见 [日志](audit/lean_kernel_verification.txt)。
+
+Step 63（2026-09-29）新增 [Lemma23ArgumentPrinciple.lean](ZhangLS/Spec/Lemma23ArgumentPrinciple.lean)：用对数导数乘积公式、Cauchy 定理和圆周核积分，证明零点互异的有限线性因子乘一个闭圆盘上解析且处处非零的因子时，\(\oint f'/f=2\pi i\cdot\#\text{roots}\)。这是一条可复用的有限显式分解版本，不是对任意解析函数的辐角原理；故不能单独据此计算实际 Dirichlet 乘积的零点数。单模块与 lake build 均通过。
+
+Step 64（2026-09-29）新增 [Lemma23RoucheIntegral.lean](ZhangLS/Spec/Lemma23RoucheIntegral.lean)：若 \(f,g\) 在闭圆盘邻域解析且圆周上 \(|f-g|<|g|\)，则商 \(f/g\) 的边界值落在以 1 为中心的单位开圆盘，因而主值对数沿圆周闭合；沿圆参数化应用微积分基本定理，证明 \(\oint f'/f=\oint g'/g\)。该模块及其依赖已通过单模块 lake build。至此严格边界同伦／积分不变性已有可信证明；剩余实质难点收窄为一般解析函数的辐角积分—零点重数和公式，以及实际零点局部有限分解与论文 Section 4 估计的连接。本轮 tools/verify_all_lean.sh 全量审计通过：55 个 Spec 模块、聚合入口、完整项目及 22 个审计回归模块均 PASS，158 个 Lean 源文件无占位证明（详见 [审计日志](audit/lean_kernel_verification.txt)，时间 08:21:53–08:27:57 UTC）。
+
+Step 65（2026-09-29）新增 [Lemma23GeneralArgumentPrinciple.lean](ZhangLS/Spec/Lemma23GeneralArgumentPrinciple.lean)：先证明局部有限支撑若包含于紧集则为有限集，再用 Mathlib 的 `MeromorphicOn.extract_zeros_poles` 分解全纯函数的有限零点除子；借助解析恒等定理把除子分解从余离散集延拓到闭圆盘，并再次对导数应用恒等定理将等式延至边界。于是得到一般全纯函数的对数导数积分公式，右侧按除子有限和计入零点重数；再与 Step 64 的边界积分不变性合并，证明严格 Rouché 条件下两函数圆盘内零点重数和相等。新模块已通过 `lake env lean` 单文件检查。由此原先的一般 argument-principle/Rouché 计数瓶颈闭合；接下来将核对并形式化 Section 4 给实际 \(\Psi_1\) 提供的位置、简单性和间距估计。
+
+Step 66（2026-09-29）将 Step 65 的全局解析假设收窄为仅在闭圆盘邻域解析，并在 [Lemma23ModelRouche.lean](ZhangLS/Spec/Lemma23ModelRouche.lean) 证明：当 \(\alpha=\pi/L<R<2\alpha\) 时，参考函数 \(1-e^{-2Lw}\) 的除子按重数之和为 3；对任意在该闭圆盘解析、且圆周上严格满足 \(|f-(1-e^{-2Lw})|<|1-e^{-2Lw}|\) 的 \(f\)，其零点重数和也等于 3。该条件化的 Lemma 4.7 零点计数桥已通过全量可信内核审计；本轮 `tools/verify_all_lean.sh` 核验 57 个 Spec 模块、135 个全项目模块和 160 个 Lean 源文件，聚合入口、完整项目及回归模块均 PASS，且无 `sorry`/`admit`（时间见 [审计日志](audit/lean_kernel_verification.txt)，09:21:36–09:28:08 UTC）。论文 Section 4 的剩余实质是为实际 \(\mathcal A(\rho+w,\psi)\) 证明该边界不等式；原文由 (4.10)、(4.11) 推出 (4.12)、(4.13)，涉及实际有限 Dirichlet 多项式商、复对数导数与显式均匀余项，尚无对应 Lean 估计。
+
+Step 67（2026-09-29）继续在 [Lemma23ModelRouche.lean](ZhangLS/Spec/Lemma23ModelRouche.lean) 补上 Lemma 4.6 所需的模型侧计数：若 \(0<R<\alpha=\pi/L\)，则模型圆盘内唯一零点为原点且为单根，除子重数和为 1；相应地，任何圆周上满足严格 Rouché 比较的解析函数也有且仅有一个零点（按重数计）。这与 Step 66 的半径介于 \(\alpha\) 和 \(2\alpha\) 的三零点计数一起，覆盖 Lemma 4.6/4.7 的模型侧 Rouché 框架。新增证明已通过最新全量审计：57 个 Spec 模块、135 个全项目模块、160 个 Lean 源文件（无 `sorry`/`admit`），全部 PASS；日志记录时间为 09:33:22–09:39:48 UTC。真正未闭合的是论文对实际 \(\mathcal A\) 与模型的边界接近估计，而非模型零点数或 Rouché 计数传递。
+
+Theorem 1/2 还依赖论文其余的大筛、零点与均值估计，不能由 Lemma 5.7 单独推出。
+
+Step 68（2026-09-29）新增 [Lemma23FiniteDirichletApproximation.lean](ZhangLS/Spec/Lemma23FiniteDirichletApproximation.lean)，定义论文 Section 4 的截断多项式 \(F,G\) 及归一化因子 \(A,B\)，证明有限和的整函数性、逐项导数公式，以及 \(A,B\) 的精确对数导数恒等式（其中 \(B'/B\) 的反射链式法则对应 (4.11) 第一等号）；这些定理没有假设或推出论文的大 \(O\) 估计。新增 [Lemma23ArithmeticCoefficients.lean](ZhangLS/Spec/Lemma23ArithmeticCoefficients.lean)，将实际 \(\nu=\zeta*\chi\)、\(\upsilon=\mu*(\chi\mu)\) 定义成算术函数，证明 \(\nu(n)=\sum_{d\mid n}\chi(d)\)、\(\nu*\upsilon=1\)，并把实际系数序列接入有限 \(F,G\)。两模块、聚合入口和全项目通过 `tools/verify_all_lean.sh`：59 个可信 Spec 模块、137 个全项目导入模块、162 个 Lean 文件，且无 `sorry`/`admit`；审计时间 10:01:58–10:08:12 UTC。Lemma 2.3 仍未完成。主缺口是论文从 \(\Psi_1\) 部分和条件推出 F 的无零圆盘及其对数导数定量界、再推出 (4.10)/(4.12)/(4.13)；Mathlib 虽有 Borel–Carathéodory 与 Cauchy 导数估计，但仍需在无零圆盘上把连续对数提升证明为解析分支，并形式化系数/部分和的数值估计。
+
+Step 69（2026-09-29）继续闭合 Section 4 的条件解析链。新增 [Lemma23AnalyticLogBranch.lean](ZhangLS/Spec/Lemma23AnalyticLogBranch.lean)：在单连通无零域上先由覆盖映射构造连续指数提升，再局部用指数在主值带上的单射性证明提升可微且导数为 \(f'/f\)。新增 [Lemma23BorelCaratheodory.lean](ZhangLS/Spec/Lemma23BorelCaratheodory.lean)：用 Borel–Carathéodory 与半径 \(R/2\) 的 Cauchy 估计证明圆盘上界 \(\|f(z)/f(c)\|\le H\Rightarrow\|\operatorname{logDeriv} f(c)\|\le4\log H/R\)；并专门化到实际 Section 4 多项式 \(F\)，证明若全盘满足 \(\mathcal L^{-88}\le|F|\le\mathcal L^{88}\)，则 \(\|\operatorname{logDeriv} F(c)\|\le704\log\mathcal L/R\)，下界同时给出无零性。新增 [Lemma23CoefficientBounds.lean](ZhangLS/Spec/Lemma23CoefficientBounds.lean)：证明真实系数 \(\|\nu(n)\|\le d(n)\)，并把实际 \(F\) 的模约到显式有限实和 \(\sum_{n\le D^4}d(n)e^{-\Re(s)\log n}\)（假定 twist 系数模不超过 1）。三项新增模块与自动生成入口均经完整审计通过：62 个 Spec 模块、140 个全项目导入模块、165 个 Lean 文件（无 `sorry`/`admit`），`LEAN_KERNEL_VERIFICATION=PASS`；审计时间 10:41:12–10:47:56 UTC，详见 [审计日志](audit/lean_kernel_verification.txt)。Lemma 2.3 仍未完成：关键重担现已明确收敛为在论文所需偏移圆盘上证明该除数加权有限和的 \((\log D)^{88}\) 上界，并从 \(\Psi_1\) 部分和条件推出相应下界/无零圆盘；之后还要把 (4.10)–(4.13) 误差传到模型函数的 Rouché 边界比较及 Proposition 2.2 的间距结论。
+
+Step 70（2026-09-29）在 [Lemma23CoefficientBounds.lean](ZhangLS/Spec/Lemma23CoefficientBounds.lean) 新增并构建通过：将除数反对角线重排为因子对，证明 \(\sum_{n\le X}d(n)/n\le H_X^2\)；进而证明若 \(\Re(s)\ge1-\delta\)，则 \(\sum_{n\le X}d(n)e^{-\Re(s)\log n}\le e^{\delta\log X}H_X^2\)，并将其专门化为实际有限多项式 \(F\) 的上界（还需 \(\|\psi(n)\|\le1\)）。这只是右半平面上的粗界，不是论文 Lemma 4.1：原文的 \(\Omega_1\) 以 \(1/2\) 为中心，要求从 \(\Psi_1\) 的 (3.4) 部分和条件先展开 \(F^{20}\)，再用 Abel 分部求和和导数权估计得到 \(|F|+|G|\ll\mathcal L^{79}\)；Lemma 4.2 再用 (3.6) 控制 \(FG-1\)，导出 \(F\) 的下界。当前重大缺口因此定位为：形式化实际扭曲系数的高次卷积与上述 Abel/数值传递，并非 antidiagonal 计数或 Borel–Carathéodory。论文依据：[arXiv:2211.02515v1，§3 Lemma 3.4–3.6、§4 Lemma 4.1–4.2](https://arxiv.org/pdf/2211.02515)。
+
+Step 71（2026-09-29）在 [Lemma23CoefficientBounds.lean](ZhangLS/Spec/Lemma23CoefficientBounds.lean) 继续形式化论文 §4 Lemma 4.1 的 Abel 求和步骤：用 Mathlib AbelSummation 证明端点项与导数积分控制有限加权和；进一步专门化权 \(t^z=\exp(z\log t)\)，证明导数为 \(z t^z/t\)，并由 \(\Re z\le \log L/(100L)\)、\(\log t\le80L\) 推出 \(|t^z|\le L\)。另证任意有限系数部分和在 \([1,N]\) 上除以 \(t\) 后自动可积；最后以显式假设“\(F^{20}\) 的 Dirichlet 展开 + 端点/积分部分和界 \(L^{1171}\) + 权函数界”推出 \(\|F\|\le L^{79}\)，即闭合论文的指数预算。这些是可信的条件化传递引理，**不等于**已经证明真实截断多项式的幂展开：当前尚无 \(\Psi_1\)、\(X_1\) 及实际截断 \(\nu_{20}\) 卷积系数的 Lean 构造，也未从其定义证明上述输入前提。新增模块、Spec 聚合、完整项目及审计回归已通过 `tools/verify_all_lean.sh`：62 个 Spec 模块、140 个全项目导入模块、165 个 Lean 源文件无占位证明；审计时间 2026-09-29 11:48:48–11:55:25 UTC，详见 [日志](audit/lean_kernel_verification.txt)。论文对应位置：[arXiv:2211.02515v1，§3 (3.4)、§4 Lemma 4.1](https://arxiv.org/pdf/2211.02515)。
+
+Step 72（2026-09-29）闭合真实截断多项式的代数展开桥。于 [Lemma23FiniteDirichletApproximation.lean](ZhangLS/Spec/Lemma23FiniteDirichletApproximation.lean) 证明有限 Dirichlet 多项式的幂先展开为有限元组和，再按元组乘积归并成单重和；新系数支持落在 \(1\le n\le X^m\)。于 [Lemma23ArithmeticCoefficients.lean](ZhangLS/Spec/Lemma23ArithmeticCoefficients.lean) 定义真实截断 \(\nu_{20}\) 元组卷积系数，利用 Dirichlet 特征的乘法性证明论文 (3.1) 的实际恒等式 \(F(s,\psi)^{20}=\sum_{n\le D^{80}}\nu_{20}(n)\psi(n)n^{-s}\)。新增 [Lemma23X1Expansion.lean](ZhangLS/Spec/Lemma23X1Expansion.lean)，定义实际 \(X_1(x,\psi)\)，证明其等于中心化系数的有限部分和，并将 \(F^{20}\) 精确改写成 \(t^{s_0-s}\) Abel 加权和；进而证明若真实 \(X_1(D^{80})\)、\(\int_1^{D^{80}}|X_1(t)|/t\,dt\) 和相应核界满足条件，则真实 \(F\) 满足 \( |F(s,\psi)|\le L^{79}\)。这不再把“实际幂展开”当作前提，但没有证明论文 (3.4) 中 \(X_1\) 的端点/积分估计，也没有证明 \(G\) 侧或大筛推出该好集条件；因此 Lemma 2.3 仍未完成。全量审计核验通过：63 个可信 Spec 模块、141 个全项目导入模块、166 个 Lean 文件，无 sorry/admit，Spec 逐模块、聚合入口、全项目和回归均 PASS；审计时间 2026-09-29 12:28:53–12:35:30 UTC，详见 [日志](audit/lean_kernel_verification.txt)。论文对应公式见 [arXiv:2211.02515v1，§3 (3.1)、(3.4) 与 §4 Lemma 4.1](https://arxiv.org/html/2211.02515v1#S3)。
+
+Step 72 补充（本轮勘误）：重新核对论文 §3 后确认，Lemma 3.4 调用的是 Lemma 3.3 的第一条短和估计（精确特征正交性）；第二条大筛估计用于长度至多 \(P^2\) 的长和，并不在 (3.4) 这一步使用。因 \(D^{80}\ll P\)，当前短多项式路线不需要先形式化大筛。当前真正未闭合的是 \(\tau_{40}^2/n\) 的多对数矩界及其向连续积分、全素模数族与例外集估计的传递。
+
+Step 73（2026-09-29）新增 [Lemma23Nu20Bounds.lean](ZhangLS/Spec/Lemma23Nu20Bounds.lean)，从真实 \(\nu,\upsilon\) 的因子界证明实际二十重系数满足 \(|\nu_{20}(n)|,|\upsilon_{20}(n)|\le\tau_{40}(n)\)。新增 [Lemma23CharacterOrthogonality.lean](ZhangLS/Spec/Lemma23CharacterOrthogonality.lean)，把 Mathlib 素模数 Dirichlet 特征正交关系改写为 Hermitian 核，并证明对任意短于素数模数的复系数多项式有精确 Parseval 均方公式；借复数代数闭性自动提供所需单位根，不再保留额外根单位类假设。继而在 [Lemma23X1Expansion.lean](ZhangLS/Spec/Lemma23X1Expansion.lean) 将恒等式专门化到论文真实 \(X_1,X_2\)，并证明两者的单模数特征均方都不超过对应有限加权和 \(\varphi(p)\sum_{n\le x}\tau_{40}(n)^2|n^{-s_0}|^2\)。这还不是论文 (3.4)：下一道主要障碍是可信证明 \(\sum_{n\le D^{80}}\tau_{40}(n)^2/n\ll(\log D)^{1600}\)（并闭合真实中心 \(\Re s_0=1/2\) 的权重）、对 \(x\) 积分后的均方、跨素数族汇总与 Chebyshev 例外集界。新增模块及全项目均通过内核审计：65 个可信 Spec 模块、143 个全项目导入模块、168 个 Lean 源文件（无 `sorry`/`admit`），Spec 逐模块、聚合入口、全项目和审计回归全部 PASS；完成时间 2026-09-29 13:36:32 UTC，详见 [审计日志](audit/lean_kernel_verification.txt)。
+
+Step 74（2026-09-30）纠正依赖路线并闭合 **Lemma 4.1–4.3**。新增 [Lemma23GoodSet.lean](ZhangLS/Spec/Lemma23GoodSet.lean)：定义真实 \(\mathcal L,P,s_0,X_3,X_4,\varsigma,\Psi,\Psi_1,\Omega_1\)，集合条件仅为原文 (3.4)–(3.6)，未偷放 \(F\) 上界／无零性等 Section 4 结论。从实际 \(X_1,X_2\) 的可积性和非负性拆出 (3.4) 的四个预算，并在完整 \(\Omega_1\) 推出 \(|F|+|G|\le2\mathcal L^{79}\)。原位移前提 \(\|s_0-s\|\le\mathcal L^{405}\) 无法覆盖虚部 \(+5\)；已证明 \(\|s_0-s\|\le3\mathcal L^{405}\le\mathcal L^{406}\)，并调整二十次幂 Abel 预算，未改变最终指数 \(79\)。
+
+新增 [Lemma23ProductApproximation.lean](ZhangLS/Spec/Lemma23ProductApproximation.lean)：实际 \(F G\) 展开为截断混合卷积，利用已证 \(\nu*\upsilon=1\) 消去 \(n\le D^4\) 的全部低次项，将 \(FG-1\) 精确接到 \(X_4\) 的 Abel 尾和；证明 \(X_4\) 在 \(x\le D^4\) 时为零，故下限扩到 1 不引入新误差。由定义条件 (3.6) 得到 \(|FG-1|\le4\mathcal L^{-227}\)，即 Lemma 4.2。
+
+新增 [Lemma23SectionFourLogDerivative.lean](ZhangLS/Spec/Lemma23SectionFourLogDerivative.lean)：误差严格小于 \(1/2\)，结合 Lemma 4.1 证明 \(\mathcal L^{-88}\le|F|\le\mathcal L^{88}\) 及 \(F\ne0\)。定义真实 \(\Omega_2\)，证明半径 \(\log\mathcal L/(200\mathcal L)\) 的圆盘包含于 \(\Omega_1\)，调用已证明的 Borel–Carathéodory/Cauchy 工具得到 \(\|F'/F\|\le140800\mathcal L\)，即 Lemma 4.3。给出闭式可计算公共阈值 \(D_0=3^{3^{200}}\)，并证明其保证 \(\mathcal L\ge3\)、\(\log\mathcal L\ge200\)。[新增回归](audit/Step74GoodSetSectionFourRegression.lean) 检查三个论文接口和无零性均只接受真实集合成员、区域与模数阈值，并打印公理依赖。
+
+**Step 74 结束时的困难（Step 75 已闭合其中的对数导数部分）**：Lemma 4.4 需要新的复 \(\Gamma\) 定量分析。所固定 Mathlib 的 Stirling 文件证明的是自然数阶乘公式；`Gamma/Digamma.lean` 有定义、递推、亚纯性，但仍把 Gauss 积分表示列为 TODO。项目已有 \(\Gamma\)／倒数 \(\Gamma\) 的粗指数增长界，但还不能给出纸面 (4.5)–(4.6) 所需的高虚部统一模长与对数导数精度。需要先开发这些可信估计及相应 Gaussian Mellin 轮廓余项，再推进实际近似函数方程和 Rouché 接合。此困难不影响本轮已完成的 Lemma 4.1–4.3；也不能据此把 Lemma 2.3 标为完成。[论文依据：§3–4](https://arxiv.org/html/2211.02515v1#S4)。
+
+Step 72–73 的例外集／多对数矩讨论保留为历史记录：它们对 Lemma 3.4、Proposition 2.1 有用，但不再作为 Lemma 2.3 的当前阻塞原因。
+
+Step 74 结束时的优先目标（历史）：先建立高虚部 `logDeriv Gamma` 的有效增长界，并将它接到实际 \(\widetilde Z\) 的 (4.6) 型估计；可同时利用已证的临界线单位模长，通过水平积分取得所需模长控制。未必需要先形式化最完整的复 Stirling 展开，但必须证明足够强的定量替代。随后还需组装 \(\chi\psi\) 的实际模数／原始性与乘积 Dirichlet 级数，并控制 Lemma 4.4 的 Gaussian Mellin 轮廓及 (3.5) 长和余项。
+
+Step 75（2026-09-30）新增 [Lemma44GammaLogDerivative.lean](ZhangLS/Spec/Lemma44GammaLogDerivative.lean)。不预设复 Stirling 或 digamma 积分表示：先由 Euler 积分在右半平面取得显式阶乘界，再以递推扩大到左半平面；反射公式同时控制倒数 Gamma。将两界放在半径与虚部同阶、避开实轴的大圆盘上，调用已证 Borel–Carathéodory/Cauchy 工具，得到有效 \(O(\log\lvert t\rvert)\) 对数导数界，常数为 \(48,16\pi+8\)。该模块单文件内核检查及 `lake build ZhangLS.Spec.Lemma44GammaLogDerivative` 均通过。
+
+新增 [Lemma44DirichletFactorEstimates.lean](ZhangLS/Spec/Lemma44DirichletFactorEstimates.lean)，证明实际单个／乘积函数方程因子的精确对数导数公式及一致显式误差。新增 [Lemma44CharacterProduct.lean](ZhangLS/Spec/Lemma44CharacterProduct.lean)，证明扩模保持导子、互素导子的乘积导子相乘，构造真实模数 \(Dp\) 上的 \(\chi\psi\) 并闭合其原始性。新增 [Lemma44SectionFourGamma.lean](ZhangLS/Spec/Lemma44SectionFourGamma.lean)，从 \(p\in(P,P(1+\mathcal L^{-68}))\) 推出 \(D<p\)、\(\gcd(D,p)=1\)，并在原文 \(\lvert\Re(s-s_0)\rvert\le100\)、\(\lvert\Im(s-s_0)\rvert\le\mathcal L^{405}+3\) 的完整宽条带上证明 (4.6)：\(\lvert\widetilde Z^\prime/\widetilde Z+2\log P\rvert\le60000\mathcal L\)。实际乘积函数方程 (4.4) 与临界线单位模长也已接通。该步骤不依赖 Assumption (A)、例外集大小或未证的 Gamma 估计。以上单文件检查已通过。
+
+新增 [Lemma44LongSum.lean](ZhangLS/Spec/Lemma44LongSum.lean)，从真实 (3.5) 提取端点与积分预算，证明非整数 \(P^2\) 的 floor／积分连接、实际 \(X_3\) 的可积性和 Abel 恒等式。未加平滑权重的真实长和在整个 \(\Omega_3\) 内满足 \(\lvert\sum_{D^4<n\le P^2}\nu(n)\psi(n)n^{-s}\rvert\le4e^{2\pi}\mathcal L^{-180}\)。保留位移常数 \(3\mathcal L^{405}\)，没有扩大到 \(\mathcal L^{406}\) 而损失一个指数。单文件内核检查通过。
+
+新增 [Step75GammaAndLongSumRegression.lean](audit/Step75GammaAndLongSumRegression.lean)，检查有效 Gamma 界、原始 twist、实际 (4.4)/(4.6)、单位模长与真实长和界的输入及公理依赖。全量复核已通过：73 个可信 Spec 模块、151 个全项目导入模块、178 个 Lean 源文件和 24 个回归均 PASS。六个主要接口的公理依赖仅为 `propext`、`Classical.choice`、`Quot.sound`；详见 [Step 75 状态](audit/STEP75_STATUS.md) 和 [审计日志](audit/lean_kernel_verification.txt)。
+
+Step 75 结束时的剩余义务（下文 Step 76 已闭合其中若干项）为适合轮廓移动的实际 \(\widetilde Z\) 模长界、Gaussian 权重有限和及 Mellin 展开、短／中／长三段轮廓的余项闭合。不能把 (4.6) 的完成记为整个 Lemma 4.4 的完成。
+
+Step 76（2026-09-30，本轮继续）新增 [Lemma44ModulusControl.lean](ZhangLS/Spec/Lemma44ModulusControl.lean)，已通过单文件 Lean 内核检查。保留真实导子贡献，先在扩大的虚部范围 \(\lvert\Im(s-s_0)\rvert\le2\mathcal L^{405}+3\) 上证明 Gamma 误差 \(\le50000\log\mathcal L+4000\)，再从原有显式阈值 \(D\ge3^{3^{200}}\) 推出其 \(\le\mathcal L/2\)。由实际因子的无零性构造解析对数，沿水平线积分并用临界线单位模长归一化：右侧得到 \(\lvert\widetilde Z\rvert\le P^{1-2\sigma}\)，左侧得到额外因子 \(\exp(3\mathcal L(1/2-\sigma))\)。整个真实 \(\Omega_3\) 上统一为 \(\lvert\widetilde Z\rvert\le eP^{1-2\sigma}\)。亦证明所有 \(\lvert\Re w\rvert\le15\)、\(\lvert\Im w\rvert\le\mathcal L^{20}\) 的截断轮廓移位落在扩大条带内。本结果是轮廓所需的粗模长界，不宣称完整 (4.5) 的 \((1+o(1))\) 渐近；后续 Gaussian 平滑、级数与中段积分进展见下；完整轮廓余项仍未闭合，Lemma 4.4 保持进行中。
+
+Step 76 继续新增 [Lemma44GaussianLongSum.lean](ZhangLS/Spec/Lemma44GaussianLongSum.lean)，单文件内核检查及模块构建均通过。复用已证明的真实 Gaussian 权重，证明其在对数坐标中的密度模长不超过 \(\mathcal L^{15}\)、截断权 \(g(B/t)\) 的导数模长不超过 \(\mathcal L^{15}/t\)。从真实 (3.5) 作 Abel 求和，得到任意正尺度 \(B\) 下的完整加权长和界；额外 \(\mathcal L^{15}\) 可放入已有 \(\mathcal L^{405}\) 位移预算，因而保留 \(-180\) 指数。论文尺度 \(B=P^{9/5}\) 上，整个 \(\Omega_3\) 满足 \(\lvert\sum_{D^4<n\le P^2}\nu(n)\psi(n)n^{-s}g(P^{9/5}/n)\rvert\le5e^{2\pi}\mathcal L^{-180}\)。精确有限 Mellin 连接已在下项闭合；完整近似函数方程仍未完成。
+
+Step 76 继续新增 [Lemma44FiniteGaussianMellin.lean](ZhangLS/Spec/Lemma44FiniteGaussianMellin.lean)、[Lemma44ProductDirichletSeries.lean](ZhangLS/Spec/Lemma44ProductDirichletSeries.lean) 和 [Lemma44ReflectedLongSum.lean](ZhangLS/Spec/Lemma44ReflectedLongSum.lean)，均已通过单文件内核检查。第一项证明真实 Gaussian 长和等于绝对收敛的 Mellin 积分，有限求和／积分交换及复幂合并均已闭合；第二项在所有自然数（含非单位）上连接真实原始 twist 与 \(\chi(n)\psi(n)\)，并证明右半平面实际乘积 L 函数的级数系数恰为 \(\nu(n)\psi(n)\)。第三项利用真实 \(\nu\) 系数的实性，将反射侧 \(\bar\psi\) 长和转成 \(\psi\) 的共轭正高度长和，未外加“\(\bar\psi\in\Psi_1\)”条件；在 \(\Re w=-\alpha\)、\(\lvert\Im w\rvert\le\mathcal L^{20}\) 上证明导子幂次抵消后的乘积界 \(5e^{2+4\pi}\mathcal L^{-180}\)。这是 (4.8) 的点态核心，下项已将其积分；水平边、无限尾及整条轮廓移动仍未闭合。
+
+Step 76 最后新增 [Lemma44MiddleContour.lean](ZhangLS/Spec/Lemma44MiddleContour.lean)，已通过单文件内核检查。精确积分 \((\alpha+|v|)^{-1}\)，证明 \(\int_{-T}^{T}|-\alpha+iv|^{-1}\,dv\le4\log((\alpha+T)/\alpha)\)；取 \(T=\mathcal L^{20}\)，由原有显式阈值吸收为 \(\le\mathcal L\)。证明实际中段被积函数在该区间可积，并连同真实 Gaussian Mellin 权、\(P^{9w/5}\) 及 \(1/w\) 得到归一化截断积分 \(\le5e^{3+4\pi}\mathcal L^{-179}\)。未将截断积分冒充整条 (4.8)：区间外尾部及变形连接仍需证明。本轮六个模块的详细状态见 [Step 76 状态](audit/STEP76_STATUS.md)。
+
+新增 [Step76GaussianMiddleContourRegression.lean](audit/Step76GaussianMiddleContourRegression.lean) 检查真实族成员、实际区域与同一可计算阈值下的接口，并打印八个主要定理的公理依赖，均仅为 `propext`、`Classical.choice`、`Quot.sound`。全量审计最终 **PASS**：79 个可信 Spec 模块、157 个全项目导入模块、185 个 Lean 文件及 25 个回归。首轮审计曾因 Mathlib 文件头检查读取文件时收到系统中断（EINTR）而停止；原样重查该模块及完整复跑均通过，没有关闭检查或改动证明绕过错误。当前剩余为完整乘积 Mellin 展开、整条轮廓移动、短段与水平边／无限尾控制；Lemma 4.4 仍为进行中。
+
+Step 79（2026-09-30）完成 **Lemma 4.5**。新增 [实际归一化](ZhangLS/Spec/Lemma45Normalization.lean)、[显式常数预算](ZhangLS/Spec/Lemma45ErrorBudget.lean)、[水平短多项式比较](ZhangLS/Spec/Lemma45HorizontalQuotient.lean) 和 [最终无零定理](ZhangLS/Spec/Lemma45ZeroFree.lean)，均已通过单模块内核检查及构建。[新增回归](audit/Step79Lemma45ZeroFreeRegression.lean) 验证原始区域接口和实际乘积无零性，十一个主要接口仅依赖 `propext`、`Classical.choice`、`Quot.sound`。全量审计 **PASS**：105 个可信模块、183 个项目导入模块、214 个源文件和 28 个回归；核验时间 2026-09-30 17:46:57–17:57:10（北京时间）。
+
+先由实际 Lemma 4.1–4.2 推出 \(\|F^{-1}\|\le4\mathcal L^{79}\)，从完整 Lemma 4.4 得到 (4.10) 的误差 \(4C\mathcal L^{-100}\)。证明固定约数级数常数 \(\le36\)、倒数平方级数常数 \(\le3\) 和 \(C\le3^{60}\)，故误差 \(\le1/(4\mathcal L^9)\)。靠近临界线时，以真实 \(F\) 的水平对数模长导数比较两个反射端点，结合实际 \(\widetilde Z\) 衰减，得到 \(\|B\|\le e^{-(\sigma-1/2)\mathcal L^9}\)；较远处的粗界给出 \(\|B\|\le e^{-\mathcal L^8}\)。两者统一为 \(\|B\|\le e^{-1/\mathcal L^9}\)，最终 \(\|A\|\ge1/(4\mathcal L^9)>0\)。所有条件均来自真实好集、论文区域和既有闭式阈值；没有要求 \(\bar\psi\in\Psi_1\)，也没有依赖完整 (4.5) Stirling 渐近。严格静态扫描仍有原有 78 个候选，新模块无新增候选；它与内核审计的结果分别记录。详见 [Step 79 记录](audit/STEP79_STATUS.md)。
+
+**Step 80（2026-09-30）完成 Lemma 4.6。** 新增九个可信模块，最终 [Lemma46ZeroAnalysis.lean](ZhangLS/Spec/Lemma46ZeroAnalysis.lean) 的 `lemma46_proved : Lemma46Target` 证明原始临界线位置、单根性及收缩圆盘内的局部无零结论，并显式保证半径为正。实际 (4.11) 的常数为 341600；解析对数的指数输运给出模型误差 CαL，模型除去三个单根后由紧致性取得统一边界下界，严格 Rouché 比较给出重数和 1，实际函数方程／共轭反射再强制 β=1/2。绝对常数 c′ 和阈值在所有字符／零点之前统一选择，没有增加待证误差、无零性、单根性或逆字符好集假设。所证模型比较覆盖 ‖w‖<α，足够用于所有收缩圆周；未额外宣称论文 ‖w‖<2α 的完整 (4.12) 或数值常数 6 的 (4.13)。
+
+[原始陈述回归](audit/Step80Lemma46ZeroAnalysisRegression.lean) 及全部十一项公理检查通过。全量审计 **PASS**：114 个可信模块、192 个项目导入、224 个源文件、29 个回归，核验时间 2026-09-30 18:36:13–18:47:08（北京时间）。模型下界采用紧致性选择，因此当前 c′、D₀ 是统一存在性结论，不宣称闭式可计算数值；这符合原论文的充分大模数约定。静态扫描新增的两个候选均是从已证局部结果传递结论，已逐项核对并在 [Step 80 状态](audit/STEP80_STATUS.md) 说明。Lemma 4.7 与最终 Proposition 2.2／Lemma 2.3 接合仍待推进。
+
+**Step 81（2026-09-30）完成 Lemma 4.7。** 新增五个可信模块，最终 [Lemma47ThreeZeros.lean](ZhangLS/Spec/Lemma47ThreeZeros.lean) 的 `lemma47_proved : Lemma47Target` 保留真实 Ψ₁、原始临界线零点和高度区域，证明 α(1+c′αL) 圆内恰有三个零点（按重数计），并证明圆周无零、α<R<2α。绝对常数和模数阈值在所有字符及零点之前统一选择，没有外加误差、解析性或计数结论。
+
+扩张圆会越过已有 Ω₃ 的左边界。[真实反射](ZhangLS/Spec/Lemma47Reflection.lean) 由 Gamma 共轭、根数单位模长和真实函数方程证明 Z(s)·conj Z(1−conj s)=1、A(s)=B(s)·conj A(1−conj s) 以及 B 的对应恒等式。[扩张圆盘区域与误差反射](ZhangLS/Spec/Lemma47OuterGeometry.lean) 补齐左半圆余项。[完整模型误差](ZhangLS/Spec/Lemma47ModelApproximation.lean) 在 ‖w‖<2α 上给出 CαL，C=2exp(17)+exp(16)(1+4×1100000)。[外模型下界](ZhangLS/Spec/Lemma47ModelBoundary.lean) 除去 0、i、−i 三个单根，在半径 3/2 的紧圆盘取得统一 m>0，从而在 1≤‖z‖≤3/2 上证明模型模长 ≥m(‖z‖−1)。选择 c′=(C+1)/m，使误差严格小于外圆周模型模长，再应用已证三零点 Rouché 定理。
+
+[原始陈述回归](audit/Step81Lemma47ThreeZerosRegression.lean) 与十项公理检查通过，均仅依赖 `propext`、`Classical.choice`、`Quot.sound`。230 个源文件的占位／结构检查通过。全量内核审计 **PASS**：119 个可信模块、197 个项目导入、230 个源文件、30 个回归；核验时间 2026-09-30 19:10:59–19:22:24（北京时间）。常数与最终阈值为统一存在性结论，不宣称闭式数值。原文 Lemma 4.7 的三零点计数已闭合；Proposition 2.2 的最终区域与最大间距接合仍是后续任务。详见 [Step 81 状态](audit/STEP81_STATUS.md)。
+
+**Step 82（2026-09-30）完成 Lemma 4.8 的可信定理。** [Lemma48ZeroRegion.lean](ZhangLS/Spec/Lemma48ZeroRegion.lean) 定义原文 (2.7) 的完整 Ω 和实际 L 函数乘积；由真实函数方程与共轭反射推出同字符的反射零点，再应用 Lemma 4.5 得到 |Re ρ−1/2|≤α²。此处保留边界等号，无需外加临界线位置。薄层中的零点及其反射都落入 Ω₃，零点也落入 Ω₁；真实 Z̃ 反射互逆关系与已有模长估计给出 ‖Z̃⁻¹‖≤exp(3)。
+
+[最终定理](ZhangLS/Spec/Lemma48InverseFactor.lean) 将 Z̃⁻¹+GFr 精确写为 Z̃⁻¹(1−FG)+Z̃⁻¹G(F+Z̃Fr)。Lemma 4.2 控制第一项为 4exp(3)L⁻²²⁷；Lemma 4.1、4.4 控制第二项为 2exp(3)C₄₄L⁻¹⁰⁰。故统一常数为 exp(3)(4+2C₄₄)，并证明其 ≤3⁶⁵。`lemma48_at_explicit_constant` 使用闭式阈值 D₀=3^(3^200)；`lemma48_proved : Lemma48Target` 在所有模数、字符和零点前统一量化常数与阈值。没有外加临界线位置、逆因子界、误差或逆字符好集条件。
+
+[原始陈述回归](audit/Step82Lemma48InverseFactorRegression.lean) 展开完整 Ω 和实际 L 乘积零点，并检查闭式常数／阈值；十个主要接口的公理依赖仅为 `propext`、`Classical.choice`、`Quot.sound`。两模块构建、回归及 233 个源文件的占位／结构检查通过。全量审计 **PASS**：121 个可信模块、199 个项目导入、233 个源文件和 31 个回归；核验时间 2026-09-30 22:41:25–22:52:51（北京时间）。严格静态扫描新增的两个候选分别为反射后的 Ω 条件传递及已证 Lemma 4.2 范数界传递，均已核对；详见 [Step 82 状态](audit/STEP82_STATUS.md)。
+
+**Step 83（2026-09-30）完成 Proposition 2.2 的可信定理。** [Proposition22.lean](ZhangLS/Spec/Proposition22.lean) 的 `proposition22_proved : Proposition22Target` 在真实 Ψ₁ 和原始完整 Ω 下，证明所有实际 L 函数乘积零点在临界线上且为单根，并对任意相邻零点证明 |γ′−γ−α|≤Cα²L。C 和自然数阈值在所有模数、字符及零点之前统一选取；没有外加位置、单根性、间距、无零区域或计数假设。
+
+三条 Lemma 4.6 接口扩展到闭边界 Re ρ≤1/2+α²，同时保留原严格接口。[完整 Ω 的零点分析](ZhangLS/Spec/Proposition22Zeros.lean) 结合实际反射／薄层定位处理左右两侧和等号，再通过真实商函数的导数公式把 A′≠0 传到实际乘积 P′≠0；局部无零结论给出最小间距 α−cα²L。
+
+[局部模型线性下界](ZhangLS/Spec/Proposition22ModelNearZero.lean) 除去原点单根，在半径 1/2 的紧圆盘取得统一正下界 m，证明 |1−exp(−2πz)|≥m|z|。利用模型在 iα 处的精确周期性，[邻根定理](ZhangLS/Spec/Proposition22Neighbor.lean) 在 ρ+iα 附近半径 kα²L 的圆盘作严格 Rouché 比较，得到实际 A 的零点；k=(C₄₇+1)/m。最终接合证明：若相邻间距大于 α+kα²L，此零点虚部严格在两端之间，实部也在 Ω 中，从而自动满足原始高度条件并与相邻性矛盾。F 在该圆盘无零性保证这确为实际乘积零点。该论证保留 Ω 原始边界，不缩小论文区域。
+
+[原始陈述回归](audit/Step83Proposition22Regression.lean) 展开实际 L 乘积、完整 Ω 和无中间零点条件；另检查闭薄层等号不能有零点。十个主要接口公理依赖仅为 `propext`、`Classical.choice`、`Quot.sound`。新增四模块、闭边界扩展、回归及 238 个源文件的占位／结构检查通过。全量审计 **PASS**：125 个可信模块、203 个项目导入、238 个源文件和 32 个回归；核验时间 2026-09-30 23:23:01–23:34:30（北京时间）。常数与最终阈值是统一存在性结论，不宣称闭式数值。严格静态扫描仍为既有 83 个候选，新增模块无新候选；详见 [Step 83 状态](audit/STEP83_STATUS.md)。Lemma 2.3 的相邻零点存在性／无零区间与最终系数接合仍待推进。
+
+## 更新规则
+
+每推进一步，先更新本文件的日期、状态及 Lean 链接；只有核检查通过且移除关键外加假设，才可把论文编号项目改成 ✅。运行 `tools/verify_all_lean.sh` 后，以 `audit/lean_kernel_verification.txt` 的 `LEAN_KERNEL_VERIFICATION=PASS` 作为当前版本的整体验证记录。旧版 `ZhangLS/*.lean` 若仍把待证结论作为输入，不得记作论文结论已证明。
+
+**Step 84（2026-10-01）完成 Lemma 2.3 的可信定理。** [Lemma23SuccessiveZeros.lean](ZhangLS/Spec/Lemma23SuccessiveZeros.lean) 保留原始较小零点区域，由已证邻根 Rouché 构造三个后继零点。局部无零圆盘的覆盖排除中间零点，因此后继确为连续零点；三步高度增量小于原始 Ω 的二单位余量，不缩小目标区域，也不假设已有后继零点。
+
+[Lemma23ZeroIntervals.lean](ZhangLS/Spec/Lemma23ZeroIntervals.lean) 从严格间距界证明原文三个位移的交错关系，并把实际乘积在第一、第三间隔的无零性传到 L(s,ψ)，得到 (0,|β₁|] 和 [|β₂|,|β₃|] 两个无零区间。[Lemma23ZeroData.lean](ZhangLS/Spec/Lemma23ZeroData.lean) 统一选择 c′=c+k+1 和充分大模数阈值，使 c′αL≤1/32，并证明这一常数同时满足 Proposition 2.2 的严格间距结论。从实际乘积导数和 L(ρ,ψ)=0 推出 L′(ρ,ψ)≠0；临界线位置、正高度、位移排序及区间无零性均是已证结论。
+
+[最终定理](ZhangLS/Spec/Lemma23.lean) 使用实际 M=YL 及实际复导数 M′(ρ)，证明 C*(ρ,ψ)=−iM(ρ+β₁)M(ρ+β₂)M(ρ+β₃)/M′(ρ) 为实且非负，且分母非零。实际连续平方根分支存在，结论对每个满足原始根方程的连续分支成立；同一分支可同时用于该字符的所有目标零点。
+
+[原始陈述回归](audit/Step84Lemma23Regression.lean) 展开实际 M、三个位移、原始较小区域及真实导数分母；另核对同一有效分支同时适用于所有零点。八个新接口公理依赖仅为 `propext`、`Classical.choice`、`Quot.sound`。四模块、回归和 243 个源文件的占位／结构检查通过；Step 84 全量审计 **PASS**：129 个可信模块、207 个项目导入、243 个源文件和 33 个回归；核验时间 2026-10-01 00:13:39–00:25:34（北京时间）。常数与最终阈值为统一存在性结论，不宣称闭式数值。严格静态扫描仍为既有 83 个候选，新增模块无新候选；详见 [Step 84 状态](audit/STEP84_STATUS.md)。
+
+
+## Step 85：Lemma 5.1
+
+[完整定理](ZhangLS/Spec/Lemma51.lean) 已在真实 Ψ 和原文完整区域下证明四个实际 Z 位移估计。新增 Euler 对数乘积构造，证明真实 Gamma 对数导数的 Euler 级数表示；单位区间求和与积分的望远镜误差给出 `‖Γ′/Γ−log z‖≤8/|Im z|`。处理两种特征奇偶性后得到 `‖Z′/Z+log N+log(t/(2π))‖≤18/t`，再由原文高度窗口取得 `‖Z′/Z+log N+log t₀‖≤21L^-114`。实际临界线单位模长与水平积分给出统一界 `‖Z‖≤exp(600π)`。竖直积分时实数导子指数的模长为 1，除以 w 后仍保留原误差阶；`0≤log p−log P≤L^-68` 接合其余两式。统一常数为 `22exp(600π)`，显式阈值仍为 `3^(3^200)`，不加入 Ψ₁、Gamma 渐近、模长或积分估计作为待证前提。
+
+八模块构建、展开原始陈述／闭实部边界／零位移回归与十项标准公理检查均已通过。252 个源文件无占位且结构检查通过。Step 85 全量内核审计 **PASS**：137 个可信模块、215 个项目导入和 34 个回归全部通过（2026-10-01 01:27:45–01:39:42 北京时间）；详见 [Step 85 记录](audit/STEP85_STATUS.md)。静态启发式扫描为 85 个候选，其中新增的两个局部变量返回已逐项检查，分别来自已证明的极限界和实际竖直积分结果，不是原始假设中的目标结论。
+
+2026-10-01 13:14:58（北京时间）按本次请求复查 Lemma 5.1：再次逐项核对原文 (5.1)–(5.4)，原始陈述、闭实部边界和零位移回归重新运行 **PASS**，十项接口仍仅依赖标准公理。八个 Lemma 5.1 模块及其回归与 Step 102 已通过全量验证的源码一致；该快照中的全部 365 个源码指纹均未改变。详见[本次复查记录](audit/lemma51_recheck_20261001.txt)与[实际输出](audit/lemma51_recheck_20261001.log)。Lemma 5.1 保持完成，总完成数仍为 17/51。
+
+
+## Step 86：Lemma 5.2
+
+实际连续分支的无零性、可微性与 `Y′/Y=−Z′/(2Z)` 已从根方程推出。上半平面的解析对数与竖直线段平均值估计给出三个实际分支比值；由三位移之和等于两倍 β₃，累计对数误差不超过 `63π L^-123`，最终相对误差不超过 `126π L^-123`。最终目标使用已证 Lemma 2.3 的同一常数，保留真实 Ψ 和原始完整区域，分支存在且结论适用于每个有效分支。五模块构建、展开原始陈述／闭边界／分支变号回归与十项标准公理检查通过；258 个源文件无占位且结构检查通过。Step 86 全量内核审计 **PASS**：142 个可信模块、220 个项目导入和 35 个回归全部通过（2026-10-01 02:35:17–02:48:37 北京时间）。充分大模数阈值统一存在，当前不宣称沿用 Section 4 的闭式阈值。严格静态扫描仍为此前 85 个候选，新增模块无新候选；详见 [Step 86 记录](audit/STEP86_STATUS.md)。
+
+
+## Step 87：Lemma 5.3 的实际核与解析基础
+
+[原始目标](ZhangLS/Spec/Lemma53.lean) 保留全部正 x、分界 t₀^(51/50)、大 x 的两个原始指数尾项，以及指数为 10 的 ε。实际 Δ 按原始逆 Mellin 积分定义；振荡积分单独定义，尚未宣称二者相等。已证明原始 Mellin 积分对 D>1、x>0 绝对收敛，并证明精确高斯主项、临界线权重正性、实际核分解、振荡积分收敛与粗模长界、局部扰动误差、移线路径实部及平稳线上的高斯衰减。四模块构建、展开原始定义／高斯尺度回归和十一项标准公理检查通过。尚缺 Mellin–振荡积分恒等式、有限／无限移线连接与两范围完整误差估计；Lemma 5.3 保持进行中。
+
+本轮全量审计 **PASS**：146 个可信模块、224 个项目导入、263 个源文件和 36 个回归；核验时间 2026-10-01 03:16:19–03:29:34（北京时间）。四个新增模块、展开定义／高斯尺度回归与十一项标准公理检查全部通过。静态扫描新增的一个局部返回来自实际 Gamma 欧拉积分界，不是待证假设；详见 [Step 87 记录](audit/STEP87_STATUS.md)。
+
+
+## Step 90：完成 Lemma 5.3
+
+[大 x 参数](ZhangLS/Spec/Lemma53LargeRangeParameters.lean) 从原始范围推出 x^0.99>4t₀，控制原始向下移线的相位，包含 v=0。[三段估计](ZhangLS/Spec/Lemma53LargeContourEstimates.lean) 分别给出左尾 2A、左竖边 eA 和右射线 sqrt(π)exp(2)B，其中 A=exp(-(L₂ log x/100)²)、B=exp(-x^0.99/L₂)。[无限移线与完整大 x 估计](ZhangLS/Spec/Lemma53LargeRange.lean) 证明右端趋零、两条水平射线的极限与绝对收敛，再以实际有限 Cauchy 恒等式闭合大 x 两项界。[最终定理](ZhangLS/Spec/Lemma53.lean) 接合此前的小 x 估计，选择统一 C、k=1/2 和自然数模数阈值。没有外加扰动小性、Mellin 恒等式、尾界、解析性或轮廓假设。
+
+[完整原始陈述回归](audit/Step90Lemma53Regression.lean) 和十二项标准公理检查通过，依赖仅为 `propext`、`Classical.choice`、`Quot.sound`。全量内核审计 **PASS**：159 个可信模块、237 个项目导入、279 个源文件、39 个回归；2026-10-01 05:13:29–05:26:53（北京时间）。静态启发式扫描仍为 86 个候选，本轮未新增。总进度 **14/51 完成、0 项进行中、37 项未开始**；下一编号 Lemma 5.4 尚未证明。详见 [Step 90 记录](audit/STEP90_STATUS.md)。
+
+
+## Step 91：Lemma 5.4 的实际导数与完整 Mellin 解析性
+
+[参数核与主控](ZhangLS/Spec/Lemma54KernelDerivatives.lean) 从实际核证明两次积分号下求导，[实际导数公式](ZhangLS/Spec/Lemma54ActualDerivatives.lean) 将结果传回原始逆 Mellin Δ，包含实际 `deriv (deriv Δ)` 与论文 −4π² 积分公式。[幂衰减](ZhangLS/Spec/Lemma54MellinDecay.lean) 从两个原始大 x 尾项证明 Δ 在无穷远压过任意固定幂、在零点右侧有界，并证明全正轴连续性。[Mellin 解析性](ZhangLS/Spec/Lemma54MellinAnalytic.lean) 证明实际 δ 在整个 Re s>0 绝对收敛且解析，给出统一自然数模数阈值。[显式导数界](ZhangLS/Spec/Lemma54DerivativeBounds.lean) 求出 Gaussian Laplace 质量，得到全正轴上 |Δ′|≤4πsqrt(π)e/L₂ 和 |Δ″|≤16π²sqrt(π)exp(2)/L₂。
+
+[完整原始目标](ZhangLS/Spec/Lemma54.lean) 保留两个原始区域、同一 C 和指数 c，尚未证明定量 |s|^-2 界及 δ(s)=1+O(α log L)。下一步需证明带权导数的向下移线尾界、两次分部积分全部边界项、Gaussian 归一化／集中与两范围误差的定量积分。不会以当前解析基础代替完整目标。
+
+[原始定义及接口回归](audit/Step91Lemma54FoundationsRegression.lean) 和十五项标准公理检查通过，依赖仅为 `propext`、`Classical.choice`、`Quot.sound`。全量内核审计 **PASS**：165 个可信模块、243 个项目导入、286 个源文件、40 个回归；2026-10-01 05:46:35–06:00:32（北京时间）。静态启发式扫描仍为 86 个候选，本轮未新增。总进度 **14/51 完成、1 项进行中、36 项未开始**；详见 [Step 91 记录](audit/STEP91_STATUS.md)。
+
+## Step 92：实际带权导数移线与两次 Mellin 分部积分
+
+[带权核](ZhangLS/Spec/Lemma54WeightedKernels.lean) 用 C_w=1+8π² 同时控制 (-2πi(e^w−1)) 的一／二次幂。[三段轮廓界](ZhangLS/Spec/Lemma54WeightedContourEstimates.lean) 与 [无限移线](ZhangLS/Spec/Lemma54WeightedContour.lean) 在原始 x>t₀^(51/50) 范围推出两个实际导数共同尾界 C_w(4+2e)exp(-(B log x/100)²)+2C_w sqrt(π)e³ exp(-x^.99/B)。右端竖边趋零及右射线绝对收敛已证明，B=L^400、t₀=L^519 没有改变。
+
+[实际导数衰减与端点](ZhangLS/Spec/Lemma54DerivativeDecay.lean) 证明 Δ′、Δ″ 的任意固定幂衰减、正轴连续性和右半平面 Mellin 绝对收敛，以及两次分部积分全部四个端点极限。[实际分部积分](ZhangLS/Spec/Lemma54IntegrationByParts.lean) 在整个 Re s>0 得到 s(s+1)δ(s)=∫₀∞x^(s+1)Δ″(x)dx。[实际矩界](ZhangLS/Spec/Lemma54MellinSecondMoment.lean) 证明 M_D(σ)=∫₀∞x^(σ+1)|Δ″(x)|dx 在 σ>0 有限，且 |δ(s)|≤M_D(Re s)/|s|²。尚未证明 M_D(σ)≤C L^c 在完整原始闭条带上一致成立，故不把有限矩界记作完整第一项；第二项原始圆盘归一化仍待证明。
+
+[实际原始对象回归](audit/Step92Lemma54WeightedDerivativeRegression.lean) 和十七项标准公理检查通过；六模块构建通过。293 个源文件无占位且结构检查通过，覆盖 171 个可信模块、249 个项目导入和 41 个回归。严格静态扫描 87 个候选，新增一个局部界返回已逐项核对；见 [Step 92 记录](audit/STEP92_STATUS.md)。Step 92 全量内核审计 **PASS**：2026-10-01 06:24:07–06:38:37（北京时间）。总进度保持 **14/51 完成、1 项进行中、36 项未开始**。
+
+## Step 93：闭合 Lemma 5.4 第一项原始估计
+
+[对数 Gaussian 矩](ZhangLS/Spec/Lemma54LogTailMoments.lean) 对任意实幂证明正轴绝对可积及精确 Gaussian Laplace 积分；其 1+x³ 加权质量在 B≥200 时不超过 200sqrt(π)e。[平方替换和 Gamma 矩](ZhangLS/Spec/Lemma54HalfPowerMoments.lean) 证明 ∫₀∞(1+x³)exp(-sqrt x/B)dx=2B²+10080B⁸，且 B≥1 时不超过 10082B⁸。两个积分均来自真实变量替换和已经证明的积分公式，没有外加数值积分或尾界假设。
+
+[小 x 的实际二阶矩](ZhangLS/Spec/Lemma54SmallSecondMoment.lean) 由原始上端点 T=t₀^(51/50)≤L^530 和全正轴二阶导数界推出 ≤C₀L^2120。[大 x 的实际矩](ZhangLS/Spec/Lemma54LargeSecondMoment.lean) 将原始两项导数尾界用完整条带权重 1+x³ 积分，得到 C_A(200sqrt(π)e)+10082C_B B⁸。[最终统一多项式界](ZhangLS/Spec/Lemma54UniformSecondMoment.lean) 用 B⁸=L^3200 接合为 M_D(σ)≤C_M L^3200，其中 C_M=C₀+C_A(200sqrt(π)e)+10082C_B 为显式正绝对常数。由两次实际分部积分，在完整闭条带证明 |δ(s)|≤C_M L^3200/|s|²。`lemma54_first_part_proved` 保留 ∃C>0 ∃c>0 ∃D₀ ∀D≥D₀ ∀s 的原始量词顺序；c=3200，阈值统一存在。
+
+[原始闭条带回归](audit/Step93Lemma54StripRegression.lean) 和十三项标准公理检查通过；五模块构建通过。299 个源文件无占位且结构检查通过，覆盖 176 个可信模块、254 个项目导入和 42 个回归。严格静态扫描仍为 87 个候选，本轮未新增。Step 93 全量内核审计 **PASS**：2026-10-01 06:52:46–07:07:34（北京时间）；详见 [Step 93 记录](audit/STEP93_STATUS.md)。第二项原始圆盘归一化和最终公共常数仍待证明，完整 Lemma 5.4 保持进行中，总进度 **14/51 完成、1 项进行中、36 项未开始**。
+
+## Step 94：实际 Gaussian 集中性与中心窗口归一化
+
+[Gaussian 总质量](ZhangLS/Spec/Lemma54GaussianNormalization.lean) 用已证精确实 Gaussian 积分和真实平移证明 ∫ℝg=1，并将 g 接回实际 Ω。[二次矩](ZhangLS/Spec/Lemma54GaussianMoments.lean) 保留一部分指数，证明 (1+x²)g_B≤4(1+t²)(1+2B²/π²)g_(2B)，包括绝对可积和积分界。[窗口外质量](ZhangLS/Spec/Lemma54GaussianConcentration.lean) 对任意可测外部集合证明 g_B≤2exp(-(πW/B)²/2)g_(2B)；实际 B=L^400、t=L^519、W=L^405 给出总尾质量 ≤2exp(-L^10/2)、二次加权尾质量 ≤144L^1838 exp(-L^10/2)。
+
+[原始窗口参数](ZhangLS/Spec/Lemma54CentralWindow.lean) 证明 t₀/2≤x≤2t₀≤t₀^(51/50)、x≥1、0≤log x≤520log L，且完整原始圆盘实部位于 [1/2,3/2]。由 5200α log L≤1，[中心权误差](ZhangLS/Spec/Lemma54CentralMellinWeight.lean) 得到 |x^(s−1)−1|≤10400α log L，继而证明实际 Gaussian 的中心 Mellin 积分归一化误差 ≤10400α log L+2exp(-L^10/2)。
+
+[实际 Δ 中心接合](ZhangLS/Spec/Lemma54CentralDeltaApproximation.lean) 从已经证明的 Lemma 5.3 小范围误差和原始 Mellin 绝对收敛，得到窗口内实际加权 Δ−g 误差积分 ≤3α+6C_s L^405 exp(-L^10/2)。因此实际 Δ 的中心窗口 Mellin 积分与 1 的差 ≤10400α log L+3α+(2+6C_s L^405)exp(-L^10/2)。全部估计保留完整 |s−1|<10α 和原始闭窗口；没有假定 δ(1)=1。
+
+[原始 Gaussian／圆盘回归](audit/Step94Lemma54GaussianRegression.lean) 和 23 项标准公理检查通过；七模块构建通过。307 个源文件无占位且结构检查通过，覆盖 183 个可信模块、261 个项目导入和 43 个回归；严格静态扫描仍为 87 个候选，未新增。Step 94 全量内核审计 **PASS**：2026-10-01 07:31:12–07:46:47（北京时间）；详见 [Step 94 记录](audit/STEP94_STATUS.md)。完整正轴窗口外积分、指数误差吸收及最终共同常数仍待证明，账本保持 **14/51 完成、1 项进行中、36 项未开始**。
+
+## Step 95：完整 Lemma 5.4 的原始目标接合
+
+[零点附近](ZhangLS/Spec/Lemma54NearZeroMellin.lean) 在完整圆盘上用可积权 x^(-1/2) 控制实际 Mellin 权，证明 ∫₀¹x^(-1/2)dx=2，以及实际积分 ≤2C_n exp(-L^10/2)，C_n=2sqrt(π)+C_s。[小范围窗口外](ZhangLS/Spec/Lemma54SmallExteriorMellin.lean) 对任意可测 S⊆(1,T]、S⊆J_D 的补集，积分实际 Δ 的已证小范围估计，得到 ≤(288+C_s)L^1838 exp(-L^10/2)。
+
+[原始大范围指数](ZhangLS/Spec/Lemma54LargeTailDamping.lean) 保留原始 T=t₀^(51/50)，证明 (B log x/100)²≥L^10 和 x^.99/B≥L^10，并从各个实际尾项分出 exp(-L^10/2)。[大范围实际 Mellin 积分](ZhangLS/Spec/Lemma54LargeExteriorMellin.lean) 用已证 B/2 的 log-Gaussian 和 2B 的半幂指数矩，将其完整实际积分控制为 C_l L^3200 exp(-L^10/2)，其中 C_l 为显式正绝对常数。
+
+[完整圆盘预算](ZhangLS/Spec/Lemma54FullDiskBudget.lean) 对实际正轴 integral 作四段可积拆分，与已证中心窗口接合，得到 |δ(s)−1|≤10403α log L+C_e L^3200 exp(-L^10/2)。C_e=2+6C_s+2C_n+(288+C_s)+C_l。[统一误差吸收](ZhangLS/Spec/Lemma54DiskErrorAbsorption.lean) 用 L^3209 exp(-L/2)→0 和 L^10≥L，推出一个先于所有 D、s 的自然数阈值，使 L^3200 exp(-L^10/2)≤α log L。因此第二项可取 C_disk=10403+C_e。
+
+[最终可信证明](ZhangLS/Spec/Lemma54.lean) 选择 C=C_M+C_disk>0、c=3200；同一个阈值供给实际右半平面解析性和两项原始估计。`Lemma54AtConstants`、`Lemma54Target` 的原始定义未改变。完整闭条带、原始半径 10α 开圆盘、同一常数与原始量词顺序全部保留，阈值为统一存在性见证，不宣称闭式数值或最优常数。
+
+[完整原始陈述回归](audit/Step95Lemma54CompletionRegression.lean) 展开实际正轴积分、检查两个完整域、同一常数和 s=1 的阈值特例。19 项主要公理检查只含 `propext`、`Classical.choice`、`Quot.sound`。六模块及最终定理构建通过；314 个源文件无占位且结构检查通过，覆盖 189 个可信模块、267 个项目导入和 44 个回归。严格静态扫描仍为 87 个候选，未新增。Step 95 全量内核审计 **PASS**：2026-10-01 08:04:34–08:20:21（北京时间）；完整 Lemma 5.4 正式完成，整体增至 **15/51 完成、0 项进行中、36 项未开始**。详见 [Step 95 记录](audit/STEP95_STATUS.md)。
+
+
+## Step 103：Lemma 5.6 的复特征算术与解析基础
+
+[忠实原始目标](ZhangLS/Spec/Lemma56.lean) 已保留实际素数区间、T、复幂、(A)、闭高度边界和模数 1。九个可信模块证明通用复特征的实际算术正性、乘积分类、部分和界、Abel 表示及整个 Re s>0 的续拓、Re s≥2 的圆心下界和 θ／χθ 的实际局部 Jensen 重数界 ≤24L^1.1。
+
+17 项展开回归及 60 项标准公理检查通过；Step 103 全量内核验证 PASS，覆盖 242 个可信模块、320 个项目导入、375 个源码和 52 个回归，核验期间全部源码指纹保持不变。核验时间 2026-10-01 13:25:59–13:46:27 Asia/Shanghai。新增四个静态候选均已核对为实际局部推导。完整素数和指数衰减仍待证明；总账本为 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 103 状态](audit/STEP103_STATUS.md)。
+
+## Step 104：Lemma 5.6 的实际四组零点排斥
+
+Step 104 推进 [Lemma 5.6 的实际零点排斥](ZhangLS/Spec/Lemma56WeakZeroExclusion.lean)：十五个新增可信模块闭合实际零点因子分解、全阶余项、四组零点共同极值检测和统一严格预算。在原始 (A) 下，对所有 r>1、r<T、θ≠χ 的本原 θ，一个先于全部模数、特征和点的统一阈值保证 Re s>1−2/(log D)^4、abs(Im s)≤2D 内无零点；两个高度端点均保留。实际乘积 χθ 允许非本原，模数允许不互素。11 项展开回归和 81 项标准公理检查通过；Step 104 全量内核验证 **PASS**（257 个可信模块、335 个项目导入、391 个源码、53 个回归；全部源码指纹不变；2026-10-01 14:03:29–14:25:35 Asia/Shanghai）。完整素数短区间指数估计和忠实目标中的模数 1 情形仍待闭合，总账本保持 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 104 状态](audit/STEP104_STATUS.md)。
+
+另有[独立高高度与严格指数余量草稿](audit/step105_lemma56_margin_zero_draft.txt)，19 项标准公理接口和四项展开回归已通过：U=(log D)^4.5、V=3U/4 时，实际无零性达到 Re s>1−2/V、abs(Im s)≤2exp(2U)，实际导数/L 比值在闭条带 1−1/V≤Re s≤2、abs(Im s)≤exp(2U) 上有界 24V²+28800V。该草稿未纳入本轮冻结的工程核验，也未计为完整引理；下一步接入这些实际界，证明移线积分、Mangoldt 和到原始素数短区间和的指数衰减。
+
+## Step 105：Lemma 5.6 的高高度无零性与实际高斯积分
+
+Step 105 推进 [Lemma 5.6 的高高度无零性与实际高斯积分](ZhangLS/Spec/Lemma56GaussianContour.lean)：十二个新增可信模块在原始 (A) 下证明 Re s>1−2/V、abs(Im s)≤2exp(2U) 内的非主本原特征无零性，并在闭矩形内给出实际 L'/L 界 24V²+28800V，其中 U=(log D)^4.5、V=3U/4。已证明实际 Mangoldt 高斯加权和的精确 Mellin 恒等式、两边收敛与求和积分交换，以及带全部水平边的有限矩形移线。37 项标准公理接口和 11 项展开回归通过；Step 105 全量内核验证 **PASS**（269 个可信模块、347 个项目导入、404 个源码、54 个回归；全部指纹不变；2026-10-01 14:49:47–15:13:26 Asia/Shanghai）。另有独立振荡参数草稿通过 26 项接口与 5 项回归，实际归一化左竖线积分 ≤4150656exp(1/4)P exp(−7U/6)，尚未接入项目。完整素数短区间估计与主特征边界仍待闭合；总账本保持 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 105 状态](audit/STEP105_STATUS.md)。
+
+## Step 106：Lemma 5.6 的振荡参数与累积 Perron 恒等式
+
+Step 106 推进 [Lemma 5.6 的振荡参数与累积 Perron 恒等式](ZhangLS/Spec/Lemma56PerronMellinIdentity.lean)：十七个新增可信模块证明实际 n^(iτ) Mangoldt 高斯和与累积 Perron 和的精确 Mellin 恒等式、独立收敛和求和积分交换，恒等式允许包括模数 1 主特征在内的全部复特征。原始 (A) 下，非主本原特征的实际有限矩形移线覆盖 |τ|≤D、H≤exp(2U)/2 的闭端点并保留水平边；累积核的左线成本仅为 6M log(1+H)，实际归一化左线积分 ≤2017218816exp(1/4)P exp(−7U/6)。实际点高斯右线的两个无限尾项界也已证明。61 项标准公理接口、15 项展开回归通过；Step 106 全量内核验证 **PASS**（286 个可信模块、364 个项目导入、422 个源码、55 个回归；全部指纹不变；2026-10-01 15:43:30–16:08:18 Asia/Shanghai）。完整素数短区间估计、去平滑、素数幂剔除、素数质量归一化和主特征边界仍待闭合；账本保持 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 106 状态](audit/STEP106_STATUS.md)。
+
+独立 [下一步 Perron 草稿](audit/step107_lemma56_perron_exterior_draft.txt) 也已通过 17 项标准公理接口和 4 项展开回归：在原始 (A) 下，已闭合实际累积 Mangoldt 和在全部 1≤x≤2P、|τ|≤D 上的 C P exp(−7U/6) 界，并证明参数 B=exp(3U/2)、H=exp(2U)/2 下的实际右尾和水平边预算。该草稿尚未接入冻结项目，不计入 286 个模块覆盖或完整引理账本；完整无平滑素数和仍待去平滑、素数幂剔除、素数质量归一化和主特征边界接合。
+
+## Step 107：Lemma 5.6 的实际累积和与去平滑误差
+
+Step 107 推进 [Lemma 5.6 的实际累积 Mangoldt 和与去平滑误差](ZhangLS/Spec/Lemma56PerronMangoldtWindow.lean)：十五个新增可信模块在原始 (A) 下闭合非主本原特征、全部 1≤x≤2P、|τ|≤D 上的实际累积和 C P exp(−7U/6) 界，两个水平边与右尾均已预算。所有复特征（包括模数 1 主特征）的实际权重满足 0≤g_B≤1、反射恒等式和半值端点；实际平滑和减严格截断和的误差已精确分为可求和远项和有限近项，得到带窗口长度与高斯尾的定量界。55 项标准公理接口、14 项展开回归通过；Step 107 全量内核验证 **PASS**（301 个可信模块、379 个项目导入、438 个源码、56 个回归；全部指纹不变；2026-10-01 16:33:40–16:58:53 Asia/Shanghai）。严格静态审计仍为 108 个已审查候选，无新增。完整素数短区间目标仍待权重转换、实际素数质量归一化和主特征边界；去平滑与素数幂后续草稿已独立验证，尚未接入本轮覆盖；账本保持 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 107 状态](audit/STEP107_STATUS.md)。
+
+独立 [下一步去平滑草稿](audit/step108_lemma56_unsmoothing_draft.txt) 已通过 11 项标准公理接口和 4 项展开回归：参数 B=exp(3U/2)、ε=exp(−7U/5) 给出所有复特征（包括模数 1 主特征）的实际去平滑误差 ≤C_err P exp(−7U/6)，C_err=1728e+864+4Cright/√π。接合后，在原始 (A) 下，对非主本原 θ、全部 1≤x≤2P 和 |τ|≤D，实际严格截断 Mangoldt 和满足 C P exp(−7U/6) 界。整数截点排除端点，两个高度闭端点均保留。该草稿尚未接入冻结项目，不计入本轮 301 个模块覆盖或完整引理账本；完整素数窗口仍待素数幂剔除、权重转换、实际素数质量归一化和主特征边界。
+
+随后独立 [素数幂剔除草稿](audit/step109_lemma56_prime_power_draft.txt) 也已通过内核：组合草稿共 17 项标准公理接口（包含上述 11 项，新增 6 项）和 4 项展开回归。实际高次素数幂差对所有复特征均 ≤2√x log x，并已预算为 ≤1728P exp(−7U/6)。原始 (A) 下，非主本原 θ 的实际严格截断 log p 加权素数和在全部 1≤x≤2P、|τ|≤D 上满足 C P exp(−7U/6)。该草稿同样未接入本轮冻结项目；完整 Lemma 5.6 仍待 p^(1+iτ) 权转换、实际素数质量归一化和忠实主特征边界。
+
+## Step 108：Lemma 5.6 的原文素数权与绝对界
+
+Step 108 推进 [Lemma 5.6 的原文素数权与绝对指数界](ZhangLS/Spec/Lemma56PrimeWindowAbsolute.lean)：十二个新增可信模块闭合实际去平滑和素数幂剔除，随后用有限 Abel 求和及 x/log x 单调性，把 log p 权精确转换为 p^(1+iτ) 权。原始 (A) 下，对 r>1、r<T、θ≠χ 的本原特征，实际严格素数窗口上的原文和满足 C P² exp(−7U/6)，覆盖 |τ|≤D 的两个闭端点；常数和模数阈值先于全部 D、特征、τ。24 项标准公理接口、12 项展开回归通过。Step 108 全量内核验证 **PASS**（313 个可信模块、391 个项目导入、451 个源码、57 个回归；全部指纹不变；2026-10-01 17:20:18–17:51:15 Asia/Shanghai）。严格静态审计为 111 个已审查候选，新增三处均为局部已证对数／幂界。实际素数质量下界和忠实模数 1 主特征边界仍待闭合；完整 Lemma 5.6 保持进行中，总账本 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 108 状态](audit/STEP108_STATUS.md)。
+
+独立 [下一步质量归一化草稿](audit/step109_lemma56_mass_normalization_draft.txt) 已通过 8 项标准公理接口和 4 项展开回归：实际素数质量与基数的关系、从实际 log p 总质量推出 P²L^-77 下界的归约，以及 L^77 指数损失吸收均已证明。若另行证明实际质量 ≥cP²/L^77，已得绝对界即可归一化为原文 exp(−U) 衰减；该质量下界在草稿中仍是明确的待证假设，主特征边界也未证明。草稿未接入本轮冻结项目，不计入 313 个模块覆盖或完整引理账本。
+
+## Step 109：实际质量、ζ 解析输入与主特征 Perron 极点
+
+Step 109 推进 [Lemma 5.6 的实际质量与 ζ 解析输入](ZhangLS/Spec/Lemma56PrimeMassNormalization.lean)：实际素数质量与 log p 总质量的有限关系、L^77 的指数损失吸收及条件归一化已接入可信层；质量下界仍是明确的待证假设。原始 (A) 下，实际去极点 ζ 和实际 riemannZeta 在 Re s>1−2/log D、闭 |Im s|≤2D 中无零点。实际去极点对数导数在 1−1/L≤Re s≤2、闭 |Im s|≤D 上 ≤18L²+21600L；实际 ζ′/ζ 在左边界 ≤18L²+21601L。已精确保留主特征 Perron 核在 1 处的值 x exp(1/(4B²))，并证明该极点项的实际有限矩形留数与实际主特征 Mellin 恒等式。全部常数／阈值先于所需参数，均使用真实有限和、真实 ζ 与实际导数。11 个新增可信模块、27 项标准公理接口、16 项展开回归通过。Step 109 全量内核验证 **PASS**（324 个可信模块、402 个项目导入、463 个源码、58 个回归；全部指纹不变；2026-10-01 18:13:33–18:42:13 Asia/Shanghai）。严格静态审计为 113 个已审查候选，新增两处均为局部已证对数／极点距离返回。实际素数质量下界与忠实模数 1 主特征目标仍未证明，完整 Lemma 5.6 保持进行中，账本 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 109 状态](audit/STEP109_STATUS.md)。
+
+独立 [下一步主特征主项误差草稿](audit/step110_lemma56_principal_main_error_draft.txt) 已通过 14 项标准公理接口和 4 项展开回归：实际 ζ 算术轮廓已与精确极点主项接合，原始 (A) 下的实际主特征平滑 Mangoldt 和减 x exp(1/(4B²))，由明确的左竖边、水平方向及右尾误差控制；统一阈值先于全部 D、χ、B、x、H，覆盖 1≤H≤D。该草稿独立于 Step 109 全量项目验证，未计入 324 个可信模块或完整引理账本。误差在论文尺度上的吸收、实际去平滑后的素数质量下界和忠实主特征结论仍待闭合。
+
+## Step 110：实际 ζ 算术轮廓与主特征平滑主项
+
+Step 110 推进 [Lemma 5.6 的实际主特征主项误差](ZhangLS/Spec/Lemma56PrincipalPerronMainError.lean)：原始 (A) 下，实际 ζ 算术有限轮廓与精确极点主项 2πi x exp(1/(4B²)) 已接合；实际主特征平滑 Mangoldt 和减 x exp(1/(4B²))，由明确的左竖边、两个水平边及右尾误差控制。统一阈值先于全部 D、χ、B、x、H，覆盖 B>0、x≥1、1≤H≤D。6 个新增可信模块、14 项标准公理接口、4 项展开回归通过。Step 110 全量内核验证 **PASS**（330 个可信模块、408 个项目导入、470 个源码、59 个回归；全部指纹不变；2026-10-01 22:42:59–23:12:25 Asia/Shanghai）。严格静态审计仍为 113 个已审查候选，输出完全不变。论文尺度误差吸收、实际去平滑后的素数质量下界与忠实模数 1 主特征目标仍未证明，完整 Lemma 5.6 保持进行中，账本 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 110 状态](audit/STEP110_STATUS.md)。
+
+## Step 111：主特征前缀主项误差与实际去平滑
+
+Step 111 推进 [Lemma 5.6 的主特征质量尺度误差](ZhangLS/Spec/Lemma56PrincipalMassSharpPrime.lean)：在 B=exp(L/3)、H=D/2 上，实际平滑 Mangoldt 和的主项误差已吸收为 Cmass P L^-197。实际去平滑误差对包括模数 1 在内的所有复特征 ≤Cuns P L^-191，实际素数幂剔除误差 ≤1728P L^-191。原始 (A) 下的实际严格素数对数前缀和减精确主项 x exp(1/(4B²))，统一 ≤Cprime P L^-191，覆盖整个 1≤x≤2P。常数显式，统一阈值先于全部 D、χ、x。6 个新增可信模块、29 项标准公理接口、6 项展开回归通过。Step 111 全量内核验证 **PASS**（336 个可信模块、414 个导入、477 个源码、60 个回归；全部指纹不变；2026-10-01 23:17:56–23:48:28 Asia/Shanghai）。严格静态审计仍为 113 个已审查候选，输出完全不变。完整 Lemma 5.6 保持进行中，账本 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 111 状态](audit/STEP111_STATUS.md)。
+
+独立 [下一步实际素数质量草稿](audit/step112_lemma56_actual_prime_mass_draft.txt) 已通过 14 项标准公理接口和 6 项展开回归：原始 (A) 下，实际严格窗口的 log p 质量 ≥P/(2L^68)，实际 p 质量 ≥P²/(4L^77)，质量为正且窗口非空。实际下截断 floor(P)+1 精确保留严格下端点；原文 q>1 本原特征的归一化指数界已闭合，未添加质量下界假设。统一阈值先于全部参数，闭振荡端点保留。该草稿独立于本轮全量项目验证，未计入 336 个可信模块。忠实模数 1 主特征目标仍未证明，完整 Lemma 5.6 不计作完成。
+
+## Step 112：实际素数质量与原文非主特征归一化
+
+Step 112 推进 [Lemma 5.6 的实际素数质量与归一化](ZhangLS/Spec/Lemma56ActualPrimeMassNormalization.lean)：原始 (A) 下，实际严格窗口的 log p 质量 ≥P/(2L^68)，实际 p 质量 ≥P²/(4L^77)，并证明质量为正、窗口非空。用实际下截断 floor(P)+1 精确保留原文两个严格素数端点；实际主项与两项前缀误差给出上述下界。原文 q>1 本原特征的归一化指数估计已闭合，不添加质量下界假设，统一常数／阈值先于全部参数，保留闭振荡端点。四个新增可信模块、14 项标准公理接口、6 项展开回归通过。Step 112 全量内核验证 **PASS**（340 个可信模块、418 个导入、482 个源码、61 个回归；全部指纹不变；2026-10-01 23:52:35–2026-10-02 00:27:16 Asia/Shanghai）。严格静态审计为 114 个已审查候选，新增一处为局部已证实数下界的返回。完整 Lemma 5.6 的忠实模数 1 主特征目标仍待证明，账本 **17/51 完成、1 项进行中、33 项未开始**。详见 [Step 112 状态](audit/STEP112_STATUS.md)。
+
+
+## Step 113：闭区域多项式及有限零点乘积辅助证明
+
+Step 113 全量内核验证 **PASS**（345 个可信模块、423 个导入、488 个源码、62 个回归；全部指纹不变；2026-10-02 00:32:35–2026-10-02 01:03:17 Asia/Shanghai）。 五模块、27 接口、8 展开回归通过。完整 Lemma 5.9 商与 Lemma 5.6 模数 1 情形仍未证明；账本 17/51 完成、2 项进行中、32 项未开始。详见 [Step 113 状态](audit/STEP113_STATUS.md)。
+
+
+## Step 114：实际局部零点与重数的统一预算
+
+Step 114 全量内核验证 **PASS**（347 个可信模块、425 个导入、491 个源码、63 个回归；全部指纹不变；2026-10-02 01:11:10–2026-10-02 01:43:28 Asia/Shanghai）。 两模块、12 接口、5 展开回归通过。独立扩大近似函数方程草稿通过50接口与3回归，尚未接入本轮项目覆盖。完整 Lemma 5.9 商与 Lemma 5.6 模数 1 情形仍未证明；账本 17/51 完成、2 项进行中、32 项未开始。详见 [Step 114 状态](audit/STEP114_STATUS.md)。
+
+
+独立完整 Lemma 5.9 草稿已通过：`lemma59_proved : Lemma59Target` 保留原始 Ψ1、实际 L 函数、原文闭区域、所有实际零点的分离条件，以及先于所有 D／χ／ψ／s 的常数与阈值。141 项标准公理报告与3项原文／闭边界展开回归通过，尚未接入冻结的 Step115 全量覆盖；项目完成账本仍为17/2/32，接入并通过新全量检查后再更新。见 [完整草稿](audit/step121_lemma59_full_actual_quotient_draft.txt)。
+
+
+Step 115 全量 PASS：2026-10-02 01:47:11–2026-10-02 02:18:15 Asia/Shanghai；五模块、33 接口、5 回归，352 可信模块、430 导入、497 源码、64 回归，全部指纹不变。原始 Ψ1 下的实际局部临界线／重数 1／纵坐标间距草稿另通过123接口和2展开回归，尚未接入本轮覆盖。完整原文5.9商与5.6模数1仍未证明，账本17/2/32。
+
+
+Step116 完整Lemma5.9全量PASS：2026-10-02 02:24:29–2026-10-02 02:58:00 Asia/Shanghai。原始账本18完成、1进行中、32未开始；全部51个编号结果仍在活动目标中，5.6模数1主特征目标仍待证明。
+
+
+Step117 Lemma6.1实际Gaussian输入与截断界全量PASS：2026-10-02 03:01:07–2026-10-02 03:32:21 Asia/Shanghai。完整6.1仍未证明；账本18完成、2进行中、31未开始，全部51个编号结果仍在活动目标中。
+
+
+Step118 Lemma6.1实际Z误差积分界全量PASS：2026-10-02 03:35:16–2026-10-02 04:06:10 Asia/Shanghai。完整6.1仍未证明；账本18完成、2进行中、31未开始，全部51个编号结果仍在活动目标中。
+
+
+Step119 Lemma6.1实际单L留数及右截断全量PASS：2026-10-02 04:09:35–2026-10-02 04:40:07 Asia/Shanghai。完整6.1仍未证明；账本18完成、2进行中、31未开始，全部51个编号结果仍在活动目标中。
+
+
+Step120 Lemma6.1实际对偶尾和截断全量PASS：2026-10-02 04:43:22–2026-10-02 05:14:33 Asia/Shanghai。完整6.1仍未证明；账本18完成、2进行中、31未开始，全部51个编号结果仍在活动目标中。
+
+
+Step121 Lemma6.1原左侧实际Z误差全量PASS：2026-10-02 05:18:02–2026-10-02 05:49:34 Asia/Shanghai。完整6.1仍未证明；账本18完成、2进行中、31未开始，全部51个编号结果仍在活动目标中。
+
+
+Step122完整Lemma6.1全量PASS：2026-10-02 05:54:47–2026-10-02 06:27:22 Asia/Shanghai。账本19完成、1进行中、31未开始；全部51个编号结果仍在活动目标中，忠实5.6 q=1仍待证明。
+
+
+Step123完整Lemma3.3全量PASS：2026-10-02 06:31:56–2026-10-02 07:04:54 Asia/Shanghai。账本20完成、1进行中、30未开始；全部51个编号结果仍在活动目标中，忠实5.6 q=1仍待证明。
+
+
+Step130临时进展：Lemma3.4的实际系数与均值基础已归档（31标准公理接口、4实际对象例子）。证明了实际二十重卷积到标准τ40的上界、τ40²≤τ1600、带权调和数界、原始Ψ上X1/X2在1≤x≤D80的统一均方界及可积性。完整B均方界与异常字符计数仍未证明；未修改项目Lean源文件，账本保持20/1/30。详见[audit/STEP130_STATUS.md](audit/STEP130_STATUS.md)。
+
+Step124完整Lemma3.4全量PASS：2026-10-02 07:33:50–2026-10-02 08:09:46 Asia/Shanghai。账本21完成、1进行中、29未开始；全部51个编号结果仍在活动目标中，忠实5.6 q=1仍待证明。
+
+Step125完整Lemma3.1全量PASS：2026-10-02 08:46:07–2026-10-02 09:26:35 Asia/Shanghai。账本22完成、1进行中、28未开始；全部51个编号结果仍在活动目标中，忠实5.6 q=1仍待证明。
+
+Step126完整Lemma3.5全量PASS：2026-10-02 09:29:14–2026-10-02 10:11:22 Asia/Shanghai。账本23完成、1进行中、27未开始；全部51个编号结果仍在活动目标中，忠实5.6 q=1仍待证明。
+
+Step127部分Lemma3.2圆积分界全量PASS：2026-10-02 10:19:44–2026-10-02 11:06:01 Asia/Shanghai。完整3.2仍UNPROVED；账本23/2/26，全部51项活动目标继续。
+
+Step128实际Lemma3.2级数／Mellin／尾和比较／留数全量PASS：2026-10-02 11:11:06–2026-10-02 11:53:44 Asia/Shanghai。完整3.2仍UNPROVED；账本23/2/26，全部51项活动目标继续。
+
+Step129实际Lemma3.2无限移线／原始尾和归约／修正因子统一界全量PASS：2026-10-02 12:09:14–2026-10-02 12:54:39 Asia/Shanghai。完整3.2仍UNPROVED；账本23/2/26，全部51项活动目标继续。
+
+Step130实际Lemma3.2显式条件归约／有限字符四阶矩／实际曲线点数关系全量PASS：2026-10-02 13:22:29–2026-10-02 14:12:17 Asia/Shanghai。Burgess算术输入与完整3.2仍UNPROVED；账本23/2/26，全部51项活动目标继续。

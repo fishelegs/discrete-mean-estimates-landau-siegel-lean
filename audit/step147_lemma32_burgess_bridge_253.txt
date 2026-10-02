@@ -1,0 +1,42 @@
+import ZhangMathStep251Lemma32RamificationPowerSavingDraft
+import ZhangLS.Spec.Lemma55NearOneBound
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open MeasureTheory Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_square_quarter_power (B : ℝ) (hB : 0 ≤ B) :
+    (B^2)^(1/4 : ℝ) = B^(1/2 : ℝ) := by
+  rw [← Real.rpow_natCast_mul hB 2]
+  congr 1
+  norm_num
+
+lemma lemma32_square_negative_quarter_power (B : ℝ) (hB : 0 < B) :
+    B*(B^2)^(-1/4 : ℝ) = B^(1/2 : ℝ) := by
+  rw [← Real.rpow_natCast_mul hB.le 2]
+  nth_rw 1 [← Real.rpow_one B]
+  rw [← Real.rpow_add hB]
+  congr 1
+  norm_num
+
+lemma lemma32_small_quarter_power_integral (B : ℝ) (hB : 1 ≤ B) :
+    (∫ t : ℝ in Ioc 1 (B^2), t^(-3/4 : ℝ)) ≤ 4*B^(1/2 : ℝ) := by
+  have hB0 : 0 ≤ B := by linarith
+  have hB2 : 1 ≤ B^2 := by nlinarith
+  rw [← intervalIntegral.integral_of_le hB2,
+    integral_rpow (Or.inl (by norm_num : (-1 : ℝ) < -3/4))]
+  norm_num
+  rw [lemma32_square_quarter_power B hB0]
+  linarith
+
+lemma lemma32_large_quarter_power_integral (B : ℝ) (hB : 0 < B) :
+    (∫ t : ℝ in Ioi (B^2), B*t^(-5/4 : ℝ)) = 4*B^(1/2 : ℝ) := by
+  rw [integral_const_mul,integral_Ioi_rpow_of_lt
+    (by norm_num : (-5/4 : ℝ) < -1) (sq_pos_of_pos hB)]
+  norm_num
+  calc
+    _ = 4*(B*(B^2)^(-1/4 : ℝ)) := by ring
+    _ = _ := by rw [lemma32_square_negative_quarter_power B hB]
+
+end ZhangLS.Spec

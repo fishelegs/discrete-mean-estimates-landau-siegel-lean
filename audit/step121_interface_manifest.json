@@ -1,0 +1,34 @@
+{
+  "modules": [
+    "ZhangLS/Spec/Lemma61ErrorRegularPart.lean",
+    "ZhangLS/Spec/Lemma61ErrorLineShift.lean",
+    "ZhangLS/Spec/Lemma61ErrorHorizontalBounds.lean",
+    "ZhangLS/Spec/Lemma61OriginalLeftError.lean"
+  ],
+  "proved_interfaces": [
+    "lemma61_positive_real_cpow_model",
+    "lemma61_error_difference_at_zero",
+    "lemma61_error_regular_eq_actual_of_ne_zero",
+    "lemma61_error_difference_rectangle_differentiable",
+    "lemma61_error_regular_rectangle_differentiable",
+    "lemma61_error_vertical_ae_eq",
+    "lemma61_error_vertical_interval_integrable",
+    "lemma61_error_vertical_integral_eq",
+    "lemma61_actual_error_path_interval_integrable",
+    "lemma61_error_regular_path_rectangle_cauchy",
+    "lemma61_actual_error_line_shift",
+    "lemma61_short_polynomial_norm_bound",
+    "lemma61_model_Z_P4_factor",
+    "lemma61_actual_Z_original_norm_bound",
+    "lemma61_actual_horizontal_Z_error_factor_bound",
+    "lemma61_actual_horizontal_Z_error_point_bound",
+    "lemma61_actual_horizontal_Z_error_integral_bound",
+    "lemma61_E1_exponential_floor",
+    "lemma61_actual_original_left_Z_error_bound"
+  ],
+  "interface_count": 19,
+  "definition_count": 2,
+  "expanded_examples": 3,
+  "full_original_target_status": "UNPROVED",
+  "remaining": "finite reciprocal polynomial Gaussian relation, full horizontal L edges, final constants and threshold"
+}

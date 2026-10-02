@@ -1,0 +1,67 @@
+import ZhangMathStep361Lemma32CoprimeCountErrorDraft
+import Mathlib.Data.Nat.Cast.Field
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+open scoped Classical
+
+lemma lemma32_actual_unit_count_interval (D A : ℕ) :
+    ((lemma32BurgessUnitMultipliers D A).card : ℝ) =
+      ∑ k ∈ Ioc 0 A, if k.Coprime D then (1 : ℝ) else 0 := by
+  calc
+    _ = ∑ a : Fin A, if (a.val+1).Coprime D then (1 : ℝ) else 0 := by
+      unfold lemma32BurgessUnitMultipliers
+      rw [← Finset.sum_filter]
+      simp
+    _ = _ := lemma32_fin_positive_sum A (fun k => if k.Coprime D then (1 : ℝ) else 0)
+
+lemma lemma32_actual_unit_count_totient {D : ℕ} (hD : 0 < D) :
+    ((lemma32BurgessUnitMultipliers D D).card : ℝ) = (D.totient : ℝ) := by
+  rw [lemma32_actual_unit_count_interval]
+  by_cases h1 : D=1
+  · subst D
+    norm_num
+  have he : (Ioc 0 D).filter (fun k => k.Coprime D) =
+      (Finset.range D).filter (fun k => D.Coprime k) := by
+    ext k
+    simp only [Finset.mem_filter, Finset.mem_Ioc, Finset.mem_range]
+    constructor
+    · rintro ⟨⟨hk0,hkD⟩,hc⟩
+      have hn : k≠D := by
+        intro he
+        subst k
+        have : D=1 := by simpa only [Nat.coprime_iff_gcd_eq_one, Nat.gcd_self] using hc
+        exact h1 this
+      exact ⟨lt_of_le_of_ne hkD hn, hc.symm⟩
+    · rintro ⟨hkD,hc⟩
+      have hn : k≠0 := by
+        intro he
+        subst k
+        have : D=1 := by simpa only [Nat.coprime_iff_gcd_eq_one, Nat.gcd_zero_right] using hc
+        exact h1 this
+      exact ⟨⟨Nat.pos_of_ne_zero hn, hkD.le⟩, hc.symm⟩
+  rw [← Finset.sum_filter, he]
+  simp only [Finset.sum_const, nsmul_eq_mul, mul_one, Nat.totient_eq_card_coprime]
+
+lemma lemma32_mobius_reciprocal_density {D : ℕ} (hD : 0 < D) :
+    (∑ d ∈ D.divisors, (ArithmeticFunction.moebius d : ℝ)/(d : ℝ)) =
+      (D.totient : ℝ)/(D : ℝ) := by
+  have hu := lemma32_actual_burgess_unit_multiplier_count hD D
+  have he : (∑ d ∈ D.divisors, (ArithmeticFunction.moebius d : ℝ)*(D/d : ℕ)) =
+      (D : ℝ)*(∑ d ∈ D.divisors, (ArithmeticFunction.moebius d : ℝ)/(d : ℝ)) := by
+    rw [Finset.mul_sum]
+    apply Finset.sum_congr rfl
+    intro d hd
+    rw [Nat.cast_div_charZero (Nat.mem_divisors.mp hd).1]
+    ring
+  rw [lemma32_actual_unit_count_totient hD, he] at hu
+  apply (eq_div_iff (Nat.cast_ne_zero.mpr hD.ne')).mpr
+  nlinarith
+
+lemma lemma32_actual_burgess_unit_density_error {D : ℕ} (hD : 0 < D) (A : ℕ) :
+    |((lemma32BurgessUnitMultipliers D A).card : ℝ)-
+      (A : ℝ)*(D.totient : ℝ)/(D : ℝ)| ≤ (D.divisors.card : ℝ) := by
+  simpa only [lemma32_mobius_reciprocal_density hD, mul_div_assoc] using
+    lemma32_actual_burgess_unit_count_error hD A
+
+end ZhangLS.Spec

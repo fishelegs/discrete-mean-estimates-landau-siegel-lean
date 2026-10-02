@@ -1,0 +1,193 @@
+{
+  "status": "PARTIAL_KERNEL_CHECKED_TEMPORARY",
+  "full_original_lemma32_status": "UNPROVED",
+  "numbered_completion_recorded": false,
+  "interface_count": 53,
+  "definition_count": 8,
+  "regression_examples": 6,
+  "expanded_actual_euler_object_regressions": 6,
+  "modules": [
+    {
+      "temporary_module": "ZhangMathStep183Lemma32PrimeCoefficientsDraft",
+      "archive": "audit/step137_lemma32_product_183.txt",
+      "sha256": "b46bf86958806ab54512c5bae837a3e13bab71bc8a4affeb0546b4f2b94bf67b",
+      "interfaces": [
+        "lemma32_actual_coefficient_nonneg",
+        "lemma32_tau_two_prime_power",
+        "lemma32_actual_coefficient_prime_power_of_one",
+        "lemma32_actual_coefficient_prime_power_of_zero",
+        "lemma32_actual_coefficient_prime_power_of_neg_one",
+        "lemma32_actual_coefficient_one"
+      ],
+      "definitions": [
+        "lemma32ActualCoefficient"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep184Lemma32GeometricDraft",
+      "archive": "audit/step137_lemma32_product_184.txt",
+      "sha256": "68421732d4d47e523c99a8ef369fc9e90bb62cdfd91dea7cfa5393bcf32c3c9e",
+      "interfaces": [
+        "lemma32_rising_choose_two",
+        "lemma32_rising_choose_three",
+        "lemma32_rising_choose_four",
+        "lemma32_fourth_power_choose",
+        "lemma32_fourth_geometric_hasSum"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep185Lemma32LocalSeriesDraft",
+      "archive": "audit/step137_lemma32_product_185.txt",
+      "sha256": "1a6a93835ab51c1f7240268d48c24135924b73d109ac40f6218cf6953277e430",
+      "interfaces": [
+        "lemma32_actual_coefficient_mul",
+        "lemma32_square_geometric_hasSum",
+        "lemma32_even_square_geometric_hasSum",
+        "lemma32_actual_local_series_of_one",
+        "lemma32_actual_local_series_of_zero",
+        "lemma32_actual_even_local_series_of_neg_one"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep186Lemma32EulerFactorsDraft",
+      "archive": "audit/step137_lemma32_product_186.txt",
+      "sha256": "17ff637c6745c0c8e9ba1612a7dd8304e64419821525d370d1d5427bfcced234",
+      "interfaces": [
+        "lemma32_actual_local_series_of_neg_one",
+        "lemma32_local_correction_of_one",
+        "lemma32_local_correction_of_zero",
+        "lemma32_local_correction_of_neg_one"
+      ],
+      "definitions": [
+        "lemma32LocalCorrection"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep187Lemma32LocalBoundsDraft",
+      "archive": "audit/step137_lemma32_product_187.txt",
+      "sha256": "08ed763723c8a0090c983126e5a11ad8fac16b693b720e5f9c5a5e527c4c0b58",
+      "interfaces": [
+        "lemma32_bounded_polynomial_norm",
+        "lemma32_plus_factor_remainder",
+        "lemma32_minus_factor_remainder",
+        "lemma32_plus_factor_norm_sub_one",
+        "lemma32_minus_factor_norm_sub_one",
+        "lemma32_actual_local_correction_norm_sub_one"
+      ],
+      "definitions": [
+        "lemma32PlusQCoefficient",
+        "lemma32MinusQCoefficient"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep189Lemma32ModulusFactorsDraft",
+      "archive": "audit/step137_lemma32_product_189.txt",
+      "sha256": "4a887b2a2835a4acb7bd56cb580b8844dfbc97d9de1ed938f06cd7d76a6898a8",
+      "interfaces": [
+        "lemma32_character_prime_cases_of_not_dvd",
+        "lemma32_local_correction_norm_of_not_dvd",
+        "lemma32_zero_factor_norm",
+        "lemma32_local_correction_norm_of_dvd"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep190Lemma32RegularFactorsDraft",
+      "archive": "audit/step137_lemma32_product_190.txt",
+      "sha256": "a5b028aa45b25226053a9b89094fbba483dd340d03c8749c7b79b76ef534ff18",
+      "interfaces": [
+        "lemma32_zero_correction_factorization",
+        "lemma32_actual_correction_regular_factorization",
+        "lemma32_regular_local_norm_sub_one",
+        "lemma32_regular_local_differentiable",
+        "lemma32_regular_local_at_zero"
+      ],
+      "definitions": [
+        "lemma32RegularLocalPolynomial"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep191Lemma32ProductConvergenceDraft",
+      "archive": "audit/step137_lemma32_product_191.txt",
+      "sha256": "384eb0c751f4c0d9197ccb7e7ab0f979b8b490589faf88f9097540d2aeae5346",
+      "interfaces": [
+        "lemma32_prime_monomial_norm",
+        "lemma32_prime_monomial_norm_square",
+        "lemma32_prime_monomial_norm_lt_one",
+        "lemma32_regular_prime_errors_summable",
+        "lemma32_regular_euler_product_multipliable"
+      ],
+      "definitions": [
+        "lemma32PrimeMonomial",
+        "lemma32RegularEulerProduct"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep192Lemma32ProductBoundsDraft",
+      "archive": "audit/step137_lemma32_product_192.txt",
+      "sha256": "f9c1a56f0f3f461d4dd4eb2a5b6e8389d6b5b104af866670e1cb91b34c4a0e90",
+      "interfaces": [
+        "lemma32_regular_prime_error_uniform",
+        "lemma32_regular_finite_product_bound",
+        "lemma32_regular_euler_product_bound",
+        "lemma32_regular_product_bound_pos"
+      ],
+      "definitions": [
+        "lemma32RegularProductBound"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep193Lemma32ProductDifferenceDraft",
+      "archive": "audit/step137_lemma32_product_193.txt",
+      "sha256": "c41af632e48e875c443467e0ad69d0ea23b8e9c42af888d4a306dedca1390821",
+      "interfaces": [
+        "lemma32_regular_finite_product_difference"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep194Lemma32UniformProductDraft",
+      "archive": "audit/step137_lemma32_product_194.txt",
+      "sha256": "de11ae8c4a0b93af3fffacea370d5d3d4adc2dc608ef2978eb88fa2f11f61e73",
+      "interfaces": [
+        "lemma32_regular_products_uniform_cauchy",
+        "lemma32_regular_products_uniform_limit"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep195Lemma32ProductAnalyticDraft",
+      "archive": "audit/step137_lemma32_product_195.txt",
+      "sha256": "8b09a6c336f761bde068ee64a8d0a10b0ad93a1d75f37e3092e10f9d4c97ce93",
+      "interfaces": [
+        "lemma32_prime_monomial_differentiable",
+        "lemma32_regular_finite_product_differentiable",
+        "lemma32_regular_products_locally_uniform",
+        "lemma32_regular_euler_product_differentiableOn",
+        "lemma32_regular_euler_product_analyticOnNhd"
+      ],
+      "definitions": []
+    }
+  ],
+  "created_at_utc": "2026-10-02T01:49:35.523696+00:00",
+  "proved": [
+    "all Step136 actual weighted coefficient and local series foundations",
+    "prime not dividing D has character value plus or minus one",
+    "modulus prime factor correction equals (1-z)^4*(1-z^2)",
+    "regular local polynomial entire and quadratic remainder bound uniform over all primes",
+    "regular prime product converges for Re(s)>1/2",
+    "regular product bounded uniformly in D,chi and s on Re(s)>=sigma0>1/2",
+    "finite product difference controlled by summable tails",
+    "uniform convergence on every closed half-plane sigma0>1/2",
+    "regular product analytic on Re(s)>1/2"
+  ],
+  "remaining": [
+    "full finite ramification product and residue-circle uniform bounds",
+    "actual weighted Dirichlet series equality with zeta^8*L^8 times Euler correction",
+    "contour and residue estimates",
+    "original weighted tail estimate and full target closure"
+  ],
+  "whole_project_freeze": "Step126 running;602 project/audit Lean sources unchanged"
+}

@@ -1,0 +1,57 @@
+import ZhangLS.Spec.Lemma55MangoldtPositivity
+
+namespace ZhangLS.Spec
+open Complex Finset
+
+lemma lemma56_principal_one_primitive :
+    DirichletCharacter.IsPrimitive (1 : DirichletCharacter ℂ 1) :=
+  DirichletCharacter.isPrimitive_one_level_one
+
+lemma lemma56_principal_one_apply_nat (n : ℕ) :
+    (1 : DirichletCharacter ℂ 1) (n : ZMod 1) = 1 := by
+  rw [show (n : ZMod 1) = 1 from Subsingleton.elim _ _]
+  exact map_one _
+
+lemma lemma56_principal_zero_height_prime_sum (S : Finset ℕ) :
+    (∑ p ∈ S, (1 : DirichletCharacter ℂ 1) (p : ZMod 1) *
+      (p : ℂ) ^ (1 + Complex.I * (0 : ℂ))) = ((∑ p ∈ S, p : ℕ) : ℂ) := by
+  simp [lemma56_principal_one_apply_nat]
+
+lemma lemma56_principal_zero_height_prime_sum_norm (S : Finset ℕ) :
+    ‖∑ p ∈ S, (1 : DirichletCharacter ℂ 1) (p : ZMod 1) *
+      (p : ℂ) ^ (1 + Complex.I * (0 : ℂ))‖ = ∑ p ∈ S, (p : ℝ) := by
+  rw [lemma56_principal_zero_height_prime_sum]
+  rw [show ((∑ p ∈ S, p : ℕ) : ℂ) = (((∑ p ∈ S, p : ℕ) : ℝ) : ℂ) by simp]
+  rw [Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg (Nat.cast_nonneg _)]
+  simp only [Nat.cast_sum]
+
+lemma lemma56_principal_decay_requires_absorption (S : Finset ℕ) {C E : ℝ}
+    (hmass : 0 < ∑ p ∈ S, (p : ℝ))
+    (hbound : ‖∑ p ∈ S, (1 : DirichletCharacter ℂ 1) (p : ZMod 1) *
+      (p : ℂ) ^ (1 + Complex.I * (0 : ℂ))‖ ≤ C * (∑ p ∈ S, (p : ℝ)) * E) :
+    1 ≤ C * E := by
+  rw [lemma56_principal_zero_height_prime_sum_norm] at hbound
+  have hdiv : (∑ p ∈ S, (p : ℝ)) / (∑ p ∈ S, (p : ℝ)) ≤ C * E :=
+    (div_le_iff₀ hmass).mpr (by nlinarith only [hbound])
+  simpa only [div_self hmass.ne'] using hdiv
+
+lemma lemma56_principal_one_differs_from_real_character {D : ℕ}
+    (χ : RealPrimitiveCharacter D) (hD : 1 < D) :
+    (fun n : ℕ => χ.chi (n : ZMod D)) ≠
+      (fun n : ℕ => (1 : DirichletCharacter ℂ 1) (n : ZMod 1)) := by
+  intro h
+  have he := congrFun h D
+  have hnon : ¬IsUnit (D : ZMod D) := by
+    simp only [ZMod.isUnit_iff_coprime, Nat.coprime_self]
+    exact ne_of_gt hD
+  rw [MulChar.map_nonunit χ.chi hnon, lemma56_principal_one_apply_nat] at he
+  norm_num at he
+
+end ZhangLS.Spec
+
+#print axioms ZhangLS.Spec.lemma56_principal_one_primitive
+#print axioms ZhangLS.Spec.lemma56_principal_one_apply_nat
+#print axioms ZhangLS.Spec.lemma56_principal_zero_height_prime_sum
+#print axioms ZhangLS.Spec.lemma56_principal_zero_height_prime_sum_norm
+#print axioms ZhangLS.Spec.lemma56_principal_decay_requires_absorption
+#print axioms ZhangLS.Spec.lemma56_principal_one_differs_from_real_character

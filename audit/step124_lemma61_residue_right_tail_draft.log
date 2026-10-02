@@ -1,0 +1,75 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/private/tmp/ZhangMathStep119Lemma61ContourChecked.lean:72:8: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/private/tmp/ZhangMathStep119Lemma61ContourChecked.lean:73:8: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/private/tmp/ZhangMathStep119Lemma61ContourChecked.lean:87:8: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/private/tmp/ZhangMathStep119Lemma61ContourChecked.lean:88:8: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/private/tmp/ZhangMathStep119Lemma61ContourChecked.lean:102:8: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/private/tmp/ZhangMathStep119Lemma61ContourChecked.lean:103:8: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/private/tmp/ZhangMathStep119Lemma61ContourChecked.lean:117:8: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/private/tmp/ZhangMathStep119Lemma61ContourChecked.lean:118:8: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/private/tmp/ZhangMathStep119Lemma61ContourChecked.lean:267:22: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/private/tmp/ZhangMathStep119Lemma61ContourChecked.lean:310:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ZhangLS.Spec.lemma61_family_nonprincipal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_single_mellin_numerator_entire' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_single_mellin_rectangle_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_single_functional_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_interval_integral_double' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_rectangle_scale_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_simple_pole_wide_rectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_wide_rectangle_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_rectangle_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_single_series_norm_le_square_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_right_mellin_gaussian_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_right_gaussian_exponent_absorption' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_right_mellin_truncation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_mellin_normalization_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_finite_right_K_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

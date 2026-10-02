@@ -1,0 +1,47 @@
+import ZhangLS.Spec.Lemma32LocalL
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Set Metric
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_exists_gamma_local_bound :
+    ∃ C : ℝ, 0 < C ∧ ∀ w : ℂ, ‖w‖ ≤ 1/4 → ‖Complex.Gamma (1+w)‖ ≤ C := by
+  have hc : ContinuousOn (fun w : ℂ => Complex.Gamma (1+w)) (closedBall 0 (1/4)) := by
+    intro w hw
+    have hn : ‖w‖ ≤ 1/4 := by simpa using mem_closedBall_iff_norm.mp hw
+    have hp : 0 < (1+w).re := by
+      have hr := Complex.abs_re_le_norm w
+      have hh := (abs_le.mp (hr.trans hn)).1
+      simp only [Complex.add_re,Complex.one_re]
+      linarith
+    have hg : ContinuousAt Complex.Gamma (1+w) :=
+      Complex.continuousAt_Gamma (1+w) (by
+        intro m hm
+        have ht := congrArg Complex.re hm
+        simp only [Complex.neg_re,Complex.natCast_re] at ht
+        have hm0 : (0 : ℝ) ≤ m := Nat.cast_nonneg m
+        linarith)
+    exact (hg.comp (by fun_prop : ContinuousAt (fun w : ℂ => 1+w) w)).continuousWithinAt
+  obtain ⟨C,hC⟩ := (isCompact_closedBall (0 : ℂ) (1/4)).exists_bound_of_continuousOn hc
+  refine ⟨|C|+1,by positivity,fun w hw => ?_⟩
+  have hh := hC w (by simpa using hw)
+  exact hh.trans (by linarith [le_abs_self C])
+
+noncomputable def lemma32GammaLocalBound : ℝ :=
+  Classical.choose lemma32_exists_gamma_local_bound
+
+lemma lemma32_gamma_local_bound_pos : 0 < lemma32GammaLocalBound :=
+  (Classical.choose_spec lemma32_exists_gamma_local_bound).1
+
+lemma lemma32_gamma_local_bound (w : ℂ) (hw : ‖w‖ ≤ 1/4) :
+    ‖Complex.Gamma (1+w)‖ ≤ lemma32GammaLocalBound :=
+  (Classical.choose_spec lemma32_exists_gamma_local_bound).2 w hw
+
+lemma lemma32_regularized_gamma_local_bound (w : ℂ) (hw : ‖w‖ ≤ 1/4) (h0 : w ≠ 0) :
+    ‖w*Complex.Gamma w‖ ≤ lemma32GammaLocalBound := by
+  have h := lemma32_gamma_local_bound w hw
+  rw [add_comm 1 w,Complex.Gamma_add_one w h0] at h
+  exact h
+
+end ZhangLS.Spec

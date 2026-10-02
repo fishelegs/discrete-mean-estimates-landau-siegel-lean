@@ -1,0 +1,107 @@
+[
+  {
+    "module": "HasseWeil.Foundation.OmegaPullbackCoeff",
+    "declaration": "omegaPullbackCoeff_mulByInt",
+    "start": 44975,
+    "end": 46054,
+    "removed_sha256": "83b82968ef86e5b2c9588a2e2f7c268191d4b888cdd4971fd2e1bb9a085e3a7b"
+  },
+  {
+    "module": "HasseWeil.Foundation.OmegaPullbackCoeff",
+    "declaration": "wronskian_Φ_ΨSq",
+    "start": 25810,
+    "end": 26816,
+    "removed_sha256": "2729526e627a6cf559d769ea359171a95b76b424667a8bf28f9c563f39c9e7df"
+  },
+  {
+    "module": "HasseWeil.Foundation.OmegaPullbackCoeff",
+    "declaration": "wronskian_Φ_ΨSq_nat",
+    "start": 21443,
+    "end": 25810,
+    "removed_sha256": "3239b43a301c2101702793c5ac0494f49588203d6fe8d14513b4d74bf91ea63c"
+  },
+  {
+    "module": "HasseWeil.Foundation.OmegaPullbackCoeff",
+    "declaration": "divPoly_wronskian_identity",
+    "start": 34152,
+    "end": 34919,
+    "removed_sha256": "c8d616489fcfd9aad246bca3adac9acd6092796be8a27d1f91c8334b5d9f525f"
+  },
+  {
+    "module": "HasseWeil.Isogeny.FormalSeries",
+    "declaration": "omegaPullbackCoeff_eq_formalIsogenyLeading",
+    "start": 16238,
+    "end": 18807,
+    "removed_sha256": "ec2c63fe4a5d67e5f235d938b4d1dd062d981bdecce42050bee1f4788c2de27f"
+  },
+  {
+    "module": "HasseWeil.Isogeny.OmegaCoeffViaFormalGroup",
+    "declaration": "omegaPullbackCoeff_mulByInt_via_formalGroup",
+    "start": 90838,
+    "end": 91882,
+    "removed_sha256": "b57524af291c8cd052c6f94734d515817441f3838c05b970b3aff543d34041b7"
+  },
+  {
+    "module": "HasseWeil.Isogeny.OmegaCoeffViaFormalGroup",
+    "declaration": "omegaPullbackCoeff_mulByInt_p_eq_zero_via_formalGroup",
+    "start": 91882,
+    "end": 92669,
+    "removed_sha256": "11ee54d095c4d72f2837cbc951164d4800f5ecb4f906bab24dc330196bf7cdd9"
+  },
+  {
+    "module": "HasseWeil.Isogeny.OmegaCoeffViaFormalGroup",
+    "declaration": "omegaPullbackCoeff_localExpand_eq_coeff_one",
+    "start": 89199,
+    "end": 89654,
+    "removed_sha256": "23f844feb127c87e0762c8ab1fc0050e2059d014b68480831751a139766cebdc"
+  },
+  {
+    "module": "HasseWeil.Isogeny.OmegaCoeffViaFormalGroup",
+    "declaration": "omegaPullbackCoeff_mem_F",
+    "start": 34636,
+    "end": 35876,
+    "removed_sha256": "12c1acb0db293f530ddf14b9d4ca3e0b4d9ca380fc8014c7c4211e891ec6e07e"
+  },
+  {
+    "module": "HasseWeil.Isogeny.OmegaCoeffViaFormalGroup",
+    "declaration": "omegaPullbackCoeff_ordAtInfty_nonneg",
+    "start": 34127,
+    "end": 34636,
+    "removed_sha256": "277631554d0607494f6842018038614c85dc4659a8f31135a18f5057b532db2c"
+  },
+  {
+    "module": "HasseWeil.Isogeny.OmegaCoeffViaFormalGroup",
+    "declaration": "omegaPullbackCoeff_eq_formalIsogenyLeading_via_localization",
+    "start": 89654,
+    "end": 90838,
+    "removed_sha256": "5fa8e628a4f5053fb0cb3716bf4e7f8d10390afa0d3a9cec8f522c95c9024c9e"
+  },
+  {
+    "module": "HasseWeil.Isogeny.OmegaCoeffViaFormalGroup",
+    "declaration": "omegaPullbackCoeff_isIntegral_polynomialX",
+    "start": 33368,
+    "end": 34127,
+    "removed_sha256": "22083a6d1781898421dca7c397262607cb583bab20407d41db3afb2239c348ba"
+  },
+  {
+    "module": "HasseWeil.HasseBound.WeilPairing.PencilComapPointValuation",
+    "declaration": "pencilScalingComapDataCard_pDvdR",
+    "start": 106003,
+    "end": 109772,
+    "removed_sha256": "c738476d1001b140bf2b8407295a0a74ed6f08ffa988eee905869886091ee822"
+  },
+  {
+    "module": "HasseWeil.HasseBound.WeilPairing.PencilComapPointValuation",
+    "declaration": "pencilScalingComapDataCard_sep",
+    "start": 109772,
+    "end": 110811,
+    "removed_sha256": "ce600fde61092a4d8ff69451ee5e3709843e2ec32349e7a6dec6e210147f702c"
+  },
+  {
+    "module": "HasseWeil.HasseBound.WeilPairing.PencilComapPointValuation",
+    "declaration": "pencilScaling_holds",
+    "start": 111982,
+    "end": 113764,
+    "removed_sha256": "4065c69e4b7583fb3e4d2ad554eba803e408d449fdbb5f7d259b5fce42748fe3"
+  }
+]

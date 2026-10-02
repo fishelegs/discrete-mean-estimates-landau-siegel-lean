@@ -1,0 +1,60 @@
+import ZhangMathStep241Lemma32GlobalCorrectionGrowthDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Metric Set Filter
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_positive_strip_high_norm (s : ℂ) (hlo : 3/4 ≤ s.re) (hhi : s.re ≤ 2)
+    (ht : 1 ≤ |s.im|) : ‖s‖ ≤ 3*|s.im| := by
+  calc
+    _ ≤ |s.re|+|s.im| := Complex.norm_le_abs_re_add_abs_im s
+    _ ≤ 2+|s.im| := by rw [abs_of_nonneg (by linarith : 0 ≤ s.re)];linarith
+    _ ≤ _ := by linarith
+
+lemma lemma32_actual_zeta_strip_high_growth (s : ℂ) (hlo : 3/4 ≤ s.re) (hhi : s.re ≤ 2)
+    (ht : 1 ≤ |s.im|) : ‖riemannZeta s‖ ≤ 8*|s.im| := by
+  have hs : 0 < s.re := by linarith
+  have hs1 : s ≠ 1 := by intro h;rw [h] at ht;norm_num at ht
+  have hnm := lemma32_positive_strip_high_norm s hlo hhi ht
+  have hd : |s.im| ≤ ‖s-1‖ := by simpa using Complex.abs_im_le_norm (s-1)
+  have hd0 : 0 < ‖s-1‖ := by linarith
+  have hfirst : ‖s‖/‖s-1‖ ≤ 3 := by apply (div_le_iff₀ hd0).mpr;nlinarith
+  have hsecond : ‖s‖/s.re ≤ 4*|s.im| := by apply (div_le_iff₀ hs).mpr;nlinarith
+  rw [riemannZeta_eq_fractionalPart_formula_of_pos_re hs hs1]
+  calc
+    _ ≤ ‖s/(s-1)‖+‖s*mellin zetaFractionalPart (-s)‖ := norm_sub_le _ _
+    _ ≤ ‖s‖/‖s-1‖+‖s‖*(1/s.re) := by
+      rw [norm_div,norm_mul]
+      gcongr
+      exact norm_mellin_zetaFractionalPart_le hs
+    _ = ‖s‖/‖s-1‖+‖s‖/s.re := by ring
+    _ ≤ 3+4*|s.im| := add_le_add hfirst hsecond
+    _ ≤ _ := by linarith
+
+lemma lemma32_actual_L_strip_high_growth {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (s : ℂ) (hlo : 3/4 ≤ s.re) (hhi : s.re ≤ 2)
+    (ht : 1 ≤ |s.im|) : ‖dirichletLFunction χ s‖ ≤ 4*(D : ℝ)*|s.im| := by
+  have hs : 0 < s.re := by linarith
+  have hnm := lemma32_positive_strip_high_norm s hlo hhi ht
+  calc
+    _ ≤ ‖s‖*((D : ℝ)/s.re) := χ.norm_dirichletLFunction_le_of_pos_re hD hs
+    _ = (‖s‖*(D : ℝ))/s.re := by ring
+    _ ≤ _ := by
+      apply (div_le_iff₀ hs).mpr
+      calc
+        _ ≤ (3*|s.im|)*(D : ℝ) := mul_le_mul_of_nonneg_right hnm (Nat.cast_nonneg D)
+        _ = (4*(D : ℝ)*|s.im|)*(3/4) := by ring
+        _ ≤ _ := mul_le_mul_of_nonneg_left hlo (by positivity)
+
+lemma lemma32_actual_zeta_L_strip_high_growth {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (s : ℂ) (hlo : 3/4 ≤ s.re) (hhi : s.re ≤ 2)
+    (ht : 1 ≤ |s.im|) : ‖riemannZeta s*dirichletLFunction χ s‖ ≤ 32*(D : ℝ)*|s.im|^2 := by
+  rw [norm_mul]
+  calc
+    _ ≤ (8*|s.im|)*(4*(D : ℝ)*|s.im|) :=
+      mul_le_mul (lemma32_actual_zeta_strip_high_growth s hlo hhi ht)
+        (lemma32_actual_L_strip_high_growth χ hD s hlo hhi ht) (norm_nonneg _) (by positivity)
+    _ = _ := by ring
+
+end ZhangLS.Spec

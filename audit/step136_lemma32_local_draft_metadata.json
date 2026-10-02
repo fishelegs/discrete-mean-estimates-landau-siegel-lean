@@ -1,0 +1,100 @@
+{
+  "status": "PARTIAL_KERNEL_CHECKED_TEMPORARY",
+  "full_original_lemma32_status": "UNPROVED",
+  "numbered_completion_recorded": false,
+  "interface_count": 27,
+  "definition_count": 4,
+  "regression_examples": 4,
+  "expanded_original_object_regressions": 4,
+  "modules": [
+    {
+      "temporary_module": "ZhangMathStep183Lemma32PrimeCoefficientsDraft",
+      "archive": "audit/step136_lemma32_local_183.txt",
+      "sha256": "b46bf86958806ab54512c5bae837a3e13bab71bc8a4affeb0546b4f2b94bf67b",
+      "interfaces": [
+        "lemma32_actual_coefficient_nonneg",
+        "lemma32_tau_two_prime_power",
+        "lemma32_actual_coefficient_prime_power_of_one",
+        "lemma32_actual_coefficient_prime_power_of_zero",
+        "lemma32_actual_coefficient_prime_power_of_neg_one",
+        "lemma32_actual_coefficient_one"
+      ],
+      "definitions": [
+        "lemma32ActualCoefficient"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep184Lemma32GeometricDraft",
+      "archive": "audit/step136_lemma32_local_184.txt",
+      "sha256": "68421732d4d47e523c99a8ef369fc9e90bb62cdfd91dea7cfa5393bcf32c3c9e",
+      "interfaces": [
+        "lemma32_rising_choose_two",
+        "lemma32_rising_choose_three",
+        "lemma32_rising_choose_four",
+        "lemma32_fourth_power_choose",
+        "lemma32_fourth_geometric_hasSum"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep185Lemma32LocalSeriesDraft",
+      "archive": "audit/step136_lemma32_local_185.txt",
+      "sha256": "1a6a93835ab51c1f7240268d48c24135924b73d109ac40f6218cf6953277e430",
+      "interfaces": [
+        "lemma32_actual_coefficient_mul",
+        "lemma32_square_geometric_hasSum",
+        "lemma32_even_square_geometric_hasSum",
+        "lemma32_actual_local_series_of_one",
+        "lemma32_actual_local_series_of_zero",
+        "lemma32_actual_even_local_series_of_neg_one"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep186Lemma32EulerFactorsDraft",
+      "archive": "audit/step136_lemma32_local_186.txt",
+      "sha256": "17ff637c6745c0c8e9ba1612a7dd8304e64419821525d370d1d5427bfcced234",
+      "interfaces": [
+        "lemma32_actual_local_series_of_neg_one",
+        "lemma32_local_correction_of_one",
+        "lemma32_local_correction_of_zero",
+        "lemma32_local_correction_of_neg_one"
+      ],
+      "definitions": [
+        "lemma32LocalCorrection"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep187Lemma32LocalBoundsDraft",
+      "archive": "audit/step136_lemma32_local_187.txt",
+      "sha256": "08ed763723c8a0090c983126e5a11ad8fac16b693b720e5f9c5a5e527c4c0b58",
+      "interfaces": [
+        "lemma32_bounded_polynomial_norm",
+        "lemma32_plus_factor_remainder",
+        "lemma32_minus_factor_remainder",
+        "lemma32_plus_factor_norm_sub_one",
+        "lemma32_minus_factor_norm_sub_one",
+        "lemma32_actual_local_correction_norm_sub_one"
+      ],
+      "definitions": [
+        "lemma32PlusQCoefficient",
+        "lemma32MinusQCoefficient"
+      ]
+    }
+  ],
+  "created_at_utc": "2026-10-02T01:32:28.674154+00:00",
+  "proved": [
+    "actual weighted coefficient nonnegative,multiplicative,and one",
+    "prime-power values at chi(p)=0,1,-1",
+    "three actual local series with explicit rational forms",
+    "normalized local Euler correction factors",
+    "nonzero-character local quadratic remainder bound 7659*norm(z)^2"
+  ],
+  "remaining": [
+    "modulus-dividing prime factor bound",
+    "global product convergence/analyticity and equality with actual Dirichlet series",
+    "uniform L estimates and contour/residue bounds",
+    "original weighted tail estimate and full target closure"
+  ],
+  "whole_project_freeze": "Step126 running;602 project/audit Lean sources unchanged"
+}

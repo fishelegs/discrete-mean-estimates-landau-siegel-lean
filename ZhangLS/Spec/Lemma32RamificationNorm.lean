@@ -1,0 +1,40 @@
+import ZhangLS.Spec.Lemma32ProductAnalytic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex Filter Topology Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_one_sub_norm_le_one (z : ℂ) (hz : ‖z‖ ≤ 1) (hr : ‖z‖ ≤ 2*z.re) :
+    ‖1-z‖ ≤ 1 := by
+  have he : ‖1-z‖^2 = 1+‖z‖^2-2*z.re := by
+    rw [Complex.sq_norm,Complex.normSq_sub]
+    simp only [Complex.normSq_eq_norm_sq,norm_one,one_pow,one_mul,Complex.conj_re]
+  nlinarith [norm_nonneg z,norm_nonneg (1-z)]
+
+lemma lemma32_prime_monomial_re (p : ℕ) (s : ℂ) :
+    (lemma32PrimeMonomial p s).re =
+      Real.exp (-s.re*Real.log (p : ℝ))*Real.cos (s.im*Real.log (p : ℝ)) := by
+  unfold lemma32PrimeMonomial
+  rw [Complex.exp_re]
+  simp only [Complex.mul_re,Complex.mul_im,Complex.neg_re,Complex.neg_im,
+    Complex.ofReal_re,Complex.ofReal_im,mul_zero,sub_zero,zero_add]
+  simp only [neg_mul,Real.cos_neg]
+
+lemma lemma32_cos_lower_of_abs_le_one (x : ℝ) (hx : |x| ≤ 1) : 1/2 ≤ Real.cos x := by
+  have ha := abs_le.mp hx
+  have hp := mul_nonneg (by linarith : 0 ≤ 1+x) (by linarith : 0 ≤ 1-x)
+  nlinarith [Real.one_sub_sq_div_two_le_cos (x := x)]
+
+lemma lemma32_ramified_prime_factor_norm {p : ℕ} (hp : 1 < p) (s : ℂ) (hs : 0 < s.re)
+    (hphase : |s.im*Real.log (p : ℝ)| ≤ 1) :
+    ‖1-lemma32PrimeMonomial p s‖ ≤ 1 := by
+  apply lemma32_one_sub_norm_le_one
+  · exact (lemma32_prime_monomial_norm_lt_one hp s hs).le
+  · rw [lemma32_prime_monomial_norm,lemma32_prime_monomial_re]
+    have hc := lemma32_cos_lower_of_abs_le_one _ hphase
+    have he := Real.exp_pos (-s.re*Real.log (p : ℝ))
+    nlinarith [mul_nonneg he.le (sub_nonneg.mpr hc)]
+
+end ZhangLS.Spec

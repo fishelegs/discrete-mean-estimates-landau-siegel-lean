@@ -1,0 +1,57 @@
+import ZhangMathStep383Lemma32ActualBurgessParametersDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+
+lemma lemma32_burgess_chosen_log_bound {D N : ℕ} (hD : 1≤D)
+    (hN : lemma32BurgessSmallRangeConstant*lemma32BurgessPower D (25/64)<(N : ℝ))
+    (hupper : (N : ℝ)≤lemma32BurgessPower D (79/128)) :
+    1+Real.log (lemma32BurgessMultiplierLength D N : ℝ)≤512*lemma32BurgessPower D (1/512) := by
+  have hA := (lemma32_burgess_multiplier_length_bounds hD hN).1
+  have hApos : (0 : ℝ)<(lemma32BurgessMultiplierLength D N : ℝ) := Nat.cast_pos.mpr (by omega)
+  have hAD : (lemma32BurgessMultiplierLength D N : ℝ)≤(D : ℝ) := by
+    calc
+      _ ≤ (N : ℝ) := Nat.cast_le.mpr (lemma32_burgess_multiplier_length_le_interval hD)
+      _ ≤ lemma32BurgessPower D (79/128) := hupper
+      _ ≤ lemma32BurgessPower D 1 := lemma32_burgess_power_mono hD (by norm_num)
+      _ = _ := lemma32_burgess_power_one (Nat.lt_of_lt_of_le Nat.zero_lt_one hD)
+  exact (add_le_add le_rfl (Real.log_le_log hApos hAD)).trans (lemma32_burgess_log_power_bound D)
+
+lemma lemma32_burgess_chosen_log_nonneg {D N : ℕ} (hD : 1≤D)
+    (hN : lemma32BurgessSmallRangeConstant*lemma32BurgessPower D (25/64)<(N : ℝ)) :
+    0≤1+Real.log (lemma32BurgessMultiplierLength D N : ℝ) := by
+  have ha : (1 : ℝ)≤(lemma32BurgessMultiplierLength D N : ℝ) := Nat.one_le_cast.mpr (lemma32_burgess_multiplier_length_bounds hD hN).1
+  linarith [Real.log_nonneg ha]
+
+lemma lemma32_burgess_block_fourth_moment_bound {D : ℕ} (hD : 1≤D) :
+    3*(D : ℝ)*(lemma32BurgessBlockLength D : ℝ)^2+lemma32UniformMomentConstant*
+      lemma32BurgessPower D (17/32)*(lemma32BurgessBlockLength D : ℝ)^4 ≤
+    (6+lemma32UniformMomentConstant)*lemma32BurgessPower D (49/64)*
+      (lemma32BurgessBlockLength D : ℝ)^3 := by
+  have hb := lemma32_burgess_block_bounds hD
+  have hB0 : (0 : ℝ)≤(lemma32BurgessBlockLength D : ℝ) := Nat.cast_nonneg _
+  have hp := lemma32_burgess_power_pos D (49/64)
+  have hd : (D : ℝ)=lemma32BurgessPower D (49/64)*lemma32BurgessPower D (15/64) := by
+    rw [← lemma32_burgess_power_add]
+    norm_num
+    exact (lemma32_burgess_power_one (Nat.lt_of_lt_of_le Nat.zero_lt_one hD)).symm
+  have hD : (D : ℝ)≤2*lemma32BurgessPower D (49/64)*(lemma32BurgessBlockLength D : ℝ) := by
+    rw [hd]
+    have hm := mul_le_mul_of_nonneg_left hb.2.1 hp.le
+    nlinarith
+  have hfirst := mul_le_mul_of_nonneg_right hD
+    (by positivity : (0 : ℝ)≤3*(lemma32BurgessBlockLength D : ℝ)^2)
+  have hlocal : lemma32BurgessPower D (17/32)*(lemma32BurgessBlockLength D : ℝ)≤
+      lemma32BurgessPower D (49/64) := by
+    have hm := mul_le_mul_of_nonneg_left hb.2.2 (lemma32_burgess_power_pos D (17/32)).le
+    have he : lemma32BurgessPower D (17/32)*lemma32BurgessPower D (15/64)=
+        lemma32BurgessPower D (49/64) := by
+      rw [← lemma32_burgess_power_add]
+      norm_num
+    exact hm.trans_eq he
+  have hcoef : (0 : ℝ)≤lemma32UniformMomentConstant*(lemma32BurgessBlockLength D : ℝ)^3 :=
+    mul_nonneg lemma32_uniform_moment_constant_pos.le (pow_nonneg hB0 3)
+  have hsecond := mul_le_mul_of_nonneg_left hlocal hcoef
+  nlinarith [hfirst,hsecond]
+
+end ZhangLS.Spec

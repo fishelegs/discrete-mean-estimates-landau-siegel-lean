@@ -1,0 +1,173 @@
+⚠ [2469/2578] Replayed ZhangLS.Spec.Lemma23AnalyticLogBranch
+warning: ZhangLS/Spec/Lemma23AnalyticLogBranch.lean:42:53: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ZhangLS/Spec/Lemma23AnalyticLogBranch.lean:67:44: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [2473/2578] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3461/3658] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3463/3658] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:101:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:102:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3464/3658] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3469/3658] Replayed ZhangLS.Spec.Lemma57SmoothedSum
+warning: ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3478/3658] Replayed ZhangLS.Spec.Lemma57GaussianGlobal
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:55:58: unused variable `ha`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:13: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:34: unused variable `hx`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3479/3658] Replayed ZhangLS.Spec.Lemma57SmoothedSummability
+warning: ZhangLS/Spec/Lemma57SmoothedSummability.lean:20:52: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3484/3658] Replayed ZhangLS.Spec.Lemma57GaussianMellinTransform
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:67:63: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:145:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:326:4: Try `simp at hs` instead of `simpa using hs`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3498/3658] Replayed ZhangLS.Spec.RiemannZetaCriticalLineBound
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:99:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:124:13: unused variable `hs`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:152:6: unused variable `n`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:156:20: unused variable `k`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:161:8: This simp argument is unused:
+  sum_one_Icc
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵s̵u̵m̵_̵o̵n̵e̵_̵I̵c̵c̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:242:12: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:242:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:219:41: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:303:8: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:303:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:394:12: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:475:75: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3499/3658] Replayed ZhangLS.Spec.Lemma57CriticalStripGrowth
+warning: ZhangLS/Spec/Lemma57CriticalStripGrowth.lean:270:14: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3506/3658] Replayed ZhangLS.Spec.Lemma23DirichletConjugation
+warning: ZhangLS/Spec/Lemma23DirichletConjugation.lean:23:0: automatically included section variable(s) unused in theorem `ZhangLS.Spec.dirichletLSeries_inv_eq_conj_at_conj`:
+  [NeZero N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3508/3658] Replayed ZhangLS.Spec.Lemma23PrimitiveGaussSum
+warning: ZhangLS/Spec/Lemma23PrimitiveGaussSum.lean:42:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3509/3658] Replayed ZhangLS.Spec.Lemma23DirichletUnitModulus
+warning: ZhangLS/Spec/Lemma23DirichletUnitModulus.lean:112:48: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3526/3658] Replayed ZhangLS.Spec.Lemma51GammaAsymptotic
+warning: ZhangLS/Spec/Lemma51GammaAsymptotic.lean:14:21: unused variable `hx`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3527/3658] Replayed ZhangLS.Spec.Lemma44CharacterProduct
+warning: ZhangLS/Spec/Lemma44CharacterProduct.lean:55:38: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵m̵u̵l̵_̵c̵o̵m̵m̵,̵ ̵m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵[̲m̲u̲l̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲,̲ mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/Lemma44CharacterProduct.lean:55:48: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp [mul_comm, mul_l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵ ̵m̵u̵l̵_̵assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✖ [3657/3658] Building ZhangLS.Spec.Lemma51Parameters (8.7s)
+trace: .> LEAN_PATH=/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Cli/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/batteries/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Qq/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/aesop/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/importGraph/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/plausible/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/mathlib/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/keyishen/Documents/ChatGPT/zhangmath/ZhangLS/Spec/Lemma51Parameters.lean -o /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/Lemma51Parameters.olean -i /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/Lemma51Parameters.ilean -c /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/Lemma51Parameters.c --setup /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/Lemma51Parameters.setup.json --json
+error: ZhangLS/Spec/Lemma51Parameters.lean:117:42: unsolved goals
+D N : ℕ
+inst✝ : NeZero N
+θ : DirichletCharacter ℂ N
+hθ : θ.IsPrimitive
+hN : N ≠ 1
+s : ℂ
+hL : 3 ≤ lemma23PaperL D
+hs : Lemma51InExtendedRegion D s
+hh :
+  0 < s.re ∧
+    s.re < 1 ∧
+      lemma51PaperT0 D ≤ s.im ∧
+        |s.im - (lemma23PaperCenter D).im| ≤ 3 * lemma23PaperL D ^ 405 ∧ Lemma44InExtendedGammaRegion D s
+hL1 : 1 ≤ lemma23PaperL D
+hLpos : 0 < lemma23PaperL D
+hT : 0 < lemma51PaperT0 D
+hT3 : 3 ≤ lemma51PaperT0 D
+ht : 0 < s.im
+hg : ‖logDeriv (lemma23DirichletZ θ) s + log ↑N + ↑(Real.log (s.im / (2 * Real.pi)))‖ ≤ 18 / s.im
+hlog : |Real.log (s.im / (2 * Real.pi)) - Real.log (lemma51PaperT0 D)| ≤ 3 * lemma23PaperL D ^ (-114)
+⊢ lemma23PaperL D ^ 519 = lemma23PaperL D ^ 519
+error: Lean exited with code 1
+Some required targets logged failures:
+- ZhangLS.Spec.Lemma51Parameters
+error: build failed

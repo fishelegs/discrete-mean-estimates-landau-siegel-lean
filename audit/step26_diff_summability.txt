@@ -1,0 +1,13 @@
+diff --git a/mnt/data/step25/ZhangLS/Spec/Lemma57SmoothedSummability.lean b/ZhangLS/Spec/Lemma57SmoothedSummability.lean
+index f1d7341..bb06fb4 100644
+--- a/mnt/data/step25/ZhangLS/Spec/Lemma57SmoothedSummability.lean
++++ b/ZhangLS/Spec/Lemma57SmoothedSummability.lean
+@@ -54,7 +54,7 @@ theorem lemma57CoefficientFactor_le_one
+     divisorCharacterSumReal χ n * ((n : ℝ)⁻¹)
+         ≤ (n : ℝ) * ((n : ℝ)⁻¹) :=
+           mul_le_mul_of_nonneg_right hnu (inv_nonneg.mpr hnpos.le)
+-    _ = 1 := by field_simp
++    _ = 1 := by field_simp [hnpos.ne']
+ 
+ /-- The one remaining Gaussian-tail statement.  It asks only for an eventual
+ cubic majorant along the exact sequence sampled by Lemma 5.7. -/

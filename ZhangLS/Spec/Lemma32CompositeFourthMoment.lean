@@ -1,0 +1,73 @@
+import ZhangLS.Spec.Lemma32ActualRootWeights
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_nonpaired_correlation_root_weights {D H : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (v : Fin 4 → Fin H)
+    (hp : v ∉ lemma32DegenerateQuarticTuples H) :
+    |lemma32QuarticCorrelation χ v| ≤
+      (8 * (3 : ℝ)^D.primeFactors.card * Real.sqrt (D : ℝ)) *
+      ∑ j : Fin 4, lemma32IsolatedRootWeight (lemma32GcdRootWeight D) j v := by
+  have hpair : ¬ lemma32QuarticPaired v := fun h => hp
+    ((lemma32_mem_degenerate_iff_paired v).mpr h)
+  obtain ⟨j, hj⟩ := lemma32_unpaired_quartic_tuple_has_singleton v hpair
+  have hb := lemma32_actual_isolated_root_correlation_weight χ v j hj
+  have hw : lemma32IsolatedRootWeight (lemma32GcdRootWeight D) j v ≤
+      ∑ k : Fin 4, lemma32IsolatedRootWeight (lemma32GcdRootWeight D) k v := by
+    exact Finset.single_le_sum
+      (fun k hk => lemma32_isolated_root_weight_nonneg _ (lemma32_gcd_root_weight_nonneg D) k v)
+      (Finset.mem_univ j)
+  exact hb.trans (mul_le_mul_of_nonneg_left hw (by positivity))
+
+lemma lemma32_actual_composite_nondegenerate_fourth_moment {D : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (H : ℕ) :
+    lemma32NondegenerateFourthMoment χ H ≤
+      256 * (3 : ℝ)^D.primeFactors.card * Real.sqrt (D : ℝ) *
+        (H : ℝ)^4 * (D.divisors.card : ℝ)^3 := by
+  let K : ℝ := 8 * (3 : ℝ)^D.primeFactors.card * Real.sqrt (D : ℝ)
+  let T : ℝ := 2 * (H : ℝ) * D.divisors.card
+  have hK : 0 ≤ K := by dsimp [K]; positivity
+  have hw (v : Fin 4 → Fin H) : 0 ≤ ∑ j : Fin 4,
+      lemma32IsolatedRootWeight (lemma32GcdRootWeight D) j v := by
+    exact Finset.sum_nonneg fun j hj =>
+      lemma32_isolated_root_weight_nonneg _ (lemma32_gcd_root_weight_nonneg D) j v
+  have hs (j : Fin 4) : (∑ v : Fin 4 → Fin H,
+      lemma32IsolatedRootWeight (lemma32GcdRootWeight D) j v) ≤ (H : ℝ)*T^3 := by
+    simpa only [Fintype.card_fin] using lemma32_isolated_root_weight_sum_bound
+      (lemma32GcdRootWeight D) (lemma32_gcd_root_weight_nonneg D) T
+      (lemma32_gcd_root_weight_row_sum χ.modulus_pos) j
+  unfold lemma32NondegenerateFourthMoment
+  calc
+    _ ≤ ∑ v ∈ Finset.univ \ lemma32DegenerateQuarticTuples H,
+        K * ∑ j : Fin 4, lemma32IsolatedRootWeight (lemma32GcdRootWeight D) j v := by
+      apply Finset.sum_le_sum
+      intro v hv
+      exact lemma32_actual_nonpaired_correlation_root_weights χ v (Finset.mem_sdiff.mp hv).2
+    _ ≤ ∑ v : Fin 4 → Fin H,
+        K * ∑ j : Fin 4, lemma32IsolatedRootWeight (lemma32GcdRootWeight D) j v := by
+      exact Finset.sum_le_sum_of_subset_of_nonneg (Finset.sdiff_subset)
+        (fun v hv hnot => mul_nonneg hK (hw v))
+    _ = K * ∑ j : Fin 4, ∑ v : Fin 4 → Fin H,
+        lemma32IsolatedRootWeight (lemma32GcdRootWeight D) j v := by
+      rw [← Finset.mul_sum, Finset.sum_comm]
+    _ ≤ K * ∑ _j : Fin 4, (H : ℝ)*T^3 :=
+      mul_le_mul_of_nonneg_left (Finset.sum_le_sum fun j hj => hs j) hK
+    _ = _ := by
+      simp only [Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
+      dsimp only [K, T]
+      norm_num
+      ring
+
+lemma lemma32_actual_composite_burgess_fourth_moment {D : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (H : ℕ) :
+    lemma32BurgessFourthMoment χ H ≤
+      3*(D : ℝ)*(H : ℝ)^2 +
+      256*(3 : ℝ)^D.primeFactors.card*Real.sqrt (D : ℝ)*(H : ℝ)^4*
+        (D.divisors.card : ℝ)^3 := by
+  exact (lemma32_actual_fourth_moment_remainder_bound χ H).trans
+    (add_le_add le_rfl (lemma32_actual_composite_nondegenerate_fourth_moment χ H))
+
+end ZhangLS.Spec

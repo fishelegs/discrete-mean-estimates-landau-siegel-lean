@@ -1,0 +1,44 @@
+import ZhangLS.Spec.Lemma32FiniteShiftAverage
+import ZhangLS.Spec.Lemma32BurgessMultiplierParameters
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+
+lemma lemma32_actual_burgess_induction_boundary {D N : ℕ}
+    (χ : RealPrimitiveCharacter D) (hD : 1≤D) (hN : 0<N) (M : ℤ)
+    {C : ℝ} (hC : 0≤C)
+    (hind : ∀ H : ℕ, H<N → ∀ R : ℤ,
+      ‖lemma32BurgessIntervalSum χ R H‖≤C*lemma32BurgessPower D (25/128)*Real.sqrt (H : ℝ))
+    (a : Fin (lemma32BurgessMultiplierLength D N)) (b : Fin (lemma32BurgessBlockLength D)) :
+    ‖lemma32BurgessIntervalSum χ M N-
+      lemma32BurgessIntervalSum χ (M+(((a.val+1)*b.val : ℕ) : ℤ)) N‖ ≤
+      (C/16)*lemma32BurgessPower D (25/128)*Real.sqrt (N : ℝ) := by
+  let H : ℕ := (a.val+1)*b.val
+  have hprod : H≤lemma32BurgessMultiplierLength D N*lemma32BurgessBlockLength D :=
+    Nat.mul_le_mul (by omega) b.isLt.le
+  have hHR : (H : ℝ)≤(N : ℝ)/1024 := by
+    have hp : (H : ℝ)≤(lemma32BurgessMultiplierLength D N : ℝ)*(lemma32BurgessBlockLength D : ℝ) := by
+      exact_mod_cast hprod
+    exact hp.trans (lemma32_burgess_shift_product_bound hD)
+  have hNR : (0 : ℝ)<(N : ℝ) := Nat.cast_pos.mpr hN
+  have hHlt : H<N := Nat.cast_lt.mp (by linarith : (H : ℝ)<(N : ℝ))
+  have hmul := (le_div_iff₀ (by norm_num : (0 : ℝ)<1024)).mp hHR
+  have hsH := Real.sq_sqrt (Nat.cast_nonneg H : (0 : ℝ)≤(H : ℝ))
+  have hsN := Real.sq_sqrt (Nat.cast_nonneg N : (0 : ℝ)≤(N : ℝ))
+  have hnH := Real.sqrt_nonneg (H : ℝ)
+  have hnN := Real.sqrt_nonneg (N : ℝ)
+  have hroot : 32*Real.sqrt (H : ℝ)≤Real.sqrt (N : ℝ) := by nlinarith
+  have hcoef : 0≤C*lemma32BurgessPower D (25/128) :=
+    mul_nonneg hC (lemma32_burgess_power_pos D (25/128)).le
+  have hh := mul_le_mul_of_nonneg_left hroot hcoef
+  change ‖lemma32BurgessIntervalSum χ M N-lemma32BurgessIntervalSum χ (M+(H : ℤ)) N‖≤_
+  calc
+    _ = ‖lemma32BurgessIntervalSum χ (M+(H : ℤ)) N-lemma32BurgessIntervalSum χ M N‖ := norm_sub_rev _ _
+    _ ≤ ‖lemma32BurgessIntervalSum χ (M+(N : ℤ)) H‖+
+        ‖lemma32BurgessIntervalSum χ M H‖ := lemma32_burgess_interval_shift_error χ M N H
+    _ ≤ C*lemma32BurgessPower D (25/128)*Real.sqrt (H : ℝ)+
+        C*lemma32BurgessPower D (25/128)*Real.sqrt (H : ℝ) :=
+      add_le_add (hind H hHlt (M+(N : ℤ))) (hind H hHlt M)
+    _ ≤ _ := by nlinarith [hh]
+
+end ZhangLS.Spec

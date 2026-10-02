@@ -1,0 +1,9 @@
+ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:67:63: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:145:54: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:326:4: warning: Try `simp at hs` instead of `simpa using hs`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`

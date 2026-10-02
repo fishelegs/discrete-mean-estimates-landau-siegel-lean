@@ -1,0 +1,40 @@
+import ZhangLS.Spec.Lemma32PrimeFourthMomentSplit
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_distinct_quartic_correlation_point_count {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) {H : ℕ} (hH : H ≤ p) (v : Fin 4 → Fin H)
+    (hv : Function.Injective v) :
+    lemma32QuarticCorrelation χ v+1 =
+      (Nat.card (lemma32QuarticWeierstrass ((v 0).val : ZMod p) ((v 1).val : ZMod p)
+        ((v 2).val : ZMod p) ((v 3).val : ZMod p)).toAffine.Point : ℝ)-(p : ℝ)-1 := by
+  have hi : Function.Injective (fun i : Fin 4 => ((v i).val : ZMod p)) :=
+    (lemma32_short_residue_cast_injective hH).comp hv
+  have h := congrArg Complex.re (lemma32_actual_prime_distinct_quartic_point_count χ
+    ((v 0).val : ZMod p) ((v 1).val : ZMod p) ((v 2).val : ZMod p)
+    ((v 3).val : ZMod p) (hi.ne (by decide)) (hi.ne (by decide)) (hi.ne (by decide))
+    (hi.ne (by decide)) (hi.ne (by decide)) (hi.ne (by decide)))
+  simpa only [Complex.add_re,Complex.sub_re,Complex.re_sum,Complex.one_re,
+    Complex.natCast_re,lemma32QuarticCorrelation,Fin.prod_univ_four] using h
+
+lemma lemma32_distinct_fourth_moment_eq_actual_point_discrepancy {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) {H : ℕ} (hH : H ≤ p) :
+    lemma32DistinctFourthMoment χ H =
+      ∑ v ∈ (Finset.univ \ lemma32DegenerateQuarticTuples H).filter Function.Injective,
+        |(Nat.card (lemma32QuarticWeierstrass ((v 0).val : ZMod p) ((v 1).val : ZMod p)
+          ((v 2).val : ZMod p) ((v 3).val : ZMod p)).toAffine.Point : ℝ)-(p : ℝ)-2| := by
+  unfold lemma32DistinctFourthMoment
+  apply Finset.sum_congr rfl
+  intro v hv
+  have h := lemma32_distinct_quartic_correlation_point_count χ hH v
+    (Finset.mem_filter.mp hv).2
+  have he : lemma32QuarticCorrelation χ v =
+      (Nat.card (lemma32QuarticWeierstrass ((v 0).val : ZMod p) ((v 1).val : ZMod p)
+        ((v 2).val : ZMod p) ((v 3).val : ZMod p)).toAffine.Point : ℝ)-(p : ℝ)-2 := by
+    linarith
+  rw [he]
+
+end ZhangLS.Spec

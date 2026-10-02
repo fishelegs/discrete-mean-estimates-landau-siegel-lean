@@ -1,0 +1,10 @@
+ZhangLS/Spec/Lemma53MellinBoundary.lean:94:85: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ZhangLS/Spec/Lemma53MellinBoundary.lean:169:29: warning: This simp argument is unused:
+  sub_re
+
+Hint: Omit it from the simp argument list.
+  simp only [← ofReal_pow, s̵u̵b̵_̵r̵e̵,̵ ̵mul_re, ofReal_re, ofReal_im, mul_zero, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

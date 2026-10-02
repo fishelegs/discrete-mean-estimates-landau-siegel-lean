@@ -1,0 +1,351 @@
+import ZhangLS.Spec.Lemma56PrimeWindowAbsolute
+import ZhangLS.Spec.Lemma55FullZeroExclusion
+
+set_option autoImplicit false
+
+namespace ZhangLS.Spec
+open Complex Metric Set Finset
+set_option maxHeartbeats 1000000
+set_option maxRecDepth 4096
+
+lemma lemma56_actual_zeta_zero_own_disk {L : ℝ} (hL : 2000 ≤ L) {ρ : ℂ}
+    (hre : 1 - 2 / L < ρ.re) (hzero : zetaPoleRemoved ρ = 0) :
+    ρ ∈ lemma55ZetaLocalZeroFinset ρ.im := by
+  have hr := lemma55_actual_zeta_pole_removed_zero_re_lt_one hzero
+  have hLp : 0 < L := by linarith only [hL]
+  have hinv : 2 / L ≤ (1 : ℝ) / 1000 := by
+    apply (div_le_iff₀ hLp).mpr
+    linarith only [hL]
+  have hp : 0 < ρ.re := by linarith only [hre, hinv]
+  apply (lemma55_mem_actual_zeta_local_zero_finset ρ.im ρ).mpr
+  refine ⟨?_, (lemma55_actual_zeta_pole_removed_zero_iff hp).mp hzero⟩
+  rw [mem_closedBall_iff_norm, norm_sub_rev, lemma55_jensen_center_at_zero_height,
+    norm_real, Real.norm_eq_abs, abs_of_pos (by linarith only [hr] : 0 < 2 - ρ.re)]
+  linarith only [hre, hinv]
+
+lemma lemma56_actual_zeta_inverse_square_lower {L : ℝ} (hL : 2000 ≤ L) {ρ : ℂ}
+    (hre : 1 - 2 / L < ρ.re) (hzero : zetaPoleRemoved ρ = 0) :
+    ((1 + 2 / L)⁻¹) ^ 2 ≤ ‖lemma55ZeroInverseSquare ρ.im ρ‖ := by
+  have hr := lemma55_actual_zeta_pole_removed_zero_re_lt_one hzero
+  have hLp : 0 < L := by linarith only [hL]
+  have hd : 0 < 2 - ρ.re := by linarith only [hr]
+  have ha : 2 - ρ.re ≤ 1 + 2 / L := by linarith only [hre]
+  have hi : (1 + 2 / L)⁻¹ ≤ (2 - ρ.re)⁻¹ :=
+    (inv_le_inv₀ (by positivity : 0 < 1 + 2 / L) hd).mpr ha
+  unfold lemma55ZeroInverseSquare
+  rw [norm_pow, norm_inv, lemma55_jensen_center_at_zero_height,
+    norm_real, Real.norm_eq_abs, abs_of_pos hd]
+  exact pow_le_pow_left₀ (by positivity) hi 2
+
+lemma lemma56_actual_zeta_zero_four_detected {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (hL : 2000 ≤ Real.log (D : ℝ)) {ρ β : ℂ}
+    (hre : 1 - 2 / Real.log (D : ℝ) < ρ.re) (ht : |ρ.im| ≤ 2 * (D : ℝ))
+    (hzero : zetaPoleRemoved ρ = 0) :
+    ∃ a₀ ∈ lemma55FourZeroFinset χ ρ.im β,
+      0 < ‖lemma55TaggedInverseSquare ρ.im a₀‖ ∧ ‖lemma55TaggedInverseSquare ρ.im a₀‖ < 1 ∧
+      ((1 + 2 / Real.log (D : ℝ))⁻¹) ^ 2 ≤ ‖lemma55TaggedInverseSquare ρ.im a₀‖ ∧
+      ∀ J : ℕ, (J : ℝ) / 4 - 62 * Real.log (D : ℝ) ≤
+        (lemma55CombinedRemainingPower χ ρ.im ‖lemma55TaggedInverseSquare ρ.im a₀‖ β
+          (lemma55TaggedInverseSquare ρ.im a₀ / (‖lemma55TaggedInverseSquare ρ.im a₀‖ : ℂ))⁻¹ J).re := by
+  have hlocal := lemma56_actual_zeta_zero_own_disk hL hre hzero
+  have hρ : (⟨3, ρ⟩ : Lemma55TaggedZero) ∈ lemma55FourZeroFinset χ ρ.im β := by
+    apply (lemma55_mem_four_zero_finset χ ρ.im β ⟨3, ρ⟩).mpr
+    simpa [lemma55ZeroFamily] using hlocal
+  obtain ⟨a₀, ha₀, hmax⟩ := (lemma55FourZeroFinset χ ρ.im β).exists_max_image
+    (fun a => ‖lemma55TaggedInverseSquare ρ.im a‖) ⟨⟨3, ρ⟩, hρ⟩
+  have hb := lemma55_actual_tagged_inverse_square_bounds χ hD ha₀
+  have hlower := (lemma56_actual_zeta_inverse_square_lower hL hre hzero).trans
+    (by simpa [lemma55TaggedInverseSquare, lemma55FamilyHeight] using hmax ⟨3, ρ⟩ hρ)
+  exact ⟨a₀, ha₀, hb.1, hb.2, hlower, fun J =>
+    lemma55_actual_common_maximum_weighted_detection χ hD hL ht ha₀ hmax J⟩
+
+lemma lemma56_actual_zeta_zero_exclusion {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (hL : 2000 ≤ Real.log (D : ℝ))
+    (hC : lemma55RepulsionErrorConstant ≤ Real.log (D : ℝ)) {β : ℝ}
+    (hβ : 0 < 1 - β) (hclose : 1 - β ≤ 64 * Real.log (D : ℝ) ^ (-2022 : ℤ))
+    (hzero : dirichletLFunction χ (β : ℂ) = 0)
+    (hderiv : deriv (dirichletLFunction χ) (β : ℂ) ≠ 0) :
+    ∀ ρ : ℂ, 1 - 2 / Real.log (D : ℝ) < ρ.re → |ρ.im| ≤ 2 * (D : ℝ) →
+      zetaPoleRemoved ρ ≠ 0 := by
+  intro ρ hre ht hρzero
+  obtain ⟨a₀, _ha₀, hr, _hr1, hlower, hdet⟩ :=
+    lemma56_actual_zeta_zero_four_detected χ hD hL (β := (β : ℂ)) hre ht hρzero
+  let r := ‖lemma55TaggedInverseSquare ρ.im a₀‖
+  let v := (lemma55TaggedInverseSquare ρ.im a₀ / (r : ℂ))⁻¹
+  have hv : ‖v‖ ≤ 1 := by
+    dsimp [v, r]
+    rw [norm_inv, norm_div, norm_real, Real.norm_eq_abs, abs_of_pos hr, div_self hr.ne']
+    norm_num
+  let J := lemma55RepulsionDegree (Real.log (D : ℝ))
+  have hlo := hdet J
+  have hup := lemma55_actual_combined_remaining_real_upper_bound χ hD hL ht
+    (by linarith only [hβ] : β ≤ 1) hzero hderiv hr hlower hv J
+  have hbudget := lemma55_repulsion_strict_budget hL hC hβ.le hclose
+  change 374400 * Real.log (D : ℝ) + 8 +
+      4 * (1 - β) * (J : ℝ) * ((J : ℝ) + 1) * Real.exp (4 * (J : ℝ) / Real.log (D : ℝ)) <
+        (J : ℝ) / 4 - 62 * Real.log (D : ℝ) at hbudget
+  exact (not_lt_of_ge hlo) (hup.trans_lt hbudget)
+
+theorem lemma56_uniform_zeta_pole_removed_zero_exclusion :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ ρ : ℂ, 1 - 2 / Real.log (D : ℝ) < ρ.re → |ρ.im| ≤ 2 * (D : ℝ) →
+        zetaPoleRemoved ρ ≠ 0 := by
+  obtain ⟨Drep, hrep⟩ := lemma55_uniform_repulsion_modulus_threshold
+  refine ⟨max Drep lemma57ExplicitModulusThreshold, ?_⟩
+  intro D χ hDN hD hA
+  have hDN57 : lemma57ExplicitModulusThreshold ≤ D := (le_max_right _ _).trans hDN
+  have hLM := hrep D ((le_max_left _ _).trans hDN)
+  obtain ⟨β, hβ, hclose, hzero, hderiv⟩ := lemma55_actual_simple_real_zero χ hDN57 hA
+  exact lemma56_actual_zeta_zero_exclusion χ hD hLM.1 hLM.2 hβ hclose hzero hderiv
+
+theorem lemma56_uniform_riemann_zeta_zero_exclusion :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ ρ : ℂ, 1 - 2 / Real.log (D : ℝ) < ρ.re → |ρ.im| ≤ 2 * (D : ℝ) →
+        riemannZeta ρ ≠ 0 := by
+  obtain ⟨Dz, hz⟩ := lemma56_uniform_zeta_pole_removed_zero_exclusion
+  obtain ⟨Dr, hr⟩ := lemma55_uniform_repulsion_modulus_threshold
+  refine ⟨max Dz Dr, ?_⟩
+  intro D χ hDN hD hA ρ hre ht hzero
+  have hL := (hr D ((le_max_right _ _).trans hDN)).1
+  have hLp : 0 < Real.log (D : ℝ) := by linarith only [hL]
+  have hinv : 2 / Real.log (D : ℝ) ≤ (1 : ℝ) / 1000 := by
+    apply (div_le_iff₀ hLp).mpr
+    linarith only [hL]
+  have hp : 0 < ρ.re := by linarith only [hre, hinv]
+  exact hz χ ((le_max_left _ _).trans hDN) hD hA ρ hre ht
+    ((lemma55_actual_zeta_pole_removed_zero_iff hp).mpr hzero)
+
+lemma lemma56_actual_zeta_removed_logDeriv_near_center_bound
+    {D : ℕ} (hD : 1 < D) (hL : 2000 ≤ Real.log (D : ℝ))
+    {t : ℝ} (ht : |t| ≤ 2 * (D : ℝ)) {z : ℂ}
+    (hz : ‖z - lemma55JensenCenter t‖ ≤ (17 / 16 : ℝ)) :
+    ‖logDeriv (lemma55ZetaZeroRemoved t) z‖ ≤ 21600 * Real.log (D : ℝ) := by
+  obtain ⟨ℓ, hℓ⟩ := lemma55_actual_zeta_zero_removed_log_exists t
+  let w := z - lemma55JensenCenter t
+  have hw : ‖w‖ ≤ (17 / 16 : ℝ) := hz
+  have hshift {u : ℂ} (hu : u ∈ closedBall w (1 / 16 : ℝ)) :
+      u ∈ closedBall (0 : ℂ) (9 / 8 : ℝ) := by
+    apply mem_closedBall_iff_norm.mpr
+    have hn := norm_add_le (u - w) w
+    rw [sub_add_cancel] at hn
+    have hd := mem_closedBall_iff_norm.mp hu
+    simp only [sub_zero]
+    linarith only [hn, hd, hw]
+  have hclosure : closure (ball w (1 / 16 : ℝ)) ⊆ ball (0 : ℂ) (5 / 4 : ℝ) := by
+    intro u hu
+    have hn := mem_closedBall_iff_norm.mp (hshift (closure_ball_subset_closedBall hu))
+    apply mem_ball_zero_iff.mpr
+    simp only [sub_zero] at hn
+    linarith only [hn]
+  have hdiff : DifferentiableOn ℂ ℓ (ball (0 : ℂ) (5 / 4 : ℝ)) := fun u hu =>
+    (lemma55_actual_zeta_zero_removed_log_hasDerivAt hℓ hu).differentiableAt.differentiableWithinAt
+  have hc := Complex.norm_deriv_le_of_forall_mem_sphere_norm_le
+    (c := w) (R := (1 / 16 : ℝ)) (C := 1350 * Real.log (D : ℝ)) (by norm_num)
+    (hdiff.mono hclosure).diffContOnCl (fun u hu =>
+      lemma55_actual_zeta_zero_removed_log_closed_bound hD hL ht hℓ (hshift (sphere_subset_closedBall hu)))
+  have hd := (lemma55_actual_zeta_zero_removed_log_hasDerivAt hℓ
+    (mem_ball_zero_iff.mpr (by linarith only [hw] : ‖w‖ < (5 / 4 : ℝ)))).deriv
+  have he : lemma55JensenCenter t + w = z := by dsimp [w]; abel
+  rw [he] at hd
+  rw [hd] at hc
+  exact hc.trans_eq (by ring)
+
+lemma lemma56_actual_zeta_logDeriv_bound_of_local_zero_gap
+    {D : ℕ} (hD : 1 < D) (hL : 2000 ≤ Real.log (D : ℝ))
+    {t δ : ℝ} (ht : |t| ≤ 2 * (D : ℝ)) {z : ℂ} (hδ : 0 < δ)
+    (hz : ‖z - lemma55JensenCenter t‖ ≤ (17 / 16 : ℝ))
+    (hne : zetaPoleRemoved z ≠ 0)
+    (hgap : ∀ ρ ∈ lemma55ZetaLocalZeroFinset t, δ ≤ ‖z - ρ‖) :
+    ‖logDeriv zetaPoleRemoved z‖ ≤ 18 * Real.log (D : ℝ) / δ + 21600 * Real.log (D : ℝ) := by
+  have hsum : ‖∑ ρ ∈ lemma55ZetaLocalZeroFinset t,
+      (analyticOrderNatAt zetaPoleRemoved ρ : ℂ) / (z - ρ)‖ ≤ 18 * Real.log (D : ℝ) / δ := by
+    calc
+      _ ≤ ∑ ρ ∈ lemma55ZetaLocalZeroFinset t,
+          ‖(analyticOrderNatAt zetaPoleRemoved ρ : ℂ) / (z - ρ)‖ := norm_sum_le _ _
+      _ ≤ ∑ ρ ∈ lemma55ZetaLocalZeroFinset t,
+          (analyticOrderNatAt zetaPoleRemoved ρ : ℝ) / δ := by
+        apply sum_le_sum
+        intro ρ hρ
+        rw [norm_div, Complex.norm_natCast]
+        exact div_le_div_of_nonneg_left (Nat.cast_nonneg _) hδ (hgap ρ hρ)
+      _ = (lemma55ZetaLocalMultiplicity t : ℝ) / δ := by
+        rw [← sum_div]
+        simp [lemma55ZetaLocalMultiplicity]
+      _ ≤ _ := div_le_div_of_nonneg_right (lemma55_actual_zeta_local_multiplicity_bound hD hL ht) hδ.le
+  have hzpos : 0 < z.re := by
+    have hr := re_le_norm (lemma55JensenCenter t - z)
+    rw [sub_re, lemma55_jensen_center_re] at hr
+    have hh : ‖lemma55JensenCenter t - z‖ ≤ (17 / 16 : ℝ) := by rwa [norm_sub_rev]
+    linarith only [hr, hh]
+  rw [lemma55_actual_zeta_removed_local_logDeriv_formula t hzpos hne]
+  exact (norm_add_le _ _).trans (add_le_add hsum
+    (lemma56_actual_zeta_removed_logDeriv_near_center_bound hD hL ht hz))
+
+lemma lemma56_actual_zeta_logDeriv_rectangular_bound
+    {D : ℕ} (hD : 1 < D) (hL : 2000 ≤ Real.log (D : ℝ))
+    (hfree : ∀ ρ : ℂ, 1 - 2 / Real.log (D : ℝ) < ρ.re → |ρ.im| ≤ 2 * (D : ℝ) →
+      zetaPoleRemoved ρ ≠ 0) {z : ℂ}
+    (hσ : 1 - 1 / Real.log (D : ℝ) ≤ z.re) (hσ2 : z.re ≤ 2) (ht : |z.im| ≤ D) :
+    ‖logDeriv zetaPoleRemoved z‖ ≤ 18 * Real.log (D : ℝ) ^ 2 + 21600 * Real.log (D : ℝ) := by
+  have hLp : 0 < Real.log (D : ℝ) := by linarith only [hL]
+  have hD2 : (2 : ℝ) ≤ D := by exact_mod_cast hD
+  have hinv : 1 / Real.log (D : ℝ) ≤ (1 : ℝ) / 16 := by
+    apply (div_le_div_iff₀ hLp (by norm_num)).mpr
+    linarith only [hL]
+  have hdist : ‖z - lemma55JensenCenter z.im‖ ≤ (17 / 16 : ℝ) := by
+    rw [norm_sub_rev, lemma55_jensen_center_at_zero_height z,
+      norm_real, Real.norm_eq_abs, abs_of_nonneg (by linarith only [hσ2] : 0 ≤ 2 - z.re)]
+    linarith only [hσ, hinv]
+  have hp : 0 < 1 / Real.log (D : ℝ) := by positivity
+  have htw : 2 / Real.log (D : ℝ) = 2 * (1 / Real.log (D : ℝ)) := by ring
+  have hne : zetaPoleRemoved z ≠ 0 := hfree z (by rw [htw]; linarith only [hp, hσ])
+    (by linarith only [ht, hD2])
+  have hgap : ∀ ρ ∈ lemma55ZetaLocalZeroFinset z.im, 1 / Real.log (D : ℝ) ≤ ‖z - ρ‖ := by
+    intro ρ hρ
+    have hm := (lemma55_mem_actual_zeta_local_zero_finset z.im ρ).mp hρ
+    have hd := mem_closedBall_iff_norm.mp hm.1
+    have hi := (abs_im_le_norm (ρ - lemma55JensenCenter z.im)).trans hd
+    norm_num [lemma55JensenCenter, Complex.mul_im] at hi
+    have hsum := abs_add_le (ρ.im - z.im) z.im
+    rw [sub_add_cancel] at hsum
+    have hheight : |ρ.im| ≤ 2 * (D : ℝ) := by linarith only [hi, hsum, ht, hD2]
+    have hR := (lemma55_actual_zeta_pole_removed_zero_iff
+      (lemma55_zeta_disk_re_pos (by norm_num) hm.1)).mpr hm.2
+    have hρre : ρ.re ≤ 1 - 2 / Real.log (D : ℝ) := le_of_not_gt (fun hre => (hfree ρ hre hheight) hR)
+    rw [htw] at hρre
+    have hn := re_le_norm (z - ρ)
+    rw [sub_re] at hn
+    linarith only [hσ, hρre, hn]
+  have hb := lemma56_actual_zeta_logDeriv_bound_of_local_zero_gap hD hL
+    (by linarith only [ht, hD2]) hp hdist hne hgap
+  apply hb.trans_eq
+  field_simp
+
+theorem lemma56_uniform_zeta_removed_logDeriv_bound :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ z : ℂ, 1 - 1 / Real.log (D : ℝ) ≤ z.re → z.re ≤ 2 → |z.im| ≤ D →
+        ‖logDeriv zetaPoleRemoved z‖ ≤ 18 * Real.log (D : ℝ) ^ 2 + 21600 * Real.log (D : ℝ) := by
+  obtain ⟨Dz, hz⟩ := lemma56_uniform_zeta_pole_removed_zero_exclusion
+  obtain ⟨Dr, hr⟩ := lemma55_uniform_repulsion_modulus_threshold
+  refine ⟨max Dz Dr, ?_⟩
+  intro D χ hDN hD hA z hσ hσ2 ht
+  exact lemma56_actual_zeta_logDeriv_rectangular_bound hD
+    (hr D ((le_max_right _ _).trans hDN)).1
+    (hz χ ((le_max_left _ _).trans hDN) hD hA) hσ hσ2 ht
+
+theorem lemma56_uniform_zeta_left_logDeriv_bound :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ t : ℝ, |t| ≤ D →
+        let a := 1 - 1 / Real.log (D : ℝ)
+        ‖logDeriv riemannZeta ((a : ℂ) + (t : ℂ) * I)‖ ≤
+          18 * Real.log (D : ℝ) ^ 2 + 21601 * Real.log (D : ℝ) := by
+  obtain ⟨Dz, hz⟩ := lemma56_uniform_zeta_removed_logDeriv_bound
+  obtain ⟨Dfree, hfree⟩ := lemma56_uniform_riemann_zeta_zero_exclusion
+  obtain ⟨Dr, hr⟩ := lemma55_uniform_repulsion_modulus_threshold
+  refine ⟨max (max Dz Dfree) Dr, ?_⟩
+  intro D χ hDN hD hA t ht
+  have hL := (hr D ((le_max_right _ _).trans hDN)).1
+  have hLp : 0 < Real.log (D : ℝ) := by linarith only [hL]
+  let a := 1 - 1 / Real.log (D : ℝ)
+  let z : ℂ := (a : ℂ) + (t : ℂ) * I
+  have hp : 0 < 1 / Real.log (D : ℝ) := by positivity
+  have hinv : 1 / Real.log (D : ℝ) ≤ (1 : ℝ) / 16 := by
+    apply (div_le_div_iff₀ hLp (by norm_num)).mpr
+    linarith only [hL]
+  have hre : z.re = a := by simp [z]
+  have him : z.im = t := by simp [z]
+  have hzp : 0 < z.re := by rw [hre]; dsimp [a]; linarith only [hinv]
+  have hz1 : z ≠ 1 := by
+    intro he
+    have h := congrArg Complex.re he
+    rw [hre, one_re] at h
+    dsimp [a] at h
+    linarith only [h, hp]
+  have hD2 : (2 : ℝ) ≤ D := by exact_mod_cast hD
+  have hζ : riemannZeta z ≠ 0 := by
+    apply hfree χ ((le_max_right _ _).trans ((le_max_left _ _).trans hDN)) hD hA
+    · rw [hre]; dsimp [a]
+      rw [show 2 / Real.log (D : ℝ) = 2 * (1 / Real.log (D : ℝ)) by ring]
+      linarith only [hp]
+    · rw [him]; linarith only [ht, hD2]
+  have hb := hz χ ((le_max_left _ _).trans ((le_max_left _ _).trans hDN)) hD hA z
+    (by rw [hre]) (by rw [hre]; dsimp [a]; linarith only [hp]) (by rwa [him])
+  have he : logDeriv riemannZeta z = logDeriv zetaPoleRemoved z - 1 / (z - 1) := by
+    rw [lemma55_actual_zeta_pole_removed_logDeriv hzp hz1 hζ]
+    abel
+  have hd : 1 / Real.log (D : ℝ) ≤ ‖z - 1‖ := by
+    have hn := abs_re_le_norm (z - 1)
+    rw [sub_re, hre, one_re] at hn
+    have ha : a - 1 = -(1 / Real.log (D : ℝ)) := by dsimp [a]; ring
+    rw [ha, abs_neg, abs_of_pos hp] at hn
+    exact hn
+  have hterm : ‖1 / (z - 1)‖ ≤ Real.log (D : ℝ) := by
+    rw [norm_div, norm_one]
+    calc
+      _ ≤ 1 / (1 / Real.log (D : ℝ)) := div_le_div_of_nonneg_left (by norm_num) hp hd
+      _ = _ := by field_simp
+  change ‖logDeriv riemannZeta z‖ ≤ _
+  rw [he]
+  have hn := (norm_sub_le _ _).trans (add_le_add hb hterm)
+  exact hn.trans_eq (by ring)
+
+-- Actual derivative quotient with the complete closed height interval.
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    ∀ t : ℝ, |t| ≤ D →
+      ‖deriv riemannZeta (((1 - 1 / Real.log (D : ℝ) : ℝ) : ℂ) + (t : ℂ) * I) /
+        riemannZeta (((1 - 1 / Real.log (D : ℝ) : ℝ) : ℂ) + (t : ℂ) * I)‖ ≤
+        18 * Real.log (D : ℝ) ^ 2 + 21601 * Real.log (D : ℝ) := by
+  simpa only [logDeriv_apply] using lemma56_uniform_zeta_left_logDeriv_bound
+
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    ‖logDeriv riemannZeta (((1 - 1 / Real.log (D : ℝ) : ℝ) : ℂ) + (D : ℂ) * I)‖ ≤
+      18 * Real.log (D : ℝ) ^ 2 + 21601 * Real.log (D : ℝ) := by
+  obtain ⟨D₀, h⟩ := lemma56_uniform_zeta_left_logDeriv_bound
+  refine ⟨D₀, ?_⟩
+  intro D χ hDN hD hA
+  exact h χ hDN hD hA (D : ℝ) (by simp)
+
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    ‖logDeriv riemannZeta (((1 - 1 / Real.log (D : ℝ) : ℝ) : ℂ) - (D : ℂ) * I)‖ ≤
+      18 * Real.log (D : ℝ) ^ 2 + 21601 * Real.log (D : ℝ) := by
+  obtain ⟨D₀, h⟩ := lemma56_uniform_zeta_left_logDeriv_bound
+  refine ⟨D₀, ?_⟩
+  intro D χ hDN hD hA
+  have hn := h χ hDN hD hA (-(D : ℝ)) (by simp)
+  simpa only [Complex.ofReal_neg, neg_mul, sub_eq_add_neg] using hn
+
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    ‖logDeriv zetaPoleRemoved ((2 : ℂ) + (D : ℂ) * I)‖ ≤
+      18 * Real.log (D : ℝ) ^ 2 + 21600 * Real.log (D : ℝ) := by
+  obtain ⟨D₀, h⟩ := lemma56_uniform_zeta_removed_logDeriv_bound
+  obtain ⟨Dr, hr⟩ := lemma55_uniform_repulsion_modulus_threshold
+  refine ⟨max D₀ Dr, ?_⟩
+  intro D χ hDN hD hA
+  have hL := (hr D ((le_max_right _ _).trans hDN)).1
+  have hLp : 0 < Real.log (D : ℝ) := by linarith only [hL]
+  apply h χ ((le_max_left _ _).trans hDN) hD hA
+  · have hp : 0 < 1 / Real.log (D : ℝ) := by positivity
+    simpa using (by linarith only [hp] : 1 - 1 / Real.log (D : ℝ) ≤ (2 : ℝ))
+  · simp
+  · simp
+
+#print axioms lemma56_actual_zeta_zero_own_disk
+#print axioms lemma56_actual_zeta_inverse_square_lower
+#print axioms lemma56_actual_zeta_zero_four_detected
+#print axioms lemma56_actual_zeta_zero_exclusion
+#print axioms lemma56_uniform_zeta_pole_removed_zero_exclusion
+#print axioms lemma56_uniform_riemann_zeta_zero_exclusion
+#print axioms lemma56_actual_zeta_removed_logDeriv_near_center_bound
+#print axioms lemma56_actual_zeta_logDeriv_bound_of_local_zero_gap
+#print axioms lemma56_actual_zeta_logDeriv_rectangular_bound
+#print axioms lemma56_uniform_zeta_removed_logDeriv_bound
+#print axioms lemma56_uniform_zeta_left_logDeriv_bound
+end ZhangLS.Spec

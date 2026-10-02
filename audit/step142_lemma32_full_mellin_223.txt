@@ -1,0 +1,54 @@
+import ZhangMathStep222Lemma32FullGammaMellinDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma32SmoothedWeightedSeries {D : ℕ} (χ : RealPrimitiveCharacter D) (B : ℝ) : ℂ :=
+  ∑' n : ℕ, LSeries.term (fun n => (lemma32ActualCoefficient χ n : ℂ)) 1 n*
+    (Real.exp (-(n : ℝ)/B) : ℂ)
+
+noncomputable def lemma32RightGammaIntegrand {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (B : ℝ) (t : ℝ) : ℂ :=
+  lemma32AnalyticCorrection χ (2+(t : ℂ)*I)*
+    (riemannZeta (2+(t : ℂ)*I)*dirichletLFunction χ (2+(t : ℂ)*I))^8*
+    Complex.exp ((1+(t : ℂ)*I)*(Real.log B : ℂ))*Complex.Gamma (1+(t : ℂ)*I)
+
+lemma lemma32_actual_right_Gamma_integrand_eq_tsum {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (B : ℝ) (t : ℝ) :
+    lemma32RightGammaIntegrand χ B t =
+      ∑' n : ℕ, lemma32GammaMellinTerm (fun n => (lemma32ActualCoefficient χ n : ℂ)) B n t := by
+  unfold lemma32RightGammaIntegrand
+  rw [← lemma32_actual_weighted_series_identity χ (2+(t : ℂ)*I) (by norm_num)]
+  unfold lemma32WeightedDirichletSeries
+  simp only [lemma32GammaMellinTerm,tsum_mul_right,LSeries]
+
+lemma lemma32_actual_right_Gamma_integrand_integrable {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (B : ℝ) (hB : 0 < B) : Integrable (lemma32RightGammaIntegrand χ B) := by
+  have he : lemma32RightGammaIntegrand χ B = (fun t : ℝ =>
+      ∑' n : ℕ, lemma32GammaMellinTerm (fun n => (lemma32ActualCoefficient χ n : ℂ)) B n t) :=
+    funext (lemma32_actual_right_Gamma_integrand_eq_tsum χ B)
+  rw [he]
+  exact lemma32_Gamma_mellin_tsum_integrable _ B hB
+    (lemma32_actual_weighted_lseries_summable χ 2 (by norm_num))
+
+lemma lemma32_actual_smoothed_weighted_summable {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (B : ℝ) (hB : 0 < B) :
+    Summable (fun n : ℕ => LSeries.term (fun n => (lemma32ActualCoefficient χ n : ℂ)) 1 n*
+      (Real.exp (-(n : ℝ)/B) : ℂ)) :=
+  (lemma32_full_series_gamma_mellin _ B hB
+    (lemma32_actual_weighted_lseries_summable χ 2 (by norm_num))).1
+
+lemma lemma32_actual_full_Gamma_mellin {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (B : ℝ) (hB : 0 < B) :
+    ((1/(2*Real.pi) : ℝ) : ℂ)*(∫ t : ℝ, lemma32RightGammaIntegrand χ B t) =
+      lemma32SmoothedWeightedSeries χ B := by
+  have he : lemma32RightGammaIntegrand χ B = (fun t : ℝ =>
+      ∑' n : ℕ, lemma32GammaMellinTerm (fun n => (lemma32ActualCoefficient χ n : ℂ)) B n t) :=
+    funext (lemma32_actual_right_Gamma_integrand_eq_tsum χ B)
+  rw [he]
+  exact (lemma32_full_series_gamma_mellin _ B hB
+    (lemma32_actual_weighted_lseries_summable χ 2 (by norm_num))).2
+
+end ZhangLS.Spec

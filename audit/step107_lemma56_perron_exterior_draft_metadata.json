@@ -1,0 +1,33 @@
+{
+  "sha256": "6eac40a232af965dae3386d7f51aafc4edcb0de9728bff58220e46c332ea7e49",
+  "kernel_exit_code": 0,
+  "proved_interfaces": [
+    "lemma56_actual_perron_right_eq",
+    "lemma56_actual_perron_right_integrable",
+    "lemma56_actual_perron_right_envelope",
+    "lemma56_actual_perron_right_truncation",
+    "lemma56_actual_perron_mangoldt_truncation",
+    "lemma56_perron_horizontal_point_bound",
+    "lemma56_perron_horizontal_integral_bound",
+    "lemma56_perron_supergaussian_budget",
+    "lemma56_perron_paper_scales",
+    "lemma56_perron_paper_right_budget",
+    "lemma56_perron_paper_logDeriv_width_budget",
+    "lemma56_perron_paper_horizontal_budget",
+    "lemma56_uniform_primitive_perron_paper_exterior_bounds",
+    "lemma56_perron_paper_window_left_budget",
+    "lemma56_uniform_primitive_perron_window_left_bound",
+    "lemma56_perron_rectangle_norm_budget",
+    "lemma56_uniform_primitive_perron_mangoldt_window_bound"
+  ],
+  "interface_count": 17,
+  "expanded_examples": 4,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "verified_at_utc": "2026-10-01T08:07:43Z",
+  "scope": "Independent draft outside the frozen Step 106 project sources. Proves actual cumulative Perron Mangoldt norm bound under original (A) for distinct nonprincipal primitive theta, every 1<=x<=2P and |tau|<=D. Full original sharp prime-window target remains unproved.",
+  "kernel_command": "lake env lean /private/tmp/ZhangMathStep107PerronExteriorDraft.lean"
+}

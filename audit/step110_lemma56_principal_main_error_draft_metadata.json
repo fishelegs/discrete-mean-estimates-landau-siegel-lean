@@ -1,0 +1,31 @@
+{
+  "sha256": "865760d2da27635294d8cef0232f22cad447458e481ed1ba25d3b7be2bcf2103",
+  "kernel_exit_code": 0,
+  "proved_interfaces": [
+    "lemma56_perron_rectangle_edges_mem",
+    "lemma56_perron_rectangle_edges_integrable",
+    "lemma56_perron_rectangle_boundary_add",
+    "lemma56_perron_rectangle_boundary_congr",
+    "lemma56_actual_principal_regular_perron_analytic",
+    "lemma56_actual_principal_perron_pole_split",
+    "lemma56_actual_principal_perron_rectangle_boundary",
+    "lemma56_actual_principal_perron_rectangle_shift",
+    "lemma56_uniform_principal_perron_rectangle_shift",
+    "lemma56_actual_principal_perron_arithmetic_eq",
+    "lemma56_uniform_zeta_off_real_logDeriv_bound",
+    "lemma56_uniform_principal_perron_left_bound",
+    "lemma56_uniform_principal_perron_horizontal_bound",
+    "lemma56_uniform_principal_perron_smoothed_main_error"
+  ],
+  "interface_count": 14,
+  "expanded_examples": 4,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "auto_implicit": false,
+  "verified_at_utc": "2026-10-01T10:37:14.177485+00:00",
+  "scope": "Independent draft outside frozen Step 109 project gate. Actual principal zeta arithmetic integrand is split on the punctured actual rectangle into the actual K(s)/(s-1) pole term and actual analytic zero-free regular term. Actual edge integrability, Cauchy and exact residue combine to give the original-(A) uniform finite arithmetic rectangle shift. Actual left and horizontal integral estimates, and actual right-truncation error give a uniform explicit bound for the actual principal Gaussian Mangoldt sum minus x exp(1/(4B^2)), for B>0, x>=1 and 1<=H<=D. Threshold precedes all D, characters, B, x and H. Four regressions expand the actual von Mangoldt infinite sum and actual derivative quotient, specialize paper parameters B=exp(log D/3), H=D/2, x=P, and check the closed lower height endpoint. Paper-scale budget absorption, actual unsmoothed prime-mass lower bound and faithful modulus-one principal cancellation remain unproved. No completion of full Lemma56Target is claimed.",
+  "kernel_command": "lake env lean /private/tmp/ZhangMathStep110PrincipalContourDraft.lean"
+}

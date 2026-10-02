@@ -1,0 +1,55 @@
+import ZhangLS.Spec.Lemma32OriginalCircle
+import ZhangLS.Spec.Lemma32ActualSeriesIdentity
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Metric Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_circle_integrand_differentiableAt {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (w : ℂ) (hw : ‖w‖ ≤ 1/4) (h0 : w ≠ 0) :
+    DifferentiableAt ℂ (lemma32CircleIntegrand χ) w := by
+  have hre : 1/2 < (1+w).re := by
+    have hr := Complex.abs_re_le_norm w
+    have hh := (abs_le.mp (hr.trans hw)).1
+    simp only [Complex.add_re,Complex.one_re]
+    linarith
+  have had : DifferentiableAt ℂ (fun w : ℂ => 1+w) w := by fun_prop
+  have hc := ((lemma32_analytic_correction_analyticOnNhd χ) (1+w) hre).differentiableAt.comp w had
+  have hz := (differentiableAt_riemannZeta (s := 1+w) (by
+    intro h
+    have ht : w = 0 := by linear_combination h
+    exact h0 ht)).comp w had
+  have hl := (differentiable_dirichletLFunction_of_one_lt_modulus χ hD (1+w)).comp w had
+  have hg : DifferentiableAt ℂ Complex.Gamma w := Complex.differentiableAt_Gamma w (by
+    intro m hm
+    cases m with
+    | zero => exact h0 (by simpa using hm)
+    | succ m =>
+      have ht := congrArg norm hm
+      simp only [norm_neg,Complex.norm_natCast] at ht
+      have hp : (1 : ℝ) ≤ (m+1 : ℕ) := by exact_mod_cast Nat.succ_pos m
+      rw [ht] at hw
+      linarith)
+  have hs : DifferentiableAt ℂ (lemma32SmoothingDifference (lemma23PaperL D)) w := by
+    unfold lemma32SmoothingDifference
+    fun_prop
+  exact (hc.mul ((hz.mul hl).pow 8)).mul (hs.mul hg)
+
+lemma lemma32_actual_circle_integrable {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (hL : 3 ≤ lemma23PaperL D) :
+    CircleIntegrable (lemma32CircleIntegrand χ) 0 (lemma23PaperL D^(-2024 : ℤ)) := by
+  have hl0 : 0 < lemma23PaperL D := by linarith
+  have hr := zpow_pos hl0 (-2024 : ℤ)
+  have hc : ContinuousOn (lemma32CircleIntegrand χ)
+      (sphere (0 : ℂ) (lemma23PaperL D^(-2024 : ℤ))) := by
+    intro w hw
+    have hn : ‖w‖ = lemma23PaperL D^(-2024 : ℤ) := by simpa [dist_eq_norm] using hw
+    have hsmall : ‖w‖ ≤ 1/4 := by
+      rw [hn]
+      exact (lemma32_negative_power_small _ hL 2024 (by norm_num)).trans (by norm_num)
+    have h0 : w ≠ 0 := by intro h; rw [h,norm_zero] at hn; linarith
+    exact (lemma32_circle_integrand_differentiableAt χ hD w hsmall h0).continuousAt.continuousWithinAt
+  exact hc.circleIntegrable hr.le
+
+end ZhangLS.Spec

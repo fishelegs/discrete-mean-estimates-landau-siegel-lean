@@ -1,0 +1,61 @@
+/private/tmp/ZhangMathStep118Lemma61GammaChecked.lean:202:15: warning: This simp argument is unused:
+  add_re
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵d̵d̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵r̵e̵,̵I̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵I̵_̵i̵m̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵s̵u̵b̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵s̵u̵b̵_̵s̵e̵l̵f̵,̵a̵b̵s̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵i̵m̵,̵m̵u̵l̵_̵i̵m̵,̵o̵n̵e̵_̵m̵u̵l̵,̵z̵e̵r̵o̵_̵a̵d̵d̵]̵[̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲r̲e̲,̲ ̲I̲_̲r̲e̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲I̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲s̲u̲b̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲s̲u̲b̲_̲s̲e̲l̲f̲,̲ ̲a̲b̲s̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲o̲n̲e̲_̲m̲u̲l̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/private/tmp/ZhangMathStep118Lemma61GammaChecked.lean:203:6: warning: This simp argument is unused:
+  sub_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵d̵d̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵r̵e̵,̵I̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵I̵_̵i̵m̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵s̵u̵b̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵s̵u̵b̵_̵s̵e̵l̵f̵,̵a̵b̵s̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵i̵m̵,̵m̵u̵l̵_̵i̵m̵,̵o̵n̵e̵_̵m̵u̵l̵,̵z̵e̵r̵o̵_̵a̵d̵d̵]̵[̲a̲d̲d̲_̲r̲e̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲r̲e̲,̲ ̲I̲_̲r̲e̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲I̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲s̲u̲b̲_̲s̲e̲l̲f̲,̲ ̲a̲b̲s̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲o̲n̲e̲_̲m̲u̲l̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/private/tmp/ZhangMathStep118Lemma61GammaChecked.lean:203:42: warning: This simp argument is unused:
+  add_im
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵d̵d̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵r̵e̵,̵I̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵I̵_̵i̵m̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵s̵u̵b̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵s̵u̵b̵_̵s̵e̵l̵f̵,̵a̵b̵s̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵i̵m̵,̵m̵u̵l̵_̵i̵m̵,̵o̵n̵e̵_̵m̵u̵l̵,̵z̵e̵r̵o̵_̵a̵d̵d̵]̵[̲a̲d̲d̲_̲r̲e̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲r̲e̲,̲ ̲I̲_̲r̲e̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲I̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲s̲u̲b̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲ ̲s̲u̲b̲_̲s̲e̲l̲f̲,̲ ̲a̲b̲s̲_̲z̲e̲r̲o̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲o̲n̲e̲_̲m̲u̲l̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/private/tmp/ZhangMathStep118Lemma61GammaChecked.lean:280:31: warning: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/private/tmp/ZhangMathStep118Lemma61GammaChecked.lean:483:89: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ZhangLS.Spec.lemma61_Gamma_logDeriv_recurrence_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_Gamma_logDeriv_im_axis_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_Gamma_logDeriv_im_axis_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_GammaR_logDeriv_im_axis_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_gammaFactor_logDeriv_im_axis_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_DirichletZ_logDeriv_all_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_wide_height_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_DirichletZ_logDeriv_at_T0_wide' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_family_Z_logDeriv_normalized_wide' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_complex_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_family_Z_log_modulus_wide' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_family_Z_norm_model_wide' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_six_alpha_le_quarter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_PT0_log_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_family_Z_norm_thin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_thin_real_in_wide' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_shift_segment_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_complex_Z_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_short_polynomial_conjugation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_error_contour_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_error_contour_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_error_contour_short_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_P4_log_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_P4_exponential_thin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_omega_one_thin_gaussian_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_error_contour_point_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_error_contour_integral_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_normalized_error_contour_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

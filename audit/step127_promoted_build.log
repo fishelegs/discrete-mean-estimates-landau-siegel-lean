@@ -1,0 +1,169 @@
+⚠ [1279/1632] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3438/3679] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3440/3679] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:101:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:102:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3441/3679] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3446/3679] Replayed ZhangLS.Spec.Lemma57SmoothedSum
+warning: ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3463/3679] Replayed ZhangLS.Spec.Lemma31CharacterAbel
+warning: ZhangLS/Spec/Lemma31CharacterAbel.lean:23:26: unused variable `hN`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3472/3679] Replayed ZhangLS.Spec.Lemma57GaussianGlobal
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:55:58: unused variable `ha`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:13: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:34: unused variable `hx`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3473/3679] Replayed ZhangLS.Spec.Lemma57SmoothedSummability
+warning: ZhangLS/Spec/Lemma57SmoothedSummability.lean:20:52: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3478/3679] Replayed ZhangLS.Spec.Lemma57GaussianMellinTransform
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:67:63: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:145:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:326:4: Try `simp at hs` instead of `simpa using hs`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3484/3679] Replayed ZhangLS.Spec.RiemannZetaCriticalLineBound
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:99:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:124:13: unused variable `hs`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:152:6: unused variable `n`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:156:20: unused variable `k`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:161:8: This simp argument is unused:
+  sum_one_Icc
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵s̵u̵m̵_̵o̵n̵e̵_̵I̵c̵c̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:242:12: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:242:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:219:41: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:303:8: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:303:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:394:12: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:475:75: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3485/3679] Replayed ZhangLS.Spec.Lemma57CriticalStripGrowth
+warning: ZhangLS/Spec/Lemma57CriticalStripGrowth.lean:270:14: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3656/3679] Replayed ZhangLS.Spec.Lemma23DirichletConjugation
+warning: ZhangLS/Spec/Lemma23DirichletConjugation.lean:23:0: automatically included section variable(s) unused in theorem `ZhangLS.Spec.dirichletLSeries_inv_eq_conj_at_conj`:
+  [NeZero N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [3658/3679] Built ZhangLS.Spec.Lemma32PrimeCoefficients (9.6s)
+⚠ [3659/3679] Built ZhangLS.Spec.Lemma32Geometric (2.7s)
+warning: ZhangLS/Spec/Lemma32Geometric.lean:13:2: 'norm_num [Nat.factorial] at h' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [3660/3679] Built ZhangLS.Spec.Lemma32LocalSeries (2.5s)
+⚠ [3661/3679] Built ZhangLS.Spec.Lemma32EulerFactors (2.4s)
+warning: ZhangLS/Spec/Lemma32EulerFactors.lean:34:2: 'all_goals ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/Lemma32EulerFactors.lean:34:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ZhangLS/Spec/Lemma32EulerFactors.lean:44:2: 'all_goals ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/Lemma32EulerFactors.lean:44:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+✔ [3662/3679] Built ZhangLS.Spec.Lemma32LocalBounds (2.7s)
+✔ [3663/3679] Built ZhangLS.Spec.Lemma32ModulusFactors (2.3s)
+✔ [3664/3679] Built ZhangLS.Spec.Lemma32RegularFactors (2.3s)
+✔ [3665/3679] Built ZhangLS.Spec.Lemma32ProductConvergence (2.2s)
+✔ [3666/3679] Built ZhangLS.Spec.Lemma32ProductBounds (2.3s)
+✔ [3667/3679] Built ZhangLS.Spec.Lemma32ProductDifference (2.2s)
+✔ [3668/3679] Built ZhangLS.Spec.Lemma32UniformProduct (2.3s)
+✔ [3669/3679] Built ZhangLS.Spec.Lemma32ProductAnalytic (2.3s)
+✔ [3670/3679] Built ZhangLS.Spec.Lemma32RamificationNorm (2.3s)
+⚠ [3671/3679] Built ZhangLS.Spec.Lemma32AnalyticCorrection (2.2s)
+warning: ZhangLS/Spec/Lemma32AnalyticCorrection.lean:26:48: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [3672/3679] Built ZhangLS.Spec.Lemma32ResidueCircle (2.5s)
+✔ [3673/3679] Built ZhangLS.Spec.Lemma32LocalL (2.6s)
+✔ [3674/3679] Built ZhangLS.Spec.Lemma32GammaLocal (2.6s)
+✔ [3675/3679] Built ZhangLS.Spec.Lemma32ZetaCircle (2.8s)
+⚠ [3676/3679] Built ZhangLS.Spec.Lemma32SmoothingCircle (2.6s)
+warning: ZhangLS/Spec/Lemma32SmoothingCircle.lean:22:10: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵o̵r̵m̵_̵m̵u̵l̵,̵C̵o̵m̵p̵l̵e̵x̵.̵n̵o̵r̵m̵_̵r̵e̵a̵l̵,̵a̵b̵s̵_̵o̵f̵_̵p̵o̵s̵[̲C̲o̲m̲p̲l̲e̲x̲.̲n̲o̲r̲m̲_̲r̲e̲a̲l̲,̲ ̲a̲b̲s̲_̲o̲f̲_̲p̲o̲s̲ hl0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3677/3679] Built ZhangLS.Spec.Lemma32CircleIntegrand (2.5s)
+warning: ZhangLS/Spec/Lemma32CircleIntegrand.lean:40:65: 'positivity' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/Lemma32CircleIntegrand.lean:40:65: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+✔ [3678/3679] Built ZhangLS.Spec.Lemma32CircleIntegral (2.3s)
+✔ [3679/3679] Built ZhangLS.Spec.Lemma32OriginalCircle (2.2s)
+Build completed successfully (3679 jobs).

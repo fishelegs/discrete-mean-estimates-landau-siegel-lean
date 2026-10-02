@@ -1,0 +1,7 @@
+ZhangLS/Spec/Lemma34TupleConvolution.lean:88:57: warning: This simp argument is unused:
+  ArithmeticFunction.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵l̵e̵m̵m̵a̵3̵4̵T̵u̵p̵l̵e̵S̵u̵m̵,̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵F̵u̵n̵c̵t̵i̵o̵n̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵,̵h̵,̵e̵q̵_̵c̵o̵m̵m̵]̵[̲l̲e̲m̲m̲a̲3̲4̲T̲u̲p̲l̲e̲S̲u̲m̲,̲ ̲h̲,̲ ̲e̲q̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,41 @@
+import ZhangLS.Spec.Lemma32PrimeGcdCorrelation
+import ZhangLS.Spec.Lemma32IntegerCRTCorrelation
+import ZhangLS.Spec.Lemma32CoprimeCorrelationFactor
+import Mathlib.Data.Nat.Squarefree
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_squarefree_quartic_correlation_bound {m : ℕ} [hm0 : NeZero m]
+    (χ : RealPrimitiveCharacter m) (hm : Squarefree m) (a b c d : ℤ) :
+    ‖∑ x : ZMod m, χ.chi (lemma32QuarticRootProduct (a : ZMod m) b c d x)‖ ≤
+      lemma32SquarefreeCorrelationFactor m (lemma32IntegerRootDifferenceProduct a b c d) := by
+  revert χ hm
+  revert hm0
+  induction m using Nat.strong_induction_on with
+  | h m ih =>
+    intro hm0 χ hm
+    by_cases hm1 : m=1
+    · subst m
+      simpa only [lemma32_correlation_factor_one, Nat.cast_one] using
+        lemma32_actual_quartic_sum_trivial_norm χ (a : ZMod 1) b c d
+    obtain ⟨p, hp, hpd⟩ := Nat.exists_prime_and_dvd hm1
+    obtain ⟨n, rfl⟩ := hpd
+    have hn : 0 < n := Nat.pos_of_mul_pos_left χ.modulus_pos
+    letI : NeZero p := ⟨hp.ne_zero⟩
+    letI : NeZero n := ⟨hn.ne'⟩
+    letI : Fact p.Prime := ⟨hp⟩
+    have hc : p.Coprime n := Nat.coprime_of_squarefree_mul hm
+    have hlt : n < p*n := by
+      simpa using Nat.mul_lt_mul_of_pos_right hp.one_lt hn
+    have hleft := lemma32_actual_prime_quartic_gcd_bound (lemma32RealCRTLeft hc χ) a b c d
+    have hright := ih n hlt (lemma32RealCRTRight hc χ) hm.of_mul_right
+    rw [lemma32_real_primitive_integer_CRT_quartic_norm hc χ a b c d,
+      lemma32_coprime_correlation_factor_mul hc,
+      lemma32_prime_correlation_factor hp]
+    exact mul_le_mul hleft hright (norm_nonneg _)
+      (mul_nonneg (mul_nonneg (by norm_num) (Real.sqrt_nonneg _)) (Real.sqrt_nonneg _))
+
+end ZhangLS.Spec

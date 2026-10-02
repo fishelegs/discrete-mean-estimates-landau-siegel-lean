@@ -1,0 +1,43 @@
+import ZhangLS.Spec.Lemma32TwoPowerConductor
+import Mathlib.Data.Nat.Factorization.Basic
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma32RealPrimePowerComponent {D p : ℕ}
+    (χ : RealPrimitiveCharacter D) (hp : p.Prime) :
+    RealPrimitiveCharacter (p^(D.factorization p)) := by
+  letI : NeZero (p^(D.factorization p)) := ⟨pow_ne_zero _ hp.ne_zero⟩
+  letI : NeZero ((D / p^(D.factorization p))) :=
+    ⟨(Nat.ordCompl_pos p (Nat.ne_of_gt χ.modulus_pos)).ne'⟩
+  have hc : (p^(D.factorization p)).Coprime ((D / p^(D.factorization p))) :=
+    (Nat.coprime_ordCompl hp (Nat.ne_of_gt χ.modulus_pos)).pow_left _
+  have he : p^(D.factorization p) * (D / p^(D.factorization p)) = D :=
+    Nat.ordProj_mul_ordCompl_eq_self D p
+  let χ' : RealPrimitiveCharacter (p^(D.factorization p) * (D / p^(D.factorization p))) := he.symm ▸ χ
+  exact lemma32RealCRTLeft hc χ'
+
+lemma lemma32_real_primitive_odd_prime_exponent {D p : ℕ}
+    (χ : RealPrimitiveCharacter D) (hp : p.Prime) (hodd : p ≠ 2) :
+    D.factorization p ≤ 1 := by
+  by_cases hz : D.factorization p=0
+  · omega
+  obtain ⟨k, hk⟩ := Nat.exists_eq_succ_of_ne_zero hz
+  have θ := lemma32RealPrimePowerComponent χ hp
+  rw [hk] at θ
+  have he := lemma32_odd_prime_power_primitive_quadratic_exponent hp hodd k
+    θ.chi θ.quadratic θ.primitive
+  omega
+
+lemma lemma32_real_primitive_two_adic_exponent {D : ℕ}
+    (χ : RealPrimitiveCharacter D) : D.factorization 2 ≤ 3 := by
+  by_contra hnot
+  have hk : D.factorization 2 = (D.factorization 2-3)+3 := by omega
+  have θ := lemma32RealPrimePowerComponent χ Nat.prime_two
+  rw [hk] at θ
+  have he := lemma32_two_power_primitive_quadratic_exponent (D.factorization 2-3)
+    θ.chi θ.quadratic θ.primitive
+  omega
+
+end ZhangLS.Spec

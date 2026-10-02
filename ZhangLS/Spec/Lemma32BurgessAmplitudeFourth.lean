@@ -1,0 +1,78 @@
+import ZhangLS.Spec.Lemma32BurgessBlockMomentBounds
+import ZhangLS.Spec.Lemma32BurgessBlockNormalization
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+open scoped Classical
+
+noncomputable def lemma32BurgessAmplitudeConstant : ℝ :=
+  98304*512*lemma32UnitPrimeSavingConstant^4*(6+lemma32UniformMomentConstant)
+
+lemma lemma32_burgess_amplitude_constant_pos : 0 < lemma32BurgessAmplitudeConstant := by
+  unfold lemma32BurgessAmplitudeConstant
+  exact mul_pos (mul_pos (mul_pos (by norm_num) (by norm_num))
+    (pow_pos lemma32_unit_prime_saving_constant_pos 4))
+    (by linarith [lemma32_uniform_moment_constant_pos])
+
+lemma lemma32_actual_burgess_normalized_amplitude_fourth {D N : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (hD : 1≤D)
+    (hN : lemma32BurgessSmallRangeConstant*lemma32BurgessPower D (25/64)<(N : ℝ))
+    (hupper : (N : ℝ)≤lemma32BurgessPower D (79/128)) (M : ℤ) :
+    (lemma32BurgessShiftAbsoluteSum χ M (lemma32BurgessMultiplierLength D N) N (lemma32BurgessBlockLength D)/
+      (((lemma32BurgessUnitMultipliers D (lemma32BurgessMultiplierLength D N)).card : ℝ)*
+        (lemma32BurgessBlockLength D : ℝ)))^4 ≤
+      lemma32BurgessAmplitudeConstant*lemma32BurgessPower D (197/256)*(N : ℝ)^2 := by
+  let A := lemma32BurgessMultiplierLength D N
+  let B := lemma32BurgessBlockLength D
+  let U : ℝ := (lemma32BurgessUnitMultipliers D A).card
+  let V := lemma32UnitPrimeSavingConstant*lemma32BurgessPower D (1/2048)
+  let T := lemma32BurgessShiftAbsoluteSum χ M A N B
+  let L := 1+Real.log (A : ℝ)
+  let Q := 3*(D : ℝ)*(B : ℝ)^2+lemma32UniformMomentConstant*
+    lemma32BurgessPower D (17/32)*(B : ℝ)^4
+  let W := (6+lemma32UniformMomentConstant)*lemma32BurgessPower D (49/64)
+  have hA : (0 : ℝ)<(A : ℝ) := Nat.cast_pos.mpr
+    (Nat.lt_of_lt_of_le Nat.zero_lt_one (lemma32_burgess_multiplier_length_bounds hD hN).1)
+  have hB : (0 : ℝ)<(B : ℝ) := Nat.cast_pos.mpr
+    (Nat.lt_of_lt_of_le Nat.zero_lt_one (lemma32_burgess_block_bounds hD).1)
+  have hV : 0<V := mul_pos lemma32_unit_prime_saving_constant_pos
+    (lemma32_burgess_power_pos D (1/2048))
+  have hT : 0≤T := Finset.sum_nonneg (fun p hp => norm_nonneg _)
+  have hL : 0≤L := lemma32_burgess_chosen_log_nonneg hD hN
+  have hW : 0≤W := mul_nonneg (by linarith [lemma32_uniform_moment_constant_pos])
+    (lemma32_burgess_power_pos D (49/64)).le
+  have hNle : (N : ℝ)≤2048*(A : ℝ)*(B : ℝ) := by
+    have hl := (lemma32_burgess_multiplier_length_bounds hD hN).2.1
+    have hh := (div_le_iff₀ (mul_pos (by norm_num : (0 : ℝ)<2048) hB)).mp hl
+    nlinarith
+  have hU : (A : ℝ)/(2*V)≤U := by
+    dsimp only [A,V,U]
+    simpa only [mul_assoc] using lemma32_actual_burgess_chosen_unit_lower χ hD hN
+  have hb := lemma32_burgess_block_normalization_fourth hA hB hV hT
+    (Nat.cast_nonneg N) hL hW hU
+    (lemma32_actual_burgess_chosen_amplification χ hD hN hupper M)
+    (lemma32_burgess_block_fourth_moment_bound hD) hNle
+  have hcoeflog : (0 : ℝ)≤98304*V^4*(N : ℝ)^2*W :=
+    mul_nonneg (mul_nonneg (mul_nonneg (by norm_num) (pow_nonneg hV.le 4)) (sq_nonneg _)) hW
+  have hlog := mul_le_mul_of_nonneg_left (lemma32_burgess_chosen_log_bound hD hN hupper) hcoeflog
+  have he : 98304*V^4*(N : ℝ)^2*(512*lemma32BurgessPower D (1/512))*W =
+      lemma32BurgessAmplitudeConstant*lemma32BurgessPower D (197/256)*(N : ℝ)^2 := by
+    have hpow : (lemma32BurgessPower D (1/2048))^4*
+        lemma32BurgessPower D (1/512)*lemma32BurgessPower D (49/64)=
+        lemma32BurgessPower D (197/256) := by
+      rw [lemma32_burgess_power_nat_pow, ← lemma32_burgess_power_add, ← lemma32_burgess_power_add]
+      norm_num
+    dsimp only [V,W]
+    unfold lemma32BurgessAmplitudeConstant
+    rw [mul_pow]
+    calc
+      _ = (98304*512*lemma32UnitPrimeSavingConstant^4*(6+lemma32UniformMomentConstant))*
+          ((lemma32BurgessPower D (1/2048))^4*lemma32BurgessPower D (1/512)*
+            lemma32BurgessPower D (49/64))*(N : ℝ)^2 := by ring
+      _ = _ := by rw [hpow]
+  have hlog' : 98304*V^4*(N : ℝ)^2*L*W ≤
+      98304*V^4*(N : ℝ)^2*(512*lemma32BurgessPower D (1/512))*W := by
+    convert hlog using 1 <;> ring
+  exact hb.trans (hlog'.trans_eq he)
+
+end ZhangLS.Spec

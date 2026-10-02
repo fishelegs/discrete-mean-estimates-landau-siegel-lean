@@ -1,0 +1,301 @@
+import ZhangLS.Spec.Lemma56PrimeLogWindow
+import Mathlib.Algebra.BigOperators.Module
+
+namespace ZhangLS.Spec
+open Complex MeasureTheory Finset
+open scoped Real
+set_option maxHeartbeats 1000000
+set_option maxRecDepth 4096
+
+lemma lemma56_finite_abel_positive_budget {m n : ℕ} (hmn : m < n)
+    (w : ℕ → ℝ) (c : ℕ → ℂ) {A : ℝ}
+    (hmono : MonotoneOn w (Set.Icc m (n - 1))) (hw : 0 ≤ w m)
+    (hc : ∀ k : ℕ, m ≤ k → k ≤ n → ‖∑ j ∈ range k, c j‖ ≤ A) :
+    ‖∑ j ∈ Ico m n, w j • c j‖ ≤ 2 * A * w (n - 1) := by
+  have hm : m ≤ n - 1 := Nat.le_sub_one_of_lt hmn
+  have htop : 0 ≤ w (n - 1) := hw.trans
+    (hmono ⟨le_rfl, hm⟩ ⟨hm, le_rfl⟩ hm)
+  have hd : ∀ j ∈ Ico m (n - 1), 0 ≤ w (j + 1) - w j := by
+    intro j hj
+    have hh := mem_Ico.mp hj
+    apply sub_nonneg.mpr
+    exact hmono ⟨hh.1, hh.2.le⟩ ⟨by omega, by omega⟩ (by omega)
+  have hmid : ‖∑ j ∈ Ico m (n - 1),
+      (w (j + 1) - w j) • (∑ k ∈ range (j + 1), c k)‖ ≤
+        A * (w (n - 1) - w m) := by
+    calc
+      _ ≤ ∑ j ∈ Ico m (n - 1),
+          ‖(w (j + 1) - w j) • (∑ k ∈ range (j + 1), c k)‖ := norm_sum_le _ _
+      _ ≤ ∑ j ∈ Ico m (n - 1), (w (j + 1) - w j) * A := by
+        apply sum_le_sum
+        intro j hj
+        rw [norm_smul, Real.norm_eq_abs, abs_of_nonneg (hd j hj)]
+        apply mul_le_mul_of_nonneg_left _ (hd j hj)
+        have hh := mem_Ico.mp hj
+        exact hc (j + 1) (by omega) (by omega)
+      _ = A * (w (n - 1) - w m) := by
+        rw [← sum_mul, sum_Ico_sub w hm]
+        ring
+  have hfirst : ‖w (n - 1) • (∑ j ∈ range n, c j)‖ ≤ w (n - 1) * A := by
+    rw [norm_smul, Real.norm_eq_abs, abs_of_nonneg htop]
+    exact mul_le_mul_of_nonneg_left (hc n hmn.le le_rfl) htop
+  have hsecond : ‖w m • (∑ j ∈ range m, c j)‖ ≤ w m * A := by
+    rw [norm_smul, Real.norm_eq_abs, abs_of_nonneg hw]
+    exact mul_le_mul_of_nonneg_left (hc m le_rfl hmn.le) hw
+  rw [sum_Ico_by_parts w c hmn]
+  have h1 := norm_sub_le (w (n - 1) • (∑ j ∈ range n, c j))
+    (w m • (∑ j ∈ range m, c j))
+  have h2 := norm_sub_le
+    (w (n - 1) • (∑ j ∈ range n, c j) - w m • (∑ j ∈ range m, c j))
+    (∑ j ∈ Ico m (n - 1), (w (j + 1) - w j) • (∑ k ∈ range (j + 1), c k))
+  nlinarith only [h1, h2, hfirst, hsecond, hmid]
+
+lemma lemma56_prime_weight_mono {x y : ℝ} (hx : 0 < x) (hxy : x ≤ y)
+    (hlogx : 1 ≤ Real.log x) : x / Real.log x ≤ y / Real.log y := by
+  have hy : 0 < y := hx.trans_le hxy
+  have hlogy : 1 ≤ Real.log y := hlogx.trans (Real.log_le_log hx hxy)
+  have hratio : 0 < y / x := div_pos hy hx
+  have he := Real.log_le_sub_one_of_pos hratio
+  rw [Real.log_div hy.ne' hx.ne'] at he
+  have hh := mul_le_mul_of_nonneg_left he hx.le
+  have heq : x * (y / x - 1) = y - x := by field_simp
+  rw [heq] at hh
+  have hp := mul_nonneg (sub_nonneg.mpr hxy) (sub_nonneg.mpr hlogx)
+  apply (div_le_div_iff₀ (by linarith only [hlogx] : 0 < Real.log x)
+    (by linarith only [hlogy] : 0 < Real.log y)).mpr
+  nlinarith only [hh, hp]
+
+lemma lemma56_actual_prime_weight_identity {q p : ℕ} (θ : DirichletCharacter ℂ q)
+    (hp : p.Prime) (τ : ℝ) :
+    θ (p : ZMod q) * (p : ℂ) ^ (1 + I * (τ : ℂ)) =
+      ((p : ℝ) / Real.log (p : ℝ)) •
+        ((p : ℂ) ^ ((τ : ℂ) * I) *
+          (θ (p : ZMod q) * (Real.log (p : ℝ) : ℂ))) := by
+  have hp0 : (p : ℂ) ≠ 0 := by exact_mod_cast hp.ne_zero
+  have hlog : (Real.log (p : ℝ) : ℂ) ≠ 0 := by
+    exact_mod_cast (Real.log_pos (by exact_mod_cast hp.one_lt)).ne'
+  rw [Complex.cpow_add 1 (I * (τ : ℂ)) hp0, Complex.cpow_one, Complex.real_smul,
+    Complex.ofReal_div, Complex.ofReal_natCast, mul_comm I (τ : ℂ)]
+  field_simp
+
+lemma lemma56_actual_paper_prime_interval {D q : ℕ} (θ : DirichletCharacter ℂ q)
+    (hP : 0 ≤ lemma23PaperP D) (τ : ℝ) :
+    lemma56PrimeSum D θ τ =
+      ∑ n ∈ Ico (⌊lemma23PaperP D⌋₊ + 1) ⌈lemma56PrimeUpper D⌉₊,
+        if n.Prime then θ (n : ZMod q) * (n : ℂ) ^ (1 + I * (τ : ℂ)) else 0 := by
+  unfold lemma56PrimeSum lemma56PaperPrimes
+  rw [sum_filter]
+  have hsub : Ico (⌊lemma23PaperP D⌋₊ + 1) ⌈lemma56PrimeUpper D⌉₊ ⊆
+      range ⌈lemma56PrimeUpper D⌉₊ := by
+    intro n hn
+    exact mem_range.mpr (mem_Ico.mp hn).2
+  rw [← sum_subset hsub]
+  · apply sum_congr rfl
+    intro n hn
+    have hh := mem_Ico.mp hn
+    have hlo : lemma23PaperP D < (n : ℝ) :=
+      (Nat.floor_lt hP).mp (by omega)
+    have hhi : (n : ℝ) < lemma56PrimeUpper D := Nat.lt_ceil.mp hh.2
+    simp only [hlo, hhi, and_true]
+  · intro n hn hnnot
+    by_cases hwindow : n.Prime ∧ lemma23PaperP D < (n : ℝ) ∧ (n : ℝ) < lemma56PrimeUpper D
+    · have hh : n ∈ Ico (⌊lemma23PaperP D⌋₊ + 1) ⌈lemma56PrimeUpper D⌉₊ := by
+        apply mem_Ico.mpr
+        refine ⟨?_, Nat.lt_ceil.mpr hwindow.2.2⟩
+        have hlo := (Nat.floor_lt hP).mpr hwindow.2.1
+        omega
+      exact False.elim (hnnot hh)
+    · exact if_neg hwindow
+
+lemma lemma56_paper_prime_weight_parameters {D : ℕ} (hL : 2000 ≤ lemma23PaperL D) :
+    1 ≤ Real.log (lemma23PaperP D) ∧ 4 ≤ lemma23PaperP D ∧
+      lemma23PaperP D ≤ lemma56PrimeUpper D ∧
+      lemma56PrimeUpper D + 1 ≤ 2 * lemma23PaperP D ∧
+      (⌈lemma56PrimeUpper D⌉₊ : ℝ) ≤ 2 * lemma23PaperP D := by
+  let L := lemma23PaperL D
+  have hL0 : 0 ≤ L := by dsimp [L]; linarith only [hL]
+  have hL2 : (2 : ℝ) ≤ L := by dsimp [L]; linarith only [hL]
+  have h512 : 512 ≤ L ^ 9 := by
+    have hh := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 2) hL2 9
+    norm_num at hh
+    exact hh
+  have hL68 : 4 ≤ L ^ 68 := by
+    have hh := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 2) hL2 68
+    norm_num at hh
+    linarith only [hh]
+  have hδ0 : 0 ≤ L ^ (-68 : ℤ) := zpow_nonneg hL0 _
+  have hδ : L ^ (-68 : ℤ) ≤ (1 / 4 : ℝ) := by
+    rw [show (-68 : ℤ) = -(68 : ℤ) by norm_num, zpow_neg, zpow_ofNat]
+    simpa only [one_div] using
+      one_div_le_one_div_of_le (by norm_num : (0 : ℝ) < 4) hL68
+  have hP4 : 4 ≤ lemma23PaperP D := by
+    have hh := Real.add_one_le_exp (L ^ 9)
+    change 4 ≤ Real.exp (L ^ 9)
+    linarith only [hh, h512]
+  have hP0 : 0 ≤ lemma23PaperP D := (by norm_num : (0 : ℝ) ≤ 4).trans hP4
+  have hprod := mul_le_mul_of_nonneg_left hδ hP0
+  have hprod0 := mul_nonneg hP0 hδ0
+  have hupper : lemma56PrimeUpper D + 1 ≤ 2 * lemma23PaperP D := by
+    change lemma23PaperP D * (1 + L ^ (-68 : ℤ)) + 1 ≤ _
+    nlinarith only [hprod, hP4]
+  have hY0 : 0 ≤ lemma56PrimeUpper D := by
+    change 0 ≤ lemma23PaperP D * (1 + L ^ (-68 : ℤ))
+    positivity
+  refine ⟨?_, hP4, ?_, hupper, ?_⟩
+  · rw [lemma23PaperP, Real.log_exp]
+    exact (by norm_num : (1 : ℝ) ≤ 512).trans h512
+  · change lemma23PaperP D ≤ lemma23PaperP D * (1 + L ^ (-68 : ℤ))
+    nlinarith only [hprod0]
+  · exact (Nat.ceil_lt_add_one hY0).le.trans hupper
+
+lemma lemma56_actual_paper_prime_weight_budget {D q : ℕ} (θ : DirichletCharacter ℂ q)
+    (hL : 2000 ≤ lemma23PaperL D) (τ : ℝ) {A : ℝ} (hA : 0 ≤ A)
+    (hc : ∀ {x : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D →
+      ‖lemma56SharpPrimeLogSum θ x τ‖ ≤ A) :
+    ‖lemma56PrimeSum D θ τ‖ ≤ 4 * A * lemma23PaperP D := by
+  have hp := lemma56_paper_prime_weight_parameters hL
+  have hP0 : 0 ≤ lemma23PaperP D := (by norm_num : (0 : ℝ) ≤ 4).trans hp.2.1
+  let m := ⌊lemma23PaperP D⌋₊ + 1
+  let n := ⌈lemma56PrimeUpper D⌉₊
+  let w : ℕ → ℝ := fun k => (k : ℝ) / Real.log (k : ℝ)
+  let c : ℕ → ℂ := fun k => if k.Prime then
+    (k : ℂ) ^ ((τ : ℂ) * I) * (θ (k : ZMod q) * (Real.log (k : ℝ) : ℂ)) else 0
+  have hmP : lemma23PaperP D < (m : ℝ) := by
+    dsimp [m]
+    rw [Nat.cast_add, Nat.cast_one]
+    exact Nat.lt_floor_add_one _
+  have hm1 : 1 ≤ m := by dsimp [m]; omega
+  have hnmax : (n : ℝ) ≤ 2 * lemma23PaperP D := hp.2.2.2.2
+  have hmLog : 1 ≤ Real.log (m : ℝ) := hp.1.trans
+    (Real.log_le_log (by linarith only [hp.2.1] : 0 < lemma23PaperP D) hmP.le)
+  have hmw : 0 ≤ w m := by dsimp [w]; positivity
+  have hc_range : ∀ k : ℕ, m ≤ k → k ≤ n → ‖∑ j ∈ range k, c j‖ ≤ A := by
+    intro k hmk hkn
+    have hk1 : (1 : ℝ) ≤ k := by exact_mod_cast hm1.trans hmk
+    have hkmax : (k : ℝ) ≤ 2 * lemma23PaperP D :=
+      (by exact_mod_cast hkn : (k : ℝ) ≤ n).trans hnmax
+    simpa only [lemma56SharpPrimeLogSum, Nat.ceil_natCast] using hc hk1 hkmax
+  rw [lemma56_actual_paper_prime_interval θ hP0]
+  change ‖∑ k ∈ Ico m n, if k.Prime then θ (k : ZMod q) *
+    (k : ℂ) ^ (1 + I * (τ : ℂ)) else 0‖ ≤ _
+  have heq : (∑ k ∈ Ico m n, if k.Prime then θ (k : ZMod q) *
+      (k : ℂ) ^ (1 + I * (τ : ℂ)) else 0) = ∑ k ∈ Ico m n, w k • c k := by
+    apply sum_congr rfl
+    intro k hk
+    by_cases hkp : k.Prime
+    · simp only [hkp, if_true, c, w]
+      exact lemma56_actual_prime_weight_identity θ hkp τ
+    · simp [hkp, c]
+  rw [heq]
+  by_cases hmn : m < n
+  · have hmono : MonotoneOn w (Set.Icc m (n - 1)) := by
+      intro a ha b hb hab
+      have ha1 : (1 : ℝ) ≤ a := by exact_mod_cast hm1.trans ha.1
+      have hma : (m : ℝ) ≤ a := by exact_mod_cast ha.1
+      apply lemma56_prime_weight_mono (by linarith only [ha1]) (by exact_mod_cast hab)
+      exact hmLog.trans (Real.log_le_log (by exact_mod_cast (Nat.zero_lt_of_lt hm1)) hma)
+    have hb := lemma56_finite_abel_positive_budget hmn w c hmono hmw hc_range
+    have htopm : m ≤ n - 1 := Nat.le_sub_one_of_lt hmn
+    have htop1 : 1 ≤ Real.log ((n - 1 : ℕ) : ℝ) := hmLog.trans
+      (Real.log_le_log (by exact_mod_cast (Nat.zero_lt_of_lt hm1)) (by exact_mod_cast htopm))
+    have htop0 : (0 : ℝ) ≤ (n - 1 : ℕ) := Nat.cast_nonneg _
+    have htop : w (n - 1) ≤ 2 * lemma23PaperP D := by
+      calc
+        _ ≤ ((n - 1 : ℕ) : ℝ) := by
+          dsimp [w]
+          apply (div_le_iff₀ (by linarith only [htop1] : 0 < Real.log ((n - 1 : ℕ) : ℝ))).mpr
+          have hh := mul_le_mul_of_nonneg_left htop1 htop0
+          simpa only [mul_one] using hh
+        _ ≤ (n : ℝ) := by exact_mod_cast Nat.sub_le n 1
+        _ ≤ _ := hnmax
+    exact hb.trans (by nlinarith only [mul_le_mul_of_nonneg_left htop (mul_nonneg (by norm_num : (0 : ℝ) ≤ 2) hA)])
+  · rw [Ico_eq_empty_of_le (by omega), sum_empty, norm_zero]
+    positivity
+
+theorem lemma56_uniform_primitive_prime_window_absolute_bound :
+    ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q]
+      (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → θ.IsPrimitive → 1 < q →
+      (q : ℝ) < lemma56PaperT D →
+      (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      ∀ τ : ℝ, |τ| ≤ D →
+        ‖lemma56PrimeSum D θ τ‖ ≤ C * (lemma23PaperP D) ^ 2 *
+          Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ))) := by
+  obtain ⟨Cp, hCp, Ds, hs⟩ := lemma56_uniform_primitive_sharp_prime_log_window_bound
+  obtain ⟨Dr, hr⟩ := lemma56_uniform_repulsion_modulus_threshold
+  refine ⟨4 * Cp, by positivity, max Ds Dr, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne τ hτ
+  have hL : 2000 ≤ lemma23PaperL D := (hr D ((le_max_right _ _).trans hDN)).1
+  let A := Cp * lemma23PaperP D *
+    Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)))
+  have hP : 0 < lemma23PaperP D := Real.exp_pos _
+  have hA0 : 0 ≤ A := by dsimp [A]; positivity
+  have hc : ∀ {x : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D →
+      ‖lemma56SharpPrimeLogSum θ x τ‖ ≤ A := by
+    intro x hx hxmax
+    exact hs χ θ ((le_max_left _ _).trans hDN) hD hA hθ hq1 hqT hne hx hxmax hτ
+  have hb := lemma56_actual_paper_prime_weight_budget θ hL τ hA0 hc
+  dsimp [A] at hb
+  convert hb using 1 <;> ring
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → θ.IsPrimitive → 1 < q →
+    (q : ℝ) < Real.exp ((Real.log (D : ℝ)) ^ (11 / 10 : ℝ)) →
+    (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+    ∀ τ : ℝ, |τ| ≤ D →
+      ‖∑ p ∈ (range ⌈Real.exp ((Real.log (D : ℝ)) ^ 9) *
+        (1 + (Real.log (D : ℝ)) ^ (-68 : ℤ))⌉₊).filter
+          (fun p : ℕ => p.Prime ∧ Real.exp ((Real.log (D : ℝ)) ^ 9) < (p : ℝ) ∧
+            (p : ℝ) < Real.exp ((Real.log (D : ℝ)) ^ 9) *
+              (1 + (Real.log (D : ℝ)) ^ (-68 : ℤ))),
+        θ (p : ZMod q) * (p : ℂ) ^ (1 + I * (τ : ℂ))‖ ≤
+          C * (Real.exp ((Real.log (D : ℝ)) ^ 9)) ^ 2 *
+            Real.exp (-((7 / 6 : ℝ) * (Real.log (D : ℝ)) ^ (9 / 2 : ℝ))) := by
+  simpa only [lemma56PrimeSum, lemma56PaperPrimes, lemma56PrimeUpper,
+    lemma56PaperT, lemma23PaperP, lemma23PaperL] using
+    lemma56_uniform_primitive_prime_window_absolute_bound
+
+example {p : ℕ} (hp : p.Prime) (τ : ℝ) :
+    (1 : DirichletCharacter ℂ 1) (p : ZMod 1) * (p : ℂ) ^ (1 + I * (τ : ℂ)) =
+      ((p : ℝ) / Real.log (p : ℝ)) • ((p : ℂ) ^ ((τ : ℂ) * I) *
+        ((1 : DirichletCharacter ℂ 1) (p : ZMod 1) * (Real.log (p : ℝ) : ℂ))) :=
+  lemma56_actual_prime_weight_identity _ hp τ
+
+example {D q : ℕ} (θ : DirichletCharacter ℂ q) (τ : ℝ) :
+    (∑ p ∈ lemma56PaperPrimes D, θ (p : ZMod q) * (p : ℂ) ^ (1 + I * (τ : ℂ))) =
+      ∑ n ∈ Ico (⌊lemma23PaperP D⌋₊ + 1) ⌈lemma56PrimeUpper D⌉₊,
+        if n.Prime then θ (n : ZMod q) * (n : ℂ) ^ (1 + I * (τ : ℂ)) else 0 := by
+  exact lemma56_actual_paper_prime_interval θ (Real.exp_pos _).le τ
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → θ.IsPrimitive → 1 < q →
+    (q : ℝ) < lemma56PaperT D →
+    (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      (‖∑ p ∈ lemma56PaperPrimes D, θ (p : ZMod q) *
+          (p : ℂ) ^ (1 + I * (-(D : ℝ) : ℂ))‖ ≤
+        C * (lemma23PaperP D) ^ 2 * Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)))) ∧
+      (‖∑ p ∈ lemma56PaperPrimes D, θ (p : ZMod q) *
+          (p : ℂ) ^ (1 + I * (((D : ℝ) : ℂ)))‖ ≤
+        C * (lemma23PaperP D) ^ 2 * Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)))) := by
+  obtain ⟨C, hC, D₀, h⟩ := lemma56_uniform_primitive_prime_window_absolute_bound
+  refine ⟨C, hC, D₀, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne
+  constructor
+  · simpa only [lemma56PrimeSum, Complex.ofReal_neg] using
+      h χ θ hDN hD hA hθ hq1 hqT hne (-(D : ℝ))
+        (by simp [abs_of_nonneg (by positivity : (0 : ℝ) ≤ D)])
+  · simpa only [lemma56PrimeSum] using
+      h χ θ hDN hD hA hθ hq1 hqT hne (D : ℝ)
+        (by simp [abs_of_nonneg (by positivity : (0 : ℝ) ≤ D)])
+
+#print axioms lemma56_finite_abel_positive_budget
+#print axioms lemma56_prime_weight_mono
+#print axioms lemma56_actual_prime_weight_identity
+#print axioms lemma56_actual_paper_prime_interval
+#print axioms lemma56_paper_prime_weight_parameters
+#print axioms lemma56_actual_paper_prime_weight_budget
+#print axioms lemma56_uniform_primitive_prime_window_absolute_bound
+
+end ZhangLS.Spec

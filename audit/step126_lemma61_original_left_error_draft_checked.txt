@@ -1,0 +1,475 @@
+import ZhangLS.Spec.Lemma61ActualZError
+import ZhangLS.Spec.Lemma44LocalRectangle
+import ZhangLS.Spec.Lemma61ReciprocalTailKernel
+
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set
+open scoped Real Topology
+set_option maxHeartbeats 2000000
+set_option maxRecDepth 4096
+
+lemma lemma61_positive_real_cpow_model {B : ℝ} (hB : 0 < B) (w : ℂ) :
+    (B : ℂ) ^ (-w) = exp (-(Real.log B : ℂ) * w) := by
+  rw [Complex.cpow_def_of_ne_zero (Complex.ofReal_ne_zero.mpr hB.ne'),← Complex.ofReal_log hB.le]
+  congr 1
+  ring
+
+noncomputable def lemma61ErrorDifferenceNumerator {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s w : ℂ) : ℂ :=
+  lemma23DirichletZ ψ (s + w) - lemma23DirichletZ ψ s *
+    ((lemma23PaperP D * lemma51PaperT0 D : ℝ) : ℂ) ^ (-w)
+
+noncomputable def lemma61ErrorRegularIntegrand {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s w : ℂ) : ℂ :=
+  dslope (lemma61ErrorDifferenceNumerator (D := D) ψ s) 0 w *
+    lemma61ShortPolynomial D ψ⁻¹ (1 - s - w) *
+      exp (w * (Real.log (lemma61PaperP4 D) : ℂ)) * lemma57OmegaOne D w
+
+lemma lemma61_error_difference_at_zero {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) :
+    lemma61ErrorDifferenceNumerator (D := D) ψ s 0 = 0 := by
+  simp [lemma61ErrorDifferenceNumerator]
+
+lemma lemma61_error_regular_eq_actual_of_ne_zero {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) {w : ℂ} (hw : w ≠ 0) :
+    lemma61ErrorRegularIntegrand (D := D) ψ s w = lemma61ActualZErrorIntegrand (D := D) ψ s w := by
+  unfold lemma61ErrorRegularIntegrand
+  rw [dslope_of_ne _ hw,slope_def_field,lemma61_error_difference_at_zero]
+  simp only [sub_zero]
+  rfl
+
+lemma lemma61_error_difference_rectangle_differentiable {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s) :
+    DifferentiableOn ℂ (lemma61ErrorDifferenceNumerator (D := D) ψ s)
+      (lemma44ClosedRectangle (-1) 1 (lemma23PaperL D ^ 20)) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hbase : 0 < lemma23PaperP D * lemma51PaperT0 D := mul_pos (Real.exp_pos _) (pow_pos h0 519)
+  have hmodel : Differentiable ℂ (fun w : ℂ =>
+      ((lemma23PaperP D * lemma51PaperT0 D : ℝ) : ℂ) ^ (-w)) := by
+    simp_rw [lemma61_positive_real_cpow_model hbase]
+    fun_prop
+  intro w hw
+  change w.re ∈ Icc (-1) 1 ∧ w.im ∈ Icc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20) at hw
+  have hpow : lemma23PaperL D ^ 20 ≤ lemma23PaperL D ^ 405 :=
+    pow_le_pow_right₀ (by linarith) (by norm_num)
+  have hh : |(s + w).im - (lemma23PaperCenter D).im| ≤ 2 * lemma23PaperL D ^ 405 + 3 := by
+    have he : (s + w).im - (lemma23PaperCenter D).im = (s.im - (lemma23PaperCenter D).im) + w.im := by simp; ring
+    rw [he]
+    exact (abs_add_le _ _).trans (by linarith only [hs.2,abs_le.mpr hw.2,hpow])
+  have hdata := lemma61_wide_height_data hL hh
+  have hzi : 0 < (s + w).im := by linarith only [hdata.2.1]
+  have hz : DifferentiableAt ℂ (fun u : ℂ => lemma23DirichletZ ψ (s + u)) w :=
+    (lemma23DirichletZ_differentiableAt_of_im_ne_zero ψ hzi.ne').comp w (by fun_prop)
+  exact (hz.sub ((hmodel w).const_mul (lemma23DirichletZ ψ s))).differentiableWithinAt
+
+lemma lemma61_error_regular_rectangle_differentiable {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s) :
+    DifferentiableOn ℂ (lemma61ErrorRegularIntegrand (D := D) ψ s)
+      (lemma44ClosedRectangle (-1) 1 (lemma23PaperL D ^ 20)) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hn : lemma44ClosedRectangle (-1) 1 (lemma23PaperL D ^ 20) ∈ nhds (0 : ℂ) := by
+    rw [← mem_interior_iff_mem_nhds]
+    simp only [lemma44ClosedRectangle,interior_reProdIm,interior_Icc,mem_reProdIm,mem_Ioo,zero_re,zero_im]
+    constructor <;> constructor <;> norm_num <;> positivity
+  have hd := (Complex.differentiableOn_dslope hn).2 (lemma61_error_difference_rectangle_differentiable ψ hL hs)
+  have hN := lemma61_short_polynomial_differentiable (D := D) ψ⁻¹
+  have hp : Differentiable ℂ (fun w : ℂ => lemma61ShortPolynomial D ψ⁻¹ (1 - s - w) *
+      exp (w * (Real.log (lemma61PaperP4 D) : ℂ)) * lemma57OmegaOne D w) := by
+    unfold lemma57OmegaOne
+    fun_prop
+  convert hd.mul hp.differentiableOn using 1
+  funext w
+  dsimp [lemma61ErrorRegularIntegrand]
+  ring
+
+lemma lemma61_error_vertical_ae_eq {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (a : ℝ) :
+    (fun v : ℝ => lemma61ErrorRegularIntegrand (D := D) ψ s ((a : ℂ) + (v : ℂ) * I)) =ᵐ[volume]
+      (fun v : ℝ => lemma61ActualZErrorIntegrand (D := D) ψ s ((a : ℂ) + (v : ℂ) * I)) := by
+  filter_upwards [volume.ae_ne (0 : ℝ)] with v hv
+  apply lemma61_error_regular_eq_actual_of_ne_zero
+  intro he
+  have hi := congrArg Complex.im he
+  simp only [add_im,ofReal_im,mul_im,ofReal_re,I_im,I_re,mul_one,mul_zero,add_zero,zero_add,zero_im] at hi
+  exact hv hi
+
+lemma lemma61_error_vertical_interval_integrable {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s)
+    {a : ℝ} (ha : a ∈ Icc (-1) 1) :
+    IntervalIntegrable (fun v : ℝ => lemma61ActualZErrorIntegrand (D := D) ψ s ((a : ℂ) + (v : ℂ) * I))
+      volume (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hR := (lemma61_error_regular_rectangle_differentiable ψ hL hs).continuousOn
+  have hm : MapsTo (fun v : ℝ => (a : ℂ) + (v : ℂ) * I)
+      (uIcc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20))
+      (lemma44ClosedRectangle (-1) 1 (lemma23PaperL D ^ 20)) := by
+    intro v hv
+    rw [uIcc_of_le (neg_le_self (pow_nonneg h0.le 20))] at hv
+    simpa [lemma44ClosedRectangle,mem_reProdIm] using And.intro ha hv
+  have hi : IntervalIntegrable (fun v : ℝ => lemma61ErrorRegularIntegrand (D := D) ψ s ((a : ℂ) + (v : ℂ) * I))
+      volume (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20) :=
+    (hR.comp (by fun_prop) hm).intervalIntegrable
+  exact hi.congr_ae (ae_restrict_of_ae (lemma61_error_vertical_ae_eq ψ s a))
+
+lemma lemma61_error_vertical_integral_eq {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (a H : ℝ) :
+    (∫ v : ℝ in -H..H, lemma61ErrorRegularIntegrand (D := D) ψ s ((a : ℂ) + (v : ℂ) * I) * I) =
+      (∫ v : ℝ in -H..H, lemma61ActualZErrorIntegrand (D := D) ψ s ((a : ℂ) + (v : ℂ) * I) * I) := by
+  apply intervalIntegral.integral_congr_ae
+  filter_upwards [lemma61_error_vertical_ae_eq ψ s a] with v hv
+  intro _
+  exact congrArg (fun z : ℂ => z * I) hv
+
+lemma lemma61_actual_error_path_interval_integrable {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s) :
+    IntervalIntegrable (fun v : ℝ => lemma61ActualZErrorIntegrand (D := D) ψ s (lemma61ErrorContourShift s v))
+      volume (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20) := by
+  have hr := lemma61_region_real_parts hL hs
+  have ha : (1 - 2 * s.re : ℝ) ∈ Icc (-1) 1 := ⟨by linarith only [hr.2],by linarith only [hr.1]⟩
+  simpa only [lemma61ErrorContourShift,mul_comm] using lemma61_error_vertical_interval_integrable ψ hL hs ha
+
+lemma lemma61_error_regular_path_rectangle_cauchy {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s) :
+    lemma44GeneralRectangleBoundaryIntegral (lemma61ErrorRegularIntegrand (D := D) ψ s)
+      (-1) (1 - 2 * s.re) (lemma23PaperL D ^ 20) = 0 := by
+  have hr := lemma61_region_real_parts hL hs
+  have h0 : 0 < lemma23PaperL D := by linarith
+  apply lemma44_local_rectangle_cauchy _ (by linarith only [hr.2]) (by positivity)
+  apply (lemma61_error_regular_rectangle_differentiable ψ hL hs).mono
+  intro w hw
+  exact ⟨⟨hw.1.1,by linarith only [hw.1.2,hr.1]⟩,hw.2⟩
+
+lemma lemma61_actual_error_line_shift {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s) :
+    (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+      lemma61ActualZErrorIntegrand (D := D) ψ s ((-1 : ℂ) + (v : ℂ) * I) * I) =
+      (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+        lemma61ActualZErrorIntegrand (D := D) ψ s (lemma61ErrorContourShift s v) * I) +
+      (∫ x : ℝ in (-1 : ℝ)..(1 - 2 * s.re),
+        lemma61ActualZErrorIntegrand (D := D) ψ s ((x : ℂ) - ((lemma23PaperL D ^ 20 : ℝ) : ℂ) * I)) -
+      (∫ x : ℝ in (-1 : ℝ)..(1 - 2 * s.re),
+        lemma61ActualZErrorIntegrand (D := D) ψ s ((x : ℂ) + ((lemma23PaperL D ^ 20 : ℝ) : ℂ) * I)) := by
+  let H := lemma23PaperL D ^ 20
+  let a := 1 - 2 * s.re
+  let R := lemma61ErrorRegularIntegrand (D := D) ψ s
+  let F := lemma61ActualZErrorIntegrand (D := D) ψ s
+  have h0 : 0 < H := by dsimp [H]; positivity
+  have hb : (∫ x : ℝ in (-1 : ℝ)..a, R ((x : ℂ) - (H : ℂ) * I)) =
+      (∫ x : ℝ in (-1 : ℝ)..a, F ((x : ℂ) - (H : ℂ) * I)) := by
+    apply intervalIntegral.integral_congr
+    intro x hx
+    apply lemma61_error_regular_eq_actual_of_ne_zero
+    intro he
+    have hi := congrArg Complex.im he
+    simp only [sub_im,ofReal_im,mul_im,ofReal_re,I_im,I_re,mul_one,mul_zero,add_zero,zero_im] at hi
+    linarith only [hi,h0]
+  have ht : (∫ x : ℝ in (-1 : ℝ)..a, R ((x : ℂ) + (H : ℂ) * I)) =
+      (∫ x : ℝ in (-1 : ℝ)..a, F ((x : ℂ) + (H : ℂ) * I)) := by
+    apply intervalIntegral.integral_congr
+    intro x hx
+    apply lemma61_error_regular_eq_actual_of_ne_zero
+    intro he
+    have hi := congrArg Complex.im he
+    simp only [add_im,ofReal_im,mul_im,ofReal_re,I_im,I_re,mul_one,mul_zero,add_zero,zero_add,zero_im] at hi
+    linarith only [hi,h0]
+  have hc := lemma61_error_regular_path_rectangle_cauchy ψ hL hs
+  unfold lemma44GeneralRectangleBoundaryIntegral at hc
+  simp only [Complex.ofReal_neg,Complex.ofReal_one] at hc
+  have hleft := lemma61_error_vertical_integral_eq (D := D) ψ s (-1) H
+  simp only [Complex.ofReal_neg,Complex.ofReal_one] at hleft
+  rw [← hleft,
+    show (fun v : ℝ => F (lemma61ErrorContourShift s v) * I) =
+      (fun v : ℝ => F ((a : ℂ) + (v : ℂ) * I) * I) by funext v; simp [lemma61ErrorContourShift,a,mul_comm],
+    ← lemma61_error_vertical_integral_eq (D := D) ψ s a H]
+  change (∫ v : ℝ in -H..H, R ((-1 : ℂ) + (v : ℂ) * I) * I) =
+    (∫ v : ℝ in -H..H, R ((a : ℂ) + (v : ℂ) * I) * I) + _ - _
+  rw [← hb,← ht]
+  simp only [intervalIntegral.integral_mul_const]
+  linear_combination -hc
+
+lemma lemma61_short_polynomial_norm_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hL : 3 ≤ lemma23PaperL D) {z : ℂ} (hz : 0 ≤ z.re) :
+    ‖lemma61ShortPolynomial D ψ z‖ ≤ 2 * lemma56PaperT D ^ 3 := by
+  classical
+  let S := (Finset.Icc 1 ⌈lemma56PaperT D ^ 3⌉₊).filter (fun (n : ℕ) => (n : ℝ) < lemma56PaperT D ^ 3)
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hT : 1 ≤ lemma56PaperT D := by
+    unfold lemma56PaperT
+    exact Real.one_le_exp_iff.mpr (Real.rpow_nonneg h0.le _)
+  have ht3 : 1 ≤ lemma56PaperT D ^ 3 := one_le_pow₀ hT
+  have hp (n : ℕ) (hn : n ∈ S) : ‖ψ (n : ZMod p) * exp (-z * (Real.log (n : ℝ) : ℂ))‖ ≤ 1 := by
+    have hn1 : 1 ≤ n := (Finset.mem_Icc.mp (Finset.mem_filter.mp hn).1).1
+    have hlog : 0 ≤ Real.log (n : ℝ) := Real.log_nonneg (by exact_mod_cast hn1)
+    rw [norm_mul,norm_exp]
+    simp only [mul_re,neg_re,ofReal_re,ofReal_im,mul_zero,sub_zero]
+    have he : Real.exp (-z.re * Real.log (n : ℝ)) ≤ 1 :=
+      Real.exp_le_one_iff.mpr (by nlinarith only [hz,hlog])
+    exact (mul_le_mul_of_nonneg_left he (norm_nonneg _)).trans (by simpa only [mul_one] using ψ.norm_le_one (n : ZMod p))
+  have hc : S.card ≤ ⌈lemma56PaperT D ^ 3⌉₊ := by
+    have h := Finset.card_filter_le (s := Finset.Icc 1 ⌈lemma56PaperT D ^ 3⌉₊)
+      (p := fun (n : ℕ) => (n : ℝ) < lemma56PaperT D ^ 3)
+    simpa only [Nat.card_Icc,Nat.add_sub_cancel] using h
+  have hceil := (Nat.ceil_lt_add_one (show 0 ≤ lemma56PaperT D ^ 3 by positivity)).le
+  unfold lemma61ShortPolynomial
+  apply (norm_sum_le _ _).trans
+  calc
+    _ ≤ ∑ n ∈ S, (1 : ℝ) := Finset.sum_le_sum hp
+    _ = (S.card : ℝ) := by simp
+    _ ≤ (⌈lemma56PaperT D ^ 3⌉₊ : ℝ) := by exact_mod_cast hc
+    _ ≤ _ := by linarith only [hceil,ht3]
+
+lemma lemma61_model_Z_P4_factor {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s w : ℂ) (hL : 3 ≤ lemma23PaperL D) :
+    lemma23DirichletZ ψ s * ((lemma23PaperP D * lemma51PaperT0 D : ℝ) : ℂ) ^ (-w) *
+      exp (w * (Real.log (lemma61PaperP4 D) : ℂ)) =
+        lemma23DirichletZ ψ s * exp (-2 * (Real.log (lemma56PaperT D) : ℂ) * w) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hbase : 0 < lemma23PaperP D * lemma51PaperT0 D := mul_pos (Real.exp_pos _) (pow_pos h0 519)
+  have he : -(Real.log (lemma23PaperP D * lemma51PaperT0 D) : ℂ) * w +
+      w * (Real.log (lemma61PaperP4 D) : ℂ) = -2 * (Real.log (lemma56PaperT D) : ℂ) * w := by
+    rw [lemma61_P4_PT0_log_identity hL]
+    push_cast
+    ring
+  rw [lemma61_positive_real_cpow_model hbase,mul_assoc,← Complex.exp_add,he]
+
+lemma lemma61_actual_Z_original_norm_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hL : 3 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s) :
+    ‖lemma23DirichletZ ψ s‖ ≤ Real.exp (1 + 4 * Real.pi) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have h := lemma61_actual_Z_P4_cancellation ψ hψ hL hs (w := 0)
+    (by simp only [zero_re]; constructor <;> nlinarith only [pow_nonneg h0.le 9])
+    (by simpa only [zero_im,abs_zero] using (pow_nonneg h0.le 20))
+  simpa using h
+
+lemma lemma61_actual_horizontal_Z_error_factor_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    {s w : ℂ} (hL : 3 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s)
+    (hwre : -1 ≤ w.re ∧ w.re ≤ 1 - 2 * s.re)
+    (hwim : |w.im| = lemma23PaperL D ^ 20) :
+    ‖((lemma23DirichletZ ψ (s + w) - lemma23DirichletZ ψ s *
+      ((lemma23PaperP D * lemma51PaperT0 D : ℝ) : ℂ) ^ (-w)) / w) *
+        exp (w * (Real.log (lemma61PaperP4 D) : ℂ))‖ ≤
+      2 * Real.exp (1 + 4 * Real.pi) * Real.exp (2 * Real.log (lemma56PaperT D)) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hr := lemma61_region_real_parts hL hs
+  have h9 : 1 ≤ lemma23PaperL D ^ 9 := one_le_pow₀ (by linarith : 1 ≤ lemma23PaperL D)
+  have h20 : 1 ≤ lemma23PaperL D ^ 20 := one_le_pow₀ (by linarith : 1 ≤ lemma23PaperL D)
+  have hw : -(lemma23PaperL D ^ 9) ≤ w.re ∧ w.re ≤ 2 := ⟨by linarith only [hwre.1,h9],by linarith only [hwre.2,hr.1]⟩
+  have hz := lemma61_actual_Z_P4_cancellation ψ hψ hL hs hw hwim.le
+  have hT0 : 0 ≤ Real.log (lemma56PaperT D) := by linarith [(lemma61_T_log_bounds hL).1]
+  have he : -2 * w.re * Real.log (lemma56PaperT D) ≤ 2 * Real.log (lemma56PaperT D) :=
+    by nlinarith only [hwre.1,hT0]
+  have hz' := hz.trans (mul_le_mul_of_nonneg_left (Real.exp_le_exp.mpr he) (Real.exp_nonneg _))
+  have hm : ‖lemma23DirichletZ ψ s * ((lemma23PaperP D * lemma51PaperT0 D : ℝ) : ℂ) ^ (-w) *
+      exp (w * (Real.log (lemma61PaperP4 D) : ℂ))‖ ≤
+      Real.exp (1 + 4 * Real.pi) * Real.exp (2 * Real.log (lemma56PaperT D)) := by
+    rw [lemma61_model_Z_P4_factor ψ s w hL,norm_mul,norm_exp]
+    have heq : (-2 * (Real.log (lemma56PaperT D) : ℂ) * w).re = -2 * w.re * Real.log (lemma56PaperT D) := by simp [mul_re]; ring
+    rw [heq]
+    exact mul_le_mul (lemma61_actual_Z_original_norm_bound ψ hψ hL hs) (Real.exp_le_exp.mpr he) (Real.exp_nonneg _) (Real.exp_nonneg _)
+  have hn : ‖w‖⁻¹ ≤ 1 := inv_le_one_of_one_le₀ (by
+    have hi := Complex.abs_im_le_norm w
+    rw [hwim] at hi
+    linarith only [hi,h20])
+  have hcalc : ((lemma23DirichletZ ψ (s + w) - lemma23DirichletZ ψ s *
+      ((lemma23PaperP D * lemma51PaperT0 D : ℝ) : ℂ) ^ (-w)) / w) * exp (w * (Real.log (lemma61PaperP4 D) : ℂ)) =
+      (lemma23DirichletZ ψ (s + w) * exp (w * (Real.log (lemma61PaperP4 D) : ℂ)) -
+        lemma23DirichletZ ψ s * ((lemma23PaperP D * lemma51PaperT0 D : ℝ) : ℂ) ^ (-w) *
+          exp (w * (Real.log (lemma61PaperP4 D) : ℂ))) / w := by rw [div_eq_mul_inv,div_eq_mul_inv]; ring
+  rw [hcalc,norm_div,div_eq_mul_inv]
+  have hb := norm_sub_le (lemma23DirichletZ ψ (s + w) * exp (w * (Real.log (lemma61PaperP4 D) : ℂ)))
+    (lemma23DirichletZ ψ s * ((lemma23PaperP D * lemma51PaperT0 D : ℝ) : ℂ) ^ (-w) * exp (w * (Real.log (lemma61PaperP4 D) : ℂ)))
+  apply (mul_le_mul_of_nonneg_left hn (norm_nonneg _)).trans
+  simp only [mul_one]
+  nlinarith only [hb,hz',hm]
+
+lemma lemma61_actual_horizontal_Z_error_point_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    {s w : ℂ} (hL : 3 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s)
+    (hwre : -1 ≤ w.re ∧ w.re ≤ 1 - 2 * s.re)
+    (hwim : |w.im| = lemma23PaperL D ^ 20) :
+    ‖lemma61ActualZErrorIntegrand (D := D) ψ s w‖ ≤
+      (4 * Real.exp (2 + 4 * Real.pi)) * Real.exp (5 * lemma23PaperL D ^ 9 - lemma23PaperL D ^ 10 / 4) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hr := lemma61_region_real_parts hL hs
+  have h9 : 1 ≤ lemma23PaperL D ^ 9 := one_le_pow₀ (by linarith : 1 ≤ lemma23PaperL D)
+  have hw : -(lemma23PaperL D ^ 9) ≤ w.re ∧ w.re ≤ 2 := ⟨by linarith only [hwre.1,h9],by linarith only [hwre.2,hr.1]⟩
+  have hz := lemma61_actual_horizontal_Z_error_factor_bound ψ hψ hL hs hwre hwim
+  have hp := lemma61_short_polynomial_norm_bound ψ⁻¹ hL (z := 1 - s - w)
+    (by simp only [sub_re,one_re]; linarith only [hwre.2,hr.1])
+  have ho := lemma61_large_shift_gaussian_bound hL hw
+  have hgauss : w.im ^ 2 / (4 * lemma23PaperL D ^ 30) = lemma23PaperL D ^ 10 / 4 := by
+    rw [← sq_abs w.im,hwim]
+    field_simp
+  rw [neg_div,hgauss] at ho
+  have hT := lemma61_T_log_bounds hL
+  have ht3 : lemma56PaperT D ^ 3 = Real.exp (3 * Real.log (lemma56PaperT D)) := by
+    simpa only [Real.log_pow,Nat.cast_ofNat] using (Real.exp_log (pow_pos (Real.exp_pos _) 3)).symm
+  unfold lemma61ActualZErrorIntegrand
+  calc
+    _ = ‖((lemma23DirichletZ ψ (s + w) - lemma23DirichletZ ψ s *
+        ((lemma23PaperP D * lemma51PaperT0 D : ℝ) : ℂ) ^ (-w)) / w) * exp (w * (Real.log (lemma61PaperP4 D) : ℂ))‖ *
+        ‖lemma61ShortPolynomial D ψ⁻¹ (1 - s - w)‖ * ‖lemma57OmegaOne D w‖ := by
+      simp only [norm_mul,norm_div]
+      ring
+    _ ≤ (2 * Real.exp (1 + 4 * Real.pi) * Real.exp (2 * Real.log (lemma56PaperT D))) *
+        (2 * lemma56PaperT D ^ 3) * (Real.exp 1 * Real.exp (-(lemma23PaperL D ^ 10 / 4))) := by
+      gcongr <;> (rw [ht3]; positivity)
+    _ = (4 * Real.exp (2 + 4 * Real.pi)) * Real.exp (5 * Real.log (lemma56PaperT D) - lemma23PaperL D ^ 10 / 4) := by
+      rw [ht3,show 2 + 4 * Real.pi = (1 + 4 * Real.pi) + 1 by ring,
+        show 5 * Real.log (lemma56PaperT D) - lemma23PaperL D ^ 10 / 4 =
+          (2 * Real.log (lemma56PaperT D)) + (3 * Real.log (lemma56PaperT D)) + -(lemma23PaperL D ^ 10 / 4) by ring]
+      simp only [Real.exp_add]
+      ring
+    _ ≤ _ := mul_le_mul_of_nonneg_left (Real.exp_le_exp.mpr (by linarith only [hT.2])) (by positivity)
+
+lemma lemma61_actual_horizontal_Z_error_integral_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hL : 64 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s)
+    {t : ℝ} (ht : |t| = lemma23PaperL D ^ 20) :
+    ‖(2 * (Real.pi : ℂ) * I)⁻¹ * (∫ x : ℝ in (-1 : ℝ)..(1 - 2 * s.re),
+      lemma61ActualZErrorIntegrand (D := D) ψ s ((x : ℂ) + (t : ℂ) * I))‖ ≤
+      (8 * Real.exp (2 + 4 * Real.pi)) * Real.exp (-(lemma23PaperL D ^ 10) / 8) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hr := lemma61_region_real_parts (by linarith) hs
+  have hab : (-1 : ℝ) ≤ 1 - 2 * s.re := by linarith only [hr.2]
+  have hb := intervalIntegral.norm_integral_le_of_norm_le_const
+    (a := (-1 : ℝ)) (b := 1 - 2 * s.re)
+    (f := fun x : ℝ => lemma61ActualZErrorIntegrand (D := D) ψ s ((x : ℂ) + (t : ℂ) * I))
+    (C := (4 * Real.exp (2 + 4 * Real.pi)) * Real.exp (5 * lemma23PaperL D ^ 9 - lemma23PaperL D ^ 10 / 4))
+    (by intro x hx; rw [uIoc_of_le hab] at hx
+        apply lemma61_actual_horizontal_Z_error_point_bound ψ hψ (by linarith) hs
+        · simpa using And.intro hx.1.le hx.2
+        · simpa using ht)
+  have hn := (mul_le_mul_of_nonneg_right lemma61_mellin_normalization_norm_le_one
+    (norm_nonneg (∫ x : ℝ in (-1 : ℝ)..(1 - 2 * s.re),
+      lemma61ActualZErrorIntegrand (D := D) ψ s ((x : ℂ) + (t : ℂ) * I)))).trans (by simpa only [one_mul] using hb)
+  rw [← norm_mul] at hn
+  apply hn.trans
+  have he : 5 * lemma23PaperL D ^ 9 - lemma23PaperL D ^ 10 / 4 ≤ -(lemma23PaperL D ^ 10) / 8 := by
+    nlinarith only [mul_le_mul_of_nonneg_right hL (pow_nonneg h0.le 9),pow_nonneg h0.le 9]
+  calc
+    _ ≤ ((4 * Real.exp (2 + 4 * Real.pi)) * Real.exp (5 * lemma23PaperL D ^ 9 - lemma23PaperL D ^ 10 / 4)) * 2 := by
+      apply mul_le_mul_of_nonneg_left _ (by positivity)
+      rw [abs_of_nonneg (by linarith only [hr.2])]
+      linarith only [hr.1]
+    _ ≤ _ := by
+      have h := mul_le_mul_of_nonneg_left (Real.exp_le_exp.mpr he) (by positivity : 0 ≤ 8 * Real.exp (2 + 4 * Real.pi))
+      nlinarith only [h]
+
+lemma lemma61_E1_exponential_floor {D p : ℕ} (ψ : DirichletCharacter ℂ p) (s : ℂ) (k : ℝ) :
+    Real.exp (-k * lemma23PaperL D ^ 10) ≤ lemma61ActualE1 D ψ s k := by
+  have hL : 0 ≤ lemma23PaperL D := Real.log_natCast_nonneg D
+  have hab := neg_le_self (pow_nonneg hL 20)
+  have hi : 0 ≤ (∫ v in (-(lemma23PaperL D ^ 20))..(lemma23PaperL D ^ 20),
+      ‖lemma61ShortPolynomial D ψ (s + I * (v : ℂ))‖ * Real.exp (-(v ^ 2) / (4 * lemma23PaperL D ^ 30))) := by
+    apply intervalIntegral.integral_nonneg_of_forall hab
+    intro v
+    positivity
+  unfold lemma61ActualE1
+  nlinarith only [mul_nonneg (zpow_nonneg hL (-68 : ℤ)) hi]
+
+lemma lemma61_actual_original_left_Z_error_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hL : 64 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s) :
+    ‖(2 * (Real.pi : ℂ) * I)⁻¹ * (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+      lemma61ActualZErrorIntegrand (D := D) ψ s ((-1 : ℂ) + (v : ℂ) * I) * I)‖ ≤
+      (35 * Real.exp (246 * Real.pi + 1) + 16 * Real.exp (2 + 4 * Real.pi)) *
+        lemma61ActualE1 D ψ s (1 / 8) := by
+  let H := lemma23PaperL D ^ 20
+  let a := 1 - 2 * s.re
+  let F := lemma61ActualZErrorIntegrand (D := D) ψ s
+  let c : ℂ := (2 * (Real.pi : ℂ) * I)⁻¹
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have he := lemma61_actual_error_line_shift ψ (by linarith) hs
+  have hid : c * (∫ v : ℝ in -H..H, F ((-1 : ℂ) + (v : ℂ) * I) * I) =
+      c * (∫ v : ℝ in -H..H, F (lemma61ErrorContourShift s v) * I) +
+      c * (∫ x : ℝ in (-1 : ℝ)..a, F ((x : ℂ) - (H : ℂ) * I)) -
+      c * (∫ x : ℝ in (-1 : ℝ)..a, F ((x : ℂ) + (H : ℂ) * I)) := by
+    rw [he,mul_sub,mul_add]
+  have hp := lemma61_actual_normalized_error_contour_bound ψ hψ (by linarith) hs (1 / 8 : ℝ)
+  have hf := lemma61_E1_exponential_floor (D := D) ψ s (1 / 8 : ℝ)
+  rw [show -(1 / 8 : ℝ) * lemma23PaperL D ^ 10 = -(lemma23PaperL D ^ 10) / 8 by ring] at hf
+  have hH : |H| = H := abs_of_pos (pow_pos h0 20)
+  have hb := lemma61_actual_horizontal_Z_error_integral_bound ψ hψ hL hs (t := -H) (by simpa only [abs_neg] using hH)
+  have ht := lemma61_actual_horizontal_Z_error_integral_bound ψ hψ hL hs (t := H) hH
+  have hb' : ‖c * (∫ x : ℝ in (-1 : ℝ)..a, F ((x : ℂ) - (H : ℂ) * I))‖ ≤
+      (8 * Real.exp (2 + 4 * Real.pi)) * lemma61ActualE1 D ψ s (1 / 8) := by
+    apply (show ‖c * (∫ x : ℝ in (-1 : ℝ)..a, F ((x : ℂ) - (H : ℂ) * I))‖ ≤
+      (8 * Real.exp (2 + 4 * Real.pi)) * Real.exp (-(lemma23PaperL D ^ 10) / 8) by
+        simpa only [c,F,a,H,Complex.ofReal_neg,neg_mul,sub_eq_add_neg] using hb).trans
+    exact mul_le_mul_of_nonneg_left hf (by positivity)
+  have ht' := ht.trans (mul_le_mul_of_nonneg_left hf (by positivity : 0 ≤ 8 * Real.exp (2 + 4 * Real.pi)))
+  change ‖c * (∫ v : ℝ in -H..H, F ((-1 : ℂ) + (v : ℂ) * I) * I)‖ ≤ _
+  rw [hid]
+  apply (norm_sub_le _ _).trans
+  have hn := norm_add_le (c * (∫ v : ℝ in -H..H, F (lemma61ErrorContourShift s v) * I))
+    (c * (∫ x : ℝ in (-1 : ℝ)..a, F ((x : ℂ) - (H : ℂ) * I)))
+  nlinarith only [hp,hb',ht',hn]
+
+end ZhangLS.Spec
+
+#print axioms ZhangLS.Spec.lemma61_positive_real_cpow_model
+#print axioms ZhangLS.Spec.lemma61_error_difference_at_zero
+#print axioms ZhangLS.Spec.lemma61_error_regular_eq_actual_of_ne_zero
+#print axioms ZhangLS.Spec.lemma61_error_difference_rectangle_differentiable
+#print axioms ZhangLS.Spec.lemma61_error_regular_rectangle_differentiable
+#print axioms ZhangLS.Spec.lemma61_error_vertical_ae_eq
+#print axioms ZhangLS.Spec.lemma61_error_vertical_interval_integrable
+#print axioms ZhangLS.Spec.lemma61_error_vertical_integral_eq
+#print axioms ZhangLS.Spec.lemma61_actual_error_path_interval_integrable
+#print axioms ZhangLS.Spec.lemma61_error_regular_path_rectangle_cauchy
+#print axioms ZhangLS.Spec.lemma61_actual_error_line_shift
+#print axioms ZhangLS.Spec.lemma61_short_polynomial_norm_bound
+#print axioms ZhangLS.Spec.lemma61_model_Z_P4_factor
+#print axioms ZhangLS.Spec.lemma61_actual_Z_original_norm_bound
+#print axioms ZhangLS.Spec.lemma61_actual_horizontal_Z_error_factor_bound
+#print axioms ZhangLS.Spec.lemma61_actual_horizontal_Z_error_point_bound
+#print axioms ZhangLS.Spec.lemma61_actual_horizontal_Z_error_integral_bound
+#print axioms ZhangLS.Spec.lemma61_E1_exponential_floor
+#print axioms ZhangLS.Spec.lemma61_actual_original_left_Z_error_bound
+
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set
+open scoped Real Topology
+example {D p : ℕ} [NeZero p] (ψ : DirichletCharacter ℂ p) {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s) (hσ : s.re = 1 / 2) :
+    IntervalIntegrable (fun v : ℝ => lemma61ActualZErrorIntegrand (D := D) ψ s (I * (v : ℂ)))
+      volume (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20) := by
+  simpa [lemma61ErrorContourShift,hσ] using lemma61_actual_error_path_interval_integrable ψ hL hs
+
+example {D p : ℕ} [NeZero p] (ψ : DirichletCharacter ℂ p) {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma61InRegion D s) :
+    (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+      lemma61ActualZErrorIntegrand (D := D) ψ s ((-1 : ℂ) + (v : ℂ) * I) * I) =
+      (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+        lemma61ActualZErrorIntegrand (D := D) ψ s (((1 - 2 * s.re : ℝ) : ℂ) + I * (v : ℂ)) * I) +
+      (∫ x : ℝ in (-1 : ℝ)..(1 - 2 * s.re),
+        lemma61ActualZErrorIntegrand (D := D) ψ s ((x : ℂ) - ((lemma23PaperL D ^ 20 : ℝ) : ℂ) * I)) -
+      (∫ x : ℝ in (-1 : ℝ)..(1 - 2 * s.re),
+        lemma61ActualZErrorIntegrand (D := D) ψ s ((x : ℂ) + ((lemma23PaperL D ^ 20 : ℝ) : ℂ) * I)) := by
+  exact lemma61_actual_error_line_shift ψ hL hs
+
+example {D p : ℕ} [NeZero p] (ψ : DirichletCharacter ℂ p)
+    (hψ : Lemma23InPsi (D := D) ψ) {s : ℂ} (hL : 64 ≤ lemma23PaperL D)
+    (hre : |s.re - 1 / 2| < 2 * lemma44PaperAlpha D)
+    (him : |s.im - 2 * Real.pi * lemma23PaperL D ^ 519| < lemma23PaperL D ^ 405 + 2) :
+    ‖(2 * (Real.pi : ℂ) * I)⁻¹ * (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+      ((lemma23DirichletZ ψ (s + ((-1 : ℂ) + (v : ℂ) * I)) - lemma23DirichletZ ψ s *
+        ((lemma23PaperP D * lemma51PaperT0 D : ℝ) : ℂ) ^ (-((-1 : ℂ) + (v : ℂ) * I))) / ((-1 : ℂ) + (v : ℂ) * I)) *
+        lemma61ShortPolynomial D ψ⁻¹ (1 - s - ((-1 : ℂ) + (v : ℂ) * I)) *
+        Complex.exp (((-1 : ℂ) + (v : ℂ) * I) * (Real.log (lemma61PaperP4 D) : ℂ)) *
+        lemma57OmegaOne D ((-1 : ℂ) + (v : ℂ) * I) * I)‖ ≤
+      (35 * Real.exp (246 * Real.pi + 1) + 16 * Real.exp (2 + 4 * Real.pi)) *
+        lemma61ActualE1 D ψ s (1 / 8) := by
+  apply lemma61_actual_original_left_Z_error_bound ψ hψ hL
+  exact ⟨hre,by simpa [lemma23PaperCenter] using him⟩
+end ZhangLS.Spec

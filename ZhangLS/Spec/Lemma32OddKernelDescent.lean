@@ -1,0 +1,36 @@
+import ZhangLS.Spec.Lemma32RealPrimitiveCRTCharacter
+import Mathlib.GroupTheory.OrderOfElement
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_quadratic_hom_odd_card_eq_one {G H : Type*} [Group G] [Group H]
+    (f : G →* H) (hs : ∀ x : G, f x ^ 2 = 1) (ho : Odd (Nat.card G)) : f = 1 := by
+  apply MonoidHom.ext
+  intro x
+  obtain ⟨k, hk⟩ := ho
+  have hp : f x ^ Nat.card G = 1 := by
+    rw [← map_pow, pow_card_eq_one', map_one]
+  rw [hk, pow_add, pow_mul, hs x, one_pow, pow_one, one_mul] at hp
+  exact hp
+
+lemma lemma32_quadratic_character_factorsThrough_odd_kernel {m n : ℕ} [NeZero n]
+    (hd : m ∣ n) (χ : DirichletCharacter ℂ n) (hq : χ^2=1)
+    (ho : Odd (Nat.card (ZMod.unitsMap hd).ker)) : χ.FactorsThrough m := by
+  let f := χ.toUnitHom.comp (ZMod.unitsMap hd).ker.subtype
+  have hf : f = 1 := lemma32_quadratic_hom_odd_card_eq_one f (by
+    intro x
+    apply Units.ext
+    change χ (x.val : ZMod n) ^ 2 = 1
+    have he := congrArg (fun ψ : DirichletCharacter ℂ n => ψ (x.val : ZMod n)) hq
+    change (χ^2) (x.val : ZMod n) = (1 : DirichletCharacter ℂ n) (x.val : ZMod n) at he
+    rw [MulChar.pow_apply_coe, MulChar.one_apply_coe] at he
+    exact he) ho
+  apply (DirichletCharacter.factorsThrough_iff_ker_unitsMap hd).mpr
+  intro x hx
+  apply MonoidHom.mem_ker.mpr
+  have he := congrArg (fun g : (ZMod.unitsMap hd).ker →* ℂˣ => g ⟨x,hx⟩) hf
+  exact he
+
+end ZhangLS.Spec

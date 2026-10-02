@@ -1,0 +1,591 @@
+Pinned toolchain: leanprover/lean4:v4.30.0
+Lean: Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)
+Lake: Lake version 5.0.0-src+d024af0 (Lean version 4.30.0)
+Spec/All.lean coverage OK: 19 modules
+All.lean coverage OK: 97 modules
+placeholder check OK: 103 Lean files, no code-level sorry/admit
+Lean source structure: 103 files; failures=0
+== Stage 1a/3: trusted Spec modules, individually ==
+== kernel-check ZhangLS/Spec/DirichletLSeries.lean ==
+⚠ [1279/1418] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (3424 jobs).
+== kernel-check ZhangLS/Spec/DivisorCharacterSum.lean ==
+⚠ [1280/1292] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (1292 jobs).
+== kernel-check ZhangLS/Spec/DivisorCharacterSumNonnegative.lean ==
+⚠ [1279/1573] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3428/3443] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3430/3443] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3431/3443] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3436/3443] Replayed ZhangLS.Spec.Lemma57SmoothedSum
+warning: ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3443 jobs).
+== kernel-check ZhangLS/Spec/Lemma57.lean ==
+⚠ [1279/1494] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3427/3429] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3429/3429] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3429 jobs).
+ZhangLS/Spec/Lemma57.lean:98:58: warning: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ZhangLS/Spec/Lemma57.lean:99:7: warning: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+== kernel-check ZhangLS/Spec/Lemma57Arithmetic.lean ==
+⚠ [1279/1867] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3428/3431] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3430/3431] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3431/3431] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3431 jobs).
+ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: warning: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+== kernel-check ZhangLS/Spec/Lemma57FullSmoothedSeries.lean ==
+⚠ [1279/1397] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3428/3444] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3430/3444] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3431/3444] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3436/3444] Replayed ZhangLS.Spec.Lemma57SmoothedSum
+warning: ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3444 jobs).
+== kernel-check ZhangLS/Spec/Lemma57GaussianGlobal.lean ==
+⚠ [1279/1420] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3428/3445] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3430/3445] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3431/3445] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3436/3445] Replayed ZhangLS.Spec.Lemma57SmoothedSum
+warning: ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3445/3445] Replayed ZhangLS.Spec.Lemma57GaussianGlobal
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:55:58: unused variable `ha`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:13: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:34: unused variable `hx`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3445 jobs).
+ZhangLS/Spec/Lemma57GaussianGlobal.lean:55:58: warning: unused variable `ha`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:13: warning: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:34: warning: unused variable `hx`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+== kernel-check ZhangLS/Spec/Lemma57GaussianWeight.lean ==
+⚠ [1279/1346] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3428/3435] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3430/3435] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3431/3435] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3435 jobs).
+== kernel-check ZhangLS/Spec/Lemma57SmoothedSum.lean ==
+⚠ [1279/1406] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3428/3436] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3430/3436] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3431/3436] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3436/3436] Replayed ZhangLS.Spec.Lemma57SmoothedSum
+warning: ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3436 jobs).
+ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: warning: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+== kernel-check ZhangLS/Spec/Lemma57SmoothedSummability.lean ==
+⚠ [1279/1391] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3428/3446] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3430/3446] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3431/3446] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3436/3446] Replayed ZhangLS.Spec.Lemma57SmoothedSum
+warning: ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3445/3446] Replayed ZhangLS.Spec.Lemma57GaussianGlobal
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:55:58: unused variable `ha`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:13: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:34: unused variable `hx`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3446/3446] Replayed ZhangLS.Spec.Lemma57SmoothedSummability
+warning: ZhangLS/Spec/Lemma57SmoothedSummability.lean:20:52: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3446 jobs).
+ZhangLS/Spec/Lemma57SmoothedSummability.lean:20:52: warning: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+== kernel-check ZhangLS/Spec/PaperTheorems.lean ==
+⚠ [1279/1363] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (3426 jobs).
+== kernel-check ZhangLS/Spec/RealAxisAtOne.lean ==
+⚠ [1279/1439] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3427/3427] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (3427 jobs).
+ZhangLS/Spec/RealAxisAtOne.lean:56:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+== kernel-check ZhangLS/Spec/RealAxisDerivativeAtOne.lean ==
+⚠ [1279/1408] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3427/3428] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (3428 jobs).
+== kernel-check ZhangLS/Spec/RealAxisLFunction.lean ==
+⚠ [1279/1362] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (3425 jobs).
+== kernel-check ZhangLS/Spec/RealAxisSeries.lean ==
+⚠ [1279/1408] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (3426 jobs).
+== kernel-check ZhangLS/Spec/RealDirichletCharacter.lean ==
+⚠ [1280/1280] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (1280 jobs).
+ZhangLS/Spec/RealDirichletCharacter.lean:48:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+== kernel-check ZhangLS/Spec/ReciprocalDivisorBound.lean ==
+⚠ [1279/1331] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3428/3432] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3430/3432] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3431/3432] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3432 jobs).
+== kernel-check ZhangLS/Spec/ReciprocalDivisorEulerFactorization.lean ==
+⚠ [1279/1424] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3428/3434] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3430/3434] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3431/3434] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3434 jobs).
+== kernel-check ZhangLS/Spec/ReciprocalDivisorEulerLoss.lean ==
+⚠ [1279/1394] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3428/3433] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3430/3433] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3431/3433] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3433 jobs).
+== Stage 1b/3: trusted Spec aggregate ==
+== Stage 2/3: full project kernel check ==
+⚠ [1979/2647] Replayed ZhangLS.RealDirichletSeries
+warning: ZhangLS/RealDirichletSeries.lean:34:25: unused variable `hr`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1980/2647] Replayed ZhangLS.AssumptionA
+warning: ZhangLS/AssumptionA.lean:30:21: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/AssumptionA.lean:30:37: unused variable `χ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/AssumptionA.lean:35:22: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/AssumptionA.lean:35:38: unused variable `χ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/AssumptionA.lean:91:23: unused variable `h_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/AssumptionA.lean:112:5: unused variable `h_c_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/AssumptionA.lean:113:5: unused variable `h_u_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1981/2647] Replayed ZhangLS.MainIdentity
+warning: ZhangLS/MainIdentity.lean:19:32: unused variable `H₂`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1986/2647] Replayed ZhangLS.MainTerms
+warning: ZhangLS/MainTerms.lean:64:5: unused variable `h_ap`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1988/2647] Replayed ZhangLS.AnalyticHypotheses
+warning: ZhangLS/AnalyticHypotheses.lean:36:21: unused variable `gamma`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1989/2647] Replayed ZhangLS.Theorem1
+warning: ZhangLS/Theorem1.lean:23:5: unused variable `env`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Theorem1.lean:26:5: unused variable `h_logD_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Theorem1.lean:36:5: unused variable `env`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1995/2647] Replayed ZhangLS.Estimates
+warning: ZhangLS/Estimates.lean:27:11: unused variable `D`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2001/2647] Replayed ZhangLS.LargeSieveFoundation
+warning: ZhangLS/LargeSieveFoundation.lean:27:30: unused variable `hP`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2012/2647] Replayed ZhangLS.FareySequence
+warning: ZhangLS/FareySequence.lean:32:5: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/FareySequence.lean:32:18: unused variable `hq'`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/FareySequence.lean:46:18: unused variable `hq'`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2013/2647] Replayed ZhangLS.ExponentialSumOrthogonality
+warning: ZhangLS/ExponentialSumOrthogonality.lean:35:5: unused variable `kernel_norm`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/ExponentialSumOrthogonality.lean:36:5: unused variable `h_dist_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2023/2647] Replayed ZhangLS.TaoAnalysisBridge
+warning: ZhangLS/TaoAnalysisBridge.lean:16:24: unused variable `f`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:16:60: unused variable `x1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:16:63: unused variable `x2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:16:66: unused variable `y`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:20:24: unused variable `f`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:20:60: unused variable `x`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:20:62: unused variable `y1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:20:65: unused variable `y2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:25:5: unused variable `f`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:25:41: unused variable `x1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:25:44: unused variable `x2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:25:47: unused variable `y1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoAnalysisBridge.lean:25:50: unused variable `y2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2024/2647] Replayed ZhangLS.TaoMellinIntegration
+warning: ZhangLS/TaoMellinIntegration.lean:19:5: unused variable `f`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoMellinIntegration.lean:19:7: unused variable `g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/TaoMellinIntegration.lean:19:27: unused variable `x`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2030/2647] Replayed ZhangLS.RealFPolynomialLowerBound
+warning: ZhangLS/RealFPolynomialLowerBound.lean:36:5: unused variable `h_L_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2032/2647] Replayed ZhangLS.RealSobolevEnergy
+warning: ZhangLS/RealSobolevEnergy.lean:42:5: unused variable `h_N_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/RealSobolevEnergy.lean:54:5: unused variable `h_energy_nonneg`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2033/2647] Replayed ZhangLS.RealGaussSumLargeSieve
+warning: ZhangLS/RealGaussSumLargeSieve.lean:39:5: unused variable `h_mult_nonneg`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/RealGaussSumLargeSieve.lean:48:5: unused variable `h_energy`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2037/2647] Replayed ZhangLS.RealStieltjesKernelIntegral
+warning: ZhangLS/RealStieltjesKernelIntegral.lean:29:5: unused variable `h_x_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/RealStieltjesKernelIntegral.lean:38:5: unused variable `h_L_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/RealStieltjesKernelIntegral.lean:39:5: unused variable `h_haar_nonneg`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2039/2647] Replayed ZhangLS.RealLogMomentCalculus
+warning: ZhangLS/RealLogMomentCalculus.lean:21:5: unused variable `h_denom_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2040/2647] Replayed ZhangLS.RealStirlingContourDecay
+warning: ZhangLS/RealStirlingContourDecay.lean:47:5: unused variable `h_M_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2044/2647] Replayed ZhangLS.RealHilbertMeasureEmbedding
+warning: ZhangLS/RealHilbertMeasureEmbedding.lean:29:5: unused variable `h_pi`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/RealHilbertMeasureEmbedding.lean:30:5: unused variable `h_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/RealHilbertMeasureEmbedding.lean:31:5: unused variable `h_energy_nonneg`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/RealHilbertMeasureEmbedding.lean:49:5: unused variable `h_energy`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2047/2647] Replayed ZhangLS.UnconditionalTheorem1
+warning: ZhangLS/UnconditionalTheorem1.lean:47:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [2256/2647] Replayed ZhangLS.Fix1_FPolynomialZeroExclusion
+warning: ZhangLS/Fix1_FPolynomialZeroExclusion.lean:41:5: unused variable `h_L_pos`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2270/2647] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3505/3529] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3507/3529] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:98:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:99:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3509/3529] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3514/3529] Replayed ZhangLS.Spec.Lemma57SmoothedSum
+warning: ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3523/3529] Replayed ZhangLS.Spec.Lemma57GaussianGlobal
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:55:58: unused variable `ha`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:13: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:34: unused variable `hx`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3524/3529] Replayed ZhangLS.Spec.Lemma57SmoothedSummability
+warning: ZhangLS/Spec/Lemma57SmoothedSummability.lean:20:52: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (3529 jobs).
+== Stage 3/3: audit regression modules ==
+LEAN_KERNEL_VERIFICATION=PASS

@@ -1,0 +1,12 @@
+{
+  "source_sha256": "dc21bc34f58b4d2532ca6d47aa11424bf167ac9347bca475c29dd98d6f7df5f3",
+  "draft_kernel_exit_code": 0,
+  "axiom_interfaces": 19,
+  "expanded_examples": 4,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": "Independent next-step strict-margin draft outside the Step 104 full gate; retains the 14-interface high-zero prefix. Not a complete prime-window proof."
+}

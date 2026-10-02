@@ -1,0 +1,285 @@
+import ZhangLS.Spec.Lemma61ReciprocalTailKernel
+import ZhangLS.Spec.Lemma56AbelContinuation
+
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set
+open scoped Real Topology
+set_option maxHeartbeats 2000000
+set_option maxRecDepth 4096
+
+lemma lemma61_family_modulus_bound {D p : ℕ} (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) (hψ : Lemma23InPsi (D := D) ψ) :
+    (p : ℝ) ≤ 2 * lemma23PaperP D := by
+  have hpow : 1 ≤ lemma23PaperL D ^ 68 := one_le_pow₀ (by linarith)
+  have hinv : lemma23PaperL D ^ (-68 : ℤ) ≤ 1 := by
+    simp only [zpow_neg,zpow_natCast]
+    exact inv_le_one_of_one_le₀ hpow
+  have hP : 0 < lemma23PaperP D := Real.exp_pos _
+  nlinarith only [hψ.2.2.2.le,mul_le_mul_of_nonneg_left hinv hP.le]
+
+lemma lemma61_shifted_argument_norm_bounds {D : ℕ} (hL : 3 ≤ lemma23PaperL D)
+    {s w : ℂ} (hs : Lemma61InRegion D s)
+    (hwr : -1 ≤ w.re ∧ w.re ≤ 2) (hwi : |w.im| ≤ lemma23PaperL D ^ 20) :
+    ‖s + w‖ ≤ 16 * lemma23PaperL D ^ 519 ∧
+      ‖1 - (s + w)‖ ≤ 17 * lemma23PaperL D ^ 519 := by
+  have h1 : 1 ≤ lemma23PaperL D := by linarith
+  have hp : 1 ≤ lemma23PaperL D ^ 519 := one_le_pow₀ h1
+  have h405 : lemma23PaperL D ^ 405 ≤ lemma23PaperL D ^ 519 :=
+    pow_le_pow_right₀ h1 (by norm_num)
+  have h9 : 1 ≤ lemma23PaperL D ^ 9 := one_le_pow₀ h1
+  have hr := lemma61_region_quarter_bounds hL hs
+  have hwide := lemma61_large_shift_rectangle_bounds hL hs
+    ⟨by linarith only [hwr.1,h9],hwr.2⟩ hwi
+  have hre : |(s + w).re| ≤ 3 := by
+    rw [add_re]
+    exact abs_le.mpr ⟨by linarith only [hwr.1,hr.1],by linarith only [hwr.2,hr.2]⟩
+  have hc : |(lemma23PaperCenter D).im| ≤ 8 * lemma23PaperL D ^ 519 := by
+    simp only [lemma23PaperCenter,add_im,ofReal_im,zero_add,mul_im,I_re,I_im,
+      ofReal_re,mul_zero,mul_one,zero_mul,add_zero]
+    rw [abs_of_nonneg (by positivity)]
+    nlinarith only [Real.pi_le_four,pow_nonneg (by linarith : 0 ≤ lemma23PaperL D) 519]
+  have him : |(s + w).im| ≤ 2 * lemma23PaperL D ^ 405 + 3 + 8 * lemma23PaperL D ^ 519 := by
+    have h := abs_add_le ((s + w).im - (lemma23PaperCenter D).im) (lemma23PaperCenter D).im
+    rw [sub_add_cancel] at h
+    linarith only [h,hwide.2.1,hc]
+  have hn : ‖s + w‖ ≤ 16 * lemma23PaperL D ^ 519 := by
+    have h := Complex.norm_le_abs_re_add_abs_im (s + w)
+    linarith only [h,hre,him,h405,hp]
+  refine ⟨hn,?_⟩
+  have h := norm_sub_le (1 : ℂ) (s + w)
+  norm_num only [norm_one] at h
+  linarith only [h,hn,hp]
+
+lemma lemma61_actual_L_quarter_plane_bound {p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : ψ ≠ 1) {z : ℂ} (hz : 1 / 4 ≤ z.re) :
+    ‖DirichletCharacter.LFunction ψ z‖ ≤ 4 * (p : ℝ) * ‖z‖ := by
+  have hpos : 0 < z.re := by linarith
+  have h := lemma56_actual_LFunction_bound_re_pos ψ hψ hpos
+  have hd : (p : ℝ) / z.re ≤ 4 * (p : ℝ) := by
+    apply (div_le_iff₀ hpos).mpr
+    nlinarith only [mul_le_mul_of_nonneg_left hz (by positivity : 0 ≤ (p : ℝ))]
+  exact h.trans ((mul_le_mul_of_nonneg_left hd (norm_nonneg _)).trans_eq (by ring))
+
+lemma lemma61_P4_exponential_rectangle_bound {D : ℕ} (hL : 3 ≤ lemma23PaperL D)
+    {w : ℂ} (hw : w.re ≤ 2) :
+    ‖exp (w * (Real.log (lemma61PaperP4 D) : ℂ))‖ ≤ Real.exp (4 * lemma23PaperL D ^ 9) := by
+  rw [norm_exp,mul_re]
+  simp only [ofReal_re,ofReal_im,mul_zero,sub_zero]
+  apply Real.exp_le_exp.mpr
+  have h := mul_le_mul_of_nonneg_right hw (lemma61_P4_log_nonneg hL)
+  linarith only [h,lemma61_P4_log_bound hL]
+
+lemma lemma61_T_left_rectangle_exponential_bound {D : ℕ} (hL : 3 ≤ lemma23PaperL D)
+    {w : ℂ} (hw : -1 ≤ w.re) :
+    Real.exp (-2 * w.re * Real.log (lemma56PaperT D)) ≤ Real.exp (2 * lemma23PaperL D ^ 9) := by
+  apply Real.exp_le_exp.mpr
+  have ht := lemma61_T_log_bounds hL
+  have hn : 0 ≤ Real.log (lemma56PaperT D) := by linarith only [hL,ht.1]
+  have h := mul_le_mul_of_nonneg_right hw hn
+  linarith only [h,ht.2]
+
+lemma lemma61_actual_shifted_L_positive_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hL : 3 ≤ lemma23PaperL D) {s w : ℂ} (hs : Lemma61InRegion D s)
+    (hwr : -1 ≤ w.re ∧ w.re ≤ 2) (hwi : |w.im| ≤ lemma23PaperL D ^ 20)
+    (hz : 1 / 4 ≤ (s + w).re) :
+    ‖DirichletCharacter.LFunction ψ (s + w)‖ ≤
+      128 * lemma23PaperP D * lemma23PaperL D ^ 519 := by
+  have hn := (lemma61_shifted_argument_norm_bounds hL hs hwr hwi).1
+  have hp := lemma61_family_modulus_bound ψ hL hψ
+  have hP : 0 < lemma23PaperP D := Real.exp_pos _
+  have ht := lemma61_actual_L_quarter_plane_bound ψ (lemma61_family_nonprincipal ψ hψ) hz
+  apply ht.trans
+  calc
+    _ ≤ (4 * (2 * lemma23PaperP D)) * (16 * lemma23PaperL D ^ 519) := by
+      gcongr <;> positivity
+    _ = _ := by ring
+
+lemma lemma61_actual_shifted_L_dual_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hL : 3 ≤ lemma23PaperL D) {s w : ℂ} (hs : Lemma61InRegion D s)
+    (hwr : -1 ≤ w.re ∧ w.re ≤ 2) (hwi : |w.im| ≤ lemma23PaperL D ^ 20)
+    (hz : (s + w).re < 1 / 4) :
+    ‖DirichletCharacter.LFunction ψ⁻¹ (1 - (s + w))‖ ≤
+      136 * lemma23PaperP D * lemma23PaperL D ^ 519 := by
+  have hn := (lemma61_shifted_argument_norm_bounds hL hs hwr hwi).2
+  have hp := lemma61_family_modulus_bound ψ hL hψ
+  have hP : 0 < lemma23PaperP D := Real.exp_pos _
+  have hne : ψ⁻¹ ≠ 1 := inv_ne_one.mpr (lemma61_family_nonprincipal ψ hψ)
+  have hre : 1 / 4 ≤ (1 - (s + w)).re := by simp only [sub_re,one_re]; linarith only [hz]
+  have ht := lemma61_actual_L_quarter_plane_bound ψ⁻¹ hne hre
+  apply ht.trans
+  calc
+    _ ≤ (4 * (2 * lemma23PaperP D)) * (17 * lemma23PaperL D ^ 519) := by
+      gcongr <;> positivity
+    _ = _ := by ring
+
+lemma lemma61_actual_positive_L_P4_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hL : 3 ≤ lemma23PaperL D) {s w : ℂ} (hs : Lemma61InRegion D s)
+    (hwr : -1 ≤ w.re ∧ w.re ≤ 2) (hwi : |w.im| ≤ lemma23PaperL D ^ 20)
+    (hz : 1 / 4 ≤ (s + w).re) :
+    ‖DirichletCharacter.LFunction ψ (s + w) * exp (w * (Real.log (lemma61PaperP4 D) : ℂ))‖ ≤
+      128 * lemma23PaperL D ^ 519 * Real.exp (5 * lemma23PaperL D ^ 9) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hP : 0 < lemma23PaperP D := Real.exp_pos _
+  rw [norm_mul]
+  calc
+    _ ≤ (128 * lemma23PaperP D * lemma23PaperL D ^ 519) *
+        Real.exp (4 * lemma23PaperL D ^ 9) :=
+      mul_le_mul (lemma61_actual_shifted_L_positive_bound ψ hψ hL hs hwr hwi hz)
+        (lemma61_P4_exponential_rectangle_bound hL hwr.2) (norm_nonneg _) (by positivity)
+    _ = _ := by
+      rw [lemma23PaperP,show 5 * lemma23PaperL D ^ 9 =
+        lemma23PaperL D ^ 9 + 4 * lemma23PaperL D ^ 9 by ring,Real.exp_add]
+      ring
+
+lemma lemma61_actual_negative_L_P4_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hL : 3 ≤ lemma23PaperL D) {s w : ℂ} (hs : Lemma61InRegion D s)
+    (hwr : -1 ≤ w.re ∧ w.re ≤ 2) (hwi : |w.im| ≤ lemma23PaperL D ^ 20)
+    (hz : (s + w).re < 1 / 4) :
+    ‖DirichletCharacter.LFunction ψ (s + w) * exp (w * (Real.log (lemma61PaperP4 D) : ℂ))‖ ≤
+      136 * Real.exp (1 + 4 * Real.pi) * lemma23PaperL D ^ 519 *
+        Real.exp (3 * lemma23PaperL D ^ 9) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hP : 0 < lemma23PaperP D := Real.exp_pos _
+  have h9 : 1 ≤ lemma23PaperL D ^ 9 := one_le_pow₀ (by linarith)
+  have hwide : -(lemma23PaperL D ^ 9) ≤ w.re ∧ w.re ≤ 2 :=
+    ⟨by linarith only [hwr.1,h9],hwr.2⟩
+  have hd := lemma61_large_shift_rectangle_bounds hL hs hwide hwi
+  have him : 0 < (s + w).im := by linarith only [(lemma61_wide_height_data hL hd.2.1).2.1]
+  have hz' := (lemma61_actual_Z_P4_cancellation ψ hψ hL hs hwide hwi).trans
+    (mul_le_mul_of_nonneg_left (lemma61_T_left_rectangle_exponential_bound hL hwr.1) (Real.exp_nonneg _))
+  have hd' := lemma61_actual_shifted_L_dual_bound ψ hψ hL hs hwr hwi hz
+  calc
+    _ = ‖lemma23DirichletZ ψ (s + w) * exp (w * (Real.log (lemma61PaperP4 D) : ℂ))‖ *
+        ‖DirichletCharacter.LFunction ψ⁻¹ (1 - (s + w))‖ := by
+      rw [lemma61_actual_single_functional_equation ψ hψ him]
+      simp only [norm_mul]; ring
+    _ ≤ (Real.exp (1 + 4 * Real.pi) * Real.exp (2 * lemma23PaperL D ^ 9)) *
+        (136 * lemma23PaperP D * lemma23PaperL D ^ 519) :=
+      mul_le_mul hz' hd' (norm_nonneg _) (by positivity)
+    _ = _ := by
+      rw [lemma23PaperP,show 3 * lemma23PaperL D ^ 9 =
+        2 * lemma23PaperL D ^ 9 + lemma23PaperL D ^ 9 by ring]
+      simp only [Real.exp_add]
+      ring
+
+lemma lemma61_actual_L_P4_rectangle_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hL : 3 ≤ lemma23PaperL D) {s w : ℂ} (hs : Lemma61InRegion D s)
+    (hwr : -1 ≤ w.re ∧ w.re ≤ 2) (hwi : |w.im| ≤ lemma23PaperL D ^ 20) :
+    ‖DirichletCharacter.LFunction ψ (s + w) * exp (w * (Real.log (lemma61PaperP4 D) : ℂ))‖ ≤
+      136 * Real.exp (1 + 4 * Real.pi) * lemma23PaperL D ^ 519 *
+        Real.exp (5 * lemma23PaperL D ^ 9) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hA : 1 ≤ Real.exp (1 + 4 * Real.pi) := Real.one_le_exp_iff.mpr (by positivity)
+  by_cases hz : 1 / 4 ≤ (s + w).re
+  · apply (lemma61_actual_positive_L_P4_bound ψ hψ hL hs hwr hwi hz).trans
+    have hcoeff : (128 : ℝ) ≤ 136 * Real.exp (1 + 4 * Real.pi) := by linarith only [hA]
+    exact mul_le_mul_of_nonneg_right (mul_le_mul_of_nonneg_right hcoeff (pow_nonneg h0.le 519))
+      (Real.exp_nonneg _)
+  · apply (lemma61_actual_negative_L_P4_bound ψ hψ hL hs hwr hwi (lt_of_not_ge hz)).trans
+    apply mul_le_mul_of_nonneg_left _ (by positivity)
+    exact Real.exp_le_exp.mpr (by nlinarith only [pow_nonneg h0.le 9])
+
+lemma lemma61_actual_horizontal_L_point_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hL : 3 ≤ lemma23PaperL D) {s w : ℂ} (hs : Lemma61InRegion D s)
+    (hwr : -1 ≤ w.re ∧ w.re ≤ 2) (hwi : |w.im| = lemma23PaperL D ^ 20) :
+    ‖lemma61SingleMellinNumerator (D := D) ψ s (lemma61PaperP4 D) w / w‖ ≤
+      136 * Real.exp (2 + 4 * Real.pi) * lemma23PaperL D ^ 519 *
+        Real.exp (5 * lemma23PaperL D ^ 9 - lemma23PaperL D ^ 10 / 4) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have h1 : 1 ≤ lemma23PaperL D := by linarith
+  have h9 : 1 ≤ lemma23PaperL D ^ 9 := one_le_pow₀ h1
+  have hp20 : 1 ≤ lemma23PaperL D ^ 20 := one_le_pow₀ h1
+  have hwide : -(lemma23PaperL D ^ 9) ≤ w.re ∧ w.re ≤ 2 :=
+    ⟨by linarith only [hwr.1,h9],hwr.2⟩
+  have hn : 1 ≤ ‖w‖ := by
+    have h := Complex.abs_im_le_norm w
+    linarith only [h,hwi,hp20]
+  have hinv : ‖w‖⁻¹ ≤ 1 := inv_le_one_of_one_le₀ hn
+  have hsq : w.im ^ 2 = (lemma23PaperL D ^ 20) ^ 2 := by
+    nlinarith only [sq_abs w.im,congrArg (fun x : ℝ => x ^ 2) hwi]
+  have he : w.im ^ 2 / (4 * lemma23PaperL D ^ 30) = lemma23PaperL D ^ 10 / 4 := by
+    rw [hsq]; field_simp
+  have hG := lemma61_large_shift_gaussian_bound hL hwide
+  rw [neg_div,he] at hG
+  have hF := lemma61_actual_L_P4_rectangle_bound ψ hψ hL hs hwr hwi.le
+  unfold lemma61SingleMellinNumerator
+  simp only [norm_mul,norm_inv,div_eq_mul_inv]
+  calc
+    _ ≤ (136 * Real.exp (1 + 4 * Real.pi) * lemma23PaperL D ^ 519 *
+        Real.exp (5 * lemma23PaperL D ^ 9)) *
+        (Real.exp 1 * Real.exp (-(lemma23PaperL D ^ 10 / 4))) * 1 :=
+      mul_le_mul (mul_le_mul (by simpa only [norm_mul] using hF) hG
+        (norm_nonneg _) (by positivity)) hinv
+        (inv_nonneg.mpr (norm_nonneg _)) (by positivity)
+    _ = _ := by
+      change _ = 136 * Real.exp (2 + 4 * Real.pi) * lemma23PaperL D ^ 519 *
+        Real.exp (5 * lemma23PaperL D ^ 9 - lemma23PaperL D ^ 10 / 4)
+      rw [show 2 + 4 * Real.pi = (1 + 4 * Real.pi) + 1 by ring,
+        show 5 * lemma23PaperL D ^ 9 - lemma23PaperL D ^ 10 / 4 =
+          5 * lemma23PaperL D ^ 9 + -(lemma23PaperL D ^ 10 / 4) by ring]
+      simp only [Real.exp_add]; ring
+
+lemma lemma61_horizontal_L_exponent_absorption {L : ℝ} (hL : 64 ≤ L) :
+    L ^ 519 * Real.exp (5 * L ^ 9 - L ^ 10 / 4) ≤ Real.exp (-(L ^ 10) / 8) := by
+  have h0 : 0 < L := by linarith
+  have h8 : (519 : ℝ) ≤ L ^ 8 := by
+    have h := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 3) (by linarith : 3 ≤ L) 8
+    norm_num at h
+    linarith only [h]
+  have hbudget : 519 * L ≤ L ^ 9 := by
+    convert mul_le_mul_of_nonneg_right h8 h0.le using 1 <;> ring
+  have hlog : Real.log (L ^ 519) ≤ L ^ 9 := by
+    rw [Real.log_pow]
+    norm_num
+    have h := Real.log_le_sub_one_of_pos h0
+    linarith only [h,hbudget]
+  have h9 : 64 * L ^ 9 ≤ L ^ 10 := by
+    convert mul_le_mul_of_nonneg_right hL (pow_nonneg h0.le 9) using 1 <;> ring
+  calc
+    _ ≤ Real.exp (L ^ 9) * Real.exp (5 * L ^ 9 - L ^ 10 / 4) :=
+      mul_le_mul_of_nonneg_right (Real.le_exp_of_log_le hlog) (Real.exp_nonneg _)
+    _ = Real.exp (L ^ 9 + (5 * L ^ 9 - L ^ 10 / 4)) := (Real.exp_add _ _).symm
+    _ ≤ _ := Real.exp_le_exp.mpr (by nlinarith only [h9,pow_nonneg h0.le 9])
+
+lemma lemma61_actual_horizontal_L_integral_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hL : 64 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma61InRegion D s)
+    {t : ℝ} (ht : |t| = lemma23PaperL D ^ 20) :
+    ‖(2 * (Real.pi : ℂ) * I)⁻¹ * (∫ x : ℝ in (-1 : ℝ)..2,
+      lemma61SingleMellinNumerator (D := D) ψ s (lemma61PaperP4 D) ((x : ℂ) + (t : ℂ) * I) /
+        ((x : ℂ) + (t : ℂ) * I))‖ ≤
+      408 * Real.exp (2 + 4 * Real.pi) * Real.exp (-(lemma23PaperL D ^ 10) / 8) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hb := intervalIntegral.norm_integral_le_of_norm_le_const
+    (a := (-1 : ℝ)) (b := 2)
+    (f := fun x : ℝ => lemma61SingleMellinNumerator (D := D) ψ s (lemma61PaperP4 D)
+      ((x : ℂ) + (t : ℂ) * I) / ((x : ℂ) + (t : ℂ) * I))
+    (C := 136 * Real.exp (2 + 4 * Real.pi) * lemma23PaperL D ^ 519 *
+      Real.exp (5 * lemma23PaperL D ^ 9 - lemma23PaperL D ^ 10 / 4))
+    (by
+      intro x hx
+      rw [uIoc_of_le (by norm_num : (-1 : ℝ) ≤ 2)] at hx
+      apply lemma61_actual_horizontal_L_point_bound ψ hψ (by linarith) hs
+      · simpa using And.intro hx.1.le hx.2
+      · simpa using ht)
+  have hn := (mul_le_mul_of_nonneg_right lemma61_mellin_normalization_norm_le_one
+    (norm_nonneg (∫ x : ℝ in (-1 : ℝ)..2,
+      lemma61SingleMellinNumerator (D := D) ψ s (lemma61PaperP4 D) ((x : ℂ) + (t : ℂ) * I) /
+        ((x : ℂ) + (t : ℂ) * I)))).trans (by simpa only [one_mul] using hb)
+  rw [← norm_mul] at hn
+  apply hn.trans
+  calc
+    _ = (408 * Real.exp (2 + 4 * Real.pi)) * (lemma23PaperL D ^ 519 *
+        Real.exp (5 * lemma23PaperL D ^ 9 - lemma23PaperL D ^ 10 / 4)) := by
+      norm_num only [sub_neg_eq_add,show (2 : ℝ) + 1 = 3 by norm_num,abs_of_nonneg (by norm_num : (0 : ℝ) ≤ 3)]
+      ring
+    _ ≤ _ := mul_le_mul_of_nonneg_left (lemma61_horizontal_L_exponent_absorption hL) (by positivity)
+
+end ZhangLS.Spec

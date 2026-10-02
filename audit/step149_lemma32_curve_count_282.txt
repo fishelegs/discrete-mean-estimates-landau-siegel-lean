@@ -1,0 +1,38 @@
+import ZhangMathStep281Lemma32QuarticWeierstrassDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_cubic_leading_coefficient_nonzero {F : Type*} [Field F] (a b c d : F)
+    (hab : a ≠ b) (hac : a ≠ c) (had : a ≠ d) :
+    lemma32CubicLeadingCoefficient a b c d ≠ 0 := by
+  unfold lemma32CubicLeadingCoefficient
+  exact mul_ne_zero (mul_ne_zero (sub_ne_zero.mpr hab.symm) (sub_ne_zero.mpr hac.symm))
+    (sub_ne_zero.mpr had.symm)
+
+lemma lemma32_quartic_Weierstrass_discriminant_nonzero {F : Type*} [Field F]
+    (a b c d : F) (h2 : (2 : F) ≠ 0)
+    (hab : a ≠ b) (hac : a ≠ c) (had : a ≠ d)
+    (hbc : b ≠ c) (hbd : b ≠ d) (hcd : c ≠ d) :
+    (lemma32QuarticWeierstrass a b c d).Δ ≠ 0 := by
+  have h16 : (16 : F) ≠ 0 := by
+    rw [show (16 : F) = 2^4 by ring]
+    exact pow_ne_zero 4 h2
+  rw [lemma32_quartic_Weierstrass_discriminant]
+  exact mul_ne_zero (mul_ne_zero (mul_ne_zero (mul_ne_zero h16
+    (pow_ne_zero 2 (lemma32_cubic_leading_coefficient_nonzero a b c d hab hac had)))
+    (pow_ne_zero 2 (sub_ne_zero.mpr hbc))) (pow_ne_zero 2 (sub_ne_zero.mpr hbd)))
+    (pow_ne_zero 2 (sub_ne_zero.mpr hcd))
+
+lemma lemma32_quartic_Weierstrass_isElliptic {F : Type*} [Field F]
+    (a b c d : F) (h2 : (2 : F) ≠ 0)
+    (hab : a ≠ b) (hac : a ≠ c) (had : a ≠ d)
+    (hbc : b ≠ c) (hbd : b ≠ d) (hcd : c ≠ d) :
+    (lemma32QuarticWeierstrass a b c d).IsElliptic := by
+  constructor
+  exact isUnit_iff_ne_zero.mpr
+    (lemma32_quartic_Weierstrass_discriminant_nonzero a b c d h2 hab hac had hbc hbd hcd)
+
+end ZhangLS.Spec

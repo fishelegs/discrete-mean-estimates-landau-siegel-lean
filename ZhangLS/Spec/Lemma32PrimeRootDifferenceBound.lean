@@ -1,0 +1,32 @@
+import ZhangLS.Spec.Lemma32PrimeUnpairedHasseBound
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_quartic_sum_trivial_norm {D : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (a b c d : ZMod D) :
+    ‖∑ x : ZMod D, χ.chi (lemma32QuarticRootProduct a b c d x)‖ ≤ (D : ℝ) := by
+  calc
+    _ ≤ ∑ x : ZMod D, ‖χ.chi (lemma32QuarticRootProduct a b c d x)‖ :=
+      norm_sum_le _ _
+    _ ≤ ∑ _x : ZMod D, (1 : ℝ) := Finset.sum_le_sum fun x _ => χ.chi.norm_le_one _
+    _ = (D : ℝ) := by simp only [Finset.sum_const, Finset.card_univ, ZMod.card,
+      nsmul_eq_mul, mul_one]
+
+lemma lemma32_actual_prime_quartic_root_difference_bound {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) (a b c d : ZMod p) :
+    ‖∑ x : ZMod p, χ.chi (lemma32QuarticRootProduct a b c d x)‖ ≤
+      3*Real.sqrt (p : ℝ)*(if (a-b)*(a-c)*(a-d)=0 then Real.sqrt (p : ℝ) else 1) := by
+  by_cases hδ : (a-b)*(a-c)*(a-d)=0
+  · rw [if_pos hδ, mul_assoc, Real.mul_self_sqrt (Nat.cast_nonneg p)]
+    have ht := lemma32_actual_quartic_sum_trivial_norm χ a b c d
+    linarith [show (0 : ℝ) ≤ (p : ℝ) from Nat.cast_nonneg p]
+  · rw [if_neg hδ, mul_one]
+    have hn : a-b ≠ 0 ∧ a-c ≠ 0 ∧ a-d ≠ 0 := by
+      simpa only [mul_ne_zero_iff, and_assoc] using hδ
+    exact lemma32_actual_prime_isolated_root_hasse_bound χ a b c d
+      (sub_ne_zero.mp hn.1) (sub_ne_zero.mp hn.2.1) (sub_ne_zero.mp hn.2.2)
+
+end ZhangLS.Spec

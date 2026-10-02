@@ -1,0 +1,8 @@
+HasseWeil.WeilPairing.hasse_bound.{u_1} {K : Type u_1} [Field K] [Fintype K] [DecidableEq K] (W : WeierstrassCurve K)
+  [WeierstrassCurve.IsElliptic W.toAffine] [Fintype W.toAffine.Point] :
+  |↑(HasseWeil.pointCount W.toAffine) - ↑(Fintype.card K) - 1| ≤ 2 * √↑(Fintype.card K)
+'HasseWeil.WeilPairing.hasse_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HasseWeil.WeilPairing.hasse_bound_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+def HasseWeil.pointCount.{u_1} : {F : Type u_1} →
+  [inst : Field F] → (E : WeierstrassCurve.Affine F) → [Fintype E.Point] → ℕ :=
+fun {F} [Field F] E [Fintype E.Point] => Fintype.card E.Point

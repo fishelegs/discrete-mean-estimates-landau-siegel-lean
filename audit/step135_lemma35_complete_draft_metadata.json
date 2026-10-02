@@ -1,0 +1,135 @@
+{
+  "status": "PROVED_KERNEL_CHECKED_TEMPORARY_COMPLETE",
+  "full_original_lemma35_status": "PROVED_KERNEL_CHECKED_TEMPORARY",
+  "numbered_completion_recorded": false,
+  "interface_count": 29,
+  "definition_count": 6,
+  "regression_examples": 6,
+  "expanded_original_object_regressions": 5,
+  "modules": [
+    {
+      "temporary_module": "ZhangMathStep174Lemma35MeanDraft",
+      "archive": "audit/step135_lemma35_complete_174.txt",
+      "sha256": "5ef8b6af8c5f8ff0e5ff27b435a997e11dae1645c8bf1970a23bce6c9e76642d",
+      "interfaces": [
+        "lemma35_actual_X3_eq_centered_sum",
+        "lemma35_actual_X3_mean_eq",
+        "lemma35_centered_coefficient_energy_le",
+        "lemma35_actual_X3_mean_energy_le"
+      ],
+      "definitions": [
+        "lemma35CenteredCoefficient"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep175Lemma35PrimeMassDraft",
+      "archive": "audit/step135_lemma35_complete_175.txt",
+      "sha256": "fd954bca685ee86a412ec08ca9a5325184debdba4526cec60ef57367b389d535",
+      "interfaces": [
+        "lemma35_prime_windows_eq",
+        "lemma35_actual_prime_mass_eq",
+        "lemma35_prime_mass_scale_of_lower",
+        "lemma35_mean_scale_identity"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep176Lemma35UniformMeanDraft",
+      "archive": "audit/step135_lemma35_complete_176.txt",
+      "sha256": "3fcecbd3632b0d4b625e3e644609e51388904949cac62288f37b8ceca48afd16",
+      "interfaces": [
+        "lemma35_actual_X3_mean_of_inputs",
+        "lemma35_uniform_actual_X3_mean"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep177Lemma35IntegrabilityDraft",
+      "archive": "audit/step135_lemma35_complete_177.txt",
+      "sha256": "8203bb7f3d9ffb00811350bcabb584a78ff43245fdab197976420fb4c78011f1",
+      "interfaces": [
+        "lemma35_actual_X3_eq_partial_sum",
+        "lemma35_actual_X3_measurable",
+        "lemma35_actual_X3_partial_norm_bound",
+        "lemma35_actual_X3_power_weighted_integrable"
+      ],
+      "definitions": [
+        "lemma35ActualTailCoefficient"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep178Lemma35WeightLengthDraft",
+      "archive": "audit/step135_lemma35_complete_178.txt",
+      "sha256": "fc0299688541d4eeefc6a90586fab052406da6b0a5d7108575ead43108e2b701",
+      "interfaces": [
+        "lemma35_interval_parameters",
+        "lemma35_inverse_integral",
+        "lemma35_inverse_integrable"
+      ],
+      "definitions": [
+        "lemma35WeightLength"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep179Lemma35IntegralMeanDraft",
+      "archive": "audit/step135_lemma35_complete_179.txt",
+      "sha256": "34754aa1cadcacee51fcf0247b0c3c702f9d6e6012fe9630dc4301dd53e897cc",
+      "interfaces": [
+        "lemma35_actual_weighted_integral_cauchy",
+        "lemma35_actual_weighted_square_integral_mean_le",
+        "lemma35_actual_integral_mean_square_le"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep180Lemma35BSecondMomentDraft",
+      "archive": "audit/step135_lemma35_complete_180.txt",
+      "sha256": "2de27353c656240dea1087816ec20437b5ae51b1441e117963076788990710e3",
+      "interfaces": [
+        "lemma35_actual_B_nonneg",
+        "lemma35_actual_B_mean_square_le",
+        "lemma35_B_mean_scale_identity",
+        "lemma35_uniform_actual_B_mean_square"
+      ],
+      "definitions": [
+        "lemma35ActualB"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep181Lemma35CompleteDraft",
+      "archive": "audit/step135_lemma35_complete_181.txt",
+      "sha256": "17259e40bf26aff25e6de42ac880bbea230856b6724c73252697257a56d1dc8f",
+      "interfaces": [
+        "lemma35_mem_bad_family",
+        "lemma35_bad_count_times_threshold",
+        "lemma35_threshold_square",
+        "lemma35_uniform_actual_bad_count",
+        "lemma35_proved"
+      ],
+      "definitions": [
+        "lemma35ActualBadFamily",
+        "Lemma35Target"
+      ]
+    }
+  ],
+  "created_at_utc": "2026-10-02T01:11:17.618134+00:00",
+  "constant": "50400*(32+pi^2)",
+  "threshold": "derived uniformly from Lemma31 exponential absorption and actual prime mass lower bound",
+  "original_objects": [
+    "actual nu=zeta*chi",
+    "actual X3 with D^4<n<=x and original center s0",
+    "endpoint P^2 plus integral over D^4<t<=P^2",
+    "primitive Psi with strict short prime window",
+    "failure of strict L^-585 condition",
+    "actual prime mass",
+    "normalized A",
+    "uniform C,D0 before D,chi"
+  ],
+  "derived_stronger_count_exponent": -746,
+  "original_count_exponent": -739,
+  "whole_project_freeze": "Step125 still running; no project or audit Lean sources changed",
+  "remaining": [
+    "promote eight modules and expanded regressions after Step125 unlocks",
+    "fresh whole-project verification with unchanged source fingerprints"
+  ]
+}

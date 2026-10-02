@@ -1,0 +1,58 @@
+import ZhangLS.Spec.Lemma32DivisorGcdAverage
+import Mathlib.NumberTheory.Harmonic.Bounds
+import Mathlib.Data.Nat.Cast.Order.Field
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+open scoped Classical
+
+lemma lemma32_short_divisor_set {n A : ℕ} (hn : 0 < n) (hA : n ≤ A) :
+    n.divisors=(Finset.Ioc 0 A).filter (fun d => d ∣ n) := by
+  ext d
+  constructor
+  · intro hd
+    exact Finset.mem_filter.mpr ⟨Finset.mem_Ioc.mpr
+      ⟨Nat.pos_of_mem_divisors hd,(Nat.divisor_le hd).trans hA⟩,Nat.dvd_of_mem_divisors hd⟩
+  · intro hd
+    exact Nat.mem_divisors.mpr ⟨(Finset.mem_filter.mp hd).2,hn.ne'⟩
+
+lemma lemma32_divisor_summatory_identity (A : ℕ) :
+    (∑ n ∈ Finset.Ioc 0 A, n.divisors.card) = ∑ d ∈ Finset.Ioc 0 A, A/d := by
+  calc
+    _ = ∑ n ∈ Finset.Ioc 0 A, ∑ d ∈ Finset.Ioc 0 A, if d ∣ n then (1 : ℕ) else 0 := by
+      apply Finset.sum_congr rfl
+      intro n hn
+      rw [lemma32_short_divisor_set (Finset.mem_Ioc.mp hn).1 (Finset.mem_Ioc.mp hn).2,
+        Finset.card_eq_sum_ones, Finset.sum_filter]
+    _ = ∑ d ∈ Finset.Ioc 0 A, ∑ n ∈ Finset.Ioc 0 A, if d ∣ n then (1 : ℕ) else 0 :=
+      Finset.sum_comm
+    _ = _ := by
+      apply Finset.sum_congr rfl
+      intro d hd
+      rw [← Finset.sum_filter]
+      simp only [Finset.sum_const, nsmul_eq_mul, Nat.cast_id, mul_one,
+        Nat.Ioc_filter_dvd_card_eq_div]
+
+lemma lemma32_divisor_summatory_log_bound (A : ℕ) :
+    (∑ n ∈ Finset.Ioc 0 A, (n.divisors.card : ℝ)) ≤ (A : ℝ)*(1+Real.log (A : ℝ)) := by
+  have he : (∑ n ∈ Finset.Ioc 0 A, (n.divisors.card : ℝ)) =
+      ∑ d ∈ Finset.Ioc 0 A, ((A/d : ℕ) : ℝ) := by
+    exact_mod_cast lemma32_divisor_summatory_identity A
+  have hi : Finset.Ioc 0 A=Finset.Icc 1 A := by
+    ext n
+    simp only [Finset.mem_Ioc, Finset.mem_Icc]
+    omega
+  have hh : (∑ d ∈ Finset.Ioc 0 A, (d : ℝ)⁻¹) = (harmonic A : ℝ) := by
+    rw [hi, harmonic_eq_sum_Icc]
+    simp only [Rat.cast_sum, Rat.cast_inv, Rat.cast_natCast]
+  rw [he]
+  calc
+    _ ≤ ∑ d ∈ Finset.Ioc 0 A, (A : ℝ)/(d : ℝ) :=
+      Finset.sum_le_sum fun d hd => Nat.cast_div_le
+    _ = (A : ℝ)*∑ d ∈ Finset.Ioc 0 A, (d : ℝ)⁻¹ := by
+      simp_rw [div_eq_mul_inv]
+      rw [Finset.mul_sum]
+    _ = (A : ℝ)*(harmonic A : ℝ) := by rw [hh]
+    _ ≤ _ := mul_le_mul_of_nonneg_left (harmonic_le_one_add_log A) (Nat.cast_nonneg A)
+
+end ZhangLS.Spec

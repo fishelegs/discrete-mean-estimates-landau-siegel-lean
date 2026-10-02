@@ -1,0 +1,52 @@
+import ZhangMathStep194Lemma32UniformProductDraft
+import Mathlib.Analysis.Complex.LocallyUniformLimit
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex Filter Topology Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_prime_monomial_differentiable (p : ℕ) :
+    Differentiable ℂ (lemma32PrimeMonomial p) := by
+  unfold lemma32PrimeMonomial
+  fun_prop
+
+lemma lemma32_regular_finite_product_differentiable {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (S : Finset Nat.Primes) :
+    Differentiable ℂ (fun s : ℂ =>
+      ∏ p ∈ S, lemma32RegularLocalPolynomial χ p.val (lemma32PrimeMonomial p.val s)) := by
+  have hp (p : Nat.Primes) : Differentiable ℂ (fun s : ℂ =>
+      lemma32RegularLocalPolynomial χ p.val (lemma32PrimeMonomial p.val s)) :=
+    (lemma32_regular_local_differentiable χ p.val).comp (lemma32_prime_monomial_differentiable p.val)
+  fun_prop
+
+lemma lemma32_regular_products_locally_uniform {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    TendstoLocallyUniformlyOn
+      (fun S : Finset Nat.Primes => fun s : ℂ =>
+        ∏ p ∈ S, lemma32RegularLocalPolynomial χ p.val (lemma32PrimeMonomial p.val s))
+      (lemma32RegularEulerProduct χ) atTop {s : ℂ | 1/2 < s.re} := by
+  intro u hu s hs
+  change 1/2 < s.re at hs
+  let σ : ℝ := (s.re+1/2)/2
+  have hσ : 1/2 < σ := by dsimp [σ]; linarith
+  have hσs : σ < s.re := by dsimp [σ]; linarith
+  have hopen : IsOpen {z : ℂ | σ < z.re} := isOpen_lt continuous_const Complex.continuous_re
+  have hn : {z : ℂ | σ ≤ z.re} ∈ 𝓝[{z : ℂ | 1/2 < z.re}] s := by
+    apply mem_nhdsWithin_of_mem_nhds
+    filter_upwards [hopen.mem_nhds hσs] with z hz
+    exact hz.le
+  exact ⟨{z : ℂ | σ ≤ z.re},hn,(lemma32_regular_products_uniform_limit χ σ hσ) u hu⟩
+
+lemma lemma32_regular_euler_product_differentiableOn {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    DifferentiableOn ℂ (lemma32RegularEulerProduct χ) {s : ℂ | 1/2 < s.re} := by
+  apply (lemma32_regular_products_locally_uniform χ).differentiableOn
+  · filter_upwards with S
+    exact (lemma32_regular_finite_product_differentiable χ S).differentiableOn
+  · exact isOpen_lt continuous_const Complex.continuous_re
+
+lemma lemma32_regular_euler_product_analyticOnNhd {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    AnalyticOnNhd ℂ (lemma32RegularEulerProduct χ) {s : ℂ | 1/2 < s.re} := by
+  exact (lemma32_regular_euler_product_differentiableOn χ).analyticOnNhd
+    (isOpen_lt continuous_const Complex.continuous_re)
+
+end ZhangLS.Spec

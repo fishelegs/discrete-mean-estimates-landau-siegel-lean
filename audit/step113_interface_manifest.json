@@ -1,0 +1,40 @@
+{
+  "modules": [
+    "ZhangLS/Spec/Lemma59Parameters.lean",
+    "ZhangLS/Spec/Lemma59ExtendedPolynomialBounds.lean",
+    "ZhangLS/Spec/Lemma59ExtendedPolynomialLog.lean",
+    "ZhangLS/Spec/Lemma59UniformPolynomialInputs.lean",
+    "ZhangLS/Spec/Lemma59FiniteZeroProducts.lean"
+  ],
+  "proved_interfaces": [
+    "lemma59_alpha_bounds",
+    "lemma59_original_region_in_extended",
+    "lemma59_zero_separated_LFunction_ne_zero",
+    "lemma59_paper_offset_one_bounds",
+    "lemma59_original_shift_in_extended",
+    "lemma59_extended_center_displacement_le_three",
+    "lemma59_extended_center_displacement_le",
+    "lemma59_extended_power_kernel_le",
+    "lemma59_extended_FG_bound",
+    "lemma59_extended_product_bound",
+    "lemma59_extended_L227_error_lt_half",
+    "lemma59_extended_F_two_sided",
+    "lemma59_extended_F_ne_zero",
+    "lemma59_extended_disk_subset_omega1",
+    "lemma59_extended_F_logDeriv_bound",
+    "lemma59_uniform_extended_F_inputs",
+    "lemma59_linear_telescoping_product",
+    "lemma59_shift_factor_bound",
+    "lemma59_ranked_zero_product_bound",
+    "lemma59_near_zero_factor_bound",
+    "lemma59_above_zero_norm_decreases",
+    "lemma59_above_zero_factor_le_one",
+    "lemma59_above_zero_product_le_one",
+    "lemma59_descending_gap_rank",
+    "lemma59_descending_zeros_ranked_distance",
+    "lemma59_descending_zero_product_bound",
+    "lemma59_exceptional_zero_product_bound"
+  ],
+  "interface_count": 27,
+  "expanded_examples": 8
+}

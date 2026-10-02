@@ -1,0 +1,44 @@
+import ZhangMathStep302Lemma32ProductCharacterDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_product_character_left_quadratic {R S : Type*}
+    [CommMonoid R] [CommMonoid S] (χ : MulChar (R × S) ℂ) (hq : χ^2=1) :
+    (lemma32ProductCharacterLeft χ)^2=1 := by
+  apply MulChar.ext
+  intro a
+  rw [MulChar.pow_apply_coe,MulChar.one_apply_coe]
+  change χ ((a : R),1)^2=1
+  let u : (R × S)ˣ := Units.map (MonoidHom.inl R S) a
+  have he := congrArg (fun ξ : MulChar (R × S) ℂ => ξ (u : R × S)) hq
+  simpa only [MulChar.pow_apply_coe,MulChar.one_apply_coe,Units.coe_map,
+    MonoidHom.inl_apply] using he
+
+lemma lemma32_product_character_right_quadratic {R S : Type*}
+    [CommMonoid R] [CommMonoid S] (χ : MulChar (R × S) ℂ) (hq : χ^2=1) :
+    (lemma32ProductCharacterRight χ)^2=1 := by
+  apply MulChar.ext
+  intro b
+  rw [MulChar.pow_apply_coe,MulChar.one_apply_coe]
+  change χ (1,(b : S))^2=1
+  let u : (R × S)ˣ := Units.map (MonoidHom.inr R S) b
+  have he := congrArg (fun ξ : MulChar (R × S) ℂ => ξ (u : R × S)) hq
+  simpa only [MulChar.pow_apply_coe,MulChar.one_apply_coe,Units.coe_map,
+    MonoidHom.inr_apply] using he
+
+lemma lemma32_product_quartic_character_sum {R S : Type*}
+    [CommRing R] [CommRing S] [Fintype R] [Fintype S]
+    (χ : MulChar (R × S) ℂ) (a b c d : R × S) :
+    (∑ x : R × S, χ (lemma32QuarticRootProduct a b c d x)) =
+      (∑ x : R, lemma32ProductCharacterLeft χ
+        (lemma32QuarticRootProduct a.1 b.1 c.1 d.1 x))*
+      (∑ x : S, lemma32ProductCharacterRight χ
+        (lemma32QuarticRootProduct a.2 b.2 c.2 d.2 x)) := by
+  exact lemma32_product_character_finite_sum χ
+    (lemma32QuarticRootProduct a.1 b.1 c.1 d.1)
+    (lemma32QuarticRootProduct a.2 b.2 c.2 d.2)
+
+end ZhangLS.Spec

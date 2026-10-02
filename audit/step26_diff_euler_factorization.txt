@@ -1,0 +1,26 @@
+diff --git a/mnt/data/step25/ZhangLS/Spec/ReciprocalDivisorEulerFactorization.lean b/ZhangLS/Spec/ReciprocalDivisorEulerFactorization.lean
+index 5f2582f..d15b9c3 100644
+--- a/mnt/data/step25/ZhangLS/Spec/ReciprocalDivisorEulerFactorization.lean
++++ b/ZhangLS/Spec/ReciprocalDivisorEulerFactorization.lean
+@@ -92,16 +92,18 @@ theorem reciprocalDivisorPrimeProductFormula_proved :
+   intro D hD
+   have hD0 : D ≠ 0 := (Nat.zero_lt_of_lt hD).ne'
+   have hsumNat := Nat.sum_divisors hD0
+-  have hprodNat := Nat.prod_factorization_pow_eq_self hD0
++  have hprodNat := Nat.prod_primeFactors_pow_factorization hD0
+   have hsumReal :
+       (((∑ d ∈ D.divisors, d : ℕ) : ℝ)) =
+         ∏ p ∈ D.primeFactors,
+           ∑ k ∈ Finset.range (D.factorization p + 1), ((p : ℝ) ^ k) := by
+-    exact_mod_cast hsumNat
++    have hcast := congrArg (fun n : ℕ => (n : ℝ)) hsumNat
++    simpa only [Nat.cast_sum, Nat.cast_prod, Nat.cast_pow] using hcast
+   have hprodReal :
+       (D : ℝ) =
+         ∏ p ∈ D.primeFactors, ((p : ℝ) ^ (D.factorization p)) := by
+-    exact_mod_cast hprodNat
++    have hcast := congrArg (fun n : ℕ => (n : ℝ)) hprodNat
++    simpa only [Nat.cast_prod, Nat.cast_pow] using hcast
+   rw [reciprocalDivisorSum_eq_divisorSum_div hD0, hsumReal, hprodReal]
+   exact (Finset.prod_div_distrib (s := D.primeFactors)
+     (fun p : ℕ => ∑ k ∈ Finset.range (D.factorization p + 1), ((p : ℝ) ^ k))

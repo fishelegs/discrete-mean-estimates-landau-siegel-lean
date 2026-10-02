@@ -1,0 +1,113 @@
+import ZhangMathStep200Lemma32LocalLDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex Filter Topology Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    AnalyticOnNhd ℂ (fun s : ℂ => (∏ p ∈ D.primeFactors,
+      (1-Complex.exp (-s*(Real.log (p : ℝ) : ℂ)))^4)*
+      (∏' p : Nat.Primes, lemma32RegularLocalPolynomial χ p.val
+        (Complex.exp (-s*(Real.log (p.val : ℝ) : ℂ))))) {s : ℂ | 1/2 < s.re} :=
+    lemma32_analytic_correction_analyticOnNhd χ
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (hL : 3 ≤ Real.log (D : ℝ))
+    (s : ℂ) (hs : ‖s-1‖ ≤ Real.log (D : ℝ)^(-2024 : ℤ)) :
+    ‖(∏ p ∈ D.primeFactors, (1-Complex.exp (-s*(Real.log (p : ℝ) : ℂ)))^4)*
+      (∏' p : Nat.Primes, lemma32RegularLocalPolynomial χ p.val
+        (Complex.exp (-s*(Real.log (p.val : ℝ) : ℂ))))‖ ≤
+      Real.exp (7659*∑' p : Nat.Primes, (p.val : ℝ)^((-2 : ℝ)*(3/4))) :=
+    lemma32_analytic_correction_residue_disk_bound χ hL s hs
+
+example {D : ℕ} (hL : 3 ≤ Real.log (D : ℝ)) (s : ℂ)
+    (hs : ‖s-1‖ ≤ Real.log (D : ℝ)^(-2024 : ℤ)) :
+    3/4 ≤ s.re ∧ |s.im| * Real.log (D : ℝ) ≤ 1 ∧
+      ‖s-1‖ ≤ 1/(4*Real.log (D : ℝ)) := lemma32_residue_disk_parameters hL s hs
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D)
+    (hL : 2 ≤ Real.log (D : ℝ)) (s : ℂ) (hs : ‖s-1‖ ≤ 1/(4*Real.log (D : ℝ))) :
+    ‖deriv (dirichletLFunction χ) s‖ ≤ 16*Real.exp 1*Real.log (D : ℝ)^2 :=
+    lemma32_actual_first_derivative_bound χ hD hL hs
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D)
+    (hA : NormalizedAssumptionA χ) :
+    ‖dirichletLFunction χ 1‖ ≤ Real.log (D : ℝ)^(-2022 : ℤ) :=
+    lemma32_actual_value_at_one_small χ hD hA
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D)
+    (hL : 3 ≤ Real.log (D : ℝ)) (hA : NormalizedAssumptionA χ)
+    (s : ℂ) (hs : ‖s-1‖ ≤ Real.log (D : ℝ)^(-2024 : ℤ)) :
+    ‖dirichletLFunction χ s‖ ≤ (1+16*Real.exp 1)*Real.log (D : ℝ)^(-2022 : ℤ) :=
+    lemma32_actual_L_residue_disk_small χ hD hL hA s hs
+
+#print axioms lemma32_actual_coefficient_nonneg
+#print axioms lemma32_tau_two_prime_power
+#print axioms lemma32_actual_coefficient_prime_power_of_one
+#print axioms lemma32_actual_coefficient_prime_power_of_zero
+#print axioms lemma32_actual_coefficient_prime_power_of_neg_one
+#print axioms lemma32_actual_coefficient_one
+#print axioms lemma32_rising_choose_two
+#print axioms lemma32_rising_choose_three
+#print axioms lemma32_rising_choose_four
+#print axioms lemma32_fourth_power_choose
+#print axioms lemma32_fourth_geometric_hasSum
+#print axioms lemma32_actual_coefficient_mul
+#print axioms lemma32_square_geometric_hasSum
+#print axioms lemma32_even_square_geometric_hasSum
+#print axioms lemma32_actual_local_series_of_one
+#print axioms lemma32_actual_local_series_of_zero
+#print axioms lemma32_actual_even_local_series_of_neg_one
+#print axioms lemma32_actual_local_series_of_neg_one
+#print axioms lemma32_local_correction_of_one
+#print axioms lemma32_local_correction_of_zero
+#print axioms lemma32_local_correction_of_neg_one
+#print axioms lemma32_bounded_polynomial_norm
+#print axioms lemma32_plus_factor_remainder
+#print axioms lemma32_minus_factor_remainder
+#print axioms lemma32_plus_factor_norm_sub_one
+#print axioms lemma32_minus_factor_norm_sub_one
+#print axioms lemma32_actual_local_correction_norm_sub_one
+#print axioms lemma32_character_prime_cases_of_not_dvd
+#print axioms lemma32_local_correction_norm_of_not_dvd
+#print axioms lemma32_zero_factor_norm
+#print axioms lemma32_local_correction_norm_of_dvd
+#print axioms lemma32_zero_correction_factorization
+#print axioms lemma32_actual_correction_regular_factorization
+#print axioms lemma32_regular_local_norm_sub_one
+#print axioms lemma32_regular_local_differentiable
+#print axioms lemma32_regular_local_at_zero
+#print axioms lemma32_prime_monomial_norm
+#print axioms lemma32_prime_monomial_norm_square
+#print axioms lemma32_prime_monomial_norm_lt_one
+#print axioms lemma32_regular_prime_errors_summable
+#print axioms lemma32_regular_euler_product_multipliable
+#print axioms lemma32_regular_prime_error_uniform
+#print axioms lemma32_regular_finite_product_bound
+#print axioms lemma32_regular_euler_product_bound
+#print axioms lemma32_regular_product_bound_pos
+#print axioms lemma32_regular_finite_product_difference
+#print axioms lemma32_regular_products_uniform_cauchy
+#print axioms lemma32_regular_products_uniform_limit
+#print axioms lemma32_prime_monomial_differentiable
+#print axioms lemma32_regular_finite_product_differentiable
+#print axioms lemma32_regular_products_locally_uniform
+#print axioms lemma32_regular_euler_product_differentiableOn
+#print axioms lemma32_regular_euler_product_analyticOnNhd
+#print axioms lemma32_one_sub_norm_le_one
+#print axioms lemma32_prime_monomial_re
+#print axioms lemma32_cos_lower_of_abs_le_one
+#print axioms lemma32_ramified_prime_factor_norm
+#print axioms lemma32_ramification_factor_differentiable
+#print axioms lemma32_analytic_correction_analyticOnNhd
+#print axioms lemma32_ramification_factor_norm
+#print axioms lemma32_analytic_correction_sector_bound
+#print axioms lemma32_negative_power_small
+#print axioms lemma32_residue_disk_parameters
+#print axioms lemma32_analytic_correction_residue_disk_bound
+#print axioms lemma32_actual_first_derivative_bound
+#print axioms lemma32_actual_L_difference_near_one
+#print axioms lemma32_actual_value_at_one_small
+#print axioms lemma32_circle_small_value_scale_identity
+#print axioms lemma32_actual_L_residue_disk_small
+end ZhangLS.Spec

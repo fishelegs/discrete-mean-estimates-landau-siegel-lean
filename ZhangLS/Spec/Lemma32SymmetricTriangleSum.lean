@@ -1,0 +1,44 @@
+import ZhangLS.Spec.Lemma32DivisorSummatory
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+open scoped Classical
+
+lemma lemma32_symmetric_triangle_sum_bound (A : ℕ) (f : ℕ → ℕ → ℝ)
+    (hf : ∀ a b, 0 ≤ f a b) (hsym : ∀ a b, f a b=f b a) :
+    (∑ a ∈ Ioc 0 A, ∑ b ∈ Ioc 0 A, f a b) ≤
+      2*∑ b ∈ Ioc 0 A, ∑ a ∈ Ioc 0 b, f a b := by
+  have ht : (∑ a ∈ Ioc 0 A, ∑ b ∈ Ioc 0 A, if a ≤ b then f a b else 0) =
+      ∑ b ∈ Ioc 0 A, ∑ a ∈ Ioc 0 b, f a b := by
+    rw [Finset.sum_comm]
+    apply Finset.sum_congr rfl
+    intro b hb
+    rw [← Finset.sum_filter]
+    have he : (Ioc 0 A).filter (fun a => a ≤ b)=Ioc 0 b := by
+      ext a
+      simp only [Finset.mem_filter, Finset.mem_Ioc]
+      have hbA := (Finset.mem_Ioc.mp hb).2
+      omega
+    rw [he]
+  have ht' : (∑ a ∈ Ioc 0 A, ∑ b ∈ Ioc 0 A, if b ≤ a then f a b else 0) =
+      ∑ b ∈ Ioc 0 A, ∑ a ∈ Ioc 0 b, f a b := by
+    rw [← ht, Finset.sum_comm]
+    apply Finset.sum_congr rfl
+    intro a ha
+    apply Finset.sum_congr rfl
+    intro b hb
+    rw [hsym b a]
+  have hpoint (a b : ℕ) : f a b ≤
+      (if a ≤ b then f a b else 0)+(if b ≤ a then f a b else 0) := by
+    by_cases hab : a ≤ b
+    · simp only [if_pos hab]
+      exact le_add_of_nonneg_right (by split <;> simp_all [hf])
+    · simp only [if_neg hab, if_pos (Nat.le_of_lt (Nat.lt_of_not_ge hab)), zero_add]
+      exact le_rfl
+  have hc := Finset.sum_le_sum (s := Ioc 0 A) (fun a ha =>
+    Finset.sum_le_sum (s := Ioc 0 A) (fun b hb => hpoint a b))
+  simp_rw [Finset.sum_add_distrib] at hc
+  rw [ht, ht'] at hc
+  linarith
+
+end ZhangLS.Spec

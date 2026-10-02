@@ -1,0 +1,64 @@
+import ZhangLS.Spec.Lemma32LocalL
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_zeta_pole_removed_local_bound (s : ℂ) (hs : ‖s-1‖ ≤ 1/4) :
+    ‖zetaPoleRemoved s‖ ≤ 8 := by
+  have hre := Complex.abs_re_le_norm (s-1)
+  simp only [Complex.sub_re,Complex.one_re] at hre
+  have hr : 3/4 ≤ s.re := by have hh := (abs_le.mp (hre.trans hs)).1; linarith
+  have hp : 0 < s.re := by linarith
+  have hn : ‖s‖ ≤ 2 := by
+    have ht := norm_add_le (s-1) (1 : ℂ)
+    rw [sub_add_cancel,norm_one] at ht
+    linarith
+  have hm : ‖mellin zetaFractionalPart (-s)‖ ≤ 2 := by
+    apply (norm_mellin_zetaFractionalPart_le hp).trans
+    apply (div_le_iff₀ hp).mpr
+    linarith
+  rw [zetaPoleRemoved_eq_regularizedAbel_of_pos_re hp]
+  calc
+    _ ≤ ‖s‖ + ‖s*(s-1)*mellin zetaFractionalPart (-s)‖ := norm_sub_le _ _
+    _ = ‖s‖ + ‖s‖*‖s-1‖*‖mellin zetaFractionalPart (-s)‖ := by rw [norm_mul,norm_mul]
+    _ ≤ 2 + 2*1*2 := by gcongr; linarith
+    _ ≤ 8 := by norm_num
+
+lemma lemma32_actual_zeta_local_pole_bound (s : ℂ) (hs : ‖s-1‖ ≤ 1/4)
+    (h1 : s ≠ 1) : ‖s-1‖*‖riemannZeta s‖ ≤ 8 := by
+  have h0 : s ≠ 0 := by
+    intro h; subst s; norm_num at hs
+  have hb := lemma32_zeta_pole_removed_local_bound s hs
+  rw [zetaPoleRemoved_eq_mul_riemannZeta h0 h1,norm_mul] at hb
+  exact hb
+
+lemma lemma32_actual_zeta_L_residue_circle_bound {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (hL : 3 ≤ lemma23PaperL D) (hA : NormalizedAssumptionA χ)
+    (s : ℂ) (hs : ‖s-1‖ = lemma23PaperL D^(-2024 : ℤ)) :
+    ‖riemannZeta s * dirichletLFunction χ s‖ ≤
+      8*(1+16*Real.exp 1)*lemma23PaperL D^2 := by
+  let L := lemma23PaperL D
+  have hl0 : 0 < L := by dsimp [L]; linarith
+  have hr : 0 < L^(-2024 : ℤ) := zpow_pos hl0 _
+  have h1 : s ≠ 1 := by intro hh; rw [hh,sub_self,norm_zero] at hs; linarith
+  have hd : ‖s-1‖ ≤ 1/4 := by
+    rw [hs]
+    exact (lemma32_negative_power_small L hL 2024 (by norm_num)).trans (by norm_num)
+  have hz := lemma32_actual_zeta_local_pole_bound s hd h1
+  rw [hs] at hz
+  have hls := lemma32_actual_L_residue_disk_small χ hD hL hA s hs.le
+  have ht := mul_le_mul_of_nonneg_right hz (norm_nonneg (dirichletLFunction χ s))
+  have ht2 := mul_le_mul_of_nonneg_left hls (by norm_num : (0 : ℝ) ≤ 8)
+  have hscale := lemma32_circle_small_value_scale_identity L hl0
+  rw [norm_mul]
+  apply (mul_le_mul_iff_right₀ hr).mp
+  change L^(-2024 : ℤ)*(‖riemannZeta s‖*‖dirichletLFunction χ s‖) ≤
+    L^(-2024 : ℤ)*(8*(1+16*Real.exp 1)*L^2)
+  calc
+    _ ≤ 8*‖dirichletLFunction χ s‖ := by simpa only [mul_assoc] using ht
+    _ ≤ 8*((1+16*Real.exp 1)*L^(-2022 : ℤ)) := ht2
+    _ = _ := by rw [← hscale]; ring
+
+end ZhangLS.Spec

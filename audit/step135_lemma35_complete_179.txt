@@ -1,0 +1,91 @@
+import ZhangMathStep178Lemma35WeightLengthDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex MeasureTheory Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma35_actual_weighted_integral_cauchy {D N : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ N) (hL : 3 ≤ lemma23PaperL D) :
+    (∫ t in Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2),
+      (‖lemma23ActualX3 χ ψ t‖)/t)^2 ≤
+      (lemma35WeightLength D) * (∫ t in Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2),
+        (‖lemma23ActualX3 χ ψ t‖)^2/t) := by
+  have hp := lemma35_interval_parameters hL
+  have hD1 : 1 ≤ D := hp.1
+  have hDr : (0 : ℝ) < D := by exact_mod_cast hp.1
+  let μ := volume.restrict (Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2))
+  let f := fun t : ℝ => ‖lemma23ActualX3 χ ψ t‖
+  have hw : Integrable (fun t : ℝ => 1/t) μ := by
+    simpa only [pow_zero] using lemma35_actual_X3_power_weighted_integrable χ ψ hD1 0
+  have hfw : Integrable (fun t : ℝ => f t*(1/t)) μ := by
+    simpa only [pow_one,mul_one_div] using lemma35_actual_X3_power_weighted_integrable χ ψ hD1 1
+  have hf2w : Integrable (fun t : ℝ => f t^2*(1/t)) μ := by
+    simpa only [mul_one_div] using lemma35_actual_X3_power_weighted_integrable χ ψ hD1 2
+  have hn : 0 ≤ᵐ[μ] (fun t : ℝ => 1/t) := by
+    filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
+    exact one_div_nonneg.mpr (le_of_lt ((pow_pos hDr 4).trans ht.1))
+  have hW : 0 < ∫ t, 1/t ∂μ := by
+    change 0 < ∫ t in Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2), 1/t
+    rw [lemma35_inverse_integral hL]
+    exact hp.2.2.1
+  have h := lemma34_weighted_integral_cauchy μ f (fun t => 1/t) hw hfw hf2w hn hW
+  simpa only [μ,f,mul_one_div,lemma35_inverse_integral hL] using h
+
+lemma lemma35_actual_weighted_square_integral_mean_le {D : ℕ}
+    (χ : RealPrimitiveCharacter D) (hL : 3 ≤ lemma23PaperL D) (K : ℝ)
+    (hmean : ∀ t : ℝ, t ≤ lemma23PaperP D^2 →
+      (∑ ψ ∈ lemma33ActualFamily D, ‖lemma23ActualX3 χ ψ.2 t‖^2) ≤ K) :
+    (∑ ψ ∈ lemma33ActualFamily D,
+      ∫ t in Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2), ‖lemma23ActualX3 χ ψ.2 t‖^2/t) ≤
+        K*lemma35WeightLength D := by
+  have hp := lemma35_interval_parameters hL
+  have hD1 : 1 ≤ D := hp.1
+  have hDr : (0 : ℝ) < D := by exact_mod_cast hp.1
+  let μ := volume.restrict (Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2))
+  let f : lemma33CharacterIndex D → ℝ → ℝ := fun ψ t =>
+    (‖lemma23ActualX3 χ ψ.2 t‖)^2/t
+  have hf (ψ : lemma33CharacterIndex D) : Integrable (f ψ) μ :=
+    lemma35_actual_X3_power_weighted_integrable χ ψ.2 hD1 2
+  have hs : Integrable (fun t => ∑ ψ ∈ lemma33ActualFamily D, f ψ t) μ :=
+    integrable_finsetSum _ (fun ψ _ => hf ψ)
+  have hw : Integrable (fun t : ℝ => 1/t) μ := lemma35_inverse_integrable hL
+  have hK : Integrable (fun t : ℝ => K/t) μ := by
+    simpa only [mul_one_div] using hw.const_mul K
+  have hmono : (fun t => ∑ ψ ∈ lemma33ActualFamily D, f ψ t) ≤ᵐ[μ] (fun t => K/t) := by
+    filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
+    dsimp only [f]
+    rw [← Finset.sum_div]
+    exact div_le_div_of_nonneg_right
+      (hmean t ht.2) ((pow_pos hDr 4).trans ht.1).le
+  calc
+    _ = ∫ t, ∑ ψ ∈ lemma33ActualFamily D, f ψ t ∂μ :=
+      (integral_finsetSum _ (fun ψ _ => hf ψ)).symm
+    _ ≤ ∫ t, K/t ∂μ := integral_mono_ae hs hK hmono
+    _ = K * (lemma35WeightLength D) := by
+      simp_rw [div_eq_mul_inv]
+      rw [integral_const_mul]
+      congr 1
+      simpa only [one_div] using lemma35_inverse_integral hL
+
+lemma lemma35_actual_integral_mean_square_le {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hL : 3 ≤ lemma23PaperL D) (K : ℝ)
+    (hmean : ∀ t : ℝ, t ≤ lemma23PaperP D^2 →
+      (∑ ψ ∈ lemma33ActualFamily D, ‖lemma23ActualX3 χ ψ.2 t‖^2) ≤ K) :
+    (∑ ψ ∈ lemma33ActualFamily D,
+      (∫ t in Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2), ‖lemma23ActualX3 χ ψ.2 t‖/t)^2) ≤
+        K*(lemma35WeightLength D)^2 := by
+  have hw : 0 ≤ lemma35WeightLength D := (lemma35_interval_parameters hL).2.2.1.le
+  calc
+    _ ≤ ∑ ψ ∈ lemma33ActualFamily D,
+        lemma35WeightLength D*(∫ t in Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2),
+          ‖lemma23ActualX3 χ ψ.2 t‖^2/t) :=
+      Finset.sum_le_sum (fun ψ _ => lemma35_actual_weighted_integral_cauchy χ ψ.2 hL)
+    _ = lemma35WeightLength D*(∑ ψ ∈ lemma33ActualFamily D,
+        ∫ t in Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2), ‖lemma23ActualX3 χ ψ.2 t‖^2/t) := by
+      rw [Finset.mul_sum]
+    _ ≤ lemma35WeightLength D*(K*lemma35WeightLength D) := mul_le_mul_of_nonneg_left
+      (lemma35_actual_weighted_square_integral_mean_le χ hL K hmean) hw
+    _ = _ := by ring
+
+end ZhangLS.Spec

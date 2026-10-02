@@ -1,0 +1,19 @@
+⚠ [1832/1832] Built ZhangLS.Spec.Lemma55FejerDetection (4.1s)
+warning: ZhangLS/Spec/Lemma55FejerDetection.lean:62:4: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ZhangLS/Spec/Lemma55FejerDetection.lean:64:43: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  simp [norm_m̵u̵l̵,̵ ̵n̵o̵r̵m̵_̵star, hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/Lemma55FejerDetection.lean:64:53: This simp argument is unused:
+  norm_star
+
+Hint: Omit it from the simp argument list.
+  simp [norm_mul, n̵o̵r̵m̵_̵s̵t̵a̵r̵,̵ ̵hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (1832 jobs).

@@ -1,0 +1,44 @@
+import ZhangLS.Spec.Lemma31HarmonicTruncation
+import Mathlib.Algebra.BigOperators.Module
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+set_option maxHeartbeats 2000000
+
+lemma lemma31_antitone_weighted_sum_norm_le (f : ℕ → ℝ) (g : ℕ → ℂ)
+    (hf : ∀ n, 0 ≤ f n) (hm : Antitone f) (B : ℝ) (hB : 0 ≤ B)
+    (N : ℕ) (hg : ∀ k ≤ N, ‖∑ i ∈ Finset.range k, g i‖ ≤ B) :
+    ‖∑ i ∈ Finset.range N, f i • g i‖ ≤ f 0 * B := by
+  by_cases hn : N = 0
+  · subst N
+    simpa using mul_nonneg (hf 0) hB
+  · have hNp : 0 < N := Nat.pos_of_ne_zero hn
+    rw [Finset.sum_range_by_parts]
+    have he : ‖f (N-1) • (∑ i ∈ Finset.range N, g i)‖ ≤ f (N-1)*B := by
+      rw [norm_smul,Real.norm_eq_abs,abs_of_nonneg (hf _)]
+      exact mul_le_mul_of_nonneg_left (hg N le_rfl) (hf _)
+    have hs : ‖∑ i ∈ Finset.range (N-1),
+        (f (i+1)-f i) • (∑ j ∈ Finset.range (i+1), g j)‖ ≤
+        (∑ i ∈ Finset.range (N-1), (f i-f (i+1)))*B := by
+      calc
+        _ ≤ ∑ i ∈ Finset.range (N-1),
+            ‖(f (i+1)-f i) • (∑ j ∈ Finset.range (i+1), g j)‖ := norm_sum_le _ _
+        _ ≤ ∑ i ∈ Finset.range (N-1), (f i-f (i+1))*B := by
+          apply Finset.sum_le_sum
+          intro i hi
+          have hmon : f (i+1) ≤ f i := hm (by omega)
+          have hik : i+1 ≤ N := by have := Finset.mem_range.mp hi; omega
+          rw [norm_smul,Real.norm_eq_abs,abs_of_nonpos (sub_nonpos.mpr hmon)]
+          have hh := mul_le_mul_of_nonneg_left (hg (i+1) hik) (sub_nonneg.mpr hmon)
+          simpa only [neg_sub] using hh
+        _ = _ := (Finset.sum_mul _ _ _).symm
+    have ht : (∑ i ∈ Finset.range (N-1), (f i-f (i+1))) = f 0-f (N-1) := by
+      exact Finset.sum_range_sub' f (N-1)
+    calc
+      _ ≤ ‖f (N-1) • (∑ i ∈ Finset.range N, g i)‖ +
+          ‖∑ i ∈ Finset.range (N-1),
+            (f (i+1)-f i) • (∑ j ∈ Finset.range (i+1), g j)‖ := norm_sub_le _ _
+      _ ≤ f (N-1)*B + (∑ i ∈ Finset.range (N-1), (f i-f (i+1)))*B := add_le_add he hs
+      _ = _ := by rw [ht]; ring
+
+end ZhangLS.Spec

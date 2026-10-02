@@ -1,0 +1,50 @@
+import ZhangMathStep334Lemma32CompositeCorrelationDraft
+import Mathlib.Tactic.Positivity
+import Mathlib.Tactic.Linarith
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+
+lemma lemma32_gcd_triple_product_dvd (D x y z : ℕ) :
+    D.gcd (x*y*z) ∣ D.gcd x * D.gcd y * D.gcd z := by
+  have h1 : D.gcd (x*y) ∣ D.gcd x * D.gcd y := by
+    simpa only [gcd_eq_nat_gcd] using gcd_mul_dvd_mul_gcd D x y
+  have h2 : D.gcd (x*y*z) ∣ D.gcd (x*y) * D.gcd z := by
+    simpa only [gcd_eq_nat_gcd] using gcd_mul_dvd_mul_gcd D (x*y) z
+  exact h2.trans (Nat.mul_dvd_mul h1 dvd_rfl)
+
+lemma lemma32_sqrt_gcd_triple_product_le {D : ℕ} (hD : 0 < D) (x y z : ℕ) :
+    Real.sqrt (D.gcd (x*y*z) : ℝ) ≤
+      (D.gcd x : ℝ) * (D.gcd y : ℝ) * (D.gcd z : ℝ) := by
+  have hp : 0 < D.gcd x * D.gcd y * D.gcd z :=
+    Nat.mul_pos (Nat.mul_pos (Nat.gcd_pos_of_pos_left x hD)
+      (Nat.gcd_pos_of_pos_left y hD)) (Nat.gcd_pos_of_pos_left z hD)
+  have hn := Nat.le_of_dvd hp (lemma32_gcd_triple_product_dvd D x y z)
+  have hge : (1 : ℝ) ≤ (D.gcd (x*y*z) : ℝ) := by
+    exact_mod_cast Nat.gcd_pos_of_pos_left (x*y*z) hD
+  have hs : Real.sqrt (D.gcd (x*y*z) : ℝ) ≤ (D.gcd (x*y*z) : ℝ) := by
+    apply Real.sqrt_le_iff.mpr
+    constructor
+    · positivity
+    · nlinarith
+  exact hs.trans (by exact_mod_cast hn)
+
+lemma lemma32_actual_primitive_quartic_root_gcd_product_bound {D : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (a b c d : ℤ) :
+    ‖∑ x : ZMod D, χ.chi (lemma32QuarticRootProduct (a : ZMod D) b c d x)‖ ≤
+      (8 * (3 : ℝ)^D.primeFactors.card * Real.sqrt (D : ℝ)) *
+      ((D.gcd (a-b).natAbs : ℝ) * (D.gcd (a-c).natAbs : ℝ) * (D.gcd (a-d).natAbs : ℝ)) := by
+  have hb := lemma32_actual_primitive_quartic_composite_bound χ a b c d
+  have hs := lemma32_sqrt_gcd_triple_product_le χ.modulus_pos
+    (a-b).natAbs (a-c).natAbs (a-d).natAbs
+  unfold lemma32SquarefreeCorrelationFactor lemma32IntegerRootDifferenceProduct at hb
+  simp only [Int.natAbs_mul] at hb
+  have hn : 0 ≤ 8 * (3 : ℝ)^D.primeFactors.card * Real.sqrt (D : ℝ) := by positivity
+  calc
+    _ ≤ (8 * (3 : ℝ)^D.primeFactors.card * Real.sqrt (D : ℝ)) *
+        Real.sqrt (D.gcd ((a-b).natAbs*(a-c).natAbs*(a-d).natAbs) : ℝ) := by
+      simpa only [mul_assoc] using hb
+    _ ≤ _ := mul_le_mul_of_nonneg_left hs hn
+
+end ZhangLS.Spec

@@ -1,0 +1,37 @@
+import ZhangLS.Spec.Lemma32AffineCharacterCount
+import ZhangLS.Spec.Lemma32QuarticCurveElliptic
+import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Basic
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma32WeierstrassAffineSolutions {F : Type*} [Field F] [Fintype F]
+    (W : WeierstrassCurve F) : Finset (F × F) :=
+  Finset.univ.filter (fun v => W.toAffine.Equation v.1 v.2)
+
+lemma lemma32_quartic_curve_affine_equation {F : Type*} [Field F]
+    (a b c d x y : F) : (lemma32QuarticWeierstrass a b c d).toAffine.Equation x y ↔
+      y^2=lemma32NormalizedMonicCubic a b c d x := by
+  rw [WeierstrassCurve.Affine.equation_iff]
+  simp only [lemma32QuarticWeierstrass,lemma32NormalizedMonicCubic,zero_mul,add_zero]
+
+lemma lemma32_quartic_curve_affine_solution_finset {F : Type*} [Field F] [Fintype F]
+    (a b c d : F) : lemma32WeierstrassAffineSolutions (lemma32QuarticWeierstrass a b c d) =
+      lemma32CubicAffineSolutions (lemma32NormalizedMonicCubic a b c d) := by
+  ext v
+  simp only [lemma32WeierstrassAffineSolutions,lemma32CubicAffineSolutions,
+    Finset.mem_filter,Finset.mem_univ,true_and,lemma32_quartic_curve_affine_equation]
+
+lemma lemma32_quartic_character_sum_Weierstrass_affine_card {F : Type*}
+    [Field F] [Fintype F] [DecidableEq F]
+    (χ : MulChar F ℂ) (hn : χ ≠ 1) (hq : χ^2=1) (hF : ringChar F ≠ 2)
+    (a b c d : F) (hA : lemma32CubicLeadingCoefficient a b c d ≠ 0) :
+    (∑ x : F, χ (lemma32QuarticRootProduct a b c d x)) =
+      ((lemma32WeierstrassAffineSolutions (lemma32QuarticWeierstrass a b c d)).card : ℂ)-
+      (Fintype.card F : ℂ)-1 := by
+  rw [lemma32_quartic_curve_affine_solution_finset]
+  exact lemma32_quartic_character_sum_affine_card χ hn hq hF a b c d hA
+
+end ZhangLS.Spec

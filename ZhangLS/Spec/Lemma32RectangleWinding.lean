@@ -1,0 +1,54 @@
+import ZhangLS.Spec.Lemma32RectanglePowers
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Metric Set Filter
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_rectangle_inverse_winding (a T : ℝ) (ha : -1/2 ≤ a) (han : a < 0)
+    (hT : 0 < T) :
+    lemma44GeneralRectangleBoundaryIntegral (fun w : ℂ => w⁻¹) a 1 T = 2*Real.pi*I := by
+  have hbottom : Continuous (fun x : ℝ => ((x : ℂ)-(T : ℂ)*I)⁻¹) := by
+    apply Continuous.inv₀ (by fun_prop)
+    intro x hx;have hi := congrArg Complex.im hx;simp at hi;linarith
+  have htop : Continuous (fun x : ℝ => ((x : ℂ)+(T : ℂ)*I)⁻¹) := by
+    apply Continuous.inv₀ (by fun_prop)
+    intro x hx;have hi := congrArg Complex.im hx;simp at hi;linarith
+  have hm := lemma44_general_rectangle_inv (a := -(1 : ℝ)/2) (b := 1) le_rfl le_rfl hT
+  have hz := lemma44_local_rectangle_cauchy (fun w : ℂ => w⁻¹) ha hT.le (by
+    intro w hw
+    have hwr : w.re ≤ a := hw.1.2
+    have h0 : w ≠ 0 := by intro h;rw [h] at hwr;norm_num at hwr;linarith
+    exact (differentiableAt_id.inv h0).differentiableWithinAt)
+  have hb := intervalIntegral.integral_add_adjacent_intervals
+    (hbottom.intervalIntegrable (μ := volume) (-(1 : ℝ)/2) a)
+    (hbottom.intervalIntegrable a 1)
+  have ht := intervalIntegral.integral_add_adjacent_intervals
+    (htop.intervalIntegrable (μ := volume) (-(1 : ℝ)/2) a)
+    (htop.intervalIntegrable a 1)
+  unfold lemma44GeneralRectangleBoundaryIntegral at hm hz ⊢
+  simp only [Complex.ofReal_one] at hm hz ⊢
+  rw [← hb,← ht] at hm
+  linear_combination hm-hz
+
+lemma lemma32_rectangle_laurent_kernel (a T : ℝ) (ha : -1/2 ≤ a) (han : a < 0)
+    (hT : 0 < T) (k : ℕ) (hk : k < 8) :
+    lemma44GeneralRectangleBoundaryIntegral (fun w : ℂ => w^(k : ℤ)/w^(8 : ℤ)) a 1 T =
+      if k = 7 then (2*Real.pi*I : ℂ) else 0 := by
+  have hfun : (fun w : ℂ => w^(k : ℤ)/w^(8 : ℤ)) =
+      (fun w : ℂ => w^((k : ℤ)-8)) := by
+    funext w
+    by_cases hw : w = 0
+    · subst w
+      have he : (k : ℤ)-8 ≠ 0 := by omega
+      norm_num [zero_zpow ((k : ℤ)-8) he]
+    · exact (zpow_sub₀ hw (k : ℤ) 8).symm
+  rw [hfun]
+  by_cases hk7 : k = 7
+  · subst k
+    norm_num
+    exact lemma32_rectangle_inverse_winding a T ha han hT
+  · rw [if_neg hk7]
+    exact lemma32_rectangle_zpow_zero _ (by omega) a 1 T (ne_of_lt han) (by norm_num) hT
+
+end ZhangLS.Spec

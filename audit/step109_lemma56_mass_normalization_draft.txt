@@ -1,0 +1,220 @@
+import ZhangLS.Spec.Lemma56PrimeWindowAbsolute
+
+namespace ZhangLS.Spec
+open Complex MeasureTheory Finset
+open scoped Real
+set_option maxHeartbeats 1000000
+set_option maxRecDepth 4096
+
+noncomputable def lemma56PaperPrimeLogMass (D : ℕ) : ℝ :=
+  ∑ p ∈ lemma56PaperPrimes D, Real.log (p : ℝ)
+
+lemma lemma56_paper_prime_log_mass_nonneg (D : ℕ) : 0 ≤ lemma56PaperPrimeLogMass D := by
+  apply sum_nonneg
+  intro p hp
+  have hh := (lemma56_mem_paper_primes D p).mp hp
+  exact Real.log_nonneg (by exact_mod_cast hh.1.one_lt.le)
+
+lemma lemma56_actual_prime_mass_card_bounds (D : ℕ) :
+    lemma23PaperP D * (lemma56PaperPrimes D).card ≤ lemma56PrimeMass D ∧
+      lemma56PrimeMass D ≤ lemma56PrimeUpper D * (lemma56PaperPrimes D).card := by
+  constructor
+  · have hh : (∑ p ∈ lemma56PaperPrimes D, lemma23PaperP D) ≤
+        ∑ p ∈ lemma56PaperPrimes D, (p : ℝ) := by
+      apply sum_le_sum
+      intro p hp
+      exact ((lemma56_mem_paper_primes D p).mp hp).2.1.le
+    simpa only [sum_const, nsmul_eq_mul, mul_comm, lemma56PrimeMass] using hh
+  · have hh : (∑ p ∈ lemma56PaperPrimes D, (p : ℝ)) ≤
+        ∑ p ∈ lemma56PaperPrimes D, lemma56PrimeUpper D := by
+      apply sum_le_sum
+      intro p hp
+      exact ((lemma56_mem_paper_primes D p).mp hp).2.2.le
+    simpa only [sum_const, nsmul_eq_mul, mul_comm, lemma56PrimeMass] using hh
+
+lemma lemma56_actual_prime_mass_from_logmass {D : ℕ}
+    (hY : 1 < lemma56PrimeUpper D) :
+    (lemma23PaperP D / Real.log (lemma56PrimeUpper D)) *
+      lemma56PaperPrimeLogMass D ≤ lemma56PrimeMass D := by
+  have hlogY : 0 < Real.log (lemma56PrimeUpper D) := Real.log_pos hY
+  have hP : 0 ≤ lemma23PaperP D := (Real.exp_pos _).le
+  calc
+    _ = ∑ p ∈ lemma56PaperPrimes D,
+        (lemma23PaperP D / Real.log (lemma56PrimeUpper D)) * Real.log (p : ℝ) := by
+      rw [lemma56PaperPrimeLogMass, mul_sum]
+    _ ≤ lemma56PrimeMass D := by
+      apply sum_le_sum
+      intro p hp
+      have hh := (lemma56_mem_paper_primes D p).mp hp
+      have hp0 : (0 : ℝ) < p := by exact_mod_cast hh.1.pos
+      have hlogp : 0 ≤ Real.log (p : ℝ) := Real.log_nonneg (by exact_mod_cast hh.1.one_lt.le)
+      have hl := Real.log_le_log hp0 hh.2.2.le
+      have h1 := mul_le_mul_of_nonneg_right hh.2.1.le hlogp
+      have h2 := mul_le_mul_of_nonneg_left hl hp0.le
+      rw [div_mul_eq_mul_div]
+      exact (div_le_iff₀ hlogY).mpr (h1.trans h2)
+
+lemma lemma56_paper_prime_log_upper {D : ℕ} (hL : 2000 ≤ lemma23PaperL D) :
+    1 ≤ Real.log (lemma56PrimeUpper D) ∧
+      Real.log (lemma56PrimeUpper D) ≤ 2 * lemma23PaperL D ^ 9 := by
+  have hp := lemma56_paper_prime_weight_parameters hL
+  have hP : 0 < lemma23PaperP D := Real.exp_pos _
+  have hlow := hp.1.trans (Real.log_le_log hP hp.2.2.1)
+  have hhigh := Real.log_le_log (hP.trans_le hp.2.2.1)
+    (by linarith only [hp.2.2.2.1] : lemma56PrimeUpper D ≤ 2 * lemma23PaperP D)
+  rw [Real.log_mul (by norm_num : (2 : ℝ) ≠ 0) hP.ne', lemma23PaperP, Real.log_exp] at hhigh
+  have hlog2 : Real.log (2 : ℝ) ≤ 1 := by
+    have hh := Real.log_le_sub_one_of_pos (by norm_num : (0 : ℝ) < 2)
+    norm_num at hh ⊢
+    exact hh
+  have hL9 : 1 ≤ lemma23PaperL D ^ 9 := by
+    simpa only [lemma23PaperP, Real.log_exp] using hp.1
+  exact ⟨hlow, by linarith only [hhigh, hlog2, hL9]⟩
+
+lemma lemma56_actual_prime_mass_log_reduction {D : ℕ} (hL : 2000 ≤ lemma23PaperL D)
+    {c : ℝ} (hlogmass : c * lemma23PaperP D / lemma23PaperL D ^ 68 ≤
+      lemma56PaperPrimeLogMass D) :
+    (c / 2) * (lemma23PaperP D) ^ 2 / lemma23PaperL D ^ 77 ≤ lemma56PrimeMass D := by
+  have hy := lemma56_paper_prime_log_upper hL
+  have hY0 : 0 ≤ lemma56PrimeUpper D := (Real.exp_pos _).le.trans
+    (lemma56_paper_prime_weight_parameters hL).2.2.1
+  have hY : 1 < lemma56PrimeUpper D :=
+    (Real.log_pos_iff hY0).mp (by linarith only [hy.1])
+  have hm := lemma56_actual_prime_mass_from_logmass hY
+  have hP : 0 < lemma23PaperP D := Real.exp_pos _
+  have hL0 : 0 < lemma23PaperL D := by linarith only [hL]
+  have hlogmass0 := lemma56_paper_prime_log_mass_nonneg D
+  have hratio : lemma23PaperP D / (2 * lemma23PaperL D ^ 9) ≤
+      lemma23PaperP D / Real.log (lemma56PrimeUpper D) :=
+    div_le_div_of_nonneg_left hP.le (by linarith only [hy.1]) hy.2
+  have hfirst := mul_le_mul_of_nonneg_right hratio hlogmass0
+  have hsecond := mul_le_mul_of_nonneg_left hlogmass
+    (by positivity : 0 ≤ lemma23PaperP D / (2 * lemma23PaperL D ^ 9))
+  have heq : (c / 2) * (lemma23PaperP D) ^ 2 / lemma23PaperL D ^ 77 =
+      (lemma23PaperP D / (2 * lemma23PaperL D ^ 9)) *
+        (c * lemma23PaperP D / lemma23PaperL D ^ 68) := by
+    rw [show lemma23PaperL D ^ 77 = lemma23PaperL D ^ 9 * lemma23PaperL D ^ 68 by
+      rw [← pow_add]]
+    field_simp
+  rw [heq]
+  exact hsecond.trans (hfirst.trans hm)
+
+lemma lemma56_prime_mass_polynomial_absorption {L : ℝ} (hL : 2000 ≤ L) :
+    L ^ 77 * Real.exp (-((7 / 6 : ℝ) * L ^ (9 / 2 : ℝ))) ≤
+      Real.exp (-(L ^ (9 / 2 : ℝ))) := by
+  have hL0 : 0 ≤ L := by linarith only [hL]
+  have hL1 : 1 ≤ L := by linarith only [hL]
+  have hU : L ^ 3 ≤ L ^ (9 / 2 : ℝ) := by
+    simpa using Real.rpow_le_rpow_of_exponent_le hL1 (by norm_num : (3 : ℝ) ≤ 9 / 2)
+  have hL2 : 462 ≤ L ^ 2 := by nlinarith only [hL]
+  have hp := mul_le_mul_of_nonneg_right hL2 hL0
+  have hUL : 462 * L ≤ L ^ (9 / 2 : ℝ) := by nlinarith only [hp, hU]
+  have he := Real.add_one_le_exp (L ^ (9 / 2 : ℝ) / 462)
+  have hle : L ≤ Real.exp (L ^ (9 / 2 : ℝ) / 462) := by linarith only [he, hUL]
+  have hpow := pow_le_pow_left₀ hL0 hle 77
+  have hpe : (Real.exp (L ^ (9 / 2 : ℝ) / 462)) ^ 77 =
+      Real.exp (L ^ (9 / 2 : ℝ) / 6) := by
+    rw [← Real.exp_nat_mul]
+    congr 1
+    ring
+  rw [hpe] at hpow
+  calc
+    _ ≤ Real.exp (L ^ (9 / 2 : ℝ) / 6) *
+        Real.exp (-((7 / 6 : ℝ) * L ^ (9 / 2 : ℝ))) :=
+      mul_le_mul_of_nonneg_right hpow (Real.exp_pos _).le
+    _ = _ := by rw [← Real.exp_add]; congr 1; ring
+
+lemma lemma56_actual_prime_mass_normalization {D q : ℕ}
+    (θ : DirichletCharacter ℂ q) (hL : 2000 ≤ lemma23PaperL D)
+    {C c : ℝ} (hC : 0 ≤ C) (hc : 0 < c)
+    (hmass : c * (lemma23PaperP D) ^ 2 / lemma23PaperL D ^ 77 ≤ lemma56PrimeMass D)
+    {τ : ℝ} (habs : ‖lemma56PrimeSum D θ τ‖ ≤ C * (lemma23PaperP D) ^ 2 *
+      Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)))) :
+    ‖lemma56PrimeSum D θ τ‖ ≤ (C / c) * lemma56PrimeMass D * lemma56Decay D := by
+  have hL0 : 0 < lemma23PaperL D := by linarith only [hL]
+  have hL77 : 0 < lemma23PaperL D ^ 77 := pow_pos hL0 _
+  have hm : c * (lemma23PaperP D) ^ 2 ≤ lemma56PrimeMass D * lemma23PaperL D ^ 77 :=
+    (div_le_iff₀ hL77).mp hmass
+  have hratio : (lemma23PaperP D) ^ 2 ≤
+      (lemma56PrimeMass D / c) * lemma23PaperL D ^ 77 := by
+    have hh : (lemma23PaperP D) ^ 2 ≤ lemma56PrimeMass D * lemma23PaperL D ^ 77 / c :=
+      (le_div_iff₀ hc).mpr (by nlinarith only [hm])
+    convert hh using 1 <;> ring
+  have hM : 0 ≤ lemma56PrimeMass D / c := div_nonneg (lemma56_prime_mass_nonneg D) hc.le
+  have hdecay := lemma56_prime_mass_polynomial_absorption hL
+  calc
+    _ ≤ C * (lemma23PaperP D) ^ 2 *
+        Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ))) := habs
+    _ ≤ C * ((lemma56PrimeMass D / c) * lemma23PaperL D ^ 77) *
+        Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ))) := by gcongr
+    _ = C * (lemma56PrimeMass D / c) *
+        (lemma23PaperL D ^ 77 * Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)))) := by ring
+    _ ≤ C * (lemma56PrimeMass D / c) * Real.exp (-(lemma23PaperL D ^ (9 / 2 : ℝ))) := by gcongr
+    _ = _ := by dsimp [lemma56Decay]; ring
+
+theorem lemma56_uniform_primitive_prime_window_normalized_of_mass_lower
+    {c : ℝ} (hc : 0 < c) (Dm : ℕ)
+    (hmass : ∀ D : ℕ, Dm ≤ D →
+      c * (lemma23PaperP D) ^ 2 / lemma23PaperL D ^ 77 ≤ lemma56PrimeMass D) :
+    ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q]
+      (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → θ.IsPrimitive → 1 < q →
+      (q : ℝ) < lemma56PaperT D →
+      (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      ∀ τ : ℝ, |τ| ≤ D →
+        ‖lemma56PrimeSum D θ τ‖ ≤ C * lemma56PrimeMass D * lemma56Decay D := by
+  obtain ⟨Ca, hCa, Da, ha⟩ := lemma56_uniform_primitive_prime_window_absolute_bound
+  obtain ⟨Dr, hr⟩ := lemma56_uniform_repulsion_modulus_threshold
+  refine ⟨Ca / c, div_pos hCa hc, max Da (max Dr Dm), ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne τ hτ
+  have hL : 2000 ≤ lemma23PaperL D :=
+    (hr D ((le_max_left _ _).trans ((le_max_right _ _).trans hDN))).1
+  have habs := ha χ θ ((le_max_left _ _).trans hDN) hD hA hθ hq1 hqT hne τ hτ
+  exact lemma56_actual_prime_mass_normalization θ hL hCa.le hc
+    (hmass D ((le_max_right _ _).trans ((le_max_right _ _).trans hDN))) habs
+
+example (D : ℕ) :
+    lemma23PaperP D * (lemma56PaperPrimes D).card ≤
+        ∑ p ∈ lemma56PaperPrimes D, (p : ℝ) ∧
+      (∑ p ∈ lemma56PaperPrimes D, (p : ℝ)) ≤
+        lemma56PrimeUpper D * (lemma56PaperPrimes D).card := by
+  simpa only [lemma56PrimeMass] using lemma56_actual_prime_mass_card_bounds D
+
+example {D : ℕ} (hL : 2000 ≤ lemma23PaperL D) {c : ℝ}
+    (hlogmass : c * lemma23PaperP D / lemma23PaperL D ^ 68 ≤
+      ∑ p ∈ lemma56PaperPrimes D, Real.log (p : ℝ)) :
+    (c / 2) * (lemma23PaperP D) ^ 2 / lemma23PaperL D ^ 77 ≤
+      ∑ p ∈ lemma56PaperPrimes D, (p : ℝ) := by
+  simpa only [lemma56PrimeMass, lemma56PaperPrimeLogMass] using
+    lemma56_actual_prime_mass_log_reduction hL hlogmass
+
+example : (2000 : ℝ) ^ 77 *
+    Real.exp (-((7 / 6 : ℝ) * (2000 : ℝ) ^ (9 / 2 : ℝ))) ≤
+      Real.exp (-((2000 : ℝ) ^ (9 / 2 : ℝ))) :=
+  lemma56_prime_mass_polynomial_absorption (by norm_num)
+
+example {c : ℝ} (hc : 0 < c) (Dm : ℕ)
+    (hmass : ∀ D : ℕ, Dm ≤ D → c * (lemma23PaperP D) ^ 2 / lemma23PaperL D ^ 77 ≤
+      ∑ p ∈ lemma56PaperPrimes D, (p : ℝ)) :
+    ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q]
+      (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → θ.IsPrimitive → 1 < q →
+      (q : ℝ) < lemma56PaperT D →
+      (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      ∀ τ : ℝ, |τ| ≤ D →
+        ‖∑ p ∈ lemma56PaperPrimes D, θ (p : ZMod q) * (p : ℂ) ^ (1 + I * (τ : ℂ))‖ ≤
+          C * (∑ p ∈ lemma56PaperPrimes D, (p : ℝ)) *
+            Real.exp (-(lemma23PaperL D ^ (9 / 2 : ℝ))) := by
+  simpa only [lemma56PrimeMass, lemma56PrimeSum, lemma56Decay] using
+    lemma56_uniform_primitive_prime_window_normalized_of_mass_lower hc Dm hmass
+
+#print axioms lemma56_paper_prime_log_mass_nonneg
+#print axioms lemma56_actual_prime_mass_card_bounds
+#print axioms lemma56_actual_prime_mass_from_logmass
+#print axioms lemma56_paper_prime_log_upper
+#print axioms lemma56_actual_prime_mass_log_reduction
+#print axioms lemma56_prime_mass_polynomial_absorption
+#print axioms lemma56_actual_prime_mass_normalization
+#print axioms lemma56_uniform_primitive_prime_window_normalized_of_mass_lower
+
+end ZhangLS.Spec

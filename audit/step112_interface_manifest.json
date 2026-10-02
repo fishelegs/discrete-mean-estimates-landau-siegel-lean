@@ -1,0 +1,26 @@
+{
+  "modules": [
+    "ZhangLS/Spec/Lemma56ActualPrimeMassScales.lean",
+    "ZhangLS/Spec/Lemma56ActualPrimeMassIdentity.lean",
+    "ZhangLS/Spec/Lemma56ActualPrimeMassLower.lean",
+    "ZhangLS/Spec/Lemma56ActualPrimeMassNormalization.lean"
+  ],
+  "proved_interfaces": [
+    "lemma56_principal_mass_window_width",
+    "lemma56_principal_mass_prefix_error_budget",
+    "lemma56_paper_prime_mass_cut_parameters",
+    "lemma56_actual_paper_prime_log_interval",
+    "lemma56_actual_prime_log_mass_prefix_difference",
+    "lemma56_principal_mass_main_factor_ge_one",
+    "lemma56_actual_prime_log_mass_main_error_of_prefix",
+    "lemma56_actual_prime_log_mass_lower_of_main_error",
+    "lemma56_uniform_actual_prime_mass_threshold",
+    "lemma56_uniform_actual_prime_log_mass_lower",
+    "lemma56_uniform_actual_prime_mass_lower",
+    "lemma56_uniform_primitive_prime_window_normalized_bound",
+    "lemma56_uniform_actual_prime_mass_pos",
+    "lemma56_uniform_actual_prime_window_nonempty"
+  ],
+  "interface_count": 14,
+  "expanded_examples": 6
+}

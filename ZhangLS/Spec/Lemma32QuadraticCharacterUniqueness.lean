@@ -1,0 +1,58 @@
+import ZhangLS.Spec.Lemma32NormalizedCubicSums
+import Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset Subgroup
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_mulchar_eq_of_unit_generator {F : Type*} [Field F] [Fintype F]
+    (χ ψ : MulChar F ℂ) (g : Fˣ) (hg : ∀ a : Fˣ, a ∈ Subgroup.zpowers g)
+    (he : χ (g : F)=ψ (g : F)) : χ=ψ := by
+  apply MulChar.ext
+  intro a
+  obtain ⟨n,hn⟩ : a ∈ Submonoid.powers g := by
+    rw [mem_powers_iff_mem_zpowers]
+    exact hg a
+  rw [← hn]
+  simp only [Units.val_pow_eq_pow_val,map_pow,he]
+
+lemma lemma32_nontrivial_quadratic_unit_generator_value {F : Type*} [Field F] [Fintype F]
+    (χ : MulChar F ℂ) (hn : χ ≠ 1) (hq : χ^2=1)
+    (g : Fˣ) (hg : ∀ a : Fˣ, a ∈ Subgroup.zpowers g) : χ (g : F) = -1 := by
+  have hg1 : χ (g : F) ≠ 1 := by
+    intro h
+    apply hn
+    apply lemma32_mulchar_eq_of_unit_generator χ 1 g hg
+    simpa only [MulChar.one_apply_coe] using h
+  exact (sq_eq_one_iff.mp (lemma32_quadratic_character_value_square χ hq (g : F) g.ne_zero)).resolve_left hg1
+
+lemma lemma32_nontrivial_quadratic_character_unique {F : Type*} [Field F] [Fintype F]
+    (χ ψ : MulChar F ℂ) (hχ : χ ≠ 1) (hψ : ψ ≠ 1)
+    (hqχ : χ^2=1) (hqψ : ψ^2=1) : χ=ψ := by
+  obtain ⟨g,hg⟩ := IsCyclic.exists_generator (α := Fˣ)
+  apply lemma32_mulchar_eq_of_unit_generator χ ψ g hg
+  rw [lemma32_nontrivial_quadratic_unit_generator_value χ hχ hqχ g hg,
+    lemma32_nontrivial_quadratic_unit_generator_value ψ hψ hqψ g hg]
+
+lemma lemma32_nontrivial_quadratic_character_eq_canonical {F : Type*}
+    [Field F] [Fintype F] [DecidableEq F]
+    (χ : MulChar F ℂ) (hn : χ ≠ 1) (hq : χ^2=1) (hF : ringChar F ≠ 2) :
+    χ = (quadraticChar F).ringHomComp (Int.castRingHom ℂ) := by
+  apply lemma32_nontrivial_quadratic_character_unique χ _ hn _ hq
+    ((quadraticChar_isQuadratic F).comp (Int.castRingHom ℂ)).sq_eq_one
+  obtain ⟨a,ha⟩ := quadraticChar_exists_neg_one' hF
+  intro h
+  have hh := congrArg (fun φ : MulChar F ℂ => φ (a : F)) h
+  simp only [MulChar.ringHomComp_apply,ha,MulChar.one_apply_coe,
+    map_neg,map_one] at hh
+  norm_num at hh
+
+lemma lemma32_nontrivial_quadratic_character_canonical_value {F : Type*}
+    [Field F] [Fintype F] [DecidableEq F]
+    (χ : MulChar F ℂ) (hn : χ ≠ 1) (hq : χ^2=1) (hF : ringChar F ≠ 2) (a : F) :
+    χ a = (quadraticChar F a : ℂ) := by
+  rw [lemma32_nontrivial_quadratic_character_eq_canonical χ hn hq hF]
+  rfl
+
+end ZhangLS.Spec

@@ -1,0 +1,29 @@
+--- /mnt/data/step24/ZhangLS/Spec/ReciprocalDivisorEulerFactorization.lean	2026-09-07 01:45:27.161421605 +0000
++++ ZhangLS/Spec/ReciprocalDivisorEulerFactorization.lean	2026-09-07 01:49:31.965341676 +0000
+@@ -58,7 +58,7 @@
+         ((p : ℝ) ^ (D.factorization p))) =
+       ((p : ℝ) / ((p : ℝ) - 1)) *
+         (1 - reciprocalDivisorEulerLoss D p) := by
+-  have hp : p.Prime := (Nat.mem_primeFactors.mp hpD).1
++  have hp : p.Prime := Nat.prime_of_mem_primeFactors hpD
+   simpa [reciprocalDivisorEulerLoss] using
+     (normalized_geom_sum_eq_euler_factor (p := p) (a := D.factorization p) hp)
+ 
+@@ -123,7 +123,7 @@
+       0 < ∏ p ∈ D.primeFactors, ((p : ℝ) - 1) := by
+     apply Finset.prod_pos
+     intro p hp
+-    have hpprime : p.Prime := (Nat.mem_primeFactors.mp hp).1
++    have hpprime : p.Prime := Nat.prime_of_mem_primeFactors hp
+     exact sub_pos.mpr (by exact_mod_cast hpprime.one_lt)
+   have hq :
+       (∏ p ∈ D.primeFactors, ((p : ℝ) - 1)) ≠ 0 := hqpos.ne'
+@@ -138,7 +138,7 @@
+     apply Finset.prod_congr rfl
+     intro p hp
+     rw [Nat.cast_sub]
+-    exact (Nat.mem_primeFactors.mp hp).1.one_le
++    exact (Nat.prime_of_mem_primeFactors hp).one_le
+   have heulerNat := Nat.totient_mul_prod_primeFactors D
+   have heulerReal :
+       (Nat.totient D : ℝ) * (∏ p ∈ D.primeFactors, (p : ℝ)) =

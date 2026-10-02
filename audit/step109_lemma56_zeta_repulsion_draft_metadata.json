@@ -1,0 +1,23 @@
+{
+  "sha256": "58d3b655856a957b43af9e5dcd9c79ad9ded665a0367b032f786494c1ce542d3",
+  "kernel_exit_code": 0,
+  "proved_interfaces": [
+    "lemma56_actual_zeta_zero_own_disk",
+    "lemma56_actual_zeta_inverse_square_lower",
+    "lemma56_actual_zeta_zero_four_detected",
+    "lemma56_actual_zeta_zero_exclusion",
+    "lemma56_uniform_zeta_pole_removed_zero_exclusion",
+    "lemma56_uniform_riemann_zeta_zero_exclusion"
+  ],
+  "interface_count": 6,
+  "expanded_examples": 4,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "auto_implicit": false,
+  "verified_at_utc": "2026-10-01T09:51:20.327518+00:00",
+  "scope": "Independent draft outside frozen Step 108 project sources. Under the original NormalizedAssumptionA, the actual pole-removed zeta and actual riemannZeta have no zeros in Re s>1-2/log D, closed |Im s|<=2D, uniformly beyond one natural modulus threshold. Uses actual tagged zero multiplicities, the common-maximum four-family Fejer detector and the existing strict repulsion budget. The actual prime-mass lower bound and faithful modulus-one principal cancellation target remain unproved. No completion of full Lemma56Target is claimed.",
+  "kernel_command": "lake env lean /private/tmp/ZhangMathStep109ZetaRepulsionDraft.lean"
+}

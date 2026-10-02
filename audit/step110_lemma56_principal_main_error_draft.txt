@@ -1,0 +1,500 @@
+import ZhangLS.Spec.Lemma56PrincipalPerronMellin
+import ZhangLS.Spec.Lemma56ZetaLogDerivativeLeft
+import ZhangLS.Spec.Lemma56PerronHorizontal
+
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set Metric
+set_option maxHeartbeats 1000000
+set_option maxRecDepth 4096
+
+def Lemma56PerronPuncturedRectangle (a H : ℝ) : Set ℂ :=
+  lemma44ClosedRectangle a 2 H \ {1}
+
+def Lemma56PerronRectangleEdgesIntegrable (f : ℂ → ℂ) (a H : ℝ) : Prop :=
+  IntervalIntegrable (fun x : ℝ => f ((x : ℂ) - (H : ℂ) * I)) volume a 2 ∧
+  IntervalIntegrable (fun x : ℝ => f ((x : ℂ) + (H : ℂ) * I)) volume a 2 ∧
+  IntervalIntegrable (fun y : ℝ => f (((2 : ℝ) : ℂ) + (y : ℂ) * I)) volume (-H) H ∧
+  IntervalIntegrable (fun y : ℝ => f ((a : ℂ) + (y : ℂ) * I)) volume (-H) H
+
+lemma lemma56_perron_rectangle_edges_mem {a H : ℝ} (ha : a < 1) (hH : 0 < H) :
+    (∀ x ∈ uIcc a 2, (x : ℂ) - (H : ℂ) * I ∈ Lemma56PerronPuncturedRectangle a H) ∧
+    (∀ x ∈ uIcc a 2, (x : ℂ) + (H : ℂ) * I ∈ Lemma56PerronPuncturedRectangle a H) ∧
+    (∀ y ∈ uIcc (-H) H, ((2 : ℝ) : ℂ) + (y : ℂ) * I ∈ Lemma56PerronPuncturedRectangle a H) ∧
+    (∀ y ∈ uIcc (-H) H, (a : ℂ) + (y : ℂ) * I ∈ Lemma56PerronPuncturedRectangle a H) := by
+  have ha2 : a ≤ 2 := by linarith only [ha]
+  have hHH : -H ≤ H := by linarith only [hH]
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · intro x hx
+    rw [uIcc_of_le ha2] at hx
+    refine ⟨?_, ?_⟩
+    · change _ ∈ Icc a 2 ×ℂ Icc (-H) H
+      simp only [mem_reProdIm, mem_Icc, sub_re, sub_im, ofReal_re, ofReal_im,
+        mul_re, mul_im, I_re, I_im, mul_zero, zero_mul, mul_one, zero_add, sub_zero]
+      exact ⟨hx, by constructor <;> linarith only [hH]⟩
+    · simp only [mem_singleton_iff]
+      intro he
+      have hi := congrArg Complex.im he
+      simp at hi
+      linarith only [hi, hH]
+  · intro x hx
+    rw [uIcc_of_le ha2] at hx
+    refine ⟨?_, ?_⟩
+    · change _ ∈ Icc a 2 ×ℂ Icc (-H) H
+      simpa [mem_reProdIm] using And.intro hx (show -H ≤ H ∧ H ≤ H by constructor; exact hHH; rfl)
+    · simp only [mem_singleton_iff]
+      intro he
+      have hi := congrArg Complex.im he
+      simp at hi
+      linarith only [hi, hH]
+  · intro y hy
+    rw [uIcc_of_le hHH] at hy
+    refine ⟨?_, ?_⟩
+    · change _ ∈ Icc a 2 ×ℂ Icc (-H) H
+      simpa [mem_reProdIm] using And.intro (show a ≤ 2 ∧ (2 : ℝ) ≤ 2 from ⟨ha2, le_rfl⟩) hy
+    · simp only [mem_singleton_iff]
+      intro he
+      have hr := congrArg Complex.re he
+      norm_num at hr
+  · intro y hy
+    rw [uIcc_of_le hHH] at hy
+    refine ⟨?_, ?_⟩
+    · change _ ∈ Icc a 2 ×ℂ Icc (-H) H
+      simpa [mem_reProdIm] using And.intro (show a ≤ a ∧ a ≤ 2 from ⟨le_rfl, ha2⟩) hy
+    · simp only [mem_singleton_iff]
+      intro he
+      have hr := congrArg Complex.re he
+      simp at hr
+      linarith only [hr, ha]
+
+lemma lemma56_perron_rectangle_edges_integrable {a H : ℝ} (ha : a < 1) (hH : 0 < H)
+    (f : ℂ → ℂ) (hf : ContinuousOn f (Lemma56PerronPuncturedRectangle a H)) :
+    Lemma56PerronRectangleEdgesIntegrable f a H := by
+  have hm := lemma56_perron_rectangle_edges_mem ha hH
+  have hline (γ : ℝ → ℂ) (hγ : Continuous γ) (u v : ℝ)
+      (hg : MapsTo γ (uIcc u v) (Lemma56PerronPuncturedRectangle a H)) :
+      IntervalIntegrable (fun t => f (γ t)) volume u v :=
+    (hf.comp hγ.continuousOn hg).intervalIntegrable
+  exact ⟨hline _ (by fun_prop) a 2 hm.1,
+    hline _ (by fun_prop) a 2 hm.2.1,
+    hline _ (by fun_prop) (-H) H hm.2.2.1,
+    hline _ (by fun_prop) (-H) H hm.2.2.2⟩
+
+lemma lemma56_perron_rectangle_boundary_add {a H : ℝ} (f g : ℂ → ℂ)
+    (hf : Lemma56PerronRectangleEdgesIntegrable f a H)
+    (hg : Lemma56PerronRectangleEdgesIntegrable g a H) :
+    lemma44GeneralRectangleBoundaryIntegral (fun s => f s + g s) a 2 H =
+      lemma44GeneralRectangleBoundaryIntegral f a 2 H +
+        lemma44GeneralRectangleBoundaryIntegral g a 2 H := by
+  unfold lemma44GeneralRectangleBoundaryIntegral
+  rw [intervalIntegral.integral_add hf.1 hg.1,
+    intervalIntegral.integral_add hf.2.1 hg.2.1,
+    intervalIntegral.integral_add hf.2.2.1 hg.2.2.1,
+    intervalIntegral.integral_add hf.2.2.2 hg.2.2.2]
+  ring
+
+lemma lemma56_perron_rectangle_boundary_congr {a H : ℝ} (ha : a < 1) (hH : 0 < H)
+    (f g : ℂ → ℂ) (heq : ∀ s ∈ Lemma56PerronPuncturedRectangle a H, f s = g s) :
+    lemma44GeneralRectangleBoundaryIntegral f a 2 H =
+      lemma44GeneralRectangleBoundaryIntegral g a 2 H := by
+  have hm := lemma56_perron_rectangle_edges_mem ha hH
+  have hbot : (∫ x : ℝ in a..2, f ((x : ℂ) - (H : ℂ) * I)) =
+      ∫ x : ℝ in a..2, g ((x : ℂ) - (H : ℂ) * I) :=
+    intervalIntegral.integral_congr (fun x hx => heq _ (hm.1 x hx))
+  have htop : (∫ x : ℝ in a..2, f ((x : ℂ) + (H : ℂ) * I)) =
+      ∫ x : ℝ in a..2, g ((x : ℂ) + (H : ℂ) * I) :=
+    intervalIntegral.integral_congr (fun x hx => heq _ (hm.2.1 x hx))
+  have hright : (∫ y : ℝ in -H..H, f (((2 : ℝ) : ℂ) + (y : ℂ) * I)) =
+      ∫ y : ℝ in -H..H, g (((2 : ℝ) : ℂ) + (y : ℂ) * I) :=
+    intervalIntegral.integral_congr (fun y hy => heq _ (hm.2.2.1 y hy))
+  have hleft : (∫ y : ℝ in -H..H, f ((a : ℂ) + (y : ℂ) * I)) =
+      ∫ y : ℝ in -H..H, g ((a : ℂ) + (y : ℂ) * I) :=
+    intervalIntegral.integral_congr (fun y hy => heq _ (hm.2.2.2 y hy))
+  unfold lemma44GeneralRectangleBoundaryIntegral
+  rw [hbot, htop, hright, hleft]
+
+noncomputable def lemma56PrincipalPerronArithmeticIntegrand (B x : ℝ) (s : ℂ) : ℂ :=
+  -(logDeriv riemannZeta s) * lemma56PerronComplexKernel B x s
+
+noncomputable def lemma56PrincipalPerronRegularIntegrand (B x : ℝ) (s : ℂ) : ℂ :=
+  -(logDeriv zetaPoleRemoved s) * lemma56PerronComplexKernel B x s
+
+lemma lemma56_actual_principal_regular_perron_analytic {x : ℝ} (hx : 0 < x) (B : ℝ)
+    {s : ℂ} (hre : 0 < s.re) (hR : zetaPoleRemoved s ≠ 0) :
+    AnalyticAt ℂ (lemma56PrincipalPerronRegularIntegrand B x) s := by
+  have hA := lemma55_actual_zeta_pole_removed_analyticAt hre
+  have hs : s ≠ 0 := by intro he; simp [he] at hre
+  exact (hA.deriv.div hA hR).neg.mul (lemma56_perron_complex_kernel_analytic hx B hs)
+
+lemma lemma56_actual_principal_perron_pole_split (B x : ℝ) {s : ℂ}
+    (hre : 0 < s.re) (hs1 : s ≠ 1) (hR : zetaPoleRemoved s ≠ 0) :
+    lemma56PrincipalPerronArithmeticIntegrand B x s =
+      lemma56PerronComplexKernel B x s / (s - 1) + lemma56PrincipalPerronRegularIntegrand B x s := by
+  have hζ : riemannZeta s ≠ 0 := by
+    intro he
+    exact hR ((lemma55_actual_zeta_pole_removed_zero_iff hre).mpr he)
+  unfold lemma56PrincipalPerronArithmeticIntegrand lemma56PrincipalPerronRegularIntegrand
+  rw [lemma55_actual_zeta_pole_removed_logDeriv hre hs1 hζ]
+  ring
+
+lemma lemma56_actual_principal_perron_rectangle_boundary {x a H : ℝ}
+    (hx : 0 < x) (ha0 : 0 < a) (ha1 : a < 1) (hH : 0 < H) (B : ℝ)
+    (hfree : ∀ s : ℂ, a ≤ s.re → s.re ≤ 2 → |s.im| ≤ H → zetaPoleRemoved s ≠ 0) :
+    lemma44GeneralRectangleBoundaryIntegral (lemma56PrincipalPerronArithmeticIntegrand B x) a 2 H =
+      2 * (Real.pi : ℂ) * I * ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ) := by
+  let P : ℂ → ℂ := fun s => lemma56PerronComplexKernel B x s / (s - 1)
+  let G := lemma56PrincipalPerronRegularIntegrand B x
+  have ha2 : a ≤ 2 := by linarith only [ha1]
+  have hG : DifferentiableOn ℂ G (lemma44ClosedRectangle a 2 H) := by
+    intro s hs
+    have hre : 0 < s.re := ha0.trans_le hs.1.1
+    exact (lemma56_actual_principal_regular_perron_analytic hx B hre
+      (hfree s hs.1.1 hs.1.2 (abs_le.mpr hs.2))).differentiableAt.differentiableWithinAt
+  have hc := lemma44_local_rectangle_cauchy G ha2 hH.le hG
+  have hPc : ContinuousOn P (Lemma56PerronPuncturedRectangle a H) := by
+    intro s hs
+    have hre : 0 < s.re := ha0.trans_le hs.1.1.1
+    have hn : s ≠ 0 := by intro he; simp [he] at hre
+    have hn1 : s - 1 ≠ 0 := sub_ne_zero.mpr (by simpa only [mem_singleton_iff] using hs.2)
+    exact ((lemma56_perron_complex_kernel_analytic hx B hn).div
+      (analyticAt_id.sub analyticAt_const) hn1).continuousAt.continuousWithinAt
+  have hGc : ContinuousOn G (Lemma56PerronPuncturedRectangle a H) :=
+    hG.continuousOn.mono (fun _ hs => hs.1)
+  have heq : ∀ s ∈ Lemma56PerronPuncturedRectangle a H,
+      lemma56PrincipalPerronArithmeticIntegrand B x s = P s + G s := by
+    intro s hs
+    exact lemma56_actual_principal_perron_pole_split B x (ha0.trans_le hs.1.1.1)
+      (by simpa only [mem_singleton_iff] using hs.2)
+      (hfree s hs.1.1.1 hs.1.1.2 (abs_le.mpr hs.1.2))
+  rw [lemma56_perron_rectangle_boundary_congr ha1 hH _ _ heq,
+    lemma56_perron_rectangle_boundary_add P G
+      (lemma56_perron_rectangle_edges_integrable ha1 hH P hPc)
+      (lemma56_perron_rectangle_edges_integrable ha1 hH G hGc), hc, add_zero]
+  exact lemma56_actual_perron_pole_rectangle hx ha0 ha1 hH B
+
+lemma lemma56_actual_principal_perron_rectangle_shift {x a H : ℝ}
+    (hx : 0 < x) (ha0 : 0 < a) (ha1 : a < 1) (hH : 0 < H) (B : ℝ)
+    (hfree : ∀ s : ℂ, a ≤ s.re → s.re ≤ 2 → |s.im| ≤ H → zetaPoleRemoved s ≠ 0) :
+    I * (∫ t : ℝ in -H..H, lemma56PrincipalPerronArithmeticIntegrand B x (((2 : ℝ) : ℂ) + (t : ℂ) * I)) =
+      I * (∫ t : ℝ in -H..H, lemma56PrincipalPerronArithmeticIntegrand B x ((a : ℂ) + (t : ℂ) * I)) +
+        (∫ σ : ℝ in a..2, lemma56PrincipalPerronArithmeticIntegrand B x ((σ : ℂ) + (H : ℂ) * I)) -
+          (∫ σ : ℝ in a..2, lemma56PrincipalPerronArithmeticIntegrand B x ((σ : ℂ) - (H : ℂ) * I)) +
+            2 * (Real.pi : ℂ) * I * ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ) := by
+  have hb := lemma56_actual_principal_perron_rectangle_boundary hx ha0 ha1 hH B hfree
+  unfold lemma44GeneralRectangleBoundaryIntegral at hb
+  linear_combination hb
+
+theorem lemma56_uniform_principal_perron_rectangle_shift :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ {x H : ℝ}, 0 < x → 0 < H → H ≤ D → ∀ B : ℝ,
+        let a := 1 - 1 / Real.log (D : ℝ)
+        I * (∫ t : ℝ in -H..H, lemma56PrincipalPerronArithmeticIntegrand B x (((2 : ℝ) : ℂ) + (t : ℂ) * I)) =
+          I * (∫ t : ℝ in -H..H, lemma56PrincipalPerronArithmeticIntegrand B x ((a : ℂ) + (t : ℂ) * I)) +
+            (∫ σ : ℝ in a..2, lemma56PrincipalPerronArithmeticIntegrand B x ((σ : ℂ) + (H : ℂ) * I)) -
+              (∫ σ : ℝ in a..2, lemma56PrincipalPerronArithmeticIntegrand B x ((σ : ℂ) - (H : ℂ) * I)) +
+                2 * (Real.pi : ℂ) * I * ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ) := by
+  obtain ⟨Dz, hz⟩ := lemma56_uniform_zeta_pole_removed_zero_exclusion
+  obtain ⟨Dr, hr⟩ := lemma55_uniform_repulsion_modulus_threshold
+  refine ⟨max Dz Dr, ?_⟩
+  intro D χ hDN hD hA x H hx hH hHD B
+  have hL := (hr D ((le_max_right _ _).trans hDN)).1
+  have hLp : 0 < Real.log (D : ℝ) := by linarith only [hL]
+  have hp : 0 < 1 / Real.log (D : ℝ) := by positivity
+  have hinv : 1 / Real.log (D : ℝ) ≤ (1 / 2 : ℝ) := by
+    apply (div_le_div_iff₀ hLp (by norm_num)).mpr
+    linarith only [hL]
+  have hD2 : (2 : ℝ) ≤ D := by exact_mod_cast hD
+  apply lemma56_actual_principal_perron_rectangle_shift hx
+    (by linarith only [hinv]) (by linarith only [hp]) hH B
+  intro s hre _hre2 ht
+  apply hz χ ((le_max_left _ _).trans hDN) hD hA
+  · rw [show 2 / Real.log (D : ℝ) = 2 * (1 / Real.log (D : ℝ)) by ring]
+    linarith only [hre, hp]
+  · linarith only [ht, hHD, hD2]
+
+lemma lemma56_actual_principal_perron_arithmetic_eq (B x : ℝ) (s : ℂ) :
+    lemma56PrincipalPerronArithmeticIntegrand B x s =
+      lemma56PerronArithmeticIntegrand (1 : DirichletCharacter ℂ 1) B x 0 s := by
+  simp only [lemma56PrincipalPerronArithmeticIntegrand, lemma56PerronComplexKernel,
+    lemma56PerronArithmeticIntegrand, DirichletCharacter.LFunction_modOne_eq,
+    ofReal_zero, zero_mul, sub_zero]
+
+theorem lemma56_uniform_zeta_off_real_logDeriv_bound :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ z : ℂ, 1 - 1 / Real.log (D : ℝ) ≤ z.re → z.re ≤ 2 → |z.im| ≤ D →
+        1 ≤ |z.im| → ‖logDeriv riemannZeta z‖ ≤
+          18 * Real.log (D : ℝ) ^ 2 + 21601 * Real.log (D : ℝ) := by
+  obtain ⟨Dz, hz⟩ := lemma56_uniform_zeta_removed_logDeriv_bound
+  obtain ⟨Dfree, hfree⟩ := lemma56_uniform_riemann_zeta_zero_exclusion
+  obtain ⟨Dr, hr⟩ := lemma55_uniform_repulsion_modulus_threshold
+  refine ⟨max (max Dz Dfree) Dr, ?_⟩
+  intro D χ hDN hD hA z hσ hσ2 ht ht1
+  have hL := (hr D ((le_max_right _ _).trans hDN)).1
+  have hLp : 0 < Real.log (D : ℝ) := by linarith only [hL]
+  have hp : 0 < 1 / Real.log (D : ℝ) := by positivity
+  have hinv : 1 / Real.log (D : ℝ) ≤ (1 / 2 : ℝ) := by
+    apply (div_le_div_iff₀ hLp (by norm_num)).mpr
+    linarith only [hL]
+  have hzp : 0 < z.re := by linarith only [hσ, hinv]
+  have hz1 : z ≠ 1 := by intro he; norm_num [he] at ht1
+  have hD2 : (2 : ℝ) ≤ D := by exact_mod_cast hD
+  have hζ : riemannZeta z ≠ 0 := by
+    apply hfree χ ((le_max_right _ _).trans ((le_max_left _ _).trans hDN)) hD hA
+    · rw [show 2 / Real.log (D : ℝ) = 2 * (1 / Real.log (D : ℝ)) by ring]
+      linarith only [hσ, hp]
+    · linarith only [ht, hD2]
+  have hb := hz χ ((le_max_left _ _).trans ((le_max_left _ _).trans hDN)) hD hA z hσ hσ2 ht
+  have he : logDeriv riemannZeta z = logDeriv zetaPoleRemoved z - 1 / (z - 1) := by
+    rw [lemma55_actual_zeta_pole_removed_logDeriv hzp hz1 hζ]
+    abel
+  have hd : 1 ≤ ‖z - 1‖ := ht1.trans (by simpa only [sub_im, one_im, sub_zero] using abs_im_le_norm (z - 1))
+  have hterm : ‖1 / (z - 1)‖ ≤ 1 := by
+    rw [norm_div, norm_one]
+    exact (div_le_one (by linarith only [hd] : 0 < ‖z - 1‖)).mpr hd
+  rw [he]
+  have hn := (norm_sub_le _ _).trans (add_le_add hb hterm)
+  linarith only [hn, hL]
+
+theorem lemma56_uniform_principal_perron_left_bound :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ {B x H : ℝ}, 0 < B → 0 < x → 0 ≤ H → H ≤ D →
+        let a := 1 - 1 / Real.log (D : ℝ)
+        ‖∫ t : ℝ in -H..H, lemma56PrincipalPerronArithmeticIntegrand B x ((a : ℂ) + (t : ℂ) * I)‖ ≤
+          6 * (18 * Real.log (D : ℝ) ^ 2 + 21601 * Real.log (D : ℝ)) *
+            x ^ a * Real.exp (a ^ 2 / (4 * B ^ 2)) * Real.log (1 + H) := by
+  obtain ⟨Dz, hz⟩ := lemma56_uniform_zeta_left_logDeriv_bound
+  obtain ⟨Dr, hr⟩ := lemma55_uniform_repulsion_modulus_threshold
+  refine ⟨max Dz Dr, ?_⟩
+  intro D χ hDN hD hA B x H hB hx hH hHD
+  have hL := (hr D ((le_max_right _ _).trans hDN)).1
+  have hLp : 0 < Real.log (D : ℝ) := by linarith only [hL]
+  have hinv : 1 / Real.log (D : ℝ) ≤ (1 / 2 : ℝ) := by
+    apply (div_le_div_iff₀ hLp (by norm_num)).mpr
+    linarith only [hL]
+  simp_rw [lemma56_actual_principal_perron_arithmetic_eq]
+  apply lemma56_perron_vertical_integral_bound (1 : DirichletCharacter ℂ 1) hB hx hH
+    (by positivity : 0 ≤ 18 * Real.log (D : ℝ) ^ 2 + 21601 * Real.log (D : ℝ))
+    (by linarith only [hinv]) 0
+  intro t ht
+  simpa only [DirichletCharacter.LFunction_modOne_eq, ofReal_zero, zero_mul, sub_zero] using
+    hz χ ((le_max_left _ _).trans hDN) hD hA t (ht.trans hHD)
+
+theorem lemma56_uniform_principal_perron_horizontal_bound :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ {B x H t : ℝ}, 0 < B → 1 ≤ x → 1 ≤ H → H ≤ D → |t| = H →
+        let a := 1 - 1 / Real.log (D : ℝ)
+        ‖∫ σ : ℝ in a..2, lemma56PrincipalPerronArithmeticIntegrand B x ((σ : ℂ) + (t : ℂ) * I)‖ ≤
+          2 * (18 * Real.log (D : ℝ) ^ 2 + 21601 * Real.log (D : ℝ)) *
+            x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H := by
+  obtain ⟨Dz, hz⟩ := lemma56_uniform_zeta_off_real_logDeriv_bound
+  obtain ⟨Dr, hr⟩ := lemma55_uniform_repulsion_modulus_threshold
+  refine ⟨max Dz Dr, ?_⟩
+  intro D χ hDN hD hA B x H t hB hx hH hHD ht
+  have hL := (hr D ((le_max_right _ _).trans hDN)).1
+  have hLp : 0 < Real.log (D : ℝ) := by linarith only [hL]
+  have hp : 0 < 1 / Real.log (D : ℝ) := by positivity
+  have hinv : 1 / Real.log (D : ℝ) ≤ (1 / 2 : ℝ) := by
+    apply (div_le_div_iff₀ hLp (by norm_num)).mpr
+    linarith only [hL]
+  simp_rw [lemma56_actual_principal_perron_arithmetic_eq]
+  apply lemma56_perron_horizontal_integral_bound (1 : DirichletCharacter ℂ 1) hB hx
+    (by linarith only [hH])
+    (by positivity : 0 ≤ 18 * Real.log (D : ℝ) ^ 2 + 21601 * Real.log (D : ℝ))
+    (by linarith only [hinv]) (by linarith only [hp]) (by rw [ht]) 0
+  intro σ hσ hσ2
+  have hn := hz χ ((le_max_left _ _).trans hDN) hD hA
+    ((σ : ℂ) + (t : ℂ) * I) (by simpa using hσ) (by simpa using hσ2)
+    (by simpa [ht] using hHD) (by simpa [ht] using hH)
+  simpa only [DirichletCharacter.LFunction_modOne_eq, ofReal_zero, zero_mul, sub_zero] using hn
+
+theorem lemma56_uniform_principal_perron_smoothed_main_error :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ {B x H : ℝ}, 0 < B → 1 ≤ x → 1 ≤ H → H ≤ D →
+        let L := Real.log (D : ℝ)
+        let a := 1 - 1 / L
+        let M := 18 * L ^ 2 + 21601 * L
+        ‖lemma56PerronMangoldtSum (1 : DirichletCharacter ℂ 1) B x 0 -
+          ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ)‖ ≤
+          6 * M * x ^ a * Real.exp (a ^ 2 / (4 * B ^ 2)) * Real.log (1 + H) +
+            (4 * M + 4 * lemma56GaussianRightConstant * B ^ 2) *
+              x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H := by
+  obtain ⟨Dr, hr⟩ := lemma56_uniform_principal_perron_rectangle_shift
+  obtain ⟨Dl, hl⟩ := lemma56_uniform_principal_perron_left_bound
+  obtain ⟨Dh, hh⟩ := lemma56_uniform_principal_perron_horizontal_bound
+  refine ⟨max Dr (max Dl Dh), ?_⟩
+  intro D χ hDN hD hA B x H hB hx hH hHD
+  have hx0 : 0 < x := by linarith only [hx]
+  have hHp : 0 < H := by linarith only [hH]
+  let L := Real.log (D : ℝ)
+  let a := 1 - 1 / L
+  let M := 18 * L ^ 2 + 21601 * L
+  let c : ℝ := 1 / (2 * Real.pi)
+  let P := lemma56PerronMangoldtSum (1 : DirichletCharacter ℂ 1) B x 0
+  let m : ℂ := ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ)
+  let R := ∫ t : ℝ in -H..H, lemma56PrincipalPerronArithmeticIntegrand B x (((2 : ℝ) : ℂ) + (t : ℂ) * I)
+  let S := ∫ t : ℝ in -H..H, lemma56PrincipalPerronArithmeticIntegrand B x ((a : ℂ) + (t : ℂ) * I)
+  let U := ∫ σ : ℝ in a..2, lemma56PrincipalPerronArithmeticIntegrand B x ((σ : ℂ) + (H : ℂ) * I)
+  let V := ∫ σ : ℝ in a..2, lemma56PrincipalPerronArithmeticIntegrand B x ((σ : ℂ) - (H : ℂ) * I)
+  let Rt := 4 * lemma56GaussianRightConstant * x ^ 2 * (B ^ 2 / H) *
+    Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2))
+  have hs := hr χ ((le_max_left _ _).trans hDN) hD hA hx0 hHp hHD B
+  change I * R = I * S + U - V + 2 * (Real.pi : ℂ) * I * m at hs
+  have hR : R = S - I * U + I * V + 2 * (Real.pi : ℂ) * m := by
+    calc
+      R = -(I * (I * R)) := by rw [← mul_assoc, I_mul_I]; ring
+      _ = -(I * (I * S + U - V + 2 * (Real.pi : ℂ) * I * m)) := by rw [hs]
+      _ = _ := by ring_nf <;> simp [Complex.I_sq]
+  have hc : 0 < c := by dsimp [c]; positivity
+  have hc1 : c ≤ 1 := by
+    dsimp [c]
+    apply (div_le_one (by positivity : 0 < 2 * Real.pi)).mpr
+    linarith only [Real.one_le_pi_div_two]
+  have hnc : ‖(c : ℂ)‖ = c := by rw [norm_real, Real.norm_eq_abs, abs_of_pos hc]
+  have hcn : (c : ℂ) * 2 * (Real.pi : ℂ) = 1 := by
+    dsimp [c]
+    push_cast
+    field_simp [ofReal_ne_zero.mpr Real.pi_ne_zero]
+  have hmid : (c : ℂ) * R - m = (c : ℂ) * S - (c : ℂ) * I * U + (c : ℂ) * I * V := by
+    rw [hR]
+    linear_combination m * hcn
+  have hfinite : ‖(c : ℂ) * R - m‖ ≤ ‖S‖ + ‖U‖ + ‖V‖ := by
+    rw [hmid]
+    calc
+      _ ≤ (‖(c : ℂ) * S‖ + ‖(c : ℂ) * I * U‖) + ‖(c : ℂ) * I * V‖ :=
+        (norm_add_le _ _).trans (add_le_add (norm_sub_le _ _) (le_refl _))
+      _ = c * (‖S‖ + ‖U‖ + ‖V‖) := by simp only [norm_mul, norm_I, hnc, mul_one]; ring
+      _ ≤ _ := by
+        convert mul_le_mul_of_nonneg_right hc1
+          (by positivity : 0 ≤ ‖S‖ + ‖U‖ + ‖V‖) using 1 <;> ring
+  have hS := hl χ ((le_max_left _ _).trans ((le_max_right _ _).trans hDN))
+    hD hA hB hx0 hHp.le hHD
+  change ‖S‖ ≤ 6 * M * x ^ a * Real.exp (a ^ 2 / (4 * B ^ 2)) * Real.log (1 + H) at hS
+  have hU := hh χ ((le_max_right _ _).trans ((le_max_right _ _).trans hDN))
+    hD hA (B := B) (x := x) (H := H) (t := H) hB hx hH hHD (abs_of_pos hHp)
+  change ‖U‖ ≤ 2 * M * x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H at hU
+  have hV := hh χ ((le_max_right _ _).trans ((le_max_right _ _).trans hDN))
+    hD hA (B := B) (x := x) (H := H) (t := -H) hB hx hH hHD
+    (by rw [abs_neg, abs_of_pos hHp])
+  have hpoint (σ : ℝ) : (σ : ℂ) + ((-H : ℝ) : ℂ) * I = (σ : ℂ) - (H : ℂ) * I := by push_cast; ring
+  simp_rw [hpoint] at hV
+  change ‖V‖ ≤ 2 * M * x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H at hV
+  have htwo : ((2 : ℝ) : ℂ) = (2 : ℂ) := by norm_num
+  have htr : ‖P - (c : ℂ) * R‖ ≤ c * Rt := by
+    simpa only [P, c, R, Rt, htwo, lemma56PrincipalPerronArithmeticIntegrand,
+      lemma56PerronComplexKernel, lemma56PerronArithmeticIntegrand,
+      DirichletCharacter.LFunction_modOne_eq, ofReal_zero, zero_mul, sub_zero] using
+      lemma56_actual_perron_mangoldt_truncation (1 : DirichletCharacter ℂ 1) hB hx0 hHp 0
+  have hCr := lemma56_gaussian_right_constant_nonneg
+  have hRt : 0 ≤ Rt := by dsimp [Rt]; positivity
+  have htail : ‖P - (c : ℂ) * R‖ ≤ Rt := htr.trans
+    (by simpa only [one_mul] using mul_le_mul_of_nonneg_right hc1 hRt)
+  have htri := norm_add_le (P - (c : ℂ) * R) ((c : ℂ) * R - m)
+  rw [sub_add_sub_cancel] at htri
+  have hb : ‖P - m‖ ≤ Rt +
+      6 * M * x ^ a * Real.exp (a ^ 2 / (4 * B ^ 2)) * Real.log (1 + H) +
+        2 * (2 * M * x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H) := by
+    linarith only [htri, htail, hfinite, hS, hU, hV]
+  change ‖P - m‖ ≤ 6 * M * x ^ a * Real.exp (a ^ 2 / (4 * B ^ 2)) * Real.log (1 + H) +
+    (4 * M + 4 * lemma56GaussianRightConstant * B ^ 2) *
+      x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H
+  convert hb using 1 <;> dsimp [Rt] <;> ring
+
+-- The original actual infinite von Mangoldt sum, with the principal values and phase expanded.
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    ∀ {B x H : ℝ}, 0 < B → 1 ≤ x → 1 ≤ H → H ≤ D →
+      let L := Real.log (D : ℝ)
+      let a := 1 - 1 / L
+      let M := 18 * L ^ 2 + 21601 * L
+      ‖(∑' n : ℕ, (ArithmeticFunction.vonMangoldt n : ℂ) *
+          (lemma56PerronWeight B (x / (n : ℝ)) : ℂ)) -
+        ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ)‖ ≤
+        6 * M * x ^ a * Real.exp (a ^ 2 / (4 * B ^ 2)) * Real.log (1 + H) +
+          (4 * M + 4 * lemma56GaussianRightConstant * B ^ 2) *
+            x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H := by
+  simpa only [lemma56PerronMangoldtSum, lemma56PerronMangoldtTerm, lemma56GaussianPhase,
+    lemma56Mangoldt, ofReal_zero, zero_mul, Complex.cpow_zero,
+    lemma56_principal_one_apply_nat, one_mul] using
+      lemma56_uniform_principal_perron_smoothed_main_error
+
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    ∀ {x H : ℝ}, 0 < x → 0 < H → H ≤ D → ∀ B : ℝ,
+      let a := 1 - 1 / Real.log (D : ℝ)
+      lemma44GeneralRectangleBoundaryIntegral
+        (fun s : ℂ => -(deriv riemannZeta s / riemannZeta s) *
+          ((x : ℂ) ^ s * Complex.exp (s ^ 2 / (4 * (B : ℂ) ^ 2)) / s)) a 2 H =
+            2 * (Real.pi : ℂ) * I * ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ) := by
+  obtain ⟨D₀, h⟩ := lemma56_uniform_principal_perron_rectangle_shift
+  refine ⟨D₀, ?_⟩
+  intro D χ hDN hD hA x H hx hH hHD B
+  have hs := h χ hDN hD hA hx hH hHD B
+  dsimp only at hs
+  have hb : lemma44GeneralRectangleBoundaryIntegral (lemma56PrincipalPerronArithmeticIntegrand B x)
+      (1 - 1 / Real.log (D : ℝ)) 2 H =
+        2 * (Real.pi : ℂ) * I * ((x * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ) := by
+    unfold lemma44GeneralRectangleBoundaryIntegral
+    linear_combination hs
+  simpa only [lemma56PrincipalPerronArithmeticIntegrand, lemma56PerronComplexKernel, logDeriv_apply] using hb
+
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      let L := Real.log (D : ℝ)
+      let B := Real.exp (L / 3)
+      let a := 1 - 1 / L
+      let M := 18 * L ^ 2 + 21601 * L
+      ‖lemma56PerronMangoldtSum (1 : DirichletCharacter ℂ 1) B (lemma23PaperP D) 0 -
+        ((lemma23PaperP D * Real.exp (1 / (4 * B ^ 2)) : ℝ) : ℂ)‖ ≤
+        6 * M * (lemma23PaperP D) ^ a * Real.exp (a ^ 2 / (4 * B ^ 2)) * Real.log (1 + (D : ℝ) / 2) +
+          (4 * M + 4 * lemma56GaussianRightConstant * B ^ 2) *
+            (lemma23PaperP D) ^ 2 * Real.exp (1 / B ^ 2 - ((D : ℝ) / 2) ^ 2 / (4 * B ^ 2)) / ((D : ℝ) / 2) := by
+  obtain ⟨D₀, h⟩ := lemma56_uniform_principal_perron_smoothed_main_error
+  obtain ⟨Dr, hr⟩ := lemma55_uniform_repulsion_modulus_threshold
+  refine ⟨max D₀ Dr, ?_⟩
+  intro D χ hDN hD hA
+  have hL := (hr D ((le_max_right _ _).trans hDN)).1
+  have hLp : 0 ≤ Real.log (D : ℝ) := by linarith only [hL]
+  have hD2 : (2 : ℝ) ≤ D := by exact_mod_cast hD
+  have hx : 1 ≤ lemma23PaperP D := by
+    unfold lemma23PaperP lemma23PaperL
+    exact (Real.one_le_exp_iff).mpr (by positivity)
+  exact h χ ((le_max_left _ _).trans hDN) hD hA
+    (Real.exp_pos _) hx (by linarith only [hD2]) (by linarith only [hD2])
+
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    ∀ {B x : ℝ}, 0 < B → 1 ≤ x →
+      let L := Real.log (D : ℝ)
+      let a := 1 - 1 / L
+      ‖∫ σ : ℝ in a..2, lemma56PrincipalPerronArithmeticIntegrand B x ((σ : ℂ) - (D : ℂ) * I)‖ ≤
+        2 * (18 * L ^ 2 + 21601 * L) * x ^ 2 *
+          Real.exp (1 / B ^ 2 - (D : ℝ) ^ 2 / (4 * B ^ 2)) / D := by
+  obtain ⟨D₀, h⟩ := lemma56_uniform_principal_perron_horizontal_bound
+  refine ⟨D₀, ?_⟩
+  intro D χ hDN hD hA B x hB hx
+  have hD1 : (1 : ℝ) ≤ D := by exact_mod_cast hD.le
+  have hn := h χ hDN hD hA (B := B) (x := x) (H := (D : ℝ)) (t := -(D : ℝ))
+    hB hx hD1 (le_refl _) (by simp)
+  simpa only [ofReal_neg, neg_mul, sub_eq_add_neg] using hn
+
+#print axioms lemma56_perron_rectangle_edges_mem
+#print axioms lemma56_perron_rectangle_edges_integrable
+#print axioms lemma56_perron_rectangle_boundary_add
+#print axioms lemma56_perron_rectangle_boundary_congr
+#print axioms lemma56_actual_principal_regular_perron_analytic
+#print axioms lemma56_actual_principal_perron_pole_split
+#print axioms lemma56_actual_principal_perron_rectangle_boundary
+#print axioms lemma56_actual_principal_perron_rectangle_shift
+#print axioms lemma56_uniform_principal_perron_rectangle_shift
+#print axioms lemma56_actual_principal_perron_arithmetic_eq
+#print axioms lemma56_uniform_zeta_off_real_logDeriv_bound
+#print axioms lemma56_uniform_principal_perron_left_bound
+#print axioms lemma56_uniform_principal_perron_horizontal_bound
+#print axioms lemma56_uniform_principal_perron_smoothed_main_error
+
+end ZhangLS.Spec

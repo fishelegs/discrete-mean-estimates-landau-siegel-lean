@@ -1,0 +1,7 @@
+ZhangLS/Spec/Lemma55ZeroFactorization.lean:78:10: warning: This simp argument is unused:
+  divisor_def
+
+Hint: Omit it from the simp argument list.
+  simp [d̵i̵v̵i̵s̵o̵r̵_̵d̵e̵f̵,̵ ̵hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

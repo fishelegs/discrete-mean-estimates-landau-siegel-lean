@@ -1,0 +1,57 @@
+import ZhangLS.Spec.Lemma33Sampling
+import ZhangLS.Spec.Lemma33Fourier
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set
+open scoped Real Topology
+set_option maxHeartbeats 2000000
+
+lemma lemma33_additive_large_sieve {ι : Type*} (U : Finset ι) (x : ι → ℝ)
+    (S : Finset ℕ) (a : ℕ → ℂ) {P : ℝ} (hP : 1 ≤ P) (N : ℕ)
+    (hN : (N : ℝ) ≤ P ^ 2) (hSN : ∀ n ∈ S, n ≤ N)
+    (hx : ∀ i ∈ U, 0 ≤ x i ∧ x i ≤ 1)
+    (hsep : ∀ i ∈ U, ∀ j ∈ U, i ≠ j → (8 * P ^ 2)⁻¹ ≤ |x i-x j|) :
+    (∑ i ∈ U, ‖lemma33TrigSum S a (x i)‖ ^ 2) ≤
+      (32 + Real.pi ^ 2) * P ^ 2 * ∑ n ∈ S, ‖a n‖ ^ 2 := by
+  let δ := (8 * P ^ 2)⁻¹
+  have hPpos : 0 < P := lt_of_lt_of_le (by norm_num) hP
+  have hδ : 0 < δ := by dsimp [δ]; positivity
+  have hδ1 : δ ≤ 1 := by
+    dsimp [δ]
+    apply inv_le_one_of_one_le₀
+    nlinarith [sq_nonneg (P-1)]
+  have hsamp := lemma33_separated_norm_square_sampling U x hδ (by norm_num : (0 : ℝ) ≤ 2)
+    (fun i hi => ⟨(hx i hi).1,by linarith [(hx i hi).2]⟩) hsep
+    (lemma33_trig_sum_continuous S a)
+    (lemma33_trig_sum_continuous S (fun n => a n * (2 * (Real.pi : ℂ) * I * n)))
+    (lemma33_trig_sum_hasDerivAt S a)
+  rw [lemma33_trig_square_energy_two_periods] at hsamp
+  have hder := lemma33_trig_derivative_two_period_bound S a N hSN
+  have hδN : δ * (N : ℝ) ≤ 1 / 8 := by
+    dsimp [δ]
+    rw [mul_comm,← div_eq_mul_inv]
+    apply (div_le_iff₀ (by positivity : 0 < 8 * P ^ 2)).mpr
+    nlinarith [hN]
+  have hfreq : 2 * δ ^ 2 * (2 * Real.pi * N) ^ 2 ≤ Real.pi ^ 2 / 8 := by
+    have hh := mul_le_mul_of_nonneg_left
+      (pow_le_pow_left₀ (mul_nonneg hδ.le (Nat.cast_nonneg N)) hδN 2)
+      (by positivity : 0 ≤ 8 * Real.pi ^ 2)
+    convert hh using 1 <;> ring
+  let E := ∑ n ∈ S, ‖a n‖ ^ 2
+  have hE : 0 ≤ E := Finset.sum_nonneg (fun n hn => sq_nonneg _)
+  have hb : δ * (∑ i ∈ U, ‖lemma33TrigSum S a (x i)‖ ^ 2) ≤
+      4 * E + 2 * δ ^ 2 * (2 * Real.pi * N) ^ 2 * E := by
+    have hh := mul_le_mul_of_nonneg_left hder (sq_nonneg δ)
+    dsimp only [E]
+    nlinarith [hsamp,hh]
+  apply (mul_le_mul_iff_right₀ hδ).mp
+  calc
+    _ ≤ 4 * E + 2 * δ ^ 2 * (2 * Real.pi * N) ^ 2 * E := hb
+    _ ≤ 4 * E + Real.pi ^ 2 / 8 * E := by
+      nlinarith [mul_le_mul_of_nonneg_right hfreq hE]
+    _ = _ := by
+      dsimp only [δ,E]
+      field_simp
+      ring
+
+end ZhangLS.Spec

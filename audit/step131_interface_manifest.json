@@ -1,0 +1,63 @@
+{
+  "modules": [
+    "ZhangLS/Spec/Lemma32ActualOddCurveCount.lean",
+    "ZhangLS/Spec/Lemma32DistinctRootFieldSize.lean",
+    "ZhangLS/Spec/Lemma32QuarticCollisionBound.lean",
+    "ZhangLS/Spec/Lemma32ActualCollisionBound.lean",
+    "ZhangLS/Spec/Lemma32CollisionTupleCount.lean",
+    "ZhangLS/Spec/Lemma32PrimeFourthMomentSplit.lean",
+    "ZhangLS/Spec/Lemma32DistinctMomentPointCount.lean",
+    "ZhangLS/Spec/Lemma32FiniteActualCurvePoints.lean"
+  ],
+  "interfaces": [
+    "lemma32_nontrivial_quadratic_odd_characteristic",
+    "lemma32_field_two_nonzero_of_odd_characteristic",
+    "lemma32_actual_prime_odd_characteristic",
+    "lemma32_actual_prime_distinct_quartic_point_count",
+    "lemma32_four_distinct_roots_injective",
+    "lemma32_four_distinct_roots_field_card",
+    "lemma32_four_distinct_prime_roots_modulus_ge_five",
+    "lemma32_quadratic_unpaired_quartic_collision_bound",
+    "lemma32_short_residue_cast_injective",
+    "lemma32_actual_prime_unpaired_collision_correlation",
+    "lemma32_quartic_noninjective_iff_collision",
+    "lemma32_collision_tuples_covered",
+    "lemma32_collision_quartic_tuple_card",
+    "lemma32_prime_collision_fourth_moment_bound",
+    "lemma32_nondegenerate_split_by_injectivity",
+    "lemma32_actual_prime_fourth_moment_distinct_reduction",
+    "lemma32_distinct_quartic_correlation_point_count",
+    "lemma32_distinct_fourth_moment_eq_actual_point_discrepancy",
+    "lemma32_actual_curve_points_finite",
+    "lemma32_actual_curve_fintype_card_eq_nat_card"
+  ],
+  "definitions": [
+    "lemma32CollisionQuarticTuples",
+    "lemma32QuarticCollisionFamily",
+    "lemma32DistinctFourthMoment"
+  ],
+  "interface_count": 20,
+  "definition_count": 3,
+  "combined_lemma32_standard_interfaces": 306,
+  "regression_examples": 72,
+  "full_original_target_status": "UNPROVED",
+  "original_target": "full Lemma3.2 weighted tail",
+  "partial_result": "actual odd-characteristic and distinct-root conditions;all nonpaired collision correlations at most2;collision tuples at most6H^3;collision fourth-moment contribution at most12H^3;actual prime fourth moment reduced to actual distinct curve point discrepancies;finite actual point type",
+  "source_archive": "step153_lemma32_distinct_moment_points_draft_metadata.json",
+  "proof_bytes": "only imports renamed relative to archived temporary sources",
+  "full_project_verification": "INCREMENTAL_PASS_AGAINST_STEP130",
+  "arithmetic_input_status": "UNPROVED",
+  "remaining": [
+    "actual four-distinct-root finite-field correlation bound",
+    "composite-modulus extension and Burgess amplification",
+    "prove actual uniform Burgess finite-character partial-sum bound and apply conditional analytic reduction"
+  ],
+  "partial_result_status": "PROVED_PROMOTED_INCREMENTAL_VERIFIED",
+  "promoted_build": "PASS",
+  "regression_kernel_and_axioms": "PASS",
+  "spec_aggregate": "PASS",
+  "new_module_oleans": "PASS",
+  "fresh_repository_wide_verification": "NOT_RUN",
+  "source_fingerprints": "707 unchanged during incremental checks;696 older nonaggregate files unchanged since full Step130",
+  "verified_at_utc": "2026-10-02T06:18:47.253449+00:00"
+}

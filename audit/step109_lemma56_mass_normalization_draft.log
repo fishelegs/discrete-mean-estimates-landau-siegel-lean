@@ -1,0 +1,13 @@
+/private/tmp/ZhangMathStep109MassNormalizationDraft.lean:142:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ZhangLS.Spec.lemma56_paper_prime_log_mass_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_prime_mass_card_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_prime_mass_from_logmass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_paper_prime_log_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_prime_mass_log_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_prime_mass_polynomial_absorption' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_prime_mass_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_uniform_primitive_prime_window_normalized_of_mass_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

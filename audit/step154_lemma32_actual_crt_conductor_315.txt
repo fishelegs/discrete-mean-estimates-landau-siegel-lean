@@ -1,0 +1,35 @@
+import ZhangMathStep314Lemma32PrimePowerReductionKernelDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_odd_prime_power_quadratic_factorsThrough {p : ℕ} (hp : p.Prime)
+    (hodd : p ≠ 2) (k : ℕ) (χ : DirichletCharacter ℂ (p^(k+1)))
+    (hq : χ^2=1) : χ.FactorsThrough p := by
+  letI : NeZero (p^(k+1)) := ⟨pow_ne_zero _ hp.ne_zero⟩
+  apply lemma32_quadratic_character_factorsThrough_odd_kernel
+    (dvd_pow_self p (Nat.succ_ne_zero k)) χ hq
+  rw [lemma32_prime_power_reduction_kernel_card hp k]
+  exact (hp.odd_of_ne_two hodd).pow
+
+lemma lemma32_odd_prime_power_quadratic_conductor_dvd {p : ℕ} (hp : p.Prime)
+    (hodd : p ≠ 2) (k : ℕ) (χ : DirichletCharacter ℂ (p^(k+1)))
+    (hq : χ^2=1) : χ.conductor ∣ p := by
+  letI : NeZero (p^(k+1)) := ⟨pow_ne_zero _ hp.ne_zero⟩
+  exact DirichletCharacter.conductor_dvd_of_mem_conductorSet χ
+    (lemma32_odd_prime_power_quadratic_factorsThrough hp hodd k χ hq)
+
+lemma lemma32_odd_prime_power_primitive_quadratic_exponent {p : ℕ} (hp : p.Prime)
+    (hodd : p ≠ 2) (k : ℕ) (χ : DirichletCharacter ℂ (p^(k+1)))
+    (hq : χ^2=1) (hprim : χ.IsPrimitive) : k=0 := by
+  have hd := lemma32_odd_prime_power_quadratic_conductor_dvd hp hodd k χ hq
+  rw [hprim] at hd
+  have he : p^(k+1)=p^1 := by
+    rw [pow_one]
+    apply Nat.le_antisymm (Nat.le_of_dvd hp.pos hd)
+    exact Nat.le_of_dvd (pow_pos hp.pos _) (dvd_pow_self p (Nat.succ_ne_zero k))
+  have hk := Nat.pow_right_injective hp.two_le he
+  omega
+
+end ZhangLS.Spec

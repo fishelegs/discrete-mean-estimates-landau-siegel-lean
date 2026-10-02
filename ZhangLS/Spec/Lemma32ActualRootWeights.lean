@@ -1,0 +1,57 @@
+import ZhangLS.Spec.Lemma32RootGcdProduct
+import ZhangLS.Spec.Lemma32RootDifferenceAverage
+import ZhangLS.Spec.Lemma32IsolatedRootWeights
+import ZhangLS.Spec.Lemma32UnpairedSingleton
+import Mathlib.Data.Fintype.BigOperators
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma32GcdRootWeight (D : ℕ) {H : ℕ} (a b : Fin H) : ℝ :=
+  if b=a then 0 else (D.gcd (((a.val : ℤ)-(b.val : ℤ)).natAbs) : ℝ)
+
+lemma lemma32_gcd_root_weight_nonneg (D : ℕ) {H : ℕ} (a b : Fin H) :
+    0 ≤ lemma32GcdRootWeight D a b := by
+  unfold lemma32GcdRootWeight
+  split <;> positivity
+
+lemma lemma32_gcd_root_weight_row_sum {D H : ℕ} (hD : 0 < D) (a : Fin H) :
+    (∑ b : Fin H, lemma32GcdRootWeight D a b) ≤ 2 * (H : ℝ) * D.divisors.card := by
+  have ht := lemma32_real_gcd_root_difference_sum hD a.isLt
+  rw [← Fin.sum_univ_eq_sum_range] at ht
+  simpa only [lemma32GcdRootWeight, Fin.ext_iff] using ht
+
+lemma lemma32_quartic_correlation_selected_root {D H : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (v : Fin 4 → Fin H) (j : Fin 4) :
+    lemma32QuarticCorrelation χ v =
+      (∑ x : ZMod D, χ.chi (lemma32QuarticRootProduct ((v j).val : ZMod D)
+        ((v (j.succAbove 0)).val : ZMod D) ((v (j.succAbove 1)).val : ZMod D)
+        ((v (j.succAbove 2)).val : ZMod D) x)).re := by
+  unfold lemma32QuarticCorrelation
+  rw [Complex.re_sum]
+  apply Finset.sum_congr rfl
+  intro x hx
+  congr 2
+  rw [Fin.prod_univ_succAbove _ j, Fin.prod_univ_three]
+  unfold lemma32QuarticRootProduct
+  ring
+
+lemma lemma32_actual_isolated_root_correlation_weight {D H : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (v : Fin 4 → Fin H) (j : Fin 4)
+    (hs : ∀ i : Fin 4, i ≠ j → v j ≠ v i) :
+    |lemma32QuarticCorrelation χ v| ≤
+      (8 * (3 : ℝ)^D.primeFactors.card * Real.sqrt (D : ℝ)) *
+      lemma32IsolatedRootWeight (lemma32GcdRootWeight D) j v := by
+  have hn (i : Fin 3) : v (j.succAbove i) ≠ v j :=
+    (hs _ (Fin.succAbove_ne j i)).symm
+  have hb := lemma32_actual_primitive_quartic_root_gcd_product_bound χ
+    ((v j).val : ℤ) ((v (j.succAbove 0)).val : ℤ)
+    ((v (j.succAbove 1)).val : ℤ) ((v (j.succAbove 2)).val : ℤ)
+  rw [lemma32_quartic_correlation_selected_root χ v j]
+  apply (Complex.abs_re_le_norm _).trans
+  simpa only [Int.cast_natCast, lemma32IsolatedRootWeight, Fin.prod_univ_three,
+    lemma32GcdRootWeight, if_neg (hn 0), if_neg (hn 1), if_neg (hn 2)] using hb
+
+end ZhangLS.Spec

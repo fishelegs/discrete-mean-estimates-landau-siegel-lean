@@ -1,0 +1,46 @@
+import ZhangMathStep347Lemma32BurgessMultiplicityDraft
+import ZhangMathStep356Lemma32MultiplierGcdAverageDraft
+import Mathlib.NumberTheory.ArithmeticFunction.Moebius
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+open scoped Classical ArithmeticFunction.zeta
+
+lemma lemma32_mobius_divisor_sum (n : ℕ) :
+    (∑ d ∈ n.divisors, (ArithmeticFunction.moebius d : ℝ)) =
+      if n=1 then (1 : ℝ) else 0 := by
+  have hi : (∑ d ∈ n.divisors, ArithmeticFunction.moebius d) =
+      if n=1 then (1 : ℤ) else 0 := by
+    rw [← ArithmeticFunction.coe_mul_zeta_apply,
+      ArithmeticFunction.moebius_mul_coe_zeta]
+    rfl
+  exact_mod_cast hi
+
+lemma lemma32_coprime_mobius_indicator {D : ℕ} (hD : 0 < D) (k : ℕ) :
+    (if k.Coprime D then (1 : ℝ) else 0) =
+      ∑ d ∈ D.divisors, if d ∣ k then (ArithmeticFunction.moebius d : ℝ) else 0 := by
+  have hg : D.gcd k ≠ 0 := (Nat.gcd_pos_of_pos_left k hD).ne'
+  have he : D.divisors.filter (fun d => d ∣ k) = (D.gcd k).divisors := by
+    ext d
+    simp [Nat.mem_divisors, Nat.dvd_gcd_iff, hD.ne', hg, and_assoc]
+  rw [← Finset.sum_filter, he, lemma32_mobius_divisor_sum]
+  simp only [Nat.coprime_iff_gcd_eq_one, Nat.gcd_comm]
+
+lemma lemma32_actual_burgess_unit_multiplier_count {D : ℕ} (hD : 0 < D) (A : ℕ) :
+    ((lemma32BurgessUnitMultipliers D A).card : ℝ) =
+      ∑ d ∈ D.divisors, (ArithmeticFunction.moebius d : ℝ)*(A/d : ℕ) := by
+  have he : ((lemma32BurgessUnitMultipliers D A).card : ℝ) =
+      ∑ a : Fin A, if (a.val+1).Coprime D then (1 : ℝ) else 0 := by
+    unfold lemma32BurgessUnitMultipliers
+    rw [← Finset.sum_filter]
+    simp
+  rw [he, lemma32_fin_positive_sum A (fun a => if a.Coprime D then (1 : ℝ) else 0)]
+  simp_rw [lemma32_coprime_mobius_indicator hD]
+  rw [Finset.sum_comm]
+  apply Finset.sum_congr rfl
+  intro d hd
+  rw [← Finset.sum_filter]
+  simp only [Finset.sum_const, nsmul_eq_mul, Nat.Ioc_filter_dvd_card_eq_div]
+  ring
+
+end ZhangLS.Spec

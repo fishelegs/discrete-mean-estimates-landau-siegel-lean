@@ -1,0 +1,19 @@
+diff --git a/mnt/data/step25/ZhangLS/Spec/Lemma57GaussianGlobal.lean b/ZhangLS/Spec/Lemma57GaussianGlobal.lean
+index 643c234..f71b0c6 100644
+--- a/mnt/data/step25/ZhangLS/Spec/Lemma57GaussianGlobal.lean
++++ b/ZhangLS/Spec/Lemma57GaussianGlobal.lean
+@@ -95,12 +95,12 @@ theorem zhangGaussianWeight_nonneg
+             ≤ (Real.sqrt Real.pi)⁻¹ * (Real.sqrt Real.pi / 2) := by
+               exact mul_le_mul_of_nonneg_left hreflect
+                 (inv_nonneg.mpr hsqrt_pos.le)
+-        _ = (1 : ℝ) / 2 := by field_simp
++        _ = (1 : ℝ) / 2 := by field_simp [hsqrt_pos.ne']
+     unfold zhangGaussianWeight
+     have hsymm :
+         ∫ t : ℝ in (0 : ℝ)..a, gaussianKernel t =
+           -(∫ t : ℝ in a..(0 : ℝ), gaussianKernel t) := by
+-      simpa using intervalIntegral.integral_symm a (0 : ℝ) gaussianKernel
++      simpa using intervalIntegral.integral_symm (f := gaussianKernel) a (0 : ℝ)
+     rw [show (∫ t : ℝ in (0 : ℝ)..zhangGaussianEndpoint D x,
+       Real.exp (-(t ^ 2))) = ∫ t : ℝ in (0 : ℝ)..a, gaussianKernel t by
+         simp [a, gaussianKernel]]

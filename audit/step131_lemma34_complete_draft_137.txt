@@ -1,0 +1,148 @@
+import ZhangMathStep134Lemma34TauDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped BigOperators Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma34_tuple_sum_succ (X k : ℕ) (F : (Fin (k+1) → ℕ) → ℕ) :
+    (∑ p ∈ Fintype.piFinset (fun _ : Fin (k+1) => Finset.Icc 1 X), F p) =
+    ∑ q ∈ Finset.Icc 1 X ×ˢ Fintype.piFinset (fun _ : Fin k => Finset.Icc 1 X),
+      F (Fin.cons q.1 q.2) := by
+  classical
+  apply Finset.sum_bij (fun p _ => (p 0, fun i : Fin k => p i.succ))
+  · intro p hp
+    refine Finset.mem_product.mpr ⟨Fintype.mem_piFinset.mp hp 0, ?_⟩
+    exact Fintype.mem_piFinset.mpr (fun i => Fintype.mem_piFinset.mp hp i.succ)
+  · intro p hp q hq h
+    have h0 : p 0 = q 0 := congrArg Prod.fst h
+    have ht : (fun i : Fin k => p i.succ) = (fun i : Fin k => q i.succ) :=
+      congrArg Prod.snd h
+    funext i
+    exact Fin.cases h0 (fun j => congrFun ht j) i
+  · intro q hq
+    refine ⟨Fin.cons q.1 q.2, ?_, ?_⟩
+    · apply Fintype.mem_piFinset.mpr
+      intro i
+      exact Fin.cases (Finset.mem_product.mp hq).1
+        (fun j => Fintype.mem_piFinset.mp (Finset.mem_product.mp hq).2 j) i
+    · simp
+  · intro p hp
+    congr 1
+    ext i
+    exact Fin.cases (by simp) (fun j => by simp) i
+
+noncomputable def lemma34TupleSum (X k : ℕ) (f : ℕ → ℕ) (n : ℕ) : ℕ :=
+  ∑ p ∈ Fintype.piFinset (fun _ : Fin k => Finset.Icc 1 X)
+    with (∏ i : Fin k, p i) = n, ∏ i : Fin k, f (p i)
+
+lemma lemma34_tuple_sum_recurrence (X k : ℕ) (f : ℕ → ℕ) (n : ℕ) :
+    lemma34TupleSum X (k+1) f n = ∑ a ∈ Finset.Icc 1 X,
+      if a ∣ n then f a * lemma34TupleSum X k f (n/a) else 0 := by
+  classical
+  unfold lemma34TupleSum
+  rw [Finset.sum_filter,lemma34_tuple_sum_succ]
+  simp only [Fin.prod_univ_succ,Fin.cons_zero,Fin.cons_succ]
+  rw [Finset.sum_product' (Finset.Icc 1 X)
+    (Fintype.piFinset (fun _ : Fin k => Finset.Icc 1 X))
+    (fun (a : ℕ) (p : Fin k → ℕ) => if a * (∏ i : Fin k, p i) = n then
+      f a * (∏ i : Fin k, f (p i)) else 0)]
+  apply Finset.sum_congr rfl
+  intro a ha
+  have ha0 : 0 < a := by have := (Finset.mem_Icc.mp ha).1; omega
+  by_cases hd : a ∣ n
+  · simp only [hd,ite_true]
+    rw [Finset.sum_filter,Finset.mul_sum]
+    apply Finset.sum_congr rfl
+    intro p hp
+    have he : a * (∏ i : Fin k, p i) = n ↔ (∏ i : Fin k, p i) = n/a := by
+      constructor
+      · intro h
+        rw [← h,Nat.mul_div_right _ ha0]
+      · intro h
+        rw [h,Nat.mul_div_cancel' hd]
+    simp only [he,mul_ite,mul_zero]
+  · simp only [hd,ite_false]
+    apply Finset.sum_eq_zero
+    intro p hp
+    have he : a * (∏ i : Fin k, p i) ≠ n := by
+      intro h
+      exact hd ⟨_,h.symm⟩
+    simp [he]
+
+lemma lemma34_tuple_sum_zero (X k : ℕ) (f : ℕ → ℕ) :
+    lemma34TupleSum X k f 0 = 0 := by
+  classical
+  unfold lemma34TupleSum
+  apply Finset.sum_eq_zero
+  intro p hp
+  have hm := Finset.mem_filter.mp hp
+  have hpos : 1 ≤ ∏ i : Fin k, p i := Finset.one_le_prod' (fun i _ =>
+    (Finset.mem_Icc.mp (Fintype.mem_piFinset.mp hm.1 i)).1)
+  rw [hm.2] at hpos
+  omega
+
+lemma lemma34_tuple_sum_le_arithmetic_pow (X k : ℕ) (f : ArithmeticFunction ℕ)
+    (n : ℕ) : lemma34TupleSum X k f n ≤ (f^k) n := by
+  classical
+  induction k generalizing n with
+  | zero => by_cases h : n = 1 <;> simp [lemma34TupleSum,ArithmeticFunction.one_apply,h,eq_comm]
+  | succ k ih =>
+    by_cases hn : n = 0
+    · subst n
+      simp [lemma34_tuple_sum_zero]
+    · rw [lemma34_tuple_sum_recurrence]
+      have hsub : (Finset.Icc 1 X).filter (fun a => a ∣ n) ⊆ n.divisors := by
+        intro a ha
+        have ha' := Finset.mem_filter.mp ha
+        exact Nat.mem_divisors.mpr ⟨ha'.2,hn⟩
+      calc
+        _ = ∑ a ∈ (Finset.Icc 1 X).filter (fun a => a ∣ n),
+          f a * lemma34TupleSum X k f (n/a) := by rw [Finset.sum_filter]
+        _ ≤ ∑ a ∈ (Finset.Icc 1 X).filter (fun a => a ∣ n),
+          f a * (f^k) (n/a) := by
+            apply Finset.sum_le_sum
+            intro a ha
+            exact Nat.mul_le_mul_left _ (ih (n/a))
+        _ ≤ ∑ a ∈ n.divisors, f a * (f^k) (n/a) :=
+          Finset.sum_le_sum_of_subset_of_nonneg hsub (fun _ _ _ => Nat.zero_le _)
+        _ = (f^(k+1)) n := by
+          rw [pow_succ',ArithmeticFunction.mul_apply]
+          exact (Nat.sum_divisorsAntidiagonal (fun a b => f a * (f^k) b)).symm
+
+lemma lemma34_tau2_eq_divisor_card (n : ℕ) :
+    lemma34Tau 2 n = n.divisors.card := by
+  unfold lemma34Tau
+  rw [pow_two,ArithmeticFunction.mul_zeta_apply]
+  calc
+    _ = ∑ a ∈ n.divisors, 1 := by
+      apply Finset.sum_congr rfl
+      intro a ha
+      exact ArithmeticFunction.zeta_apply_ne (by
+        have hh := (Nat.mem_divisors.mp ha).1
+        have hn := (Nat.mem_divisors.mp ha).2
+        intro haz
+        rw [haz] at hh
+        exact hn (by simpa using hh))
+    _ = _ := by simp
+
+lemma lemma34_actual_tau40_le_standard (n : ℕ) :
+    lemma23Tau40 n ≤ (lemma34Tau 40 n : ℝ) := by
+  classical
+  have h := lemma34_tuple_sum_le_arithmetic_pow n 20 (ArithmeticFunction.zeta^2) n
+  have hp : ((ArithmeticFunction.zeta^2)^20) n = lemma34Tau 40 n := by
+    rw [← pow_mul]
+    rfl
+  rw [hp] at h
+  change lemma34TupleSum n 20 (fun a => lemma34Tau 2 a) n ≤ lemma34Tau 40 n at h
+  have he : (lemma34TupleSum n 20 (fun a => lemma34Tau 2 a) n : ℝ) =
+      lemma23Tau40 n := by
+    simp only [lemma34TupleSum,Nat.cast_sum,Nat.cast_prod]
+    apply Finset.sum_congr rfl
+    intro p hp
+    apply Finset.prod_congr rfl
+    intro i hi
+    exact_mod_cast lemma34_tau2_eq_divisor_card (p i)
+  rw [← he]
+  exact_mod_cast h
+
+end ZhangLS.Spec

@@ -1,0 +1,74 @@
+name: Lean kernel verification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify-gaussian-closure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pinned Lean toolchain
+        run: |
+          curl -fsSL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Resolve pinned dependencies
+        run: |
+          source "$HOME/.elan/env"
+          lean --version
+          lake --version
+          lake update
+          lake exe cache get
+
+      - name: Directly verify the Gaussian closure API
+        run: |
+          source "$HOME/.elan/env"
+          tools/verify_step30_gaussian.sh
+
+      - name: Upload focused verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: step30-gaussian-kernel-verification
+          path: audit/step30_gaussian_kernel_verification.txt
+          if-no-files-found: warn
+
+  verify-all:
+    runs-on: ubuntu-latest
+    env:
+      ZHANGMATH_SPEC_JOBS: "4"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pinned Lean toolchain
+        run: |
+          curl -fsSL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Resolve pinned dependencies
+        run: |
+          source "$HOME/.elan/env"
+          lean --version
+          lake --version
+          lake update
+          lake exe cache get
+
+      - name: Kernel-check every Lean module
+        run: |
+          source "$HOME/.elan/env"
+          tools/verify_all_lean.sh
+
+      - name: Upload verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lean-kernel-verification
+          path: |
+            audit/lean_kernel_verification.txt
+            audit/spec_kernel_modules.txt
+            audit/spec_kernel_logs/
+          if-no-files-found: warn

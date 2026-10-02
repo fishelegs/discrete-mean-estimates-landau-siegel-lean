@@ -1,0 +1,621 @@
+import ZhangLS.Spec.Lemma56WeakZeroExclusion
+
+namespace ZhangLS.Spec
+open Complex Metric Set Finset Filter
+open scoped Real Topology
+set_option maxHeartbeats 1000000
+set_option maxRecDepth 4096
+
+lemma lemma56_actual_four_zero_order_log_bound {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q)
+    (hD : 1 < D) (hL : 2000 ≤ lemma23PaperL D)
+    (hθ : θ ≠ 1) (htwist : lemma44CharacterTwist χ θ ≠ 1) (t : ℝ) (β : ℂ) :
+    letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+    (∑ a ∈ lemma56FourZeroFinset χ θ t β, (lemma56FamilyOrder χ θ a.1 a.2 : ℝ)) ≤
+      31 * lemma23PaperL D + 6 * lemma56JensenLogSize θ t +
+        6 * lemma56JensenLogSize (lemma44CharacterTwist χ θ) t := by
+  classical
+  letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+  have hχ0 := lemma55_removed_zero_order_sum_bound χ hD hL (by simp : |(0 : ℝ)| ≤ 2 * D) β
+  have hζ0 := lemma55_actual_zeta_local_multiplicity_bound hD hL (by simp : |(0 : ℝ)| ≤ 2 * D)
+  have hθt := lemma56_actual_local_multiplicity_bound θ hθ t
+  have htw := lemma56_actual_local_multiplicity_bound (lemma44CharacterTwist χ θ) htwist t
+  unfold lemma56FourZeroFinset
+  rw [sum_sigma, Fin.sum_univ_four]
+  simp [lemma56ZeroFamily, lemma56FamilyOrder, lemma56FamilyFunction]
+  unfold lemma55ZetaLocalMultiplicity at hζ0
+  unfold lemma56LocalMultiplicity at hθt htw
+  push_cast at hζ0 hθt htw
+  change _ ≤ 13 * lemma23PaperL D at hχ0
+  change _ ≤ 18 * lemma23PaperL D at hζ0
+  simp only [lemma56JensenLogSize, Nat.cast_mul]
+  linarith only [hχ0, hζ0, hθt, htw]
+
+lemma lemma56_actual_common_maximum_log_detection {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q)
+    (hD : 1 < D) (hL : 2000 ≤ lemma23PaperL D)
+    (hθ : θ ≠ 1) (htwist : lemma44CharacterTwist χ θ ≠ 1)
+    {t U : ℝ} (hLU : lemma23PaperL D ≤ U)
+    (hBθ : lemma56JensenLogSize θ t ≤ 4 * U)
+    (hBtw : letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+      lemma56JensenLogSize (lemma44CharacterTwist χ θ) t ≤ 4 * U)
+    {β : ℂ} {a₀ : Lemma56TaggedZero} (ha₀ : a₀ ∈ lemma56FourZeroFinset χ θ t β)
+    (hmax : ∀ a ∈ lemma56FourZeroFinset χ θ t β,
+      ‖lemma56TaggedInverseSquare t a‖ ≤ ‖lemma56TaggedInverseSquare t a₀‖) (J : ℕ) :
+    (J : ℝ) / 4 - 79 * U ≤
+      (lemma56MixedRemainingPower χ θ t ‖lemma56TaggedInverseSquare t a₀‖ β
+        (lemma56TaggedInverseSquare t a₀ / (‖lemma56TaggedInverseSquare t a₀‖ : ℂ))⁻¹ J).re := by
+  letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+  have hr := (lemma56_actual_tagged_inverse_square_bounds χ θ hD hθ htwist ha₀).1
+  have hnorm : ∀ a ∈ lemma56FourZeroFinset χ θ t β,
+      ‖lemma56TaggedInverseSquare t a / (‖lemma56TaggedInverseSquare t a₀‖ : ℂ)‖ ≤ 1 := by
+    intro a ha
+    rw [norm_div, norm_real, Real.norm_eq_abs, abs_of_pos hr]
+    exact (div_le_iff₀ hr).mpr (by simpa only [one_mul] using hmax a ha)
+  have hunit : ‖lemma56TaggedInverseSquare t a₀ / (‖lemma56TaggedInverseSquare t a₀‖ : ℂ)‖ = 1 := by
+    rw [norm_div, norm_real, Real.norm_eq_abs, abs_of_pos hr, div_self hr.ne']
+  have hm : 1 ≤ (lemma56FamilyOrder χ θ a₀.1 a₀.2 : ℝ) := by
+    exact_mod_cast lemma56_actual_tagged_zero_order_pos χ θ hD hθ htwist ha₀
+  have hd := lemma55_fejer_finite_weighted_power_detection (lemma56FourZeroFinset χ θ t β)
+    (fun a => (lemma56FamilyOrder χ θ a.1 a.2 : ℝ))
+    (fun a => lemma56TaggedInverseSquare t a / (‖lemma56TaggedInverseSquare t a₀‖ : ℂ))
+    ha₀ (fun _ _ => Nat.cast_nonneg _) hm hnorm hunit J
+  simp only [lemma56_tagged_normalized_power_sum] at hd
+  rw [lemma56_actual_weighted_tagged_real_sum_eq] at hd
+  have hN := lemma56_actual_four_zero_order_log_bound χ θ hD hL hθ htwist t β
+  linarith only [hd, hN, hLU, hBθ, hBtw]
+
+noncomputable def lemma56GeneralRepulsionDegree (U : ℝ) : ℕ := ⌈2000000 * U⌉₊
+
+lemma lemma56_general_repulsion_degree_bounds {U : ℝ} (hU : 2000 ≤ U) :
+    2000000 * U ≤ (lemma56GeneralRepulsionDegree U : ℝ) ∧
+      (lemma56GeneralRepulsionDegree U : ℝ) ≤ 2000001 * U ∧
+      (lemma56GeneralRepulsionDegree U : ℝ) + 1 ≤ 2000002 * U := by
+  have hlo : 2000000 * U ≤ (lemma56GeneralRepulsionDegree U : ℝ) := Nat.le_ceil _
+  have hup : (lemma56GeneralRepulsionDegree U : ℝ) < 2000000 * U + 1 :=
+    Nat.ceil_lt_add_one (by linarith only [hU] : 0 ≤ 2000000 * U)
+  exact ⟨hlo, by linarith only [hup, hU], by linarith only [hup, hU]⟩
+
+lemma lemma56_general_repulsion_exponential_cost {U : ℝ} (hU : 2000 ≤ U) :
+    Real.exp (4 * (lemma56GeneralRepulsionDegree U : ℝ) / U) ≤ Real.exp 8000004 := by
+  have hUp : 0 < U := by linarith only [hU]
+  apply Real.exp_le_exp.mpr
+  apply (div_le_iff₀ hUp).mpr
+  linarith only [(lemma56_general_repulsion_degree_bounds hU).2.1]
+
+lemma lemma56_general_repulsion_exceptional_cost_bound {L U δ : ℝ}
+    (hL : 2000 ≤ L) (hC : lemma56RepulsionErrorConstant ≤ L)
+    (hU : 2000 ≤ U) (hUL : U ≤ L ^ 5) (_hδ : 0 ≤ δ)
+    (hclose : δ ≤ 64 * L ^ (-2022 : ℤ)) :
+    2 * δ * (lemma56GeneralRepulsionDegree U : ℝ) * ((lemma56GeneralRepulsionDegree U : ℝ) + 1) *
+      Real.exp (4 * (lemma56GeneralRepulsionDegree U : ℝ) / U) ≤ 1 := by
+  have hLp : 0 < L := by linarith
+  have hL1 : 1 ≤ L := by linarith
+  have hj := lemma56_general_repulsion_degree_bounds hU
+  have he := lemma56_general_repulsion_exponential_cost hU
+  have hcancel : L ^ (-2022 : ℤ) * L ^ 10 = L ^ (-2012 : ℤ) := by
+    rw [← zpow_natCast, ← zpow_add₀ hLp.ne']
+    norm_num
+  calc
+    _ ≤ 2 * (64 * L ^ (-2022 : ℤ)) * (2000001 * L ^ 5) * (2000002 * L ^ 5) * Real.exp 8000004 := by
+      gcongr
+      · exact hj.2.1.trans (mul_le_mul_of_nonneg_left hUL (by norm_num))
+      · exact hj.2.2.trans (mul_le_mul_of_nonneg_left hUL (by norm_num))
+    _ = lemma56RepulsionErrorConstant * (L ^ (-2022 : ℤ) * L ^ 10) := by
+      unfold lemma56RepulsionErrorConstant
+      ring
+    _ = lemma56RepulsionErrorConstant * L ^ (-2012 : ℤ) := by rw [hcancel]
+    _ ≤ lemma56RepulsionErrorConstant * L ^ (-1 : ℤ) :=
+      mul_le_mul_of_nonneg_left (zpow_le_zpow_right₀ hL1 (by norm_num))
+        lemma56_repulsion_error_constant_pos.le
+    _ ≤ 1 := by
+      rw [zpow_neg_one, ← div_eq_mul_inv]
+      exact (div_le_one hLp).mpr hC
+
+lemma lemma56_general_repulsion_strict_budget {L U δ : ℝ}
+    (hL : 2000 ≤ L) (hC : lemma56RepulsionErrorConstant ≤ L)
+    (hU : 2000 ≤ U) (hUL : U ≤ L ^ 5) (hδ : 0 ≤ δ)
+    (hclose : δ ≤ 64 * L ^ (-2022 : ℤ)) :
+    475200 * U + 2 * δ * (lemma56GeneralRepulsionDegree U : ℝ) *
+      ((lemma56GeneralRepulsionDegree U : ℝ) + 1) *
+        Real.exp (4 * (lemma56GeneralRepulsionDegree U : ℝ) / U) <
+      (lemma56GeneralRepulsionDegree U : ℝ) / 4 - 79 * U := by
+  have hb := lemma56_general_repulsion_exceptional_cost_bound hL hC hU hUL hδ hclose
+  have hj := (lemma56_general_repulsion_degree_bounds hU).1
+  linarith only [hb, hj, hU]
+
+lemma lemma56_actual_log_budget_zero_exclusion {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q)
+    (hD : 1 < D) (hL : 2000 ≤ lemma23PaperL D)
+    (hC : lemma56RepulsionErrorConstant ≤ lemma23PaperL D)
+    (hθ : θ ≠ 1) (htwist : lemma44CharacterTwist χ θ ≠ 1)
+    {U : ℝ} (hU : 2000 ≤ U) (hLU : lemma23PaperL D ≤ U)
+    (hUL : U ≤ (lemma23PaperL D) ^ 5) {β : ℝ}
+    (hβ : 0 < 1 - β) (hclose : 1 - β ≤ 64 * lemma23PaperL D ^ (-2022 : ℤ))
+    (hzero : dirichletLFunction χ (β : ℂ) = 0)
+    (hderiv : deriv (dirichletLFunction χ) (β : ℂ) ≠ 0)
+    (hmem : (β : ℂ) ∈ lemma55LocalZeroFinset χ 0) {ρ : ℂ}
+    (hre : 1 - 2 / U < ρ.re)
+    (hBθ : lemma56JensenLogSize θ ρ.im ≤ 4 * U)
+    (hBtw : letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+      lemma56JensenLogSize (lemma44CharacterTwist χ θ) ρ.im ≤ 4 * U) :
+    DirichletCharacter.LFunction θ ρ ≠ 0 := by
+  classical
+  letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+  intro hρzero
+  have hLp : 0 < lemma23PaperL D := by linarith
+  have hUp : 0 < U := by linarith
+  have hε : 0 ≤ 2 / U := by positivity
+  have hεupper : 2 / U ≤ (1 : ℝ) / 4 := by
+    apply (div_le_iff₀ hUp).mpr
+    linarith
+  have hρ : (⟨2, ρ⟩ : Lemma56TaggedZero) ∈ lemma56FourZeroFinset χ θ ρ.im (β : ℂ) := by
+    apply (lemma56_mem_four_zero_finset χ θ ρ.im (β : ℂ) ⟨2, ρ⟩).mpr
+    simpa [lemma56ZeroFamily] using lemma56_near_one_zero_in_own_local_disk θ hθ hεupper hre hρzero
+  obtain ⟨a₀, ha₀, hmax⟩ := (lemma56FourZeroFinset χ θ ρ.im (β : ℂ)).exists_max_image
+    (fun a => ‖lemma56TaggedInverseSquare ρ.im a‖) ⟨⟨2, ρ⟩, hρ⟩
+  have hr := (lemma56_actual_tagged_inverse_square_bounds χ θ hD hθ htwist ha₀).1
+  have hUlower := (lemma56_near_one_zero_inverse_square_lower_bound θ hθ hε hre hρzero).trans
+    (by simpa [lemma56TaggedInverseSquare, lemma55FamilyHeight] using hmax ⟨2, ρ⟩ hρ)
+  have hdiv : 2 / U ≤ 2 / lemma23PaperL D := div_le_div_of_nonneg_left (by norm_num) hLp hLU
+  have hi : (1 + 2 / lemma23PaperL D)⁻¹ ≤ (1 + 2 / U)⁻¹ :=
+    (inv_le_inv₀ (by positivity) (by positivity)).mpr (by linarith)
+  have hlower := (pow_le_pow_left₀ (by positivity) hi 2).trans hUlower
+  let R := ‖lemma56TaggedInverseSquare ρ.im a₀‖
+  let v := (lemma56TaggedInverseSquare ρ.im a₀ / (R : ℂ))⁻¹
+  have hv : ‖v‖ ≤ 1 := by
+    dsimp [v, R]
+    rw [norm_inv, norm_div, norm_real, Real.norm_eq_abs, abs_of_pos hr, div_self hr.ne']
+    norm_num
+  let J := lemma56GeneralRepulsionDegree U
+  have hlo := lemma56_actual_common_maximum_log_detection χ θ hD hL hθ htwist
+    hLU hBθ hBtw ha₀ hmax J
+  have hupr := lemma56_actual_mixed_remaining_real_upper_bound χ θ hθ htwist hD hL ρ.im
+    (by linarith only [hβ] : β ≤ 1) hzero hderiv hmem hr hlower hUp hUlower hv J
+  have hup : (lemma56MixedRemainingPower χ θ ρ.im R (β : ℂ) v J).re ≤
+      475200 * U + 2 * (1 - β) * (J : ℝ) * ((J : ℝ) + 1) * Real.exp (4 * (J : ℝ) / U) := by
+    dsimp only [lemma23PaperL] at hLU
+    linarith only [hupr, hLU, hBθ, hBtw]
+  have hbudget := lemma56_general_repulsion_strict_budget hL hC hU hUL hβ.le hclose
+  exact (not_lt_of_ge hlo) (hup.trans_lt hbudget)
+
+lemma lemma56_actual_jensen_log_high_budget {D q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) (hD : 1 < D) (hL : 2000 ≤ lemma23PaperL D)
+    (hq : (q : ℝ) ≤ (D : ℝ) * lemma56PaperT D) {U : ℝ}
+    (hU : 2000 ≤ U) (hPU : lemma23PaperL D ^ (11 / 10 : ℝ) ≤ U)
+    {t : ℝ} (ht : |t| ≤ 2 * Real.exp U) :
+    lemma56JensenLogSize θ t ≤ 4 * U := by
+  have hDp : (0 : ℝ) < D := by exact_mod_cast Nat.zero_lt_of_lt hD
+  have hqp : (0 : ℝ) < q := by exact_mod_cast Nat.pos_of_ne_zero (NeZero.ne q)
+  have hT := lemma56_paper_T_pos D
+  have hL1 : 1 ≤ lemma23PaperL D := by linarith
+  have hpower : lemma23PaperL D ≤ lemma23PaperL D ^ (11 / 10 : ℝ) := by
+    simpa using Real.rpow_le_rpow_of_exponent_le hL1 (show (1 : ℝ) ≤ 11 / 10 by norm_num)
+  have he1 : 1 ≤ Real.exp U := Real.one_le_exp (by linarith)
+  have hX : 8 * (q : ℝ) * (7 / 2 + |t|) ≤ 44 * (D : ℝ) * lemma56PaperT D * Real.exp U := by
+    calc
+      _ ≤ 8 * ((D : ℝ) * lemma56PaperT D) * (7 / 2 + 2 * Real.exp U) := by gcongr
+      _ ≤ 8 * ((D : ℝ) * lemma56PaperT D) * ((11 / 2 : ℝ) * Real.exp U) := by
+        gcongr
+        linarith
+      _ = _ := by ring
+  unfold lemma56JensenLogSize
+  calc
+    _ ≤ Real.log (44 * (D : ℝ) * lemma56PaperT D * Real.exp U) := Real.log_le_log (by positivity) hX
+    _ = Real.log 44 + lemma23PaperL D + lemma23PaperL D ^ (11 / 10 : ℝ) + U := by
+      rw [Real.log_mul (by positivity) (Real.exp_pos U).ne', Real.log_mul (by positivity) hT.ne',
+        Real.log_mul (by norm_num) hDp.ne']
+      simp [lemma56PaperT, lemma23PaperL]
+    _ ≤ _ := by
+      have hc := Real.log_le_sub_one_of_pos (by norm_num : (0 : ℝ) < 44)
+      norm_num at hc
+      linarith only [hc, hpower, hPU, hU]
+
+lemma lemma56_high_repulsion_scale_bounds {L : ℝ} (hL : 2000 ≤ L) :
+    L ≤ L ^ (9 / 2 : ℝ) ∧ L ^ (11 / 10 : ℝ) ≤ L ^ (9 / 2 : ℝ) ∧
+      L ^ (9 / 2 : ℝ) ≤ L ^ 5 := by
+  have hL1 : 1 ≤ L := by linarith
+  refine ⟨?_, Real.rpow_le_rpow_of_exponent_le hL1 (by norm_num), ?_⟩
+  · simpa using Real.rpow_le_rpow_of_exponent_le hL1 (show (1 : ℝ) ≤ 9 / 2 by norm_num)
+  · simpa using Real.rpow_le_rpow_of_exponent_le hL1 (show (9 / 2 : ℝ) ≤ 5 by norm_num)
+
+theorem lemma56_uniform_primitive_high_zero_exclusion :
+    ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q] (χ : RealPrimitiveCharacter D)
+      (θ : DirichletCharacter ℂ q), D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      θ.IsPrimitive → 1 < q → (q : ℝ) < lemma56PaperT D →
+      (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      ∀ ρ : ℂ, 1 - 2 / (lemma23PaperL D ^ (9 / 2 : ℝ)) < ρ.re →
+        |ρ.im| ≤ 2 * Real.exp (lemma23PaperL D ^ (9 / 2 : ℝ)) →
+          DirichletCharacter.LFunction θ ρ ≠ 0 := by
+  obtain ⟨Drep, hrep⟩ := lemma56_uniform_repulsion_modulus_threshold
+  refine ⟨max Drep lemma57ExplicitModulusThreshold, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne ρ hre ht
+  letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+  have hDN57 : lemma57ExplicitModulusThreshold ≤ D := (le_max_right _ _).trans hDN
+  have hLM := hrep D ((le_max_left _ _).trans hDN)
+  have hs := lemma56_high_repulsion_scale_bounds hLM.1
+  have hU : 2000 ≤ lemma23PaperL D ^ (9 / 2 : ℝ) := hLM.1.trans hs.1
+  have hD1 : (1 : ℝ) ≤ D := by exact_mod_cast hD.le
+  have hqp : (q : ℝ) ≤ (D : ℝ) * lemma56PaperT D := by
+    nlinarith only [hqT.le, hD1, lemma56_paper_T_pos D]
+  have hDqp : ((D * q : ℕ) : ℝ) ≤ (D : ℝ) * lemma56PaperT D := by
+    rw [Nat.cast_mul]
+    exact mul_le_mul_of_nonneg_left hqT.le (Nat.cast_nonneg _)
+  obtain ⟨β, hβ, hclose, hzero, hderiv⟩ := lemma55_actual_simple_real_zero χ hDN57 hA
+  exact lemma56_actual_log_budget_zero_exclusion χ θ hD hLM.1 hLM.2
+    (lemma56_primitive_positive_level_nonprincipal θ hθ hq1)
+    (lemma56_distinct_primitive_twist_nonprincipal χ θ hθ hne) hU hs.1 hs.2.2
+    hβ hclose hzero hderiv (lemma56_actual_exceptional_zero_local χ hDN57 hβ hclose hzero) hre
+    (lemma56_actual_jensen_log_high_budget θ hD hLM.1 hqp hU hs.2.1 ht)
+    (lemma56_actual_jensen_log_high_budget (lemma44CharacterTwist χ θ) hD hLM.1 hDqp hU hs.2.1 ht)
+
+lemma lemma56_actual_zero_removed_logDeriv_near_center_bound
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1)
+    {t : ℝ} {z : ℂ} (hz : ‖z - lemma55JensenCenter t‖ ≤ (17 / 16 : ℝ)) :
+    ‖logDeriv (lemma56ZeroRemovedL θ t) z‖ ≤ 7200 * lemma56JensenLogSize θ t := by
+  obtain ⟨ℓ, hℓ⟩ := lemma56_actual_zero_removed_log_exists θ hθ t
+  let w := z - lemma55JensenCenter t
+  have hw : ‖w‖ ≤ (17 / 16 : ℝ) := hz
+  have hshift {u : ℂ} (hu : u ∈ closedBall w (1 / 16 : ℝ)) :
+      u ∈ closedBall (0 : ℂ) (9 / 8 : ℝ) := by
+    apply mem_closedBall_iff_norm.mpr
+    have hn := norm_add_le (u - w) w
+    rw [sub_add_cancel] at hn
+    have hd := mem_closedBall_iff_norm.mp hu
+    simp only [sub_zero]
+    linarith only [hn, hd, hw]
+  have hclosure : closure (ball w (1 / 16 : ℝ)) ⊆ ball (0 : ℂ) (5 / 4 : ℝ) := by
+    intro u hu
+    have hn := mem_closedBall_iff_norm.mp (hshift (closure_ball_subset_closedBall hu))
+    apply mem_ball_zero_iff.mpr
+    simp only [sub_zero] at hn
+    linarith only [hn]
+  have hdiff : DifferentiableOn ℂ ℓ (ball (0 : ℂ) (5 / 4 : ℝ)) := fun u hu =>
+    (lemma56_actual_zero_removed_log_hasDerivAt θ hθ hℓ hu).differentiableAt.differentiableWithinAt
+  have hc := Complex.norm_deriv_le_of_forall_mem_sphere_norm_le
+    (c := w) (R := (1 / 16 : ℝ)) (C := 450 * lemma56JensenLogSize θ t) (by norm_num)
+    (hdiff.mono hclosure).diffContOnCl (fun u hu =>
+      lemma56_actual_zero_removed_log_closed_bound θ hθ hℓ (hshift (sphere_subset_closedBall hu)))
+  have hd := (lemma56_actual_zero_removed_log_hasDerivAt θ hθ hℓ
+    (mem_ball_zero_iff.mpr (by linarith only [hw] : ‖w‖ < (5 / 4 : ℝ)))).deriv
+  have he : lemma55JensenCenter t + w = z := by dsimp [w]; abel
+  rw [he] at hd
+  rw [hd] at hc
+  exact hc.trans_eq (by ring)
+
+lemma lemma56_actual_logDeriv_bound_of_local_zero_gap
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1)
+    {t δ : ℝ} {z : ℂ} (hδ : 0 < δ)
+    (hz : ‖z - lemma55JensenCenter t‖ ≤ (17 / 16 : ℝ))
+    (hne : DirichletCharacter.LFunction θ z ≠ 0)
+    (hgap : ∀ ρ ∈ lemma56LocalZeroFinset θ t, δ ≤ ‖z - ρ‖) :
+    ‖logDeriv (DirichletCharacter.LFunction θ) z‖ ≤
+      6 * lemma56JensenLogSize θ t / δ + 7200 * lemma56JensenLogSize θ t := by
+  have hsum : ‖∑ ρ ∈ lemma56LocalZeroFinset θ t,
+      (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℂ) / (z - ρ)‖ ≤
+      6 * lemma56JensenLogSize θ t / δ := by
+    calc
+      _ ≤ ∑ ρ ∈ lemma56LocalZeroFinset θ t,
+          ‖(analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℂ) / (z - ρ)‖ := norm_sum_le _ _
+      _ ≤ ∑ ρ ∈ lemma56LocalZeroFinset θ t,
+          (analyticOrderNatAt (DirichletCharacter.LFunction θ) ρ : ℝ) / δ := by
+        apply sum_le_sum
+        intro ρ hρ
+        rw [norm_div, Complex.norm_natCast]
+        exact div_le_div_of_nonneg_left (Nat.cast_nonneg _) hδ (hgap ρ hρ)
+      _ = (lemma56LocalMultiplicity θ t : ℝ) / δ := by
+        rw [← sum_div]
+        simp [lemma56LocalMultiplicity]
+      _ ≤ _ := div_le_div_of_nonneg_right (lemma56_actual_local_multiplicity_bound θ hθ t) hδ.le
+  rw [lemma56_actual_local_logDeriv_formula θ hθ t hne]
+  exact (norm_add_le _ _).trans (add_le_add hsum
+    (lemma56_actual_zero_removed_logDeriv_near_center_bound θ hθ hz))
+
+lemma lemma56_actual_logDeriv_bound_from_high_zero_exclusion
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1)
+    {U : ℝ} (hU : 2000 ≤ U)
+    (hfree : ∀ ρ : ℂ, 1 - 2 / U < ρ.re → |ρ.im| ≤ 2 * Real.exp U →
+      DirichletCharacter.LFunction θ ρ ≠ 0)
+    {z : ℂ} (hσ : 1 - 1 / U ≤ z.re) (hσ2 : z.re ≤ 2) (ht : |z.im| ≤ Real.exp U) :
+    ‖logDeriv (DirichletCharacter.LFunction θ) z‖ ≤
+      (6 * U + 7200) * lemma56JensenLogSize θ z.im := by
+  have hUp : 0 < U := by linarith
+  have he := Real.add_one_le_exp U
+  have hEp := Real.exp_pos U
+  have hinv : 1 / U ≤ (1 : ℝ) / 16 := by
+    apply (div_le_div_iff₀ hUp (by norm_num)).mpr
+    linarith
+  have hdist : ‖z - lemma55JensenCenter z.im‖ ≤ (17 / 16 : ℝ) := by
+    rw [norm_sub_rev, lemma55_jensen_center_at_zero_height z,
+      norm_real, Real.norm_eq_abs, abs_of_nonneg (by linarith only [hσ2] : 0 ≤ 2 - z.re)]
+    linarith only [hσ, hinv]
+  have hp : 0 < 1 / U := by positivity
+  have htw : 2 / U = 2 * (1 / U) := by ring
+  have hne : DirichletCharacter.LFunction θ z ≠ 0 :=
+    hfree z (by rw [htw]; linarith only [hp, hσ])
+      (by linarith only [ht, hEp])
+  have hgap : ∀ ρ ∈ lemma56LocalZeroFinset θ z.im, 1 / U ≤ ‖z - ρ‖ := by
+    intro ρ hρ
+    have hm := (lemma56_mem_actual_local_zero_finset θ hθ z.im ρ).mp hρ
+    have hd := mem_closedBall_iff_norm.mp hm.1
+    have hi := (abs_im_le_norm (ρ - lemma55JensenCenter z.im)).trans hd
+    norm_num [lemma55JensenCenter, Complex.mul_im] at hi
+    have hsum := abs_add_le (ρ.im - z.im) z.im
+    rw [sub_add_cancel] at hsum
+    have hheight : |ρ.im| ≤ 2 * Real.exp U := by linarith only [hi, hsum, ht, he, hU]
+    have hρre : ρ.re ≤ 1 - 2 / U := le_of_not_gt (fun hre => (hfree ρ hre hheight) hm.2)
+    rw [htw] at hρre
+    have hn := re_le_norm (z - ρ)
+    rw [sub_re] at hn
+    linarith only [hσ, hρre, hn]
+  have hb := lemma56_actual_logDeriv_bound_of_local_zero_gap θ hθ
+    (by positivity : 0 < 1 / U) hdist hne hgap
+  apply hb.trans_eq
+  field_simp
+
+theorem lemma56_uniform_primitive_high_logDeriv_bound :
+    ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q] (χ : RealPrimitiveCharacter D)
+      (θ : DirichletCharacter ℂ q), D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      θ.IsPrimitive → 1 < q → (q : ℝ) < lemma56PaperT D →
+      (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      ∀ z : ℂ, 1 - 1 / (lemma23PaperL D ^ (9 / 2 : ℝ)) ≤ z.re → z.re ≤ 2 →
+        |z.im| ≤ Real.exp (lemma23PaperL D ^ (9 / 2 : ℝ)) →
+          ‖logDeriv (DirichletCharacter.LFunction θ) z‖ ≤
+            24 * (lemma23PaperL D ^ (9 / 2 : ℝ)) ^ 2 + 28800 * lemma23PaperL D ^ (9 / 2 : ℝ) := by
+  obtain ⟨Dhigh, hhigh⟩ := lemma56_uniform_primitive_high_zero_exclusion
+  obtain ⟨Drep, hrep⟩ := lemma56_uniform_repulsion_modulus_threshold
+  refine ⟨max Dhigh Drep, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne z hσ hσ2 ht
+  have hf := hhigh χ θ ((le_max_left _ _).trans hDN) hD hA hθ hq1 hqT hne
+  have hL := (hrep D ((le_max_right _ _).trans hDN)).1
+  have hs := lemma56_high_repulsion_scale_bounds hL
+  have hU : 2000 ≤ lemma23PaperL D ^ (9 / 2 : ℝ) := hL.trans hs.1
+  have hD1 : (1 : ℝ) ≤ D := by exact_mod_cast hD.le
+  have hqp : (q : ℝ) ≤ (D : ℝ) * lemma56PaperT D := by
+    nlinarith only [hqT.le, hD1, lemma56_paper_T_pos D]
+  have hheight : |z.im| ≤ 2 * Real.exp (lemma23PaperL D ^ (9 / 2 : ℝ)) := by
+    linarith only [ht, Real.exp_pos (lemma23PaperL D ^ (9 / 2 : ℝ))]
+  have hB := lemma56_actual_jensen_log_high_budget θ hD hL hqp hU hs.2.1 hheight
+  have hn := lemma56_actual_logDeriv_bound_from_high_zero_exclusion θ
+    (lemma56_primitive_positive_level_nonprincipal θ hθ hq1) hU hf hσ hσ2 ht
+  exact (hn.trans (mul_le_mul_of_nonneg_left hB (by positivity))).trans_eq (by ring)
+
+lemma lemma56_high_scale_strict_margin {L : ℝ} (hL : 2000 ≤ L) :
+    8 * L ^ (11 / 10 : ℝ) ≤ L ^ (9 / 2 : ℝ) ∧
+      L ≤ (3 / 4 : ℝ) * L ^ (9 / 2 : ℝ) ∧
+      2000 ≤ (3 / 4 : ℝ) * L ^ (9 / 2 : ℝ) ∧
+      (3 / 4 : ℝ) * L ^ (9 / 2 : ℝ) ≤ L ^ 5 := by
+  have hL1 : 1 ≤ L := by linarith
+  have hL0 : 0 ≤ L := by linarith
+  have hLP := (lemma56_repulsion_scale_bounds hL).2.1
+  have hLU := (lemma56_high_repulsion_scale_bounds hL).1
+  have hU5 := (lemma56_high_repulsion_scale_bounds hL).2.2
+  have h3 : L ^ 3 ≤ L ^ (9 / 2 : ℝ) := by
+    simpa using Real.rpow_le_rpow_of_exponent_le hL1 (show (3 : ℝ) ≤ 9 / 2 by norm_num)
+  have h82 : 8 * L ^ 2 ≤ L ^ 3 := by
+    have hn := mul_le_mul_of_nonneg_right (by linarith : (8 : ℝ) ≤ L) (sq_nonneg L)
+    nlinarith only [hn]
+  have h8U : 8 * L ≤ L ^ (9 / 2 : ℝ) := by
+    have hL2 : L ≤ L ^ 2 := by nlinarith only [hL1]
+    linarith only [hL2, h82, h3]
+  exact ⟨(mul_le_mul_of_nonneg_left hLP (by norm_num)).trans (h82.trans h3),
+    by linarith only [h8U, hL0], by linarith only [h8U, hL],
+    (by have hp := Real.rpow_nonneg hL0 (9 / 2 : ℝ); linarith only [hU5, hp])⟩
+
+lemma lemma56_actual_jensen_log_margin_budget {D q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) (hD : 1 < D) (hL : 2000 ≤ lemma23PaperL D)
+    (hq : (q : ℝ) ≤ (D : ℝ) * lemma56PaperT D) {t : ℝ}
+    (ht : |t| ≤ 2 * Real.exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ))) :
+    lemma56JensenLogSize θ t ≤ 4 * ((3 / 4 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)) := by
+  have hDp : (0 : ℝ) < D := by exact_mod_cast Nat.zero_lt_of_lt hD
+  have hqp : (0 : ℝ) < q := by exact_mod_cast Nat.pos_of_ne_zero (NeZero.ne q)
+  have hT := lemma56_paper_T_pos D
+  have hLp : 0 ≤ lemma23PaperL D := by linarith
+  have hL1 : 1 ≤ lemma23PaperL D := by linarith
+  have hU0 := Real.rpow_nonneg hLp (9 / 2 : ℝ)
+  have he1 : 1 ≤ Real.exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ)) := Real.one_le_exp (by positivity)
+  have hX : 8 * (q : ℝ) * (7 / 2 + |t|) ≤
+      44 * (D : ℝ) * lemma56PaperT D * Real.exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ)) := by
+    calc
+      _ ≤ 8 * ((D : ℝ) * lemma56PaperT D) *
+          (7 / 2 + 2 * Real.exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ))) := by gcongr
+      _ ≤ 8 * ((D : ℝ) * lemma56PaperT D) *
+          ((11 / 2 : ℝ) * Real.exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ))) := by
+        gcongr
+        linarith only [he1]
+      _ = _ := by ring
+  have hpower : lemma23PaperL D ≤ lemma23PaperL D ^ (11 / 10 : ℝ) := by
+    simpa using Real.rpow_le_rpow_of_exponent_le hL1 (show (1 : ℝ) ≤ 11 / 10 by norm_num)
+  have h8 := (lemma56_high_scale_strict_margin hL).1
+  unfold lemma56JensenLogSize
+  calc
+    _ ≤ Real.log (44 * (D : ℝ) * lemma56PaperT D * Real.exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ))) :=
+      Real.log_le_log (by positivity) hX
+    _ = Real.log 44 + lemma23PaperL D + lemma23PaperL D ^ (11 / 10 : ℝ) +
+        2 * lemma23PaperL D ^ (9 / 2 : ℝ) := by
+      rw [Real.log_mul (by positivity) (Real.exp_pos _).ne', Real.log_mul (by positivity) hT.ne',
+        Real.log_mul (by norm_num) hDp.ne']
+      simp [lemma56PaperT, lemma23PaperL]
+    _ ≤ _ := by
+      have hc := Real.log_le_sub_one_of_pos (by norm_num : (0 : ℝ) < 44)
+      norm_num at hc
+      linarith only [hc, h8, hpower, hL]
+
+theorem lemma56_uniform_primitive_margin_zero_exclusion :
+    ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q] (χ : RealPrimitiveCharacter D)
+      (θ : DirichletCharacter ℂ q), D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      θ.IsPrimitive → 1 < q → (q : ℝ) < lemma56PaperT D →
+      (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      ∀ ρ : ℂ, 1 - 2 / ((3 / 4 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)) < ρ.re →
+        |ρ.im| ≤ 2 * Real.exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ)) →
+          DirichletCharacter.LFunction θ ρ ≠ 0 := by
+  obtain ⟨Drep, hrep⟩ := lemma56_uniform_repulsion_modulus_threshold
+  refine ⟨max Drep lemma57ExplicitModulusThreshold, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne ρ hre ht
+  letI : NeZero (D * q) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne q)⟩
+  have hDN57 : lemma57ExplicitModulusThreshold ≤ D := (le_max_right _ _).trans hDN
+  have hLM := hrep D ((le_max_left _ _).trans hDN)
+  have hs := lemma56_high_scale_strict_margin hLM.1
+  have hD1 : (1 : ℝ) ≤ D := by exact_mod_cast hD.le
+  have hqp : (q : ℝ) ≤ (D : ℝ) * lemma56PaperT D := by
+    nlinarith only [hqT.le, hD1, lemma56_paper_T_pos D]
+  have hDqp : ((D * q : ℕ) : ℝ) ≤ (D : ℝ) * lemma56PaperT D := by
+    rw [Nat.cast_mul]
+    exact mul_le_mul_of_nonneg_left hqT.le (Nat.cast_nonneg _)
+  obtain ⟨β, hβ, hclose, hzero, hderiv⟩ := lemma55_actual_simple_real_zero χ hDN57 hA
+  exact lemma56_actual_log_budget_zero_exclusion χ θ hD hLM.1 hLM.2
+    (lemma56_primitive_positive_level_nonprincipal θ hθ hq1)
+    (lemma56_distinct_primitive_twist_nonprincipal χ θ hθ hne) hs.2.2.1 hs.2.1 hs.2.2.2
+    hβ hclose hzero hderiv (lemma56_actual_exceptional_zero_local χ hDN57 hβ hclose hzero) hre
+    (lemma56_actual_jensen_log_margin_budget θ hD hLM.1 hqp ht)
+    (lemma56_actual_jensen_log_margin_budget (lemma44CharacterTwist χ θ) hD hLM.1 hDqp ht)
+
+lemma lemma56_actual_logDeriv_bound_from_rectangular_zero_exclusion
+    {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) (hθ : θ ≠ 1)
+    {U H : ℝ} (hU : 2000 ≤ U) (hH : 2 ≤ H)
+    (hfree : ∀ ρ : ℂ, 1 - 2 / U < ρ.re → |ρ.im| ≤ 2 * H →
+      DirichletCharacter.LFunction θ ρ ≠ 0)
+    {z : ℂ} (hσ : 1 - 1 / U ≤ z.re) (hσ2 : z.re ≤ 2) (ht : |z.im| ≤ H) :
+    ‖logDeriv (DirichletCharacter.LFunction θ) z‖ ≤
+      (6 * U + 7200) * lemma56JensenLogSize θ z.im := by
+  have hUp : 0 < U := by linarith
+  have he : 2 ≤ H := hH
+  have hEp : 0 < H := by linarith only [hH]
+  have hinv : 1 / U ≤ (1 : ℝ) / 16 := by
+    apply (div_le_div_iff₀ hUp (by norm_num)).mpr
+    linarith
+  have hdist : ‖z - lemma55JensenCenter z.im‖ ≤ (17 / 16 : ℝ) := by
+    rw [norm_sub_rev, lemma55_jensen_center_at_zero_height z,
+      norm_real, Real.norm_eq_abs, abs_of_nonneg (by linarith only [hσ2] : 0 ≤ 2 - z.re)]
+    linarith only [hσ, hinv]
+  have hp : 0 < 1 / U := by positivity
+  have htw : 2 / U = 2 * (1 / U) := by ring
+  have hne : DirichletCharacter.LFunction θ z ≠ 0 :=
+    hfree z (by rw [htw]; linarith only [hp, hσ])
+      (by linarith only [ht, hEp])
+  have hgap : ∀ ρ ∈ lemma56LocalZeroFinset θ z.im, 1 / U ≤ ‖z - ρ‖ := by
+    intro ρ hρ
+    have hm := (lemma56_mem_actual_local_zero_finset θ hθ z.im ρ).mp hρ
+    have hd := mem_closedBall_iff_norm.mp hm.1
+    have hi := (abs_im_le_norm (ρ - lemma55JensenCenter z.im)).trans hd
+    norm_num [lemma55JensenCenter, Complex.mul_im] at hi
+    have hsum := abs_add_le (ρ.im - z.im) z.im
+    rw [sub_add_cancel] at hsum
+    have hheight : |ρ.im| ≤ 2 * H := by linarith only [hi, hsum, ht, he, hU]
+    have hρre : ρ.re ≤ 1 - 2 / U := le_of_not_gt (fun hre => (hfree ρ hre hheight) hm.2)
+    rw [htw] at hρre
+    have hn := re_le_norm (z - ρ)
+    rw [sub_re] at hn
+    linarith only [hσ, hρre, hn]
+  have hb := lemma56_actual_logDeriv_bound_of_local_zero_gap θ hθ
+    (by positivity : 0 < 1 / U) hdist hne hgap
+  apply hb.trans_eq
+  field_simp
+
+
+theorem lemma56_uniform_primitive_margin_logDeriv_bound :
+    ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q] (χ : RealPrimitiveCharacter D)
+      (θ : DirichletCharacter ℂ q), D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      θ.IsPrimitive → 1 < q → (q : ℝ) < lemma56PaperT D →
+      (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      ∀ z : ℂ, 1 - 1 / ((3 / 4 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)) ≤ z.re → z.re ≤ 2 →
+        |z.im| ≤ Real.exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ)) →
+          ‖logDeriv (DirichletCharacter.LFunction θ) z‖ ≤
+            24 * ((3 / 4 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)) ^ 2 +
+              28800 * ((3 / 4 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)) := by
+  obtain ⟨Dhigh, hhigh⟩ := lemma56_uniform_primitive_margin_zero_exclusion
+  obtain ⟨Drep, hrep⟩ := lemma56_uniform_repulsion_modulus_threshold
+  refine ⟨max Dhigh Drep, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne z hσ hσ2 ht
+  have hf := hhigh χ θ ((le_max_left _ _).trans hDN) hD hA hθ hq1 hqT hne
+  have hL := (hrep D ((le_max_right _ _).trans hDN)).1
+  change 2000 ≤ lemma23PaperL D at hL
+  have hs := lemma56_high_scale_strict_margin hL
+  have he := Real.add_one_le_exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ))
+  have hH : 2 ≤ Real.exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ)) := by
+    linarith only [he, hs.2.2.1]
+  have hD1 : (1 : ℝ) ≤ D := by exact_mod_cast hD.le
+  have hqp : (q : ℝ) ≤ (D : ℝ) * lemma56PaperT D := by
+    nlinarith only [hqT.le, hD1, lemma56_paper_T_pos D]
+  have hheight : |z.im| ≤ 2 * Real.exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ)) := by
+    linarith only [ht, hH]
+  have hB := lemma56_actual_jensen_log_margin_budget θ hD hL hqp hheight
+  have hn := lemma56_actual_logDeriv_bound_from_rectangular_zero_exclusion θ
+    (lemma56_primitive_positive_level_nonprincipal θ hθ hq1) hs.2.2.1 hH hf hσ hσ2 ht
+  exact (hn.trans (mul_le_mul_of_nonneg_left hB (by positivity))).trans_eq (by ring)
+
+end ZhangLS.Spec
+
+#print axioms ZhangLS.Spec.lemma56_actual_four_zero_order_log_bound
+#print axioms ZhangLS.Spec.lemma56_actual_common_maximum_log_detection
+#print axioms ZhangLS.Spec.lemma56_general_repulsion_degree_bounds
+#print axioms ZhangLS.Spec.lemma56_general_repulsion_exponential_cost
+#print axioms ZhangLS.Spec.lemma56_general_repulsion_exceptional_cost_bound
+#print axioms ZhangLS.Spec.lemma56_general_repulsion_strict_budget
+#print axioms ZhangLS.Spec.lemma56_actual_log_budget_zero_exclusion
+#print axioms ZhangLS.Spec.lemma56_actual_jensen_log_high_budget
+#print axioms ZhangLS.Spec.lemma56_high_repulsion_scale_bounds
+#print axioms ZhangLS.Spec.lemma56_uniform_primitive_high_zero_exclusion
+#print axioms ZhangLS.Spec.lemma56_actual_zero_removed_logDeriv_near_center_bound
+#print axioms ZhangLS.Spec.lemma56_actual_logDeriv_bound_of_local_zero_gap
+#print axioms ZhangLS.Spec.lemma56_actual_logDeriv_bound_from_high_zero_exclusion
+#print axioms ZhangLS.Spec.lemma56_uniform_primitive_high_logDeriv_bound
+#print axioms ZhangLS.Spec.lemma56_high_scale_strict_margin
+#print axioms ZhangLS.Spec.lemma56_actual_jensen_log_margin_budget
+#print axioms ZhangLS.Spec.lemma56_uniform_primitive_margin_zero_exclusion
+
+open ZhangLS.Spec
+
+example : ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q] (χ : RealPrimitiveCharacter D)
+    (θ : DirichletCharacter ℂ q), D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    θ.IsPrimitive → 1 < q → (q : ℝ) < Real.exp ((Real.log (D : ℝ)) ^ (11 / 10 : ℝ)) →
+    (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+    ∀ s : ℂ, 1 - 2 / ((Real.log (D : ℝ)) ^ (9 / 2 : ℝ)) < s.re →
+      |s.im| ≤ 2 * Real.exp ((Real.log (D : ℝ)) ^ (9 / 2 : ℝ)) →
+        DirichletCharacter.LFunction θ s ≠ 0 :=
+  lemma56_uniform_primitive_high_zero_exclusion
+
+example : ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q] (χ : RealPrimitiveCharacter D)
+    (θ : DirichletCharacter ℂ q), D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    θ.IsPrimitive → 1 < q → (q : ℝ) < lemma56PaperT D →
+    (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+    ∀ σ : ℝ, 1 - 2 / ((Real.log (D : ℝ)) ^ (9 / 2 : ℝ)) < σ →
+      DirichletCharacter.LFunction θ
+        ((σ : ℂ) + (2 * Real.exp ((Real.log (D : ℝ)) ^ (9 / 2 : ℝ)) : ℂ) * Complex.I) ≠ 0 ∧
+      DirichletCharacter.LFunction θ
+        ((σ : ℂ) - (2 * Real.exp ((Real.log (D : ℝ)) ^ (9 / 2 : ℝ)) : ℂ) * Complex.I) ≠ 0 := by
+  obtain ⟨D₀, hD₀⟩ := lemma56_uniform_primitive_high_zero_exclusion
+  refine ⟨D₀, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq hqT hne σ hre
+  have hf := hD₀ χ θ hDN hD hA hθ hq hqT hne
+  constructor
+  · apply hf
+    · simpa using hre
+    · simp [lemma23PaperL, Complex.exp_re, abs_of_pos (Real.exp_pos ((Real.log (D : ℝ)) ^ (9 / 2 : ℝ)))]
+  · apply hf
+    · simpa using hre
+    · simp [lemma23PaperL, Complex.exp_re, abs_of_pos (Real.exp_pos ((Real.log (D : ℝ)) ^ (9 / 2 : ℝ)))]
+
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} [NeZero D] (χ : RealPrimitiveCharacter D)
+    (θ : DirichletCharacter ℂ D), D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    θ.IsPrimitive → (D : ℝ) < lemma56PaperT D →
+    (fun n : ℕ => θ (n : ZMod D)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+    ∀ s : ℂ, 1 - 2 / ((Real.log (D : ℝ)) ^ (9 / 2 : ℝ)) < s.re →
+      |s.im| ≤ 2 * Real.exp ((Real.log (D : ℝ)) ^ (9 / 2 : ℝ)) →
+        DirichletCharacter.LFunction θ s ≠ 0 := by
+  obtain ⟨D₀, hD₀⟩ := lemma56_uniform_primitive_high_zero_exclusion
+  exact ⟨D₀, fun χ θ hDN hD hA hθ hDT hne => hD₀ χ θ hDN hD hA hθ hD hDT hne⟩
+
+#print axioms ZhangLS.Spec.lemma56_actual_logDeriv_bound_from_rectangular_zero_exclusion
+#print axioms ZhangLS.Spec.lemma56_uniform_primitive_margin_logDeriv_bound
+
+example : ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q] (χ : RealPrimitiveCharacter D)
+    (θ : DirichletCharacter ℂ q), D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    θ.IsPrimitive → 1 < q → (q : ℝ) < Real.exp ((Real.log (D : ℝ)) ^ (11 / 10 : ℝ)) →
+    (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+    ∀ z : ℂ, 1 - 1 / ((3 / 4 : ℝ) * (Real.log (D : ℝ)) ^ (9 / 2 : ℝ)) ≤ z.re → z.re ≤ 2 →
+      |z.im| ≤ Real.exp (2 * (Real.log (D : ℝ)) ^ (9 / 2 : ℝ)) →
+        ‖deriv (DirichletCharacter.LFunction θ) z / DirichletCharacter.LFunction θ z‖ ≤
+          24 * ((3 / 4 : ℝ) * (Real.log (D : ℝ)) ^ (9 / 2 : ℝ)) ^ 2 +
+            28800 * ((3 / 4 : ℝ) * (Real.log (D : ℝ)) ^ (9 / 2 : ℝ)) :=
+  lemma56_uniform_primitive_margin_logDeriv_bound

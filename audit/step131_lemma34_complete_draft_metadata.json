@@ -1,0 +1,141 @@
+{
+  "captured_at_utc": "2026-10-01T23:28:51.632488+00:00",
+  "full_original_target_status": "PROVED_KERNEL_CHECKED_TEMPORARY",
+  "target": "lemma34_proved : Lemma34Target",
+  "kernel_exit_code": 0,
+  "source_count": 13,
+  "interface_count": 44,
+  "definition_count": 5,
+  "expanded_regressions": 4,
+  "proved_interfaces": [
+    "lemma34_multichoose_recurrence",
+    "lemma34_multichoose_40_square_le_1600",
+    "lemma34_tau_multiplicative",
+    "lemma34_tau_prime_power",
+    "lemma34_tau40_square_le_tau1600",
+    "lemma34_weighted_convolution_le",
+    "lemma34_tau_weighted_sum_le_harmonic_pow",
+    "lemma34_tuple_sum_succ",
+    "lemma34_tuple_sum_recurrence",
+    "lemma34_tuple_sum_zero",
+    "lemma34_tuple_sum_le_arithmetic_pow",
+    "lemma34_tau2_eq_divisor_card",
+    "lemma34_actual_tau40_le_standard",
+    "lemma34_actual_tau40_square_le_tau1600",
+    "lemma34_actual_tau40_weighted_sum_le",
+    "lemma34_majorized_coefficient_weighted_sum",
+    "lemma34_centered_weight_square",
+    "lemma34_centered_coefficient_energy",
+    "lemma34_actual_short_mean_bound",
+    "lemma34_centered_partial_sum_mean_square",
+    "lemma34_cutoff_le_P",
+    "lemma34_cutoff_nat_le_floor_P",
+    "lemma34_coefficient_log_bound",
+    "lemma34_uniform_centered_mean_square",
+    "lemma34_actual_x1_mean_square",
+    "lemma34_actual_x2_mean_square",
+    "lemma34_weighted_integral_cauchy",
+    "lemma34_partial_sum_measurable",
+    "lemma34_partial_sum_norm_bound",
+    "lemma34_two_partial_sums_weighted_integrable",
+    "lemma34_actual_partial_sums_weighted_integrable",
+    "lemma34_D_positive",
+    "lemma34_inverse_integral",
+    "lemma34_actual_sum_norms_square_mean",
+    "lemma34_actual_weighted_integral_cauchy",
+    "lemma34_actual_weighted_square_integral_mean",
+    "lemma34_actual_integral_mean_square",
+    "lemma34_actual_B_nonneg",
+    "lemma34_B_algebra_bound",
+    "lemma34_actual_B_mean_square",
+    "lemma34_mem_bad_family",
+    "lemma34_bad_count_times_threshold",
+    "lemma34_actual_bad_count",
+    "lemma34_proved"
+  ],
+  "sources": {
+    "133": {
+      "temporary_source": "/private/tmp/ZhangMathStep133Lemma34MultichooseDraft.lean",
+      "file": "step131_lemma34_complete_draft_133.txt",
+      "sha256": "259d75cd39a94e50d8de078ca1f0daa9e61cf0f84c8bbc25661ac60469e4d058"
+    },
+    "134": {
+      "temporary_source": "/private/tmp/ZhangMathStep134Lemma34TauDraft.lean",
+      "file": "step131_lemma34_complete_draft_134.txt",
+      "sha256": "c08b990c9faffd76df5b828f0185368dff1e4836e10bba2edde14d1833cded85"
+    },
+    "135": {
+      "temporary_source": "/private/tmp/ZhangMathStep135Lemma34TauSquareDraft.lean",
+      "file": "step131_lemma34_complete_draft_135.txt",
+      "sha256": "3841cd18a1b8fb97de2c9fd30a28e630de73a017078f12ee0a57f875d061d88c"
+    },
+    "136": {
+      "temporary_source": "/private/tmp/ZhangMathStep136Lemma34HarmonicDraft.lean",
+      "file": "step131_lemma34_complete_draft_136.txt",
+      "sha256": "c69d3f3d73398c5fd4f67d01f184cc911e61f9cc600ff19f36e561105fe9324e"
+    },
+    "137": {
+      "temporary_source": "/private/tmp/ZhangMathStep137Lemma34TupleDraft.lean",
+      "file": "step131_lemma34_complete_draft_137.txt",
+      "sha256": "8b422bf8baf876b257027489a116301f5ba0a182635913ec9fe0a8ab7bed63da"
+    },
+    "138": {
+      "temporary_source": "/private/tmp/ZhangMathStep138Lemma34CoefficientEnergyDraft.lean",
+      "file": "step131_lemma34_complete_draft_138.txt",
+      "sha256": "e273544ee70581f3ee5beb6c75839fe533e82e9fd7327e52c96b85450aee77b4"
+    },
+    "139": {
+      "temporary_source": "/private/tmp/ZhangMathStep139Lemma34ShortMeanDraft.lean",
+      "file": "step131_lemma34_complete_draft_139.txt",
+      "sha256": "4bfb13b206dc93ca56b6cb5b1b35198d47ce4938025e5e512f59411f601686b6"
+    },
+    "140": {
+      "temporary_source": "/private/tmp/ZhangMathStep140Lemma34UniformMeanDraft.lean",
+      "file": "step131_lemma34_complete_draft_140.txt",
+      "sha256": "3d20cdab5a6f98c9b24825d102c7ad66eddef21ca80d856ede068213325f0dc0"
+    },
+    "141": {
+      "temporary_source": "/private/tmp/ZhangMathStep141Lemma34IntegralDraft.lean",
+      "file": "step131_lemma34_complete_draft_141.txt",
+      "sha256": "7df83bd332c37d5ff58845ca8cc16aeaa2f13c487b56357bc8503f1e7e38ace1"
+    },
+    "142": {
+      "temporary_source": "/private/tmp/ZhangMathStep142Lemma34PartialIntegralDraft.lean",
+      "file": "step131_lemma34_complete_draft_142.txt",
+      "sha256": "0ea5c6fc09fca8e386506418e77a6fbe6ae36dfb470b8f60bc449310f6db4aff"
+    },
+    "143": {
+      "temporary_source": "/private/tmp/ZhangMathStep143Lemma34IntegralMeanDraft.lean",
+      "file": "step131_lemma34_complete_draft_143.txt",
+      "sha256": "0d1d9af4173519e1dfc6b3cf2979485524992656d740612709c3694c96975ccf"
+    },
+    "145": {
+      "temporary_source": "/private/tmp/ZhangMathStep145Lemma34BMeanDraft.lean",
+      "file": "step131_lemma34_complete_draft_145.txt",
+      "sha256": "aa8f08d19d6751d44d81839a90bdfd3bfb5e078a7b3c502d0548f0b5734b66ec"
+    },
+    "146": {
+      "temporary_source": "/private/tmp/ZhangMathStep146Lemma34CompleteDraft.lean",
+      "file": "step131_lemma34_complete_draft_146.txt",
+      "sha256": "a7962abd21e9434b46b55d83b777bac92117021cf17b8d2d01ce14f64c40b251"
+    }
+  },
+  "checked_source_file": "step131_lemma34_complete_draft_checked.txt",
+  "checked_source_sha256": "2b419de85010e83fdc7c1e9dd7950c0fbc262999a62d2af90e680697b0f4dcd3",
+  "log_file": "step131_lemma34_complete_draft.log",
+  "constant": "51208*81^1600",
+  "threshold": "ceil(exp3)",
+  "assumption_A_used": false,
+  "original_objects": [
+    "Psi primitive characters in strict prime window",
+    "prime mass sum_p p",
+    "nu20/upsilon20 from actual truncated F20/G20",
+    "center s0",
+    "D80 endpoint and integral",
+    "original strict B < L1171 failure",
+    "uniform C,D0 before D,chi"
+  ],
+  "completion_requires": "promotion and fresh full repository terminal PASS with unchanged fingerprints",
+  "last_completed_full_gate": "Step123 PASS",
+  "numbered_completion_recorded": false
+}

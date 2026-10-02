@@ -1,0 +1,61 @@
+import ZhangMathStep142Lemma34PartialIntegralDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open MeasureTheory
+open scoped Classical
+example (n : ℕ) : lemma23Tau40 n^2 ≤ (lemma34Tau 1600 n : ℝ) :=
+  lemma34_actual_tau40_square_le_tau1600 n
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (X : ℕ) (hX : 1 ≤ X) :
+    (∑ n ∈ Finset.Icc 1 X, ‖lemma23Nu20Coefficient χ n *
+      Complex.exp (-lemma23PaperCenter D * (Real.log (n : ℝ) : ℂ))‖^2) ≤
+      (1+Real.log (X : ℝ))^1600 :=
+  lemma34_centered_coefficient_energy _ (lemma23Nu20Coefficient_norm_le_tau40 χ) _ rfl X hX
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (hL : 3 ≤ lemma23PaperL D)
+    (x : ℝ) (hx : 1 ≤ x) (hxD : x ≤ (D : ℝ)^80) :
+    ((∑ ψ ∈ lemma33ActualFamily D, ‖lemma23ActualX1 χ ψ.2 (lemma23PaperCenter D) x‖^2) ≤
+      lemma33ActualPrimeMass D * (81^1600 * lemma23PaperL D^1600)) ∧
+    ((∑ ψ ∈ lemma33ActualFamily D, ‖lemma23ActualX2 χ ψ.2 (lemma23PaperCenter D) x‖^2) ≤
+      lemma33ActualPrimeMass D * (81^1600 * lemma23PaperL D^1600)) :=
+  ⟨lemma34_actual_x1_mean_square χ hL x hx hxD,lemma34_actual_x2_mean_square χ hL x hx hxD⟩
+
+example {D N : ℕ} (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ N) :
+    IntegrableOn (fun t : ℝ =>
+      (‖lemma23ActualX1 χ ψ (lemma23PaperCenter D) t‖ +
+        ‖lemma23ActualX2 χ ψ (lemma23PaperCenter D) t‖)^2/t)
+      (Set.Ioc (1 : ℝ) ((D : ℝ)^80)) :=
+  lemma34_actual_partial_sums_weighted_integrable χ ψ 2
+
+#print axioms lemma34_multichoose_recurrence
+#print axioms lemma34_multichoose_40_square_le_1600
+#print axioms lemma34_tau_multiplicative
+#print axioms lemma34_tau_prime_power
+#print axioms lemma34_tau40_square_le_tau1600
+#print axioms lemma34_weighted_convolution_le
+#print axioms lemma34_tau_weighted_sum_le_harmonic_pow
+#print axioms lemma34_tuple_sum_succ
+#print axioms lemma34_tuple_sum_recurrence
+#print axioms lemma34_tuple_sum_zero
+#print axioms lemma34_tuple_sum_le_arithmetic_pow
+#print axioms lemma34_tau2_eq_divisor_card
+#print axioms lemma34_actual_tau40_le_standard
+#print axioms lemma34_actual_tau40_square_le_tau1600
+#print axioms lemma34_actual_tau40_weighted_sum_le
+#print axioms lemma34_majorized_coefficient_weighted_sum
+#print axioms lemma34_centered_weight_square
+#print axioms lemma34_centered_coefficient_energy
+#print axioms lemma34_actual_short_mean_bound
+#print axioms lemma34_centered_partial_sum_mean_square
+#print axioms lemma34_cutoff_le_P
+#print axioms lemma34_cutoff_nat_le_floor_P
+#print axioms lemma34_coefficient_log_bound
+#print axioms lemma34_uniform_centered_mean_square
+#print axioms lemma34_actual_x1_mean_square
+#print axioms lemma34_actual_x2_mean_square
+#print axioms lemma34_weighted_integral_cauchy
+#print axioms lemma34_partial_sum_measurable
+#print axioms lemma34_partial_sum_norm_bound
+#print axioms lemma34_two_partial_sums_weighted_integrable
+#print axioms lemma34_actual_partial_sums_weighted_integrable
+end ZhangLS.Spec

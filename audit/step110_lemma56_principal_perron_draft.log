@@ -1,0 +1,26 @@
+/private/tmp/ZhangMathStep110PrincipalPerronDraft.lean:90:46: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_reProdIm, mem_Icc, sub_re, sub_im, ofReal_re, ofReal_im, mul_re, mul_im, I_re,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲I_im, mul_zero, z̵e̵r̵o̵_̵m̵u̵l̵,̵ ̵mul_one, zero_add, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/private/tmp/ZhangMathStep110PrincipalPerronDraft.lean:90:65: warning: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_reProdIm, mem_Icc, sub_re, sub_im, ofReal_re, ofReal_im, mul_re, mul_im, I_re,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲I_im, mul_zero, zero_mul, mul_one, z̵e̵r̵o̵_̵a̵d̵d̵,̵ ̵sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'ZhangLS.Spec.lemma56_positive_right_rectangle_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_positive_right_simple_pole_rectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_complex_kernel_at_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_complex_kernel_analytic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_complex_kernel_at_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_rectangle_translation_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_perron_pole_rectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_principal_perron_mellin_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,99 @@
+'ZhangLS.Spec.lemma56_paper_power_margin_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_margin_polynomial_absorption' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_paper_left_gaussian_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_omega_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_kernel_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_kernel_norm_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_phase_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_phase_LSeries_term' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_mellin_term_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_mellin_term_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_mellin_integral_norm_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_mellin_term_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_logDeriv_two_uniform_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_right_constant_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_right_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_right_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_right_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_right_truncation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_mangoldt_truncation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_actual_perron_integrand_analyticAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_perron_rectangle_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_uniform_primitive_perron_rectangle_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_perron_base_scale_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_weight_rescale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_kernel_rescale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_kernel_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_kernel_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_vertical_intervalIntegrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_uniform_primitive_perron_left_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_height_log_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_margin_polynomial_absorption' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_paper_left_perron_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_uniform_primitive_perron_paper_left_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_actual_perron_mangoldt_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_mellin_term_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_perron_mellin_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_perron_mellin_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_kernel_norm_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_mellin_term_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_mellin_term_eq_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_mellin_term_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_mellin_term_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_mellin_integral_norm_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_kernel_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_kernel_log_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_log_majorant_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_perron_vertical_integral_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_integrand_analyticAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_rectangle_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_margin_height_contains_modulus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_uniform_primitive_twisted_gaussian_rectangle_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_horizontal_point_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_horizontal_integral_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_uniform_primitive_twisted_gaussian_paper_left_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_mangoldt_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_mellin_term_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_mellin_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_mellin_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_vertical_intervalIntegrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_vertical_integral_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_uniform_primitive_twisted_gaussian_left_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

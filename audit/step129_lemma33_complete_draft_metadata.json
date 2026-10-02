@@ -1,0 +1,166 @@
+{
+  "status": "KERNEL_CHECKED_TEMPORARY",
+  "kernel_exit_code": 0,
+  "full_original_target_status": "PROVED_KERNEL_CHECKED_TEMPORARY",
+  "target": "lemma33_proved : Lemma33Target",
+  "interface_count": 44,
+  "definition_count": 11,
+  "expanded_regressions": 3,
+  "proved_interfaces": [
+    "lemma33_mem_prime_window",
+    "lemma33_prime_index_short_bound",
+    "lemma33_actual_first_mean_bound",
+    "lemma33_original_family_prime_mem",
+    "lemma33_actual_family_mem",
+    "lemma33_LSeries_term_norm_square",
+    "lemma33_actual_first_Dirichlet_mean_bound",
+    "lemma33_local_scalar_sampling",
+    "lemma33_norm_square_derivative",
+    "lemma33_norm_square_derivative_bound",
+    "lemma33_local_norm_square_sampling",
+    "lemma33_sampling_interval_sum_le",
+    "lemma33_separated_norm_square_sampling",
+    "lemma33_prime_fraction_cross_ne",
+    "lemma33_prime_fraction_separation",
+    "lemma33_fourier_interval_orthogonality",
+    "lemma33_trig_sum_continuous",
+    "lemma33_trig_sum_parseval",
+    "lemma33_trig_sum_hasDerivAt",
+    "lemma33_trig_sum_periodic",
+    "lemma33_trig_derivative_energy",
+    "lemma33_trig_derivative_energy_bound",
+    "lemma33_trig_square_integral_two_periods",
+    "lemma33_trig_square_energy_two_periods",
+    "lemma33_trig_derivative_two_period_bound",
+    "lemma33_primitive_nonprincipal",
+    "lemma33_prime_gauss_norm_square",
+    "lemma33_unit_character_mean_square_exact",
+    "lemma33_gauss_finite_transform",
+    "lemma33_gauss_finite_transform_norm_square",
+    "lemma33_unit_character_transform_parseval",
+    "lemma33_prime_primitive_mean_le_additive",
+    "lemma33_additive_large_sieve",
+    "lemma33_prime_window_modulus_bound",
+    "lemma33_sample_point_bounds",
+    "lemma33_actual_samples_separated",
+    "lemma33_additive_polynomial_eq_trig",
+    "lemma33_actual_mean_eq_prime_sum",
+    "lemma33_actual_mean_le_samples",
+    "lemma33_actual_second_mean_bound",
+    "lemma33_actual_second_Dirichlet_mean_bound",
+    "lemma33_parameters_at_threshold",
+    "lemma33_proved",
+    "lemma33_original_Dirichlet_sum_eq_actual"
+  ],
+  "sources": {
+    "125": {
+      "file": "step129_lemma33_complete_draft_125.txt",
+      "sha256": "eb47cdba87e9859bb023c297418bc6b19692cc1c8bfadba3a833925c83fd042c",
+      "proved_interfaces": [
+        "lemma33_mem_prime_window",
+        "lemma33_prime_index_short_bound",
+        "lemma33_actual_first_mean_bound",
+        "lemma33_original_family_prime_mem",
+        "lemma33_actual_family_mem",
+        "lemma33_LSeries_term_norm_square",
+        "lemma33_actual_first_Dirichlet_mean_bound"
+      ],
+      "temporary_source": "/private/tmp/ZhangMathStep125Lemma33FirstMeanDraft.lean"
+    },
+    "126": {
+      "file": "step129_lemma33_complete_draft_126.txt",
+      "sha256": "debe3be97cde4d15f74bac75d13bc88e6f5aa2c040abe80b5c81444543f08ac4",
+      "proved_interfaces": [
+        "lemma33_local_scalar_sampling",
+        "lemma33_norm_square_derivative",
+        "lemma33_norm_square_derivative_bound",
+        "lemma33_local_norm_square_sampling",
+        "lemma33_sampling_interval_sum_le",
+        "lemma33_separated_norm_square_sampling"
+      ],
+      "temporary_source": "/private/tmp/ZhangMathStep126Lemma33SamplingDraft.lean"
+    },
+    "127": {
+      "file": "step129_lemma33_complete_draft_127.txt",
+      "sha256": "11cf9179728ccce613c128b3d70b538abfb031f92c547ce8ce797646490c92f1",
+      "proved_interfaces": [
+        "lemma33_prime_fraction_cross_ne",
+        "lemma33_prime_fraction_separation"
+      ],
+      "temporary_source": "/private/tmp/ZhangMathStep127Lemma33FractionDraft.lean"
+    },
+    "128": {
+      "file": "step129_lemma33_complete_draft_128.txt",
+      "sha256": "ed840eb6d0f4f0de5919602911fac816de74b6d0b6779ee26c4be690112bc3d1",
+      "proved_interfaces": [
+        "lemma33_fourier_interval_orthogonality",
+        "lemma33_trig_sum_continuous",
+        "lemma33_trig_sum_parseval",
+        "lemma33_trig_sum_hasDerivAt",
+        "lemma33_trig_sum_periodic",
+        "lemma33_trig_derivative_energy",
+        "lemma33_trig_derivative_energy_bound",
+        "lemma33_trig_square_integral_two_periods",
+        "lemma33_trig_square_energy_two_periods",
+        "lemma33_trig_derivative_two_period_bound"
+      ],
+      "temporary_source": "/private/tmp/ZhangMathStep128Lemma33FourierDraft.lean"
+    },
+    "129": {
+      "file": "step129_lemma33_complete_draft_129.txt",
+      "sha256": "55f903bfbbd7d8f17fee80b4e664abb0b3872780cd3cad5715cb24226ca1d689",
+      "proved_interfaces": [
+        "lemma33_primitive_nonprincipal",
+        "lemma33_prime_gauss_norm_square",
+        "lemma33_unit_character_mean_square_exact",
+        "lemma33_gauss_finite_transform",
+        "lemma33_gauss_finite_transform_norm_square",
+        "lemma33_unit_character_transform_parseval",
+        "lemma33_prime_primitive_mean_le_additive"
+      ],
+      "temporary_source": "/private/tmp/ZhangMathStep129Lemma33GaussDraft.lean"
+    },
+    "130": {
+      "file": "step129_lemma33_complete_draft_130.txt",
+      "sha256": "65fc1d6b6749e91567a3ce162dea4b6bbad2921bb739359f03613741a8737b81",
+      "proved_interfaces": [
+        "lemma33_additive_large_sieve"
+      ],
+      "temporary_source": "/private/tmp/ZhangMathStep130Lemma33AdditiveDraft.lean"
+    },
+    "131": {
+      "file": "step129_lemma33_complete_draft_131.txt",
+      "sha256": "a206585623dc0789e15047817e02b9aa388d0822a88ff797ebea3d398ca7f1bf",
+      "proved_interfaces": [
+        "lemma33_prime_window_modulus_bound",
+        "lemma33_sample_point_bounds",
+        "lemma33_actual_samples_separated",
+        "lemma33_additive_polynomial_eq_trig"
+      ],
+      "temporary_source": "/private/tmp/ZhangMathStep131Lemma33SamplesDraft.lean"
+    },
+    "132": {
+      "file": "step129_lemma33_complete_draft_132.txt",
+      "sha256": "53e942a19b0b1c724d37b8d2e2c8ee4643296fd5257a2f82e6f4d1e72b372d66",
+      "proved_interfaces": [
+        "lemma33_actual_mean_eq_prime_sum",
+        "lemma33_actual_mean_le_samples",
+        "lemma33_actual_second_mean_bound",
+        "lemma33_actual_second_Dirichlet_mean_bound",
+        "lemma33_parameters_at_threshold",
+        "lemma33_proved",
+        "lemma33_original_Dirichlet_sum_eq_actual"
+      ],
+      "temporary_source": "/private/tmp/ZhangMathStep132Lemma33AssemblyDraft.lean"
+    }
+  },
+  "checked_source_file": "step129_lemma33_complete_draft_checked.txt",
+  "checked_source_sha256": "3f4a5e1d4e5f6bedce0491cf6cbce355a45457d49bb1efe820d2514d0e456634",
+  "log_file": "step129_lemma33_complete_draft.log",
+  "created_at_utc": "2026-10-01T22:28:28.666952+00:00",
+  "constant": "32 + pi^2",
+  "threshold": "ceil(exp(3))",
+  "original_objects": "original Psi, strict prime window, actual Dirichlet polynomial c(n)psi(n)/n^s, mass=sum prime moduli, both original lengths and original rpow energies",
+  "assumption_A_required": false,
+  "project_gate": "Step122 RUNNING; all546 Lean sources frozen; no project promotion or numbered completion yet"
+}

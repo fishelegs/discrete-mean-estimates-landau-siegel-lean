@@ -1,0 +1,49 @@
+import ZhangMathStep346Lemma32BurgessShiftCharacterDraft
+import Mathlib.Analysis.Fourier.ZMod
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+open scoped Classical
+
+lemma lemma32_actual_primitive_quadratic_inverse {D : ℕ}
+    (χ : RealPrimitiveCharacter D) : χ.chi⁻¹=χ.chi :=
+  (MulChar.isQuadratic_iff_sq_eq_one.mpr χ.quadratic).inv
+
+lemma lemma32_actual_quadratic_fourier_transform {D : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (k : ZMod D) :
+    ZMod.dft χ.chi k = χ.chi (-k)*gaussSum χ.chi ZMod.stdAddChar := by
+  rw [χ.primitive.fourierTransform_eq_inv_mul_gaussSum,
+    lemma32_actual_primitive_quadratic_inverse χ]
+
+lemma lemma32_actual_quadratic_gauss_square {D : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) :
+    (gaussSum χ.chi ZMod.stdAddChar)^2 = (D : ℂ)*χ.chi (-1) := by
+  let τ : ℂ := gaussSum χ.chi ZMod.stdAddChar
+  have hd : ZMod.dft χ.chi = fun k => τ*χ.chi (-k) := by
+    ext k
+    rw [lemma32_actual_quadratic_fourier_transform χ]
+    exact mul_comm _ _
+  have hs : ZMod.dft (ZMod.dft χ.chi) (1 : ZMod D) = τ^2 := by
+    rw [hd, ZMod.dft_const_mul, ZMod.dft_comp_neg]
+    change τ*ZMod.dft χ.chi (-1)=τ^2
+    rw [lemma32_actual_quadratic_fourier_transform χ]
+    simp only [neg_neg, map_one, one_mul]
+    ring
+  have hi := congrFun (ZMod.dft_dft (χ.chi : ZMod D → ℂ)) (1 : ZMod D)
+  rw [hs] at hi
+  exact hi
+
+lemma lemma32_actual_quadratic_gauss_norm {D : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) :
+    ‖gaussSum χ.chi ZMod.stdAddChar‖ = Real.sqrt (D : ℝ) := by
+  have he := congrArg norm (lemma32_actual_quadratic_gauss_square χ)
+  have hm : ‖χ.chi (-1)‖=1 := by
+    simpa only [Units.val_neg, Units.val_one] using
+      χ.chi.unit_norm_eq_one (-1 : (ZMod D)ˣ)
+  rw [norm_pow, norm_mul, Complex.norm_natCast, hm, mul_one] at he
+  have hs := Real.sq_sqrt (Nat.cast_nonneg D : (0 : ℝ) ≤ (D : ℝ))
+  have hτ := norm_nonneg (gaussSum χ.chi ZMod.stdAddChar)
+  have hsqrt := Real.sqrt_nonneg (D : ℝ)
+  nlinarith
+
+end ZhangLS.Spec

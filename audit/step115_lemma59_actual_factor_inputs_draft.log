@@ -1,0 +1,69 @@
+/private/tmp/ZhangMathStep115Lemma59FactorInputsChecked.lean:133:19: warning: 'positivity' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/private/tmp/ZhangMathStep115Lemma59FactorInputsChecked.lean:133:19: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/private/tmp/ZhangMathStep115Lemma59FactorInputsChecked.lean:515:5: warning: unused variable `θ`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/private/tmp/ZhangMathStep115Lemma59FactorInputsChecked.lean:795:23: warning: This simp argument is unused:
+  zero_sub
+
+Hint: Omit it from the simp argument list.
+  simp only [lemma55JensenCenter, Complex.sub_re, Complex.sub_im, Complex.add_re, Complex.add_im,
+  ̲  ̲ ̲ ̲Complex.mul_re, Complex.mul_im, Complex.I_re, Complex.I_im, Complex.ofReal_re,
+  ̲  ̲ ̲ ̲Complex.ofReal_im, zero_mul, mul_zero, one_mul, mul_one, sub_zero, z̵e̵r̵o̵_̵s̵u̵b̵,̵ ̵add_zero, zero_add] at hn
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'ZhangLS.Spec.lemma59_actual_L_large_disk_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_large_disk_multiplicity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_large_height_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_family_modulus_le_two_P' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_family_large_disk_log_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_local_divisor_eq_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_mem_actual_local_zero_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_local_zero_order_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_multiplicity_count_eq_sum_orders' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_actual_local_zero_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_family_character_nonprincipal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_uniform_actual_local_zero_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_meromorphic_order_eq_nat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_factor_analytic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_factor_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_analytic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_eq_quotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_factor_eq_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_local_multiplicity_eq_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_factor_center_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_factor_outer_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_factor_outer_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_local_multiplicity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_outer_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_closed_disk_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_center_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_jensen_log_size_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_zero_removed_ratio_bound_gt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_ratio_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_log_ratio_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_log_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_log_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_log_closed_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_log_cauchy_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_logDeriv_near_center_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_removed_shift_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_original_shift_path_near_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_uniform_actual_zero_removed_first_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_actual_L_quotient_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_zero_factor_ratio_eq_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_local_zero_re_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_local_zeros_in_extended_region' depends on axioms: [propext, Classical.choice, Quot.sound]

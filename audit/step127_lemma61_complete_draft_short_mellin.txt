@@ -1,0 +1,494 @@
+import ZhangLS.Spec.Lemma61OriginalLeftError
+import ZhangLS.Spec.Lemma61GaussianCutoff
+import ZhangLS.Spec.Lemma61ReciprocalTailTruncation
+
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set
+open scoped Real Topology
+set_option maxHeartbeats 2000000
+set_option maxRecDepth 4096
+
+noncomputable def lemma61ShortRightMellinIntegrand {p : ℕ} (D : ℕ)
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (B σ t : ℝ) : ℂ :=
+  let w := (σ : ℂ) + (t : ℂ) * I
+  lemma61ShortPolynomial D ψ (s + w) * exp (w * (Real.log B : ℂ)) *
+    lemma57OmegaOne D w / w
+
+lemma lemma61_short_mellin_eq_finite_sum {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (B σ t : ℝ) :
+    lemma61ShortRightMellinIntegrand D ψ s B σ t * I =
+      ∑ n ∈ (Finset.Icc 1 ⌈lemma56PaperT D ^ 3⌉₊).filter
+        (fun (n : ℕ) => (n : ℝ) < lemma56PaperT D ^ 3),
+        lemma44MellinSeriesTerm D (fun n => ψ (n : ZMod p)) s B σ n t := by
+  unfold lemma61ShortRightMellinIntegrand lemma61ShortPolynomial
+  simp only [Finset.sum_mul,Finset.sum_div]
+  apply Finset.sum_congr rfl
+  intro n hn
+  have hn0 : n ≠ 0 := by
+    have h := (Finset.mem_Icc.mp (Finset.mem_filter.mp hn).1).1
+    omega
+  rw [lemma44MellinSeriesTerm,lemma44_LSeries_term_eq_exp _ _ hn0]
+
+lemma lemma61_short_mellin_integrable {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (B : ℝ) (hD : 1 < D)
+    {σ : ℝ} (hσ : σ ≠ 0) :
+    Integrable (lemma61ShortRightMellinIntegrand D ψ s B σ) := by
+  have ht : Integrable (fun t : ℝ => lemma61ShortRightMellinIntegrand D ψ s B σ t * I) := by
+    simp_rw [lemma61_short_mellin_eq_finite_sum]
+    apply integrable_finsetSum
+    intro n hn
+    exact lemma44MellinSeriesTerm_integrable hD _ s B hσ n
+  simpa only [mul_assoc,I_mul_I,mul_neg,mul_one,neg_neg] using ht.mul_const (-I)
+
+lemma lemma61_actual_short_gaussian_mellin {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (hD : 1 < D)
+    {B σ : ℝ} (hB : 0 < B) (hσ : 0 < σ) :
+    (2 * (Real.pi : ℂ) * I)⁻¹ *
+      (∫ t : ℝ, lemma61ShortRightMellinIntegrand D ψ s B σ t * I) =
+      ∑ n ∈ (Finset.Icc 1 ⌈lemma56PaperT D ^ 3⌉₊).filter
+        (fun (n : ℕ) => (n : ℝ) < lemma56PaperT D ^ 3),
+        LSeries.term (fun n => ψ (n : ZMod p)) s n *
+          (zhangGaussianWeight D (B / n) : ℂ) := by
+  simp_rw [lemma61_short_mellin_eq_finite_sum]
+  rw [integral_finsetSum _ (fun n _ =>
+    lemma44MellinSeriesTerm_integrable hD _ s B hσ.ne' n),Finset.mul_sum]
+  apply Finset.sum_congr rfl
+  intro n hn
+  exact lemma44MellinSeriesTerm_normalized_integral hD _ s hB hσ n
+
+lemma lemma61_short_star_sum_eq_weighted {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) {B : ℝ}
+    (hcut : 2 * B < lemma56PaperT D ^ 3) :
+    (∑ n ∈ (Finset.Icc 1 ⌈lemma56PaperT D ^ 3⌉₊).filter
+        (fun (n : ℕ) => (n : ℝ) < lemma56PaperT D ^ 3),
+        LSeries.term (fun n => ψ (n : ZMod p)) s n *
+          (lemma61GaussianStar D (B / n) : ℂ)) =
+      lemma61WeightedPolynomial D ψ B s := by
+  rw [← lemma61_actual_weighted_tsum_eq_finite ψ B s]
+  symm
+  rw [tsum_eq_sum (s := (Finset.Icc 1 ⌈lemma56PaperT D ^ 3⌉₊).filter
+      (fun (n : ℕ) => (n : ℝ) < lemma56PaperT D ^ 3))]
+  · exact Finset.sum_congr rfl (fun n _ => lemma61_weighted_term_eq_LSeries_term ψ B s n)
+  · intro n hn
+    by_cases hn0 : n = 0
+    · simp [lemma61WeightedTerm,hn0]
+    have hn1 : 1 ≤ n := Nat.one_le_iff_ne_zero.mpr hn0
+    have hnr : 0 < (n : ℝ) := by exact_mod_cast Nat.pos_of_ne_zero hn0
+    have hlarge : lemma56PaperT D ^ 3 ≤ (n : ℝ) := by
+      by_contra h
+      have hsmall : (n : ℝ) < lemma56PaperT D ^ 3 := lt_of_not_ge h
+      have hceil : n ≤ ⌈lemma56PaperT D ^ 3⌉₊ := by
+        exact_mod_cast hsmall.le.trans (Nat.le_ceil _)
+      exact hn (Finset.mem_filter.mpr ⟨Finset.mem_Icc.mpr ⟨hn1,hceil⟩,hsmall⟩)
+    have hy : B / n ≤ 1 / 2 := by
+      apply (div_le_iff₀ hnr).mpr
+      linarith
+    rw [lemma61_weighted_term_eq_LSeries_term,lemma61_gaussian_star_below_half hy]
+    simp
+
+lemma lemma61_short_gaussian_cutoff_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (hD : 1 < D)
+    (hL : 3 ≤ lemma23PaperL D) {B : ℝ} (hB : 0 < B)
+    (hlogB : Real.log B ≤ 2 * lemma23PaperL D ^ 9)
+    (hcut : 2 * B < lemma56PaperT D ^ 3) (hs : 0 ≤ s.re) :
+    ‖(∑ n ∈ (Finset.Icc 1 ⌈lemma56PaperT D ^ 3⌉₊).filter
+        (fun (n : ℕ) => (n : ℝ) < lemma56PaperT D ^ 3),
+        LSeries.term (fun n => ψ (n : ZMod p)) s n *
+          (zhangGaussianWeight D (B / n) : ℂ)) -
+      lemma61WeightedPolynomial D ψ B s‖ ≤
+        lemma44InverseSquareMass * Real.exp (-(lemma23PaperL D ^ 10)) := by
+  rw [← lemma61_short_star_sum_eq_weighted ψ s hcut,← Finset.sum_sub_distrib]
+  simp_rw [← mul_sub,← Complex.ofReal_sub]
+  apply (norm_sum_le _ _).trans
+  calc
+    _ ≤ ∑ n ∈ (Finset.Icc 1 ⌈lemma56PaperT D ^ 3⌉₊).filter
+        (fun (n : ℕ) => (n : ℝ) < lemma56PaperT D ^ 3),
+        Real.exp (-(lemma23PaperL D ^ 10)) * ((n : ℝ) ^ 2)⁻¹ :=
+      Finset.sum_le_sum (fun n _ => lemma61_cutoff_correction_term_bound ψ hD hL hB hlogB hs n)
+    _ ≤ ∑' n : ℕ, Real.exp (-(lemma23PaperL D ^ 10)) * ((n : ℝ) ^ 2)⁻¹ :=
+      (lemma44_inverse_square_summable.mul_left _).sum_le_tsum _ (fun n _ => by positivity)
+    _ = _ := by rw [tsum_mul_left]; exact mul_comm _ _
+
+lemma lemma61_N_support_inside_short_sum {D : ℕ} (hL : 3 ≤ lemma23PaperL D) :
+    2 * lemma56PaperT D ^ 2 < lemma56PaperT D ^ 3 := by
+  have hpos : 0 < lemma56PaperT D := Real.exp_pos _
+  have hlog := (lemma61_T_log_bounds hL).1
+  have ht : 2 < lemma56PaperT D := by
+    have h := Real.add_one_le_exp (Real.log (lemma56PaperT D))
+    rw [Real.exp_log hpos] at h
+    linarith
+  convert mul_lt_mul_of_pos_right ht (pow_pos hpos 2) using 1 <;> ring
+
+lemma lemma61_actual_full_short_mellin_N_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (hD : 1 < D)
+    (hL : 3 ≤ lemma23PaperL D) (hs : s.re ≤ 1) :
+    ‖(2 * (Real.pi : ℂ) * I)⁻¹ *
+      (∫ t : ℝ, lemma61ShortRightMellinIntegrand D ψ (1 - s)
+        (lemma56PaperT D ^ 2) 1 t * I) - lemma61ActualN D ψ (1 - s)‖ ≤
+      lemma44InverseSquareMass * Real.exp (-(lemma23PaperL D ^ 10)) := by
+  have hpos : 0 < lemma56PaperT D ^ 2 := pow_pos (Real.exp_pos _) 2
+  rw [lemma61_actual_short_gaussian_mellin ψ (1 - s) hD hpos
+    (by norm_num : (0 : ℝ) < 1)]
+  exact lemma61_short_gaussian_cutoff_bound ψ (1 - s) hD hL
+    hpos (lemma61_T_squared_log_bound hL)
+    (lemma61_N_support_inside_short_sum hL) (by simpa using sub_nonneg.mpr hs)
+
+lemma lemma61_short_right_gaussian_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hL : 3 ≤ lemma23PaperL D)
+    {s : ℂ} (hs : 0 ≤ s.re) (v : ℝ) :
+    ‖lemma61ShortRightMellinIntegrand D ψ s (lemma56PaperT D ^ 2) 1 v * I‖ ≤
+      (2 * Real.exp (1 + 5 * lemma23PaperL D ^ 9)) *
+        Real.exp (-(1 / (4 * lemma23PaperL D ^ 30)) * v ^ 2) := by
+  let w : ℂ := 1 + (v : ℂ) * I
+  have hTpos : 0 < lemma56PaperT D := Real.exp_pos _
+  have hz : 0 ≤ (s + w).re := by simp [w]; linarith only [hs]
+  have hp := lemma61_short_polynomial_norm_bound ψ hL hz
+  have hn : 1 ≤ ‖w‖ := by simpa [w] using Complex.abs_re_le_norm w
+  have hinv : ‖w‖⁻¹ ≤ 1 := inv_le_one_of_one_le₀ hn
+  have hscale : ‖exp (w * (Real.log (lemma56PaperT D ^ 2) : ℂ))‖ =
+      Real.exp (2 * Real.log (lemma56PaperT D)) := by
+    rw [norm_exp,mul_re,Real.log_pow]
+    simp [w]
+  have homega : ‖lemma57OmegaOne D w‖ ≤
+      Real.exp 1 * Real.exp (-(1 / (4 * lemma23PaperL D ^ 30)) * v ^ 2) := by
+    change ‖lemma57OmegaOne D (((1 : ℝ) : ℂ) + (v : ℂ) * I)‖ ≤ _
+    rw [lemma44_Omega_norm_vertical,← Real.exp_add]
+    apply Real.exp_le_exp.mpr
+    have h0 : 0 < lemma23PaperL D := by linarith
+    have hp30 : 1 ≤ lemma23PaperL D ^ 30 := one_le_pow₀ (by linarith : 1 ≤ lemma23PaperL D)
+    field_simp
+    nlinarith only [hp30]
+  have ht3 : lemma56PaperT D ^ 3 = Real.exp (3 * Real.log (lemma56PaperT D)) := by
+    simpa only [Real.log_pow,Nat.cast_ofNat] using
+      (Real.exp_log (pow_pos (show 0 < lemma56PaperT D from Real.exp_pos _) 3)).symm
+  unfold lemma61ShortRightMellinIntegrand
+  change ‖lemma61ShortPolynomial D ψ (s + w) *
+    exp (w * (Real.log (lemma56PaperT D ^ 2) : ℂ)) * lemma57OmegaOne D w / w * I‖ ≤ _
+  simp only [norm_mul,norm_inv,norm_I,mul_one,div_eq_mul_inv,hscale]
+  calc
+    _ ≤ (2 * lemma56PaperT D ^ 3) * Real.exp (2 * Real.log (lemma56PaperT D)) *
+        (Real.exp 1 * Real.exp (-(1 / (4 * lemma23PaperL D ^ 30)) * v ^ 2)) * 1 :=
+      mul_le_mul (mul_le_mul (mul_le_mul hp le_rfl (by positivity) (by positivity))
+        homega (norm_nonneg _) (by positivity)) hinv
+        (inv_nonneg.mpr (norm_nonneg _)) (by positivity)
+    _ = 2 * Real.exp (1 + 5 * Real.log (lemma56PaperT D)) *
+        Real.exp (-(1 / (4 * lemma23PaperL D ^ 30)) * v ^ 2) := by
+      rw [ht3,show 1 + 5 * Real.log (lemma56PaperT D) =
+        3 * Real.log (lemma56PaperT D) + 2 * Real.log (lemma56PaperT D) + 1 by ring]
+      simp only [Real.exp_add]; ring
+    _ ≤ _ := mul_le_mul_of_nonneg_right
+      (mul_le_mul_of_nonneg_left (Real.exp_le_exp.mpr
+        (by linarith only [(lemma61_T_log_bounds hL).2])) (by norm_num)) (by positivity)
+
+lemma lemma61_short_gaussian_exponent_absorption {L : ℝ} (hL : 64 ≤ L) :
+    L ^ 10 * Real.exp (1 + 5 * L ^ 9 - L ^ 10 / 4) ≤
+      Real.exp (-(L ^ 10) / 8) := by
+  have h0 : 0 < L := by linarith
+  have h1 : 1 ≤ L := by linarith
+  have hlog : Real.log (L ^ 10) ≤ 10 * L := by
+    rw [Real.log_pow]
+    have h := Real.log_le_sub_one_of_pos h0
+    norm_num
+    linarith
+  have hpoly : L ^ 3 ≤ L ^ 10 := pow_le_pow_right₀ h1 (by norm_num)
+  have h2 : 64 * L ≤ L ^ 2 := by
+    nlinarith only [mul_le_mul_of_nonneg_right hL h0.le]
+  have h3 : 4096 * L ≤ L ^ 3 := by
+    nlinarith only [h2,mul_le_mul_of_nonneg_right h2 h0.le]
+  have h9 : 64 * L ^ 9 ≤ L ^ 10 := by
+    have h := mul_le_mul_of_nonneg_right hL (pow_nonneg h0.le 9)
+    convert h using 1 <;> ring
+  have hex : 10 * L + 1 + 5 * L ^ 9 ≤ L ^ 10 / 8 := by
+    linarith only [hpoly,h3,h9,hL]
+  calc
+    _ ≤ Real.exp (10 * L) * Real.exp (1 + 5 * L ^ 9 - L ^ 10 / 4) :=
+      mul_le_mul_of_nonneg_right (Real.le_exp_of_log_le hlog) (Real.exp_nonneg _)
+    _ = Real.exp (10 * L + (1 + 5 * L ^ 9 - L ^ 10 / 4)) := (Real.exp_add _ _).symm
+    _ ≤ _ := Real.exp_le_exp.mpr (by linarith only [hex])
+
+
+lemma lemma61_actual_short_right_truncation {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hD : 1 < D)
+    (hL : 64 ≤ lemma23PaperL D) {s : ℂ} (hs : 0 ≤ s.re) :
+    ‖(∫ v : ℝ, lemma61ShortRightMellinIntegrand D ψ s (lemma56PaperT D ^ 2) 1 v * I) -
+      (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+        lemma61ShortRightMellinIntegrand D ψ s (lemma56PaperT D ^ 2) 1 v * I)‖ ≤
+      16 * Real.exp (-(lemma23PaperL D ^ 10) / 8) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hi := (lemma61_short_mellin_integrable ψ s (lemma56PaperT D ^ 2) hD
+    (by norm_num : (1 : ℝ) ≠ 0)).mul_const I
+  have ht := lemma44_gaussian_integral_truncation
+    (fun v => lemma61ShortRightMellinIntegrand D ψ s (lemma56PaperT D ^ 2) 1 v * I) hi
+    (C := 2 * Real.exp (1 + 5 * lemma23PaperL D ^ 9))
+    (b := 1 / (4 * lemma23PaperL D ^ 30)) (T := lemma23PaperL D ^ 20)
+    (by positivity) (by positivity) (by positivity)
+    (lemma61_short_right_gaussian_bound ψ (by linarith) hs)
+  have hbt : (1 / (4 * lemma23PaperL D ^ 30)) * lemma23PaperL D ^ 20 =
+      1 / (4 * lemma23PaperL D ^ 10) := by field_simp
+  have hbe : (1 / (4 * lemma23PaperL D ^ 30)) * (lemma23PaperL D ^ 20) ^ 2 =
+      lemma23PaperL D ^ 10 / 4 := by field_simp
+  apply ht.trans
+  calc
+    _ = 16 * (lemma23PaperL D ^ 10 * Real.exp
+        (1 + 5 * lemma23PaperL D ^ 9 - lemma23PaperL D ^ 10 / 4)) := by
+      rw [hbt,show -(1 / (4 * lemma23PaperL D ^ 30)) *
+        (lemma23PaperL D ^ 20) ^ 2 = -(lemma23PaperL D ^ 10 / 4) by linarith only [hbe]]
+      rw [show 1 + 5 * lemma23PaperL D ^ 9 - lemma23PaperL D ^ 10 / 4 =
+        (1 + 5 * lemma23PaperL D ^ 9) + -(lemma23PaperL D ^ 10 / 4) by ring]
+      simp only [Real.exp_add]
+      field_simp <;> ring
+    _ ≤ _ := mul_le_mul_of_nonneg_left (lemma61_short_gaussian_exponent_absorption hL)
+      (by norm_num)
+
+lemma lemma61_actual_finite_short_mellin_N_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (hD : 1 < D)
+    (hL : 64 ≤ lemma23PaperL D) (hs : s.re ≤ 1) :
+    ‖(2 * (Real.pi : ℂ) * I)⁻¹ *
+      (∫ t : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+        lemma61ShortRightMellinIntegrand D ψ (1 - s)
+          (lemma56PaperT D ^ 2) 1 t * I) - lemma61ActualN D ψ (1 - s)‖ ≤
+      (16 + lemma44InverseSquareMass) * Real.exp (-(lemma23PaperL D ^ 10) / 8) := by
+  let F := (2 * (Real.pi : ℂ) * I)⁻¹ *
+    (∫ t : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+      lemma61ShortRightMellinIntegrand D ψ (1 - s) (lemma56PaperT D ^ 2) 1 t * I)
+  let J := (2 * (Real.pi : ℂ) * I)⁻¹ *
+    (∫ t : ℝ, lemma61ShortRightMellinIntegrand D ψ (1 - s) (lemma56PaperT D ^ 2) 1 t * I)
+  have ht := lemma61_actual_short_right_truncation ψ hD hL
+    (s := 1 - s) (by simpa using sub_nonneg.mpr hs)
+  have hn : ‖F - J‖ ≤ 16 * Real.exp (-(lemma23PaperL D ^ 10) / 8) := by
+    dsimp [F,J]
+    rw [← mul_sub,norm_mul]
+    exact (mul_le_mul_of_nonneg_right lemma61_mellin_normalization_norm_le_one (norm_nonneg _)).trans
+      (by simpa only [one_mul,norm_sub_rev] using ht)
+  have hc := lemma61_actual_full_short_mellin_N_bound ψ s hD (by linarith) hs
+  have he : Real.exp (-(lemma23PaperL D ^ 10)) ≤ Real.exp (-(lemma23PaperL D ^ 10) / 8) := by
+    apply Real.exp_le_exp.mpr
+    have h0 : 0 ≤ lemma23PaperL D ^ 10 := pow_nonneg (by linarith) _
+    linarith
+  have hc' := hc.trans (mul_le_mul_of_nonneg_left he
+    (show 0 ≤ lemma44InverseSquareMass from tsum_nonneg (fun _ => by positivity)))
+  have ht' := norm_sub_le_norm_sub_add_norm_sub F J (lemma61ActualN D ψ (1 - s))
+  change ‖F - lemma61ActualN D ψ (1 - s)‖ ≤ _
+  change ‖J - lemma61ActualN D ψ (1 - s)‖ ≤ _ at hc'
+  nlinarith only [ht',hn,hc']
+
+noncomputable def lemma61ReciprocalModelIntegrand {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s w : ℂ) : ℂ :=
+  lemma23DirichletZ ψ s * exp (-2 * (Real.log (lemma56PaperT D) : ℂ) * w) *
+    lemma61ShortPolynomial D ψ⁻¹ (1 - s - w) * lemma57OmegaOne D w / w
+
+lemma lemma61_reciprocal_model_reflection {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (v : ℝ) :
+    lemma61ReciprocalModelIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I =
+      -lemma23DirichletZ ψ s *
+        (lemma61ShortRightMellinIntegrand D ψ⁻¹ (1 - s) (lemma56PaperT D ^ 2) 1 (-v) * I) := by
+  let u : ℂ := 1 + ((-v : ℝ) : ℂ) * I
+  have hw : (-1 : ℂ) + (v : ℂ) * I = -u := by dsimp [u]; push_cast; ring
+  have hs : 1 - s - (-u) = (1 - s) + u := by ring
+  have hlog : (Real.log (lemma56PaperT D ^ 2) : ℂ) =
+      2 * (Real.log (lemma56PaperT D) : ℂ) := by rw [Real.log_pow]; push_cast; ring
+  have homega : lemma57OmegaOne D (-u) = lemma57OmegaOne D u := by
+    unfold lemma57OmegaOne
+    congr 2
+    ring
+  unfold lemma61ReciprocalModelIntegrand lemma61ShortRightMellinIntegrand
+  change lemma23DirichletZ ψ s * exp (-2 * (Real.log (lemma56PaperT D) : ℂ) *
+      (-1 + (v : ℂ) * I)) * lemma61ShortPolynomial D ψ⁻¹ (1 - s - (-1 + (v : ℂ) * I)) *
+      lemma57OmegaOne D (-1 + (v : ℂ) * I) / (-1 + (v : ℂ) * I) * I =
+    -lemma23DirichletZ ψ s * (lemma61ShortPolynomial D ψ⁻¹ ((1 - s) + u) *
+      exp (u * (Real.log (lemma56PaperT D ^ 2) : ℂ)) * lemma57OmegaOne D u / u * I)
+  rw [hw,hs,homega,hlog]
+  have he : -2 * (Real.log (lemma56PaperT D) : ℂ) * (-u) =
+      u * (2 * (Real.log (lemma56PaperT D) : ℂ)) := by ring
+  rw [he]
+  ring
+
+lemma lemma61_reciprocal_model_vertical_identity {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (H : ℝ) :
+    (2 * (Real.pi : ℂ) * I)⁻¹ *
+      (∫ v : ℝ in -H..H,
+        lemma61ReciprocalModelIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I) =
+      -lemma23DirichletZ ψ s * ((2 * (Real.pi : ℂ) * I)⁻¹ *
+        (∫ v : ℝ in -H..H,
+          lemma61ShortRightMellinIntegrand D ψ⁻¹ (1 - s) (lemma56PaperT D ^ 2) 1 v * I)) := by
+  simp_rw [lemma61_reciprocal_model_reflection ψ s]
+  rw [intervalIntegral.integral_const_mul]
+  have hc := intervalIntegral.integral_comp_neg
+    (fun v : ℝ => lemma61ShortRightMellinIntegrand D ψ⁻¹ (1 - s)
+      (lemma56PaperT D ^ 2) 1 v * I) (a := -H) (b := H)
+  simp only [neg_neg] at hc
+  rw [hc]
+  ring
+
+lemma lemma61_actual_finite_reciprocal_model_N_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hD : 1 < D) (hL : 64 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma61InRegion D s) :
+    ‖(2 * (Real.pi : ℂ) * I)⁻¹ *
+      (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+        lemma61ReciprocalModelIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I) +
+      lemma23DirichletZ ψ s * lemma61ActualN D ψ⁻¹ (1 - s)‖ ≤
+      Real.exp (1 + 4 * Real.pi) * (16 + lemma44InverseSquareMass) *
+        Real.exp (-(lemma23PaperL D ^ 10) / 8) := by
+  have hre := (lemma61_region_real_parts (by linarith) hs).2.le
+  have hn := lemma61_actual_finite_short_mellin_N_bound ψ⁻¹ s hD hL hre
+  have hz := lemma61_actual_Z_original_norm_bound ψ hψ (by linarith) hs
+  rw [lemma61_reciprocal_model_vertical_identity]
+  rw [show -lemma23DirichletZ ψ s * ((2 * (Real.pi : ℂ) * I)⁻¹ *
+      (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+        lemma61ShortRightMellinIntegrand D ψ⁻¹ (1 - s) (lemma56PaperT D ^ 2) 1 v * I)) +
+      lemma23DirichletZ ψ s * lemma61ActualN D ψ⁻¹ (1 - s) =
+      -lemma23DirichletZ ψ s * (((2 * (Real.pi : ℂ) * I)⁻¹ *
+      (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+        lemma61ShortRightMellinIntegrand D ψ⁻¹ (1 - s) (lemma56PaperT D ^ 2) 1 v * I)) -
+        lemma61ActualN D ψ⁻¹ (1 - s)) by ring]
+  rw [norm_mul,norm_neg]
+  exact (mul_le_mul hz hn (norm_nonneg _) (Real.exp_nonneg _)).trans_eq (by ring)
+
+lemma lemma61_actual_original_left_integrand_split {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hL : 3 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma61InRegion D s)
+    {v : ℝ} (hv : |v| ≤ lemma23PaperL D ^ 20) :
+    lemma61SingleMellinNumerator (D := D) ψ s (lemma61PaperP4 D) (-1 + (v : ℂ) * I) /
+      (-1 + (v : ℂ) * I) =
+      lemma61ReciprocalModelIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) +
+      lemma61ActualZErrorIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) +
+      lemma61ActualReciprocalTailIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) := by
+  let w : ℂ := -1 + (v : ℂ) * I
+  have h9 : 1 ≤ lemma23PaperL D ^ 9 := one_le_pow₀ (by linarith)
+  have hd := lemma61_large_shift_rectangle_bounds hL hs (w := w)
+    ⟨by simpa [w] using neg_le_neg h9,by norm_num [w]⟩ (by simpa [w] using hv)
+  have him : 0 < (s + w).im := by
+    have h := (lemma61_wide_height_data hL hd.2.1).2.1
+    linarith only [h]
+  have hdual : 1 < (1 - s - w).re := by
+    have h := (lemma61_region_real_parts hL hs).2
+    simp [w]
+    linarith only [h]
+  unfold lemma61SingleMellinNumerator lemma61ReciprocalModelIntegrand
+    lemma61ActualZErrorIntegrand lemma61ActualReciprocalTailIntegrand
+  change DirichletCharacter.LFunction ψ (s + w) *
+    exp (w * (Real.log (lemma61PaperP4 D) : ℂ)) * lemma57OmegaOne D w / w = _
+  rw [lemma61_actual_single_functional_equation ψ hψ him]
+  have ha : 1 - (s + w) = 1 - s - w := by ring
+  rw [ha,lemma61_actual_reciprocal_series_split ψ⁻¹ hdual]
+  rw [← lemma61_model_Z_P4_factor ψ s w hL]
+  ring
+
+lemma lemma61_reciprocal_model_interval_integrable {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) (hD : 1 < D) (H : ℝ) :
+    IntervalIntegrable (fun v : ℝ =>
+      lemma61ReciprocalModelIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I) volume (-H) H := by
+  simp_rw [lemma61_reciprocal_model_reflection ψ s]
+  have hi := (lemma61_short_mellin_integrable ψ⁻¹ (1 - s) (lemma56PaperT D ^ 2) hD
+    (by norm_num : (1 : ℝ) ≠ 0)).mul_const I
+  exact (hi.comp_neg.const_mul (-lemma23DirichletZ ψ s)).intervalIntegrable
+
+lemma lemma61_actual_left_tail_interval_integrable {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hL : 3 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma61InRegion D s) :
+    IntervalIntegrable (fun v : ℝ =>
+      lemma61ActualReciprocalTailIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I)
+      volume (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have h9 : 1 ≤ lemma23PaperL D ^ 9 := one_le_pow₀ (by linarith)
+  have hc := (lemma61_actual_reciprocal_tail_rectangle_differentiable ψ hψ hL hs).continuousOn
+  have hm : MapsTo (fun v : ℝ => (-1 : ℂ) + (v : ℂ) * I)
+      (uIcc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20))
+      (lemma44ClosedRectangle (-(lemma23PaperL D ^ 9)) (-1) (lemma23PaperL D ^ 20)) := by
+    intro v hv
+    rw [uIcc_of_le (neg_le_self (pow_nonneg h0.le 20))] at hv
+    have ha : (-1 : ℝ) ∈ Icc (-(lemma23PaperL D ^ 9)) (-1) := ⟨by linarith only [h9],le_rfl⟩
+    simpa [lemma44ClosedRectangle,mem_reProdIm] using And.intro ha hv
+  exact ((hc.comp (by fun_prop) hm).mul continuousOn_const).intervalIntegrable
+
+lemma lemma61_actual_original_left_integral_split {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hD : 1 < D) (hL : 3 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma61InRegion D s) :
+    (2 * (Real.pi : ℂ) * I)⁻¹ *
+      (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+        (lemma61SingleMellinNumerator (D := D) ψ s (lemma61PaperP4 D) (-1 + (v : ℂ) * I) /
+          (-1 + (v : ℂ) * I)) * I) =
+      (2 * (Real.pi : ℂ) * I)⁻¹ *
+        (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+          lemma61ReciprocalModelIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I) +
+      (2 * (Real.pi : ℂ) * I)⁻¹ *
+        (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+          lemma61ActualZErrorIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I) +
+      (2 * (Real.pi : ℂ) * I)⁻¹ *
+        (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+          lemma61ActualReciprocalTailIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I) := by
+  have h0 : 0 < lemma23PaperL D := by linarith
+  have hM := lemma61_reciprocal_model_interval_integrable ψ s hD (lemma23PaperL D ^ 20)
+  have hE := (lemma61_error_vertical_interval_integrable ψ hL hs (a := -1) (by norm_num)).mul_const I
+  simp only [Complex.ofReal_neg,Complex.ofReal_one] at hE
+  have hT := lemma61_actual_left_tail_interval_integrable ψ hψ hL hs
+  have he : (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+      (lemma61SingleMellinNumerator (D := D) ψ s (lemma61PaperP4 D) (-1 + (v : ℂ) * I) /
+        (-1 + (v : ℂ) * I)) * I) =
+      ∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+        (lemma61ReciprocalModelIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I +
+          lemma61ActualZErrorIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I) +
+          lemma61ActualReciprocalTailIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I := by
+    apply intervalIntegral.integral_congr
+    intro v hv
+    rw [uIcc_of_le (neg_le_self (pow_nonneg h0.le 20))] at hv
+    dsimp only
+    rw [lemma61_actual_original_left_integrand_split ψ hψ hL hs (abs_le.mpr hv)]
+    ring
+  rw [he,intervalIntegral.integral_add (hM.add hE) hT,intervalIntegral.integral_add hM hE]
+  ring
+
+noncomputable def lemma61ActualLeftMellinIntegral {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (s : ℂ) : ℂ :=
+  (2 * (Real.pi : ℂ) * I)⁻¹ *
+    (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+      (lemma61SingleMellinNumerator (D := D) ψ s (lemma61PaperP4 D) (-1 + (v : ℂ) * I) /
+        (-1 + (v : ℂ) * I)) * I)
+
+noncomputable def lemma61LeftApproximationConstant : ℝ :=
+  Real.exp (1 + 4 * Real.pi) * (16 + lemma44InverseSquareMass) +
+    (35 * Real.exp (246 * Real.pi + 1) + 16 * Real.exp (2 + 4 * Real.pi)) +
+    2 * Real.exp (2 + 4 * Real.pi) * (lemma44InverseSquareMass + lemma61QuarterSeriesMass)
+
+lemma lemma61_actual_original_left_N_bound {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hψ : Lemma23InPsi (D := D) ψ)
+    (hD : 1 < D) (hL : 64 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma61InRegion D s) :
+    ‖lemma61ActualLeftMellinIntegral (D := D) ψ s +
+      lemma23DirichletZ ψ s * lemma61ActualN D ψ⁻¹ (1 - s)‖ ≤
+      lemma61LeftApproximationConstant * lemma61ActualE1 D ψ s (1 / 8) := by
+  let c : ℂ := (2 * (Real.pi : ℂ) * I)⁻¹
+  let M := c * (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+    lemma61ReciprocalModelIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I)
+  let E := c * (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+    lemma61ActualZErrorIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I)
+  let T := c * (∫ v : ℝ in -(lemma23PaperL D ^ 20)..(lemma23PaperL D ^ 20),
+    lemma61ActualReciprocalTailIntegrand (D := D) ψ s (-1 + (v : ℂ) * I) * I)
+  let ZN := lemma23DirichletZ ψ s * lemma61ActualN D ψ⁻¹ (1 - s)
+  have hsplit : lemma61ActualLeftMellinIntegral (D := D) ψ s = M + E + T :=
+    lemma61_actual_original_left_integral_split ψ hψ hD (by linarith) hs
+  have hM := lemma61_actual_finite_reciprocal_model_N_bound ψ hψ hD hL hs
+  have hE := lemma61_actual_original_left_Z_error_bound ψ hψ hL hs
+  have hT := lemma61_actual_reciprocal_tail_truncation_bound ψ hψ hL hs
+  change ‖M + ZN‖ ≤ _ at hM
+  change ‖E‖ ≤ _ at hE
+  change ‖T‖ ≤ _ at hT
+  have hm2 : 0 ≤ lemma44InverseSquareMass := tsum_nonneg (fun _ => by positivity)
+  have hm4 : 0 ≤ lemma61QuarterSeriesMass := tsum_nonneg (fun n => Real.rpow_nonneg (Nat.cast_nonneg n) _)
+  have hf := lemma61_E1_exponential_floor (D := D) ψ s (1 / 8)
+  have hf' : Real.exp (-(lemma23PaperL D ^ 10) / 8) ≤ lemma61ActualE1 D ψ s (1 / 8) := by
+    convert hf using 1 <;> ring
+  have hM' := hM.trans (mul_le_mul_of_nonneg_left hf' (by positivity :
+    0 ≤ Real.exp (1 + 4 * Real.pi) * (16 + lemma44InverseSquareMass)))
+  have hT' := hT.trans (mul_le_mul_of_nonneg_left hf' (by positivity :
+    0 ≤ 2 * Real.exp (2 + 4 * Real.pi) * (lemma44InverseSquareMass + lemma61QuarterSeriesMass)))
+  have hn1 := norm_add_le (M + ZN) E
+  have hn2 := norm_add_le (M + ZN + E) T
+  have he : lemma61ActualLeftMellinIntegral (D := D) ψ s + ZN = (M + ZN + E) + T := by
+    rw [hsplit]; ring
+  change ‖lemma61ActualLeftMellinIntegral (D := D) ψ s + ZN‖ ≤ _
+  rw [he]
+  unfold lemma61LeftApproximationConstant
+  nlinarith only [hn1,hn2,hM',hE,hT']
+
+end ZhangLS.Spec

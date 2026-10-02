@@ -1,0 +1,76 @@
+/private/tmp/ZhangMathStep106PhaseDraft.lean:254:75: warning: This simp argument is unused:
+  sub_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [sub_re, mul_re, ofReal_re, I_re, ofReal_im, I_im, mul_zero,̵ ̵s̵u̵b̵_̵z̵e̵r̵o̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/private/tmp/ZhangMathStep106PhaseDraft.lean:497:70: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/private/tmp/ZhangMathStep106PhaseDraft.lean:585:64: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ZhangLS.Spec.lemma56_gaussian_phase_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_phase_LSeries_term' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_mellin_term_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_mellin_term_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_mellin_integral_norm_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_mellin_term_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_mangoldt_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_mellin_term_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_mellin_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_mellin_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_integrand_analyticAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_rectangle_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_margin_height_contains_modulus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_uniform_primitive_twisted_gaussian_rectangle_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_omega_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_kernel_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_kernel_norm_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_vertical_intervalIntegrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_vertical_integral_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_uniform_primitive_twisted_gaussian_left_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_paper_power_margin_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_margin_polynomial_absorption' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_paper_left_gaussian_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_horizontal_point_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_twisted_gaussian_horizontal_integral_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma56_uniform_primitive_twisted_gaussian_paper_left_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+/private/tmp/ZhangMathStep106PhaseDraft.lean:751:52: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/private/tmp/ZhangMathStep106PhaseDraft.lean:751:66: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ZhangLS.Spec.lemma56_actual_logDeriv_two_uniform_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_gaussian_right_constant_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma56_actual_twisted_gaussian_right_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]

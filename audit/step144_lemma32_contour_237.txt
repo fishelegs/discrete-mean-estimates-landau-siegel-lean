@@ -1,0 +1,86 @@
+import ZhangMathStep236Lemma32PrincipalBoundaryDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Metric Set Filter
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_boundary_integrable_halfplane (f : ℂ → ℂ)
+    (hc : ContinuousOn f {w : ℂ | -1/2 < w.re}) (a b T : ℝ)
+    (ha : -1/2 < a) (hab : a ≤ b) : lemma32BoundaryIntegrable f a b T := by
+  have hbot : IntervalIntegrable (fun x : ℝ => f ((x : ℂ)-(T : ℂ)*I)) volume a b := by
+    apply ContinuousOn.intervalIntegrable
+    apply hc.comp (by fun_prop)
+    intro x hx
+    rw [uIcc_of_le hab] at hx
+    simpa using lt_of_lt_of_le ha hx.1
+  have htop : IntervalIntegrable (fun x : ℝ => f ((x : ℂ)+(T : ℂ)*I)) volume a b := by
+    apply ContinuousOn.intervalIntegrable
+    apply hc.comp (by fun_prop)
+    intro x hx
+    rw [uIcc_of_le hab] at hx
+    simpa using lt_of_lt_of_le ha hx.1
+  have hright : IntervalIntegrable (fun y : ℝ => f ((b : ℂ)+(y : ℂ)*I)) volume (-T) T := by
+    apply ContinuousOn.intervalIntegrable
+    apply hc.comp (by fun_prop)
+    intro y hy
+    simpa using lt_of_lt_of_le ha hab
+  have hleft : IntervalIntegrable (fun y : ℝ => f ((a : ℂ)+(y : ℂ)*I)) volume (-T) T := by
+    apply ContinuousOn.intervalIntegrable
+    apply hc.comp (by fun_prop)
+    intro y hy
+    simpa using ha
+  exact ⟨hbot,htop,hright,hleft⟩
+
+lemma lemma32_actual_finite_rectangle_residue {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (a T : ℝ) (ha : -1/2 < a) (han : a < 0) (hT : 0 < T) :
+    lemma44GeneralRectangleBoundaryIntegral (lemma32CircleIntegrand χ) a 1 T =
+      2*Real.pi*I*lemma32ActualResidue χ := by
+  let P := lemma32PrincipalPart χ
+  let R := lemma32DividedRemainder χ 8
+  have hab : a ≤ 1 := by linarith
+  have he (w : ℂ) (hw : -1/2 < w.re) (h0 : w ≠ 0) :
+      lemma32CircleIntegrand χ w = P w+R w :=
+    lemma32_actual_integrand_principal_decomposition χ w hw h0
+  have hb : (∫ x : ℝ in a..1, lemma32CircleIntegrand χ ((x : ℂ)-(T : ℂ)*I)) =
+      ∫ x : ℝ in a..1, P ((x : ℂ)-(T : ℂ)*I)+R ((x : ℂ)-(T : ℂ)*I) := by
+    apply intervalIntegral.integral_congr
+    intro x hx
+    rw [uIcc_of_le hab] at hx
+    apply he _ (by simpa using lt_of_lt_of_le ha hx.1)
+    intro h;have hi := congrArg Complex.im h;simp at hi;linarith
+  have ht : (∫ x : ℝ in a..1, lemma32CircleIntegrand χ ((x : ℂ)+(T : ℂ)*I)) =
+      ∫ x : ℝ in a..1, P ((x : ℂ)+(T : ℂ)*I)+R ((x : ℂ)+(T : ℂ)*I) := by
+    apply intervalIntegral.integral_congr
+    intro x hx
+    rw [uIcc_of_le hab] at hx
+    apply he _ (by simpa using lt_of_lt_of_le ha hx.1)
+    intro h;have hi := congrArg Complex.im h;simp at hi;linarith
+  have hr : (∫ y : ℝ in -T..T, lemma32CircleIntegrand χ ((1 : ℂ)+(y : ℂ)*I)) =
+      ∫ y : ℝ in -T..T, P ((1 : ℂ)+(y : ℂ)*I)+R ((1 : ℂ)+(y : ℂ)*I) := by
+    apply intervalIntegral.integral_congr
+    intro y hy
+    apply he _ (by norm_num)
+    intro h;have hx := congrArg Complex.re h;norm_num at hx
+  have hl : (∫ y : ℝ in -T..T, lemma32CircleIntegrand χ ((a : ℂ)+(y : ℂ)*I)) =
+      ∫ y : ℝ in -T..T, P ((a : ℂ)+(y : ℂ)*I)+R ((a : ℂ)+(y : ℂ)*I) := by
+    apply intervalIntegral.integral_congr
+    intro y hy
+    apply he _ (by simpa using ha)
+    intro h;have hx := congrArg Complex.re h;simp at hx;linarith
+  have hP := lemma32_principal_part_boundary_integrable χ a T han hT
+  have hR := lemma32_boundary_integrable_halfplane R
+    (lemma32_divided_remainder_differentiableOn χ hD 8).continuousOn a 1 T ha hab
+  calc
+    _ = lemma44GeneralRectangleBoundaryIntegral (fun w => P w+R w) a 1 T := by
+      unfold lemma44GeneralRectangleBoundaryIntegral
+      simp only [Complex.ofReal_one]
+      rw [hb,ht,hr,hl]
+    _ = lemma44GeneralRectangleBoundaryIntegral P a 1 T+
+        lemma44GeneralRectangleBoundaryIntegral R a 1 T :=
+      lemma32_boundary_integral_add P R a 1 T hP hR
+    _ = _ := by
+      rw [lemma32_actual_principal_boundary_residue χ hD a T ha.le han hT,
+        lemma32_actual_regular_remainder_rectangle_zero χ hD a 1 T ha hab hT.le,add_zero]
+
+end ZhangLS.Spec

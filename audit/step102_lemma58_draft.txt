@@ -1,0 +1,161 @@
+import ZhangLS.Spec.Lemma55SimpleRealZero
+import ZhangLS.Spec.Lemma44LongSum
+
+namespace ZhangLS.Spec
+open Complex
+set_option maxHeartbeats 1000000
+
+noncomputable def lemma58ErrorConstant : ℝ := 1 + 128 * Real.exp 1 * (10 * Real.pi) ^ 2
+
+def Lemma58InAnnulus (D : ℕ) (s : ℂ) : Prop :=
+  lemma44PaperAlpha D ≤ ‖s - 1‖ ∧ ‖s - 1‖ ≤ 10 * lemma44PaperAlpha D
+
+def Lemma58AtConstant (C : ℝ) : Prop :=
+  0 < C ∧ ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → ∀ s : ℂ,
+      Lemma58InAnnulus D s →
+      ‖dirichletLFunction χ s - LDerivAtOne χ * (s - 1)‖ ≤
+        C * Real.log (D : ℝ) ^ (-15 : ℤ)
+
+def Lemma58Target : Prop := ∃ C : ℝ, Lemma58AtConstant C
+
+lemma lemma58_error_constant_pos : 0 < lemma58ErrorConstant := by
+  unfold lemma58ErrorConstant
+  positivity
+
+lemma lemma58_alpha_eq_log_power (D : ℕ) :
+    lemma44PaperAlpha D = Real.pi * Real.log (D : ℝ) ^ (-9 : ℤ) := by
+  change Real.pi / Real.log (Real.exp (Real.log (D : ℝ) ^ (9 : ℕ))) =
+    Real.pi * Real.log (D : ℝ) ^ (-((9 : ℕ) : ℤ))
+  rw [Real.log_exp, zpow_neg, zpow_natCast, div_eq_mul_inv]
+
+lemma lemma58_original_radius_in_taylor_disk {D : ℕ}
+    (hL : 2000 ≤ Real.log (D : ℝ)) :
+    10 * lemma44PaperAlpha D ≤ 1 / (4 * Real.log (D : ℝ)) := by
+  let L := Real.log (D : ℝ)
+  have hLp : 0 < L := by dsimp [L]; linarith
+  have hL1 : 1 ≤ L := by dsimp [L]; linarith
+  have h8 : L ≤ L ^ 8 := by
+    simpa using pow_le_pow_right₀ hL1 (show 1 ≤ 8 by norm_num)
+  have h160 : 160 ≤ L ^ 8 := by dsimp [L] at *; linarith
+  have hpower : 160 * L ≤ L ^ 9 := by
+    calc
+      160 * L ≤ L ^ 8 * L := mul_le_mul_of_nonneg_right h160 hLp.le
+      _ = L ^ 9 := by ring
+  have hbound : 40 / L ^ 9 ≤ 1 / (4 * L) := by
+    apply (div_le_div_iff₀ (pow_pos hLp 9) (by positivity : 0 < 4 * L)).mpr
+    nlinarith only [hpower]
+  calc
+    10 * lemma44PaperAlpha D = 10 * Real.pi / L ^ 9 := by
+      simp [lemma44PaperAlpha, lemma23PaperP, lemma23PaperL, L, mul_div_assoc]
+    _ ≤ 40 / L ^ 9 := by
+      apply div_le_div_of_nonneg_right _ (pow_pos hLp 9).le
+      linarith [Real.pi_le_four]
+    _ ≤ 1 / (4 * Real.log (D : ℝ)) := hbound
+
+lemma lemma58_actual_value_at_one_small {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (hL : 2000 ≤ Real.log (D : ℝ)) (hA : NormalizedAssumptionA χ) :
+    ‖LAtOne χ‖ ≤ Real.log (D : ℝ) ^ (-15 : ℤ) := by
+  have hA' : realLAtOne χ < Real.log (D : ℝ) ^ (-2022 : ℤ) := by
+    simpa [NormalizedAssumptionA, AssumptionAWithConstant] using hA
+  have hp : 0 < realLAtOne χ := realLAtOne_pos χ hD
+  have hnorm : ‖LAtOne χ‖ = realLAtOne χ := by
+    unfold LAtOne
+    rw [show (1 : ℂ) = ((1 : ℝ) : ℂ) by simp,
+      dirichletLFunction_real_eq_realLValue χ hD 1, Complex.norm_real, Real.norm_eq_abs]
+    exact abs_of_pos hp
+  rw [hnorm]
+  exact hA'.le.trans (zpow_le_zpow_right₀ (by linarith : 1 ≤ Real.log (D : ℝ)) (by norm_num))
+
+lemma lemma58_actual_full_disk_linear_error {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (hL : 2000 ≤ Real.log (D : ℝ)) (hA : NormalizedAssumptionA χ)
+    {s : ℂ} (hs : ‖s - 1‖ ≤ 10 * lemma44PaperAlpha D) :
+    ‖dirichletLFunction χ s - LDerivAtOne χ * (s - 1)‖ ≤
+      lemma58ErrorConstant * Real.log (D : ℝ) ^ (-15 : ℤ) := by
+  let L := Real.log (D : ℝ)
+  have hLp : 0 < L := by dsimp [L]; linarith
+  have hTaylor := lemma55_actual_taylor_remainder_bound χ hD (by linarith)
+    (hs.trans (lemma58_original_radius_in_taylor_disk hL))
+  have hsmall := lemma58_actual_value_at_one_small χ hD hL hA
+  have hsa : ‖s - 1‖ ≤ (10 * Real.pi) * L ^ (-9 : ℤ) := by
+    simpa [lemma58_alpha_eq_log_power, L, mul_assoc] using hs
+  have hsq : ‖s - 1‖ ^ 2 ≤ ((10 * Real.pi) * L ^ (-9 : ℤ)) ^ 2 :=
+    pow_le_pow_left₀ (norm_nonneg _) hsa 2
+  have hpow : L ^ 3 * (L ^ (-9 : ℤ)) ^ 2 = L ^ (-15 : ℤ) := by
+    rw [← zpow_natCast L 3, ← zpow_natCast (L ^ (-9 : ℤ)) 2, ← zpow_mul, ← zpow_add₀ hLp.ne']
+    norm_num
+  have herr : (128 * Real.exp 1 * L ^ 3) * ‖s - 1‖ ^ 2 ≤
+      (128 * Real.exp 1 * (10 * Real.pi) ^ 2) * L ^ (-15 : ℤ) := by
+    calc
+      (128 * Real.exp 1 * L ^ 3) * ‖s - 1‖ ^ 2 ≤
+          (128 * Real.exp 1 * L ^ 3) * ((10 * Real.pi) * L ^ (-9 : ℤ)) ^ 2 :=
+        mul_le_mul_of_nonneg_left hsq (by positivity)
+      _ = (128 * Real.exp 1 * (10 * Real.pi) ^ 2) * (L ^ 3 * (L ^ (-9 : ℤ)) ^ 2) := by ring
+      _ = _ := by rw [hpow]
+  calc
+    ‖dirichletLFunction χ s - LDerivAtOne χ * (s - 1)‖ =
+        ‖(dirichletLFunction χ s - LAtOne χ - LDerivAtOne χ * (s - 1)) + LAtOne χ‖ := by
+      congr 1
+      ring
+    _ ≤ ‖dirichletLFunction χ s - LAtOne χ - LDerivAtOne χ * (s - 1)‖ + ‖LAtOne χ‖ := norm_add_le _ _
+    _ ≤ (128 * Real.exp 1 * L ^ 3) * ‖s - 1‖ ^ 2 + L ^ (-15 : ℤ) := add_le_add hTaylor hsmall
+    _ ≤ (128 * Real.exp 1 * (10 * Real.pi) ^ 2) * L ^ (-15 : ℤ) + L ^ (-15 : ℤ) :=
+      add_le_add herr le_rfl
+    _ = lemma58ErrorConstant * Real.log (D : ℝ) ^ (-15 : ℤ) := by
+      simp only [lemma58ErrorConstant, L]
+      ring
+
+lemma lemma58_at_explicit_constant : Lemma58AtConstant lemma58ErrorConstant := by
+  refine ⟨lemma58_error_constant_pos, lemma57ExplicitModulusThreshold, ?_⟩
+  intro D χ hDN hD hA s hs
+  exact lemma58_actual_full_disk_linear_error χ hD
+    (by linarith [lemma57_log_ge_ten_million hDN]) hA hs.2
+
+theorem lemma58_proved : Lemma58Target := ⟨lemma58ErrorConstant, lemma58_at_explicit_constant⟩
+
+end ZhangLS.Spec
+
+
+open Complex ZhangLS.Spec
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → ∀ s : ℂ,
+      (Real.pi / Real.log (Real.exp (Real.log (D : ℝ) ^ (9 : ℕ))) ≤ ‖s - 1‖ ∧
+        ‖s - 1‖ ≤ 10 * (Real.pi / Real.log (Real.exp (Real.log (D : ℝ) ^ (9 : ℕ))))) →
+      ‖(@DirichletCharacter.LFunction D ⟨χ.modulus_ne_zero⟩ χ.chi) s -
+        deriv (@DirichletCharacter.LFunction D ⟨χ.modulus_ne_zero⟩ χ.chi) 1 * (s - 1)‖ ≤
+        C * Real.log (D : ℝ) ^ (-15 : ℤ) := lemma58_proved
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D)
+    (hL : 2000 ≤ Real.log (D : ℝ)) (hA : NormalizedAssumptionA χ)
+    {s : ℂ} (hs : ‖s - 1‖ = 10 * lemma44PaperAlpha D) :
+    ‖dirichletLFunction χ s - LDerivAtOne χ * (s - 1)‖ ≤
+      lemma58ErrorConstant * Real.log (D : ℝ) ^ (-15 : ℤ) :=
+  lemma58_actual_full_disk_linear_error χ hD hL hA hs.le
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D)
+    (hL : 2000 ≤ Real.log (D : ℝ)) (hA : NormalizedAssumptionA χ)
+    {s : ℂ} (hs : ‖s - 1‖ = lemma44PaperAlpha D) :
+    ‖dirichletLFunction χ s - LDerivAtOne χ * (s - 1)‖ ≤
+      lemma58ErrorConstant * Real.log (D : ℝ) ^ (-15 : ℤ) := by
+  apply lemma58_actual_full_disk_linear_error χ hD hL hA
+  rw [hs]
+  have hp := (lemma44_alpha_pos_le_one (D := D) (by change 3 ≤ Real.log (D : ℝ); linarith)).1
+  linarith
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D)
+    (hL : 2000 ≤ Real.log (D : ℝ)) (hA : NormalizedAssumptionA χ) :
+    ‖dirichletLFunction χ 1 - LDerivAtOne χ * ((1 : ℂ) - 1)‖ ≤
+      lemma58ErrorConstant * Real.log (D : ℝ) ^ (-15 : ℤ) := by
+  apply lemma58_actual_full_disk_linear_error χ hD hL hA
+  simp only [sub_self, norm_zero]
+  have hp := (lemma44_alpha_pos_le_one (D := D) (by change 3 ≤ Real.log (D : ℝ); linarith)).1
+  positivity
+
+#print axioms lemma58_error_constant_pos
+#print axioms lemma58_alpha_eq_log_power
+#print axioms lemma58_original_radius_in_taylor_disk
+#print axioms lemma58_actual_value_at_one_small
+#print axioms lemma58_actual_full_disk_linear_error
+#print axioms lemma58_at_explicit_constant
+#print axioms lemma58_proved

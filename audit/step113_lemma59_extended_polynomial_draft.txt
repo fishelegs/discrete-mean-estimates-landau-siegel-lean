@@ -1,0 +1,431 @@
+import ZhangLS.Spec.Lemma23SectionFourLogDerivative
+import ZhangLS.Spec.Lemma51
+
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Set Metric MeasureTheory
+set_option maxHeartbeats 1000000
+set_option maxRecDepth 4096
+
+def Lemma59InRegion (D : ℕ) (s : ℂ) : Prop :=
+  |s.re - 1 / 2| ≤ lemma44PaperAlpha D ∧
+    |s.im - (lemma23PaperCenter D).im| ≤ lemma23PaperL D ^ 405 + 10
+
+def Lemma59InExtendedOmega1 (D : ℕ) (s : ℂ) : Prop :=
+  1 / 2 - Real.log (lemma23PaperL D) / (100 * lemma23PaperL D) < s.re ∧
+    s.re < 1 + Real.log (lemma23PaperL D) / (100 * lemma23PaperL D) ∧
+    |s.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 20
+
+theorem lemma59_extended_center_displacement_le_three {D : ℕ} {s : ℂ}
+    (hL : 100 ≤ lemma23PaperL D) (hs : Lemma59InExtendedOmega1 D s) :
+    ‖lemma23PaperCenter D - s‖ ≤ 3 * lemma23PaperL D ^ 405 := by
+  let L := lemma23PaperL D
+  have hLpos : 0 < L := by dsimp [L]; linarith
+  have hL1 : 1 ≤ L := by dsimp [L]; linarith
+  have hdelta0 : 0 ≤ Real.log L / (100 * L) :=
+    div_nonneg (Real.log_nonneg hL1) (by positivity)
+  have hdelta1 : Real.log L / (100 * L) ≤ 1 / 100 := by
+    apply (div_le_iff₀ (by positivity : 0 < 100 * L)).mpr
+    nlinarith [Real.log_le_self hLpos.le]
+  have hre : |(lemma23PaperCenter D - s).re| ≤ 1 := by
+    rw [Complex.sub_re]
+    change |1 / 2 - s.re| ≤ 1
+    apply abs_le.mpr
+    change 1 / 2 - Real.log L / (100 * L) < s.re ∧
+      s.re < 1 + Real.log L / (100 * L) ∧ _ at hs
+    constructor <;> linarith [hs.1, hs.2.1]
+  have him : |(lemma23PaperCenter D - s).im| ≤ L ^ 405 + 20 := by
+    rw [Complex.sub_im, abs_sub_comm]
+    exact hs.2.2.le
+  have hLp : 100 ≤ L ^ 405 := by
+    have hp : L ≤ L ^ 405 := by
+      simpa using pow_le_pow_right₀ hL1 (show 1 ≤ 405 by norm_num)
+    exact hL.trans hp
+  calc
+    ‖lemma23PaperCenter D - s‖ ≤
+        |(lemma23PaperCenter D - s).re| + |(lemma23PaperCenter D - s).im| :=
+      Complex.norm_le_abs_re_add_abs_im _
+    _ ≤ L ^ 405 + 21 := by linarith
+    _ ≤ 3 * L ^ 405 := by linarith
+
+theorem lemma59_extended_center_displacement_le {D : ℕ} {s : ℂ}
+    (hL : 100 ≤ lemma23PaperL D) (hs : Lemma59InExtendedOmega1 D s) :
+    ‖lemma23PaperCenter D - s‖ ≤ lemma23PaperL D ^ 406 := by
+  calc
+    ‖lemma23PaperCenter D - s‖ ≤ 3 * lemma23PaperL D ^ 405 :=
+      lemma59_extended_center_displacement_le_three hL hs
+    _ ≤ lemma23PaperL D * lemma23PaperL D ^ 405 :=
+      mul_le_mul_of_nonneg_right (by linarith only [hL] : 3 ≤ lemma23PaperL D) (by positivity)
+    _ = lemma23PaperL D ^ 406 := by rw [pow_succ]; ring
+
+theorem lemma59_extended_power_kernel_le {D : ℕ} {s : ℂ} {t : ℝ}
+    (hL : 100 ≤ lemma23PaperL D) (hs : Lemma59InExtendedOmega1 D s)
+    (ht : 1 ≤ t) (htD : t ≤ (D : ℝ) ^ 80) :
+    ‖lemma23AbelPowerWeight (lemma23PaperCenter D - s) t‖ ≤ lemma23PaperL D := by
+  have hlogt : Real.log t ≤ 80 * lemma23PaperL D := by
+    calc
+      Real.log t ≤ Real.log ((D : ℝ) ^ 80) := Real.log_le_log (by linarith) htD
+      _ = 80 * lemma23PaperL D := by rw [Real.log_pow]; rfl
+  apply lemma23AbelPowerWeight_norm_le_of_strip_exponent (by linarith) ht hlogt
+  rw [Complex.sub_re]
+  change 1 / 2 - s.re ≤ Real.log (lemma23PaperL D) / (100 * lemma23PaperL D)
+  linarith [hs.1]
+
+theorem lemma59_extended_FG_bound {D N : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ N) (s : ℂ)
+    (hL : 100 ≤ lemma23PaperL D) (hgood : Lemma23GoodPartialSums χ ψ)
+    (hs : Lemma59InExtendedOmega1 D s) :
+    ‖lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod N)) s‖ +
+      ‖lemma23ActualSectionFourG χ (fun n => ψ (n : ZMod N)) s‖ ≤
+      2 * lemma23PaperL D ^ 79 := by
+  have hL3 : 3 ≤ lemma23PaperL D := by linarith only [hL]
+  have hD1 : (1 : ℝ) ≤ D := by exact_mod_cast χ.modulus_pos
+  have hEndpoint := lemma59_extended_power_kernel_le hL hs
+    (one_le_pow₀ hD1) (le_refl ((D : ℝ) ^ 80))
+  rw [← Nat.cast_pow] at hEndpoint
+  have hKernel : ∀ t ∈ Set.Ioc (1 : ℝ) ((D ^ 80 : ℕ) : ℝ),
+      ‖lemma23AbelPowerWeight (lemma23PaperCenter D - s) t‖ ≤ lemma23PaperL D := by
+    intro t ht
+    apply lemma59_extended_power_kernel_le hL hs ht.1.le
+    simpa only [Nat.cast_pow] using ht.2
+  have hbounds := hgood.x1_x2_bounds
+  have hF := lemma23ActualSectionFourF_norm_le_of_X1_data χ ψ
+    (lemma23PaperCenter D) s (lemma23PaperL D) hL3 hbounds.1.1 hbounds.1.2
+    (lemma59_extended_center_displacement_le hL hs) hEndpoint hKernel
+  have hG := lemma23ActualSectionFourG_norm_le_of_X2_data χ ψ
+    (lemma23PaperCenter D) s (lemma23PaperL D) hL3 hbounds.2.1 hbounds.2.2
+    (lemma59_extended_center_displacement_le hL hs) hEndpoint hKernel
+  linarith
+
+theorem lemma59_extended_product_bound {D N : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ N) (s : ℂ)
+    (hL : 100 ≤ lemma23PaperL D) (hgood : Lemma23GoodPartialSums χ ψ)
+    (hs : Lemma59InExtendedOmega1 D s) :
+    ‖lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod N)) s *
+        lemma23ActualSectionFourG χ (fun n => ψ (n : ZMod N)) s - 1‖ ≤
+      4 * lemma23PaperL D ^ (-227 : ℤ) := by
+  let L := lemma23PaperL D
+  let c := lemma23ActualX4CenteredCoefficient χ ψ
+  have hL1 : 1 ≤ L := by dsimp [L]; linarith
+  have hLne : L ≠ 0 := by dsimp [L]; linarith
+  have hD1 : (1 : ℝ) ≤ D := by exact_mod_cast χ.modulus_pos
+  have hD8 : (D : ℝ) ^ 8 ≤ (D : ℝ) ^ 80 := pow_le_pow_right₀ hD1 (by norm_num)
+  have hEndpoint :
+      ‖lemma23AbelPowerWeight (lemma23PaperCenter D - s) ((D ^ 8 : ℕ) : ℝ)‖ ≤ L := by
+    rw [Nat.cast_pow]
+    exact lemma59_extended_power_kernel_le hL hs (one_le_pow₀ hD1) hD8
+  have hbounds := hgood.x4_bounds
+  have hCoefEndpoint : ‖∑ n ∈ Finset.Icc 0 (D ^ 8), c n‖ ≤ L ^ (-633 : ℤ) := by
+    have hx := lemma23ActualX4_eq_centered_partial_sum χ ψ ((D : ℝ) ^ 8)
+    rw [← Nat.cast_pow, Nat.floor_natCast] at hx
+    change ‖∑ n ∈ Finset.Icc 0 (D ^ 8), lemma23ActualX4CenteredCoefficient χ ψ n‖ ≤
+      lemma23PaperL D ^ (-633 : ℤ)
+    rw [← hx, Nat.cast_pow]
+    exact hbounds.1
+  have hIntegral : (∫ t in Set.Ioc (1 : ℝ) ((D ^ 8 : ℕ) : ℝ),
+      ‖∑ n ∈ Finset.Icc 0 ⌊t⌋₊, c n‖ / t) ≤ L ^ (-633 : ℤ) := by
+    dsimp [c, L]
+    simpa only [Nat.cast_pow, ← lemma23ActualX4_eq_centered_partial_sum] using hbounds.2
+  have hWeight : ∀ t ∈ Set.Ioc (1 : ℝ) ((D ^ 8 : ℕ) : ℝ),
+      ‖lemma23PaperCenter D - s‖ *
+          ‖lemma23AbelPowerWeight (lemma23PaperCenter D - s) t‖ ≤ 3 * L ^ 406 := by
+    intro t ht
+    have ht8 : t ≤ (D : ℝ) ^ 8 := by simpa only [Nat.cast_pow] using ht.2
+    have htD : t ≤ (D : ℝ) ^ 80 := ht8.trans hD8
+    calc
+      _ ≤ (3 * L ^ 405) * L :=
+        mul_le_mul (lemma59_extended_center_displacement_le_three hL hs)
+          (lemma59_extended_power_kernel_le hL hs ht.1.le htD) (norm_nonneg _) (by positivity)
+      _ = 3 * L ^ 406 := by rw [pow_succ]; ring
+  have hAbel := lemma23_abel_power_weight_norm_bound (by simp [c]) hEndpoint
+    hCoefEndpoint (by positivity : 0 ≤ 3 * L ^ 406) hWeight hIntegral
+  have hpower : L ^ 406 * L ^ (-633 : ℤ) = L ^ (-227 : ℤ) := by
+    rw [← zpow_natCast, ← zpow_add₀ hLne]
+    norm_num
+  have hfirst : L * L ^ (-633 : ℤ) ≤ L ^ (-227 : ℤ) := by
+    rw [← hpower]
+    apply mul_le_mul_of_nonneg_right
+    · simpa using pow_le_pow_right₀ hL1 (show 1 ≤ 406 by norm_num)
+    · positivity
+  rw [lemma23ActualSectionFourFG_sub_one_eq_centered_abel_sum]
+  calc
+    _ ≤ L * L ^ (-633 : ℤ) + (3 * L ^ 406) * L ^ (-633 : ℤ) := hAbel
+    _ = L * L ^ (-633 : ℤ) + 3 * L ^ (-227 : ℤ) := by rw [mul_assoc, hpower]
+    _ ≤ 4 * L ^ (-227 : ℤ) := by linarith
+
+
+lemma lemma59_extended_L227_error_lt_half {L : ℝ} (hL : 3 ≤ L) :
+    4 * L ^ (-227 : ℤ) < 1 / 2 := by
+  have hL1 : 1 ≤ L := by linarith
+  have hLpos : 0 < L := by linarith
+  have hp2 : 9 ≤ L ^ 2 := by nlinarith
+  have hp227 : 9 ≤ L ^ 227 := hp2.trans (pow_le_pow_right₀ hL1 (by norm_num))
+  have hp227pos : 0 < L ^ 227 := pow_pos hLpos _
+  have hinv : (L ^ 227)⁻¹ ≤ (9 : ℝ)⁻¹ :=
+    (inv_le_inv₀ hp227pos (by norm_num : 0 < (9 : ℝ))).mpr hp227
+  have hpow : L ^ (-227 : ℤ) = (L ^ 227)⁻¹ := by
+    rw [zpow_neg, zpow_ofNat]
+  rw [hpow]
+  norm_num at hinv
+  linarith
+
+theorem lemma59_extended_F_two_sided {D N : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ N) (s : ℂ)
+    (hL : 100 ≤ lemma23PaperL D) (hgood : Lemma23GoodPartialSums χ ψ)
+    (hs : Lemma59InExtendedOmega1 D s) :
+    (lemma23PaperL D ^ 88)⁻¹ ≤
+        ‖lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod N)) s‖ ∧
+      ‖lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod N)) s‖ ≤ lemma23PaperL D ^ 88 := by
+  let L := lemma23PaperL D
+  let F := lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod N)) s
+  let G := lemma23ActualSectionFourG χ (fun n => ψ (n : ZMod N)) s
+  have hL1 : 1 ≤ L := by dsimp [L]; linarith
+  have hLpos : 0 < L := by dsimp [L]; linarith
+  have h41 : ‖F‖ + ‖G‖ ≤ 2 * L ^ 79 :=
+    lemma59_extended_FG_bound χ ψ s hL hgood hs
+  have h42 : ‖F * G - 1‖ < 1 / 2 :=
+    (lemma59_extended_product_bound χ ψ s hL hgood hs).trans_lt
+      (lemma59_extended_L227_error_lt_half (by linarith only [hL] : 3 ≤ lemma23PaperL D))
+  have hprod : 1 / 2 ≤ ‖F‖ * ‖G‖ := by
+    have htriangle := norm_sub_norm_le (1 : ℂ) (F * G)
+    rw [norm_one, norm_sub_rev, norm_mul] at htriangle
+    linarith
+  have hG : ‖G‖ ≤ 2 * L ^ 79 := by linarith [norm_nonneg F]
+  have hF : ‖F‖ ≤ 2 * L ^ 79 := by linarith [norm_nonneg G]
+  have hp9 : 4 ≤ L ^ 9 := by
+    have hp2 : 9 ≤ L ^ 2 := by nlinarith
+    have hp := pow_le_pow_right₀ hL1 (show 2 ≤ 9 by norm_num)
+    linarith
+  have hpower : 4 * L ^ 79 ≤ L ^ 88 := by
+    calc
+      4 * L ^ 79 ≤ L ^ 9 * L ^ 79 := mul_le_mul_of_nonneg_right hp9 (by positivity)
+      _ = L ^ 88 := by rw [← pow_add]
+  have hscaled : 1 ≤ ‖F‖ * L ^ 88 := by
+    have hprod' : 1 / 2 ≤ ‖F‖ * (2 * L ^ 79) :=
+      hprod.trans (mul_le_mul_of_nonneg_left hG (norm_nonneg F))
+    have hmono := mul_le_mul_of_nonneg_left hpower (norm_nonneg F)
+    nlinarith
+  constructor
+  · change (L ^ 88)⁻¹ ≤ ‖F‖
+    rw [← one_div]
+    exact (div_le_iff₀ (pow_pos hLpos _)).mpr hscaled
+  · change ‖F‖ ≤ L ^ 88
+    calc
+      ‖F‖ ≤ 2 * L ^ 79 := hF
+      _ ≤ 4 * L ^ 79 := by nlinarith [pow_nonneg hLpos.le 79]
+      _ ≤ L ^ 88 := hpower
+
+theorem lemma59_extended_F_ne_zero {D N : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ N) (s : ℂ)
+    (hL : 100 ≤ lemma23PaperL D) (hgood : Lemma23GoodPartialSums χ ψ)
+    (hs : Lemma59InExtendedOmega1 D s) :
+    lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod N)) s ≠ 0 := by
+  intro hzero
+  have h := (lemma59_extended_F_two_sided χ ψ s hL hgood hs).1
+  rw [hzero, norm_zero] at h
+  have hpos : 0 < (lemma23PaperL D ^ 88)⁻¹ := by positivity
+  linarith
+
+def Lemma59InExtendedOmega2 (D : ℕ) (s : ℂ) : Prop :=
+  1 / 2 - (lemma23PaperL D)⁻¹ < s.re ∧
+    s.re < 1 + (lemma23PaperL D)⁻¹ ∧
+    |s.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 19
+
+theorem lemma59_extended_disk_subset_omega1 {D : ℕ} {s z : ℂ}
+    (hL : 100 ≤ lemma23PaperL D) (hlogL : 200 ≤ Real.log (lemma23PaperL D))
+    (hs : Lemma59InExtendedOmega2 D s)
+    (hz : z ∈ Metric.ball s (lemma23LogDerivativeRadius D)) :
+    Lemma59InExtendedOmega1 D z := by
+  let L := lemma23PaperL D
+  let R := lemma23LogDerivativeRadius D
+  have hLpos : 0 < L := by dsimp [L]; linarith
+  have hRle : R ≤ 1 := by
+    change Real.log L / (200 * L) ≤ 1
+    apply (div_le_iff₀ (by positivity : 0 < 200 * L)).mpr
+    nlinarith [Real.log_le_self hLpos.le]
+  have hinv : L⁻¹ ≤ R := by
+    change L⁻¹ ≤ Real.log L / (200 * L)
+    apply (le_div_iff₀ (by positivity : 0 < 200 * L)).mpr
+    have hcancel : L⁻¹ * (200 * L) = 200 := by field_simp
+    rw [hcancel]
+    exact hlogL
+  have hdelta : Real.log L / (100 * L) = 2 * R := by
+    dsimp [R, lemma23LogDerivativeRadius, L]
+    ring
+  have hnorm : ‖z - s‖ < R := by
+    simpa only [Metric.mem_ball, dist_eq_norm] using hz
+  have hrebound : |z.re - s.re| ≤ ‖z - s‖ := by
+    simpa only [Complex.sub_re] using Complex.abs_re_le_norm (z - s)
+  have himbound : |z.im - s.im| ≤ ‖z - s‖ := by
+    simpa only [Complex.sub_im] using Complex.abs_im_le_norm (z - s)
+  have hre : |z.re - s.re| < R := hrebound.trans_lt hnorm
+  have him : |z.im - s.im| < R := himbound.trans_lt hnorm
+  have hre' := abs_lt.mp hre
+  have hs' := hs
+  change 1 / 2 - L⁻¹ < s.re ∧ s.re < 1 + L⁻¹ ∧
+    |s.im - (lemma23PaperCenter D).im| < L ^ 405 + 19 at hs'
+  unfold Lemma59InExtendedOmega1
+  change 1 / 2 - Real.log L / (100 * L) < z.re ∧
+    z.re < 1 + Real.log L / (100 * L) ∧ _
+  rw [hdelta]
+  refine ⟨by linarith [hs'.1], by linarith [hs'.2.1], ?_⟩
+  calc
+    |z.im - (lemma23PaperCenter D).im| ≤
+        |z.im - s.im| + |s.im - (lemma23PaperCenter D).im| := abs_sub_le _ _ _
+    _ < R + (L ^ 405 + 19) := add_lt_add him hs'.2.2
+    _ ≤ L ^ 405 + 20 := by linarith
+
+theorem lemma59_extended_F_logDeriv_bound {D N : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ N) (s : ℂ)
+    (hL : 100 ≤ lemma23PaperL D) (hlogL : 200 ≤ Real.log (lemma23PaperL D))
+    (hgood : Lemma23GoodPartialSums χ ψ) (hs : Lemma59InExtendedOmega2 D s) :
+    ‖logDeriv (lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod N))) s‖ ≤
+      140800 * lemma23PaperL D := by
+  have hLpos : 0 < lemma23PaperL D := by linarith
+  have hlogpos : 0 < Real.log (lemma23PaperL D) := by linarith
+  have hRpos : 0 < lemma23LogDerivativeRadius D := by
+    unfold lemma23LogDerivativeRadius
+    positivity
+  have hbound := lemma23_actualSectionFourF_logDeriv_bound_of_two_sided_norm
+    χ (fun n => ψ (n : ZMod N)) s hRpos (by linarith : 1 < lemma23PaperL D)
+    (fun z hz => lemma59_extended_F_two_sided χ ψ z hL hgood
+      (lemma59_extended_disk_subset_omega1 hL hlogL hs hz))
+  calc
+    _ ≤ 704 * Real.log (lemma23PaperL D) / lemma23LogDerivativeRadius D := hbound
+    _ = 140800 * lemma23PaperL D := by
+      unfold lemma23LogDerivativeRadius
+      field_simp
+      ring
+
+
+lemma lemma59_alpha_bounds {D : ℕ} (hL : 100 ≤ lemma23PaperL D) :
+    0 < lemma44PaperAlpha D ∧ lemma44PaperAlpha D < (lemma23PaperL D)⁻¹ := by
+  have hLp : 0 < lemma23PaperL D := by linarith only [hL]
+  have hL1 : 1 ≤ lemma23PaperL D := by linarith only [hL]
+  have hL8 : lemma23PaperL D ≤ lemma23PaperL D ^ 8 := by
+    simpa only [pow_one] using pow_le_pow_right₀ hL1 (by norm_num : (1 : ℕ) ≤ 8)
+  have hp : Real.pi < lemma23PaperL D ^ 8 := by linarith only [Real.pi_le_four, hL8, hL]
+  have hm := mul_lt_mul_of_pos_right hp hLp
+  unfold lemma44PaperAlpha lemma23PaperP
+  rw [Real.log_exp]
+  refine ⟨div_pos Real.pi_pos (pow_pos hLp 9), ?_⟩
+  rw [inv_eq_one_div]
+  apply (div_lt_div_iff₀ (pow_pos hLp 9) hLp).mpr
+  nlinarith only [hm]
+
+lemma lemma59_original_region_in_extended {D : ℕ} (hL : 100 ≤ lemma23PaperL D)
+    {s : ℂ} (hs : Lemma59InRegion D s) :
+    Lemma59InExtendedOmega2 D s ∧ Lemma51InExtendedRegion D s := by
+  have ha := (lemma59_alpha_bounds hL).2
+  have hre := abs_le.mp hs.1
+  have hL1 : 1 ≤ lemma23PaperL D := by linarith only [hL]
+  have hpow : lemma23PaperL D ≤ lemma23PaperL D ^ 405 := by
+    simpa only [pow_one] using pow_le_pow_right₀ hL1 (by norm_num : (1 : ℕ) ≤ 405)
+  exact ⟨⟨by linarith only [hre.1, ha], by linarith only [hre.2, ha], by linarith only [hs.2]⟩,
+    ⟨hs.1, by linarith only [hs.2, hpow, hL]⟩⟩
+
+def Lemma59ZeroSeparated {D p : ℕ} [NeZero p] (ψ : DirichletCharacter ℂ p) (s : ℂ) (η : ℝ) : Prop :=
+  ∀ ρ : ℂ, ψ.LFunction ρ = 0 → η * lemma44PaperAlpha D ≤ ‖s - ρ‖
+
+lemma lemma59_zero_separated_LFunction_ne_zero {D p : ℕ} [NeZero p]
+    (ψ : DirichletCharacter ℂ p) (hL : 100 ≤ lemma23PaperL D) {s : ℂ} {η : ℝ}
+    (hη : 0 < η) (hs : Lemma59ZeroSeparated (D := D) ψ s η) : ψ.LFunction s ≠ 0 := by
+  intro hz
+  have hh := hs s hz
+  rw [sub_self, norm_zero] at hh
+  exact (not_le_of_gt (mul_pos hη (lemma59_alpha_bounds hL).1)) hh
+
+theorem lemma59_uniform_extended_F_inputs :
+    ∃ D₀ : ℕ, ∀ {D p : ℕ} [NeZero p] (χ : RealPrimitiveCharacter D)
+      (ψ : DirichletCharacter ℂ p), D₀ ≤ D → Lemma23InPsi1 χ ψ →
+      ∀ {s : ℂ}, Lemma59InRegion D s →
+        (lemma23PaperL D ^ 88)⁻¹ ≤ ‖lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s‖ ∧
+        ‖lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s‖ ≤ lemma23PaperL D ^ 88 ∧
+        lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s ≠ 0 ∧
+        ‖logDeriv (lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p))) s‖ ≤ 140800 * lemma23PaperL D := by
+  refine ⟨lemma23SectionFourModulusThreshold, ?_⟩
+  intro D p _ χ ψ hD hψ s hs
+  have hparam := lemma23_sectionFour_parameters_at_explicit_threshold hD
+  have hL : 100 ≤ lemma23PaperL D := by
+    have hh := Real.log_le_self (by linarith only [hparam.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hh, hparam.2]
+  have hs2 := (lemma59_original_region_in_extended hL hs).1
+  have hR : 0 < lemma23LogDerivativeRadius D := by
+    unfold lemma23LogDerivativeRadius
+    exact div_pos (by linarith only [hparam.2]) (by linarith only [hL])
+  have hs1 := lemma59_extended_disk_subset_omega1 hL hparam.2 hs2 (Metric.mem_ball_self hR)
+  have hnorm := lemma59_extended_F_two_sided χ ψ s hL hψ.2 hs1
+  exact ⟨hnorm.1, hnorm.2, lemma59_extended_F_ne_zero χ ψ s hL hψ.2 hs1,
+    lemma59_extended_F_logDeriv_bound χ ψ s hL hparam.2 hψ.2 hs2⟩
+
+
+example : ∃ D₀ : ℕ, ∀ {D p : ℕ} [NeZero p] (χ : RealPrimitiveCharacter D)
+    (ψ : DirichletCharacter ℂ p), D₀ ≤ D → Lemma23InPsi1 χ ψ →
+    ∀ {s : ℂ}, |s.re - 1 / 2| ≤ lemma44PaperAlpha D →
+      |s.im - (lemma23PaperCenter D).im| ≤ lemma23PaperL D ^ 405 + 10 →
+      (lemma23PaperL D ^ 88)⁻¹ ≤
+        ‖∑ n ∈ Finset.Icc 1 (D ^ 4), lemma23NuArithmeticFunction χ n * ψ (n : ZMod p) *
+          Complex.exp (-s * (Real.log (n : ℝ) : ℂ))‖ ∧
+      ‖∑ n ∈ Finset.Icc 1 (D ^ 4), lemma23NuArithmeticFunction χ n * ψ (n : ZMod p) *
+          Complex.exp (-s * (Real.log (n : ℝ) : ℂ))‖ ≤ lemma23PaperL D ^ 88 ∧
+      (∑ n ∈ Finset.Icc 1 (D ^ 4), lemma23NuArithmeticFunction χ n * ψ (n : ZMod p) *
+          Complex.exp (-s * (Real.log (n : ℝ) : ℂ))) ≠ 0 ∧
+      ‖logDeriv (fun z : ℂ => ∑ n ∈ Finset.Icc 1 (D ^ 4),
+          lemma23NuArithmeticFunction χ n * ψ (n : ZMod p) *
+          Complex.exp (-z * (Real.log (n : ℝ) : ℂ))) s‖ ≤ 140800 * lemma23PaperL D := by
+  obtain ⟨D₀, h⟩ := lemma59_uniform_extended_F_inputs
+  refine ⟨D₀, ?_⟩
+  intro D p _ χ ψ hD hψ s hre him
+  simpa only [lemma23ActualSectionFourF, lemma23SectionFourF,
+    lemma23FiniteDirichletPolynomial] using h χ ψ hD hψ ⟨hre, him⟩
+
+example {D : ℕ} (hL : 100 ≤ lemma23PaperL D) :
+    Lemma59InExtendedOmega2 D
+      ⟨1 / 2 + lemma44PaperAlpha D, (lemma23PaperCenter D).im + lemma23PaperL D ^ 405 + 10⟩ ∧
+    Lemma51InExtendedRegion D
+      ⟨1 / 2 + lemma44PaperAlpha D, (lemma23PaperCenter D).im + lemma23PaperL D ^ 405 + 10⟩ := by
+  apply lemma59_original_region_in_extended hL
+  constructor
+  · simp only [add_sub_cancel_left, abs_of_pos (lemma59_alpha_bounds hL).1]
+    exact le_rfl
+  · change |(lemma23PaperCenter D).im + lemma23PaperL D ^ 405 + 10 - (lemma23PaperCenter D).im| ≤ lemma23PaperL D ^ 405 + 10
+    have hp : 0 ≤ lemma23PaperL D ^ 405 + 10 := by positivity
+    have he : (lemma23PaperCenter D).im + lemma23PaperL D ^ 405 + 10 -
+        (lemma23PaperCenter D).im = lemma23PaperL D ^ 405 + 10 := by ring
+    rw [he, abs_of_nonneg hp]
+
+example {D : ℕ} (hL : 100 ≤ lemma23PaperL D) :
+    Lemma59InExtendedOmega2 D
+      ⟨1 / 2 - lemma44PaperAlpha D, (lemma23PaperCenter D).im - (lemma23PaperL D ^ 405 + 10)⟩ ∧
+    Lemma51InExtendedRegion D
+      ⟨1 / 2 - lemma44PaperAlpha D, (lemma23PaperCenter D).im - (lemma23PaperL D ^ 405 + 10)⟩ := by
+  apply lemma59_original_region_in_extended hL
+  constructor
+  · simp only [sub_sub_cancel_left, abs_neg,
+      abs_of_pos (lemma59_alpha_bounds hL).1]
+    exact le_rfl
+  · simp only [sub_sub_cancel_left, abs_neg]
+    rw [abs_of_nonneg (by positivity : 0 ≤ lemma23PaperL D ^ 405 + 10)]
+
+example {D p : ℕ} [NeZero p] (ψ : DirichletCharacter ℂ p)
+    (hL : 100 ≤ lemma23PaperL D) {s : ℂ} {η : ℝ} (hη : 0 < η)
+    (hs : ∀ ρ : ℂ, DirichletCharacter.LFunction ψ ρ = 0 →
+      η * lemma44PaperAlpha D ≤ ‖s - ρ‖) : DirichletCharacter.LFunction ψ s ≠ 0 := by
+  exact lemma59_zero_separated_LFunction_ne_zero ψ hL hη hs
+
+#print axioms lemma59_extended_center_displacement_le_three
+#print axioms lemma59_extended_center_displacement_le
+#print axioms lemma59_extended_power_kernel_le
+#print axioms lemma59_extended_FG_bound
+#print axioms lemma59_extended_product_bound
+#print axioms lemma59_extended_L227_error_lt_half
+#print axioms lemma59_extended_F_two_sided
+#print axioms lemma59_extended_F_ne_zero
+#print axioms lemma59_extended_disk_subset_omega1
+#print axioms lemma59_extended_F_logDeriv_bound
+#print axioms lemma59_alpha_bounds
+#print axioms lemma59_original_region_in_extended
+#print axioms lemma59_zero_separated_LFunction_ne_zero
+#print axioms lemma59_uniform_extended_F_inputs
+
+end ZhangLS.Spec

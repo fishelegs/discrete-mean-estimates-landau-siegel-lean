@@ -1,0 +1,55 @@
+⚠ [3290/3509] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3581/3591] Replayed ZhangLS.Spec.Lemma23DirichletConjugation
+warning: ZhangLS/Spec/Lemma23DirichletConjugation.lean:23:0: automatically included section variable(s) unused in theorem `ZhangLS.Spec.dirichletLSeries_inv_eq_conj_at_conj`:
+  [NeZero N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3583/3591] Replayed ZhangLS.Spec.Lemma23PrimitiveGaussSum
+warning: ZhangLS/Spec/Lemma23PrimitiveGaussSum.lean:42:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [3584/3591] Built ZhangLS.Spec.Lemma33Sampling (8.0s)
+⚠ [3585/3591] Built ZhangLS.Spec.Lemma33Fourier (9.0s)
+warning: ZhangLS/Spec/Lemma33Fourier.lean:79:12: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  simp [̵C̵o̵m̵p̵l̵e̵x̵.̵s̵t̵a̵r̵_̵d̵e̵f̵,̵←̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵n̵o̵r̵m̵S̵q̵_̵e̵q̵_̵c̵o̵n̵j̵_̵m̵u̵l̵_̵s̵e̵l̵f̵,̵C̵o̵m̵p̵l̵e̵x̵.̵n̵o̵r̵m̵S̵q̵_̵e̵q̵_̵n̵o̵r̵m̵_̵s̵q̵]̵[̲←̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲n̲o̲r̲m̲S̲q̲_̲e̲q̲_̲c̲o̲n̲j̲_̲m̲u̲l̲_̲s̲e̲l̲f̲,̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲n̲o̲r̲m̲S̲q̲_̲e̲q̲_̲n̲o̲r̲m̲_̲s̲q̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/Lemma33Fourier.lean:109:8: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  simp [n̵o̵r̵m̵_̵m̵u̵l̵,̵abs_of_pos Real.pi_pos]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [3586/3591] Built ZhangLS.Spec.Lemma33FirstMean (9.0s)
+✔ [3587/3591] Built ZhangLS.Spec.Lemma33GaussTransform (9.1s)
+⚠ [3588/3591] Built ZhangLS.Spec.Lemma33Fractions (9.0s)
+warning: ZhangLS/Spec/Lemma33Fractions.lean:9:32: unused variable `hb`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3589/3591] Built ZhangLS.Spec.Lemma33ActualSamples (2.1s)
+warning: ZhangLS/Spec/Lemma33ActualSamples.lean:24:24: This simp argument is unused:
+  zpow_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [zpow_neg,̵z̵p̵o̵w̵_̵n̵a̵t̵C̵a̵s̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/Lemma33ActualSamples.lean:48:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [3590/3591] Built ZhangLS.Spec.Lemma33AdditiveLargeSieve (2.8s)
+✔ [3591/3591] Built ZhangLS.Spec.Lemma33 (1.9s)
+Build completed successfully (3591 jobs).

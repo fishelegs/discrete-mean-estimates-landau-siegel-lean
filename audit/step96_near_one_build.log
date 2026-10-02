@@ -1,0 +1,15 @@
+⚠ [1279/1398] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3433/3433] Built ZhangLS.Spec.Lemma55NearOneBound (5.9s)
+warning: ZhangLS/Spec/Lemma55NearOneBound.lean:123:22: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/Lemma55NearOneBound.lean:123:22: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ZhangLS/Spec/Lemma55NearOneBound.lean:92:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (3433 jobs).

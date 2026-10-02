@@ -1,0 +1,43 @@
+{
+  "modules": [
+    "ZhangLS/Spec/Lemma56PrincipalMassScales.lean",
+    "ZhangLS/Spec/Lemma56PrincipalMassContourBudget.lean",
+    "ZhangLS/Spec/Lemma56PrincipalMassMainError.lean",
+    "ZhangLS/Spec/Lemma56PrincipalMassUnsmoothing.lean",
+    "ZhangLS/Spec/Lemma56PrincipalMassSharpMangoldt.lean",
+    "ZhangLS/Spec/Lemma56PrincipalMassSharpPrime.lean"
+  ],
+  "proved_interfaces": [
+    "lemma56_principal_mass_exp_base",
+    "lemma56_principal_mass_exp_power",
+    "lemma56_principal_mass_left_power",
+    "lemma56_principal_mass_moment_budget",
+    "lemma56_principal_mass_scale_parameters",
+    "lemma56_principal_mass_left_budget",
+    "lemma56_principal_mass_height_exponent",
+    "lemma56_principal_mass_horizontal_exponent_identity",
+    "lemma56_principal_mass_horizontal_gaussian_budget",
+    "lemma56_principal_mass_horizontal_budget",
+    "lemma56_principal_mass_error_constant_pos",
+    "lemma56_principal_mass_main_error_budget",
+    "lemma56_principal_mass_polynomial_absorption",
+    "lemma56_uniform_principal_mass_scale_threshold",
+    "lemma56_uniform_principal_smoothed_mass_main_error",
+    "lemma56_principal_mass_smoothing_parameters",
+    "lemma56_principal_mass_smoothing_polynomial",
+    "lemma56_principal_mass_near_smoothing_budget",
+    "lemma56_principal_mass_far_smoothing_margin",
+    "lemma56_principal_mass_far_smoothing_gaussian",
+    "lemma56_principal_mass_far_smoothing_budget",
+    "lemma56_principal_unsmoothing_constant_pos",
+    "lemma56_actual_principal_mass_smoothing_removal",
+    "lemma56_principal_sharp_mangoldt_error_constant_pos",
+    "lemma56_uniform_principal_sharp_mangoldt_mass_main_error",
+    "lemma56_principal_mass_prime_power_decay",
+    "lemma56_actual_principal_mass_prime_power_error",
+    "lemma56_principal_sharp_prime_error_constant_pos",
+    "lemma56_uniform_principal_sharp_prime_mass_main_error"
+  ],
+  "interface_count": 29,
+  "expanded_examples": 6
+}

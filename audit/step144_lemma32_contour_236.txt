@@ -1,0 +1,54 @@
+import ZhangMathStep235Lemma32BoundaryLinearityDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Metric Set Filter
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_laurent_kernel_continuousOn (k : ℕ) :
+    ContinuousOn (fun w : ℂ => w^(k : ℤ)/w^(8 : ℤ)) ({0} : Set ℂ)ᶜ := by
+  intro w hw
+  have h0 : w ≠ 0 := by simpa using hw
+  exact ((continuousAt_id.zpow₀ (k : ℤ) (Or.inl h0)).div
+    (continuousAt_id.zpow₀ 8 (Or.inl h0)) (zpow_ne_zero 8 h0)).continuousWithinAt
+
+private lemma principal_part_eq_laurent_sum {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    lemma32PrincipalPart χ = (fun w : ℂ => ∑ k ∈ Finset.range 8,
+      lemma32DividedRemainder χ k 0*(w^(k : ℤ)/w^(8 : ℤ))) := by
+  funext w
+  simp only [lemma32PrincipalPart,zpow_natCast,mul_div_assoc]
+  rfl
+
+lemma lemma32_principal_part_boundary_integrable {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (a T : ℝ) (han : a < 0) (hT : 0 < T) : lemma32BoundaryIntegrable (lemma32PrincipalPart χ) a 1 T := by
+  have hc : ContinuousOn (lemma32PrincipalPart χ) ({0} : Set ℂ)ᶜ := by
+    have hs : ContinuousOn (fun w : ℂ => ∑ k ∈ Finset.range 8,
+        lemma32DividedRemainder χ k 0*(w^(k : ℤ)/w^(8 : ℤ))) ({0} : Set ℂ)ᶜ :=
+      continuousOn_finsetSum _ (fun k hk =>
+        (lemma32_laurent_kernel_continuousOn k).const_mul _)
+    rw [principal_part_eq_laurent_sum χ]
+    exact hs
+  exact lemma32_boundary_integrable_punctured _ hc a 1 T (ne_of_lt han) (by norm_num) hT
+
+lemma lemma32_actual_principal_boundary_residue {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (a T : ℝ) (ha : -1/2 ≤ a) (han : a < 0) (hT : 0 < T) :
+    lemma44GeneralRectangleBoundaryIntegral (lemma32PrincipalPart χ) a 1 T =
+      2*Real.pi*I*lemma32ActualResidue χ := by
+  have hfun := principal_part_eq_laurent_sum χ
+  have hi (k : ℕ) : lemma32BoundaryIntegrable
+      (fun w : ℂ => lemma32DividedRemainder χ k 0*(w^(k : ℤ)/w^(8 : ℤ))) a 1 T :=
+    lemma32_boundary_integrable_punctured _
+      ((lemma32_laurent_kernel_continuousOn k).const_mul _) a 1 T (ne_of_lt han) (by norm_num) hT
+  rw [hfun,lemma32_boundary_integral_sum _ _ _ _ _ (fun k hk => hi k)]
+  simp_rw [lemma32_boundary_integral_const_mul]
+  calc
+    _ = ∑ k ∈ Finset.range 8, lemma32DividedRemainder χ k 0*
+        (if k = 7 then (2*Real.pi*I : ℂ) else 0) := by
+      apply Finset.sum_congr rfl
+      intro k hk
+      rw [lemma32_rectangle_laurent_kernel a T ha han hT k (Finset.mem_range.mp hk)]
+    _ = 2*Real.pi*I*lemma32DividedRemainder χ 7 0 := by
+      simp [mul_ite,mul_comm]
+    _ = _ := by rw [lemma32_actual_residue_eq_divided_remainder χ hD]
+
+end ZhangLS.Spec

@@ -1,0 +1,53 @@
+import ZhangLS.Spec.Lemma31FloorError
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+set_option maxHeartbeats 2000000
+
+lemma lemma31_actual_cumulative_error_le {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (N Y : ℕ) (hY : 1 ≤ Y) (hYN : Y ≤ N) :
+    ‖(∑ n ∈ Finset.Icc 1 N, lemma23NuArithmeticFunction χ n) -
+      (N : ℂ)*dirichletLFunction χ 1‖ ≤ (Y : ℝ) + 4*(D : ℝ)*(N : ℝ)/(Y : ℝ) := by
+  let H : ℂ := ∑ n ∈ Finset.Icc 1 Y, (n : ℂ)⁻¹ * χ.evalNat n
+  let S : ℂ := ∑ n ∈ Finset.Icc 1 Y, χ.evalNat n * (N/n : ℕ)
+  let T : ℂ := ∑ n ∈ Finset.Ioc Y N, χ.evalNat n * (N/n : ℕ)
+  have hsplit : (∑ n ∈ Finset.Icc 1 N, χ.evalNat n * (N/n : ℕ)) = S+T := by
+    have hsetN : Finset.Icc 1 N = Finset.Ioc 0 N := Finset.Icc_add_one_left_eq_Ioc (0 : ℕ) N
+    have hsetY : Finset.Icc 1 Y = Finset.Ioc 0 Y := Finset.Icc_add_one_left_eq_Ioc (0 : ℕ) Y
+    dsimp [S,T]
+    rw [hsetN,hsetY]
+    exact (Finset.sum_Ioc_consecutive (fun n => χ.evalNat n * (N/n : ℕ))
+      (Nat.zero_le Y) hYN).symm
+  have hid : (∑ n ∈ Finset.Icc 1 N, lemma23NuArithmeticFunction χ n) -
+      (N : ℂ)*dirichletLFunction χ 1 =
+      (S-(N : ℂ)*H)+T+(N : ℂ)*(H-dirichletLFunction χ 1) := by
+    rw [lemma31_actual_nu_cumulative_eq,hsplit]
+    ring
+  have hpY : (0 : ℝ) < Y := by exact_mod_cast (show 0 < Y by omega)
+  have hd : 0 ≤ (2 : ℝ)*(D : ℝ) := by positivity
+  have hq : ((N/(Y+1) : ℕ) : ℝ) ≤ (N : ℝ)/(Y : ℝ) := by
+    calc
+      _ ≤ (N : ℝ)/((Y+1 : ℕ) : ℝ) := Nat.cast_div_le
+      _ ≤ (N : ℝ)/(Y : ℝ) := div_le_div_of_nonneg_left
+        (Nat.cast_nonneg _) hpY (by exact_mod_cast (Nat.le_succ Y))
+  have hT : ‖T‖ ≤ 2*(D : ℝ)*(N : ℝ)/(Y : ℝ) := by
+    calc
+      _ ≤ 2*(D : ℝ)*((N/(Y+1) : ℕ) : ℝ) := lemma31_hyperbola_long_sum_norm_le χ hD N Y
+      _ ≤ 2*(D : ℝ)*((N : ℝ)/(Y : ℝ)) := mul_le_mul_of_nonneg_left hq hd
+      _ = _ := by ring
+  have hH : ‖(N : ℂ)*(H-dirichletLFunction χ 1)‖ ≤
+      (N : ℝ)*(2*(D : ℝ)/(Y : ℝ)) := by
+    rw [norm_mul,Complex.norm_natCast]
+    exact mul_le_mul_of_nonneg_left
+      (lemma31_character_harmonic_truncation_norm_le χ hD Y hY) (Nat.cast_nonneg _)
+  rw [hid]
+  calc
+    _ ≤ ‖(S-(N : ℂ)*H)+T‖ + ‖(N : ℂ)*(H-dirichletLFunction χ 1)‖ := norm_add_le _ _
+    _ ≤ (‖S-(N : ℂ)*H‖+‖T‖) + ‖(N : ℂ)*(H-dirichletLFunction χ 1)‖ :=
+      add_le_add (norm_add_le _ _) (le_refl _)
+    _ ≤ ((Y : ℝ)+2*(D : ℝ)*(N : ℝ)/(Y : ℝ)) +
+        (N : ℝ)*(2*(D : ℝ)/(Y : ℝ)) := add_le_add
+      (add_le_add (lemma31_hyperbola_short_error_le χ N Y) hT) hH
+    _ = _ := by ring
+
+end ZhangLS.Spec

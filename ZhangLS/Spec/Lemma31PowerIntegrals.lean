@@ -1,0 +1,48 @@
+import ZhangLS.Spec.Lemma31NuAbel
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset MeasureTheory Set
+set_option maxHeartbeats 2000000
+
+lemma lemma31_sqrt_inverse_square (t : ℝ) (ht : 0 < t) :
+    (t^2)⁻¹*Real.sqrt t = t^(-3/2 : ℝ) := by
+  have hh := Real.rpow_sub ht (1/2) 2
+  rw [show (1/2-2 : ℝ) = -3/2 by ring] at hh
+  rw [Real.rpow_two,← Real.sqrt_eq_rpow] at hh
+  rw [mul_comm]
+  change Real.sqrt t / t^2 = t^(-3/2 : ℝ)
+  exact hh.symm
+
+lemma lemma31_sqrt_inverse (t : ℝ) (ht : 0 < t) :
+    Real.sqrt t * t⁻¹ = (Real.sqrt t)⁻¹ := by
+  have hs : 0 < Real.sqrt t := Real.sqrt_pos.mpr ht
+  field_simp
+  exact Real.sq_sqrt ht.le
+
+lemma lemma31_three_halves_integral (T : ℝ) (hT : 0 < T) :
+    (∫ t : ℝ in Set.Ioi T, t^(-3/2 : ℝ)) = 2*(Real.sqrt T)⁻¹ := by
+  rw [integral_Ioi_rpow_of_lt (by norm_num : (-3/2 : ℝ) < -1) hT]
+  norm_num
+  rw [Real.rpow_neg hT.le,← Real.sqrt_eq_rpow]
+  ring
+
+lemma lemma31_three_halves_partial_integral_le (M N : ℝ) (hM : 0 < M) :
+    (∫ t : ℝ in Set.Ioc M N, t^(-3/2 : ℝ)) ≤ 2*(Real.sqrt M)⁻¹ := by
+  have hi : IntegrableOn (fun t : ℝ => t^(-3/2 : ℝ)) (Set.Ioi M) :=
+    integrableOn_Ioi_rpow_of_lt (by norm_num : (-3/2 : ℝ) < -1) hM
+  calc
+    _ ≤ ∫ t : ℝ in Set.Ioi M, t^(-3/2 : ℝ) := by
+      apply setIntegral_mono_set hi
+      · filter_upwards [ae_restrict_mem measurableSet_Ioi] with t ht
+        exact Real.rpow_nonneg (le_of_lt (lt_trans hM ht)) _
+      · exact Set.Ioc_subset_Ioi_self.eventuallyLE
+    _ = _ := lemma31_three_halves_integral M hM
+
+lemma lemma31_inverse_partial_integral (M N : ℝ) (hM : 0 < M) (hMN : M ≤ N) :
+    (∫ t : ℝ in Set.Ioc M N, t⁻¹) = Real.log N-Real.log M := by
+  have hN : 0 < N := lt_of_lt_of_le hM hMN
+  rw [← intervalIntegral.integral_of_le hMN]
+  have hi := integral_one_div_of_pos hM hN
+  simpa only [one_div,Real.log_div (ne_of_gt hN) (ne_of_gt hM)] using hi
+
+end ZhangLS.Spec

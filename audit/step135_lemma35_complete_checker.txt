@@ -1,0 +1,79 @@
+import ZhangMathStep181Lemma35CompleteDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex MeasureTheory Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (p : lemma33PrimeIndex D)
+    (ψ : DirichletCharacter ℂ p.val) :
+    (⟨p,ψ⟩ : lemma33CharacterIndex D) ∈ lemma35ActualBadFamily χ ↔
+      p.val.Prime ∧ ψ.IsPrimitive ∧ lemma23PaperP D < (p.val : ℝ) ∧
+        (p.val : ℝ) < lemma23PaperP D*(1+lemma23PaperL D^(-68 : ℤ)) ∧
+        ¬(‖lemma23ActualX3 χ ψ (lemma23PaperP D^2)‖ +
+          (∫ t in Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2), ‖lemma23ActualX3 χ ψ t‖/t)
+          < lemma23PaperL D^(-585 : ℤ)) := by
+  simpa only [Lemma23InPsi,lemma35ActualB,and_assoc] using lemma35_mem_bad_family χ p ψ
+
+example {D q : ℕ} (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ q) :
+    Measurable (fun t : ℝ => ∑ n ∈ Finset.Ioc (D^4) ⌊t⌋₊,
+      lemma23NuArithmeticFunction χ n*ψ (n : ZMod q)*
+        Complex.exp (-lemma23PaperCenter D*(Real.log (n : ℝ) : ℂ))) := by
+  simpa only [lemma23ActualX3] using lemma35_actual_X3_measurable χ ψ
+
+example {D q : ℕ} (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ q)
+    (hD : 1 ≤ D) :
+    IntegrableOn (fun t : ℝ => ‖lemma23ActualX3 χ ψ t‖/t)
+      (Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2)) := by
+  simpa only [pow_one] using lemma35_actual_X3_power_weighted_integrable χ ψ hD 1
+
+example : ∃ D₀ : ℕ, ∀ D : ℕ, D₀ ≤ D → 1 < D ∧ 3 ≤ lemma23PaperL D ∧
+    ∀ χ : RealPrimitiveCharacter D, NormalizedAssumptionA χ →
+      ∀ x : ℝ, x ≤ lemma23PaperP D^2 →
+        (∑ ψ ∈ lemma33ActualFamily D,
+          ‖∑ n ∈ Finset.Ioc (D^4) ⌊x⌋₊,
+            lemma23NuArithmeticFunction χ n*ψ.2 (n : ZMod ψ.1.val)*
+              Complex.exp (-lemma23PaperCenter D*(Real.log (n : ℝ) : ℂ))‖^2) ≤
+          5040*(32+Real.pi^2)*lemma33ActualPrimeMass D*lemma23PaperL D^(-1934 : ℤ) := by
+  simpa only [lemma23ActualX3] using lemma35_uniform_actual_X3_mean
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ,
+    ∀ D : ℕ, D₀ ≤ D → ∀ χ : RealPrimitiveCharacter D, NormalizedAssumptionA χ →
+      (((lemma33ActualFamily D).filter (fun ψ => lemma23PaperL D^(-585 : ℤ) ≤
+        ‖lemma23ActualX3 χ ψ.2 (lemma23PaperP D^2)‖ +
+          (∫ t in Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2), ‖lemma23ActualX3 χ ψ.2 t‖/t))).card : ℝ) ≤
+        C*lemma33ActualPrimeMass D*lemma23PaperL D^(-739 : ℤ) := by
+  simpa only [Lemma35Target,lemma35ActualBadFamily,lemma35ActualB] using lemma35_proved
+
+example : Lemma35Target := lemma35_proved
+
+#print axioms lemma35_actual_X3_eq_centered_sum
+#print axioms lemma35_actual_X3_mean_eq
+#print axioms lemma35_centered_coefficient_energy_le
+#print axioms lemma35_actual_X3_mean_energy_le
+#print axioms lemma35_prime_windows_eq
+#print axioms lemma35_actual_prime_mass_eq
+#print axioms lemma35_prime_mass_scale_of_lower
+#print axioms lemma35_mean_scale_identity
+#print axioms lemma35_actual_X3_mean_of_inputs
+#print axioms lemma35_uniform_actual_X3_mean
+#print axioms lemma35_actual_X3_eq_partial_sum
+#print axioms lemma35_actual_X3_measurable
+#print axioms lemma35_actual_X3_partial_norm_bound
+#print axioms lemma35_actual_X3_power_weighted_integrable
+#print axioms lemma35_interval_parameters
+#print axioms lemma35_inverse_integral
+#print axioms lemma35_inverse_integrable
+#print axioms lemma35_actual_weighted_integral_cauchy
+#print axioms lemma35_actual_weighted_square_integral_mean_le
+#print axioms lemma35_actual_integral_mean_square_le
+#print axioms lemma35_actual_B_nonneg
+#print axioms lemma35_actual_B_mean_square_le
+#print axioms lemma35_B_mean_scale_identity
+#print axioms lemma35_uniform_actual_B_mean_square
+#print axioms lemma35_mem_bad_family
+#print axioms lemma35_bad_count_times_threshold
+#print axioms lemma35_threshold_square
+#print axioms lemma35_uniform_actual_bad_count
+#print axioms lemma35_proved
+end ZhangLS.Spec

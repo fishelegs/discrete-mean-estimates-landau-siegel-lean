@@ -1,0 +1,28 @@
+{
+  "modules": [
+    "ZhangLS/Spec/Lemma61SingleResidue.lean",
+    "ZhangLS/Spec/Lemma61RightTruncation.lean"
+  ],
+  "proved_interfaces": [
+    "lemma61_family_nonprincipal",
+    "lemma61_single_mellin_numerator_entire",
+    "lemma61_single_mellin_rectangle_residue",
+    "lemma61_actual_single_functional_equation",
+    "lemma61_interval_integral_double",
+    "lemma61_rectangle_scale_identity",
+    "lemma61_simple_pole_wide_rectangle",
+    "lemma61_actual_wide_rectangle_residue",
+    "lemma61_actual_rectangle_identity",
+    "lemma61_single_series_norm_le_square_mass",
+    "lemma61_right_mellin_gaussian_bound",
+    "lemma61_right_gaussian_exponent_absorption",
+    "lemma61_actual_right_mellin_truncation",
+    "lemma61_mellin_normalization_norm_le_one",
+    "lemma61_actual_finite_right_K_bound"
+  ],
+  "interface_count": 15,
+  "definition_count": 2,
+  "expanded_examples": 3,
+  "full_original_target_status": "UNPROVED",
+  "remaining": "left dual integrals, reciprocal tail truncation and horizontal edges"
+}

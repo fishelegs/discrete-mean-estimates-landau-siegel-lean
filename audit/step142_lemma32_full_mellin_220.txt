@@ -1,0 +1,55 @@
+import ZhangMathStep218Lemma32GammaMellinDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma32GammaMellinTerm (c : ℕ → ℂ) (B : ℝ) (n : ℕ) (t : ℝ) : ℂ :=
+  LSeries.term c (2+(t : ℂ)*I) n *
+    Complex.exp ((1+(t : ℂ)*I)*(Real.log B : ℂ))*Complex.Gamma (1+(t : ℂ)*I)
+
+lemma lemma32_Gamma_mellin_term_norm (c : ℕ → ℂ) (B : ℝ) (hB : 0 < B) (n : ℕ) (t : ℝ) :
+    ‖lemma32GammaMellinTerm c B n t‖ =
+      (B*‖LSeries.term c 2 n‖)*‖Complex.Gamma (1+(t : ℂ)*I)‖ := by
+  have ht : ‖LSeries.term c (2+(t : ℂ)*I) n‖ = ‖LSeries.term c 2 n‖ := by
+    simp only [LSeries.norm_term_eq]
+    congr 2
+    simp
+  simp only [lemma32GammaMellinTerm,norm_mul,ht,Complex.norm_exp]
+  simp only [Complex.mul_re,Complex.add_re,Complex.ofReal_re,Complex.ofReal_im,
+    Complex.I_re,Complex.I_im,mul_zero,zero_mul,sub_zero,add_zero,Complex.one_re,mul_one,one_mul]
+  rw [Real.exp_log hB]
+  ring
+
+lemma lemma32_Gamma_mellin_term_integrable (c : ℕ → ℂ) (B : ℝ) (hB : 0 < B) (n : ℕ) :
+    Integrable (lemma32GammaMellinTerm c B n) := by
+  have hc : Continuous (fun t : ℝ =>
+      LSeries.term c (2+(t : ℂ)*I) n*Complex.exp ((1+(t : ℂ)*I)*(Real.log B : ℂ))) := by
+    by_cases hn : n = 0
+    · subst n; simpa only [LSeries.term_zero,zero_mul] using
+        (continuous_const : Continuous (fun _ : ℝ => (0 : ℂ)))
+    have hnC : (n : ℂ) ≠ 0 := by exact_mod_cast hn
+    simp only [LSeries.term_of_ne_zero hn]
+    apply Continuous.mul
+    · apply Continuous.div₀ continuous_const
+      · apply Continuous.const_cpow _ (Or.inl hnC)
+        fun_prop
+      · intro t
+        exact Complex.cpow_ne_zero_iff.mpr (Or.inl hnC)
+    · fun_prop
+  apply (lemma32_gamma_one_vertical_integrable.norm.const_mul (B*‖LSeries.term c 2 n‖)).mono'
+  · exact hc.aestronglyMeasurable.mul lemma32_gamma_one_vertical_integrable.aestronglyMeasurable
+  · filter_upwards [] with t
+    exact (lemma32_Gamma_mellin_term_norm c B hB n t).le
+
+lemma lemma32_Gamma_mellin_term_integral_norm_summable (c : ℕ → ℂ) (B : ℝ) (hB : 0 < B)
+    (hc : LSeriesSummable c 2) :
+    Summable (fun n => ∫ t : ℝ, ‖lemma32GammaMellinTerm c B n t‖) := by
+  have hn := hc.norm
+  apply (hn.mul_left (B*∫ t : ℝ, ‖Complex.Gamma (1+(t : ℂ)*I)‖)).congr
+  intro n
+  simp_rw [lemma32_Gamma_mellin_term_norm c B hB,integral_const_mul]
+  ring
+
+end ZhangLS.Spec

@@ -1,0 +1,24 @@
+{
+  "kernel_exit_code": 0,
+  "checked_at_utc": "2026-10-01T15:34:16.039468+00:00",
+  "sha256": "a3170a5ce98fb88ec790e71c35d5a6653aa101a04b0c5e1a16f08e60c28c95a5",
+  "interface_count": 14,
+  "expanded_examples": 6,
+  "proved_interfaces": [
+    "lemma56_principal_mass_window_width",
+    "lemma56_principal_mass_prefix_error_budget",
+    "lemma56_paper_prime_mass_cut_parameters",
+    "lemma56_actual_paper_prime_log_interval",
+    "lemma56_actual_prime_log_mass_prefix_difference",
+    "lemma56_principal_mass_main_factor_ge_one",
+    "lemma56_actual_prime_log_mass_main_error_of_prefix",
+    "lemma56_actual_prime_log_mass_lower_of_main_error",
+    "lemma56_uniform_actual_prime_mass_threshold",
+    "lemma56_uniform_actual_prime_log_mass_lower",
+    "lemma56_uniform_actual_prime_mass_lower",
+    "lemma56_uniform_primitive_prime_window_normalized_bound",
+    "lemma56_uniform_actual_prime_mass_pos",
+    "lemma56_uniform_actual_prime_window_nonempty"
+  ],
+  "scope": "Original-(A) actual strict prime-log mass lower P/(2 L^68), actual prime mass lower P^2/(4 L^77), positivity and nonempty strict window; original normalized primitive prime-window exponential bound for q>1 without any mass hypothesis. Full faithful q=1 principal target remains pending."
+}

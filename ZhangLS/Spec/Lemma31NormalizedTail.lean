@@ -1,0 +1,41 @@
+import ZhangLS.Spec.Lemma31PaperScale
+import ZhangLS.Spec.Lemma31Absorption
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+set_option maxHeartbeats 2000000
+
+lemma lemma31_small_value_scale_identity (L : ℝ) (hL : 0 < L) :
+    L^(-2022 : ℤ)*L^9 = L^(-2013 : ℤ) := by
+  simpa only [Int.reduceAdd,zpow_ofNat] using (zpow_add₀ (ne_of_gt hL) (-2022 : ℤ) 9).symm
+
+lemma lemma31_nu_linear_paper_tail_le {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (hL : 1 ≤ lemma23PaperL D) (hA : NormalizedAssumptionA χ)
+    (hAbs : (Real.sqrt (D : ℝ))⁻¹ ≤ lemma23PaperL D^(-2013 : ℤ)) :
+    (∑ n ∈ Finset.Ioc (D^2) (lemma31PaperCutoff D), lemma31NuReal χ n*(n : ℝ)⁻¹) ≤
+      21*lemma23PaperL D^(-2013 : ℤ) := by
+  have hl0 : 0 < lemma23PaperL D := by linarith
+  have hc := lemma31_D_square_le_paper_cutoff hD hL
+  have hn : 1 ≤ lemma31PaperCutoff D := (show 1 ≤ D^2 by have hd : 1 ≤ D := hD.le; exact one_le_pow₀ hd).trans hc
+  have hnR : (1 : ℝ) ≤ lemma31PaperCutoff D := by exact_mod_cast hn
+  have hfac : 0 ≤ 1+Real.log (lemma31PaperCutoff D : ℝ) := by
+    have hh := Real.log_nonneg hnR
+    linarith
+  have ha : realLAtOne χ ≤ lemma23PaperL D^(-2022 : ℤ) := by
+    have hh : realLAtOne χ < lemma23PaperL D^(-2022 : ℤ) := by
+      simpa only [NormalizedAssumptionA,AssumptionAWithConstant,one_mul,lemma23PaperL] using hA
+    exact hh.le
+  have hmain : realLAtOne χ*(1+Real.log (lemma31PaperCutoff D : ℝ)) ≤
+      lemma23PaperL D^(-2022 : ℤ)*(3*lemma23PaperL D^9) := mul_le_mul ha
+    (lemma31_paper_cutoff_log_factor_le hD hL) hfac (zpow_pos hl0 _).le
+  calc
+    _ ≤ realLAtOne χ*(1+Real.log (lemma31PaperCutoff D : ℝ)) +
+        18*(Real.sqrt (D : ℝ))⁻¹ := lemma31_nu_weighted_D_square_tail_le χ hD _ hc
+    _ ≤ lemma23PaperL D^(-2022 : ℤ)*(3*lemma23PaperL D^9) +
+        18*lemma23PaperL D^(-2013 : ℤ) := add_le_add hmain
+      (mul_le_mul_of_nonneg_left hAbs (by norm_num))
+    _ = 3*(lemma23PaperL D^(-2022 : ℤ)*lemma23PaperL D^9) +
+        18*lemma23PaperL D^(-2013 : ℤ) := by ring
+    _ = _ := by rw [lemma31_small_value_scale_identity _ hl0]; ring
+
+end ZhangLS.Spec

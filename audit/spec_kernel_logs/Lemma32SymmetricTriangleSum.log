@@ -1,0 +1,7 @@
+ZhangLS/Spec/Lemma32SymmetricTriangleSum.lean:35:59: warning: This simp argument is unused:
+  hf
+
+Hint: Omit it from the simp argument list.
+  simp_all ̵[̵h̵f̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

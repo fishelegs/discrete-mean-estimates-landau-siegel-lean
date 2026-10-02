@@ -1,0 +1,56 @@
+import ZhangMathStep216Lemma32CircleRegularityDraft
+import ZhangLS.Spec.Lemma44GammaLogDerivative
+import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_gamma_one_vertical_bound (t : ℝ) :
+    ‖Complex.Gamma (1+(t : ℂ)*Complex.I)‖ ≤ 3/(1+t^2) := by
+  let z : ℂ := 1+(t : ℂ)*Complex.I
+  have hzre : z.re = 1 := by simp [z]
+  have hzne : z ≠ 0 := by intro h; rw [h] at hzre; norm_num at hzre
+  have hz1re : (z+1).re = 2 := by norm_num [hzre]
+  have hz1ne : z+1 ≠ 0 := by intro h; rw [h] at hz1re; norm_num at hz1re
+  have hn : ‖z‖^2 = 1+t^2 := by
+    rw [Complex.sq_norm]
+    simp [Complex.normSq_apply,z,pow_two]
+  have hn1 : ‖z+1‖^2 = 4+t^2 := by
+    rw [Complex.sq_norm]
+    simp [Complex.normSq_apply,z,pow_two]
+    ring
+  have hle : ‖z‖ ≤ ‖z+1‖ := by nlinarith [norm_nonneg z,norm_nonneg (z+1)]
+  have hb : ‖Complex.Gamma ((z+1)+1)‖ ≤ 3 := by
+    have hh := lemma44_norm_Gamma_le_factorial (z := (z+1)+1) (m := 2)
+      (by norm_num [hzre]) (by norm_num [hzre])
+    norm_num [Nat.factorial] at hh
+    exact hh
+  rw [Complex.Gamma_add_one (z+1) hz1ne,Complex.Gamma_add_one z hzne,
+    norm_mul,norm_mul] at hb
+  apply (le_div_iff₀ (by positivity : 0 < 1+t^2)).mpr
+  calc
+    _ = (‖z‖*‖z‖)*‖Complex.Gamma z‖ := by rw [← hn]; ring
+    _ ≤ (‖z+1‖*‖z‖)*‖Complex.Gamma z‖ := by gcongr
+    _ ≤ 3 := by simpa only [mul_assoc] using hb
+
+lemma lemma32_gamma_one_vertical_integrable :
+    Integrable (fun t : ℝ => Complex.Gamma (1+(t : ℂ)*Complex.I)) := by
+  have hc : Continuous (fun t : ℝ => Complex.Gamma (1+(t : ℂ)*Complex.I)) := by
+    apply continuous_iff_continuousAt.mpr
+    intro t
+    have hg := Complex.continuousAt_Gamma (1+(t : ℂ)*Complex.I) (by
+      intro m hm
+      have ht := congrArg Complex.re hm
+      simp only [Complex.add_re,Complex.one_re,Complex.mul_re,Complex.ofReal_re,
+        Complex.ofReal_im,Complex.I_re,Complex.I_im,mul_zero,zero_mul,sub_zero,add_zero,
+        Complex.neg_re,Complex.natCast_re] at ht
+      have hm0 : (0 : ℝ) ≤ m := Nat.cast_nonneg m
+      linarith)
+    exact hg.comp' (f := fun u : ℝ => (1 : ℂ)+(u : ℂ)*Complex.I) (by fun_prop)
+  apply (integrable_inv_one_add_sq.const_mul (3 : ℝ)).mono' hc.aestronglyMeasurable
+  filter_upwards [] with t
+  simpa only [div_eq_mul_inv] using lemma32_gamma_one_vertical_bound t
+
+end ZhangLS.Spec

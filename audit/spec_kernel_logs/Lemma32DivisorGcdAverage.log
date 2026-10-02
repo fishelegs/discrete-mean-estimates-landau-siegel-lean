@@ -1,0 +1,7 @@
+ZhangLS/Spec/Lemma32DivisorGcdAverage.lean:15:57: warning: This simp argument is unused:
+  and_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [Nat.mem_divisors, Nat.dvd_gcd_iff, hD.ne', hg,̵ ̵a̵n̵d̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

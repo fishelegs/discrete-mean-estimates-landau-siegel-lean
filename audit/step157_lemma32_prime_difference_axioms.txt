@@ -1,0 +1,461 @@
+'ZhangLS.Spec.lemma32_actual_coefficient_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_tau_two_prime_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_coefficient_prime_power_of_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_coefficient_prime_power_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_coefficient_prime_power_of_neg_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_coefficient_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_rising_choose_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_rising_choose_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_rising_choose_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_fourth_power_choose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_fourth_geometric_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_coefficient_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_square_geometric_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_even_square_geometric_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_local_series_of_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_local_series_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_even_local_series_of_neg_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_local_series_of_neg_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_local_correction_of_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_local_correction_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_local_correction_of_neg_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_bounded_polynomial_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_plus_factor_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_minus_factor_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_plus_factor_norm_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_minus_factor_norm_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_local_correction_norm_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_character_prime_cases_of_not_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_local_correction_norm_of_not_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_zero_factor_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_local_correction_norm_of_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_zero_correction_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_correction_regular_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_regular_local_norm_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_local_differentiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_local_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_prime_monomial_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_prime_monomial_norm_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_prime_monomial_norm_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_prime_errors_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_euler_product_multipliable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_prime_error_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_finite_product_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_euler_product_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_product_bound_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_finite_product_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_products_uniform_cauchy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_products_uniform_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_prime_monomial_differentiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_finite_product_differentiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_products_locally_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_euler_product_differentiableOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_euler_product_analyticOnNhd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_one_sub_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_prime_monomial_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_cos_lower_of_abs_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_ramified_prime_factor_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_ramification_factor_differentiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_analytic_correction_analyticOnNhd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_ramification_factor_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_analytic_correction_sector_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_negative_power_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_residue_disk_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_analytic_correction_residue_disk_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_first_derivative_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_L_difference_near_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_value_at_one_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_circle_small_value_scale_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_L_residue_disk_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_zeta_pole_removed_local_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_zeta_local_pole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_zeta_L_residue_circle_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_exists_gamma_local_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_gamma_local_bound_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_gamma_local_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regularized_gamma_local_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_smoothing_difference_local_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_smoothing_gamma_local_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_circle_constant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_circle_integrand_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_residue_circle_scale_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_normalized_circle_integral_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_modulus_cpow_eq_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_original_smoothing_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_original_normalized_circle_integral_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_multichoose_2_square_le_4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_multichoose_4_square_le_16' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_tau2_square_le_tau4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_tau4_square_le_tau16' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_tau_two_eq_card_divisors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_coefficient_le_tau_sixteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_tau_lseries_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_weighted_lseries_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_weighted_norm_terms_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_weighted_term_at_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_weighted_term_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_weighted_euler_hasProd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_weighted_euler_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_prime_monomial_eq_cpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_weighted_prime_power_term' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_weighted_local_correction_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_finite_ramification_prime_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_ramification_prime_factors_hasProd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_local_corrections_hasProd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_zeta_monomial_euler_hasProd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_L_monomial_euler_hasProd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_weighted_series_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_circle_integrand_differentiableAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_circle_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_gamma_one_vertical_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_gamma_one_vertical_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_exponential_mellin_eq_Gamma' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_exponential_mellin_convergent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_Gamma_mellin_inversion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_Gamma_mellin_term_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_Gamma_mellin_term_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_Gamma_mellin_term_integral_norm_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_Gamma_mellin_term_eq_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_Gamma_mellin_term_normalized_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_Gamma_mellin_tsum_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_full_series_gamma_mellin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_right_Gamma_integrand_eq_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_right_Gamma_integrand_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_smoothed_weighted_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_full_Gamma_mellin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_original_right_Gamma_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_original_right_Gamma_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_original_Gamma_mellin_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_smoothed_difference_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_weighted_term_one_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_real_smoothed_terms_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_smoothed_difference_real_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_real_smoothed_term_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_real_smoothed_difference_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_smoothing_window_lower_bound_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_exponential_smoothing_window_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_smoothing_weight_window_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_weighted_tail_le_smoothed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_zeta_pole_removed_differentiableAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_smoothing_difference_differentiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_smoothing_dslope_differentiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_numerator_differentiableAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_numerator_analyticOnNhd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_numerator_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_numerator_differentiableOn_ball' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_circle_integral_eq_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_original_circle_integral_eq_residue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_residue_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_divided_remainder_differentiableOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_divided_remainder_analyticOnNhd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_divided_remainder_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_regular_numerator_finite_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_integrand_principal_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_regular_remainder_rectangle_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_divided_remainder_power_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_divided_remainder_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_residue_eq_divided_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_laurent_primitive_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_horizontal_zpow_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_vertical_zpow_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_rectangle_zpow_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_rectangle_inverse_winding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_rectangle_laurent_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_boundary_integrable_punctured' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_boundary_integral_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_boundary_integral_const_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_boundary_integral_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_laurent_kernel_continuousOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_principal_part_boundary_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_principal_boundary_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_boundary_integrable_halfplane' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_finite_rectangle_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_mellin_normalizing_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_normalized_finite_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_gamma_shift_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_gamma_shift_norm_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_gamma_strip_polynomial_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_ramification_global_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_analytic_correction_global_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_positive_strip_high_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_zeta_strip_high_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_L_strip_high_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_zeta_L_strip_high_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_smoothing_strip_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_global_height_constant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_integrand_height_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_integrand_eq_regular_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_integrand_differentiableAt_global' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_vertical_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_integrable_of_quartic_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_left_vertical_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_horizontal_integral_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_tendsto_zero_of_quartic_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_upper_horizontal_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_lower_horizontal_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_infinite_contour_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_smoothed_difference_eq_residue_add_left' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_original_tail_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_ramified_prime_small_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_large_prime_monomial_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_ramified_large_prime_saving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_ramification_saving_constant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_prime_factors_log_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_ramification_small_prime_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_ramification_uniform_power_saving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_analytic_correction_uniform_power_saving' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_square_quarter_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_square_negative_quarter_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_small_quarter_power_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_large_quarter_power_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_partial_sum_square_root_majorant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_abel_small_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_abel_large_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_abel_square_root_partial_sum_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_L_bound_of_square_root_partial_sums' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_burgess_scale_half_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_L_bound_of_burgess_partial_sums' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_left_line_Gamma_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_left_line_zeta_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_left_kernel_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_left_kernel_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_left_kernel_high_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_left_kernel_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_left_kernel_constant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_left_kernel_integral_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_smoothing_left_line_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_half_power_eighth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_left_integrand_bound_of_partial_sums' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_left_error_constant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_left_integral_bound_of_partial_sums' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_burgess_scale_fourth_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_left_integral_bound_of_burgess_partial_sums' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_left_error_absorption_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_target_of_uniform_burgess_partial_sums' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_real_complex_norm_fourth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_quartic_character_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_burgess_fourth_moment_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_pairing_image_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_degenerate_quartic_tuples_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_quartic_correlation_abs_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_degenerate_fourth_moment_contribution_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_character_value_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_character_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_two_linear_correlation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_character_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_two_linear_correlation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_two_linear_real_correlation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_repeated_root_correlation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_repeated_root_correlation_norm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_mem_degenerate_iff_paired' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_repeated_correlation_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_quartic_repeated_correlation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_fourth_moment_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_fourth_moment_remainder_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_nondegenerate_fourth_moment_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_correlation_permutation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_repeated_quartic_permutation_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_cubic_substitution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_quartic_cubic_point_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_quartic_cubic_punctured_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_quartic_cubic_sum_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_monic_cubic_normalization' depends on axioms: [propext, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_monic_cubic_point_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_normalized_cubic_sum_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_quartic_normalized_cubic_sum_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_normalized_cubic_root_factorization' depends on axioms: [propext, Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_Weierstrass_discriminant' depends on axioms: [propext, Quot.sound]
+'ZhangLS.Spec.lemma32_cubic_leading_coefficient_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_Weierstrass_discriminant_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_Weierstrass_isElliptic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_mulchar_eq_of_unit_generator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_nontrivial_quadratic_unit_generator_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_nontrivial_quadratic_character_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_nontrivial_quadratic_character_eq_canonical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_nontrivial_quadratic_character_canonical_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_affine_solution_card_fibers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_square_root_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_affine_card_character_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_character_sum_affine_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_curve_affine_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_curve_affine_solution_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_character_sum_Weierstrass_affine_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_Weierstrass_point_card_affine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_character_sum_actual_curve_points' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_quartic_point_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_quartic_correlation_point_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_nontrivial_quadratic_odd_characteristic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_field_two_nonzero_of_odd_characteristic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_odd_characteristic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_distinct_quartic_point_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_four_distinct_roots_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_four_distinct_roots_field_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_four_distinct_prime_roots_modulus_ge_five' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_unpaired_quartic_collision_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_short_residue_cast_injective' depends on axioms: [propext, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_unpaired_collision_correlation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_noninjective_iff_collision' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_collision_tuples_covered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_collision_quartic_tuple_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_prime_collision_fourth_moment_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_nondegenerate_split_by_injectivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_fourth_moment_distinct_reduction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_distinct_quartic_correlation_point_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_distinct_fourth_moment_eq_actual_point_discrepancy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_curve_points_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_curve_fintype_card_eq_nat_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_product_character_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_product_character_finite_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_product_character_left_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_product_character_right_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_product_quartic_character_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_character_equiv_pullback_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_character_equiv_pullback_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quartic_character_sum_ring_equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_CRT_character_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_CRT_quartic_character_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_CRT_character_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_CRT_factorsThrough_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_CRT_factorsThrough_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_primitive_CRT_left_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_primitive_CRT_right_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_changeLevel_factorsThrough_conductor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_changeLevel_conductor_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_CRT_changeLevel_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_CRT_conductor_dvd_lcm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_primitive_CRT_characters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_real_primitive_CRT_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_real_primitive_CRT_quartic_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_hom_odd_card_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_quadratic_character_factorsThrough_odd_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_units_reduction_kernel_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_prime_power_reduction_kernel_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_odd_prime_power_quadratic_factorsThrough' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_odd_prime_power_quadratic_conductor_dvd' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_odd_prime_power_primitive_quadratic_exponent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_two_power_reduction_kernel_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_two_power_five_unit_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_two_power_five_square_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_two_power_reduction_kernel_generator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_two_power_quadratic_factorsThrough' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_two_power_quadratic_conductor_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_two_power_primitive_quadratic_exponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_real_primitive_odd_prime_exponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_real_primitive_two_adic_exponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_real_primitive_odd_part_squarefree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_real_primitive_modulus_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_curve_hasse_nat_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_distinct_quartic_hasse_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_distinct_quartic_correlation_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_distinct_fourth_moment_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_fourth_moment_hasse_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_prime_sqrt_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_unpaired_quartic_hasse_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_isolated_root_hasse_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_unpaired_quartic_tuple_has_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_quartic_sum_trivial_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma32_actual_prime_quartic_root_difference_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

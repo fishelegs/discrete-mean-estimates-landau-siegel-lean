@@ -1,0 +1,89 @@
+import ZhangLS.Spec.Lemma32FourierKernelReciprocal
+import ZhangLS.Spec.Lemma32DivisorSummatory
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+open scoped Classical
+
+lemma lemma32_nonzero_zmod_sum (D : ℕ) [NeZero D] (f : ℕ → ℝ) :
+    (∑ k ∈ (Finset.univ : Finset (ZMod D)).filter (fun k => k≠0), f k.val) =
+      ∑ j ∈ Finset.Ioo 0 D, f j := by
+  apply Finset.sum_bij (fun k hk => k.val)
+  · intro k hk
+    exact Finset.mem_Ioo.mpr
+      ⟨Nat.pos_of_ne_zero ((ZMod.val_eq_zero k).not.mpr (Finset.mem_filter.mp hk).2), ZMod.val_lt k⟩
+  · intro k hk l hl he
+    exact ZMod.val_injective D he
+  · intro j hj
+    refine ⟨(j : ZMod D), ?_, ZMod.val_natCast_of_lt (Finset.mem_Ioo.mp hj).2⟩
+    apply Finset.mem_filter.mpr
+    refine ⟨Finset.mem_univ _, ?_⟩
+    intro he
+    have hv := congrArg ZMod.val he
+    rw [ZMod.val_natCast_of_lt (Finset.mem_Ioo.mp hj).2, ZMod.val_zero] at hv
+    exact (Nat.ne_of_gt (Finset.mem_Ioo.mp hj).1) hv
+  · intro k hk
+    rfl
+
+lemma lemma32_positive_difference_sum (D : ℕ) (f : ℕ → ℝ) :
+    (∑ j ∈ Finset.Ioo 0 D, f (D-j)) = ∑ j ∈ Finset.Ioo 0 D, f j := by
+  apply Finset.sum_bij (fun j hj => D-j)
+  · intro j hj
+    simp only [Finset.mem_Ioo] at hj ⊢
+    omega
+  · intro j hj k hk he
+    have hjD := (Finset.mem_Ioo.mp hj).2
+    have hkD := (Finset.mem_Ioo.mp hk).2
+    omega
+  · intro j hj
+    refine ⟨D-j, ?_, ?_⟩
+    · simp only [Finset.mem_Ioo] at hj ⊢
+      omega
+    · have hjD := (Finset.mem_Ioo.mp hj).2
+      omega
+  · intro j hj
+    rfl
+
+lemma lemma32_positive_harmonic_log_bound (D : ℕ) :
+    (∑ j ∈ Finset.Ioo 0 D, 1/(j : ℝ)) ≤ 1+Real.log (D : ℝ) := by
+  have hs : Finset.Ioo 0 D ⊆ Finset.Ioc 0 D := by
+    intro j hj
+    exact Finset.mem_Ioc.mpr ⟨(Finset.mem_Ioo.mp hj).1,(Finset.mem_Ioo.mp hj).2.le⟩
+  have hi : Finset.Ioc 0 D=Finset.Icc 1 D := by
+    ext j
+    simp only [Finset.mem_Ioc, Finset.mem_Icc]
+    omega
+  have he : (∑ j ∈ Finset.Ioc 0 D, 1/(j : ℝ))=(harmonic D : ℝ) := by
+    rw [hi, harmonic_eq_sum_Icc]
+    simp only [Rat.cast_sum, Rat.cast_inv, Rat.cast_natCast, one_div]
+  calc
+    _ ≤ ∑ j ∈ Finset.Ioc 0 D, 1/(j : ℝ) :=
+      Finset.sum_le_sum_of_subset_of_nonneg hs (fun j hj hjs => one_div_nonneg.mpr (Nat.cast_nonneg _))
+    _ = _ := he
+    _ ≤ _ := harmonic_le_one_add_log D
+
+lemma lemma32_fourier_interval_kernel_summatory {D : ℕ} [NeZero D]
+    (M : ℤ) (N : ℕ) :
+    (∑ k ∈ (Finset.univ : Finset (ZMod D)).filter (fun k => k≠0),
+      ‖lemma32FourierIntervalKernel D M N k‖) ≤ 2*(D : ℝ)*(1+Real.log (D : ℝ)) := by
+  have hb : (∑ k ∈ (Finset.univ : Finset (ZMod D)).filter (fun k => k≠0),
+      ‖lemma32FourierIntervalKernel D M N k‖) ≤
+      ∑ k ∈ (Finset.univ : Finset (ZMod D)).filter (fun k => k≠0),
+        ((D : ℝ)/(k.val : ℝ)+(D : ℝ)/((D-k.val : ℕ) : ℝ)) := by
+    apply Finset.sum_le_sum
+    intro k hk
+    exact lemma32_fourier_kernel_two_reciprocal_bound M N (Finset.mem_filter.mp hk).2
+  have he := lemma32_nonzero_zmod_sum D
+    (fun j => (D : ℝ)/(j : ℝ)+(D : ℝ)/((D-j : ℕ) : ℝ))
+  rw [he] at hb
+  have hs : (∑ j ∈ Finset.Ioo 0 D,
+      ((D : ℝ)/(j : ℝ)+(D : ℝ)/((D-j : ℕ) : ℝ))) =
+      2*(D : ℝ)*(∑ j ∈ Finset.Ioo 0 D, 1/(j : ℝ)) := by
+    rw [Finset.sum_add_distrib, lemma32_positive_difference_sum D (fun j => (D : ℝ)/(j : ℝ))]
+    simp_rw [div_eq_mul_inv]
+    rw [← Finset.mul_sum]
+    ring
+  rw [hs] at hb
+  exact hb.trans (mul_le_mul_of_nonneg_left (lemma32_positive_harmonic_log_bound D) (by positivity))
+
+end ZhangLS.Spec

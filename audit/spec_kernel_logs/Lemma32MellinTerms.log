@@ -1,0 +1,9 @@
+ZhangLS/Spec/Lemma32MellinTerms.lean:21:39: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [̵C̵o̵m̵p̵l̵e̵x̵.̵m̵u̵l̵_̵r̵e̵,̵C̵o̵m̵p̵l̵e̵x̵.̵a̵d̵d̵_̵r̵e̵,̵C̵o̵m̵p̵l̵e̵x̵.̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵C̵o̵m̵p̵l̵e̵x̵.̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵I̵_̵r̵e̵,̵C̵o̵m̵p̵l̵e̵x̵.̵I̵_̵i̵m̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵s̵u̵b̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵C̵o̵m̵p̵l̵e̵x̵.̵o̵n̵e̵_̵r̵e̵,̵m̵u̵l̵_̵o̵n̵e̵,̵o̵n̵e̵_̵m̵u̵l̵]̵[̲C̲o̲m̲p̲l̲e̲x̲.̲m̲u̲l̲_̲r̲e̲,̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲a̲d̲d̲_̲r̲e̲,̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲I̲_̲r̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲I̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲s̲u̲b̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲o̲n̲e̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲o̲n̲e̲_̲m̲u̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

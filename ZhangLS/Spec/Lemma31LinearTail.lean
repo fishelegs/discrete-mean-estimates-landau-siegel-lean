@@ -1,0 +1,67 @@
+import ZhangLS.Spec.Lemma31NuIntegralBound
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset MeasureTheory Set
+set_option maxHeartbeats 2000000
+
+lemma lemma31_nu_weighted_endpoint_le {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (M N : ℕ) (hDM : D ≤ M) (hMN : M ≤ N) :
+    (N : ℝ)⁻¹*lemma31NuCumulative χ N ≤
+      realLAtOne χ + 6*Real.sqrt (D : ℝ)*(Real.sqrt (M : ℝ))⁻¹ := by
+  have hm0 : (0 : ℝ) < M := by exact_mod_cast (show 0 < M by omega)
+  have hn0 : (0 : ℝ) < N := by exact_mod_cast (show 0 < N by omega)
+  have hmn : (M : ℝ) ≤ N := by exact_mod_cast hMN
+  have hb := lemma31_nu_real_cumulative_le χ hD N (hDM.trans hMN)
+  have he : lemma31NuCumulative χ N ≤ (N : ℝ)*realLAtOne χ +
+      6*Real.sqrt (D : ℝ)*Real.sqrt (N : ℝ) := by
+    simpa only [lemma31NuCumulative,Nat.floor_natCast] using hb
+  have hs : (Real.sqrt (N : ℝ))⁻¹ ≤ (Real.sqrt (M : ℝ))⁻¹ :=
+    (inv_le_inv₀ (Real.sqrt_pos.mpr hn0) (Real.sqrt_pos.mpr hm0)).mpr
+      (Real.sqrt_le_sqrt hmn)
+  calc
+    _ ≤ (N : ℝ)⁻¹*((N : ℝ)*realLAtOne χ +
+        6*Real.sqrt (D : ℝ)*Real.sqrt (N : ℝ)) :=
+      mul_le_mul_of_nonneg_left he (inv_nonneg.mpr (Nat.cast_nonneg _))
+    _ = realLAtOne χ + 6*Real.sqrt (D : ℝ)*(Real.sqrt (N : ℝ)*(N : ℝ)⁻¹) := by
+      field_simp
+    _ = realLAtOne χ + 6*Real.sqrt (D : ℝ)*(Real.sqrt (N : ℝ))⁻¹ := by
+      rw [lemma31_sqrt_inverse (N : ℝ) hn0]
+    _ ≤ _ := add_le_add (le_refl _) (mul_le_mul_of_nonneg_left hs (by positivity))
+
+lemma lemma31_nu_weighted_linear_tail_le {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (M N : ℕ) (hDM : D ≤ M) (hMN : M ≤ N) :
+    (∑ n ∈ Finset.Ioc M N, lemma31NuReal χ n*(n : ℝ)⁻¹) ≤
+      realLAtOne χ*(1+Real.log (N : ℝ)) +
+        18*Real.sqrt (D : ℝ)*(Real.sqrt (M : ℝ))⁻¹ := by
+  have hM : 1 ≤ M := hD.le.trans hDM
+  have he := lemma31_nu_weighted_endpoint_le χ hD M N hDM hMN
+  have hi := lemma31_nu_weighted_integral_le χ hD M N hDM hMN
+  have hA : 0 ≤ (M : ℝ)⁻¹*lemma31NuCumulative χ M :=
+    mul_nonneg (inv_nonneg.mpr (Nat.cast_nonneg _)) (lemma31_nu_cumulative_nonneg χ M)
+  rw [lemma31_nu_weighted_tail_abel χ M N hM hMN]
+  calc
+    _ ≤ (N : ℝ)⁻¹*lemma31NuCumulative χ N +
+        (∫ t : ℝ in Set.Ioc (M : ℝ) N, (t^2)⁻¹*lemma31NuCumulative χ t) :=
+      add_le_add (sub_le_self _ hA) (le_refl _)
+    _ ≤ (realLAtOne χ + 6*Real.sqrt (D : ℝ)*(Real.sqrt (M : ℝ))⁻¹) +
+        (realLAtOne χ*Real.log (N : ℝ) + 12*Real.sqrt (D : ℝ)*(Real.sqrt (M : ℝ))⁻¹) :=
+      add_le_add he hi
+    _ = _ := by ring
+
+lemma lemma31_nu_weighted_D_square_tail_le {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (N : ℕ) (hDN : D^2 ≤ N) :
+    (∑ n ∈ Finset.Ioc (D^2) N, lemma31NuReal χ n*(n : ℝ)⁻¹) ≤
+      realLAtOne χ*(1+Real.log (N : ℝ)) + 18*(Real.sqrt (D : ℝ))⁻¹ := by
+  have hDD : D ≤ D^2 := by nlinarith
+  have he := lemma31_nu_weighted_linear_tail_le χ hD (D^2) N hDD hDN
+  have hs : Real.sqrt ((D^2 : ℕ) : ℝ) = (D : ℝ) := by
+    rw [Nat.cast_pow,Real.sqrt_sq (Nat.cast_nonneg D)]
+  have hd0 : (0 : ℝ) < D := by exact_mod_cast (show 0 < D by omega)
+  have hroot : Real.sqrt (D : ℝ)*(D : ℝ)⁻¹ = (Real.sqrt (D : ℝ))⁻¹ :=
+    lemma31_sqrt_inverse (D : ℝ) hd0
+  rw [hs] at he
+  have hfactor : 18*Real.sqrt (D : ℝ)*(D : ℝ)⁻¹ = 18*(Real.sqrt (D : ℝ))⁻¹ := by
+    rw [mul_assoc,hroot]
+  rwa [hfactor] at he
+
+end ZhangLS.Spec

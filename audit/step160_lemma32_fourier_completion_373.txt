@@ -1,0 +1,38 @@
+import ZhangMathStep372Lemma32FourierChordLowerDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex
+open scoped Classical
+
+lemma lemma32_chord_reciprocal_bound {u r : ℝ} (hu0 : 0<u) (hu1 : u<1)
+    (hchord : 4*min u (1-u)≤r) : 2/r ≤ 1/u+1/(1-u) := by
+  have hv : 0<1-u := sub_pos.mpr hu1
+  have hm : 0<min u (1-u) := lt_min hu0 hv
+  have hr : 0<r := (mul_pos (by norm_num : (0 : ℝ)<4) hm).trans_le hchord
+  by_cases hh : u≤1-u
+  · rw [min_eq_left hh] at hchord
+    have h : 2/r≤1/u := (div_le_div_iff₀ hr hu0).mpr (by nlinarith)
+    exact h.trans (le_add_of_nonneg_right (one_div_pos.mpr hv).le)
+  · rw [min_eq_right (le_of_not_ge hh)] at hchord
+    have h : 2/r≤1/(1-u) := (div_le_div_iff₀ hr hv).mpr (by nlinarith)
+    exact h.trans (le_add_of_nonneg_left (one_div_pos.mpr hu0).le)
+
+lemma lemma32_fourier_kernel_two_reciprocal_bound {D : ℕ} [NeZero D]
+    (M : ℤ) (N : ℕ) {k : ZMod D} (hk : k≠0) :
+    ‖lemma32FourierIntervalKernel D M N k‖ ≤
+      (D : ℝ)/(k.val : ℝ)+(D : ℝ)/((D-k.val : ℕ) : ℝ) := by
+  have hD : (0 : ℝ)<(D : ℝ) := Nat.cast_pos.mpr (NeZero.pos D)
+  have hkN : 0<k.val := Nat.pos_of_ne_zero ((ZMod.val_eq_zero k).not.mpr hk)
+  have hkR : (0 : ℝ)<(k.val : ℝ) := Nat.cast_pos.mpr hkN
+  have hlt : (k.val : ℝ)<(D : ℝ) := Nat.cast_lt.mpr (ZMod.val_lt k)
+  have h0 : (0 : ℝ)<(k.val : ℝ)/(D : ℝ) := div_pos hkR hD
+  have h1 : (k.val : ℝ)/(D : ℝ)<1 := (div_lt_one hD).mpr hlt
+  calc
+    _ ≤ 2/‖ZMod.stdAddChar k-1‖ := lemma32_fourier_geometric_kernel_norm_bound M N hk
+    _ ≤ 1/((k.val : ℝ)/(D : ℝ))+1/(1-(k.val : ℝ)/(D : ℝ)) :=
+      lemma32_chord_reciprocal_bound h0 h1 (lemma32_std_character_chord_lower k)
+    _ = _ := by
+      rw [Nat.cast_sub (ZMod.val_lt k).le]
+      field_simp
+
+end ZhangLS.Spec

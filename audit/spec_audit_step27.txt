@@ -1,0 +1,40 @@
+HIGH   ZhangLS/ApproxFunctionalEquation.lean:30: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/ArithmeticBasics.lean:23: direct exact hypothesis: exact h_ratio
+HIGH   ZhangLS/ArithmeticBasics.lean:30: direct exact hypothesis: exact h_ge
+HIGH   ZhangLS/AssumptionA.lean:85: direct exact hypothesis: exact h_ge
+HIGH   ZhangLS/AssumptionA.lean:122: direct exact hypothesis: exact h_ge
+HIGH   ZhangLS/AssumptionA.lean:104: arbitrary residual: use (I - (L' 1 χ + 4 * (ℒ D) * (L 1 χ)))
+HIGH   ZhangLS/BadCharacterDensity.lean:48: direct exact hypothesis: exact h_union
+HIGH   ZhangLS/CauchyDerivativeFormula.lean:25: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/CharacterOrthogonality.lean:37: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/ComplexAnalysisBounds.lean:41: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/ContourShift.lean:25: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/EulerProductNonvanishing.lean:36: direct exact hypothesis: exact h_gt
+HIGH   ZhangLS/EulerProducts.lean:22: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/ExponentialSumOrthogonality.lean:37: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/GallagherLemma.lean:58: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/HilbertInequality.lean:25: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/LargeSieveFoundation.lean:19: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/LogDerivativePoles.lean:25: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/MainTerms.lean:40: arbitrary residual: use (Xi1 - main_term)
+HIGH   ZhangLS/MellinConvolution.lean:23: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/NonNeg.lean:44: direct exact hypothesis: exact h_exp
+HIGH   ZhangLS/NonNeg.lean:89: direct exact hypothesis: exact h_pythagoras
+HIGH   ZhangLS/PerronFormula.lean:23: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/RealCharacterParseval.lean:41: direct exact hypothesis: exact h_iso
+HIGH   ZhangLS/RealContourShift.lean:34: direct exact hypothesis: exact h_scale
+HIGH   ZhangLS/RealDirichletPolynomialProduct.lean:60: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/RealDirichletSeries.lean:35: direct exact hypothesis: exact h_bound
+HIGH   ZhangLS/RealDirichletSeries.lean:65: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/RealDiscreteMeanDecomp.lean:36: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/RealFPolynomialLowerBound.lean:67: direct exact hypothesis: exact h_isolated
+HIGH   ZhangLS/RealKernelCalculus.lean:56: direct exact hypothesis: exact h
+HIGH   ZhangLS/RoucheMinMaxBound.lean:31: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/SmoothWeight.lean:22: direct exact hypothesis: exact h_pos
+HIGH   ZhangLS/StieltjesIntegration.lean:25: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/StirlingAsymptotics.lean:26: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/TaoMellinIntegration.lean:53: direct exact hypothesis: exact h_eq
+HIGH   ZhangLS/TaylorApproximation.lean:24: direct exact hypothesis: exact h_le
+HIGH   ZhangLS/Theorem1.lean:40: direct exact hypothesis: exact h_nonvanishing
+
+38 findings; 38 high-risk review candidates

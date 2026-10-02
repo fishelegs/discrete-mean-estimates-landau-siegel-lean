@@ -1,0 +1,33 @@
+import ZhangLS.Spec.Lemma32CRTConductorDescent
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_primitive_CRT_left_nontrivial {m n : ℕ} [NeZero m] [NeZero n]
+    (h : m.Coprime n) (χ : DirichletCharacter ℂ (m*n))
+    (hp : χ.IsPrimitive) (hm : 1 < m) : lemma32CRTCharacterLeft h χ ≠ 1 := by
+  letI : NeZero (m*n) := ⟨Nat.mul_ne_zero (NeZero.ne m) (NeZero.ne n)⟩
+  intro he
+  have hf := lemma32_actual_CRT_factorsThrough_right h χ he
+  have hd := DirichletCharacter.conductor_dvd_of_mem_conductorSet χ hf
+  rw [hp] at hd
+  have hn : 0 < n := Nat.pos_of_ne_zero (NeZero.ne n)
+  have hle := Nat.le_of_dvd hn hd
+  have hlt : n < m*n := by simpa using Nat.mul_lt_mul_of_pos_right hm hn
+  exact (not_lt_of_ge hle) hlt
+
+lemma lemma32_actual_primitive_CRT_right_nontrivial {m n : ℕ} [NeZero m] [NeZero n]
+    (h : m.Coprime n) (χ : DirichletCharacter ℂ (m*n))
+    (hp : χ.IsPrimitive) (hn : 1 < n) : lemma32CRTCharacterRight h χ ≠ 1 := by
+  letI : NeZero (m*n) := ⟨Nat.mul_ne_zero (NeZero.ne m) (NeZero.ne n)⟩
+  intro he
+  have hf := lemma32_actual_CRT_factorsThrough_left h χ he
+  have hd := DirichletCharacter.conductor_dvd_of_mem_conductorSet χ hf
+  rw [hp] at hd
+  have hm : 0 < m := Nat.pos_of_ne_zero (NeZero.ne m)
+  have hle := Nat.le_of_dvd hm hd
+  have hlt : m < m*n := by simpa using Nat.mul_lt_mul_of_pos_left hn hm
+  exact (not_lt_of_ge hle) hlt
+
+end ZhangLS.Spec

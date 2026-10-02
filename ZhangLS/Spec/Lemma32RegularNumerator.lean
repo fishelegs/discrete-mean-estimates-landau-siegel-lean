@@ -1,0 +1,86 @@
+import ZhangLS.Spec.Lemma32CircleRegularity
+import Mathlib.Analysis.Analytic.IsolatedZeros
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Metric Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_zeta_pole_removed_differentiableAt {s : ℂ} (hs : 0 < s.re) :
+    DifferentiableAt ℂ zetaPoleRemoved s := by
+  have hs0 : s ≠ 0 := by intro h; rw [h] at hs; norm_num at hs
+  unfold zetaPoleRemoved
+  have hmain : DifferentiableAt ℂ
+      (fun z : ℂ => (z-1)*(completedRiemannZeta₀ z-z⁻¹)+1) s := by
+    exact ((differentiableAt_id.sub_const 1).mul
+      (differentiable_completedZeta₀.differentiableAt.sub
+        (differentiableAt_inv hs0))).add_const 1
+  exact hmain.mul differentiable_Gammaℝ_inv.differentiableAt
+
+lemma lemma32_smoothing_difference_differentiable (L : ℝ) :
+    Differentiable ℂ (lemma32SmoothingDifference L) := by
+  unfold lemma32SmoothingDifference
+  fun_prop
+
+lemma lemma32_smoothing_dslope_differentiable (L : ℝ) :
+    Differentiable ℂ (dslope (lemma32SmoothingDifference L) 0) := by
+  intro w
+  by_cases hw : w = 0
+  · subst w
+    obtain ⟨p,hp⟩ := (lemma32_smoothing_difference_differentiable L).analyticAt 0
+    exact (show AnalyticAt ℂ (dslope (lemma32SmoothingDifference L) 0) 0 from
+      ⟨p.fslope,hp.has_fpower_series_dslope_fslope⟩).differentiableAt
+  · exact (differentiableAt_dslope_of_ne hw).mpr
+      ((lemma32_smoothing_difference_differentiable L) w)
+
+noncomputable def lemma32RegularNumerator {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (w : ℂ) : ℂ :=
+  lemma32AnalyticCorrection χ (1+w)*
+    (zetaPoleRemoved (1+w)*dirichletLFunction χ (1+w))^8*
+    dslope (lemma32SmoothingDifference (lemma23PaperL D)) 0 w*Complex.Gamma (1+w)
+
+lemma lemma32_regular_numerator_differentiableAt {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (w : ℂ) (hw : -1/2 < w.re) :
+    DifferentiableAt ℂ (lemma32RegularNumerator χ) w := by
+  have hre : 1/2 < (1+w).re := by simp only [Complex.add_re,Complex.one_re]; linarith
+  have had : DifferentiableAt ℂ (fun w : ℂ => 1+w) w := by fun_prop
+  have hc := ((lemma32_analytic_correction_analyticOnNhd χ) (1+w) hre).differentiableAt.comp w had
+  have hz := (lemma32_zeta_pole_removed_differentiableAt (by linarith : 0 < (1+w).re)).comp w had
+  have hl := (differentiable_dirichletLFunction_of_one_lt_modulus χ hD (1+w)).comp w had
+  have hs := (lemma32_smoothing_dslope_differentiable (lemma23PaperL D)) w
+  have hg : DifferentiableAt ℂ Complex.Gamma (1+w) := Complex.differentiableAt_Gamma _ (by
+    intro n hn
+    have ht := congrArg Complex.re hn
+    simp only [Complex.neg_re,Complex.natCast_re] at ht
+    have hp : (0 : ℝ) ≤ n := Nat.cast_nonneg n
+    linarith)
+  exact ((hc.mul ((hz.mul hl).pow 8)).mul hs).mul (hg.comp w had)
+
+lemma lemma32_regular_numerator_analyticOnNhd {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) :
+    AnalyticOnNhd ℂ (lemma32RegularNumerator χ) {w : ℂ | -1/2 < w.re} := by
+  exact (show DifferentiableOn ℂ (lemma32RegularNumerator χ) {w : ℂ | -1/2 < w.re} from
+    fun w hw => (lemma32_regular_numerator_differentiableAt χ hD w hw).differentiableWithinAt).analyticOnNhd
+    (isOpen_lt continuous_const Complex.continuous_re)
+
+lemma lemma32_regular_numerator_eq {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (w : ℂ) (hw : -1/2 < w.re) (h0 : w ≠ 0) :
+    lemma32RegularNumerator χ w = w^8*lemma32CircleIntegrand χ w := by
+  have hs0 : 1+w ≠ 0 := by
+    intro h;have ht := congrArg Complex.re h
+    simp only [Complex.add_re,Complex.one_re,Complex.zero_re] at ht;linarith
+  have hs1 : 1+w ≠ 1 := by intro h;exact h0 (by linear_combination h)
+  have hz := zetaPoleRemoved_eq_mul_riemannZeta hs0 hs1
+  have hds : dslope (lemma32SmoothingDifference (lemma23PaperL D)) 0 w =
+      lemma32SmoothingDifference (lemma23PaperL D) w/w := by
+    rw [dslope_of_ne _ h0,slope_def_module]
+    simp [lemma32SmoothingDifference,smul_eq_mul,div_eq_mul_inv,mul_comm]
+  have hg : Complex.Gamma (1+w) = w*Complex.Gamma w := by
+    simpa only [add_comm 1 w] using Complex.Gamma_add_one w h0
+  unfold lemma32RegularNumerator lemma32CircleIntegrand
+  rw [hz,hds,hg]
+  simp only [add_sub_cancel_left]
+  field_simp
+  <;> ring
+
+end ZhangLS.Spec

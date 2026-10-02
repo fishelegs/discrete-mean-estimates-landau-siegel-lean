@@ -1,0 +1,59 @@
+import ZhangMathStep253Lemma32QuarterPowerIntegralsDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Finset Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma32AbelIntegrand {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (s : ℂ) (t : ℝ) : ℂ :=
+  (∑ n ∈ Finset.Icc 1 ⌊t⌋₊, χ.evalNat n)*(t : ℂ)^(-(s+1))
+
+lemma lemma32_actual_partial_sum_square_root_majorant {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (B : ℝ) (hB : 0 ≤ B)
+    (hS : ∀ N : ℕ, ‖∑ n ∈ Finset.Icc 1 N, χ.evalNat n‖ ≤ B*(N : ℝ)^(1/2 : ℝ))
+    (t : ℝ) (ht : 0 ≤ t) :
+    ‖∑ n ∈ Finset.Icc 1 ⌊t⌋₊, χ.evalNat n‖ ≤ B*t^(1/2 : ℝ) := by
+  calc
+    _ ≤ B*(⌊t⌋₊ : ℝ)^(1/2 : ℝ) := hS _
+    _ ≤ _ := mul_le_mul_of_nonneg_left
+      (Real.rpow_le_rpow (Nat.cast_nonneg _) (Nat.floor_le ht) (by norm_num)) hB
+
+lemma lemma32_actual_abel_small_majorant {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (s : ℂ) (hs : s.re = 3/4) (t : ℝ) (ht : 1 < t) :
+    ‖lemma32AbelIntegrand χ s t‖ ≤ t^(-3/4 : ℝ) := by
+  have ht0 : 0 < t := by linarith
+  have hp : ‖∑ n ∈ Finset.Icc 1 ⌊t⌋₊, χ.evalNat n‖ ≤ t :=
+    (χ.norm_sum_Icc_evalNat_le_length _).trans (Nat.floor_le ht0.le)
+  unfold lemma32AbelIntegrand
+  rw [norm_mul,norm_cpow_eq_rpow_re_of_pos ht0]
+  have he : (-(s+1)).re = (-7/4 : ℝ) := by simp only [neg_re,add_re,one_re,hs];ring
+  rw [he]
+  calc
+    _ ≤ t*t^(-7/4 : ℝ) := mul_le_mul_of_nonneg_right hp (Real.rpow_nonneg ht0.le _)
+    _ = _ := by
+      nth_rw 1 [← Real.rpow_one t]
+      rw [← Real.rpow_add ht0]
+      congr 1
+      norm_num
+
+lemma lemma32_actual_abel_large_majorant {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (B : ℝ) (hB : 0 ≤ B)
+    (hS : ∀ N : ℕ, ‖∑ n ∈ Finset.Icc 1 N, χ.evalNat n‖ ≤ B*(N : ℝ)^(1/2 : ℝ))
+    (s : ℂ) (hs : s.re = 3/4) (t : ℝ) (ht : 1 < t) :
+    ‖lemma32AbelIntegrand χ s t‖ ≤ B*t^(-5/4 : ℝ) := by
+  have ht0 : 0 < t := by linarith
+  have hp := lemma32_actual_partial_sum_square_root_majorant χ B hB hS t ht0.le
+  unfold lemma32AbelIntegrand
+  rw [norm_mul,norm_cpow_eq_rpow_re_of_pos ht0]
+  have he : (-(s+1)).re = (-7/4 : ℝ) := by simp only [neg_re,add_re,one_re,hs];ring
+  rw [he]
+  calc
+    _ ≤ (B*t^(1/2 : ℝ))*t^(-7/4 : ℝ) :=
+      mul_le_mul_of_nonneg_right hp (Real.rpow_nonneg ht0.le _)
+    _ = _ := by
+      rw [mul_assoc,← Real.rpow_add ht0]
+      congr 2
+      norm_num
+
+end ZhangLS.Spec

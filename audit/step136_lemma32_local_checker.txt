@@ -1,0 +1,60 @@
+import ZhangMathStep187Lemma32LocalBoundsDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+example {D p : ℕ} (χ : RealPrimitiveCharacter D) (hp : p.Prime)
+    (h : χ.evalNat p = 1) (z : ℂ) (hz : ‖z‖ < 1) :
+    HasSum (fun e : ℕ => ((‖lemma23NuArithmeticFunction χ (p^e)‖^2*
+      (lemma34Tau 2 (p^e) : ℝ)^2 : ℝ) : ℂ)*z^e)
+      ((1+11*z+11*z^2+z^3)/(1-z)^5) := lemma32_actual_local_series_of_one χ hp h z hz
+
+example {D p : ℕ} (χ : RealPrimitiveCharacter D) (hp : p.Prime)
+    (h : χ.evalNat p = -1) (z : ℂ) (hz : ‖z‖ < 1) :
+    HasSum (fun e : ℕ => ((‖lemma23NuArithmeticFunction χ (p^e)‖^2*
+      (lemma34Tau 2 (p^e) : ℝ)^2 : ℝ) : ℂ)*z^e)
+      ((1+6*z^2+z^4)/(1-z^2)^3) := lemma32_actual_local_series_of_neg_one χ hp h z hz
+
+example {D p : ℕ} (χ : RealPrimitiveCharacter D) (hp : p.Prime)
+    (h : χ.evalNat p = 0) (z : ℂ) (hz : ‖z‖ < 1) :
+    HasSum (fun e : ℕ => ((‖lemma23NuArithmeticFunction χ (p^e)‖^2*
+      (lemma34Tau 2 (p^e) : ℝ)^2 : ℝ) : ℂ)*z^e)
+      ((1+z)/(1-z)^3) := lemma32_actual_local_series_of_zero χ hp h z hz
+
+example {D p : ℕ} (χ : RealPrimitiveCharacter D) (hp : p.Prime)
+    (h : χ.evalNat p = 1 ∨ χ.evalNat p = -1) (z : ℂ) (hz : ‖z‖ < 1) :
+    ‖(1-z)^8*(1-χ.evalNat p*z)^8*
+      (∑' e : ℕ, ((‖lemma23NuArithmeticFunction χ (p^e)‖^2*
+        (lemma34Tau 2 (p^e) : ℝ)^2 : ℝ) : ℂ)*z^e)-1‖ ≤ 7659*‖z‖^2 :=
+    lemma32_actual_local_correction_norm_sub_one χ hp h z hz
+
+#print axioms lemma32_actual_coefficient_nonneg
+#print axioms lemma32_tau_two_prime_power
+#print axioms lemma32_actual_coefficient_prime_power_of_one
+#print axioms lemma32_actual_coefficient_prime_power_of_zero
+#print axioms lemma32_actual_coefficient_prime_power_of_neg_one
+#print axioms lemma32_actual_coefficient_one
+#print axioms lemma32_rising_choose_two
+#print axioms lemma32_rising_choose_three
+#print axioms lemma32_rising_choose_four
+#print axioms lemma32_fourth_power_choose
+#print axioms lemma32_fourth_geometric_hasSum
+#print axioms lemma32_actual_coefficient_mul
+#print axioms lemma32_square_geometric_hasSum
+#print axioms lemma32_even_square_geometric_hasSum
+#print axioms lemma32_actual_local_series_of_one
+#print axioms lemma32_actual_local_series_of_zero
+#print axioms lemma32_actual_even_local_series_of_neg_one
+#print axioms lemma32_actual_local_series_of_neg_one
+#print axioms lemma32_local_correction_of_one
+#print axioms lemma32_local_correction_of_zero
+#print axioms lemma32_local_correction_of_neg_one
+#print axioms lemma32_bounded_polynomial_norm
+#print axioms lemma32_plus_factor_remainder
+#print axioms lemma32_minus_factor_remainder
+#print axioms lemma32_plus_factor_norm_sub_one
+#print axioms lemma32_minus_factor_norm_sub_one
+#print axioms lemma32_actual_local_correction_norm_sub_one
+end ZhangLS.Spec

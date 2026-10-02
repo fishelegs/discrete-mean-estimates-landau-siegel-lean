@@ -1,0 +1,24 @@
+{
+  "sha256": "e4ab57f376813fb27b3a913f3a13c97282a07272d5cc185d4567ef52be6fa686",
+  "kernel_exit_code": 0,
+  "proved_interfaces": [
+    "lemma56_paper_prime_log_mass_nonneg",
+    "lemma56_actual_prime_mass_card_bounds",
+    "lemma56_actual_prime_mass_from_logmass",
+    "lemma56_paper_prime_log_upper",
+    "lemma56_actual_prime_mass_log_reduction",
+    "lemma56_prime_mass_polynomial_absorption",
+    "lemma56_actual_prime_mass_normalization",
+    "lemma56_uniform_primitive_prime_window_normalized_of_mass_lower"
+  ],
+  "interface_count": 8,
+  "expanded_examples": 4,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "verified_at_utc": "2026-10-01T09:29:55.310001+00:00",
+  "scope": "Independent draft outside frozen Step 108 project sources. Actual finite prime mass/cardinality bounds, mass reduction from actual prime-log mass, quantitative absorption of L^77, and conditional original nonprincipal normalization from an explicit actual prime-mass lower bound. The mass lower bound is not proved; the faithful modulus-one principal target is not proved. No completion of full Lemma56Target is claimed.",
+  "kernel_command": "lake env lean /private/tmp/ZhangMathStep109MassNormalizationDraft.lean"
+}

@@ -1,0 +1,43 @@
+import ZhangLS.Spec.Lemma32PrimitiveCRTCharacters
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma32RealCRTLeft {m n : ℕ} [NeZero m] [NeZero n]
+    (h : m.Coprime n) (χ : RealPrimitiveCharacter (m*n)) : RealPrimitiveCharacter m where
+  chi := lemma32CRTCharacterLeft h χ.chi
+  primitive := (lemma32_actual_primitive_CRT_characters h χ.chi χ.primitive).1
+  real_valued a := by
+    change (χ.chi ((ZMod.chineseRemainder h).symm (a, 1))).im = 0
+    exact χ.real_valued _
+  quadratic := (lemma32_actual_CRT_character_quadratic h χ.chi χ.quadratic).1
+  modulus_pos := Nat.pos_of_ne_zero (NeZero.ne m)
+
+noncomputable def lemma32RealCRTRight {m n : ℕ} [NeZero m] [NeZero n]
+    (h : m.Coprime n) (χ : RealPrimitiveCharacter (m*n)) : RealPrimitiveCharacter n where
+  chi := lemma32CRTCharacterRight h χ.chi
+  primitive := (lemma32_actual_primitive_CRT_characters h χ.chi χ.primitive).2
+  real_valued a := by
+    change (χ.chi ((ZMod.chineseRemainder h).symm (1, a))).im = 0
+    exact χ.real_valued _
+  quadratic := (lemma32_actual_CRT_character_quadratic h χ.chi χ.quadratic).2
+  modulus_pos := Nat.pos_of_ne_zero (NeZero.ne n)
+
+lemma lemma32_real_primitive_CRT_factorization {m n : ℕ} [NeZero m] [NeZero n]
+    (h : m.Coprime n) (χ : RealPrimitiveCharacter (m*n)) (a : ZMod (m*n)) :
+    χ.chi a = (lemma32RealCRTLeft h χ).chi ((ZMod.chineseRemainder h a).1) *
+      (lemma32RealCRTRight h χ).chi ((ZMod.chineseRemainder h a).2) := by
+  exact lemma32_actual_CRT_character_factorization h χ.chi a
+
+lemma lemma32_real_primitive_CRT_quartic_sum {m n : ℕ} [NeZero m] [NeZero n]
+    (h : m.Coprime n) (χ : RealPrimitiveCharacter (m*n)) (a b c d : ZMod (m*n)) :
+    let e := ZMod.chineseRemainder h
+    (∑ x : ZMod (m*n), χ.chi (lemma32QuarticRootProduct a b c d x)) =
+      (∑ x : ZMod m, (lemma32RealCRTLeft h χ).chi
+        (lemma32QuarticRootProduct (e a).1 (e b).1 (e c).1 (e d).1 x)) *
+      (∑ x : ZMod n, (lemma32RealCRTRight h χ).chi
+        (lemma32QuarticRootProduct (e a).2 (e b).2 (e c).2 (e d).2 x)) := by
+  exact lemma32_actual_CRT_quartic_character_sum h χ.chi a b c d
+
+end ZhangLS.Spec

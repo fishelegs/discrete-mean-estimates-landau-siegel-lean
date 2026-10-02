@@ -1,0 +1,7 @@
+ZhangLS/Spec/Lemma32SmoothingCircle.lean:22:10: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵o̵r̵m̵_̵m̵u̵l̵,̵C̵o̵m̵p̵l̵e̵x̵.̵n̵o̵r̵m̵_̵r̵e̵a̵l̵,̵a̵b̵s̵_̵o̵f̵_̵p̵o̵s̵[̲C̲o̲m̲p̲l̲e̲x̲.̲n̲o̲r̲m̲_̲r̲e̲a̲l̲,̲ ̲a̲b̲s̲_̲o̲f̲_̲p̲o̲s̲ hl0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

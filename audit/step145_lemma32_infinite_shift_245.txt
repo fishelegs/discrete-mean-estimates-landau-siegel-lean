@@ -1,0 +1,41 @@
+import ZhangMathStep244Lemma32GlobalAnalyticityDraft
+import Mathlib.MeasureTheory.Integral.Asymptotics
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Metric Set Filter
+open scoped Classical Topology
+set_option maxHeartbeats 2000000
+
+lemma lemma32_integrable_of_quartic_decay (f : ℝ → ℂ) (hf : Continuous f)
+    (C : ℝ) (hC : 0 ≤ C) (hb : ∀ t : ℝ, 1 ≤ |t| → ‖f t‖ ≤ C/|t|^4) : Integrable f := by
+  have ho : f =O[cocompact ℝ] (fun t : ℝ => (1+t^2)⁻¹) := by
+    apply Asymptotics.IsBigO.of_bound (2*C)
+    filter_upwards [(isCompact_Icc : IsCompact (Icc (-1 : ℝ) 1)).compl_mem_cocompact] with t ht
+    have ht1 : 1 ≤ |t| := by
+      by_contra h
+      have hh := abs_lt.mp (lt_of_not_ge h)
+      exact ht ⟨hh.1.le,hh.2.le⟩
+    have hp : 0 < |t| := lt_of_lt_of_le zero_lt_one ht1
+    have hsq : 1 ≤ t^2 := by nlinarith [sq_abs t]
+    have hpow : 1+t^2 ≤ 2*|t|^4 := by nlinarith [sq_abs t,sq_nonneg (t^2-1)]
+    rw [Real.norm_eq_abs,abs_of_pos (by positivity : 0 < (1+t^2)⁻¹),← div_eq_mul_inv]
+    calc
+      _ ≤ C/|t|^4 := hb t ht1
+      _ ≤ (2*C)/(1+t^2) := by
+        apply (div_le_div_iff₀ (pow_pos hp 4) (by positivity : 0 < 1+t^2)).mpr
+        nlinarith [mul_le_mul_of_nonneg_left hpow hC]
+  exact hf.locallyIntegrable.integrable_of_isBigO_cocompact ho
+    (integrable_inv_one_add_sq.integrableAtFilter (cocompact ℝ))
+
+lemma lemma32_actual_left_vertical_integrable {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (a : ℝ) (ha : -1/4 ≤ a) (hb : a ≤ 1) (han : a ≠ 0) :
+    Integrable (fun t : ℝ => lemma32CircleIntegrand χ ((a : ℂ)+(t : ℂ)*I)) := by
+  apply lemma32_integrable_of_quartic_decay _
+    (lemma32_actual_vertical_continuous χ hD a (by linarith) han)
+    (lemma32GlobalHeightConstant D) (lemma32_global_height_constant_pos D χ.modulus_pos).le
+  intro t ht
+  simpa using lemma32_actual_integrand_height_decay χ hD ((a : ℂ)+(t : ℂ)*I)
+    (by simpa using ha) (by simpa using hb)
+    (by simpa using ht)
+
+end ZhangLS.Spec

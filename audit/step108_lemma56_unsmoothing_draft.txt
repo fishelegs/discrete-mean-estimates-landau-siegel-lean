@@ -1,0 +1,330 @@
+import ZhangLS.Spec.Lemma56PerronNearError
+
+namespace ZhangLS.Spec
+open Complex MeasureTheory
+open scoped Real
+set_option maxHeartbeats 1000000
+set_option maxRecDepth 4096
+
+lemma lemma56_perron_exp_window_bound {ε : ℝ} (hε0 : 0 ≤ ε) (hε1 : ε ≤ 1) :
+    Real.exp ε - Real.exp (-ε) ≤ 2 * Real.exp 1 * ε := by
+  have hb := intervalIntegral.norm_integral_le_of_norm_le_const
+    (f := fun t : ℝ => Real.exp t) (a := -ε) (b := ε) (C := Real.exp 1) (fun t ht => by
+      have hh : t ∈ Set.Ioc (-ε) ε := by
+        simpa only [Set.uIoc_of_le (by linarith only [hε0] : -ε ≤ ε)] using ht
+      rw [Real.norm_eq_abs, abs_of_pos (Real.exp_pos _)]
+      exact Real.exp_le_exp.mpr (hh.2.trans hε1))
+  rw [integral_exp, Real.norm_eq_abs,
+    abs_of_nonneg (sub_nonneg.mpr (Real.exp_le_exp.mpr (by linarith only [hε0]))),
+    abs_of_nonneg (by linarith only [hε0] : 0 ≤ ε - -ε)] at hb
+  convert hb using 1 <;> ring
+
+lemma lemma56_perron_unsmoothing_scales {U : ℝ} (hU : 0 ≤ U) :
+    let B := Real.exp ((3 / 2 : ℝ) * U)
+    let ε := Real.exp (-((7 / 5 : ℝ) * U))
+    0 < B ∧ 0 < ε ∧ ε ≤ 1 ∧ 1 ≤ B * ε ∧
+      B ^ 2 * ε ^ 2 = Real.exp (U / 5) ∧ 2 / B ^ 2 ≤ 2 := by
+  let B := Real.exp ((3 / 2 : ℝ) * U)
+  let ε := Real.exp (-((7 / 5 : ℝ) * U))
+  have hB : 0 < B := Real.exp_pos _
+  have hε : 0 < ε := Real.exp_pos _
+  have hε1 : ε ≤ 1 := Real.exp_le_one_iff.mpr (by linarith only [hU])
+  have hB1 : 1 ≤ B := Real.one_le_exp (by positivity)
+  have he : B * ε = Real.exp (U / 10) := by
+    dsimp [B, ε]
+    rw [← Real.exp_add]
+    congr 1
+    ring
+  refine ⟨hB, hε, hε1, ?_, ?_, ?_⟩
+  · rw [he]
+    exact Real.one_le_exp (by positivity)
+  · rw [← mul_pow, he, ← Real.exp_nat_mul]
+    congr 1
+    ring
+  · have hsq : 1 ≤ B ^ 2 := by nlinarith only [hB1]
+    apply (div_le_iff₀ (sq_pos_of_pos hB)).mpr
+    nlinarith only [hsq]
+
+lemma lemma56_perron_unsmoothing_far_margin {U : ℝ} (hU : 2000 ≤ U) :
+    U ^ 2 + 3 * U + 3 ≤ Real.exp (U / 5) / 2 := by
+  have hU0 : 0 ≤ U := by linarith only [hU]
+  have he := Real.add_one_le_exp (U / 20)
+  have hle : U / 20 ≤ Real.exp (U / 20) := by linarith only [he]
+  have hp : (U / 20) ^ 4 ≤ (Real.exp (U / 20)) ^ 4 :=
+    pow_le_pow_left₀ (by positivity) hle 4
+  have hpe : (Real.exp (U / 20)) ^ 4 = Real.exp (U / 5) := by
+    rw [← Real.exp_nat_mul]
+    congr 1
+    ring
+  rw [hpe] at hp
+  have hpoly : U ^ 4 ≤ 160000 * Real.exp (U / 5) := by nlinarith only [hp]
+  have hsq : 4000000 ≤ U ^ 2 := by nlinarith only [hU]
+  have hfour : 4000000 * U ^ 2 ≤ U ^ 4 := by
+    have hh := mul_le_mul_of_nonneg_right hsq (sq_nonneg U)
+    nlinarith only [hh]
+  have hU2 : U ≤ U ^ 2 := by nlinarith only [hU]
+  have hsmall : 320000 * (U ^ 2 + 3 * U + 3) ≤ 4000000 * U ^ 2 := by
+    nlinarith only [hU2, hsq]
+  linarith only [hsmall, hfour, hpoly]
+
+lemma lemma56_perron_unsmoothing_polynomial {U : ℝ} (hU : 1 ≤ U) :
+    U ^ 2 + 2 ≤ 432 * Real.exp (U / 6) := by
+  have hU0 : 0 ≤ U := by linarith only [hU]
+  have he := Real.add_one_le_exp (U / 12)
+  have hh : U / 12 ≤ Real.exp (U / 12) := by linarith only [he]
+  have hs := pow_le_pow_left₀ (by positivity : 0 ≤ U / 12) hh 2
+  have hse : (Real.exp (U / 12)) ^ 2 = Real.exp (U / 6) := by
+    rw [← Real.exp_nat_mul]
+    congr 1
+    ring
+  rw [hse] at hs
+  have hpoly : U ^ 2 ≤ 144 * Real.exp (U / 6) := by nlinarith only [hs]
+  have hsq : 1 ≤ U ^ 2 := by nlinarith only [hU]
+  linarith only [hpoly, hsq]
+
+lemma lemma56_perron_unsmoothing_polynomial_decay {U : ℝ} (hU : 1 ≤ U) :
+    (U ^ 2 + 2) * Real.exp (-((7 / 5 : ℝ) * U)) ≤
+      432 * Real.exp (-((7 / 6 : ℝ) * U)) := by
+  have hp := lemma56_perron_unsmoothing_polynomial hU
+  have hh := mul_le_mul_of_nonneg_right hp
+    (Real.exp_pos (-((7 / 5 : ℝ) * U))).le
+  have he : U / 6 - (7 / 5 : ℝ) * U ≤ -((7 / 6 : ℝ) * U) := by
+    linarith only [hU]
+  calc
+    _ ≤ (432 * Real.exp (U / 6)) * Real.exp (-((7 / 5 : ℝ) * U)) := hh
+    _ = 432 * Real.exp (U / 6 - (7 / 5 : ℝ) * U) := by
+      rw [mul_assoc, ← Real.exp_add]; congr 2
+    _ ≤ _ := mul_le_mul_of_nonneg_left (Real.exp_le_exp.mpr he) (by norm_num)
+
+lemma lemma56_perron_unsmoothing_endpoint_budget {U : ℝ} (hU : 2000 ≤ U) :
+    2 * (U ^ 2 + 2) ≤
+      864 * Real.exp (U ^ 2) * Real.exp (-((7 / 6 : ℝ) * U)) := by
+  have hp := lemma56_perron_unsmoothing_polynomial (by linarith only [hU])
+  have he : U / 6 ≤ U ^ 2 - (7 / 6 : ℝ) * U := by nlinarith only [hU]
+  have hh := mul_le_mul_of_nonneg_left (Real.exp_le_exp.mpr he)
+    (by norm_num : (0 : ℝ) ≤ 864)
+  rw [sub_eq_add_neg, Real.exp_add, ← mul_assoc] at hh
+  linarith only [hp, hh]
+
+lemma lemma56_perron_unsmoothing_near_budget {U x : ℝ}
+    (hU : 2000 ≤ U) (hx : 1 ≤ x) (hxmax : x ≤ 2 * Real.exp (U ^ 2)) :
+    let ε := Real.exp (-((7 / 5 : ℝ) * U))
+    (x * (Real.exp ε - Real.exp (-ε)) + 2) * (Real.log x + ε) ≤
+      (1728 * Real.exp 1 + 864) * Real.exp (U ^ 2) *
+        Real.exp (-((7 / 6 : ℝ) * U)) := by
+  let ε := Real.exp (-((7 / 5 : ℝ) * U))
+  have hU0 : 0 ≤ U := by linarith only [hU]
+  have hs := lemma56_perron_unsmoothing_scales hU0
+  have hε : 0 < ε := hs.2.1
+  have hε1 : ε ≤ 1 := hs.2.2.1
+  have hxp : 0 < x := by linarith only [hx]
+  have hw := lemma56_perron_exp_window_bound hε.le hε1
+  have hlog := Real.log_le_log hxp hxmax
+  rw [Real.log_mul (by norm_num : (2 : ℝ) ≠ 0) (Real.exp_ne_zero _), Real.log_exp] at hlog
+  have hlog2 : Real.log (2 : ℝ) ≤ 1 := by
+    have hh := Real.log_le_sub_one_of_pos (by norm_num : (0 : ℝ) < 2)
+    norm_num at hh ⊢
+    exact hh
+  have hlogx : 0 ≤ Real.log x := Real.log_nonneg hx
+  have hl : Real.log x + ε ≤ U ^ 2 + 2 := by linarith only [hlog, hlog2, hε1]
+  have hwx : x * (Real.exp ε - Real.exp (-ε)) + 2 ≤
+      4 * Real.exp 1 * Real.exp (U ^ 2) * ε + 2 := by
+    calc
+      _ ≤ x * (2 * Real.exp 1 * ε) + 2 := by gcongr
+      _ ≤ (2 * Real.exp (U ^ 2)) * (2 * Real.exp 1 * ε) + 2 := by gcongr
+      _ = _ := by ring
+  have hp := lemma56_perron_unsmoothing_polynomial_decay (by linarith only [hU])
+  have he := lemma56_perron_unsmoothing_endpoint_budget hU
+  have hscaled := mul_le_mul_of_nonneg_left hp
+    (by positivity : 0 ≤ 4 * Real.exp 1 * Real.exp (U ^ 2))
+  calc
+    _ ≤ (4 * Real.exp 1 * Real.exp (U ^ 2) * ε + 2) * (U ^ 2 + 2) := by
+      apply mul_le_mul hwx hl (by positivity) (by positivity)
+    _ = (4 * Real.exp 1 * Real.exp (U ^ 2)) *
+        ((U ^ 2 + 2) * ε) + 2 * (U ^ 2 + 2) := by ring
+    _ ≤ (4 * Real.exp 1 * Real.exp (U ^ 2)) *
+        (432 * Real.exp (-((7 / 6 : ℝ) * U))) +
+        864 * Real.exp (U ^ 2) * Real.exp (-((7 / 6 : ℝ) * U)) := by
+      dsimp [ε] at *
+      linarith only [hscaled, he]
+    _ = _ := by ring
+
+lemma lemma56_perron_unsmoothing_far_budget {U x C : ℝ}
+    (hU : 2000 ≤ U) (hx : 0 ≤ x) (hxmax : x ≤ 2 * Real.exp (U ^ 2))
+    (hC : 0 ≤ C) :
+    let B := Real.exp ((3 / 2 : ℝ) * U)
+    let ε := Real.exp (-((7 / 5 : ℝ) * U))
+    C * x ^ 2 * Real.exp (2 / B ^ 2 - B ^ 2 * ε ^ 2 / 2) ≤
+      4 * C * Real.exp (U ^ 2) * Real.exp (-((7 / 6 : ℝ) * U)) := by
+  let B := Real.exp ((3 / 2 : ℝ) * U)
+  let ε := Real.exp (-((7 / 5 : ℝ) * U))
+  have hs := lemma56_perron_unsmoothing_scales (by linarith only [hU] : 0 ≤ U)
+  have heq : B ^ 2 * ε ^ 2 = Real.exp (U / 5) := hs.2.2.2.2.1
+  have htwo : 2 / B ^ 2 ≤ 2 := hs.2.2.2.2.2
+  have hk : 2 / B ^ 2 - B ^ 2 * ε ^ 2 / 2 ≤ 2 - Real.exp (U / 5) / 2 := by
+    rw [heq]
+    linarith only [htwo]
+  have hx2 : x ^ 2 ≤ 4 * (Real.exp (U ^ 2)) ^ 2 := by
+    have hh := pow_le_pow_left₀ hx hxmax 2
+    nlinarith only [hh]
+  have hm := lemma56_perron_unsmoothing_far_margin hU
+  have hmargin : 2 * U ^ 2 + 2 - Real.exp (U / 5) / 2 ≤
+      U ^ 2 - (7 / 6 : ℝ) * U := by linarith only [hm, hU]
+  calc
+    _ ≤ C * (4 * (Real.exp (U ^ 2)) ^ 2) *
+        Real.exp (2 - Real.exp (U / 5) / 2) := by gcongr
+    _ = 4 * C * Real.exp (2 * U ^ 2 + 2 - Real.exp (U / 5) / 2) := by
+      have he : (Real.exp (U ^ 2)) ^ 2 = Real.exp (2 * U ^ 2) := by
+        rw [← Real.exp_nat_mul]
+        norm_num
+      rw [he, show 2 * U ^ 2 + 2 - Real.exp (U / 5) / 2 =
+        2 * U ^ 2 + (2 - Real.exp (U / 5) / 2) by ring, Real.exp_add]
+      ring
+    _ ≤ 4 * C * Real.exp (U ^ 2 - (7 / 6 : ℝ) * U) := by gcongr
+    _ = _ := by rw [sub_eq_add_neg, Real.exp_add]; ring
+
+noncomputable def lemma56PerronUnsmoothingConstant : ℝ :=
+  1728 * Real.exp 1 + 864 +
+    4 * lemma56GaussianRightConstant * (Real.sqrt Real.pi)⁻¹
+
+lemma lemma56_perron_unsmoothing_constant_pos : 0 < lemma56PerronUnsmoothingConstant := by
+  have hc := lemma56_gaussian_right_constant_nonneg
+  dsimp [lemma56PerronUnsmoothingConstant]
+  positivity
+
+lemma lemma56_actual_perron_paper_smoothing_error {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) {U x : ℝ} (hU : 2000 ≤ U)
+    (hx : 1 ≤ x) (hxmax : x ≤ 2 * Real.exp (U ^ 2)) (τ : ℝ) :
+    ‖lemma56PerronMangoldtSum θ (Real.exp ((3 / 2 : ℝ) * U)) x τ -
+      lemma56SharpMangoldtSum θ x τ‖ ≤
+        lemma56PerronUnsmoothingConstant * Real.exp (U ^ 2) *
+          Real.exp (-((7 / 6 : ℝ) * U)) := by
+  have hs := lemma56_perron_unsmoothing_scales (by linarith only [hU] : 0 ≤ U)
+  have he := lemma56_actual_perron_smoothing_error_bound θ hs.1 hx hs.2.1.le hs.2.2.2.1 τ
+  have hn := lemma56_perron_unsmoothing_near_budget hU hx hxmax
+  have hc := lemma56_gaussian_right_constant_nonneg
+  have hf := lemma56_perron_unsmoothing_far_budget hU (by linarith only [hx] : 0 ≤ x)
+    hxmax (by positivity : 0 ≤ lemma56GaussianRightConstant * (Real.sqrt Real.pi)⁻¹)
+  dsimp at he hn hf
+  dsimp [lemma56PerronUnsmoothingConstant]
+  nlinarith only [he, hn, hf]
+
+theorem lemma56_uniform_primitive_sharp_mangoldt_window_bound :
+    ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q]
+      (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → θ.IsPrimitive → 1 < q →
+      (q : ℝ) < lemma56PaperT D →
+      (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      ∀ {x τ : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D → |τ| ≤ D →
+        let U := lemma23PaperL D ^ (9 / 2 : ℝ)
+        ‖lemma56SharpMangoldtSum θ x τ‖ ≤
+          C * lemma23PaperP D * Real.exp (-((7 / 6 : ℝ) * U)) := by
+  obtain ⟨Cm, hCm, Ds, hs⟩ := lemma56_uniform_primitive_perron_mangoldt_window_bound
+  obtain ⟨Dr, hr⟩ := lemma56_uniform_repulsion_modulus_threshold
+  refine ⟨Cm + lemma56PerronUnsmoothingConstant,
+    add_pos hCm lemma56_perron_unsmoothing_constant_pos, max Ds Dr, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne x τ hx hxmax hτ
+  have hL : 2000 ≤ lemma23PaperL D := (hr D ((le_max_right _ _).trans hDN)).1
+  have hscale := lemma56_high_scale_strict_margin hL
+  let U := lemma23PaperL D ^ (9 / 2 : ℝ)
+  have hU : 2000 ≤ U := by
+    have hh : 2000 ≤ (3 / 4 : ℝ) * U := hscale.2.2.1
+    linarith only [hh]
+  have hP : Real.exp (U ^ 2) = lemma23PaperP D := by
+    dsimp [U, lemma23PaperP]
+    congr 1
+    rw [← Real.rpow_natCast, ← Real.rpow_mul (by linarith only [hL] : 0 ≤ lemma23PaperL D)]
+    norm_num
+  have he := lemma56_actual_perron_paper_smoothing_error θ hU hx
+    (by simpa only [hP] using hxmax) τ
+  rw [hP] at he
+  have hm := hs χ θ ((le_max_left _ _).trans hDN) hD hA hθ hq1 hqT hne hx hxmax hτ
+  have ht : ‖lemma56SharpMangoldtSum θ x τ‖ ≤
+      ‖lemma56PerronMangoldtSum θ (Real.exp ((3 / 2 : ℝ) * U)) x τ‖ +
+      ‖lemma56PerronMangoldtSum θ (Real.exp ((3 / 2 : ℝ) * U)) x τ -
+        lemma56SharpMangoldtSum θ x τ‖ := by
+    simpa only [sub_sub_cancel] using
+      norm_sub_le (lemma56PerronMangoldtSum θ (Real.exp ((3 / 2 : ℝ) * U)) x τ)
+        (lemma56PerronMangoldtSum θ (Real.exp ((3 / 2 : ℝ) * U)) x τ -
+          lemma56SharpMangoldtSum θ x τ)
+  change ‖lemma56SharpMangoldtSum θ x τ‖ ≤
+    (Cm + lemma56PerronUnsmoothingConstant) * lemma23PaperP D * Real.exp (-((7 / 6 : ℝ) * U))
+  change ‖lemma56PerronMangoldtSum θ (Real.exp ((3 / 2 : ℝ) * U)) x τ‖ ≤
+    Cm * lemma23PaperP D * Real.exp (-((7 / 6 : ℝ) * U)) at hm
+  nlinarith only [hm, he, ht]
+
+example {q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q) {U x : ℝ}
+    (hU : 2000 ≤ U) (hx : 1 ≤ x) (hxmax : x ≤ 2 * Real.exp (U ^ 2)) (τ : ℝ) :
+    ‖(∑' n : ℕ, (n : ℂ) ^ ((τ : ℂ) * I) *
+      (θ (n : ZMod q) * (ArithmeticFunction.vonMangoldt n : ℂ)) *
+      (((1 : ℝ) / 2 + (Real.sqrt Real.pi)⁻¹ *
+        ∫ v : ℝ in (0 : ℝ)..Real.exp ((3 / 2 : ℝ) * U) * Real.log (x / (n : ℝ)),
+          Real.exp (-(v ^ 2)) : ℝ) : ℂ)) -
+      ∑ n ∈ Finset.range ⌈x⌉₊, (n : ℂ) ^ ((τ : ℂ) * I) *
+        (θ (n : ZMod q) * (ArithmeticFunction.vonMangoldt n : ℂ))‖ ≤
+      lemma56PerronUnsmoothingConstant * Real.exp (U ^ 2) *
+        Real.exp (-((7 / 6 : ℝ) * U)) := by
+  simpa only [lemma56PerronMangoldtSum, lemma56PerronMangoldtTerm,
+    lemma56SharpMangoldtSum, lemma56GaussianPhase, lemma56Mangoldt, lemma56PerronWeight] using
+    lemma56_actual_perron_paper_smoothing_error θ hU hx hxmax τ
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → θ.IsPrimitive → 1 < q →
+    (q : ℝ) < lemma56PaperT D →
+    (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+    ∀ {x τ : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D → |τ| ≤ D →
+      ‖∑ n ∈ Finset.range ⌈x⌉₊, (n : ℂ) ^ ((τ : ℂ) * I) *
+        (θ (n : ZMod q) * (ArithmeticFunction.vonMangoldt n : ℂ))‖ ≤
+        C * lemma23PaperP D *
+          Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ))) := by
+  simpa only [lemma56SharpMangoldtSum, lemma56GaussianPhase, lemma56Mangoldt] using
+    lemma56_uniform_primitive_sharp_mangoldt_window_bound
+
+example (θ : DirichletCharacter ℂ 1) {U : ℝ} (hU : 2000 ≤ U)
+    (n : ℕ) (hn : 1 ≤ n) (hnmax : (n : ℝ) ≤ 2 * Real.exp (U ^ 2)) (τ : ℝ) :
+    ‖lemma56PerronMangoldtSum θ (Real.exp ((3 / 2 : ℝ) * U)) (n : ℝ) τ -
+      ∑ k ∈ Finset.range n, (k : ℂ) ^ ((τ : ℂ) * I) *
+        (θ (k : ZMod 1) * (ArithmeticFunction.vonMangoldt k : ℂ))‖ ≤
+      lemma56PerronUnsmoothingConstant * Real.exp (U ^ 2) *
+        Real.exp (-((7 / 6 : ℝ) * U)) := by
+  simpa only [lemma56SharpMangoldtSum, lemma56GaussianPhase, lemma56Mangoldt,
+    Nat.ceil_natCast] using lemma56_actual_perron_paper_smoothing_error θ hU
+      (by exact_mod_cast hn) hnmax τ
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → θ.IsPrimitive → 1 < q →
+    (q : ℝ) < lemma56PaperT D →
+    (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+    ∀ {x : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D →
+      (‖∑ n ∈ Finset.range ⌈x⌉₊, (n : ℂ) ^ ((-(D : ℝ) : ℂ) * I) *
+        (θ (n : ZMod q) * (ArithmeticFunction.vonMangoldt n : ℂ))‖ ≤
+        C * lemma23PaperP D * Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)))) ∧
+      (‖∑ n ∈ Finset.range ⌈x⌉₊, (n : ℂ) ^ (((D : ℝ) : ℂ) * I) *
+        (θ (n : ZMod q) * (ArithmeticFunction.vonMangoldt n : ℂ))‖ ≤
+        C * lemma23PaperP D * Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ)))) := by
+  obtain ⟨C, hC, D₀, h⟩ := lemma56_uniform_primitive_sharp_mangoldt_window_bound
+  refine ⟨C, hC, D₀, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne x hx hxmax
+  constructor
+  · simpa only [lemma56SharpMangoldtSum, lemma56GaussianPhase, lemma56Mangoldt, Complex.ofReal_neg] using
+      h χ θ hDN hD hA hθ hq1 hqT hne hx hxmax
+        (τ := -(D : ℝ)) (by simp [abs_of_nonneg (by positivity : (0 : ℝ) ≤ D)])
+  · simpa only [lemma56SharpMangoldtSum, lemma56GaussianPhase, lemma56Mangoldt] using
+      h χ θ hDN hD hA hθ hq1 hqT hne hx hxmax
+        (τ := (D : ℝ)) (by simp [abs_of_nonneg (by positivity : (0 : ℝ) ≤ D)])
+
+#print axioms lemma56_perron_exp_window_bound
+#print axioms lemma56_perron_unsmoothing_scales
+#print axioms lemma56_perron_unsmoothing_far_margin
+#print axioms lemma56_perron_unsmoothing_polynomial
+#print axioms lemma56_perron_unsmoothing_polynomial_decay
+#print axioms lemma56_perron_unsmoothing_endpoint_budget
+#print axioms lemma56_perron_unsmoothing_near_budget
+#print axioms lemma56_perron_unsmoothing_far_budget
+#print axioms lemma56_perron_unsmoothing_constant_pos
+#print axioms lemma56_actual_perron_paper_smoothing_error
+#print axioms lemma56_uniform_primitive_sharp_mangoldt_window_bound
+
+end ZhangLS.Spec

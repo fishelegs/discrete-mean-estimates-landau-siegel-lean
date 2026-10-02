@@ -1,0 +1,62 @@
+import ZhangMathStep203Lemma32GammaLocalDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma32SmoothingDifference (L : ℝ) (w : ℂ) : ℂ :=
+  Complex.exp (8*(L : ℂ)*w)-Complex.exp (4*(L : ℂ)*w)
+
+lemma lemma32_smoothing_difference_local_bound (L : ℝ) (hL : 3 ≤ L)
+    (w : ℂ) (hw : ‖w‖ ≤ L^(-2024 : ℤ)) :
+    ‖lemma32SmoothingDifference L w‖ ≤ 8*Real.exp 1*L*‖w‖ := by
+  have hl0 : 0 < L := by linarith
+  have hrL : L^(-2024 : ℤ)*L ≤ 1/9 := by
+    calc
+      _ = L^(-2023 : ℤ) := by
+        simpa only [Int.reduceAdd,zpow_one] using
+          (zpow_add₀ (ne_of_gt hl0) (-2024 : ℤ) 1).symm
+      _ ≤ 1/9 := lemma32_negative_power_small L hL 2023 (by norm_num)
+  have hn : ‖(4 : ℂ)*(L : ℂ)*w‖ = 4*L*‖w‖ := by
+    simp [norm_mul,Complex.norm_real,abs_of_pos hl0]
+  have hh : 4*L*‖w‖ ≤ 4/9 := by
+    have ht := mul_le_mul_of_nonneg_right hw hl0.le
+    nlinarith
+  have hd : ‖(8 : ℂ)*(L : ℂ)*w-4*(L : ℂ)*w‖ < 1 := by
+    rw [show (8 : ℂ)*(L : ℂ)*w-4*(L : ℂ)*w = 4*(L : ℂ)*w by ring,hn]
+    linarith
+  have he : ‖Complex.exp (4*(L : ℂ)*w)‖ ≤ Real.exp 1 := by
+    rw [Complex.norm_exp]
+    apply Real.exp_le_exp.mpr
+    have hr := Complex.re_le_norm ((4 : ℂ)*(L : ℂ)*w)
+    rw [hn] at hr
+    linarith
+  have hb := Complex.locally_lipschitz_exp (r := 1) zero_le_one le_rfl
+    (4*(L : ℂ)*w) (8*(L : ℂ)*w) hd
+  change ‖Complex.exp (8*(L : ℂ)*w)-Complex.exp (4*(L : ℂ)*w)‖ ≤ _
+  calc
+    _ ≤ 2*‖Complex.exp (4*(L : ℂ)*w)‖*(4*L*‖w‖) := by
+      simpa only [show (8 : ℂ)*(L : ℂ)*w-4*(L : ℂ)*w = 4*(L : ℂ)*w by ring,hn,
+        one_add_one_eq_two] using hb
+    _ ≤ 2*Real.exp 1*(4*L*‖w‖) := by gcongr
+    _ = _ := by ring
+
+lemma lemma32_smoothing_gamma_local_bound (L : ℝ) (hL : 3 ≤ L)
+    (w : ℂ) (hw : ‖w‖ ≤ L^(-2024 : ℤ)) (h0 : w ≠ 0) :
+    ‖lemma32SmoothingDifference L w * Complex.Gamma w‖ ≤
+      8*Real.exp 1*lemma32GammaLocalBound*L := by
+  have hl0 : 0 < L := by linarith
+  have hd : ‖w‖ ≤ 1/4 :=
+    hw.trans ((lemma32_negative_power_small L hL 2024 (by norm_num)).trans (by norm_num))
+  have hg := lemma32_regularized_gamma_local_bound w hd h0
+  have hb := lemma32_smoothing_difference_local_bound L hL w hw
+  rw [norm_mul]
+  calc
+    _ ≤ (8*Real.exp 1*L*‖w‖)*‖Complex.Gamma w‖ :=
+      mul_le_mul_of_nonneg_right hb (norm_nonneg _)
+    _ = (8*Real.exp 1*L)*‖w*Complex.Gamma w‖ := by rw [norm_mul]; ring
+    _ ≤ (8*Real.exp 1*L)*lemma32GammaLocalBound := by gcongr
+    _ = _ := by ring
+
+end ZhangLS.Spec

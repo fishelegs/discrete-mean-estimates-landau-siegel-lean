@@ -1,0 +1,19 @@
+/private/tmp/zhangmath-step100-zeta.lean:131:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'ZhangLS.Spec.lemma55_zeta_trivial_L_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_zeta_norm_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_zeta_pole_removed_analyticAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_zeta_pole_removed_at_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_zeta_pole_removed_center_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_zeta_pole_removed_disk_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_zeta_pole_removed_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_zeta_pole_removed_zero_re_lt_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_actual_zeta_pole_removed_order_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_zeta_pole_removed_logDeriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_zeta_pole_removed_higher_logDeriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_actual_zeta_jensen_multiplicity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,80 @@
+'ZhangLS.Spec.lemma55_fejer_geom_rec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_geom_norm_rec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_positive_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_nested_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_nested_eq_weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_kernel_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_kernel_at_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_weight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_weight_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_kernel_eq_weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_detector_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_detector_at_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_detector_eq_weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_detection_weight_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_finite_detection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_fejer_finite_weighted_power_detection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_iterated_deriv_inverse_pole' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_iterated_deriv_weighted_inverse_pole' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_local_zero_higher_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_power_sum_remainder_norm_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_power_sum_remainder_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_power_sum_remainder_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_local_zero_center_distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_inverse_square_norm_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_subset_max_inverse_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_normalized_inverse_square_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_normalized_inverse_square_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_normalized_inverse_square_power_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_subset_weighted_power_detection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_subset_weighted_detection_log_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_jensen_center_at_zero_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_original_zero_in_own_local_disk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_original_zero_inverse_square_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_original_candidate_subset_normalization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_normalization_power_exp_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_normalization_first_powers_exp_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_odd_power_remainder_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_weighted_complex_difference_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_weighted_power_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_weighted_real_power_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_normalized_remainder_geometric_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_normalized_odd_power_error_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_successor_geometric_finite_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_weighted_power_error_uniform_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_actual_weighted_real_power_error_uniform_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_unit_disk_power_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_real_pole_center_distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_real_pole_inverse_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_real_pole_inverse_power_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_sum_successors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_weighted_exceptional_pole_difference_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_actual_simple_zero_order_nat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_simple_zero_removed_power_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_removed_power_remainder_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_removed_power_remainder_sum_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_original_other_zero_remaining_normalization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_actual_weighted_remaining_remainder_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_weighted_remaining_error_uniform_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_actual_weighted_remaining_detection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_original_other_zero_detected' depends on axioms: [propext, Classical.choice, Quot.sound]

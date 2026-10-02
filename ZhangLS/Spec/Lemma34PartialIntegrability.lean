@@ -1,0 +1,56 @@
+import ZhangLS.Spec.Lemma34UniformMean
+import ZhangLS.Spec.Lemma34WeightedCauchy
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open MeasureTheory
+set_option maxHeartbeats 2000000
+
+lemma lemma34_partial_sum_measurable (c : ℕ → ℂ) :
+    Measurable (fun t : ℝ => ∑ k ∈ Finset.Icc 0 ⌊t⌋₊, c k) :=
+  (measurable_of_countable (fun m : ℕ => ∑ k ∈ Finset.Icc 0 m, c k)).comp Nat.measurable_floor
+
+lemma lemma34_partial_sum_norm_bound (c : ℕ → ℂ) (N : ℕ) (t : ℝ) (ht : t ≤ N) :
+    ‖∑ k ∈ Finset.Icc 0 ⌊t⌋₊, c k‖ ≤ ∑ k ∈ Finset.Icc 0 N, ‖c k‖ := by
+  have hfloor : ⌊t⌋₊ ≤ N := by simpa using Nat.floor_le_floor ht
+  calc
+    _ ≤ ∑ k ∈ Finset.Icc 0 ⌊t⌋₊, ‖c k‖ := norm_sum_le _ _
+    _ ≤ _ := Finset.sum_le_sum_of_subset_of_nonneg
+      (Finset.Icc_subset_Icc_right hfloor) (by intros; positivity)
+
+lemma lemma34_two_partial_sums_weighted_integrable (c d : ℕ → ℂ) (N m : ℕ) :
+    IntegrableOn (fun t : ℝ =>
+      (‖∑ k ∈ Finset.Icc 0 ⌊t⌋₊, c k‖ + ‖∑ k ∈ Finset.Icc 0 ⌊t⌋₊, d k‖)^m / t)
+      (Set.Ioc (1 : ℝ) N) := by
+  let C := (∑ k ∈ Finset.Icc 0 N, ‖c k‖) + (∑ k ∈ Finset.Icc 0 N, ‖d k‖)
+  have hmeas : Measurable (fun t : ℝ =>
+      (‖∑ k ∈ Finset.Icc 0 ⌊t⌋₊, c k‖ + ‖∑ k ∈ Finset.Icc 0 ⌊t⌋₊, d k‖)^m / t) :=
+    (((lemma34_partial_sum_measurable c).norm.add
+      (lemma34_partial_sum_measurable d).norm).pow_const m).div measurable_id
+  have hbound : IntegrableOn (fun _ : ℝ => C^m) (Set.Ioc (1 : ℝ) N) :=
+    continuous_const.integrableOn_Ioc
+  apply hbound.mono' hmeas.aestronglyMeasurable
+  filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
+  have ht0 : 0 < t := lt_trans zero_lt_one ht.1
+  have hsum : ‖∑ k ∈ Finset.Icc 0 ⌊t⌋₊, c k‖ + ‖∑ k ∈ Finset.Icc 0 ⌊t⌋₊, d k‖ ≤ C :=
+    add_le_add (lemma34_partial_sum_norm_bound c N t ht.2)
+      (lemma34_partial_sum_norm_bound d N t ht.2)
+  have hnonneg : 0 ≤ ‖∑ k ∈ Finset.Icc 0 ⌊t⌋₊, c k‖ + ‖∑ k ∈ Finset.Icc 0 ⌊t⌋₊, d k‖ :=
+    add_nonneg (norm_nonneg _) (norm_nonneg _)
+  have hpow := pow_le_pow_left₀ hnonneg hsum m
+  rw [Real.norm_of_nonneg (div_nonneg (pow_nonneg hnonneg _) ht0.le)]
+  exact (div_le_div_of_nonneg_right hpow ht0.le).trans
+    (div_le_self (pow_nonneg (hnonneg.trans hsum) _) ht.1.le)
+
+lemma lemma34_actual_partial_sums_weighted_integrable {D N : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ N) (m : ℕ) :
+    IntegrableOn (fun t : ℝ =>
+      (‖lemma23ActualX1 χ ψ (lemma23PaperCenter D) t‖ +
+        ‖lemma23ActualX2 χ ψ (lemma23PaperCenter D) t‖)^m / t)
+      (Set.Ioc (1 : ℝ) ((D : ℝ)^80)) := by
+  have h := lemma34_two_partial_sums_weighted_integrable
+    (lemma23ActualNu20CenteredCoefficient χ ψ (lemma23PaperCenter D))
+    (lemma23ActualUpsilon20CenteredCoefficient χ ψ (lemma23PaperCenter D)) (D^80) m
+  simpa only [Nat.cast_pow,← lemma23ActualX1_eq_centered_partial_sum,
+    ← lemma23ActualX2_eq_centered_partial_sum] using h
+
+end ZhangLS.Spec

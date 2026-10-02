@@ -1,0 +1,12 @@
+{
+  "source_sha256": "ddb32476b04727fa92d2acc10f44b7a3f4d57145571da7f33a804265b825387d",
+  "draft_kernel_exit_code": 0,
+  "axiom_interfaces": 14,
+  "expanded_examples": 3,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": "Independent next-step draft outside the frozen Step 104 full gate; not a proof of the complete original prime-window estimate."
+}

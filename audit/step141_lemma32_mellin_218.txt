@@ -1,0 +1,37 @@
+import ZhangMathStep217Lemma32GammaVerticalDraft
+import Mathlib.Analysis.MellinInversion
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_exponential_mellin_eq_Gamma (s : ℂ) (hs : 0 < s.re) :
+    mellin (fun x : ℝ => (Real.exp (-x) : ℂ)) s = Complex.Gamma s := by
+  rw [Complex.Gamma_eq_integral hs,Complex.GammaIntegral_eq_mellin]
+
+lemma lemma32_exponential_mellin_convergent (σ : ℝ) (hσ : 0 < σ) :
+    MellinConvergent (fun x : ℝ => (Real.exp (-x) : ℂ)) (σ : ℂ) := by
+  have hs : 0 < (σ : ℂ).re := by simpa using hσ
+  simpa only [MellinConvergent,smul_eq_mul,mul_comm] using Complex.GammaIntegral_convergent hs
+
+lemma lemma32_actual_Gamma_mellin_inversion (x : ℝ) (hx : 0 < x) :
+    mellinInv 1 Complex.Gamma x = (Real.exp (-x) : ℂ) := by
+  let f : ℝ → ℂ := fun x => (Real.exp (-x) : ℂ)
+  have hv : Complex.VerticalIntegrable (mellin f) 1 := by
+    apply lemma32_gamma_one_vertical_integrable.congr
+    filter_upwards [] with t
+    exact (lemma32_exponential_mellin_eq_Gamma (1+(t : ℂ)*Complex.I) (by simp)).symm
+  have hi := mellinInv_mellin_eq 1 f hx
+    (lemma32_exponential_mellin_convergent 1 (by norm_num)) hv (by fun_prop)
+  have he : mellinInv 1 Complex.Gamma x = mellinInv 1 (mellin f) x := by
+    unfold mellinInv
+    congr 1
+    apply integral_congr_ae
+    filter_upwards [] with t
+    dsimp [f]
+    norm_num only [Nat.cast_one]
+    rw [lemma32_exponential_mellin_eq_Gamma (1+(t : ℂ)*Complex.I) (by simp)]
+  exact he.trans hi
+
+end ZhangLS.Spec

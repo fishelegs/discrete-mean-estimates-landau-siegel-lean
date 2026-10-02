@@ -1,0 +1,106 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/private/tmp/ZhangMathStep116Lemma59ExtendedApproxChecked.lean:689:64: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/private/tmp/ZhangMathStep116Lemma59ExtendedApproxChecked.lean:1080:64: warning: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp only [sub_eq_add_neg, add_comm, add_left_comm, mul_comm, mul_l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵ ̵m̵u̵l̵_̵assoc] at hc ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/private/tmp/ZhangMathStep116Lemma59ExtendedApproxChecked.lean:1080:79: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp only [sub_eq_add_neg, add_comm, add_left_comm, mul_comm, mul_left_comm,̵ ̵m̵u̵l̵_̵a̵s̵s̵o̵c̵] at hc ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/private/tmp/ZhangMathStep116Lemma59ExtendedApproxChecked.lean:1223:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ZhangLS.Spec.lemma59_extended_height_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_gamma_region_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_middle_reflected_displacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_omega3_displacement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_omega3_re_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_omega3_subset_extended_gamma_region' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_right_mellin_gaussian_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_truncated_shift_in_extended_gamma_region' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44ActualZtilde_norm_on_omega3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_equation46' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_gaussian_long_sum_on_omega3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_initial_left_denominator_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_initial_left_shift_abs_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_left_product_mellin_eq_reflected_series' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_long_sum_on_omega3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_middle_Z_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_middle_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_product_finite_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_product_horizontal_point_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_reflected_horizontal_point_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_reflected_long_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_reflected_numerator_rectangle_differentiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_reflected_polynomial_intervalIntegrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_right_vertical_truncation_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_short_right_point_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_initial_left_gamma_region' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_initial_left_omega_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_long_horizontal_point_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_middle_product_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_paper_gaussian_long_sum_on_omega3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_product_horizontal_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_reflected_polynomial_middle_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_reflected_polynomial_residue_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_short_horizontal_point_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_short_right_contour_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_full_gaussian_series_approximation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_initial_left_Z_scale_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_long_horizontal_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_middle_integrand_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_reflected_tail_contour_continuousOn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_short_horizontal_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_reflected_tail_contour_intervalIntegrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_reflected_tail_contour_pointwise_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_right_mellin_approximation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_truncated_middle_contour_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_left_product_contour_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_middle_reflected_polynomial_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_reflected_tail_contour_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_actual_approximate_functional_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_ext44_uniform_error_constant' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,637 @@
+import ZhangLS.Spec.Lemma56PrincipalPerronMainError
+import ZhangLS.Spec.Lemma56PrimeMassNormalization
+
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set Metric
+set_option maxHeartbeats 1000000
+set_option maxRecDepth 4096
+
+lemma lemma56_principal_mass_exp_base {L : ℝ} (hL : 10000000 ≤ L) :
+    L ≤ Real.exp (L / 800) := by
+  have hL0 : 0 ≤ L := by linarith only [hL]
+  have hbig : 2560000 ≤ L := by linarith only [hL]
+  have hm := mul_le_mul_of_nonneg_right hbig hL0
+  have hpoly : L ≤ (1 + L / 1600) ^ 2 := by nlinarith only [hm, hL0]
+  have he : 1 + L / 1600 ≤ Real.exp (L / 1600) := by
+    simpa only [add_comm] using Real.add_one_le_exp (L / 1600)
+  have hp := pow_le_pow_left₀ (by positivity : 0 ≤ 1 + L / 1600) he 2
+  have hex : (Real.exp (L / 1600)) ^ 2 = Real.exp (L / 800) := by
+    rw [← Real.exp_nat_mul]
+    congr 1
+    ring
+  rw [hex] at hp
+  exact hpoly.trans hp
+
+lemma lemma56_principal_mass_exp_power {L : ℝ} (hL : 10000000 ≤ L) (n : ℕ) :
+    L ^ n ≤ Real.exp ((n : ℝ) * L / 800) := by
+  have hL0 : 0 ≤ L := by linarith only [hL]
+  have hp := pow_le_pow_left₀ hL0 (lemma56_principal_mass_exp_base hL) n
+  rw [← Real.exp_nat_mul] at hp
+  exact hp.trans_eq (by congr 1; ring)
+
+lemma lemma56_principal_mass_left_power {L : ℝ} (hL : 0 < L) :
+    (Real.exp (L ^ 9)) ^ (1 - 1 / L) = Real.exp (L ^ 9 - L ^ 8) := by
+  rw [Real.rpow_def_of_pos (Real.exp_pos _), Real.log_exp]
+  congr 1
+  field_simp [hL.ne'] <;> ring
+
+lemma lemma56_principal_mass_moment_budget {L : ℝ} (hL : 10000000 ≤ L) :
+    0 ≤ 18 * L ^ 2 + 21601 * L ∧
+      18 * L ^ 2 + 21601 * L ≤ 21619 * L ^ 2 := by
+  have hL0 : 0 ≤ L := by linarith only [hL]
+  have hL1 : 1 ≤ L := by linarith only [hL]
+  have hm := mul_le_mul_of_nonneg_right hL1 hL0
+  exact ⟨by positivity, by nlinarith only [hm]⟩
+
+lemma lemma56_principal_mass_scale_parameters {L : ℝ} (hL : 10000000 ≤ L) :
+    (1 / 2 : ℝ) ≤ 1 - 1 / L ∧ 1 - 1 / L ≤ 1 ∧
+      1 ≤ Real.exp (L / 3) ∧ (Real.exp (L / 3)) ^ 2 ≤ Real.exp L ∧
+      1 ≤ Real.exp L / 2 ∧ Real.exp L / 2 ≤ Real.exp L := by
+  have hL0 : 0 ≤ L := by linarith only [hL]
+  have hLp : 0 < L := by linarith only [hL]
+  have hinv : 1 / L ≤ (1 / 2 : ℝ) := by
+    apply (div_le_div_iff₀ hLp (by norm_num)).mpr
+    linarith only [hL]
+  have hB : 1 ≤ Real.exp (L / 3) := Real.one_le_exp (by positivity)
+  have hB2 : (Real.exp (L / 3)) ^ 2 ≤ Real.exp L := by
+    rw [← Real.exp_nat_mul]
+    apply Real.exp_le_exp.mpr
+    norm_num
+    linarith only [hL0]
+  have he := Real.add_one_le_exp L
+  have hpInv : 0 ≤ 1 / L := by positivity
+  exact ⟨by linarith only [hinv], by linarith only [hpInv], hB, hB2,
+    by linarith only [he, hL], by have hp := Real.exp_pos L; linarith only [hp]⟩
+
+lemma lemma56_principal_mass_left_budget {L x : ℝ} (hL : 10000000 ≤ L)
+    (hx : 1 ≤ x) (hxmax : x ≤ 2 * Real.exp (L ^ 9)) :
+    6 * (18 * L ^ 2 + 21601 * L) * x ^ (1 - 1 / L) *
+      Real.exp ((1 - 1 / L) ^ 2 / (4 * (Real.exp (L / 3)) ^ 2)) *
+        Real.log (1 + Real.exp L / 2) ≤
+      259428 * Real.exp 1 * Real.exp (L ^ 9) * L ^ 3 * Real.exp (-(L ^ 8)) := by
+  have hLp : 0 < L := by linarith only [hL]
+  have hL0 : 0 ≤ L := hLp.le
+  have hs := lemma56_principal_mass_scale_parameters hL
+  have ha0 : 0 ≤ 1 - 1 / L := by linarith only [hs.1]
+  have hM := (lemma56_principal_mass_moment_budget hL).2
+  have hx0 : 0 ≤ x := by linarith only [hx]
+  have hP : 0 < Real.exp (L ^ 9) := Real.exp_pos _
+  have hpow : x ^ (1 - 1 / L) ≤
+      2 * Real.exp (L ^ 9) * Real.exp (-(L ^ 8)) := by
+    have htwo : (2 : ℝ) ^ (1 - 1 / L) ≤ 2 := by
+      simpa only [Real.rpow_one] using Real.rpow_le_rpow_of_exponent_le (by norm_num : (1 : ℝ) ≤ 2) hs.2.1
+    calc
+      _ ≤ (2 * Real.exp (L ^ 9)) ^ (1 - 1 / L) := Real.rpow_le_rpow hx0 hxmax ha0
+      _ = (2 : ℝ) ^ (1 - 1 / L) * (Real.exp (L ^ 9)) ^ (1 - 1 / L) :=
+        Real.mul_rpow (by norm_num) hP.le
+      _ ≤ 2 * (Real.exp (L ^ 9)) ^ (1 - 1 / L) :=
+        mul_le_mul_of_nonneg_right htwo (Real.rpow_nonneg hP.le _)
+      _ = _ := by
+        rw [lemma56_principal_mass_left_power hLp]
+        rw [show Real.exp (L ^ 9 - L ^ 8) = Real.exp (L ^ 9) * Real.exp (-(L ^ 8)) by
+          rw [← Real.exp_add]; congr 1]
+        ring
+  have ha2 : (1 - 1 / L) ^ 2 ≤ 1 := by nlinarith only [hs.1, hs.2.1]
+  have hB2 : 1 ≤ (Real.exp (L / 3)) ^ 2 := by
+    have hh := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 1) hs.2.2.1 2
+    simpa only [one_pow] using hh
+  have hex : Real.exp ((1 - 1 / L) ^ 2 / (4 * (Real.exp (L / 3)) ^ 2)) ≤ Real.exp 1 := by
+    apply Real.exp_le_exp.mpr
+    apply (div_le_one (by positivity : 0 < 4 * (Real.exp (L / 3)) ^ 2)).mpr
+    linarith only [ha2, hB2]
+  have hlog : Real.log (1 + Real.exp L / 2) ≤ L := by
+    calc
+      _ ≤ Real.log (Real.exp L) := Real.log_le_log (by positivity)
+        (by linarith only [hs.2.2.2.2.1] : 1 + Real.exp L / 2 ≤ Real.exp L)
+      _ = L := Real.log_exp L
+  calc
+    _ ≤ 6 * (21619 * L ^ 2) * (2 * Real.exp (L ^ 9) * Real.exp (-(L ^ 8))) *
+        Real.exp 1 * L := by
+      gcongr
+      exact Real.log_nonneg (by have hp := Real.exp_pos L; linarith only [hp])
+    _ = _ := by ring
+
+lemma lemma56_principal_mass_height_exponent {L : ℝ} (hL : 10000000 ≤ L) :
+    4 * L ^ 9 ≤ Real.exp (4 * L / 3) / 16 := by
+  have hL0 : 0 ≤ L := by linarith only [hL]
+  have hL2 : 2 ≤ L := by linarith only [hL]
+  have hp := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 2) hL2 7
+  norm_num at hp
+  have hm := mul_le_mul_of_nonneg_right (by linarith only [hp] : 64 ≤ L ^ 7) (pow_nonneg hL0 9)
+  rw [show L ^ 7 * L ^ 9 = L ^ 16 by ring] at hm
+  have he := (lemma56_principal_mass_exp_power hL 16).trans
+    (Real.exp_le_exp.mpr (by norm_num; linarith only [hL0] : (16 : ℝ) * L / 800 ≤ 4 * L / 3))
+  apply (le_div_iff₀ (by norm_num : (0 : ℝ) < 16)).mpr
+  linarith only [he, hm]
+
+lemma lemma56_principal_mass_horizontal_exponent_identity (L : ℝ) :
+    1 / (Real.exp (L / 3)) ^ 2 - (Real.exp L / 2) ^ 2 / (4 * (Real.exp (L / 3)) ^ 2) =
+      Real.exp (-2 * L / 3) - Real.exp (4 * L / 3) / 16 := by
+  have hB : (Real.exp (L / 3)) ^ 2 = Real.exp (2 * L / 3) := by
+    rw [← Real.exp_nat_mul]
+    congr 1
+    ring
+  have hD : (Real.exp L) ^ 2 = Real.exp (2 * L) := by rw [← Real.exp_nat_mul]; norm_num
+  have hrec : 1 / Real.exp (2 * L / 3) = Real.exp (-2 * L / 3) := by
+    calc
+      _ = (Real.exp (2 * L / 3))⁻¹ := one_div _
+      _ = Real.exp (-(2 * L / 3)) := (Real.exp_neg _).symm
+      _ = _ := by congr 1; ring
+  have hquot : Real.exp (2 * L) / Real.exp (2 * L / 3) = Real.exp (4 * L / 3) := by
+    rw [← Real.exp_sub]
+    congr 1
+    ring
+  rw [div_pow, hD]
+  simp_rw [hB]
+  calc
+    _ = 1 / Real.exp (2 * L / 3) - (Real.exp (2 * L) / Real.exp (2 * L / 3)) / 16 := by ring
+    _ = _ := by rw [hrec, hquot]
+
+lemma lemma56_principal_mass_horizontal_gaussian_budget {L : ℝ} (hL : 10000000 ≤ L) :
+    Real.exp (1 / (Real.exp (L / 3)) ^ 2 -
+      (Real.exp L / 2) ^ 2 / (4 * (Real.exp (L / 3)) ^ 2)) ≤ Real.exp (-3 * L ^ 9) := by
+  have hL0 : 0 ≤ L := by linarith only [hL]
+  have hL1 : 1 ≤ L := by linarith only [hL]
+  have hL9 : 1 ≤ L ^ 9 := by simpa only [one_pow] using pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 1) hL1 9
+  have he : Real.exp (-2 * L / 3) ≤ 1 := Real.exp_le_one_iff.mpr (by linarith only [hL0])
+  have hh := lemma56_principal_mass_height_exponent hL
+  apply Real.exp_le_exp.mpr
+  rw [lemma56_principal_mass_horizontal_exponent_identity]
+  linarith only [he, hh, hL9]
+
+lemma lemma56_principal_mass_horizontal_budget {L x C : ℝ}
+    (hL : 10000000 ≤ L) (hx : 1 ≤ x) (hxmax : x ≤ 2 * Real.exp (L ^ 9))
+    (hC : 0 ≤ C) :
+    (4 * (18 * L ^ 2 + 21601 * L) + 4 * C * (Real.exp (L / 3)) ^ 2) *
+        x ^ 2 * Real.exp (1 / (Real.exp (L / 3)) ^ 2 -
+          (Real.exp L / 2) ^ 2 / (4 * (Real.exp (L / 3)) ^ 2)) / (Real.exp L / 2) ≤
+      (691808 + 32 * C) * Real.exp (L ^ 9) * L ^ 3 * Real.exp (-(L ^ 8)) := by
+  have hL0 : 0 ≤ L := by linarith only [hL]
+  have hL1 : 1 ≤ L := by linarith only [hL]
+  have hM := lemma56_principal_mass_moment_budget hL
+  have hs := lemma56_principal_mass_scale_parameters hL
+  have hD1 : 1 ≤ Real.exp L := Real.one_le_exp hL0
+  have hMD := mul_le_mul_of_nonneg_left hD1 hM.1
+  have hCB := mul_le_mul_of_nonneg_left hs.2.2.2.1 hC
+  have hcoeff : 4 * (18 * L ^ 2 + 21601 * L) + 4 * C * (Real.exp (L / 3)) ^ 2 ≤
+      (4 * (18 * L ^ 2 + 21601 * L) + 4 * C) * Real.exp L := by
+    nlinarith only [hMD, hCB]
+  have hxp : 0 ≤ x := by linarith only [hx]
+  have hx2 := pow_le_pow_left₀ hxp hxmax 2
+  have hgauss := lemma56_principal_mass_horizontal_gaussian_budget hL
+  have heq : (Real.exp (L ^ 9)) ^ 2 * Real.exp (-3 * L ^ 9) =
+      Real.exp (L ^ 9) * Real.exp (-2 * L ^ 9) := by
+    rw [← Real.exp_nat_mul, ← Real.exp_add, ← Real.exp_add]
+    congr 1
+    ring
+  have hL23 : L ^ 2 ≤ L ^ 3 := pow_le_pow_right₀ hL1 (by norm_num)
+  have hL3 : 1 ≤ L ^ 3 := by
+    simpa only [one_pow] using pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 1) hL1 3
+  have hCb := mul_le_mul_of_nonneg_left hL3 hC
+  have hpoly : 32 * (18 * L ^ 2 + 21601 * L) + 32 * C ≤
+      (691808 + 32 * C) * L ^ 3 := by
+    nlinarith only [hM.2, hL23, hCb]
+  have hL89 : L ^ 8 ≤ L ^ 9 := pow_le_pow_right₀ hL1 (by norm_num)
+  have he : Real.exp (-2 * L ^ 9) ≤ Real.exp (-(L ^ 8)) :=
+    Real.exp_le_exp.mpr (by linarith only [hL89, pow_nonneg hL0 9])
+  calc
+    _ ≤ ((4 * (18 * L ^ 2 + 21601 * L) + 4 * C) * Real.exp L) *
+        (2 * Real.exp (L ^ 9)) ^ 2 * Real.exp (-3 * L ^ 9) / (Real.exp L / 2) := by
+      gcongr
+    _ = (32 * (18 * L ^ 2 + 21601 * L) + 32 * C) *
+        ((Real.exp (L ^ 9)) ^ 2 * Real.exp (-3 * L ^ 9)) := by
+      field_simp [(Real.exp_pos L).ne'] <;> ring
+    _ = (32 * (18 * L ^ 2 + 21601 * L) + 32 * C) *
+        Real.exp (L ^ 9) * Real.exp (-2 * L ^ 9) := by rw [heq]; ring
+    _ ≤ ((691808 + 32 * C) * L ^ 3) * Real.exp (L ^ 9) * Real.exp (-(L ^ 8)) := by
+      gcongr
+    _ = _ := by ring
+
+noncomputable def lemma56PrincipalMassErrorConstant : ℝ :=
+  259428 * Real.exp 1 + 691808 + 32 * lemma56GaussianRightConstant
+
+lemma lemma56_principal_mass_error_constant_pos : 0 < lemma56PrincipalMassErrorConstant := by
+  have hC := lemma56_gaussian_right_constant_nonneg
+  dsimp [lemma56PrincipalMassErrorConstant]
+  positivity
+
+lemma lemma56_principal_mass_main_error_budget {L x : ℝ}
+    (hL : 10000000 ≤ L) (hx : 1 ≤ x) (hxmax : x ≤ 2 * Real.exp (L ^ 9)) :
+    6 * (18 * L ^ 2 + 21601 * L) * x ^ (1 - 1 / L) *
+      Real.exp ((1 - 1 / L) ^ 2 / (4 * (Real.exp (L / 3)) ^ 2)) *
+        Real.log (1 + Real.exp L / 2) +
+      (4 * (18 * L ^ 2 + 21601 * L) + 4 * lemma56GaussianRightConstant * (Real.exp (L / 3)) ^ 2) *
+        x ^ 2 * Real.exp (1 / (Real.exp (L / 3)) ^ 2 -
+          (Real.exp L / 2) ^ 2 / (4 * (Real.exp (L / 3)) ^ 2)) / (Real.exp L / 2) ≤
+      lemma56PrincipalMassErrorConstant * Real.exp (L ^ 9) * L ^ 3 * Real.exp (-(L ^ 8)) := by
+  have hl := lemma56_principal_mass_left_budget hL hx hxmax
+  have hh := lemma56_principal_mass_horizontal_budget hL hx hxmax lemma56_gaussian_right_constant_nonneg
+  dsimp [lemma56PrincipalMassErrorConstant]
+  linarith only [hl, hh]
+
+lemma lemma56_principal_mass_polynomial_absorption {L : ℝ} (hL : 10000000 ≤ L) :
+    L ^ 3 * Real.exp (-(L ^ 8)) ≤ L ^ (-197 : ℤ) := by
+  have hLp : 0 < L := by linarith only [hL]
+  have hL1 : 1 ≤ L := by linarith only [hL]
+  have hL8 : L ≤ L ^ 8 := by simpa only [pow_one] using pow_le_pow_right₀ hL1 (by norm_num : (1 : ℕ) ≤ 8)
+  have he : L ^ 200 ≤ Real.exp (L ^ 8) := (lemma56_principal_mass_exp_power hL 200).trans
+    (Real.exp_le_exp.mpr (by norm_num; linarith only [hL8, hLp.le] : (200 : ℝ) * L / 800 ≤ L ^ 8))
+  have hm := mul_le_mul_of_nonneg_right he (Real.exp_nonneg (-(L ^ 8)))
+  have hex : Real.exp (L ^ 8) * Real.exp (-(L ^ 8)) = 1 := by
+    rw [← Real.exp_add, add_neg_cancel, Real.exp_zero]
+  rw [hex] at hm
+  rw [zpow_neg, inv_eq_one_div]
+  apply (le_div_iff₀ (pow_pos hLp 197)).mpr
+  convert hm using 1 <;> ring
+
+open Filter in
+lemma lemma56_uniform_principal_mass_scale_threshold :
+    ∃ D₀ : ℕ, ∀ D : ℕ, D₀ ≤ D → 10000000 ≤ lemma23PaperL D := by
+  have ht : Tendsto (fun D : ℕ => Real.log (D : ℝ)) atTop atTop :=
+    Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop
+  obtain ⟨D₀, hD₀⟩ := eventually_atTop.mp (ht.eventually (eventually_ge_atTop (10000000 : ℝ)))
+  exact ⟨D₀, fun D hD => hD₀ D hD⟩
+
+theorem lemma56_uniform_principal_smoothed_mass_main_error :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ {x : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D →
+        ‖lemma56PerronMangoldtSum (1 : DirichletCharacter ℂ 1)
+            (Real.exp (lemma23PaperL D / 3)) x 0 -
+          ((x * Real.exp (1 / (4 * (Real.exp (lemma23PaperL D / 3)) ^ 2)) : ℝ) : ℂ)‖ ≤
+          lemma56PrincipalMassErrorConstant * lemma23PaperP D *
+            lemma23PaperL D ^ (-197 : ℤ) := by
+  obtain ⟨Dm, hm⟩ := lemma56_uniform_principal_perron_smoothed_main_error
+  obtain ⟨Ds, hs⟩ := lemma56_uniform_principal_mass_scale_threshold
+  refine ⟨max Dm Ds, ?_⟩
+  intro D χ hDN hD hA x hx hxmax
+  have hL := hs D ((le_max_right _ _).trans hDN)
+  have hDp : (0 : ℝ) < D := by exact_mod_cast Nat.zero_lt_of_lt hD
+  have hExpD : Real.exp (lemma23PaperL D) = (D : ℝ) := Real.exp_log hDp
+  have hparam := lemma56_principal_mass_scale_parameters hL
+  have hh := hm χ ((le_max_left _ _).trans hDN) hD hA
+    (B := Real.exp (lemma23PaperL D / 3)) (H := Real.exp (lemma23PaperL D) / 2)
+    (Real.exp_pos _) hx hparam.2.2.2.2.1 (by simpa only [hExpD] using hparam.2.2.2.2.2)
+  have hb := lemma56_principal_mass_main_error_budget hL hx hxmax
+  have hp := lemma56_principal_mass_polynomial_absorption hL
+  apply (hh.trans hb).trans
+  have hC := (lemma56_principal_mass_error_constant_pos).le
+  convert mul_le_mul_of_nonneg_left hp
+    (mul_nonneg hC (Real.exp_nonneg ((lemma23PaperL D) ^ 9))) using 1 <;>
+    dsimp [lemma23PaperP] <;> ring
+
+lemma lemma56_principal_mass_smoothing_parameters {L : ℝ} (hL : 10000000 ≤ L) :
+    let B := Real.exp (L / 3)
+    let ε := Real.exp (-L / 4)
+    0 < B ∧ 0 < ε ∧ ε ≤ 1 ∧ 1 ≤ B * ε ∧
+      B ^ 2 * ε ^ 2 = Real.exp (L / 6) ∧ 2 / B ^ 2 ≤ 2 := by
+  have hL0 : 0 ≤ L := by linarith only [hL]
+  have hB1 := (lemma56_principal_mass_scale_parameters hL).2.2.1
+  have hm : Real.exp (L / 3) * Real.exp (-L / 4) = Real.exp (L / 12) := by
+    rw [← Real.exp_add]
+    congr 1
+    ring
+  refine ⟨Real.exp_pos _, Real.exp_pos _, Real.exp_le_one_iff.mpr (by linarith only [hL0]), ?_, ?_, ?_⟩
+  · rw [hm]
+    exact Real.one_le_exp (by positivity)
+  · rw [← mul_pow, hm, ← Real.exp_nat_mul]
+    congr 1
+    ring
+  · have hB2 : 1 ≤ (Real.exp (L / 3)) ^ 2 := by nlinarith only [hB1]
+    apply (div_le_iff₀ (sq_pos_of_pos (Real.exp_pos _))).mpr
+    linarith only [hB2]
+
+lemma lemma56_principal_mass_smoothing_polynomial {L : ℝ} (hL : 10000000 ≤ L) :
+    Real.exp (-L / 4) ≤ L ^ (-200 : ℤ) ∧ L ^ 200 ≤ Real.exp (L ^ 9) := by
+  have hLp : 0 < L := by linarith only [hL]
+  have hL1 : 1 ≤ L := by linarith only [hL]
+  have he : L ^ 200 ≤ Real.exp (L / 4) := by
+    convert lemma56_principal_mass_exp_power hL 200 using 1 <;> congr 1 <;> ring
+  have hm := mul_le_mul_of_nonneg_right he (Real.exp_nonneg (-L / 4))
+  have hcancel : Real.exp (L / 4) * Real.exp (-L / 4) = 1 := by
+    rw [← Real.exp_add]
+    convert Real.exp_zero using 1 <;> congr 1 <;> ring
+  rw [hcancel] at hm
+  refine ⟨?_, ?_⟩
+  · rw [zpow_neg, inv_eq_one_div]
+    apply (le_div_iff₀ (pow_pos hLp 200)).mpr
+    simpa only [mul_comm] using hm
+  · have hL9 : L ≤ L ^ 9 := by simpa only [pow_one] using pow_le_pow_right₀ hL1 (by norm_num : (1 : ℕ) ≤ 9)
+    exact he.trans (Real.exp_le_exp.mpr (by linarith only [hL9, hLp.le]))
+
+lemma lemma56_principal_mass_near_smoothing_budget {L x : ℝ}
+    (hL : 10000000 ≤ L) (hx : 1 ≤ x) (hxmax : x ≤ 2 * Real.exp (L ^ 9)) :
+    (x * (Real.exp (Real.exp (-L / 4)) - Real.exp (-(Real.exp (-L / 4)))) + 2) *
+        (Real.log x + Real.exp (-L / 4)) ≤
+      (12 * Real.exp 1 + 6) * Real.exp (L ^ 9) * L ^ (-191 : ℤ) := by
+  have hLp : 0 < L := by linarith only [hL]
+  have hL1 : 1 ≤ L := by linarith only [hL]
+  have hL9 : 1 ≤ L ^ 9 := by simpa only [one_pow] using pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 1) hL1 9
+  have hx0 : 0 < x := by linarith only [hx]
+  have hs := lemma56_principal_mass_smoothing_parameters hL
+  have hp := lemma56_principal_mass_smoothing_polynomial hL
+  have hwindow := lemma56_perron_exp_window_bound hs.2.1.le hs.2.2.1
+  have hlogx : Real.log x ≤ 1 + L ^ 9 := by
+    have hh := Real.log_le_log hx0 hxmax
+    rw [Real.log_mul (by norm_num : (2 : ℝ) ≠ 0) (Real.exp_pos _).ne', Real.log_exp] at hh
+    have hlog2 := Real.log_le_sub_one_of_pos (by norm_num : (0 : ℝ) < 2)
+    norm_num at hlog2
+    linarith only [hh, hlog2]
+  have hlog : Real.log x + Real.exp (-L / 4) ≤ 3 * L ^ 9 := by
+    linarith only [hlogx, hs.2.2.1, hL9]
+  have hPsmall : 1 ≤ Real.exp (L ^ 9) * L ^ (-200 : ℤ) := by
+    rw [zpow_neg, ← div_eq_mul_inv]
+    exact (one_le_div (pow_pos hLp 200)).mpr hp.2
+  have hz : L ^ (-200 : ℤ) * L ^ 9 = L ^ (-191 : ℤ) := by
+    change L ^ (-200 : ℤ) * L ^ (9 : ℤ) = L ^ (-191 : ℤ)
+    rw [← zpow_add₀ hLp.ne']
+    norm_num
+  have hwindow0 : 0 ≤ Real.exp (Real.exp (-L / 4)) - Real.exp (-(Real.exp (-L / 4))) := by
+    apply sub_nonneg.mpr
+    apply Real.exp_le_exp.mpr
+    linarith only [hs.2.1]
+  have hlog0 : 0 ≤ Real.log x + Real.exp (-L / 4) :=
+    add_nonneg (Real.log_nonneg hx) hs.2.1.le
+  have hwp := hwindow.trans (mul_le_mul_of_nonneg_left hp.1 (by positivity : 0 ≤ 2 * Real.exp 1))
+  have htwo : 2 ≤ 2 * (Real.exp (L ^ 9) * L ^ (-200 : ℤ)) := by linarith only [hPsmall]
+  calc
+    _ ≤ (2 * Real.exp (L ^ 9) * (2 * Real.exp 1 * L ^ (-200 : ℤ)) +
+        2 * (Real.exp (L ^ 9) * L ^ (-200 : ℤ))) * (3 * L ^ 9) := by
+      gcongr <;> assumption
+    _ = (12 * Real.exp 1 + 6) * Real.exp (L ^ 9) * (L ^ (-200 : ℤ) * L ^ 9) := by ring
+    _ = _ := by rw [hz]
+
+lemma lemma56_principal_mass_far_smoothing_margin {L : ℝ} (hL : 10000000 ≤ L) :
+    4 * L ^ 9 ≤ Real.exp (L / 6) / 2 := by
+  have hL0 : 0 ≤ L := by linarith only [hL]
+  have hL1 : 1 ≤ L := by linarith only [hL]
+  have hL91 : L ≤ L ^ 91 := by simpa only [pow_one] using pow_le_pow_right₀ hL1 (by norm_num : (1 : ℕ) ≤ 91)
+  have hm := mul_le_mul_of_nonneg_right (by linarith only [hL91, hL] : 8 ≤ L ^ 91) (pow_nonneg hL0 9)
+  rw [show L ^ 91 * L ^ 9 = L ^ 100 by ring] at hm
+  have he := (lemma56_principal_mass_exp_power hL 100).trans
+    (Real.exp_le_exp.mpr (by norm_num; linarith only [hL0] : (100 : ℝ) * L / 800 ≤ L / 6))
+  linarith only [hm, he]
+
+lemma lemma56_principal_mass_far_smoothing_gaussian {L : ℝ} (hL : 10000000 ≤ L) :
+    Real.exp (2 / (Real.exp (L / 3)) ^ 2 -
+      (Real.exp (L / 3)) ^ 2 * (Real.exp (-L / 4)) ^ 2 / 2) ≤ Real.exp (-2 * L ^ 9) := by
+  have hL1 : 1 ≤ L := by linarith only [hL]
+  have hL9 : 1 ≤ L ^ 9 := by simpa only [one_pow] using pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 1) hL1 9
+  have hs := lemma56_principal_mass_smoothing_parameters hL
+  have hm := lemma56_principal_mass_far_smoothing_margin hL
+  apply Real.exp_le_exp.mpr
+  rw [hs.2.2.2.2.1]
+  linarith only [hs.2.2.2.2.2, hm, hL9]
+
+lemma lemma56_principal_mass_far_smoothing_budget {L x : ℝ}
+    (hL : 10000000 ≤ L) (hx : 1 ≤ x) (hxmax : x ≤ 2 * Real.exp (L ^ 9)) :
+    lemma56GaussianRightConstant * (Real.sqrt Real.pi)⁻¹ * x ^ 2 *
+        Real.exp (2 / (Real.exp (L / 3)) ^ 2 -
+          (Real.exp (L / 3)) ^ 2 * (Real.exp (-L / 4)) ^ 2 / 2) ≤
+      4 * lemma56GaussianRightConstant * (Real.sqrt Real.pi)⁻¹ *
+        Real.exp (L ^ 9) * L ^ (-191 : ℤ) := by
+  have hLp : 0 < L := by linarith only [hL]
+  have hL1 : 1 ≤ L := by linarith only [hL]
+  have hC := lemma56_gaussian_right_constant_nonneg
+  have hp := (lemma56_principal_mass_smoothing_polynomial hL).2
+  have hPsmall : 1 ≤ Real.exp (L ^ 9) * L ^ (-200 : ℤ) := by
+    rw [zpow_neg, ← div_eq_mul_inv]
+    exact (one_le_div (pow_pos hLp 200)).mpr hp
+  have hP191 : 1 ≤ Real.exp (L ^ 9) * L ^ (-191 : ℤ) := hPsmall.trans
+    (mul_le_mul_of_nonneg_left (zpow_le_zpow_right₀ hL1 (by norm_num : (-200 : ℤ) ≤ -191)) (Real.exp_nonneg _))
+  have hg := lemma56_principal_mass_far_smoothing_gaussian hL
+  have hx0 : 0 ≤ x := by linarith only [hx]
+  have heq : (Real.exp (L ^ 9)) ^ 2 * Real.exp (-2 * L ^ 9) = 1 := by
+    rw [← Real.exp_nat_mul, ← Real.exp_add]
+    convert Real.exp_zero using 1 <;> congr 1 <;> ring
+  calc
+    _ ≤ lemma56GaussianRightConstant * (Real.sqrt Real.pi)⁻¹ *
+        (2 * Real.exp (L ^ 9)) ^ 2 * Real.exp (-2 * L ^ 9) := by gcongr
+    _ = 4 * lemma56GaussianRightConstant * (Real.sqrt Real.pi)⁻¹ := by
+      rw [mul_pow]
+      calc
+        _ = (4 * lemma56GaussianRightConstant * (Real.sqrt Real.pi)⁻¹) *
+            ((Real.exp (L ^ 9)) ^ 2 * Real.exp (-2 * L ^ 9)) := by ring
+        _ = _ := by rw [heq, mul_one]
+    _ ≤ _ := by
+      convert mul_le_mul_of_nonneg_left hP191
+        (by positivity : 0 ≤ 4 * lemma56GaussianRightConstant * (Real.sqrt Real.pi)⁻¹) using 1 <;> ring
+
+noncomputable def lemma56PrincipalUnsmoothingConstant : ℝ :=
+  12 * Real.exp 1 + 6 + 4 * lemma56GaussianRightConstant * (Real.sqrt Real.pi)⁻¹
+
+lemma lemma56_principal_unsmoothing_constant_pos : 0 < lemma56PrincipalUnsmoothingConstant := by
+  have hC := lemma56_gaussian_right_constant_nonneg
+  dsimp [lemma56PrincipalUnsmoothingConstant]
+  positivity
+
+lemma lemma56_actual_principal_mass_smoothing_removal {D q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) (hL : 10000000 ≤ lemma23PaperL D)
+    {x : ℝ} (hx : 1 ≤ x) (hxmax : x ≤ 2 * lemma23PaperP D) (τ : ℝ) :
+    ‖lemma56PerronMangoldtSum θ (Real.exp (lemma23PaperL D / 3)) x τ -
+      lemma56SharpMangoldtSum θ x τ‖ ≤
+      lemma56PrincipalUnsmoothingConstant * lemma23PaperP D * lemma23PaperL D ^ (-191 : ℤ) := by
+  have hs := lemma56_principal_mass_smoothing_parameters hL
+  have hb := lemma56_actual_perron_smoothing_error_bound θ hs.1 hx hs.2.1.le hs.2.2.2.1 τ
+  have hn := lemma56_principal_mass_near_smoothing_budget hL hx hxmax
+  have hf := lemma56_principal_mass_far_smoothing_budget hL hx hxmax
+  apply hb.trans
+  dsimp [lemma56PrincipalUnsmoothingConstant, lemma23PaperP]
+  linarith only [hn, hf]
+
+noncomputable def lemma56PrincipalSharpMangoldtErrorConstant : ℝ :=
+  lemma56PrincipalMassErrorConstant + lemma56PrincipalUnsmoothingConstant
+
+lemma lemma56_principal_sharp_mangoldt_error_constant_pos : 0 < lemma56PrincipalSharpMangoldtErrorConstant :=
+  add_pos lemma56_principal_mass_error_constant_pos lemma56_principal_unsmoothing_constant_pos
+
+theorem lemma56_uniform_principal_sharp_mangoldt_mass_main_error :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ {x : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D →
+        ‖lemma56SharpMangoldtSum (1 : DirichletCharacter ℂ 1) x 0 -
+          ((x * Real.exp (1 / (4 * (Real.exp (lemma23PaperL D / 3)) ^ 2)) : ℝ) : ℂ)‖ ≤
+          lemma56PrincipalSharpMangoldtErrorConstant * lemma23PaperP D * lemma23PaperL D ^ (-191 : ℤ) := by
+  obtain ⟨Dm, hm⟩ := lemma56_uniform_principal_smoothed_mass_main_error
+  obtain ⟨Ds, hs⟩ := lemma56_uniform_principal_mass_scale_threshold
+  refine ⟨max Dm Ds, ?_⟩
+  intro D χ hDN hD hA x hx hxmax
+  have hL := hs D ((le_max_right _ _).trans hDN)
+  have hL1 : 1 ≤ lemma23PaperL D := by linarith only [hL]
+  have hh := hm χ ((le_max_left _ _).trans hDN) hD hA hx hxmax
+  have hu := lemma56_actual_principal_mass_smoothing_removal (1 : DirichletCharacter ℂ 1) hL hx hxmax 0
+  have hpower : lemma23PaperL D ^ (-197 : ℤ) ≤ lemma23PaperL D ^ (-191 : ℤ) :=
+    zpow_le_zpow_right₀ hL1 (by norm_num)
+  have hhm := hh.trans (mul_le_mul_of_nonneg_left hpower
+    (mul_nonneg lemma56_principal_mass_error_constant_pos.le (Real.exp_nonneg _)))
+  have ht := norm_add_le (lemma56SharpMangoldtSum (1 : DirichletCharacter ℂ 1) x 0 -
+    lemma56PerronMangoldtSum (1 : DirichletCharacter ℂ 1) (Real.exp (lemma23PaperL D / 3)) x 0)
+    (lemma56PerronMangoldtSum (1 : DirichletCharacter ℂ 1) (Real.exp (lemma23PaperL D / 3)) x 0 -
+      ((x * Real.exp (1 / (4 * (Real.exp (lemma23PaperL D / 3)) ^ 2)) : ℝ) : ℂ))
+  rw [sub_add_sub_cancel] at ht
+  rw [norm_sub_rev] at hu
+  dsimp [lemma56PrincipalSharpMangoldtErrorConstant]
+  linarith only [ht, hu, hhm]
+
+lemma lemma56_principal_mass_prime_power_decay {L : ℝ} (hL : 10000000 ≤ L) :
+    2000 ≤ L ^ (9 / 2 : ℝ) ∧
+      Real.exp (-((7 / 6 : ℝ) * L ^ (9 / 2 : ℝ))) ≤ L ^ (-200 : ℤ) := by
+  have hL1 : 1 ≤ L := by linarith only [hL]
+  have hU : L ≤ L ^ (9 / 2 : ℝ) := by
+    simpa only [Real.rpow_one] using Real.rpow_le_rpow_of_exponent_le hL1 (by norm_num : (1 : ℝ) ≤ 9 / 2)
+  refine ⟨by linarith only [hL, hU], ?_⟩
+  exact (Real.exp_le_exp.mpr (by linarith only [hU, hL] :
+    -((7 / 6 : ℝ) * L ^ (9 / 2 : ℝ)) ≤ -L / 4)).trans
+      (lemma56_principal_mass_smoothing_polynomial hL).1
+
+lemma lemma56_actual_principal_mass_prime_power_error {D q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) (hL : 10000000 ≤ lemma23PaperL D)
+    {x : ℝ} (hx : 1 ≤ x) (hxmax : x ≤ 2 * lemma23PaperP D) (τ : ℝ) :
+    ‖lemma56SharpMangoldtSum θ x τ - lemma56SharpPrimeLogSum θ x τ‖ ≤
+      1728 * lemma23PaperP D * lemma23PaperL D ^ (-191 : ℤ) := by
+  have hL0 : 0 ≤ lemma23PaperL D := by linarith only [hL]
+  have hL1 : 1 ≤ lemma23PaperL D := by linarith only [hL]
+  have hd := lemma56_principal_mass_prime_power_decay hL
+  have hP : Real.exp ((lemma23PaperL D ^ (9 / 2 : ℝ)) ^ 2) = lemma23PaperP D := by
+    dsimp [lemma23PaperP]
+    congr 1
+    rw [← Real.rpow_natCast, ← Real.rpow_mul hL0]
+    norm_num
+  have hh := lemma56_actual_paper_prime_power_error θ hd.1 hx
+    (by simpa only [hP] using hxmax) τ
+  rw [hP] at hh
+  have hp := hd.2.trans (zpow_le_zpow_right₀ hL1 (by norm_num : (-200 : ℤ) ≤ -191))
+  exact hh.trans (mul_le_mul_of_nonneg_left hp (mul_nonneg (by norm_num) (Real.exp_nonneg _)))
+
+noncomputable def lemma56PrincipalSharpPrimeErrorConstant : ℝ :=
+  lemma56PrincipalSharpMangoldtErrorConstant + 1728
+
+lemma lemma56_principal_sharp_prime_error_constant_pos : 0 < lemma56PrincipalSharpPrimeErrorConstant := by
+  have hp := lemma56_principal_sharp_mangoldt_error_constant_pos
+  dsimp [lemma56PrincipalSharpPrimeErrorConstant]
+  linarith only [hp]
+
+theorem lemma56_uniform_principal_sharp_prime_mass_main_error :
+    ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ∀ {x : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D →
+        ‖lemma56SharpPrimeLogSum (1 : DirichletCharacter ℂ 1) x 0 -
+          ((x * Real.exp (1 / (4 * (Real.exp (lemma23PaperL D / 3)) ^ 2)) : ℝ) : ℂ)‖ ≤
+          lemma56PrincipalSharpPrimeErrorConstant * lemma23PaperP D * lemma23PaperL D ^ (-191 : ℤ) := by
+  obtain ⟨Dm, hm⟩ := lemma56_uniform_principal_sharp_mangoldt_mass_main_error
+  obtain ⟨Ds, hs⟩ := lemma56_uniform_principal_mass_scale_threshold
+  refine ⟨max Dm Ds, ?_⟩
+  intro D χ hDN hD hA x hx hxmax
+  have hL := hs D ((le_max_right _ _).trans hDN)
+  have hh := hm χ ((le_max_left _ _).trans hDN) hD hA hx hxmax
+  have hp := lemma56_actual_principal_mass_prime_power_error (1 : DirichletCharacter ℂ 1) hL hx hxmax 0
+  have ht := norm_add_le (lemma56SharpPrimeLogSum (1 : DirichletCharacter ℂ 1) x 0 -
+    lemma56SharpMangoldtSum (1 : DirichletCharacter ℂ 1) x 0)
+    (lemma56SharpMangoldtSum (1 : DirichletCharacter ℂ 1) x 0 -
+      ((x * Real.exp (1 / (4 * (Real.exp (lemma23PaperL D / 3)) ^ 2)) : ℝ) : ℂ))
+  rw [sub_add_sub_cancel] at ht
+  rw [norm_sub_rev] at hp
+  dsimp [lemma56PrincipalSharpPrimeErrorConstant]
+  linarith only [ht, hp, hh]
+
+
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    ∀ {x : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D →
+      ‖(∑ n ∈ Finset.range ⌈x⌉₊, if n.Prime then (Real.log (n : ℝ) : ℂ) else 0) -
+        ((x * Real.exp (1 / (4 * (Real.exp (lemma23PaperL D / 3)) ^ 2)) : ℝ) : ℂ)‖ ≤
+        lemma56PrincipalSharpPrimeErrorConstant * lemma23PaperP D * lemma23PaperL D ^ (-191 : ℤ) := by
+  simpa only [lemma56SharpPrimeLogSum, ofReal_zero, zero_mul, Complex.cpow_zero,
+    lemma56_principal_one_apply_nat, one_mul] using lemma56_uniform_principal_sharp_prime_mass_main_error
+
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    ∀ {x : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D →
+      ‖(∑ n ∈ Finset.range ⌈x⌉₊, (ArithmeticFunction.vonMangoldt n : ℂ)) -
+        ((x * Real.exp (1 / (4 * (Real.exp (lemma23PaperL D / 3)) ^ 2)) : ℝ) : ℂ)‖ ≤
+        lemma56PrincipalSharpMangoldtErrorConstant * lemma23PaperP D * lemma23PaperL D ^ (-191 : ℤ) := by
+  simpa only [lemma56SharpMangoldtSum, lemma56GaussianPhase, lemma56Mangoldt,
+    ofReal_zero, zero_mul, Complex.cpow_zero, lemma56_principal_one_apply_nat,
+    one_mul] using lemma56_uniform_principal_sharp_mangoldt_mass_main_error
+
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+    ∀ {x : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D →
+      ‖(∑' n : ℕ, (ArithmeticFunction.vonMangoldt n : ℂ) *
+          (lemma56PerronWeight (Real.exp (lemma23PaperL D / 3)) (x / (n : ℝ)) : ℂ)) -
+        ((x * Real.exp (1 / (4 * (Real.exp (lemma23PaperL D / 3)) ^ 2)) : ℝ) : ℂ)‖ ≤
+        lemma56PrincipalMassErrorConstant * lemma23PaperP D * lemma23PaperL D ^ (-197 : ℤ) := by
+  simpa only [lemma56PerronMangoldtSum, lemma56PerronMangoldtTerm, lemma56GaussianPhase,
+    lemma56Mangoldt, ofReal_zero, zero_mul, Complex.cpow_zero,
+    lemma56_principal_one_apply_nat, one_mul] using lemma56_uniform_principal_smoothed_mass_main_error
+
+example {D q : ℕ} [NeZero q] (θ : DirichletCharacter ℂ q)
+    (hL : 10000000 ≤ lemma23PaperL D) {x : ℝ} (hx : 1 ≤ x)
+    (hxmax : x ≤ 2 * lemma23PaperP D) (τ : ℝ) :
+    ‖(∑' n : ℕ, (n : ℂ) ^ ((τ : ℂ) * I) *
+        (θ (n : ZMod q) * (ArithmeticFunction.vonMangoldt n : ℂ)) *
+          (lemma56PerronWeight (Real.exp (lemma23PaperL D / 3)) (x / (n : ℝ)) : ℂ)) -
+      (∑ n ∈ Finset.range ⌈x⌉₊, (n : ℂ) ^ ((τ : ℂ) * I) *
+        (θ (n : ZMod q) * (ArithmeticFunction.vonMangoldt n : ℂ)))‖ ≤
+      lemma56PrincipalUnsmoothingConstant * lemma23PaperP D * lemma23PaperL D ^ (-191 : ℤ) := by
+  simpa only [lemma56PerronMangoldtSum, lemma56PerronMangoldtTerm,
+    lemma56SharpMangoldtSum, lemma56GaussianPhase, lemma56Mangoldt] using
+      lemma56_actual_principal_mass_smoothing_removal θ hL hx hxmax τ
+
+example : ∃ D₀ : ℕ, ∀ {D : ℕ} (χ : RealPrimitiveCharacter D),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      ‖(∑ n ∈ Finset.range ⌈2 * lemma23PaperP D⌉₊,
+          if n.Prime then (Real.log (n : ℝ) : ℂ) else 0) -
+        ((2 * lemma23PaperP D * Real.exp (1 / (4 * (Real.exp (lemma23PaperL D / 3)) ^ 2)) : ℝ) : ℂ)‖ ≤
+        lemma56PrincipalSharpPrimeErrorConstant * lemma23PaperP D * lemma23PaperL D ^ (-191 : ℤ) := by
+  obtain ⟨Dm, hm⟩ := lemma56_uniform_principal_sharp_prime_mass_main_error
+  obtain ⟨Ds, hs⟩ := lemma56_uniform_principal_mass_scale_threshold
+  refine ⟨max Dm Ds, ?_⟩
+  intro D χ hDN hD hA
+  have hL := hs D ((le_max_right _ _).trans hDN)
+  have hp : 1 ≤ lemma23PaperP D := Real.one_le_exp (pow_nonneg (by linarith only [hL]) 9)
+  simpa only [lemma56SharpPrimeLogSum, ofReal_zero, zero_mul, Complex.cpow_zero,
+    lemma56_principal_one_apply_nat, one_mul] using
+      hm χ ((le_max_left _ _).trans hDN) hD hA (by linarith only [hp] : 1 ≤ 2 * lemma23PaperP D) le_rfl
+
+example {L : ℝ} (hL : 10000000 ≤ L) :
+    L ^ 3 * Real.exp (-(L ^ 8)) ≤ L ^ (-197 : ℤ) ∧
+      Real.exp (-L / 4) ≤ L ^ (-200 : ℤ) ∧
+        Real.exp (2 / (Real.exp (L / 3)) ^ 2 -
+          (Real.exp (L / 3)) ^ 2 * (Real.exp (-L / 4)) ^ 2 / 2) ≤ Real.exp (-2 * L ^ 9) :=
+  ⟨lemma56_principal_mass_polynomial_absorption hL,
+    (lemma56_principal_mass_smoothing_polynomial hL).1,
+    lemma56_principal_mass_far_smoothing_gaussian hL⟩
+
+#print axioms lemma56_principal_mass_exp_base
+#print axioms lemma56_principal_mass_exp_power
+#print axioms lemma56_principal_mass_left_power
+#print axioms lemma56_principal_mass_moment_budget
+#print axioms lemma56_principal_mass_scale_parameters
+#print axioms lemma56_principal_mass_left_budget
+#print axioms lemma56_principal_mass_height_exponent
+#print axioms lemma56_principal_mass_horizontal_exponent_identity
+#print axioms lemma56_principal_mass_horizontal_gaussian_budget
+#print axioms lemma56_principal_mass_horizontal_budget
+#print axioms lemma56_principal_mass_error_constant_pos
+#print axioms lemma56_principal_mass_main_error_budget
+#print axioms lemma56_principal_mass_polynomial_absorption
+#print axioms lemma56_uniform_principal_mass_scale_threshold
+#print axioms lemma56_uniform_principal_smoothed_mass_main_error
+#print axioms lemma56_principal_mass_smoothing_parameters
+#print axioms lemma56_principal_mass_smoothing_polynomial
+#print axioms lemma56_principal_mass_near_smoothing_budget
+#print axioms lemma56_principal_mass_far_smoothing_margin
+#print axioms lemma56_principal_mass_far_smoothing_gaussian
+#print axioms lemma56_principal_mass_far_smoothing_budget
+#print axioms lemma56_principal_unsmoothing_constant_pos
+#print axioms lemma56_actual_principal_mass_smoothing_removal
+#print axioms lemma56_principal_sharp_mangoldt_error_constant_pos
+#print axioms lemma56_uniform_principal_sharp_mangoldt_mass_main_error
+#print axioms lemma56_principal_mass_prime_power_decay
+#print axioms lemma56_actual_principal_mass_prime_power_error
+#print axioms lemma56_principal_sharp_prime_error_constant_pos
+#print axioms lemma56_uniform_principal_sharp_prime_mass_main_error
+
+end ZhangLS.Spec

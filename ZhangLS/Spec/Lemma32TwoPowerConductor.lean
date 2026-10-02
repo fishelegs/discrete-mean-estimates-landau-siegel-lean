@@ -1,0 +1,56 @@
+import ZhangLS.Spec.Lemma32TwoPowerKernel
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_two_power_reduction_kernel_generator (k : ℕ) :
+    Subgroup.zpowers (lemma32TwoPowerFiveUnit k ^ 2) =
+      (ZMod.unitsMap (lemma32TwoPowerReductionDvd k)).ker := by
+  letI : NeZero (2^(k+3)) := ⟨pow_ne_zero _ (by decide)⟩
+  apply Subgroup.eq_of_le_of_card_ge
+  · apply Subgroup.zpowers_le.mpr
+    apply MonoidHom.mem_ker.mpr
+    apply Units.ext
+    rw [map_pow, Units.val_pow_eq_pow_val, ZMod.unitsMap_val]
+    norm_num [lemma32TwoPowerFiveUnit, ZMod.coe_unitOfCoprime]
+    change (ZMod.cast ((5 : ℕ) : ZMod (2^(k+3))) : ZMod 8)^2=1
+    rw [ZMod.cast_natCast (lemma32TwoPowerReductionDvd k) 5]
+    decide
+  · rw [Nat.card_zpowers, lemma32_two_power_five_square_order,
+      lemma32_two_power_reduction_kernel_card]
+
+lemma lemma32_two_power_quadratic_factorsThrough (k : ℕ)
+    (χ : DirichletCharacter ℂ (2^(k+3))) (hq : χ^2=1) : χ.FactorsThrough 8 := by
+  letI : NeZero (2^(k+3)) := ⟨pow_ne_zero _ (by decide)⟩
+  apply (DirichletCharacter.factorsThrough_iff_ker_unitsMap
+    (lemma32TwoPowerReductionDvd k)).mpr
+  rw [← lemma32_two_power_reduction_kernel_generator]
+  apply Subgroup.zpowers_le.mpr
+  apply MonoidHom.mem_ker.mpr
+  rw [map_pow]
+  apply Units.ext
+  change χ (lemma32TwoPowerFiveUnit k : ZMod (2^(k+3))) ^ 2 = 1
+  have he := congrArg (fun ψ : DirichletCharacter ℂ (2^(k+3)) =>
+    ψ (lemma32TwoPowerFiveUnit k : ZMod (2^(k+3)))) hq
+  change (χ^2) (lemma32TwoPowerFiveUnit k : ZMod (2^(k+3))) =
+    (1 : DirichletCharacter ℂ (2^(k+3))) (lemma32TwoPowerFiveUnit k : ZMod (2^(k+3))) at he
+  rw [MulChar.pow_apply_coe, MulChar.one_apply_coe] at he
+  exact he
+
+lemma lemma32_two_power_quadratic_conductor_dvd (k : ℕ)
+    (χ : DirichletCharacter ℂ (2^(k+3))) (hq : χ^2=1) : χ.conductor ∣ 8 := by
+  letI : NeZero (2^(k+3)) := ⟨pow_ne_zero _ (by decide)⟩
+  exact DirichletCharacter.conductor_dvd_of_mem_conductorSet χ
+    (lemma32_two_power_quadratic_factorsThrough k χ hq)
+
+lemma lemma32_two_power_primitive_quadratic_exponent (k : ℕ)
+    (χ : DirichletCharacter ℂ (2^(k+3))) (hq : χ^2=1) (hprim : χ.IsPrimitive) : k=0 := by
+  have hd := lemma32_two_power_quadratic_conductor_dvd k χ hq
+  rw [hprim] at hd
+  have he : 2^(k+3)=2^3 := Nat.le_antisymm (Nat.le_of_dvd (by decide) hd)
+    (Nat.le_of_dvd (pow_pos (by decide) _) (lemma32TwoPowerReductionDvd k))
+  have hk := Nat.pow_right_injective (by decide : 2 ≤ 2) he
+  omega
+
+end ZhangLS.Spec

@@ -1,0 +1,29 @@
+import ZhangMathStep277Lemma32QuarticCubicSubstitutionDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+def lemma32CubicLeadingCoefficient {F : Type*} [CommRing F] (a b c d : F) : F :=
+  (b-a)*(c-a)*(d-a)
+def lemma32NormalizedMonicCubic {F : Type*} [CommRing F] (a b c d X : F) : F :=
+  X^3+((b-a)*(c-a)+(b-a)*(d-a)+(c-a)*(d-a))*X^2+
+    lemma32CubicLeadingCoefficient a b c d*((b-a)+(c-a)+(d-a))*X+
+      (lemma32CubicLeadingCoefficient a b c d)^2
+
+lemma lemma32_monic_cubic_normalization {F : Type*} [CommRing F] (a b c d u : F) :
+    lemma32NormalizedMonicCubic a b c d (lemma32CubicLeadingCoefficient a b c d*u) =
+      (lemma32CubicLeadingCoefficient a b c d)^2*lemma32TransformedCubic a b c d u := by
+  unfold lemma32NormalizedMonicCubic lemma32CubicLeadingCoefficient lemma32TransformedCubic
+  ring
+
+lemma lemma32_quadratic_monic_cubic_point_identity {F : Type*} [Field F]
+    (χ : MulChar F ℂ) (hq : χ^2=1) (a b c d u : F)
+    (hA : lemma32CubicLeadingCoefficient a b c d ≠ 0) :
+    χ (lemma32NormalizedMonicCubic a b c d (lemma32CubicLeadingCoefficient a b c d*u)) =
+      χ (lemma32TransformedCubic a b c d u) := by
+  rw [lemma32_monic_cubic_normalization,map_mul,map_pow,
+    lemma32_quadratic_character_value_square χ hq _ hA,one_mul]
+
+end ZhangLS.Spec

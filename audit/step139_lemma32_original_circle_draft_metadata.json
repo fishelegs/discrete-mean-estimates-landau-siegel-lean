@@ -1,0 +1,326 @@
+{
+  "status": "PARTIAL_KERNEL_CHECKED_TEMPORARY",
+  "full_original_lemma32_status": "UNPROVED",
+  "numbered_completion_recorded": false,
+  "interface_count": 85,
+  "definition_count": 14,
+  "regression_examples": 8,
+  "expanded_actual_euler_object_regressions": 6,
+  "modules": [
+    {
+      "temporary_module": "ZhangMathStep183Lemma32PrimeCoefficientsDraft",
+      "archive": "audit/step139_lemma32_original_circle_183.txt",
+      "sha256": "b46bf86958806ab54512c5bae837a3e13bab71bc8a4affeb0546b4f2b94bf67b",
+      "interfaces": [
+        "lemma32_actual_coefficient_nonneg",
+        "lemma32_tau_two_prime_power",
+        "lemma32_actual_coefficient_prime_power_of_one",
+        "lemma32_actual_coefficient_prime_power_of_zero",
+        "lemma32_actual_coefficient_prime_power_of_neg_one",
+        "lemma32_actual_coefficient_one"
+      ],
+      "definitions": [
+        "lemma32ActualCoefficient"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep184Lemma32GeometricDraft",
+      "archive": "audit/step139_lemma32_original_circle_184.txt",
+      "sha256": "68421732d4d47e523c99a8ef369fc9e90bb62cdfd91dea7cfa5393bcf32c3c9e",
+      "interfaces": [
+        "lemma32_rising_choose_two",
+        "lemma32_rising_choose_three",
+        "lemma32_rising_choose_four",
+        "lemma32_fourth_power_choose",
+        "lemma32_fourth_geometric_hasSum"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep185Lemma32LocalSeriesDraft",
+      "archive": "audit/step139_lemma32_original_circle_185.txt",
+      "sha256": "1a6a93835ab51c1f7240268d48c24135924b73d109ac40f6218cf6953277e430",
+      "interfaces": [
+        "lemma32_actual_coefficient_mul",
+        "lemma32_square_geometric_hasSum",
+        "lemma32_even_square_geometric_hasSum",
+        "lemma32_actual_local_series_of_one",
+        "lemma32_actual_local_series_of_zero",
+        "lemma32_actual_even_local_series_of_neg_one"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep186Lemma32EulerFactorsDraft",
+      "archive": "audit/step139_lemma32_original_circle_186.txt",
+      "sha256": "17ff637c6745c0c8e9ba1612a7dd8304e64419821525d370d1d5427bfcced234",
+      "interfaces": [
+        "lemma32_actual_local_series_of_neg_one",
+        "lemma32_local_correction_of_one",
+        "lemma32_local_correction_of_zero",
+        "lemma32_local_correction_of_neg_one"
+      ],
+      "definitions": [
+        "lemma32LocalCorrection"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep187Lemma32LocalBoundsDraft",
+      "archive": "audit/step139_lemma32_original_circle_187.txt",
+      "sha256": "08ed763723c8a0090c983126e5a11ad8fac16b693b720e5f9c5a5e527c4c0b58",
+      "interfaces": [
+        "lemma32_bounded_polynomial_norm",
+        "lemma32_plus_factor_remainder",
+        "lemma32_minus_factor_remainder",
+        "lemma32_plus_factor_norm_sub_one",
+        "lemma32_minus_factor_norm_sub_one",
+        "lemma32_actual_local_correction_norm_sub_one"
+      ],
+      "definitions": [
+        "lemma32PlusQCoefficient",
+        "lemma32MinusQCoefficient"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep189Lemma32ModulusFactorsDraft",
+      "archive": "audit/step139_lemma32_original_circle_189.txt",
+      "sha256": "4a887b2a2835a4acb7bd56cb580b8844dfbc97d9de1ed938f06cd7d76a6898a8",
+      "interfaces": [
+        "lemma32_character_prime_cases_of_not_dvd",
+        "lemma32_local_correction_norm_of_not_dvd",
+        "lemma32_zero_factor_norm",
+        "lemma32_local_correction_norm_of_dvd"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep190Lemma32RegularFactorsDraft",
+      "archive": "audit/step139_lemma32_original_circle_190.txt",
+      "sha256": "a5b028aa45b25226053a9b89094fbba483dd340d03c8749c7b79b76ef534ff18",
+      "interfaces": [
+        "lemma32_zero_correction_factorization",
+        "lemma32_actual_correction_regular_factorization",
+        "lemma32_regular_local_norm_sub_one",
+        "lemma32_regular_local_differentiable",
+        "lemma32_regular_local_at_zero"
+      ],
+      "definitions": [
+        "lemma32RegularLocalPolynomial"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep191Lemma32ProductConvergenceDraft",
+      "archive": "audit/step139_lemma32_original_circle_191.txt",
+      "sha256": "384eb0c751f4c0d9197ccb7e7ab0f979b8b490589faf88f9097540d2aeae5346",
+      "interfaces": [
+        "lemma32_prime_monomial_norm",
+        "lemma32_prime_monomial_norm_square",
+        "lemma32_prime_monomial_norm_lt_one",
+        "lemma32_regular_prime_errors_summable",
+        "lemma32_regular_euler_product_multipliable"
+      ],
+      "definitions": [
+        "lemma32PrimeMonomial",
+        "lemma32RegularEulerProduct"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep192Lemma32ProductBoundsDraft",
+      "archive": "audit/step139_lemma32_original_circle_192.txt",
+      "sha256": "f9c1a56f0f3f461d4dd4eb2a5b6e8389d6b5b104af866670e1cb91b34c4a0e90",
+      "interfaces": [
+        "lemma32_regular_prime_error_uniform",
+        "lemma32_regular_finite_product_bound",
+        "lemma32_regular_euler_product_bound",
+        "lemma32_regular_product_bound_pos"
+      ],
+      "definitions": [
+        "lemma32RegularProductBound"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep193Lemma32ProductDifferenceDraft",
+      "archive": "audit/step139_lemma32_original_circle_193.txt",
+      "sha256": "c41af632e48e875c443467e0ad69d0ea23b8e9c42af888d4a306dedca1390821",
+      "interfaces": [
+        "lemma32_regular_finite_product_difference"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep194Lemma32UniformProductDraft",
+      "archive": "audit/step139_lemma32_original_circle_194.txt",
+      "sha256": "de11ae8c4a0b93af3fffacea370d5d3d4adc2dc608ef2978eb88fa2f11f61e73",
+      "interfaces": [
+        "lemma32_regular_products_uniform_cauchy",
+        "lemma32_regular_products_uniform_limit"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep195Lemma32ProductAnalyticDraft",
+      "archive": "audit/step139_lemma32_original_circle_195.txt",
+      "sha256": "8b09a6c336f761bde068ee64a8d0a10b0ad93a1d75f37e3092e10f9d4c97ce93",
+      "interfaces": [
+        "lemma32_prime_monomial_differentiable",
+        "lemma32_regular_finite_product_differentiable",
+        "lemma32_regular_products_locally_uniform",
+        "lemma32_regular_euler_product_differentiableOn",
+        "lemma32_regular_euler_product_analyticOnNhd"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep197Lemma32RamificationNormDraft",
+      "archive": "audit/step139_lemma32_original_circle_197.txt",
+      "sha256": "06cda0a70794875145276dbf3da95c494d8e38789cc5c4a9ee5beca6a4d9af39",
+      "interfaces": [
+        "lemma32_one_sub_norm_le_one",
+        "lemma32_prime_monomial_re",
+        "lemma32_cos_lower_of_abs_le_one",
+        "lemma32_ramified_prime_factor_norm"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep198Lemma32AnalyticCorrectionDraft",
+      "archive": "audit/step139_lemma32_original_circle_198.txt",
+      "sha256": "2e4e4363fb9cf8e0baea636998b582bbda79ad7f90244b3dfa07f93a38232772",
+      "interfaces": [
+        "lemma32_ramification_factor_differentiable",
+        "lemma32_analytic_correction_analyticOnNhd",
+        "lemma32_ramification_factor_norm",
+        "lemma32_analytic_correction_sector_bound"
+      ],
+      "definitions": [
+        "lemma32RamificationFactor",
+        "lemma32AnalyticCorrection"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep199Lemma32ResidueCircleDraft",
+      "archive": "audit/step139_lemma32_original_circle_199.txt",
+      "sha256": "8758f2cf99cf4e1da1d25936083a99063ef8913115945d8f35f62c7da789c162",
+      "interfaces": [
+        "lemma32_negative_power_small",
+        "lemma32_residue_disk_parameters",
+        "lemma32_analytic_correction_residue_disk_bound"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep200Lemma32LocalLDraft",
+      "archive": "audit/step139_lemma32_original_circle_200.txt",
+      "sha256": "f2a3274a18af0d5f1a0b47bd4f50f55a88927b1baab3921ddb2d2893d3ea8f53",
+      "interfaces": [
+        "lemma32_actual_first_derivative_bound",
+        "lemma32_actual_L_difference_near_one",
+        "lemma32_actual_value_at_one_small",
+        "lemma32_circle_small_value_scale_identity",
+        "lemma32_actual_L_residue_disk_small"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep202Lemma32ZetaCircleDraft",
+      "archive": "audit/step139_lemma32_original_circle_202.txt",
+      "sha256": "4e65dcdd1319b84548397fe334217cd56e026bc8a7522602a16cdf79584945ea",
+      "interfaces": [
+        "lemma32_zeta_pole_removed_local_bound",
+        "lemma32_actual_zeta_local_pole_bound",
+        "lemma32_actual_zeta_L_residue_circle_bound"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep203Lemma32GammaLocalDraft",
+      "archive": "audit/step139_lemma32_original_circle_203.txt",
+      "sha256": "507e737f23366b43232cc8de6abcb43e6e36e4b7cb8dc01c0f66b79810c32636",
+      "interfaces": [
+        "lemma32_exists_gamma_local_bound",
+        "lemma32_gamma_local_bound_pos",
+        "lemma32_gamma_local_bound",
+        "lemma32_regularized_gamma_local_bound"
+      ],
+      "definitions": [
+        "lemma32GammaLocalBound"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep204Lemma32SmoothingCircleDraft",
+      "archive": "audit/step139_lemma32_original_circle_204.txt",
+      "sha256": "6e911ebd5b2c32a3dfbcb58d6b5a8e9490c4968c50811bf5faece238a664cc61",
+      "interfaces": [
+        "lemma32_smoothing_difference_local_bound",
+        "lemma32_smoothing_gamma_local_bound"
+      ],
+      "definitions": [
+        "lemma32SmoothingDifference"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep205Lemma32CircleIntegrandDraft",
+      "archive": "audit/step139_lemma32_original_circle_205.txt",
+      "sha256": "ab52b57d9e10eb003345af48c71ab1cd8b53e1459ae3b375e7157f9131e3b408",
+      "interfaces": [
+        "lemma32_circle_constant_pos",
+        "lemma32_circle_integrand_bound",
+        "lemma32_residue_circle_scale_identity"
+      ],
+      "definitions": [
+        "lemma32CircleConstant",
+        "lemma32CircleIntegrand"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep206Lemma32CircleIntegralDraft",
+      "archive": "audit/step139_lemma32_original_circle_206.txt",
+      "sha256": "7bfdb50d100ca915d33032f7449918dbe4ca97ece344dc5efc160cc9e5d67b26",
+      "interfaces": [
+        "lemma32_actual_normalized_circle_integral_bound"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep207Lemma32OriginalCircleDraft",
+      "archive": "audit/step139_lemma32_original_circle_207.txt",
+      "sha256": "454aa5116b8f8a68cbb5b0cf81443398ee5d297e704f962a88d2933452f785d7",
+      "interfaces": [
+        "lemma32_modulus_cpow_eq_exp",
+        "lemma32_original_smoothing_difference",
+        "lemma32_original_normalized_circle_integral_bound"
+      ],
+      "definitions": []
+    }
+  ],
+  "created_at_utc": "2026-10-02T02:17:08.123065+00:00",
+  "proved": [
+    "all Step136 actual weighted coefficient and local series foundations",
+    "prime not dividing D has character value plus or minus one",
+    "modulus prime factor correction equals (1-z)^4*(1-z^2)",
+    "regular local polynomial entire and quadratic remainder bound uniform over all primes",
+    "regular prime product converges for Re(s)>1/2",
+    "regular product bounded uniformly in D,chi and s on Re(s)>=sigma0>1/2",
+    "finite product difference controlled by summable tails",
+    "uniform convergence on every closed half-plane sigma0>1/2",
+    "regular product analytic on Re(s)>1/2",
+    "finite ramification factor norm at most one in residue disk",
+    "analytic correction bounded uniformly in original residue disk",
+    "actual first derivative L bound 16 exp(1) L^2",
+    "original A yields norm L(1) at most L^-2022",
+    "actual L disk bound (1+16 exp(1)) L^-2022",
+    "actual zeta pole removed norm bound eight",
+    "actual zeta times L norm on residue circle bounded by 8*(1+16*exp(1))*L^2",
+    "absolute Gamma local bound from compactness",
+    "actual smoothing difference times Gamma bound 8*exp(1)*GammaConstant*L",
+    "actual circle integrand bound C*L^17",
+    "normalized circle integral norm bounded by C*L^-2007",
+    "original D^(8w)-D^(4w) smoothing expression exactly connected"
+  ],
+  "remaining": [
+    "actual weighted Dirichlet series equality",
+    "global Mellin equality and contour shift with errors",
+    "original weighted tail and full target closure"
+  ],
+  "whole_project_freeze": "Step126 terminal PASS, archived before these temporary proofs; no running full gate"
+}

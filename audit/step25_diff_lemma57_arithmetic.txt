@@ -1,0 +1,11 @@
+--- /mnt/data/step24/ZhangLS/Spec/Lemma57Arithmetic.lean	2026-09-06 15:10:36.000000000 +0000
++++ ZhangLS/Spec/Lemma57Arithmetic.lean	2026-09-07 01:47:50.089407001 +0000
+@@ -45,7 +45,7 @@
+   unfold lemma57DivisorSubsum
+   apply Finset.sum_congr rfl
+   intro n hn
+-  rw [divisorCharacterSumReal_eq_one_of_dvd_modulus χ (Nat.mem_divisors.mp hn).2]
++  rw [divisorCharacterSumReal_eq_one_of_dvd_modulus χ (Nat.mem_divisors.mp hn).1]
+   simp
+ 
+ /-- If the smoothing function is at least `c_g` on all divisor arguments, then the

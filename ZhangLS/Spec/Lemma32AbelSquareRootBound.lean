@@ -1,0 +1,78 @@
+import ZhangLS.Spec.Lemma32AbelMajorants
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_abel_square_root_partial_sum_bound {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (B : ℝ) (hB : 1 ≤ B)
+    (hS : ∀ N : ℕ, ‖∑ n ∈ Finset.Icc 1 N, χ.evalNat n‖ ≤ B*(N : ℝ)^(1/2 : ℝ))
+    (s : ℂ) (hs : s.re = 3/4) :
+    ‖characterAbelIntegral χ s‖ ≤ 8*B^(1/2 : ℝ) := by
+  have hB0 : 0 < B := by linarith
+  have hB2 : 1 ≤ B^2 := by nlinarith
+  have hint : IntegrableOn (lemma32AbelIntegrand χ s) (Ioi 1) :=
+    χ.abelIntegrand_integrable hD (by rw [hs];norm_num)
+  have hfin : IntegrableOn (lemma32AbelIntegrand χ s) (Ioc 1 (B^2)) :=
+    hint.mono_set (fun t ht => ht.1)
+  have htail : IntegrableOn (lemma32AbelIntegrand χ s) (Ioi (B^2)) :=
+    hint.mono_set (fun t ht => hB2.trans_lt ht)
+  have hsmall : ‖∫ t : ℝ in Ioc 1 (B^2), lemma32AbelIntegrand χ s t‖ ≤
+      4*B^(1/2 : ℝ) := by
+    calc
+      _ ≤ ∫ t : ℝ in Ioc 1 (B^2), ‖lemma32AbelIntegrand χ s t‖ :=
+        norm_integral_le_integral_norm _
+      _ ≤ ∫ t : ℝ in Ioc 1 (B^2), t^(-3/4 : ℝ) := by
+        apply integral_mono_ae hfin.norm
+          (intervalIntegral.intervalIntegrable_rpow' (by norm_num : (-1 : ℝ) < -3/4)).1
+        filter_upwards [ae_restrict_mem measurableSet_Ioc] with t ht
+        exact lemma32_actual_abel_small_majorant χ s hs t ht.1
+      _ ≤ _ := lemma32_small_quarter_power_integral B hB
+  have hmajor : IntegrableOn (fun t : ℝ => B*t^(-5/4 : ℝ)) (Ioi (B^2)) :=
+    (integrableOn_Ioi_rpow_of_lt (by norm_num : (-5/4 : ℝ) < -1) (sq_pos_of_pos hB0)).const_mul _
+  have hbig : ‖∫ t : ℝ in Ioi (B^2), lemma32AbelIntegrand χ s t‖ ≤
+      4*B^(1/2 : ℝ) := by
+    calc
+      _ ≤ ∫ t : ℝ in Ioi (B^2), ‖lemma32AbelIntegrand χ s t‖ :=
+        norm_integral_le_integral_norm _
+      _ ≤ ∫ t : ℝ in Ioi (B^2), B*t^(-5/4 : ℝ) := by
+        apply integral_mono_ae htail.norm hmajor
+        filter_upwards [ae_restrict_mem measurableSet_Ioi] with t ht
+        exact lemma32_actual_abel_large_majorant χ B hB0.le hS s hs t (hB2.trans_lt ht)
+      _ = _ := lemma32_large_quarter_power_integral B hB0
+  have hu : Ioc 1 (B^2) ∪ Ioi (B^2) = Ioi (1 : ℝ) := by
+    ext t
+    simp only [mem_union,mem_Ioc,mem_Ioi]
+    constructor
+    · rintro (h | h)
+      · exact h.1
+      · exact hB2.trans_lt h
+    · intro h
+      by_cases hx : t ≤ B^2
+      · exact Or.inl ⟨h,hx⟩
+      · exact Or.inr (lt_of_not_ge hx)
+  have hdis : Disjoint (Ioc 1 (B^2)) (Ioi (B^2)) := by
+    apply disjoint_left.mpr
+    intro t ht ht'
+    exact (not_lt_of_ge ht.2) ht'
+  change ‖∫ t : ℝ in Ioi 1, lemma32AbelIntegrand χ s t‖ ≤ _
+  rw [← hu,setIntegral_union hdis measurableSet_Ioi hfin htail]
+  calc
+    _ ≤ ‖∫ t : ℝ in Ioc 1 (B^2), lemma32AbelIntegrand χ s t‖+
+      ‖∫ t : ℝ in Ioi (B^2), lemma32AbelIntegrand χ s t‖ := norm_add_le _ _
+    _ ≤ 4*B^(1/2 : ℝ)+4*B^(1/2 : ℝ) := add_le_add hsmall hbig
+    _ = _ := by ring
+
+lemma lemma32_actual_L_bound_of_square_root_partial_sums {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (B : ℝ) (hB : 1 ≤ B)
+    (hS : ∀ N : ℕ, ‖∑ n ∈ Finset.Icc 1 N, χ.evalNat n‖ ≤ B*(N : ℝ)^(1/2 : ℝ))
+    (s : ℂ) (hs : s.re = 3/4) :
+    ‖dirichletLFunction χ s‖ ≤ 8*B^(1/2 : ℝ)*‖s‖ := by
+  rw [dirichletLFunction_eq_abelIntegral_of_pos_re χ hD (by rw [hs];norm_num),norm_mul]
+  calc
+    _ ≤ ‖s‖*(8*B^(1/2 : ℝ)) := mul_le_mul_of_nonneg_left
+      (lemma32_actual_abel_square_root_partial_sum_bound χ hD B hB hS s hs) (norm_nonneg _)
+    _ = _ := by ring
+
+end ZhangLS.Spec

@@ -1,0 +1,63 @@
+import ZhangLS.Spec.Lemma31DiscreteAbel
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+open scoped ArithmeticFunction.zeta
+set_option maxHeartbeats 2000000
+
+lemma lemma31_actual_nu_cumulative_eq {D : ℕ} (χ : RealPrimitiveCharacter D) (N : ℕ) :
+    (∑ n ∈ Finset.Icc 1 N, lemma23NuArithmeticFunction χ n) =
+      ∑ n ∈ Finset.Icc 1 N, χ.evalNat n * (N/n : ℕ) := by
+  have hset : Finset.Icc 1 N = Finset.Ioc 0 N := Finset.Icc_add_one_left_eq_Ioc (0 : ℕ) N
+  rw [hset]
+  simp only [lemma31_actual_nu_eq_zetaMul,DirichletCharacter.zetaMul]
+  rw [mul_comm,ArithmeticFunction.sum_Ioc_mul_zeta_eq_sum]
+  apply Finset.sum_congr rfl
+  intro n hn
+  have hn0 : n ≠ 0 := by have := (Finset.mem_Ioc.mp hn).1; omega
+  simp [toArithmeticFunction,hn0,RealPrimitiveCharacter.evalNat]
+
+lemma lemma31_shifted_character_partial_norm_le {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (A K : ℕ) :
+    ‖∑ i ∈ Finset.range K, χ.evalNat (A+i)‖ ≤ 2*(D : ℝ) := by
+  have he : (∑ i ∈ Finset.range K, χ.evalNat (A+i)) =
+      (∑ i ∈ Finset.range (A+K), χ.evalNat i) - ∑ i ∈ Finset.range A, χ.evalNat i := by
+    rw [Finset.sum_range_add]
+    ring
+  rw [he]
+  calc
+    _ ≤ ‖∑ i ∈ Finset.range (A+K), χ.evalNat i‖ +
+        ‖∑ i ∈ Finset.range A, χ.evalNat i‖ := norm_sub_le _ _
+    _ ≤ (D : ℝ)+(D : ℝ) := add_le_add
+      (χ.norm_sum_evalNat_le_modulus hD (A+K)) (χ.norm_sum_evalNat_le_modulus hD A)
+    _ = _ := by ring
+
+lemma lemma31_floor_div_weight_antitone (N Y : ℕ) :
+    Antitone (fun i : ℕ => ((N/(Y+1+i) : ℕ) : ℝ)) := by
+  intro i j hij
+  change ((N/(Y+1+j) : ℕ) : ℝ) ≤ ((N/(Y+1+i) : ℕ) : ℝ)
+  have he : N/(Y+1+j) ≤ N/(Y+1+i) :=
+    Nat.div_le_div_left (show Y+1+i ≤ Y+1+j by omega) (by omega)
+  exact_mod_cast he
+
+lemma lemma31_hyperbola_long_sum_norm_le {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (N Y : ℕ) :
+    ‖∑ n ∈ Finset.Ioc Y N, χ.evalNat n * (N/n : ℕ)‖ ≤
+      2*(D : ℝ)*((N/(Y+1) : ℕ) : ℝ) := by
+  rw [← Finset.Ico_add_one_add_one_eq_Ioc,Finset.sum_Ico_eq_sum_range]
+  have hb := lemma31_antitone_weighted_sum_norm_le
+    (fun i : ℕ => ((N/(Y+1+i) : ℕ) : ℝ))
+    (fun i : ℕ => χ.evalNat (Y+1+i))
+    (fun _ => Nat.cast_nonneg _) (lemma31_floor_div_weight_antitone N Y)
+    (2*(D : ℝ)) (by positivity) (N+1-(Y+1))
+    (fun k _ => lemma31_shifted_character_partial_norm_le χ hD (Y+1) k)
+  simp only [add_zero] at hb
+  convert hb using 1
+  · congr 1
+    apply Finset.sum_congr rfl
+    intro i hi
+    rw [Complex.real_smul,Complex.ofReal_natCast,mul_comm]
+  · ring
+
+end ZhangLS.Spec

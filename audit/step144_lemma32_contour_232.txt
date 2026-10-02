@@ -1,0 +1,41 @@
+import ZhangMathStep231Lemma32PrincipalPartsDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Metric Set Filter
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_divided_remainder_power_series {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (p : FormalMultilinearSeries ℂ ℂ ℂ)
+    (hp : HasFPowerSeriesAt (lemma32RegularNumerator χ) p 0) (n : ℕ) :
+    HasFPowerSeriesAt (lemma32DividedRemainder χ n) (FormalMultilinearSeries.fslope^[n] p) 0 := by
+  induction n with
+  | zero => exact hp
+  | succ n ih =>
+    simpa only [lemma32DividedRemainder,Function.iterate_succ_apply'] using
+      ih.has_fpower_series_dslope_fslope
+
+lemma lemma32_divided_remainder_coefficient {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (n : ℕ) :
+    lemma32DividedRemainder χ n 0 =
+      iteratedDeriv n (lemma32RegularNumerator χ) 0/(Nat.factorial n : ℂ) := by
+  obtain ⟨p,hp⟩ := (lemma32_regular_numerator_analyticOnNhd χ hD) 0 (by norm_num)
+  have hs := lemma32_divided_remainder_power_series χ p hp n
+  have hc : lemma32DividedRemainder χ n 0 = p.coeff n := by
+    rw [← hs.coeff_zero 1]
+    change (FormalMultilinearSeries.fslope^[n] p).coeff 0 = p.coeff n
+    simp only [FormalMultilinearSeries.coeff_iterate_fslope,zero_add]
+  obtain ⟨r,hpr⟩ := hp
+  have hf := hpr.factorial_smul (1 : ℂ) n
+  rw [iteratedFDeriv_apply_eq_iteratedDeriv_mul_prod,Finset.prod_const_one,one_smul] at hf
+  have he : (Nat.factorial n : ℂ)*p.coeff n = iteratedDeriv n (lemma32RegularNumerator χ) 0 := by
+    simpa only [FormalMultilinearSeries.coeff,nsmul_eq_mul] using hf
+  rw [hc,← he]
+  have hn : (Nat.factorial n : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr (Nat.factorial_ne_zero n)
+  field_simp [hn]
+
+lemma lemma32_actual_residue_eq_divided_remainder {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) : lemma32ActualResidue χ = lemma32DividedRemainder χ 7 0 :=
+  (lemma32_divided_remainder_coefficient χ hD 7).symm
+
+end ZhangLS.Spec

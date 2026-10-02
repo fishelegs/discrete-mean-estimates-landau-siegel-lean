@@ -1,0 +1,61 @@
+import ZhangLS.Spec.Lemma32BurgessAmplitudeBound
+import ZhangLS.Spec.Lemma32BurgessInductionBoundary
+import ZhangLS.Spec.Lemma32BurgessEndpointBounds
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_uniform_burgess_interval {D : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (hD : 1<D) (N : ℕ) (M : ℤ) :
+    ‖lemma32BurgessIntervalSum χ M N‖≤
+      lemma32BurgessGlobalConstant*lemma32BurgessPower D (25/128)*Real.sqrt (N : ℝ) := by
+  let C := lemma32BurgessGlobalConstant
+  have hb := lemma32_burgess_global_constant_bounds
+  have hC : 0≤C := by linarith [hb.1]
+  revert M
+  induction N using Nat.strong_induction_on with
+  | h N ih =>
+    intro M
+    by_cases hshort : (N : ℝ)≤lemma32BurgessSmallRangeConstant*lemma32BurgessPower D (25/64)
+    · have hm := mul_le_mul_of_nonneg_right hb.2.2.1 (lemma32_burgess_power_pos D (25/64)).le
+      exact lemma32_actual_burgess_short_interval_bound χ M N hC (hshort.trans hm)
+    · have hs : lemma32BurgessSmallRangeConstant*lemma32BurgessPower D (25/64)<(N : ℝ) :=
+        lt_of_not_ge hshort
+      have hN : 0<N := Nat.cast_pos.mp ((mul_pos lemma32_burgess_small_range_constant_pos
+        (lemma32_burgess_power_pos D (25/64))).trans hs)
+      by_cases hlong : lemma32BurgessPower D (79/128)≤(N : ℝ)
+      · have ht := lemma32_actual_burgess_long_interval_bound χ hD M N hlong
+        have hm := mul_le_mul_of_nonneg_right hb.2.1
+          (mul_nonneg (lemma32_burgess_power_pos D (25/128)).le (Real.sqrt_nonneg (N : ℝ)))
+        exact ht.trans (by simpa only [mul_assoc] using hm)
+      · have hupper : (N : ℝ)≤lemma32BurgessPower D (79/128) := (lt_of_not_ge hlong).le
+        let A := lemma32BurgessMultiplierLength D N
+        let B := lemma32BurgessBlockLength D
+        let K : ℝ := ((lemma32BurgessUnitMultipliers D A).card : ℝ)*(B : ℝ)
+        let E := (C/16)*lemma32BurgessPower D (25/128)*Real.sqrt (N : ℝ)
+        have hU : (0 : ℝ)<((lemma32BurgessUnitMultipliers D A).card : ℝ) :=
+          Nat.cast_pos.mpr (lemma32_actual_burgess_chosen_unit_count_pos χ hD.le hs)
+        have hB : (0 : ℝ)<(B : ℝ) := Nat.cast_pos.mpr
+          (Nat.lt_of_lt_of_le Nat.zero_lt_one (lemma32_burgess_block_bounds hD.le).1)
+        have hK : 0<K := mul_pos hU hB
+        have havg := lemma32_actual_burgess_interval_average_bound χ M A N B E
+          (fun a ha b => lemma32_actual_burgess_induction_boundary χ hD.le hN M hC
+            (fun H hH R => ih H hH R) a b)
+        change K*‖lemma32BurgessIntervalSum χ M N‖≤lemma32BurgessShiftAbsoluteSum χ M A N B+K*E at havg
+        have hamp := lemma32_actual_burgess_amplitude_half_bound χ hD.le hs hupper M
+        change lemma32BurgessShiftAbsoluteSum χ M A N B/K≤
+          (C/2)*lemma32BurgessPower D (25/128)*Real.sqrt (N : ℝ) at hamp
+        have he : K*(lemma32BurgessShiftAbsoluteSum χ M A N B/K+E)=
+            lemma32BurgessShiftAbsoluteSum χ M A N B+K*E := by
+          rw [mul_add, mul_div_cancel₀ _ hK.ne']
+        have hd := (mul_le_mul_iff_right₀ hK).mp (havg.trans_eq he.symm)
+        have hnonneg : 0≤C*lemma32BurgessPower D (25/128)*Real.sqrt (N : ℝ) :=
+          mul_nonneg (mul_nonneg hC (lemma32_burgess_power_pos D (25/128)).le) (Real.sqrt_nonneg _)
+        calc
+          _ ≤ lemma32BurgessShiftAbsoluteSum χ M A N B/K+E := hd
+          _ ≤ (C/2)*lemma32BurgessPower D (25/128)*Real.sqrt (N : ℝ)+E := add_le_add hamp le_rfl
+          _ ≤ _ := by dsimp only [E];nlinarith [hnonneg]
+
+end ZhangLS.Spec

@@ -1,0 +1,35 @@
+import ZhangMathStep262Lemma32BurgessLeftErrorDraft
+import ZhangLS.Spec.Lemma31Absorption
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Filter
+open scoped Topology
+set_option maxHeartbeats 2000000
+
+lemma lemma32_left_error_absorption_threshold (C : ℝ) :
+    ∃ D₀ : ℕ, ∀ D : ℕ, D₀ ≤ D → 1 < D ∧ 3 ≤ lemma23PaperL D ∧
+      lemma32LeftErrorConstant*C^4*Real.exp (-(27/128)*lemma23PaperL D) ≤
+        lemma23PaperL D^(-2007 : ℤ) := by
+  have ht : Tendsto (fun D : ℕ => lemma23PaperL D) atTop atTop :=
+    Real.tendsto_log_atTop.comp (tendsto_natCast_atTop_atTop (R := ℝ))
+  have hf : Tendsto (fun D : ℕ => lemma23PaperL D^2007*
+      Real.exp (-(27/128)*lemma23PaperL D)) atTop (𝓝 0) := by
+    simpa only [Real.rpow_ofNat,Function.comp_apply] using
+      (tendsto_rpow_mul_exp_neg_mul_atTop_nhds_zero (2007 : ℝ) (27/128) (by norm_num)).comp ht
+  have hc : Tendsto (fun D : ℕ => (lemma32LeftErrorConstant*C^4)*
+      (lemma23PaperL D^2007*Real.exp (-(27/128)*lemma23PaperL D))) atTop (𝓝 0) := by
+    simpa only [mul_zero] using hf.const_mul (lemma32LeftErrorConstant*C^4)
+  have he : ∀ᶠ D : ℕ in atTop, 1 < D ∧ 3 ≤ lemma23PaperL D ∧
+      lemma32LeftErrorConstant*C^4*Real.exp (-(27/128)*lemma23PaperL D) ≤
+        lemma23PaperL D^(-2007 : ℤ) := by
+    filter_upwards [hc.eventually (eventually_lt_nhds (by norm_num : (0 : ℝ) < 1)),
+      ht.eventually (eventually_ge_atTop 3),eventually_ge_atTop (2 : ℕ)] with D hsmall hL hD
+    refine ⟨by omega,hL,?_⟩
+    have hl0 : 0 < lemma23PaperL D := by linarith
+    simp only [zpow_neg,zpow_ofNat]
+    rw [← one_mul ((lemma23PaperL D^2007)⁻¹)]
+    apply (le_mul_inv_iff₀ (pow_pos hl0 2007)).mpr
+    nlinarith [hsmall.le]
+  exact eventually_atTop.mp he
+
+end ZhangLS.Spec

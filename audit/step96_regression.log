@@ -1,0 +1,23 @@
+'ZhangLS.Spec.RealPrimitiveCharacter.norm_sum_Icc_evalNat_le_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_rpow_near_one_le_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.RealPrimitiveCharacter.norm_characterAbelIntegral_le_near_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma55_actual_L_near_one_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_second_derivative_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_first_derivative_variation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_taylor_remainder_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.RealPrimitiveCharacter.inverse_eq_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.dirichletLFunction_im_eq_zero_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.dirichletLFunction_real_eq_realLValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.realLValue_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.realLValue_deriv_eq_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.real_axis_value_theorem_proved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.real_axis_analytic_compatibility_proved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_local_zero_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_real_derivative_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_simple_real_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_local_zero_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma55_actual_simple_real_zero_locally_unique' depends on axioms: [propext, Classical.choice, Quot.sound]

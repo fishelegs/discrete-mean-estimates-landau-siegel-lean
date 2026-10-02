@@ -1,0 +1,57 @@
+import ZhangLS.Spec.Lemma32RegularNumerator
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Metric Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma32ActualResidue {D : ℕ} (χ : RealPrimitiveCharacter D) : ℂ :=
+  iteratedDeriv 7 (lemma32RegularNumerator χ) 0/(Nat.factorial 7 : ℂ)
+
+lemma lemma32_regular_numerator_differentiableOn_ball {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (r : ℝ) (hr : r ≤ 1/4) :
+    DifferentiableOn ℂ (lemma32RegularNumerator χ) (closedBall 0 r) := by
+  intro w hw
+  have hn : ‖w‖ ≤ r := by simpa [mem_closedBall,dist_eq_norm] using hw
+  have hb := (abs_le.mp ((Complex.abs_re_le_norm w).trans (hn.trans hr))).1
+  exact (lemma32_regular_numerator_differentiableAt χ hD w (by linarith)).differentiableWithinAt
+
+lemma lemma32_actual_circle_integral_eq_residue {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (r : ℝ) (hr : 0 < r) (hsmall : r ≤ 1/4) :
+    (2*Real.pi*Complex.I : ℂ)⁻¹*circleIntegral (lemma32CircleIntegrand χ) 0 r =
+      lemma32ActualResidue χ := by
+  have hd := lemma32_regular_numerator_differentiableOn_ball χ hD r hsmall
+  have hc : circleIntegral (fun w : ℂ => 1/w^8*lemma32RegularNumerator χ w) 0 r =
+      ((2*Real.pi*Complex.I : ℂ)/(Nat.factorial 7 : ℂ))*
+        iteratedDeriv 7 (lemma32RegularNumerator χ) 0 := by
+    simpa only [sub_zero,smul_eq_mul,Nat.reduceAdd] using
+      hd.circleIntegral_one_div_sub_center_pow_smul hr 7
+  have he : circleIntegral (lemma32CircleIntegrand χ) 0 r =
+      circleIntegral (fun w : ℂ => 1/w^8*lemma32RegularNumerator χ w) 0 r := by
+    apply circleIntegral.integral_congr hr.le
+    intro w hw
+    have hn : ‖w‖ = r := by simpa [mem_sphere,dist_eq_norm] using hw
+    have h0 : w ≠ 0 := by intro h;rw [h,norm_zero] at hn;linarith
+    have hb := (abs_le.mp ((Complex.abs_re_le_norm w).trans (hn.le.trans hsmall))).1
+    change lemma32CircleIntegrand χ w = 1/w^8*lemma32RegularNumerator χ w
+    rw [lemma32_regular_numerator_eq χ w (by linarith) h0]
+    field_simp
+  rw [he,hc]
+  unfold lemma32ActualResidue
+  field_simp [Complex.two_pi_I_ne_zero]
+
+lemma lemma32_actual_original_circle_integral_eq_residue {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (hL : 3 ≤ lemma23PaperL D) :
+    (2*Real.pi*Complex.I : ℂ)⁻¹*circleIntegral (lemma32CircleIntegrand χ) 0
+      (lemma23PaperL D^(-2024 : ℤ)) = lemma32ActualResidue χ := by
+  have hl0 : 0 < lemma23PaperL D := by linarith
+  exact lemma32_actual_circle_integral_eq_residue χ hD _ (zpow_pos hl0 _)
+    ((lemma32_negative_power_small _ hL 2024 (by norm_num)).trans (by norm_num))
+
+lemma lemma32_actual_residue_bound {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (hL : 3 ≤ lemma23PaperL D) (hA : NormalizedAssumptionA χ) :
+    ‖lemma32ActualResidue χ‖ ≤ lemma32CircleConstant*lemma23PaperL D^(-2007 : ℤ) := by
+  rw [← lemma32_actual_original_circle_integral_eq_residue χ hD hL]
+  exact lemma32_actual_normalized_circle_integral_bound χ hD hL hA
+
+end ZhangLS.Spec

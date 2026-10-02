@@ -1,0 +1,28 @@
+⚠ [1279/1363] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3452/3457] Replayed ZhangLS.Spec.Lemma23DirichletConjugation
+warning: ZhangLS/Spec/Lemma23DirichletConjugation.lean:23:0: automatically included section variable(s) unused in theorem `ZhangLS.Spec.dirichletLSeries_inv_eq_conj_at_conj`:
+  [NeZero N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3455/3457] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✖ [3457/3457] Building ZhangLS.Spec.RealAxisContinuation (3.6s)
+trace: .> LEAN_PATH=/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Cli/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/batteries/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Qq/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/aesop/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/importGraph/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/plausible/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/mathlib/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/keyishen/Documents/ChatGPT/zhangmath/ZhangLS/Spec/RealAxisContinuation.lean -o /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/RealAxisContinuation.olean -i /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/RealAxisContinuation.ilean -c /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/RealAxisContinuation.c --setup /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/RealAxisContinuation.setup.json --json
+error: ZhangLS/Spec/RealAxisContinuation.lean:44:8: Function expected at
+  DifferentiableAt.hasDerivAt (differentiable_dirichletLFunction_of_one_lt_modulus χ hD ↑x)
+but this term has type
+  HasDerivAt (dirichletLFunction χ) (deriv (dirichletLFunction χ) ↑x) ↑x
+
+Note: Expected a function because this term is being applied to the argument
+  .real_of_complex
+error: Lean exited with code 1
+Some required targets logged failures:
+- ZhangLS.Spec.RealAxisContinuation
+error: build failed

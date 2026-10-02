@@ -1,0 +1,62 @@
+import ZhangLS.Spec.Lemma32QuadraticGaussNorm
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+open scoped Classical
+
+noncomputable def lemma32FourierIntervalKernel (D : ℕ) [NeZero D]
+    (M : ℤ) (N : ℕ) (k : ZMod D) : ℂ :=
+  ∑ n : Fin N, ZMod.stdAddChar (k*(((M+(n.val : ℤ)) : ℤ) : ZMod D))
+
+lemma lemma32_actual_quadratic_fourier_inversion {D : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (x : ZMod D) :
+    (D : ℂ)*χ.chi x = gaussSum χ.chi ZMod.stdAddChar*
+      (∑ k : ZMod D, χ.chi (-k)*ZMod.stdAddChar (k*x)) := by
+  have hi := congrFun (ZMod.dft_dft (χ.chi : ZMod D → ℂ)) (-x)
+  change (∑ k : ZMod D, ZMod.stdAddChar (-(k*(-x)))*ZMod.dft χ.chi k) =
+    (D : ℂ)*χ.chi (-(-x)) at hi
+  simp only [mul_neg, neg_neg] at hi
+  rw [← hi, Finset.mul_sum]
+  apply Finset.sum_congr rfl
+  intro k hk
+  rw [lemma32_actual_quadratic_fourier_transform χ]
+  ring
+
+lemma lemma32_actual_interval_fourier_completion {D : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (M : ℤ) (N : ℕ) :
+    (D : ℂ)*lemma32BurgessIntervalSum χ M N =
+      gaussSum χ.chi ZMod.stdAddChar*
+        (∑ k : ZMod D, χ.chi (-k)*lemma32FourierIntervalKernel D M N k) := by
+  unfold lemma32BurgessIntervalSum
+  rw [Finset.mul_sum]
+  simp_rw [lemma32_actual_quadratic_fourier_inversion χ, Finset.mul_sum]
+  rw [Finset.sum_comm]
+  apply Finset.sum_congr rfl
+  intro k hk
+  unfold lemma32FourierIntervalKernel
+  simp only [Finset.mul_sum]
+
+lemma lemma32_actual_interval_fourier_completion_norm {D : ℕ} [NeZero D]
+    (χ : RealPrimitiveCharacter D) (hD : 1<D) (M : ℤ) (N : ℕ) :
+    (D : ℝ)*‖lemma32BurgessIntervalSum χ M N‖ ≤
+      Real.sqrt (D : ℝ)*(∑ k ∈ (Finset.univ : Finset (ZMod D)).filter (fun k => k≠0),
+        ‖lemma32FourierIntervalKernel D M N k‖) := by
+  have hi := congrArg norm (lemma32_actual_interval_fourier_completion χ M N)
+  rw [norm_mul, Complex.norm_natCast, norm_mul, lemma32_actual_quadratic_gauss_norm χ] at hi
+  rw [hi]
+  apply mul_le_mul_of_nonneg_left _ (Real.sqrt_nonneg _)
+  calc
+    _ ≤ ∑ k : ZMod D, ‖χ.chi (-k)*lemma32FourierIntervalKernel D M N k‖ := norm_sum_le _ _
+    _ ≤ ∑ k : ZMod D, if k≠0 then ‖lemma32FourierIntervalKernel D M N k‖ else 0 := by
+      apply Finset.sum_le_sum
+      intro k hk
+      rw [norm_mul]
+      by_cases h0 : k=0
+      · subst k
+        rw [neg_zero, χ.chi.map_zero' hD.ne', norm_zero, zero_mul, if_neg (by simp)]
+      · rw [if_pos h0]
+        exact (mul_le_mul_of_nonneg_right (χ.chi.norm_le_one (-k)) (norm_nonneg _)).trans_eq
+          (one_mul _)
+    _ = _ := (Finset.sum_filter _ _).symm
+
+end ZhangLS.Spec

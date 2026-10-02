@@ -1,0 +1,61 @@
+import ZhangLS.Spec.Lemma32OriginalMellinDifference
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_weighted_term_one_real {D : ℕ} (χ : RealPrimitiveCharacter D) (n : ℕ) :
+    LSeries.term (fun n => (lemma32ActualCoefficient χ n : ℂ)) 1 n =
+      ((lemma32ActualCoefficient χ n/(n : ℝ) : ℝ) : ℂ) := by
+  by_cases hn : n = 0
+  · subst n; simp
+  rw [LSeries.term_of_ne_zero hn,Complex.cpow_one,Complex.ofReal_div]
+  rfl
+
+noncomputable def lemma32RealSmoothedTerm {D : ℕ} (χ : RealPrimitiveCharacter D) (n : ℕ) : ℝ :=
+  lemma32ActualCoefficient χ n/(n : ℝ)*
+    (Real.exp (-(n : ℝ)/(D : ℝ)^8)-Real.exp (-(n : ℝ)/(D : ℝ)^4))
+
+lemma lemma32_actual_real_smoothed_terms_summable {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    Summable (lemma32RealSmoothedTerm χ) := by
+  have hp : 0 < (D : ℝ) := by exact_mod_cast χ.modulus_pos
+  have h8 := lemma32_actual_smoothed_weighted_summable χ _ (pow_pos hp 8)
+  have h4 := lemma32_actual_smoothed_weighted_summable χ _ (pow_pos hp 4)
+  apply Complex.summable_ofReal.mp
+  apply (h8.sub h4).congr
+  intro n
+  rw [lemma32_actual_weighted_term_one_real]
+  unfold lemma32RealSmoothedTerm
+  push_cast
+  ring
+
+lemma lemma32_actual_smoothed_difference_real_series {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    lemma32SmoothedWeightedDifference χ = ((∑' n : ℕ, lemma32RealSmoothedTerm χ n : ℝ) : ℂ) := by
+  rw [lemma32_actual_smoothed_difference_series,Complex.ofReal_tsum]
+  apply tsum_congr
+  intro n
+  rw [lemma32_actual_weighted_term_one_real]
+  unfold lemma32RealSmoothedTerm
+  push_cast
+  ring
+
+lemma lemma32_actual_real_smoothed_term_nonneg {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 ≤ D) (n : ℕ) : 0 ≤ lemma32RealSmoothedTerm χ n := by
+  have hd1 : 1 ≤ (D : ℝ) := by exact_mod_cast hD
+  have hd4 : (D : ℝ)^4 ≤ (D : ℝ)^8 := pow_le_pow_right₀ hd1 (by norm_num)
+  have hx : (n : ℝ)/(D : ℝ)^8 ≤ (n : ℝ)/(D : ℝ)^4 :=
+    div_le_div_of_nonneg_left (Nat.cast_nonneg n) (by positivity) hd4
+  have hw : 0 ≤ Real.exp (-(n : ℝ)/(D : ℝ)^8)-Real.exp (-(n : ℝ)/(D : ℝ)^4) := by
+    apply sub_nonneg.mpr
+    apply Real.exp_le_exp.mpr
+    simp only [neg_div]
+    linarith
+  exact mul_nonneg (div_nonneg (lemma32_actual_coefficient_nonneg χ n) (Nat.cast_nonneg n)) hw
+
+lemma lemma32_actual_real_smoothed_difference_nonneg {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    0 ≤ (lemma32SmoothedWeightedDifference χ).re := by
+  rw [lemma32_actual_smoothed_difference_real_series,Complex.ofReal_re]
+  exact tsum_nonneg (fun n => lemma32_actual_real_smoothed_term_nonneg χ χ.modulus_pos n)
+
+end ZhangLS.Spec

@@ -1,0 +1,51 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/private/tmp/ZhangMathStep124Lemma61CompleteChecked.lean:54:70: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ZhangLS.Spec.lemma61_short_mellin_eq_finite_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_short_mellin_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_short_gaussian_mellin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_short_star_sum_eq_weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_short_gaussian_cutoff_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_N_support_inside_short_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_full_short_mellin_N_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_short_right_gaussian_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_short_gaussian_exponent_absorption' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_short_right_truncation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_finite_short_mellin_N_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_reciprocal_model_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_reciprocal_model_vertical_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_finite_reciprocal_model_N_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_original_left_integrand_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_reciprocal_model_interval_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_left_tail_interval_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_original_left_integral_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_original_left_N_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_family_modulus_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_shifted_argument_norm_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_L_quarter_plane_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_P4_exponential_rectangle_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_T_left_rectangle_exponential_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_shifted_L_positive_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_shifted_L_dual_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_positive_L_P4_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_negative_L_P4_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_L_P4_rectangle_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_horizontal_L_point_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_horizontal_L_exponent_absorption' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_horizontal_L_integral_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_approximation_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_approximation_constant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_parameters_at_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_proved' depends on axioms: [propext, Classical.choice, Quot.sound]
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.

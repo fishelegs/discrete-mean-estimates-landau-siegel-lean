@@ -1,0 +1,30 @@
+ZhangLS/Spec/Lemma61WideZBounds.lean:26:15: warning: This simp argument is unused:
+  add_re
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵d̵d̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵r̵e̵,̵I̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵I̵_̵i̵m̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵s̵u̵b̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵s̵u̵b̵_̵s̵e̵l̵f̵,̵a̵b̵s̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵i̵m̵,̵m̵u̵l̵_̵i̵m̵,̵o̵n̵e̵_̵m̵u̵l̵,̵z̵e̵r̵o̵_̵a̵d̵d̵]̵[̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲r̲e̲,̲ ̲I̲_̲r̲e̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲I̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲s̲u̲b̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲s̲u̲b̲_̲s̲e̲l̲f̲,̲ ̲a̲b̲s̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲o̲n̲e̲_̲m̲u̲l̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61WideZBounds.lean:27:6: warning: This simp argument is unused:
+  sub_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵d̵d̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵r̵e̵,̵I̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵I̵_̵i̵m̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵s̵u̵b̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵s̵u̵b̵_̵s̵e̵l̵f̵,̵a̵b̵s̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵i̵m̵,̵m̵u̵l̵_̵i̵m̵,̵o̵n̵e̵_̵m̵u̵l̵,̵z̵e̵r̵o̵_̵a̵d̵d̵]̵[̲a̲d̲d̲_̲r̲e̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲r̲e̲,̲ ̲I̲_̲r̲e̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲I̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲s̲u̲b̲_̲s̲e̲l̲f̲,̲ ̲a̲b̲s̲_̲z̲e̲r̲o̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲o̲n̲e̲_̲m̲u̲l̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61WideZBounds.lean:27:42: warning: This simp argument is unused:
+  add_im
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵d̵d̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵r̵e̵,̵I̵_̵r̵e̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵I̵_̵i̵m̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵s̵u̵b̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵s̵u̵b̵_̵s̵e̵l̵f̵,̵a̵b̵s̵_̵z̵e̵r̵o̵,̵a̵d̵d̵_̵i̵m̵,̵m̵u̵l̵_̵i̵m̵,̵o̵n̵e̵_̵m̵u̵l̵,̵z̵e̵r̵o̵_̵a̵d̵d̵]̵[̲a̲d̲d̲_̲r̲e̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲r̲e̲,̲ ̲I̲_̲r̲e̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲I̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲s̲u̲b̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲ ̲s̲u̲b̲_̲s̲e̲l̲f̲,̲ ̲a̲b̲s̲_̲z̲e̲r̲o̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲o̲n̲e̲_̲m̲u̲l̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61WideZBounds.lean:231:89: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

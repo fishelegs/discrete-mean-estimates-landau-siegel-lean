@@ -1,0 +1,32 @@
+import ZhangMathStep327Lemma32PrimeRootDifferenceBoundDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+def lemma32IntegerRootDifferenceProduct (a b c d : ℤ) : ℕ :=
+  ((a-b)*(a-c)*(a-d)).natAbs
+
+lemma lemma32_actual_prime_quartic_gcd_bound {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) (a b c d : ℤ) :
+    ‖∑ x : ZMod p, χ.chi (lemma32QuarticRootProduct (a : ZMod p) b c d x)‖ ≤
+      3*Real.sqrt (p : ℝ)*Real.sqrt (p.gcd (lemma32IntegerRootDifferenceProduct a b c d) : ℝ) := by
+  have he : (((a-b)*(a-c)*(a-d) : ℤ) : ZMod p) =
+      ((a : ZMod p)-b)*((a : ZMod p)-c)*((a : ZMod p)-d) := by
+    push_cast
+    rfl
+  have hd : ((a : ZMod p)-b)*((a : ZMod p)-c)*((a : ZMod p)-d)=0 ↔
+      p ∣ lemma32IntegerRootDifferenceProduct a b c d := by
+    rw [← he, ZMod.intCast_zmod_eq_zero_iff_dvd, Int.natCast_dvd]
+    rfl
+  have hb := lemma32_actual_prime_quartic_root_difference_bound χ (a : ZMod p) b c d
+  by_cases hp : p ∣ lemma32IntegerRootDifferenceProduct a b c d
+  · rw [if_pos (hd.mpr hp)] at hb
+    rw [Nat.gcd_eq_left hp]
+    exact hb
+  · rw [if_neg (fun hz => hp (hd.mp hz))] at hb
+    rw [((Fact.out : p.Prime).coprime_iff_not_dvd.mpr hp).gcd_eq_one, Nat.cast_one, Real.sqrt_one]
+    exact hb
+
+end ZhangLS.Spec

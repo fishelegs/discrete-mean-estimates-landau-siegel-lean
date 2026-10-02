@@ -1,0 +1,58 @@
+import ZhangMathStep189Lemma32ModulusFactorsDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma32RegularLocalPolynomial {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (p : ℕ) (z : ℂ) : ℂ :=
+  if p ∣ D then 1-z^2 else if χ.evalNat p = 1 then
+    (1-z)^11*(1+11*z+11*z^2+z^3) else (1-z^2)^5*(1+6*z^2+z^4)
+
+lemma lemma32_zero_correction_factorization {D p : ℕ} (χ : RealPrimitiveCharacter D)
+    (hp : p.Prime) (h : χ.evalNat p = 0) (z : ℂ) (hz : ‖z‖ < 1) :
+    lemma32LocalCorrection χ p z = (1-z)^4*(1-z^2) := by
+  rw [lemma32_local_correction_of_zero χ hp h z hz]
+  ring
+
+lemma lemma32_actual_correction_regular_factorization {D p : ℕ} (χ : RealPrimitiveCharacter D)
+    (hp : p.Prime) (z : ℂ) (hz : ‖z‖ < 1) :
+    lemma32LocalCorrection χ p z =
+      (if p ∣ D then (1-z)^4 else 1)*lemma32RegularLocalPolynomial χ p z := by
+  unfold lemma32RegularLocalPolynomial
+  by_cases hpd : p ∣ D
+  · simp only [if_pos hpd]
+    exact lemma32_zero_correction_factorization χ hp
+      (χ.evalNat_eq_zero_of_dvd_modulus hpd hp.ne_one) z hz
+  · simp only [if_neg hpd,one_mul]
+    rcases lemma32_character_prime_cases_of_not_dvd χ hp hpd with h | h
+    · rw [if_pos h]
+      exact lemma32_local_correction_of_one χ hp h z hz
+    · have hn : χ.evalNat p ≠ 1 := by rw [h]; norm_num
+      rw [if_neg hn]
+      exact lemma32_local_correction_of_neg_one χ hp h z hz
+
+lemma lemma32_regular_local_norm_sub_one {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (p : ℕ) (z : ℂ) (hz : ‖z‖ ≤ 1) :
+    ‖lemma32RegularLocalPolynomial χ p z-1‖ ≤ 7659*‖z‖^2 := by
+  unfold lemma32RegularLocalPolynomial
+  split_ifs
+  · have he : (1-z^2-1 : ℂ) = -z^2 := by ring
+    rw [he,norm_neg,norm_pow]
+    nlinarith [sq_nonneg ‖z‖]
+  · exact lemma32_plus_factor_norm_sub_one z hz
+  · have h := lemma32_minus_factor_norm_sub_one z hz
+    nlinarith [sq_nonneg ‖z‖]
+
+lemma lemma32_regular_local_differentiable {D : ℕ} (χ : RealPrimitiveCharacter D) (p : ℕ) :
+    Differentiable ℂ (fun z : ℂ => lemma32RegularLocalPolynomial χ p z) := by
+  unfold lemma32RegularLocalPolynomial
+  split_ifs <;> fun_prop
+
+lemma lemma32_regular_local_at_zero {D : ℕ} (χ : RealPrimitiveCharacter D) (p : ℕ) :
+    lemma32RegularLocalPolynomial χ p 0 = 1 := by
+  unfold lemma32RegularLocalPolynomial
+  split_ifs <;> norm_num
+
+end ZhangLS.Spec

@@ -1,0 +1,14 @@
+ZhangLS/Spec/Lemma33Fourier.lean:79:12: warning: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  simp [̵C̵o̵m̵p̵l̵e̵x̵.̵s̵t̵a̵r̵_̵d̵e̵f̵,̵←̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵n̵o̵r̵m̵S̵q̵_̵e̵q̵_̵c̵o̵n̵j̵_̵m̵u̵l̵_̵s̵e̵l̵f̵,̵C̵o̵m̵p̵l̵e̵x̵.̵n̵o̵r̵m̵S̵q̵_̵e̵q̵_̵n̵o̵r̵m̵_̵s̵q̵]̵[̲←̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲n̲o̲r̲m̲S̲q̲_̲e̲q̲_̲c̲o̲n̲j̲_̲m̲u̲l̲_̲s̲e̲l̲f̲,̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲n̲o̲r̲m̲S̲q̲_̲e̲q̲_̲n̲o̲r̲m̲_̲s̲q̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma33Fourier.lean:109:8: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  simp [n̵o̵r̵m̵_̵m̵u̵l̵,̵abs_of_pos Real.pi_pos]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

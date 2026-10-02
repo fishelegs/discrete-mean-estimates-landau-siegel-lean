@@ -1,0 +1,27 @@
+{
+  "sha256": "83c84e8662c8d41cf310ec857ef046b558a5101ddc129f064c63c8b28d75887f",
+  "kernel_exit_code": 0,
+  "proved_interfaces": [
+    "lemma56_perron_exp_window_bound",
+    "lemma56_perron_unsmoothing_scales",
+    "lemma56_perron_unsmoothing_far_margin",
+    "lemma56_perron_unsmoothing_polynomial",
+    "lemma56_perron_unsmoothing_polynomial_decay",
+    "lemma56_perron_unsmoothing_endpoint_budget",
+    "lemma56_perron_unsmoothing_near_budget",
+    "lemma56_perron_unsmoothing_far_budget",
+    "lemma56_perron_unsmoothing_constant_pos",
+    "lemma56_actual_perron_paper_smoothing_error",
+    "lemma56_uniform_primitive_sharp_mangoldt_window_bound"
+  ],
+  "interface_count": 11,
+  "expanded_examples": 4,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "verified_at_utc": "2026-10-01T08:47:20.898886+00:00",
+  "scope": "Independent draft outside frozen Step 107 project sources. Actual unconditional smoothing error for all complex characters, including modulus-one principal, and actual sharp Mangoldt cancellation under original (A) for distinct nonprincipal primitive characters, all 1<=x<=2P and closed |tau|<=D. Full original prime-window target remains unproved.",
+  "kernel_command": "lake env lean /private/tmp/ZhangMathStep108UnsmoothingDraft.lean"
+}

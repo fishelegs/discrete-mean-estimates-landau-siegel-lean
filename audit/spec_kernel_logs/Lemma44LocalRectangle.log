@@ -1,0 +1,16 @@
+ZhangLS/Spec/Lemma44LocalRectangle.lean:115:46: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_reProdIm, mem_Icc, sub_re, sub_im, ofReal_re, ofReal_im, mul_re, mul_im, I_re,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲I_im, mul_zero, z̵e̵r̵o̵_̵m̵u̵l̵,̵ ̵mul_one, zero_add, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma44LocalRectangle.lean:115:65: warning: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_reProdIm, mem_Icc, sub_re, sub_im, ofReal_re, ofReal_im, mul_re, mul_im, I_re,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲I_im, mul_zero, zero_mul, mul_one, z̵e̵r̵o̵_̵a̵d̵d̵,̵ ̵sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

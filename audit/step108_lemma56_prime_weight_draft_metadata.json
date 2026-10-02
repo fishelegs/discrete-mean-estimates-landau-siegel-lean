@@ -1,0 +1,23 @@
+{
+  "sha256": "a7657f28440080073969f5528b8e117b8d3764dd6621450fc7e0d83a4af0bdbf",
+  "kernel_exit_code": 0,
+  "proved_interfaces": [
+    "lemma56_finite_abel_positive_budget",
+    "lemma56_prime_weight_mono",
+    "lemma56_actual_prime_weight_identity",
+    "lemma56_actual_paper_prime_interval",
+    "lemma56_paper_prime_weight_parameters",
+    "lemma56_actual_paper_prime_weight_budget",
+    "lemma56_uniform_primitive_prime_window_absolute_bound"
+  ],
+  "interface_count": 7,
+  "expanded_examples": 4,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "verified_at_utc": "2026-10-01T09:14:35.674028+00:00",
+  "scope": "Actual finite Abel conversion, strict paper interval and actual p^(1+i tau) prime-window absolute bound C P^2 exp(-7U/6) under original (A), uniform for distinct nonprincipal primitive characters and closed |tau|<=D. Actual prime-mass normalization and faithful modulus-one principal target remain unproved.",
+  "kernel_command": "lake env lean /private/tmp/ZhangMathStep108PrimeWeightDraft.lean"
+}

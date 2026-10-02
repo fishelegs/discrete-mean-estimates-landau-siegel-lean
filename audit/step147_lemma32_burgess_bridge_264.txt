@@ -1,0 +1,40 @@
+import ZhangMathStep263Lemma32LeftErrorAbsorptionDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+def Lemma32Target : Prop := ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ,
+  ∀ D : ℕ, D₀ ≤ D → ∀ χ : RealPrimitiveCharacter D, NormalizedAssumptionA χ →
+    (∑ n ∈ Finset.Ioc (D^4) (D^8),
+      ‖lemma23NuArithmeticFunction χ n‖^2*(lemma34Tau 2 n : ℝ)^2/(n : ℝ)) ≤
+      C*lemma23PaperL D^(-2007 : ℤ)
+
+lemma lemma32_target_of_uniform_burgess_partial_sums (C : ℝ) (hC : 1 ≤ C)
+    (hBurgess : ∀ D : ℕ, 2 ≤ D → ∀ χ : RealPrimitiveCharacter D, ∀ N : ℕ,
+      ‖∑ n ∈ Finset.Icc 1 N, χ.evalNat n‖ ≤
+        (C*Real.exp ((25/128)*lemma23PaperL D))*(N : ℝ)^(1/2 : ℝ)) :
+    Lemma32Target := by
+  obtain ⟨D₀,hD₀⟩ := lemma32_left_error_absorption_threshold C
+  have hc := lemma32_smoothing_window_lower_bound_pos
+  have hcircle := lemma32_circle_constant_pos
+  refine ⟨(lemma32CircleConstant+1)/lemma32SmoothingWindowLowerBound,by positivity,D₀,?_⟩
+  intro D hD χ hA
+  have hp := hD₀ D hD
+  have htwo : 2 ≤ D := by omega
+  have hl := (lemma32_actual_left_integral_bound_of_burgess_partial_sums χ hp.1 C hC
+    (hBurgess D htwo χ)).trans hp.2.2
+  have ht := lemma32_actual_original_tail_reduction χ htwo hp.2.1 hA
+  have he : Finset.Ioc (D^4) (D^8) = Finset.Icc (D^4+1) (D^8) := by
+    ext n
+    simp only [Finset.mem_Ioc,Finset.mem_Icc]
+    omega
+  rw [he]
+  calc
+    _ ≤ ((lemma32CircleConstant+1)*lemma23PaperL D^(-2007 : ℤ))/lemma32SmoothingWindowLowerBound := by
+      apply (le_div_iff₀ hc).mpr
+      nlinarith [ht,hl]
+    _ = _ := by ring
+
+end ZhangLS.Spec

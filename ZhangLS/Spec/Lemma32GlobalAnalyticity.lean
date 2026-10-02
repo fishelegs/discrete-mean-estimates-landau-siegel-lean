@@ -1,0 +1,37 @@
+import ZhangLS.Spec.Lemma32GlobalHeightGrowth
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Metric Set Filter
+open scoped Classical Topology
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_integrand_eq_regular_div {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (w : ℂ) (hw : -1/2 < w.re) (h0 : w ≠ 0) :
+    lemma32CircleIntegrand χ w = lemma32RegularNumerator χ w/w^8 := by
+  apply (eq_div_iff (pow_ne_zero 8 h0)).mpr
+  rw [lemma32_regular_numerator_eq χ w hw h0]
+  ring
+
+lemma lemma32_actual_integrand_differentiableAt_global {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (w : ℂ) (hw : -1/2 < w.re) (h0 : w ≠ 0) :
+    DifferentiableAt ℂ (lemma32CircleIntegrand χ) w := by
+  have he : lemma32CircleIntegrand χ =ᶠ[𝓝 w]
+      (fun z => lemma32RegularNumerator χ z/z^8) := by
+    filter_upwards [(isOpen_lt continuous_const Complex.continuous_re).mem_nhds hw,
+      isOpen_ne.mem_nhds h0] with z hz hz0
+    exact lemma32_actual_integrand_eq_regular_div χ z hz hz0
+  exact ((lemma32_regular_numerator_differentiableAt χ hD w hw).div
+    (differentiableAt_id.pow 8) (pow_ne_zero 8 h0)).congr_of_eventuallyEq he
+
+lemma lemma32_actual_vertical_continuous {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (a : ℝ) (ha : -1/2 < a) (han : a ≠ 0) :
+    Continuous (fun t : ℝ => lemma32CircleIntegrand χ ((a : ℂ)+(t : ℂ)*I)) := by
+  apply continuous_iff_continuousAt.mpr
+  intro t
+  have hw : -1/2 < ((a : ℂ)+(t : ℂ)*I).re := by simpa using ha
+  have h0 : (a : ℂ)+(t : ℂ)*I ≠ 0 := by
+    intro h;have hr := congrArg Complex.re h;simp at hr;exact han hr
+  exact (lemma32_actual_integrand_differentiableAt_global χ hD _ hw h0).continuousAt.comp'
+    (f := fun u : ℝ => (a : ℂ)+(u : ℂ)*I) (by fun_prop)
+
+end ZhangLS.Spec

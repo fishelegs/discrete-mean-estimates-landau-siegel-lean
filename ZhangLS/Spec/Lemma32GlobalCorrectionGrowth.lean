@@ -1,0 +1,42 @@
+import ZhangLS.Spec.Lemma32GammaStripDecay
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Metric Set Filter
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_ramification_global_bound (D : ℕ) (hD : 0 < D) (s : ℂ) (hs : 0 < s.re) :
+    ‖lemma32RamificationFactor D s‖ ≤ (D : ℝ)^4 := by
+  have hpD : (∏ p ∈ D.primeFactors, p) ≤ D := Nat.le_of_dvd hD (Nat.prod_primeFactors_dvd D)
+  have hlocal (p : ℕ) (hp : p ∈ D.primeFactors) :
+      ‖(1-lemma32PrimeMonomial p s)^4‖ ≤ (p : ℝ)^4 := by
+    have hpr := Nat.prime_of_mem_primeFactors hp
+    have hm := lemma32_prime_monomial_norm_lt_one hpr.one_lt s hs
+    have hb : ‖1-lemma32PrimeMonomial p s‖ ≤ (p : ℝ) := by
+      calc
+        _ ≤ ‖(1 : ℂ)‖+‖lemma32PrimeMonomial p s‖ := norm_sub_le _ _
+        _ ≤ 2 := by simp only [norm_one];linarith
+        _ ≤ _ := by exact_mod_cast hpr.two_le
+    rw [norm_pow]
+    gcongr
+  unfold lemma32RamificationFactor
+  calc
+    _ ≤ ∏ p ∈ D.primeFactors, ‖(1-lemma32PrimeMonomial p s)^4‖ := Finset.norm_prod_le _ _
+    _ ≤ ∏ p ∈ D.primeFactors, (p : ℝ)^4 :=
+      Finset.prod_le_prod (fun p hp => norm_nonneg _) hlocal
+    _ = (∏ p ∈ D.primeFactors, (p : ℝ))^4 := by rw [Finset.prod_pow]
+    _ ≤ _ := by
+      gcongr
+      simpa only [Nat.cast_prod] using
+        (show (((∏ p ∈ D.primeFactors, p) : ℕ) : ℝ) ≤ (D : ℝ) from Nat.cast_le.mpr hpD)
+
+lemma lemma32_analytic_correction_global_growth {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (σ : ℝ) (hσ : 1/2 < σ) (s : ℂ) (hs : σ ≤ s.re) :
+    ‖lemma32AnalyticCorrection χ s‖ ≤ (D : ℝ)^4*lemma32RegularProductBound σ := by
+  unfold lemma32AnalyticCorrection
+  rw [norm_mul]
+  exact mul_le_mul
+    (lemma32_ramification_global_bound D χ.modulus_pos s (by linarith))
+    (lemma32_regular_euler_product_bound χ σ hσ s hs) (norm_nonneg _) (by positivity)
+
+end ZhangLS.Spec

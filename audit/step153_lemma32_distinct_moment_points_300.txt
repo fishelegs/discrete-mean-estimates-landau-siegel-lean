@@ -1,0 +1,16 @@
+import ZhangMathStep298Lemma32DistinctMomentPointCountDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+
+lemma lemma32_actual_curve_points_finite {F : Type*} [Field F] [Fintype F]
+    (W : WeierstrassCurve F) [W.IsElliptic] : Finite W.toAffine.Point := by
+  exact Finite.of_equiv (Option {xy : F × F // W.toAffine.Equation xy.1 xy.2})
+    W.toAffine.pointEquiv.symm
+
+lemma lemma32_actual_curve_fintype_card_eq_nat_card {F : Type*} [Field F] [Fintype F]
+    (W : WeierstrassCurve F) [W.IsElliptic] [Fintype W.toAffine.Point] :
+    Fintype.card W.toAffine.Point = Nat.card W.toAffine.Point :=
+  Nat.card_eq_fintype_card.symm
+
+end ZhangLS.Spec

@@ -1,0 +1,52 @@
+import ZhangMathStep187Lemma32LocalBoundsDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_character_prime_cases_of_not_dvd {D p : ℕ} (χ : RealPrimitiveCharacter D)
+    (hp : p.Prime) (hpd : ¬p ∣ D) : χ.evalNat p = 1 ∨ χ.evalNat p = -1 := by
+  have hu : IsUnit (p : ZMod D) := by
+    rw [ZMod.isUnit_iff_coprime]
+    exact hp.coprime_iff_not_dvd.mpr hpd
+  have hn : χ.evalNat p ≠ 0 := (hu.map χ.chi.toMonoidHom).ne_zero
+  rcases MulChar.isQuadratic_iff_sq_eq_one.mpr χ.quadratic (p : ZMod D) with h | h | h
+  · exact False.elim (hn h)
+  · exact Or.inl h
+  · exact Or.inr h
+
+lemma lemma32_local_correction_norm_of_not_dvd {D p : ℕ} (χ : RealPrimitiveCharacter D)
+    (hp : p.Prime) (hpd : ¬p ∣ D) (z : ℂ) (hz : ‖z‖ < 1) :
+    ‖lemma32LocalCorrection χ p z-1‖ ≤ 7659*‖z‖^2 :=
+  lemma32_actual_local_correction_norm_sub_one χ hp
+    (lemma32_character_prime_cases_of_not_dvd χ hp hpd) z hz
+
+lemma lemma32_zero_factor_norm (z : ℂ) (hz : ‖z‖ ≤ 3/4) :
+    ‖(1-z)^5*(1+z)‖ ≤ 128*‖1-z^4‖ := by
+  have hs : ‖1-z‖ ≤ 2 := by have h := norm_sub_le (1 : ℂ) z; norm_num at h; linarith
+  have ha : ‖1+z‖ ≤ 2 := by have h := norm_add_le (1 : ℂ) z; norm_num at h; linarith
+  have hf : ‖(1-z)^5*(1+z)‖ ≤ 64 := by
+    rw [norm_mul,norm_pow]
+    calc
+      _ ≤ (2 : ℝ)^5*2 := mul_le_mul
+        (pow_le_pow_left₀ (norm_nonneg _) hs 5) ha (norm_nonneg _) (by positivity)
+      _ = _ := by norm_num
+  have hz4 : ‖z^4‖ ≤ 1/2 := by
+    rw [norm_pow]
+    calc
+      _ ≤ (3/4 : ℝ)^4 := pow_le_pow_left₀ (norm_nonneg _) hz 4
+      _ ≤ _ := by norm_num
+  have hl := norm_sub_norm_le (1 : ℂ) (z^4)
+  norm_num only [norm_one] at hl
+  linarith
+
+lemma lemma32_local_correction_norm_of_dvd {D p : ℕ} (χ : RealPrimitiveCharacter D)
+    (hp : p.Prime) (hpd : p ∣ D) (z : ℂ) (hz : ‖z‖ ≤ 3/4) :
+    ‖lemma32LocalCorrection χ p z‖ ≤ 128*‖1-z^4‖ := by
+  have hχ := χ.evalNat_eq_zero_of_dvd_modulus hpd hp.ne_one
+  have hzz : ‖z‖ < 1 := by linarith
+  rw [lemma32_local_correction_of_zero χ hp hχ z hzz]
+  exact lemma32_zero_factor_norm z hz
+
+end ZhangLS.Spec

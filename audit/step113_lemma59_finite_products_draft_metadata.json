@@ -1,0 +1,21 @@
+{
+  "kernel_exit_code": 0,
+  "checked_at_utc": "2026-10-01T16:19:49.440108+00:00",
+  "sha256": "bfb9759c1e2a8b60d4d6fb25fa125be8fd722e59b2751e7d14fb5b0a4afefca0",
+  "interface_count": 11,
+  "expanded_examples": 2,
+  "proved_interfaces": [
+    "lemma59_linear_telescoping_product",
+    "lemma59_shift_factor_bound",
+    "lemma59_ranked_zero_product_bound",
+    "lemma59_near_zero_factor_bound",
+    "lemma59_above_zero_norm_decreases",
+    "lemma59_above_zero_factor_le_one",
+    "lemma59_above_zero_product_le_one",
+    "lemma59_descending_gap_rank",
+    "lemma59_descending_zeros_ranked_distance",
+    "lemma59_descending_zero_product_bound",
+    "lemma59_exceptional_zero_product_bound"
+  ],
+  "scope": "Auxiliary finite complex zero-factor product estimates: telescoping rank bound N+1, upper-zero norm decrease, distance ranking from descending gaps, and at most two near-zero factors. No actual-L ratio assertion."
+}

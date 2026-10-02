@@ -1,0 +1,29 @@
+import ZhangLS.Spec.Lemma32NormalizedCubicSums
+import Mathlib.AlgebraicGeometry.EllipticCurve.Weierstrass
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+def lemma32QuarticWeierstrass {F : Type*} [CommRing F] (a b c d : F) : WeierstrassCurve F :=
+  { a₁ := 0
+    a₂ := (b-a)*(c-a)+(b-a)*(d-a)+(c-a)*(d-a)
+    a₃ := 0
+    a₄ := lemma32CubicLeadingCoefficient a b c d*((b-a)+(c-a)+(d-a))
+    a₆ := (lemma32CubicLeadingCoefficient a b c d)^2 }
+
+lemma lemma32_normalized_cubic_root_factorization {F : Type*} [CommRing F] (a b c d X : F) :
+    lemma32NormalizedMonicCubic a b c d X =
+      (X+(c-a)*(d-a))*(X+(b-a)*(d-a))*(X+(b-a)*(c-a)) := by
+  unfold lemma32NormalizedMonicCubic lemma32CubicLeadingCoefficient
+  ring
+
+lemma lemma32_quartic_Weierstrass_discriminant {F : Type*} [CommRing F] (a b c d : F) :
+    (lemma32QuarticWeierstrass a b c d).Δ =
+      16*(lemma32CubicLeadingCoefficient a b c d)^2*(b-c)^2*(b-d)^2*(c-d)^2 := by
+  unfold WeierstrassCurve.Δ WeierstrassCurve.b₂ WeierstrassCurve.b₄
+    WeierstrassCurve.b₆ WeierstrassCurve.b₈ lemma32QuarticWeierstrass lemma32CubicLeadingCoefficient
+  ring
+
+end ZhangLS.Spec

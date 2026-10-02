@@ -1,0 +1,34 @@
+import ZhangMathStep286Lemma32ActualCurvePointCountDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_prime_quartic_point_count {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) (hF : ringChar (ZMod p) ≠ 2)
+    (a b c d : ZMod p) (hA : lemma32CubicLeadingCoefficient a b c d ≠ 0)
+    [(lemma32QuarticWeierstrass a b c d).IsElliptic] :
+    (∑ x : ZMod p, χ.chi (lemma32QuarticRootProduct a b c d x))+1 =
+      (Nat.card (lemma32QuarticWeierstrass a b c d).toAffine.Point : ℂ)-(p : ℂ)-1 := by
+  simpa only [ZMod.card] using lemma32_quartic_character_sum_actual_curve_points χ.chi
+    (χ.nontrivial_of_one_lt_modulus (Fact.out : p.Prime).one_lt) χ.quadratic hF a b c d hA
+
+lemma lemma32_actual_prime_quartic_correlation_point_count {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) (hF : ringChar (ZMod p) ≠ 2)
+    {H : ℕ} (v : Fin 4 → Fin H)
+    (hA : lemma32CubicLeadingCoefficient ((v 0).val : ZMod p) ((v 1).val : ZMod p)
+      ((v 2).val : ZMod p) ((v 3).val : ZMod p) ≠ 0)
+    [(lemma32QuarticWeierstrass ((v 0).val : ZMod p) ((v 1).val : ZMod p)
+      ((v 2).val : ZMod p) ((v 3).val : ZMod p)).IsElliptic] :
+    lemma32QuarticCorrelation χ v+1 =
+      (Nat.card (lemma32QuarticWeierstrass ((v 0).val : ZMod p) ((v 1).val : ZMod p)
+        ((v 2).val : ZMod p) ((v 3).val : ZMod p)).toAffine.Point : ℝ)-(p : ℝ)-1 := by
+  have h := congrArg Complex.re (lemma32_actual_prime_quartic_point_count χ hF
+    ((v 0).val : ZMod p) ((v 1).val : ZMod p) ((v 2).val : ZMod p)
+    ((v 3).val : ZMod p) hA)
+  simpa only [Complex.add_re,Complex.sub_re,Complex.re_sum,Complex.one_re,
+    Complex.natCast_re,lemma32QuarticCorrelation,Fin.prod_univ_four,
+    lemma32QuarticRootProduct] using h
+
+end ZhangLS.Spec

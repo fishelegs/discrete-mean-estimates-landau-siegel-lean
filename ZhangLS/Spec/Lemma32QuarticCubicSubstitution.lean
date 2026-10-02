@@ -1,0 +1,29 @@
+import ZhangLS.Spec.Lemma32QuarticPermutations
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+def lemma32QuarticRootProduct {F : Type*} [CommRing F] (a b c d x : F) : F :=
+  (x+a)*(x+b)*(x+c)*(x+d)
+def lemma32TransformedCubic {F : Type*} [CommRing F] (a b c d u : F) : F :=
+  (1+(b-a)*u)*(1+(c-a)*u)*(1+(d-a)*u)
+
+lemma lemma32_quartic_cubic_substitution {F : Type*} [Field F] (a b c d u : F) (hu : u ≠ 0) :
+    lemma32QuarticRootProduct a b c d (u⁻¹-a) = (u⁻¹)^4*lemma32TransformedCubic a b c d u := by
+  unfold lemma32QuarticRootProduct lemma32TransformedCubic
+  field_simp
+  ring
+
+lemma lemma32_quadratic_quartic_cubic_point_identity {F : Type*} [Field F]
+    (χ : MulChar F ℂ) (hq : χ^2=1) (a b c d u : F) (hu : u ≠ 0) :
+    χ (lemma32QuarticRootProduct a b c d (u⁻¹-a)) = χ (lemma32TransformedCubic a b c d u) := by
+  rw [lemma32_quartic_cubic_substitution a b c d u hu,map_mul,map_pow]
+  have he : (χ (u⁻¹))^4=1 := by
+    calc
+      _ = ((χ (u⁻¹))^2)^2 := by ring
+      _ = _ := by rw [lemma32_quadratic_character_value_square χ hq (u⁻¹) (inv_ne_zero hu),one_pow]
+  rw [he,one_mul]
+
+end ZhangLS.Spec

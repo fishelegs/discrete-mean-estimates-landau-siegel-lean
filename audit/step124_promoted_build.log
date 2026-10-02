@@ -1,0 +1,75 @@
+⚠ [1279/1336] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3582/3604] Replayed ZhangLS.Spec.Lemma23DirichletConjugation
+warning: ZhangLS/Spec/Lemma23DirichletConjugation.lean:23:0: automatically included section variable(s) unused in theorem `ZhangLS.Spec.dirichletLSeries_inv_eq_conj_at_conj`:
+  [NeZero N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3584/3604] Replayed ZhangLS.Spec.Lemma23PrimitiveGaussSum
+warning: ZhangLS/Spec/Lemma23PrimitiveGaussSum.lean:42:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3587/3604] Replayed ZhangLS.Spec.Lemma33Fourier
+warning: ZhangLS/Spec/Lemma33Fourier.lean:79:12: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  simp [̵C̵o̵m̵p̵l̵e̵x̵.̵s̵t̵a̵r̵_̵d̵e̵f̵,̵←̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵n̵o̵r̵m̵S̵q̵_̵e̵q̵_̵c̵o̵n̵j̵_̵m̵u̵l̵_̵s̵e̵l̵f̵,̵C̵o̵m̵p̵l̵e̵x̵.̵n̵o̵r̵m̵S̵q̵_̵e̵q̵_̵n̵o̵r̵m̵_̵s̵q̵]̵[̲←̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲n̲o̲r̲m̲S̲q̲_̲e̲q̲_̲c̲o̲n̲j̲_̲m̲u̲l̲_̲s̲e̲l̲f̲,̲ ̲C̲o̲m̲p̲l̲e̲x̲.̲n̲o̲r̲m̲S̲q̲_̲e̲q̲_̲n̲o̲r̲m̲_̲s̲q̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/Lemma33Fourier.lean:109:8: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  simp [n̵o̵r̵m̵_̵m̵u̵l̵,̵abs_of_pos Real.pi_pos]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3589/3604] Replayed ZhangLS.Spec.Lemma33Fractions
+warning: ZhangLS/Spec/Lemma33Fractions.lean:9:32: unused variable `hb`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3590/3604] Replayed ZhangLS.Spec.Lemma33ActualSamples
+warning: ZhangLS/Spec/Lemma33ActualSamples.lean:24:24: This simp argument is unused:
+  zpow_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [zpow_neg,̵z̵p̵o̵w̵_̵n̵a̵t̵C̵a̵s̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/Lemma33ActualSamples.lean:48:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [3592/3604] Built ZhangLS.Spec.Lemma34Multichoose (11s)
+✔ [3593/3604] Built ZhangLS.Spec.Lemma34DivisorFunction (11s)
+✔ [3594/3604] Built ZhangLS.Spec.Lemma34DivisorSquare (2.1s)
+⚠ [3595/3604] Built ZhangLS.Spec.Lemma34TupleConvolution (2.2s)
+warning: ZhangLS/Spec/Lemma34TupleConvolution.lean:88:57: This simp argument is unused:
+  ArithmeticFunction.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵l̵e̵m̵m̵a̵3̵4̵T̵u̵p̵l̵e̵S̵u̵m̵,̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵F̵u̵n̵c̵t̵i̵o̵n̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵,̵h̵,̵e̵q̵_̵c̵o̵m̵m̵]̵[̲l̲e̲m̲m̲a̲3̲4̲T̲u̲p̲l̲e̲S̲u̲m̲,̲ ̲h̲,̲ ̲e̲q̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [3596/3604] Built ZhangLS.Spec.Lemma34WeightedConvolution (2.4s)
+✔ [3597/3604] Built ZhangLS.Spec.Lemma34CoefficientEnergy (1.7s)
+✔ [3598/3604] Built ZhangLS.Spec.Lemma34ShortMean (3.3s)
+✔ [3599/3604] Built ZhangLS.Spec.Lemma34UniformMean (2.4s)
+✔ [3600/3604] Built ZhangLS.Spec.Lemma34WeightedCauchy (2.5s)
+✔ [3601/3604] Built ZhangLS.Spec.Lemma34PartialIntegrability (1.9s)
+⚠ [3602/3604] Built ZhangLS.Spec.Lemma34IntegralMean (2.0s)
+warning: ZhangLS/Spec/Lemma34IntegralMean.lean:41:2: exponent 1600 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold
+warning: ZhangLS/Spec/Lemma34IntegralMean.lean:132:16: exponent 1600 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold
+⚠ [3603/3604] Built ZhangLS.Spec.Lemma34BSecondMoment (2.1s)
+warning: ZhangLS/Spec/Lemma34BSecondMoment.lean:47:6: 'change _ = (51208 * C) * M * L ^ 1602' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [3604/3604] Built ZhangLS.Spec.Lemma34 (2.0s)
+Build completed successfully (3604 jobs).

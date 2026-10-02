@@ -1,0 +1,60 @@
+import ZhangMathStep197Lemma32RamificationNormDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex Filter Topology Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma32RamificationFactor (D : ℕ) (s : ℂ) : ℂ :=
+  ∏ p ∈ D.primeFactors, (1-lemma32PrimeMonomial p s)^4
+
+noncomputable def lemma32AnalyticCorrection {D : ℕ} (χ : RealPrimitiveCharacter D) (s : ℂ) : ℂ :=
+  lemma32RamificationFactor D s*lemma32RegularEulerProduct χ s
+
+lemma lemma32_ramification_factor_differentiable (D : ℕ) :
+    Differentiable ℂ (lemma32RamificationFactor D) := by
+  have hp (p : ℕ) := lemma32_prime_monomial_differentiable p
+  unfold lemma32RamificationFactor
+  fun_prop
+
+lemma lemma32_analytic_correction_analyticOnNhd {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    AnalyticOnNhd ℂ (lemma32AnalyticCorrection χ) {s : ℂ | 1/2 < s.re} := by
+  have hd := (lemma32_ramification_factor_differentiable D).differentiableOn.mul
+    (lemma32_regular_euler_product_differentiableOn χ)
+  exact hd.analyticOnNhd (isOpen_lt continuous_const Complex.continuous_re)
+
+lemma lemma32_ramification_factor_norm (D : ℕ) (hD : 0 < D) (s : ℂ) (hs : 0 < s.re)
+    (hphase : |s.im| *lemma23PaperL D ≤ 1) : ‖lemma32RamificationFactor D s‖ ≤ 1 := by
+  unfold lemma32RamificationFactor
+  calc
+    _ ≤ ∏ p ∈ D.primeFactors, ‖(1-lemma32PrimeMonomial p s)^4‖ := Finset.norm_prod_le _ _
+    _ ≤ 1 := by
+      apply Finset.prod_le_one (fun _ _ => norm_nonneg _)
+      intro p hp
+      have hpr := Nat.prime_of_mem_primeFactors hp
+      have hpl : 0 ≤ Real.log (p : ℝ) := Real.log_nonneg (Nat.one_le_cast.mpr hpr.one_lt.le)
+      have hdl : Real.log (p : ℝ) ≤ lemma23PaperL D := by
+        unfold lemma23PaperL
+        exact Real.log_le_log (Nat.cast_pos.mpr hpr.pos) (Nat.cast_le.mpr (Nat.le_of_mem_primeFactors hp))
+      have hpp : |s.im*Real.log (p : ℝ)| ≤ 1 := by
+        calc
+          _ = |s.im| *Real.log (p : ℝ) := by rw [abs_mul,abs_of_nonneg hpl]
+          _ ≤ |s.im| *lemma23PaperL D := mul_le_mul_of_nonneg_left hdl (abs_nonneg _)
+          _ ≤ 1 := hphase
+      rw [norm_pow]
+      exact pow_le_one₀ (norm_nonneg _) (lemma32_ramified_prime_factor_norm hpr.one_lt s hs hpp)
+
+lemma lemma32_analytic_correction_sector_bound {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (σ : ℝ) (hσ : 1/2 < σ) (s : ℂ) (hs : σ ≤ s.re)
+    (hphase : |s.im| *lemma23PaperL D ≤ 1) :
+    ‖lemma32AnalyticCorrection χ s‖ ≤ lemma32RegularProductBound σ := by
+  unfold lemma32AnalyticCorrection
+  rw [norm_mul]
+  have hr := lemma32_ramification_factor_norm D χ.modulus_pos s (by linarith) hphase
+  have hp := lemma32_regular_euler_product_bound χ σ hσ s hs
+  calc
+    _ ≤ 1*lemma32RegularProductBound σ :=
+      mul_le_mul hr hp (norm_nonneg _) (by norm_num)
+    _ = _ := one_mul _
+
+end ZhangLS.Spec

@@ -1,0 +1,127 @@
+import ZhangLS.Spec.Lemma34DivisorFunction
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped ArithmeticFunction.zeta
+set_option maxHeartbeats 2000000
+
+lemma lemma34_weighted_convolution_le (f g : ArithmeticFunction ℕ) (X : ℕ) :
+    (∑ n ∈ Finset.Icc 1 X, ((f*g) n : ℝ) * (n : ℝ)⁻¹) ≤
+      (∑ n ∈ Finset.Icc 1 X, (f n : ℝ) * (n : ℝ)⁻¹) *
+      (∑ n ∈ Finset.Icc 1 X, (g n : ℝ) * (n : ℝ)⁻¹) := by
+  classical
+  let S : Finset (Σ n : ℕ, ℕ × ℕ) :=
+    (Finset.Icc 1 X).sigma fun n => n.divisorsAntidiagonal
+  let R : Finset (ℕ × ℕ) := Finset.Icc 1 X ×ˢ Finset.Icc 1 X
+  let pairOf (x : Σ n : ℕ, ℕ × ℕ) : ℕ × ℕ := x.2
+  let weight (p : ℕ × ℕ) : ℝ :=
+    ((f p.1 : ℝ) * (p.1 : ℝ)⁻¹) * ((g p.2 : ℝ) * (p.2 : ℝ)⁻¹)
+  have hsum_expand :
+      (∑ n ∈ Finset.Icc 1 X, ((f*g) n : ℝ) * (n : ℝ)⁻¹) =
+      ∑ x ∈ S, ((f x.2.1 * g x.2.2 : ℕ) : ℝ) * (x.1 : ℝ)⁻¹ := by
+    simp only [ArithmeticFunction.mul_apply,Nat.cast_sum,Finset.sum_mul]
+    exact (Finset.sum_sigma (Finset.Icc 1 X) (fun n => n.divisorsAntidiagonal)
+      (fun x : Σ n : ℕ, ℕ × ℕ => ((f x.2.1 * g x.2.2 : ℕ) : ℝ) * (x.1 : ℝ)⁻¹)).symm
+  have hpair_inj : Set.InjOn pairOf S := by
+    intro x hx y hy hxy
+    rcases x with ⟨nx, px⟩
+    rcases y with ⟨ny, py⟩
+    simp only [pairOf] at hxy
+    have hpx : px ∈ nx.divisorsAntidiagonal := (Finset.mem_sigma.mp hx).2
+    have hpy : py ∈ ny.divisorsAntidiagonal := (Finset.mem_sigma.mp hy).2
+    have hnx : px.1 * px.2 = nx := (Nat.mem_divisorsAntidiagonal.mp hpx).1
+    have hny : py.1 * py.2 = ny := (Nat.mem_divisorsAntidiagonal.mp hpy).1
+    have hfst : nx = ny := by rw [← hnx, ← hny, hxy]
+    exact Sigma.ext hfst (heq_of_eq hxy)
+  have himage_subset : S.image pairOf ⊆ R := by
+    intro p hp
+    rcases Finset.mem_image.mp hp with ⟨x, hx, rfl⟩
+    let n := x.1
+    let q := x.2
+    have hmem := Finset.mem_sigma.mp hx
+    have hn : n ∈ Finset.Icc 1 X := hmem.1
+    have hq : q ∈ n.divisorsAntidiagonal := hmem.2
+    have hprod : q.1 * q.2 = n := (Nat.mem_divisorsAntidiagonal.mp hq).1
+    have hnle : n ≤ X := (Finset.mem_Icc.mp hn).2
+    have hnpos : 0 < n := lt_of_lt_of_le (by decide) (Finset.mem_Icc.mp hn).1
+    have hq1 : 0 < q.1 := Nat.pos_of_ne_zero (by
+      intro hzero
+      rw [hzero, zero_mul] at hprod
+      omega)
+    have hq2 : 0 < q.2 := Nat.pos_of_ne_zero (by
+      intro hzero
+      rw [hzero, mul_zero] at hprod
+      omega)
+    have hq1le : q.1 ≤ X := (Nat.le_mul_of_pos_right q.1 hq2).trans (hprod ▸ hnle)
+    have hq2le : q.2 ≤ X := (Nat.le_mul_of_pos_left q.2 hq1).trans (hprod ▸ hnle)
+    simp only [R, Finset.mem_product, Finset.mem_Icc]
+    exact ⟨⟨Nat.one_le_iff_ne_zero.mpr (Nat.ne_of_gt hq1), hq1le⟩,
+      ⟨Nat.one_le_iff_ne_zero.mpr (Nat.ne_of_gt hq2), hq2le⟩⟩
+  have hsum_reindex :
+      (∑ x ∈ S, ((f x.2.1 * g x.2.2 : ℕ) : ℝ) * (x.1 : ℝ)⁻¹) = ∑ p ∈ S.image pairOf, weight p := by
+    rw [Finset.sum_image hpair_inj]
+    apply Finset.sum_congr rfl
+    intro x hx
+    let n := x.1
+    let q := x.2
+    have hmem := Finset.mem_sigma.mp hx
+    have hn : n ∈ Finset.Icc 1 X := hmem.1
+    have hq : q ∈ n.divisorsAntidiagonal := hmem.2
+    have hprod : q.1 * q.2 = n := (Nat.mem_divisorsAntidiagonal.mp hq).1
+    simp only [pairOf, weight]
+    change ((f q.1 * g q.2 : ℕ) : ℝ) * (n : ℝ)⁻¹ =
+      ((f q.1 : ℝ) * (q.1 : ℝ)⁻¹) * ((g q.2 : ℝ) * (q.2 : ℝ)⁻¹)
+    rw [← hprod, Nat.cast_mul, Nat.cast_mul, mul_inv]
+    ring
+  have hsum_rect :
+      (∑ p ∈ S.image pairOf, weight p) ≤ ∑ p ∈ R, weight p :=
+    Finset.sum_le_sum_of_subset_of_nonneg himage_subset (by
+      intro p hp hnot
+      simp only [weight]
+      positivity)
+  have hrect :
+      (∑ p ∈ R, weight p) =
+      (∑ n ∈ Finset.Icc 1 X, (f n : ℝ) * (n : ℝ)⁻¹) *
+      (∑ n ∈ Finset.Icc 1 X, (g n : ℝ) * (n : ℝ)⁻¹) := by
+    change (∑ p ∈ Finset.Icc 1 X ×ˢ Finset.Icc 1 X,
+      ((f p.1 : ℝ) * (p.1 : ℝ)⁻¹) * ((g p.2 : ℝ) * (p.2 : ℝ)⁻¹)) = _
+    rw [Finset.sum_product' (Finset.Icc 1 X) (Finset.Icc 1 X)
+      (fun a b : ℕ => ((f a : ℝ) * (a : ℝ)⁻¹) * ((g b : ℝ) * (b : ℝ)⁻¹)),
+      ← Finset.sum_mul_sum]
+  calc
+    _ = ∑ x ∈ S, ((f x.2.1 * g x.2.2 : ℕ) : ℝ) * (x.1 : ℝ)⁻¹ := hsum_expand
+    _ = ∑ p ∈ S.image pairOf, weight p := hsum_reindex
+    _ ≤ ∑ p ∈ R, weight p := hsum_rect
+    _ = _ := hrect
+
+lemma lemma34_tau_weighted_sum_le_harmonic_pow (k X : ℕ) (hX : 1 ≤ X) :
+    (∑ n ∈ Finset.Icc 1 X, (lemma34Tau k n : ℝ) * (n : ℝ)⁻¹) ≤
+      (harmonic X : ℝ)^k := by
+  classical
+  have hh : (harmonic X : ℝ) = ∑ n ∈ Finset.Icc 1 X, (n : ℝ)⁻¹ := by
+    simp only [harmonic_eq_sum_Icc,Rat.cast_sum,Rat.cast_inv,Rat.cast_natCast]
+  have hH : 0 ≤ (harmonic X : ℝ) := by
+    rw [hh]
+    exact Finset.sum_nonneg (fun _ _ => by positivity)
+  induction k with
+  | zero => simp [lemma34Tau,ArithmeticFunction.one_apply,hX]
+  | succ k ih =>
+    change (∑ n ∈ Finset.Icc 1 X, ((ArithmeticFunction.zeta^(k+1)) n : ℝ) *
+      (n : ℝ)⁻¹) ≤ _
+    rw [pow_succ]
+    have hz : (∑ n ∈ Finset.Icc 1 X, (ArithmeticFunction.zeta n : ℝ) *
+        (n : ℝ)⁻¹) = (harmonic X : ℝ) := by
+      rw [hh]
+      apply Finset.sum_congr rfl
+      intro n hn
+      have hn0 : n ≠ 0 := by have := (Finset.mem_Icc.mp hn).1; omega
+      simp [hn0]
+    calc
+      _ ≤ _ := lemma34_weighted_convolution_le (ArithmeticFunction.zeta^k)
+        ArithmeticFunction.zeta X
+      _ = (∑ n ∈ Finset.Icc 1 X, (lemma34Tau k n : ℝ) * (n : ℝ)⁻¹) *
+        (harmonic X : ℝ) := by rw [hz]; rfl
+      _ ≤ (harmonic X : ℝ)^k * (harmonic X : ℝ) :=
+        mul_le_mul_of_nonneg_right ih hH
+      _ = _ := (pow_succ _ _).symm
+
+end ZhangLS.Spec

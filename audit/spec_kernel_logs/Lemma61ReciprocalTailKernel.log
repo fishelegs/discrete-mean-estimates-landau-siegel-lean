@@ -1,0 +1,10 @@
+ZhangLS/Spec/Lemma61ReciprocalTailKernel.lean:65:26: warning: This simp argument is unused:
+  zpow_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [zpow_neg,̵z̵p̵o̵w̵_̵n̵a̵t̵C̵a̵s̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61ReciprocalTailKernel.lean:66:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

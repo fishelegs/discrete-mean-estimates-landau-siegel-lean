@@ -1,0 +1,15 @@
+LEAN_KERNEL_VERIFICATION=PASS
+trusted_spec_module_verification=PASS
+trusted_spec_kernel_verification=PASS
+full_project_kernel_verification=PASS
+audit_regression_kernel_verification=PASS
+started_at_utc=2026-10-01T03:29:29Z
+finished_at_utc=2026-10-01T03:49:34Z
+pinned_toolchain=leanprover/lean4:v4.30.0
+lean_version=Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)
+lake_version=Lake version 5.0.0-src+d024af0 (Lean version 4.30.0)
+reason=Spec modules, Spec aggregate, full project, and audit regressions passed
+trusted_spec_modules_command=tools/verify_trusted_spec_modules.sh
+trusted_spec_command=lake env lean ZhangLS/Spec/All.lean
+full_project_command=lake build
+authoritative_command=tools/verify_all_lean.sh

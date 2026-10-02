@@ -1,0 +1,22 @@
+{
+  "kernel_exit_code": 0,
+  "checked_at_utc": "2026-10-01T16:30:52.601718+00:00",
+  "sha256": "c0a61fd76e5b074a8ea16022abb37084e6cc8f69a35e1002eac3260a7a202e6d",
+  "interface_count": 12,
+  "expanded_examples": 5,
+  "proved_interfaces": [
+    "lemma59_actual_L_large_disk_bound",
+    "lemma59_actual_large_disk_multiplicity_bound",
+    "lemma59_large_height_bound",
+    "lemma59_family_modulus_le_two_P",
+    "lemma59_family_large_disk_log_budget",
+    "lemma59_actual_local_divisor_eq_order",
+    "lemma59_mem_actual_local_zero_finset",
+    "lemma59_actual_local_zero_order_pos",
+    "lemma59_actual_multiplicity_count_eq_sum_orders",
+    "lemma59_actual_local_zero_card_bound",
+    "lemma59_family_character_nonprincipal",
+    "lemma59_uniform_actual_local_zero_bound"
+  ],
+  "scope": "Actual L-function growth on radius 15/8 disk; actual finite zeros and analytic multiplicity sum on radius 7/4 disk, uniformly bounded by 30 log P on the enlarged closed height window. Both height endpoints, actual zero-set membership and exact multiplicity identity are expanded. Independent of the project gate; full Lemma 5.9 quotient remains unproved."
+}

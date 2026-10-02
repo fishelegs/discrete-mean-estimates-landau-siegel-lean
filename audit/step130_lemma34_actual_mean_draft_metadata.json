@@ -1,0 +1,83 @@
+{
+  "captured_at_utc": "2026-10-01T23:10:08.344839+00:00",
+  "status": "PARTIAL_ACTUAL_MEAN_KERNEL_CHECKED_TEMPORARY",
+  "full_original_Lemma34_target_status": "UNPROVED",
+  "uniform_B_second_moment_status": "UNPROVED",
+  "exceptional_character_count_status": "UNPROVED",
+  "source_count": 10,
+  "standard_axiom_interfaces": 31,
+  "actual_object_examples": 4,
+  "sources": [
+    {
+      "source": "/private/tmp/ZhangMathStep133Lemma34MultichooseDraft.lean",
+      "archive": "audit/step130_lemma34_actual_mean_draft_133.txt",
+      "sha256": "259d75cd39a94e50d8de078ca1f0daa9e61cf0f84c8bbc25661ac60469e4d058"
+    },
+    {
+      "source": "/private/tmp/ZhangMathStep134Lemma34TauDraft.lean",
+      "archive": "audit/step130_lemma34_actual_mean_draft_134.txt",
+      "sha256": "c08b990c9faffd76df5b828f0185368dff1e4836e10bba2edde14d1833cded85"
+    },
+    {
+      "source": "/private/tmp/ZhangMathStep135Lemma34TauSquareDraft.lean",
+      "archive": "audit/step130_lemma34_actual_mean_draft_135.txt",
+      "sha256": "3841cd18a1b8fb97de2c9fd30a28e630de73a017078f12ee0a57f875d061d88c"
+    },
+    {
+      "source": "/private/tmp/ZhangMathStep136Lemma34HarmonicDraft.lean",
+      "archive": "audit/step130_lemma34_actual_mean_draft_136.txt",
+      "sha256": "c69d3f3d73398c5fd4f67d01f184cc911e61f9cc600ff19f36e561105fe9324e"
+    },
+    {
+      "source": "/private/tmp/ZhangMathStep137Lemma34TupleDraft.lean",
+      "archive": "audit/step130_lemma34_actual_mean_draft_137.txt",
+      "sha256": "8b422bf8baf876b257027489a116301f5ba0a182635913ec9fe0a8ab7bed63da"
+    },
+    {
+      "source": "/private/tmp/ZhangMathStep138Lemma34CoefficientEnergyDraft.lean",
+      "archive": "audit/step130_lemma34_actual_mean_draft_138.txt",
+      "sha256": "e273544ee70581f3ee5beb6c75839fe533e82e9fd7327e52c96b85450aee77b4"
+    },
+    {
+      "source": "/private/tmp/ZhangMathStep139Lemma34ShortMeanDraft.lean",
+      "archive": "audit/step130_lemma34_actual_mean_draft_139.txt",
+      "sha256": "4bfb13b206dc93ca56b6cb5b1b35198d47ce4938025e5e512f59411f601686b6"
+    },
+    {
+      "source": "/private/tmp/ZhangMathStep140Lemma34UniformMeanDraft.lean",
+      "archive": "audit/step130_lemma34_actual_mean_draft_140.txt",
+      "sha256": "3d20cdab5a6f98c9b24825d102c7ad66eddef21ca80d856ede068213325f0dc0"
+    },
+    {
+      "source": "/private/tmp/ZhangMathStep141Lemma34IntegralDraft.lean",
+      "archive": "audit/step130_lemma34_actual_mean_draft_141.txt",
+      "sha256": "7df83bd332c37d5ff58845ca8cc16aeaa2f13c487b56357bc8503f1e7e38ace1"
+    },
+    {
+      "source": "/private/tmp/ZhangMathStep142Lemma34PartialIntegralDraft.lean",
+      "archive": "audit/step130_lemma34_actual_mean_draft_142.txt",
+      "sha256": "0ea5c6fc09fca8e386506418e77a6fbe6ae36dfb470b8f60bc449310f6db4aff"
+    }
+  ],
+  "checked_source_sha256": "a295a89208b2e4c83e506a7a72a8b12158a7f40c3004a942be01d74d0448e0b0",
+  "repository_sources_modified": false,
+  "current_full_gate": "Step123 PASS,555 sources",
+  "ledger": {
+    "complete": 20,
+    "in_progress": 1,
+    "unstarted": 30,
+    "total": 51
+  },
+  "proved": [
+    "multichoose40(e)^2 <= multichoose1600(e)",
+    "standard tau40(n)^2 <= tau1600(n)",
+    "weighted convolution mean <= product of weighted means",
+    "sum tau_k(n)/n <= H_X^k",
+    "actual twentieth divisor convolution <= standard tau40",
+    "actual tau40 squared weighted sum <= (1+log X)^1600",
+    "centered actual nu20 and upsilon20 mean bounds on genuine primitive character family",
+    "uniform original X1 and X2 means <= primeMass*81^1600*L^1600 for 1<=x<=D^80,L>=3",
+    "weighted integral Cauchy and actual norm partial-sum powers divided by t are integrable"
+  ],
+  "assumption_A_used": false
+}

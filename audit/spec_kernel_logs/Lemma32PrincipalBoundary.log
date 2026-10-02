@@ -1,0 +1,7 @@
+ZhangLS/Spec/Lemma32PrincipalBoundary.lean:51:12: warning: This simp argument is unused:
+  mul_ite
+
+Hint: Omit it from the simp argument list.
+  simp [mul_i̵t̵e̵,̵m̵u̵l̵_̵comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

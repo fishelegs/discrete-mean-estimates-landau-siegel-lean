@@ -1,0 +1,42 @@
+import ZhangLS.Spec.Lemma32PrimitiveModulusShape
+import Mathlib.NumberTheory.ArithmeticFunction.Misc
+import Mathlib.Tactic.Positivity
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+open scoped Classical
+
+lemma lemma32_actual_primitive_divisor_count {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    D.divisors.card ≤ 4^D.primeFactors.card := by
+  rw [Nat.card_divisors χ.modulus_pos.ne']
+  calc
+    _ ≤ ∏ _p ∈ D.primeFactors, (4 : ℕ) := by
+      apply Finset.prod_le_prod
+      · intro p hp
+        exact Nat.zero_le _
+      · intro p hp
+        have he : D.factorization p ≤ 3 := by
+          by_cases hp2 : p=2
+          · subst p
+            exact lemma32_real_primitive_two_adic_exponent χ
+          · exact (lemma32_real_primitive_odd_prime_exponent χ
+              (Nat.prime_of_mem_primeFactors hp) hp2).trans (by decide)
+        omega
+    _ = _ := Finset.prod_const _
+
+lemma lemma32_actual_primitive_moment_divisor_factor {D : ℕ}
+    (χ : RealPrimitiveCharacter D) :
+    (3 : ℝ)^D.primeFactors.card * (D.divisors.card : ℝ)^3 ≤
+      (192 : ℝ)^D.primeFactors.card := by
+  have hc : (D.divisors.card : ℝ) ≤ (4 : ℝ)^D.primeFactors.card := by
+    exact_mod_cast lemma32_actual_primitive_divisor_count χ
+  have he : ((4 : ℝ)^D.primeFactors.card)^3 = ((4 : ℝ)^3)^D.primeFactors.card := by
+    rw [← pow_mul, ← pow_mul, Nat.mul_comm]
+  calc
+    _ ≤ (3 : ℝ)^D.primeFactors.card * ((4 : ℝ)^D.primeFactors.card)^3 :=
+      mul_le_mul_of_nonneg_left (pow_le_pow_left₀ (Nat.cast_nonneg _) hc 3) (by positivity)
+    _ = (192 : ℝ)^D.primeFactors.card := by
+      rw [he, ← mul_pow]
+      norm_num
+
+end ZhangLS.Spec

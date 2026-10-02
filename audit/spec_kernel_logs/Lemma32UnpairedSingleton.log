@@ -1,0 +1,6 @@
+ZhangLS/Spec/Lemma32UnpairedSingleton.lean:20:6: warning: 'simp_all [eq_comm]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ZhangLS/Spec/Lemma32UnpairedSingleton.lean:20:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`

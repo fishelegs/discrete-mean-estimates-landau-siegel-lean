@@ -1,0 +1,31 @@
+import ZhangLS.Spec.Lemma32WeierstrassAffineCount
+import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_Weierstrass_point_card_affine {F : Type*} [Field F] [Fintype F]
+    (W : WeierstrassCurve F) [W.IsElliptic] :
+    Nat.card W.toAffine.Point = (lemma32WeierstrassAffineSolutions W).card+1 := by
+  classical
+  rw [Nat.card_congr W.toAffine.pointEquiv]
+  change Nat.card (Option {xy : F × F // W.toAffine.Equation xy.1 xy.2}) =
+    (lemma32WeierstrassAffineSolutions W).card+1
+  rw [Nat.card_eq_fintype_card,Fintype.card_option,Fintype.card_subtype]
+  rfl
+
+lemma lemma32_quartic_character_sum_actual_curve_points {F : Type*}
+    [Field F] [Fintype F] [DecidableEq F]
+    (χ : MulChar F ℂ) (hn : χ ≠ 1) (hq : χ^2=1) (hF : ringChar F ≠ 2)
+    (a b c d : F) (hA : lemma32CubicLeadingCoefficient a b c d ≠ 0)
+    [((lemma32QuarticWeierstrass a b c d)).IsElliptic] :
+    (∑ x : F, χ (lemma32QuarticRootProduct a b c d x))+1 =
+      (Nat.card (lemma32QuarticWeierstrass a b c d).toAffine.Point : ℂ)-
+      (Fintype.card F : ℂ)-1 := by
+  rw [lemma32_quartic_character_sum_Weierstrass_affine_card χ hn hq hF a b c d hA,
+    lemma32_Weierstrass_point_card_affine,Nat.cast_add,Nat.cast_one]
+  ring
+
+end ZhangLS.Spec

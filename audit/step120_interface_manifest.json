@@ -1,0 +1,40 @@
+{
+  "modules": [
+    "ZhangLS/Spec/Lemma61ReciprocalTailKernel.lean",
+    "ZhangLS/Spec/Lemma61ReciprocalSeriesSplit.lean",
+    "ZhangLS/Spec/Lemma61ReciprocalFarLeft.lean",
+    "ZhangLS/Spec/Lemma61ReciprocalTailRectangle.lean",
+    "ZhangLS/Spec/Lemma61ReciprocalTailTruncation.lean"
+  ],
+  "proved_interfaces": [
+    "lemma61_region_quarter_bounds",
+    "lemma61_large_shift_rectangle_bounds",
+    "lemma61_wide_log_modulus_error_le_one",
+    "lemma61_P4_PT0_log_identity",
+    "lemma61_actual_Z_P4_cancellation",
+    "lemma61_large_shift_gaussian_bound",
+    "lemma61_large_shift_denominator_bound",
+    "lemma61_T_log_bounds",
+    "lemma61_reciprocal_tail_summable",
+    "lemma61_actual_reciprocal_series_split",
+    "lemma61_reciprocal_far_left_term_bound",
+    "lemma61_reciprocal_far_left_sum_bound",
+    "lemma61_far_left_exponent_bound",
+    "lemma61_actual_far_left_tail_point_bound",
+    "lemma61_far_left_integral_exponent_absorption",
+    "lemma61_actual_far_left_tail_integral_bound",
+    "lemma61_actual_reciprocal_tail_rectangle_differentiable",
+    "lemma61_actual_reciprocal_tail_rectangle_cauchy",
+    "lemma61_quarter_series_summable",
+    "lemma61_reciprocal_horizontal_term_bound",
+    "lemma61_reciprocal_horizontal_sum_bound",
+    "lemma61_actual_horizontal_tail_point_bound",
+    "lemma61_actual_horizontal_tail_integral_bound",
+    "lemma61_actual_reciprocal_tail_truncation_bound"
+  ],
+  "interface_count": 24,
+  "definition_count": 3,
+  "expanded_examples": 3,
+  "full_original_target_status": "UNPROVED",
+  "remaining": "finite reciprocal polynomial error-line shift, full horizontal edges, final constants and threshold"
+}

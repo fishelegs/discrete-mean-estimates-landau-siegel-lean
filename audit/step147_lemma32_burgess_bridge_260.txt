@@ -1,0 +1,59 @@
+import ZhangMathStep258Lemma32LeftKernelIntegrabilityDraft
+import ZhangMathStep259Lemma32LeftSmoothingDraft
+import ZhangMathStep251Lemma32RamificationPowerSavingDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_half_power_eighth (B : ℝ) (hB : 0 ≤ B) :
+    (B^(1/2 : ℝ))^8 = B^4 := by
+  rw [← Real.rpow_mul_natCast hB (1/2) 8]
+  norm_num
+
+lemma lemma32_actual_left_integrand_bound_of_partial_sums {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (B : ℝ) (hB : 1 ≤ B)
+    (hS : ∀ N : ℕ, ‖∑ n ∈ Finset.Icc 1 N, χ.evalNat n‖ ≤ B*(N : ℝ)^(1/2 : ℝ)) (t : ℝ) :
+    ‖lemma32CircleIntegrand χ (lemma32LeftLine t)‖ ≤
+      (2*(lemma32RamificationSavingConstant*lemma32RegularProductBound (3/4))*8^8*B^4)*
+        Real.exp (-(127/128)*lemma23PaperL D)*lemma32LeftKernel t := by
+  have hL : 0 ≤ lemma23PaperL D := Real.log_nonneg (by exact_mod_cast hD.le)
+  have hs : (1+lemma32LeftLine t).re = 3/4 := by norm_num [lemma32LeftLine,mul_re]
+  have hc := lemma32_analytic_correction_uniform_power_saving χ (1+lemma32LeftLine t) hs.ge
+  have hl := lemma32_actual_L_bound_of_square_root_partial_sums χ hD B hB hS (1+lemma32LeftLine t) hs
+  have hsm := lemma32_smoothing_left_line_bound (lemma23PaperL D) t hL
+  have hl8 := pow_le_pow_left₀ (norm_nonneg _) hl 8
+  rw [mul_pow,mul_pow,lemma32_half_power_eighth B (by linarith)] at hl8
+  have hp : ‖riemannZeta (1+lemma32LeftLine t)*dirichletLFunction χ (1+lemma32LeftLine t)‖^8 ≤
+      ‖riemannZeta (1+lemma32LeftLine t)‖^8*
+        ((8^8*B^4)*‖1+lemma32LeftLine t‖^8) := by
+    rw [norm_mul,mul_pow]
+    exact mul_le_mul_of_nonneg_left hl8 (by positivity)
+  have hcp := lemma32_ramification_saving_constant_pos
+  have hkp := lemma32_regular_product_bound_pos (3/4)
+  unfold lemma32CircleIntegrand
+  rw [norm_mul,norm_mul,norm_pow]
+  have hb1 := mul_le_mul hc hp (by positivity) (by positivity)
+  have hb2 : ‖lemma32SmoothingDifference (lemma23PaperL D) (lemma32LeftLine t)*
+      Complex.Gamma (lemma32LeftLine t)‖ ≤
+      (2*Real.exp (-lemma23PaperL D))*‖Complex.Gamma (lemma32LeftLine t)‖ := by
+    rw [norm_mul]
+    exact mul_le_mul_of_nonneg_right hsm (norm_nonneg _)
+  calc
+    _ ≤ ((lemma32RamificationSavingConstant*lemma32RegularProductBound (3/4))*
+        Real.exp (lemma23PaperL D/128))*
+      (‖riemannZeta (1+lemma32LeftLine t)‖^8*((8^8*B^4)*‖1+lemma32LeftLine t‖^8))*
+      ((2*Real.exp (-lemma23PaperL D))*‖Complex.Gamma (lemma32LeftLine t)‖) :=
+      mul_le_mul hb1 hb2 (norm_nonneg _) (by positivity)
+    _ = _ := by
+      have he : Real.exp (lemma23PaperL D/128)*Real.exp (-lemma23PaperL D) =
+          Real.exp (-(127/128)*lemma23PaperL D) := by rw [← Real.exp_add];congr 1;ring
+      calc
+        _ = (2*(lemma32RamificationSavingConstant*lemma32RegularProductBound (3/4))*8^8*B^4)*
+          (Real.exp (lemma23PaperL D/128)*Real.exp (-lemma23PaperL D))*lemma32LeftKernel t := by
+            unfold lemma32LeftKernel
+            ring
+        _ = _ := by rw [he]
+
+end ZhangLS.Spec

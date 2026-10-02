@@ -1,0 +1,28 @@
+ZhangLS/Spec/Lemma54KernelDerivatives.lean:42:10: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  simp [norm_m̵u̵l̵,̵ ̵n̵o̵rm̵_̵r̵eal, Real.norm_eq_abs, abs_of_pos Real.pi_pos]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma54KernelDerivatives.lean:45:42: warning: This simp argument is unused:
+  norm_real
+
+Hint: Omit it from the simp argument list.
+  simp [n̵o̵r̵m̵_̵r̵e̵a̵l̵,̵ ̵Real.norm_eq_abs, abs_of_pos (Real.exp_pos u)]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma54KernelDerivatives.lean:45:53: warning: This simp argument is unused:
+  Real.norm_eq_abs
+
+Hint: Omit it from the simp argument list.
+  simp [norm_real, R̵e̵a̵l̵.̵n̵o̵r̵m̵_̵e̵q̵_̵a̵b̵s̵,̵ ̵abs_of_pos (Real.exp_pos u)]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma54KernelDerivatives.lean:45:71: warning: This simp argument is unused:
+  abs_of_pos (Real.exp_pos u)
+
+Hint: Omit it from the simp argument list.
+  simp [norm_real, Real.norm_eq_abs,̵ ̵a̵b̵s̵_̵o̵f̵_̵p̵o̵s̵ ̵(̵R̵e̵a̵l̵.̵e̵x̵p̵_̵p̵o̵s̵ ̵u̵)̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

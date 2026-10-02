@@ -1,0 +1,84 @@
+import ZhangLS.Spec.Lemma33FirstMean
+import ZhangLS.Spec.Lemma33Fractions
+import ZhangLS.Spec.Lemma33Fourier
+import ZhangLS.Spec.Lemma33GaussTransform
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set
+open scoped Real Topology Classical
+set_option maxHeartbeats 2000000
+
+def lemma33AdditiveIndex (D : ℕ) :=
+  Σ p : lemma33PrimeIndex D, {u : ZMod p.val // u ≠ 0}
+noncomputable instance (D : ℕ) : Fintype (lemma33AdditiveIndex D) := by
+  classical
+  unfold lemma33AdditiveIndex
+  infer_instance
+noncomputable def lemma33SamplePoint {D : ℕ} (i : lemma33AdditiveIndex D) : ℝ :=
+  (i.2.val.val : ℝ) / (i.1.val : ℝ)
+
+lemma lemma33_prime_window_modulus_bound {D : ℕ} (hL : 3 ≤ lemma23PaperL D)
+    (p : lemma33PrimeIndex D) : (p.val : ℝ) ≤ 2 * lemma23PaperP D := by
+  have hpow : 1 ≤ lemma23PaperL D ^ 68 := one_le_pow₀ (by linarith)
+  have hinv : lemma23PaperL D ^ (-68 : ℤ) ≤ 1 := by
+    simp only [zpow_neg,zpow_natCast]
+    exact inv_le_one_of_one_le₀ hpow
+  have hP : 0 < lemma23PaperP D := Real.exp_pos _
+  have hp := (lemma33_mem_prime_window.mp p.property).2.2.le
+  nlinarith only [hp,mul_le_mul_of_nonneg_left hinv hP.le]
+
+lemma lemma33_sample_point_bounds {D : ℕ} (i : lemma33AdditiveIndex D) :
+    0 ≤ lemma33SamplePoint i ∧ lemma33SamplePoint i ≤ 1 := by
+  have hp := (lemma33_mem_prime_window.mp i.1.property).1
+  have hpR : 0 < (i.1.val : ℝ) := by exact_mod_cast hp.pos
+  constructor
+  · exact div_nonneg (Nat.cast_nonneg _) hpR.le
+  · apply (div_le_iff₀ hpR).mpr
+    simpa only [one_mul] using (show (i.2.val.val : ℝ) ≤ i.1.val by exact_mod_cast (ZMod.val_lt i.2.val).le)
+
+lemma lemma33_actual_samples_separated {D : ℕ} (hL : 3 ≤ lemma23PaperL D)
+    (i j : lemma33AdditiveIndex D) (hne : i ≠ j) :
+    (8 * lemma23PaperP D ^ 2)⁻¹ ≤ |lemma33SamplePoint i - lemma33SamplePoint j| := by
+  rcases i with ⟨p,u⟩
+  rcases j with ⟨q,v⟩
+  have hp := (lemma33_mem_prime_window.mp p.property).1
+  have hq := (lemma33_mem_prime_window.mp q.property).1
+  have hne' : p.val ≠ q.val ∨ u.val.val ≠ v.val.val := by
+    by_contra hn
+    push_neg at hn
+    have he : p = q := Subtype.ext hn.1
+    subst q
+    have huv : u = v := Subtype.ext (ZMod.val_injective p.val hn.2)
+    subst v
+    exact hne rfl
+  have hh := lemma33_prime_fraction_separation hp hq (ZMod.val_pos.mpr u.property)
+    (ZMod.val_lt u.val) (ZMod.val_pos.mpr v.property) (ZMod.val_lt v.val) hne'
+  have hpR : 0 < (p.val : ℝ) := by exact_mod_cast hp.pos
+  have hqR : 0 < (q.val : ℝ) := by exact_mod_cast hq.pos
+  have hP : 0 < lemma23PaperP D := Real.exp_pos _
+  have hpB := lemma33_prime_window_modulus_bound hL p
+  have hqB := lemma33_prime_window_modulus_bound hL q
+  have hprod : (p.val : ℝ) * q.val ≤ 4 * lemma23PaperP D ^ 2 := by
+    calc
+      _ ≤ (2 * lemma23PaperP D) * (2 * lemma23PaperP D) :=
+        mul_le_mul hpB hqB hqR.le (by positivity)
+      _ = _ := by ring
+  have hden : (p.val : ℝ) * q.val ≤ 8 * lemma23PaperP D ^ 2 := by nlinarith [hprod]
+  simpa only [one_div,lemma33SamplePoint] using
+    (one_div_le_one_div_of_le (mul_pos hpR hqR) hden).trans hh
+
+lemma lemma33_additive_polynomial_eq_trig {p : ℕ} [NeZero p]
+    (S : Finset ℕ) (a : ℕ → ℂ) (u : ZMod p) :
+    lemma33AdditivePolynomial S a u = lemma33TrigSum S a ((u.val : ℝ) / p) := by
+  unfold lemma33AdditivePolynomial lemma33TrigSum
+  apply Finset.sum_congr rfl
+  intro n hn
+  congr 1
+  rw [fourier_coe_apply]
+  conv_lhs => rw [← ZMod.natCast_zmod_val u,← Nat.cast_mul,ZMod.stdAddChar_apply,
+    ZMod.toCircle_natCast]
+  push_cast
+  congr 1
+  ring
+
+end ZhangLS.Spec

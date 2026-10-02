@@ -1,0 +1,7 @@
+ZhangLS/Spec/Lemma54WeightedKernels.lean:53:10: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  simp [norm_m̵u̵l̵,̵ ̵n̵o̵rm̵_̵r̵eal, Real.norm_eq_abs, abs_of_pos Real.pi_pos]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

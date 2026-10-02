@@ -1,0 +1,28 @@
+{
+  "modules": [
+    "ZhangLS/Spec/Lemma56PrincipalPerronArithmetic.lean",
+    "ZhangLS/Spec/Lemma56PrincipalPerronBoundaryBounds.lean",
+    "ZhangLS/Spec/Lemma56PrincipalPerronContour.lean",
+    "ZhangLS/Spec/Lemma56PrincipalPerronEdges.lean",
+    "ZhangLS/Spec/Lemma56PrincipalPerronMainError.lean",
+    "ZhangLS/Spec/Lemma56ZetaOffRealLogDerivative.lean"
+  ],
+  "proved_interfaces": [
+    "lemma56_actual_principal_regular_perron_analytic",
+    "lemma56_actual_principal_perron_pole_split",
+    "lemma56_actual_principal_perron_arithmetic_eq",
+    "lemma56_uniform_principal_perron_left_bound",
+    "lemma56_uniform_principal_perron_horizontal_bound",
+    "lemma56_actual_principal_perron_rectangle_boundary",
+    "lemma56_actual_principal_perron_rectangle_shift",
+    "lemma56_uniform_principal_perron_rectangle_shift",
+    "lemma56_perron_rectangle_edges_mem",
+    "lemma56_perron_rectangle_edges_integrable",
+    "lemma56_perron_rectangle_boundary_add",
+    "lemma56_perron_rectangle_boundary_congr",
+    "lemma56_uniform_principal_perron_smoothed_main_error",
+    "lemma56_uniform_zeta_off_real_logDeriv_bound"
+  ],
+  "interface_count": 14,
+  "expanded_examples": 4
+}

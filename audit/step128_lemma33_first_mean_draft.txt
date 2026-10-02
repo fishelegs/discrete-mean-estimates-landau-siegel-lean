@@ -1,0 +1,150 @@
+import ZhangLS.Spec.Lemma23CharacterOrthogonality
+import ZhangLS.Spec.Lemma23GoodSet
+
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex MeasureTheory Set
+open scoped Real Topology
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma33PrimeWindow (D : ℕ) : Finset ℕ := by
+  classical
+  exact (Finset.Icc 1 ⌈lemma23PaperP D * (1 + lemma23PaperL D ^ (-68 : ℤ))⌉₊).filter
+    (fun p => p.Prime ∧ lemma23PaperP D < (p : ℝ) ∧
+      (p : ℝ) < lemma23PaperP D * (1 + lemma23PaperL D ^ (-68 : ℤ)))
+
+lemma lemma33_mem_prime_window {D p : ℕ} : p ∈ lemma33PrimeWindow D ↔
+    p.Prime ∧ lemma23PaperP D < (p : ℝ) ∧
+      (p : ℝ) < lemma23PaperP D * (1 + lemma23PaperL D ^ (-68 : ℤ)) := by
+  classical
+  simp only [lemma33PrimeWindow,Finset.mem_filter,Finset.mem_Icc]
+  constructor
+  · exact fun h => h.2
+  · intro h
+    refine ⟨⟨h.1.one_lt.le,?_⟩,h⟩
+    exact_mod_cast h.2.2.le.trans (Nat.le_ceil _)
+
+def lemma33PrimeIndex (D : ℕ) := {p : ℕ // p ∈ lemma33PrimeWindow D}
+
+noncomputable instance (D : ℕ) : Fintype (lemma33PrimeIndex D) := by
+  classical
+  unfold lemma33PrimeIndex
+  infer_instance
+
+instance {D : ℕ} (p : lemma33PrimeIndex D) : NeZero p.val :=
+  ⟨(lemma33_mem_prime_window.mp p.property).1.ne_zero⟩
+
+def lemma33CharacterIndex (D : ℕ) := Σ p : lemma33PrimeIndex D, DirichletCharacter ℂ p.val
+
+noncomputable instance (D : ℕ) : Fintype (lemma33CharacterIndex D) := by
+  classical
+  unfold lemma33CharacterIndex
+  infer_instance
+
+noncomputable def lemma33ActualFamily (D : ℕ) : Finset (lemma33CharacterIndex D) := by
+  classical
+  exact Finset.univ.filter (fun ψ => Lemma23InPsi (D := D) ψ.2)
+
+noncomputable def lemma33ActualMean (D M : ℕ) (a : ℕ → ℂ) : ℝ :=
+  ∑ ψ ∈ lemma33ActualFamily D, ‖∑ n ∈ Finset.Icc 1 M, a n * ψ.2 (n : ZMod ψ.1.val)‖ ^ 2
+
+noncomputable def lemma33ActualPrimeMass (D : ℕ) : ℝ :=
+  ∑ p : lemma33PrimeIndex D, (p.val : ℝ)
+
+lemma lemma33_prime_index_short_bound (D : ℕ) (p : lemma33PrimeIndex D) :
+    ⌊lemma23PaperP D⌋₊ < p.val := by
+  have hp := (lemma33_mem_prime_window.mp p.property).2.1
+  have hn := Nat.floor_le (show 0 ≤ lemma23PaperP D from (Real.exp_pos _).le)
+  exact_mod_cast hn.trans_lt hp
+
+lemma lemma33_actual_first_mean_bound (D : ℕ) (a : ℕ → ℂ) :
+    lemma33ActualMean D ⌊lemma23PaperP D⌋₊ a ≤
+      lemma33ActualPrimeMass D * ∑ n ∈ Finset.Icc 1 ⌊lemma23PaperP D⌋₊, ‖a n‖ ^ 2 := by
+  classical
+  let M := ⌊lemma23PaperP D⌋₊
+  let f : lemma33CharacterIndex D → ℝ := fun ψ =>
+    ‖∑ n ∈ Finset.Icc 1 M, a n * ψ.2 (n : ZMod ψ.1.val)‖ ^ 2
+  change (∑ ψ ∈ lemma33ActualFamily D, f ψ) ≤ _
+  calc
+    _ ≤ ∑ ψ : lemma33CharacterIndex D, f ψ :=
+      Finset.sum_le_sum_of_subset_of_nonneg (Finset.subset_univ _) (fun _ _ _ => sq_nonneg _)
+    _ = ∑ p : lemma33PrimeIndex D, ∑ ψ : DirichletCharacter ℂ p.val,
+        ‖∑ n ∈ Finset.Icc 1 M, a n * ψ (n : ZMod p.val)‖ ^ 2 := by
+      change (∑ ψ : Σ p : lemma33PrimeIndex D, DirichletCharacter ℂ p.val, f ψ) = _
+      rw [Fintype.sum_sigma]
+    _ = ∑ p : lemma33PrimeIndex D, (p.val.totient : ℝ) *
+        ∑ n ∈ Finset.Icc 1 M, ‖a n‖ ^ 2 := by
+      apply Finset.sum_congr rfl
+      intro p hp
+      exact lemma23_prime_character_mean_square_exact
+        (lemma33_mem_prime_window.mp p.property).1 (lemma33_prime_index_short_bound D p) a
+    _ ≤ ∑ p : lemma33PrimeIndex D, (p.val : ℝ) *
+        ∑ n ∈ Finset.Icc 1 M, ‖a n‖ ^ 2 := by
+      apply Finset.sum_le_sum
+      intro p hp
+      apply mul_le_mul_of_nonneg_right _ (Finset.sum_nonneg (fun n _ => sq_nonneg _))
+      exact_mod_cast Nat.totient_le p.val
+    _ = _ := by rw [← Finset.sum_mul]; rfl
+
+lemma lemma33_original_family_prime_mem {D p : ℕ} (ψ : DirichletCharacter ℂ p)
+    (hψ : Lemma23InPsi (D := D) ψ) : p ∈ lemma33PrimeWindow D :=
+  lemma33_mem_prime_window.mpr ⟨hψ.1,hψ.2.2⟩
+
+lemma lemma33_actual_family_mem {D : ℕ} (p : lemma33PrimeIndex D)
+    (ψ : DirichletCharacter ℂ p.val) :
+    (⟨p,ψ⟩ : lemma33CharacterIndex D) ∈ lemma33ActualFamily D ↔ Lemma23InPsi (D := D) ψ := by
+  classical
+  change (⟨p,ψ⟩ : lemma33CharacterIndex D) ∈
+    Finset.univ.filter (fun χ : lemma33CharacterIndex D => Lemma23InPsi (D := D) χ.2) ↔ _
+  constructor
+  · intro h
+    exact (Finset.mem_filter.mp h).2
+  · intro h
+    exact Finset.mem_filter.mpr ⟨Finset.mem_univ _,h⟩
+
+lemma lemma33_LSeries_term_norm_square (c : ℕ → ℂ) (s : ℂ) {n : ℕ} (hn : 0 < n) :
+    ‖LSeries.term c s n‖ ^ 2 = ‖c n‖ ^ 2 / (n : ℝ) ^ (2 * s.re) := by
+  have hn0 : n ≠ 0 := Nat.ne_zero_of_lt hn
+  have hnr : 0 ≤ (n : ℝ) := Nat.cast_nonneg n
+  rw [LSeries.norm_term_eq,if_neg hn0,div_pow]
+  have he : ((n : ℝ) ^ s.re) ^ 2 = (n : ℝ) ^ (2 * s.re) := by
+    rw [← Real.rpow_natCast,← Real.rpow_mul hnr]
+    congr 1
+    norm_num
+    ring
+  rw [he]
+
+lemma lemma33_actual_first_Dirichlet_mean_bound (D : ℕ) (c : ℕ → ℂ) (s : ℂ) :
+    lemma33ActualMean D ⌊lemma23PaperP D⌋₊ (LSeries.term c s) ≤
+      lemma33ActualPrimeMass D *
+        ∑ n ∈ Finset.Icc 1 ⌊lemma23PaperP D⌋₊, ‖c n‖ ^ 2 / (n : ℝ) ^ (2 * s.re) := by
+  apply (lemma33_actual_first_mean_bound D (LSeries.term c s)).trans_eq
+  congr 1
+  apply Finset.sum_congr rfl
+  intro n hn
+  exact lemma33_LSeries_term_norm_square c s (Finset.mem_Icc.mp hn).1
+
+def Lemma33Target : Prop :=
+  ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ D : ℕ, D₀ ≤ D →
+    ∀ (c : ℕ → ℂ) (s : ℂ),
+      lemma33ActualMean D ⌊lemma23PaperP D⌋₊ (LSeries.term c s) ≤
+        C * lemma33ActualPrimeMass D *
+          (∑ n ∈ Finset.Icc 1 ⌊lemma23PaperP D⌋₊, ‖c n‖ ^ 2 / (n : ℝ) ^ (2 * s.re)) ∧
+      lemma33ActualMean D ⌊lemma23PaperP D ^ 2⌋₊ (LSeries.term c s) ≤
+        C * lemma23PaperP D ^ 2 *
+          (∑ n ∈ Finset.Icc 1 ⌊lemma23PaperP D ^ 2⌋₊, ‖c n‖ ^ 2 / (n : ℝ) ^ (2 * s.re))
+
+example (D : ℕ) (a : ℕ → ℂ) :
+    (∑ ψ ∈ lemma33ActualFamily D,
+      ‖∑ n ∈ Finset.Icc 1 ⌊lemma23PaperP D⌋₊,
+        a n * ψ.2 (n : ZMod ψ.1.val)‖ ^ 2) ≤
+      (∑ p : lemma33PrimeIndex D, (p.val : ℝ)) *
+        ∑ n ∈ Finset.Icc 1 ⌊lemma23PaperP D⌋₊, ‖a n‖ ^ 2 :=
+  lemma33_actual_first_mean_bound D a
+
+example {D p : ℕ} (ψ : DirichletCharacter ℂ p)
+    (hψ : p.Prime ∧ ψ.IsPrimitive ∧ lemma23PaperP D < (p : ℝ) ∧
+      (p : ℝ) < lemma23PaperP D * (1 + lemma23PaperL D ^ (-68 : ℤ))) :
+    p ∈ lemma33PrimeWindow D := lemma33_original_family_prime_mem ψ hψ
+
+end ZhangLS.Spec

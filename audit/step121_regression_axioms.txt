@@ -1,0 +1,23 @@
+'ZhangLS.Spec.lemma61_positive_real_cpow_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_error_difference_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_error_regular_eq_actual_of_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_error_difference_rectangle_differentiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma61_error_regular_rectangle_differentiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_error_vertical_ae_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_error_vertical_interval_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_error_vertical_integral_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_error_path_interval_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_error_regular_path_rectangle_cauchy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_error_line_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_short_polynomial_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_model_Z_P4_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_Z_original_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_horizontal_Z_error_factor_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_horizontal_Z_error_point_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_horizontal_Z_error_integral_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma61_E1_exponential_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma61_actual_original_left_Z_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

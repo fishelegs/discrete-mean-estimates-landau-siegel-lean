@@ -1,0 +1,99 @@
+import ZhangLS.Spec.Lemma44ProductDirichletSeries
+import Mathlib.NumberTheory.LSeries.DirichletContinuation
+
+namespace ZhangLS.Spec
+open DirichletCharacter
+set_option maxHeartbeats 1000000
+
+lemma lemma56_principal_twist_lifts_equal {D r : ℕ} [NeZero r]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ r)
+    (h : lemma44CharacterTwist χ θ = 1) :
+    θ.changeLevel (r.dvd_mul_left D) = χ.chi.changeLevel (D.dvd_mul_right r) := by
+  letI : NeZero D := ⟨χ.modulus_ne_zero⟩
+  letI : NeZero (D * r) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne r)⟩
+  have hpow : (χ.chi.changeLevel (D.dvd_mul_right r)) ^ 2 = 1 := by
+    rw [← map_pow, χ.quadratic, map_one]
+  apply mul_left_cancel (a := χ.chi.changeLevel (D.dvd_mul_right r))
+  rw [← pow_two, hpow]
+  exact h
+
+lemma lemma56_principal_twist_conductors_equal {D r : ℕ} [NeZero r]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ r)
+    (hθ : θ.IsPrimitive) (h : lemma44CharacterTwist χ θ = 1) : r = D := by
+  letI : NeZero D := ⟨χ.modulus_ne_zero⟩
+  letI : NeZero (D * r) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne r)⟩
+  have hc := congrArg DirichletCharacter.conductor (lemma56_principal_twist_lifts_equal χ θ h)
+  rw [lemma44_conductor_changeLevel θ, lemma44_conductor_changeLevel χ.chi,
+    hθ, χ.primitive] at hc
+  exact hc
+
+lemma lemma56_principal_twist_characters_equal {D r : ℕ} [NeZero r]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ r)
+    (hθ : θ.IsPrimitive) (h : lemma44CharacterTwist χ θ = 1) :
+    (fun n : ℕ => θ (n : ZMod r)) = (fun n : ℕ => χ.chi (n : ZMod D)) := by
+  have hr := lemma56_principal_twist_conductors_equal χ θ hθ h
+  subst r
+  letI : NeZero (D * D) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero χ.modulus_ne_zero⟩
+  have he : θ = χ.chi := DirichletCharacter.changeLevel_injective (D.dvd_mul_right D)
+    (by simpa using lemma56_principal_twist_lifts_equal χ θ h)
+  exact congrArg (fun ψ : DirichletCharacter ℂ D => fun n : ℕ => ψ (n : ZMod D)) he
+
+lemma lemma56_distinct_primitive_twist_nonprincipal {D r : ℕ} [NeZero r]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ r)
+    (hθ : θ.IsPrimitive)
+    (hne : (fun n : ℕ => θ (n : ZMod r)) ≠ (fun n : ℕ => χ.chi (n : ZMod D))) :
+    lemma44CharacterTwist χ θ ≠ 1 :=
+  fun h => hne (lemma56_principal_twist_characters_equal χ θ hθ h)
+
+lemma lemma56_primitive_positive_level_nonprincipal {r : ℕ} [NeZero r]
+    (θ : DirichletCharacter ℂ r) (hθ : θ.IsPrimitive) (hr : 1 < r) : θ ≠ 1 := by
+  intro h
+  change θ.conductor = r at hθ
+  rw [h, DirichletCharacter.conductor_one] at hθ
+  exact (ne_of_gt hr) hθ.symm
+
+lemma lemma56_actual_distinct_twist_entire {D r : ℕ} [NeZero r]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ r)
+    (hθ : θ.IsPrimitive)
+    (hne : (fun n : ℕ => θ (n : ZMod r)) ≠ (fun n : ℕ => χ.chi (n : ZMod D))) :
+    letI : NeZero (D * r) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne r)⟩
+    Differentiable ℂ (DirichletCharacter.LFunction (lemma44CharacterTwist χ θ)) := by
+  letI : NeZero (D * r) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne r)⟩
+  exact DirichletCharacter.differentiable_LFunction
+    (lemma56_distinct_primitive_twist_nonprincipal χ θ hθ hne)
+
+lemma lemma56_actual_nonprincipal_primitive_entire {r : ℕ} [NeZero r]
+    (θ : DirichletCharacter ℂ r) (hθ : θ.IsPrimitive) (hr : 1 < r) :
+    Differentiable ℂ (DirichletCharacter.LFunction θ) :=
+  DirichletCharacter.differentiable_LFunction (lemma56_primitive_positive_level_nonprincipal θ hθ hr)
+
+end ZhangLS.Spec
+
+
+open ZhangLS.Spec
+
+example {D r : ℕ} [NeZero r] (χ : RealPrimitiveCharacter D)
+    (θ : DirichletCharacter ℂ r) (hθ : θ.IsPrimitive) (hne : r ≠ D) :
+    lemma44CharacterTwist χ θ ≠ 1 :=
+  fun h => hne (lemma56_principal_twist_conductors_equal χ θ hθ h)
+
+example {D r : ℕ} [NeZero r] (χ : RealPrimitiveCharacter D)
+    (θ : DirichletCharacter ℂ r) (hθ : θ.IsPrimitive)
+    (hne : (fun n : ℕ => θ (n : ZMod r)) ≠ (fun n : ℕ => χ.chi (n : ZMod D))) :
+    letI : NeZero (D * r) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne r)⟩
+    Differentiable ℂ (@DirichletCharacter.LFunction (D * r)
+      ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne r)⟩ (lemma44CharacterTwist χ θ)) :=
+  lemma56_actual_distinct_twist_entire χ θ hθ hne
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D) :
+    lemma44CharacterTwist χ (1 : DirichletCharacter ℂ 1) ≠ 1 :=
+  fun h => (ne_of_lt hD) (lemma56_principal_twist_conductors_equal χ
+    (1 : DirichletCharacter ℂ 1) DirichletCharacter.isPrimitive_one_level_one h)
+
+#print axioms ZhangLS.Spec.lemma56_principal_twist_lifts_equal
+#print axioms ZhangLS.Spec.lemma56_principal_twist_conductors_equal
+#print axioms ZhangLS.Spec.lemma56_principal_twist_characters_equal
+#print axioms ZhangLS.Spec.lemma56_distinct_primitive_twist_nonprincipal
+#print axioms ZhangLS.Spec.lemma56_primitive_positive_level_nonprincipal
+#print axioms ZhangLS.Spec.lemma56_actual_distinct_twist_entire
+#print axioms ZhangLS.Spec.lemma56_actual_nonprincipal_primitive_entire

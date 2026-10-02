@@ -1,0 +1,50 @@
+import ZhangLS.Spec.Lemma32GlobalCorrectionGrowth
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_ramified_prime_small_bound {p : ℕ} (hp : p.Prime) (s : ℂ)
+    (hs : 3/4 ≤ s.re) :
+    ‖(1-lemma32PrimeMonomial p s)^4‖ ≤ 16 := by
+  have hm := lemma32_prime_monomial_norm_lt_one hp.one_lt s (by linarith)
+  have hb : ‖1-lemma32PrimeMonomial p s‖ ≤ 2 := by
+    calc
+      _ ≤ ‖(1 : ℂ)‖+‖lemma32PrimeMonomial p s‖ := norm_sub_le _ _
+      _ ≤ 2 := by simp only [norm_one];linarith
+  rw [norm_pow]
+  calc
+    _ ≤ (2 : ℝ)^4 := pow_le_pow_left₀ (norm_nonneg _) hb 4
+    _ = 16 := by norm_num
+
+lemma lemma32_large_prime_monomial_small (p : ℕ) (s : ℂ)
+    (hs : 3/4 ≤ s.re) (hp : 64 ≤ Real.log (p : ℝ)) :
+    ‖lemma32PrimeMonomial p s‖ ≤ 1/8 := by
+  have hh : 0 ≤ Real.log (p : ℝ) := by linarith
+  have he : 8 ≤ Real.exp (48 : ℝ) := by
+    have h := Real.add_one_le_exp (48 : ℝ)
+    linarith
+  rw [lemma32_prime_monomial_norm]
+  calc
+    _ ≤ Real.exp (-48) := Real.exp_le_exp.mpr (by nlinarith)
+    _ = (Real.exp (48 : ℝ))⁻¹ := Real.exp_neg _
+    _ ≤ 1/8 := by simpa only [one_div] using inv_anti₀ (by norm_num : (0 : ℝ)<8) he
+
+lemma lemma32_ramified_large_prime_saving (p : ℕ) (s : ℂ)
+    (hs : 3/4 ≤ s.re) (hp : 64 ≤ Real.log (p : ℝ)) :
+    ‖(1-lemma32PrimeMonomial p s)^4‖ ≤ Real.exp (Real.log (p : ℝ)/128) := by
+  have hm := lemma32_large_prime_monomial_small p s hs hp
+  have hb : ‖1-lemma32PrimeMonomial p s‖ ≤ Real.exp ‖lemma32PrimeMonomial p s‖ := by
+    calc
+      _ ≤ 1+‖lemma32PrimeMonomial p s‖ := by simpa using norm_sub_le (1 : ℂ) _
+      _ ≤ _ := by simpa only [add_comm] using Real.add_one_le_exp ‖lemma32PrimeMonomial p s‖
+  rw [norm_pow]
+  calc
+    _ ≤ (Real.exp ‖lemma32PrimeMonomial p s‖)^4 :=
+      pow_le_pow_left₀ (norm_nonneg _) hb 4
+    _ = Real.exp (4*‖lemma32PrimeMonomial p s‖) := by
+      simpa only [Nat.cast_ofNat] using (Real.exp_nat_mul ‖lemma32PrimeMonomial p s‖ 4).symm
+    _ ≤ _ := Real.exp_le_exp.mpr (by linarith)
+
+end ZhangLS.Spec

@@ -1,0 +1,6 @@
+ZhangLS/Spec/Lemma46ZeroAnalysis.lean:108:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ZhangLS/Spec/Lemma46ZeroAnalysis.lean:151:54: warning: unused variable `hc`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

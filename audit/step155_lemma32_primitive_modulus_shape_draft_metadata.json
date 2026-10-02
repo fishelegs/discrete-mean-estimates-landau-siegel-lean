@@ -1,0 +1,1499 @@
+{
+  "status": "PARTIAL_KERNEL_CHECKED_TEMPORARY",
+  "full_original_lemma32_status": "UNPROVED",
+  "numbered_completion_recorded": false,
+  "interface_count": 346,
+  "definition_count": 64,
+  "regression_examples": 101,
+  "expanded_actual_euler_object_regressions": 6,
+  "modules": [
+    {
+      "temporary_module": "ZhangMathStep183Lemma32PrimeCoefficientsDraft",
+      "archive": "audit/step140_lemma32_actual_series_183.txt",
+      "sha256": "b46bf86958806ab54512c5bae837a3e13bab71bc8a4affeb0546b4f2b94bf67b",
+      "interfaces": [
+        "lemma32_actual_coefficient_nonneg",
+        "lemma32_tau_two_prime_power",
+        "lemma32_actual_coefficient_prime_power_of_one",
+        "lemma32_actual_coefficient_prime_power_of_zero",
+        "lemma32_actual_coefficient_prime_power_of_neg_one",
+        "lemma32_actual_coefficient_one"
+      ],
+      "definitions": [
+        "lemma32ActualCoefficient"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep184Lemma32GeometricDraft",
+      "archive": "audit/step140_lemma32_actual_series_184.txt",
+      "sha256": "68421732d4d47e523c99a8ef369fc9e90bb62cdfd91dea7cfa5393bcf32c3c9e",
+      "interfaces": [
+        "lemma32_rising_choose_two",
+        "lemma32_rising_choose_three",
+        "lemma32_rising_choose_four",
+        "lemma32_fourth_power_choose",
+        "lemma32_fourth_geometric_hasSum"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep185Lemma32LocalSeriesDraft",
+      "archive": "audit/step140_lemma32_actual_series_185.txt",
+      "sha256": "1a6a93835ab51c1f7240268d48c24135924b73d109ac40f6218cf6953277e430",
+      "interfaces": [
+        "lemma32_actual_coefficient_mul",
+        "lemma32_square_geometric_hasSum",
+        "lemma32_even_square_geometric_hasSum",
+        "lemma32_actual_local_series_of_one",
+        "lemma32_actual_local_series_of_zero",
+        "lemma32_actual_even_local_series_of_neg_one"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep186Lemma32EulerFactorsDraft",
+      "archive": "audit/step140_lemma32_actual_series_186.txt",
+      "sha256": "17ff637c6745c0c8e9ba1612a7dd8304e64419821525d370d1d5427bfcced234",
+      "interfaces": [
+        "lemma32_actual_local_series_of_neg_one",
+        "lemma32_local_correction_of_one",
+        "lemma32_local_correction_of_zero",
+        "lemma32_local_correction_of_neg_one"
+      ],
+      "definitions": [
+        "lemma32LocalCorrection"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep187Lemma32LocalBoundsDraft",
+      "archive": "audit/step140_lemma32_actual_series_187.txt",
+      "sha256": "08ed763723c8a0090c983126e5a11ad8fac16b693b720e5f9c5a5e527c4c0b58",
+      "interfaces": [
+        "lemma32_bounded_polynomial_norm",
+        "lemma32_plus_factor_remainder",
+        "lemma32_minus_factor_remainder",
+        "lemma32_plus_factor_norm_sub_one",
+        "lemma32_minus_factor_norm_sub_one",
+        "lemma32_actual_local_correction_norm_sub_one"
+      ],
+      "definitions": [
+        "lemma32PlusQCoefficient",
+        "lemma32MinusQCoefficient"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep189Lemma32ModulusFactorsDraft",
+      "archive": "audit/step140_lemma32_actual_series_189.txt",
+      "sha256": "4a887b2a2835a4acb7bd56cb580b8844dfbc97d9de1ed938f06cd7d76a6898a8",
+      "interfaces": [
+        "lemma32_character_prime_cases_of_not_dvd",
+        "lemma32_local_correction_norm_of_not_dvd",
+        "lemma32_zero_factor_norm",
+        "lemma32_local_correction_norm_of_dvd"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep190Lemma32RegularFactorsDraft",
+      "archive": "audit/step140_lemma32_actual_series_190.txt",
+      "sha256": "a5b028aa45b25226053a9b89094fbba483dd340d03c8749c7b79b76ef534ff18",
+      "interfaces": [
+        "lemma32_zero_correction_factorization",
+        "lemma32_actual_correction_regular_factorization",
+        "lemma32_regular_local_norm_sub_one",
+        "lemma32_regular_local_differentiable",
+        "lemma32_regular_local_at_zero"
+      ],
+      "definitions": [
+        "lemma32RegularLocalPolynomial"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep191Lemma32ProductConvergenceDraft",
+      "archive": "audit/step140_lemma32_actual_series_191.txt",
+      "sha256": "384eb0c751f4c0d9197ccb7e7ab0f979b8b490589faf88f9097540d2aeae5346",
+      "interfaces": [
+        "lemma32_prime_monomial_norm",
+        "lemma32_prime_monomial_norm_square",
+        "lemma32_prime_monomial_norm_lt_one",
+        "lemma32_regular_prime_errors_summable",
+        "lemma32_regular_euler_product_multipliable"
+      ],
+      "definitions": [
+        "lemma32PrimeMonomial",
+        "lemma32RegularEulerProduct"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep192Lemma32ProductBoundsDraft",
+      "archive": "audit/step140_lemma32_actual_series_192.txt",
+      "sha256": "f9c1a56f0f3f461d4dd4eb2a5b6e8389d6b5b104af866670e1cb91b34c4a0e90",
+      "interfaces": [
+        "lemma32_regular_prime_error_uniform",
+        "lemma32_regular_finite_product_bound",
+        "lemma32_regular_euler_product_bound",
+        "lemma32_regular_product_bound_pos"
+      ],
+      "definitions": [
+        "lemma32RegularProductBound"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep193Lemma32ProductDifferenceDraft",
+      "archive": "audit/step140_lemma32_actual_series_193.txt",
+      "sha256": "c41af632e48e875c443467e0ad69d0ea23b8e9c42af888d4a306dedca1390821",
+      "interfaces": [
+        "lemma32_regular_finite_product_difference"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep194Lemma32UniformProductDraft",
+      "archive": "audit/step140_lemma32_actual_series_194.txt",
+      "sha256": "de11ae8c4a0b93af3fffacea370d5d3d4adc2dc608ef2978eb88fa2f11f61e73",
+      "interfaces": [
+        "lemma32_regular_products_uniform_cauchy",
+        "lemma32_regular_products_uniform_limit"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep195Lemma32ProductAnalyticDraft",
+      "archive": "audit/step140_lemma32_actual_series_195.txt",
+      "sha256": "8b09a6c336f761bde068ee64a8d0a10b0ad93a1d75f37e3092e10f9d4c97ce93",
+      "interfaces": [
+        "lemma32_prime_monomial_differentiable",
+        "lemma32_regular_finite_product_differentiable",
+        "lemma32_regular_products_locally_uniform",
+        "lemma32_regular_euler_product_differentiableOn",
+        "lemma32_regular_euler_product_analyticOnNhd"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep197Lemma32RamificationNormDraft",
+      "archive": "audit/step140_lemma32_actual_series_197.txt",
+      "sha256": "06cda0a70794875145276dbf3da95c494d8e38789cc5c4a9ee5beca6a4d9af39",
+      "interfaces": [
+        "lemma32_one_sub_norm_le_one",
+        "lemma32_prime_monomial_re",
+        "lemma32_cos_lower_of_abs_le_one",
+        "lemma32_ramified_prime_factor_norm"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep198Lemma32AnalyticCorrectionDraft",
+      "archive": "audit/step140_lemma32_actual_series_198.txt",
+      "sha256": "2e4e4363fb9cf8e0baea636998b582bbda79ad7f90244b3dfa07f93a38232772",
+      "interfaces": [
+        "lemma32_ramification_factor_differentiable",
+        "lemma32_analytic_correction_analyticOnNhd",
+        "lemma32_ramification_factor_norm",
+        "lemma32_analytic_correction_sector_bound"
+      ],
+      "definitions": [
+        "lemma32RamificationFactor",
+        "lemma32AnalyticCorrection"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep199Lemma32ResidueCircleDraft",
+      "archive": "audit/step140_lemma32_actual_series_199.txt",
+      "sha256": "8758f2cf99cf4e1da1d25936083a99063ef8913115945d8f35f62c7da789c162",
+      "interfaces": [
+        "lemma32_negative_power_small",
+        "lemma32_residue_disk_parameters",
+        "lemma32_analytic_correction_residue_disk_bound"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep200Lemma32LocalLDraft",
+      "archive": "audit/step140_lemma32_actual_series_200.txt",
+      "sha256": "f2a3274a18af0d5f1a0b47bd4f50f55a88927b1baab3921ddb2d2893d3ea8f53",
+      "interfaces": [
+        "lemma32_actual_first_derivative_bound",
+        "lemma32_actual_L_difference_near_one",
+        "lemma32_actual_value_at_one_small",
+        "lemma32_circle_small_value_scale_identity",
+        "lemma32_actual_L_residue_disk_small"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep202Lemma32ZetaCircleDraft",
+      "archive": "audit/step140_lemma32_actual_series_202.txt",
+      "sha256": "4e65dcdd1319b84548397fe334217cd56e026bc8a7522602a16cdf79584945ea",
+      "interfaces": [
+        "lemma32_zeta_pole_removed_local_bound",
+        "lemma32_actual_zeta_local_pole_bound",
+        "lemma32_actual_zeta_L_residue_circle_bound"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep203Lemma32GammaLocalDraft",
+      "archive": "audit/step140_lemma32_actual_series_203.txt",
+      "sha256": "507e737f23366b43232cc8de6abcb43e6e36e4b7cb8dc01c0f66b79810c32636",
+      "interfaces": [
+        "lemma32_exists_gamma_local_bound",
+        "lemma32_gamma_local_bound_pos",
+        "lemma32_gamma_local_bound",
+        "lemma32_regularized_gamma_local_bound"
+      ],
+      "definitions": [
+        "lemma32GammaLocalBound"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep204Lemma32SmoothingCircleDraft",
+      "archive": "audit/step140_lemma32_actual_series_204.txt",
+      "sha256": "6e911ebd5b2c32a3dfbcb58d6b5a8e9490c4968c50811bf5faece238a664cc61",
+      "interfaces": [
+        "lemma32_smoothing_difference_local_bound",
+        "lemma32_smoothing_gamma_local_bound"
+      ],
+      "definitions": [
+        "lemma32SmoothingDifference"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep205Lemma32CircleIntegrandDraft",
+      "archive": "audit/step140_lemma32_actual_series_205.txt",
+      "sha256": "ab52b57d9e10eb003345af48c71ab1cd8b53e1459ae3b375e7157f9131e3b408",
+      "interfaces": [
+        "lemma32_circle_constant_pos",
+        "lemma32_circle_integrand_bound",
+        "lemma32_residue_circle_scale_identity"
+      ],
+      "definitions": [
+        "lemma32CircleConstant",
+        "lemma32CircleIntegrand"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep206Lemma32CircleIntegralDraft",
+      "archive": "audit/step140_lemma32_actual_series_206.txt",
+      "sha256": "7bfdb50d100ca915d33032f7449918dbe4ca97ece344dc5efc160cc9e5d67b26",
+      "interfaces": [
+        "lemma32_actual_normalized_circle_integral_bound"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep207Lemma32OriginalCircleDraft",
+      "archive": "audit/step140_lemma32_actual_series_207.txt",
+      "sha256": "454aa5116b8f8a68cbb5b0cf81443398ee5d297e704f962a88d2933452f785d7",
+      "interfaces": [
+        "lemma32_modulus_cpow_eq_exp",
+        "lemma32_original_smoothing_difference",
+        "lemma32_original_normalized_circle_integral_bound"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep209Lemma32CoefficientMajorantDraft",
+      "archive": "audit/step140_lemma32_actual_series_209.txt",
+      "sha256": "451bb5dac5a967a225bd5e4c46d08c934da8beeafc4059703f3cae225f4c4811",
+      "interfaces": [
+        "lemma32_multichoose_2_square_le_4",
+        "lemma32_multichoose_4_square_le_16",
+        "lemma32_tau2_square_le_tau4",
+        "lemma32_tau4_square_le_tau16",
+        "lemma32_tau_two_eq_card_divisors",
+        "lemma32_actual_coefficient_le_tau_sixteen"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep210Lemma32SeriesConvergenceDraft",
+      "archive": "audit/step140_lemma32_actual_series_210.txt",
+      "sha256": "c52278da7c201673d30e953263cdceea3e7bf802d627fe7a190438f1f772b710",
+      "interfaces": [
+        "lemma32_tau_lseries_summable",
+        "lemma32_actual_weighted_lseries_summable",
+        "lemma32_actual_weighted_norm_terms_summable"
+      ],
+      "definitions": [
+        "lemma32WeightedDirichletSeries"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep211Lemma32WeightedEulerDraft",
+      "archive": "audit/step140_lemma32_actual_series_211.txt",
+      "sha256": "353a91e9a26e3b7b026d8f98d0a73371b93b0d37b309b9da26129af2c9b71ad8",
+      "interfaces": [
+        "lemma32_weighted_term_at_one",
+        "lemma32_weighted_term_mul",
+        "lemma32_actual_weighted_euler_hasProd",
+        "lemma32_actual_weighted_euler_product"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep212Lemma32EulerLocalIdentityDraft",
+      "archive": "audit/step140_lemma32_actual_series_212.txt",
+      "sha256": "96ef260875efdf395d63897453a69e1aca3bb63598e55708667deced4a8ba358",
+      "interfaces": [
+        "lemma32_prime_monomial_eq_cpow",
+        "lemma32_weighted_prime_power_term",
+        "lemma32_weighted_local_correction_identity"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep213Lemma32CorrectionProductDraft",
+      "archive": "audit/step140_lemma32_actual_series_213.txt",
+      "sha256": "943ceba3a0114c15e1da18947eb6f98ce2af7b42f94ba5bcdb206feba0b9dd87",
+      "interfaces": [
+        "lemma32_finite_ramification_prime_product",
+        "lemma32_ramification_prime_factors_hasProd",
+        "lemma32_actual_local_corrections_hasProd"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep214Lemma32ActualSeriesIdentityDraft",
+      "archive": "audit/step140_lemma32_actual_series_214.txt",
+      "sha256": "2760db43eb43c302d61f5bab41cfe09905282508ce2054f61d3dcdc3d73956f2",
+      "interfaces": [
+        "lemma32_actual_zeta_monomial_euler_hasProd",
+        "lemma32_actual_L_monomial_euler_hasProd",
+        "lemma32_actual_weighted_series_identity"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep216Lemma32CircleRegularityDraft",
+      "archive": "audit/step141_lemma32_mellin_216.txt",
+      "sha256": "04e9040bf408e50b471ab2965175e5999e7a7a19a154c5625c407a26589aa591",
+      "interfaces": [
+        "lemma32_circle_integrand_differentiableAt",
+        "lemma32_actual_circle_integrable"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep217Lemma32GammaVerticalDraft",
+      "archive": "audit/step141_lemma32_mellin_217.txt",
+      "sha256": "6703027e5fe4b91c080aab1c9bdd69256dc30db63e3f86d6831c23c5ac7caf88",
+      "interfaces": [
+        "lemma32_gamma_one_vertical_bound",
+        "lemma32_gamma_one_vertical_integrable"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep218Lemma32GammaMellinDraft",
+      "archive": "audit/step141_lemma32_mellin_218.txt",
+      "sha256": "2c7c33a729eabf2bcc67a87f1dc4988dbbb92aea1e9ba38d994a72bbad2c7fc2",
+      "interfaces": [
+        "lemma32_exponential_mellin_eq_Gamma",
+        "lemma32_exponential_mellin_convergent",
+        "lemma32_actual_Gamma_mellin_inversion"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep220Lemma32MellinTermsDraft",
+      "archive": "audit/step142_lemma32_full_mellin_220.txt",
+      "sha256": "1add0d74e1c0414178632e5a2bcd0bcaa4c4e4fcbf1786e7165d1c85b19c5a2d",
+      "interfaces": [
+        "lemma32_Gamma_mellin_term_norm",
+        "lemma32_Gamma_mellin_term_integrable",
+        "lemma32_Gamma_mellin_term_integral_norm_summable"
+      ],
+      "definitions": [
+        "lemma32GammaMellinTerm"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep221Lemma32TermMellinIdentityDraft",
+      "archive": "audit/step142_lemma32_full_mellin_221.txt",
+      "sha256": "d3f22baf3b178ae8b7e665dcf9b8dfbe1ed76664ba5df68355261e55f3711f11",
+      "interfaces": [
+        "lemma32_Gamma_mellin_term_eq_kernel",
+        "lemma32_Gamma_mellin_term_normalized_integral"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep222Lemma32FullGammaMellinDraft",
+      "archive": "audit/step142_lemma32_full_mellin_222.txt",
+      "sha256": "84c850acc7a5ec2d6155cdaf11167ea1f677dcea6af648c3019c0ab9ca3cb581",
+      "interfaces": [
+        "lemma32_Gamma_mellin_tsum_integrable",
+        "lemma32_full_series_gamma_mellin"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep223Lemma32ActualGammaMellinDraft",
+      "archive": "audit/step142_lemma32_full_mellin_223.txt",
+      "sha256": "5012a6623cd351949345690430954c9f4966296996663117569cef0742a97260",
+      "interfaces": [
+        "lemma32_actual_right_Gamma_integrand_eq_tsum",
+        "lemma32_actual_right_Gamma_integrand_integrable",
+        "lemma32_actual_smoothed_weighted_summable",
+        "lemma32_actual_full_Gamma_mellin"
+      ],
+      "definitions": [
+        "lemma32SmoothedWeightedSeries",
+        "lemma32RightGammaIntegrand"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep224Lemma32OriginalMellinDifferenceDraft",
+      "archive": "audit/step142_lemma32_full_mellin_224.txt",
+      "sha256": "61c69b92a99c63b34363d417a84203d325d1a974d0943218c7eb3d305201d045",
+      "interfaces": [
+        "lemma32_actual_original_right_Gamma_difference",
+        "lemma32_actual_original_right_Gamma_integrable",
+        "lemma32_actual_original_Gamma_mellin_difference",
+        "lemma32_actual_smoothed_difference_series"
+      ],
+      "definitions": [
+        "lemma32SmoothedWeightedDifference"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep225Lemma32RealSmoothingDraft",
+      "archive": "audit/step142_lemma32_full_mellin_225.txt",
+      "sha256": "d63adb917580a1feceb83994036f4c34e52221238355304a7696fb612570eb3b",
+      "interfaces": [
+        "lemma32_actual_weighted_term_one_real",
+        "lemma32_actual_real_smoothed_terms_summable",
+        "lemma32_actual_smoothed_difference_real_series",
+        "lemma32_actual_real_smoothed_term_nonneg",
+        "lemma32_actual_real_smoothed_difference_nonneg"
+      ],
+      "definitions": [
+        "lemma32RealSmoothedTerm"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep226Lemma32SmoothingWindowDraft",
+      "archive": "audit/step142_lemma32_full_mellin_226.txt",
+      "sha256": "cfbdd98c44fe891ceb6cfeb03cf4c3811fceb09184f13e5b2e22fbdfd63d249f",
+      "interfaces": [
+        "lemma32_smoothing_window_lower_bound_pos",
+        "lemma32_exponential_smoothing_window_lower",
+        "lemma32_actual_smoothing_weight_window_lower",
+        "lemma32_actual_weighted_tail_le_smoothed"
+      ],
+      "definitions": [
+        "lemma32SmoothingWindowLowerBound"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep228Lemma32RegularNumeratorDraft",
+      "archive": "audit/step143_lemma32_residue_228.txt",
+      "sha256": "db2cb8034c9c4effa778e2b120b52ed8643703b7eb20e6edc3871cf1012041fb",
+      "interfaces": [
+        "lemma32_zeta_pole_removed_differentiableAt",
+        "lemma32_smoothing_difference_differentiable",
+        "lemma32_smoothing_dslope_differentiable",
+        "lemma32_regular_numerator_differentiableAt",
+        "lemma32_regular_numerator_analyticOnNhd",
+        "lemma32_regular_numerator_eq"
+      ],
+      "definitions": [
+        "lemma32RegularNumerator"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep229Lemma32ActualResidueDraft",
+      "archive": "audit/step143_lemma32_residue_229.txt",
+      "sha256": "3d1d8836e60a8a63128d3fc65c8ab85942d167b978e67018e3a768c9c5a83c27",
+      "interfaces": [
+        "lemma32_regular_numerator_differentiableOn_ball",
+        "lemma32_actual_circle_integral_eq_residue",
+        "lemma32_actual_original_circle_integral_eq_residue",
+        "lemma32_actual_residue_bound"
+      ],
+      "definitions": [
+        "lemma32ActualResidue"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep231Lemma32PrincipalPartsDraft",
+      "archive": "audit/step144_lemma32_contour_231.txt",
+      "sha256": "1c0347c4b54fd411b5ab05fbd274475e386dace735a10a4d0cb5fe23a349a697",
+      "interfaces": [
+        "lemma32_divided_remainder_differentiableOn",
+        "lemma32_divided_remainder_analyticOnNhd",
+        "lemma32_divided_remainder_recurrence",
+        "lemma32_regular_numerator_finite_expansion",
+        "lemma32_actual_integrand_principal_decomposition",
+        "lemma32_actual_regular_remainder_rectangle_zero"
+      ],
+      "definitions": [
+        "lemma32DividedRemainder",
+        "lemma32PrincipalPart"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep232Lemma32LaurentCoefficientsDraft",
+      "archive": "audit/step144_lemma32_contour_232.txt",
+      "sha256": "87ce27638ad0679db6f1e93df1b4e88edd76318c8269bb91547b543110f3f026",
+      "interfaces": [
+        "lemma32_divided_remainder_power_series",
+        "lemma32_divided_remainder_coefficient",
+        "lemma32_actual_residue_eq_divided_remainder"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep233Lemma32RectanglePowersDraft",
+      "archive": "audit/step144_lemma32_contour_233.txt",
+      "sha256": "cc7f643538c2ddfe217a0404b04a28a77bbe56a2459db58d491a2ee0d9da5c4f",
+      "interfaces": [
+        "lemma32_laurent_primitive_hasDerivAt",
+        "lemma32_horizontal_zpow_integral",
+        "lemma32_vertical_zpow_integral",
+        "lemma32_rectangle_zpow_zero"
+      ],
+      "definitions": [
+        "lemma32LaurentPrimitive"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep234Lemma32RectangleWindingDraft",
+      "archive": "audit/step144_lemma32_contour_234.txt",
+      "sha256": "b2689780f6e43283526627dc2831c66f157293f88bed448827b5c163dd850ff2",
+      "interfaces": [
+        "lemma32_rectangle_inverse_winding",
+        "lemma32_rectangle_laurent_kernel"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep235Lemma32BoundaryLinearityDraft",
+      "archive": "audit/step144_lemma32_contour_235.txt",
+      "sha256": "86a17f74924a712ba515ca91ed3e4cb4a755bc2a2be691abd4f3f7432ccbea2f",
+      "interfaces": [
+        "lemma32_boundary_integrable_punctured",
+        "lemma32_boundary_integral_add",
+        "lemma32_boundary_integral_const_mul",
+        "lemma32_boundary_integral_sum"
+      ],
+      "definitions": [
+        "lemma32BoundaryIntegrable"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep236Lemma32PrincipalBoundaryDraft",
+      "archive": "audit/step144_lemma32_contour_236.txt",
+      "sha256": "41e46ed56b2b2a47fdbb0fb7ea9b4521be2a6bdfacc4bee6989d73a239f00855",
+      "interfaces": [
+        "lemma32_laurent_kernel_continuousOn",
+        "lemma32_principal_part_boundary_integrable",
+        "lemma32_actual_principal_boundary_residue"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep237Lemma32FiniteShiftDraft",
+      "archive": "audit/step144_lemma32_contour_237.txt",
+      "sha256": "5661133431d19d5fa71aa1c660d4bb203245e386fb4e6bdf14ce0081d6b02bdd",
+      "interfaces": [
+        "lemma32_boundary_integrable_halfplane",
+        "lemma32_actual_finite_rectangle_residue"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep238Lemma32NormalizedFiniteShiftDraft",
+      "archive": "audit/step144_lemma32_contour_238.txt",
+      "sha256": "bcbe9921a8b9568281e1b9228a960e310319ac7e00ff50011bc50873fbd80ec9",
+      "interfaces": [
+        "lemma32_mellin_normalizing_factor",
+        "lemma32_actual_normalized_finite_shift"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep239Lemma32GammaStripDecayDraft",
+      "archive": "audit/step144_lemma32_contour_239.txt",
+      "sha256": "6541748dd05b577218d687ce4f982f9b383777ee004d48c969777550bacf1b82",
+      "interfaces": [
+        "lemma32_gamma_shift_product",
+        "lemma32_gamma_shift_norm_lower",
+        "lemma32_gamma_strip_polynomial_decay"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep241Lemma32GlobalCorrectionGrowthDraft",
+      "archive": "audit/step145_lemma32_infinite_shift_241.txt",
+      "sha256": "8b535322f32f75bf3e68f18ba80556987b1d55b3c97335284eb47fbfb2cff9de",
+      "interfaces": [
+        "lemma32_ramification_global_bound",
+        "lemma32_analytic_correction_global_growth"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep242Lemma32StripLSeriesGrowthDraft",
+      "archive": "audit/step145_lemma32_infinite_shift_242.txt",
+      "sha256": "79fdc6e985858d8605d4c6bc352c18a7cef7e6fbda40bc61d943be0df49252e4",
+      "interfaces": [
+        "lemma32_positive_strip_high_norm",
+        "lemma32_actual_zeta_strip_high_growth",
+        "lemma32_actual_L_strip_high_growth",
+        "lemma32_actual_zeta_L_strip_high_growth"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep243Lemma32GlobalHeightGrowthDraft",
+      "archive": "audit/step145_lemma32_infinite_shift_243.txt",
+      "sha256": "9db26a954d72d1140753b6211efd82ab4bea8f184896df6fe15ffe3a52cf473b",
+      "interfaces": [
+        "lemma32_smoothing_strip_growth",
+        "lemma32_global_height_constant_pos",
+        "lemma32_actual_integrand_height_decay"
+      ],
+      "definitions": [
+        "lemma32GlobalHeightConstant"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep244Lemma32GlobalAnalyticityDraft",
+      "archive": "audit/step145_lemma32_infinite_shift_244.txt",
+      "sha256": "84b108197140ddbd460e5ebc2513cea61ad71e2e29c7605cf2c62d1a4c7490ba",
+      "interfaces": [
+        "lemma32_actual_integrand_eq_regular_div",
+        "lemma32_actual_integrand_differentiableAt_global",
+        "lemma32_actual_vertical_continuous"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep245Lemma32VerticalIntegrabilityDraft",
+      "archive": "audit/step145_lemma32_infinite_shift_245.txt",
+      "sha256": "a8017a1a8bdd8357aad93333707f68d2ba1c53a1e5020c9a63e11508871b1903",
+      "interfaces": [
+        "lemma32_integrable_of_quartic_decay",
+        "lemma32_actual_left_vertical_integrable"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep246Lemma32HorizontalDecayDraft",
+      "archive": "audit/step145_lemma32_infinite_shift_246.txt",
+      "sha256": "6bdfa0a4c0a35ed03f61b756f2986b1926f52b564fc6171c321237a5b1ee7e78",
+      "interfaces": [
+        "lemma32_actual_horizontal_integral_bound",
+        "lemma32_tendsto_zero_of_quartic_norm_bound",
+        "lemma32_actual_upper_horizontal_decay",
+        "lemma32_actual_lower_horizontal_decay"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep247Lemma32InfiniteShiftDraft",
+      "archive": "audit/step145_lemma32_infinite_shift_247.txt",
+      "sha256": "97ce649c1fbf69febd8efc8fd2cc1888a82724daac17b1ecfa63194846b8824a",
+      "interfaces": [
+        "lemma32_actual_infinite_contour_shift",
+        "lemma32_actual_smoothed_difference_eq_residue_add_left"
+      ],
+      "definitions": [
+        "lemma32LeftVerticalIntegral"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep248Lemma32ActualTailReductionDraft",
+      "archive": "audit/step145_lemma32_infinite_shift_248.txt",
+      "sha256": "075af33a89678a704e82405aef4e886f564f5952c6fb4d0451023df371edab50",
+      "interfaces": [
+        "lemma32_actual_original_tail_reduction"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep250Lemma32RamificationPrimeSavingDraft",
+      "archive": "audit/step146_lemma32_ramification_250.txt",
+      "sha256": "a6d40a751893e12592f71970ec0dfd6c9133008ce0008777af451a28eb3036ef",
+      "interfaces": [
+        "lemma32_ramified_prime_small_bound",
+        "lemma32_large_prime_monomial_small",
+        "lemma32_ramified_large_prime_saving"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep251Lemma32RamificationPowerSavingDraft",
+      "archive": "audit/step146_lemma32_ramification_251.txt",
+      "sha256": "0aec1b347970c2012ad57e73feaa714a08ca52c4bbb983d1d8b444a3b426ad91",
+      "interfaces": [
+        "lemma32_ramification_saving_constant_pos",
+        "lemma32_prime_factors_log_sum_bound",
+        "lemma32_ramification_small_prime_count",
+        "lemma32_ramification_uniform_power_saving",
+        "lemma32_analytic_correction_uniform_power_saving"
+      ],
+      "definitions": [
+        "lemma32RamificationCutoff",
+        "lemma32RamificationSavingConstant"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep253Lemma32QuarterPowerIntegralsDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_253.txt",
+      "sha256": "c5c7aac9d7c923a291c62dabbc7d6282c11c758eb5920d10c3a45f719bab872c",
+      "interfaces": [
+        "lemma32_square_quarter_power",
+        "lemma32_square_negative_quarter_power",
+        "lemma32_small_quarter_power_integral",
+        "lemma32_large_quarter_power_integral"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep254Lemma32AbelMajorantsDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_254.txt",
+      "sha256": "642d1d01d45e098650e4e9cd065c24e8a0d9a26eea2888acd518515c807c38aa",
+      "interfaces": [
+        "lemma32_actual_partial_sum_square_root_majorant",
+        "lemma32_actual_abel_small_majorant",
+        "lemma32_actual_abel_large_majorant"
+      ],
+      "definitions": [
+        "lemma32AbelIntegrand"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep255Lemma32AbelSquareRootBoundDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_255.txt",
+      "sha256": "0db30e989827a46155829fa9e53f32f761db6ca4ae54b6cc32b378188a41299d",
+      "interfaces": [
+        "lemma32_actual_abel_square_root_partial_sum_bound",
+        "lemma32_actual_L_bound_of_square_root_partial_sums"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep256Lemma32BurgessAbelScaleDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_256.txt",
+      "sha256": "06899391473682372712cfda8dae09ea92272ee83b40a71cc87add3b0e6ab3fb",
+      "interfaces": [
+        "lemma32_burgess_scale_half_power",
+        "lemma32_actual_L_bound_of_burgess_partial_sums"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep257Lemma32LeftKernelContinuityDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_257.txt",
+      "sha256": "809c20990b5e813c71b0cc3cbfa3447615c0dfb2659d9167e9b163abcb932b80",
+      "interfaces": [
+        "lemma32_left_line_Gamma_continuous",
+        "lemma32_left_line_zeta_continuous",
+        "lemma32_left_kernel_continuous",
+        "lemma32_left_kernel_nonneg"
+      ],
+      "definitions": [
+        "lemma32LeftLine",
+        "lemma32LeftKernel"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep258Lemma32LeftKernelIntegrabilityDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_258.txt",
+      "sha256": "c76da178b2a17ecfd344e4004aed7728dc5abed940c3e00b6b6740918cc90043",
+      "interfaces": [
+        "lemma32_left_kernel_high_bound",
+        "lemma32_left_kernel_integrable",
+        "lemma32_left_kernel_constant_pos",
+        "lemma32_left_kernel_integral_le"
+      ],
+      "definitions": [
+        "lemma32LeftKernelConstant"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep259Lemma32LeftSmoothingDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_259.txt",
+      "sha256": "6f74db957766752b6ccf7bf41f779cbc8663c3d25c844c484b08695e385850ac",
+      "interfaces": [
+        "lemma32_smoothing_left_line_bound"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep260Lemma32LeftIntegrandBoundDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_260.txt",
+      "sha256": "2302f37e1b14ba0c3c8236e576b80bab7e8e04bbf06cff4afc10656c96437698",
+      "interfaces": [
+        "lemma32_half_power_eighth",
+        "lemma32_actual_left_integrand_bound_of_partial_sums"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep261Lemma32LeftIntegralBoundDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_261.txt",
+      "sha256": "ba04934efeb19cff126deda1a70375e8c1e8dfd03f3c0788d98b5e5d3a5d508f",
+      "interfaces": [
+        "lemma32_left_error_constant_pos",
+        "lemma32_actual_left_integral_bound_of_partial_sums"
+      ],
+      "definitions": [
+        "lemma32LeftErrorConstant"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep262Lemma32BurgessLeftErrorDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_262.txt",
+      "sha256": "0e114c876c0026b42e5bb26298d4fbbc337db5b5f0bf8ec19599d86a84430301",
+      "interfaces": [
+        "lemma32_burgess_scale_fourth_decay",
+        "lemma32_actual_left_integral_bound_of_burgess_partial_sums"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep263Lemma32LeftErrorAbsorptionDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_263.txt",
+      "sha256": "b69213829014feb2445ef955228fc356c0e581b2878c46e31e5c437e4ea5efe4",
+      "interfaces": [
+        "lemma32_left_error_absorption_threshold"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep264Lemma32BurgessReductionDraft",
+      "archive": "audit/step147_lemma32_burgess_bridge_264.txt",
+      "sha256": "1bb43529baad496ef2062b3ee1f883e46243bbd05c496a7b4bf101a3e36f63ea",
+      "interfaces": [
+        "lemma32_target_of_uniform_burgess_partial_sums"
+      ],
+      "definitions": [
+        "Lemma32Target"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep266Lemma32BurgessFourthMomentDraft",
+      "archive": "audit/step148_lemma32_fourth_moment_266.txt",
+      "sha256": "ee68f90b5275f38e64ab0533ee527c010260a2db25b27b92d4f48fb431ca30a2",
+      "interfaces": [
+        "lemma32_real_complex_norm_fourth",
+        "lemma32_actual_quartic_character_product",
+        "lemma32_actual_burgess_fourth_moment_expansion"
+      ],
+      "definitions": [
+        "lemma32ResidueShortSum",
+        "lemma32BurgessFourthMoment",
+        "lemma32QuarticCorrelation"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep267Lemma32BurgessPairingsDraft",
+      "archive": "audit/step148_lemma32_fourth_moment_267.txt",
+      "sha256": "2058e4bec17fda6fdb9bb1c272e5e3754266c046247d17e6ca488dad9131423a",
+      "interfaces": [
+        "lemma32_quartic_pairing_image_card",
+        "lemma32_degenerate_quartic_tuples_card"
+      ],
+      "definitions": [
+        "lemma32QuarticPairing",
+        "lemma32DegenerateQuarticTuples"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep268Lemma32QuarticTrivialBoundsDraft",
+      "archive": "audit/step148_lemma32_fourth_moment_268.txt",
+      "sha256": "18ffc1a34a62c90566bfacc463048ed47abb0a1debc4743547b2df985864d247",
+      "interfaces": [
+        "lemma32_actual_quartic_correlation_abs_bound",
+        "lemma32_degenerate_fourth_moment_contribution_bound"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep269Lemma32QuadraticCorrelationDraft",
+      "archive": "audit/step148_lemma32_fourth_moment_269.txt",
+      "sha256": "7d52648571f9d4b4b7867e2c52aa8657f2aac8e88a285f77c8acb623efb47c81",
+      "interfaces": [
+        "lemma32_quadratic_character_value_square",
+        "lemma32_quadratic_character_inverse",
+        "lemma32_quadratic_two_linear_correlation"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep270Lemma32ActualPrimeCorrelationDraft",
+      "archive": "audit/step148_lemma32_fourth_moment_270.txt",
+      "sha256": "50f0880bc6ed9ba2962d1f49504d85088f45f3130b24991c4857764faa50f397",
+      "interfaces": [
+        "lemma32_quadratic_character_norm_le_one",
+        "lemma32_actual_prime_two_linear_correlation",
+        "lemma32_actual_prime_two_linear_real_correlation"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep271Lemma32RepeatedRootCorrelationDraft",
+      "archive": "audit/step148_lemma32_fourth_moment_271.txt",
+      "sha256": "4efe13c0443be92bb7d0837625d45fdd9094ed32808f7726b47315d7965a1ccc",
+      "interfaces": [
+        "lemma32_quadratic_repeated_root_correlation",
+        "lemma32_quadratic_repeated_root_correlation_norm"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep272Lemma32QuarticPairingClassificationDraft",
+      "archive": "audit/step148_lemma32_fourth_moment_272.txt",
+      "sha256": "80a89cf6c14aea88468858c85d867f88e7d6ffb06b90149a9f0cb3e12b4c4d0f",
+      "interfaces": [
+        "lemma32_mem_degenerate_iff_paired"
+      ],
+      "definitions": [
+        "lemma32QuarticPaired"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep273Lemma32ActualRepeatedCorrelationDraft",
+      "archive": "audit/step148_lemma32_fourth_moment_273.txt",
+      "sha256": "8bc56b594223193e81aae2c27e1a01339c854dba8528cd0b87084d3b0c17efa5",
+      "interfaces": [
+        "lemma32_actual_prime_repeated_correlation_norm",
+        "lemma32_actual_prime_quartic_repeated_correlation"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep274Lemma32FourthMomentRemainderDraft",
+      "archive": "audit/step148_lemma32_fourth_moment_274.txt",
+      "sha256": "2223798a29e3b73e1ccccf582d47d3c68b150d5332159c5b1c14a330669c85fb",
+      "interfaces": [
+        "lemma32_actual_fourth_moment_decomposition",
+        "lemma32_actual_fourth_moment_remainder_bound",
+        "lemma32_nondegenerate_fourth_moment_nonneg"
+      ],
+      "definitions": [
+        "lemma32NondegenerateFourthMoment"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep275Lemma32QuarticPermutationsDraft",
+      "archive": "audit/step148_lemma32_fourth_moment_275.txt",
+      "sha256": "194e0febdc02e6c3316a6a21ca16050a2e92185e23b35adf2ab8ebf6606537ee",
+      "interfaces": [
+        "lemma32_quartic_correlation_permutation",
+        "lemma32_actual_prime_repeated_quartic_permutation_bound"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep277Lemma32QuarticCubicSubstitutionDraft",
+      "archive": "audit/step149_lemma32_curve_count_277.txt",
+      "sha256": "94379cec6321ae376ffecf60181999415532cc6bd627d1e2740c7267e5436516",
+      "interfaces": [
+        "lemma32_quartic_cubic_substitution",
+        "lemma32_quadratic_quartic_cubic_point_identity"
+      ],
+      "definitions": [
+        "lemma32QuarticRootProduct",
+        "lemma32TransformedCubic"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep278Lemma32QuarticCubicSumsDraft",
+      "archive": "audit/step149_lemma32_curve_count_278.txt",
+      "sha256": "b63a1e72838dc951c61cc9a445592f70f65757b291b19e4bb05346d6fc51502d",
+      "interfaces": [
+        "lemma32_quadratic_quartic_cubic_punctured_sum",
+        "lemma32_quadratic_quartic_cubic_sum_identity"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep279Lemma32MonicCubicNormalizationDraft",
+      "archive": "audit/step149_lemma32_curve_count_279.txt",
+      "sha256": "ad4636716860cbe2165cf9a100a3a94dc30722290610fcc54bb3205b3a850603",
+      "interfaces": [
+        "lemma32_monic_cubic_normalization",
+        "lemma32_quadratic_monic_cubic_point_identity"
+      ],
+      "definitions": [
+        "lemma32CubicLeadingCoefficient",
+        "lemma32NormalizedMonicCubic"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep280Lemma32NormalizedCubicSumsDraft",
+      "archive": "audit/step149_lemma32_curve_count_280.txt",
+      "sha256": "b8180b39848ad90ac87527abaaba0bf3bec16805edac09c4bdd10c7502663ef3",
+      "interfaces": [
+        "lemma32_quadratic_normalized_cubic_sum_identity",
+        "lemma32_quadratic_quartic_normalized_cubic_sum_identity"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep281Lemma32QuarticWeierstrassDraft",
+      "archive": "audit/step149_lemma32_curve_count_281.txt",
+      "sha256": "0925b1d4d79e5e0a119fe47a870fb6f25d47e96430526674a3cfc6313867199a",
+      "interfaces": [
+        "lemma32_normalized_cubic_root_factorization",
+        "lemma32_quartic_Weierstrass_discriminant"
+      ],
+      "definitions": [
+        "lemma32QuarticWeierstrass"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep282Lemma32QuarticCurveEllipticDraft",
+      "archive": "audit/step149_lemma32_curve_count_282.txt",
+      "sha256": "45d13cc77ecefe4730e1c398a6f87ede00c44fd8601b661a236dd08e40267913",
+      "interfaces": [
+        "lemma32_cubic_leading_coefficient_nonzero",
+        "lemma32_quartic_Weierstrass_discriminant_nonzero",
+        "lemma32_quartic_Weierstrass_isElliptic"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep283Lemma32QuadraticCharacterUniquenessDraft",
+      "archive": "audit/step149_lemma32_curve_count_283.txt",
+      "sha256": "56507eba964b91fad71e019784239542664a13c9a82388094a93fdfd3dc268d8",
+      "interfaces": [
+        "lemma32_mulchar_eq_of_unit_generator",
+        "lemma32_nontrivial_quadratic_unit_generator_value",
+        "lemma32_nontrivial_quadratic_character_unique",
+        "lemma32_nontrivial_quadratic_character_eq_canonical",
+        "lemma32_nontrivial_quadratic_character_canonical_value"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep284Lemma32AffineCharacterCountDraft",
+      "archive": "audit/step149_lemma32_curve_count_284.txt",
+      "sha256": "f3223c22d0c4cacbd425ed0b6bbd9cd5fc68a1756fafeb64a8a9d912ad72ccce",
+      "interfaces": [
+        "lemma32_affine_solution_card_fibers",
+        "lemma32_quadratic_square_root_count",
+        "lemma32_actual_affine_card_character_sum",
+        "lemma32_quartic_character_sum_affine_card"
+      ],
+      "definitions": [
+        "lemma32CubicAffineSolutions"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep285Lemma32WeierstrassAffineCountDraft",
+      "archive": "audit/step149_lemma32_curve_count_285.txt",
+      "sha256": "84df36fae65f40b21ed4e15c22aacc912ae499460b9552a91e56783f23f4a4df",
+      "interfaces": [
+        "lemma32_quartic_curve_affine_equation",
+        "lemma32_quartic_curve_affine_solution_finset",
+        "lemma32_quartic_character_sum_Weierstrass_affine_card"
+      ],
+      "definitions": [
+        "lemma32WeierstrassAffineSolutions"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep286Lemma32ActualCurvePointCountDraft",
+      "archive": "audit/step149_lemma32_curve_count_286.txt",
+      "sha256": "bd11284965323b5eedcb7581f94d5b32ddf071329e5d984c6a9cb06c32ce2060",
+      "interfaces": [
+        "lemma32_Weierstrass_point_card_affine",
+        "lemma32_quartic_character_sum_actual_curve_points"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep287Lemma32ActualPrimeCurveCountDraft",
+      "archive": "audit/step149_lemma32_curve_count_287.txt",
+      "sha256": "d8e465ade3391891c14898c358a6b023d03af9657a2d249067d15a6adabbda74",
+      "interfaces": [
+        "lemma32_actual_prime_quartic_point_count",
+        "lemma32_actual_prime_quartic_correlation_point_count"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep289Lemma32ActualOddCurveCountDraft",
+      "archive": "audit/step150_lemma32_odd_curve_count_289.txt",
+      "sha256": "d0d69ed9aec0e74f2bb894e85021acd8a3b35869963b647f2281ade9799e275d",
+      "interfaces": [
+        "lemma32_nontrivial_quadratic_odd_characteristic",
+        "lemma32_field_two_nonzero_of_odd_characteristic",
+        "lemma32_actual_prime_odd_characteristic",
+        "lemma32_actual_prime_distinct_quartic_point_count"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep291Lemma32DistinctRootFieldSizeDraft",
+      "archive": "audit/step151_lemma32_distinct_root_size_291.txt",
+      "sha256": "c670974512eb435c64558595c963c9cd23def05e8e59b25ccc1365ca4f23ee64",
+      "interfaces": [
+        "lemma32_four_distinct_roots_injective",
+        "lemma32_four_distinct_roots_field_card",
+        "lemma32_four_distinct_prime_roots_modulus_ge_five"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep293Lemma32QuarticCollisionBoundDraft",
+      "archive": "audit/step152_lemma32_collision_moment_293.txt",
+      "sha256": "de133df62ebf3554b56b638c3ffc73fdc0bc92d11ef6ce428154929a0bc252c0",
+      "interfaces": [
+        "lemma32_quadratic_unpaired_quartic_collision_bound"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep294Lemma32ActualCollisionBoundDraft",
+      "archive": "audit/step152_lemma32_collision_moment_294.txt",
+      "sha256": "e563600aaa34c9d9a5174e116473334c182f2fe16285a97d498e64779ecff1da",
+      "interfaces": [
+        "lemma32_short_residue_cast_injective",
+        "lemma32_actual_prime_unpaired_collision_correlation"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep295Lemma32CollisionTupleCountDraft",
+      "archive": "audit/step152_lemma32_collision_moment_295.txt",
+      "sha256": "3d772ec554f35bd1f1de349c4bfa84238f6dbc0ae6e7a35257f0c4fd530581e7",
+      "interfaces": [
+        "lemma32_quartic_noninjective_iff_collision",
+        "lemma32_collision_tuples_covered",
+        "lemma32_collision_quartic_tuple_card"
+      ],
+      "definitions": [
+        "lemma32CollisionQuarticTuples",
+        "lemma32QuarticCollisionFamily"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep296Lemma32PrimeFourthMomentSplitDraft",
+      "archive": "audit/step152_lemma32_collision_moment_296.txt",
+      "sha256": "7825b1e419173dce38a05ae88539b23e2e8e9402dc7c82ab639e18107a6219e4",
+      "interfaces": [
+        "lemma32_prime_collision_fourth_moment_bound",
+        "lemma32_nondegenerate_split_by_injectivity",
+        "lemma32_actual_prime_fourth_moment_distinct_reduction"
+      ],
+      "definitions": [
+        "lemma32DistinctFourthMoment"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep298Lemma32DistinctMomentPointCountDraft",
+      "archive": "audit/step153_lemma32_distinct_moment_points_298.txt",
+      "sha256": "263d55ebb830d95df111c705047a2989d31db58640510f5fb92c4a7f6e438510",
+      "interfaces": [
+        "lemma32_distinct_quartic_correlation_point_count",
+        "lemma32_distinct_fourth_moment_eq_actual_point_discrepancy"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep300Lemma32FiniteActualCurvePointsDraft",
+      "archive": "audit/step153_lemma32_distinct_moment_points_300.txt",
+      "sha256": "b7b0b6dee53d1dcfadae9eed475da87501e1660fa7f712d10499168b738ced12",
+      "interfaces": [
+        "lemma32_actual_curve_points_finite",
+        "lemma32_actual_curve_fintype_card_eq_nat_card"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep302Lemma32ProductCharacterDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_302.txt",
+      "sha256": "a575ffbf1d7670817546c57d7919d08988aef5012e2d3135afa70dd780026bee",
+      "interfaces": [
+        "lemma32_product_character_factorization",
+        "lemma32_product_character_finite_sum"
+      ],
+      "definitions": [
+        "lemma32ProductCharacterLeft",
+        "lemma32ProductCharacterRight"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep303Lemma32ProductQuadraticCharacterDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_303.txt",
+      "sha256": "67d64f8ef5e52e19016a71d6fda93e3915c2f26771dd991fcd9b84479b79b609",
+      "interfaces": [
+        "lemma32_product_character_left_quadratic",
+        "lemma32_product_character_right_quadratic",
+        "lemma32_product_quartic_character_sum"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep304Lemma32CharacterEquivPullbackDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_304.txt",
+      "sha256": "6d8b3f7e49e254e0091964b18095c606485a844e9e3c251ccce9b9f40b8c5c5f",
+      "interfaces": [
+        "lemma32_character_equiv_pullback_quadratic",
+        "lemma32_character_equiv_pullback_nontrivial",
+        "lemma32_quartic_character_sum_ring_equiv"
+      ],
+      "definitions": [
+        "lemma32CharacterEquivPullback"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep305Lemma32ActualCRTCharacterDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_305.txt",
+      "sha256": "5d19ec1330d19f1f4e7af0cd3bd3ea4ec513c4683624e89d4a80ef86e5c70e12",
+      "interfaces": [
+        "lemma32_actual_CRT_character_quadratic",
+        "lemma32_actual_CRT_quartic_character_sum"
+      ],
+      "definitions": [
+        "lemma32CRTCharacterLeft",
+        "lemma32CRTCharacterRight"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep306Lemma32CRTConductorDescentDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_306.txt",
+      "sha256": "efa9d83967a9f8bff181a47df0ebb3ae090e1209d023ff00679add2ea3178123",
+      "interfaces": [
+        "lemma32_actual_CRT_character_factorization",
+        "lemma32_actual_CRT_factorsThrough_left",
+        "lemma32_actual_CRT_factorsThrough_right"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep307Lemma32PrimitiveCRTNontrivialDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_307.txt",
+      "sha256": "716239f4e0c90981bc6cabc328a795d5e962858e0e1e53b97a7c3b9371ab4251",
+      "interfaces": [
+        "lemma32_actual_primitive_CRT_left_nontrivial",
+        "lemma32_actual_primitive_CRT_right_nontrivial"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep309Lemma32ChangeLevelConductorDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_309.txt",
+      "sha256": "a8a055e6d76785727b5341b15e24abcdd4ab262ec2e7f0b066a83b9523c97bf5",
+      "interfaces": [
+        "lemma32_changeLevel_factorsThrough_conductor",
+        "lemma32_changeLevel_conductor_dvd",
+        "lemma32_actual_CRT_changeLevel_product"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep310Lemma32PrimitiveCRTCharactersDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_310.txt",
+      "sha256": "794bd7615bd7867649d1ec384cc84ad13a2a27ce0581461ccf2553c54bfe256a",
+      "interfaces": [
+        "lemma32_actual_CRT_conductor_dvd_lcm",
+        "lemma32_actual_primitive_CRT_characters"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep311Lemma32RealPrimitiveCRTCharacterDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_311.txt",
+      "sha256": "78f8b7f5d4e6e15c53d60b54477b7422428eacf7f75d805f717b1d82f1ef3854",
+      "interfaces": [
+        "lemma32_real_primitive_CRT_factorization",
+        "lemma32_real_primitive_CRT_quartic_sum"
+      ],
+      "definitions": [
+        "lemma32RealCRTLeft",
+        "lemma32RealCRTRight"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep313Lemma32OddKernelDescentDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_313.txt",
+      "sha256": "fc729e1be8d57b272ce8f26dadd2d1b53d2b23fda5ca631a5029c10c99881ceb",
+      "interfaces": [
+        "lemma32_quadratic_hom_odd_card_eq_one",
+        "lemma32_quadratic_character_factorsThrough_odd_kernel"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep314Lemma32PrimePowerReductionKernelDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_314.txt",
+      "sha256": "8144ac4dace6b4bb566f5e4d6fabde3bd67bb30e24bd07074c7edd81f5901968",
+      "interfaces": [
+        "lemma32_units_reduction_kernel_card",
+        "lemma32_prime_power_reduction_kernel_card"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep315Lemma32OddPrimePowerConductorDraft",
+      "archive": "audit/step154_lemma32_actual_crt_conductor_315.txt",
+      "sha256": "8a74cdebd62a74cb080cc75782cbb5fd0da2e59f349580b701f034384f30db7c",
+      "interfaces": [
+        "lemma32_odd_prime_power_quadratic_factorsThrough",
+        "lemma32_odd_prime_power_quadratic_conductor_dvd",
+        "lemma32_odd_prime_power_primitive_quadratic_exponent"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep317Lemma32TwoPowerKernelDraft",
+      "archive": "audit/step155_lemma32_primitive_modulus_shape_317.txt",
+      "sha256": "ad3aa39eb8ea0594c779ea43fa079b4dbc17e47aea95c5c59bb2a6e0803bcbaf",
+      "interfaces": [
+        "lemma32_two_power_reduction_kernel_card",
+        "lemma32_two_power_five_unit_order",
+        "lemma32_two_power_five_square_order"
+      ],
+      "definitions": [
+        "lemma32TwoPowerReductionDvd",
+        "lemma32TwoPowerFiveUnit"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep318Lemma32TwoPowerConductorDraft",
+      "archive": "audit/step155_lemma32_primitive_modulus_shape_318.txt",
+      "sha256": "08a46cd7d0df7d091f6842c7e928a98b3a7c0ac6c1a0b375f78e810db625bb19",
+      "interfaces": [
+        "lemma32_two_power_reduction_kernel_generator",
+        "lemma32_two_power_quadratic_factorsThrough",
+        "lemma32_two_power_quadratic_conductor_dvd",
+        "lemma32_two_power_primitive_quadratic_exponent"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep319Lemma32PrimitiveModulusExponentsDraft",
+      "archive": "audit/step155_lemma32_primitive_modulus_shape_319.txt",
+      "sha256": "8051d766746b6b2f3a10c30fceafa2abd8654399d37b348f0e4b313131902e4c",
+      "interfaces": [
+        "lemma32_real_primitive_odd_prime_exponent",
+        "lemma32_real_primitive_two_adic_exponent"
+      ],
+      "definitions": [
+        "lemma32RealPrimePowerComponent"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep320Lemma32PrimitiveModulusShapeDraft",
+      "archive": "audit/step155_lemma32_primitive_modulus_shape_320.txt",
+      "sha256": "ab3c5fe7a349c218f15709e4e430256f0c36c5499c5937f24acda46cef164d01",
+      "interfaces": [
+        "lemma32_real_primitive_odd_part_squarefree",
+        "lemma32_real_primitive_modulus_shape"
+      ],
+      "definitions": []
+    }
+  ],
+  "created_at_utc": "2026-10-02T07:24:04.097524+00:00",
+  "proved": [
+    "all Step136 actual weighted coefficient and local series foundations",
+    "prime not dividing D has character value plus or minus one",
+    "modulus prime factor correction equals (1-z)^4*(1-z^2)",
+    "regular local polynomial entire and quadratic remainder bound uniform over all primes",
+    "regular prime product converges for Re(s)>1/2",
+    "regular product bounded uniformly in D,chi and s on Re(s)>=sigma0>1/2",
+    "finite product difference controlled by summable tails",
+    "uniform convergence on every closed half-plane sigma0>1/2",
+    "regular product analytic on Re(s)>1/2",
+    "finite ramification factor norm at most one in residue disk",
+    "analytic correction bounded uniformly in original residue disk",
+    "actual first derivative L bound 16 exp(1) L^2",
+    "original A yields norm L(1) at most L^-2022",
+    "actual L disk bound (1+16 exp(1)) L^-2022",
+    "actual zeta pole removed norm bound eight",
+    "actual zeta times L norm on residue circle bounded by 8*(1+16*exp(1))*L^2",
+    "absolute Gamma local bound from compactness",
+    "actual smoothing difference times Gamma bound 8*exp(1)*GammaConstant*L",
+    "actual circle integrand bound C*L^17",
+    "normalized circle integral norm bounded by C*L^-2007",
+    "original D^(8w)-D^(4w) smoothing expression exactly connected",
+    "actual coefficient nu^2*tau2^2 at most tau16",
+    "actual weighted Dirichlet series absolutely converges for Re(s)>1",
+    "actual weighted Dirichlet series equals its prime local series product",
+    "actual local Euler correction infinite product equals analytic correction",
+    "actual weighted Dirichlet series equals analytic correction times (zeta*actual L)^8 on Re(s)>1",
+    "actual circle integrand differentiable on punctured quarter disk and original circle integrable",
+    "Gamma on Re=1 bounded by 3/(1+t^2) and vertically integrable",
+    "actual exponential Mellin transform is Gamma on Re>0",
+    "actual Gamma Mellin inversion at Re=1 proved from Fourier/Mellin inversion",
+    "actual smoothed weighted series equals normalized Re(w)=1 Gamma Mellin integral for every positive scale",
+    "original D8 minus D4 smoothed difference equals actual right vertical Mellin integral",
+    "actual smoothed difference is a convergent real nonnegative series",
+    "positive absolute constant times original D4<n<=D8 weighted tail is at most actual smoothed difference",
+    "actual integrand equals analytic regular numerator divided by w^8 on Re(w)>-1/2 away from zero",
+    "actual normalized circle integral equals seventh derivative of numerator at zero divided by 7 factorial",
+    "actual canonical residue norm at most positive absolute C*L^-2007 under original A",
+    "actual integrand finite principal-part decomposition and analytic divided remainder on Re(w)>-1/2",
+    "all canonical Laurent coefficients equal actual numerator derivatives divided by factorial",
+    "finite oriented rectangle boundary integral of actual integrand equals 2*pi*i times actual canonical residue",
+    "normalized finite shift retains both actual horizontal edges and left vertical integral",
+    "Gamma on -1/4<=Re(w)<=1 has arbitrary polynomial height decay via actual finite recurrence",
+    "actual integrand global quartic height decay with explicit D-dependent constant",
+    "actual left vertical integrability and both horizontal edges tend to zero",
+    "actual infinite rectangle contour shift equals actual canonical residue",
+    "actual smoothed difference equals residue plus actual normalized left vertical integral",
+    "positive absolute constant times raw original weighted tail at most C L^-2007 plus norm of actual left vertical integral",
+    "actual finite ramification product at most absolute constant times D^(1/128) for Re(s)>=3/4",
+    "actual full analytic correction at most absolute constant times D^(1/128) for Re(s)>=3/4",
+    "square-root bound for actual finite character partial sums implies actual L bound at Re(s)=3/4 by splitting the actual Abel integral",
+    "actual zeta-Gamma left kernel continuous and integrable with absolute constant",
+    "actual left smoothing has bound2D^-1",
+    "explicit Burgess arithmetic input yields actual normalized left integral bound absolute constant times D^(-27/128)",
+    "uniform threshold absorbs this decay into(logD)^-2007",
+    "full original Lemma3.2 target reduced to a uniform actual Burgess finite-character partial-sum bound",
+    "actual finite-residue short-character fourth moment equals exact sum of actual quartic correlations",
+    "paired quadruples lie in three actual pairing families and have cardinality at most3H^2",
+    "actual paired fourth-moment contribution at most3D H^2 for all moduli",
+    "pairing predicate equivalence covers every paired quadruple",
+    "nontrivial quadratic finite-field two-linear correlation is exactly-1",
+    "repeated-root quadratic correlation exactly-1-chi((b-a)(c-a)) and has norm at most2",
+    "these formulas are connected to actual prime-modulus primitive real characters",
+    "actual quartic correlations invariant under all index permutations",
+    "actual fourth moment at most3D H^2 plus the actual absolute nonpaired correlation sum",
+    "exact Mobius substitution reduces the quartic quadratic-character sum to a cubic-character sum minus one",
+    "normalization produces an actual monic Weierstrass cubic with explicit discriminant16A^2(b-c)^2(b-d)^2(c-d)^2",
+    "four distinct roots and characteristic not2 give an actual elliptic curve",
+    "nontrivial quadratic finite-field complex character equals the canonical integer quadratic character after casting",
+    "actual square-root counts give the exact affine curve cardinality",
+    "actual mathlib Weierstrass point type has cardinality affine solution count plus one",
+    "actual prime quartic correlation plus one equals actual curve point count minus p minus one",
+    "nontrivial quadratic finite-field character forces characteristic different from2",
+    "actual prime character plus four distinct roots derives curve ellipticity and the exact full point-count identity without extra model assumptions",
+    "four distinct roots inject Fin4 into the actual field and force at least4 elements",
+    "in the prime-modulus four-distinct-root case the actual modulus is at least5",
+    "every nonpaired repeated-root quartic quadratic-character correlation has norm at most2",
+    "actual prime unpaired collision correlation at most2 for H<=p including all six collision patterns",
+    "the actual number of collision quartic tuples is at most6H^3",
+    "actual prime nonpaired collision fourth-moment contribution at most12H^3",
+    "actual prime fourth moment at most3pH^2+12H^3 plus the actual four-distinct-root remainder",
+    "actual injective prime short-residue tuple yields exact rho+1=#E(Fp)-p-1",
+    "actual distinct fourth-moment remainder exactly equals the sum of abs(#E(Fp)-p-2)",
+    "actual elliptic point type is finite over every finite field",
+    "actual Fintype point cardinality equals Nat.card independently of the chosen finite enumeration",
+    "actual CRT character factorization and quartic complete sum product",
+    "actual CRT local characters are quadratic,nontrivial and primitive when globally primitive",
+    "actual real primitive character wrappers preserve all fields",
+    "quadratic character descends through a reduction map with odd-cardinality unit kernel",
+    "actual prime-power unit reduction kernel has card p^k",
+    "odd-prime-power quadratic conductor divides p and primitive exponent is exactly one",
+    "actual units mod2^(k+3) reduction to mod8 kernel has2^k elements and is generated by5^2",
+    "quadratic2-power conductor divides8",
+    "all actual primitive quadratic modulus prime valuations are≤1 at odd primes and≤3 at2",
+    "actual real primitive modulus decomposes as2^e*m wheree≤3 andm odd squarefree"
+  ],
+  "remaining": [
+    "actual Hasse point-count bound or another proved uniform four-distinct-root bound",
+    "general-modulus extension and Burgess amplification",
+    "apply proved conditional analytic reduction;full original Lemma3.2 remains UNPROVED"
+  ],
+  "whole_project_freeze": "No project compiler running;Step131 incremental verification PASS against full Step130;16 new modules remain temporary only",
+  "conditional_analytic_bridge": "Explicit unproved arithmetic input:there exists C>=1 such that for every D>=2,actual primitive real chi and N,norm sum chi(1..N)<=C D^(25/128) sqrtN. This input is not proved and is not promoted as full Lemma3.2."
+}

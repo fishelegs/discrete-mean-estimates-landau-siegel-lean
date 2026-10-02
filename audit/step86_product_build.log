@@ -1,0 +1,451 @@
+⚠ [2469/2527] Replayed ZhangLS.Spec.Lemma23AnalyticLogBranch
+warning: ZhangLS/Spec/Lemma23AnalyticLogBranch.lean:42:53: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ZhangLS/Spec/Lemma23AnalyticLogBranch.lean:67:44: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [2473/2527] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3460/3591] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3462/3591] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:101:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:102:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3463/3591] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3468/3591] Replayed ZhangLS.Spec.Lemma57SmoothedSum
+warning: ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3477/3591] Replayed ZhangLS.Spec.Lemma57GaussianGlobal
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:55:58: unused variable `ha`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:13: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:34: unused variable `hx`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3478/3591] Replayed ZhangLS.Spec.Lemma57SmoothedSummability
+warning: ZhangLS/Spec/Lemma57SmoothedSummability.lean:20:52: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3483/3591] Replayed ZhangLS.Spec.Lemma57GaussianMellinTransform
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:67:63: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:145:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:326:4: Try `simp at hs` instead of `simpa using hs`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3497/3591] Replayed ZhangLS.Spec.RiemannZetaCriticalLineBound
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:99:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:124:13: unused variable `hs`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:152:6: unused variable `n`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:156:20: unused variable `k`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:161:8: This simp argument is unused:
+  sum_one_Icc
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵s̵u̵m̵_̵o̵n̵e̵_̵I̵c̵c̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:242:12: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:242:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:219:41: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:303:8: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:303:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:394:12: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:475:75: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3498/3591] Replayed ZhangLS.Spec.Lemma57CriticalStripGrowth
+warning: ZhangLS/Spec/Lemma57CriticalStripGrowth.lean:270:14: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3505/3591] Replayed ZhangLS.Spec.Lemma23DirichletConjugation
+warning: ZhangLS/Spec/Lemma23DirichletConjugation.lean:23:0: automatically included section variable(s) unused in theorem `ZhangLS.Spec.dirichletLSeries_inv_eq_conj_at_conj`:
+  [NeZero N]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero N] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3507/3591] Replayed ZhangLS.Spec.Lemma23PrimitiveGaussSum
+warning: ZhangLS/Spec/Lemma23PrimitiveGaussSum.lean:42:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3508/3591] Replayed ZhangLS.Spec.Lemma23DirichletUnitModulus
+warning: ZhangLS/Spec/Lemma23DirichletUnitModulus.lean:112:48: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3526/3591] Replayed ZhangLS.Spec.Lemma44CharacterProduct
+warning: ZhangLS/Spec/Lemma44CharacterProduct.lean:55:38: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵m̵u̵l̵_̵c̵o̵m̵m̵,̵ ̵m̵u̵l̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵[̲m̲u̲l̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲,̲ mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/Lemma44CharacterProduct.lean:55:48: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp [mul_comm, mul_l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵ ̵m̵u̵l̵_̵assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3664/3724] Replayed ZhangLS.Spec.Lemma44ProductMellin
+warning: ZhangLS/Spec/Lemma44ProductMellin.lean:144:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3668/3724] Replayed ZhangLS.Spec.Lemma44RightMellinApproximation
+warning: ZhangLS/Spec/Lemma44RightMellinApproximation.lean:37:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3670/3724] Replayed ZhangLS.Spec.Lemma44ReflectedLongSum
+warning: ZhangLS/Spec/Lemma44ReflectedLongSum.lean:81:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3673/3724] Replayed ZhangLS.Spec.Lemma44InitialLeftEstimates
+warning: ZhangLS/Spec/Lemma44InitialLeftEstimates.lean:68:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3676/3724] Replayed ZhangLS.Spec.Lemma44ComplexCharacterAbel
+warning: ZhangLS/Spec/Lemma44ComplexCharacterAbel.lean:73:56: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3677/3724] Replayed ZhangLS.Spec.Lemma44HorizontalGrowth
+warning: ZhangLS/Spec/Lemma44HorizontalGrowth.lean:147:6: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3679/3724] Replayed ZhangLS.Spec.Lemma44GaussianVerticalTail
+info: ZhangLS/Spec/Lemma44GaussianVerticalTail.lean:41:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: ZhangLS/Spec/Lemma44GaussianVerticalTail.lean:57:16: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: ZhangLS/Spec/Lemma44GaussianVerticalTail.lean:57:12: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma44GaussianVerticalTail.lean:68:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: ZhangLS/Spec/Lemma44GaussianVerticalTail.lean:153:35: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [3680/3724] Replayed ZhangLS.Spec.Lemma44LocalRectangle
+warning: ZhangLS/Spec/Lemma44LocalRectangle.lean:115:46: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_reProdIm, mem_Icc, sub_re, sub_im, ofReal_re, ofReal_im, mul_re, mul_im, I_re,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲I_im, mul_zero, z̵e̵r̵o̵_̵m̵u̵l̵,̵ ̵mul_one, zero_add, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/Lemma44LocalRectangle.lean:115:65: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  simp only [mem_reProdIm, mem_Icc, sub_re, sub_im, ofReal_re, ofReal_im, mul_re, mul_im, I_re,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲I_im, mul_zero, zero_mul, mul_one, z̵e̵r̵o̵_̵a̵d̵d̵,̵ ̵sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3683/3724] Replayed ZhangLS.Spec.Lemma44HorizontalIntegrals
+warning: ZhangLS/Spec/Lemma44HorizontalIntegrals.lean:18:5: unused variable `hK`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3684/3724] Replayed ZhangLS.Spec.Lemma44ReflectedPolynomialContours
+warning: ZhangLS/Spec/Lemma44ReflectedPolynomialContours.lean:152:64: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp only [sub_eq_add_neg, add_comm, add_left_comm, mul_comm, mul_l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵ ̵m̵u̵l̵_̵assoc] at hc ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/Lemma44ReflectedPolynomialContours.lean:152:79: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp only [sub_eq_add_neg, add_comm, add_left_comm, mul_comm, mul_left_comm,̵ ̵m̵u̵l̵_̵a̵s̵s̵o̵c̵] at hc ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3688/3724] Replayed ZhangLS.Spec.Lemma45Normalization
+warning: ZhangLS/Spec/Lemma45Normalization.lean:90:8: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ZhangLS/Spec/Lemma45Normalization.lean:90:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3705/3724] Replayed ZhangLS.Spec.Lemma46SingleZero
+warning: ZhangLS/Spec/Lemma46SingleZero.lean:33:10: This simp argument is unused:
+  mem_sphere
+
+Hint: Omit it from the simp argument list.
+  simp [m̵e̵m̵_̵s̵p̵h̵e̵r̵e̵,̵ ̵dist_zero_right, abs_of_pos hR]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ZhangLS/Spec/Lemma46SingleZero.lean:33:22: This simp argument is unused:
+  dist_zero_right
+
+Hint: Omit it from the simp argument list.
+  simp [mem_sphere, d̵i̵s̵t̵_̵z̵e̵r̵o̵_̵r̵i̵g̵h̵t̵,̵ ̵abs_of_pos hR]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3706/3724] Replayed ZhangLS.Spec.Lemma46RoucheLocal
+warning: ZhangLS/Spec/Lemma46RoucheLocal.lean:30:5: unused variable `hm`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3707/3724] Replayed ZhangLS.Spec.Lemma46ZeroAnalysis
+warning: ZhangLS/Spec/Lemma46ZeroAnalysis.lean:108:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma46ZeroAnalysis.lean:151:54: unused variable `hc`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✖ [3724/3724] Building ZhangLS.Spec.Lemma52Product (14s)
+trace: .> LEAN_PATH=/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Cli/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/batteries/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Qq/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/aesop/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/importGraph/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/plausible/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/mathlib/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/keyishen/Documents/ChatGPT/zhangmath/ZhangLS/Spec/Lemma52Product.lean -o /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/Lemma52Product.olean -i /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/Lemma52Product.ilean -c /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/Lemma52Product.c --setup /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/Lemma52Product.setup.json --json
+error: ZhangLS/Spec/Lemma52Product.lean:48:33: don't know how to synthesize implicit argument `D`
+  @Lemma52Estimate (?m.41 ψ hψ hp Y hY hL hc hsmall hs) p ⋯ ψ Y c s lemma52ErrorConstant
+context:
+D p : ℕ
+inst✝ : NeZero p
+ψ : DirichletCharacter ℂ p
+hψ : ψ.IsPrimitive
+hp : p ≠ 1
+Y : ℂ → ℂ
+hY : Lemma23ActualBranch ψ Y
+c : ℝ
+s : ℂ
+hL : 3 ≤ lemma23PaperL D
+hc : 0 < c
+hsmall : c * lemma44PaperAlpha D * lemma23PaperL D ≤ 1 / 10
+hs : Lemma51InRegion D s
+⊢ ℕ
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+error: ZhangLS/Spec/Lemma52Product.lean:74:19: unsolved goals
+D p : ℕ
+inst✝ : NeZero p
+ψ : DirichletCharacter ℂ p
+hψ : ψ.IsPrimitive
+hp : p ≠ 1
+Y : ℂ → ℂ
+hY : Lemma23ActualBranch ψ Y
+c : ℝ
+s : ℂ
+hL : 3 ≤ lemma23PaperL D
+hc : 0 < c
+hsmall : c * lemma44PaperAlpha D * lemma23PaperL D ≤ 1 / 10
+hs : Lemma51InRegion D s
+hb :
+  (0 ≤ lemma23PaperOffsetOne D c ∧ lemma23PaperOffsetOne D c ≤ 3 * lemma44PaperAlpha D) ∧
+    (0 ≤ lemma23PaperOffsetTwo D c ∧ lemma23PaperOffsetTwo D c ≤ 3 * lemma44PaperAlpha D) ∧
+      0 ≤ lemma23PaperOffsetThree D c ∧ lemma23PaperOffsetThree D c ≤ 3 * lemma44PaperAlpha D
+e₁ : ℂ
+he₁ : ‖e₁‖ ≤ 21 / 2 * lemma23PaperL D ^ (-114) * lemma23PaperOffsetOne D c
+hr₁ :
+  Y (s + I * ↑(lemma23PaperOffsetOne D c)) / Y s =
+    cexp (↑(Real.log (↑p * lemma51PaperT0 D)) / 2 * (I * ↑(lemma23PaperOffsetOne D c)) + e₁)
+e₂ : ℂ
+he₂ : ‖e₂‖ ≤ 21 / 2 * lemma23PaperL D ^ (-114) * lemma23PaperOffsetTwo D c
+hr₂ :
+  Y (s + I * ↑(lemma23PaperOffsetTwo D c)) / Y s =
+    cexp (↑(Real.log (↑p * lemma51PaperT0 D)) / 2 * (I * ↑(lemma23PaperOffsetTwo D c)) + e₂)
+e₃ : ℂ
+he₃ : ‖e₃‖ ≤ 21 / 2 * lemma23PaperL D ^ (-114) * lemma23PaperOffsetThree D c
+hr₃ :
+  Y (s + I * ↑(lemma23PaperOffsetThree D c)) / Y s =
+    cexp (↑(Real.log (↑p * lemma51PaperT0 D)) / 2 * (I * ↑(lemma23PaperOffsetThree D c)) + e₃)
+E : ℂ := e₁ + e₂ + e₃
+hK : 0 ≤ 21 / 2 * lemma23PaperL D ^ (-114)
+⊢ 63 * (Real.pi * lemma23PaperL D ^ (-123)) = 63 * Real.pi * lemma23PaperL D ^ (-123)
+error: ZhangLS/Spec/Lemma52Product.lean:60:41: Application type mismatch: The argument
+  add_le_add_right (norm_add_le e₁ e₂) ?m.296
+has type
+  ?m.296 + ‖e₁ + e₂‖ ≤ ?m.296 + (‖e₁‖ + ‖e₂‖)
+but is expected to have type
+  ‖e₁ + e₂‖ + ‖e₃‖ ≤ ‖e₁‖ + ‖e₂‖ + ‖e₃‖
+in the application
+  LE.le.trans (norm_add_le (e₁ + e₂) e₃) (add_le_add_right (norm_add_le e₁ e₂) ?m.296)
+error: ZhangLS/Spec/Lemma52Product.lean:107:68: No goals to be solved
+error: ZhangLS/Spec/Lemma52Product.lean:111:72: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Y (s + I * ↑(lemma23PaperOffsetOne D c)) / Y s
+in the target expression
+  (lemma23DirichletZ ψ s)⁻¹ * (Y (s + lemma52PaperBetaOne D c) / Y s) * (Y (s + lemma52PaperBetaTwo D c) / Y s) *
+      (Y (s + lemma52PaperBetaThree D c) / Y s) =
+    (lemma23DirichletZ ψ s)⁻¹ * cexp (a * lemma52PaperBetaOne D c + e₁) * cexp (a * lemma52PaperBetaTwo D c + e₂) *
+      cexp (a * lemma52PaperBetaThree D c + e₃)
+
+D p : ℕ
+inst✝ : NeZero p
+ψ : DirichletCharacter ℂ p
+hψ : ψ.IsPrimitive
+hp : p ≠ 1
+Y : ℂ → ℂ
+hY : Lemma23ActualBranch ψ Y
+c : ℝ
+s : ℂ
+hL : 3 ≤ lemma23PaperL D
+hc : 0 < c
+hsmall : c * lemma44PaperAlpha D * lemma23PaperL D ≤ 1 / 10
+hs : Lemma51InRegion D s
+hb :
+  (0 ≤ lemma23PaperOffsetOne D c ∧ lemma23PaperOffsetOne D c ≤ 3 * lemma44PaperAlpha D) ∧
+    (0 ≤ lemma23PaperOffsetTwo D c ∧ lemma23PaperOffsetTwo D c ≤ 3 * lemma44PaperAlpha D) ∧
+      0 ≤ lemma23PaperOffsetThree D c ∧ lemma23PaperOffsetThree D c ≤ 3 * lemma44PaperAlpha D
+e₁ : ℂ
+he₁ : ‖e₁‖ ≤ 21 / 2 * lemma23PaperL D ^ (-114) * lemma23PaperOffsetOne D c
+hr₁ :
+  Y (s + I * ↑(lemma23PaperOffsetOne D c)) / Y s =
+    cexp (↑(Real.log (↑p * lemma51PaperT0 D)) / 2 * (I * ↑(lemma23PaperOffsetOne D c)) + e₁)
+e₂ : ℂ
+he₂ : ‖e₂‖ ≤ 21 / 2 * lemma23PaperL D ^ (-114) * lemma23PaperOffsetTwo D c
+hr₂ :
+  Y (s + I * ↑(lemma23PaperOffsetTwo D c)) / Y s =
+    cexp (↑(Real.log (↑p * lemma51PaperT0 D)) / 2 * (I * ↑(lemma23PaperOffsetTwo D c)) + e₂)
+e₃ : ℂ
+he₃ : ‖e₃‖ ≤ 21 / 2 * lemma23PaperL D ^ (-114) * lemma23PaperOffsetThree D c
+hr₃ :
+  Y (s + I * ↑(lemma23PaperOffsetThree D c)) / Y s =
+    cexp (↑(Real.log (↑p * lemma51PaperT0 D)) / 2 * (I * ↑(lemma23PaperOffsetThree D c)) + e₃)
+E : ℂ := e₁ + e₂ + e₃
+hK : 0 ≤ 21 / 2 * lemma23PaperL D ^ (-114)
+hE : ‖E‖ ≤ 63 * Real.pi * lemma23PaperL D ^ (-123)
+hEnorm : ‖E‖ ≤ 1
+hT : 0 < lemma51PaperT0 D
+hsExt : Lemma51InExtendedRegion D s
+him : 0 < s.im
+hYne : Y s ≠ 0
+hsq : Y s ^ 2 = (lemma23DirichletZ ψ s)⁻¹
+a : ℂ := ↑(Real.log (↑p * lemma51PaperT0 D)) / 2
+hpR : 0 < ↑p
+hpow :
+  ↑(↑p * lemma51PaperT0 D) ^ lemma52PaperBetaThree D c =
+    cexp (↑(Real.log (↑p * lemma51PaperT0 D)) * lemma52PaperBetaThree D c)
+hsum :
+  a * lemma52PaperBetaOne D c + e₁ + (a * lemma52PaperBetaTwo D c + e₂) + (a * lemma52PaperBetaThree D c + e₃) =
+    ↑(Real.log (↑p * lemma51PaperT0 D)) * lemma52PaperBetaThree D c + E
+⊢ (lemma23DirichletZ ψ s)⁻¹ * (Y (s + lemma52PaperBetaOne D c) / Y s) * (Y (s + lemma52PaperBetaTwo D c) / Y s) *
+      (Y (s + lemma52PaperBetaThree D c) / Y s) =
+    (lemma23DirichletZ ψ s)⁻¹ * cexp (a * lemma52PaperBetaOne D c + e₁) * cexp (a * lemma52PaperBetaTwo D c + e₂) *
+      cexp (a * lemma52PaperBetaThree D c + e₃)
+error: ZhangLS/Spec/Lemma52Product.lean:114:70: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  a * lemma52PaperBetaOne D c + e₁ + (a * lemma52PaperBetaTwo D c + e₂) + (a * lemma52PaperBetaThree D c + e₃)
+in the target expression
+  (lemma23DirichletZ ψ s)⁻¹ *
+      cexp
+        (a * lemma52PaperBetaOne D c + e₁ + (a * lemma52PaperBetaTwo D c + e₂ + (a * lemma52PaperBetaThree D c + e₃))) =
+    (lemma23DirichletZ ψ s)⁻¹ * cexp (↑(Real.log (↑p * lemma51PaperT0 D)) * lemma52PaperBetaThree D c + E)
+
+D p : ℕ
+inst✝ : NeZero p
+ψ : DirichletCharacter ℂ p
+hψ : ψ.IsPrimitive
+hp : p ≠ 1
+Y : ℂ → ℂ
+hY : Lemma23ActualBranch ψ Y
+c : ℝ
+s : ℂ
+hL : 3 ≤ lemma23PaperL D
+hc : 0 < c
+hsmall : c * lemma44PaperAlpha D * lemma23PaperL D ≤ 1 / 10
+hs : Lemma51InRegion D s
+hb :
+  (0 ≤ lemma23PaperOffsetOne D c ∧ lemma23PaperOffsetOne D c ≤ 3 * lemma44PaperAlpha D) ∧
+    (0 ≤ lemma23PaperOffsetTwo D c ∧ lemma23PaperOffsetTwo D c ≤ 3 * lemma44PaperAlpha D) ∧
+      0 ≤ lemma23PaperOffsetThree D c ∧ lemma23PaperOffsetThree D c ≤ 3 * lemma44PaperAlpha D
+e₁ : ℂ
+he₁ : ‖e₁‖ ≤ 21 / 2 * lemma23PaperL D ^ (-114) * lemma23PaperOffsetOne D c
+hr₁ :
+  Y (s + I * ↑(lemma23PaperOffsetOne D c)) / Y s =
+    cexp (↑(Real.log (↑p * lemma51PaperT0 D)) / 2 * (I * ↑(lemma23PaperOffsetOne D c)) + e₁)
+e₂ : ℂ
+he₂ : ‖e₂‖ ≤ 21 / 2 * lemma23PaperL D ^ (-114) * lemma23PaperOffsetTwo D c
+hr₂ :
+  Y (s + I * ↑(lemma23PaperOffsetTwo D c)) / Y s =
+    cexp (↑(Real.log (↑p * lemma51PaperT0 D)) / 2 * (I * ↑(lemma23PaperOffsetTwo D c)) + e₂)
+e₃ : ℂ
+he₃ : ‖e₃‖ ≤ 21 / 2 * lemma23PaperL D ^ (-114) * lemma23PaperOffsetThree D c
+hr₃ :
+  Y (s + I * ↑(lemma23PaperOffsetThree D c)) / Y s =
+    cexp (↑(Real.log (↑p * lemma51PaperT0 D)) / 2 * (I * ↑(lemma23PaperOffsetThree D c)) + e₃)
+E : ℂ := e₁ + e₂ + e₃
+hK : 0 ≤ 21 / 2 * lemma23PaperL D ^ (-114)
+hE : ‖E‖ ≤ 63 * Real.pi * lemma23PaperL D ^ (-123)
+hEnorm : ‖E‖ ≤ 1
+hT : 0 < lemma51PaperT0 D
+hsExt : Lemma51InExtendedRegion D s
+him : 0 < s.im
+hYne : Y s ≠ 0
+hsq : Y s ^ 2 = (lemma23DirichletZ ψ s)⁻¹
+a : ℂ := ↑(Real.log (↑p * lemma51PaperT0 D)) / 2
+hpR : 0 < ↑p
+hpow :
+  ↑(↑p * lemma51PaperT0 D) ^ lemma52PaperBetaThree D c =
+    cexp (↑(Real.log (↑p * lemma51PaperT0 D)) * lemma52PaperBetaThree D c)
+hsum :
+  a * lemma52PaperBetaOne D c + e₁ + (a * lemma52PaperBetaTwo D c + e₂) + (a * lemma52PaperBetaThree D c + e₃) =
+    ↑(Real.log (↑p * lemma51PaperT0 D)) * lemma52PaperBetaThree D c + E
+⊢ (lemma23DirichletZ ψ s)⁻¹ *
+      cexp
+        (a * lemma52PaperBetaOne D c + e₁ + (a * lemma52PaperBetaTwo D c + e₂ + (a * lemma52PaperBetaThree D c + e₃))) =
+    (lemma23DirichletZ ψ s)⁻¹ * cexp (↑(Real.log (↑p * lemma51PaperT0 D)) * lemma52PaperBetaThree D c + E)
+error: Lean exited with code 1
+Some required targets logged failures:
+- ZhangLS.Spec.Lemma52Product
+error: build failed

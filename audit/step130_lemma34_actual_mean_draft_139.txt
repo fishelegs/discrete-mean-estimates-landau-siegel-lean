@@ -1,0 +1,86 @@
+import ZhangMathStep138Lemma34CoefficientEnergyDraft
+import ZhangLS.Spec.Lemma33FirstMean
+set_option autoImplicit false
+namespace ZhangLS.Spec
+set_option maxHeartbeats 2000000
+
+lemma lemma34_centered_weight_square (s : ℂ) (hs : s.re = 1/2)
+    {n : ℕ} (hn : 0 < n) :
+    ‖Complex.exp (-s * (Real.log (n : ℝ) : ℂ))‖^2 = (n : ℝ)⁻¹ := by
+  rw [Complex.norm_exp,pow_two,← Real.exp_add]
+  have he : (-s * (Real.log (n : ℝ) : ℂ)).re = -(1/2) * Real.log (n : ℝ) := by
+    simp only [Complex.mul_re,Complex.neg_re,Complex.neg_im,Complex.ofReal_re,
+      Complex.ofReal_im,mul_zero,sub_zero,hs]
+  rw [he]
+  rw [show -(1/2)*Real.log (n : ℝ) + -(1/2)*Real.log (n : ℝ) =
+    -Real.log (n : ℝ) by ring]
+  rw [Real.exp_neg,Real.exp_log (by exact_mod_cast hn)]
+
+lemma lemma34_centered_coefficient_energy (c : ℕ → ℂ)
+    (hc : ∀ n, ‖c n‖ ≤ lemma23Tau40 n) (s : ℂ) (hs : s.re = 1/2)
+    (X : ℕ) (hX : 1 ≤ X) :
+    (∑ n ∈ Finset.Icc 1 X, ‖c n * Complex.exp (-s * (Real.log (n : ℝ) : ℂ))‖^2) ≤
+      (1+Real.log (X : ℝ))^1600 := by
+  calc
+    _ = ∑ n ∈ Finset.Icc 1 X, ‖c n‖^2 * (n : ℝ)⁻¹ := by
+      apply Finset.sum_congr rfl
+      intro n hn
+      rw [norm_mul,mul_pow,lemma34_centered_weight_square s hs]
+      have := (Finset.mem_Icc.mp hn).1
+      omega
+    _ ≤ _ := lemma34_majorized_coefficient_weighted_sum c hc X hX
+
+lemma lemma34_actual_short_mean_bound (D M : ℕ) (hM : M ≤ ⌊lemma23PaperP D⌋₊) (a : ℕ → ℂ) :
+    lemma33ActualMean D M a ≤
+      lemma33ActualPrimeMass D * ∑ n ∈ Finset.Icc 1 M, ‖a n‖ ^ 2 := by
+  classical
+  let f : lemma33CharacterIndex D → ℝ := fun ψ =>
+    ‖∑ n ∈ Finset.Icc 1 M, a n * ψ.2 (n : ZMod ψ.1.val)‖ ^ 2
+  change (∑ ψ ∈ lemma33ActualFamily D, f ψ) ≤ _
+  calc
+    _ ≤ ∑ ψ : lemma33CharacterIndex D, f ψ :=
+      Finset.sum_le_sum_of_subset_of_nonneg (Finset.subset_univ _) (fun _ _ _ => sq_nonneg _)
+    _ = ∑ p : lemma33PrimeIndex D, ∑ ψ : DirichletCharacter ℂ p.val,
+        ‖∑ n ∈ Finset.Icc 1 M, a n * ψ (n : ZMod p.val)‖ ^ 2 := by
+      change (∑ ψ : Σ p : lemma33PrimeIndex D, DirichletCharacter ℂ p.val, f ψ) = _
+      rw [Fintype.sum_sigma]
+    _ = ∑ p : lemma33PrimeIndex D, (p.val.totient : ℝ) *
+        ∑ n ∈ Finset.Icc 1 M, ‖a n‖ ^ 2 := by
+      apply Finset.sum_congr rfl
+      intro p hp
+      exact lemma23_prime_character_mean_square_exact
+        (lemma33_mem_prime_window.mp p.property).1 (hM.trans_lt (lemma33_prime_index_short_bound D p)) a
+    _ ≤ ∑ p : lemma33PrimeIndex D, (p.val : ℝ) *
+        ∑ n ∈ Finset.Icc 1 M, ‖a n‖ ^ 2 := by
+      apply Finset.sum_le_sum
+      intro p hp
+      apply mul_le_mul_of_nonneg_right _ (Finset.sum_nonneg (fun n _ => sq_nonneg _))
+      exact_mod_cast Nat.totient_le p.val
+    _ = _ := by rw [← Finset.sum_mul]; rfl
+
+lemma lemma34_centered_partial_sum_mean_square (D X : ℕ)
+    (hX : 1 ≤ X) (hshort : X ≤ ⌊lemma23PaperP D⌋₊) (c : ℕ → ℂ)
+    (hc : ∀ n, ‖c n‖ ≤ lemma23Tau40 n) (s : ℂ) (hs : s.re = 1/2) :
+    (∑ ψ ∈ lemma33ActualFamily D,
+      ‖∑ n ∈ Finset.Icc 1 X, c n * ψ.2 (n : ZMod ψ.1.val) *
+        Complex.exp (-s * (Real.log (n : ℝ) : ℂ))‖^2) ≤
+      lemma33ActualPrimeMass D * (1+Real.log (X : ℝ))^1600 := by
+  classical
+  calc
+    _ = lemma33ActualMean D X (fun n => c n *
+      Complex.exp (-s * (Real.log (n : ℝ) : ℂ))) := by
+      unfold lemma33ActualMean
+      apply Finset.sum_congr rfl
+      intro ψ hψ
+      congr 2
+      apply Finset.sum_congr rfl
+      intro n hn
+      ring
+    _ ≤ lemma33ActualPrimeMass D * ∑ n ∈ Finset.Icc 1 X,
+      ‖c n * Complex.exp (-s * (Real.log (n : ℝ) : ℂ))‖^2 :=
+      lemma34_actual_short_mean_bound D X hshort _
+    _ ≤ _ := mul_le_mul_of_nonneg_left
+      (lemma34_centered_coefficient_energy c hc s hs X hX)
+      (Finset.sum_nonneg (fun _ _ => by positivity))
+
+end ZhangLS.Spec

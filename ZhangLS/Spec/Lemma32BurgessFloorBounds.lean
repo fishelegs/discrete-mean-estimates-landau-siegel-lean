@@ -1,0 +1,13 @@
+import ZhangLS.Spec.Lemma32BurgessPowerAlgebra
+import Mathlib.Algebra.Order.Floor.Semiring
+set_option autoImplicit false
+namespace ZhangLS.Spec
+
+lemma lemma32_positive_floor_bounds {x : ℝ} (hx : 1≤x) :
+    1≤⌊x⌋₊ ∧ x/2≤(⌊x⌋₊ : ℝ) ∧ (⌊x⌋₊ : ℝ)≤x := by
+  have hn : 1≤⌊x⌋₊ := (Nat.one_le_floor_iff x).mpr hx
+  have hc : (1 : ℝ)≤(⌊x⌋₊ : ℝ) := Nat.one_le_cast.mpr hn
+  have ht := Nat.lt_floor_add_one x
+  exact ⟨hn, by linarith, Nat.floor_le (by linarith)⟩
+
+end ZhangLS.Spec

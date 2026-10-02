@@ -1,0 +1,11 @@
+--- /mnt/data/step24/ZhangLS/Spec/Lemma57GaussianWeight.lean	2026-09-06 16:07:09.000000000 +0000
++++ ZhangLS/Spec/Lemma57GaussianWeight.lean	2026-09-07 01:47:50.089469369 +0000
+@@ -70,7 +70,7 @@
+     {D n : ℕ} (hD : 1 < D) (hn : n ∈ Nat.divisors D) :
+     (1 : ℝ) ≤ lemma57WeightArgument D n := by
+   have hD0 : D ≠ 0 := (Nat.zero_lt_of_lt hD).ne'
+-  have hnD : n ∣ D := (Nat.mem_divisors.mp hn).2
++  have hnD : n ∣ D := (Nat.mem_divisors.mp hn).1
+   have hn0 : n ≠ 0 := Nat.ne_zero_of_dvd_ne_zero hD0 hnD
+   have hnpos : (0 : ℝ) < n := by exact_mod_cast Nat.pos_of_ne_zero hn0
+   have hnleNat : n ≤ D := Nat.le_of_dvd (Nat.pos_of_ne_zero hD0) hnD

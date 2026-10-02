@@ -1,0 +1,65 @@
+import ZhangMathStep177Lemma35IntegrabilityDraft
+import ZhangLS.Spec.Lemma34WeightedCauchy
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex MeasureTheory Set
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma35WeightLength (D : ℕ) : ℝ := 2*lemma23PaperL D^9-4*lemma23PaperL D
+
+lemma lemma35_interval_parameters {D : ℕ} (hL : 3 ≤ lemma23PaperL D) :
+    0 < D ∧ (D : ℝ)^4 < lemma23PaperP D^2 ∧ 0 < lemma35WeightLength D ∧
+      lemma35WeightLength D ≤ 2*lemma23PaperL D^9 := by
+  have hd : 0 < D := by
+    by_contra h
+    have hz : D = 0 := by omega
+    simp [hz,lemma23PaperL] at hL
+    linarith
+  have hdR : (0 : ℝ) < D := by exact_mod_cast hd
+  have hl : 0 < lemma23PaperL D := by linarith
+  have h8 := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 3) hL 8
+  norm_num at h8
+  have h9 : 2*lemma23PaperL D < lemma23PaperL D^9 := by
+    calc
+      _ < lemma23PaperL D^8*lemma23PaperL D := mul_lt_mul_of_pos_right (by linarith) hl
+      _ = _ := (pow_succ _ _).symm
+  have he4 : (D : ℝ)^4 = Real.exp (4*lemma23PaperL D) := by
+    have he := Real.exp_nat_mul (lemma23PaperL D) 4
+    norm_num at he
+    rw [lemma23PaperL,Real.exp_log hdR] at he
+    exact he.symm
+  have he2 : lemma23PaperP D^2 = Real.exp (2*lemma23PaperL D^9) := by
+    have he := Real.exp_nat_mul (lemma23PaperL D^9) 2
+    norm_num at he
+    exact he.symm
+  refine ⟨hd,?_,?_,?_⟩
+  · rw [he4,he2]
+    exact Real.exp_lt_exp.mpr (by linarith)
+  · unfold lemma35WeightLength
+    linarith
+  · unfold lemma35WeightLength
+    linarith
+
+lemma lemma35_inverse_integral {D : ℕ} (hL : 3 ≤ lemma23PaperL D) :
+    (∫ t : ℝ in Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2), 1/t) = lemma35WeightLength D := by
+  have hp := lemma35_interval_parameters hL
+  have hd : (0 : ℝ) < D := by exact_mod_cast hp.1
+  have hP : 0 < lemma23PaperP D := Real.exp_pos _
+  rw [← intervalIntegral.integral_of_le hp.2.1.le,
+    integral_one_div_of_pos (pow_pos hd 4) (pow_pos hP 2)]
+  rw [Real.log_div (pow_ne_zero 2 (ne_of_gt hP)) (pow_ne_zero 4 (ne_of_gt hd))]
+  simp only [Real.log_pow,lemma23PaperP,Real.log_exp,lemma35WeightLength,lemma23PaperL,Nat.cast_ofNat]
+
+lemma lemma35_inverse_integrable {D : ℕ} (hL : 3 ≤ lemma23PaperL D) :
+    IntegrableOn (fun t : ℝ => 1/t) (Set.Ioc ((D : ℝ)^4) (lemma23PaperP D^2)) := by
+  have hp := lemma35_interval_parameters hL
+  have hd : (0 : ℝ) < D := by exact_mod_cast hp.1
+  have hc : ContinuousOn (fun t : ℝ => t⁻¹) (Set.Icc ((D : ℝ)^4) (lemma23PaperP D^2)) := by
+    apply ContinuousOn.inv₀ continuous_id.continuousOn
+    intro t ht
+    change t ≠ 0
+    exact ne_of_gt ((pow_pos hd 4).trans_le ht.1)
+  simpa only [one_div] using hc.integrableOn_Icc.mono_set Set.Ioc_subset_Icc_self
+
+end ZhangLS.Spec

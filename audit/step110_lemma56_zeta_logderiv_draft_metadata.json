@@ -1,0 +1,30 @@
+{
+  "sha256": "dddf645c529604410d21231b104382e63a3bb78b8813be60d59fa168b585da01",
+  "kernel_exit_code": 0,
+  "proved_interfaces": [
+    "lemma56_actual_zeta_zero_own_disk",
+    "lemma56_actual_zeta_inverse_square_lower",
+    "lemma56_actual_zeta_zero_four_detected",
+    "lemma56_actual_zeta_zero_exclusion",
+    "lemma56_uniform_zeta_pole_removed_zero_exclusion",
+    "lemma56_uniform_riemann_zeta_zero_exclusion",
+    "lemma56_actual_zeta_removed_logDeriv_near_center_bound",
+    "lemma56_actual_zeta_logDeriv_bound_of_local_zero_gap",
+    "lemma56_actual_zeta_logDeriv_rectangular_bound",
+    "lemma56_uniform_zeta_removed_logDeriv_bound",
+    "lemma56_uniform_zeta_left_logDeriv_bound"
+  ],
+  "interface_count": 11,
+  "new_interfaces": 5,
+  "reused_interfaces": 6,
+  "expanded_examples": 4,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "auto_implicit": false,
+  "verified_at_utc": "2026-10-01T09:59:29.763223+00:00",
+  "scope": "Independent draft outside frozen Step 108 project sources. Reuses six verified actual zeta repulsion interfaces and proves five new local Cauchy, actual zero-gap, closed-strip and original-(A) uniform log-derivative bounds. In 1-1/L<=Re s<=2, |Im s|<=D, logDeriv of actual pole-removed zeta is bounded by 18L^2+21600L. On Re s=1-1/L, actual logDeriv riemannZeta is bounded by 18L^2+21601L, retaining the exact removed-pole correction. The actual prime-mass lower bound and faithful modulus-one principal cancellation target remain unproved. No completion of full Lemma56Target is claimed.",
+  "kernel_command": "lake env lean /private/tmp/ZhangMathStep110ZetaLogDerivDraft.lean"
+}

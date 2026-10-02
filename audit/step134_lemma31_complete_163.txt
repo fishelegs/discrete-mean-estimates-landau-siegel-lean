@@ -1,0 +1,81 @@
+import ZhangMathStep161Lemma31CumulativeBoundDraft
+import ZhangLS.Spec.Lemma57LAtOnePositivity
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset Complex MeasureTheory Set
+set_option maxHeartbeats 2000000
+
+noncomputable def lemma31NuCumulative {D : ℕ} (χ : RealPrimitiveCharacter D) (t : ℝ) : ℝ :=
+  ∑ n ∈ Finset.Icc 1 ⌊t⌋₊, lemma31NuReal χ n
+
+lemma lemma31_nu_real_zero {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    lemma31NuReal χ 0 = 0 := by simp [lemma31NuReal]
+
+lemma lemma31_nu_real_sum_zero_to_one {D : ℕ} (χ : RealPrimitiveCharacter D) (N : ℕ) :
+    (∑ n ∈ Finset.Icc 0 N, lemma31NuReal χ n) =
+      ∑ n ∈ Finset.Icc 1 N, lemma31NuReal χ n := by
+  rw [Finset.Icc_eq_cons_Ioc (Nat.zero_le N),Finset.sum_cons,lemma31_nu_real_zero,zero_add]
+  rw [← Finset.Icc_add_one_left_eq_Ioc]
+  simp
+
+lemma lemma31_nu_cumulative_nonneg {D : ℕ} (χ : RealPrimitiveCharacter D) (t : ℝ) :
+    0 ≤ lemma31NuCumulative χ t := Finset.sum_nonneg (fun n _ => lemma31_nu_real_nonneg χ n)
+
+lemma lemma31_nu_cumulative_measurable {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    Measurable (lemma31NuCumulative χ) :=
+  (measurable_of_countable (fun N : ℕ => ∑ n ∈ Finset.Icc 1 N, lemma31NuReal χ n)).comp
+    Nat.measurable_floor
+
+lemma lemma31_nu_cumulative_real_bound {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) (t : ℝ) (ht : (D : ℝ) ≤ t) :
+    lemma31NuCumulative χ t ≤ t*realLAtOne χ + 6*Real.sqrt (D : ℝ)*Real.sqrt t := by
+  have ht0 : 0 ≤ t := (Nat.cast_nonneg D).trans ht
+  have hd : D ≤ ⌊t⌋₊ := (Nat.le_floor_iff ht0).mpr ht
+  have he := lemma31_nu_real_cumulative_le χ hD ⌊t⌋₊ hd
+  have hn : (⌊t⌋₊ : ℝ) ≤ t := Nat.floor_le ht0
+  have hL : 0 ≤ realLAtOne χ := (realLAtOne_pos χ hD).le
+  calc
+    _ ≤ (⌊t⌋₊ : ℝ)*realLAtOne χ + 6*Real.sqrt (D : ℝ)*Real.sqrt (⌊t⌋₊ : ℝ) := he
+    _ ≤ _ := add_le_add (mul_le_mul_of_nonneg_right hn hL)
+      (mul_le_mul_of_nonneg_left (Real.sqrt_le_sqrt hn) (by positivity))
+
+lemma lemma31_nu_weighted_tail_abel {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (M N : ℕ) (hM : 1 ≤ M) (hMN : M ≤ N) :
+    (∑ n ∈ Finset.Ioc M N, lemma31NuReal χ n * (n : ℝ)⁻¹) =
+      (N : ℝ)⁻¹*lemma31NuCumulative χ N - (M : ℝ)⁻¹*lemma31NuCumulative χ M +
+        ∫ t : ℝ in Set.Ioc (M : ℝ) N, (t^2)⁻¹*lemma31NuCumulative χ t := by
+  have hm : (1 : ℝ) ≤ M := by exact_mod_cast hM
+  have hd : ∀ t ∈ Set.Icc (M : ℝ) N, DifferentiableAt ℝ (fun u : ℝ => u⁻¹) t := by
+    intro t ht
+    exact differentiableAt_inv (by linarith [ht.1])
+  have hc : ContinuousOn (fun t : ℝ => -(t^2)⁻¹) (Set.Icc (M : ℝ) N) := by
+    apply ContinuousOn.neg
+    apply ContinuousOn.inv₀
+    · exact continuous_id.continuousOn.pow 2
+    · intro t ht
+      exact pow_ne_zero 2 (by linarith [ht.1])
+  have hi : IntegrableOn (deriv (fun u : ℝ => u⁻¹)) (Set.Icc (M : ℝ) N) := by
+    exact hc.integrableOn_Icc.congr_fun (fun t _ => (deriv_inv (x := t)).symm) measurableSet_Icc
+  have hab := sum_mul_eq_sub_sub_integral_mul' (c := lemma31NuReal χ) hMN hd hi
+  simp only [lemma31_nu_real_sum_zero_to_one] at hab
+  have hint : (∫ t : ℝ in Set.Ioc (M : ℝ) N,
+      deriv (fun u : ℝ => u⁻¹) t * ∑ n ∈ Finset.Icc 1 ⌊t⌋₊, lemma31NuReal χ n) =
+      -(∫ t : ℝ in Set.Ioc (M : ℝ) N, (t^2)⁻¹*lemma31NuCumulative χ t) := by
+    rw [← integral_neg]
+    apply setIntegral_congr_fun measurableSet_Ioc
+    intro t ht
+    dsimp only [lemma31NuCumulative]
+    rw [deriv_inv]
+    ring
+  rw [hint,sub_neg_eq_add] at hab
+  have heN : (∑ n ∈ Finset.Icc 1 N, lemma31NuReal χ n) = lemma31NuCumulative χ N := by
+    simp [lemma31NuCumulative]
+  have heM : (∑ n ∈ Finset.Icc 1 M, lemma31NuReal χ n) = lemma31NuCumulative χ M := by
+    simp [lemma31NuCumulative]
+  rw [heN,heM] at hab
+  calc
+    _ = ∑ n ∈ Finset.Ioc M N, (n : ℝ)⁻¹*lemma31NuReal χ n :=
+      Finset.sum_congr rfl (fun _ _ => mul_comm _ _)
+    _ = _ := hab
+
+end ZhangLS.Spec

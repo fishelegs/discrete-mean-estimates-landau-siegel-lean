@@ -1,0 +1,106 @@
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:24:24: warning: This simp argument is unused:
+  zpow_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [zpow_neg,̵z̵p̵o̵w̵_̵n̵a̵t̵C̵a̵s̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:46:34: warning: This simp argument is unused:
+  add_im
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵e̵m̵m̵a̵2̵3̵P̵a̵p̵e̵r̵C̵e̵n̵t̵e̵r̵,̵a̵d̵d̵_̵i̵m̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵m̵u̵l̵_̵i̵m̵,̵I̵_̵r̵e̵,̵I̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲l̲e̲m̲m̲a̲2̲3̲P̲a̲p̲e̲r̲C̲e̲n̲t̲e̲r̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲I̲_̲r̲e̲,̲ ̲I̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:46:41: warning: This simp argument is unused:
+  ofReal_im
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵e̵m̵m̵a̵2̵3̵P̵a̵p̵e̵r̵C̵e̵n̵t̵e̵r̵,̵a̵d̵d̵_̵i̵m̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵m̵u̵l̵_̵i̵m̵,̵I̵_̵r̵e̵,̵I̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲l̲e̲m̲m̲a̲2̲3̲P̲a̲p̲e̲r̲C̲e̲n̲t̲e̲r̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲I̲_̲r̲e̲,̲ ̲I̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:46:51: warning: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵e̵m̵m̵a̵2̵3̵P̵a̵p̵e̵r̵C̵e̵n̵t̵e̵r̵,̵a̵d̵d̵_̵i̵m̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵m̵u̵l̵_̵i̵m̵,̵I̵_̵r̵e̵,̵I̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲l̲e̲m̲m̲a̲2̲3̲P̲a̲p̲e̲r̲C̲e̲n̲t̲e̲r̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲I̲_̲r̲e̲,̲ ̲I̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:46:60: warning: This simp argument is unused:
+  mul_im
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵e̵m̵m̵a̵2̵3̵P̵a̵p̵e̵r̵C̵e̵n̵t̵e̵r̵,̵a̵d̵d̵_̵i̵m̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵m̵u̵l̵_̵i̵m̵,̵I̵_̵r̵e̵,̵I̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲l̲e̲m̲m̲a̲2̲3̲P̲a̲p̲e̲r̲C̲e̲n̲t̲e̲r̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲I̲_̲r̲e̲,̲ ̲I̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:46:67: warning: This simp argument is unused:
+  I_re
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵e̵m̵m̵a̵2̵3̵P̵a̵p̵e̵r̵C̵e̵n̵t̵e̵r̵,̵a̵d̵d̵_̵i̵m̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵m̵u̵l̵_̵i̵m̵,̵I̵_̵r̵e̵,̵I̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲l̲e̲m̲m̲a̲2̲3̲P̲a̲p̲e̲r̲C̲e̲n̲t̲e̲r̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲I̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:46:72: warning: This simp argument is unused:
+  I_im
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵e̵m̵m̵a̵2̵3̵P̵a̵p̵e̵r̵C̵e̵n̵t̵e̵r̵,̵a̵d̵d̵_̵i̵m̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵m̵u̵l̵_̵i̵m̵,̵I̵_̵r̵e̵,̵I̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲l̲e̲m̲m̲a̲2̲3̲P̲a̲p̲e̲r̲C̲e̲n̲t̲e̲r̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲I̲_̲r̲e̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:47:6: warning: This simp argument is unused:
+  ofReal_re
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵e̵m̵m̵a̵2̵3̵P̵a̵p̵e̵r̵C̵e̵n̵t̵e̵r̵,̵a̵d̵d̵_̵i̵m̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵m̵u̵l̵_̵i̵m̵,̵I̵_̵r̵e̵,̵I̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲l̲e̲m̲m̲a̲2̲3̲P̲a̲p̲e̲r̲C̲e̲n̲t̲e̲r̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲I̲_̲r̲e̲,̲ ̲I̲_̲i̲m̲,̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:47:16: warning: This simp argument is unused:
+  mul_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵e̵m̵m̵a̵2̵3̵P̵a̵p̵e̵r̵C̵e̵n̵t̵e̵r̵,̵a̵d̵d̵_̵i̵m̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵m̵u̵l̵_̵i̵m̵,̵I̵_̵r̵e̵,̵I̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲l̲e̲m̲m̲a̲2̲3̲P̲a̲p̲e̲r̲C̲e̲n̲t̲e̲r̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲I̲_̲r̲e̲,̲ ̲I̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:47:25: warning: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵e̵m̵m̵a̵2̵3̵P̵a̵p̵e̵r̵C̵e̵n̵t̵e̵r̵,̵a̵d̵d̵_̵i̵m̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵m̵u̵l̵_̵i̵m̵,̵I̵_̵r̵e̵,̵I̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲l̲e̲m̲m̲a̲2̲3̲P̲a̲p̲e̲r̲C̲e̲n̲t̲e̲r̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲I̲_̲r̲e̲,̲ ̲I̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:47:33: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵e̵m̵m̵a̵2̵3̵P̵a̵p̵e̵r̵C̵e̵n̵t̵e̵r̵,̵a̵d̵d̵_̵i̵m̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵m̵u̵l̵_̵i̵m̵,̵I̵_̵r̵e̵,̵I̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲l̲e̲m̲m̲a̲2̲3̲P̲a̲p̲e̲r̲C̲e̲n̲t̲e̲r̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲I̲_̲r̲e̲,̲ ̲I̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma61HorizontalKernel.lean:47:42: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵e̵m̵m̵a̵2̵3̵P̵a̵p̵e̵r̵C̵e̵n̵t̵e̵r̵,̵a̵d̵d̵_̵i̵m̵,̵o̵f̵R̵e̵a̵l̵_̵i̵m̵,̵z̵e̵r̵o̵_̵a̵d̵d̵,̵m̵u̵l̵_̵i̵m̵,̵I̵_̵r̵e̵,̵I̵_̵i̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵f̵R̵e̵a̵l̵_̵r̵e̵,̵m̵u̵l̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵o̵n̵e̵,̵z̵e̵r̵o̵_̵m̵u̵l̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲l̲e̲m̲m̲a̲2̲3̲P̲a̲p̲e̲r̲C̲e̲n̲t̲e̲r̲,̲ ̲a̲d̲d̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲i̲m̲,̲ ̲z̲e̲r̲o̲_̲a̲d̲d̲,̲ ̲m̲u̲l̲_̲i̲m̲,̲ ̲I̲_̲r̲e̲,̲ ̲I̲_̲i̲m̲,̲ ̲o̲f̲R̲e̲a̲l̲_̲r̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲z̲e̲r̲o̲,̲ ̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲z̲e̲r̲o̲_̲m̲u̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

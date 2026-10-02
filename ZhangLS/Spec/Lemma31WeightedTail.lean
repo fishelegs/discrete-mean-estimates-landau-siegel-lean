@@ -1,0 +1,144 @@
+import ZhangLS.Spec.Lemma31RealCoefficients
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped ArithmeticFunction.zeta
+set_option maxHeartbeats 2000000
+
+lemma lemma31_positive_weighted_convolution_tail_le (c : ℕ → ℝ)
+    (hc : ∀ n, 0 ≤ c n) (Y N : ℕ) :
+    (∑ n ∈ Finset.Ioc (Y*Y) N,
+      (∑ q ∈ n.divisorsAntidiagonal, c q.1 * c q.2) * (n : ℝ)⁻¹) ≤
+      2 * (∑ n ∈ Finset.Ioc Y N, c n * (n : ℝ)⁻¹) *
+        (∑ n ∈ Finset.Icc 1 N, c n * (n : ℝ)⁻¹) := by
+  classical
+  let S : Finset (Σ n : ℕ, ℕ × ℕ) :=
+    (Finset.Ioc (Y*Y) N).sigma fun n => n.divisorsAntidiagonal
+  let R₁ : Finset (ℕ × ℕ) := Finset.Ioc Y N ×ˢ Finset.Icc 1 N
+  let R₂ : Finset (ℕ × ℕ) := Finset.Icc 1 N ×ˢ Finset.Ioc Y N
+  let R : Finset (ℕ × ℕ) := R₁ ∪ R₂
+  let pairOf (x : Σ n : ℕ, ℕ × ℕ) : ℕ × ℕ := x.2
+  let weight (p : ℕ × ℕ) : ℝ :=
+    (c p.1 * (p.1 : ℝ)⁻¹) * (c p.2 * (p.2 : ℝ)⁻¹)
+  have hsum_expand :
+      (∑ n ∈ Finset.Ioc (Y*Y) N, (∑ q ∈ n.divisorsAntidiagonal, c q.1 * c q.2) * (n : ℝ)⁻¹) =
+      ∑ x ∈ S, (c x.2.1 * c x.2.2) * (x.1 : ℝ)⁻¹ := by
+    simp only [Finset.sum_mul]
+    exact (Finset.sum_sigma (Finset.Ioc (Y*Y) N) (fun n => n.divisorsAntidiagonal)
+      (fun x : Σ n : ℕ, ℕ × ℕ => (c x.2.1 * c x.2.2) * (x.1 : ℝ)⁻¹)).symm
+  have hpair_inj : Set.InjOn pairOf S := by
+    intro x hx y hy hxy
+    rcases x with ⟨nx, px⟩
+    rcases y with ⟨ny, py⟩
+    simp only [pairOf] at hxy
+    have hpx : px ∈ nx.divisorsAntidiagonal := (Finset.mem_sigma.mp hx).2
+    have hpy : py ∈ ny.divisorsAntidiagonal := (Finset.mem_sigma.mp hy).2
+    have hnx : px.1 * px.2 = nx := (Nat.mem_divisorsAntidiagonal.mp hpx).1
+    have hny : py.1 * py.2 = ny := (Nat.mem_divisorsAntidiagonal.mp hpy).1
+    have hfst : nx = ny := by rw [← hnx, ← hny, hxy]
+    exact Sigma.ext hfst (heq_of_eq hxy)
+  have himage_subset : S.image pairOf ⊆ R := by
+    intro p hp
+    rcases Finset.mem_image.mp hp with ⟨x, hx, rfl⟩
+    let n := x.1
+    let q := x.2
+    have hmem := Finset.mem_sigma.mp hx
+    have hn : n ∈ Finset.Ioc (Y*Y) N := hmem.1
+    have hq : q ∈ n.divisorsAntidiagonal := hmem.2
+    have hprod : q.1 * q.2 = n := (Nat.mem_divisorsAntidiagonal.mp hq).1
+    have hnle : n ≤ N := (Finset.mem_Ioc.mp hn).2
+    have hnpos : 0 < n := by have := (Finset.mem_Ioc.mp hn).1; omega
+    have hq1 : 0 < q.1 := Nat.pos_of_ne_zero (by
+      intro hzero
+      rw [hzero, zero_mul] at hprod
+      omega)
+    have hq2 : 0 < q.2 := Nat.pos_of_ne_zero (by
+      intro hzero
+      rw [hzero, mul_zero] at hprod
+      omega)
+    have hq1le : q.1 ≤ N := (Nat.le_mul_of_pos_right q.1 hq2).trans (hprod ▸ hnle)
+    have hq2le : q.2 ≤ N := (Nat.le_mul_of_pos_left q.2 hq1).trans (hprod ▸ hnle)
+    have hlarge : Y < q.1 ∨ Y < q.2 := by
+      by_contra h
+      have hboth : q.1 ≤ Y ∧ q.2 ≤ Y := by omega
+      have hmul := Nat.mul_le_mul hboth.1 hboth.2
+      have hstrict := (Finset.mem_Ioc.mp hn).1
+      rw [hprod] at hmul
+      omega
+    simp only [R,R₁,R₂,Finset.mem_union,Finset.mem_product,Finset.mem_Ioc,Finset.mem_Icc]
+    rcases hlarge with hlarge | hlarge
+    · exact Or.inl ⟨⟨hlarge,hq1le⟩,⟨hq2,hq2le⟩⟩
+    · exact Or.inr ⟨⟨hq1,hq1le⟩,⟨hlarge,hq2le⟩⟩
+  have hsum_reindex :
+      (∑ x ∈ S, (c x.2.1 * c x.2.2) * (x.1 : ℝ)⁻¹) = ∑ p ∈ S.image pairOf, weight p := by
+    rw [Finset.sum_image hpair_inj]
+    apply Finset.sum_congr rfl
+    intro x hx
+    let n := x.1
+    let q := x.2
+    have hmem := Finset.mem_sigma.mp hx
+    have hn : n ∈ Finset.Ioc (Y*Y) N := hmem.1
+    have hq : q ∈ n.divisorsAntidiagonal := hmem.2
+    have hprod : q.1 * q.2 = n := (Nat.mem_divisorsAntidiagonal.mp hq).1
+    simp only [pairOf, weight]
+    change (c q.1 * c q.2) * (n : ℝ)⁻¹ =
+      (c q.1 * (q.1 : ℝ)⁻¹) * (c q.2 * (q.2 : ℝ)⁻¹)
+    rw [← hprod, Nat.cast_mul, mul_inv]
+    ring
+  have hsum_rect :
+      (∑ p ∈ S.image pairOf, weight p) ≤ ∑ p ∈ R, weight p :=
+    Finset.sum_le_sum_of_subset_of_nonneg himage_subset (by
+      intro p hp hnot
+      simp only [weight]
+      exact mul_nonneg (mul_nonneg (hc _) (inv_nonneg.mpr (Nat.cast_nonneg _)))
+        (mul_nonneg (hc _) (inv_nonneg.mpr (Nat.cast_nonneg _))))
+  have hw : ∀ p, 0 ≤ weight p := fun p =>
+    mul_nonneg (mul_nonneg (hc _) (inv_nonneg.mpr (Nat.cast_nonneg _)))
+      (mul_nonneg (hc _) (inv_nonneg.mpr (Nat.cast_nonneg _)))
+  have hunion : (∑ p ∈ R, weight p) ≤
+      (∑ p ∈ R₁, weight p) + (∑ p ∈ R₂, weight p) := by
+    have he : (∑ p ∈ R₁ ∪ R₂, weight p) + (∑ p ∈ R₁ ∩ R₂, weight p) =
+        (∑ p ∈ R₁, weight p) + (∑ p ∈ R₂, weight p) := Finset.sum_union_inter
+    have hi : 0 ≤ ∑ p ∈ R₁ ∩ R₂, weight p := Finset.sum_nonneg (fun p _ => hw p)
+    change (∑ p ∈ R₁ ∪ R₂, weight p) ≤ _
+    linarith
+  have hrect₁ : (∑ p ∈ R₁, weight p) =
+      (∑ n ∈ Finset.Ioc Y N, c n * (n : ℝ)⁻¹) *
+        (∑ n ∈ Finset.Icc 1 N, c n * (n : ℝ)⁻¹) := by
+    change (∑ p ∈ Finset.Ioc Y N ×ˢ Finset.Icc 1 N,
+      (c p.1 * (p.1 : ℝ)⁻¹) * (c p.2 * (p.2 : ℝ)⁻¹)) = _
+    rw [Finset.sum_product' (Finset.Ioc Y N) (Finset.Icc 1 N)
+      (fun a b : ℕ => (c a * (a : ℝ)⁻¹) * (c b * (b : ℝ)⁻¹)),
+      ← Finset.sum_mul_sum]
+  have hrect₂ : (∑ p ∈ R₂, weight p) =
+      (∑ n ∈ Finset.Icc 1 N, c n * (n : ℝ)⁻¹) *
+        (∑ n ∈ Finset.Ioc Y N, c n * (n : ℝ)⁻¹) := by
+    change (∑ p ∈ Finset.Icc 1 N ×ˢ Finset.Ioc Y N,
+      (c p.1 * (p.1 : ℝ)⁻¹) * (c p.2 * (p.2 : ℝ)⁻¹)) = _
+    rw [Finset.sum_product' (Finset.Icc 1 N) (Finset.Ioc Y N)
+      (fun a b : ℕ => (c a * (a : ℝ)⁻¹) * (c b * (b : ℝ)⁻¹)),
+      ← Finset.sum_mul_sum]
+  calc
+    _ = ∑ x ∈ S, (c x.2.1 * c x.2.2) * (x.1 : ℝ)⁻¹ := hsum_expand
+    _ = ∑ p ∈ S.image pairOf, weight p := hsum_reindex
+    _ ≤ ∑ p ∈ R, weight p := hsum_rect
+    _ ≤ (∑ p ∈ R₁, weight p) + (∑ p ∈ R₂, weight p) := hunion
+    _ = _ := by rw [hrect₁,hrect₂]; ring
+
+lemma lemma31_actual_square_weighted_tail_le {D : ℕ}
+    (χ : RealPrimitiveCharacter D) (Y N : ℕ) :
+    (∑ n ∈ Finset.Ioc (Y*Y) N, ‖lemma23NuArithmeticFunction χ n‖^2 * (n : ℝ)⁻¹) ≤
+      2 * (∑ n ∈ Finset.Ioc Y N, lemma31NuReal χ n * (n : ℝ)⁻¹) *
+        (∑ n ∈ Finset.Icc 1 N, lemma31NuReal χ n * (n : ℝ)⁻¹) := by
+  calc
+    _ ≤ ∑ n ∈ Finset.Ioc (Y*Y) N,
+        (∑ q ∈ n.divisorsAntidiagonal, lemma31NuReal χ q.1 * lemma31NuReal χ q.2) *
+          (n : ℝ)⁻¹ := by
+      apply Finset.sum_le_sum
+      intro n hn
+      exact mul_le_mul_of_nonneg_right
+        (lemma31_nu_norm_square_le_divisor_convolution χ n)
+        (inv_nonneg.mpr (Nat.cast_nonneg _))
+    _ ≤ _ := lemma31_positive_weighted_convolution_tail_le
+      (lemma31NuReal χ) (lemma31_nu_real_nonneg χ) Y N
+
+end ZhangLS.Spec

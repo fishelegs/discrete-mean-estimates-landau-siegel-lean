@@ -1,0 +1,5 @@
+STEP30_GAUSSIAN_KERNEL_VERIFICATION=PASS
+pinned_toolchain=leanprover/lean4:v4.30.0
+lean_version=Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)
+reason=Gaussian modules and terminal theorem API regression compiled successfully
+command=tools/verify_step30_gaussian.sh

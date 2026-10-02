@@ -1,0 +1,14 @@
+--- /mnt/data/step24/ZhangLS/Spec/DivisorCharacterSum.lean	2026-09-06 14:03:37.000000000 +0000
++++ ZhangLS/Spec/DivisorCharacterSum.lean	2026-09-07 01:47:50.089254678 +0000
+@@ -64,9 +64,9 @@
+   · exact χ.evalNat_one
+   · intro d hddiv hdne
+     apply χ.evalNat_eq_zero_of_dvd_modulus
+-    · exact dvd_trans (Nat.mem_divisors.mp hddiv).2 hnD
++    · exact dvd_trans (Nat.mem_divisors.mp hddiv).1 hnD
+     · exact hdne
+-  · exact Nat.mem_divisors.mpr ⟨hn0, one_dvd n⟩
++  · exact Nat.mem_divisors.mpr ⟨one_dvd n, hn0⟩
+ 
+ /-- Real-valued form of the same coefficient, convenient for the inequalities in
+ Lemma 5.7. -/

@@ -1,0 +1,42 @@
+import ZhangLS.Spec.Lemma32PrimeHasseFourthMoment
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_prime_sqrt_ge_one {p : ℕ} (hp : p.Prime) : 1 ≤ Real.sqrt (p : ℝ) := by
+  have hp1 : (1 : ℝ) ≤ p := by exact_mod_cast hp.one_lt.le
+  simpa only [Real.sqrt_one] using Real.sqrt_le_sqrt hp1
+
+lemma lemma32_actual_prime_unpaired_quartic_hasse_bound {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) (a b c d : ZMod p)
+    (hp : ¬ ((a=b ∧ c=d) ∨ (a=c ∧ b=d) ∨ (a=d ∧ b=c))) :
+    ‖∑ x : ZMod p, χ.chi (lemma32QuarticRootProduct a b c d x)‖ ≤
+      3*Real.sqrt (p : ℝ) := by
+  have hs := lemma32_prime_sqrt_ge_one (Fact.out : p.Prime)
+  by_cases hr : a=b ∨ a=c ∨ a=d ∨ b=c ∨ b=d ∨ c=d
+  · have hb := lemma32_quadratic_unpaired_quartic_collision_bound χ.chi
+      (χ.nontrivial_of_one_lt_modulus (Fact.out : p.Prime).one_lt) χ.quadratic
+      a b c d hp hr
+    linarith
+  · push_neg at hr
+    obtain ⟨hab,hac,had,hbc,hbd,hcd⟩ := hr
+    have hb := lemma32_actual_prime_distinct_quartic_hasse_bound χ a b c d
+      hab hac had hbc hbd hcd
+    change ‖∑ x : ZMod p, χ.chi ((x+a)*(x+b)*(x+c)*(x+d))‖ ≤ _
+    linarith
+
+lemma lemma32_actual_prime_isolated_root_hasse_bound {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) (a b c d : ZMod p)
+    (hab : a ≠ b) (hac : a ≠ c) (had : a ≠ d) :
+    ‖∑ x : ZMod p, χ.chi (lemma32QuarticRootProduct a b c d x)‖ ≤
+      3*Real.sqrt (p : ℝ) := by
+  apply lemma32_actual_prime_unpaired_quartic_hasse_bound χ a b c d
+  intro hp
+  rcases hp with hp | hp | hp
+  · exact hab hp.1
+  · exact hac hp.1
+  · exact had hp.1
+
+end ZhangLS.Spec

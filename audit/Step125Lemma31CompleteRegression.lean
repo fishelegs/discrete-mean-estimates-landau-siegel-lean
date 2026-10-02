@@ -1,0 +1,121 @@
+import ZhangLS.Spec.Lemma31
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped ComplexOrder
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (n : ℕ) :
+    ‖lemma23NuArithmeticFunction χ n‖^2 ≤
+      ((lemma23NuArithmeticFunction χ * lemma23NuArithmeticFunction χ) n).re :=
+  lemma31_actual_nu_norm_square_le_convolution χ n
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (n : ℕ) :
+    ((lemma23NuArithmeticFunction χ * lemma23NuArithmeticFunction χ) n).re =
+      ∑ q ∈ n.divisorsAntidiagonal,
+        (lemma23NuArithmeticFunction χ q.1).re * (lemma23NuArithmeticFunction χ q.2).re :=
+  lemma31_nu_convolution_real χ n
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (Y N : ℕ) :
+    (∑ n ∈ Finset.Ioc (Y*Y) N, ‖lemma23NuArithmeticFunction χ n‖^2 * (n : ℝ)⁻¹) ≤
+      2 * (∑ n ∈ Finset.Ioc Y N, (lemma23NuArithmeticFunction χ n).re * (n : ℝ)⁻¹) *
+        (∑ n ∈ Finset.Icc 1 N, (lemma23NuArithmeticFunction χ n).re * (n : ℝ)⁻¹) :=
+  lemma31_actual_square_weighted_tail_le χ Y N
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D) (N : ℕ) (hN : 1 ≤ N) :
+    |(∑ n ∈ Finset.Icc 1 N, (n : ℝ)⁻¹ * (χ.evalNat n).re) -
+      (dirichletLFunction χ (1 : ℂ)).re| ≤ 2 * (D : ℝ) / N :=
+  lemma31_character_harmonic_truncation_real_le χ hD N hN
+
+example {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D) (N : ℕ) (hDN : D ≤ N) :
+    (∑ n ∈ Finset.Icc 1 N, (lemma23NuArithmeticFunction χ n).re) ≤
+      (N : ℝ)*(dirichletLFunction χ 1).re + 6*Real.sqrt (D : ℝ)*Real.sqrt (N : ℝ) :=
+  lemma31_nu_real_cumulative_le χ hD N hDN
+
+example : Lemma31Target := lemma31_proved
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ D : ℕ, D₀ ≤ D →
+    ∀ χ : RealPrimitiveCharacter D,
+      (dirichletLFunction χ 1).re < (Real.log (D : ℝ))^(-2022 : ℤ) →
+      (∑ n ∈ Finset.Ioc (D^4) ⌊(Real.exp ((Real.log (D : ℝ))^9))^2⌋₊,
+        ‖∑ d ∈ Nat.divisors n, χ.chi (d : ZMod D)‖^2*(n : ℝ)⁻¹) ≤
+          C*(Real.log (D : ℝ))^(-2011 : ℤ) := by
+  simpa only [Lemma31Target,lemma23PaperL,lemma23PaperP,NormalizedAssumptionA,
+    AssumptionAWithConstant,realLAtOne,realLValue,Complex.ofReal_one,one_mul,
+    lemma23NuArithmeticFunction_apply] using lemma31_proved
+
+end ZhangLS.Spec
+#print axioms ZhangLS.Spec.lemma31_actual_nu_eq_zetaMul
+#print axioms ZhangLS.Spec.lemma31_actual_nu_nonneg
+#print axioms ZhangLS.Spec.lemma31_actual_nu_prime_power
+#print axioms ZhangLS.Spec.lemma31_actual_nu_multiplicative
+#print axioms ZhangLS.Spec.lemma31_actual_nu_one
+#print axioms ZhangLS.Spec.lemma31_actual_nu_le_convolution_square
+#print axioms ZhangLS.Spec.lemma31_linear_convolution_sum_bound
+#print axioms ZhangLS.Spec.lemma31_actual_nu_convolution_prime_power
+#print axioms ZhangLS.Spec.lemma31_actual_nu_prime_power_of_one
+#print axioms ZhangLS.Spec.lemma31_actual_nu_prime_power_idempotent
+#print axioms ZhangLS.Spec.lemma31_actual_nu_prime_square_le_of_one
+#print axioms ZhangLS.Spec.lemma31_actual_nu_prime_square_le
+#print axioms ZhangLS.Spec.lemma31_actual_nu_square_le_convolution
+#print axioms ZhangLS.Spec.lemma31_actual_nu_norm_square_le_convolution
+#print axioms ZhangLS.Spec.lemma31_nu_real_nonneg
+#print axioms ZhangLS.Spec.lemma31_nu_real_eq_norm
+#print axioms ZhangLS.Spec.lemma31_nu_real_eq_divisor_sum
+#print axioms ZhangLS.Spec.lemma31_nu_im_zero
+#print axioms ZhangLS.Spec.lemma31_nu_convolution_real
+#print axioms ZhangLS.Spec.lemma31_nu_norm_square_le_divisor_convolution
+#print axioms ZhangLS.Spec.lemma31_positive_weighted_convolution_tail_le
+#print axioms ZhangLS.Spec.lemma31_actual_square_weighted_tail_le
+#print axioms ZhangLS.Spec.lemma31_inverse_deriv
+#print axioms ZhangLS.Spec.lemma31_eval_sum_zero_to_one
+#print axioms ZhangLS.Spec.lemma31_character_harmonic_abel
+#print axioms ZhangLS.Spec.lemma31_character_kernel_eq_abel
+#print axioms ZhangLS.Spec.lemma31_character_kernel_integrable
+#print axioms ZhangLS.Spec.lemma31_character_kernel_LAtOne
+#print axioms ZhangLS.Spec.lemma31_character_kernel_norm_le
+#print axioms ZhangLS.Spec.lemma31_character_kernel_tail_norm_le
+#print axioms ZhangLS.Spec.lemma31_character_harmonic_truncation_identity
+#print axioms ZhangLS.Spec.lemma31_character_harmonic_truncation_norm_le
+#print axioms ZhangLS.Spec.lemma31_character_harmonic_truncation_real_le
+#print axioms ZhangLS.Spec.lemma31_antitone_weighted_sum_norm_le
+#print axioms ZhangLS.Spec.lemma31_actual_nu_cumulative_eq
+#print axioms ZhangLS.Spec.lemma31_shifted_character_partial_norm_le
+#print axioms ZhangLS.Spec.lemma31_floor_div_weight_antitone
+#print axioms ZhangLS.Spec.lemma31_hyperbola_long_sum_norm_le
+#print axioms ZhangLS.Spec.lemma31_floor_div_real_error_le
+#print axioms ZhangLS.Spec.lemma31_hyperbola_short_error_le
+#print axioms ZhangLS.Spec.lemma31_actual_cumulative_error_le
+#print axioms ZhangLS.Spec.lemma31_sqrt_cutoff_properties
+#print axioms ZhangLS.Spec.lemma31_actual_cumulative_sqrt_error_le
+#print axioms ZhangLS.Spec.lemma31_nu_real_cumulative_le
+#print axioms ZhangLS.Spec.lemma31_nu_real_zero
+#print axioms ZhangLS.Spec.lemma31_nu_real_sum_zero_to_one
+#print axioms ZhangLS.Spec.lemma31_nu_cumulative_nonneg
+#print axioms ZhangLS.Spec.lemma31_nu_cumulative_measurable
+#print axioms ZhangLS.Spec.lemma31_nu_cumulative_real_bound
+#print axioms ZhangLS.Spec.lemma31_nu_weighted_tail_abel
+#print axioms ZhangLS.Spec.lemma31_sqrt_inverse_square
+#print axioms ZhangLS.Spec.lemma31_sqrt_inverse
+#print axioms ZhangLS.Spec.lemma31_three_halves_integral
+#print axioms ZhangLS.Spec.lemma31_three_halves_partial_integral_le
+#print axioms ZhangLS.Spec.lemma31_inverse_partial_integral
+#print axioms ZhangLS.Spec.lemma31_nu_weighted_kernel_bound
+#print axioms ZhangLS.Spec.lemma31_nu_weighted_kernel_integrable
+#print axioms ZhangLS.Spec.lemma31_nu_weighted_integral_le
+#print axioms ZhangLS.Spec.lemma31_nu_weighted_endpoint_le
+#print axioms ZhangLS.Spec.lemma31_nu_weighted_linear_tail_le
+#print axioms ZhangLS.Spec.lemma31_nu_weighted_D_square_tail_le
+#print axioms ZhangLS.Spec.lemma31_D_le_P
+#print axioms ZhangLS.Spec.lemma31_D_square_le_paper_cutoff
+#print axioms ZhangLS.Spec.lemma31_paper_cutoff_log_le
+#print axioms ZhangLS.Spec.lemma31_paper_cutoff_log_factor_le
+#print axioms ZhangLS.Spec.lemma31_inverse_sqrt_eq_exp
+#print axioms ZhangLS.Spec.lemma31_exponential_absorption_threshold
+#print axioms ZhangLS.Spec.lemma31_small_value_scale_identity
+#print axioms ZhangLS.Spec.lemma31_nu_linear_paper_tail_le
+#print axioms ZhangLS.Spec.lemma31_nu_weighted_sum_le_harmonic_sq
+#print axioms ZhangLS.Spec.lemma31_nu_small_weighted_sum_le
+#print axioms ZhangLS.Spec.lemma31_nu_total_paper_weight_le
+#print axioms ZhangLS.Spec.lemma31_square_tail_scale_identity
+#print axioms ZhangLS.Spec.lemma31_actual_square_paper_tail_le
+#print axioms ZhangLS.Spec.lemma31_actual_real_square_paper_tail_le
+#print axioms ZhangLS.Spec.lemma31_proved

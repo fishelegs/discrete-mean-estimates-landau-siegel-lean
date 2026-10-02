@@ -1,0 +1,53 @@
+import ZhangLS.Spec.Lemma32BurgessBlockParameters
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+
+lemma lemma32_burgess_multiplier_length_bounds {D N : ℕ} (hD : 1≤D)
+    (hN : lemma32BurgessSmallRangeConstant*lemma32BurgessPower D (25/64)<(N : ℝ)) :
+    1≤lemma32BurgessMultiplierLength D N ∧
+      (N : ℝ)/(2048*(lemma32BurgessBlockLength D : ℝ))≤(lemma32BurgessMultiplierLength D N : ℝ) ∧
+      (lemma32BurgessMultiplierLength D N : ℝ)≤(N : ℝ)/(1024*(lemma32BurgessBlockLength D : ℝ)) ∧
+      2*lemma32UnitPrimeSavingConstant*lemma32BurgessPower D (1/2048)≤
+        (lemma32BurgessMultiplierLength D N : ℝ) := by
+  have hr := lemma32_burgess_multiplier_ratio_lower hD hN
+  have hc := lemma32_burgess_unit_saving_constant_one_le
+  have hp := lemma32_burgess_power_one_le hD (by norm_num : (0 : ℝ)≤1/2048)
+  have hcpos := lemma32_unit_prime_saving_constant_pos
+  have hp0 := lemma32_burgess_power_pos D (1/2048)
+  have hcp : 1≤lemma32UnitPrimeSavingConstant*lemma32BurgessPower D (1/2048) := by
+    simpa only [one_mul] using mul_le_mul hc hp (by norm_num : (0 : ℝ)≤1) hcpos.le
+  have hratio : 1≤(N : ℝ)/(1024*(lemma32BurgessBlockLength D : ℝ)) := by nlinarith
+  have hf := lemma32_positive_floor_bounds hratio
+  have he : ((N : ℝ)/(1024*(lemma32BurgessBlockLength D : ℝ)))/2 =
+      (N : ℝ)/(2048*(lemma32BurgessBlockLength D : ℝ)) := by
+    field_simp <;> ring
+  rw [he] at hf
+  refine ⟨hf.1, hf.2.1, hf.2.2, ?_⟩
+  have hhalf : 2*lemma32UnitPrimeSavingConstant*lemma32BurgessPower D (1/2048) ≤
+      (N : ℝ)/(2048*(lemma32BurgessBlockLength D : ℝ)) := by
+    rw [← he]
+    nlinarith
+  exact hhalf.trans hf.2.1
+
+lemma lemma32_burgess_shift_product_bound {D N : ℕ} (hD : 1≤D) :
+    (lemma32BurgessMultiplierLength D N : ℝ)*(lemma32BurgessBlockLength D : ℝ)≤(N : ℝ)/1024 := by
+  have hb := (lemma32_burgess_block_bounds hD).1
+  have hbpos : (0 : ℝ)<(lemma32BurgessBlockLength D : ℝ) := Nat.cast_pos.mpr (by omega)
+  have ha : (lemma32BurgessMultiplierLength D N : ℝ)≤(N : ℝ)/(1024*(lemma32BurgessBlockLength D : ℝ)) :=
+    Nat.floor_le (div_nonneg (Nat.cast_nonneg _) (by positivity))
+  have h := (le_div_iff₀ (mul_pos (by norm_num : (0 : ℝ)<1024) hbpos)).mp ha
+  apply (le_div_iff₀ (by norm_num : (0 : ℝ)<1024)).mpr
+  nlinarith
+
+lemma lemma32_burgess_multiplier_length_le_interval {D N : ℕ} (hD : 1≤D) :
+    lemma32BurgessMultiplierLength D N≤N := by
+  have hb := (lemma32_burgess_block_bounds hD).1
+  have hbR : (1 : ℝ)≤(lemma32BurgessBlockLength D : ℝ) := Nat.one_le_cast.mpr hb
+  have ha := lemma32_burgess_shift_product_bound (N := N) hD
+  have ha0 : (0 : ℝ)≤(lemma32BurgessMultiplierLength D N : ℝ) := Nat.cast_nonneg _
+  have hn0 : (0 : ℝ)≤(N : ℝ) := Nat.cast_nonneg _
+  have hr : (lemma32BurgessMultiplierLength D N : ℝ)≤(N : ℝ) := by nlinarith
+  exact Nat.cast_le.mp hr
+
+end ZhangLS.Spec

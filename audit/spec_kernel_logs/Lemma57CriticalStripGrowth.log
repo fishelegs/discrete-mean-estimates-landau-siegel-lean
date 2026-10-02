@@ -1,0 +1,7 @@
+ZhangLS/Spec/Lemma57CriticalStripGrowth.lean:270:14: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

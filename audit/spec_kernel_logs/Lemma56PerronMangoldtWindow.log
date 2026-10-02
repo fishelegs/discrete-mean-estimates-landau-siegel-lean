@@ -1,0 +1,15 @@
+ZhangLS/Spec/Lemma56PerronMangoldtWindow.lean:104:2: warning: 'change N * ‖R‖ ≤ _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ZhangLS/Spec/Lemma56PerronMangoldtWindow.lean:72:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ZhangLS/Spec/Lemma56PerronMangoldtWindow.lean:76:67: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ZhangLS/Spec/Lemma56PerronMangoldtWindow.lean:79:69: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ZhangLS/Spec/Lemma56PerronMangoldtWindow.lean:83:36: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

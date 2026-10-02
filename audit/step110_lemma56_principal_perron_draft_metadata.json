@@ -1,0 +1,25 @@
+{
+  "sha256": "7dea161f05cbeccab0d868265fcba906f0e61b8950cb6534c12b8419a31c4131",
+  "kernel_exit_code": 0,
+  "proved_interfaces": [
+    "lemma56_positive_right_rectangle_inv",
+    "lemma56_positive_right_simple_pole_rectangle",
+    "lemma56_perron_complex_kernel_at_line",
+    "lemma56_perron_complex_kernel_analytic",
+    "lemma56_perron_complex_kernel_at_one",
+    "lemma56_rectangle_translation_one",
+    "lemma56_actual_perron_pole_rectangle",
+    "lemma56_actual_principal_perron_mellin_identity"
+  ],
+  "interface_count": 8,
+  "expanded_examples": 4,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "auto_implicit": false,
+  "verified_at_utc": "2026-10-01T10:10:48.330438+00:00",
+  "scope": "Actual arbitrary-negative-left simple-pole rectangle, actual Perron complex kernel, residue at s=1 equal to x exp(1/(4B^2)), exact translated finite-rectangle pole integral, and actual principal-character Mellin identity. Full actual zeta arithmetic contour combination and prime-mass lower bound remain unproved. Original faithful principal cancellation target remains unproved.",
+  "kernel_command": "lake env lean /private/tmp/ZhangMathStep110PrincipalPerronDraft.lean"
+}

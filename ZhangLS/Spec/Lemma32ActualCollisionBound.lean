@@ -1,0 +1,79 @@
+import ZhangLS.Spec.Lemma32QuarticCollisionBound
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_short_residue_cast_injective {p H : ℕ} (hH : H ≤ p) :
+    Function.Injective (fun h : Fin H => (h.val : ZMod p)) := by
+  intro a b he
+  have hv := congrArg ZMod.val he
+  rw [ZMod.val_natCast_of_lt (a.isLt.trans_le hH),
+    ZMod.val_natCast_of_lt (b.isLt.trans_le hH)] at hv
+  exact Fin.ext hv
+
+lemma lemma32_actual_prime_unpaired_collision_correlation {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) {H : ℕ} (hH : H ≤ p) (v : Fin 4 → Fin H)
+    (hp : v ∉ lemma32DegenerateQuarticTuples H) (hr : ¬ Function.Injective v) :
+    |lemma32QuarticCorrelation χ v| ≤ 2 := by
+  have hi := lemma32_short_residue_cast_injective hH
+  have hpair : ¬ ((((v 0).val : ZMod p)=((v 1).val : ZMod p) ∧
+        ((v 2).val : ZMod p)=((v 3).val : ZMod p)) ∨
+      (((v 0).val : ZMod p)=((v 2).val : ZMod p) ∧
+        ((v 1).val : ZMod p)=((v 3).val : ZMod p)) ∨
+      (((v 0).val : ZMod p)=((v 3).val : ZMod p) ∧
+        ((v 1).val : ZMod p)=((v 2).val : ZMod p))) := by
+    intro h
+    apply hp
+    apply (lemma32_mem_degenerate_iff_paired v).mpr
+    rcases h with h | h | h
+    · exact Or.inl ⟨hi h.1,hi h.2⟩
+    · exact Or.inr (Or.inl ⟨hi h.1,hi h.2⟩)
+    · exact Or.inr (Or.inr ⟨hi h.1,hi h.2⟩)
+  have hrep : v 0=v 1 ∨ v 0=v 2 ∨ v 0=v 3 ∨ v 1=v 2 ∨ v 1=v 3 ∨ v 2=v 3 := by
+    by_contra h
+    have he : (![v 0,v 1,v 2,v 3] : Fin 4 → Fin H) = v := by
+      ext i
+      fin_cases i <;> rfl
+    apply hr
+    rw [← he]
+    apply lemma32_four_distinct_roots_injective
+    · intro h01
+      exact h (Or.inl h01)
+    · intro h02
+      exact h (Or.inr (Or.inl h02))
+    · intro h03
+      exact h (Or.inr (Or.inr (Or.inl h03)))
+    · intro h12
+      exact h (Or.inr (Or.inr (Or.inr (Or.inl h12))))
+    · intro h13
+      exact h (Or.inr (Or.inr (Or.inr (Or.inr (Or.inl h13)))))
+    · intro h23
+      exact h (Or.inr (Or.inr (Or.inr (Or.inr (Or.inr h23)))))
+  have hrepF : ((v 0).val : ZMod p)=((v 1).val : ZMod p) ∨
+      ((v 0).val : ZMod p)=((v 2).val : ZMod p) ∨
+      ((v 0).val : ZMod p)=((v 3).val : ZMod p) ∨
+      ((v 1).val : ZMod p)=((v 2).val : ZMod p) ∨
+      ((v 1).val : ZMod p)=((v 3).val : ZMod p) ∨
+      ((v 2).val : ZMod p)=((v 3).val : ZMod p) := by
+    rcases hrep with h | h | h | h | h | h
+    · exact Or.inl (congrArg (fun z : Fin H => (z.val : ZMod p)) h)
+    · exact Or.inr (Or.inl (congrArg (fun z : Fin H => (z.val : ZMod p)) h))
+    · exact Or.inr (Or.inr (Or.inl (congrArg (fun z : Fin H => (z.val : ZMod p)) h)))
+    · exact Or.inr (Or.inr (Or.inr (Or.inl (congrArg (fun z : Fin H => (z.val : ZMod p)) h))))
+    · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inl (congrArg (fun z : Fin H => (z.val : ZMod p)) h)))))
+    · exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr ((congrArg (fun z : Fin H => (z.val : ZMod p)) h))))))
+  have hb := lemma32_quadratic_unpaired_quartic_collision_bound χ.chi
+    (χ.nontrivial_of_one_lt_modulus (Fact.out : p.Prime).one_lt) χ.quadratic
+    ((v 0).val : ZMod p) ((v 1).val : ZMod p) ((v 2).val : ZMod p)
+    ((v 3).val : ZMod p) hpair hrepF
+  have he : lemma32QuarticCorrelation χ v =
+      (∑ x : ZMod p, χ.chi (lemma32QuarticRootProduct ((v 0).val : ZMod p)
+        ((v 1).val : ZMod p) ((v 2).val : ZMod p) ((v 3).val : ZMod p) x)).re := by
+    simp only [lemma32QuarticCorrelation,Complex.re_sum,Fin.prod_univ_four,
+      lemma32QuarticRootProduct]
+  rw [he]
+  exact (Complex.abs_re_le_norm _).trans hb
+
+end ZhangLS.Spec

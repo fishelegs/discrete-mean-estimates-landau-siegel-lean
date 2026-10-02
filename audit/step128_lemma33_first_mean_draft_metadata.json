@@ -1,0 +1,15 @@
+{
+  "status": "KERNEL_CHECKED_TEMPORARY",
+  "result": "Lemma 3.3 first estimate only",
+  "full_original_target_status": "UNPROVED",
+  "second_original_estimate": "UNPROVED: requires genuine cross-modulus large sieve",
+  "standard_axiom_interfaces": 7,
+  "expanded_regressions": 2,
+  "constant": 1,
+  "assumption_A_required": false,
+  "original_family": "all primitive characters at primes in original strict window",
+  "created_at_utc": "2026-10-01T21:57:20.148149+00:00",
+  "source_sha256": "eb47cdba87e9859bb023c297418bc6b19692cc1c8bfadba3a833925c83fd042c",
+  "checked_sha256": "653f65bd2ee6925af7cc1d30b0691473b438cbd273371641d5179af60b7bf191",
+  "project_gate": "Step122 RUNNING; all546 Lean sources frozen; no promotion and no numbered completion"
+}

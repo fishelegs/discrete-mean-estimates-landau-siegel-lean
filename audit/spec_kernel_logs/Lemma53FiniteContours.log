@@ -1,0 +1,42 @@
+ZhangLS/Spec/Lemma53FiniteContours.lean:64:66: warning: This simp argument is unused:
+  zero_pow
+
+Hint: Omit it from the simp argument list.
+  simp only [ofReal_zero, zero_mul, add_zero, mul_zero, zero_sub, z̵e̵r̵o̵_̵p̵o̵w̵,̵
+  ̵ ̵ ̵ ̵ ̵sub_zero, neg_zero,
+  ̲  ̲ ̲ ̲zero_add] at hg
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma53FiniteContours.lean:65:4: warning: This simp argument is unused:
+  sub_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [ofReal_zero, zero_mul, add_zero, mul_zero, zero_sub, zero_pow,
+  ̵  ̵ ̵ ̵s̵u̵b̵_̵z̵e̵r̵o̵,̵ ̵neg_zero,
+  ̲  ̲ ̲ ̲zero_add] at hg
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma53FiniteContours.lean:65:14: warning: This simp argument is unused:
+  neg_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [ofReal_zero, zero_mul, add_zero, mul_zero, zero_sub, zero_pow,
+  ̵  ̵ ̵ ̵sub_zero,
+  ̲ n̵e̵g̵_̵z̵e̵r̵o̵,̵  ̲ ̲zero_add] at hg
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/Lemma53FiniteContours.lean:65:24: warning: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  simp only [ofReal_zero, zero_mul, add_zero, mul_zero, zero_sub, zero_pow,
+  ̵  ̵ ̵ ̵sub_zero,
+  ̲  ̲ ̲ ̲neg_zero,̵ ̵z̵e̵r̵o̵_̵a̵d̵d̵] at hg
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.

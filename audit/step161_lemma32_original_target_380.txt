@@ -1,0 +1,61 @@
+import ZhangMathStep377Lemma32BurgessFloorBoundsDraft
+import ZhangMathStep365Lemma32PrimitiveUnitDensitySavingDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+
+noncomputable def lemma32BurgessBlockLength (D : ℕ) : ℕ :=
+  ⌊lemma32BurgessPower D (15/64)⌋₊
+
+noncomputable def lemma32BurgessMultiplierLength (D N : ℕ) : ℕ :=
+  ⌊(N : ℝ)/(1024*(lemma32BurgessBlockLength D : ℝ))⌋₊
+
+noncomputable def lemma32BurgessSmallRangeConstant : ℝ := 4096*lemma32UnitPrimeSavingConstant
+
+lemma lemma32_burgess_block_bounds {D : ℕ} (hD : 1≤D) :
+    1≤lemma32BurgessBlockLength D ∧
+      lemma32BurgessPower D (15/64)/2≤(lemma32BurgessBlockLength D : ℝ) ∧
+      (lemma32BurgessBlockLength D : ℝ)≤lemma32BurgessPower D (15/64) :=
+  lemma32_positive_floor_bounds (lemma32_burgess_power_one_le hD (by norm_num))
+
+lemma lemma32_burgess_small_range_constant_pos : 0 < lemma32BurgessSmallRangeConstant := by
+  unfold lemma32BurgessSmallRangeConstant
+  exact mul_pos (by norm_num) lemma32_unit_prime_saving_constant_pos
+
+lemma lemma32_burgess_unit_saving_constant_one_le : 1≤lemma32UnitPrimeSavingConstant := by
+  unfold lemma32UnitPrimeSavingConstant
+  exact one_le_pow₀ (by norm_num)
+
+lemma lemma32_burgess_multiplier_ratio_lower {D N : ℕ} (hD : 1≤D)
+    (hN : lemma32BurgessSmallRangeConstant*lemma32BurgessPower D (25/64)<(N : ℝ)) :
+    4*lemma32UnitPrimeSavingConstant*lemma32BurgessPower D (1/2048) ≤
+      (N : ℝ)/(1024*(lemma32BurgessBlockLength D : ℝ)) := by
+  have hb := lemma32_burgess_block_bounds hD
+  have hbpos : (0 : ℝ)<(lemma32BurgessBlockLength D : ℝ) :=
+    Nat.cast_pos.mpr (by omega)
+  have hfac : (0 : ℝ)≤4*lemma32UnitPrimeSavingConstant*lemma32BurgessPower D (1/2048)*1024 :=
+    mul_nonneg (mul_nonneg (mul_nonneg (by norm_num)
+      lemma32_unit_prime_saving_constant_pos.le) (lemma32_burgess_power_pos D (1/2048)).le)
+      (by norm_num)
+  have hmul := mul_le_mul_of_nonneg_left hb.2.2 hfac
+  have he : (4*lemma32UnitPrimeSavingConstant*lemma32BurgessPower D (1/2048)*1024)*
+      lemma32BurgessPower D (15/64) =
+      lemma32BurgessSmallRangeConstant*lemma32BurgessPower D (481/2048) := by
+    unfold lemma32BurgessSmallRangeConstant
+    have hp : lemma32BurgessPower D (1/2048)*lemma32BurgessPower D (15/64)=
+        lemma32BurgessPower D (481/2048) := by
+      rw [← lemma32_burgess_power_add]
+      norm_num
+    calc
+      _ = (4096*lemma32UnitPrimeSavingConstant)*
+          (lemma32BurgessPower D (1/2048)*lemma32BurgessPower D (15/64)) := by ring
+      _ = _ := by rw [hp]
+  rw [he] at hmul
+  have hpow := mul_le_mul_of_nonneg_left
+    (lemma32_burgess_power_mono hD (by norm_num : (481/2048 : ℝ)≤25/64))
+    lemma32_burgess_small_range_constant_pos.le
+  apply (le_div_iff₀ (mul_pos (by norm_num) hbpos)).mpr
+  have hh := hmul.trans (hpow.trans hN.le)
+  nlinarith
+
+end ZhangLS.Spec

@@ -1,0 +1,7 @@
+ZhangLS/Spec/Lemma59RelaxedProducts.lean:60:52: warning: This simp argument is unused:
+  Rat.cast_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵a̵r̵m̵o̵n̵i̵c̵,̵R̵a̵t̵.̵c̵a̵s̵t̵_̵s̵u̵m̵,̵R̵a̵t̵.̵c̵a̵s̵t̵_̵i̵n̵v̵,̵R̵a̵t̵.̵c̵a̵s̵t̵_̵n̵a̵t̵C̵a̵s̵t̵,̵N̵a̵t̵.̵c̵a̵s̵t̵_̵a̵d̵d̵,̵N̵a̵t̵.̵c̵a̵s̵t̵_̵o̵n̵e̵]̵[̲h̲a̲r̲m̲o̲n̲i̲c̲,̲ ̲R̲a̲t̲.̲c̲a̲s̲t̲_̲s̲u̲m̲,̲ ̲R̲a̲t̲.̲c̲a̲s̲t̲_̲i̲n̲v̲,̲ ̲N̲a̲t̲.̲c̲a̲s̲t̲_̲a̲d̲d̲,̲ ̲N̲a̲t̲.̲c̲a̲s̲t̲_̲o̲n̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

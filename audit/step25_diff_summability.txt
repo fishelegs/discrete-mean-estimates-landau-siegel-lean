@@ -1,0 +1,10 @@
+--- /mnt/data/step24/ZhangLS/Spec/Lemma57SmoothedSummability.lean	2026-09-07 01:12:17.000000000 +0000
++++ ZhangLS/Spec/Lemma57SmoothedSummability.lean	2026-09-07 01:51:18.992067510 +0000
+@@ -20,6 +20,7 @@
+     {D : ℕ} (χ : RealPrimitiveCharacter D) {n : ℕ} (hn : n ≠ 0) :
+     divisorCharacterSumReal χ n ≤ (Nat.divisors n).card := by
+   unfold divisorCharacterSumReal divisorCharacterSum
++  change Complex.reCLM (∑ d ∈ Nat.divisors n, χ.evalNat d) ≤ (Nat.divisors n).card
+   rw [map_sum]
+   calc
+     (∑ d ∈ Nat.divisors n, (χ.evalNat d).re)

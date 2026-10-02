@@ -1,0 +1,177 @@
+{
+  "status": "PROVED_KERNEL_CHECKED_TEMPORARY_CUMULATIVE_BOUND",
+  "full_original_lemma31_status": "UNPROVED",
+  "numbered_completion_recorded": false,
+  "interface_count": 44,
+  "definition_count": 2,
+  "expanded_object_regressions": 5,
+  "modules": [
+    {
+      "temporary_module": "ZhangMathStep148Lemma31OrderedArithmeticDraft",
+      "archive": "audit/step133_lemma31_cumulative_148.txt",
+      "sha256": "03918df9ea74ebb4f40dfd1dc7e952722e2bd850b6cbcf777381eb022cb9c99f",
+      "interfaces": [
+        "lemma31_actual_nu_eq_zetaMul",
+        "lemma31_actual_nu_nonneg",
+        "lemma31_actual_nu_prime_power",
+        "lemma31_actual_nu_multiplicative",
+        "lemma31_actual_nu_one",
+        "lemma31_actual_nu_le_convolution_square"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep149Lemma31PrimeSquareDraft",
+      "archive": "audit/step133_lemma31_cumulative_149.txt",
+      "sha256": "524c1b05ab8d9df6c559b4201876bb6272449db97de98ae1fc5334ceee1842cd",
+      "interfaces": [
+        "lemma31_linear_convolution_sum_bound",
+        "lemma31_actual_nu_convolution_prime_power",
+        "lemma31_actual_nu_prime_power_of_one",
+        "lemma31_actual_nu_prime_power_idempotent",
+        "lemma31_actual_nu_prime_square_le_of_one",
+        "lemma31_actual_nu_prime_square_le"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep150Lemma31SquareMajorantDraft",
+      "archive": "audit/step133_lemma31_cumulative_150.txt",
+      "sha256": "6d229c3ec88a8fa5089c28db8c0f1cf86f6eb7e13c7f8567365d44e954792897",
+      "interfaces": [
+        "lemma31_actual_nu_square_le_convolution",
+        "lemma31_actual_nu_norm_square_le_convolution"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep151Lemma31RealCoefficientsDraft",
+      "archive": "audit/step133_lemma31_cumulative_151.txt",
+      "sha256": "5a2c048658e2dcab2c88af328bc2be18e82ed6dde978945be6517bd2c2299e23",
+      "interfaces": [
+        "lemma31_nu_real_nonneg",
+        "lemma31_nu_real_eq_norm",
+        "lemma31_nu_real_eq_divisor_sum",
+        "lemma31_nu_im_zero",
+        "lemma31_nu_convolution_real",
+        "lemma31_nu_norm_square_le_divisor_convolution"
+      ],
+      "definitions": [
+        "lemma31NuReal"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep152Lemma31WeightedTailDraft",
+      "archive": "audit/step133_lemma31_cumulative_152.txt",
+      "sha256": "ed7f1039d6e9f1c796eb47dd15849100e46d1b75386e43cc59d3962bce315d62",
+      "interfaces": [
+        "lemma31_positive_weighted_convolution_tail_le",
+        "lemma31_actual_square_weighted_tail_le"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep153Lemma31CharacterAbelDraft",
+      "archive": "audit/step133_lemma31_cumulative_153.txt",
+      "sha256": "419bc438c848e5368616bee25498914c1b1fc3e42020b305938de5915bea1c2c",
+      "interfaces": [
+        "lemma31_inverse_deriv",
+        "lemma31_eval_sum_zero_to_one",
+        "lemma31_character_harmonic_abel"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep154Lemma31CharacterKernelDraft",
+      "archive": "audit/step133_lemma31_cumulative_154.txt",
+      "sha256": "54e457ea4ee224fc6f9792e08dc2555cbbfb8b828bbcb2bec3d0f60f2efb485c",
+      "interfaces": [
+        "lemma31_character_kernel_eq_abel",
+        "lemma31_character_kernel_integrable",
+        "lemma31_character_kernel_LAtOne",
+        "lemma31_character_kernel_norm_le",
+        "lemma31_character_kernel_tail_norm_le"
+      ],
+      "definitions": [
+        "lemma31CharacterKernel"
+      ]
+    },
+    {
+      "temporary_module": "ZhangMathStep155Lemma31HarmonicTruncationDraft",
+      "archive": "audit/step133_lemma31_cumulative_155.txt",
+      "sha256": "ee321ae789acf964ffa6d8df3d3505cccce228e626142257c9aef7ee418eb215",
+      "interfaces": [
+        "lemma31_character_harmonic_truncation_identity",
+        "lemma31_character_harmonic_truncation_norm_le",
+        "lemma31_character_harmonic_truncation_real_le"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep157Lemma31DiscreteAbelDraft",
+      "archive": "audit/step133_lemma31_cumulative_157.txt",
+      "sha256": "a2381c748af7d9593a4e63c54b62672b465b5751bb7ad5b73b69aaa4324b6e70",
+      "interfaces": [
+        "lemma31_antitone_weighted_sum_norm_le"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep158Lemma31HyperbolaInputsDraft",
+      "archive": "audit/step133_lemma31_cumulative_158.txt",
+      "sha256": "05aa4b25e0d6b6230511d7996597020ea1150fe6e4b81535f878f43447eb0d64",
+      "interfaces": [
+        "lemma31_actual_nu_cumulative_eq",
+        "lemma31_shifted_character_partial_norm_le",
+        "lemma31_floor_div_weight_antitone",
+        "lemma31_hyperbola_long_sum_norm_le"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep159Lemma31FloorErrorDraft",
+      "archive": "audit/step133_lemma31_cumulative_159.txt",
+      "sha256": "f609b4178aa5d23a65d3b42e41f7d8d8bf4bcadc2ae69be76ab26e16cfc3a65a",
+      "interfaces": [
+        "lemma31_floor_div_real_error_le",
+        "lemma31_hyperbola_short_error_le"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep160Lemma31HyperbolaErrorDraft",
+      "archive": "audit/step133_lemma31_cumulative_160.txt",
+      "sha256": "da267c9eaf0196858da1d8ee0c723b6605563e60de8a4eee8531a36fa26c4e93",
+      "interfaces": [
+        "lemma31_actual_cumulative_error_le"
+      ],
+      "definitions": []
+    },
+    {
+      "temporary_module": "ZhangMathStep161Lemma31CumulativeBoundDraft",
+      "archive": "audit/step133_lemma31_cumulative_161.txt",
+      "sha256": "deb534bc80c01a245e6e0bb1c5f0837d3717da5c5a4fced383f660f90cf87098",
+      "interfaces": [
+        "lemma31_sqrt_cutoff_properties",
+        "lemma31_actual_cumulative_sqrt_error_le",
+        "lemma31_nu_real_cumulative_le"
+      ],
+      "definitions": []
+    }
+  ],
+  "created_at_utc": "2026-10-02T00:22:46.800846+00:00",
+  "current_full_gate": "Step124 PASS; 569 project/audit Lean sources unchanged by these temporary modules",
+  "new_results": [
+    "antitone weighted complex sums bounded by first weight times prefix bound",
+    "actual cumulative nu sum equals character sum weighted by floor(N/n)",
+    "actual hyperbola long sum bound 2D floor(N/(Y+1))",
+    "actual short rounding error at most Y",
+    "actual cumulative error at most Y+4DN/Y",
+    "explicit cutoff ceil sqrt(DN) gives actual cumulative error at most 6 sqrt(D) sqrt(N)",
+    "actual positive real cumulative sum at most N actual L(1,chi)+6 sqrt(D) sqrt(N)"
+  ],
+  "remaining": [
+    "actual linear weighted tail under original A",
+    "uniform constants and thresholds for full original Lemma3.1"
+  ]
+}

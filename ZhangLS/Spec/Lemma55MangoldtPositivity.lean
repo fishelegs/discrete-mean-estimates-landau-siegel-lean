@@ -1,0 +1,204 @@
+import ZhangLS.Spec.Lemma55ZetaWeightedPowerError
+import Mathlib.NumberTheory.LSeries.Positivity
+
+/-! # Actual von Mangoldt positivity for all derivative orders
+
+Actual continued L-functions are identified with the convergent logarithmic-derivative series. Real-character coefficients then give the four-function nonpositive real sum and its Fejér-weighted version.
+-/
+
+namespace ZhangLS.Spec
+open Complex Filter Set LSeries
+open scoped Topology
+
+noncomputable def lemma55MangoldtTwist {D : ℕ} (χ : RealPrimitiveCharacter D) : ℕ → ℂ :=
+  fun n => χ.chi (n : ZMod D) * (ArithmeticFunction.vonMangoldt n : ℂ)
+
+lemma lemma55_actual_mangoldt_twist_summable {D : ℕ} (χ : RealPrimitiveCharacter D)
+    {z : ℂ} (hz : 1 < z.re) : LSeriesSummable (lemma55MangoldtTwist χ) z := by
+  exact DirichletCharacter.LSeriesSummable_twist_vonMangoldt χ.chi hz
+
+lemma lemma55_actual_mangoldt_abscissa {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    abscissaOfAbsConv (lemma55MangoldtTwist χ) ≤ (1 : ℝ) := by
+  apply abscissaOfAbsConv_le_of_forall_lt_LSeriesSummable
+  intro y hy
+  exact lemma55_actual_mangoldt_twist_summable χ (by simpa using hy)
+
+lemma lemma55_actual_logDeriv_mangoldt {D : ℕ} (χ : RealPrimitiveCharacter D)
+    {z : ℂ} (hz : 1 < z.re) :
+    logDeriv (dirichletLFunction χ) z = -LSeries (lemma55MangoldtTwist χ) z := by
+  have heq : dirichletLFunction χ =ᶠ[𝓝 z] LSeries (fun n => χ.chi (n : ZMod D)) := by
+    filter_upwards [(isOpen_lt continuous_const continuous_re).mem_nhds hz] with w hw
+    exact dirichletLFunction_eq_series χ hw
+  have hl : logDeriv (dirichletLFunction χ) z =
+      logDeriv (LSeries (fun n => χ.chi (n : ZMod D))) z := by
+    change deriv (dirichletLFunction χ) z / dirichletLFunction χ z = _
+    rw [heq.deriv_eq, heq.self_of_nhds]
+    rfl
+  rw [hl]
+  have hs := DirichletCharacter.LSeries_twist_vonMangoldt_eq χ.chi hz
+  change LSeries (lemma55MangoldtTwist χ) z =
+    -deriv (LSeries (fun n => χ.chi (n : ZMod D))) z /
+      LSeries (fun n => χ.chi (n : ZMod D)) z at hs
+  simpa only [neg_div, neg_neg, logDeriv_apply] using (congrArg Neg.neg hs).symm
+
+lemma lemma55_actual_higher_logDeriv_mangoldt {D : ℕ} (χ : RealPrimitiveCharacter D)
+    {z : ℂ} (hz : 1 < z.re) (n : ℕ) :
+    iteratedDeriv n (logDeriv (dirichletLFunction χ)) z =
+      -((-1 : ℂ) ^ n * LSeries (LSeries.logMul^[n] (lemma55MangoldtTwist χ)) z) := by
+  have heq : logDeriv (dirichletLFunction χ) =ᶠ[𝓝 z] -LSeries (lemma55MangoldtTwist χ) := by
+    filter_upwards [(isOpen_lt continuous_const continuous_re).mem_nhds hz] with w hw
+    exact lemma55_actual_logDeriv_mangoldt χ hw
+  rw [heq.iteratedDeriv_eq n, iteratedDeriv_neg]
+  rw [LSeries_iteratedDeriv n (lt_of_le_of_lt (lemma55_actual_mangoldt_abscissa χ)
+    (by exact_mod_cast hz))]
+
+lemma lemma55_actual_normalized_logDeriv_mangoldt {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (t : ℝ) (n : ℕ) :
+    lemma55NormalizedLogDerivative χ t n =
+      -LSeries (LSeries.logMul^[n] (lemma55MangoldtTwist χ)) (lemma55JensenCenter t) /
+        (n.factorial : ℂ) := by
+  have he : (-1 : ℂ) ^ n * (-1 : ℂ) ^ n = 1 := by
+    rw [← mul_pow]
+    norm_num
+  unfold lemma55NormalizedLogDerivative
+  rw [lemma55_actual_higher_logDeriv_mangoldt χ (by simp) n]
+  congr 1
+  calc
+    _ = -(((-1 : ℂ) ^ n * (-1 : ℂ) ^ n) *
+        LSeries (LSeries.logMul^[n] (lemma55MangoldtTwist χ)) (lemma55JensenCenter t)) := by ring
+    _ = _ := by rw [he, one_mul]
+
+lemma lemma55_actual_zeta_normalized_mangoldt (t : ℝ) (n : ℕ) :
+    lemma55ZetaNormalizedLogDerivative t n =
+      -LSeries (LSeries.logMul^[n] (lemma55MangoldtTwist lemma55ZetaTrivialCharacter))
+        (lemma55JensenCenter t) / (n.factorial : ℂ) := by
+  rw [← lemma55_actual_normalized_logDeriv_mangoldt]
+  unfold lemma55ZetaNormalizedLogDerivative lemma55NormalizedLogDerivative
+  rw [lemma55_zeta_trivial_L_eq]
+
+
+open scoped ComplexOrder
+
+lemma lemma55_nonnegative_series_height_bound {f : ℕ → ℂ}
+    (hf : ∀ n, 0 ≤ f n) (hs : LSeriesSummable f (2 : ℂ)) (t : ℝ) :
+    ‖LSeries f (lemma55JensenCenter t)‖ ≤ (LSeries f 2).re := by
+  have hst : LSeriesSummable f (lemma55JensenCenter t) := hs.of_re_le_re (by simp)
+  change ‖∑' n, term f (lemma55JensenCenter t) n‖ ≤ (∑' n, term f 2 n).re
+  calc
+    _ ≤ ∑' n, ‖term f (lemma55JensenCenter t) n‖ := norm_tsum_le_tsum_norm hst.norm
+    _ ≤ ∑' n, ‖term f (2 : ℂ) n‖ :=
+      hst.norm.tsum_le_tsum (fun n => norm_term_le_of_re_le_re f (by simp) n) hs.norm
+    _ = ∑' n, (term f 2 n).re := by
+      apply tsum_congr
+      intro n
+      exact (Complex.re_eq_norm.mpr (term_nonneg (hf n) (2 : ℝ))).symm
+    _ = _ := (re_tsum hs).symm
+
+lemma lemma55_nonnegative_series_two_heights {f : ℕ → ℂ}
+    (hf : ∀ n, 0 ≤ f n) (hs : LSeriesSummable f (2 : ℂ)) (t : ℝ) :
+    0 ≤ (LSeries f 2 + LSeries f (lemma55JensenCenter t)).re := by
+  have hn := lemma55_nonnegative_series_height_bound hf hs t
+  have hb := (neg_le_neg (abs_re_le_norm (LSeries f (lemma55JensenCenter t)))).trans
+    (neg_abs_le (LSeries f (lemma55JensenCenter t)).re)
+  rw [add_re]
+  linarith only [hn, hb]
+
+lemma lemma55_mangoldt_trivial (n : ℕ) :
+    lemma55MangoldtTwist lemma55ZetaTrivialCharacter n =
+      (ArithmeticFunction.vonMangoldt n : ℂ) := by
+  have he : (n : ZMod 1) = 1 := Subsingleton.elim _ _
+  simp [lemma55MangoldtTwist, lemma55ZetaTrivialCharacter, he]
+
+lemma lemma55_actual_mangoldt_positive {D : ℕ} (χ : RealPrimitiveCharacter D) (n : ℕ) :
+    0 ≤ lemma55MangoldtTwist χ n + lemma55MangoldtTwist lemma55ZetaTrivialCharacter n := by
+  letI : NeZero D := ⟨χ.modulus_ne_zero⟩
+  rw [lemma55_mangoldt_trivial]
+  unfold lemma55MangoldtTwist
+  rw [← add_one_mul]
+  apply mul_nonneg
+  · apply Complex.nonneg_iff.mpr
+    have hb := (abs_re_le_norm (χ.chi (n : ZMod D))).trans (χ.chi.norm_le_one _)
+    refine ⟨?_, ?_⟩
+    · simp only [add_re, one_re]
+      linarith only [(abs_le.mp hb).1]
+    · simp [χ.real_valued]
+  · exact Complex.zero_le_real.mpr ArithmeticFunction.vonMangoldt_nonneg
+
+lemma lemma55_log_power_nonnegative {f : ℕ → ℂ} (hf : ∀ n, 0 ≤ f n) (k n : ℕ) :
+    0 ≤ LSeries.logMul^[k] f n := by
+  induction k with
+  | zero => exact hf n
+  | succ k ih =>
+    rw [Function.iterate_succ_apply']
+    exact mul_nonneg (by simp only [← natCast_log, Complex.zero_le_real, Real.log_natCast_nonneg]) ih
+
+lemma lemma55_log_power_add (f g : ℕ → ℂ) (k : ℕ) :
+    LSeries.logMul^[k] (f + g) = LSeries.logMul^[k] f + LSeries.logMul^[k] g := by
+  induction k with
+  | zero => rfl
+  | succ k ih =>
+    rw [Function.iterate_succ_apply', Function.iterate_succ_apply', Function.iterate_succ_apply', ih]
+    ext n
+    simp only [LSeries.logMul, Pi.add_apply, mul_add]
+
+noncomputable def lemma55PositiveMangoldtCoeffs {D : ℕ} (χ : RealPrimitiveCharacter D) (k : ℕ) : ℕ → ℂ :=
+  LSeries.logMul^[k] (lemma55MangoldtTwist χ + lemma55MangoldtTwist lemma55ZetaTrivialCharacter)
+
+lemma lemma55_actual_log_power_summable {D : ℕ} (χ : RealPrimitiveCharacter D)
+    {z : ℂ} (hz : 1 < z.re) (k : ℕ) :
+    LSeriesSummable (LSeries.logMul^[k] (lemma55MangoldtTwist χ)) z := by
+  apply LSeriesSummable_of_abscissaOfAbsConv_lt_re
+  rw [LSeries.absicssaOfAbsConv_logPowMul]
+  exact lt_of_le_of_lt (lemma55_actual_mangoldt_abscissa χ) (by exact_mod_cast hz)
+
+lemma lemma55_actual_combined_mangoldt_summable {D : ℕ} (χ : RealPrimitiveCharacter D)
+    {z : ℂ} (hz : 1 < z.re) (k : ℕ) :
+    LSeriesSummable (lemma55PositiveMangoldtCoeffs χ k) z := by
+  unfold lemma55PositiveMangoldtCoeffs
+  rw [lemma55_log_power_add]
+  exact (lemma55_actual_log_power_summable χ hz k).add
+    (lemma55_actual_log_power_summable lemma55ZetaTrivialCharacter hz k)
+
+lemma lemma55_actual_two_function_mangoldt {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (t : ℝ) (k : ℕ) :
+    lemma55NormalizedLogDerivative χ t k + lemma55ZetaNormalizedLogDerivative t k =
+      -LSeries (lemma55PositiveMangoldtCoeffs χ k) (lemma55JensenCenter t) /
+        (k.factorial : ℂ) := by
+  rw [lemma55_actual_normalized_logDeriv_mangoldt, lemma55_actual_zeta_normalized_mangoldt]
+  unfold lemma55PositiveMangoldtCoeffs
+  rw [lemma55_log_power_add, LSeries_add
+    (lemma55_actual_log_power_summable χ (by simp) k)
+    (lemma55_actual_log_power_summable lemma55ZetaTrivialCharacter (by simp) k)]
+  ring
+
+lemma lemma55_actual_four_logDeriv_nonpos {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (t : ℝ) (k : ℕ) :
+    (lemma55NormalizedLogDerivative χ 0 k + lemma55ZetaNormalizedLogDerivative 0 k +
+      (lemma55NormalizedLogDerivative χ t k + lemma55ZetaNormalizedLogDerivative t k)).re ≤ 0 := by
+  have hn : ∀ n, 0 ≤ lemma55PositiveMangoldtCoeffs χ k n :=
+    fun n => lemma55_log_power_nonnegative (lemma55_actual_mangoldt_positive χ) k n
+  have hs := lemma55_actual_combined_mangoldt_summable χ (z := 2) (by norm_num) k
+  have hb := lemma55_nonnegative_series_two_heights hn hs t
+  rw [lemma55_actual_two_function_mangoldt, lemma55_actual_two_function_mangoldt]
+  rw [show lemma55JensenCenter 0 = (2 : ℂ) by simp [lemma55JensenCenter]]
+  rw [← add_div, ← neg_add, div_natCast_re, neg_re]
+  exact div_nonpos_of_nonpos_of_nonneg (by linarith only [hb]) (by positivity)
+
+
+lemma lemma55_actual_weighted_four_logDeriv_nonpos {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (t : ℝ) {r : ℝ} (hr : 0 < r) {v : ℂ} (hv : ‖v‖ ≤ 1) (J : ℕ) :
+    (∑ j ∈ Finset.range J, (lemma55FejerDetectionWeight v J j : ℂ) *
+      (lemma55NormalizedLogDerivative χ 0 (2 * j + 1) +
+        lemma55ZetaNormalizedLogDerivative 0 (2 * j + 1) +
+        (lemma55NormalizedLogDerivative χ t (2 * j + 1) +
+          lemma55ZetaNormalizedLogDerivative t (2 * j + 1))) /
+            (r : ℂ) ^ (j + 1)).re ≤ 0 := by
+  rw [Complex.re_sum]
+  apply Finset.sum_nonpos
+  intro j _
+  rw [← Complex.ofReal_pow, div_ofReal_re, mul_re, ofReal_re, ofReal_im, zero_mul, sub_zero]
+  exact div_nonpos_of_nonpos_of_nonneg
+    (mul_nonpos_of_nonneg_of_nonpos (lemma55_fejer_detection_weight_bounds hv J j).1
+      (lemma55_actual_four_logDeriv_nonpos χ t (2 * j + 1))) (pow_nonneg hr.le _)
+
+end ZhangLS.Spec

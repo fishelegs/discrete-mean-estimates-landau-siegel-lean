@@ -1,0 +1,34 @@
+import ZhangMathStep319Lemma32PrimitiveModulusExponentsDraft
+import Mathlib.Data.Nat.Squarefree
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_real_primitive_odd_part_squarefree {D : ℕ}
+    (χ : RealPrimitiveCharacter D) : Squarefree (D / 2^(D.factorization 2)) := by
+  apply (Nat.squarefree_iff_factorization_le_one
+    (Nat.ordCompl_pos 2 (Nat.ne_of_gt χ.modulus_pos)).ne').mpr
+  intro p
+  rw [Nat.factorization_ordCompl D 2]
+  by_cases hp2 : p=2
+  · subst p
+    simp
+  rw [Finsupp.erase_ne hp2]
+  by_cases hp : p.Prime
+  · exact lemma32_real_primitive_odd_prime_exponent χ hp hp2
+  · rw [Nat.factorization_eq_zero_of_not_prime D hp]
+    decide
+
+lemma lemma32_real_primitive_modulus_shape {D : ℕ}
+    (χ : RealPrimitiveCharacter D) :
+    ∃ e m : ℕ, e ≤ 3 ∧ Odd m ∧ Squarefree m ∧ D=2^e*m := by
+  refine ⟨D.factorization 2, D / 2^(D.factorization 2),
+    lemma32_real_primitive_two_adic_exponent χ, ?_,
+    lemma32_real_primitive_odd_part_squarefree χ,
+    (Nat.ordProj_mul_ordCompl_eq_self D 2).symm⟩
+  apply Nat.not_even_iff_odd.mp
+  rw [even_iff_two_dvd]
+  exact Nat.not_dvd_ordCompl Nat.prime_two (Nat.ne_of_gt χ.modulus_pos)
+
+end ZhangLS.Spec

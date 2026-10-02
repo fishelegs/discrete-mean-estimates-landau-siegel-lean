@@ -1,0 +1,20 @@
+/private/tmp/ZhangMathStep114Lemma59ActualZerosChecked.lean:128:19: warning: 'positivity' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/private/tmp/ZhangMathStep114Lemma59ActualZerosChecked.lean:128:19: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+'ZhangLS.Spec.lemma59_actual_L_large_disk_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_large_disk_multiplicity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_large_height_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_family_modulus_le_two_P' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_family_large_disk_log_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_local_divisor_eq_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_mem_actual_local_zero_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_local_zero_order_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_actual_multiplicity_count_eq_sum_orders' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ZhangLS.Spec.lemma59_actual_local_zero_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_family_character_nonprincipal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZhangLS.Spec.lemma59_uniform_actual_local_zero_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

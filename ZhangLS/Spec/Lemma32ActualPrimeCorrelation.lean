@@ -1,0 +1,28 @@
+import ZhangLS.Spec.Lemma32QuadraticCorrelation
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_quadratic_character_norm_le_one {F : Type*} [Field F]
+    (χ : MulChar F ℂ) (hq : χ^2=1) (a : F) : ‖χ a‖ ≤ 1 := by
+  by_cases ha : a=0
+  · simp [ha,χ.map_zero]
+  · have h := congrArg norm (lemma32_quadratic_character_value_square χ hq a ha)
+    rw [norm_pow,norm_one] at h
+    nlinarith [norm_nonneg (χ a)]
+
+lemma lemma32_actual_prime_two_linear_correlation {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) (a b : ZMod p) (hab : a ≠ b) :
+    (∑ x : ZMod p, χ.chi ((x+a)*(x+b))) = -1 :=
+  lemma32_quadratic_two_linear_correlation χ.chi
+    (χ.nontrivial_of_one_lt_modulus (Fact.out : p.Prime).one_lt) χ.quadratic a b hab
+
+lemma lemma32_actual_prime_two_linear_real_correlation {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) (a b : ZMod p) (hab : a ≠ b) :
+    (∑ x : ZMod p, (χ.chi ((x+a)*(x+b))).re) = -1 := by
+  have h := congrArg Complex.re (lemma32_actual_prime_two_linear_correlation χ a b hab)
+  simpa only [Complex.re_sum,neg_re,one_re] using h
+
+end ZhangLS.Spec

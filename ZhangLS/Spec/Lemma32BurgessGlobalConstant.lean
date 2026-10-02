@@ -1,0 +1,32 @@
+import ZhangLS.Spec.Lemma32BurgessAmplitudeFourth
+set_option autoImplicit false
+namespace ZhangLS.Spec
+
+noncomputable def lemma32BurgessGlobalConstant : ℝ :=
+  4*(lemma32BurgessSmallRangeConstant+lemma32BurgessAmplitudeConstant+1024+1)
+
+lemma lemma32_burgess_global_constant_bounds :
+    1≤lemma32BurgessGlobalConstant ∧ 1024≤lemma32BurgessGlobalConstant ∧
+      lemma32BurgessSmallRangeConstant≤lemma32BurgessGlobalConstant^2 ∧
+      lemma32BurgessAmplitudeConstant≤(lemma32BurgessGlobalConstant/2)^4 := by
+  have hsmall := lemma32_burgess_small_range_constant_pos
+  have hamp := lemma32_burgess_amplitude_constant_pos
+  have hC : 1≤lemma32BurgessGlobalConstant := by
+    unfold lemma32BurgessGlobalConstant
+    linarith
+  have hbig : 1024≤lemma32BurgessGlobalConstant := by
+    unfold lemma32BurgessGlobalConstant
+    linarith
+  have hs : lemma32BurgessSmallRangeConstant≤lemma32BurgessGlobalConstant := by
+    unfold lemma32BurgessGlobalConstant
+    linarith
+  have hhalf : 1≤lemma32BurgessGlobalConstant/2 := by
+    unfold lemma32BurgessGlobalConstant
+    linarith
+  have ha : lemma32BurgessAmplitudeConstant≤lemma32BurgessGlobalConstant/2 := by
+    unfold lemma32BurgessGlobalConstant
+    linarith
+  exact ⟨hC,hbig,hs.trans (le_self_pow₀ hC (by decide : (2 : ℕ)≠0)),
+    ha.trans (le_self_pow₀ hhalf (by decide : (4 : ℕ)≠0))⟩
+
+end ZhangLS.Spec

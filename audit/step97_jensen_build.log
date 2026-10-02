@@ -1,0 +1,34 @@
+⚠ [1279/1546] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✖ [3468/3468] Building ZhangLS.Spec.Lemma55JensenZeroCount (2.2s)
+trace: .> LEAN_PATH=/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Cli/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/batteries/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/Qq/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/aesop/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/importGraph/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/plausible/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/packages/mathlib/.lake/build/lib/lean:/Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/keyishen/Documents/ChatGPT/zhangmath/ZhangLS/Spec/Lemma55JensenZeroCount.lean -o /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/Lemma55JensenZeroCount.olean -i /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/lib/lean/ZhangLS/Spec/Lemma55JensenZeroCount.ilean -c /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/Lemma55JensenZeroCount.c --setup /Users/keyishen/Documents/ChatGPT/zhangmath/.lake/build/ir/ZhangLS/Spec/Lemma55JensenZeroCount.setup.json --json
+error: ZhangLS/Spec/Lemma55JensenZeroCount.lean:37:10: Type mismatch: After simplification, term
+  sphere_subset_closedBall hz
+ has type
+  dist z (lemma55JensenCenter t) ≤ |3 / 2|
+but is expected to have type
+  dist z (lemma55JensenCenter t) ≤ 3 / 2
+error: ZhangLS/Spec/Lemma55JensenZeroCount.lean:40:32: unsolved goals
+case h.e'_3
+D : ℕ
+χ : RealPrimitiveCharacter D
+hD : 1 < D
+hL : 2000 ≤ Real.log ↑D
+t : ℝ
+ht : |t| ≤ 2 * ↑D
+hD2 : 2 ≤ ↑D
+hDp : 0 < ↑D
+hM : 1 ≤ 8 * ↑D ^ 2
+hMpos : 0 < 8 * ↑D ^ 2
+ha : AnalyticOnNhd ℂ (dirichletLFunction χ) (closedBall (lemma55JensenCenter t) |3 / 2|)
+hJ :
+  ↑(∑ᶠ (u : ℂ), (divisor (dirichletLFunction χ) (closedBall (lemma55JensenCenter t) |5 / 4|)) u) ≤
+    Real.log (8 * ↑D ^ 2 / ‖dirichletLFunction χ (lemma55JensenCenter t)‖) / Real.log (3 / 2 / (5 / 4))
+⊢ ∑ᶠ (ρ : ℂ), (divisor (dirichletLFunction χ) (closedBall (lemma55JensenCenter t) (5 / 4))) ρ =
+    ∑ᶠ (u : ℂ), (divisor (dirichletLFunction χ) (closedBall (lemma55JensenCenter t) |5 / 4|)) u
+error: Lean exited with code 1
+Some required targets logged failures:
+- ZhangLS.Spec.Lemma55JensenZeroCount
+error: build failed

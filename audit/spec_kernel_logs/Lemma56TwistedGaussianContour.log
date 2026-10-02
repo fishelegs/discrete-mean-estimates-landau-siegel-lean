@@ -1,0 +1,7 @@
+ZhangLS/Spec/Lemma56TwistedGaussianContour.lean:123:75: warning: This simp argument is unused:
+  sub_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [sub_re, mul_re, ofReal_re, I_re, ofReal_im, I_im, mul_zero,̵ ̵s̵u̵b̵_̵z̵e̵r̵o̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

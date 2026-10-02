@@ -1,0 +1,10 @@
+ZhangLS/Spec/Lemma61ReciprocalTailTruncation.lean:26:34: warning: unused variable `hL`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ZhangLS/Spec/Lemma61ReciprocalTailTruncation.lean:202:34: warning: This simp argument is unused:
+  Complex.ofReal_one
+
+Hint: Omit it from the simp argument list.
+  simp only [Complex.ofReal_neg,̵C̵o̵m̵p̵l̵e̵x̵.̵o̵f̵R̵e̵a̵l̵_̵o̵n̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

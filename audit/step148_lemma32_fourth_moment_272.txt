@@ -1,0 +1,36 @@
+import ZhangMathStep267Lemma32BurgessPairingsDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+def lemma32QuarticPaired {H : ℕ} (v : Fin 4 → Fin H) : Prop :=
+  (v 0=v 1 ∧ v 2=v 3) ∨ (v 0=v 2 ∧ v 1=v 3) ∨ (v 0=v 3 ∧ v 1=v 2)
+
+lemma lemma32_mem_degenerate_iff_paired {H : ℕ} (v : Fin 4 → Fin H) :
+    v ∈ lemma32DegenerateQuarticTuples H ↔ lemma32QuarticPaired v := by
+  unfold lemma32DegenerateQuarticTuples lemma32QuarticPaired
+  constructor
+  · intro h
+    simp only [mem_union,mem_image,mem_univ,true_and] at h
+    rcases h with (⟨ab,rfl⟩ | ⟨ab,rfl⟩) | ⟨ab,rfl⟩
+    · exact Or.inl (by simp [lemma32QuarticPairing])
+    · exact Or.inr (Or.inl (by simp [lemma32QuarticPairing]))
+    · exact Or.inr (Or.inr (by simp [lemma32QuarticPairing]))
+  · intro h
+    rcases h with h | h | h
+    · have he : lemma32QuarticPairing H 0 (v 0,v 2)=v := by
+        funext i
+        fin_cases i <;> simp [lemma32QuarticPairing,h.1,h.2]
+      exact mem_union_left _ (mem_union_left _ (mem_image.mpr ⟨(v 0,v 2),mem_univ _,he⟩))
+    · have he : lemma32QuarticPairing H 1 (v 0,v 1)=v := by
+        funext i
+        fin_cases i <;> simp [lemma32QuarticPairing,h.1,h.2]
+      exact mem_union_left _ (mem_union_right _ (mem_image.mpr ⟨(v 0,v 1),mem_univ _,he⟩))
+    · have he : lemma32QuarticPairing H 2 (v 0,v 1)=v := by
+        funext i
+        fin_cases i <;> simp [lemma32QuarticPairing,h.1,h.2]
+      exact mem_union_right _ (mem_image.mpr ⟨(v 0,v 1),mem_univ _,he⟩)
+
+end ZhangLS.Spec

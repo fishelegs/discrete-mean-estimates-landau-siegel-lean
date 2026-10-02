@@ -1,0 +1,70 @@
+import ZhangLS.Spec.Lemma32CorrectionProduct
+import Mathlib.NumberTheory.EulerProduct.DirichletLSeries
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_zeta_monomial_euler_hasProd (s : ℂ) (hs : 1 < s.re) :
+    HasProd (fun p : Nat.Primes => (1-lemma32PrimeMonomial p.val s)⁻¹) (riemannZeta s) := by
+  apply (riemannZeta_eulerProduct_hasProd hs).congr_fun
+  intro p
+  rw [lemma32_prime_monomial_eq_cpow p.property.pos s]
+
+lemma lemma32_actual_L_monomial_euler_hasProd {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (s : ℂ) (hs : 1 < s.re) :
+    HasProd (fun p : Nat.Primes => (1-χ.evalNat p.val*lemma32PrimeMonomial p.val s)⁻¹)
+      (dirichletLFunction χ s) := by
+  letI : NeZero D := ⟨χ.modulus_ne_zero⟩
+  have hh := DirichletCharacter.LSeries_eulerProduct_hasProd χ.chi hs
+  rw [← DirichletCharacter.LFunction_eq_LSeries χ.chi hs] at hh
+  apply hh.congr_fun
+  intro p
+  rw [lemma32_prime_monomial_eq_cpow p.property.pos s]
+  rfl
+
+lemma lemma32_actual_weighted_series_identity {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (s : ℂ) (hs : 1 < s.re) :
+    lemma32WeightedDirichletSeries χ s =
+      lemma32AnalyticCorrection χ s*(riemannZeta s*dirichletLFunction χ s)^8 := by
+  have hc := lemma32_actual_local_corrections_hasProd χ s (by linarith)
+  have hz := (lemma32_actual_zeta_monomial_euler_hasProd s hs).pow 8
+  have hl := (lemma32_actual_L_monomial_euler_hasProd χ s hs).pow 8
+  have hp := hc.mul (hz.mul hl)
+  have hb : HasProd (fun p : Nat.Primes => ∑' e : ℕ,
+      LSeries.term (fun n => (lemma32ActualCoefficient χ n : ℂ)) s (p.val^e))
+      (lemma32AnalyticCorrection χ s*(riemannZeta s^8*dirichletLFunction χ s^8)) := by
+    apply hp.congr_fun
+    intro p
+    have hn := lemma32_prime_monomial_norm_lt_one p.property.one_lt s (by linarith)
+    have h1 : 1-lemma32PrimeMonomial p.val s ≠ 0 := by
+      intro h
+      have ht : lemma32PrimeMonomial p.val s = 1 := (sub_eq_zero.mp h).symm
+      rw [ht,norm_one] at hn
+      linarith
+    have hcn : ‖χ.evalNat p.val*lemma32PrimeMonomial p.val s‖ < 1 := by
+      rw [norm_mul]
+      calc
+        _ ≤ 1*‖lemma32PrimeMonomial p.val s‖ :=
+          mul_le_mul_of_nonneg_right (χ.evalNat_norm_le_one p.val) (norm_nonneg _)
+        _ < 1 := by simpa using hn
+    have h2 : 1-χ.evalNat p.val*lemma32PrimeMonomial p.val s ≠ 0 := by
+      intro h
+      have ht : χ.evalNat p.val*lemma32PrimeMonomial p.val s = 1 := (sub_eq_zero.mp h).symm
+      rw [ht,norm_one] at hcn
+      linarith
+    symm
+    rw [← lemma32_weighted_local_correction_identity χ p.property s]
+    change (1-lemma32PrimeMonomial p.val s)^8*
+      (1-χ.evalNat p.val*lemma32PrimeMonomial p.val s)^8*
+      (∑' e : ℕ, LSeries.term (fun n => (lemma32ActualCoefficient χ n : ℂ)) s (p.val^e))*
+      ((1-lemma32PrimeMonomial p.val s)⁻¹^8*
+        (1-χ.evalNat p.val*lemma32PrimeMonomial p.val s)⁻¹^8) = _
+    have h2' : 1-lemma32PrimeMonomial p.val s*χ.evalNat p.val ≠ 0 := by
+      simpa only [mul_comm] using h2
+    field_simp [h1,h2,h2']
+  have he := (lemma32_actual_weighted_euler_hasProd χ s hs).unique hb
+  simpa only [mul_pow] using he
+
+end ZhangLS.Spec

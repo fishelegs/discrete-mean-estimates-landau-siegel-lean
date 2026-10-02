@@ -1,0 +1,24 @@
+{
+  "kernel_exit_code": 0,
+  "checked_at_utc": "2026-10-01T16:10:08.414831+00:00",
+  "sha256": "f0ff8cf7077f2b1aea51b87c70e6b8126d9351631dc6f6d58efa0f8a5f73d22a",
+  "interface_count": 14,
+  "expanded_examples": 4,
+  "proved_interfaces": [
+    "lemma59_extended_center_displacement_le_three",
+    "lemma59_extended_center_displacement_le",
+    "lemma59_extended_power_kernel_le",
+    "lemma59_extended_FG_bound",
+    "lemma59_extended_product_bound",
+    "lemma59_extended_L227_error_lt_half",
+    "lemma59_extended_F_two_sided",
+    "lemma59_extended_F_ne_zero",
+    "lemma59_extended_disk_subset_omega1",
+    "lemma59_extended_F_logDeriv_bound",
+    "lemma59_alpha_bounds",
+    "lemma59_original_region_in_extended",
+    "lemma59_zero_separated_LFunction_ne_zero",
+    "lemma59_uniform_extended_F_inputs"
+  ],
+  "scope": "Auxiliary actual F/G bounds and F nonvanishing/logarithmic derivative on enlarged regions covering the entire original Lemma 5.9 closed strip. Zero separation implies actual L denominator nonzero. Uniform threshold precedes all D, characters and points. Full actual L quotient target remains unproved; independent of the frozen Step 112 gate."
+}

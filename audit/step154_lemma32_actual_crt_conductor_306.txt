@@ -1,0 +1,52 @@
+import ZhangMathStep305Lemma32ActualCRTCharacterDraft
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_CRT_character_factorization {m n : ℕ} (h : m.Coprime n)
+    (χ : DirichletCharacter ℂ (m*n)) (a : ZMod (m*n)) :
+    χ a = lemma32CRTCharacterLeft h χ ((ZMod.chineseRemainder h a).1)*
+      lemma32CRTCharacterRight h χ ((ZMod.chineseRemainder h a).2) := by
+  have he := lemma32_product_character_factorization
+    (lemma32CharacterEquivPullback (ZMod.chineseRemainder h).symm.toMulEquiv χ)
+    (ZMod.chineseRemainder h a).1 (ZMod.chineseRemainder h a).2
+  change χ ((ZMod.chineseRemainder h).symm (ZMod.chineseRemainder h a)) =
+    lemma32CRTCharacterLeft h χ ((ZMod.chineseRemainder h a).1)*
+      lemma32CRTCharacterRight h χ ((ZMod.chineseRemainder h a).2) at he
+  simpa only [RingEquiv.symm_apply_apply] using he
+
+lemma lemma32_actual_CRT_factorsThrough_left {m n : ℕ} (h : m.Coprime n)
+    (χ : DirichletCharacter ℂ (m*n)) (hr : lemma32CRTCharacterRight h χ = 1) :
+    χ.FactorsThrough m := by
+  refine ⟨Nat.dvd_mul_right m n,lemma32CRTCharacterLeft h χ,?_⟩
+  apply MulChar.ext
+  intro a
+  rw [DirichletCharacter.changeLevel_eq_cast_of_dvd]
+  rw [lemma32_actual_CRT_character_factorization h χ (a : ZMod (m*n)),hr]
+  have hunit : IsUnit ((ZMod.chineseRemainder h (a : ZMod (m*n))).2) :=
+    (a.isUnit.map (ZMod.chineseRemainder h).toMonoidHom).map
+      (MonoidHom.snd (ZMod m) (ZMod n))
+  rw [MulChar.one_apply hunit,mul_one]
+  congr 1
+  change (ZMod.cast (a : ZMod (m*n)) : ZMod m × ZMod n).1 = _
+  exact Prod.fst_zmod_cast _
+
+lemma lemma32_actual_CRT_factorsThrough_right {m n : ℕ} (h : m.Coprime n)
+    (χ : DirichletCharacter ℂ (m*n)) (hl : lemma32CRTCharacterLeft h χ = 1) :
+    χ.FactorsThrough n := by
+  refine ⟨Nat.dvd_mul_left n m,lemma32CRTCharacterRight h χ,?_⟩
+  apply MulChar.ext
+  intro a
+  rw [DirichletCharacter.changeLevel_eq_cast_of_dvd]
+  rw [lemma32_actual_CRT_character_factorization h χ (a : ZMod (m*n)),hl]
+  have hunit : IsUnit ((ZMod.chineseRemainder h (a : ZMod (m*n))).1) :=
+    (a.isUnit.map (ZMod.chineseRemainder h).toMonoidHom).map
+      (MonoidHom.fst (ZMod m) (ZMod n))
+  rw [MulChar.one_apply hunit,one_mul]
+  congr 1
+  change (ZMod.cast (a : ZMod (m*n)) : ZMod m × ZMod n).2 = _
+  exact Prod.snd_zmod_cast _
+
+end ZhangLS.Spec

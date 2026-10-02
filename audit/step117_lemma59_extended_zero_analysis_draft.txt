@@ -1,0 +1,3328 @@
+import ZhangLS.Spec.Lemma44ApproximateFunctionalEquation
+import ZhangLS.Spec.Lemma59UniformPolynomialInputs
+import ZhangLS.Spec.Lemma48InverseFactor
+
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open scoped ArithmeticFunction.zeta Interval Real Topology
+set_option maxHeartbeats 2000000
+set_option maxRecDepth 4096
+
+
+lemma lemma59_extended_height_margin {D : ℕ} (hL : 3 ≤ lemma23PaperL D) :
+    lemma23PaperL D ^ 20 + 20 ≤ lemma23PaperL D ^ 405 := by
+  have hL1 : 1 ≤ lemma23PaperL D := by linarith only [hL]
+  have hp20 : 1 ≤ lemma23PaperL D ^ 20 := one_le_pow₀ hL1
+  have hp3 : (3 : ℝ) ^ 3 ≤ lemma23PaperL D ^ 3 := pow_le_pow_left₀ (by norm_num) hL 3
+  have hpow : lemma23PaperL D ^ 3 ≤ lemma23PaperL D ^ 385 := pow_le_pow_right₀ hL1 (by norm_num)
+  norm_num at hp3
+  have hm := mul_le_mul_of_nonneg_left (hp3.trans hpow) (by positivity : 0 ≤ lemma23PaperL D ^ 20)
+  have he : lemma23PaperL D ^ 20 * lemma23PaperL D ^ 385 = lemma23PaperL D ^ 405 := by rw [← pow_add]
+  rw [he] at hm
+  nlinarith only [hm,hp20]
+
+open Complex in
+def Lemma59ExtendedGammaRegion (D : ℕ) (s : ℂ) : Prop :=
+  |s.re - 1 / 2| ≤ 100 ∧
+    |s.im - (lemma23PaperCenter D).im| ≤ lemma23PaperL D ^ 405 + 20
+
+open MeasureTheory Complex in
+def Lemma59ExtendedOmega3 (D : ℕ) (s : ℂ) : Prop :=
+  1 / 2 - lemma44PaperAlpha D < s.re ∧ s.re < 1 + lemma44PaperAlpha D ∧
+    |s.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 19
+
+open Complex MeasureTheory in
+private theorem lemma59_ext44_norm_eight_terms (a b c d e f g h : ℂ) :
+    ‖a - b - c - d + e + f - g - h‖ ≤
+      ‖a‖ + ‖b‖ + ‖c‖ + ‖d‖ + ‖e‖ + ‖f‖ + ‖g‖ + ‖h‖ := by
+  calc
+    _ ≤ ‖a - b - c - d + e + f - g‖ + ‖h‖ := norm_sub_le _ _
+    _ ≤ (‖a - b - c - d + e + f‖ + ‖g‖) + ‖h‖ := by gcongr; exact norm_sub_le _ _
+    _ ≤ ((‖a - b - c - d + e‖ + ‖f‖) + ‖g‖) + ‖h‖ := by gcongr; exact norm_add_le _ _
+    _ ≤ (((‖a - b - c - d‖ + ‖e‖) + ‖f‖) + ‖g‖) + ‖h‖ := by gcongr; exact norm_add_le _ _
+    _ ≤ ((((‖a - b - c‖ + ‖d‖) + ‖e‖) + ‖f‖) + ‖g‖) + ‖h‖ := by gcongr; exact norm_sub_le _ _
+    _ ≤ (((((‖a - b‖ + ‖c‖) + ‖d‖) + ‖e‖) + ‖f‖) + ‖g‖) + ‖h‖ := by gcongr; exact norm_sub_le _ _
+    _ ≤ _ := by gcongr; exact norm_sub_le _ _
+
+open Complex in
+theorem lemma59_ext44_gamma_region_height {D : ℕ} {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma59ExtendedGammaRegion D s) :
+    24 ≤ |s.im| ∧ |s.re| + 2 ≤ |s.im| / 4 ∧
+      Real.log (3 * |s.im|) ≤ 550 * lemma23PaperL D := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  let L := lemma23PaperL D
+  have hL3 : 3 ≤ L := hL
+  have hL1 : 1 ≤ L := by linarith
+  have hLpos : 0 < L := by linarith
+  have hpow : L ^ 405 ≤ L ^ 519 := pow_le_pow_right₀ hL1 (by norm_num)
+  have hpow3 : 3 ≤ L ^ 519 := (show L ≤ L ^ 519 from le_self_pow₀ hL1 (by norm_num))
+    |>.trans' hL3
+  have hpow729 : 729 ≤ L ^ 519 := by
+    have h₆ : (3 : ℝ) ^ 6 ≤ L ^ 6 := pow_le_pow_left₀ (by norm_num) hL3 6
+    have h₆' : L ^ 6 ≤ L ^ 519 := pow_le_pow_right₀ hL1 (by norm_num)
+    norm_num at h₆
+    exact h₆.trans h₆'
+  have him : |s.im - 2 * Real.pi * L ^ 519| ≤ L ^ 405 + 20 := hs.2
+  have himlo : L ^ 519 ≤ s.im := by
+    have h := (abs_le.mp him).1
+    have hpi := Real.one_le_pi_div_two
+    nlinarith
+  have himhi : s.im ≤ 10 * L ^ 519 := by
+    have h := (abs_le.mp him).2
+    nlinarith [Real.pi_le_four]
+  have hspos : 0 ≤ s.im := by linarith
+  rw [abs_of_nonneg hspos]
+  have hre : |s.re| ≤ 101 := by
+    have h := abs_add_le (s.re - 1 / 2) (1 / 2 : ℝ)
+    norm_num at h
+    have hreal := hs.1
+    linarith
+  refine ⟨by linarith, by linarith, ?_⟩
+  have htpos : 0 < 3 * s.im := by linarith
+  calc
+    Real.log (3 * s.im) ≤ Real.log (30 * L ^ 519) :=
+      Real.log_le_log htpos (by linarith)
+    _ = Real.log 30 + 519 * Real.log L := by
+      rw [Real.log_mul (by norm_num) (by positivity), Real.log_pow]
+      norm_num
+    _ ≤ 550 * L := by
+      have hlogL := Real.log_le_self hLpos.le
+      have hlog30 := Real.log_le_self (by norm_num : (0 : ℝ) ≤ 30)
+      nlinarith
+
+open Complex ComplexConjugate in
+theorem lemma59_ext44_middle_reflected_displacement {D : ℕ} {s : ℂ} {v : ℝ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma59ExtendedOmega3 D s)
+    (hv : |v| ≤ lemma23PaperL D ^ 20) :
+    ‖lemma23PaperCenter D - lemma44MiddleReflectedArgument D s v‖ ≤
+      4 * lemma23PaperL D ^ 405 := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have ha := lemma44_alpha_pos_le_one hL
+  have hre : |(lemma23PaperCenter D - lemma44MiddleReflectedArgument D s v).re| ≤ 2 := by
+    have heq : (lemma23PaperCenter D - lemma44MiddleReflectedArgument D s v).re =
+        1 / 2 - (1 + lemma44PaperAlpha D - s.re) := by
+      simp [lemma44MiddleReflectedArgument, lemma23PaperCenter]
+    rw [heq]
+    apply abs_le.mpr
+    constructor <;> linarith [hs.1, hs.2.1]
+  have hp : lemma23PaperL D ^ 20 ≤ lemma23PaperL D ^ 405 :=
+    pow_le_pow_right₀ (by linarith : 1 ≤ lemma23PaperL D) (by norm_num)
+  have him : |(lemma23PaperCenter D - lemma44MiddleReflectedArgument D s v).im| ≤
+      2 * lemma23PaperL D ^ 405 + 3 := by
+    have htri := abs_add_le ((lemma23PaperCenter D).im - s.im) (-v)
+    simp only [abs_neg, abs_sub_comm] at htri
+    have heq : (lemma23PaperCenter D - lemma44MiddleReflectedArgument D s v).im =
+        (lemma23PaperCenter D).im - s.im - v := by
+      simp [lemma44MiddleReflectedArgument]
+      ring
+    rw [heq]
+    have htri' : |(lemma23PaperCenter D).im - s.im - v| ≤
+        |s.im - (lemma23PaperCenter D).im| + |v| := by
+      simpa only [sub_eq_add_neg] using htri
+    exact htri'.trans (by linarith [hs.2.2])
+  have hpow : 3 ≤ lemma23PaperL D ^ 405 :=
+    hL.trans (le_self_pow₀ (by linarith : 1 ≤ lemma23PaperL D) (by norm_num))
+  exact (Complex.norm_le_abs_re_add_abs_im _).trans (by linarith)
+
+open MeasureTheory Complex in
+theorem lemma59_ext44_omega3_displacement {D : ℕ} {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma59ExtendedOmega3 D s) :
+    ‖lemma23PaperCenter D - s‖ ≤ 3 * lemma23PaperL D ^ 405 := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have ha := lemma44_alpha_pos_le_one hL
+  have hre : |(lemma23PaperCenter D - s).re| ≤ 2 := by
+    change |1 / 2 - s.re| ≤ 2
+    have hreal := hs.1
+    have hreal' := hs.2.1
+    apply abs_le.mpr
+    constructor <;> linarith [ha.2]
+  have him : |(lemma23PaperCenter D - s).im| ≤ lemma23PaperL D ^ 405 + 19 := by
+    simpa [abs_sub_comm] using hs.2.2.le
+  have hpow : 3 ≤ lemma23PaperL D ^ 405 :=
+    hL.trans (le_self_pow₀ (by linarith : 1 ≤ lemma23PaperL D) (by norm_num))
+  exact (Complex.norm_le_abs_re_add_abs_im _).trans (by linarith)
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_omega3_re_pos {D : ℕ} (hL : 3 ≤ lemma23PaperL D)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) : 0 < s.re := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have hL0 : 0 < lemma23PaperL D := by linarith
+  have hL1 : 1 ≤ lemma23PaperL D := by linarith
+  have h3 : (3 : ℝ) ^ 3 ≤ lemma23PaperL D ^ 3 := pow_le_pow_left₀ (by norm_num) hL 3
+  have h39 : lemma23PaperL D ^ 3 ≤ lemma23PaperL D ^ 9 :=
+    pow_le_pow_right₀ hL1 (by norm_num)
+  have ha : lemma44PaperAlpha D ≤ 1 / 4 := by
+    unfold lemma44PaperAlpha lemma23PaperP
+    rw [Real.log_exp]
+    apply (div_le_iff₀ (pow_pos hL0 9)).mpr
+    norm_num at h3
+    nlinarith only [h3, h39, Real.pi_le_four]
+  linarith only [hs.1, ha]
+
+open Complex Set in
+theorem lemma59_ext44_omega3_subset_extended_gamma_region {D : ℕ} {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma59ExtendedOmega3 D s) :
+    Lemma44InExtendedGammaRegion D s := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have ha := lemma44_alpha_pos_le_one hL
+  refine ⟨?_, ?_⟩
+  · apply abs_le.mpr
+    constructor <;> linarith [hs.1, hs.2.1]
+  · have hp : 0 ≤ lemma23PaperL D ^ 405 := by positivity
+    linarith [hs.2.2]
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_right_mellin_gaussian_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) (v : ℝ) :
+    ‖lemma44ProductMellinIntegrand χ ψ s (lemma44PaperGaussianScale D) 1 v * I‖ ≤
+      (lemma44DivisorSeriesMass * Real.exp (1 + (9 / 5 : ℝ) * lemma23PaperL D ^ 9)) *
+        Real.exp (-(1 / (4 * lemma23PaperL D ^ 30)) * v ^ 2) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+  let w : ℂ := 1 + (v : ℂ) * I
+  have hL0 : 0 < lemma23PaperL D := by linarith
+  have ha : lemma44PaperAlpha D ≤ 1 / 4 := by
+    unfold lemma44PaperAlpha lemma23PaperP
+    rw [Real.log_exp]
+    apply (div_le_iff₀ (pow_pos hL0 9)).mpr
+    have h3 := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 3) hL 3
+    have h39 := pow_le_pow_right₀ (by linarith : 1 ≤ lemma23PaperL D) (show 3 ≤ 9 by norm_num)
+    norm_num at h3
+    nlinarith only [h3, h39, Real.pi_le_four]
+  have hz : 5 / 4 ≤ (s + w).re := by simp [w]; linarith only [hs.1, ha]
+  have hp := lemma44_product_series_norm_le_divisor_mass χ ψ hz
+  rw [norm_mul] at hp
+  have hmass := lemma44_divisor_series_mass_nonneg
+  have hn : 1 ≤ ‖w‖ := by simpa [w] using Complex.abs_re_le_norm w
+  have hinv : ‖w‖⁻¹ ≤ 1 := inv_le_one_of_one_le₀ hn
+  have hscale : ‖exp (w * (Real.log (lemma44PaperGaussianScale D) : ℂ))‖ =
+      Real.exp ((9 / 5 : ℝ) * lemma23PaperL D ^ 9) := by
+    rw [norm_exp, mul_re]
+    simp only [ofReal_re, ofReal_im, mul_zero, sub_zero,
+      lemma44_paper_gaussian_scale_log]
+    simp [w]
+  have homega : ‖lemma57OmegaOne D w‖ ≤
+      Real.exp 1 * Real.exp (-(1 / (4 * lemma23PaperL D ^ 30)) * v ^ 2) := by
+    change ‖lemma57OmegaOne D (((1 : ℝ) : ℂ) + (v : ℂ) * I)‖ ≤ _
+    rw [lemma44_Omega_norm_vertical, ← Real.exp_add]
+    apply Real.exp_le_exp.mpr
+    have hL0 : 0 < lemma23PaperL D := by linarith
+    have hp30 : 1 ≤ lemma23PaperL D ^ 30 := one_le_pow₀ (by linarith : 1 ≤ lemma23PaperL D)
+    field_simp
+    nlinarith only [hp30]
+  unfold lemma44ProductMellinIntegrand
+  change ‖(DirichletCharacter.LFunction ψ (s + w) *
+    DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) (s + w)) *
+    exp (w * (Real.log (lemma44PaperGaussianScale D) : ℂ)) * lemma57OmegaOne D w / w * I‖ ≤ _
+  simp only [norm_mul, norm_inv, norm_I, mul_one, div_eq_mul_inv]
+  rw [hscale]
+  calc
+    _ ≤ lemma44DivisorSeriesMass * Real.exp ((9 / 5 : ℝ) * lemma23PaperL D ^ 9) *
+        (Real.exp 1 * Real.exp (-(1 / (4 * lemma23PaperL D ^ 30)) * v ^ 2)) * 1 := by
+      exact mul_le_mul (mul_le_mul
+        (mul_le_mul_of_nonneg_right hp (Real.exp_nonneg _)) homega
+        (norm_nonneg _) (by positivity)) hinv (inv_nonneg.mpr (norm_nonneg _)) (by positivity)
+    _ = _ := by rw [Real.exp_add]; ring
+
+open Complex Set in
+theorem lemma59_ext44_truncated_shift_in_extended_gamma_region {D : ℕ} {s w : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma59ExtendedOmega3 D s)
+    (hwre : |w.re| ≤ 15) (hwim : |w.im| ≤ lemma23PaperL D ^ 20) :
+    Lemma44InExtendedGammaRegion D (s + w) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have ha := lemma44_alpha_pos_le_one hL
+  have hre : |s.re - 1 / 2| ≤ 2 := by
+    apply abs_le.mpr
+    constructor <;> linarith [hs.1, hs.2.1]
+  have hp : lemma23PaperL D ^ 20 ≤ lemma23PaperL D ^ 405 :=
+    pow_le_pow_right₀ (by linarith : 1 ≤ lemma23PaperL D) (by norm_num)
+  constructor
+  · change |s.re + w.re - 1 / 2| ≤ 100
+    have ht := abs_add_le (s.re - 1 / 2) w.re
+    rw [sub_add_eq_add_sub] at ht
+    linarith
+  · change |s.im + w.im - (lemma23PaperCenter D).im| ≤ _
+    have ht := abs_add_le (s.im - (lemma23PaperCenter D).im) w.im
+    rw [sub_add_eq_add_sub] at ht
+    linarith [hs.2.2]
+
+open Complex Set in
+theorem lemma59_ext44ActualZtilde_norm_on_omega3 {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D)
+    (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖lemma44ActualZtilde χ ψ s‖ ≤
+      Real.exp 1 * Real.exp ((1 - 2 * s.re) * Real.log (lemma23PaperP D)) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hregion := lemma59_ext44_omega3_subset_extended_gamma_region hL hs
+  by_cases hre : 1 / 2 ≤ s.re
+  · have hb := lemma44ActualZtilde_norm_le_right χ ψ hD hψ hregion hre
+    have he : 1 ≤ Real.exp (1 : ℝ) := Real.one_le_exp_iff.mpr (by norm_num)
+    apply hb.trans
+    have hm := mul_le_mul_of_nonneg_right he (Real.exp_nonneg
+      ((1 - 2 * s.re) * Real.log (lemma23PaperP D)))
+    simpa only [one_mul] using hm
+  · have hb := lemma44ActualZtilde_norm_le_left χ ψ hD hψ hregion (le_of_not_ge hre)
+    have hsmall : 3 * lemma23PaperL D * (1 / 2 - s.re) ≤ 1 := by
+      have hm := mul_le_mul_of_nonneg_left (show 1 / 2 - s.re ≤ lemma44PaperAlpha D by
+        linarith [hs.1]) (by linarith : 0 ≤ 3 * lemma23PaperL D)
+      exact hm.trans (lemma44_alpha_horizontal_loss hL)
+    apply hb.trans
+    rw [← Real.exp_add]
+    exact Real.exp_le_exp.mpr (by linarith only [hsmall])
+
+open Complex in
+theorem lemma59_ext44_equation46 {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedGammaRegion D s) :
+    ‖logDeriv (lemma44ActualZtilde χ ψ) s +
+      ((2 * Real.log (lemma23PaperP D) : ℝ) : ℂ)‖ ≤ 60000 * lemma23PaperL D := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  letI : NeZero D := ⟨χ.modulus_ne_zero⟩
+  letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+  have hpne : p ≠ 1 := hψ.1.ne_one
+  have hDpne : D * p ≠ 1 := by
+    intro h
+    exact hpne (Nat.dvd_one.mp (h ▸ Nat.dvd_mul_left p D))
+  have htwist := lemma44CharacterTwist_isPrimitive χ ψ hψ.2.1
+    (lemma44_family_coprime χ ψ hL hψ)
+  have hheight := lemma59_ext44_gamma_region_height hL hs
+  have hfactor := lemma44_productZ_logDeriv_bound ψ (lemma44CharacterTwist χ ψ)
+    hψ.2.1 htwist hpne hDpne hheight.1 hheight.2.1
+  change ‖logDeriv (lemma44ActualZtilde χ ψ) s + Complex.log (p : ℂ) +
+    Complex.log ((D * p : ℕ) : ℂ)‖ ≤ _ at hfactor
+  have hπ : ‖Complex.log (Real.pi : ℂ)‖ ≤ 4 := by
+    rw [← Complex.ofReal_log Real.pi_pos.le, Complex.norm_real, Real.norm_eq_abs,
+      abs_of_nonneg (Real.log_nonneg (by linarith [Real.one_le_pi_div_two]))]
+    exact (Real.log_le_self Real.pi_pos.le).trans Real.pi_le_four
+  have hfactor' : ‖logDeriv (lemma44ActualZtilde χ ψ) s + Complex.log (p : ℂ) +
+      Complex.log ((D * p : ℕ) : ℂ)‖ ≤ 59000 * lemma23PaperL D := by
+    apply hfactor.trans
+    nlinarith [hheight.2.2, Real.pi_le_four]
+  have hlogDp : Complex.log ((D * p : ℕ) : ℂ) =
+      ((lemma23PaperL D + Real.log (p : ℝ) : ℝ) : ℂ) := by
+    rw [← Complex.natCast_log, Nat.cast_mul, Real.log_mul
+      (by exact_mod_cast χ.modulus_ne_zero) (by exact_mod_cast NeZero.ne p)]
+    rfl
+  have hlogp : Complex.log (p : ℂ) = ((Real.log (p : ℝ) : ℝ) : ℂ) :=
+    (Complex.natCast_log (n := p)).symm
+  have hlogbounds := lemma44_family_log_bound hL ψ hψ
+  let E : ℝ := lemma23PaperL D + 2 *
+    (Real.log (p : ℝ) - Real.log (lemma23PaperP D))
+  have hE : 0 ≤ E ∧ E ≤ lemma23PaperL D + 2 := by dsimp [E]; constructor <;> linarith
+  have heq : logDeriv (lemma44ActualZtilde χ ψ) s +
+      ((2 * Real.log (lemma23PaperP D) : ℝ) : ℂ) =
+      (logDeriv (lemma44ActualZtilde χ ψ) s + Complex.log (p : ℂ) +
+        Complex.log ((D * p : ℕ) : ℂ)) - (E : ℂ) := by
+    rw [hlogDp, hlogp]
+    dsimp [E]
+    push_cast
+    ring
+  rw [heq]
+  have hnormE : ‖(E : ℂ)‖ ≤ lemma23PaperL D + 2 := by
+    rw [Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg hE.1]
+    exact hE.2
+  exact (norm_sub_le _ _).trans (by linarith)
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_gaussian_long_sum_on_omega3 {D p : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) {B : ℝ} (hB : 0 < B) :
+    ‖lemma44GaussianLongDirichletSum χ ψ s B‖ ≤
+      5 * Real.exp (2 * Real.pi) * lemma23PaperL D ^ (-180 : ℤ) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have hLpos : 0 < lemma23PaperL D := by linarith
+  have ha := lemma44_alpha_pos_le_one hL
+  have hmax : max 0 (1 / 2 - s.re) ≤ lemma44PaperAlpha D :=
+    max_le ha.1.le (by linarith [hs.1])
+  have halpha : lemma23PaperL D ^ 9 * lemma44PaperAlpha D = Real.pi := by
+    simp only [lemma44PaperAlpha, lemma23PaperP, Real.log_exp]
+    field_simp
+  have hexp : Real.exp (2 * lemma23PaperL D ^ 9 * max 0 (1 / 2 - s.re)) ≤
+      Real.exp (2 * Real.pi) := by
+    apply Real.exp_le_exp.mpr
+    have h := mul_le_mul_of_nonneg_left hmax (pow_pos hLpos 9).le
+    rw [halpha] at h
+    linarith
+  have hb := lemma44_gaussian_long_sum_L180_of_displacement χ ψ s hL hψ.2
+    (lemma59_ext44_omega3_displacement hL hs) hB
+  exact hb.trans (mul_le_mul_of_nonneg_right (by linarith) (by positivity))
+
+open Complex in
+theorem lemma59_ext44_initial_left_denominator_bound {D : ℕ}
+    (hL : 3 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) (v : ℝ) :
+    ‖lemma44InitialLeftShift s v‖⁻¹ ≤ 2 := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have hre := lemma59_ext44_omega3_re_pos hL hs
+  have hn := Complex.abs_re_le_norm (lemma44InitialLeftShift s v)
+  rw [lemma44_initial_left_shift_re, abs_of_neg (by linarith : -s.re - 1 / 2 < 0)] at hn
+  have hnorm : 0 < ‖lemma44InitialLeftShift s v‖ := by linarith only [hn, hre]
+  apply (inv_le_comm₀ hnorm (by norm_num : (0 : ℝ) < 2)).mpr
+  norm_num
+  linarith only [hn, hre]
+
+open Complex in
+theorem lemma59_ext44_initial_left_shift_abs_re {D : ℕ} (hL : 3 ≤ lemma23PaperL D)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) (v : ℝ) :
+    |(lemma44InitialLeftShift s v).re| ≤ 3 := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have ha := lemma44_alpha_pos_le_one hL
+  have hre := lemma59_ext44_omega3_re_pos hL hs
+  rw [lemma44_initial_left_shift_re]
+  apply abs_le.mpr
+  constructor <;> linarith only [hs.2.1, ha.2, hre]
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_left_product_mellin_eq_reflected_series {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) (B : ℝ) {v : ℝ}
+    (hv : |v| ≤ lemma23PaperL D ^ 20) :
+    let w : ℂ := ((-s.re - 1 / 2 : ℝ) : ℂ) + (v : ℂ) * I
+    lemma44ProductMellinIntegrand χ ψ s B (-s.re - 1 / 2) v =
+      lemma44ActualZtilde χ ψ (s + w) *
+        LSeries (fun n => lemma23NuArithmeticFunction χ n * ψ⁻¹ (n : ZMod p)) (1 - s - w) *
+          exp (w * (Real.log B : ℂ)) * lemma57OmegaOne D w / w := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+  let w : ℂ := ((-s.re - 1 / 2 : ℝ) : ℂ) + (v : ℂ) * I
+  have hwre : |w.re| ≤ 15 := by
+    have ha := lemma44_alpha_pos_le_one hL
+    have hre := lemma59_ext44_omega3_re_pos hL hs
+    simp only [w, add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im,
+      mul_zero, zero_mul, sub_zero, add_zero]
+    apply abs_le.mpr
+    constructor <;> linarith only [hs.2.1, ha.2, hre]
+  have hregion := lemma59_ext44_truncated_shift_in_extended_gamma_region hL hs hwre
+    (by simpa [w] using hv)
+  have him := (lemma44_extended_gamma_region_height hL hregion).2.2.1
+  have hfe := lemma44_equation44 χ ψ hL hψ him
+  have hmir : 1 < (1 - (s + w)).re := by simp [w]; linarith
+  have hprod := lemma44_product_LFunction_eq_LSeries χ ψ⁻¹ hmir
+  have hmirror : 1 - s - w = 1 - (s + w) := by ring
+  change _ = lemma44ActualZtilde χ ψ (s + w) *
+    LSeries (fun n => lemma23NuArithmeticFunction χ n * ψ⁻¹ (n : ZMod p)) (1 - s - w) *
+      exp (w * (Real.log B : ℂ)) * lemma57OmegaOne D w / w
+  rw [hmirror]
+  unfold lemma44ProductMellinIntegrand
+  change (DirichletCharacter.LFunction ψ (s + w) *
+    DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) (s + w)) *
+      exp (w * (Real.log B : ℂ)) * lemma57OmegaOne D w / w = _
+  rw [hfe, lemma44CharacterTwist_inv, hprod]
+
+open MeasureTheory Complex in
+theorem lemma59_ext44_long_sum_on_omega3 {D p : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖lemma44LongDirichletSum χ ψ s‖ ≤
+      4 * Real.exp (2 * Real.pi) * lemma23PaperL D ^ (-180 : ℤ) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have hLpos : 0 < lemma23PaperL D := by linarith
+  have ha := lemma44_alpha_pos_le_one hL
+  have hmax : max 0 (1 / 2 - s.re) ≤ lemma44PaperAlpha D :=
+    max_le ha.1.le (by linarith [hs.1])
+  have halpha : lemma23PaperL D ^ 9 * lemma44PaperAlpha D = Real.pi := by
+    simp only [lemma44PaperAlpha, lemma23PaperP, Real.log_exp]
+    field_simp
+  have hexp : Real.exp (2 * lemma23PaperL D ^ 9 * max 0 (1 / 2 - s.re)) ≤
+      Real.exp (2 * Real.pi) := by
+    apply Real.exp_le_exp.mpr
+    have h := mul_le_mul_of_nonneg_left hmax (pow_pos hLpos 9).le
+    rw [halpha] at h
+    linarith
+  have hb := lemma44_long_sum_L180_of_displacement χ ψ s hL hψ.2
+    (lemma59_ext44_omega3_displacement hL hs)
+  exact hb.trans (mul_le_mul_of_nonneg_right (by linarith) (by positivity))
+
+open Complex ComplexConjugate in
+theorem lemma59_ext44_middle_Z_norm_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D)
+    (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) {v : ℝ} (hv : |v| ≤ lemma23PaperL D ^ 20) :
+    ‖lemma44ActualZtilde χ ψ
+      (s + (-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I))‖ ≤
+        Real.exp (2 + 2 * lemma23PaperL D ^ 9 *
+          (1 / 2 - s.re + lemma44PaperAlpha D)) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have ha := lemma44_alpha_pos_le_one hL
+  let z := s + (-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I)
+  have hz : Lemma44InExtendedGammaRegion D z :=
+    lemma59_ext44_truncated_shift_in_extended_gamma_region hL hs
+      (by simp only [Complex.add_re, Complex.neg_re, Complex.ofReal_re,
+        Complex.mul_re, Complex.ofReal_im, Complex.I_re, mul_zero, zero_mul,
+        sub_zero, add_zero, abs_neg]
+          rw [abs_of_pos ha.1]; linarith [ha.2]) (by simpa using hv)
+  have hre : z.re = s.re - lemma44PaperAlpha D := by simp [z]; ring
+  have hlogP : Real.log (lemma23PaperP D) = lemma23PaperL D ^ 9 := by
+    simp [lemma23PaperP]
+  by_cases hr : 1 / 2 ≤ z.re
+  · have hb := lemma44ActualZtilde_norm_le_right χ ψ hD hψ hz hr
+    apply hb.trans
+    rw [hre, hlogP]
+    apply Real.exp_le_exp.mpr
+    ring_nf
+    linarith
+  · have hb := lemma44ActualZtilde_norm_le_left χ ψ hD hψ hz (le_of_not_ge hr)
+    have hsmall : 3 * lemma23PaperL D * (1 / 2 - z.re) ≤ 2 := by
+      have hm := mul_le_mul_of_nonneg_left (show 1 / 2 - z.re ≤ 2 * lemma44PaperAlpha D by
+        rw [hre]; linarith [hs.1]) (by linarith : 0 ≤ 3 * lemma23PaperL D)
+      nlinarith only [hm, lemma44_alpha_horizontal_loss hL]
+    apply hb.trans
+    rw [hre, hlogP] at *
+    apply Real.exp_le_exp.mpr
+    nlinarith only [hsmall]
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_middle_integrable {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    IntegrableOn (lemma44MiddleContourIntegrand χ ψ s)
+      (Ioc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20)) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have ha := lemma44_alpha_pos_le_one hL
+  let w : ℝ → ℂ := fun v => -(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I
+  have hwc : Continuous w := by dsimp [w]; fun_prop
+  have hwne (v : ℝ) : w v ≠ 0 := by
+    intro h
+    have hr := congrArg Complex.re h
+    simp [w] at hr
+    exact ha.1.ne' hr
+  have hrest : Continuous (fun v : ℝ => lemma44LongDirichletSum χ ψ⁻¹ (1 - s - w v) *
+      Complex.exp (w v * (Real.log (lemma44PaperGaussianScale D) : ℂ)) *
+        lemma57OmegaOne D (w v) / w v) := by
+    have hnum : Continuous (fun v : ℝ => lemma44LongDirichletSum χ ψ⁻¹ (1 - s - w v) *
+        Complex.exp (w v * (Real.log (lemma44PaperGaussianScale D) : ℂ)) *
+          lemma57OmegaOne D (w v)) := by
+      unfold lemma44LongDirichletSum lemma57OmegaOne
+      fun_prop
+    exact hnum.div₀ hwc hwne
+  have hc : ContinuousOn (lemma44MiddleContourIntegrand χ ψ s)
+      (Icc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20)) := by
+    intro v hv
+    have hvabs : |v| ≤ lemma23PaperL D ^ 20 := abs_le.mpr hv
+    have hz := lemma59_ext44_truncated_shift_in_extended_gamma_region hL hs
+      (w := w v) (by
+        simp only [w, Complex.add_re, Complex.neg_re, Complex.ofReal_re,
+          Complex.mul_re, Complex.ofReal_im, Complex.I_re, mul_zero, zero_mul,
+          sub_zero, add_zero, abs_neg]
+        rw [abs_of_pos ha.1]; linarith [ha.2]) (by simpa [w] using hvabs)
+    have him := (lemma44_extended_gamma_region_height hL hz).2.2.1
+    have hzd : ContinuousAt (lemma44ActualZtilde χ ψ) (s + w v) :=
+      (lemma44ActualZtilde_differentiableAt χ ψ him.ne').continuousAt
+    have hargC : ContinuousAt (fun u : ℝ => s + w u) v :=
+      continuousAt_const.add hwc.continuousAt
+    have hzc : ContinuousAt (fun u : ℝ => lemma44ActualZtilde χ ψ (s + w u)) v :=
+      hzd.comp (f := fun u : ℝ => s + w u) hargC
+    have h := hzc.mul hrest.continuousAt
+    have heq : lemma44MiddleContourIntegrand χ ψ s =
+        (fun u : ℝ => lemma44ActualZtilde χ ψ (s + w u)) *
+          (fun u : ℝ => lemma44LongDirichletSum χ ψ⁻¹ (1 - s - w u) *
+            Complex.exp (w u * (Real.log (lemma44PaperGaussianScale D) : ℂ)) *
+              lemma57OmegaOne D (w u) / w u) := by
+      funext u
+      dsimp [lemma44MiddleContourIntegrand, w]
+      ring
+    rw [heq]
+    exact h.continuousWithinAt
+  exact hc.integrableOn_Icc.mono_set Ioc_subset_Icc_self
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_product_finite_shift {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) (B : ℝ) {T : ℝ} (hT : 0 < T) :
+    letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+    lemma44TruncatedProductMellin χ ψ s B 1 T =
+      DirichletCharacter.LFunction ψ s *
+          DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) s +
+        lemma44TruncatedProductMellin χ ψ s B (-s.re - 1 / 2) T +
+          lemma44ProductHorizontalError χ ψ s B (-s.re - 1 / 2) T := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+  have hres := lemma44_simple_pole_rectangle_left (lemma44ProductMellinNumerator χ ψ s B)
+    (lemma44_product_mellin_numerator_differentiable χ ψ hL hψ s B)
+    (a := -s.re - 1 / 2) (by linarith [lemma59_ext44_omega3_re_pos hL hs]) hT
+  have hzero : lemma44ProductMellinNumerator χ ψ s B 0 =
+      DirichletCharacter.LFunction ψ s *
+        DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) s := by
+    simp [lemma44ProductMellinNumerator, lemma57OmegaOne]
+  rw [hzero] at hres
+  have hpoint (σ t : ℝ) : lemma44ProductMellinIntegrand χ ψ s B σ t =
+      lemma44ProductMellinNumerator χ ψ s B ((σ : ℂ) + (t : ℂ) * I) /
+        ((σ : ℂ) + (t : ℂ) * I) := rfl
+  unfold lemma44TruncatedProductMellin lemma44ProductHorizontalError
+  simp_rw [hpoint, intervalIntegral.integral_mul_const]
+  field_simp [two_pi_I_ne_zero]
+  unfold lemma44RectangleBoundaryIntegral at hres
+  simp only [ofReal_one, sub_eq_add_neg] at hres ⊢
+  ring_nf at hres ⊢
+  simp only [sub_eq_add_neg, add_comm, add_left_comm,
+    mul_comm, mul_left_comm, mul_assoc] at hres ⊢
+  linear_combination hres
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_product_horizontal_point_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) {x v : ℝ}
+    (hx : -s.re - 1 / 2 ≤ x) (hx10 : |x| ≤ 10) (hv : |v| = lemma23PaperL D ^ 20) :
+    ‖lemma44ProductMellinNumerator χ ψ s (lemma44PaperGaussianScale D)
+      ((x : ℂ) + (v : ℂ) * I) / ((x : ℂ) + (v : ℂ) * I)‖ ≤
+      262144 * Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ) := by
+  letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hL0 : 0 ≤ lemma23PaperL D := by linarith
+  let w : ℂ := (x : ℂ) + (v : ℂ) * I
+  have hr : Lemma44InExtendedGammaRegion D (s + w) :=
+    lemma59_ext44_truncated_shift_in_extended_gamma_region hL hs
+      (by simpa [w] using hx10.trans (by norm_num : (10 : ℝ) ≤ 15))
+      (by simpa [w] using hv.le)
+  have hre : -1 / 2 ≤ (s + w).re := by simp [w]; linarith only [hx]
+  have hp := lemma44_actual_product_local_growth χ ψ hD hψ hr hre
+  have hb := lemma44_horizontal_scale_bound hL (abs_le.mp hx10).2 v
+  have hg := lemma44_horizontal_gaussian_bound hL hx10 hv
+  have hi := lemma44_horizontal_denominator_bound hL x hv
+  have hbudget : lemma23PaperL D ^ 1038 *
+      Real.exp (22 * lemma23PaperL D ^ 9 + 4 * lemma23PaperL D - lemma23PaperL D ^ 10 / 4) ≤
+      lemma23PaperL D ^ (-180 : ℤ) := by
+    apply le_trans _ (lemma44_horizontal_decay_budget (lemma44_log_large_at_threshold hD))
+    apply mul_le_mul
+      (pow_le_pow_right₀ (by linarith : 1 ≤ lemma23PaperL D) (show 1038 ≤ 2000 by norm_num))
+      (Real.exp_le_exp.mpr (by nlinarith only [hL0, pow_nonneg hL0 9]))
+      (Real.exp_nonneg _) (pow_nonneg hL0 2000)
+  change ‖lemma44ProductMellinNumerator χ ψ s (lemma44PaperGaussianScale D) w / w‖ ≤ _
+  unfold lemma44ProductMellinNumerator
+  simp only [norm_mul, norm_inv, div_eq_mul_inv]
+  rw [norm_mul] at hp
+  calc
+    _ ≤ (262144 * Real.exp (4 * lemma23PaperL D + 4 * lemma23PaperL D ^ 9) * lemma23PaperL D ^ 1038) *
+        Real.exp (18 * lemma23PaperL D ^ 9) *
+        (Real.exp 1 * Real.exp (-(lemma23PaperL D ^ 10 / 4))) * 1 := by
+      gcongr
+    _ = (262144 * Real.exp 1) * (lemma23PaperL D ^ 1038 *
+        Real.exp (22 * lemma23PaperL D ^ 9 + 4 * lemma23PaperL D - lemma23PaperL D ^ 10 / 4)) := by
+      have he : Real.exp (22 * lemma23PaperL D ^ 9 + 4 * lemma23PaperL D - lemma23PaperL D ^ 10 / 4) =
+          Real.exp (4 * lemma23PaperL D + 4 * lemma23PaperL D ^ 9) *
+          Real.exp (18 * lemma23PaperL D ^ 9) * Real.exp (-(lemma23PaperL D ^ 10 / 4)) := by
+        rw [← Real.exp_add, ← Real.exp_add]
+        congr 1
+        ring
+      rw [he]
+      ring
+    _ ≤ _ := mul_le_mul_of_nonneg_left hbudget (by positivity)
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_reflected_horizontal_point_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) (f : ℂ → ℂ) {x v E H : ℝ}
+    (hx : -s.re - 1 / 2 ≤ x) (hx10 : |x| ≤ 10) (hv : |v| = lemma23PaperL D ^ 20)
+    (hf : ‖f (1 - s - ((x : ℂ) + (v : ℂ) * I))‖ ≤ Real.exp E)
+    (hscale : ‖exp (((x : ℂ) + (v : ℂ) * I) *
+      (Real.log (lemma44PaperGaussianScale D) : ℂ))‖ ≤ Real.exp H)
+    (hbudget : E + H + 2 * lemma23PaperL D ^ 9 + 3 * lemma23PaperL D ≤
+      30 * lemma23PaperL D ^ 9 + 100 * lemma23PaperL D) :
+    ‖lemma44ReflectedPolynomialNumerator χ ψ s f ((x : ℂ) + (v : ℂ) * I) /
+      ((x : ℂ) + (v : ℂ) * I)‖ ≤ Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  let w : ℂ := (x : ℂ) + (v : ℂ) * I
+  have hr := lemma59_ext44_truncated_shift_in_extended_gamma_region hL hs
+    (w := w) (by simpa [w] using hx10.trans (by norm_num : (10 : ℝ) ≤ 15))
+    (by simpa [w] using hv.le)
+  have hre : -1 / 2 ≤ (s + w).re := by simp [w]; linarith only [hx]
+  have hz := lemma44_Z_coarse_bound χ ψ hD hψ hr hre
+  have hg := lemma44_horizontal_gaussian_bound hL hx10 hv
+  have hi := lemma44_horizontal_denominator_bound hL x hv
+  have hb := lemma44_horizontal_exponential_budget hD hbudget
+  unfold lemma44ReflectedPolynomialNumerator
+  simp only [norm_mul, norm_inv, div_eq_mul_inv]
+  calc
+    _ ≤ Real.exp (2 * lemma23PaperL D ^ 9 + 3 * lemma23PaperL D) * Real.exp E * Real.exp H *
+        (Real.exp 1 * Real.exp (-(lemma23PaperL D ^ 10 / 4))) * 1 := by gcongr
+    _ = Real.exp 1 * Real.exp (E + H + 2 * lemma23PaperL D ^ 9 +
+        3 * lemma23PaperL D - lemma23PaperL D ^ 10 / 4) := by
+      rw [mul_one]
+      have he : Real.exp (E + H + 2 * lemma23PaperL D ^ 9 +
+          3 * lemma23PaperL D - lemma23PaperL D ^ 10 / 4) =
+          Real.exp (2 * lemma23PaperL D ^ 9 + 3 * lemma23PaperL D) *
+            Real.exp E * Real.exp H * Real.exp (-(lemma23PaperL D ^ 10 / 4)) := by
+        simp only [← Real.exp_add]
+        congr 1
+        ring
+      rw [he]
+      ring
+    _ ≤ _ := mul_le_mul_of_nonneg_left hb (Real.exp_nonneg 1)
+
+open Complex ComplexConjugate in
+theorem lemma59_ext44_reflected_long_sum_bound {D p : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) {v : ℝ} (hv : |v| ≤ lemma23PaperL D ^ 20) :
+    ‖lemma44LongDirichletSum χ ψ⁻¹
+      (1 - s - (-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I))‖ ≤
+        5 * Real.exp (2 * lemma23PaperL D ^ 9 *
+          max 0 (s.re - 1 / 2 - lemma44PaperAlpha D)) * lemma23PaperL D ^ (-180 : ℤ) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have harg : conj (1 - s - (-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I)) =
+      lemma44MiddleReflectedArgument D s v := by
+    apply Complex.ext <;> simp [lemma44MiddleReflectedArgument] <;> ring
+  rw [lemma44_long_sum_inv_eq_conj, Complex.norm_conj, harg]
+  have hdisp := lemma59_ext44_middle_reflected_displacement hL hs hv
+  have hLpos : 0 < lemma23PaperL D := by linarith
+  have hpow : 1 ≤ lemma23PaperL D ^ 405 := one_le_pow₀ (by linarith : 1 ≤ lemma23PaperL D)
+  have hprod : lemma23PaperL D ^ 405 * lemma23PaperL D ^ (-585 : ℤ) =
+      lemma23PaperL D ^ (-180 : ℤ) := by
+    rw [← zpow_natCast, ← zpow_add₀ hLpos.ne']
+    norm_num
+  have hcoef : (1 + ‖lemma23PaperCenter D - lemma44MiddleReflectedArgument D s v‖) *
+      lemma23PaperL D ^ (-585 : ℤ) ≤ 5 * lemma23PaperL D ^ (-180 : ℤ) := by
+    calc
+      _ ≤ (5 * lemma23PaperL D ^ 405) * lemma23PaperL D ^ (-585 : ℤ) :=
+        mul_le_mul_of_nonneg_right (by linarith) (by positivity)
+      _ = _ := by rw [mul_assoc, hprod]
+  have hb := lemma44_long_sum_bound χ ψ (lemma44MiddleReflectedArgument D s v) hL hψ.2
+  have hre : 1 / 2 - (lemma44MiddleReflectedArgument D s v).re =
+      s.re - 1 / 2 - lemma44PaperAlpha D := by
+    simp [lemma44MiddleReflectedArgument]
+    ring
+  rw [hre] at hb
+  have he := mul_le_mul_of_nonneg_left hcoef (Real.exp_nonneg
+    (2 * lemma23PaperL D ^ 9 * max 0 (s.re - 1 / 2 - lemma44PaperAlpha D)))
+  exact hb.trans (by nlinarith only [he])
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_reflected_numerator_rectangle_differentiable {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma59ExtendedOmega3 D s)
+    (f : ℂ → ℂ) (hf : Differentiable ℂ f) {a b : ℝ} (ha : -3 ≤ a) (hb : b ≤ 10) :
+    DifferentiableOn ℂ (lemma44ReflectedPolynomialNumerator χ ψ s f)
+      (lemma44ClosedRectangle a b (lemma23PaperL D ^ 20)) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  intro w hw
+  have hwr : |w.re| ≤ 15 := by
+    have hr := hw.1
+    apply abs_le.mpr
+    constructor <;> linarith only [hr.1, hr.2, ha, hb]
+  have hwi : |w.im| ≤ lemma23PaperL D ^ 20 := abs_le.mpr hw.2
+  have hregion := lemma59_ext44_truncated_shift_in_extended_gamma_region hL hs hwr hwi
+  exact (lemma44_reflected_numerator_differentiableAt χ ψ s f hf
+    (ne_of_gt (lemma44_extended_gamma_region_height hL hregion).2.2.1)).differentiableWithinAt
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_reflected_polynomial_intervalIntegrable {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma59ExtendedOmega3 D s)
+    (f : ℂ → ℂ) (hf : Differentiable ℂ f) {σ : ℝ} (hσ : |σ| ≤ 15) (hσ0 : σ ≠ 0) :
+    IntervalIntegrable (fun v : ℝ =>
+      lemma44ReflectedPolynomialNumerator χ ψ s f ((σ : ℂ) + (v : ℂ) * I) /
+        ((σ : ℂ) + (v : ℂ) * I)) volume
+      (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have hT : 0 ≤ lemma23PaperL D ^ 20 := by positivity
+  apply ContinuousOn.intervalIntegrable
+  rw [uIcc_of_le (by linarith : -(lemma23PaperL D ^ 20) ≤ lemma23PaperL D ^ 20)]
+  intro v hv
+  let w : ℂ := (σ : ℂ) + (v : ℂ) * I
+  have hr := lemma59_ext44_truncated_shift_in_extended_gamma_region hL hs (w := w)
+    (by simpa [w] using hσ) (by simpa [w] using abs_le.mpr hv)
+  have hd := lemma44_reflected_numerator_differentiableAt χ ψ s f hf
+    (ne_of_gt (lemma44_extended_gamma_region_height hL hr).2.2.1)
+  have hc : ContinuousAt (fun u : ℝ => lemma44ReflectedPolynomialNumerator χ ψ s f
+      ((σ : ℂ) + (u : ℂ) * I)) v := hd.continuousAt.comp
+        (f := fun u : ℝ => (σ : ℂ) + (u : ℂ) * I) (by fun_prop)
+  apply (hc.div (by fun_prop) _).continuousWithinAt
+  intro he
+  have hre := congrArg Complex.re he
+  simp at hre
+  exact hσ0 hre
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_right_vertical_truncation_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖(2 * (Real.pi : ℂ) * I)⁻¹ *
+      (∫ v : ℝ, lemma44ProductMellinIntegrand χ ψ s (lemma44PaperGaussianScale D) 1 v * I) -
+        lemma44TruncatedProductMellin χ ψ s (lemma44PaperGaussianScale D) 1
+          (lemma23PaperL D ^ 20)‖ ≤
+      8 * lemma44DivisorSeriesMass * Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ) := by
+  let L := lemma23PaperL D
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hL0 : 0 < L := by linarith
+  have hL1 : 1 ≤ L := by linarith
+  have hmass := lemma44_divisor_series_mass_nonneg
+  have hB : 0 < lemma44PaperGaussianScale D := by
+    unfold lemma44PaperGaussianScale lemma23PaperP
+    exact Real.rpow_pos_of_pos (Real.exp_pos _) _
+  have hi := (lemma44_product_gaussian_mellin_identity χ ψ s
+    (lemma44_modulus_one_lt_at_threshold χ hD) hB (by norm_num : (0 : ℝ) < 1)
+    (by linarith only [lemma59_ext44_omega3_re_pos hL hs])).1.mul_const I
+  have hg := lemma44_gaussian_integral_truncation _ hi
+    (mul_nonneg lemma44_divisor_series_mass_nonneg (Real.exp_nonneg _))
+    (by positivity : 0 < 1 / (4 * L ^ 30)) (pow_pos hL0 20)
+    (lemma59_ext44_right_mellin_gaussian_bound χ ψ hL hs)
+  have he : 1 / (4 * L ^ 30) * (L ^ 20) ^ 2 = L ^ 10 / 4 := by
+    field_simp
+  have hk : 1 / (4 * L ^ 30) * L ^ 20 = (4 * L ^ 10)⁻¹ := by
+    field_simp
+  change ‖_ - _‖ ≤ _ at hg
+  rw [neg_mul, he, hk, div_eq_mul_inv, inv_inv] at hg
+  have hb : L ^ 10 * Real.exp ((9 / 5 : ℝ) * L ^ 9 - L ^ 10 / 4) ≤ L ^ (-180 : ℤ) := by
+    calc
+      _ ≤ L ^ 2000 * Real.exp (30 * L ^ 9 + 100 * L - L ^ 10 / 4) := by
+        apply mul_le_mul
+          (pow_le_pow_right₀ hL1 (show 10 ≤ 2000 by norm_num))
+          (Real.exp_le_exp.mpr (by nlinarith only [hL0, pow_nonneg hL0.le 9]))
+          (Real.exp_nonneg _) (pow_nonneg hL0.le 2000)
+      _ ≤ _ := lemma44_horizontal_decay_budget (lemma44_log_large_at_threshold hD)
+  have heprod : Real.exp (1 + (9 / 5 : ℝ) * L ^ 9) * Real.exp (-(L ^ 10 / 4)) =
+      Real.exp 1 * Real.exp ((9 / 5 : ℝ) * L ^ 9 - L ^ 10 / 4) := by
+    rw [← Real.exp_add, ← Real.exp_add]
+    congr 1
+    ring
+  have hg' : ‖(∫ v : ℝ, lemma44ProductMellinIntegrand χ ψ s (lemma44PaperGaussianScale D) 1 v * I) -
+      (∫ v : ℝ in -(L ^ 20)..L ^ 20,
+        lemma44ProductMellinIntegrand χ ψ s (lemma44PaperGaussianScale D) 1 v * I)‖ ≤
+      8 * lemma44DivisorSeriesMass * Real.exp 1 * L ^ (-180 : ℤ) := by
+    apply hg.trans
+    calc
+      _ = (8 * lemma44DivisorSeriesMass * Real.exp 1) *
+          (L ^ 10 * Real.exp ((9 / 5 : ℝ) * L ^ 9 - L ^ 10 / 4)) := by
+        dsimp only [L]
+        rw [show 2 * (lemma44DivisorSeriesMass * Real.exp (1 + (9 / 5 : ℝ) * lemma23PaperL D ^ 9)) *
+            Real.exp (-(lemma23PaperL D ^ 10 / 4)) * (4 * lemma23PaperL D ^ 10) =
+          8 * lemma44DivisorSeriesMass * lemma23PaperL D ^ 10 *
+            (Real.exp (1 + (9 / 5 : ℝ) * lemma23PaperL D ^ 9) * Real.exp (-(lemma23PaperL D ^ 10 / 4)))
+          by ring]
+        rw [heprod]
+        ring
+      _ ≤ _ := mul_le_mul_of_nonneg_left hb (by positivity)
+  unfold lemma44TruncatedProductMellin
+  rw [← mul_sub, norm_mul]
+  exact (mul_le_mul_of_nonneg_right lemma44_mellin_normalization_norm_le_one (norm_nonneg _)).trans
+    (by simpa only [one_mul] using hg')
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_short_right_point_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) {v : ℝ} (hv : |v| ≤ lemma23PaperL D ^ 20) :
+    ‖lemma44ReflectedPolynomialNumerator χ ψ s
+      (lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)))
+        ((10 : ℂ) + (v : ℂ) * I) / ((10 : ℂ) + (v : ℂ) * I)‖ ≤
+      Real.exp 1 * Real.exp (52 * lemma23PaperL D - lemma23PaperL D ^ 9) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hL0 : 0 ≤ lemma23PaperL D := by linarith
+  have hre := lemma59_ext44_omega3_re_pos hL hs
+  have ha := lemma44_alpha_pos_le_one hL
+  let w : ℂ := (10 : ℂ) + (v : ℂ) * I
+  have hr := lemma59_ext44_truncated_shift_in_extended_gamma_region hL hs (w := w)
+    (by norm_num [w]) (by simpa [w] using hv)
+  have hz := lemma44ActualZtilde_norm_le_right χ ψ hD hψ hr (by simp [w]; linarith only [hre])
+  simp only [lemma23PaperP, Real.log_exp] at hz
+  have hzre : (s + w).re = s.re + 10 := by simp [w]
+  rw [hzre] at hz
+  have hf := lemma44_short_polynomial_coarse_bound χ ψ⁻¹
+    (z := 1 - s - w) (by simp [w]; linarith only [hs.2.1, ha.2])
+  have hb := lemma44_horizontal_scale_bound hL (show (10 : ℝ) ≤ 10 by rfl) v
+  norm_num only [ofReal_ofNat] at hb
+  have hg : ‖lemma57OmegaOne D w‖ ≤ Real.exp 1 := by
+    change ‖lemma57OmegaOne D (((10 : ℝ) : ℂ) + (v : ℂ) * I)‖ ≤ _
+    rw [lemma44_Omega_norm_vertical]
+    apply Real.exp_le_exp.mpr
+    apply (div_le_one (by positivity : 0 < 4 * lemma23PaperL D ^ 30)).mpr
+    have h6 := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 3) hL 6
+    have h630 := pow_le_pow_right₀ (by linarith : 1 ≤ lemma23PaperL D) (show 6 ≤ 30 by norm_num)
+    norm_num at h6 ⊢
+    nlinarith only [h6, h630, sq_nonneg v]
+  have hi : ‖w‖⁻¹ ≤ 1 := by
+    have hn := Complex.abs_re_le_norm w
+    norm_num [w] at hn
+    exact inv_le_one_of_one_le₀ (by linarith only [hn])
+  unfold lemma44ReflectedPolynomialNumerator
+  simp only [norm_mul, norm_inv, div_eq_mul_inv]
+  calc
+    _ ≤ Real.exp ((1 - 2 * (s.re + 10)) * lemma23PaperL D ^ 9) *
+        Real.exp (52 * lemma23PaperL D) * Real.exp (18 * lemma23PaperL D ^ 9) * Real.exp 1 * 1 := by
+      gcongr
+    _ ≤ _ := by
+      rw [mul_one]
+      have he : Real.exp ((1 - 2 * (s.re + 10)) * lemma23PaperL D ^ 9) *
+          Real.exp (52 * lemma23PaperL D) * Real.exp (18 * lemma23PaperL D ^ 9) =
+          Real.exp ((-1 - 2 * s.re) * lemma23PaperL D ^ 9 + 52 * lemma23PaperL D) := by
+        simp only [← Real.exp_add]
+        congr 1
+        ring
+      rw [he, mul_comm _ (Real.exp 1)]
+      apply mul_le_mul_of_nonneg_left _ (Real.exp_nonneg 1)
+      apply Real.exp_le_exp.mpr
+      nlinarith only [mul_nonneg hre.le (pow_nonneg hL0 9)]
+
+open Complex in
+theorem lemma59_ext44_initial_left_gamma_region {D : ℕ}
+    (hL : 3 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma59ExtendedOmega3 D s)
+    {v : ℝ} (hv : |v| ≤ lemma23PaperL D ^ 20) :
+    Lemma44InExtendedGammaRegion D (s + lemma44InitialLeftShift s v) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  apply lemma59_ext44_truncated_shift_in_extended_gamma_region hL hs
+  · exact (lemma59_ext44_initial_left_shift_abs_re hL hs v).trans (by norm_num)
+  · simpa using hv
+
+open Complex in
+theorem lemma59_ext44_initial_left_omega_bound {D : ℕ}
+    (hL : 3 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) (v : ℝ) :
+    ‖lemma57OmegaOne D (lemma44InitialLeftShift s v)‖ ≤ Real.exp 1 := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have habs := lemma59_ext44_initial_left_shift_abs_re hL hs v
+  have hL1 : 1 ≤ lemma23PaperL D := by linarith
+  have h30 : 9 ≤ lemma23PaperL D ^ 30 := by
+    have h2 := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 3) hL 2
+    have h230 := pow_le_pow_right₀ hL1 (show 2 ≤ 30 by norm_num)
+    norm_num at h2
+    exact h2.trans h230
+  have hsquare : (-s.re - 1 / 2) ^ 2 ≤ 9 := by
+    rw [lemma44_initial_left_shift_re] at habs
+    have h := sq_le_sq₀ (abs_nonneg (-s.re - 1 / 2)) (by norm_num : (0 : ℝ) ≤ 3) |>.mpr habs
+    norm_num only [sq_abs] at h
+    exact h
+  change ‖lemma57OmegaOne D (((-s.re - 1 / 2 : ℝ) : ℂ) + (v : ℂ) * I)‖ ≤ _
+  rw [lemma44_Omega_norm_vertical]
+  apply Real.exp_le_exp.mpr
+  apply (div_le_one (by positivity : 0 < 4 * lemma23PaperL D ^ 30)).mpr
+  nlinarith only [hsquare, h30, sq_nonneg v]
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_long_horizontal_point_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) {x v : ℝ}
+    (hx : -s.re - 1 / 2 ≤ x) (hx10 : |x| ≤ 10) (hx0 : x ≤ 0)
+    (hv : |v| = lemma23PaperL D ^ 20) :
+    ‖lemma44ReflectedPolynomialNumerator χ ψ s (lemma44LongDirichletSum χ ψ⁻¹)
+      ((x : ℂ) + (v : ℂ) * I) / ((x : ℂ) + (v : ℂ) * I)‖ ≤
+      Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have ha := lemma44_alpha_pos_le_one hL
+  apply lemma59_ext44_reflected_horizontal_point_bound χ ψ hD hψ hs _ hx hx10 hv
+    (E := 26 * lemma23PaperL D ^ 9) (H := 0)
+  · apply lemma44_long_polynomial_coarse_bound χ ψ⁻¹ hL
+    simp only [sub_re, one_re, add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im,
+      mul_zero, zero_mul, sub_zero, add_zero]
+    linarith only [hs.2.1, ha.2, hx0]
+  · rw [norm_exp, mul_re]
+    simp only [ofReal_re, ofReal_im, mul_zero, sub_zero, add_re, mul_re,
+      I_re, I_im, zero_mul, add_zero, lemma44_paper_gaussian_scale_log]
+    apply Real.exp_le_exp.mpr
+    have hL0 : 0 ≤ lemma23PaperL D := by linarith
+    exact mul_nonpos_of_nonpos_of_nonneg hx0 (by positivity)
+  · have hL0 : 0 ≤ lemma23PaperL D := by linarith
+    nlinarith only [hL0, pow_nonneg hL0 9]
+
+open Complex ComplexConjugate in
+theorem lemma59_ext44_middle_product_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) {v : ℝ} (hv : |v| ≤ lemma23PaperL D ^ 20) :
+    ‖lemma44ActualZtilde χ ψ
+        (s + (-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I)) *
+      lemma44LongDirichletSum χ ψ⁻¹
+        (1 - s - (-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I))‖ ≤
+      5 * Real.exp (2 + 4 * Real.pi) * lemma23PaperL D ^ (-180 : ℤ) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have ha := lemma44_alpha_pos_le_one hL
+  have hLpos : 0 < lemma23PaperL D := by linarith
+  have hz := lemma59_ext44_middle_Z_norm_bound χ ψ hD hψ.1 hs hv
+  have hf := lemma59_ext44_reflected_long_sum_bound χ ψ hL hψ hs hv
+  rw [norm_mul]
+  have hp := mul_le_mul hz hf (norm_nonneg _) (Real.exp_nonneg _)
+  apply hp.trans
+  have hmax : (1 / 2 - s.re + lemma44PaperAlpha D) +
+      max 0 (s.re - 1 / 2 - lemma44PaperAlpha D) ≤ 2 * lemma44PaperAlpha D := by
+    rcases le_total 0 (s.re - 1 / 2 - lemma44PaperAlpha D) with h | h
+    · rw [max_eq_right h]
+      linarith [ha.1]
+    · rw [max_eq_left h]
+      linarith [hs.1]
+  have halpha : lemma23PaperL D ^ 9 * lemma44PaperAlpha D = Real.pi := by
+    simp only [lemma44PaperAlpha, lemma23PaperP, Real.log_exp]
+    field_simp
+  have he : Real.exp (2 + 2 * lemma23PaperL D ^ 9 *
+      (1 / 2 - s.re + lemma44PaperAlpha D)) *
+      Real.exp (2 * lemma23PaperL D ^ 9 * max 0 (s.re - 1 / 2 - lemma44PaperAlpha D)) ≤
+        Real.exp (2 + 4 * Real.pi) := by
+    rw [← Real.exp_add]
+    apply Real.exp_le_exp.mpr
+    have hm := mul_le_mul_of_nonneg_left hmax (by positivity : 0 ≤ lemma23PaperL D ^ 9)
+    nlinarith only [hm, halpha]
+  have hm := mul_le_mul_of_nonneg_right he (by positivity : 0 ≤ 5 * lemma23PaperL D ^ (-180 : ℤ))
+  nlinarith only [hm]
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_paper_gaussian_long_sum_on_omega3 {D p : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖lemma44GaussianLongDirichletSum χ ψ s (lemma44PaperGaussianScale D)‖ ≤
+      5 * Real.exp (2 * Real.pi) * lemma23PaperL D ^ (-180 : ℤ) :=
+  lemma59_ext44_gaussian_long_sum_on_omega3 χ ψ hL hψ hs
+    (Real.rpow_pos_of_pos (Real.exp_pos _) _)
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_product_horizontal_error_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖lemma44ProductHorizontalError χ ψ s (lemma44PaperGaussianScale D)
+      (-s.re - 1 / 2) (lemma23PaperL D ^ 20)‖ ≤
+      2097152 * Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hre := lemma59_ext44_omega3_re_pos hL hs
+  have ha := lemma44_alpha_pos_le_one hL
+  have hpoint (x : ℝ) (hx : x ∈ uIcc (-s.re - 1 / 2) 1)
+      (v : ℝ) (hv : |v| = lemma23PaperL D ^ 20) :
+      ‖lemma44ProductMellinNumerator χ ψ s (lemma44PaperGaussianScale D)
+        ((x : ℂ) + (v : ℂ) * I) / ((x : ℂ) + (v : ℂ) * I)‖ ≤
+      262144 * Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ) := by
+    rw [uIcc_of_le (by linarith : -s.re - 1 / 2 ≤ 1)] at hx
+    apply lemma59_ext44_product_horizontal_point_bound χ ψ hD hψ hs hx.1 _ hv
+    apply abs_le.mpr
+    constructor <;> linarith only [hx.1, hx.2, hs.2.1, ha.2]
+  have hT : 0 ≤ lemma23PaperL D ^ 20 := by positivity
+  have he := lemma44_horizontal_error_bound
+    (fun w => lemma44ProductMellinNumerator χ ψ s (lemma44PaperGaussianScale D) w / w)
+    (a := -s.re - 1 / 2) (b := 1) (T := lemma23PaperL D ^ 20)
+    (K := 262144 * Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ)) (by positivity)
+    (fun x hx => hpoint x hx _ (abs_of_nonneg hT))
+    (by
+      intro x hx
+      simpa only [ofReal_neg, neg_mul, sub_eq_add_neg] using
+        hpoint x hx (-(lemma23PaperL D ^ 20)) (by rw [abs_neg, abs_of_nonneg hT]))
+  change ‖lemma44ProductHorizontalError χ ψ s (lemma44PaperGaussianScale D)
+    (-s.re - 1 / 2) (lemma23PaperL D ^ 20)‖ ≤ _ at he
+  apply he.trans
+  have hwidth : |1 - (-s.re - 1 / 2)| ≤ 4 := by
+    rw [abs_of_pos (by linarith : 0 < 1 - (-s.re - 1 / 2))]
+    linarith only [hs.2.1, ha.2]
+  calc
+    _ ≤ 2 * (262144 * Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ)) * 4 :=
+      mul_le_mul_of_nonneg_left hwidth (by positivity)
+    _ = _ := by ring
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_reflected_polynomial_middle_shift {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma59ExtendedOmega3 D s)
+    (f : ℂ → ℂ) (hf : Differentiable ℂ f) :
+    lemma44TruncatedReflectedPolynomial χ ψ s f (-lemma44PaperAlpha D) (lemma23PaperL D ^ 20) =
+      lemma44TruncatedReflectedPolynomial χ ψ s f (-s.re - 1 / 2) (lemma23PaperL D ^ 20) +
+        lemma44HorizontalError (fun w => lemma44ReflectedPolynomialNumerator χ ψ s f w / w)
+          (-s.re - 1 / 2) (-lemma44PaperAlpha D) (lemma23PaperL D ^ 20) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have hre := lemma59_ext44_omega3_re_pos hL hs
+  have ha := lemma44_alpha_pos_le_one hL
+  have hab : -s.re - 1 / 2 ≤ -lemma44PaperAlpha D := by
+    have hL0 : 0 < lemma23PaperL D := by linarith
+    have hL1 : 1 ≤ lemma23PaperL D := by linarith
+    have h3 := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 3) hL 3
+    have h39 := pow_le_pow_right₀ hL1 (show 3 ≤ 9 by norm_num)
+    have ha4 : lemma44PaperAlpha D ≤ 1 / 4 := by
+      unfold lemma44PaperAlpha lemma23PaperP
+      rw [Real.log_exp]
+      apply (div_le_iff₀ (pow_pos hL0 9)).mpr
+      norm_num at h3
+      nlinarith only [h3, h39, Real.pi_le_four]
+    linarith only [hre, ha4]
+  have hN := lemma59_ext44_reflected_numerator_rectangle_differentiable χ ψ hL hs f hf
+    (a := -s.re - 1 / 2) (b := -lemma44PaperAlpha D)
+    (by linarith only [hs.2.1, ha.2]) (by linarith only [ha.1])
+  have hc := lemma44_local_rectangle_cauchy
+    (fun w => lemma44ReflectedPolynomialNumerator χ ψ s f w / w)
+    hab (by positivity : 0 ≤ lemma23PaperL D ^ 20) (by
+      intro w hw
+      have hwr : w.re ≤ -lemma44PaperAlpha D := hw.1.2
+      have hw0 : w ≠ 0 := by
+        intro he
+        rw [he] at hwr
+        simp only [zero_re] at hwr
+        linarith only [hwr, ha.1]
+      exact (hN w hw).div differentiableWithinAt_id hw0)
+  unfold lemma44TruncatedReflectedPolynomial lemma44HorizontalError
+  simp_rw [intervalIntegral.integral_mul_const]
+  field_simp [two_pi_I_ne_zero]
+  unfold lemma44GeneralRectangleBoundaryIntegral at hc
+  ring_nf at hc ⊢
+  simp only [sub_eq_add_neg, add_comm, add_left_comm, mul_comm, mul_left_comm, mul_assoc] at hc ⊢
+  linear_combination hc
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_reflected_polynomial_residue_shift {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hL : 3 ≤ lemma23PaperL D) {s : ℂ} (hs : Lemma59ExtendedOmega3 D s)
+    (f : ℂ → ℂ) (hf : Differentiable ℂ f) :
+    lemma44TruncatedReflectedPolynomial χ ψ s f 10 (lemma23PaperL D ^ 20) =
+      lemma44ActualZtilde χ ψ s * f (1 - s) +
+        lemma44TruncatedReflectedPolynomial χ ψ s f (-s.re - 1 / 2) (lemma23PaperL D ^ 20) +
+          lemma44HorizontalError (fun w => lemma44ReflectedPolynomialNumerator χ ψ s f w / w)
+            (-s.re - 1 / 2) 10 (lemma23PaperL D ^ 20) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have hre := lemma59_ext44_omega3_re_pos hL hs
+  have ha := lemma44_alpha_pos_le_one hL
+  have hT : 0 < lemma23PaperL D ^ 20 := pow_pos (by linarith) 20
+  have hN := lemma59_ext44_reflected_numerator_rectangle_differentiable χ ψ hL hs f hf
+    (a := -s.re - 1 / 2) (b := 10) (by linarith only [hs.2.1, ha.2]) (by rfl)
+  have hres := lemma44_local_simple_pole_rectangle _
+    (show -s.re - 1 / 2 ≤ -1 / 2 by linarith only [hre]) (by norm_num : (1 : ℝ) ≤ 10) hT hN
+  have hzero : lemma44ReflectedPolynomialNumerator χ ψ s f 0 =
+      lemma44ActualZtilde χ ψ s * f (1 - s) := by
+    simp [lemma44ReflectedPolynomialNumerator, lemma57OmegaOne]
+  rw [hzero] at hres
+  unfold lemma44TruncatedReflectedPolynomial lemma44HorizontalError
+  simp_rw [intervalIntegral.integral_mul_const]
+  field_simp [two_pi_I_ne_zero]
+  unfold lemma44GeneralRectangleBoundaryIntegral at hres
+  ring_nf at hres ⊢
+  simp only [sub_eq_add_neg, add_comm, add_left_comm, mul_comm, mul_left_comm, mul_assoc] at hres ⊢
+  linear_combination hres
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_short_horizontal_point_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) {x v : ℝ}
+    (hx : -s.re - 1 / 2 ≤ x) (hx10 : |x| ≤ 10) (hv : |v| = lemma23PaperL D ^ 20) :
+    ‖lemma44ReflectedPolynomialNumerator χ ψ s
+      (lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)))
+        ((x : ℂ) + (v : ℂ) * I) / ((x : ℂ) + (v : ℂ) * I)‖ ≤
+      Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have ha := lemma44_alpha_pos_le_one hL
+  apply lemma59_ext44_reflected_horizontal_point_bound χ ψ hD hψ hs _ hx hx10 hv
+    (E := 52 * lemma23PaperL D) (H := 18 * lemma23PaperL D ^ 9)
+  · apply lemma44_short_polynomial_coarse_bound
+    simp only [sub_re, one_re, add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im,
+      mul_zero, zero_mul, sub_zero, add_zero]
+    linarith only [hs.2.1, ha.2, (abs_le.mp hx10).2]
+  · exact lemma44_horizontal_scale_bound hL (abs_le.mp hx10).2 v
+  · have hL0 : 0 ≤ lemma23PaperL D := by linarith
+    nlinarith only [hL0, pow_nonneg hL0 9]
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_short_right_contour_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖lemma44TruncatedReflectedPolynomial χ ψ s
+      (lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p))) 10 (lemma23PaperL D ^ 20)‖ ≤
+      2 * Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hL0 : 0 < lemma23PaperL D := by linarith
+  have hT : 0 ≤ lemma23PaperL D ^ 20 := by positivity
+  have hi := intervalIntegral.norm_integral_le_of_norm_le_const
+    (a := -(lemma23PaperL D ^ 20)) (b := lemma23PaperL D ^ 20)
+    (C := Real.exp 1 * Real.exp (52 * lemma23PaperL D - lemma23PaperL D ^ 9))
+    (f := fun v : ℝ => lemma44ReflectedPolynomialNumerator χ ψ s
+      (lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)))
+        ((10 : ℂ) + (v : ℂ) * I) / ((10 : ℂ) + (v : ℂ) * I) * I)
+    (by
+      intro v hv
+      rw [uIoc_of_le (by linarith : -(lemma23PaperL D ^ 20) ≤ lemma23PaperL D ^ 20)] at hv
+      rw [norm_mul, norm_I, mul_one]
+      exact lemma59_ext44_short_right_point_bound χ ψ hD hψ hs (abs_le.mpr ⟨hv.1.le, hv.2⟩))
+  have hb : lemma23PaperL D ^ 20 * Real.exp (52 * lemma23PaperL D - lemma23PaperL D ^ 9) ≤
+      lemma23PaperL D ^ (-180 : ℤ) := by
+    have h9 : 6561 * lemma23PaperL D ≤ lemma23PaperL D ^ 9 := by
+      have h8 := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 3) hL 8
+      have hm := mul_le_mul_of_nonneg_right h8 hL0.le
+      norm_num at hm
+      nlinarith only [hm]
+    apply le_trans _ (lemma44_initial_left_exponential_budget hL)
+    apply mul_le_mul_of_nonneg_left _ (pow_nonneg hL0.le 20)
+    apply Real.exp_le_exp.mpr
+    nlinarith only [h9, hL0]
+  unfold lemma44TruncatedReflectedPolynomial
+  rw [norm_mul]
+  apply le_trans (mul_le_mul_of_nonneg_right lemma44_mellin_normalization_norm_le_one (norm_nonneg _))
+  simp only [one_mul]
+  apply hi.trans
+  rw [abs_of_nonneg (by linarith only [hT])]
+  have hm := mul_le_mul_of_nonneg_left hb (show 0 ≤ 2 * Real.exp 1 by positivity)
+  nlinarith only [hm]
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_full_gaussian_series_approximation {D p : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : 1 < D) (hL : 3 ≤ lemma23PaperL D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖lemma44FullGaussianSeries χ ψ s -
+      lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s‖ ≤
+        (1 + 5 * Real.exp (2 * Real.pi) + lemma44InverseSquareMass) *
+          lemma23PaperL D ^ (-180 : ℤ) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have hre := (lemma59_ext44_omega3_re_pos hL hs).le
+  rw [lemma44_full_gaussian_series_decomposition χ ψ hD hL hre]
+  have hshort := lemma44_short_smoothing_error χ ψ hD hL hre
+  have hmiddle := lemma59_ext44_paper_gaussian_long_sum_on_omega3 χ ψ hL hψ hs
+  have htail := (lemma44_gaussian_tail_summable_and_bound χ ψ hD hL hre).2
+  calc
+    _ = ‖(lemma44GaussianShortDirichletSum χ ψ s -
+        lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s) +
+          lemma44GaussianLongDirichletSum χ ψ s (lemma44PaperGaussianScale D) +
+            ∑' n : ℕ, lemma44GaussianTailTerm χ ψ s n‖ := by congr 1; ring
+    _ ≤ ‖lemma44GaussianShortDirichletSum χ ψ s -
+        lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s‖ +
+          ‖lemma44GaussianLongDirichletSum χ ψ s (lemma44PaperGaussianScale D)‖ +
+            ‖∑' n : ℕ, lemma44GaussianTailTerm χ ψ s n‖ := norm_add₃_le
+    _ ≤ _ := by linarith only [hshort, hmiddle, htail]
+
+open Complex in
+theorem lemma59_ext44_initial_left_Z_scale_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) {v : ℝ} (hv : |v| ≤ lemma23PaperL D ^ 20) :
+    ‖lemma44ActualZtilde χ ψ (s + lemma44InitialLeftShift s v)‖ *
+      ‖exp (lemma44InitialLeftShift s v * (Real.log (lemma44PaperGaussianScale D) : ℂ))‖ ≤
+        Real.exp (3 * lemma23PaperL D + (9 / 5 : ℝ) * Real.pi + lemma23PaperL D ^ 9 / 5) := by
+  let L := lemma23PaperL D
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hL0 : 0 < L := by linarith
+  have hregion := lemma59_ext44_initial_left_gamma_region hL hs hv
+  have hre : (s + lemma44InitialLeftShift s v).re = -1 / 2 := by simp; ring
+  have hz := lemma44ActualZtilde_norm_le_left χ ψ hD hψ hregion
+    (by rw [hre]; norm_num)
+  rw [hre] at hz
+  have hz' : ‖lemma44ActualZtilde χ ψ (s + lemma44InitialLeftShift s v)‖ ≤
+      Real.exp (2 * L ^ 9 + 3 * L) := by
+    convert hz using 1 <;> norm_num [lemma23PaperP, Real.log_exp, L]
+  have hscale : ‖exp (lemma44InitialLeftShift s v *
+      (Real.log (lemma44PaperGaussianScale D) : ℂ))‖ =
+      Real.exp ((-s.re - 1 / 2) * ((9 / 5 : ℝ) * L ^ 9)) := by
+    rw [norm_exp, mul_re]
+    simp only [ofReal_re, ofReal_im, mul_zero, sub_zero,
+      lemma44_initial_left_shift_re, lemma44_paper_gaussian_scale_log]
+    rfl
+  have halpha : L ^ 9 * lemma44PaperAlpha D = Real.pi := by
+    unfold lemma44PaperAlpha lemma23PaperP
+    rw [Real.log_exp]
+    dsimp [L]
+    field_simp
+  have hgap := mul_nonneg (pow_nonneg hL0.le 9)
+    (show 0 ≤ s.re - (1 / 2 - lemma44PaperAlpha D) by linarith only [hs.1])
+  rw [hscale]
+  calc
+    _ ≤ Real.exp (2 * L ^ 9 + 3 * L) *
+        Real.exp ((-s.re - 1 / 2) * ((9 / 5 : ℝ) * L ^ 9)) :=
+      mul_le_mul_of_nonneg_right hz' (Real.exp_pos _).le
+    _ = Real.exp (2 * L ^ 9 + 3 * L + (-s.re - 1 / 2) * ((9 / 5 : ℝ) * L ^ 9)) :=
+      (Real.exp_add _ _).symm
+    _ ≤ _ := Real.exp_le_exp.mpr (by nlinarith only [hgap, halpha])
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_long_horizontal_error_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖lemma44HorizontalError (fun w => lemma44ReflectedPolynomialNumerator χ ψ s
+      (lemma44LongDirichletSum χ ψ⁻¹) w / w)
+        (-s.re - 1 / 2) (-lemma44PaperAlpha D) (lemma23PaperL D ^ 20)‖ ≤
+      6 * Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hre := lemma59_ext44_omega3_re_pos hL hs
+  have ha := lemma44_alpha_pos_le_one hL
+  have ha4 : lemma44PaperAlpha D ≤ 1 / 4 := by
+    unfold lemma44PaperAlpha lemma23PaperP
+    rw [Real.log_exp]
+    apply (div_le_iff₀ (pow_pos (by linarith : 0 < lemma23PaperL D) 9)).mpr
+    have h3 := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 3) hL 3
+    have h39 := pow_le_pow_right₀ (by linarith : 1 ≤ lemma23PaperL D) (show 3 ≤ 9 by norm_num)
+    norm_num at h3
+    nlinarith only [h3, h39, Real.pi_le_four]
+  have hab : -s.re - 1 / 2 ≤ -lemma44PaperAlpha D := by linarith only [hs.1, ha4]
+  have hT : 0 ≤ lemma23PaperL D ^ 20 := by positivity
+  have hpoint (x : ℝ) (hx : x ∈ uIcc (-s.re - 1 / 2) (-lemma44PaperAlpha D))
+      (v : ℝ) (hv : |v| = lemma23PaperL D ^ 20) := by
+    rw [uIcc_of_le hab] at hx
+    exact lemma59_ext44_long_horizontal_point_bound χ ψ hD hψ hs hx.1
+      (abs_le.mpr ⟨by linarith only [hx.1, hs.2.1, ha.2], by linarith only [hx.2, ha.1]⟩)
+      (by linarith only [hx.2, ha.1]) hv
+  have he := lemma44_horizontal_error_bound
+    (fun w => lemma44ReflectedPolynomialNumerator χ ψ s (lemma44LongDirichletSum χ ψ⁻¹) w / w)
+    (a := -s.re - 1 / 2) (b := -lemma44PaperAlpha D) (T := lemma23PaperL D ^ 20)
+    (K := Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ)) (by positivity)
+    (fun x hx => hpoint x hx _ (abs_of_nonneg hT))
+    (by intro x hx; simpa only [ofReal_neg, neg_mul, sub_eq_add_neg] using
+      hpoint x hx (-(lemma23PaperL D ^ 20)) (by rw [abs_neg, abs_of_nonneg hT]))
+  apply he.trans
+  have hwidth : |-lemma44PaperAlpha D - (-s.re - 1 / 2)| ≤ 3 := by
+    rw [abs_of_nonneg (by linarith only [hab])]
+    linarith only [hs.2.1, ha.1, ha.2]
+  calc
+    _ ≤ 2 * (Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ)) * 3 :=
+      mul_le_mul_of_nonneg_left hwidth (by positivity)
+    _ = _ := by ring
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_middle_integrand_norm_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) {v : ℝ} (hv : |v| ≤ lemma23PaperL D ^ 20) :
+    ‖lemma44MiddleContourIntegrand χ ψ s v‖ ≤
+      (5 * Real.exp (3 + 4 * Real.pi) * lemma23PaperL D ^ (-180 : ℤ)) *
+        ‖-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I‖⁻¹ := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have ha := lemma44_alpha_pos_le_one hL
+  have hprod := lemma59_ext44_middle_product_bound χ ψ hD hψ hs hv
+  have hlogB : 0 ≤ Real.log (lemma44PaperGaussianScale D) := by
+    have hP : 0 < lemma23PaperP D := Real.exp_pos _
+    rw [lemma44PaperGaussianScale, Real.log_rpow hP, lemma23PaperP, Real.log_exp]
+    positivity
+  have hpower : ‖Complex.exp ((-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I) *
+      (Real.log (lemma44PaperGaussianScale D) : ℂ))‖ ≤ 1 := by
+    rw [Complex.norm_exp]
+    apply Real.exp_le_one_iff.mpr
+    simp only [Complex.mul_re, Complex.add_re, Complex.neg_re, Complex.ofReal_re,
+      Complex.ofReal_im, Complex.I_re, mul_zero, zero_mul, sub_zero, add_zero]
+    exact mul_nonpos_of_nonpos_of_nonneg (neg_nonpos.mpr ha.1.le) hlogB
+  have homega : ‖lemma57OmegaOne D (-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I)‖ ≤
+      Real.exp 1 := by
+    have h := lemma44_Omega_norm_vertical D (-lemma44PaperAlpha D) v
+    simp only [Complex.ofReal_neg, neg_sq] at h
+    rw [h]
+    apply Real.exp_le_exp.mpr
+    apply (div_le_iff₀ (by positivity : 0 < 4 * lemma23PaperL D ^ 30)).mpr
+    have hp : 1 ≤ lemma23PaperL D ^ 30 := one_le_pow₀ (by linarith : 1 ≤ lemma23PaperL D)
+    nlinarith only [ha.1, ha.2, hp, sq_nonneg v]
+  dsimp only [lemma44MiddleContourIntegrand]
+  rw [norm_div, norm_mul, norm_mul]
+  have hm := mul_le_mul (mul_le_mul hprod hpower (norm_nonneg _) (by positivity)) homega
+    (norm_nonneg _) (by positivity)
+  have hc : (5 * Real.exp (2 + 4 * Real.pi) * lemma23PaperL D ^ (-180 : ℤ) * 1) *
+      Real.exp 1 = 5 * Real.exp (3 + 4 * Real.pi) * lemma23PaperL D ^ (-180 : ℤ) := by
+    rw [show (5 * Real.exp (2 + 4 * Real.pi) * lemma23PaperL D ^ (-180 : ℤ) * 1) *
+      Real.exp 1 = 5 * (Real.exp (2 + 4 * Real.pi) * Real.exp 1) *
+        lemma23PaperL D ^ (-180 : ℤ) by ring, ← Real.exp_add]
+    rw [show 2 + 4 * Real.pi + 1 = 3 + 4 * Real.pi by ring]
+  rw [hc] at hm
+  have hd := div_le_div_of_nonneg_right hm
+    (norm_nonneg (-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I))
+  simpa only [div_eq_mul_inv] using hd
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_reflected_tail_contour_continuousOn {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ContinuousOn (lemma44ReflectedTailContourIntegrand χ ψ s)
+      (Set.Icc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20)) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hshift : Continuous (fun v : ℝ => lemma44InitialLeftShift s v) := by
+    unfold lemma44InitialLeftShift
+    fun_prop
+  have hz : ContinuousOn (fun v : ℝ => lemma44ActualZtilde χ ψ (s + lemma44InitialLeftShift s v))
+      (Set.Icc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20)) := by
+    intro v hv
+    have hr := lemma59_ext44_initial_left_gamma_region hL hs (abs_le.mpr hv)
+    have him := (lemma44_extended_gamma_region_height hL hr).2.2.1
+    have hc : Continuous (fun v : ℝ => s + lemma44InitialLeftShift s v) :=
+      continuous_const.add hshift
+    exact (ContinuousAt.comp (f := fun v : ℝ => s + lemma44InitialLeftShift s v)
+      (lemma44ActualZtilde_differentiableAt χ ψ him.ne').continuousAt
+      hc.continuousAt).continuousWithinAt
+  have htail := lemma44_reflected_tail_vertical_continuous χ ψ⁻¹ s
+  have hB : Continuous (fun v : ℝ => exp (lemma44InitialLeftShift s v *
+      (Real.log (lemma44PaperGaussianScale D) : ℂ))) := by fun_prop
+  have hO : Continuous (fun v : ℝ => lemma57OmegaOne D (lemma44InitialLeftShift s v)) := by
+    unfold lemma57OmegaOne
+    fun_prop
+  have hne : ∀ v ∈ Set.Icc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20),
+      lemma44InitialLeftShift s v ≠ 0 := by
+    intro v _hv he
+    have hre := congrArg Complex.re he
+    simp only [lemma44_initial_left_shift_re, zero_re] at hre
+    linarith [lemma59_ext44_omega3_re_pos hL hs]
+  exact (((hz.mul htail.continuousOn).mul hB.continuousOn).mul hO.continuousOn).div₀
+    hshift.continuousOn hne
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_short_horizontal_error_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖lemma44HorizontalError (fun w => lemma44ReflectedPolynomialNumerator χ ψ s
+      (lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p))) w / w)
+        (-s.re - 1 / 2) 10 (lemma23PaperL D ^ 20)‖ ≤
+      26 * Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hre := lemma59_ext44_omega3_re_pos hL hs
+  have ha := lemma44_alpha_pos_le_one hL
+  have hT : 0 ≤ lemma23PaperL D ^ 20 := by positivity
+  have hpoint (x : ℝ) (hx : x ∈ uIcc (-s.re - 1 / 2) 10)
+      (v : ℝ) (hv : |v| = lemma23PaperL D ^ 20) := by
+    rw [uIcc_of_le (by linarith : -s.re - 1 / 2 ≤ 10)] at hx
+    exact lemma59_ext44_short_horizontal_point_bound χ ψ hD hψ hs hx.1
+      (abs_le.mpr ⟨by linarith only [hx.1, hs.2.1, ha.2], hx.2⟩) hv
+  have he := lemma44_horizontal_error_bound
+    (fun w => lemma44ReflectedPolynomialNumerator χ ψ s
+      (lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p))) w / w)
+    (a := -s.re - 1 / 2) (b := 10) (T := lemma23PaperL D ^ 20)
+    (K := Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ)) (by positivity)
+    (fun x hx => hpoint x hx _ (abs_of_nonneg hT))
+    (by intro x hx; simpa only [ofReal_neg, neg_mul, sub_eq_add_neg] using
+      hpoint x hx (-(lemma23PaperL D ^ 20)) (by rw [abs_neg, abs_of_nonneg hT]))
+  apply he.trans
+  have hwidth : |10 - (-s.re - 1 / 2)| ≤ 13 := by
+    rw [abs_of_pos (by linarith only [hre] : 0 < 10 - (-s.re - 1 / 2))]
+    linarith only [hs.2.1, ha.2]
+  calc
+    _ ≤ 2 * (Real.exp 1 * lemma23PaperL D ^ (-180 : ℤ)) * 13 :=
+      mul_le_mul_of_nonneg_left hwidth (by positivity)
+    _ = _ := by ring
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_reflected_tail_contour_intervalIntegrable {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    IntervalIntegrable (lemma44ReflectedTailContourIntegrand χ ψ s) volume
+      (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20) := by
+  have horder : -(lemma23PaperL D ^ 20) ≤ lemma23PaperL D ^ 20 := by
+    have hp : 0 ≤ lemma23PaperL D ^ 20 := by positivity
+    linarith
+  apply ContinuousOn.intervalIntegrable
+  rw [Set.uIcc_of_le horder]
+  exact lemma59_ext44_reflected_tail_contour_continuousOn χ ψ hD hs
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_reflected_tail_contour_pointwise_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) {v : ℝ} (hv : |v| ≤ lemma23PaperL D ^ 20) :
+    ‖lemma44ReflectedTailContourIntegrand χ ψ s v‖ ≤
+      2 * lemma44DivisorSeriesMass *
+        Real.exp (3 * lemma23PaperL D + 1 + (9 / 5 : ℝ) * Real.pi -
+          (3 / 10 : ℝ) * lemma23PaperL D ^ 9) := by
+  let L := lemma23PaperL D
+  let w := lemma44InitialLeftShift s v
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hz := lemma59_ext44_initial_left_Z_scale_bound χ ψ hD hψ hs hv
+  have ho := lemma59_ext44_initial_left_omega_bound hL hs v
+  have hd := lemma59_ext44_initial_left_denominator_bound hL hs v
+  have ht := (lemma44_reflected_tail_summable_and_bound χ ψ⁻¹
+    (z := 1 - s - w) (by simp [w, lemma44InitialLeftShift]; ring)).2
+  have hm := lemma44_divisor_series_mass_nonneg
+  unfold lemma44ReflectedTailContourIntegrand
+  change ‖lemma44ActualZtilde χ ψ (s + w) *
+    (∑' n : ℕ, lemma44ReflectedTailTerm χ ψ⁻¹ (1 - s - w) n) *
+      exp (w * (Real.log (lemma44PaperGaussianScale D) : ℂ)) * lemma57OmegaOne D w / w‖ ≤ _
+  calc
+    _ = (‖lemma44ActualZtilde χ ψ (s + w)‖ *
+        ‖exp (w * (Real.log (lemma44PaperGaussianScale D) : ℂ))‖) *
+        ‖∑' n : ℕ, lemma44ReflectedTailTerm χ ψ⁻¹ (1 - s - w) n‖ *
+          ‖lemma57OmegaOne D w‖ * ‖w‖⁻¹ := by
+      simp only [norm_mul, norm_inv, div_eq_mul_inv]
+      ring
+    _ ≤ Real.exp (3 * L + (9 / 5 : ℝ) * Real.pi + L ^ 9 / 5) *
+        (lemma44DivisorSeriesMass * Real.exp (-(L ^ 9) / 2)) * Real.exp 1 * 2 := by
+      gcongr
+    _ = _ := by
+      calc
+        _ = 2 * lemma44DivisorSeriesMass *
+          (Real.exp (3 * L + (9 / 5 : ℝ) * Real.pi + L ^ 9 / 5) *
+            Real.exp (-(L ^ 9) / 2) * Real.exp 1) := by ring
+        _ = _ := by
+          rw [← Real.exp_add, ← Real.exp_add]
+          congr 2
+          ring
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_right_mellin_approximation {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : 1 < D) (hL : 3 ≤ lemma23PaperL D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖(2 * (Real.pi : ℂ) * I)⁻¹ *
+      (∫ t : ℝ, lemma44ProductMellinIntegrand χ ψ s (lemma44PaperGaussianScale D) 1 t * I) -
+        lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s‖ ≤
+      (1 + 5 * Real.exp (2 * Real.pi) + lemma44InverseSquareMass) *
+        lemma23PaperL D ^ (-180 : ℤ) := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  have hm := (lemma44_product_gaussian_mellin_identity χ ψ s hD
+    (B := lemma44PaperGaussianScale D)
+    (Real.rpow_pos_of_pos (Real.exp_pos _) _) zero_lt_one
+      (by linarith [lemma59_ext44_omega3_re_pos hL hs])).2.2
+  rw [hm]
+  exact lemma59_ext44_full_gaussian_series_approximation χ ψ hD hL hψ hs
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_truncated_middle_contour_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖(2 * (Real.pi : ℂ) * Complex.I)⁻¹ *
+      (∫ v : ℝ in Ioc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20),
+        lemma44MiddleContourIntegrand χ ψ s v * Complex.I)‖ ≤
+      5 * Real.exp (3 + 4 * Real.pi) * lemma23PaperL D ^ (-179 : ℤ) := by
+  let C := 5 * Real.exp (3 + 4 * Real.pi) * lemma23PaperL D ^ (-180 : ℤ)
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have ha := lemma44_alpha_pos_le_one hL
+  have hC : 0 ≤ C := by dsimp [C]; positivity
+  have hdc : Continuous (fun v : ℝ =>
+      ‖-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I‖⁻¹) := by
+    have hc : Continuous (fun v : ℝ =>
+        ‖-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I‖) := by fun_prop
+    apply hc.inv₀
+    intro v
+    apply norm_ne_zero_iff.mpr
+    intro h
+    have hr := congrArg Complex.re h
+    simp at hr
+    exact ha.1.ne' hr
+  have hm : IntegrableOn (fun v : ℝ => C *
+      ‖-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I‖⁻¹)
+      (Ioc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20)) :=
+    (hdc.const_mul C).integrableOn_Icc.mono_set Ioc_subset_Icc_self
+  have hb : ∀ᵐ v : ℝ ∂volume.restrict
+      (Ioc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20)),
+      ‖lemma44MiddleContourIntegrand χ ψ s v * Complex.I‖ ≤
+        C * ‖-(lemma44PaperAlpha D : ℂ) + (v : ℂ) * Complex.I‖⁻¹ := by
+    filter_upwards [ae_restrict_mem measurableSet_Ioc] with v hv
+    rw [norm_mul, Complex.norm_I, mul_one]
+    exact lemma59_ext44_middle_integrand_norm_bound χ ψ hD hψ hs (abs_le.mpr ⟨hv.1.le, hv.2⟩)
+  have hi := norm_integral_le_of_norm_le hm hb
+  rw [integral_const_mul] at hi
+  have hbudget := mul_le_mul_of_nonneg_left (lemma44_middle_denominator_budget hD) hC
+  have hn : ‖(2 * (Real.pi : ℂ) * Complex.I)⁻¹‖ ≤ 1 := by
+    rw [norm_inv, norm_mul, norm_mul, Complex.norm_I, mul_one]
+    norm_num [Complex.norm_of_nonneg Real.pi_pos.le]
+    have hpi : 1 ≤ 2 * Real.pi := by linarith only [Real.one_le_pi_div_two]
+    have h := inv_le_one_of_one_le₀ hpi
+    rw [abs_of_pos Real.pi_pos]
+    convert h using 1
+    ring
+  rw [norm_mul]
+  calc
+    _ ≤ 1 * ‖∫ v : ℝ in Ioc (-(lemma23PaperL D ^ 20)) (lemma23PaperL D ^ 20),
+        lemma44MiddleContourIntegrand χ ψ s v * Complex.I‖ :=
+      mul_le_mul_of_nonneg_right hn (norm_nonneg _)
+    _ ≤ C * lemma23PaperL D := by simpa only [one_mul] using hi.trans hbudget
+    _ = _ := by
+      have hpow : lemma23PaperL D ^ (-180 : ℤ) * lemma23PaperL D =
+          lemma23PaperL D ^ (-179 : ℤ) := by
+        calc
+          _ = lemma23PaperL D ^ (-180 : ℤ) * lemma23PaperL D ^ (1 : ℤ) := by rw [zpow_one]
+          _ = _ := by
+            rw [← zpow_add₀ (by linarith : lemma23PaperL D ≠ 0)]
+            norm_num
+      dsimp [C]
+      rw [mul_assoc, hpow]
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_left_product_contour_decomposition {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    lemma44TruncatedProductMellin χ ψ s (lemma44PaperGaussianScale D)
+      (-s.re - 1 / 2) (lemma23PaperL D ^ 20) =
+      lemma44TruncatedReflectedPolynomial χ ψ s
+        (lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)))
+          (-s.re - 1 / 2) (lemma23PaperL D ^ 20) +
+        lemma44TruncatedReflectedPolynomial χ ψ s (lemma44LongDirichletSum χ ψ⁻¹)
+          (-s.re - 1 / 2) (lemma23PaperL D ^ 20) +
+        (2 * (Real.pi : ℂ) * I)⁻¹ *
+          (∫ v : ℝ in -(lemma23PaperL D ^ 20)..lemma23PaperL D ^ 20,
+            lemma44ReflectedTailContourIntegrand χ ψ s v * I) := by
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hre := lemma59_ext44_omega3_re_pos hL hs
+  have hσ := (lemma59_ext44_initial_left_shift_abs_re hL hs 0).trans (by norm_num : (3 : ℝ) ≤ 15)
+  simp only [lemma44_initial_left_shift_re] at hσ
+  have hσ0 : -s.re - 1 / 2 ≠ 0 := by linarith only [hre]
+  let short := lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p))
+  let middle := lemma44LongDirichletSum χ ψ⁻¹
+  have hshort := (lemma59_ext44_reflected_polynomial_intervalIntegrable χ ψ hL hs short
+    (lemma44_short_polynomial_differentiable χ ψ⁻¹) hσ hσ0).mul_const I
+  have hmiddle := (lemma59_ext44_reflected_polynomial_intervalIntegrable χ ψ hL hs middle
+    (lemma44_long_polynomial_differentiable χ ψ⁻¹) hσ hσ0).mul_const I
+  have htail := (lemma59_ext44_reflected_tail_contour_intervalIntegrable χ ψ hD hs).mul_const I
+  have hpoint (v : ℝ) (hv : |v| ≤ lemma23PaperL D ^ 20) :
+      lemma44ProductMellinIntegrand χ ψ s (lemma44PaperGaussianScale D) (-s.re - 1 / 2) v * I =
+        lemma44ReflectedPolynomialNumerator χ ψ s short (lemma44InitialLeftShift s v) /
+          lemma44InitialLeftShift s v * I +
+        lemma44ReflectedPolynomialNumerator χ ψ s middle (lemma44InitialLeftShift s v) /
+          lemma44InitialLeftShift s v * I + lemma44ReflectedTailContourIntegrand χ ψ s v * I := by
+    have hfe := lemma59_ext44_left_product_mellin_eq_reflected_series χ ψ hL hψ hs
+      (lemma44PaperGaussianScale D) hv
+    have hmir : (1 - s - lemma44InitialLeftShift s v).re = 3 / 2 := by simp; ring
+    have hsplit := lemma44_reflected_series_decomposition χ ψ⁻¹ hL hmir
+    change lemma44ProductMellinIntegrand χ ψ s (lemma44PaperGaussianScale D)
+      (-s.re - 1 / 2) v = _ at hfe
+    rw [hfe]
+    change _ = _ at hsplit
+    change (lemma44ActualZtilde χ ψ (s + lemma44InitialLeftShift s v) *
+      LSeries (fun n => lemma23NuArithmeticFunction χ n * ψ⁻¹ (n : ZMod p))
+        (1 - s - lemma44InitialLeftShift s v) *
+        exp (lemma44InitialLeftShift s v * (Real.log (lemma44PaperGaussianScale D) : ℂ)) *
+        lemma57OmegaOne D (lemma44InitialLeftShift s v) / lemma44InitialLeftShift s v) * I = _
+    rw [hsplit]
+    unfold lemma44ReflectedPolynomialNumerator lemma44ReflectedTailContourIntegrand
+    dsimp only [short, middle]
+    ring
+  unfold lemma44TruncatedProductMellin lemma44TruncatedReflectedPolynomial
+  have hT : 0 ≤ lemma23PaperL D ^ 20 := by positivity
+  have he : (∫ v : ℝ in -(lemma23PaperL D ^ 20)..lemma23PaperL D ^ 20,
+      lemma44ProductMellinIntegrand χ ψ s (lemma44PaperGaussianScale D) (-s.re - 1 / 2) v * I) =
+      ∫ v : ℝ in -(lemma23PaperL D ^ 20)..lemma23PaperL D ^ 20,
+        ((lemma44ReflectedPolynomialNumerator χ ψ s short (lemma44InitialLeftShift s v) /
+          lemma44InitialLeftShift s v * I +
+        lemma44ReflectedPolynomialNumerator χ ψ s middle (lemma44InitialLeftShift s v) /
+          lemma44InitialLeftShift s v * I) + lemma44ReflectedTailContourIntegrand χ ψ s v * I) := by
+    apply intervalIntegral.integral_congr
+    intro v hv
+    rw [uIcc_of_le (by linarith : -(lemma23PaperL D ^ 20) ≤ lemma23PaperL D ^ 20)] at hv
+    exact hpoint v (abs_le.mpr hv)
+  rw [he]
+  dsimp only [lemma44InitialLeftShift]
+  rw [intervalIntegral.integral_add (hshort.add hmiddle) htail,
+    intervalIntegral.integral_add hshort hmiddle]
+  dsimp only [short, middle]
+  ring
+
+open Complex MeasureTheory Set in
+theorem lemma59_ext44_middle_reflected_polynomial_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖lemma44TruncatedReflectedPolynomial χ ψ s (lemma44LongDirichletSum χ ψ⁻¹)
+      (-lemma44PaperAlpha D) (lemma23PaperL D ^ 20)‖ ≤
+      5 * Real.exp (3 + 4 * Real.pi) * lemma23PaperL D ^ (-179 : ℤ) := by
+  have h := lemma59_ext44_truncated_middle_contour_bound χ ψ hD hψ hs
+  have hT : 0 ≤ lemma23PaperL D ^ 20 := by positivity
+  unfold lemma44TruncatedReflectedPolynomial lemma44ReflectedPolynomialNumerator
+  rw [intervalIntegral.integral_of_le (by linarith : -(lemma23PaperL D ^ 20) ≤ lemma23PaperL D ^ 20)]
+  simpa only [ofReal_neg, lemma44MiddleContourIntegrand] using h
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_reflected_tail_contour_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi (D := D) ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    ‖(2 * (Real.pi : ℂ) * I)⁻¹ *
+      (∫ v : ℝ in -(lemma23PaperL D ^ 20)..lemma23PaperL D ^ 20,
+        lemma44ReflectedTailContourIntegrand χ ψ s v * I)‖ ≤
+      (4 * lemma44DivisorSeriesMass * Real.exp (1 + (9 / 5 : ℝ) * Real.pi)) *
+        lemma23PaperL D ^ (-180 : ℤ) := by
+  let L := lemma23PaperL D
+  let C := 2 * lemma44DivisorSeriesMass *
+    Real.exp (3 * L + 1 + (9 / 5 : ℝ) * Real.pi - (3 / 10 : ℝ) * L ^ 9)
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hm := lemma44_divisor_series_mass_nonneg
+  have hT : 0 ≤ L ^ 20 := by positivity
+  have hlen : |L ^ 20 - -(L ^ 20)| = 2 * L ^ 20 := by
+    rw [abs_of_nonneg (by linarith only [hT])]
+    ring
+  have hi : ‖∫ v : ℝ in -(L ^ 20)..L ^ 20,
+      lemma44ReflectedTailContourIntegrand χ ψ s v * I‖ ≤ C * (2 * L ^ 20) := by
+    apply (intervalIntegral.norm_integral_le_of_norm_le_const ?_).trans_eq
+      (congrArg (fun r : ℝ => C * r) hlen)
+    intro v hv
+    rw [Set.uIoc_of_le (by linarith only [hT] : -(L ^ 20) ≤ L ^ 20)] at hv
+    rw [norm_mul, norm_I, mul_one]
+    exact lemma59_ext44_reflected_tail_contour_pointwise_bound χ ψ hD hψ hs
+      (abs_le.mpr ⟨hv.1.le, hv.2⟩)
+  have hn : ‖(2 * (Real.pi : ℂ) * I)⁻¹‖ ≤ 1 := by
+    rw [norm_inv, norm_mul, norm_mul, norm_I, mul_one]
+    norm_num [Complex.norm_of_nonneg Real.pi_pos.le]
+    have hpi : 1 ≤ 2 * Real.pi := by linarith only [Real.one_le_pi_div_two]
+    have h := inv_le_one_of_one_le₀ hpi
+    rw [abs_of_pos Real.pi_pos]
+    convert h using 1
+    ring
+  rw [norm_mul]
+  calc
+    _ ≤ 1 * ‖∫ v : ℝ in -(L ^ 20)..L ^ 20,
+        lemma44ReflectedTailContourIntegrand χ ψ s v * I‖ :=
+      mul_le_mul_of_nonneg_right hn (norm_nonneg _)
+    _ ≤ C * (2 * L ^ 20) := by simpa only [one_mul] using hi
+    _ = (4 * lemma44DivisorSeriesMass * Real.exp (1 + (9 / 5 : ℝ) * Real.pi)) *
+        (L ^ 20 * Real.exp (3 * L - (3 / 10 : ℝ) * L ^ 9)) := by
+      dsimp [C]
+      have he : Real.exp (3 * L + 1 + (9 / 5 : ℝ) * Real.pi - (3 / 10 : ℝ) * L ^ 9) =
+          Real.exp (1 + (9 / 5 : ℝ) * Real.pi) * Real.exp (3 * L - (3 / 10 : ℝ) * L ^ 9) := by
+        rw [← Real.exp_add]
+        congr 1
+        ring
+      rw [he]
+      ring
+    _ ≤ _ := mul_le_mul_of_nonneg_left (lemma44_initial_left_exponential_budget hL) (by positivity)
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_actual_approximate_functional_equation {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) :
+    letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+    ‖DirichletCharacter.LFunction ψ s *
+        DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) s -
+      (lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s +
+        lemma44ActualZtilde χ ψ s *
+          lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)) (1 - s))‖ ≤
+      lemma44ErrorConstant * lemma23PaperL D ^ (-179 : ℤ) := by
+  letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hT : 0 < lemma23PaperL D ^ 20 := pow_pos (by linarith) 20
+  let F := lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s
+  let f := lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p))
+  let m := lemma44LongDirichletSum χ ψ⁻¹
+  let R := (2 * (Real.pi : ℂ) * I)⁻¹ *
+    (∫ v : ℝ, lemma44ProductMellinIntegrand χ ψ s (lemma44PaperGaussianScale D) 1 v * I)
+  let Rt := lemma44TruncatedProductMellin χ ψ s (lemma44PaperGaussianScale D) 1 (lemma23PaperL D ^ 20)
+  let Sr := lemma44TruncatedReflectedPolynomial χ ψ s f 10 (lemma23PaperL D ^ 20)
+  let Mr := lemma44TruncatedReflectedPolynomial χ ψ s m (-lemma44PaperAlpha D) (lemma23PaperL D ^ 20)
+  let Hs := lemma44HorizontalError (fun w => lemma44ReflectedPolynomialNumerator χ ψ s f w / w)
+    (-s.re - 1 / 2) 10 (lemma23PaperL D ^ 20)
+  let Hm := lemma44HorizontalError (fun w => lemma44ReflectedPolynomialNumerator χ ψ s m w / w)
+    (-s.re - 1 / 2) (-lemma44PaperAlpha D) (lemma23PaperL D ^ 20)
+  let Tail := (2 * (Real.pi : ℂ) * I)⁻¹ *
+    (∫ v : ℝ in -(lemma23PaperL D ^ 20)..lemma23PaperL D ^ 20,
+      lemma44ReflectedTailContourIntegrand χ ψ s v * I)
+  let Hp := lemma44ProductHorizontalError χ ψ s (lemma44PaperGaussianScale D)
+    (-s.re - 1 / 2) (lemma23PaperL D ^ 20)
+  have hprod := lemma59_ext44_product_finite_shift χ ψ hL hψ.1 hs (lemma44PaperGaussianScale D) hT
+  have hleft := lemma59_ext44_left_product_contour_decomposition χ ψ hD hψ.1 hs
+  have hshort := lemma59_ext44_reflected_polynomial_residue_shift χ ψ hL hs f
+    (lemma44_short_polynomial_differentiable χ ψ⁻¹)
+  have hmiddle := lemma59_ext44_reflected_polynomial_middle_shift χ ψ hL hs m
+    (lemma44_long_polynomial_differentiable χ ψ⁻¹)
+  have he : DirichletCharacter.LFunction ψ s *
+      DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) s -
+        (F + lemma44ActualZtilde χ ψ s * f (1 - s)) =
+      (R - F) - (R - Rt) - Sr - Mr + Hs + Hm - Tail - Hp := by
+    dsimp only [F, R, Rt, Sr, Mr, Hs, Hm, Tail, Hp, f, m] at *
+    linear_combination -hprod - hleft + hshort + hmiddle
+  have hR := lemma59_ext44_right_mellin_approximation χ ψ
+    (lemma44_modulus_one_lt_at_threshold χ hD) hL hψ hs
+  have hRt := lemma59_ext44_right_vertical_truncation_bound χ ψ hD hs
+  have hSr := lemma59_ext44_short_right_contour_bound χ ψ hD hψ.1 hs
+  have hMr := lemma59_ext44_middle_reflected_polynomial_bound χ ψ hD hψ hs
+  have hHs := lemma59_ext44_short_horizontal_error_bound χ ψ hD hψ.1 hs
+  have hHm := lemma59_ext44_long_horizontal_error_bound χ ψ hD hψ.1 hs
+  have hTail := lemma59_ext44_reflected_tail_contour_bound χ ψ hD hψ.1 hs
+  have hHp := lemma59_ext44_product_horizontal_error_bound χ ψ hD hψ.1 hs
+  change ‖R - F‖ ≤ _ at hR
+  change ‖R - Rt‖ ≤ _ at hRt
+  change ‖Sr‖ ≤ _ at hSr
+  change ‖Mr‖ ≤ _ at hMr
+  change ‖Hs‖ ≤ _ at hHs
+  change ‖Hm‖ ≤ _ at hHm
+  change ‖Tail‖ ≤ _ at hTail
+  change ‖Hp‖ ≤ _ at hHp
+  have hn := lemma59_ext44_norm_eight_terms (R - F) (R - Rt) Sr Mr Hs Hm Tail Hp
+  have hpow : lemma23PaperL D ^ (-180 : ℤ) ≤ lemma23PaperL D ^ (-179 : ℤ) :=
+    zpow_le_zpow_right₀ (by linarith : 1 ≤ lemma23PaperL D) (by norm_num)
+  change ‖DirichletCharacter.LFunction ψ s *
+    DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) s -
+      (F + lemma44ActualZtilde χ ψ s * f (1 - s))‖ ≤ _
+  rw [he]
+  calc
+    _ ≤ lemma44ErrorConstant180 * lemma23PaperL D ^ (-180 : ℤ) +
+        (5 * Real.exp (3 + 4 * Real.pi)) * lemma23PaperL D ^ (-179 : ℤ) := by
+      unfold lemma44ErrorConstant180
+      nlinarith only [hn, hR, hRt, hSr, hMr, hHs, hHm, hTail, hHp]
+    _ ≤ lemma44ErrorConstant * lemma23PaperL D ^ (-179 : ℤ) := by
+      have hm := mul_le_mul_of_nonneg_left hpow lemma44_error_constant180_nonneg
+      unfold lemma44ErrorConstant
+      nlinarith only [hm]
+
+open Complex MeasureTheory in
+theorem lemma59_ext44_uniform_error_constant :
+    ∃ C : ℝ, 0 < C ∧ ∀ (D p : ℕ) [NeZero p]
+      (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p),
+      lemma23SectionFourModulusThreshold ≤ D → Lemma23InPsi1 χ ψ →
+      ∀ s : ℂ, Lemma59ExtendedOmega3 D s →
+      letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+      ‖DirichletCharacter.LFunction ψ s *
+          DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) s -
+        (lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s +
+          lemma44ActualZtilde χ ψ s *
+            lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)) (1 - s))‖ ≤
+        C * lemma23PaperL D ^ (-179 : ℤ) := by
+  refine ⟨lemma44ErrorConstant, lemma44_error_constant_pos, ?_⟩
+  intro D p _ χ ψ hD hψ s hs
+  exact lemma59_ext44_actual_approximate_functional_equation χ ψ hD hψ hs
+
+
+open scoped Topology
+
+
+open Complex in
+lemma lemma59_ext_good_FG_bound {D N : ℕ} (χ : RealPrimitiveCharacter D)
+    (ψ : DirichletCharacter ℂ N) (s : ℂ) (hL : 100 ≤ lemma23PaperL D)
+    (hψ : Lemma23InPsi1 χ ψ) (hs : Lemma59InExtendedOmega1 D s) :
+    ‖lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod N)) s‖ +
+      ‖lemma23ActualSectionFourG χ (fun n => ψ (n : ZMod N)) s‖ ≤ 2 * lemma23PaperL D ^ 79 := by
+  exact lemma59_extended_FG_bound χ ψ s hL hψ.2 hs
+
+open Complex in
+lemma lemma59_ext_good_product_bound {D N : ℕ} (χ : RealPrimitiveCharacter D)
+    (ψ : DirichletCharacter ℂ N) (s : ℂ) (hL : 100 ≤ lemma23PaperL D)
+    (hψ : Lemma23InPsi1 χ ψ) (hs : Lemma59InExtendedOmega1 D s) :
+    ‖lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod N)) s *
+      lemma23ActualSectionFourG χ (fun n => ψ (n : ZMod N)) s - 1‖ ≤ 4 * lemma23PaperL D ^ (-227 : ℤ) := by
+  exact lemma59_extended_product_bound χ ψ s hL hψ.2 hs
+
+open Complex in
+lemma lemma59_ext_F_logDeriv_at_threshold {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p) (s : ℂ)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    (hs : Lemma59InExtendedOmega2 D s) :
+    ‖logDeriv (lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p))) s‖ ≤ 140800 * lemma23PaperL D := by
+  have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+  have hL : 100 ≤ lemma23PaperL D := by
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  exact lemma59_extended_F_logDeriv_bound χ ψ s hL hp.2 hψ.2 hs
+
+open Complex Set in
+def Lemma59ExtendedZeroFreeRegion (D : ℕ) (s : ℂ) : Prop :=
+  1 / 2 + lemma44PaperAlpha D ^ 2 < s.re ∧ s.re < 1 ∧
+    |s.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13
+
+open Complex ComplexConjugate Set in
+def Lemma59ExtendedLocalStrip (D : ℕ) (s : ℂ) : Prop :=
+  |s.re - 1 / 2| < (lemma23PaperL D)⁻¹ ∧
+    |s.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 14
+
+open Complex Metric Set Filter in
+def Lemma59ExtendedLemma46Target : Prop :=
+  ∃ c : ℝ, 0 < c ∧ ∃ D₀ : ℕ, ∀ {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p),
+    D₀ ≤ D → Lemma23InPsi1 χ ψ → ∀ ρ : ℂ,
+    1 / 2 ≤ ρ.re → ρ.re < 1 / 2 + lemma44PaperAlpha D ^ 2 →
+    |ρ.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13 →
+    lemma45ActualA χ ψ ρ = 0 →
+    0 < lemma46InnerRadius D c ∧
+    ρ.re = 1 / 2 ∧ deriv (lemma45ActualA χ ψ) ρ ≠ 0 ∧
+      ∀ w : ℂ, 0 < ‖w‖ → ‖w‖ < lemma46InnerRadius D c →
+        lemma45ActualA χ ψ ((1 / 2 : ℂ) + I * (ρ.im : ℂ) + w) ≠ 0
+
+open Complex ComplexConjugate Metric Set in
+def Lemma59ExtendedZeroOmega (D : ℕ) (s : ℂ) : Prop :=
+  |s.re - 1 / 2| < 1 / 2 ∧
+    |s.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13
+
+open Complex ComplexConjugate Set Filter in
+theorem lemma59_ext45_horizontal_F_quotient_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hre : 1 / 2 ≤ s.re)
+    (hnear : s.re < 1 / 2 + (lemma23PaperL D)⁻¹)
+    (him : |s.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13) :
+    ‖lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)) (1 - s) /
+      lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s‖ ≤
+        Real.exp (281600 * lemma23PaperL D * (s.re - 1 / 2)) := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  let L := lemma23PaperL D
+  let F := lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p))
+  let H : ℝ → ℝ := fun x => Real.log ‖F ((x : ℂ) + I * (s.im : ℂ))‖
+  have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+  have hL : 3 ≤ L := hp.1
+  have hLp : 0 < L := by linarith
+  have hR : 0 < lemma23LogDerivativeRadius D := by
+    unfold lemma23LogDerivativeRadius
+    exact div_pos (by linarith only [hp.2])
+      (mul_pos (by norm_num) (by linarith only [hp.1]))
+  have hregion (x : ℝ) (hx : x ∈ Icc (1 - s.re) s.re) :
+      Lemma59InExtendedOmega2 D ((x : ℂ) + I * (s.im : ℂ)) := by
+    simp only [Lemma59InExtendedOmega2, add_re, ofReal_re, mul_re, I_re, I_im,
+      ofReal_im, mul_zero, zero_mul, sub_zero, add_zero, add_im, mul_im, one_mul,
+      zero_add]
+    refine ⟨by linarith [hx.1], ?_, by linarith⟩
+    change x < 1 + L⁻¹
+    linarith [hx.2]
+  have hregion1 (x : ℝ) (hx : x ∈ Icc (1 - s.re) s.re) :
+      Lemma59InExtendedOmega1 D ((x : ℂ) + I * (s.im : ℂ)) :=
+    lemma59_extended_disk_subset_omega1 hL100 hp.2 (hregion x hx)
+      (Metric.mem_ball_self hR)
+  have hd (x : ℝ) (hx : x ∈ Icc (1 - s.re) s.re) :
+      HasDerivAt H
+        (logDeriv F ((x : ℂ) + I * (s.im : ℂ))).re x :=
+    lemma45_hasDerivAt_horizontal_log_norm
+      (lemma44_short_polynomial_differentiable χ ψ _)
+      (lemma59_extended_F_ne_zero χ ψ _ hL100 hψ.2 (hregion1 x hx))
+  have hcont : ContinuousOn H (Icc (1 - s.re) s.re) :=
+    fun x hx => (hd x hx).continuousAt.continuousWithinAt
+  have hdiff : DifferentiableOn ℝ H (interior (Icc (1 - s.re) s.re)) :=
+    fun x hx => (hd x (interior_subset hx)).differentiableAt.differentiableWithinAt
+  have hbound : ∀ x ∈ interior (Icc (1 - s.re) s.re),
+      -140800 * L ≤ deriv H x := by
+    intro x hx
+    rw [(hd x (interior_subset hx)).deriv]
+    have hb := lemma59_ext_F_logDeriv_at_threshold χ ψ _ hD hψ
+      (hregion x (interior_subset hx))
+    have hr := (abs_le.mp ((Complex.abs_re_le_norm _).trans hb)).1
+    linarith
+  have ho : 1 - s.re ≤ s.re := by linarith
+  have hm := (convex_Icc (1 - s.re) s.re).mul_sub_le_image_sub_of_le_deriv
+    hcont hdiff hbound (1 - s.re) ⟨le_rfl, ho⟩ s.re ⟨ho, le_rfl⟩ ho
+  have hsEq : (s.re : ℂ) + I * (s.im : ℂ) = s := by
+    apply Complex.ext <;> simp
+  have hrEq : ((1 - s.re : ℝ) : ℂ) + I * (s.im : ℂ) = conj (1 - s) := by
+    apply Complex.ext <;> simp
+  have hn := lemma59_extended_F_ne_zero χ ψ _ hL100 hψ.2
+    (hregion1 s.re ⟨ho, le_rfl⟩)
+  have hnr := lemma59_extended_F_ne_zero χ ψ _ hL100 hψ.2
+    (hregion1 (1 - s.re) ⟨le_rfl, ho⟩)
+  rw [hsEq] at hn
+  rw [hrEq] at hnr
+  rw [lemma45_short_sum_inv_eq_conj, norm_div, norm_conj]
+  have hlog : Real.log (‖F (conj (1 - s))‖ / ‖F s‖) ≤
+      281600 * L * (s.re - 1 / 2) := by
+    rw [Real.log_div (norm_ne_zero_iff.mpr hnr) (norm_ne_zero_iff.mpr hn)]
+    dsimp only [H] at hm
+    rw [hsEq, hrEq] at hm
+    linarith
+  rw [← Real.exp_log (div_pos (norm_pos_iff.mpr hnr) (norm_pos_iff.mpr hn))]
+  exact Real.exp_le_exp.mpr hlog
+
+open Complex ComplexConjugate in
+theorem lemma59_ext45_omega1_F_inv_bound {D N : ℕ}
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ N) (s : ℂ)
+    (hL : 100 ≤ lemma23PaperL D) (hψ : Lemma23InPsi1 χ ψ)
+    (hs : Lemma59InExtendedOmega1 D s) :
+    ‖(lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod N)) s)⁻¹‖ ≤
+      4 * lemma23PaperL D ^ 79 := by
+  have hL100 : 100 ≤ lemma23PaperL D := hL
+  let F := lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod N)) s
+  let G := lemma23ActualSectionFourG χ (fun n => ψ (n : ZMod N)) s
+  have hn := lemma59_extended_F_ne_zero χ ψ s hL100 hψ.2 hs
+  have h41 := lemma59_extended_FG_bound χ ψ s hL100 hψ.2 hs
+  have h42 := lemma59_extended_product_bound χ ψ s hL100 hψ.2 hs
+  have hp : 4 * lemma23PaperL D ^ (-227 : ℤ) ≤ 1 / 2 := by
+    have hpow : (9 : ℝ) ≤ lemma23PaperL D ^ 227 := by
+      have h2 : (9 : ℝ) ≤ lemma23PaperL D ^ 2 := by nlinarith
+      exact h2.trans (pow_le_pow_right₀ (by linarith : 1 ≤ lemma23PaperL D) (by norm_num))
+    rw [zpow_neg, zpow_ofNat]
+    have hi := (inv_le_inv₀ (by positivity : 0 < lemma23PaperL D ^ 227)
+      (by norm_num : (0 : ℝ) < 9)).mpr hpow
+    norm_num at hi
+    linarith
+  have hprod : 1 / 2 ≤ ‖F‖ * ‖G‖ := by
+    have ht := norm_sub_norm_le (1 : ℂ) (F * G)
+    rw [norm_one, norm_sub_rev, norm_mul] at ht
+    change ‖F * G - 1‖ ≤ _ at h42
+    linarith
+  have hG : ‖G‖ ≤ 2 * lemma23PaperL D ^ 79 := by
+    change ‖F‖ + ‖G‖ ≤ _ at h41
+    linarith [norm_nonneg F]
+  change ‖F⁻¹‖ ≤ _
+  rw [norm_inv, ← one_div]
+  apply (div_le_iff₀ (norm_pos_iff.mpr hn)).mpr
+  have hm := mul_le_mul_of_nonneg_left hG (norm_nonneg F)
+  nlinarith
+
+open Complex in
+def Lemma59ExtendedLemma48Target : Prop :=
+  ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p),
+    D₀ ≤ D → Lemma23InPsi1 χ ψ → ∀ ρ : ℂ,
+    Lemma59ExtendedZeroOmega D ρ → lemma48ActualProduct χ ψ ρ = 0 →
+    ‖(lemma44ActualZtilde χ ψ ρ)⁻¹ +
+      lemma23ActualSectionFourG χ (fun n => ψ (n : ZMod p)) ρ *
+        lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)) (1 - ρ)‖ ≤
+      C * lemma23PaperL D ^ (-100 : ℤ)
+
+open Complex ComplexConjugate in
+theorem lemma59_ext45_equation410 {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedOmega3 D s) (hs1 : Lemma59InExtendedOmega1 D s) :
+    ‖lemma45ActualA χ ψ s - (1 + lemma45ActualB χ ψ s)‖ ≤
+      (4 * lemma44ErrorConstant) * lemma23PaperL D ^ (-100 : ℤ) := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hn := lemma59_extended_F_ne_zero χ ψ s hL100 hψ.2 hs1
+  have he := lemma59_ext44_actual_approximate_functional_equation χ ψ hD hψ hs
+  have hi := lemma59_ext45_omega1_F_inv_bound χ ψ s hL100 hψ hs1
+  have hid : lemma45ActualA χ ψ s - (1 + lemma45ActualB χ ψ s) =
+      (DirichletCharacter.LFunction ψ s *
+        DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) s -
+        (lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s +
+          lemma44ActualZtilde χ ψ s *
+            lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)) (1 - s))) *
+        (lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s)⁻¹ := by
+    unfold lemma45ActualA lemma45ActualB
+    field_simp
+    <;> ring
+  rw [hid, norm_mul]
+  have hm := mul_le_mul he hi (norm_nonneg _)
+    (mul_nonneg lemma44_error_constant_pos.le (by positivity))
+  apply hm.trans_eq
+  have hpow : lemma23PaperL D ^ (-179 : ℤ) * lemma23PaperL D ^ 79 =
+      lemma23PaperL D ^ (-100 : ℤ) := by
+    rw [← zpow_natCast, ← zpow_add₀ (by linarith : lemma23PaperL D ≠ 0)]
+    norm_num
+  calc
+    _ = (4 * lemma44ErrorConstant) *
+        (lemma23PaperL D ^ (-179 : ℤ) * lemma23PaperL D ^ 79) := by ring
+    _ = _ := by rw [hpow]
+
+open Complex Set in
+theorem lemma59_ext45_region_subsets {D : ℕ} {s : ℂ}
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hs : Lemma59ExtendedZeroFreeRegion D s) :
+    Lemma59InExtendedOmega1 D s ∧ Lemma59ExtendedOmega3 D s ∧
+      Lemma44InExtendedGammaRegion D s ∧ 1 / 2 < s.re := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+  have ha := lemma44_alpha_pos_le_one hp.1
+  have hre : 1 / 2 < s.re := by linarith [sq_nonneg (lemma44PaperAlpha D), hs.1]
+  have hr : 0 < Real.log (lemma23PaperL D) / (100 * lemma23PaperL D) :=
+    div_pos (by linarith only [hp.2])
+      (mul_pos (by norm_num) (by linarith only [hp.1]))
+  have hs3 : Lemma59ExtendedOmega3 D s :=
+    ⟨by linarith, by linarith [hs.2.1], by linarith [hs.2.2]⟩
+  exact ⟨⟨by linarith, by linarith [hs.2.1], by linarith [hs.2.2]⟩,
+    hs3, lemma59_ext44_omega3_subset_extended_gamma_region hp.1 hs3, hre⟩
+
+open Complex Metric Set in
+theorem lemma59_ext46_disk_subset_local_strip {D : ℕ} {c s : ℂ}
+    (hD : lemma23SectionFourModulusThreshold ≤ D)
+    (hc : c.re = 1 / 2)
+    (hci : |c.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13)
+    (hs : ‖s - c‖ < 2 * lemma44PaperAlpha D) : Lemma59ExtendedLocalStrip D s := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have hp := lemma46_alpha_parameters hD
+  have hr : |s.re - 1 / 2| ≤ ‖s - c‖ := by
+    simpa only [sub_re, hc] using abs_re_le_norm (s - c)
+  have hi := abs_im_le_norm (s - c)
+  have ht := abs_add_le (s.im - c.im) (c.im - (lemma23PaperCenter D).im)
+  rw [sub_add_sub_cancel] at ht
+  refine ⟨hr.trans_lt (hs.trans hp.2.2.1), ?_⟩
+  simp only [sub_im] at hi
+  linarith [hp.2.1]
+
+open Complex ComplexConjugate Set in
+theorem lemma59_ext46_local_strip_regions {D : ℕ} {s : ℂ}
+    (hD : lemma23SectionFourModulusThreshold ≤ D)
+    (hs : Lemma59ExtendedLocalStrip D s) :
+    Lemma59InExtendedOmega2 D s ∧ Lemma59InExtendedOmega2 D (conj (1 - s)) ∧
+      Lemma59ExtendedGammaRegion D s ∧ 0 < s.im := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+  have hi : (lemma23PaperL D)⁻¹ ≤ 1 := inv_le_one_of_one_le₀ (by linarith)
+  have hr := abs_lt.mp hs.1
+  have hs2 : Lemma59InExtendedOmega2 D s :=
+    ⟨by linarith, by linarith, by linarith [hs.2]⟩
+  have hs2r : Lemma59InExtendedOmega2 D (conj (1 - s)) := by
+    simp only [Lemma59InExtendedOmega2, conj_re, sub_re, one_re,
+      conj_im, sub_im, one_im, zero_sub, neg_neg]
+    exact ⟨by linarith, by linarith, by linarith [hs.2]⟩
+  have hgamma : Lemma59ExtendedGammaRegion D s :=
+    ⟨by linarith [hs.1], by linarith [hs.2]⟩
+  have hext : Lemma44InExtendedGammaRegion D s :=
+    ⟨by linarith [hs.1], by linarith [hs.2, pow_nonneg (by linarith : 0 ≤ lemma23PaperL D) 405]⟩
+  exact ⟨hs2, hs2r, hgamma,
+    (lemma44_extended_gamma_region_height hp.1 hext).2.2.1⟩
+
+open Complex ComplexConjugate Metric Set in
+theorem lemma59_ext48_omega_height_pos {D : ℕ} {s : ℂ}
+    (hL : 3 ≤ lemma23PaperL D) (hs : Lemma59ExtendedZeroOmega D s) : 0 < s.im := by
+  have hheightmargin := lemma59_extended_height_margin hL
+  have hL20nonneg := pow_nonneg (by linarith only [hL] : 0 ≤ lemma23PaperL D) 20
+  apply (lemma44_extended_gamma_region_height hL ?_).2.2.1
+  exact ⟨by linarith [hs.1], by
+    linarith [hs.2, pow_nonneg (by linarith : 0 ≤ lemma23PaperL D) 405]⟩
+
+open Complex ComplexConjugate Metric Set in
+theorem lemma59_ext48_omega_reflection {D : ℕ} {s : ℂ} (hs : Lemma59ExtendedZeroOmega D s) :
+    Lemma59ExtendedZeroOmega D (1 - conj s) := by
+  simp only [Lemma59ExtendedZeroOmega, sub_re, one_re, conj_re, sub_im, one_im,
+    conj_im, zero_sub, neg_neg]
+  have he : 1 - s.re - 1 / 2 = -(s.re - 1 / 2) := by ring
+  rw [he, abs_neg]
+  exact hs
+
+open Complex ComplexConjugate Metric Set in
+theorem lemma59_ext48_thin_slab_regions {D : ℕ} {s : ℂ}
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hs : Lemma59ExtendedZeroOmega D s)
+    (hslab : |s.re - 1 / 2| ≤ lemma44PaperAlpha D ^ 2) :
+    Lemma59ExtendedOmega3 D s ∧ Lemma59InExtendedOmega1 D s ∧
+      Lemma59ExtendedOmega3 D (1 - conj s) := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have ha := lemma46_alpha_parameters hD
+  have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+  have hsre : |s.re - 1 / 2| < lemma44PaperAlpha D := by
+    apply hslab.trans_lt
+    nlinarith only [ha.1, ha.2.1]
+  have hre := abs_lt.mp hsre
+  have hs3 : Lemma59ExtendedOmega3 D s :=
+    ⟨by linarith, by linarith, by linarith [hs.2]⟩
+  have hr3 : Lemma59ExtendedOmega3 D (1 - conj s) := by
+    simp only [Lemma59ExtendedOmega3, sub_re, one_re, conj_re, sub_im,
+      one_im, conj_im, zero_sub, neg_neg]
+    exact ⟨by linarith, by linarith, by linarith [hs.2]⟩
+  have hs2 : Lemma59InExtendedOmega2 D s :=
+    ⟨by linarith [ha.2.2.1], by linarith [ha.2.2.1], by linarith [hs.2]⟩
+  have hR : 0 < lemma23LogDerivativeRadius D := by
+    unfold lemma23LogDerivativeRadius
+    exact div_pos (by linarith only [hp.2]) (by linarith only [hp.1])
+  exact ⟨hs3, lemma59_extended_disk_subset_omega1 hL100 hp.2 hs2
+    (mem_ball_self hR), hr3⟩
+
+open Complex Set in
+theorem lemma59_ext45_B_bound_far {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedZeroFreeRegion D s)
+    (hfar : 1 / 2 + (lemma23PaperL D)⁻¹ ≤ s.re) :
+    ‖lemma45ActualB χ ψ s‖ ≤ Real.exp (-(lemma23PaperL D ^ 8)) := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  let L := lemma23PaperL D
+  have hp := lemma45_parameters_at_threshold hD
+  have hL : 200 ≤ L := hp.1
+  have hLp : 0 < L := by linarith
+  have hr := lemma59_ext45_region_subsets hD hs
+  have hZ := lemma44ActualZtilde_norm_le_right χ ψ hD hψ.1 hr.2.2.1 hr.2.2.2.le
+  have hF := lemma44_short_polynomial_coarse_bound χ ψ⁻¹
+    (z := 1 - s) (by simp only [sub_re, one_re]; linarith [hs.2.1])
+  have hi := lemma59_ext45_omega1_F_inv_bound χ ψ s (by linarith) hψ hr.1
+  have hiexp : 4 * L ^ 79 ≤ Real.exp (82 * L) := by
+    have hself : L ≤ Real.exp L := by linarith [Real.add_one_le_exp L]
+    have hpow := pow_le_pow_left₀ hLp.le hself 79
+    have h4 : (4 : ℝ) ≤ Real.exp (3 * L) := by
+      linarith [Real.add_one_le_exp (3 * L)]
+    calc
+      _ ≤ Real.exp (3 * L) * (Real.exp L) ^ 79 :=
+        mul_le_mul h4 hpow (by positivity) (Real.exp_nonneg _)
+      _ = _ := by rw [← Real.exp_nat_mul, ← Real.exp_add]; congr 1; ring
+  have h8 : 134 * L ≤ L ^ 8 := by
+    have h7 : 134 ≤ L ^ 7 := by
+      have h := pow_le_pow_left₀ (by norm_num : (0 : ℝ) ≤ 200) hL 7
+      norm_num at h
+      linarith
+    calc
+      _ ≤ L ^ 7 * L := mul_le_mul_of_nonneg_right h7 hLp.le
+      _ = _ := by ring
+  have hdelta : L ^ 8 ≤ (s.re - 1 / 2) * L ^ 9 := by
+    have hd : L⁻¹ ≤ s.re - 1 / 2 := by linarith
+    calc
+      L ^ 8 = L⁻¹ * L ^ 9 := by field_simp
+      _ ≤ _ := mul_le_mul_of_nonneg_right hd (by positivity)
+  have hbound : ‖lemma45ActualB χ ψ s‖ ≤
+      Real.exp ((1 - 2 * s.re) * L ^ 9) * Real.exp (52 * L) * Real.exp (82 * L) := by
+    unfold lemma45ActualB
+    rw [div_eq_mul_inv, norm_mul, norm_mul]
+    have hZ' : ‖lemma44ActualZtilde χ ψ s‖ ≤ Real.exp ((1 - 2 * s.re) * L ^ 9) := by
+      simpa only [lemma23PaperP, Real.log_exp] using hZ
+    exact mul_le_mul (mul_le_mul hZ' hF (norm_nonneg _) (Real.exp_nonneg _))
+      (hi.trans hiexp) (norm_nonneg _) (by positivity)
+  apply hbound.trans
+  rw [← Real.exp_add, ← Real.exp_add]
+  exact Real.exp_le_exp.mpr (by nlinarith only [h8, hdelta])
+
+open Complex Set in
+theorem lemma59_ext45_B_bound_near {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedZeroFreeRegion D s)
+    (hnear : s.re < 1 / 2 + (lemma23PaperL D)⁻¹) :
+    ‖lemma45ActualB χ ψ s‖ ≤
+      Real.exp (-(s.re - 1 / 2) * lemma23PaperL D ^ 9) := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have hr := lemma59_ext45_region_subsets hD hs
+  have hZ := lemma44ActualZtilde_norm_le_right χ ψ hD hψ.1 hr.2.2.1 hr.2.2.2.le
+  have hF := lemma59_ext45_horizontal_F_quotient_bound χ ψ hD hψ
+    hr.2.2.2.le hnear hs.2.2
+  have he : ‖lemma45ActualB χ ψ s‖ = ‖lemma44ActualZtilde χ ψ s‖ *
+      ‖lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)) (1 - s) /
+        lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s‖ := by
+    simp only [lemma45ActualB, norm_div, norm_mul]
+    ring
+  rw [he]
+  apply (mul_le_mul hZ hF (norm_nonneg _) (Real.exp_nonneg _)).trans
+  rw [← Real.exp_add, lemma23PaperP, Real.log_exp]
+  apply Real.exp_le_exp.mpr
+  have hm := mul_le_mul_of_nonneg_right (lemma45_parameters_at_threshold hD).2
+    (sub_nonneg.mpr hr.2.2.2.le)
+  nlinarith only [hm]
+
+open Complex ComplexConjugate Metric Set in
+theorem lemma59_ext46_actual_A_reflected_zero {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedLocalStrip D s)
+    (hzero : lemma45ActualA χ ψ s = 0) :
+    lemma45ActualA χ ψ (1 - conj s) = 0 := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+  have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+  have hr := lemma59_ext46_local_strip_regions hD hs
+  have hR : 0 < lemma23LogDerivativeRadius D := by
+    unfold lemma23LogDerivativeRadius
+    exact div_pos (by linarith only [hp.2]) (by linarith only [hp.1])
+  have hF := lemma59_extended_F_ne_zero χ ψ s hL100 hψ.2
+    (lemma59_extended_disk_subset_omega1 hL100 hp.2 hr.1 (mem_ball_self hR))
+  have hprod : DirichletCharacter.LFunction ψ s *
+      DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) s = 0 := by
+    change _ / lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) s = 0 at hzero
+    exact (div_eq_zero_iff).mp hzero |>.resolve_right hF
+  have hfe := lemma44_equation44 χ ψ hp.1 hψ.1 hr.2.2.2
+  rw [hprod] at hfe
+  have hZ := lemma44ActualZtilde_ne_zero χ ψ hp.1 hψ.1 hr.2.2.2
+  have hbar := (mul_eq_zero.mp hfe.symm).resolve_left hZ
+  have hψne : ψ ≠ 1 := by
+    intro he
+    have hh := hψ.1.2.1
+    rw [he, DirichletCharacter.isPrimitive_def, DirichletCharacter.conductor_one] at hh
+    exact hψ.1.1.ne_one hh.symm
+  have htwist := lemma44CharacterTwist_isPrimitive χ ψ hψ.1.2.1
+    (lemma44_family_coprime χ ψ hp.1 hψ.1)
+  have htwne : lemma44CharacterTwist χ ψ ≠ 1 := by
+    intro he
+    rw [he, DirichletCharacter.isPrimitive_def, DirichletCharacter.conductor_one] at htwist
+    have hdvp : p ∣ 1 := htwist ▸ Nat.dvd_mul_left p D
+    exact hψ.1.1.ne_one (Nat.dvd_one.mp hdvp)
+  rw [dirichletLFunction_inv_eq_conj_at_conj ψ hψne,
+    dirichletLFunction_inv_eq_conj_at_conj (lemma44CharacterTwist χ ψ) htwne,
+    ← map_mul, map_sub, map_one] at hbar
+  have hz : DirichletCharacter.LFunction ψ (1 - conj s) *
+      DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) (1 - conj s) = 0 :=
+    (map_eq_zero conj).mp hbar
+  simp only [lemma45ActualA, hz, zero_div]
+
+open Complex ComplexConjugate Set in
+theorem lemma59_ext46_actual_B_differentiable_ne_zero {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedLocalStrip D s) :
+    DifferentiableAt ℂ (lemma45ActualB χ ψ) s ∧ lemma45ActualB χ ψ s ≠ 0 := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+  have hr := lemma59_ext46_local_strip_regions hD hs
+  have hR : 0 < lemma23LogDerivativeRadius D := by
+    unfold lemma23LogDerivativeRadius
+    exact div_pos (by linarith only [hp.2]) (by linarith only [hp.1])
+  have hF := lemma59_extended_F_ne_zero χ ψ s hL100 hψ.2
+    (lemma59_extended_disk_subset_omega1 hL100 hp.2 hr.1 (Metric.mem_ball_self hR))
+  have hFr := lemma59_extended_F_ne_zero χ ψ (conj (1 - s)) hL100 hψ.2
+    (lemma59_extended_disk_subset_omega1 hL100 hp.2 hr.2.1 (Metric.mem_ball_self hR))
+  have hFi : lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)) (1 - s) ≠ 0 := by
+    rw [lemma45_short_sum_inv_eq_conj]
+    exact (map_ne_zero conj).2 hFr
+  have hZ := lemma44ActualZtilde_ne_zero χ ψ hp.1 hψ.1 hr.2.2.2
+  constructor
+  · exact ((lemma44ActualZtilde_differentiableAt χ ψ hr.2.2.2.ne').mul
+      ((lemma44_short_polynomial_differentiable χ ψ⁻¹ (1 - s)).comp s
+        (by fun_prop))).div (lemma44_short_polynomial_differentiable χ ψ s) hF
+  · exact div_ne_zero (mul_ne_zero hZ hFi) hF
+
+open Complex ComplexConjugate Set in
+theorem lemma59_ext46_equation411 {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedLocalStrip D s) :
+    ‖logDeriv (lemma45ActualB χ ψ) s +
+      ((2 * Real.log (lemma23PaperP D) : ℝ) : ℂ)‖ ≤
+        341600 * lemma23PaperL D := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+  have hr := lemma59_ext46_local_strip_regions hD hs
+  have hR : 0 < lemma23LogDerivativeRadius D := by
+    unfold lemma23LogDerivativeRadius
+    exact div_pos (by linarith only [hp.2]) (by linarith only [hp.1])
+  have hF := lemma59_extended_F_ne_zero χ ψ s hL100 hψ.2
+    (lemma59_extended_disk_subset_omega1 hL100 hp.2 hr.1 (Metric.mem_ball_self hR))
+  have hFr := lemma59_extended_F_ne_zero χ ψ (conj (1 - s)) hL100 hψ.2
+    (lemma59_extended_disk_subset_omega1 hL100 hp.2 hr.2.1 (Metric.mem_ball_self hR))
+  have hFi : lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)) (1 - s) ≠ 0 := by
+    rw [lemma45_short_sum_inv_eq_conj]
+    exact (map_ne_zero conj).2 hFr
+  have hZ := lemma44ActualZtilde_ne_zero χ ψ hp.1 hψ.1 hr.2.2.2
+  have hid := lemma23_logDeriv_reflection_quotient
+    (lemma44ActualZtilde_differentiableAt χ ψ hr.2.2.2.ne')
+    (lemma44_short_polynomial_differentiable χ ψ⁻¹ (1 - s))
+    (lemma44_short_polynomial_differentiable χ ψ s) hZ hFi hF
+  change logDeriv (lemma45ActualB χ ψ) s = _ at hid
+  rw [hid]
+  have hb := lemma59_ext_F_logDeriv_at_threshold χ ψ s hD hψ hr.1
+  have hbr := lemma59_ext_F_logDeriv_at_threshold χ ψ (conj (1 - s)) hD hψ hr.2.1
+  have hbi : ‖logDeriv (lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)))
+      (1 - s)‖ ≤ 140800 * lemma23PaperL D := by
+    rw [lemma46_inverse_F_logDeriv, norm_conj]
+    exact hbr
+  have hz := lemma59_ext44_equation46 χ ψ hp.1 hψ.1 hr.2.2.1
+  have heq : logDeriv (lemma44ActualZtilde χ ψ) s -
+      logDeriv (lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p))) (1 - s) -
+      logDeriv (lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p))) s +
+      ((2 * Real.log (lemma23PaperP D) : ℝ) : ℂ) =
+      (logDeriv (lemma44ActualZtilde χ ψ) s +
+        ((2 * Real.log (lemma23PaperP D) : ℝ) : ℂ)) -
+      logDeriv (lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p))) (1 - s) -
+      logDeriv (lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p))) s := by ring
+  rw [heq]
+  exact (norm_sub_le _ _).trans (by
+    have ht := norm_sub_le
+      (logDeriv (lemma44ActualZtilde χ ψ) s +
+        ((2 * Real.log (lemma23PaperP D) : ℝ) : ℂ))
+      (logDeriv (lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p))) (1 - s))
+    linarith)
+
+open Complex Metric Set in
+theorem lemma59_ext46_inner_disk_regions {D : ℕ} {c s : ℂ}
+    (hD : lemma23SectionFourModulusThreshold ≤ D)
+    (hc : c.re = 1 / 2)
+    (hci : |c.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13)
+    (hs : ‖s - c‖ < lemma44PaperAlpha D) :
+    Lemma59ExtendedOmega3 D s ∧ Lemma59InExtendedOmega1 D s := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have hp := lemma46_alpha_parameters hD
+  have hs2 : ‖s - c‖ < 2 * lemma44PaperAlpha D := by linarith
+  have hstrip := lemma59_ext46_disk_subset_local_strip hD hc hci hs2
+  have hr := abs_lt.mp ((abs_re_le_norm (s - c)).trans_lt hs)
+  simp only [sub_re, hc] at hr
+  have hparams := lemma23_sectionFour_parameters_at_explicit_threshold hD
+  have hR : 0 < lemma23LogDerivativeRadius D := by
+    unfold lemma23LogDerivativeRadius
+    exact div_pos (by linarith only [hparams.2]) (by linarith only [hparams.1])
+  refine ⟨⟨by linarith, by linarith, by linarith [hstrip.2]⟩, ?_⟩
+  exact lemma59_extended_disk_subset_omega1 hL100 hparams.2
+    (lemma59_ext46_local_strip_regions hD hstrip).1 (mem_ball_self hR)
+
+open Complex Set in
+theorem lemma59_ext45_B_uniform_gap {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedZeroFreeRegion D s) :
+    ‖lemma45ActualB χ ψ s‖ ≤ Real.exp (-(lemma23PaperL D ^ 9)⁻¹) := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  let L := lemma23PaperL D
+  have hL : 3 ≤ L := (lemma23_sectionFour_parameters_at_explicit_threshold hD).1
+  have hLp : 0 < L := by linarith
+  by_cases hnear : s.re < 1 / 2 + L⁻¹
+  · apply (lemma59_ext45_B_bound_near χ ψ hD hψ hs hnear).trans
+    apply Real.exp_le_exp.mpr
+    have ha : lemma44PaperAlpha D * L ^ 9 = Real.pi := by
+      simp only [lemma44PaperAlpha, lemma23PaperP, Real.log_exp]
+      dsimp only [L]
+      field_simp [show lemma23PaperL D ≠ 0 from hLp.ne']
+    have hd : lemma44PaperAlpha D ^ 2 ≤ s.re - 1 / 2 := by linarith [hs.1]
+    have hm := mul_le_mul_of_nonneg_right hd (pow_nonneg hLp.le 18)
+    have hpi : (1 : ℝ) ≤ Real.pi ^ 2 := by nlinarith only [Real.one_le_pi_div_two]
+    have hprod : 1 ≤ (s.re - 1 / 2) * L ^ 9 * L ^ 9 := by
+      have he : lemma44PaperAlpha D ^ 2 * L ^ 18 = Real.pi ^ 2 := by
+        rw [← ha]; ring
+      rw [he] at hm
+      calc
+        1 ≤ (s.re - 1 / 2) * L ^ 18 := hpi.trans hm
+        _ = _ := by ring
+    have hh : (L ^ 9)⁻¹ ≤ (s.re - 1 / 2) * L ^ 9 := by
+      rw [← one_div]
+      exact (div_le_iff₀ (pow_pos hLp 9)).mpr (by nlinarith only [hprod])
+    linarith
+  · apply (lemma59_ext45_B_bound_far χ ψ hD hψ hs (le_of_not_gt hnear)).trans
+    apply Real.exp_le_exp.mpr
+    have hi : (L ^ 9)⁻¹ ≤ 1 := inv_le_one_of_one_le₀ (one_le_pow₀ (by linarith : 1 ≤ L))
+    have h8 : 1 ≤ L ^ 8 := one_le_pow₀ (by linarith : 1 ≤ L)
+    linarith
+
+open Complex ComplexConjugate Metric Set in
+theorem lemma59_ext46_actual_A_analyticOn_inner_disk {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {c : ℂ} (hc : c.re = 1 / 2)
+    (hci : |c.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13)
+    {R : ℝ} (hR : R < lemma44PaperAlpha D) :
+    AnalyticOnNhd ℂ (fun w => lemma45ActualA χ ψ (c + w)) (closedBall 0 R) := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  intro w hw
+  have hnorm : ‖w‖ < lemma44PaperAlpha D :=
+    lt_of_le_of_lt (by simpa [mem_closedBall, dist_zero_right] using hw) hR
+  have hs : ‖c + w - c‖ < lemma44PaperAlpha D := by simpa using hnorm
+  have hr := lemma59_ext46_inner_disk_regions hD hc hci hs
+  have hL := (lemma23_sectionFour_parameters_at_explicit_threshold hD).1
+  have hF := lemma59_extended_F_ne_zero χ ψ (c + w) hL100 hψ.2 hr.2
+  have hstrip := lemma59_ext46_disk_subset_local_strip hD hc hci
+    (by linarith [ (lemma46_alpha_parameters hD).1] : ‖c + w - c‖ < 2 * lemma44PaperAlpha D)
+  have him := (lemma59_ext46_local_strip_regions hD hstrip).2.2.2
+  have hne : c + w ≠ 1 := by
+    intro he
+    rw [he] at him
+    norm_num at him
+  exact (lemma46_actual_A_analyticAt χ ψ hne hF).comp (by fun_prop)
+
+open Complex Metric Set in
+theorem lemma59_ext46_actual_model_approximation_closed {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {ρ : ℂ} (hre : 1 / 2 ≤ ρ.re)
+    (hrehi : ρ.re ≤ 1 / 2 + lemma44PaperAlpha D ^ 2)
+    (him : |ρ.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13)
+    (hzero : lemma45ActualA χ ψ ρ = 0)
+    {w : ℂ} (hw : ‖w‖ < lemma44PaperAlpha D) :
+    ‖lemma45ActualA χ ψ ((1 / 2 : ℂ) + I * (ρ.im : ℂ) + w) -
+      lemma23ExponentialGapModel (Real.log (lemma23PaperP D)) w‖ ≤
+        lemma46ModelErrorConstant * lemma44PaperAlpha D * lemma23PaperL D := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  let L := lemma23PaperL D
+  let a := lemma44PaperAlpha D
+  let M := Real.log (lemma23PaperP D)
+  let c : ℂ := (1 / 2 : ℂ) + I * (ρ.im : ℂ)
+  let s := c + w
+  let δ := ρ.re - 1 / 2
+  have hp := lemma46_alpha_parameters hD
+  change 0 < a ∧ a < 1 / 4 ∧ 2 * a < L⁻¹ ∧
+    1100000 * a * L ≤ 1 ∧ (L ^ 9)⁻¹ / 4 ≤ a * L at hp
+  have hL : 200 ≤ L := (lemma45_parameters_at_threshold hD).1
+  have hLp : 0 < L := by linarith
+  have hM : M = L ^ 9 := by simp [M, lemma23PaperP, L]
+  have haM : a * M = Real.pi := by
+    change lemma44PaperAlpha D * Real.log (lemma23PaperP D) = Real.pi
+    unfold lemma44PaperAlpha
+    field_simp [show Real.log (lemma23PaperP D) ≠ 0 by change M ≠ 0; rw [hM]; positivity]
+  have hδ : 0 ≤ δ ∧ δ ≤ a ^ 2 := ⟨by dsimp [δ]; linarith, by dsimp [δ, a]; linarith⟩
+  have hc : c.re = 1 / 2 := by simp [c]
+  have hci : |c.im - (lemma23PaperCenter D).im| < L ^ 405 + 13 := by
+    simpa [c, L] using him
+  have hrho : ρ - c = (δ : ℂ) := by
+    apply Complex.ext <;> simp [c, δ]
+  have hrhon : ‖ρ - c‖ = δ := by rw [hrho, norm_real, Real.norm_of_nonneg hδ.1]
+  have hrhoa : ‖ρ - c‖ < a := by
+    rw [hrhon]
+    nlinarith only [hδ.2, hp.1, hp.2.1]
+  have hs : ‖s - c‖ < a := by simpa [s] using hw
+  have hx : ρ ∈ ball c (2 * a) := by
+    rw [mem_ball, dist_eq_norm]
+    linarith only [hrhoa, hp.1]
+  have hy : s ∈ ball c (2 * a) := by
+    rw [mem_ball, dist_eq_norm]
+    linarith only [hs, hp.1]
+  have hstrip (z : ℂ) (hz : z ∈ ball c (2 * a)) : Lemma59ExtendedLocalStrip D z :=
+    lemma59_ext46_disk_subset_local_strip hD hc hci (by
+      simpa only [mem_ball, dist_eq_norm] using hz)
+  obtain ⟨e, he, heq⟩ := lemma46_exponential_transport_on_ball
+    (a := ((2 * M : ℝ) : ℂ)) (by linarith only [hp.1] : 0 < 2 * a)
+    (fun z hz => (lemma59_ext46_actual_B_differentiable_ne_zero χ ψ hD hψ (hstrip z hz)).1)
+    (fun z hz => (lemma59_ext46_actual_B_differentiable_ne_zero χ ψ hD hψ (hstrip z hz)).2)
+    (fun z hz => lemma59_ext46_equation411 χ ψ hD hψ (hstrip z hz)) hx hy
+  change ‖e‖ ≤ 341600 * L * ‖s - ρ‖ at he
+  have hdist : ‖s - ρ‖ ≤ 3 * a := by
+    have ht := norm_sub_le (s - c) (ρ - c)
+    rw [sub_sub_sub_cancel_right] at ht
+    linarith only [ht, hs, hrhoa, hp.1]
+  have he' : ‖e‖ ≤ 1024800 * a * L := by
+    have hm := mul_le_mul_of_nonneg_left hdist (by positivity : 0 ≤ 341600 * L)
+    nlinarith only [he, hm]
+  let e' := e + ((2 * M * δ : ℝ) : ℂ)
+  have hδM : 2 * M * δ ≤ 8 * a * L := by
+    have hm := mul_le_mul_of_nonneg_left hδ.2
+      (by rw [hM]; positivity : 0 ≤ 2 * M)
+    have he : 2 * M * a ^ 2 = 2 * Real.pi * a := by rw [← haM]; ring
+    rw [he] at hm
+    have hpi := Real.pi_le_four
+    nlinarith only [hm, hpi, hL, hp.1]
+  have he'n : ‖e'‖ ≤ 1100000 * a * L := by
+    have ht := norm_add_le e (((2 * M * δ : ℝ) : ℂ))
+    rw [norm_real, Real.norm_of_nonneg (by rw [hM]; positivity)] at ht
+    change ‖e'‖ ≤ _
+    nlinarith only [ht, he', hδM, mul_pos hp.1 hLp]
+  have he'1 : ‖e'‖ ≤ 1 := he'n.trans hp.2.2.2.1
+  have hexp : ‖Complex.exp e' - 1‖ ≤ 2 * 1100000 * a * L :=
+    (Complex.norm_exp_sub_one_le he'1).trans (by nlinarith only [he'n])
+  let v := Complex.exp (-2 * w * (M : ℂ))
+  have hv : ‖v‖ ≤ Real.exp 8 := by
+    rw [Complex.norm_exp]
+    apply Real.exp_le_exp.mpr
+    have hm : ‖-2 * w * (M : ℂ)‖ ≤ 2 * Real.pi := by
+      rw [norm_mul, norm_mul, norm_real, Real.norm_of_nonneg (by rw [hM]; positivity)]
+      norm_num
+      nlinarith only [hw, haM, show 0 < M by rw [hM]; positivity]
+    exact (re_le_norm _).trans (hm.trans (by linarith [Real.pi_le_four]))
+  have hBs : lemma45ActualB χ ψ s = lemma45ActualB χ ψ ρ * v * Complex.exp e' := by
+    have heB := (div_eq_iff
+      (lemma59_ext46_actual_B_differentiable_ne_zero χ ψ hD hψ (hstrip ρ hx)).2).mp heq
+    have hsρ : s - ρ = w - (δ : ℂ) := by rw [← hrho]; dsimp [s]; ring
+    rw [hsρ] at heB
+    have harg : -((2 * M : ℝ) : ℂ) * (w - (δ : ℂ)) + e =
+        -2 * w * (M : ℂ) + e' := by dsimp [e']; push_cast; ring
+    rw [harg, Complex.exp_add] at heB
+    dsimp [v]
+    linear_combination heB
+  have hregρ := lemma59_ext46_inner_disk_regions hD hc hci hrhoa
+  have hregs := lemma59_ext46_inner_disk_regions hD hc hci hs
+  have herrorρ := (lemma59_ext45_equation410 χ ψ hD hψ hregρ.1 hregρ.2).trans
+    (lemma45_normalized_error_budget (by linarith : 3 ≤ lemma23PaperL D))
+  have herrors := (lemma59_ext45_equation410 χ ψ hD hψ hregs.1 hregs.2).trans
+    (lemma45_normalized_error_budget (by linarith : 3 ≤ lemma23PaperL D))
+  have hρ : ‖lemma45ActualB χ ψ ρ + 1‖ ≤ a * L := by
+    rw [hzero, zero_sub, norm_neg, add_comm] at herrorρ
+    exact herrorρ.trans hp.2.2.2.2
+  have hρ2 : ‖lemma45ActualB χ ψ ρ‖ ≤ 2 := by
+    have ht := norm_sub_le (lemma45ActualB χ ψ ρ + 1) (1 : ℂ)
+    rw [add_sub_cancel_right, norm_one] at ht
+    have haL : a * L ≤ 1 := by
+      nlinarith only [hp.2.2.2.1, mul_pos hp.1 hLp]
+    linarith
+  have hBerr : ‖lemma45ActualB χ ψ s + v‖ ≤
+      Real.exp 8 * (1 + 4 * 1100000) * a * L := by
+    rw [hBs]
+    have heq' : lemma45ActualB χ ψ ρ * v * Complex.exp e' + v =
+        v * ((lemma45ActualB χ ψ ρ + 1) +
+          lemma45ActualB χ ψ ρ * (Complex.exp e' - 1)) := by ring
+    rw [heq', norm_mul]
+    have ht := norm_add_le (lemma45ActualB χ ψ ρ + 1)
+      (lemma45ActualB χ ψ ρ * (Complex.exp e' - 1))
+    rw [norm_mul] at ht
+    have hm := mul_le_mul hρ2 hexp (norm_nonneg _) (by norm_num : (0 : ℝ) ≤ 2)
+    have hi : ‖(lemma45ActualB χ ψ ρ + 1) +
+        lemma45ActualB χ ψ ρ * (Complex.exp e' - 1)‖ ≤
+        (1 + 4 * 1100000) * a * L := by nlinarith only [ht, hρ, hm]
+    have hb := mul_le_mul hv hi (norm_nonneg _) (Real.exp_nonneg 8)
+    nlinarith only [hb]
+  have hE : ‖lemma45ActualA χ ψ s - (1 + lemma45ActualB χ ψ s)‖ ≤ a * L :=
+    herrors.trans hp.2.2.2.2
+  have hid : lemma45ActualA χ ψ s - (1 - v) =
+      (lemma45ActualA χ ψ s - (1 + lemma45ActualB χ ψ s)) +
+      (lemma45ActualB χ ψ s + v) := by ring
+  change ‖lemma45ActualA χ ψ s - (1 - v)‖ ≤ _
+  rw [hid]
+  have ht := norm_add_le
+    (lemma45ActualA χ ψ s - (1 + lemma45ActualB χ ψ s))
+    (lemma45ActualB χ ψ s + v)
+  unfold lemma46ModelErrorConstant
+  nlinarith only [ht, hE, hBerr]
+
+open Complex Set in
+theorem lemma59_ext45_actual_A_lower_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedZeroFreeRegion D s) :
+    (lemma23PaperL D ^ 9)⁻¹ / 4 ≤ ‖lemma45ActualA χ ψ s‖ := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have hL := (lemma23_sectionFour_parameters_at_explicit_threshold hD).1
+  have hr := lemma59_ext45_region_subsets hD hs
+  have he := (lemma59_ext45_equation410 χ ψ hD hψ hr.2.1 hr.1).trans
+    (lemma45_normalized_error_budget hL)
+  have hB := lemma59_ext45_B_uniform_gap χ ψ hD hψ hs
+  have hq : 0 ≤ (lemma23PaperL D ^ 9)⁻¹ := by positivity
+  have hq1 : (lemma23PaperL D ^ 9)⁻¹ ≤ 1 :=
+    inv_le_one_of_one_le₀ (one_le_pow₀ (by linarith : 1 ≤ lemma23PaperL D))
+  have hg := lemma45_exp_gap hq hq1
+  have ht := norm_sub_norm_le (1 + lemma45ActualB χ ψ s) (lemma45ActualA χ ψ s)
+  rw [norm_sub_rev] at ht
+  have hb : 1 - ‖lemma45ActualB χ ψ s‖ ≤ ‖1 + lemma45ActualB χ ψ s‖ := by
+    simpa only [norm_one, sub_neg_eq_add, norm_neg] using
+      norm_sub_norm_le (1 : ℂ) (-lemma45ActualB χ ψ s)
+  linarith
+
+open Complex Metric Set in
+theorem lemma59_ext46_actual_model_approximation {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {ρ : ℂ} (hre : 1 / 2 ≤ ρ.re)
+    (hrehi : ρ.re < 1 / 2 + lemma44PaperAlpha D ^ 2)
+    (him : |ρ.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13)
+    (hzero : lemma45ActualA χ ψ ρ = 0)
+    {w : ℂ} (hw : ‖w‖ < lemma44PaperAlpha D) :
+    ‖lemma45ActualA χ ψ ((1 / 2 : ℂ) + I * (ρ.im : ℂ) + w) -
+      lemma23ExponentialGapModel (Real.log (lemma23PaperP D)) w‖ ≤
+        lemma46ModelErrorConstant * lemma44PaperAlpha D * lemma23PaperL D := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  exact lemma59_ext46_actual_model_approximation_closed χ ψ hD hψ hre hrehi.le him hzero hw
+
+open Complex Metric Set in
+theorem lemma59_ext46_actual_rouche_count_one_closed {m c : ℝ}
+    (hm : 0 < m) (hc : 0 < c) (hcmp : lemma46ModelErrorConstant < m * c)
+    (hmodel : ∀ z : ℂ, 1 / 2 ≤ ‖z‖ → ‖z‖ ≤ 1 →
+      m * (1 - ‖z‖) ≤ ‖lemma23ExponentialGapModel Real.pi z‖)
+    {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    (hsmall : c * lemma44PaperAlpha D * lemma23PaperL D ≤ 1 / 2)
+    {ρ : ℂ} (hre : 1 / 2 ≤ ρ.re)
+    (hrehi : ρ.re ≤ 1 / 2 + lemma44PaperAlpha D ^ 2)
+    (him : |ρ.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13)
+    (hzero : lemma45ActualA χ ψ ρ = 0) :
+    let f := fun w => lemma45ActualA χ ψ ((1 / 2 : ℂ) + I * (ρ.im : ℂ) + w)
+    let R := lemma46InnerRadius D c
+    (∑ z ∈ (lemma23_support_finite_of_isCompact (isCompact_closedBall 0 R)
+      (MeromorphicOn.divisor f (closedBall 0 R))).toFinset,
+      (((MeromorphicOn.divisor f (closedBall 0 R)) z).toNat : ℂ)) = 1 := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  let a := lemma44PaperAlpha D
+  let L := lemma23PaperL D
+  let M := Real.log (lemma23PaperP D)
+  let R := lemma46InnerRadius D c
+  let c₀ : ℂ := (1 / 2 : ℂ) + I * (ρ.im : ℂ)
+  let f : ℂ → ℂ := fun w => lemma45ActualA χ ψ (c₀ + w)
+  have hp := lemma46_alpha_parameters hD
+  have hap : 0 < a := hp.1
+  have hLp : 0 < L := by linarith [(lemma45_parameters_at_threshold hD).1]
+  have hM : 0 < M := by simp only [M, lemma23PaperP, Real.log_exp]; positivity
+  have haM : a * M = Real.pi := by
+    dsimp [a, M, lemma44PaperAlpha]
+    exact div_mul_cancel₀ _ hM.ne'
+  have hR := lemma46_inner_radius_bounds hD hc hsmall
+  have hfa : AnalyticOnNhd ℂ f (closedBall 0 R) :=
+    lemma59_ext46_actual_A_analyticOn_inner_disk χ ψ hD hψ
+      (by simp [c₀]) (by simpa [c₀] using him) hR.2.2
+  apply lemma23_rouche_model_divisor_sum_eq_one hM hR.2.1
+    (by simpa only [lemma44PaperAlpha] using hR.2.2) f hfa
+  intro w hw
+  have hwn : ‖w‖ = R := by simpa [mem_sphere, dist_zero_right] using hw
+  let u := w / (a : ℂ)
+  have hun : ‖u‖ = 1 - c * a * L := by
+    rw [norm_div, norm_real, Real.norm_of_nonneg hp.1.le, hwn]
+    dsimp [R, lemma46InnerRadius]
+    change a * (1 - c * a * L) / a = _
+    field_simp [hap.ne']
+  have hulo : 1 / 2 ≤ ‖u‖ := by rw [hun]; change c * a * L ≤ 1 / 2 at hsmall; linarith
+  have huhi : ‖u‖ ≤ 1 := by
+    rw [hun]
+    linarith [mul_pos (mul_pos hc hap) hLp]
+  have heq : lemma23ExponentialGapModel M w = lemma23ExponentialGapModel Real.pi u := by
+    unfold lemma23ExponentialGapModel
+    congr 2
+    dsimp [u]
+    rw [← haM]
+    push_cast
+    field_simp [show (a : ℂ) ≠ 0 by exact_mod_cast hap.ne']
+  have hb := hmodel u hulo huhi
+  rw [hun, ← heq] at hb
+  have hwa : ‖w‖ < a := by rw [hwn]; exact hR.2.2
+  have he := lemma59_ext46_actual_model_approximation_closed χ ψ hD hψ hre hrehi him hzero hwa
+  change ‖f w - lemma23ExponentialGapModel M w‖ ≤ lemma46ModelErrorConstant * a * L at he
+  apply he.trans_lt
+  have hprod := mul_lt_mul_of_pos_right hcmp (mul_pos hp.1 hLp)
+  have he' : m * c * (a * L) = m * (1 - (1 - c * a * L)) := by ring
+  rw [he'] at hprod
+  nlinarith only [hb, hprod]
+
+open Complex Set in
+theorem lemma59_ext45_actual_A_ne_zero {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedZeroFreeRegion D s) : lemma45ActualA χ ψ s ≠ 0 := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  intro hz
+  have hb := lemma59_ext45_actual_A_lower_bound χ ψ hD hψ hs
+  rw [hz, norm_zero] at hb
+  have hp : 0 < (lemma23PaperL D ^ 9)⁻¹ / 4 := by
+    have hL := (lemma23_sectionFour_parameters_at_explicit_threshold hD).1
+    positivity
+  linarith
+
+open Complex Metric Set in
+theorem lemma59_ext46_actual_rouche_count_one {m c : ℝ}
+    (hm : 0 < m) (hc : 0 < c) (hcmp : lemma46ModelErrorConstant < m * c)
+    (hmodel : ∀ z : ℂ, 1 / 2 ≤ ‖z‖ → ‖z‖ ≤ 1 →
+      m * (1 - ‖z‖) ≤ ‖lemma23ExponentialGapModel Real.pi z‖)
+    {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    (hsmall : c * lemma44PaperAlpha D * lemma23PaperL D ≤ 1 / 2)
+    {ρ : ℂ} (hre : 1 / 2 ≤ ρ.re)
+    (hrehi : ρ.re < 1 / 2 + lemma44PaperAlpha D ^ 2)
+    (him : |ρ.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13)
+    (hzero : lemma45ActualA χ ψ ρ = 0) :
+    let f := fun w => lemma45ActualA χ ψ ((1 / 2 : ℂ) + I * (ρ.im : ℂ) + w)
+    let R := lemma46InnerRadius D c
+    (∑ z ∈ (lemma23_support_finite_of_isCompact (isCompact_closedBall 0 R)
+      (MeromorphicOn.divisor f (closedBall 0 R))).toFinset,
+      (((MeromorphicOn.divisor f (closedBall 0 R)) z).toNat : ℂ)) = 1 := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  exact lemma59_ext46_actual_rouche_count_one_closed hm hc hcmp hmodel χ ψ hD hψ hsmall hre hrehi.le him hzero
+
+open Complex Metric Set Filter in
+theorem lemma59_ext46_zero_analysis_at_contraction_closed {m c : ℝ}
+    (hm : 0 < m) (hc : 0 < c) (hcmp : lemma46ModelErrorConstant < m * c)
+    (hmodel : ∀ z : ℂ, 1 / 2 ≤ ‖z‖ → ‖z‖ ≤ 1 →
+      m * (1 - ‖z‖) ≤ ‖lemma23ExponentialGapModel Real.pi z‖)
+    {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    (hsmall : c * lemma44PaperAlpha D * lemma23PaperL D ≤ 1 / 2)
+    {ρ : ℂ} (hre : 1 / 2 ≤ ρ.re)
+    (hrehi : ρ.re ≤ 1 / 2 + lemma44PaperAlpha D ^ 2)
+    (him : |ρ.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13)
+    (hzero : lemma45ActualA χ ψ ρ = 0) :
+    ρ.re = 1 / 2 ∧ deriv (lemma45ActualA χ ψ) ρ ≠ 0 ∧
+      ∀ w : ℂ, 0 < ‖w‖ → ‖w‖ < lemma46InnerRadius D c →
+        lemma45ActualA χ ψ ((1 / 2 : ℂ) + I * (ρ.im : ℂ) + w) ≠ 0 := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  let a := lemma44PaperAlpha D
+  let R := lemma46InnerRadius D c
+  let c₀ : ℂ := (1 / 2 : ℂ) + I * (ρ.im : ℂ)
+  let x : ℂ := (ρ.re - 1 / 2 : ℝ)
+  let f : ℂ → ℂ := fun w => lemma45ActualA χ ψ (c₀ + w)
+  have hp := lemma46_alpha_parameters hD
+  have hap : 0 < a := hp.1
+  have hLp : 0 < lemma23PaperL D := by linarith [(lemma45_parameters_at_threshold hD).1]
+  have hR := lemma46_inner_radius_bounds hD hc hsmall
+  have hδ : 0 ≤ ρ.re - 1 / 2 := by linarith
+  have hxn : ‖x‖ = ρ.re - 1 / 2 := by
+    change ‖((ρ.re - 1 / 2 : ℝ) : ℂ)‖ = _
+    rw [norm_real, Real.norm_of_nonneg hδ]
+  have hxa : ‖x‖ < a / 2 := by
+    rw [hxn]
+    change ρ.re ≤ 1 / 2 + a ^ 2 at hrehi
+    change 0 < a ∧ a < 1 / 4 ∧ _ at hp
+    nlinarith only [hrehi, hp.1, hp.2.1]
+  have hxR : ‖x‖ < R := hxa.trans_le hR.1
+  have hxK : x ∈ closedBall 0 R := by simpa [mem_closedBall, dist_zero_right] using hxR.le
+  have hcρ : c₀ + x = ρ := by apply Complex.ext <;> simp [c₀, x]
+  have hfx : f x = 0 := by simpa [f, hcρ] using hzero
+  have hf : AnalyticOnNhd ℂ f (closedBall 0 R) :=
+    lemma59_ext46_actual_A_analyticOn_inner_disk χ ψ hD hψ
+      (by simp [c₀]) (by simpa [c₀] using him) hR.2.2
+  have hcount := lemma59_ext46_actual_rouche_count_one_closed hm hc hcmp hmodel χ ψ hD hψ
+    hsmall hre hrehi him hzero
+  change (∑ z ∈ (lemma23_support_finite_of_isCompact (isCompact_closedBall 0 R)
+      (MeromorphicOn.divisor f (closedBall 0 R))).toFinset,
+      (((MeromorphicOn.divisor f (closedBall 0 R)) z).toNat : ℂ)) = 1 at hcount
+  have hboundary : ∀ w ∈ sphere (0 : ℂ) R, f w ≠ 0 := by
+    intro w hw
+    -- The strict comparison is also available from Rouché. A count of one
+    -- alone does not exclude a boundary zero, so use the approximation
+    -- and the same uniform model lower bound here.
+    have hn : ‖w‖ = R := by simpa [mem_sphere, dist_zero_right] using hw
+    let u := w / (a : ℂ)
+    have hun : ‖u‖ = 1 - c * a * lemma23PaperL D := by
+      rw [norm_div, norm_real, Real.norm_of_nonneg hp.1.le, hn]
+      dsimp [R, lemma46InnerRadius]
+      change a * (1 - c * a * lemma23PaperL D) / a = _
+      field_simp [hap.ne']
+    have hu1 : 1 / 2 ≤ ‖u‖ := by rw [hun]; change c * a * lemma23PaperL D ≤ 1 / 2 at hsmall; linarith
+    have hu2 : ‖u‖ ≤ 1 := by
+      rw [hun]
+      linarith [mul_pos (mul_pos hc hap) hLp]
+    have hM : 0 < Real.log (lemma23PaperP D) := by
+      simp only [lemma23PaperP, Real.log_exp]
+      exact pow_pos hLp 9
+    have haM : a * Real.log (lemma23PaperP D) = Real.pi := by
+      dsimp [a, lemma44PaperAlpha]
+      exact div_mul_cancel₀ _ hM.ne'
+    have heq : lemma23ExponentialGapModel (Real.log (lemma23PaperP D)) w =
+        lemma23ExponentialGapModel Real.pi u := by
+      unfold lemma23ExponentialGapModel
+      congr 2
+      dsimp [u]
+      rw [← haM]
+      push_cast
+      field_simp [show (a : ℂ) ≠ 0 by exact_mod_cast hap.ne']
+    have hb := hmodel u hu1 hu2
+    rw [hun, ← heq] at hb
+    have haL : 0 < a * lemma23PaperL D := mul_pos hap hLp
+    have hmarg := mul_lt_mul_of_pos_right hcmp haL
+    have herr := lemma59_ext46_actual_model_approximation_closed χ ψ hD hψ hre hrehi him hzero
+      (w := w) (by rw [hn]; exact hR.2.2)
+    intro hfw
+    change lemma45ActualA χ ψ (c₀ + w) = 0 at hfw
+    change ‖lemma45ActualA χ ψ (c₀ + w) - _‖ ≤ _ at herr
+    rw [hfw, zero_sub, norm_neg] at herr
+    change _ ≤ lemma46ModelErrorConstant * a * lemma23PaperL D at herr
+    nlinarith only [hb, herr, hmarg]
+  have hsingle := lemma46_unique_simple_zero_of_count_one hR.2.1 hf hboundary hcount hxK hfx
+  have hρstrip : Lemma59ExtendedLocalStrip D ρ :=
+    lemma59_ext46_disk_subset_local_strip hD (c := c₀) (by simp [c₀])
+      (by simpa [c₀] using him) (by
+        rw [← hcρ, add_sub_cancel_left]
+        nlinarith only [hxa, hp.1])
+  have href := lemma59_ext46_actual_A_reflected_zero χ ψ hD hψ hρstrip hzero
+  have hcx : c₀ + (-x) = 1 - starRingEnd ℂ ρ := by
+    apply Complex.ext <;> simp [c₀, x] <;> ring
+  have hnxK : -x ∈ closedBall 0 R := by
+    simpa [mem_closedBall, dist_zero_right] using hxR.le
+  have hfnx : f (-x) = 0 := by simpa [f, hcx] using href
+  have hnx := hsingle.2 (-x) hnxK hfnx
+  have hbeta : ρ.re = 1 / 2 := by
+    have hh := congrArg Complex.re hnx
+    simp [x] at hh
+    linarith
+  have hx0 : x = 0 := by simp [x, hbeta]
+  refine ⟨hbeta, ?_, ?_⟩
+  · have hd := hsingle.1
+    change deriv (fun w => lemma45ActualA χ ψ (c₀ + w)) x ≠ 0 at hd
+    rw [deriv_comp_const_add, hcρ] at hd
+    exact hd
+  · intro w hwp hwR hzw
+    have hwK : w ∈ closedBall 0 R := by simpa [mem_closedBall, dist_zero_right] using hwR.le
+    have he := hsingle.2 w hwK hzw
+    rw [hx0] at he
+    rw [he, norm_zero] at hwp
+    exact lt_irrefl 0 hwp
+
+open Complex Set in
+theorem lemma59_ext45_actual_product_ne_zero {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedZeroFreeRegion D s) :
+    letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+    DirichletCharacter.LFunction ψ s *
+      DirichletCharacter.LFunction (lemma44CharacterTwist χ ψ) s ≠ 0 := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+  intro hz
+  apply lemma59_ext45_actual_A_ne_zero χ ψ hD hψ hs
+  simp only [lemma45ActualA, hz, zero_div]
+
+open Complex Metric Set Filter in
+theorem lemma59_ext46_zero_analysis_at_contraction {m c : ℝ}
+    (hm : 0 < m) (hc : 0 < c) (hcmp : lemma46ModelErrorConstant < m * c)
+    (hmodel : ∀ z : ℂ, 1 / 2 ≤ ‖z‖ → ‖z‖ ≤ 1 →
+      m * (1 - ‖z‖) ≤ ‖lemma23ExponentialGapModel Real.pi z‖)
+    {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    (hsmall : c * lemma44PaperAlpha D * lemma23PaperL D ≤ 1 / 2)
+    {ρ : ℂ} (hre : 1 / 2 ≤ ρ.re)
+    (hrehi : ρ.re < 1 / 2 + lemma44PaperAlpha D ^ 2)
+    (him : |ρ.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13)
+    (hzero : lemma45ActualA χ ψ ρ = 0) :
+    ρ.re = 1 / 2 ∧ deriv (lemma45ActualA χ ψ) ρ ≠ 0 ∧
+      ∀ w : ℂ, 0 < ‖w‖ → ‖w‖ < lemma46InnerRadius D c →
+        lemma45ActualA χ ψ ((1 / 2 : ℂ) + I * (ρ.im : ℂ) + w) ≠ 0 := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  exact lemma59_ext46_zero_analysis_at_contraction_closed hm hc hcmp hmodel χ ψ hD hψ hsmall hre hrehi.le him hzero
+
+open Complex Metric Set Filter in
+theorem lemma59_ext46_proved : Lemma59ExtendedLemma46Target := by
+  obtain ⟨m, hm, hmodel⟩ := lemma46_model_uniform_inner_boundary
+  let c := (lemma46ModelErrorConstant + 1) / m
+  have hc : 0 < c := div_pos (by linarith [lemma46_model_error_constant_pos]) hm
+  have hcmp : lemma46ModelErrorConstant < m * c := by
+    dsimp [c]
+    rw [mul_div_cancel₀ _ hm.ne']
+    linarith
+  obtain ⟨D₀, hD₀, hsmall⟩ := lemma46_exists_contraction_threshold hc
+  refine ⟨c, hc, D₀, ?_⟩
+  intro D p hp χ ψ hD hψ ρ hre hrehi him hzero
+  refine ⟨(lemma46_inner_radius_bounds (hD₀.trans hD) hc (hsmall D hD)).2.1, ?_⟩
+  exact lemma59_ext46_zero_analysis_at_contraction hm hc hcmp hmodel χ ψ
+    (hD₀.trans hD) hψ (hsmall D hD) hre hrehi him hzero
+
+open Complex ComplexConjugate Metric Set in
+theorem lemma59_ext48_actual_zero_in_thin_slab {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedZeroOmega D s) (hzero : lemma48ActualProduct χ ψ s = 0) :
+    |s.re - 1 / 2| ≤ lemma44PaperAlpha D ^ 2 := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hbounds (z : ℂ) (hz : Lemma59ExtendedZeroOmega D z)
+      (hzzero : lemma48ActualProduct χ ψ z = 0) :
+      z.re ≤ 1 / 2 + lemma44PaperAlpha D ^ 2 := by
+    by_contra h
+    have hr : Lemma59ExtendedZeroFreeRegion D z :=
+      ⟨lt_of_not_ge h, by linarith [(abs_lt.mp hz.1).2], hz.2⟩
+    exact lemma59_ext45_actual_product_ne_zero χ ψ hD hψ hr hzzero
+  have hu := hbounds s hs hzero
+  have hr := lemma59_ext48_omega_reflection hs
+  have hz := lemma48_actual_product_reflected_zero χ ψ hL hψ.1
+    (lemma59_ext48_omega_height_pos hL hs) hzero
+  have hl := hbounds (1 - conj s) hr hz
+  simp only [sub_re, one_re, conj_re] at hl
+  exact abs_le.mpr ⟨by linarith, by linarith⟩
+
+open Complex ComplexConjugate Metric Set in
+theorem lemma59_ext48_actual_Z_inv_bound {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {s : ℂ} (hs : Lemma59ExtendedZeroOmega D s) (hzero : lemma48ActualProduct χ ψ s = 0) :
+    ‖(lemma44ActualZtilde χ ψ s)⁻¹‖ ≤ Real.exp 3 := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hslab := lemma59_ext48_actual_zero_in_thin_slab χ ψ hD hψ hs hzero
+  have hr := lemma59_ext48_thin_slab_regions hD hs hslab
+  have him := lemma59_ext48_omega_height_pos hL hs
+  have hreflection := lemma47_actual_Z_reflection χ ψ hL hψ.1 him.ne'
+  have he : (lemma44ActualZtilde χ ψ s)⁻¹ =
+      conj (lemma44ActualZtilde χ ψ (1 - conj s)) := by
+    have hn := lemma44ActualZtilde_ne_zero χ ψ hL hψ.1 him
+    apply (mul_left_cancel₀ hn)
+    simpa only [mul_inv_cancel₀ hn] using hreflection.symm
+  rw [he, norm_conj]
+  have hb := lemma59_ext44ActualZtilde_norm_on_omega3 χ ψ hD hψ.1 hr.2.2
+  apply hb.trans
+  rw [← Real.exp_add]
+  apply Real.exp_le_exp.mpr
+  simp only [sub_re, one_re, conj_re]
+  have ha := lemma46_alpha_parameters hD
+  have hM : 0 < Real.log (lemma23PaperP D) := by
+    simp only [lemma23PaperP, Real.log_exp]
+    positivity
+  have haM : lemma44PaperAlpha D * Real.log (lemma23PaperP D) = Real.pi := by
+    unfold lemma44PaperAlpha
+    exact div_mul_cancel₀ _ hM.ne'
+  have hm := mul_le_mul_of_nonneg_right (abs_le.mp hslab).2 hM.le
+  have ha2M : lemma44PaperAlpha D ^ 2 * Real.log (lemma23PaperP D) =
+      lemma44PaperAlpha D * Real.pi := by rw [← haM]; ring
+  rw [ha2M] at hm
+  nlinarith only [hm, ha.1, ha.2.1, Real.pi_le_four]
+
+open Complex ComplexConjugate in
+theorem lemma59_ext_prop22_actual_zero_analysis {m c : ℝ}
+    (hm : 0 < m) (hc : 0 < c) (hcmp : lemma46ModelErrorConstant < m * c)
+    (hmodel : ∀ z : ℂ, 1 / 2 ≤ ‖z‖ → ‖z‖ ≤ 1 →
+      m * (1 - ‖z‖) ≤ ‖lemma23ExponentialGapModel Real.pi z‖)
+    {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    (hsmall : c * lemma44PaperAlpha D * lemma23PaperL D ≤ 1 / 2)
+    {ρ : ℂ} (hρ : Lemma59ExtendedZeroOmega D ρ) (hzero : lemma48ActualProduct χ ψ ρ = 0) :
+    ρ.re = 1 / 2 ∧ deriv (lemma48ActualProduct χ ψ) ρ ≠ 0 ∧
+      ∀ w : ℂ, 0 < ‖w‖ → ‖w‖ < lemma46InnerRadius D c →
+        lemma48ActualProduct χ ψ (ρ + w) ≠ 0 := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hslab := lemma59_ext48_actual_zero_in_thin_slab χ ψ hD hψ hρ hzero
+  have hA : lemma45ActualA χ ψ ρ = 0 := by
+    change lemma48ActualProduct χ ψ ρ / _ = 0
+    rw [hzero, zero_div]
+  have hbeta : ρ.re = 1 / 2 := by
+    by_cases hre : 1 / 2 ≤ ρ.re
+    · exact (lemma59_ext46_zero_analysis_at_contraction_closed hm hc hcmp hmodel χ ψ hD hψ
+        hsmall hre (by linarith [(abs_le.mp hslab).2]) hρ.2 hA).1
+    · have hrΩ := lemma59_ext48_omega_reflection hρ
+      have hrP := lemma48_actual_product_reflected_zero χ ψ hL hψ.1
+        (lemma59_ext48_omega_height_pos hL hρ) hzero
+      have hrA : lemma45ActualA χ ψ (1 - conj ρ) = 0 := by
+        change lemma48ActualProduct χ ψ (1 - conj ρ) / _ = 0
+        rw [hrP, zero_div]
+      have hr := lemma59_ext46_zero_analysis_at_contraction_closed hm hc hcmp hmodel χ ψ hD hψ
+        hsmall (ρ := 1 - conj ρ)
+        (by simp only [sub_re, one_re, conj_re]; linarith)
+        (by simp only [sub_re, one_re, conj_re]; linarith [(abs_le.mp hslab).1])
+        hrΩ.2 hrA
+      have he := hr.1
+      simp only [sub_re, one_re, conj_re] at he
+      linarith
+  have ha := (lemma46_alpha_parameters hD).1
+  have hz := lemma59_ext46_zero_analysis_at_contraction_closed hm hc hcmp hmodel χ ψ hD hψ
+    hsmall (by rw [hbeta]) (by rw [hbeta]; linarith [sq_nonneg (lemma44PaperAlpha D)]) hρ.2 hA
+  have hreg := lemma59_ext48_thin_slab_regions hD hρ hslab
+  have hF := lemma59_extended_F_ne_zero χ ψ ρ hL100 hψ.2 hreg.2.1
+  have hρne : ρ ≠ 1 := by intro he; rw [he] at hbeta; norm_num at hbeta
+  have hpd := (proposition22_actual_product_analyticAt χ ψ hρne).differentiableAt
+  have hfd := lemma44_short_polynomial_differentiable χ ψ ρ
+  have hderiv : deriv (lemma45ActualA χ ψ) ρ =
+      (deriv (lemma48ActualProduct χ ψ) ρ *
+        lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) ρ -
+        lemma48ActualProduct χ ψ ρ *
+          deriv (lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p))) ρ) /
+      lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) ρ ^ 2 :=
+    deriv_div hpd hfd hF
+  refine ⟨hbeta, ?_, ?_⟩
+  · intro hd
+    apply hz.2.1
+    rw [hderiv, hd, hzero]
+    simp
+  · intro w hw hwR hzw
+    have hcenter : (1 / 2 : ℂ) + I * (ρ.im : ℂ) = ρ := by
+      apply Complex.ext <;> simp [hbeta]
+    apply hz.2.2 w hw hwR
+    rw [hcenter]
+    change lemma48ActualProduct χ ψ (ρ + w) / _ = 0
+    rw [hzw, zero_div]
+
+open Complex in
+theorem lemma59_ext48_actual_inverse_factor_approximation {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {ρ : ℂ} (hρ : Lemma59ExtendedZeroOmega D ρ) (hzero : lemma48ActualProduct χ ψ ρ = 0) :
+    ‖(lemma44ActualZtilde χ ψ ρ)⁻¹ +
+      lemma23ActualSectionFourG χ (fun n => ψ (n : ZMod p)) ρ *
+        lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)) (1 - ρ)‖ ≤
+      lemma48ErrorConstant * lemma23PaperL D ^ (-100 : ℤ) := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  letI : NeZero (D * p) := ⟨Nat.mul_ne_zero χ.modulus_ne_zero (NeZero.ne p)⟩
+  let L := lemma23PaperL D
+  let F := lemma23ActualSectionFourF χ (fun n => ψ (n : ZMod p)) ρ
+  let G := lemma23ActualSectionFourG χ (fun n => ψ (n : ZMod p)) ρ
+  let Fr := lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)) (1 - ρ)
+  let Z := lemma44ActualZtilde χ ψ ρ
+  have hL := (lemma44_parameters_at_explicit_threshold hD).1
+  have hLp : 0 < L := by dsimp [L]; linarith
+  have hL1 : 1 ≤ L := by dsimp [L]; linarith
+  have hr := lemma59_ext48_thin_slab_regions hD hρ
+    (lemma59_ext48_actual_zero_in_thin_slab χ ψ hD hψ hρ hzero)
+  have hZne : Z ≠ 0 := lemma44ActualZtilde_ne_zero χ ψ hL hψ.1
+    (lemma59_ext48_omega_height_pos hL hρ)
+  have hZi := lemma59_ext48_actual_Z_inv_bound χ ψ hD hψ hρ hzero
+  change ‖Z⁻¹‖ ≤ Real.exp 3 at hZi
+  have h41 := lemma59_ext_good_FG_bound χ ψ ρ hL100 hψ hr.2.1
+  have hG : ‖G‖ ≤ 2 * L ^ 79 := by
+    change ‖F‖ + ‖G‖ ≤ 2 * L ^ 79 at h41
+    linarith [norm_nonneg F]
+  have h42 := lemma59_ext_good_product_bound χ ψ ρ hL100 hψ hr.2.1
+  have hFG : ‖1 - F * G‖ ≤ 4 * L ^ (-227 : ℤ) := by
+    rw [norm_sub_rev]
+    exact h42
+  have h44 := lemma59_ext44_actual_approximate_functional_equation χ ψ hD hψ hr.1
+  change ‖lemma48ActualProduct χ ψ ρ - (F + Z * Fr)‖ ≤
+    lemma44ErrorConstant * L ^ (-179 : ℤ) at h44
+  rw [hzero, zero_sub, norm_neg] at h44
+  have hid : Z⁻¹ + G * Fr =
+      Z⁻¹ * (1 - F * G) + Z⁻¹ * G * (F + Z * Fr) := by
+    field_simp
+    ring
+  have hfirst : ‖Z⁻¹ * (1 - F * G)‖ ≤
+      Real.exp 3 * (4 * L ^ (-227 : ℤ)) := by
+    rw [norm_mul]
+    exact mul_le_mul hZi hFG (norm_nonneg _) (Real.exp_nonneg _)
+  have hsecond : ‖Z⁻¹ * G * (F + Z * Fr)‖ ≤
+      Real.exp 3 * (2 * L ^ 79) * (lemma44ErrorConstant * L ^ (-179 : ℤ)) := by
+    simp only [norm_mul]
+    apply mul_le_mul
+      (mul_le_mul hZi hG (norm_nonneg _) (Real.exp_nonneg _)) h44
+      (norm_nonneg _) (by positivity)
+  have hpow : L ^ 79 * L ^ (-179 : ℤ) = L ^ (-100 : ℤ) := by
+    rw [← zpow_natCast, ← zpow_add₀ hLp.ne']
+    norm_num
+  have hpowle : L ^ (-227 : ℤ) ≤ L ^ (-100 : ℤ) :=
+    zpow_le_zpow_right₀ hL1 (by norm_num)
+  change ‖Z⁻¹ + G * Fr‖ ≤ _
+  rw [hid]
+  calc
+    _ ≤ ‖Z⁻¹ * (1 - F * G)‖ + ‖Z⁻¹ * G * (F + Z * Fr)‖ := norm_add_le _ _
+    _ ≤ Real.exp 3 * (4 * L ^ (-227 : ℤ)) +
+        Real.exp 3 * (2 * L ^ 79) * (lemma44ErrorConstant * L ^ (-179 : ℤ)) :=
+      add_le_add hfirst hsecond
+    _ ≤ Real.exp 3 * (4 * L ^ (-100 : ℤ)) +
+        Real.exp 3 * (2 * L ^ 79) * (lemma44ErrorConstant * L ^ (-179 : ℤ)) := by
+      gcongr
+    _ = lemma48ErrorConstant * L ^ (-100 : ℤ) := by
+      dsimp only [lemma48ErrorConstant]
+      calc
+        _ = Real.exp 3 * 4 * L ^ (-100 : ℤ) +
+            Real.exp 3 * 2 * lemma44ErrorConstant * (L ^ 79 * L ^ (-179 : ℤ)) := by ring
+        _ = _ := by rw [hpow]; ring
+
+open Complex in
+theorem lemma59_ext48_at_explicit_constant {D p : ℕ} [NeZero p]
+    (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {ρ : ℂ} (hρ : Lemma59ExtendedZeroOmega D ρ) (hzero : lemma48ActualProduct χ ψ ρ = 0) :
+    ‖(lemma44ActualZtilde χ ψ ρ)⁻¹ +
+      lemma23ActualSectionFourG χ (fun n => ψ (n : ZMod p)) ρ *
+        lemma23ActualSectionFourF χ (fun n => ψ⁻¹ (n : ZMod p)) (1 - ρ)‖ ≤
+      (3 : ℝ) ^ 65 * lemma23PaperL D ^ (-100 : ℤ) := by
+  have hL100 : 100 ≤ lemma23PaperL D := by
+    have hp := lemma23_sectionFour_parameters_at_explicit_threshold hD
+    have hh := Real.log_le_self (by linarith only [hp.1] : 0 ≤ lemma23PaperL D)
+    linarith only [hp.2,hh]
+  have hheightmargin := lemma59_extended_height_margin (by linarith only [hL100])
+  have hL20nonneg := pow_nonneg (by linarith only [hL100] : 0 ≤ lemma23PaperL D) 20
+  exact (lemma59_ext48_actual_inverse_factor_approximation χ ψ hD hψ hρ hzero).trans
+    (mul_le_mul_of_nonneg_right lemma48_error_constant_le (by positivity))
+
+open Complex in
+theorem lemma59_ext48_proved : Lemma59ExtendedLemma48Target := by
+  refine ⟨(3 : ℝ) ^ 65, by positivity,
+    lemma23SectionFourModulusThreshold, ?_⟩
+  intro D p hp χ ψ hD hψ ρ hρ hzero
+  exact lemma59_ext48_at_explicit_constant χ ψ hD hψ hρ hzero
+
+
+open Complex in
+lemma lemma59_uniform_extended_actual_product_zeros :
+    ∃ c : ℝ, 0 < c ∧ ∃ D₀ : ℕ,
+    ∀ {D p : ℕ} [NeZero p] (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p),
+      D₀ ≤ D → Lemma23InPsi1 χ ψ →
+      lemma44PaperAlpha D / 2 ≤ lemma46InnerRadius D c ∧
+      0 < lemma46InnerRadius D c ∧
+      ∀ {ρ : ℂ}, Lemma59ExtendedZeroOmega D ρ → lemma48ActualProduct χ ψ ρ = 0 →
+        ρ.re = 1 / 2 ∧ deriv (lemma48ActualProduct χ ψ) ρ ≠ 0 ∧
+        ∀ w : ℂ, 0 < ‖w‖ → ‖w‖ < lemma46InnerRadius D c →
+          lemma48ActualProduct χ ψ (ρ + w) ≠ 0 := by
+  obtain ⟨m,hm,hmodel⟩ := lemma46_model_uniform_inner_boundary
+  let c := (lemma46ModelErrorConstant + 1) / m
+  have hc : 0 < c := div_pos (by linarith [lemma46_model_error_constant_pos]) hm
+  have hcmp : lemma46ModelErrorConstant < m * c := by
+    dsimp [c]
+    rw [mul_div_cancel₀ _ hm.ne']
+    linarith
+  obtain ⟨D₀,hD₀,hsmall⟩ := lemma46_exists_contraction_threshold hc
+  refine ⟨c,hc,D₀,?_⟩
+  intro D p _ χ ψ hD hψ
+  have hr := lemma46_inner_radius_bounds (hD₀.trans hD) hc (hsmall D hD)
+  refine ⟨hr.1,hr.2.1,?_⟩
+  intro ρ hρ hz
+  exact lemma59_ext_prop22_actual_zero_analysis hm hc hcmp hmodel χ ψ
+    (hD₀.trans hD) hψ (hsmall D hD) hρ hz
+
+open Complex in
+example : ∃ c : ℝ, 0 < c ∧ ∃ D₀ : ℕ,
+    ∀ {D p : ℕ} [NeZero p] (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p),
+    D₀ ≤ D → Lemma23InPsi1 χ ψ → ∀ {ρ : ℂ},
+    |ρ.re - 1 / 2| < 1 / 2 →
+    |ρ.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13 →
+    lemma48ActualProduct χ ψ ρ = 0 →
+    ρ.re = 1 / 2 ∧ deriv (lemma48ActualProduct χ ψ) ρ ≠ 0 ∧
+    ∀ w : ℂ, 0 < ‖w‖ → ‖w‖ < lemma46InnerRadius D c →
+      lemma48ActualProduct χ ψ (ρ + w) ≠ 0 := by
+  obtain ⟨c,hc,D₀,h⟩ := lemma59_uniform_extended_actual_product_zeros
+  refine ⟨c,hc,D₀,?_⟩
+  intro D p _ χ ψ hD hψ ρ hre him hz
+  exact (h χ ψ hD hψ).2.2 ⟨hre,him⟩ hz
+
+example : Lemma59ExtendedLemma46Target := lemma59_ext46_proved
+example : Lemma59ExtendedLemma48Target := lemma59_ext48_proved
+
+open Complex in
+example {D p : ℕ} [NeZero p] (χ : RealPrimitiveCharacter D) (ψ : DirichletCharacter ℂ p)
+    (hD : lemma23SectionFourModulusThreshold ≤ D) (hψ : Lemma23InPsi1 χ ψ)
+    {ρ : ℂ} (hre : |ρ.re - 1 / 2| < 1 / 2)
+    (him : |ρ.im - (lemma23PaperCenter D).im| < lemma23PaperL D ^ 405 + 13)
+    (hz : lemma48ActualProduct χ ψ ρ = 0) :
+    |ρ.re - 1 / 2| ≤ lemma44PaperAlpha D ^ 2 := by
+  exact lemma59_ext48_actual_zero_in_thin_slab χ ψ hD hψ ⟨hre,him⟩ hz
+
+#print axioms lemma59_extended_height_margin
+#print axioms lemma59_ext44_gamma_region_height
+#print axioms lemma59_ext44_middle_reflected_displacement
+#print axioms lemma59_ext44_omega3_displacement
+#print axioms lemma59_ext44_omega3_re_pos
+#print axioms lemma59_ext44_omega3_subset_extended_gamma_region
+#print axioms lemma59_ext44_right_mellin_gaussian_bound
+#print axioms lemma59_ext44_truncated_shift_in_extended_gamma_region
+#print axioms lemma59_ext44ActualZtilde_norm_on_omega3
+#print axioms lemma59_ext44_equation46
+#print axioms lemma59_ext44_gaussian_long_sum_on_omega3
+#print axioms lemma59_ext44_initial_left_denominator_bound
+#print axioms lemma59_ext44_initial_left_shift_abs_re
+#print axioms lemma59_ext44_left_product_mellin_eq_reflected_series
+#print axioms lemma59_ext44_long_sum_on_omega3
+#print axioms lemma59_ext44_middle_Z_norm_bound
+#print axioms lemma59_ext44_middle_integrable
+#print axioms lemma59_ext44_product_finite_shift
+#print axioms lemma59_ext44_product_horizontal_point_bound
+#print axioms lemma59_ext44_reflected_horizontal_point_bound
+#print axioms lemma59_ext44_reflected_long_sum_bound
+#print axioms lemma59_ext44_reflected_numerator_rectangle_differentiable
+#print axioms lemma59_ext44_reflected_polynomial_intervalIntegrable
+#print axioms lemma59_ext44_right_vertical_truncation_bound
+#print axioms lemma59_ext44_short_right_point_bound
+#print axioms lemma59_ext44_initial_left_gamma_region
+#print axioms lemma59_ext44_initial_left_omega_bound
+#print axioms lemma59_ext44_long_horizontal_point_bound
+#print axioms lemma59_ext44_middle_product_bound
+#print axioms lemma59_ext44_paper_gaussian_long_sum_on_omega3
+#print axioms lemma59_ext44_product_horizontal_error_bound
+#print axioms lemma59_ext44_reflected_polynomial_middle_shift
+#print axioms lemma59_ext44_reflected_polynomial_residue_shift
+#print axioms lemma59_ext44_short_horizontal_point_bound
+#print axioms lemma59_ext44_short_right_contour_bound
+#print axioms lemma59_ext44_full_gaussian_series_approximation
+#print axioms lemma59_ext44_initial_left_Z_scale_bound
+#print axioms lemma59_ext44_long_horizontal_error_bound
+#print axioms lemma59_ext44_middle_integrand_norm_bound
+#print axioms lemma59_ext44_reflected_tail_contour_continuousOn
+#print axioms lemma59_ext44_short_horizontal_error_bound
+#print axioms lemma59_ext44_reflected_tail_contour_intervalIntegrable
+#print axioms lemma59_ext44_reflected_tail_contour_pointwise_bound
+#print axioms lemma59_ext44_right_mellin_approximation
+#print axioms lemma59_ext44_truncated_middle_contour_bound
+#print axioms lemma59_ext44_left_product_contour_decomposition
+#print axioms lemma59_ext44_middle_reflected_polynomial_bound
+#print axioms lemma59_ext44_reflected_tail_contour_bound
+#print axioms lemma59_ext44_actual_approximate_functional_equation
+#print axioms lemma59_ext44_uniform_error_constant
+#print axioms lemma59_ext_good_FG_bound
+#print axioms lemma59_ext_good_product_bound
+#print axioms lemma59_ext_F_logDeriv_at_threshold
+#print axioms lemma59_ext45_horizontal_F_quotient_bound
+#print axioms lemma59_ext45_omega1_F_inv_bound
+#print axioms lemma59_ext45_equation410
+#print axioms lemma59_ext45_region_subsets
+#print axioms lemma59_ext46_disk_subset_local_strip
+#print axioms lemma59_ext46_local_strip_regions
+#print axioms lemma59_ext48_omega_height_pos
+#print axioms lemma59_ext48_omega_reflection
+#print axioms lemma59_ext48_thin_slab_regions
+#print axioms lemma59_ext45_B_bound_far
+#print axioms lemma59_ext45_B_bound_near
+#print axioms lemma59_ext46_actual_A_reflected_zero
+#print axioms lemma59_ext46_actual_B_differentiable_ne_zero
+#print axioms lemma59_ext46_equation411
+#print axioms lemma59_ext46_inner_disk_regions
+#print axioms lemma59_ext45_B_uniform_gap
+#print axioms lemma59_ext46_actual_A_analyticOn_inner_disk
+#print axioms lemma59_ext46_actual_model_approximation_closed
+#print axioms lemma59_ext45_actual_A_lower_bound
+#print axioms lemma59_ext46_actual_model_approximation
+#print axioms lemma59_ext46_actual_rouche_count_one_closed
+#print axioms lemma59_ext45_actual_A_ne_zero
+#print axioms lemma59_ext46_actual_rouche_count_one
+#print axioms lemma59_ext46_zero_analysis_at_contraction_closed
+#print axioms lemma59_ext45_actual_product_ne_zero
+#print axioms lemma59_ext46_zero_analysis_at_contraction
+#print axioms lemma59_ext46_proved
+#print axioms lemma59_ext48_actual_zero_in_thin_slab
+#print axioms lemma59_ext48_actual_Z_inv_bound
+#print axioms lemma59_ext_prop22_actual_zero_analysis
+#print axioms lemma59_ext48_actual_inverse_factor_approximation
+#print axioms lemma59_ext48_at_explicit_constant
+#print axioms lemma59_ext48_proved
+#print axioms lemma59_uniform_extended_actual_product_zeros
+
+end ZhangLS.Spec

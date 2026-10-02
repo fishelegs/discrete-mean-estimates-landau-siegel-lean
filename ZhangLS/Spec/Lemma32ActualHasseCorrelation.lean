@@ -1,0 +1,41 @@
+import ZhangLS.Spec.Lemma32FiniteActualCurvePoints
+import ZhangLS.External.HasseWeil.HasseBound
+set_option autoImplicit false
+namespace ZhangLS.Spec
+open Complex Finset
+open scoped Classical
+set_option maxHeartbeats 2000000
+
+lemma lemma32_actual_curve_hasse_nat_card {F : Type*} [Field F] [Fintype F]
+    [DecidableEq F] (W : WeierstrassCurve F) [W.IsElliptic] :
+    |(Nat.card W.toAffine.Point : ℝ)-(Fintype.card F : ℝ)-1| ≤
+      2*Real.sqrt (Fintype.card F : ℝ) := by
+  letI : Finite W.toAffine.Point := lemma32_actual_curve_points_finite W
+  letI : Fintype W.toAffine.Point := Fintype.ofFinite _
+  simpa only [HasseWeil.pointCount, Nat.card_eq_fintype_card] using
+    HasseWeil.WeilPairing.hasse_bound W
+
+lemma lemma32_actual_prime_distinct_quartic_hasse_bound {p : ℕ} [Fact p.Prime]
+    (χ : RealPrimitiveCharacter p) (a b c d : ZMod p)
+    (hab : a ≠ b) (hac : a ≠ c) (had : a ≠ d)
+    (hbc : b ≠ c) (hbd : b ≠ d) (hcd : c ≠ d) :
+    ‖∑ x : ZMod p, χ.chi ((x+a)*(x+b)*(x+c)*(x+d))‖ ≤
+      2*Real.sqrt (p : ℝ)+1 := by
+  let W := lemma32QuarticWeierstrass a b c d
+  have hF := lemma32_actual_prime_odd_characteristic χ
+  letI : W.IsElliptic := lemma32_quartic_Weierstrass_isElliptic a b c d
+    (lemma32_field_two_nonzero_of_odd_characteristic hF) hab hac had hbc hbd hcd
+  have hh := lemma32_actual_curve_hasse_nat_card W
+  rw [ZMod.card] at hh
+  let ρ := ∑ x : ZMod p, χ.chi ((x+a)*(x+b)*(x+c)*(x+d))
+  have he : ρ+1 = ((Nat.card W.toAffine.Point : ℝ)-(p : ℝ)-1 : ℝ) := by
+    simpa only [Complex.ofReal_sub, Complex.ofReal_natCast, Complex.ofReal_one] using
+      lemma32_actual_prime_distinct_quartic_point_count χ a b c d hab hac had hbc hbd hcd
+  have hb : ‖ρ+1‖ ≤ 2*Real.sqrt (p : ℝ) := by
+    rw [he, Complex.norm_real, Real.norm_eq_abs]
+    exact hh
+  have hn := norm_sub_le (ρ+1) (1 : ℂ)
+  have hn' : ‖ρ‖ ≤ ‖ρ+1‖+1 := by simpa only [add_sub_cancel_right, norm_one] using hn
+  linarith
+
+end ZhangLS.Spec

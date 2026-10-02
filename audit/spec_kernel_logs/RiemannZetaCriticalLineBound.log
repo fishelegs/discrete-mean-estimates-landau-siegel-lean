@@ -1,0 +1,48 @@
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:99:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:124:13: warning: unused variable `hs`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:152:6: warning: unused variable `n`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:156:20: warning: unused variable `k`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:161:8: warning: This simp argument is unused:
+  sum_one_Icc
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵s̵u̵m̵_̵o̵n̵e̵_̵I̵c̵c̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:242:12: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:242:12: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:219:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:303:8: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:303:8: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:394:12: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ZhangLS/Spec/RiemannZetaCriticalLineBound.lean:475:75: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵n̵o̵r̵m̵_̵d̵i̵v̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,29 @@
+ZhangLS/Spec/Lemma47ModelBoundary.lean:93:18: error: unsolved goals
+f : ℂ → ℂ := lemma23ExponentialGapModel Real.pi
+f₀ : ℂ → ℂ := dslope f 0
+f₁ : ℂ → ℂ := dslope f₀ I
+g : ℂ → ℂ := dslope f₁ (-I)
+p : ℂ → ℂ := fun z => z * (z - I) * (z + I)
+hf : Differentiable ℂ f
+hd : ∀ (F : ℂ → ℂ), Differentiable ℂ F → ∀ (a : ℂ), Differentiable ℂ (dslope F a)
+hf₀ : Differentiable ℂ f₀
+hf₁ : Differentiable ℂ f₁
+hg : Differentiable ℂ g
+hzeros : f 0 = 0 ∧ f I = 0 ∧ f (-I) = 0
+hfac₀ : ∀ (z : ℂ), f z = z * f₀ z
+hf₀I : f₀ I = 0
+hf₀nI : f₀ (-I) = 0
+hfac₁ : ∀ (z : ℂ), f₀ z = (z - I) * f₁ z
+hf₁nI : f₁ (-I) = 0
+hfacg : ∀ (z : ℂ), f₁ z = (z + I) * g z
+hfac : f = fun z => p z * g z
+hgne : ∀ z ∈ closedBall 0 (3 / 2), g z ≠ 0
+⊢ 0 ≤ 3 / 2
+ZhangLS/Spec/Lemma47ModelBoundary.lean:123:45: error: Application type mismatch: The argument
+  ?m.1377
+has type
+  0 ≤ 1
+but is expected to have type
+  0 ≤ ‖z‖
+in the application
+  mul_le_mul hlo hprod hnonneg ?m.1377

@@ -1,0 +1,623 @@
+import ZhangLS.Spec.Lemma56PerronMarginBudget
+
+namespace ZhangLS.Spec
+open Complex MeasureTheory
+open scoped Real
+set_option maxHeartbeats 1000000
+set_option maxRecDepth 4096
+
+lemma lemma56_actual_perron_right_eq {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) (B x τ t : ℝ) :
+    lemma56PerronArithmeticIntegrand θ B x τ ((2 : ℂ) + (t : ℂ) * I) =
+      -(logDeriv (DirichletCharacter.LFunction θ)
+        ((2 : ℂ) + (t : ℂ) * I - (τ : ℂ) * I)) * lemma56PerronKernel B 2 x t := by
+  simp only [lemma56PerronArithmeticIntegrand, lemma56PerronKernel]
+  norm_num
+
+lemma lemma56_actual_perron_right_integrable {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) {B x : ℝ} (hB : 0 < B) (hx : 0 < x) (τ : ℝ) :
+    Integrable (fun t : ℝ => lemma56PerronArithmeticIntegrand θ B x τ
+      ((2 : ℂ) + (t : ℂ) * I)) := by
+  simpa only [lemma56_actual_perron_right_eq] using
+    lemma56_actual_perron_mellin_integrable θ hB hx τ
+
+lemma lemma56_actual_perron_right_envelope {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) {B x : ℝ} (hB : 0 < B) (hx : 0 < x) (τ t : ℝ) :
+    ‖lemma56PerronArithmeticIntegrand θ B x τ ((2 : ℂ) + (t : ℂ) * I)‖ ≤
+      (lemma56GaussianRightConstant * x ^ 2 / 2 * Real.exp (1 / B ^ 2)) *
+        Real.exp (-(1 / (4 * B ^ 2)) * t ^ 2) := by
+  let z : ℂ := 2 + (t : ℂ) * I
+  have hn : 2 ≤ ‖z‖ := by simpa [z] using Complex.re_le_norm z
+  have he : (4 - t ^ 2) / (4 * B ^ 2) =
+      1 / B ^ 2 + -(1 / (4 * B ^ 2)) * t ^ 2 := by ring
+  rw [lemma56_actual_perron_right_eq, norm_mul, norm_neg,
+    lemma56_perron_kernel_norm hx, show ((2 : ℝ) ^ 2) = 4 by norm_num, he, Real.exp_add]
+  rw [Real.rpow_two]
+  calc
+    _ ≤ lemma56GaussianRightConstant * (x ^ 2 *
+        (Real.exp (1 / B ^ 2) * Real.exp (-(1 / (4 * B ^ 2)) * t ^ 2)) / 2) := by
+      apply mul_le_mul
+      · exact lemma56_actual_logDeriv_two_uniform_bound θ (by simp)
+      · exact div_le_div_of_nonneg_left (by positivity) (by norm_num) hn
+      · positivity
+      · exact lemma56_gaussian_right_constant_nonneg
+    _ = _ := by ring
+
+theorem lemma56_actual_perron_right_truncation {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) {B x H : ℝ} (hB : 0 < B) (hx : 0 < x)
+    (hH : 0 < H) (τ : ℝ) :
+    ‖(∫ t : ℝ, lemma56PerronArithmeticIntegrand θ B x τ
+        ((2 : ℂ) + (t : ℂ) * I)) -
+      (∫ t : ℝ in -H..H, lemma56PerronArithmeticIntegrand θ B x τ
+        ((2 : ℂ) + (t : ℂ) * I))‖ ≤
+      4 * lemma56GaussianRightConstant * x ^ 2 * (B ^ 2 / H) *
+        Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) := by
+  let C := lemma56GaussianRightConstant * x ^ 2 / 2 * Real.exp (1 / B ^ 2)
+  let b := 1 / (4 * B ^ 2)
+  have hCr := lemma56_gaussian_right_constant_nonneg
+  have hC : 0 ≤ C := by dsimp [C]; positivity
+  have hb : 0 < b := by dsimp [b]; positivity
+  have hbound := lemma44_gaussian_integral_truncation
+    (fun t : ℝ => lemma56PerronArithmeticIntegrand θ B x τ ((2 : ℂ) + (t : ℂ) * I))
+    (lemma56_actual_perron_right_integrable θ hB hx τ) hC hb hH
+    (fun t => lemma56_actual_perron_right_envelope θ hB hx τ t)
+  apply hbound.trans_eq
+  dsimp [C, b]
+  rw [show -(1 / (4 * B ^ 2)) * H ^ 2 = -(H ^ 2 / (4 * B ^ 2)) by ring,
+    show 1 / B ^ 2 - H ^ 2 / (4 * B ^ 2) =
+      1 / B ^ 2 + -(H ^ 2 / (4 * B ^ 2)) by ring, Real.exp_add]
+  field_simp
+
+theorem lemma56_actual_perron_mangoldt_truncation {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) {B x H : ℝ} (hB : 0 < B) (hx : 0 < x)
+    (hH : 0 < H) (τ : ℝ) :
+    ‖lemma56PerronMangoldtSum θ B x τ -
+      ((1 / (2 * Real.pi) : ℝ) : ℂ) *
+        (∫ t : ℝ in -H..H, lemma56PerronArithmeticIntegrand θ B x τ
+          ((2 : ℂ) + (t : ℂ) * I))‖ ≤
+      (1 / (2 * Real.pi)) *
+        (4 * lemma56GaussianRightConstant * x ^ 2 * (B ^ 2 / H) *
+          Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2))) := by
+  have hi := lemma56_actual_perron_mellin_identity θ hB hx τ
+  simp_rw [← lemma56_actual_perron_right_eq θ B x τ] at hi
+  rw [← hi, ← mul_sub, norm_mul, Complex.norm_real, Real.norm_eq_abs,
+    abs_of_pos (by positivity : 0 < 1 / (2 * Real.pi))]
+  exact mul_le_mul_of_nonneg_left (lemma56_actual_perron_right_truncation θ hB hx hH τ)
+    (by positivity)
+
+lemma lemma56_perron_horizontal_point_bound {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) {B x H M σ t : ℝ} (hB : 0 < B) (hx : 1 ≤ x)
+    (hH : 0 < H) (hM : 0 ≤ M) (hσ0 : 0 ≤ σ) (hσ2 : σ ≤ 2) (ht : H ≤ |t|)
+    (τ : ℝ) (hLD : ‖logDeriv (DirichletCharacter.LFunction θ)
+      ((σ : ℂ) + (t : ℂ) * I - (τ : ℂ) * I)‖ ≤ M) :
+    ‖lemma56PerronArithmeticIntegrand θ B x τ ((σ : ℂ) + (t : ℂ) * I)‖ ≤
+      M * x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H := by
+  have hxp : 0 < x := by linarith only [hx]
+  let z : ℂ := (σ : ℂ) + (t : ℂ) * I
+  have hn : H ≤ ‖z‖ := ht.trans (by simpa [z] using Complex.abs_im_le_norm z)
+  have hxpow : x ^ σ ≤ x ^ 2 := by
+    simpa only [Real.rpow_two] using Real.rpow_le_rpow_of_exponent_le hx hσ2
+  have hsqσ : σ ^ 2 ≤ 4 := by nlinarith only [hσ0, hσ2]
+  have hsqt : H ^ 2 ≤ t ^ 2 := by
+    have h := pow_le_pow_left₀ hH.le ht 2
+    simpa using h
+  have hex : Real.exp ((σ ^ 2 - t ^ 2) / (4 * B ^ 2)) ≤
+      Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) := by
+    apply Real.exp_le_exp.mpr
+    rw [show 1 / B ^ 2 - H ^ 2 / (4 * B ^ 2) = (4 - H ^ 2) / (4 * B ^ 2) by ring]
+    apply div_le_div_of_nonneg_right _ (by positivity)
+    linarith only [hsqσ, hsqt]
+  change ‖-(logDeriv (DirichletCharacter.LFunction θ)
+    ((σ : ℂ) + (t : ℂ) * I - (τ : ℂ) * I)) * lemma56PerronKernel B σ x t‖ ≤ _
+  rw [norm_mul, norm_neg, lemma56_perron_kernel_norm hxp]
+  calc
+    _ ≤ M * (x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H) := by
+      apply mul_le_mul hLD _ (by positivity) hM
+      apply div_le_div₀ (by positivity) _ hH hn
+      exact mul_le_mul hxpow hex (Real.exp_nonneg _) (sq_nonneg x)
+    _ = _ := by ring
+
+lemma lemma56_perron_horizontal_integral_bound {q : ℕ} [NeZero q]
+    (θ : DirichletCharacter ℂ q) {B x H M a t : ℝ} (hB : 0 < B) (hx : 1 ≤ x)
+    (hH : 0 < H) (hM : 0 ≤ M) (ha0 : 0 ≤ a) (ha2 : a ≤ 2) (ht : H ≤ |t|)
+    (τ : ℝ) (hLD : ∀ σ : ℝ, a ≤ σ → σ ≤ 2 →
+      ‖logDeriv (DirichletCharacter.LFunction θ)
+        ((σ : ℂ) + (t : ℂ) * I - (τ : ℂ) * I)‖ ≤ M) :
+    ‖∫ σ : ℝ in a..2, lemma56PerronArithmeticIntegrand θ B x τ
+      ((σ : ℂ) + (t : ℂ) * I)‖ ≤
+        2 * M * x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H := by
+  have hbound := intervalIntegral.norm_integral_le_of_norm_le_const
+    (f := fun σ : ℝ => lemma56PerronArithmeticIntegrand θ B x τ ((σ : ℂ) + (t : ℂ) * I))
+    (a := a) (b := 2) (C := M * x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H)
+    (fun σ hσ => by
+      have hh : σ ∈ Set.Ioc a 2 := by simpa only [Set.uIoc_of_le ha2] using hσ
+      exact lemma56_perron_horizontal_point_bound θ hB hx hH hM
+        (ha0.trans hh.1.le) hh.2 ht τ (hLD σ hh.1.le hh.2))
+  apply hbound.trans
+  rw [abs_of_nonneg (by linarith only [ha2])]
+  have hl : 2 - a ≤ 2 := by linarith only [ha0]
+  convert mul_le_mul_of_nonneg_left hl
+    (by positivity : 0 ≤ M * x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H) using 1 <;> ring
+
+lemma lemma56_perron_supergaussian_budget {U : ℝ} (hU : 2000 ≤ U) :
+    U ^ 2 + 4 * U + 2 ≤ Real.exp U / 16 := by
+  have hU0 : 0 ≤ U := by linarith only [hU]
+  have he := Real.add_one_le_exp (U / 4)
+  have hle : U / 4 ≤ Real.exp (U / 4) := by linarith only [he]
+  have hpow : (U / 4) ^ 4 ≤ (Real.exp (U / 4)) ^ 4 :=
+    pow_le_pow_left₀ (by positivity) hle 4
+  have hpe : (Real.exp (U / 4)) ^ 4 = Real.exp U := by
+    rw [← Real.exp_nat_mul]
+    congr 1
+    ring
+  rw [hpe] at hpow
+  have hpoly : U ^ 4 ≤ 256 * Real.exp U := by nlinarith only [hpow]
+  have hsq : 4000000 ≤ U ^ 2 := by nlinarith only [hU]
+  have hfour : 4000000 * U ^ 2 ≤ U ^ 4 := by
+    have hh := mul_le_mul_of_nonneg_right hsq (sq_nonneg U)
+    nlinarith only [hh]
+  have hU2 : U ≤ U ^ 2 := by nlinarith only [hU]
+  have hsmall : 4096 * (U ^ 2 + 4 * U + 2) ≤ 4000000 * U ^ 2 := by
+    nlinarith only [hU2, hsq]
+  linarith only [hsmall, hfour, hpoly]
+
+lemma lemma56_perron_paper_scales {U : ℝ} (hU : 0 ≤ U) :
+    let B := Real.exp ((3 / 2 : ℝ) * U)
+    let H := Real.exp (2 * U) / 2
+    1 ≤ B ∧ 0 < H ∧ B ^ 2 / H = 2 * Real.exp U ∧
+      H ^ 2 / (4 * B ^ 2) = Real.exp U / 16 ∧ 1 / B ^ 2 ≤ 1 := by
+  let B := Real.exp ((3 / 2 : ℝ) * U)
+  let H := Real.exp (2 * U) / 2
+  have hB : 1 ≤ B := Real.one_le_exp (by positivity)
+  have hH : 0 < H := by dsimp [H]; positivity
+  have hB2 : B ^ 2 = Real.exp (3 * U) := by
+    dsimp [B]
+    rw [← Real.exp_nat_mul]
+    congr 1
+    ring
+  have hH2 : H ^ 2 = Real.exp (4 * U) / 4 := by
+    dsimp [H]
+    rw [div_pow, ← Real.exp_nat_mul]
+    norm_num only [Nat.cast_ofNat, show (2 : ℝ) ^ 2 = 4 by norm_num]
+    congr 1
+    congr 1
+    ring
+  have h3 : Real.exp (3 * U) = Real.exp U * Real.exp (2 * U) := by
+    rw [← Real.exp_add]
+    congr 1
+    ring
+  have h4 : Real.exp (4 * U) = Real.exp U * Real.exp (3 * U) := by
+    rw [← Real.exp_add]
+    congr 1
+    ring
+  refine ⟨hB, hH, ?_, ?_, ?_⟩
+  · change B ^ 2 / H = _
+    dsimp [H]
+    rw [hB2, h3]
+    field_simp
+  · rw [hH2, hB2, h4]
+    field_simp
+    norm_num
+  · have hs : 1 ≤ B ^ 2 := by nlinarith only [hB]
+    change 1 / B ^ 2 ≤ 1
+    apply (div_le_iff₀ (sq_pos_of_pos (lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1) hB))).mpr
+    simpa only [one_mul] using hs
+
+lemma lemma56_perron_paper_right_budget {U C x : ℝ} (hU : 2000 ≤ U)
+    (hC : 0 ≤ C) (hx : 0 < x) (hxmax : x ≤ 2 * Real.exp (U ^ 2)) :
+    let B := Real.exp ((3 / 2 : ℝ) * U)
+    let H := Real.exp (2 * U) / 2
+    4 * C * x ^ 2 * (B ^ 2 / H) * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) ≤
+      32 * C * Real.exp (U ^ 2) * Real.exp (-3 * U) := by
+  have hU0 : 0 ≤ U := by linarith only [hU]
+  have hs := lemma56_perron_paper_scales hU0
+  have hb := lemma56_perron_supergaussian_budget hU
+  let B := Real.exp ((3 / 2 : ℝ) * U)
+  let H := Real.exp (2 * U) / 2
+  have hx2 : x ^ 2 ≤ 4 * (Real.exp (U ^ 2)) ^ 2 := by
+    nlinarith only [hx.le, hxmax]
+  have hex : Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) ≤
+      Real.exp (1 - Real.exp U / 16) := by
+    apply Real.exp_le_exp.mpr
+    rw [hs.2.2.2.1]
+    linarith only [hs.2.2.2.2]
+  have hbudget : 2 * U ^ 2 + U + 1 - Real.exp U / 16 ≤ U ^ 2 - 3 * U := by
+    linarith only [hb]
+  change 4 * C * x ^ 2 * (B ^ 2 / H) * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) ≤ _
+  rw [hs.2.2.1]
+  calc
+    _ ≤ (4 * C * (4 * (Real.exp (U ^ 2)) ^ 2) * (2 * Real.exp U)) *
+        Real.exp (1 - Real.exp U / 16) := by gcongr
+    _ = 32 * C * Real.exp (2 * U ^ 2 + U + 1 - Real.exp U / 16) := by
+      rw [show (Real.exp (U ^ 2)) ^ 2 = Real.exp (2 * U ^ 2) by
+        rw [← Real.exp_nat_mul]; norm_num]
+      rw [show 2 * U ^ 2 + U + 1 - Real.exp U / 16 =
+        (2 * U ^ 2 + U) + (1 - Real.exp U / 16) by ring, Real.exp_add,
+        Real.exp_add]
+      ring
+    _ ≤ 32 * C * Real.exp (U ^ 2 - 3 * U) :=
+      mul_le_mul_of_nonneg_left (Real.exp_le_exp.mpr hbudget) (by positivity)
+    _ = _ := by rw [sub_eq_add_neg, Real.exp_add]; ring
+
+lemma lemma56_perron_paper_logDeriv_width_budget {U : ℝ} (hU : 1 ≤ U) :
+    24 * ((3 / 4 : ℝ) * U) ^ 2 + 28800 * ((3 / 4 : ℝ) * U) ≤
+      115296 * (Real.exp ((3 / 2 : ℝ) * U)) ^ 2 := by
+  have hU0 : 0 ≤ U := by linarith only [hU]
+  have hM : 24 * ((3 / 4 : ℝ) * U) ^ 2 + 28800 * ((3 / 4 : ℝ) * U) ≤ 28824 * U ^ 2 := by
+    have hs : U ≤ U ^ 2 := by nlinarith only [hU]
+    nlinarith only [hs, sq_nonneg U]
+  have he := Real.add_one_le_exp (U / 2)
+  have hle : U / 2 ≤ Real.exp (U / 2) := by linarith only [he]
+  have hsq : (U / 2) ^ 2 ≤ (Real.exp (U / 2)) ^ 2 :=
+    pow_le_pow_left₀ (by positivity) hle 2
+  have hex : (Real.exp (U / 2)) ^ 2 = Real.exp U := by
+    rw [← Real.exp_nat_mul]
+    congr 1
+    ring
+  rw [hex] at hsq
+  have hpoly : U ^ 2 ≤ 4 * Real.exp U := by nlinarith only [hsq]
+  have hB2 : (Real.exp ((3 / 2 : ℝ) * U)) ^ 2 = Real.exp (3 * U) := by
+    rw [← Real.exp_nat_mul]
+    congr 1
+    ring
+  rw [hB2]
+  calc
+    _ ≤ 28824 * (4 * Real.exp U) := hM.trans (mul_le_mul_of_nonneg_left hpoly (by norm_num))
+    _ ≤ 115296 * Real.exp (3 * U) := by
+      have he := Real.exp_le_exp.mpr (show U ≤ 3 * U by linarith only [hU0])
+      nlinarith only [he]
+
+lemma lemma56_perron_paper_horizontal_budget {U x : ℝ} (hU : 2000 ≤ U)
+    (hx : 0 < x) (hxmax : x ≤ 2 * Real.exp (U ^ 2)) :
+    let B := Real.exp ((3 / 2 : ℝ) * U)
+    let H := Real.exp (2 * U) / 2
+    let M := 24 * ((3 / 4 : ℝ) * U) ^ 2 + 28800 * ((3 / 4 : ℝ) * U)
+    2 * M * x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H ≤
+      1844736 * Real.exp (U ^ 2) * Real.exp (-3 * U) := by
+  let B := Real.exp ((3 / 2 : ℝ) * U)
+  let H := Real.exp (2 * U) / 2
+  let M := 24 * ((3 / 4 : ℝ) * U) ^ 2 + 28800 * ((3 / 4 : ℝ) * U)
+  have hM := lemma56_perron_paper_logDeriv_width_budget (show 1 ≤ U by linarith only [hU])
+  have hH : 0 < H := by dsimp [H]; positivity
+  have hb := lemma56_perron_paper_right_budget hU (C := 57648) (by norm_num) hx hxmax
+  change 2 * M * x ^ 2 * Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H ≤ _
+  calc
+    _ ≤ 2 * (115296 * B ^ 2) * x ^ 2 *
+        Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) / H := by
+      apply div_le_div_of_nonneg_right _ hH.le
+      gcongr
+    _ = 4 * 57648 * x ^ 2 * (B ^ 2 / H) *
+        Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2)) := by ring
+    _ ≤ _ := by simpa only [show (32 : ℝ) * 57648 = 1844736 by norm_num] using hb
+
+theorem lemma56_uniform_primitive_perron_paper_exterior_bounds :
+    ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q] (χ : RealPrimitiveCharacter D)
+      (θ : DirichletCharacter ℂ q), D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      θ.IsPrimitive → 1 < q → (q : ℝ) < lemma56PaperT D →
+      (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      ∀ {x τ : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D → |τ| ≤ D →
+        let U := lemma23PaperL D ^ (9 / 2 : ℝ)
+        let B := Real.exp ((3 / 2 : ℝ) * U)
+        let H := Real.exp (2 * U) / 2
+        let a := 1 - 1 / ((3 / 4 : ℝ) * U)
+        let E := 1844736 * lemma23PaperP D * Real.exp (-3 * U)
+        (‖∫ σ : ℝ in a..2, lemma56PerronArithmeticIntegrand θ B x τ
+          ((σ : ℂ) + (H : ℂ) * I)‖ ≤ E) ∧
+        (‖∫ σ : ℝ in a..2, lemma56PerronArithmeticIntegrand θ B x τ
+          ((σ : ℂ) - (H : ℂ) * I)‖ ≤ E) ∧
+        (‖(∫ t : ℝ, lemma56PerronArithmeticIntegrand θ B x τ ((2 : ℂ) + (t : ℂ) * I)) -
+          (∫ t : ℝ in -H..H, lemma56PerronArithmeticIntegrand θ B x τ ((2 : ℂ) + (t : ℂ) * I))‖ ≤
+            32 * lemma56GaussianRightConstant * lemma23PaperP D * Real.exp (-3 * U)) := by
+  obtain ⟨Dld, hld⟩ := lemma56_uniform_primitive_margin_logDeriv_bound
+  obtain ⟨Drep, hrep⟩ := lemma56_uniform_repulsion_modulus_threshold
+  refine ⟨max Dld Drep, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne x τ hx hxmax hτ
+  have hLD := hld χ θ ((le_max_left _ _).trans hDN) hD hA hθ hq1 hqT hne
+  have hL := (hrep D ((le_max_right _ _).trans hDN)).1
+  have hs := lemma56_high_scale_strict_margin hL
+  let U := lemma23PaperL D ^ (9 / 2 : ℝ)
+  let V := (3 / 4 : ℝ) * U
+  let B := Real.exp ((3 / 2 : ℝ) * U)
+  let H := Real.exp (2 * U) / 2
+  let a := 1 - 1 / V
+  let M := 24 * V ^ 2 + 28800 * V
+  have hV2 : 2000 ≤ V := hs.2.2.1
+  have hU2 : 2000 ≤ U := by dsimp [V] at hV2; linarith only [hV2]
+  have hB : 0 < B := by dsimp [B]; positivity
+  have hH : 0 < H := by dsimp [H]; positivity
+  have hxp : 0 < x := by linarith only [hx]
+  have hVp : 0 < V := by linarith only [hV2]
+  have hInv : 0 < 1 / V := by positivity
+  have hInv1 : 1 / V ≤ 1 := (div_le_iff₀ hVp).mpr (by linarith only [hV2])
+  have ha0 : 0 ≤ a := by dsimp [a]; linarith only [hInv1]
+  have ha2 : a ≤ 2 := by dsimp [a]; linarith only [hInv]
+  have hDmax := lemma56_margin_height_contains_modulus hD hL
+  have hp : U ^ 2 = (lemma23PaperL D) ^ 9 := by
+    dsimp [U]
+    rw [← Real.rpow_natCast, ← Real.rpow_mul (show 0 ≤ lemma23PaperL D from (by norm_num : (0 : ℝ) ≤ 2000).trans hL)]
+    norm_num
+  have hP : Real.exp (U ^ 2) = lemma23PaperP D := by rw [hp]; rfl
+  have hlocalLD (t : ℝ) (ht : |t| ≤ H) (σ : ℝ) (hσa : a ≤ σ) (hσ2 : σ ≤ 2) :
+      ‖logDeriv (DirichletCharacter.LFunction θ)
+        ((σ : ℂ) + (t : ℂ) * I - (τ : ℂ) * I)‖ ≤ M := by
+    apply hLD
+    · simpa only [add_re, sub_re, ofReal_re, mul_re, ofReal_im, I_re, I_im,
+        mul_zero, zero_mul, mul_one, zero_sub, sub_zero, add_zero] using hσa
+    · simpa using hσ2
+    · have hh := abs_sub t τ
+      have hheight : |t - τ| ≤ Real.exp (2 * U) := by
+        dsimp [H] at ht
+        change 2 * (D : ℝ) ≤ Real.exp (2 * U) at hDmax
+        linarith only [hh, ht, hτ, hDmax]
+      simpa using hheight
+  have hb := lemma56_perron_paper_horizontal_budget hU2 hxp (by simpa only [hP] using hxmax)
+  rw [hP] at hb
+  have htop := lemma56_perron_horizontal_integral_bound θ hB hx hH
+    (by dsimp [M]; positivity) ha0 ha2 (t := H) (le_abs_self H) τ
+      (hlocalLD H (by rw [abs_of_pos hH]))
+  have hbot := lemma56_perron_horizontal_integral_bound θ hB hx hH
+    (by dsimp [M]; positivity) ha0 ha2 (t := -H) (by rw [abs_neg]; exact le_abs_self H) τ
+      (hlocalLD (-H) (by rw [abs_neg, abs_of_pos hH]))
+  have ht := lemma56_actual_perron_right_truncation θ hB hxp hH τ
+  have htb := lemma56_perron_paper_right_budget hU2 lemma56_gaussian_right_constant_nonneg hxp
+    (by simpa only [hP] using hxmax)
+  rw [hP] at htb
+  dsimp only
+  refine ⟨htop.trans hb, ?_, ht.trans htb⟩
+  have he (σ : ℝ) : (σ : ℂ) + ((-H : ℝ) : ℂ) * I = (σ : ℂ) - (H : ℂ) * I := by push_cast; ring
+  simpa only [he] using hbot.trans hb
+
+lemma lemma56_perron_paper_window_left_budget {L B H x : ℝ} (hL : 2000 ≤ L)
+    (hB : 1 ≤ B) (hH : 0 ≤ H) (hmax : H ≤ Real.exp (2 * L ^ (9 / 2 : ℝ)) / 2)
+    (hx : 0 < x) (hxmax : x ≤ 2 * Real.exp (L ^ 9)) :
+    let U := L ^ (9 / 2 : ℝ)
+    let V := (3 / 4 : ℝ) * U
+    let a := 1 - 1 / V
+    6 * (24 * V ^ 2 + 28800 * V) * x ^ a * Real.exp (a ^ 2 / (4 * B ^ 2)) * Real.log (1 + H) ≤
+      2 * (2017218816 * Real.exp (1 / 4 : ℝ)) * Real.exp (L ^ 9) * Real.exp (-((7 / 6 : ℝ) * U)) := by
+  let U := L ^ (9 / 2 : ℝ)
+  let V := (3 / 4 : ℝ) * U
+  let a := 1 - 1 / V
+  have hs := lemma56_high_scale_strict_margin hL
+  have hVp : 0 < V := lt_of_lt_of_le (by norm_num) hs.2.2.1
+  have hInv : 0 < 1 / V := by positivity
+  have hInv1 : 1 / V ≤ 1 := (div_le_iff₀ hVp).mpr (by
+    simp only [one_mul]
+    change 1 ≤ V
+    exact (by norm_num : (1 : ℝ) ≤ 2000).trans hs.2.2.1)
+  have ha0 : 0 ≤ a := by dsimp [a]; linarith only [hInv1]
+  have ha1 : a ≤ 1 := by dsimp [a]; linarith only [hInv]
+  have hp : 0 < Real.exp (L ^ 9) := Real.exp_pos _
+  have hxpow : x ^ a ≤ 2 * (Real.exp (L ^ 9)) ^ a := by
+    calc
+      _ ≤ (2 * Real.exp (L ^ 9)) ^ a := Real.rpow_le_rpow hx.le hxmax ha0
+      _ = (2 : ℝ) ^ a * (Real.exp (L ^ 9)) ^ a := Real.mul_rpow (by norm_num) hp.le
+      _ ≤ 2 * (Real.exp (L ^ 9)) ^ a := by
+        have h2a : (2 : ℝ) ^ a ≤ 2 := by
+          simpa only [Real.rpow_one] using Real.rpow_le_rpow_of_exponent_le (by norm_num : (1 : ℝ) ≤ 2) ha1
+        exact mul_le_mul_of_nonneg_right h2a (Real.rpow_nonneg hp.le _)
+  have hU1 : 1 ≤ U := by dsimp [U]; linarith only [hs.2.2.1]
+  have hlog := (lemma56_perron_height_log_budget hU1 hH hmax).1
+  have hb := lemma56_paper_left_perron_budget hL hB hH hmax
+  change 6 * (24 * V ^ 2 + 28800 * V) * x ^ a * Real.exp (a ^ 2 / (4 * B ^ 2)) * Real.log (1 + H) ≤ _
+  calc
+    _ ≤ 2 * (6 * (24 * V ^ 2 + 28800 * V) * (Real.exp (L ^ 9)) ^ a *
+        Real.exp (a ^ 2 / (4 * B ^ 2)) * Real.log (1 + H)) := by
+      have h := mul_le_mul_of_nonneg_left hxpow
+        (show 0 ≤ 6 * (24 * V ^ 2 + 28800 * V) * Real.exp (a ^ 2 / (4 * B ^ 2)) * Real.log (1 + H) by positivity)
+      convert h using 1 <;> ring
+    _ ≤ _ := by
+      convert mul_le_mul_of_nonneg_left hb (by norm_num : (0 : ℝ) ≤ 2) using 1 <;> ring
+
+theorem lemma56_uniform_primitive_perron_window_left_bound :
+    ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q] (χ : RealPrimitiveCharacter D)
+      (θ : DirichletCharacter ℂ q), D₀ ≤ D → 1 < D → NormalizedAssumptionA χ →
+      θ.IsPrimitive → 1 < q → (q : ℝ) < lemma56PaperT D →
+      (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      ∀ {B H τ x : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D → 1 ≤ B → 0 ≤ H →
+        H ≤ Real.exp (2 * lemma23PaperL D ^ (9 / 2 : ℝ)) / 2 → |τ| ≤ D →
+        let a := 1 - 1 / ((3 / 4 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ))
+        (1 / (2 * Real.pi)) * ‖∫ t : ℝ in -H..H,
+          lemma56PerronArithmeticIntegrand θ B x τ ((a : ℂ) + (t : ℂ) * I)‖ ≤
+            (2 * (2017218816 * Real.exp (1 / 4 : ℝ))) * lemma23PaperP D *
+              Real.exp (-((7 / 6 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ))) := by
+  obtain ⟨Dleft, hleft⟩ := lemma56_uniform_primitive_perron_left_bound
+  obtain ⟨Drep, hrep⟩ := lemma56_uniform_repulsion_modulus_threshold
+  refine ⟨max Dleft Drep, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne B H τ x hx hxmax hB hH hHmax hτ
+  have hL := (hrep D ((le_max_right _ _).trans hDN)).1
+  have hBpos : 0 < B := by linarith only [hB]
+  have hxp : 0 < x := by linarith only [hx]
+  have hbound := (hleft χ θ ((le_max_left _ _).trans hDN) hD hA hθ hq1 hqT hne
+    (x := x) hBpos hxp hH hHmax hτ).2
+  have hbudget := lemma56_perron_paper_window_left_budget hL hB hH hHmax hxp hxmax
+  have hpi : 1 ≤ 2 * Real.pi := by linarith only [Real.two_le_pi]
+  have hnorm : 0 ≤ ‖∫ t : ℝ in -H..H,
+    lemma56PerronArithmeticIntegrand θ B x τ
+      (((1 - 1 / ((3 / 4 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ))) : ℝ) + (t : ℂ) * I)‖ :=
+    norm_nonneg _
+  have hcoef : 1 / (2 * Real.pi) ≤ 1 :=
+    (div_le_iff₀ (by positivity)).mpr (by simpa using hpi)
+  dsimp only
+  calc
+    _ ≤ ‖∫ t : ℝ in -H..H,
+      lemma56PerronArithmeticIntegrand θ B x τ
+        (((1 - 1 / ((3 / 4 : ℝ) * lemma23PaperL D ^ (9 / 2 : ℝ))) : ℝ) + (t : ℂ) * I)‖ := by
+      exact (mul_le_mul_of_nonneg_right hcoef hnorm).trans_eq (one_mul _)
+    _ ≤ _ := hbound.trans hbudget
+
+
+lemma lemma56_perron_rectangle_norm_budget {R L T Q : ℂ}
+    (hshift : I * R = I * L + T - Q) : ‖R‖ ≤ ‖L‖ + ‖T‖ + ‖Q‖ := by
+  calc
+    _ = ‖I * R‖ := by simp
+    _ = ‖I * L + T - Q‖ := congrArg norm hshift
+    _ ≤ ‖I * L + T‖ + ‖Q‖ := norm_sub_le _ _
+    _ ≤ (‖I * L‖ + ‖T‖) + ‖Q‖ := by
+      gcongr
+      exact norm_add_le _ _
+    _ = _ := by simp
+
+theorem lemma56_uniform_primitive_perron_mangoldt_window_bound :
+    ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q]
+      (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q),
+      D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → θ.IsPrimitive → 1 < q →
+      (q : ℝ) < lemma56PaperT D →
+      (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+      ∀ {x τ : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D → |τ| ≤ D →
+        let U := lemma23PaperL D ^ (9 / 2 : ℝ)
+        ‖lemma56PerronMangoldtSum θ (Real.exp ((3 / 2 : ℝ) * U)) x τ‖ ≤
+          C * lemma23PaperP D * Real.exp (-((7 / 6 : ℝ) * U)) := by
+  let C := 2 * (2017218816 * Real.exp (1 / 4 : ℝ)) +
+    32 * lemma56GaussianRightConstant + 3689472
+  have hCr := lemma56_gaussian_right_constant_nonneg
+  have hC : 0 < C := by dsimp [C]; positivity
+  obtain ⟨Ds, hs⟩ := lemma56_uniform_primitive_perron_rectangle_shift
+  obtain ⟨Dl, hl⟩ := lemma56_uniform_primitive_perron_window_left_bound
+  obtain ⟨De, he⟩ := lemma56_uniform_primitive_perron_paper_exterior_bounds
+  obtain ⟨Dr, hr⟩ := lemma56_uniform_repulsion_modulus_threshold
+  refine ⟨C, hC, max (max Ds Dl) (max De Dr), ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne x τ hx hxmax hτ
+  have hL := (hr D ((le_max_right _ _).trans ((le_max_right _ _).trans hDN))).1
+  have hscale := lemma56_high_scale_strict_margin hL
+  let U := lemma23PaperL D ^ (9 / 2 : ℝ)
+  let B := Real.exp ((3 / 2 : ℝ) * U)
+  let H := Real.exp (2 * U) / 2
+  let a := 1 - 1 / ((3 / 4 : ℝ) * U)
+  let N : ℝ := 1 / (2 * Real.pi)
+  let A : ℝ := lemma23PaperP D * Real.exp (-((7 / 6 : ℝ) * U))
+  let A3 : ℝ := lemma23PaperP D * Real.exp (-3 * U)
+  let f := lemma56PerronArithmeticIntegrand θ B x τ
+  let R : ℂ := ∫ t : ℝ, f ((2 : ℂ) + (t : ℂ) * I)
+  let S : ℂ := ∫ t : ℝ in -H..H, f ((2 : ℂ) + (t : ℂ) * I)
+  let L : ℂ := ∫ t : ℝ in -H..H, f ((a : ℂ) + (t : ℂ) * I)
+  let T : ℂ := ∫ σ : ℝ in a..2, f ((σ : ℂ) + (H : ℂ) * I)
+  let Q : ℂ := ∫ σ : ℝ in a..2, f ((σ : ℂ) - (H : ℂ) * I)
+  have hU0 : 0 ≤ U := by
+    have hv : 2000 ≤ (3 / 4 : ℝ) * U := hscale.2.2.1
+    linarith only [hv]
+  have hB1 : 1 ≤ B := Real.one_le_exp (by positivity)
+  have hB : 0 < B := Real.exp_pos _
+  have hH : 0 < H := by dsimp [H]; positivity
+  have hxp : 0 < x := by linarith only [hx]
+  have hN0 : 0 ≤ N := by dsimp [N]; positivity
+  have hN1 : N ≤ 1 := by
+    dsimp [N]
+    apply (div_le_iff₀ (by positivity)).mpr
+    linarith only [Real.two_le_pi]
+  have h3 : A3 ≤ A := by
+    apply mul_le_mul_of_nonneg_left _ (Real.exp_pos _).le
+    apply Real.exp_le_exp.mpr
+    linarith only [hU0]
+  have hshift : I * S = I * L + T - Q := hs χ θ
+    ((le_max_left _ _).trans ((le_max_left _ _).trans hDN))
+    hD hA hθ hq1 hqT hne hxp hH.le le_rfl hτ
+  have hleft : N * ‖L‖ ≤ (2 * (2017218816 * Real.exp (1 / 4 : ℝ))) * A := by
+    have hh := hl χ θ ((le_max_right _ _).trans ((le_max_left _ _).trans hDN))
+      hD hA hθ hq1 hqT hne (B := B) (H := H) (τ := τ) (x := x)
+      hx hxmax hB1 hH.le le_rfl hτ
+    convert hh using 1 <;> ring
+  have hexterior := he χ θ ((le_max_left _ _).trans ((le_max_right _ _).trans hDN))
+    hD hA hθ hq1 hqT hne hx hxmax hτ
+  have htop : ‖T‖ ≤ 1844736 * A := by
+    have hh : ‖T‖ ≤ 1844736 * A3 := by convert hexterior.1 using 1 <;> ring
+    exact hh.trans (mul_le_mul_of_nonneg_left h3 (by norm_num : (0 : ℝ) ≤ 1844736))
+  have hbot : ‖Q‖ ≤ 1844736 * A := by
+    have hh : ‖Q‖ ≤ 1844736 * A3 := by convert hexterior.2.1 using 1 <;> ring
+    exact hh.trans (mul_le_mul_of_nonneg_left h3 (by norm_num : (0 : ℝ) ≤ 1844736))
+  have htail : ‖R - S‖ ≤ (32 * lemma56GaussianRightConstant) * A := by
+    have hh : ‖R - S‖ ≤ (32 * lemma56GaussianRightConstant) * A3 := by
+      convert hexterior.2.2 using 1 <;> ring
+    exact hh.trans (mul_le_mul_of_nonneg_left h3
+      (mul_nonneg (by norm_num : (0 : ℝ) ≤ 32) hCr))
+  have hNtop : N * ‖T‖ ≤ 1844736 * A :=
+    ((mul_le_mul_of_nonneg_right hN1 (norm_nonneg _)).trans_eq (one_mul _)).trans htop
+  have hNbot : N * ‖Q‖ ≤ 1844736 * A :=
+    ((mul_le_mul_of_nonneg_right hN1 (norm_nonneg _)).trans_eq (one_mul _)).trans hbot
+  have hNtail : N * ‖R - S‖ ≤ (32 * lemma56GaussianRightConstant) * A :=
+    ((mul_le_mul_of_nonneg_right hN1 (norm_nonneg _)).trans_eq (one_mul _)).trans htail
+  have hfinite := mul_le_mul_of_nonneg_left (lemma56_perron_rectangle_norm_budget hshift) hN0
+  have htri : ‖R‖ ≤ ‖R - S‖ + ‖S‖ := by
+    simpa only [sub_add_cancel] using norm_add_le (R - S) S
+  have hNtri := mul_le_mul_of_nonneg_left htri hN0
+  have hi : lemma56PerronMangoldtSum θ B x τ = (N : ℂ) * R := by
+    have hh := lemma56_actual_perron_mellin_identity θ hB hxp τ
+    simp_rw [← lemma56_actual_perron_right_eq] at hh
+    exact hh.symm
+  have hn : ‖lemma56PerronMangoldtSum θ B x τ‖ = N * ‖R‖ := by
+    rw [hi, norm_mul, Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg hN0]
+  change ‖lemma56PerronMangoldtSum θ B x τ‖ ≤ C * lemma23PaperP D * Real.exp (-((7 / 6 : ℝ) * U))
+  rw [hn]
+  change N * ‖R‖ ≤ _
+  dsimp [C, A] at hleft hNtop hNbot hNtail ⊢
+  nlinarith only [hNtri, hfinite, hleft, hNtop, hNbot, hNtail]
+
+end ZhangLS.Spec
+
+open ZhangLS.Spec Complex
+
+example : ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → θ.IsPrimitive → 1 < q →
+    (q : ℝ) < Real.exp ((Real.log (D : ℝ)) ^ (11 / 10 : ℝ)) →
+    (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+    ∀ {x τ : ℝ}, 1 ≤ x → x ≤ 2 * Real.exp ((Real.log (D : ℝ)) ^ 9) → |τ| ≤ D →
+      let U := (Real.log (D : ℝ)) ^ (9 / 2 : ℝ)
+      let B := Real.exp ((3 / 2 : ℝ) * U)
+      ‖∑' n : ℕ, (n : ℂ) ^ ((τ : ℂ) * I) *
+        (θ (n : ZMod q) * (ArithmeticFunction.vonMangoldt n : ℂ)) *
+          ((1 / 2 + (Real.sqrt Real.pi)⁻¹ *
+            ∫ v : ℝ in (0 : ℝ)..B * Real.log (x / (n : ℝ)), Real.exp (-(v ^ 2)) : ℝ) : ℂ)‖ ≤
+        C * Real.exp ((Real.log (D : ℝ)) ^ 9) * Real.exp (-((7 / 6 : ℝ) * U)) := by
+  simpa only [lemma56PaperT, lemma23PaperL, lemma23PaperP, lemma56PerronMangoldtSum,
+    lemma56PerronMangoldtTerm, lemma56GaussianPhase, lemma56Mangoldt, lemma56PerronWeight] using
+      lemma56_uniform_primitive_perron_mangoldt_window_bound
+
+-- Principal modulus one remains included in the actual right-line truncation.
+example {B x H : ℝ} (hB : 0 < B) (hx : 0 < x) (hH : 0 < H) (τ : ℝ) :
+    ‖lemma56PerronMangoldtSum (1 : DirichletCharacter ℂ 1) B x τ -
+      ((1 / (2 * Real.pi) : ℝ) : ℂ) *
+        (∫ t : ℝ in -H..H, lemma56PerronArithmeticIntegrand (1 : DirichletCharacter ℂ 1) B x τ ((2 : ℂ) + (t : ℂ) * I))‖ ≤
+      (1 / (2 * Real.pi)) * (4 * lemma56GaussianRightConstant * x ^ 2 * (B ^ 2 / H) *
+        Real.exp (1 / B ^ 2 - H ^ 2 / (4 * B ^ 2))) :=
+  lemma56_actual_perron_mangoldt_truncation 1 hB hx hH τ
+
+-- Closed oscillatory endpoints of the actual arithmetic estimate.
+example : ∃ C : ℝ, 0 < C ∧ ∃ D₀ : ℕ, ∀ {D q : ℕ} [NeZero q]
+    (χ : RealPrimitiveCharacter D) (θ : DirichletCharacter ℂ q),
+    D₀ ≤ D → 1 < D → NormalizedAssumptionA χ → θ.IsPrimitive → 1 < q →
+    (q : ℝ) < lemma56PaperT D →
+    (fun n : ℕ => θ (n : ZMod q)) ≠ (fun n : ℕ => χ.chi (n : ZMod D)) →
+    ∀ {x : ℝ}, 1 ≤ x → x ≤ 2 * lemma23PaperP D →
+      let U := lemma23PaperL D ^ (9 / 2 : ℝ)
+      let B := Real.exp ((3 / 2 : ℝ) * U)
+      let E := C * lemma23PaperP D * Real.exp (-((7 / 6 : ℝ) * U))
+      ‖lemma56PerronMangoldtSum θ B x (D : ℝ)‖ ≤ E ∧
+        ‖lemma56PerronMangoldtSum θ B x (-(D : ℝ))‖ ≤ E := by
+  obtain ⟨C, hC, D₀, h⟩ := lemma56_uniform_primitive_perron_mangoldt_window_bound
+  refine ⟨C, hC, D₀, ?_⟩
+  intro D q _ χ θ hDN hD hA hθ hq1 hqT hne x hx hxmax
+  constructor
+  · exact h χ θ hDN hD hA hθ hq1 hqT hne hx hxmax (by simp)
+  · exact h χ θ hDN hD hA hθ hq1 hqT hne hx hxmax (by simp)
+
+example {U : ℝ} (hU : 2000 ≤ U) : U ^ 2 + 4 * U + 2 ≤ Real.exp U / 16 :=
+  lemma56_perron_supergaussian_budget hU
+
+#print axioms ZhangLS.Spec.lemma56_actual_perron_right_eq
+#print axioms ZhangLS.Spec.lemma56_actual_perron_right_integrable
+#print axioms ZhangLS.Spec.lemma56_actual_perron_right_envelope
+#print axioms ZhangLS.Spec.lemma56_actual_perron_right_truncation
+#print axioms ZhangLS.Spec.lemma56_actual_perron_mangoldt_truncation
+#print axioms ZhangLS.Spec.lemma56_perron_horizontal_point_bound
+#print axioms ZhangLS.Spec.lemma56_perron_horizontal_integral_bound
+#print axioms ZhangLS.Spec.lemma56_perron_supergaussian_budget
+#print axioms ZhangLS.Spec.lemma56_perron_paper_scales
+#print axioms ZhangLS.Spec.lemma56_perron_paper_right_budget
+#print axioms ZhangLS.Spec.lemma56_perron_paper_logDeriv_width_budget
+#print axioms ZhangLS.Spec.lemma56_perron_paper_horizontal_budget
+#print axioms ZhangLS.Spec.lemma56_uniform_primitive_perron_paper_exterior_bounds
+#print axioms ZhangLS.Spec.lemma56_perron_paper_window_left_budget
+#print axioms ZhangLS.Spec.lemma56_uniform_primitive_perron_window_left_bound
+#print axioms ZhangLS.Spec.lemma56_perron_rectangle_norm_budget
+#print axioms ZhangLS.Spec.lemma56_uniform_primitive_perron_mangoldt_window_bound
