@@ -903,6 +903,14 @@ import ZhangLS.Spec.Lemma61ShortMellin
 import ZhangLS.Spec.Lemma61ShortTruncation
 import ZhangLS.Spec.Lemma61SingleResidue
 import ZhangLS.Spec.Lemma61WideZBounds
+import ZhangLS.Spec.Lemma81PrimeMassAbsorption
+import ZhangLS.Spec.Lemma81PrimeMassBudget
+import ZhangLS.Spec.Lemma81PrimeMassLower
+import ZhangLS.Spec.Lemma81PrincipalPerron
+import ZhangLS.Spec.Lemma81ZetaLocalRealPart
+import ZhangLS.Spec.Lemma81ZetaPerronBounds
+import ZhangLS.Spec.Lemma81ZetaThinStrip
+import ZhangLS.Spec.Lemma81ZetaThreeFourOne
 import ZhangLS.Spec.PaperTheorems
 import ZhangLS.Spec.Proposition21
 import ZhangLS.Spec.Proposition22

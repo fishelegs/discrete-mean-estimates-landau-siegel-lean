@@ -118,11 +118,11 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 
 ## Additional 8.1 normalization obligation
 
-The original8.1 does not assume(A). Its proof normalizes a P²L^-78 aggregate error using the unconditional prime-mass asymptotic(2.9). The available actual prime-mass lower bound in the trusted layer assumes(A), so it cannot silently close this unconditional target. An unconditional prime-mass bound or a stronger estimate expressed directly in the actual mass remains required. This does not obstruct the separately verified local kernel and reflection components.
+The original8.1 does not assume(A). Its proof normalizes a P²L^-78 aggregate error using the unconditional prime-mass asymptotic(2.9). The available actual prime-mass lower bound in the trusted layer assumes(A), so it cannot silently close this unconditional target. This original gap is now closed by the [verified unconditional prime-mass prerequisite](CLOUD_LEMMA81_MASS_STATUS.md), which proves the actual lower bound and error absorption without(A). The remaining original8.1 contour and aggregate-error assembly is still active.
 
 ## Scheduling is separate from proof status
 
-As of2026-10-02, completed numbered results remain28/51. Active proof branches are8.1,8.3,11.2,15.2. The zero-incoming-edge unproved results are8.3,11.2,15.2,15.3,16.1: the first three are active;15.3 and16.1 are queued in that order. Each still needs actual definitions and mathematics beyond the numbered-result graph. The JSON records `proof_status`, `scheduling_status` and `actual_prerequisites` separately. In particular11.2 needs the primitive conductor-Dp product and integrated Gaussian error, while15.2/15.3/16.1 need their own actual coefficients, continuation and exceptional-prime factors. No proof is claimed merely because a node is queued or has zero numbered in-degree.
+As of2026-10-02, completed numbered results remain28/51. Active proof branches are8.1,8.3,11.2,15.2,15.3. The zero-incoming-edge unproved results are8.3,11.2,15.2,15.3,16.1: the first four are active;16.1 is queued. Each still needs actual definitions and mathematics beyond the numbered-result graph. The JSON records `proof_status`, `scheduling_status` and `actual_prerequisites` separately. In particular11.2 needs the primitive conductor-Dp product and integrated Gaussian error, while15.2/15.3/16.1 need their own actual coefficients, continuation and exceptional-prime factors. No proof is claimed merely because a node is queued or has zero numbered in-degree.
 
 ## Undefined alpha-one source notation
 

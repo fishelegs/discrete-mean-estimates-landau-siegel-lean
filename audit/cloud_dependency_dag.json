@@ -1943,7 +1943,10 @@
           "Unconditional prime-mass normalization (2.9), or a direct actual-prime-mass aggregate bound; the existing (A)-conditional lower bound cannot establish the unconditional original statement.",
           "Define Theta1 integral separately from P7.1 evaluation; actual finite zero sets"
         ]
-      }
+      },
+      "verified_components": [
+        "Unconditional actual prime-mass lower bound and uniform error absorption, without(A); original8.1 remains unproved."
+      ]
     },
     {
       "id": "L8.2",
@@ -2637,7 +2640,7 @@
         "proof_section": "Appendix A"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "unstarted",
+      "working_status": "in_progress",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 178,
@@ -2658,10 +2661,10 @@
         "analytic_extension_not_totalized_quotient",
         "undefined_alpha_one"
       ],
-      "scheduling_status": "queued",
-      "dispatch_reason": "Next independent theorem branch after a current slot is released; do not infer proof completion from readiness.",
-      "proof_status": "unstarted",
-      "queue_priority": 1,
+      "scheduling_status": "active",
+      "dispatch_reason": "Independent Lemma15.3 source audit and actual local Euler correction proof started after shared convergence support completed.",
+      "proof_status": "in_progress",
+      "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [],
         "mathematical_and_library_inputs": [
@@ -2670,7 +2673,8 @@
           "Evaluation at1 without dividing through unproved nonzero denominators"
         ]
       },
-      "source_alignment_note": "Official v1 TeX has28 alpha-one uses and no located definition; no arbitrary error scale is substituted."
+      "source_alignment_note": "Official v1 TeX has28 alpha-one uses and no located definition; no arbitrary error scale is substituted.",
+      "active_work": "Actual original varpi coefficient and Euler first-order cancellation are being audited; shifts and ramified factors must be preserved. Original and repaired conclusions will be distinguished."
     },
     {
       "id": "L16.1",
@@ -3745,11 +3749,11 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T14:43:00Z",
+    "verified_at_utc": "2026-10-02T14:53:00Z",
     "completed": 28,
-    "in_progress": 5,
-    "unstarted": 18,
-    "note": "28 complete;4 active original-result branches and partial5.6;15.3 next queued. Frozen full kernel recheck passed. The alpha-one source notation remains unresolved."
+    "in_progress": 6,
+    "unstarted": 17,
+    "note": "28 complete;5 active original-result branches plus partial5.6;16.1 queued. User authorized evidence-based source repairs, with original/repaired distinction."
   },
   "scheduling_semantics": {
     "proof_status": "Mathematical completion state: complete, partial, in_progress or unstarted; separate from dispatch.",
@@ -3771,5 +3775,16 @@
     "unchanged_source_hashes": true,
     "report": "audit/CLOUD_FULL_RECHECK_STATUS.md",
     "semantic_scope": "Kernel recheck, not a new independent semantic review of every baseline completion."
-  }
+  },
+  "component_milestones": [
+    {
+      "id": "L8.1_unconditional_prime_mass",
+      "status": "verified",
+      "report": "audit/CLOUD_LEMMA81_MASS_STATUS.md",
+      "original_numbered_result_completed": false,
+      "assumption_A": false,
+      "new_modules": 8,
+      "theorem_interfaces": 36
+    }
+  ]
 }

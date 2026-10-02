@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T15:03:23Z",
+  "lean": "4.30.0",
+  "new_modules": 8,
+  "new_theorem_interfaces": 36,
+  "semantic_regressions": 4,
+  "dependency_build_jobs": 3921,
+  "full_project_jobs": 4919,
+  "source_files": 1028,
+  "spec_imports": 667,
+  "full_project_imports": 932,
+  "strict_audit": {
+    "exit_code": 1,
+    "candidates": 361,
+    "new_candidates": 1,
+    "review": "Lemma81ZetaPerronBounds.lean:109 exact hh is the local consequence of Complex.re_le_norm (1-z), after rewriting its actual real part and norm_sub_rev. It is not an assumed contour bound."
+  },
+  "logs": {
+    "mass-central-recheck.log": {
+      "bytes": 1763,
+      "sha256": "0d956d68407ffe9476533dcac70163f648398450877f16fb5ee2d11c9f55153c"
+    },
+    "mass-integration-build.log": {
+      "bytes": 33046,
+      "sha256": "eb02a20eeeb8733f726dbcc12b54acd1dc27a2a3e96d9647142e01f9741d38bf"
+    },
+    "mass-integration-axioms.log": {
+      "bytes": 4125,
+      "sha256": "5dde585d19c0e72b85fa3729447014d9bc9282aed1e7ef3b9cb988fb03358ee8"
+    },
+    "mass-full-project.log": {
+      "bytes": 165383,
+      "sha256": "6d3453879b2e78f8ce8fbaa76e763069aefefbb369fb69a706676477eb5aa926"
+    },
+    "mass-strict-audit.log": {
+      "bytes": 37327,
+      "sha256": "5280442e22c136ca1932ff3b8af1ce2732ee35055c8a6ff80203ab4a55fd4359"
+    }
+  }
+}
