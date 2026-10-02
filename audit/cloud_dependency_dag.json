@@ -3893,7 +3893,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T20:19:49.615332+00:00",
+    "verified_at_utc": "2026-10-02T20:33:46.716286+00:00",
     "completed": 36,
     "in_progress": 3,
     "unstarted": 9,
@@ -4051,6 +4051,18 @@
       "source_alpha1_defined": false,
       "original_printed_high_proved": false,
       "downstream_numerical_budget_proved": false
+    },
+    {
+      "id": "actual_section8_kernel_provenance",
+      "status": "verified",
+      "report": "audit/CLOUD_SECTION8_UPSTREAM_STATUS.md",
+      "original_numbered_result_completed": false,
+      "assumption_A": false,
+      "new_modules": 3,
+      "public_declaration_checks": 37,
+      "semantic_regressions": 4,
+      "pointwise_limits_proved": true,
+      "uniform_integral_limit_proved": false
     }
   ],
   "repair_discipline": {
@@ -4097,7 +4109,8 @@
       "kernel_report": "audit/CLOUD_SECTION8_KERNEL_STATUS.md",
       "kernel_theorem": "Section8.c1_re_gt_seven",
       "kernel_lower_bound": "4790274002065539332881844226677501/679562729429049362531250000000000",
-      "external_numeric_hypotheses": []
+      "external_numeric_hypotheses": [],
+      "upstream_kernel_provenance_report": "audit/CLOUD_SECTION8_UPSTREAM_STATUS.md"
     },
     {
       "id": "section18_fixed_normalization_model_obstruction",

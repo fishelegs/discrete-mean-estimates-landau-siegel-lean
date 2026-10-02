@@ -1,0 +1,45 @@
+{
+  "status": "PASS_GENUINE_UPSTREAM_KERNEL_AND_LIMIT_IDENTITIES",
+  "verified_at_utc": "2026-10-02T20:33:46.716286+00:00",
+  "base_commit": "788ffe7e704a5a3e6db5f683f4f0d2218afee0d8",
+  "completion_kind": "actual_kernel_provenance_and_pointwise_limits",
+  "numbered_completion_count_change": 0,
+  "production_modules": 3,
+  "audit_modules": 1,
+  "new_public_declarations": 36,
+  "new_lemmas": 30,
+  "public_declaration_axiom_checks": 37,
+  "existing_contour_check": 1,
+  "semantic_examples": 4,
+  "dependency_build_jobs": 4061,
+  "full_project_jobs": 5215,
+  "source_files": 1341,
+  "spec_imports": 961,
+  "full_project_imports": 1226,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 392,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "assumption_A": false,
+  "pointwise_limits_proved": true,
+  "uniform_integral_limit_proved": false,
+  "actual_mean_to_model_bridge_proved": false,
+  "logs": {
+    "section8-upstream-integration-build.log": {
+      "bytes": 31600,
+      "sha256": "8f10881c7486b52c1082ed566d7e18a3a5b20ca739ef275b4e3763845dd2cb58"
+    },
+    "section8-upstream-integration-axioms.log": {
+      "bytes": 3397,
+      "sha256": "f268e902068a9da5f980d38e13dd44e7d09e28fe10f9e04471556d71d01e9cf4"
+    },
+    "section8-upstream-full-project.log": {
+      "bytes": 223165,
+      "sha256": "f9dfb0834889a74a205388841a3c934145408b4ff6d954b8478aec564fc39c1b"
+    },
+    "section8-upstream-strict-audit.log": {
+      "bytes": 40036,
+      "sha256": "df16e12d2f6034b130aef951bb483a759104aba49327ca0798f50ab8245052a9"
+    }
+  }
+}

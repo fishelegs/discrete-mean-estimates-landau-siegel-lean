@@ -961,4 +961,7 @@ import ZhangLS.Spec.Section8NumericalLower
 import ZhangLS.Spec.Section8NumericalObjects
 import ZhangLS.Spec.Section8NumericalPhases
 import ZhangLS.Spec.Section8NumericalValue
+import ZhangLS.Spec.Section8UpstreamGeometry
+import ZhangLS.Spec.Section8UpstreamKernels
+import ZhangLS.Spec.Section8UpstreamLimits
 import ZhangLS.Spec.ShiftedAdditiveLargeSieve

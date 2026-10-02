@@ -1,5 +1,7 @@
 # 张益唐论文 Lean 形式化进度
 
+上游源公式核验（2026-10-02 20:33 UTC）：[Section8真实F/G与极限表格](ZhangLS/Spec/Section8UpstreamGeometry.lean)已中央验证，保留有限c′修正、T修正、原β/共轭，逐点极限确为原12个f/g函数；没有发现可据原式改sign/shift/分母的修正。3模块36新声明+1既有轮廓接口仅标准公理，4回归、5215全库PASS。统一积分极限和完整字符均值桥仍未证，数值不相容与36/51状态不变。详见[证据](audit/CLOUD_SECTION8_UPSTREAM_STATUS.md)。
+
 实际三段定量结果（2026-10-02 20:19 UTC）：[Lemma12.1显式替代版本](ZhangLS/Spec/Lemma121Concrete.lean)已中央验证：原低区间O(T^-1/2)、过渡区间O(L^-7)、高区间保留精确指数相位且误差O(L^-15)，同一绝对常数/原c′/原支撑。13模块67标准公理接口、32回归、5212全库PASS。原α₁未定义和10^-5线性化仍未解决，不算原12.1完成；附加10^-3放宽版不得当作最终数值预算已过。36/51不变。详见[范围与证据](audit/CLOUD_LEMMA121_CONCRETE_STATUS.md)。
 
 真实残数兼容桥（2026-10-02 20:07 UTC）：[Section15实际r₁*r₁ⱼ乘积](ZhangLS/Spec/Section15LeadingResidueBudget.lean)已中央核验：原(15.16)实际残数×源r₁*与(1,2,1)之差，再乘真实a后为O(L^-2)。真实极点、局部轮廓残数、全部分母非零和β/P₄相位均已证明；10模块78标准公理接口、12回归、5199全库PASS。exceptional-zero替换/全局移线/unsmoothing/N(Q)/外层误差仍未闭合，数值主链阻塞仍在；编号36/51不变。详见[证据与边界](audit/CLOUD_SECTION15_PRODUCTS_STATUS.md)。
