@@ -1,0 +1,46 @@
+{
+  "status": "PASS_CONCRETE_EXACT_PHASE_REPLACEMENT",
+  "verified_at_utc": "2026-10-02T20:19:49.615332+00:00",
+  "base_commit": "9c108c40147ae8a74d784b332ccf3ea6dc0d8e64",
+  "completion_kind": "concrete_replacement_not_original_printed_completion",
+  "numbered_completion_count_change": 0,
+  "production_modules": 13,
+  "audit_modules": 1,
+  "public_declaration_axiom_checks": 67,
+  "semantic_examples": 32,
+  "dependency_build_jobs": 3865,
+  "full_project_jobs": 5212,
+  "source_files": 1337,
+  "spec_imports": 958,
+  "full_project_imports": 1223,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 392,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "original_low_branch_proved": true,
+  "transition_explicit_rate": "L^-7",
+  "source_alpha1_defined": false,
+  "preferred_high": "actual exact exponential phase with O(L^-15)",
+  "original_printed_high_proved": false,
+  "original_numbered_target_proved": false,
+  "actual_character_counterexample": false,
+  "downstream_numerical_budget_proved": false,
+  "logs": {
+    "lemma121-concrete-integration-build.log": {
+      "bytes": 18088,
+      "sha256": "1fd652e8764bdad74ef800c6c2c64a4c93488dd83ab5d243ba353d2c7c3f2b1c"
+    },
+    "lemma121-concrete-integration-axioms.log": {
+      "bytes": 6802,
+      "sha256": "42d6c258b73fb4fe1d5592c65d0646098fd07df62a11d8a9c6a606c7dc2f2219"
+    },
+    "lemma121-concrete-full-project.log": {
+      "bytes": 220843,
+      "sha256": "14309ba56432a7dfe8342e5d20dce8173db4aa3f4b2eca8a12db9ebf9d50c699"
+    },
+    "lemma121-concrete-strict-audit.log": {
+      "bytes": 40036,
+      "sha256": "df16e12d2f6034b130aef951bb483a759104aba49327ca0798f50ab8245052a9"
+    }
+  }
+}

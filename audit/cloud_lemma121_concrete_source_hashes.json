@@ -1,0 +1,58 @@
+[
+  {
+    "path": "ZhangLS/Spec/Lemma121PhaseAudit.lean",
+    "sha256": "4930435be2e65456700def8d918d28a528675eedf01a4d495adc8209a6be224a"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121Definitions.lean",
+    "sha256": "02193950ca361b5b88c76c59335b4220a5138f0f314c3b1140c4854d52b5daa8"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121FiniteBridge.lean",
+    "sha256": "72802d878357f1656ae2dc31e3cfa5c0efc01757d4529bf37dbc1f0730adc8df"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121ExactPhaseEstimate.lean",
+    "sha256": "bf49ded80293a6d7e5821dbeaca1d37ba2713395a464a24db8ce655975ca86f5"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121Ranges.lean",
+    "sha256": "46d2f0b17d1e7e5e2041e957c5e96e6948852c2e5bd8b09b98d57ef5c84ad3f8"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121ExactHigh.lean",
+    "sha256": "498299ed76cda2dd05f62c3f05888d0ef6e03982e3c84db396314a23d4bebfd9"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121PhaseBudget.lean",
+    "sha256": "e79daaeeeb49c9f050e7554f411d6580af18eaa54afa422144e2983724889583"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121RepairedHigh.lean",
+    "sha256": "30af0d1f899ada2c06b9867b4ddaa912d214559a6fdd54f39e8f74f8bbf4edd6"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121LowBridge.lean",
+    "sha256": "ae070def06a7d7618ed33be3d94800ead7d21c75be19561f324bb362a7c8b737"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121Low.lean",
+    "sha256": "ff38f010b812cf8ca24ecef38879e0f2c261814c7214173c223c8de13f373c3d"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121UniformPolynomial.lean",
+    "sha256": "ffcf2bcf0f31471e3555a79806ebe64f8b0b89bf0d86891e3201f6f08ee93374"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121Transition.lean",
+    "sha256": "0313e822aa3beb63e283e3c678c6882ba896eff12ab33f206be98a15e7dd9f76"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma121Concrete.lean",
+    "sha256": "3d591ff779a3c2111891575d1483c1ce2e823ec2511de9fc5060b3303d20f4ef"
+  },
+  {
+    "path": "audit/CloudLemma121ConcreteRegression.lean",
+    "sha256": "1ef0bf1a7d9d0adcdbec433902d260aca97bfe8f20e2edfca6a43df7e64e9afc"
+  }
+]

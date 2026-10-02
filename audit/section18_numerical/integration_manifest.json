@@ -137,7 +137,9 @@
       "Disproof of the main theorem.",
       "A missing Section 8 shift.",
       "Any argument based on vacuity of assumption (A)."
-    ]
+    ],
+    "full_ratio_obstruction_certified": false,
+    "scope_clarification": "Q-only minimum does not exclude improving the mixed moment; actual target is |ell|^2/(Q R)>1 under vanishing error and admissible support."
   },
   "certificate": {
     "arithmetic": "directed fixed-point rational intervals of denominator 10^55",
@@ -166,7 +168,8 @@
     "Explicit symbolic model identity language replaces ambiguous formal-verification language.",
     "Pending Lemma 15.1 coefficient-basis reconstruction and tail interpretation are disclosed.",
     "Section 8 shifts are confirmed present; no missing-shift allegation.",
-    "Scope excludes actual-character-mean certification, blanket impossibility, and theorem disproof."
+    "Scope excludes actual-character-mean certification, blanket impossibility, and theorem disproof.",
+    "Added full Cauchy/mixed-moment ratio scope clarification; numerical certificate bytes unchanged."
   ],
   "replay": [
     {
@@ -193,8 +196,8 @@
   "files": [
     {
       "repo_path": "CLOUD_SECTION18_QUADRATIC_AUDIT.md",
-      "sha256": "3bf2ac803d0db102f7b8b99e1c14306894c58d7680e6802061856d3430a30185",
-      "bytes": 3455
+      "sha256": "fc0ac2fbcd531e4292b74ff8420cec5a92f7cc3e76db20a2db6250e124434dec",
+      "bytes": 4960
     },
     {
       "repo_path": "audit/section18_numerical/CERTIFICATE_METHOD.md",

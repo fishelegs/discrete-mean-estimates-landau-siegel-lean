@@ -2433,7 +2433,9 @@
         "ledger_line": 172,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
-        "trusted_capstone_found": false
+        "trusted_capstone_found": false,
+        "component_report": "audit/CLOUD_LEMMA121_CONCRETE_STATUS.md",
+        "original_target_proved": false
       },
       "known_numbered_dependencies": [
         "L5.8"
@@ -2459,8 +2461,8 @@
           "Actual kappa13 and exact P-double-prime endpoints"
         ]
       },
-      "scheduling_phase": "exact_repaired_package_central_review",
-      "active_work": "Exact-phase concrete replacement completed in isolated work and queued for central review. Original alpha1 notation and printed phase-linearization budget remain unresolved."
+      "scheduling_phase": "downstream_exact_phase_propagation",
+      "active_work": "All concrete actual branches centrally verified. Original alpha1 and printed10^-5 linearization remain unresolved; downstream actual outer-error propagation is queued."
     },
     {
       "id": "L12.2",
@@ -2665,7 +2667,7 @@
         "paper_L3.2_for_B1_may_need_L3.1",
         "paper_L8.1_contour_reference_is_analogy_or_typo"
       ],
-      "scheduling_status": "active",
+      "scheduling_status": "queued",
       "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
       "proof_status": "in_progress",
       "queue_priority": null,
@@ -2679,8 +2681,8 @@
           "Actual b/rho*_j/N(Q), e_j; uniform n1"
         ]
       },
-      "scheduling_phase": "actual_coefficient_basis_and_tail_reconstruction",
-      "active_work": "Reconstruct actual b/rho/N(Q) definitions and AppendixB residues; distinguish chi-psi versus psi coefficient bases and exact cutoff endpoints before any repaired asymptotic."
+      "scheduling_phase": "arithmetic_and_source_basis_central_review",
+      "active_work": "Genuine arithmetic/local-residue package delivered for central review; complete original asymptotic still unproved."
     },
     {
       "id": "L15.2",
@@ -3891,7 +3893,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T20:08:47.420830+00:00",
+    "verified_at_utc": "2026-10-02T20:19:49.615332+00:00",
     "completed": 36,
     "in_progress": 3,
     "unstarted": 9,
@@ -4036,6 +4038,19 @@
       "semantic_regressions": 12,
       "actual_a_weighted_error": "O(L^-2)",
       "global_mellin_or_final_chain_proved": false
+    },
+    {
+      "id": "L12.1_actual_three_branch_exact_phase_replacement",
+      "status": "verified",
+      "report": "audit/CLOUD_LEMMA121_CONCRETE_STATUS.md",
+      "original_numbered_result_completed": false,
+      "assumption_A": true,
+      "new_modules": 13,
+      "public_declaration_checks": 67,
+      "semantic_regressions": 32,
+      "source_alpha1_defined": false,
+      "original_printed_high_proved": false,
+      "downstream_numerical_budget_proved": false
     }
   ],
   "repair_discipline": {
@@ -4101,7 +4116,9 @@
       "actual_character_mean_identification_proved": false,
       "lean_certificate": false,
       "main_theorem_disproved": false,
-      "other_analytic_or_parameter_repairs_excluded": false
+      "other_analytic_or_parameter_repairs_excluded": false,
+      "full_mixed_moment_ratio_obstruction_certified": false,
+      "scope_clarification": "Does not exclude coefficient-only repair through improved mixed moment; all changed bounds/support require revalidation."
     }
   ]
 }

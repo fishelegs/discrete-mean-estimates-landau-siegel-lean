@@ -50,6 +50,34 @@ of interval LDL pivots and the final Schur complement establish the global
 minimum over all three free complex coefficients. Stored independent 70-digit
 quadrature values and every matrix entry lie inside the certified intervals.
 
+## Scope clarification: the full contradiction ratio
+
+The certified minimum above excludes only reaching the chosen Q<0.001 budget
+in the stated fixed-normalization models. It does **not** exclude every
+coefficient-only repair of the complete argument: changing coefficients also
+changes the mixed moment in Proposition2.4. That moment must be recomputed,
+rather than held at its original lower bound by assumption.
+
+Normalize the nonnegative weighted sums by N=mathfrak(a)P. Let ell=Xi1*/N,
+Q be the normalized squared norm of H1+Z conjugate(H2), R the squared norm of
+J1, S that of H2, and E that of J1-Z conjugate(J2). The exact identity in(2.17)
+and Cauchy's inequality in(2.18)-(2.20) give
+
+    |ell| <= sqrt(Q R) + sqrt(S E).
+
+Thus a repaired contradiction needs estimates violating this full inequality.
+When S stays bounded and E tends to zero, the scale-invariant limiting target
+is |ell|^2/(Q R)>1, with a strict margin. With the original lower bound5 and
+upper bound3000, a fixed limiting Q<25/3000=1/120 would suffice;0.001 is a
+stronger chosen budget. The certificate's0.024 lower bound alone is not a
+certificate about the ratio after ell changes.
+
+No repaired ratio or admissible modified parameter family is established in
+this report. Support, duality, uniform error estimates and the actual-character
+identification must all be preserved and rechecked for any proposed family.
+The finite-model certificate and all its exact numerical conclusions remain
+unchanged by this clarification.
+
 ## Replay and provenance
 
 From the repository root:
