@@ -1947,7 +1947,7 @@
         ]
       },
       "scheduling_phase": "proof",
-      "active_work": "Original discrete-mean target and actual arithmetic/character-averaging proof are under construction.",
+      "active_work": "Worker-verified genuine unlocalized positive-majorant bound queued for central union verification; global contour, conductor attachment and finite7.21 rearrangement continue independently.",
       "shared_support_active": "All-moduli weighted primitive large sieve and genuine eighth-order actual delta Mellin decay now centrally verified. Actual prime/kernel glue, outer averages and l-tails remain separate."
     },
     {
@@ -2625,7 +2625,7 @@
         ]
       },
       "scheduling_phase": "proof",
-      "active_work": "Original Section14 discrete-mean definitions and product-character primitive-inducer cancellation are being proved.",
+      "active_work": "Worker-verified finite-l small-conductor aggregate and actual infinite-tail components queued for central union verification; exact conductor-family and gcd assembly continue.",
       "shared_support_active": "All-moduli weighted primitive large sieve and genuine eighth-order actual delta Mellin decay now centrally verified. Actual prime/kernel glue, outer averages and l-tails remain separate."
     },
     {
@@ -2671,7 +2671,7 @@
         "b_chi_psi_versus_psi_basis",
         "B3_literal_P12_versus_H14_support_endpoint"
       ],
-      "scheduling_status": "queued",
+      "scheduling_status": "active",
       "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
       "proof_status": "partial",
       "queue_priority": null,
@@ -2685,8 +2685,8 @@
           "Actual b/rho*_j/N(Q), e_j; uniform n1"
         ]
       },
-      "scheduling_phase": "basis_propagation_rough_collisions_and_global_asymptotic",
-      "active_work": "Actual nu convolution, rough-domain basis conversion and genuine zeta local residue centrally verified. Full asymptotic, coefficient-basis propagation and rough collision/global contour errors remain open."
+      "scheduling_phase": "canonical_actual_B_product_and_coefficient_propagation",
+      "active_work": "Deriving actual H14/H12/H13 product expansion and psi-basis convolution; initial worker compile only, not yet central acceptance. Published arithmetic/local-residue components remain partial."
     },
     {
       "id": "L15.2",
@@ -3897,7 +3897,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T20:49:08.202763+00:00",
+    "verified_at_utc": "2026-10-02T21:04:05.913988+00:00",
     "completed": 36,
     "in_progress": 2,
     "unstarted": 9,
@@ -4146,6 +4146,21 @@
       "other_analytic_or_parameter_repairs_excluded": false,
       "full_mixed_moment_ratio_obstruction_certified": false,
       "scope_clarification": "Does not exclude coefficient-only repair through improved mixed moment; all changed bounds/support require revalidation."
+    },
+    {
+      "id": "full_homogeneous_fixed_family_ratio_obstruction",
+      "status": "certified_within_fixed_finite_models",
+      "report": "audit/CLOUD_MOLLIFIER_RATIO_STATUS.md",
+      "method": "rational directed intervals, positive augmented5x5 Hermitian LDL; central replay and independent source review",
+      "model_variants": 12,
+      "vectors": "all nonzero complex4-vectors, including z1=0",
+      "ratio_upper_bound": "1/2",
+      "sharp_J_norm": "32/(pi*h)+88*pi*h/3, h=1/250",
+      "actual_character_mean_identification_proved": false,
+      "lean_certificate": false,
+      "main_theorem_disproved": false,
+      "changed_beta_constructions_excluded": false,
+      "changed_actual_B_matrix_excluded": false
     }
   ]
 }

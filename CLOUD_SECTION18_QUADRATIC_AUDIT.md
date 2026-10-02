@@ -52,6 +52,8 @@ quadrature values and every matrix entry lie inside the certified intervals.
 
 ## Scope clarification: the full contradiction ratio
 
+**Subsequent check:** a separately derived, centrally replayed and independently reviewed [full homogeneous ratio certificate](audit/CLOUD_MOLLIFIER_RATIO_STATUS.md) now proves the ratio below1/2 for all nonzero complex4-vectors in these same12 fixed models, using the sharp tent norm and the actual mixed functional of the residue model. This remains a finite-model result, without an actual-character bridge; changed beta constructions or a corrected actual B matrix are not excluded.
+
 The certified minimum above excludes only reaching the chosen Q<0.001 budget
 in the stated fixed-normalization models. It does **not** exclude every
 coefficient-only repair of the complete argument: changing coefficients also

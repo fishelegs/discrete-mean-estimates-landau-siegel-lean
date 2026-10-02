@@ -1,0 +1,92 @@
+{
+  "status": "central_replay_PASS_and_independent_ACCEPT_finite_model_only",
+  "created_utc": "2026-10-02T20:58:31.852617+00:00",
+  "kernel_certificate": false,
+  "actual_character_mean_identification_proved": false,
+  "ratio_bound": "1/2",
+  "homogeneous_vectors": "all nonzero z in C^4",
+  "original_ratio_json_sha256": "51491b67ec48f42a84d1bbe2aa40fa472e07355fe267adbec63a15fece742cf7",
+  "original_report_sha256": "50fff15800ee995d9d239ac264569f2a5d4d2161d3fe9c766dc261a3c35a4a25",
+  "independent_review_sha256": "baa4ecc8fd8e34cb8037baa01bf7a664147b16a8ac2eebe593e7eddfb3f7a91c",
+  "editorial_changes": [
+    "Report scope narrowed to current construction/interfaces; other beta constructions and changed actual B matrix remain open.",
+    "Report commands relocated; independent source check input path relocated only."
+  ],
+  "files": [
+    {
+      "path": "audit/mollifier_ratio/README.md",
+      "bytes": 1377,
+      "sha256": "6d303c63bafef9940c998bb37d08a931a9e76ab4c9ca19143748d93d804df32e"
+    },
+    {
+      "path": "audit/mollifier_ratio/REPORT.md",
+      "bytes": 22048,
+      "sha256": "9d07a358c9fc66aaa8a45e2f0847d9383762b54985cc7007af9d469c68a5e021"
+    },
+    {
+      "path": "audit/mollifier_ratio/REVIEW.md",
+      "bytes": 8795,
+      "sha256": "59d76a20633aad3447d6f87cdc388f63ca3e29ea3e8bdeb65e02f668f2cf9c89"
+    },
+    {
+      "path": "audit/mollifier_ratio/certify_ratio.py",
+      "bytes": 4920,
+      "sha256": "f2d6ae80e9679a2964a11dd102fd25736e3b26e69bad16fe38a0d247eded4e72"
+    },
+    {
+      "path": "audit/mollifier_ratio/inputs/section18-certified.json",
+      "bytes": 200207,
+      "sha256": "cbc3bcc982f46c81572e246b9fbd66645a02ef4c91ebc748ce706d8c45481441"
+    },
+    {
+      "path": "audit/mollifier_ratio/inputs/section18-quadrature.json",
+      "bytes": 64658,
+      "sha256": "82e728becb598fedac421fe8a32177488bf5c4054525252aec68ebd051f95c0e"
+    },
+    {
+      "path": "audit/mollifier_ratio/interval_engine.py",
+      "bytes": 4136,
+      "sha256": "c8afcaaa686ff0f0d361990e6a99b1a6cd0158b86df730d0cd619f7b37ee3fb0"
+    },
+    {
+      "path": "audit/mollifier_ratio/provenance.json",
+      "bytes": 1225,
+      "sha256": "8535d131449d406b30cfa4820eca4ea7bfe8548bcac9f6dd8fb1bcf0b00ed8d2"
+    },
+    {
+      "path": "audit/mollifier_ratio/ratio-100.json",
+      "bytes": 4947,
+      "sha256": "98f21438caedb5f1a00eff86eac9c63286d7051cbc62c97e1464d500946cff4c"
+    },
+    {
+      "path": "audit/mollifier_ratio/ratio-70.json",
+      "bytes": 4946,
+      "sha256": "eea4bf42f1235b070a2e4d8d97ba2f277d908b0c3ea7417500a8fb2d4f863bec"
+    },
+    {
+      "path": "audit/mollifier_ratio/ratio-certificate.json",
+      "bytes": 28923,
+      "sha256": "51491b67ec48f42a84d1bbe2aa40fa472e07355fe267adbec63a15fece742cf7"
+    },
+    {
+      "path": "audit/mollifier_ratio/ratio-certificate.log",
+      "bytes": 1673,
+      "sha256": "3b870aeb5ddbcc6118203857307b5dab6e6490347c0984f4851800024686467d"
+    },
+    {
+      "path": "audit/mollifier_ratio/ratio_diagnostic.py",
+      "bytes": 3375,
+      "sha256": "2047fd5a3f060fd2ebfad6a1385589c1ef5c4a9cf4956dbcf0e1f520371180fa"
+    },
+    {
+      "path": "audit/mollifier_ratio/source_moment_check.json",
+      "bytes": 1259,
+      "sha256": "5455d6a3566e0ccc832ac223a7eed99e24022998d028e6aecd851613ce0bb219"
+    },
+    {
+      "path": "audit/mollifier_ratio/source_moment_check.py",
+      "bytes": 2813,
+      "sha256": "b0e9e5644ba0767b978f4d8db392de04fdfd039088ce8a77c1b58de503417213"
+    }
+  ]
+}

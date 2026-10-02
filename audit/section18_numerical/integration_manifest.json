@@ -138,8 +138,10 @@
       "A missing Section 8 shift.",
       "Any argument based on vacuity of assumption (A)."
     ],
-    "full_ratio_obstruction_certified": false,
-    "scope_clarification": "Q-only minimum does not exclude improving the mixed moment; actual target is |ell|^2/(Q R)>1 under vanishing error and admissible support."
+    "full_ratio_obstruction_certified": true,
+    "scope_clarification": "Q-only minimum does not exclude improving the mixed moment; actual target is |ell|^2/(Q R)>1 under vanishing error and admissible support.",
+    "subsequent_full_ratio_report": "audit/CLOUD_MOLLIFIER_RATIO_STATUS.md",
+    "full_ratio_scope": "Same12 fixed finite models, all nonzero complex4-vectors; not actual character asymptotics and not other matrices/constructions."
   },
   "certificate": {
     "arithmetic": "directed fixed-point rational intervals of denominator 10^55",
@@ -169,7 +171,8 @@
     "Pending Lemma 15.1 coefficient-basis reconstruction and tail interpretation are disclosed.",
     "Section 8 shifts are confirmed present; no missing-shift allegation.",
     "Scope excludes actual-character-mean certification, blanket impossibility, and theorem disproof.",
-    "Added full Cauchy/mixed-moment ratio scope clarification; numerical certificate bytes unchanged."
+    "Added full Cauchy/mixed-moment ratio scope clarification; numerical certificate bytes unchanged.",
+    "Linked subsequent separately certified homogeneous full-ratio result; original Q certificate unchanged."
   ],
   "replay": [
     {
@@ -196,8 +199,8 @@
   "files": [
     {
       "repo_path": "CLOUD_SECTION18_QUADRATIC_AUDIT.md",
-      "sha256": "fc0ac2fbcd531e4292b74ff8420cec5a92f7cc3e76db20a2db6250e124434dec",
-      "bytes": 4960
+      "sha256": "5b822e3d2831838e70df259f49d7ce6937dc642fdece417339f5a8321f36cac9",
+      "bytes": 5448
     },
     {
       "repo_path": "audit/section18_numerical/CERTIFICATE_METHOD.md",
