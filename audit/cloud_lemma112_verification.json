@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T15:52:37Z",
+  "base_commit": "579fc8f345d29a4e900cfaf1c2a2d3f0e8db36e6",
+  "completion_kind": "original_statement",
+  "new_modules": 19,
+  "public_interfaces_including_definitions": 144,
+  "semantic_regressions": 12,
+  "dependency_build_jobs": 3816,
+  "full_project_jobs": 4974,
+  "source_files": 1084,
+  "spec_imports": 720,
+  "full_project_imports": 985,
+  "independent_semantic_review": "ACCEPT",
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_audit": {
+    "exit_code": 1,
+    "candidates": 370,
+    "new_candidates": 3,
+    "review": {
+      "Lemma112ErrorFloor.lean:153": "Actual Fourier integral lower bound is multiplied by L^-68, then exact exponent arithmetic is rewritten; no floor is postulated.",
+      "Lemma112ReciprocalModel.lean:82": "The actual finite Mellin dual bound is transported through a proved identity and the true critical-line Z norm1.",
+      "Lemma112ShortCutoff.lean:30": "Elementary log2<=1 after the library log inequality and norm_num."
+    }
+  },
+  "logs": {
+    "lemma112-integration-build.log": {
+      "bytes": 45234,
+      "sha256": "a8b242ff2207dc92b1b9b27826a15abafe40f302fba52cc4b0e24af33ffed46d"
+    },
+    "lemma112-integration-axioms.log": {
+      "bytes": 15650,
+      "sha256": "e144bafe3f2714137af1beb5ac3cf284a7ce06cb772d7ca37b4398fed71b88f5"
+    },
+    "lemma112-full-project.log": {
+      "bytes": 182136,
+      "sha256": "af4837c362e52913057842d352733c9c99dfddd8bebf5e179292f35d3b3a3b47"
+    },
+    "lemma112-strict-audit.log": {
+      "bytes": 38116,
+      "sha256": "b9eddcccc0e13e3e97254d239a9d43aaf2d3f1dc237576c77b58f0632c279dc8"
+    }
+  }
+}
