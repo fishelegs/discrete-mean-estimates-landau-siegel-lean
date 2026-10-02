@@ -5,7 +5,7 @@ Primary source: [Zhang, arXiv:2211.02515v1](https://arxiv.org/pdf/2211.02515v1),
 
 ## Scope and status discipline
 
-The baseline ledger has **24/51 reported complete, 1 partial (5.6), 26 unstarted**. This audit inspected statements, selected proof implementations, foundational definitions, source imports, the ledger, and all numbered-result locations/dependency references in the paper. It did **not** rebuild Lean, rerun the axiom checker, or independently revalidate all 24 old completions. “Complete” in the graph therefore means **historically reported complete**, not a fresh audit verdict. Subsequent cloud milestones completed original Lemmas11.1 and3.6: see CLOUD_LEMMA111_STATUS.md and CLOUD_LEMMA36_STATUS.md for fresh kernel, regression and axiom evidence. The current ledger is26/51 complete; baseline provenance remains distinguished from these new checks.
+The baseline ledger has **24/51 reported complete, 1 partial (5.6), 26 unstarted**. This audit inspected statements, selected proof implementations, foundational definitions, source imports, the ledger, and all numbered-result locations/dependency references in the paper. It did **not** rebuild Lean, rerun the axiom checker, or independently revalidate all 24 old completions. “Complete” in the graph therefore means **historically reported complete**, not a fresh audit verdict. Subsequent cloud milestones completed original Lemmas11.1,3.6 and17.1: see CLOUD_LEMMA111_STATUS.md, CLOUD_LEMMA36_STATUS.md and CLOUD_LEMMA171_STATUS.md for fresh kernel, regression and axiom evidence. The current ledger is27/51 complete; baseline provenance remains distinguished from these new checks.
 
 Use evidence content rather than the largest step number. `audit/STEP137_STATUS.md` and `audit/lean_kernel_verification.txt` report a complete 3.2 and a 2026-10-02 11:01:20–11:17:46 UTC full PASS on Lean 4.30.0, arm64 macOS. Root `STEP141_STATUS.md` describes older temporary work against a frozen Step127 tree and still calls 3.2 unproved. It is not newer mathematical status and is not evidence of a current Linux build.
 
@@ -107,7 +107,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 | Lemma 15.3 | 87 / 105 | U | — |
 | Lemma 16.1 | 92 / 105 | U | — |
 | Lemma 16.2 | 94 / 105–106 | U | ~L16.1 |
-| Lemma 17.1 | 96 / 108–109 | U | L3.1, ~L5.8 |
+| Lemma 17.1 | 96 / 108–109 | V | L3.1, ~L5.8 |
 
 ## Acceptance checklist for each next result
 

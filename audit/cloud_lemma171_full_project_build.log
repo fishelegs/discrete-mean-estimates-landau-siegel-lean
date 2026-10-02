@@ -1,0 +1,11 @@
+VERIFICATION=PASS
+command=lake build
+exit_code=0
+complete_log_sha256=ea02d25e113ee32c805df760874e17b307565ac85ac8ea2218277cfece82e3c6
+complete_log_bytes=165383
+summary_note=Historical and harmless style warnings omitted; all new source and complete axiom/regression output are retained.
+
+✔ [4907/4910] Built ZhangLS.Spec.All (4.3s)
+✔ [4908/4910] Built ZhangLS.All (3.6s)
+✔ [4909/4910] Built ZhangLS (2.6s)
+Build completed successfully (4910 jobs).

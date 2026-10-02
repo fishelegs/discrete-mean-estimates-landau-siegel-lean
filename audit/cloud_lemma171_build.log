@@ -1,0 +1,28 @@
+VERIFICATION=PASS
+command=lake build +ZhangLS.Spec.Lemma171:olean
+exit_code=0
+complete_log_sha256=b730ddff738b413f881af9af916e90a11cf0c23ecaf19ddccfd41fd89d2ea254
+complete_log_bytes=18215
+summary_note=Historical and harmless style warnings omitted; all new source and complete axiom/regression output are retained.
+
+✔ [3856/3875] Built ZhangLS.Spec.Lemma171Target (2.5s)
+✔ [3857/3875] Built ZhangLS.Spec.Lemma171EulerFactors (2.0s)
+✔ [3858/3875] Built ZhangLS.Spec.Lemma171GaussianTail (3.8s)
+✔ [3859/3875] Built ZhangLS.Spec.Lemma171DirichletSeries (2.9s)
+✔ [3860/3875] Built ZhangLS.Spec.Lemma171AnalyticCorrection (2.7s)
+✔ [3861/3875] Built ZhangLS.Spec.Lemma171Residue (3.2s)
+✔ [3862/3875] Built ZhangLS.Spec.Lemma171CorrectionBounds (3.0s)
+✔ [3863/3875] Built ZhangLS.Spec.Lemma171GaussianMellin (3.6s)
+✔ [3864/3875] Built ZhangLS.Spec.Lemma171LeftMajorant (2.3s)
+✔ [3865/3875] Built ZhangLS.Spec.Lemma171ResidueBound (3.9s)
+✔ [3866/3875] Built ZhangLS.Spec.Lemma171GaussianComparison (2.6s)
+⚠ [3867/3875] Built ZhangLS.Spec.Lemma171ContourFinite (3.6s)
+ℹ [3868/3875] Built ZhangLS.Spec.Lemma171UniformThresholds (3.6s)
+✔ [3869/3875] Built ZhangLS.Spec.Lemma171GaussianUnsmoothing (3.2s)
+✔ [3870/3875] Built ZhangLS.Spec.Lemma171LeftAbsorption (3.3s)
+⚠ [3871/3875] Built ZhangLS.Spec.Lemma171ContourGrowth (5.3s)
+✔ [3872/3875] Built ZhangLS.Spec.Lemma171LeftIntegral (3.4s)
+✔ [3873/3875] Built ZhangLS.Spec.Lemma171ContourHorizontal (4.1s)
+✔ [3874/3875] Built ZhangLS.Spec.Lemma171ContourInfinite (2.8s)
+✔ [3875/3875] Built ZhangLS.Spec.Lemma171 (2.8s)
+Build completed successfully (3875 jobs).

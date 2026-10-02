@@ -1,0 +1,342 @@
+import ZhangLS.Spec.Lemma171Residue
+import ZhangLS.Spec.Lemma57MellinIdentity
+
+/-!
+# Lemma 17.1: exact smoothed harmonic series and Gaussian Mellin identity
+
+The scale is the paper's T=exp((log D)^(11/10)). Absolute convergence and the
+infinite series/integral interchange are proved for the actual ν² coefficients.
+-/
+
+set_option autoImplicit false
+set_option maxHeartbeats 2000000
+namespace ZhangLS.Spec
+open Complex MeasureTheory
+open scoped Real BigOperators
+
+noncomputable def lemma171WeightArgument (D n : ℕ) : ℝ :=
+  lemma56PaperT D / (n : ℝ)
+
+noncomputable def lemma171SmoothedTerm {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (n : ℕ) : ℝ :=
+  lemma171Coefficient χ n / (n : ℝ) *
+    zhangGaussianWeight D (lemma171WeightArgument D n)
+
+noncomputable def lemma171SmoothedSum {D : ℕ} (χ : RealPrimitiveCharacter D) : ℝ :=
+  ∑' n : ℕ, lemma171SmoothedTerm χ n
+
+noncomputable def lemma171VerticalIntegral {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (c : ℝ) : ℂ :=
+  (2*(Real.pi : ℂ)*I)⁻¹ *
+    ∫ t : ℝ, lemma171MellinIntegrand χ ((c : ℂ)+(t : ℂ)*I)*I
+
+/-- The contribution of one squared-ν L-series coefficient to the
+unnormalized vertical integral on `re s = 1`. -/
+noncomputable def lemma171MellinSeriesTerm {D : ℕ}
+    (χ : RealPrimitiveCharacter D) (n : ℕ) (t : ℝ) : ℂ :=
+  let z : ℂ := (1 : ℂ) + (t : ℂ) * I
+  LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (1 + z) n *
+    lemma171GaussianMellinFactor D z / z * I
+
+/-- Absolute convergence of the squared-ν L-series at the fixed real
+part used for the interchange. -/
+theorem lemma171LSeriesSummable_two
+    {D : ℕ} (χ : RealPrimitiveCharacter D) :
+    LSeriesSummable (fun n => (lemma171Coefficient χ n : ℂ)) (2 : ℂ) := by
+  exact lemma171_lseries_summable χ (2 : ℂ) (by norm_num)
+
+/-- Pointwise expansion of the full Mellin integrand into its L-series terms. -/
+theorem lemma171MellinSeriesTerm_tsum
+    {D : ℕ} (χ : RealPrimitiveCharacter D) (t : ℝ) :
+    (∑' n : ℕ, lemma171MellinSeriesTerm χ n t) =
+      lemma171MellinIntegrand χ ((1 : ℂ) + (t : ℂ) * I) * I := by
+  let z : ℂ := (1 : ℂ) + (t : ℂ) * I
+  have hz : ((1 : ℂ) + z).re = 2 := by
+    norm_num [z]
+  rw [lemma171_mellin_integrand_eq_series χ z (by norm_num [z])]
+  unfold lemma171DirichletSeries LSeries lemma171MellinSeriesTerm
+  simp_rw [lemma171_gaussian_factor_eq_paper]
+  dsimp [z]
+  simp_rw [div_eq_mul_inv, mul_assoc]
+  rw [tsum_mul_right]
+
+/-- Every coefficientwise integrand has the same scalar Gaussian norm profile,
+up to its absolutely summable L-series coefficient. -/
+theorem lemma171MellinSeriesTerm_norm
+    {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D)
+    (n : ℕ) (t : ℝ) :
+    ‖lemma171MellinSeriesTerm χ n t‖ =
+      (lemma56PaperT D *
+          ‖LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (2 : ℂ) n‖) *
+        ‖lemma57GaussianKernelIntegrand D 1 1 t‖ := by
+  let z : ℂ := (1 : ℂ) + (t : ℂ) * I
+  have hDpos : (0 : ℝ) < D := by
+    exact_mod_cast Nat.zero_lt_of_lt hD
+  have hterm :
+      ‖LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (1 + z) n‖ =
+        ‖LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (2 : ℂ) n‖ := by
+    simp only [LSeries.norm_term_eq]
+    congr 2
+    norm_num [z]
+  have hcpow : ‖(lemma56PaperT D : ℂ) ^ z‖ = lemma56PaperT D := by
+    rw [Complex.norm_cpow_eq_rpow_re_of_pos (lemma56_paper_T_pos D)]
+    norm_num [z]
+  rw [lemma171MellinSeriesTerm]
+  rw [lemma171_gaussian_factor_eq_paper]
+  rw [norm_mul, norm_div, norm_mul, norm_mul, Complex.norm_I,
+    mul_one, hterm, hcpow]
+  simp only [lemma57GaussianKernelIntegrand, norm_div]
+  norm_num [z]
+  ring
+
+/-- Each coefficientwise vertical integrand is Bochner integrable. -/
+theorem lemma171MellinSeriesTerm_integrable
+    {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D)
+    (n : ℕ) : Integrable (lemma171MellinSeriesTerm χ n) := by
+  by_cases hn : n = 0
+  · subst n
+    have hzero : lemma171MellinSeriesTerm χ 0 = 0 := by
+      funext t
+      simp [lemma171MellinSeriesTerm]
+    rw [hzero]
+    exact integrable_zero ℝ ℂ volume
+  let C : ℝ := lemma56PaperT D *
+    ‖LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (2 : ℂ) n‖
+  have hK : Integrable (lemma57GaussianKernelIntegrand D 1 1) :=
+    lemma57GaussianKernel_integrable hD one_ne_zero zero_lt_one
+  have hmajor : Integrable (fun t : ℝ =>
+      C * ‖lemma57GaussianKernelIntegrand D 1 1 t‖) :=
+    hK.norm.const_mul C
+  apply hmajor.mono'
+  · apply Continuous.aestronglyMeasurable
+    let z : ℝ → ℂ := fun t => (1 : ℂ) + (t : ℂ) * I
+    have hzcont : Continuous z := by
+      dsimp [z]
+      fun_prop
+    have hzne : ∀ t : ℝ, z t ≠ 0 := by
+      intro t ht
+      have hre := congrArg Complex.re ht
+      norm_num [z] at hre
+    have hnC : (n : ℂ) ≠ 0 := by exact_mod_cast hn
+    have htermcont : Continuous (fun t : ℝ =>
+        LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (1 + z t) n) := by
+      simp only [LSeries.term_of_ne_zero hn]
+      apply Continuous.div₀ continuous_const
+        ((continuous_const.add hzcont).const_cpow (Or.inl hnC))
+      intro t
+      exact Complex.cpow_ne_zero_iff.mpr (Or.inl hnC)
+    have hfactorcont : Continuous (fun t : ℝ =>
+        lemma171GaussianMellinFactor D (z t)) := by
+      unfold lemma171GaussianMellinFactor
+      fun_prop
+    unfold lemma171MellinSeriesTerm
+    change Continuous (fun t : ℝ =>
+      LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (1 + z t) n *
+        lemma171GaussianMellinFactor D (z t) / z t * I)
+    exact ((htermcont.mul hfactorcont).div₀ hzcont hzne).mul
+      continuous_const
+  · filter_upwards [] with t
+    rw [lemma171MellinSeriesTerm_norm χ hD n t]
+
+/-- The integrals of the coefficientwise norms form a summable series. -/
+theorem lemma171MellinSeriesTerm_integral_norm_summable
+    {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D) :
+    Summable (fun n : ℕ =>
+      ∫ t : ℝ, ‖lemma171MellinSeriesTerm χ n t‖) := by
+  let K : ℝ := lemma56PaperT D *
+    ∫ t : ℝ, ‖lemma57GaussianKernelIntegrand D 1 1 t‖
+  have hL : Summable (fun n : ℕ =>
+      ‖LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (2 : ℂ) n‖) :=
+    summable_norm_iff.mpr (lemma171LSeriesSummable_two χ)
+  have hscaled : Summable (fun n : ℕ =>
+      K * ‖LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (2 : ℂ) n‖) :=
+    hL.mul_left K
+  apply hscaled.congr
+  intro n
+  simp_rw [lemma171MellinSeriesTerm_norm χ hD n]
+  rw [MeasureTheory.integral_const_mul]
+  dsimp [K]
+  ring
+
+/-- The pointwise sum of the coefficientwise integrands is integrable. -/
+theorem lemma171MellinSeriesTerm_tsum_integrable
+    {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D) :
+    Integrable (fun t : ℝ =>
+      ∑' n : ℕ, lemma171MellinSeriesTerm χ n t) := by
+  let A : ℝ := ∑' n : ℕ,
+    ‖LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (2 : ℂ) n‖
+  let C : ℝ := lemma56PaperT D * A
+  have hL : Summable (fun n : ℕ =>
+      ‖LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (2 : ℂ) n‖) :=
+    summable_norm_iff.mpr (lemma171LSeriesSummable_two χ)
+  have hK : Integrable (lemma57GaussianKernelIntegrand D 1 1) :=
+    lemma57GaussianKernel_integrable hD one_ne_zero zero_lt_one
+  have hmajor : Integrable (fun t : ℝ =>
+      C * ‖lemma57GaussianKernelIntegrand D 1 1 t‖) :=
+    hK.norm.const_mul C
+  apply hmajor.mono'
+  · exact AEStronglyMeasurable.tsum fun n =>
+      (lemma171MellinSeriesTerm_integrable χ hD n).1
+  · filter_upwards [] with t
+    have hnormsum : Summable (fun n : ℕ =>
+        ‖lemma171MellinSeriesTerm χ n t‖) := by
+      have hs := hL.mul_left
+        (lemma56PaperT D * ‖lemma57GaussianKernelIntegrand D 1 1 t‖)
+      apply hs.congr
+      intro n
+      rw [lemma171MellinSeriesTerm_norm χ hD n t]
+      ring
+    calc
+      ‖∑' n : ℕ, lemma171MellinSeriesTerm χ n t‖
+          ≤ ∑' n : ℕ, ‖lemma171MellinSeriesTerm χ n t‖ :=
+        norm_tsum_le_tsum_norm hnormsum
+      _ = ∑' n : ℕ,
+          (lemma56PaperT D * ‖lemma57GaussianKernelIntegrand D 1 1 t‖) *
+            ‖LSeries.term (fun n => (lemma171Coefficient χ n : ℂ)) (2 : ℂ) n‖ := by
+        apply tsum_congr
+        intro n
+        rw [lemma171MellinSeriesTerm_norm χ hD n t]
+        ring
+      _ = (lemma56PaperT D * ‖lemma57GaussianKernelIntegrand D 1 1 t‖) * A := by
+        rw [tsum_mul_left]
+      _ = C * ‖lemma57GaussianKernelIntegrand D 1 1 t‖ := by
+        dsimp [A, C]
+        ring
+
+/-- A coefficientwise integrand is a constant multiple of the scalar Gaussian
+kernel evaluated at `T/n`. -/
+theorem lemma171MellinSeriesTerm_eq_kernel
+    {D : ℕ} (χ : RealPrimitiveCharacter D) (_hD : 1 < D)
+    {n : ℕ} (hn : n ≠ 0) (t : ℝ) :
+    lemma171MellinSeriesTerm χ n t =
+      ((lemma171Coefficient χ n : ℂ) / (n : ℂ)) *
+        (lemma57GaussianKernelIntegrand D 1
+          (lemma171WeightArgument D n) t * I) := by
+  let z : ℂ := (1 : ℂ) + (t : ℂ) * I
+  let x : ℝ := lemma171WeightArgument D n
+  have hnposNat : 0 < n := Nat.pos_of_ne_zero hn
+  have hnpos : (0 : ℝ) < n := by exact_mod_cast hnposNat
+  have hnC : (n : ℂ) ≠ 0 := by exact_mod_cast hn
+  have hncast : (n : ℂ) = ((n : ℝ) : ℂ) := by norm_num
+  have hx : 0 < x := by
+    dsimp [x, lemma171WeightArgument]
+    exact div_pos (lemma56_paper_T_pos D) hnpos
+  have hxn : x * (n : ℝ) = lemma56PaperT D := by
+    dsimp [x, lemma171WeightArgument]
+    field_simp
+  have hxpow : (x : ℂ) ^ z =
+      (lemma56PaperT D : ℂ) ^ z / (n : ℂ) ^ z := by
+    rw [hncast]
+    have hncpowR : (((n : ℝ) : ℂ) ^ z) ≠ 0 :=
+      Complex.cpow_ne_zero_iff.mpr
+        (Or.inl (Complex.ofReal_ne_zero.mpr hnpos.ne'))
+    apply (eq_div_iff hncpowR).2
+    have hmul := Complex.mul_cpow_ofReal_nonneg hx.le hnpos.le z
+    have hbase : (x : ℂ) * ((n : ℝ) : ℂ) = (lemma56PaperT D : ℂ) := by
+      exact_mod_cast hxn
+    rw [← hmul, hbase]
+  rw [lemma171MellinSeriesTerm,
+    lemma171_gaussian_factor_eq_paper,
+    LSeries.term_of_ne_zero hn]
+  simp only [lemma57GaussianKernelIntegrand]
+  change (lemma171Coefficient χ n : ℂ) / (n : ℂ) ^ (1 + z) *
+      ((lemma56PaperT D : ℂ) ^ z * lemma57OmegaOne D z) / z * I =
+    ((lemma171Coefficient χ n : ℂ) / (n : ℂ)) *
+      ((x : ℂ) ^ z * lemma57OmegaOne D z / z * I)
+  rw [Complex.cpow_add _ _ hnC, Complex.cpow_one, hxpow]
+  field_simp
+
+/-- The normalized integral of one L-series coefficient is precisely the
+corresponding summand in Zhang's full smoothed sum. -/
+theorem lemma171MellinSeriesTerm_normalized_integral
+    {D : ℕ} (χ : RealPrimitiveCharacter D) (hD : 1 < D) (n : ℕ) :
+    (2 * (Real.pi : ℂ) * I)⁻¹ *
+        ∫ t : ℝ, lemma171MellinSeriesTerm χ n t =
+      (lemma171SmoothedTerm χ n : ℂ) := by
+  by_cases hn : n = 0
+  · subst n
+    have hzero : lemma171MellinSeriesTerm χ 0 = 0 := by
+      funext t
+      simp [lemma171MellinSeriesTerm]
+    rw [hzero]
+    simp [lemma171SmoothedTerm]
+  have hpoint := lemma171MellinSeriesTerm_eq_kernel χ hD hn
+  simp_rw [hpoint, MeasureTheory.integral_const_mul]
+  calc
+    (2 * (Real.pi : ℂ) * I)⁻¹ *
+          (((lemma171Coefficient χ n : ℂ) / (n : ℂ)) *
+            ∫ t : ℝ, lemma57GaussianKernelIntegrand D 1
+              (lemma171WeightArgument D n) t * I) =
+        ((lemma171Coefficient χ n : ℂ) / (n : ℂ)) *
+          lemma57GaussianKernelVerticalIntegral D 1
+            (lemma171WeightArgument D n) := by
+              rw [lemma57GaussianKernelVerticalIntegral]
+              ring
+    _ = _ := by
+      have harg : 0 < lemma171WeightArgument D n := by
+        unfold lemma171WeightArgument
+        have hDp := lemma56_paper_T_pos D
+        have hnp : (0 : ℝ) < n := by
+          exact_mod_cast Nat.pos_of_ne_zero hn
+        positivity
+      rw [lemma57GaussianKernelVerticalIntegral_eq_weight hD zero_lt_one harg]
+      rw [lemma171SmoothedTerm]
+      unfold lemma171WeightArgument
+      push_cast
+      ring
+
+
+/-- Absolute convergence of the actual smoothed harmonic series. It follows
+from the coefficientwise Gaussian integral bound, without a presumed tail estimate. -/
+theorem lemma171_smoothed_summable {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) : Summable (lemma171SmoothedTerm χ) := by
+  apply Complex.summable_ofReal.mp
+  have hs := (lemma171MellinSeriesTerm_integral_norm_summable χ hD).mul_left
+    ‖(2*(Real.pi : ℂ)*I)⁻¹‖
+  apply hs.of_norm_bounded
+  intro n
+  rw [← lemma171MellinSeriesTerm_normalized_integral χ hD n, norm_mul]
+  exact mul_le_mul_of_nonneg_left (norm_integral_le_integral_norm _)
+    (norm_nonneg _)
+
+/-- Absolute convergence, genuine vertical integrability, and the exact
+infinite Gaussian Mellin identity for the actual ν² harmonic coefficients. -/
+theorem lemma171_gaussian_mellin_identity {D : ℕ} (χ : RealPrimitiveCharacter D)
+    (hD : 1 < D) :
+    Integrable (fun t : ℝ =>
+      lemma171MellinIntegrand χ ((1 : ℂ)+(t : ℂ)*I)*I) ∧
+    lemma171VerticalIntegral χ 1 = (lemma171SmoothedSum χ : ℂ) := by
+  constructor
+  · apply (lemma171MellinSeriesTerm_tsum_integrable χ hD).congr
+    filter_upwards [] with t
+    exact lemma171MellinSeriesTerm_tsum χ t
+  · unfold lemma171VerticalIntegral
+    have hinterchange := MeasureTheory.integral_tsum_of_summable_integral_norm
+      (fun n : ℕ => lemma171MellinSeriesTerm_integrable χ hD n)
+      (lemma171MellinSeriesTerm_integral_norm_summable χ hD)
+    calc
+      (2 * (Real.pi : ℂ) * I)⁻¹ *
+          ∫ t : ℝ, lemma171MellinIntegrand χ
+            ((1 : ℂ) + (t : ℂ) * I) * I =
+          (2 * (Real.pi : ℂ) * I)⁻¹ *
+            ∫ t : ℝ, ∑' n : ℕ, lemma171MellinSeriesTerm χ n t := by
+              congr 1
+              apply MeasureTheory.integral_congr_ae
+              filter_upwards [] with t
+              exact (lemma171MellinSeriesTerm_tsum χ t).symm
+      _ = (2 * (Real.pi : ℂ) * I)⁻¹ *
+          ∑' n : ℕ, ∫ t : ℝ, lemma171MellinSeriesTerm χ n t := by
+            rw [hinterchange]
+      _ = ∑' n : ℕ, (2 * (Real.pi : ℂ) * I)⁻¹ *
+          ∫ t : ℝ, lemma171MellinSeriesTerm χ n t := by
+            rw [tsum_mul_left]
+      _ = ∑' n : ℕ, (lemma171SmoothedTerm χ n : ℂ) := by
+            apply tsum_congr
+            intro n
+            exact lemma171MellinSeriesTerm_normalized_integral χ hD n
+      _ = (lemma171SmoothedSum χ : ℂ) := by
+        unfold lemma171SmoothedSum
+        simpa using (Complex.ofRealCLM.map_tsum
+          (lemma171_smoothed_summable χ hD)).symm
+
+end ZhangLS.Spec
