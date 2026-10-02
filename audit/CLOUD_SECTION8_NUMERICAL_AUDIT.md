@@ -1,5 +1,7 @@
 # Section 8 numerical obstruction in arXiv:2211.02515v1
 
+**Update2026-10-02:** the literal integral incompatibility now also has a [centrally verified Lean kernel proof](CLOUD_SECTION8_KERNEL_STATUS.md), `7<c1.re`, with no external numerical premises. The original independent numerical evidence below is preserved.
+
 ## Result and exact scope
 
 Independent quadrature, closed-form directed intervals, and a separate exact-rational Taylor certificate of the **displayed definitions** in(8.13)–(8.23) give

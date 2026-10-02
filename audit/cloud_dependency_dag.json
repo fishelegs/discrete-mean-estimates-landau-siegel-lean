@@ -3891,7 +3891,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T19:49:00.918621+00:00",
+    "verified_at_utc": "2026-10-02T19:57:14.661971+00:00",
     "completed": 36,
     "in_progress": 3,
     "unstarted": 9,
@@ -4013,6 +4013,17 @@
       "public_declaration_checks": 21,
       "full_boundary_estimate_proved": true,
       "source_equation_8_11_proved": false
+    },
+    {
+      "id": "literal_section8_kernel_numerical_obstruction",
+      "status": "verified",
+      "report": "audit/CLOUD_SECTION8_KERNEL_STATUS.md",
+      "original_numbered_result_completed": false,
+      "assumption_A": false,
+      "new_modules": 8,
+      "public_declaration_checks": 88,
+      "semantic_regressions": 26,
+      "main_theorem_disproved": false
     }
   ],
   "repair_discipline": {
@@ -4036,14 +4047,15 @@
         "independent parameterized quadrature",
         "literal-table closed-form integration",
         "directed interval arithmetic with proven pi bracket",
-        "independent exact-rational degree40 Taylor certificate, centrally replayed"
+        "independent exact-rational degree40 Taylor certificate, centrally replayed",
+        "Lean actual interval-integral proof,88 standard-axiom declarations, independent source review"
       ],
       "c1_interval": [
         "7.050104669792050418",
         "7.050104669792050421"
       ],
       "printed_c1_upper": "6.9955",
-      "lean_integral_certificate": false,
+      "lean_integral_certificate": true,
       "main_theorem_disproved": false,
       "all_three_cross_shifts_preserved": true,
       "affected_route": [
@@ -4054,7 +4066,11 @@
       "rational_c1_interval": [
         "7.050104669792050376",
         "7.050104669792050463"
-      ]
+      ],
+      "kernel_report": "audit/CLOUD_SECTION8_KERNEL_STATUS.md",
+      "kernel_theorem": "Section8.c1_re_gt_seven",
+      "kernel_lower_bound": "4790274002065539332881844226677501/679562729429049362531250000000000",
+      "external_numeric_hypotheses": []
     }
   ]
 }

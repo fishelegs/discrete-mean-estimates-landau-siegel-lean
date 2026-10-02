@@ -1,0 +1,55 @@
+[
+  {
+    "path": "ZhangLS/Spec/Section8NumericalObjects.lean",
+    "sha256": "4f13534698db174f420e6450eee7090da792ebe6f518893a9f0fe3e8dfeb59a7",
+    "original_sha256": "4f13534698db174f420e6450eee7090da792ebe6f518893a9f0fe3e8dfeb59a7",
+    "transformation": "import paths only"
+  },
+  {
+    "path": "ZhangLS/Spec/Section8NumericalAlgebra.lean",
+    "sha256": "57eeaa55feaed2e72a1139262e7a05e200b7ae5a72ed09bdaf02409c8051f94f",
+    "original_sha256": "c57adf4398cac35b033581b9036c5bca3f7c92be7f16cec8239b03a63ddf9497",
+    "transformation": "import paths only"
+  },
+  {
+    "path": "ZhangLS/Spec/Section8NumericalIntegrals.lean",
+    "sha256": "e229f5ac82b9bc32af1b28afa988b830eb2e0e368ead9b57690e00e57cc5bac3",
+    "original_sha256": "6ad39e08e9b086536978357c39e442510b2956b05b193f7356a754d34377038f",
+    "transformation": "import paths only"
+  },
+  {
+    "path": "ZhangLS/Spec/Section8NumericalBounds.lean",
+    "sha256": "affa37d80a924a31276f87e23466072091d6d227848eccabf7fc1432c6c9edce",
+    "original_sha256": "affa37d80a924a31276f87e23466072091d6d227848eccabf7fc1432c6c9edce",
+    "transformation": "import paths only"
+  },
+  {
+    "path": "ZhangLS/Spec/Section8NumericalPhases.lean",
+    "sha256": "7b2aae5db89982abcfcb3b3e4416cff2ad13f097c5ba7ddbcef8339a764625b2",
+    "original_sha256": "40489025c936ff2b0c3f9ab0b8b5ff8057159f0577da6571c862415832fe4b7b",
+    "transformation": "import paths only"
+  },
+  {
+    "path": "ZhangLS/Spec/Section8NumericalCoordinates.lean",
+    "sha256": "adaf48f5d60f5947f099580540d692e1467fb2ed93ea2b2b15afb8083e789948",
+    "original_sha256": "20a91990213db2a49e7114b3ebb19dbb061419144678a1bd45e12982ec5357ad",
+    "transformation": "import paths only"
+  },
+  {
+    "path": "ZhangLS/Spec/Section8NumericalValue.lean",
+    "sha256": "d50e1e03409ad40ea018188d1eae39dff632206bfe5f57ca5c74227707bea14f",
+    "original_sha256": "d8c053a94264008171b93b31fa87298f553cbe41420ca406207b449f2117029f",
+    "transformation": "import paths only"
+  },
+  {
+    "path": "ZhangLS/Spec/Section8NumericalLower.lean",
+    "sha256": "3504d73f5179334583c1616d563417b55b877510b7e91894c0e0422a835ad862",
+    "original_sha256": "79b6b467913b827a7e7d3dd4feb2b8d3e6a8a27e80e435958ab2a55c2c41e7fd",
+    "transformation": "import paths only"
+  },
+  {
+    "path": "audit/CloudSection8NumericalRegression.lean",
+    "sha256": "0fcda5bc5e2d60594dd205efe6ca9b1a2a8afa2704dc9a00cd87fc56a36f3c6e",
+    "transformation": "Semantics plus Audit, local imports replaced by production module"
+  }
+]

@@ -2,7 +2,7 @@
 
 修订加权兼容桥（2026-10-02 19:48 UTC）：[8.4全支撑ξ因子替换](ZhangLS/Spec/Lemma84BoundaryLittleO.lean)已中央验证，两条真实边界层和端点均闭合，原Section8表达式变化=o(α)，不再假设边界target。6模块、21标准公理接口、3984依赖/5181全库PASS；原8.4统一L^-6、第一因子替换、8.10/8.11仍未完。编号36/51不变，数值主链阻塞仍保留。详见[证据](audit/CLOUD_LEMMA84_BOUNDARY_STATUS.md)。
 
-**重要数值风险（2026-10-02 19:02 UTC）**：[Section8独立数值审计](audit/CLOUD_SECTION8_NUMERICAL_AUDIT.md)按官方PDF/TeX(8.13)–(8.23)全部shift与共轭计算，c₁∈[7.050104669792050418,7.050104669792050421]，与原(8.24)c₁<6.9955不相容。两套独立实现与有向区间复核；目前是可复现Python区间证据，尚非Lean积分定理。它阻塞当前经2.5的最终数值论证，但不证明Landau–Siegel主结论为假，也不撤销已核验局部lemma。原36/51计数不变；需追溯公式/参数并验证任何修订，不能靠凑阈值。
+**已核验的数值不相容（2026-10-02 19:56 UTC）**：[Section8 Lean内核证书](audit/CLOUD_SECTION8_KERNEL_STATUS.md)从官方(2.26)、(8.13)–(8.23)实际积分定义证明c₁实部>7.04905>7，与原(8.24)c₁<6.9955不相容。全部shift/共轭保留、无外部数值前提；88声明仅标准三公理、26语义回归、5189全库PASS，并经独立源语义审阅。此前Python证据保留。当前经2.5的最终数值论证因此仍阻塞；这不证明Landau–Siegel主定理为假，也不撤销已证局部lemma，36/51不变。
 
 修订加权兼容桥（2026-10-02 18:55 UTC）：[8.4真实Section8内部误差](ZhangLS/Spec/Lemma84Section8SmoothingBridge.lean)已中央验证。原κ/共轭κ、λ、μ、φ、χ、P₁/P₂和iota交叉项保留；仅在dr<Pμ/T替换真实ξ因子，实际源表达式变化=o(α)，定量C(1+9logL)^42L^-11。边界值原样保留，未假设weight envelope；完整边界/8.11/P71接口仍待证。10模块、69标准公理接口、3数值回归及5175项全库PASS，编号仍36/51。详见[证据与范围](audit/CLOUD_LEMMA84_WEIGHTED_STATUS.md)。
 

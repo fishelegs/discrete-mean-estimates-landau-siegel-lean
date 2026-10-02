@@ -1,0 +1,45 @@
+{
+  "status": "PASS_LITERAL_SECTION8_INTEGRAL_OBSTRUCTION",
+  "verified_at_utc": "2026-10-02T19:57:14.661971+00:00",
+  "base_commit": "7011b11d1dd3ab45fe6baa02bce8b47d13ebdde8",
+  "completion_kind": "unconditional_literal_numerical_incompatibility",
+  "numbered_completion_count_change": 0,
+  "production_modules": 8,
+  "audit_modules": 1,
+  "public_declaration_axiom_checks": 88,
+  "semantic_examples": 26,
+  "dependency_build_jobs": 3327,
+  "full_project_jobs": 5189,
+  "source_files": 1312,
+  "spec_imports": 935,
+  "full_project_imports": 1200,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 389,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "external_numeric_hypotheses": [],
+  "source_version": "arXiv2211.02515v1",
+  "source_tex_sha256": "5dc202bdc414fb743004ae32e8dec0dd284636f7197b1cab78a46336e0cde30b",
+  "source_pdf_sha256": "4e38ecfe1a6d3a93494e2f5cc5a3336c33b9d0981e8d5ccfcd8d8dec3e5ab713",
+  "all_six_offdiagonal_shifts_preserved": true,
+  "character_sum_asymptotic_bridge_proved": false,
+  "main_theorem_disproved": false,
+  "logs": {
+    "section8-kernel-integration-build.log": {
+      "bytes": 1415,
+      "sha256": "860bfd27c52bdd25401d06d3793679c442c463b3c3dd2088e48c1ae18bedfeba"
+    },
+    "section8-kernel-integration-axioms.log": {
+      "bytes": 7135,
+      "sha256": "2860844a8aa059149c0c4f726bc24ace24c4bd413910dc0b570f911078428774"
+    },
+    "section8-kernel-full-project.log": {
+      "bytes": 220843,
+      "sha256": "4a33df5451cfda6c5de0c3ad0a57b831bd8524e4a711880d26082a277f292d1e"
+    },
+    "section8-kernel-strict-audit.log": {
+      "bytes": 39773,
+      "sha256": "3eea83b30106b77019aaf19bd03803b13b1efb0aa51d46dbde79986a3e7648fa"
+    }
+  }
+}
