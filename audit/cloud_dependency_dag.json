@@ -3891,7 +3891,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T20:03:35.404782+00:00",
+    "verified_at_utc": "2026-10-02T20:08:47.420830+00:00",
     "completed": 36,
     "in_progress": 3,
     "unstarted": 9,
@@ -4024,6 +4024,18 @@
       "public_declaration_checks": 88,
       "semantic_regressions": 26,
       "main_theorem_disproved": false
+    },
+    {
+      "id": "actual_section15_residue_product_budget",
+      "status": "verified",
+      "report": "audit/CLOUD_SECTION15_PRODUCTS_STATUS.md",
+      "original_numbered_result_completed": false,
+      "assumption_A": true,
+      "new_modules": 10,
+      "public_declaration_checks": 78,
+      "semantic_regressions": 12,
+      "actual_a_weighted_error": "O(L^-2)",
+      "global_mellin_or_final_chain_proved": false
     }
   ],
   "repair_discipline": {

@@ -1,0 +1,57 @@
+[
+  {
+    "path": "ZhangLS/Spec/Lemma153ActualPhase.lean",
+    "original_sha256": "bb9cbe4d7f0e1280d27bfca2de6972c583727896b98b6882d595bd5e8c91f3f3",
+    "sha256": "bb9cbe4d7f0e1280d27bfca2de6972c583727896b98b6882d595bd5e8c91f3f3"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma153ActualShiftRatio.lean",
+    "original_sha256": "36ffcecfe8defeedfe1d8319a92bd714cc1abd3affd21e816ae597b46799b114",
+    "sha256": "0b033f8aeb94ae6a18b65dee5f26fa69d135e35436f87efe6e3a3d0363c60240"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma153GeometricWeightBudget.lean",
+    "original_sha256": "86ae88098fb895669f2b5225c65859c93a2322e23619b54355eb7203c8dca47e",
+    "sha256": "613361a056831f5374c97997d9930bc2cd5c508824ec67b630e0c1a05f25c095"
+  },
+  {
+    "path": "ZhangLS/Spec/Section15AnalyticFactorBounds.lean",
+    "original_sha256": "4eb071eadb84d42edb801ae6eeb53d659e57df2d2b04a3378eec5849ea954421",
+    "sha256": "60159284d56b6a32d62a6f927e02c0508966044ba8a13af6bbb71e23c67caddd"
+  },
+  {
+    "path": "ZhangLS/Spec/Section15ActualResidues.lean",
+    "original_sha256": "1969c7b54e7c4c4e31d20157e90de2707cf680c0559b85f27fe6e459b844c71a",
+    "sha256": "8fbf8d9f3deae5813a25062d9a8a50420c3a24e3cf2ae96ec0ac5ef45b55c933"
+  },
+  {
+    "path": "ZhangLS/Spec/Section15SmallFactors.lean",
+    "original_sha256": "c3f63c6d0ba4ee1aaa7c09d39526d146a63f1558a2b4ace78f1cccb6287ea050",
+    "sha256": "977943d86b2467aefd5b75fc867159110a2a2eb16e875d7bcc9999c854b0b2cd"
+  },
+  {
+    "path": "ZhangLS/Spec/Section15ResidueProduct.lean",
+    "original_sha256": "71244d2e4e8affe1b7cf23c7cf18237c0c736dc817406265876c86665ebb8877",
+    "sha256": "206754382186edb88c4f1358dfe91de3cbf8eec3fd69640275c348a42eb46023"
+  },
+  {
+    "path": "ZhangLS/Spec/Section15PaperBridge.lean",
+    "original_sha256": "d71fb5b4cf8f7077307cc3f6132ce9665b8bd3c3804a4f3c0f13459c5567beba",
+    "sha256": "c9f6eb3e0b72d4b8a25fb2963ee1b96712157a1c93ed0fa1eefc828a60144172"
+  },
+  {
+    "path": "ZhangLS/Spec/Section15ResidueCertification.lean",
+    "original_sha256": "bfd35a273e0995acfeced7005c7cea4507bdb7ee1f510aafd7fb1606060171bd",
+    "sha256": "b2ae7bf0e3b1ff72c004b18c4c8516f016832f7b7b6f9ae9aa319a1296322e38"
+  },
+  {
+    "path": "ZhangLS/Spec/Section15LeadingResidueBudget.lean",
+    "original_sha256": "bb97562272d2fbee612fd15d20cd804df0c2e9bb7528e597579ac1a015307075",
+    "sha256": "75ed99f757a8f54a79becbee2fdc480197a24216e0fe9f065111aa2b5fcec39d",
+    "editorial_change": "corrected comment: final leading constant depends on fixed c-prime; proof unchanged"
+  },
+  {
+    "path": "audit/CloudSection15ResidueProductsRegression.lean",
+    "sha256": "edab52e0b75aed8705ce7eb398c9824df6fc3311f6d2cf82d461d3dbdd18e871"
+  }
+]

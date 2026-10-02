@@ -1,0 +1,49 @@
+{
+  "status": "PASS_ACTUAL_RESIDUE_PRODUCT_LEADING_BUDGET",
+  "verified_at_utc": "2026-10-02T20:08:47.420830+00:00",
+  "base_commit": "771694afb2cbc2b9eae1fc41ef2691b51b89b460",
+  "completion_kind": "actual_local_residue_product_compatibility",
+  "numbered_completion_count_change": 0,
+  "production_modules": 10,
+  "new_analytic_modules": 7,
+  "previously_unpublished_phase_modules": 3,
+  "audit_modules": 1,
+  "public_declaration_axiom_checks": 78,
+  "semantic_examples": 12,
+  "dependency_build_jobs": 4055,
+  "full_project_jobs": 5199,
+  "source_files": 1323,
+  "spec_imports": 945,
+  "full_project_imports": 1210,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 392,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 3,
+  "new_candidate_review": {
+    "Section15PaperBridge.lean:33,37": "Both hb values are proved from actual beta norm lower bounds in the same proof, then discharged into nonzero differences; not assumptions of the requested conclusion.",
+    "Section15SmallFactors.lean:139": "Eight-factor error is derived by seven applications of proved multiplication error; exact returns the last derived bound."
+  },
+  "original_shifts_retained": true,
+  "actual_a_retained": true,
+  "all_denominator_nonzero_conditions_discharged": true,
+  "exceptional_zero_replacement_proved": false,
+  "full_final_chain_proved": false,
+  "logs": {
+    "section15-products-integration-build.log": {
+      "bytes": 56729,
+      "sha256": "81ababb0c6bbfac9dbb5b9592d49d2c947d42b177ddccd49a893acd7a75ad708"
+    },
+    "section15-products-integration-axioms.log": {
+      "bytes": 8114,
+      "sha256": "526e14910ca90d10c8c04a1b36c3beac6bc88814affb65dfb3dfedbf5a0ba772"
+    },
+    "section15-products-full-project.log": {
+      "bytes": 220915,
+      "sha256": "75854a6fd4f1be7dda866059ecf299bda663b74e8b10ea2966ac40e7b681b567"
+    },
+    "section15-products-strict-audit.log": {
+      "bytes": 40036,
+      "sha256": "df16e12d2f6034b130aef951bb483a759104aba49327ca0798f50ab8245052a9"
+    }
+  }
+}
