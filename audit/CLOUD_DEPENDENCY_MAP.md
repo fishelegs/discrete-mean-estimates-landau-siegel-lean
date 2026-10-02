@@ -5,7 +5,7 @@ Primary source: [Zhang, arXiv:2211.02515v1](https://arxiv.org/pdf/2211.02515v1),
 
 ## Scope and status discipline
 
-The baseline ledger has **24/51 reported complete, 1 partial (5.6), 26 unstarted**. This audit inspected statements, selected proof implementations, foundational definitions, source imports, the ledger, and all numbered-result locations/dependency references in the paper. It did **not** rebuild Lean, rerun the axiom checker, or independently revalidate all 24 old completions. “Complete” in the graph therefore means **historically reported complete**, not a fresh audit verdict. Subsequent cloud milestones completed original Lemmas11.1,3.6,17.1 and Proposition2.1: see CLOUD_LEMMA111_STATUS.md, CLOUD_LEMMA36_STATUS.md and CLOUD_LEMMA171_STATUS.md and CLOUD_PROPOSITION21_STATUS.md for fresh kernel, regression and axiom evidence. The current ledger is28/51 complete; baseline provenance remains distinguished from these new checks. A subsequent [full cloud kernel recheck](CLOUD_FULL_RECHECK_STATUS.md) re-elaborated all659 Spec sources and92 audit files at commitc3a134 with no failures; this is not a new independent semantic review of every historical claim.
+The baseline ledger has **24/51 reported complete, 1 partial (5.6), 26 unstarted**. This audit inspected statements, selected proof implementations, foundational definitions, source imports, the ledger, and all numbered-result locations/dependency references in the paper. It did **not** rebuild Lean, rerun the axiom checker, or independently revalidate all 24 old completions. “Complete” in the graph therefore means **historically reported complete**, not a fresh audit verdict. Subsequent cloud milestones completed original Lemmas11.1,3.6,17.1 and Proposition2.1: see CLOUD_LEMMA111_STATUS.md, CLOUD_LEMMA36_STATUS.md and CLOUD_LEMMA171_STATUS.md and CLOUD_PROPOSITION21_STATUS.md for fresh kernel, regression and axiom evidence. The current ledger is29/51 complete; baseline provenance remains distinguished from these new checks. A subsequent [full cloud kernel recheck](CLOUD_FULL_RECHECK_STATUS.md) re-elaborated all659 Spec sources and92 audit files at commitc3a134 with no failures; this is not a new independent semantic review of every historical claim.
 
 Use evidence content rather than the largest step number. `audit/STEP137_STATUS.md` and `audit/lean_kernel_verification.txt` report a complete 3.2 and a 2026-10-02 11:01:20–11:17:46 UTC full PASS on Lean 4.30.0, arm64 macOS. Root `STEP141_STATUS.md` describes older temporary work against a frozen Step127 tree and still calls 3.2 unproved. It is not newer mathematical status and is not evidence of a current Linux build.
 
@@ -92,7 +92,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 | Proposition 7.1 | 33 / 34–42 | U | P2.1, L5.3, L5.4, L5.6 |
 | Lemma 8.1 | 42 / 42–44 | U | P2.2, L5.2, L5.9, L6.1, L3.3 |
 | Lemma 8.2 | 45 / 45 | U | ~L5.8 |
-| Lemma 8.3 | 46 / 101–103 | P* | — |
+| Lemma 8.3 | 46 / 101–103 | V | — |
 | Lemma 8.4 | 46 / 46–47 | U | L8.3, L5.5, ~L5.8 |
 | Lemma 10.1 | 53 / 53–55 | U | L5.8 |
 | Lemma 10.2 | 55 / 55–57 | U | L5.8, ~L8.3, ~L8.4 |
@@ -127,3 +127,9 @@ As of2026-10-02, completed numbered results remain28/51. Active proof branches a
 ## Undefined alpha-one source notation
 
 Official PDF, HTML and TeX inspection found28 uses of alpha-one but no definition. This affects15.2,15.3 and other later estimates. The [source audit](CLOUD_ALPHA1_SOURCE_AUDIT.md) records precise locations and the source hash. Explicit-rate component theorems may proceed, but no arbitrary interpretation of this error scale is accepted as completion of an original target.
+
+## Original8.3 completed
+
+The [complete original8.3 target](CLOUD_LEMMA83_STATUS.md) is now centrally verified, including actual arithmetic/Dirichlet agreement and its additive closed-disc error.29/51 original statements are complete.11.2 and repaired15.2 are awaiting central acceptance;8.1 and15.3 remain in active proof work.16.1 remains the next queued zero-incoming numbered node.
+
+Scheduling update15:36 UTC: independent8.2 and16.1 branches have started.11.2 and repaired15.2 are frozen and in central verification;8.1 and15.3 continue proof work. These phases are distinct from completion, which remains29 original statements and zero centrally accepted repaired statements.

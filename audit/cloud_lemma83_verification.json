@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T15:30:21Z",
+  "base_commit": "df40d545008414983dc8ed949dfac60b61e8490c",
+  "target_kind": "original_statement",
+  "new_modules": 33,
+  "own_lemma83_modules": 32,
+  "shared_generic_modules": 1,
+  "public_interfaces_including_definitions": 275,
+  "regression_statements": 5,
+  "required_regression_groups": 4,
+  "dependency_build_jobs": 3910,
+  "full_project_jobs": 4955,
+  "source_files": 1064,
+  "spec_imports": 701,
+  "full_project_imports": 966,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_audit": {
+    "exit_code": 1,
+    "candidates": 367,
+    "new_candidates": 6,
+    "review": {
+      "Lemma83ConverseEuler.lean:113": "Prime-index majorant summability is transported by an explicitly proved function equality; this is a generic local-to-global theorem, instantiated with proved actual bounds.",
+      "Lemma83FinitePrimeBounds.lean:283,287": "Standard elementary log bounds after norm_num.",
+      "Lemma83FiniteSupportedSeries.lean:70": "Product-series summability was derived immediately above from two norm-summable inputs.",
+      "Lemma83RegularPerturbation.lean:43": "The local norm bound2 was derived from the triangle inequality and the proved unit norm.",
+      "Lemma83SupportedPrimePower.lean:23": "A factorization coefficient vanishes because its prime is not in the proved support."
+    }
+  },
+  "logs": {
+    "lemma83-integration-build.log": {
+      "bytes": 28943,
+      "sha256": "6015acf3fdc0cf62030ea1ceb2dd7385ea43185a9033b4ff8c0f942430ec52fd"
+    },
+    "lemma83-integration-axioms.log": {
+      "bytes": 28635,
+      "sha256": "8f67d2c4b1de21197f887464c3ddf2942409c717d679c87b59de711fc4a19b60"
+    },
+    "lemma83-full-project.log": {
+      "bytes": 174553,
+      "sha256": "769fb78f1c48016d2ce0b397963b52d132dd7b311617f1ac4d51de0a187be878"
+    },
+    "lemma83-strict-audit.log": {
+      "bytes": 37865,
+      "sha256": "213f5b5efe608faaa85b9f2c875c3a8eb4b47d610b7bfe50c2ebeedd423e6616"
+    }
+  }
+}
