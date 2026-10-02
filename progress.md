@@ -1,5 +1,9 @@
 # 张益唐论文 Lean 形式化进度
 
+**重要数值风险（2026-10-02 19:02 UTC）**：[Section8独立数值审计](audit/CLOUD_SECTION8_NUMERICAL_AUDIT.md)按官方PDF/TeX(8.13)–(8.23)全部shift与共轭计算，c₁∈[7.050104669792050418,7.050104669792050421]，与原(8.24)c₁<6.9955不相容。两套独立实现与有向区间复核；目前是可复现Python区间证据，尚非Lean积分定理。它阻塞当前经2.5的最终数值论证，但不证明Landau–Siegel主结论为假，也不撤销已核验局部lemma。原36/51计数不变；需追溯公式/参数并验证任何修订，不能靠凑阈值。
+
+修订加权兼容桥（2026-10-02 18:55 UTC）：[8.4真实Section8内部误差](ZhangLS/Spec/Lemma84Section8SmoothingBridge.lean)已中央验证。原κ/共轭κ、λ、μ、φ、χ、P₁/P₂和iota交叉项保留；仅在dr<Pμ/T替换真实ξ因子，实际源表达式变化=o(α)，定量C(1+9logL)^42L^-11。边界值原样保留，未假设weight envelope；完整边界/8.11/P71接口仍待证。10模块、69标准公理接口、3数值回归及5175项全库PASS，编号仍36/51。详见[证据与范围](audit/CLOUD_LEMMA84_WEIGHTED_STATUS.md)。
+
 修订主链兼容桥（2026-10-02 18:40 UTC）：[15.3真实归一化残数](ZhangLS/Spec/Lemma153DownstreamMainTerm.lean)已中央验证：真实M₁×修订Mellin残数=原a·φ(D)/D+O(L^-3)，保留真实U/ζ正则导数、原β/c′、ramified因子与统一常数，无最终矛盾真空捷径。7模块、53标准公理记录、4回归、5165项全库PASS。这证明该局部主项/精度兼容，尚不证明有限和、移线、unsmoothing、N(Q)删选或Φ₁全链；D/φ(D)外层与r1*r1j×a误差仍显式待证。编号保持34原+2修订=36/51。详见[证据与边界](audit/CLOUD_LEMMA153_DOWNSTREAM_STATUS.md)。
 
 共享解析组件（2026-10-02 18:32 UTC）：[实际δ的八阶Mellin衰减](ZhangLS/Spec/Lemma54EighthMellin.lean)已中央验证：对所有实t，‖δ(1+it)‖≤C₈(logD)^7200/(1+t²)^4，真实八次分部积分/端点/导数矩均已证明，并有中心窗口+2B/H^7显式尾项。不越界调用有限高度5.6。7模块、65标准公理接口、4回归、5158项全库构建PASS；7.1/14.1外层求和仍独立未完，编号保持36/51。详见[证据](audit/CLOUD_EIGHTH_MELLIN_STATUS.md)。

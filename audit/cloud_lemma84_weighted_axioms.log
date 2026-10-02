@@ -1,0 +1,1036 @@
+ZhangLS.Spec.lemma84_lambda_prime_weight (β : Fin 3 → ℂ) (hβ : ∀ (i : Fin 3), (β i).re = 0) (j : Fin 3) {p : ℕ}
+  (hp : Nat.Prime p) : ‖ZhangLS.Spec.lemma83LambdaFactor β p (1 - β j)‖ ≤ 1 + 12 / ↑p
+'ZhangLS.Spec.lemma84_lambda_prime_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_lambda_product_weight (β : Fin 3 → ℂ) (hβ : ∀ (i : Fin 3), (β i).re = 0) (j : Fin 3) (n : ℕ) :
+  ‖ZhangLS.Spec.lemma83Lambda β n (1 - β j)‖ ≤ ∏ p ∈ n.primeFactors, (1 + 12 / ↑p)
+'ZhangLS.Spec.lemma84_lambda_product_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_lambda_uniform_weight (β : Fin 3 → ℂ) (hβ : ∀ (i : Fin 3), (β i).re = 0) (j : Fin 3) {n : ℕ}
+  (hn : 0 < n) {y : ℝ} (hy : 1 < y) (hny : Real.log ↑n ≤ y) :
+  ‖ZhangLS.Spec.lemma83Lambda β n (1 - β j)‖ ≤ Real.exp (12 / Real.log 2) * (1 + Real.log y) ^ 36
+'ZhangLS.Spec.lemma84_lambda_uniform_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_totient_real_product (n : ℕ) : ↑n.totient = ↑n * ∏ p ∈ n.primeFactors, (1 - (↑p)⁻¹)
+'ZhangLS.Spec.lemma84_totient_real_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_reciprocal_totient_product {n : ℕ} (hn : 0 < n) :
+  (↑n.totient)⁻¹ ≤ (↑n)⁻¹ * ∏ p ∈ n.primeFactors, (1 + 2 / ↑p)
+'ZhangLS.Spec.lemma84_reciprocal_totient_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_reciprocal_totient_uniform {n : ℕ} (hn : 0 < n) {y : ℝ} (hy : 1 < y) (hny : Real.log ↑n ≤ y) :
+  (↑n.totient)⁻¹ ≤ (↑n)⁻¹ * (Real.exp (2 / Real.log 2) * (1 + Real.log y) ^ 6)
+'ZhangLS.Spec.lemma84_reciprocal_totient_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8Weight {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3) (d r : ℕ) : ℂ
+'ZhangLS.Spec.lemma84Section8Weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84WeightScale (y : ℝ) : ℝ
+'ZhangLS.Spec.lemma84WeightScale' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_weight_scale_nonneg (y : ℝ) : 0 ≤ ZhangLS.Spec.lemma84WeightScale y
+'ZhangLS.Spec.lemma84_weight_scale_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_actual_weight_bound {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  {d r : ℕ} (hd : 0 < d) (hr : 0 < r) {y : ℝ} (hy : 1 < y) (hprod : Real.log ↑(d * r) ≤ y) :
+  ‖ZhangLS.Spec.lemma84Section8Weight χ c j d r‖ ≤ ZhangLS.Spec.lemma84WeightScale y * (↑d)⁻¹ * (↑r)⁻¹ ^ 2
+'ZhangLS.Spec.lemma84_actual_weight_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_finite_reciprocal_square (S : Finset ℕ) : ∑ r ∈ S, (↑r)⁻¹ ^ 2 ≤ 2
+'ZhangLS.Spec.lemma84_finite_reciprocal_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_actual_weight_mass {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  (S : Finset (ℕ × ℕ)) (N : ℕ) (hS : S ⊆ Finset.Icc 1 N ×ˢ Finset.Icc 1 N) {y : ℝ} (hy : 1 < y)
+  (hlog : ∀ a ∈ S, Real.log ↑(a.1 * a.2) ≤ y) :
+  ∑ a ∈ S, ‖ZhangLS.Spec.lemma84Section8Weight χ c j a.1 a.2‖ ≤ 2 * ZhangLS.Spec.lemma84WeightScale y * ↑(harmonic N)
+'ZhangLS.Spec.lemma84_actual_weight_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_companion_elementary {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  (μ : ℕ) {x : ℝ} (hx : 1 ≤ x) : ‖ZhangLS.Spec.lemma82ShiftedSum χ c j μ x‖ ≤ Real.log x * (1 + Real.log x)
+'ZhangLS.Spec.lemma84_companion_elementary' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_companion_main_bound {D : ℕ} {c : ℝ} (hL : 2000 ≤ ZhangLS.Spec.lemma23PaperL D) (hc : 0 < c)
+  (hsmall : c * ZhangLS.Spec.lemma44PaperAlpha D * ZhangLS.Spec.lemma23PaperL D ≤ 1 / 10) (j : Fin 3) (μ : ℕ) {x : ℝ}
+  (hx : 1 ≤ x) (hxP : x < ZhangLS.Spec.lemma23PaperP D) : ‖ZhangLS.Spec.lemma82MainTerm D c j μ x‖ ≤ 1 + 10 * Real.pi
+'ZhangLS.Spec.lemma84_companion_main_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84CompanionConstant : ℝ
+'ZhangLS.Spec.lemma84CompanionConstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_companion_constant_pos : 0 < ZhangLS.Spec.lemma84CompanionConstant
+'ZhangLS.Spec.lemma84_companion_constant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_companion_global (c : ℝ) :
+  0 < c →
+    ∃ D₀,
+      2 ≤ D₀ ∧
+        ∀ (D : ℕ),
+          D₀ ≤ D →
+            ∀ (χ : ZhangLS.Spec.RealPrimitiveCharacter D),
+              ZhangLS.Spec.NormalizedAssumptionA χ →
+                ∀ (j : Fin 3) (μ : ℕ) (x : ℝ),
+                  1 ≤ x →
+                    x < ZhangLS.Spec.lemma23PaperP D →
+                      ‖ZhangLS.Spec.lemma82ShiftedSum χ c j μ x‖ ≤
+                        ZhangLS.Spec.lemma84CompanionConstant * ZhangLS.Spec.lemma23PaperL D ^ 3
+'ZhangLS.Spec.lemma84_companion_global' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8P1 (D : ℕ) : ℝ
+'ZhangLS.Spec.lemma84Section8P1' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8P2 (D : ℕ) : ℝ
+'ZhangLS.Spec.lemma84Section8P2' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8Iota : ℂ
+'ZhangLS.Spec.lemma84Section8Iota' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8Cutoff (D μ : ℕ) : ℝ
+'ZhangLS.Spec.lemma84Section8Cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_cutoff_pos (D μ : ℕ) : 0 < ZhangLS.Spec.lemma84Section8Cutoff D μ
+'ZhangLS.Spec.lemma84_section8_cutoff_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_log_p1 (D : ℕ) :
+  Real.log (ZhangLS.Spec.lemma84Section8P1 D) = 63 / 125 * ZhangLS.Spec.lemma23PaperL D ^ 9
+'ZhangLS.Spec.lemma84_section8_log_p1' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_log_p2 (D : ℕ) :
+  Real.log (ZhangLS.Spec.lemma84Section8P2 D) =
+    1 / 2 * ZhangLS.Spec.lemma23PaperL D ^ 9 - 10 * ZhangLS.Spec.lemma23PaperL D ^ (11 / 10)
+'ZhangLS.Spec.lemma84_section8_log_p2' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_cutoffs_eventually :
+  ∀ᶠ (D : ℕ) in Filter.atTop,
+    2 ≤ D ∧
+      1 < ZhangLS.Spec.lemma23PaperL D ∧
+        ∀ (μ : ℕ),
+          1 < ZhangLS.Spec.lemma84Section8Cutoff D μ ∧
+            ZhangLS.Spec.lemma84Section8Cutoff D μ <
+                ZhangLS.Spec.lemma23PaperP D * ZhangLS.Spec.lemma56PaperT D ^ (-2) ∧
+              ZhangLS.Spec.lemma84Section8Cutoff D μ < ZhangLS.Spec.lemma23PaperP D ∧
+                1 / 4 * ZhangLS.Spec.lemma23PaperL D ^ 9 ≤ Real.log (ZhangLS.Spec.lemma84Section8Cutoff D μ)
+'ZhangLS.Spec.lemma84_section8_cutoffs_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_p2_lt_p1 {D : ℕ} (hL : 0 < ZhangLS.Spec.lemma23PaperL D) :
+  ZhangLS.Spec.lemma84Section8P2 D < ZhangLS.Spec.lemma84Section8P1 D
+'ZhangLS.Spec.lemma84_section8_p2_lt_p1' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8Pairs (D : ℕ) : Finset (ℕ × ℕ)
+'ZhangLS.Spec.lemma84Section8Pairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8First {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3) (μ n : ℕ) : ℂ
+'ZhangLS.Spec.lemma84Section8First' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8Second {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3) (μ d r : ℕ) :
+  ℂ
+'ZhangLS.Spec.lemma84Section8Second' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8SecondMain {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  (μ d r : ℕ) : ℂ
+'ZhangLS.Spec.lemma84Section8SecondMain' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8SecondHybrid {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  (μ d r : ℕ) : ℂ
+'ZhangLS.Spec.lemma84Section8SecondHybrid' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8FirstCombined {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  (n : ℕ) : ℂ
+'ZhangLS.Spec.lemma84Section8FirstCombined' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8Raw {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3) : ℂ
+'ZhangLS.Spec.lemma84Section8Raw' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8Hybrid {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3) : ℂ
+'ZhangLS.Spec.lemma84Section8Hybrid' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8FullSecondMain {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3) : ℂ
+'ZhangLS.Spec.lemma84Section8FullSecondMain' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8Boundary {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3) : ℂ
+'ZhangLS.Spec.lemma84Section8Boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_exact_error_split {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ)
+  (j : Fin 3) :
+  ZhangLS.Spec.lemma84Section8Raw χ c j - ZhangLS.Spec.lemma84Section8FullSecondMain χ c j =
+    ZhangLS.Spec.lemma84Section8Raw χ c j - ZhangLS.Spec.lemma84Section8Hybrid χ c j +
+      ZhangLS.Spec.lemma84Section8Boundary χ c j
+'ZhangLS.Spec.lemma84_section8_exact_error_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_pairs_exact (D d r : ℕ) :
+  (d, r) ∈ ZhangLS.Spec.lemma84Section8Pairs D ↔ 0 < d ∧ 0 < r ∧ ↑(d * r) < ZhangLS.Spec.lemma84Section8P1 D
+'ZhangLS.Spec.lemma84_section8_pairs_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_first_zero_at_cutoff {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ)
+  (j : Fin 3) (μ n : ℕ) (h : ZhangLS.Spec.lemma84Section8Cutoff D μ ≤ ↑n) :
+  ZhangLS.Spec.lemma84Section8First χ c j μ n = 0
+'ZhangLS.Spec.lemma84_section8_first_zero_at_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_second_zero_at_cutoff {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ)
+  (j : Fin 3) (μ d r : ℕ) (h : ZhangLS.Spec.lemma84Section8Cutoff D μ ≤ ↑(d * r)) :
+  ZhangLS.Spec.lemma84Section8Second χ c j μ d r = 0
+'ZhangLS.Spec.lemma84_section8_second_zero_at_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_hybrid_boundary_endpoint {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ)
+  (j : Fin 3) (μ d r : ℕ) (h : ↑(d * r) = ZhangLS.Spec.lemma84Section8Cutoff D μ / ZhangLS.Spec.lemma56PaperT D) :
+  ZhangLS.Spec.lemma84Section8SecondHybrid χ c j μ d r = ZhangLS.Spec.lemma84Section8Second χ c j μ d r
+'ZhangLS.Spec.lemma84_section8_hybrid_boundary_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_inner_bounds (c : ℝ) :
+  0 < c →
+    ∃ D₀,
+      2 ≤ D₀ ∧
+        ∀ (D : ℕ),
+          D₀ ≤ D →
+            1 < ZhangLS.Spec.lemma23PaperL D ∧
+              ∀ (χ : ZhangLS.Spec.RealPrimitiveCharacter D),
+                ZhangLS.Spec.NormalizedAssumptionA χ →
+                  ∀ (j : Fin 3) (μ : ℕ),
+                    (∀ (n : ℕ),
+                        0 < n →
+                          ‖ZhangLS.Spec.lemma84Section8First χ c j μ n‖ ≤
+                            4 * ZhangLS.Spec.lemma84CompanionConstant * ZhangLS.Spec.lemma23PaperL D ^ (-6)) ∧
+                      ∀ (d r : ℕ),
+                        0 < d →
+                          0 < r →
+                            ‖ZhangLS.Spec.lemma84Section8Second χ c j μ d r -
+                                  ZhangLS.Spec.lemma84Section8SecondHybrid χ c j μ d r‖ ≤
+                              12 * ZhangLS.Spec.lemma23PaperL D ^ (-14)
+'ZhangLS.Spec.lemma84_section8_inner_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_weight_mass {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  (hL : 1 < ZhangLS.Spec.lemma23PaperL D) :
+  ∑ a ∈ ZhangLS.Spec.lemma84Section8Pairs D, ‖ZhangLS.Spec.lemma84Section8Weight χ c j a.1 a.2‖ ≤
+    4 * ZhangLS.Spec.lemma84WeightScale (ZhangLS.Spec.lemma23PaperL D ^ 9) * ZhangLS.Spec.lemma23PaperL D ^ 9
+'ZhangLS.Spec.lemma84_section8_weight_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84InteriorConstant : ℝ
+'ZhangLS.Spec.lemma84InteriorConstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_interior_constant_pos : 0 < ZhangLS.Spec.lemma84InteriorConstant
+'ZhangLS.Spec.lemma84_interior_constant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_interior_quantitative (c : ℝ) :
+  0 < c →
+    ∃ D₀,
+      2 ≤ D₀ ∧
+        ∀ (D : ℕ),
+          D₀ ≤ D →
+            ∀ (χ : ZhangLS.Spec.RealPrimitiveCharacter D),
+              ZhangLS.Spec.NormalizedAssumptionA χ →
+                ∀ (j : Fin 3),
+                  ‖ZhangLS.Spec.lemma84Section8Raw χ c j - ZhangLS.Spec.lemma84Section8Hybrid χ c j‖ ≤
+                    ZhangLS.Spec.lemma84InteriorConstant *
+                        ZhangLS.Spec.lemma84WeightScale (ZhangLS.Spec.lemma23PaperL D ^ 9) *
+                      ZhangLS.Spec.lemma23PaperL D ^ (-11)
+'ZhangLS.Spec.lemma84_section8_interior_quantitative' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_repaired_interior_little_o (c : ℝ) :
+  0 < c →
+    ∀ (ε : ℝ),
+      0 < ε →
+        ∃ D₀,
+          2 ≤ D₀ ∧
+            ∀ (D : ℕ),
+              D₀ ≤ D →
+                ∀ (χ : ZhangLS.Spec.RealPrimitiveCharacter D),
+                  ZhangLS.Spec.NormalizedAssumptionA χ →
+                    ∀ (j : Fin 3),
+                      ‖ZhangLS.Spec.lemma84Section8Raw χ c j - ZhangLS.Spec.lemma84Section8Hybrid χ c j‖ ≤
+                        ε * ZhangLS.Spec.lemma44PaperAlpha D
+'ZhangLS.Spec.lemma84_section8_repaired_interior_little_o' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8BoundaryInner {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  (μ d r : ℕ) : ℂ
+'ZhangLS.Spec.lemma84Section8BoundaryInner' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_boundary_inner_exact {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ)
+  (j : Fin 3) (μ d r : ℕ) :
+  ZhangLS.Spec.lemma84Section8SecondHybrid χ c j μ d r - ZhangLS.Spec.lemma84Section8SecondMain χ c j μ d r =
+    ZhangLS.Spec.lemma84Section8BoundaryInner χ c j μ d r
+'ZhangLS.Spec.lemma84_section8_boundary_inner_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_boundary_exact {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3) :
+  ZhangLS.Spec.lemma84Section8Boundary χ c j =
+    ∑ a ∈ ZhangLS.Spec.lemma84Section8Pairs D,
+      ZhangLS.Spec.lemma84Section8Weight χ c j a.1 a.2 * ZhangLS.Spec.lemma84Section8FirstCombined χ c j (a.1 * a.2) *
+        (ZhangLS.Spec.lemma84Section8BoundaryInner χ c j 6 a.1 a.2 +
+          star ZhangLS.Spec.lemma84Section8Iota * ZhangLS.Spec.lemma84Section8BoundaryInner χ c j 7 a.1 a.2)
+'ZhangLS.Spec.lemma84_section8_boundary_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.Lemma84Section8BoundaryTarget : Prop
+'ZhangLS.Spec.Lemma84Section8BoundaryTarget' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_full_second_of_boundary (hboundary : ZhangLS.Spec.Lemma84Section8BoundaryTarget) (c : ℝ) :
+  0 < c →
+    ∀ (ε : ℝ),
+      0 < ε →
+        ∃ D₀,
+          2 ≤ D₀ ∧
+            ∀ (D : ℕ),
+              D₀ ≤ D →
+                ∀ (χ : ZhangLS.Spec.RealPrimitiveCharacter D),
+                  ZhangLS.Spec.NormalizedAssumptionA χ →
+                    ∀ (j : Fin 3),
+                      ‖ZhangLS.Spec.lemma84Section8Raw χ c j - ZhangLS.Spec.lemma84Section8FullSecondMain χ c j‖ ≤
+                        ε * ZhangLS.Spec.lemma44PaperAlpha D
+'ZhangLS.Spec.lemma84_section8_full_second_of_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8Kappa (D μ n : ℕ) : ℂ
+'ZhangLS.Spec.lemma84Section8Kappa' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_kappa_normalization {D μ n m : ℕ} (hn : 0 < n) (hm : 0 < m)
+  (hQ : 1 < ZhangLS.Spec.lemma84Section8Cutoff D μ) (hnm : ↑(n * m) < ZhangLS.Spec.lemma84Section8Cutoff D μ) :
+  ZhangLS.Spec.lemma84Section8Kappa D μ (n * m) =
+    ↑(ZhangLS.Spec.lemma84Section8Cutoff D μ / ↑n / ↑m) ^ ZhangLS.Spec.lemma82SmoothingBeta D μ *
+        ↑(Real.log (ZhangLS.Spec.lemma84Section8Cutoff D μ / ↑n / ↑m)) /
+      ↑(Real.log (ZhangLS.Spec.lemma84Section8Cutoff D μ))
+'ZhangLS.Spec.lemma84_section8_kappa_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_first_smoothing_exact {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ)
+  (j : Fin 3) (μ n : ℕ) (hn : 0 < n) (hQ : 1 < ZhangLS.Spec.lemma84Section8Cutoff D μ)
+  (hnQ : ↑n < ZhangLS.Spec.lemma84Section8Cutoff D μ) :
+  ZhangLS.Spec.lemma84Section8First χ c j μ n =
+    ∑ m ∈ ZhangLS.Spec.lemma82StrictCutoff (ZhangLS.Spec.lemma84Section8Cutoff D μ / ↑n),
+      χ.evalNat m / ↑m ^ (1 - ZhangLS.Spec.lemma82PaperBeta D c j) * ZhangLS.Spec.lemma84Section8Kappa D μ (n * m)
+'ZhangLS.Spec.lemma84_section8_first_smoothing_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_smoothing_beta_same (D μ : ℕ) :
+  ZhangLS.Spec.lemma84SmoothingBeta D μ = ZhangLS.Spec.lemma82SmoothingBeta D μ
+'ZhangLS.Spec.lemma84_section8_smoothing_beta_same' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_paper_beta_same (D : ℕ) (c : ℝ) (j : Fin 3) :
+  ZhangLS.Spec.lemma82PaperBeta D c j = ZhangLS.Spec.lemma83PaperBeta D c j
+'ZhangLS.Spec.lemma84_section8_paper_beta_same' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_conj_smoothing (D μ : ℕ) :
+  star (ZhangLS.Spec.lemma82SmoothingBeta D μ) = -ZhangLS.Spec.lemma84SmoothingBeta D μ
+'ZhangLS.Spec.lemma84_section8_conj_smoothing' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_conj_smoothing_power (D μ : ℕ) {x : ℝ} (hx : 0 < x) :
+  star (↑x ^ ZhangLS.Spec.lemma82SmoothingBeta D μ) = ↑x ^ (-ZhangLS.Spec.lemma84SmoothingBeta D μ)
+'ZhangLS.Spec.lemma84_section8_conj_smoothing_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_second_smoothing_exact {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ)
+  (j : Fin 3) (μ d r : ℕ) (hd : 0 < d) (hr : 0 < r) (hQ : 1 < ZhangLS.Spec.lemma84Section8Cutoff D μ)
+  (hnQ : ↑(d * r) < ZhangLS.Spec.lemma84Section8Cutoff D μ) :
+  ZhangLS.Spec.lemma84Section8Second χ c j μ d r =
+    ∑ n ∈ ZhangLS.Spec.lemma84StrictCutoff (ZhangLS.Spec.lemma84Section8Cutoff D μ / ↑(d * r)),
+      χ.evalNat n * star (ZhangLS.Spec.lemma84Section8Kappa D μ (d * r * n)) *
+          ZhangLS.Spec.lemma83Xi (ZhangLS.Spec.lemma83PaperBeta D c) j n d r /
+        ↑n
+'ZhangLS.Spec.lemma84_section8_second_smoothing_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_small_strict_cutoff {x : ℝ} (hx : 0 ≤ x) (hx1 : x ≤ 1) :
+  ZhangLS.Spec.lemma82StrictCutoff x = ∅
+'ZhangLS.Spec.lemma84_section8_small_strict_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8FirstSource {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  (μ n : ℕ) : ℂ
+'ZhangLS.Spec.lemma84Section8FirstSource' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8SecondSource {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  (μ d r : ℕ) : ℂ
+'ZhangLS.Spec.lemma84Section8SecondSource' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_first_source_exact {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  (μ n : ℕ) (hn : 0 < n) (hQ : 1 < ZhangLS.Spec.lemma84Section8Cutoff D μ) :
+  ZhangLS.Spec.lemma84Section8First χ c j μ n = ZhangLS.Spec.lemma84Section8FirstSource χ c j μ n
+'ZhangLS.Spec.lemma84_section8_first_source_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_second_source_exact {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ)
+  (j : Fin 3) (μ d r : ℕ) (hd : 0 < d) (hr : 0 < r) (hQ : 1 < ZhangLS.Spec.lemma84Section8Cutoff D μ) :
+  ZhangLS.Spec.lemma84Section8Second χ c j μ d r = ZhangLS.Spec.lemma84Section8SecondSource χ c j μ d r
+'ZhangLS.Spec.lemma84_section8_second_source_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84Section8SourceSum {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3) : ℂ
+'ZhangLS.Spec.lemma84Section8SourceSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_raw_source_exact {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ) (j : Fin 3)
+  (h6 : 1 < ZhangLS.Spec.lemma84Section8Cutoff D 6) (h7 : 1 < ZhangLS.Spec.lemma84Section8Cutoff D 7) :
+  ZhangLS.Spec.lemma84Section8Raw χ c j = ZhangLS.Spec.lemma84Section8SourceSum χ c j
+'ZhangLS.Spec.lemma84_section8_raw_source_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+ZhangLS.Spec.lemma84_section8_source_repaired_interior_little_o (c : ℝ) :
+  0 < c →
+    ∀ (ε : ℝ),
+      0 < ε →
+        ∃ D₀,
+          2 ≤ D₀ ∧
+            ∀ (D : ℕ),
+              D₀ ≤ D →
+                ∀ (χ : ZhangLS.Spec.RealPrimitiveCharacter D),
+                  ZhangLS.Spec.NormalizedAssumptionA χ →
+                    ∀ (j : Fin 3),
+                      ‖ZhangLS.Spec.lemma84Section8SourceSum χ c j - ZhangLS.Spec.lemma84Section8Hybrid χ c j‖ ≤
+                        ε * ZhangLS.Spec.lemma44PaperAlpha D
+'ZhangLS.Spec.lemma84_section8_source_repaired_interior_little_o' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ZhangLS.Spec.lemma84_section8_original_weight_exact {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D) (c : ℝ)
+  (j : Fin 3) (d r : ℕ) :
+  ZhangLS.Spec.lemma84Section8Weight χ c j d r =
+    ↑(‖χ.evalNat d‖ * ‖↑(ArithmeticFunction.moebius r) * χ.evalNat r‖) *
+        ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+          (1 - ZhangLS.Spec.lemma83PaperBeta D c j) /
+      (↑d * ↑r * ↑r.totient)
+'ZhangLS.Spec.lemma84_section8_original_weight_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem ZhangLS.Spec.lemma84_section8_source_repaired_interior_little_o : ∀ (c : ℝ),
+  0 < c →
+    ∀ (ε : ℝ),
+      0 < ε →
+        ∃ D₀,
+          2 ≤ D₀ ∧
+            ∀ (D : ℕ),
+              D₀ ≤ D →
+                ∀ (χ : ZhangLS.Spec.RealPrimitiveCharacter D),
+                  ZhangLS.Spec.NormalizedAssumptionA χ →
+                    ∀ (j : Fin 3),
+                      ‖ZhangLS.Spec.lemma84Section8SourceSum χ c j - ZhangLS.Spec.lemma84Section8Hybrid χ c j‖ ≤
+                        ε * ZhangLS.Spec.lemma44PaperAlpha D :=
+fun c hc ε hε =>
+  Exists.casesOn (ZhangLS.Spec.lemma84_section8_repaired_interior_little_o c hc ε hε) fun Di h =>
+    And.casesOn h fun hDi hi =>
+      Exists.casesOn (Filter.eventually_atTop.mp ZhangLS.Spec.lemma84_section8_cutoffs_eventually) fun Dq hDq =>
+        Exists.intro (max Di Dq)
+          ⟨le_trans hDi (le_max_left Di Dq), fun D hD χ hA j =>
+            have hq := hDq D (le_trans (le_max_right Di Dq) hD);
+            Eq.mpr
+              (id
+                (congrArg
+                  (fun _a => ‖_a - ZhangLS.Spec.lemma84Section8Hybrid χ c j‖ ≤ ε * ZhangLS.Spec.lemma44PaperAlpha D)
+                  (Eq.symm
+                    (ZhangLS.Spec.lemma84_section8_raw_source_exact χ c j (hq.right.right 6).left
+                      (hq.right.right 7).left))))
+              (hi D (le_trans (le_max_left Di Dq) hD) χ hA j)⟩
+def ZhangLS.Spec.Lemma84Section8BoundaryTarget : Prop :=
+∀ (c : ℝ),
+  0 < c →
+    ∀ (ε : ℝ),
+      0 < ε →
+        ∃ D₀,
+          2 ≤ D₀ ∧
+            ∀ (D : ℕ),
+              D₀ ≤ D →
+                ∀ (χ : ZhangLS.Spec.RealPrimitiveCharacter D),
+                  ZhangLS.Spec.NormalizedAssumptionA χ →
+                    ∀ (j : Fin 3), ‖ZhangLS.Spec.lemma84Section8Boundary χ c j‖ ≤ ε * ZhangLS.Spec.lemma44PaperAlpha D
+theorem ZhangLS.Spec.lemma84_section8_original_weight_exact : ∀ {D : ℕ} (χ : ZhangLS.Spec.RealPrimitiveCharacter D)
+  (c : ℝ) (j : Fin 3) (d r : ℕ),
+  ZhangLS.Spec.lemma84Section8Weight χ c j d r =
+    ↑(‖χ.evalNat d‖ * ‖↑(ArithmeticFunction.moebius r) * χ.evalNat r‖) *
+        ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+          (1 - ZhangLS.Spec.lemma83PaperBeta D c j) /
+      (↑d * ↑r * ↑r.totient) :=
+fun {D} χ c j d r =>
+  have hm :=
+    of_eq_true
+      (Eq.trans
+        (congrFun' (congrArg Eq (Eq.trans (congrArg (⇑χ.chi) (Nat.cast_mul d r)) (map_mul χ.chi ↑d ↑r)))
+          (χ.chi ↑d * χ.chi ↑r))
+        (eq_self (χ.chi ↑d * χ.chi ↑r)));
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a =>
+          _a =
+            ↑(‖χ.evalNat d‖ * ‖↑(ArithmeticFunction.moebius r) * χ.evalNat r‖) *
+                ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                  (1 - ZhangLS.Spec.lemma83PaperBeta D c j) /
+              (↑d * ↑r * ↑r.totient))
+        (ZhangLS.Spec.lemma84Section8Weight.eq_1 χ c j d r)))
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            ↑(|↑(ArithmeticFunction.moebius r)| * ‖_a‖ / (↑d * ↑r * ↑r.totient)) *
+                ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                  (1 - ZhangLS.Spec.lemma83PaperBeta D c j) =
+              ↑(‖χ.evalNat d‖ * ‖↑(ArithmeticFunction.moebius r) * χ.evalNat r‖) *
+                  ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                    (1 - ZhangLS.Spec.lemma83PaperBeta D c j) /
+                (↑d * ↑r * ↑r.totient))
+          hm))
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              ↑(|↑(ArithmeticFunction.moebius r)| * _a / (↑d * ↑r * ↑r.totient)) *
+                  ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                    (1 - ZhangLS.Spec.lemma83PaperBeta D c j) =
+                ↑(‖χ.evalNat d‖ * ‖↑(ArithmeticFunction.moebius r) * χ.evalNat r‖) *
+                    ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                      (1 - ZhangLS.Spec.lemma83PaperBeta D c j) /
+                  (↑d * ↑r * ↑r.totient))
+            (norm_mul (χ.evalNat d) (χ.evalNat r))))
+        (Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                ↑(|↑(ArithmeticFunction.moebius r)| * (‖χ.evalNat d‖ * ‖χ.evalNat r‖) / (↑d * ↑r * ↑r.totient)) *
+                    ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                      (1 - ZhangLS.Spec.lemma83PaperBeta D c j) =
+                  ↑(‖χ.evalNat d‖ * _a) *
+                      ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                        (1 - ZhangLS.Spec.lemma83PaperBeta D c j) /
+                    (↑d * ↑r * ↑r.totient))
+              (norm_mul (↑(ArithmeticFunction.moebius r)) (χ.evalNat r))))
+          (Eq.mpr
+            (id
+              (congrArg
+                (fun _a =>
+                  ↑(|↑(ArithmeticFunction.moebius r)| * (‖χ.evalNat d‖ * ‖χ.evalNat r‖) / (↑d * ↑r * ↑r.totient)) *
+                      ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                        (1 - ZhangLS.Spec.lemma83PaperBeta D c j) =
+                    ↑(‖χ.evalNat d‖ * (_a * ‖χ.evalNat r‖)) *
+                        ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                          (1 - ZhangLS.Spec.lemma83PaperBeta D c j) /
+                      (↑d * ↑r * ↑r.totient))
+                (Complex.norm_intCast (ArithmeticFunction.moebius r))))
+            (Eq.mpr
+              (id
+                (congr
+                  (congrArg Eq
+                    (congrFun'
+                      (congrArg HMul.hMul
+                        (Eq.trans
+                          (Complex.ofReal_div (|↑(ArithmeticFunction.moebius r)| * (‖χ.evalNat d‖ * ‖χ.evalNat r‖))
+                            (↑d * ↑r * ↑r.totient))
+                          (congr
+                            (congrArg HDiv.hDiv
+                              (Eq.trans
+                                (Complex.ofReal_mul |↑(ArithmeticFunction.moebius r)| (‖χ.evalNat d‖ * ‖χ.evalNat r‖))
+                                (congrArg (HMul.hMul ↑|↑(ArithmeticFunction.moebius r)|)
+                                  (Complex.ofReal_mul ‖χ.evalNat d‖ ‖χ.evalNat r‖))))
+                            (Eq.trans (Complex.ofReal_mul (↑d * ↑r) ↑r.totient)
+                              (congrFun' (congrArg HMul.hMul (Complex.ofReal_mul ↑d ↑r)) ↑r.totient)))))
+                      (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                        (1 - ZhangLS.Spec.lemma83PaperBeta D c j))))
+                  (congrFun'
+                    (congrArg HDiv.hDiv
+                      (congrFun'
+                        (congrArg HMul.hMul
+                          (Eq.trans
+                            (Complex.ofReal_mul ‖χ.evalNat d‖ (|↑(ArithmeticFunction.moebius r)| * ‖χ.evalNat r‖))
+                            (congrArg (HMul.hMul ↑‖χ.evalNat d‖)
+                              (Complex.ofReal_mul |↑(ArithmeticFunction.moebius r)| ‖χ.evalNat r‖))))
+                        (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                          (1 - ZhangLS.Spec.lemma83PaperBeta D c j))))
+                    (↑d * ↑r * ↑r.totient))))
+              (Mathlib.Tactic.Ring.of_eq
+                (Mathlib.Tactic.Ring.Common.mul_congr
+                  (Mathlib.Tactic.Ring.Common.div_congr
+                    (Mathlib.Tactic.Ring.Common.mul_congr
+                      (Mathlib.Tactic.Ring.Common.atom_pf (↑|↑(ArithmeticFunction.moebius r)|) rfl
+                        (Eq.mpr
+                          (id
+                            (congrArg
+                              (fun _a =>
+                                ↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 * Nat.rawCast 1 =
+                                  ↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 * _a)
+                              (Eq.symm rfl)))
+                          (Eq.refl (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                      (Mathlib.Tactic.Ring.Common.mul_congr
+                        (Mathlib.Tactic.Ring.Common.atom_pf (↑‖χ.evalNat d‖) rfl
+                          (Eq.mpr
+                            (id
+                              (congrArg
+                                (fun _a =>
+                                  ↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * Nat.rawCast 1 = ↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * _a)
+                                (Eq.symm rfl)))
+                            (Eq.refl (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                        (Mathlib.Tactic.Ring.Common.atom_pf (↑‖χ.evalNat r‖) rfl
+                          (Eq.mpr
+                            (id
+                              (congrArg
+                                (fun _a =>
+                                  ↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1 = ↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * _a)
+                                (Eq.symm rfl)))
+                            (Eq.refl (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                        (Mathlib.Tactic.Ring.Common.add_mul
+                          (Mathlib.Tactic.Ring.Common.mul_add
+                            (Mathlib.Tactic.Ring.Common.mul_pf_left (↑‖χ.evalNat d‖) (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_right (↑‖χ.evalNat r‖) (Nat.rawCast 1)
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                    (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                    (Eq.refl 1)))))
+                            (Mathlib.Tactic.Ring.Common.mul_zero (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * Nat.rawCast 1))
+                            (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                              (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1) + 0)))
+                          (Mathlib.Tactic.Ring.Common.zero_mul (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1 + 0))
+                          (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                            (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1) + 0))))
+                      (Mathlib.Tactic.Ring.Common.add_mul
+                        (Mathlib.Tactic.Ring.Common.mul_add
+                          (Mathlib.Tactic.Ring.Common.mul_pf_left (↑|↑(ArithmeticFunction.moebius r)|) (Nat.rawCast 1)
+                            (Mathlib.Tactic.Ring.Common.mul_pf_right (↑‖χ.evalNat d‖) (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_right (↑‖χ.evalNat r‖) (Nat.rawCast 1)
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                    (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                    (Eq.refl 1))))))
+                          (Mathlib.Tactic.Ring.Common.mul_zero
+                            (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 * Nat.rawCast 1))
+                          (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                            (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                                (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1)) +
+                              0)))
+                        (Mathlib.Tactic.Ring.Common.zero_mul
+                          (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1) + 0))
+                        (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                          (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                              (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1)) +
+                            0))))
+                    (Mathlib.Tactic.Ring.Common.mul_congr
+                      (Mathlib.Tactic.Ring.Common.mul_congr
+                        (Mathlib.Tactic.Ring.Common.atom_pf (↑d) rfl
+                          (Eq.mpr
+                            (id
+                              (congrArg (fun _a => ↑d ^ Nat.rawCast 1 * Nat.rawCast 1 = ↑d ^ Nat.rawCast 1 * _a)
+                                (Eq.symm rfl)))
+                            (Eq.refl (↑d ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                        (Mathlib.Tactic.Ring.Common.atom_pf (↑r) rfl
+                          (Eq.mpr
+                            (id
+                              (congrArg (fun _a => ↑r ^ Nat.rawCast 1 * Nat.rawCast 1 = ↑r ^ Nat.rawCast 1 * _a)
+                                (Eq.symm rfl)))
+                            (Eq.refl (↑r ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                        (Mathlib.Tactic.Ring.Common.add_mul
+                          (Mathlib.Tactic.Ring.Common.mul_add
+                            (Mathlib.Tactic.Ring.Common.mul_pf_left (↑d) (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_right (↑r) (Nat.rawCast 1)
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                    (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                    (Eq.refl 1)))))
+                            (Mathlib.Tactic.Ring.Common.mul_zero (↑d ^ Nat.rawCast 1 * Nat.rawCast 1))
+                            (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                              (↑d ^ Nat.rawCast 1 * (↑r ^ Nat.rawCast 1 * Nat.rawCast 1) + 0)))
+                          (Mathlib.Tactic.Ring.Common.zero_mul (↑r ^ Nat.rawCast 1 * Nat.rawCast 1 + 0))
+                          (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                            (↑d ^ Nat.rawCast 1 * (↑r ^ Nat.rawCast 1 * Nat.rawCast 1) + 0))))
+                      (Mathlib.Tactic.Ring.Common.atom_pf (↑r.totient) rfl
+                        (Eq.mpr
+                          (id
+                            (congrArg
+                              (fun _a => ↑r.totient ^ Nat.rawCast 1 * Nat.rawCast 1 = ↑r.totient ^ Nat.rawCast 1 * _a)
+                              (Eq.symm rfl)))
+                          (Eq.refl (↑r.totient ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                      (Mathlib.Tactic.Ring.Common.add_mul
+                        (Mathlib.Tactic.Ring.Common.mul_add
+                          (Mathlib.Tactic.Ring.Common.mul_pf_left (↑d) (Nat.rawCast 1)
+                            (Mathlib.Tactic.Ring.Common.mul_pf_left (↑r) (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_right (↑r.totient) (Nat.rawCast 1)
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                    (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                    (Eq.refl 1))))))
+                          (Mathlib.Tactic.Ring.Common.mul_zero
+                            (↑d ^ Nat.rawCast 1 * (↑r ^ Nat.rawCast 1 * Nat.rawCast 1)))
+                          (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                            (↑d ^ Nat.rawCast 1 * (↑r ^ Nat.rawCast 1 * (↑r.totient ^ Nat.rawCast 1 * Nat.rawCast 1)) +
+                              0)))
+                        (Mathlib.Tactic.Ring.Common.zero_mul (↑r.totient ^ Nat.rawCast 1 * Nat.rawCast 1 + 0))
+                        (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                          (↑d ^ Nat.rawCast 1 * (↑r ^ Nat.rawCast 1 * (↑r.totient ^ Nat.rawCast 1 * Nat.rawCast 1)) +
+                            0))))
+                    (Mathlib.Tactic.Ring.Common.div_pf
+                      (Mathlib.Tactic.Ring.Common.inv_single
+                        (Mathlib.Tactic.Ring.Common.inv_mul (Eq.refl (↑d)⁻¹)
+                          (Mathlib.Tactic.Ring.Common.inv_mul (Eq.refl (↑r)⁻¹)
+                            (Mathlib.Tactic.Ring.Common.inv_mul (Eq.refl (↑r.totient)⁻¹)
+                              (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                (Mathlib.Meta.NormNum.IsNNRat.to_isNat
+                                  (Mathlib.Meta.NormNum.isNNRat_inv_pos
+                                    (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)))))
+                              (Eq.symm
+                                  (Eq.mpr
+                                    (id
+                                      (congrArg
+                                        (fun _a =>
+                                          (↑r.totient)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1 =
+                                            (↑r.totient)⁻¹ ^ Nat.rawCast 1 * _a)
+                                        (Eq.symm rfl)))
+                                    (Eq.refl ((↑r.totient)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))) ▸
+                                Mathlib.Tactic.Ring.Common.mul_pf_right (↑r.totient)⁻¹ (Nat.rawCast 1)
+                                  (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                    (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                      (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                      (Eq.refl 1)))))
+                            (Eq.symm
+                                (Eq.mpr
+                                  (id
+                                    (congrArg
+                                      (fun _a => (↑r)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1 = (↑r)⁻¹ ^ Nat.rawCast 1 * _a)
+                                      (Eq.symm rfl)))
+                                  (Eq.refl ((↑r)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))) ▸
+                              Mathlib.Tactic.Ring.Common.mul_pf_right (↑r)⁻¹ (Nat.rawCast 1)
+                                (Mathlib.Tactic.Ring.Common.mul_pf_left (↑r.totient)⁻¹ (Nat.rawCast 1)
+                                  (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                    (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                      (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                      (Eq.refl 1))))))
+                          (Eq.symm
+                              (Eq.mpr
+                                (id
+                                  (congrArg
+                                    (fun _a => (↑d)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1 = (↑d)⁻¹ ^ Nat.rawCast 1 * _a)
+                                    (Eq.symm rfl)))
+                                (Eq.refl ((↑d)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))) ▸
+                            Mathlib.Tactic.Ring.Common.mul_pf_right (↑d)⁻¹ (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_left (↑r)⁻¹ (Nat.rawCast 1)
+                                (Mathlib.Tactic.Ring.Common.mul_pf_left (↑r.totient)⁻¹ (Nat.rawCast 1)
+                                  (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                    (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                      (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                      (Eq.refl 1))))))))
+                      (Mathlib.Tactic.Ring.Common.add_mul
+                        (Mathlib.Tactic.Ring.Common.mul_add
+                          (Mathlib.Tactic.Ring.Common.mul_pf_left (↑|↑(ArithmeticFunction.moebius r)|) (Nat.rawCast 1)
+                            (Mathlib.Tactic.Ring.Common.mul_pf_left (↑‖χ.evalNat d‖) (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_left (↑‖χ.evalNat r‖) (Nat.rawCast 1)
+                                (Mathlib.Tactic.Ring.Common.mul_pf_right (↑d)⁻¹ (Nat.rawCast 1)
+                                  (Mathlib.Tactic.Ring.Common.mul_pf_right (↑r)⁻¹ (Nat.rawCast 1)
+                                    (Mathlib.Tactic.Ring.Common.mul_pf_right (↑r.totient)⁻¹ (Nat.rawCast 1)
+                                      (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                        (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                          (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                          (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Eq.refl 1)))))))))
+                          (Mathlib.Tactic.Ring.Common.mul_zero
+                            (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                              (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                          (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                            (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                                (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 *
+                                  (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 *
+                                    ((↑d)⁻¹ ^ Nat.rawCast 1 *
+                                      ((↑r)⁻¹ ^ Nat.rawCast 1 * ((↑r.totient)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))))) +
+                              0)))
+                        (Mathlib.Tactic.Ring.Common.zero_mul
+                          ((↑d)⁻¹ ^ Nat.rawCast 1 *
+                              ((↑r)⁻¹ ^ Nat.rawCast 1 * ((↑r.totient)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1)) +
+                            0))
+                        (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                          (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                              (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 *
+                                (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 *
+                                  ((↑d)⁻¹ ^ Nat.rawCast 1 *
+                                    ((↑r)⁻¹ ^ Nat.rawCast 1 * ((↑r.totient)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))))) +
+                            0)))))
+                  (Mathlib.Tactic.Ring.Common.atom_pf
+                    (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                      (1 - ZhangLS.Spec.lemma83PaperBeta D c j))
+                    rfl
+                    (Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a =>
+                            ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                    (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                                  Nat.rawCast 1 *
+                                Nat.rawCast 1 =
+                              ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                    (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                                  Nat.rawCast 1 *
+                                _a)
+                          (Eq.symm rfl)))
+                      (Eq.refl
+                        (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                              (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                            Nat.rawCast 1 *
+                          Nat.rawCast 1))))
+                  (Mathlib.Tactic.Ring.Common.add_mul
+                    (Mathlib.Tactic.Ring.Common.mul_add
+                      (Mathlib.Tactic.Ring.Common.mul_pf_left (↑|↑(ArithmeticFunction.moebius r)|) (Nat.rawCast 1)
+                        (Mathlib.Tactic.Ring.Common.mul_pf_left (↑‖χ.evalNat d‖) (Nat.rawCast 1)
+                          (Mathlib.Tactic.Ring.Common.mul_pf_left (↑‖χ.evalNat r‖) (Nat.rawCast 1)
+                            (Mathlib.Tactic.Ring.Common.mul_pf_left (↑d)⁻¹ (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_left (↑r)⁻¹ (Nat.rawCast 1)
+                                (Mathlib.Tactic.Ring.Common.mul_pf_left (↑r.totient)⁻¹ (Nat.rawCast 1)
+                                  (Mathlib.Tactic.Ring.Common.mul_pf_right
+                                    (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                      (1 - ZhangLS.Spec.lemma83PaperBeta D c j))
+                                    (Nat.rawCast 1)
+                                    (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                      (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                        (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                        (Eq.refl 1))))))))))
+                      (Mathlib.Tactic.Ring.Common.mul_zero
+                        (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                          (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 *
+                            (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 *
+                              ((↑d)⁻¹ ^ Nat.rawCast 1 *
+                                ((↑r)⁻¹ ^ Nat.rawCast 1 * ((↑r.totient)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1)))))))
+                      (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                        (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                            (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 *
+                              (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 *
+                                ((↑d)⁻¹ ^ Nat.rawCast 1 *
+                                  ((↑r)⁻¹ ^ Nat.rawCast 1 *
+                                    ((↑r.totient)⁻¹ ^ Nat.rawCast 1 *
+                                      (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                            (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                                          Nat.rawCast 1 *
+                                        Nat.rawCast 1)))))) +
+                          0)))
+                    (Mathlib.Tactic.Ring.Common.zero_mul
+                      (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                              (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                            Nat.rawCast 1 *
+                          Nat.rawCast 1 +
+                        0))
+                    (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                      (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                          (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 *
+                            (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 *
+                              ((↑d)⁻¹ ^ Nat.rawCast 1 *
+                                ((↑r)⁻¹ ^ Nat.rawCast 1 *
+                                  ((↑r.totient)⁻¹ ^ Nat.rawCast 1 *
+                                    (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                          (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                                        Nat.rawCast 1 *
+                                      Nat.rawCast 1)))))) +
+                        0))))
+                (Mathlib.Tactic.Ring.Common.div_congr
+                  (Mathlib.Tactic.Ring.Common.mul_congr
+                    (Mathlib.Tactic.Ring.Common.mul_congr
+                      (Mathlib.Tactic.Ring.Common.atom_pf (↑‖χ.evalNat d‖) rfl
+                        (Eq.mpr
+                          (id
+                            (congrArg
+                              (fun _a =>
+                                ↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * Nat.rawCast 1 = ↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * _a)
+                              (Eq.symm rfl)))
+                          (Eq.refl (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                      (Mathlib.Tactic.Ring.Common.mul_congr
+                        (Mathlib.Tactic.Ring.Common.atom_pf (↑|↑(ArithmeticFunction.moebius r)|) rfl
+                          (Eq.mpr
+                            (id
+                              (congrArg
+                                (fun _a =>
+                                  ↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 * Nat.rawCast 1 =
+                                    ↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 * _a)
+                                (Eq.symm rfl)))
+                            (Eq.refl (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                        (Mathlib.Tactic.Ring.Common.atom_pf (↑‖χ.evalNat r‖) rfl
+                          (Eq.mpr
+                            (id
+                              (congrArg
+                                (fun _a =>
+                                  ↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1 = ↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * _a)
+                                (Eq.symm rfl)))
+                            (Eq.refl (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                        (Mathlib.Tactic.Ring.Common.add_mul
+                          (Mathlib.Tactic.Ring.Common.mul_add
+                            (Mathlib.Tactic.Ring.Common.mul_pf_left (↑|↑(ArithmeticFunction.moebius r)|) (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_right (↑‖χ.evalNat r‖) (Nat.rawCast 1)
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                    (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                    (Eq.refl 1)))))
+                            (Mathlib.Tactic.Ring.Common.mul_zero
+                              (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 * Nat.rawCast 1))
+                            (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                              (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                                  (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1) +
+                                0)))
+                          (Mathlib.Tactic.Ring.Common.zero_mul (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1 + 0))
+                          (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                            (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                                (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1) +
+                              0))))
+                      (Mathlib.Tactic.Ring.Common.add_mul
+                        (Mathlib.Tactic.Ring.Common.mul_add
+                          (Mathlib.Tactic.Ring.Common.mul_pf_right (↑|↑(ArithmeticFunction.moebius r)|) (Nat.rawCast 1)
+                            (Mathlib.Tactic.Ring.Common.mul_pf_left (↑‖χ.evalNat d‖) (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_right (↑‖χ.evalNat r‖) (Nat.rawCast 1)
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                    (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                    (Eq.refl 1))))))
+                          (Mathlib.Tactic.Ring.Common.mul_zero (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * Nat.rawCast 1))
+                          (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                            (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                                (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1)) +
+                              0)))
+                        (Mathlib.Tactic.Ring.Common.zero_mul
+                          (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                              (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1) +
+                            0))
+                        (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                          (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                              (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1)) +
+                            0))))
+                    (Mathlib.Tactic.Ring.Common.atom_pf
+                      (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                        (1 - ZhangLS.Spec.lemma83PaperBeta D c j))
+                      rfl
+                      (Eq.mpr
+                        (id
+                          (congrArg
+                            (fun _a =>
+                              ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                      (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                                    Nat.rawCast 1 *
+                                  Nat.rawCast 1 =
+                                ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                      (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                                    Nat.rawCast 1 *
+                                  _a)
+                            (Eq.symm rfl)))
+                        (Eq.refl
+                          (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                              Nat.rawCast 1 *
+                            Nat.rawCast 1))))
+                    (Mathlib.Tactic.Ring.Common.add_mul
+                      (Mathlib.Tactic.Ring.Common.mul_add
+                        (Mathlib.Tactic.Ring.Common.mul_pf_left (↑|↑(ArithmeticFunction.moebius r)|) (Nat.rawCast 1)
+                          (Mathlib.Tactic.Ring.Common.mul_pf_left (↑‖χ.evalNat d‖) (Nat.rawCast 1)
+                            (Mathlib.Tactic.Ring.Common.mul_pf_left (↑‖χ.evalNat r‖) (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_right
+                                (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                  (1 - ZhangLS.Spec.lemma83PaperBeta D c j))
+                                (Nat.rawCast 1)
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                    (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                    (Eq.refl 1)))))))
+                        (Mathlib.Tactic.Ring.Common.mul_zero
+                          (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                            (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 * (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                        (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                          (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                              (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 *
+                                (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 *
+                                  (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                        (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                                      Nat.rawCast 1 *
+                                    Nat.rawCast 1))) +
+                            0)))
+                      (Mathlib.Tactic.Ring.Common.zero_mul
+                        (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                              Nat.rawCast 1 *
+                            Nat.rawCast 1 +
+                          0))
+                      (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                        (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                            (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 *
+                              (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 *
+                                (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                      (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                                    Nat.rawCast 1 *
+                                  Nat.rawCast 1))) +
+                          0))))
+                  (Mathlib.Tactic.Ring.Common.mul_congr
+                    (Mathlib.Tactic.Ring.Common.mul_congr
+                      (Mathlib.Tactic.Ring.Common.atom_pf (↑d) rfl
+                        (Eq.mpr
+                          (id
+                            (congrArg (fun _a => ↑d ^ Nat.rawCast 1 * Nat.rawCast 1 = ↑d ^ Nat.rawCast 1 * _a)
+                              (Eq.symm rfl)))
+                          (Eq.refl (↑d ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                      (Mathlib.Tactic.Ring.Common.atom_pf (↑r) rfl
+                        (Eq.mpr
+                          (id
+                            (congrArg (fun _a => ↑r ^ Nat.rawCast 1 * Nat.rawCast 1 = ↑r ^ Nat.rawCast 1 * _a)
+                              (Eq.symm rfl)))
+                          (Eq.refl (↑r ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                      (Mathlib.Tactic.Ring.Common.add_mul
+                        (Mathlib.Tactic.Ring.Common.mul_add
+                          (Mathlib.Tactic.Ring.Common.mul_pf_left (↑d) (Nat.rawCast 1)
+                            (Mathlib.Tactic.Ring.Common.mul_pf_right (↑r) (Nat.rawCast 1)
+                              (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                  (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                  (Eq.refl 1)))))
+                          (Mathlib.Tactic.Ring.Common.mul_zero (↑d ^ Nat.rawCast 1 * Nat.rawCast 1))
+                          (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                            (↑d ^ Nat.rawCast 1 * (↑r ^ Nat.rawCast 1 * Nat.rawCast 1) + 0)))
+                        (Mathlib.Tactic.Ring.Common.zero_mul (↑r ^ Nat.rawCast 1 * Nat.rawCast 1 + 0))
+                        (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                          (↑d ^ Nat.rawCast 1 * (↑r ^ Nat.rawCast 1 * Nat.rawCast 1) + 0))))
+                    (Mathlib.Tactic.Ring.Common.atom_pf (↑r.totient) rfl
+                      (Eq.mpr
+                        (id
+                          (congrArg
+                            (fun _a => ↑r.totient ^ Nat.rawCast 1 * Nat.rawCast 1 = ↑r.totient ^ Nat.rawCast 1 * _a)
+                            (Eq.symm rfl)))
+                        (Eq.refl (↑r.totient ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                    (Mathlib.Tactic.Ring.Common.add_mul
+                      (Mathlib.Tactic.Ring.Common.mul_add
+                        (Mathlib.Tactic.Ring.Common.mul_pf_left (↑d) (Nat.rawCast 1)
+                          (Mathlib.Tactic.Ring.Common.mul_pf_left (↑r) (Nat.rawCast 1)
+                            (Mathlib.Tactic.Ring.Common.mul_pf_right (↑r.totient) (Nat.rawCast 1)
+                              (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                  (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                  (Eq.refl 1))))))
+                        (Mathlib.Tactic.Ring.Common.mul_zero
+                          (↑d ^ Nat.rawCast 1 * (↑r ^ Nat.rawCast 1 * Nat.rawCast 1)))
+                        (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                          (↑d ^ Nat.rawCast 1 * (↑r ^ Nat.rawCast 1 * (↑r.totient ^ Nat.rawCast 1 * Nat.rawCast 1)) +
+                            0)))
+                      (Mathlib.Tactic.Ring.Common.zero_mul (↑r.totient ^ Nat.rawCast 1 * Nat.rawCast 1 + 0))
+                      (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                        (↑d ^ Nat.rawCast 1 * (↑r ^ Nat.rawCast 1 * (↑r.totient ^ Nat.rawCast 1 * Nat.rawCast 1)) +
+                          0))))
+                  (Mathlib.Tactic.Ring.Common.div_pf
+                    (Mathlib.Tactic.Ring.Common.inv_single
+                      (Mathlib.Tactic.Ring.Common.inv_mul (Eq.refl (↑d)⁻¹)
+                        (Mathlib.Tactic.Ring.Common.inv_mul (Eq.refl (↑r)⁻¹)
+                          (Mathlib.Tactic.Ring.Common.inv_mul (Eq.refl (↑r.totient)⁻¹)
+                            (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                              (Mathlib.Meta.NormNum.IsNNRat.to_isNat
+                                (Mathlib.Meta.NormNum.isNNRat_inv_pos
+                                  (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)))))
+                            (Eq.symm
+                                (Eq.mpr
+                                  (id
+                                    (congrArg
+                                      (fun _a =>
+                                        (↑r.totient)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1 =
+                                          (↑r.totient)⁻¹ ^ Nat.rawCast 1 * _a)
+                                      (Eq.symm rfl)))
+                                  (Eq.refl ((↑r.totient)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))) ▸
+                              Mathlib.Tactic.Ring.Common.mul_pf_right (↑r.totient)⁻¹ (Nat.rawCast 1)
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                    (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                    (Eq.refl 1)))))
+                          (Eq.symm
+                              (Eq.mpr
+                                (id
+                                  (congrArg
+                                    (fun _a => (↑r)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1 = (↑r)⁻¹ ^ Nat.rawCast 1 * _a)
+                                    (Eq.symm rfl)))
+                                (Eq.refl ((↑r)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))) ▸
+                            Mathlib.Tactic.Ring.Common.mul_pf_right (↑r)⁻¹ (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_left (↑r.totient)⁻¹ (Nat.rawCast 1)
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                    (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                    (Eq.refl 1))))))
+                        (Eq.symm
+                            (Eq.mpr
+                              (id
+                                (congrArg
+                                  (fun _a => (↑d)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1 = (↑d)⁻¹ ^ Nat.rawCast 1 * _a)
+                                  (Eq.symm rfl)))
+                              (Eq.refl ((↑d)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))) ▸
+                          Mathlib.Tactic.Ring.Common.mul_pf_right (↑d)⁻¹ (Nat.rawCast 1)
+                            (Mathlib.Tactic.Ring.Common.mul_pf_left (↑r)⁻¹ (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_left (↑r.totient)⁻¹ (Nat.rawCast 1)
+                                (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                  (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                    (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                    (Eq.refl 1))))))))
+                    (Mathlib.Tactic.Ring.Common.add_mul
+                      (Mathlib.Tactic.Ring.Common.mul_add
+                        (Mathlib.Tactic.Ring.Common.mul_pf_left (↑|↑(ArithmeticFunction.moebius r)|) (Nat.rawCast 1)
+                          (Mathlib.Tactic.Ring.Common.mul_pf_left (↑‖χ.evalNat d‖) (Nat.rawCast 1)
+                            (Mathlib.Tactic.Ring.Common.mul_pf_left (↑‖χ.evalNat r‖) (Nat.rawCast 1)
+                              (Mathlib.Tactic.Ring.Common.mul_pf_right (↑d)⁻¹ (Nat.rawCast 1)
+                                (Mathlib.Tactic.Ring.Common.mul_pf_right (↑r)⁻¹ (Nat.rawCast 1)
+                                  (Mathlib.Tactic.Ring.Common.mul_pf_right (↑r.totient)⁻¹ (Nat.rawCast 1)
+                                    (Mathlib.Tactic.Ring.Common.mul_pf_left
+                                      (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                        (1 - ZhangLS.Spec.lemma83PaperBeta D c j))
+                                      (Nat.rawCast 1)
+                                      (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                        (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                          (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1)
+                                          (Mathlib.Meta.NormNum.IsNat.of_raw ℂ 1) (Eq.refl 1))))))))))
+                        (Mathlib.Tactic.Ring.Common.mul_zero
+                          (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                            (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 *
+                              (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 *
+                                (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                      (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                                    Nat.rawCast 1 *
+                                  Nat.rawCast 1)))))
+                        (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                          (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                              (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 *
+                                (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 *
+                                  ((↑d)⁻¹ ^ Nat.rawCast 1 *
+                                    ((↑r)⁻¹ ^ Nat.rawCast 1 *
+                                      ((↑r.totient)⁻¹ ^ Nat.rawCast 1 *
+                                        (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                              (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                                            Nat.rawCast 1 *
+                                          Nat.rawCast 1)))))) +
+                            0)))
+                      (Mathlib.Tactic.Ring.Common.zero_mul
+                        ((↑d)⁻¹ ^ Nat.rawCast 1 *
+                            ((↑r)⁻¹ ^ Nat.rawCast 1 * ((↑r.totient)⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1)) +
+                          0))
+                      (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                        (↑|↑(ArithmeticFunction.moebius r)| ^ Nat.rawCast 1 *
+                            (↑‖χ.evalNat d‖ ^ Nat.rawCast 1 *
+                              (↑‖χ.evalNat r‖ ^ Nat.rawCast 1 *
+                                ((↑d)⁻¹ ^ Nat.rawCast 1 *
+                                  ((↑r)⁻¹ ^ Nat.rawCast 1 *
+                                    ((↑r.totient)⁻¹ ^ Nat.rawCast 1 *
+                                      (ZhangLS.Spec.lemma83Lambda (ZhangLS.Spec.lemma83PaperBeta D c) (d * r)
+                                            (1 - ZhangLS.Spec.lemma83PaperBeta D c j) ^
+                                          Nat.rawCast 1 *
+                                        Nat.rawCast 1)))))) +
+                          0)))))))))))
+def ZhangLS.Spec.Lemma84Target : Prop :=
+∀ (c : ℝ),
+  0 < c →
+    ∃ C,
+      0 < C ∧
+        ∃ D₀,
+          2 ≤ D₀ ∧
+            ∀ (D : ℕ),
+              D₀ ≤ D →
+                ∀ (χ : ZhangLS.Spec.RealPrimitiveCharacter D),
+                  ZhangLS.Spec.NormalizedAssumptionA χ →
+                    ∀ (j : Fin 3) (μ d r : ℕ),
+                      μ = 6 ∨ μ = 7 →
+                        0 < d →
+                          0 < r →
+                            ↑d * ↑r < ZhangLS.Spec.lemma23PaperP D * ZhangLS.Spec.lemma56PaperT D ^ (-2) →
+                              ∀ (x : ℝ),
+                                ZhangLS.Spec.lemma56PaperT D < x →
+                                  x < ZhangLS.Spec.lemma23PaperP D →
+                                    ‖ZhangLS.Spec.lemma84XiSum χ c j μ d r x -
+                                          ZhangLS.Spec.LDerivAtOne χ * ZhangLS.Spec.lemma83Pi χ d r *
+                                            ZhangLS.Spec.lemma84MainTerm D c j μ x‖ ≤
+                                      C * ZhangLS.Spec.lemma23PaperL D ^ (-6)

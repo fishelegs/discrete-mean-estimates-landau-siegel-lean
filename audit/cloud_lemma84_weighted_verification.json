@@ -1,0 +1,42 @@
+{
+  "status": "PASS_WEIGHTED_INTERIOR_COMPATIBILITY",
+  "verified_at_utc": "2026-10-02T18:57:28.183561+00:00",
+  "base_commit": "db88a667493f5c3279bd0bccc5cd6f7219b120ce",
+  "completion_kind": "actual_source_weighted_interior_error_bridge",
+  "numbered_completion_count_change": 0,
+  "production_modules": 10,
+  "audit_modules": 1,
+  "public_declaration_axiom_checks": 69,
+  "semantic_examples": 3,
+  "dependency_build_jobs": 3978,
+  "full_project_jobs": 5175,
+  "source_files": 1296,
+  "spec_imports": 921,
+  "full_project_imports": 1186,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 389,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 1,
+  "new_candidate_review": "Section8LittleO:41 returns the derived numeric inequality1<=epsilon*pi*L after multiplying the threshold by a positive number; no weighted error is assumed.",
+  "full_boundary_estimate_proved": false,
+  "source_equation_8_11_proved": false,
+  "original_Lemma84Target_proved": false,
+  "logs": {
+    "lemma84-weighted-integration-build.log": {
+      "bytes": 36126,
+      "sha256": "c120b84a7cb237b897cf53b351e257d7d9d076352b14e36e61f41aab28adfcae"
+    },
+    "lemma84-weighted-integration-axioms.log": {
+      "bytes": 74424,
+      "sha256": "804d2a6b2a5741183d51a13d8e898bf17f450ae41976b34f15b50ed4af93ce30"
+    },
+    "lemma84-weighted-full-project.log": {
+      "bytes": 217931,
+      "sha256": "d0bcb1ac2f416bdfab53f8b853b41d5e63baa49afb443ff2cb8c3f89c2d38804"
+    },
+    "lemma84-weighted-strict-audit.log": {
+      "bytes": 39773,
+      "sha256": "3eea83b30106b77019aaf19bd03803b13b1efb0aa51d46dbde79986a3e7648fa"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "checked_utc": "2026-10-02T19:02:00Z",
+  "python_version": "3.12.14",
+  "mpmath_version": "1.3.0",
+  "source": {
+    "arxiv": "https://arxiv.org/abs/2211.02515",
+    "pdf": "https://arxiv.org/pdf/2211.02515v1#page=50",
+    "tex_sha256": "5dc202bdc414fb743004ae32e8dec0dd284636f7197b1cab78a46336e0cde30b",
+    "pdf_sha256": "4e38ecfe1a6d3a93494e2f5cc5a3336c33b9d0981e8d5ccfcd8d8dec3e5ab713",
+    "equations": "8.13-8.24",
+    "all_three_cross_shifts": "+0.004"
+  },
+  "conservative_interval_enclosures": {
+    "c11": [
+      "3.61226160140061256730",
+      "3.61226160140061256746"
+    ],
+    "c22": [
+      "1.32214926395358636086",
+      "1.32214926395358636091"
+    ],
+    "c12_real": [
+      "-0.457471578721370237",
+      "-0.457471578721370235"
+    ],
+    "c12_imag": [
+      "-0.201383435433634885",
+      "-0.201383435433634883"
+    ],
+    "c1": [
+      "7.050104669792050418",
+      "7.050104669792050421"
+    ]
+  },
+  "kernel_verified_integrals": false,
+  "final_main_theorem_refuted": false,
+  "source_versions_checked": "Current official arXiv submission history shows v1 only as of2026-10-02; no claim that all external author versions have been ruled out.",
+  "files": {
+    "audit/section8_numerical/CERTIFICATE_METHOD.md": "97fb6e49caaeee08c230435fef3ec4f81a1cf49d2f901b2fcb9ee1fcbbac57e2",
+    "audit/section8_numerical/README.md": "d91fe2911169c53106f4f9ff1666c28f3bdcb1d4d3b8033b6be0ee59ff721b03",
+    "audit/section8_numerical/certified-output.txt": "932d117f3636b21036ca08d064ac2a676b40726ecd373ab5048139d852bd27d0",
+    "audit/section8_numerical/certify.py": "238dc6e27d2554f1c5fe0b2d689c70e6b2204028ba984eba60d386a96f91c416",
+    "audit/section8_numerical/closed-output.txt": "db080ee304f28a9216dfa202230ca185f0bac7e97cf478a9842004ee6f2bc246",
+    "audit/section8_numerical/closed_forms.py": "30eaff41225a966d6ffec5ae1265dc66942c77d82e2357bc7540cf19bfaede4c",
+    "audit/section8_numerical/interval-output.txt": "d93be723edad4211f067f411ebe04df9361c1d8df42aab59adf86be93284d0bb",
+    "audit/section8_numerical/interval_closed_forms.py": "b318faece5128ff757b0fce1a0744d2e6030885a15e2252b717deaf862ed5cb4",
+    "audit/section8_numerical/parameterized_quadrature.py": "eaaa4d4c523ca89b1816a423b40aa7a0b894655423ddb3c7ed73d0c8a8d92a56",
+    "audit/section8_numerical/quadrature-output.txt": "53df9b6e19da4fb8c0a80b2324cb5e0b691ac17abefbeb9bbcb1f72cfaacff9d",
+    "audit/section8_numerical/rational-enclosures.json": "7ce5ac15523b488df4e14eb64f2c428a0e5ef04618ad30b1642c9b32c16bdbac"
+  },
+  "exact_rational_certificate": {
+    "replayed": true,
+    "source_script_sha256": "dec8a2e429d4ce22fe849e5e81ce807a6f8d62a256b791aeae0690ed717bcc05",
+    "relocation_change": "output path only, relative to __file__",
+    "section8_taylor_degree": 40,
+    "c1_enclosure": [
+      "7.050104669792050376",
+      "7.050104669792050463"
+    ],
+    "c12_imag_enclosure": [
+      "-0.201383435433634888",
+      "-0.201383435433634881"
+    ],
+    "section12_model_correction_norm_upper": "0.0000035",
+    "full_integral_lean_proof": false,
+    "byte_identical_to_independent_frozen_output": true
+  }
+}

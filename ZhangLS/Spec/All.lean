@@ -871,6 +871,7 @@ import ZhangLS.Spec.Lemma84CircleApproximation
 import ZhangLS.Spec.Lemma84CircleBudget
 import ZhangLS.Spec.Lemma84CircleError
 import ZhangLS.Spec.Lemma84CircleQuotient
+import ZhangLS.Spec.Lemma84CompanionBounds
 import ZhangLS.Spec.Lemma84ContourBridge
 import ZhangLS.Spec.Lemma84ContourErrorBudget
 import ZhangLS.Spec.Lemma84ContourGeometry
@@ -893,10 +894,19 @@ import ZhangLS.Spec.Lemma84Residue
 import ZhangLS.Spec.Lemma84RightLineBounds
 import ZhangLS.Spec.Lemma84RightTailBounds
 import ZhangLS.Spec.Lemma84ScalarContourBudget
+import ZhangLS.Spec.Lemma84Section8BoundaryObligations
+import ZhangLS.Spec.Lemma84Section8Cutoffs
+import ZhangLS.Spec.Lemma84Section8InnerBounds
+import ZhangLS.Spec.Lemma84Section8LittleO
+import ZhangLS.Spec.Lemma84Section8Objects
+import ZhangLS.Spec.Lemma84Section8SmoothingBridge
+import ZhangLS.Spec.Lemma84Section8WeightedInterior
 import ZhangLS.Spec.Lemma84SumCirclePolynomial
 import ZhangLS.Spec.Lemma84SumCircleQuantitative
 import ZhangLS.Spec.Lemma84TwoPoleRemoval
 import ZhangLS.Spec.Lemma84UContourBound
+import ZhangLS.Spec.Lemma84WeightedArithmetic
+import ZhangLS.Spec.Lemma84WeightedMass
 import ZhangLS.Spec.PaperErrorScaleBudget
 import ZhangLS.Spec.PaperTheorems
 import ZhangLS.Spec.Proposition21

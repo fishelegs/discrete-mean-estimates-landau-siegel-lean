@@ -159,3 +159,9 @@ Original16.1 is [centrally verified](CLOUD_LEMMA161_STATUS.md), including its ex
 [Actual eighth-order delta Mellin decay](CLOUD_EIGHTH_MELLIN_STATUS.md) is now verified shared support for7.1/14.1. It supplies a genuine H^-7 tail while preserving finite-height cancellation scope. No numbered conclusion is added; ledger remains36/51.
 
 [Repaired15.3 normalized actual residue](CLOUD_LEMMA153_DOWNSTREAM_STATUS.md) is now centrally verified to have original a phi(D)/D main term and O(L^-3) error. This validates the local residue step only; the actual finite sum/contour/unsmoothing/N(Q) and outer D/phi(D)/phase propagation remain separate. Numbered count remains36/51.
+
+[8.4 actual weighted-interior compatibility](CLOUD_LEMMA84_WEIGHTED_STATUS.md) is now verified: the literal source expression changes by o(alpha) under interior xi replacement. Boundary layers and full8.11 are still open. Numbered count unchanged36/51.
+
+## Blocking numerical risk in the current main route
+
+[Section8 displayed constants are inconsistent with their defining integrals](CLOUD_SECTION8_NUMERICAL_AUDIT.md) under independent high-precision and interval calculation. This blocks certification of the current2.5-to-main-theorem numerical argument; it is not a counterexample to the main theorem. All shifts and conjugates are retained. Count36/51 remains a local-result count, not a final-proof claim.

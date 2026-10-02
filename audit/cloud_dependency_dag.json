@@ -255,7 +255,8 @@
       "semantic_issue_ids": [
         "effectivity_not_formalized",
         "small_conductor_reduction",
-        "legacy_tautology_not_target"
+        "legacy_tautology_not_target",
+        "section8_c12_numerical_inconsistency"
       ],
       "scheduling_status": "dependency-audit",
       "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
@@ -273,7 +274,8 @@
           "Actual Xi*_1/2/3 and a, positivity, contradiction, and finite-conductor reduction",
           "Uniform asymptotic quantifiers; effective witness representation"
         ]
-      }
+      },
+      "main_chain_blocker": "audit/CLOUD_SECTION8_NUMERICAL_AUDIT.md"
     },
     {
       "id": "T2",
@@ -309,7 +311,8 @@
       ],
       "semantic_issue_ids": [
         "effectivity_not_formalized",
-        "legacy_tautology_not_target"
+        "legacy_tautology_not_target",
+        "section8_c12_numerical_inconsistency"
       ],
       "scheduling_status": "dependency-audit",
       "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
@@ -323,7 +326,8 @@
           "Real-axis derivative control translating T1 into exponent 2024",
           "Quantified uniform constants and small moduli"
         ]
-      }
+      },
+      "main_chain_blocker": "audit/CLOUD_SECTION8_NUMERICAL_AUDIT.md"
     },
     {
       "id": "P2.1",
@@ -597,12 +601,15 @@
         "L6.1"
       ],
       "missing_mathematics": [
-        "Sections 12–18 cross-term evaluations and certified cancellation to (2.32); Cauchy combination with (2.33)"
+        "Sections 12–18 cross-term evaluations and certified cancellation to (2.32); Cauchy combination with (2.33)",
+        "Source-consistent Section8/18 numerical certificate: printed c1 bound conflicts with displayed integrals. Any formula/parameter repair must be derived and verified."
       ],
       "missing_specification_or_engineering": [
         "Actual Phi components and all arithmetic coefficient definitions"
       ],
-      "semantic_issue_ids": [],
+      "semantic_issue_ids": [
+        "section8_c12_numerical_inconsistency"
+      ],
       "scheduling_status": "dependency-audit",
       "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
       "proof_status": "unstarted",
@@ -633,7 +640,9 @@
           "Sections 12–18 cross-term evaluations and certified cancellation to (2.32); Cauchy combination with (2.33)",
           "Actual Phi components and all arithmetic coefficient definitions"
         ]
-      }
+      },
+      "main_chain_blocker": "audit/CLOUD_SECTION8_NUMERICAL_AUDIT.md",
+      "scheduling_phase": "blocked_source_numerical_inconsistency"
     },
     {
       "id": "P2.6",
@@ -2134,7 +2143,8 @@
         "trusted_capstone_found": false,
         "component_report": "audit/CLOUD_LEMMA84_QUANTITATIVE_STATUS.md",
         "component_axiom_report": "audit/cloud_lemma84_quantitative_axioms.log",
-        "original_target_proved": false
+        "original_target_proved": false,
+        "weighted_interior_report": "audit/CLOUD_LEMMA84_WEIGHTED_STATUS.md"
       },
       "known_numbered_dependencies": [
         "L8.3",
@@ -2166,8 +2176,8 @@
           "Actual U/Pi and strict cutoff; use corrected references"
         ]
       },
-      "scheduling_phase": "downstream_weighted_budget_audit",
-      "active_work": "Pi-dependent error, actual Perron-to-circle L^-6 transfer, explicit L^-5 repair and Pi=0 branch centrally verified; actual downstream weighted budget under proof.",
+      "scheduling_phase": "boundary_and_full_application_proof",
+      "active_work": "Actual Section8 source weighted interior replacement now centrally verified as o(alpha), preserving exact boundary. Boundary-layer estimates are under proof; original uniformL^-6 and complete8.11 remain open.",
       "ports": {
         "actual_contour_transfer": {
           "status": "complete_fresh_kernel_verified",
@@ -3878,14 +3888,15 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T18:43:02.415927+00:00",
+    "verified_at_utc": "2026-10-02T19:09:15.070354+00:00",
     "completed": 36,
     "in_progress": 4,
     "unstarted": 10,
-    "note": "36=34 original+2 repaired. Repaired15.3 actual normalized local residue now matches original a phi(D)/D at O(L^-3); finite-sum and global chain remain open.8.4 actual weighted-interior compatibility under central queue.",
+    "note": "36 local nodes addressed, not final proof completion. Current2.5 numerical route blocked by concrete Section8 c12/c1 mismatch; verified local compatibility components remain valid.",
     "original_completed": 34,
     "repaired_completed": 2,
-    "partial": 1
+    "partial": 1,
+    "main_chain_status": "blocked_numerical_inconsistency"
   },
   "scheduling_semantics": {
     "proof_status": "Mathematical completion state; complete must be read together with completion_kind (original_statement or source_repaired). Dispatch and verification phase are separate.",
@@ -3976,6 +3987,18 @@
       "semantic_regressions": 4,
       "local_main_term_compatible": true,
       "finite_sum_or_final_chain_proved": false
+    },
+    {
+      "id": "L8.4_actual_weighted_interior",
+      "status": "verified",
+      "report": "audit/CLOUD_LEMMA84_WEIGHTED_STATUS.md",
+      "original_numbered_result_completed": false,
+      "assumption_A": true,
+      "new_modules": 10,
+      "public_declaration_checks": 69,
+      "semantic_examples": 3,
+      "interior_error_little_o_alpha": true,
+      "full_boundary_or_8_11_proved": false
     }
   ],
   "repair_discipline": {
@@ -3987,5 +4010,37 @@
     "notation_clarified_originals": [
       "L8.1"
     ]
-  }
+  },
+  "main_chain_risks": [
+    {
+      "id": "section8_c12_numerical_inconsistency",
+      "status": "blocking_current_final_argument",
+      "report": "audit/CLOUD_SECTION8_NUMERICAL_AUDIT.md",
+      "scope": "Concrete displayed Section8 f/g integrals and constants, independent of(A)",
+      "source_version": "arXiv2211.02515v1",
+      "methods": [
+        "independent parameterized quadrature",
+        "literal-table closed-form integration",
+        "directed interval arithmetic with proven pi bracket",
+        "independent exact-rational degree40 Taylor certificate, centrally replayed"
+      ],
+      "c1_interval": [
+        "7.050104669792050418",
+        "7.050104669792050421"
+      ],
+      "printed_c1_upper": "6.9955",
+      "lean_integral_certificate": false,
+      "main_theorem_disproved": false,
+      "all_three_cross_shifts_preserved": true,
+      "affected_route": [
+        "P2.5",
+        "T1",
+        "T2"
+      ],
+      "rational_c1_interval": [
+        "7.050104669792050376",
+        "7.050104669792050463"
+      ]
+    }
+  ]
 }
