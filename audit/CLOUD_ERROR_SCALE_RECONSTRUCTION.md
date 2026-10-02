@@ -42,3 +42,7 @@ Lean4.30.0, Linux x86_64, 2026-10-02: six theorem interfaces use only standard a
 ## Verified updates to the earlier gap ledger
 
 15.2 now has a proved uniform O(alpha) repair.15.3 now has a proved shifted-L repair with the exact center main product and uniform O(alpha), but still needs the separate downstream residue reconstruction. Original16.1 has since been proved using the stronger O(alpha) local calculation, resolving the specific AppendixA-to-L^-8 issue for that lemma without assigning a meaning to alpha-one. The remaining15.22/15.23 and16.14 propagation gaps above are still open.
+
+## Verified shifted-L local-residue compatibility
+
+[The genuine residue reconstruction](CLOUD_LEMMA153_DOWNSTREAM_STATUS.md) now proves M1 times actual shifted-L residue=a phi(D)/D+O(L^-3), including every U/zeta-regular derivative and ramified factor. It does not prove the sharp-sum equality.15.22 and the actual D/phi(D) outer factor still require their own error propagation; r1*r1j times a needs the sharper actual phase/residue scale, not printed O(L^-1).

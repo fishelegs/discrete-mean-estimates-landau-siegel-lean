@@ -2747,7 +2747,8 @@
         "trusted_capstone_found": true,
         "capstone": "lemma153_repaired_proved",
         "verification_report": "audit/CLOUD_LEMMA153_REPAIRED_STATUS.md",
-        "axiom_report": "audit/cloud_lemma153_axioms.log"
+        "axiom_report": "audit/cloud_lemma153_axioms.log",
+        "local_main_term_compatibility_report": "audit/CLOUD_LEMMA153_DOWNSTREAM_STATUS.md"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
@@ -2782,7 +2783,7 @@
       "active_work": "Complete explicitly shifted-L Euler continuation and center theorem centrally verified.",
       "scheduling_phase": "done",
       "completion_kind": "source_repaired",
-      "downstream_followup": "Actual shifted-L Mellin integrand/residue reconstruction active; source15.22/15.23 and final Phi1 error propagation remain open."
+      "downstream_followup": "Actual M1 times actual shifted-L residue=a phi(D)/D+O(L^-3) centrally verified. Infinite Mellin interchange/contour, unsmoothing, N(Q) restriction, actual D/phi(D) outer factor and r1*r1j error propagation remain open."
     },
     {
       "id": "L16.1",
@@ -3877,11 +3878,11 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T18:33:59.615162+00:00",
+    "verified_at_utc": "2026-10-02T18:43:02.415927+00:00",
     "completed": 36,
     "in_progress": 4,
     "unstarted": 10,
-    "note": "36=34 original+2 repaired. Stronger genuine eighth-order Mellin decay verified as shared support. Priority15.3 residue and8.4 weighted compatibility bridges remain separately tracked.",
+    "note": "36=34 original+2 repaired. Repaired15.3 actual normalized local residue now matches original a phi(D)/D at O(L^-3); finite-sum and global chain remain open.8.4 actual weighted-interior compatibility under central queue.",
     "original_completed": 34,
     "repaired_completed": 2,
     "partial": 1
@@ -3963,6 +3964,18 @@
         "P7.1",
         "P14.1"
       ]
+    },
+    {
+      "id": "L15.3_normalized_actual_residue",
+      "status": "verified",
+      "report": "audit/CLOUD_LEMMA153_DOWNSTREAM_STATUS.md",
+      "original_numbered_result_completed": false,
+      "assumption_A": true,
+      "new_modules": 7,
+      "public_declaration_checks": 53,
+      "semantic_regressions": 4,
+      "local_main_term_compatible": true,
+      "finite_sum_or_final_chain_proved": false
     }
   ],
   "repair_discipline": {

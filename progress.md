@@ -1,5 +1,7 @@
 # 张益唐论文 Lean 形式化进度
 
+修订主链兼容桥（2026-10-02 18:40 UTC）：[15.3真实归一化残数](ZhangLS/Spec/Lemma153DownstreamMainTerm.lean)已中央验证：真实M₁×修订Mellin残数=原a·φ(D)/D+O(L^-3)，保留真实U/ζ正则导数、原β/c′、ramified因子与统一常数，无最终矛盾真空捷径。7模块、53标准公理记录、4回归、5165项全库PASS。这证明该局部主项/精度兼容，尚不证明有限和、移线、unsmoothing、N(Q)删选或Φ₁全链；D/φ(D)外层与r1*r1j×a误差仍显式待证。编号保持34原+2修订=36/51。详见[证据与边界](audit/CLOUD_LEMMA153_DOWNSTREAM_STATUS.md)。
+
 共享解析组件（2026-10-02 18:32 UTC）：[实际δ的八阶Mellin衰减](ZhangLS/Spec/Lemma54EighthMellin.lean)已中央验证：对所有实t，‖δ(1+it)‖≤C₈(logD)^7200/(1+t²)^4，真实八次分部积分/端点/导数矩均已证明，并有中心窗口+2B/H^7显式尾项。不越界调用有限高度5.6。7模块、65标准公理接口、4回归、5158项全库构建PASS；7.1/14.1外层求和仍独立未完，编号保持36/51。详见[证据](audit/CLOUD_EIGHTH_MELLIN_STATUS.md)。
 
 关键定量组件（2026-10-02 18:22 UTC）：[8.4真实Perron/轮廓与Π依赖误差](ZhangLS/Spec/Lemma84Repaired.lean)已中央核验：真实sum→5α圆周误差≤L^-6，总误差≤(2+C‖Π‖)L^-6，显式弱化版≤3L^-5，Π=0分支≤2L^-6。原统一L^-6仍未证明，实际Section8加权/边界预算继续审查，本次不增加编号完成数。41新模块（含8共享helper）、226标准公理记录、13语义回归及5151项全库构建PASS。现仍34原+2修订=36/51。详见[精确证据与缺口](audit/CLOUD_LEMMA84_QUANTITATIVE_STATUS.md)。

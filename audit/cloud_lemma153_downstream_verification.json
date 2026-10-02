@@ -1,0 +1,43 @@
+{
+  "status": "PASS_LOCAL_MAIN_TERM_COMPATIBILITY",
+  "verified_at_utc": "2026-10-02T18:43:02.415927+00:00",
+  "base_commit": "19e23a1f7ed35d390a2e32c8b380df85bf141f63",
+  "completion_kind": "repaired_lemma_downstream_local_residue_bridge",
+  "numbered_completion_count_change": 0,
+  "production_modules": 7,
+  "audit_modules": 1,
+  "public_declaration_axiom_checks": 53,
+  "semantic_regressions": 4,
+  "dependency_build_jobs": 4017,
+  "full_project_jobs": 5165,
+  "source_files": 1285,
+  "spec_imports": 911,
+  "full_project_imports": 1176,
+  "source_hashes_unchanged_after_import_relocation": true,
+  "strict_candidates": 388,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "semantic_review": "Central actual-integrand/source review: pointwise true Dirichlet series, cubic-pole regularization/Cauchy residue, both genuine prefactor derivatives, thin-strip uniformity, actual beta thresholds, all ramified/unramified product cancellation and normalization to the published original a.",
+  "sharp_sum_identity_proved": false,
+  "global_contour_shift_proved": false,
+  "unsmoothing_proved": false,
+  "NQ_restriction_proved": false,
+  "logs": {
+    "lemma153-downstream-integration-build.log": {
+      "bytes": 44453,
+      "sha256": "efbcde6a81840f32129d233da5bf970399d0b3b5c3d7d3c0ab9a983f22c17238"
+    },
+    "lemma153-downstream-integration-axioms.log": {
+      "bytes": 5812,
+      "sha256": "e308106eaecdfb5b925d63f3358e16a7fcffbb691d67739e71218cc8a9ecac17"
+    },
+    "lemma153-downstream-full-project.log": {
+      "bytes": 216191,
+      "sha256": "7a3c100e5a850d0b1bc4487ab50f1a93ddc7643a850e7ec2114d2ee41b723c76"
+    },
+    "lemma153-downstream-strict-audit.log": {
+      "bytes": 39687,
+      "sha256": "9497865260b5bc331137a30b4e945e597cec1dfbe1bcebbb7bcb8d71e9d89fd2"
+    }
+  }
+}
