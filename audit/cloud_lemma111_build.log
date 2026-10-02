@@ -1,0 +1,52 @@
+⚠ [1279/1362] Replayed ZhangLS.Spec.RealDirichletCharacter
+warning: ZhangLS/Spec/RealDirichletCharacter.lean:48:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3427/3504] Replayed ZhangLS.Spec.RealAxisAtOne
+warning: ZhangLS/Spec/RealAxisAtOne.lean:56:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3429/3504] Replayed ZhangLS.Spec.Lemma57
+warning: ZhangLS/Spec/Lemma57.lean:101:58: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57.lean:102:7: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3430/3504] Replayed ZhangLS.Spec.Lemma57Arithmetic
+warning: ZhangLS/Spec/Lemma57Arithmetic.lean:55:15: unused variable `hc_g`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3435/3504] Replayed ZhangLS.Spec.Lemma57SmoothedSum
+warning: ZhangLS/Spec/Lemma57SmoothedSum.lean:42:46: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3495/3584] Replayed ZhangLS.Spec.Lemma57GaussianGlobal
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:55:58: unused variable `ha`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:13: unused variable `hD`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ZhangLS/Spec/Lemma57GaussianGlobal.lean:241:34: unused variable `hx`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3496/3584] Replayed ZhangLS.Spec.Lemma57SmoothedSummability
+warning: ZhangLS/Spec/Lemma57SmoothedSummability.lean:20:52: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3499/3584] Replayed ZhangLS.Spec.Lemma57GaussianMellinTransform
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:67:63: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:145:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ZhangLS/Spec/Lemma57GaussianMellinTransform.lean:326:4: Try `simp at hs` instead of `simpa using hs`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [3581/3584] Built ZhangLS.Spec.Lemma111GaussianPrimitive (2.5s)
+✔ [3582/3584] Built ZhangLS.Spec.Lemma111GaussianBounds (3.0s)
+✔ [3583/3584] Built ZhangLS.Spec.Lemma111SmoothedTent (3.5s)
+✔ [3584/3584] Built ZhangLS.Spec.Lemma111 (3.0s)
+Build completed successfully (3584 jobs).

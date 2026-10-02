@@ -1,0 +1,3085 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-02T11:56:31.312339+00:00",
+  "baseline_commit": "58a9273c38961411a5f06ab2db4bdf565ef30794",
+  "paper": {
+    "arxiv": "2211.02515v1",
+    "url": "https://arxiv.org/pdf/2211.02515v1",
+    "pdf_pages": 111,
+    "pdf_sha256": "4e38ecfe1a6d3a93494e2f5cc5a3336c33b9d0981e8d5ccfcd8d8dec3e5ab713"
+  },
+  "scope": "Source-level dependency audit of 51 numbered results. Known versus inferred edges are separated. No Lean build, axioms run, or old complete-result revalidation performed.",
+  "ledger_counts": {
+    "unstarted": 26,
+    "complete_reported": 24,
+    "partial_reported": 1
+  },
+  "edge_semantics": "An edge points prerequisite -> consumer. Explicit citations accepted only when mathematically coherent; suspect/analogy-only citations stay in semantic_issue_ids. Edges describe proposed proof needs, not proof-term extraction. L5.6 outgoing edges require its already available nonprincipal port, never its blocked literal full target. Unnumbered work is recorded on nodes and cannot be omitted.",
+  "acyclic_validation": {
+    "result": true,
+    "topological_order": [
+      "L11.1",
+      "L11.2",
+      "L15.2",
+      "L15.3",
+      "L16.1",
+      "L3.1",
+      "L3.2",
+      "L3.3",
+      "L4.1",
+      "L4.2",
+      "L4.4",
+      "L5.1",
+      "L5.3",
+      "L5.7",
+      "L5.8",
+      "L8.3",
+      "L16.2",
+      "L15.1",
+      "L3.4",
+      "L3.5",
+      "L3.6",
+      "L4.3",
+      "L4.8",
+      "L5.2",
+      "L6.1",
+      "L5.4",
+      "L5.5",
+      "L8.2",
+      "L10.1",
+      "L12.1",
+      "L17.1",
+      "P2.1",
+      "L4.5",
+      "L5.6",
+      "L8.4",
+      "L12.3",
+      "L4.6",
+      "P7.1",
+      "P14.1",
+      "L10.2",
+      "L12.2",
+      "L4.7",
+      "P2.2",
+      "L2.3",
+      "L5.9",
+      "L8.1",
+      "P2.4",
+      "P2.5",
+      "P2.6",
+      "T1",
+      "T2"
+    ],
+    "baseline_local_import_module_count": 894,
+    "baseline_local_import_cycles": false
+  },
+  "frontiers": [
+    {
+      "id": "gaussian_tent",
+      "target": "L11.1",
+      "independent_of": [
+        "L3.6",
+        "P2.1",
+        "P7.1",
+        "P14.1"
+      ],
+      "scope": "Define exact triangular profile and integrated actual Gaussian; prove reflection, interior and boundary-layer errors.",
+      "existing_inputs": [
+        "ZhangLS/Spec/Lemma44SmoothedTruncation.lean:lemma44_gaussian_weight_inv",
+        "ZhangLS/Spec/Lemma57GaussianGlobal.lean",
+        "ZhangLS/Spec/Lemma61GaussianWeights.lean"
+      ],
+      "risk": "low-to-medium; wrong printed T/P and equation labels must be recorded"
+    },
+    {
+      "id": "arithmetic_nu_square",
+      "target": "L17.1",
+      "independent_of": [
+        "L3.6",
+        "P2.1",
+        "P7.1",
+        "P14.1"
+      ],
+      "scope": "Prove exact nu-square Euler factors, smoothing replacement, true residue and uniform o(1) with exact a.",
+      "existing_inputs": [
+        "ZhangLS/Spec/Lemma31.lean",
+        "ZhangLS/Spec/Lemma57GaussianMellinTransform.lean",
+        "ZhangLS/Spec/Lemma58.lean"
+      ],
+      "risk": "medium; new global contour/residue work and strict cutoff"
+    },
+    {
+      "id": "appendix_euler",
+      "target": "L8.3",
+      "independent_of": [
+        "L3.6",
+        "P2.1",
+        "P7.1",
+        "P14.1"
+      ],
+      "scope": "Start prime-power generating identities/multiplicativity; then analytic extension and normally convergent Euler product.",
+      "existing_inputs": [
+        "ZhangLS/Spec/Lemma23GoodSet.lean (actual arithmetic conventions; new Section 7 coefficients still needed)",
+        "ZhangLS/Spec/Lemma32EulerFactors.lean (patterns only, different coefficients)"
+      ],
+      "risk": "medium-to-high for full target; local identities are safe independent components"
+    },
+    {
+      "id": "discrete_contour",
+      "target": "L8.1",
+      "independent_of": [
+        "L3.6",
+        "P2.1",
+        "P7.1",
+        "P14.1"
+      ],
+      "scope": "Define actual Theta1 integral independently of its arithmetic evaluation; prove finite-zero residue/reflection/aggregate-error formula.",
+      "existing_inputs": [
+        "P2.2",
+        "L5.2",
+        "L5.9",
+        "L6.1",
+        "L3.3"
+      ],
+      "risk": "high; uniform sequence bounds, zero boundary and aggregate moments need full proofs"
+    },
+    {
+      "id": "shifted_chi",
+      "target": "L8.2",
+      "independent_of": [
+        "L3.6",
+        "P2.1",
+        "P7.1"
+      ],
+      "scope": "Direct logarithmic Perron sum and Taylor residue using L5.8; independently justify contour errors.",
+      "existing_inputs": [
+        "L5.8"
+      ],
+      "risk": "high; reject the apparent erroneous citation to L5.6 rather than importing its full target"
+    }
+  ],
+  "critical_circularity_warning": "Trying to prove L5.6.literal_all_primitive from the final contradiction, while requiring that same full target for P7.1/P14.1, creates a circular proof plan. Route these consumers only through the independently proved r>1 port. Full L5.6 can be revisited after eventual not-(A), with that ex-falso route explicitly disclosed.",
+  "nodes": [
+    {
+      "id": "T1",
+      "name": "Theorem 1",
+      "source": {
+        "section": "1",
+        "statement_pages": [
+          3
+        ],
+        "proof_page_range": [
+          11
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=3"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 121,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "target_path": "ZhangLS/Spec/PaperTheorems.lean"
+      },
+      "known_numbered_dependencies": [
+        "P2.4",
+        "P2.5",
+        "P2.6"
+      ],
+      "inferred_numbered_dependencies": [
+        "L2.3",
+        "L5.7"
+      ],
+      "missing_mathematics": [
+        "Actual Xi*_1/2/3 and a, positivity, contradiction, and finite-conductor reduction"
+      ],
+      "missing_specification_or_engineering": [
+        "Uniform asymptotic quantifiers; effective witness representation"
+      ],
+      "semantic_issue_ids": [
+        "effectivity_not_formalized",
+        "small_conductor_reduction",
+        "legacy_tautology_not_target"
+      ]
+    },
+    {
+      "id": "T2",
+      "name": "Theorem 2",
+      "source": {
+        "section": "1",
+        "statement_pages": [
+          3
+        ],
+        "proof_page_range": [
+          3
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=3"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 122,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "target_path": "ZhangLS/Spec/PaperTheorems.lean"
+      },
+      "known_numbered_dependencies": [
+        "T1"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Real-axis derivative control translating T1 into exponent 2024"
+      ],
+      "missing_specification_or_engineering": [
+        "Quantified uniform constants and small moduli"
+      ],
+      "semantic_issue_ids": [
+        "effectivity_not_formalized",
+        "legacy_tautology_not_target"
+      ]
+    },
+    {
+      "id": "P2.1",
+      "name": "Proposition 2.1",
+      "source": {
+        "section": "2",
+        "statement_pages": [
+          6
+        ],
+        "proof_page_range": [
+          16
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=6"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 123,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "L3.4",
+        "L3.5",
+        "L3.6"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Finite union bound on failure of three defining inequalities"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual dependent prime-character finite family; strict complement equivalence"
+      ],
+      "semantic_issue_ids": []
+    },
+    {
+      "id": "P2.2",
+      "name": "Proposition 2.2",
+      "source": {
+        "section": "2",
+        "statement_pages": [
+          6
+        ],
+        "proof_page_range": [
+          16,
+          23
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=6"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 124,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Proposition22.lean",
+        "symbol": "proposition22_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Proposition22Zeros",
+          "ZhangLS.Spec.Proposition22Neighbor"
+        ],
+        "source_sha256": "6d733e3a41db8bde330b206feeb47f0fe8ebc1bdfaa327719422e57525a959de"
+      },
+      "known_numbered_dependencies": [
+        "L4.5",
+        "L4.6",
+        "L4.7"
+      ],
+      "inferred_numbered_dependencies": [
+        "L4.2"
+      ],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+    },
+    {
+      "id": "L2.3",
+      "name": "Lemma 2.3",
+      "source": {
+        "section": "2",
+        "statement_pages": [
+          8
+        ],
+        "proof_page_range": [
+          11,
+          12
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=8"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 125,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma23.lean",
+        "symbol": "lemma23_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma23ZeroData",
+          "ZhangLS.Spec.Lemma23DirichletBranch"
+        ],
+        "source_sha256": "330a5b5995311ff8e9a742e4454da147031d5ab3cc771ddf6e267c20628c984a"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [
+        "P2.2"
+      ],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [
+        "paper_reference_2_dot_incomplete"
+      ],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+    },
+    {
+      "id": "P2.4",
+      "name": "Proposition 2.4",
+      "source": {
+        "section": "2",
+        "statement_pages": [
+          11
+        ],
+        "proof_page_range": [
+          53,
+          62
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=11",
+        "proof_section": "10"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 126,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "L8.1",
+        "P7.1",
+        "L10.1",
+        "L10.2"
+      ],
+      "inferred_numbered_dependencies": [
+        "L8.2",
+        "L8.3",
+        "L8.4",
+        "L5.7"
+      ],
+      "missing_mathematics": [
+        "Sections 8–10 arithmetic evaluations and certified numerical lower bound"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual H/J, Xi*, a, decimals as exact rationals, uniform o(P)"
+      ],
+      "semantic_issue_ids": []
+    },
+    {
+      "id": "P2.5",
+      "name": "Proposition 2.5",
+      "source": {
+        "section": "2",
+        "statement_pages": [
+          11
+        ],
+        "proof_page_range": [
+          99,
+          100
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=11",
+        "proof_section": "18"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 127,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "L2.3",
+        "L8.1",
+        "P7.1"
+      ],
+      "inferred_numbered_dependencies": [
+        "L12.1",
+        "L12.2",
+        "L12.3",
+        "P14.1",
+        "L15.1",
+        "L15.2",
+        "L15.3",
+        "L16.1",
+        "L16.2",
+        "L17.1",
+        "L8.2",
+        "L8.4",
+        "L4.8",
+        "L5.1",
+        "L5.2",
+        "L6.1"
+      ],
+      "missing_mathematics": [
+        "Sections 12–18 cross-term evaluations and certified cancellation to (2.32); Cauchy combination with (2.33)"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual Phi components and all arithmetic coefficient definitions"
+      ],
+      "semantic_issue_ids": []
+    },
+    {
+      "id": "P2.6",
+      "name": "Proposition 2.6",
+      "source": {
+        "section": "2",
+        "statement_pages": [
+          11
+        ],
+        "proof_page_range": [
+          62,
+          65
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=11",
+        "proof_section": "11"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 128,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "L11.1",
+        "L11.2"
+      ],
+      "inferred_numbered_dependencies": [
+        "L8.1",
+        "P7.1",
+        "L2.3",
+        "L5.7"
+      ],
+      "missing_mathematics": [
+        "Smoothed J functional relation; weighted error mean and Section 9 comparison"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual J/Jtilde/E2 and uniform o(aP)"
+      ],
+      "semantic_issue_ids": []
+    },
+    {
+      "id": "L3.1",
+      "name": "Lemma 3.1",
+      "source": {
+        "section": "3",
+        "statement_pages": [
+          12
+        ],
+        "proof_page_range": [
+          12,
+          13
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=12"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 129,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma31.lean",
+        "symbol": "lemma31_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma31TotalWeight"
+        ],
+        "source_sha256": "245b1d462d8fcb956aa418f18462ff52d7c917b2eb0c5a56a000e2437a7f60b1"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L3.2",
+      "name": "Lemma 3.2",
+      "source": {
+        "section": "3",
+        "statement_pages": [
+          13
+        ],
+        "proof_page_range": [
+          13,
+          14
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=13"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 130,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma32OriginalTargetClosure.lean",
+        "symbol": "lemma32_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma32ActualUniformBurgess",
+          "ZhangLS.Spec.Lemma32BurgessReduction"
+        ],
+        "source_sha256": "3972ec370756d3f09c9923c6fcf66ff1574a7cee582d13b2cf2b9a4cc73928b3"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [
+        "paper_proof_sketch_not_dependency_on_L3.1"
+      ],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L3.3",
+      "name": "Lemma 3.3",
+      "source": {
+        "section": "3",
+        "statement_pages": [
+          14
+        ],
+        "proof_page_range": [
+          14
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=14"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 131,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma33.lean",
+        "symbol": "lemma33_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma33FirstMean",
+          "ZhangLS.Spec.Lemma33GaussTransform",
+          "ZhangLS.Spec.Lemma33AdditiveLargeSieve",
+          "ZhangLS.Spec.Lemma33ActualSamples"
+        ],
+        "source_sha256": "c7ab0f6de943ebbbb90b7bd3abfe5efc978cdbf672bab195854941ae88ff320a"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L3.4",
+      "name": "Lemma 3.4",
+      "source": {
+        "section": "3",
+        "statement_pages": [
+          15
+        ],
+        "proof_page_range": [
+          14,
+          15
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=15"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 132,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma34.lean",
+        "symbol": "lemma34_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma34BSecondMoment",
+          "ZhangLS.Spec.Lemma33"
+        ],
+        "source_sha256": "1f4716bd07abaa9a9672260c8c5a548288b7b1bf95ada88657be43318dffb042"
+      },
+      "known_numbered_dependencies": [
+        "L3.3"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L3.5",
+      "name": "Lemma 3.5",
+      "source": {
+        "section": "3",
+        "statement_pages": [
+          15
+        ],
+        "proof_page_range": [
+          15
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=15"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 133,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma35.lean",
+        "symbol": "lemma35_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma35BSecondMoment"
+        ],
+        "source_sha256": "86c461bf7a41dae0b948fc768db83fe72adc3c143858ec849b79bc3084da5384"
+      },
+      "known_numbered_dependencies": [
+        "L3.1"
+      ],
+      "inferred_numbered_dependencies": [
+        "L3.3"
+      ],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [
+        "paper_second_assertion_L3.2_means_L3.3"
+      ],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L3.6",
+      "name": "Lemma 3.6",
+      "source": {
+        "section": "3",
+        "statement_pages": [
+          16
+        ],
+        "proof_page_range": [
+          15,
+          16
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=16"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "in_progress_unverified",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 134,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [
+        "L3.2",
+        "L3.3"
+      ],
+      "missing_mathematics": [
+        "Varsigma domination plus completed weighted tail and first large-sieve estimate"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual X4 endpoint/integral square mean; strict exceptional count closure"
+      ],
+      "semantic_issue_ids": [
+        "paper_first_assertion_L3.2_and_L3.1_should_be_L3.3_and_L3.2"
+      ],
+      "active_work": "Parent reports separate five-file Lemma36 effort; no claim of checking or completion here."
+    },
+    {
+      "id": "L4.1",
+      "name": "Lemma 4.1",
+      "source": {
+        "section": "4",
+        "statement_pages": [
+          16
+        ],
+        "proof_page_range": [
+          16
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=16"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 135,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma23GoodSet.lean",
+        "symbol": "lemma23_lemma41",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma23X1Expansion"
+        ],
+        "source_sha256": "ae75451e0cff47b7fd66e0c479608074431bdb5f300b8280f5a3fbccb3cd3045"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+    },
+    {
+      "id": "L4.2",
+      "name": "Lemma 4.2",
+      "source": {
+        "section": "4",
+        "statement_pages": [
+          17
+        ],
+        "proof_page_range": [
+          17
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=17"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 136,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma23ProductApproximation.lean",
+        "symbol": "lemma23_lemma42",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma23GoodSet"
+        ],
+        "source_sha256": "7eee95ce43d22d6123d7a4e158a384d0ccca1b2404cb1492f617619c1be20e68"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+    },
+    {
+      "id": "L4.3",
+      "name": "Lemma 4.3",
+      "source": {
+        "section": "4",
+        "statement_pages": [
+          17
+        ],
+        "proof_page_range": [
+          17
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=17"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 137,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma23SectionFourLogDerivative.lean",
+        "symbol": "lemma23_lemma43_at_explicit_threshold",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma23ProductApproximation",
+          "ZhangLS.Spec.Lemma23BorelCaratheodory",
+          "Mathlib.Analysis.Complex.ExponentialBounds"
+        ],
+        "source_sha256": "6ebc5209aba1f5b90de8f8799fd17619bd97e482488f3c25b47aceabce0aede3"
+      },
+      "known_numbered_dependencies": [
+        "L4.1",
+        "L4.2"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+    },
+    {
+      "id": "L4.4",
+      "name": "Lemma 4.4",
+      "source": {
+        "section": "4",
+        "statement_pages": [
+          19
+        ],
+        "proof_page_range": [
+          19,
+          21
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=19"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 138,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma44ApproximateFunctionalEquation.lean",
+        "symbol": "lemma44_actual_approximate_functional_equation",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma44LeftContourSplit",
+          "ZhangLS.Spec.Lemma44ReflectedPolynomialBounds"
+        ],
+        "source_sha256": "8dd9770207e3f702bd4ba427e6630e6a8089be4b4bd3d4eeaddbce91b3eb1046"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+    },
+    {
+      "id": "L4.5",
+      "name": "Lemma 4.5",
+      "source": {
+        "section": "4",
+        "statement_pages": [
+          21
+        ],
+        "proof_page_range": [
+          21,
+          22
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=21"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 139,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma45ZeroFree.lean",
+        "symbol": "lemma45_actual_product_ne_zero",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma45HorizontalQuotient",
+          "ZhangLS.Spec.Lemma45ErrorBudget"
+        ],
+        "source_sha256": "b9c775d544201c8f583209a5e3882315359ce6fd9e3a60cb610af677e8f59517"
+      },
+      "known_numbered_dependencies": [
+        "L4.1",
+        "L4.2",
+        "L4.3",
+        "L4.4"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+    },
+    {
+      "id": "L4.6",
+      "name": "Lemma 4.6",
+      "source": {
+        "section": "4",
+        "statement_pages": [
+          22
+        ],
+        "proof_page_range": [
+          22,
+          23
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=22"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 140,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma46ZeroAnalysis.lean",
+        "symbol": "lemma46_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma46RoucheLocal",
+          "Mathlib.Analysis.Calculus.Deriv.Shift"
+        ],
+        "source_sha256": "10021360bbcc4681d079be77a00514692ff562845819af3279b728f3e04eb5f1"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [
+        "L4.3",
+        "L4.4",
+        "L4.5"
+      ],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+    },
+    {
+      "id": "L4.7",
+      "name": "Lemma 4.7",
+      "source": {
+        "section": "4",
+        "statement_pages": [
+          23
+        ],
+        "proof_page_range": [
+          23
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=23"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 141,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma47ThreeZeros.lean",
+        "symbol": "lemma47_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma47ModelApproximation",
+          "ZhangLS.Spec.Lemma47ModelBoundary"
+        ],
+        "source_sha256": "eb6054c630d9bfb7cb1cb3d88910e8f08d5414b833e5af80f1cb9ccd656b9066"
+      },
+      "known_numbered_dependencies": [
+        "L4.6"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+    },
+    {
+      "id": "L4.8",
+      "name": "Lemma 4.8",
+      "source": {
+        "section": "4",
+        "statement_pages": [
+          23
+        ],
+        "proof_page_range": [
+          23
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=23"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 142,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma48InverseFactor.lean",
+        "symbol": "lemma48_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma48ZeroRegion"
+        ],
+        "source_sha256": "13659e4d2f817c6ae48af07ab5195773f6eebb313e438999a0ccdedea15e2f5d"
+      },
+      "known_numbered_dependencies": [
+        "L4.1",
+        "L4.4"
+      ],
+      "inferred_numbered_dependencies": [
+        "L4.2"
+      ],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+    },
+    {
+      "id": "L5.1",
+      "name": "Lemma 5.1",
+      "source": {
+        "section": "5",
+        "statement_pages": [
+          24
+        ],
+        "proof_page_range": [
+          24
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=24"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 143,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma51.lean",
+        "symbol": "lemma51_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma51ShiftEstimates"
+        ],
+        "source_sha256": "bd0637e010c6bf44404c65d5f57caa6d3b55a0f8bc4859865570d8bc0c4bfb3c"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L5.2",
+      "name": "Lemma 5.2",
+      "source": {
+        "section": "5",
+        "statement_pages": [
+          24
+        ],
+        "proof_page_range": [
+          24,
+          25
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=24"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 144,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma52.lean",
+        "symbol": "lemma52_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma52Product"
+        ],
+        "source_sha256": "081473275101ca48fe48205c6b094ab5fb3ab3cdaf25d2e19dda981e63bfa857"
+      },
+      "known_numbered_dependencies": [
+        "L5.1"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L5.3",
+      "name": "Lemma 5.3",
+      "source": {
+        "section": "5",
+        "statement_pages": [
+          25
+        ],
+        "proof_page_range": [
+          26,
+          27
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=25"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 145,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma53.lean",
+        "symbol": "lemma53_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma53LargeRange"
+        ],
+        "source_sha256": "9866ae6d9d13855cebc047807cd2ba7e38a359f99a2524a1b75c9ea1fb2c1981"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L5.4",
+      "name": "Lemma 5.4",
+      "source": {
+        "section": "5",
+        "statement_pages": [
+          28
+        ],
+        "proof_page_range": [
+          28
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=28"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 146,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma54.lean",
+        "symbol": "lemma54_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma54UniformSecondMoment",
+          "ZhangLS.Spec.Lemma54DiskErrorAbsorption"
+        ],
+        "source_sha256": "2c3b173c308948c2673c996bcf6809dabc7e9e750f5120e04b7bfad13c18259c"
+      },
+      "known_numbered_dependencies": [
+        "L5.3"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L5.5",
+      "name": "Lemma 5.5",
+      "source": {
+        "section": "5",
+        "statement_pages": [
+          28
+        ],
+        "proof_page_range": [],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=28"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 147,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma55FullZeroExclusion.lean",
+        "symbol": "lemma55_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma55FourZeroDetection",
+          "ZhangLS.Spec.Lemma55UniformRepulsionBudget"
+        ],
+        "source_sha256": "55f980ef79d3eb361e1d6cc4c082440394dbff949629035e9ae06e6e676abcb8"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [
+        "L5.7"
+      ],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L5.6",
+      "name": "Lemma 5.6",
+      "source": {
+        "section": "5",
+        "statement_pages": [
+          29
+        ],
+        "proof_page_range": [],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=29"
+      },
+      "baseline_ledger_status": "partial_reported",
+      "working_status": "partial_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 148,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma56ActualPrimeMassNormalization.lean",
+        "symbol": "lemma56_uniform_primitive_prime_window_normalized_bound",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma56ActualPrimeMassLower"
+        ],
+        "source_sha256": "fa5a2db30dc251a236dfcc5d9917e18726cceb80f8848c6fef17e85ad5cbf409"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [
+        "L5.5"
+      ],
+      "missing_mathematics": [
+        "Nonprincipal branch exists; literal principal branch would already imply eventual not-(A)"
+      ],
+      "missing_specification_or_engineering": [
+        "Preserve original target; expose restricted port explicitly; do not silently add 1<r"
+      ],
+      "semantic_issue_ids": [
+        "principal_modulus_one_obstruction"
+      ],
+      "ports": {
+        "nonprincipal_r_gt_one": {
+          "status": "complete_reported",
+          "symbol": "lemma56_uniform_primitive_prime_window_normalized_bound"
+        },
+        "literal_all_primitive_including_r_one": {
+          "status": "blocked_specification",
+          "target": "ZhangLS/Spec/Lemma56.lean:Lemma56Target"
+        }
+      }
+    },
+    {
+      "id": "L5.7",
+      "name": "Lemma 5.7",
+      "source": {
+        "section": "5",
+        "statement_pages": [
+          29
+        ],
+        "proof_page_range": [
+          29
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=29"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 149,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma57LeftQuadraticGrowth.lean",
+        "symbol": "lemma57_target_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma57CriticalStripGrowth",
+          "ZhangLS.Spec.Lemma57QuadraticConductorThreshold"
+        ],
+        "source_sha256": "9683eccbee0b881f34aba6adac8ad290db1a56eddf6a1d0a4199784ec824e528"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L5.8",
+      "name": "Lemma 5.8",
+      "source": {
+        "section": "5",
+        "statement_pages": [
+          29
+        ],
+        "proof_page_range": [
+          29
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=29"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 150,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma58.lean",
+        "symbol": "lemma58_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma55SimpleRealZero",
+          "ZhangLS.Spec.Lemma44LongSum"
+        ],
+        "source_sha256": "50a3657cd5eceb267637065d35f0c175964e3c00105d4b6bd43cb0e4362d3beb"
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "L5.9",
+      "name": "Lemma 5.9",
+      "source": {
+        "section": "5",
+        "statement_pages": [
+          29
+        ],
+        "proof_page_range": [
+          29,
+          30
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=29"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 151,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma59.lean",
+        "symbol": "lemma59_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma59FiniteComplexProducts"
+        ],
+        "source_sha256": "954fe0985031ef902190c94515417e17adc9a22f0afde072ed118c7248a6df39"
+      },
+      "known_numbered_dependencies": [
+        "P2.2"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+    },
+    {
+      "id": "L6.1",
+      "name": "Lemma 6.1",
+      "source": {
+        "section": "6",
+        "statement_pages": [
+          30
+        ],
+        "proof_page_range": [
+          30,
+          32
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=30"
+      },
+      "baseline_ledger_status": "complete_reported",
+      "working_status": "complete_reported",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 152,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "capstone_path": "ZhangLS/Spec/Lemma61.lean",
+        "symbol": "lemma61_proved",
+        "symbol_present_in_source": true,
+        "direct_imports": [
+          "ZhangLS.Spec.Lemma61Approximation"
+        ],
+        "source_sha256": "25b487be9b9a0f66bb345b6552987d1e8a8f65c0e2c1785a2c14c5424d972cf0"
+      },
+      "known_numbered_dependencies": [
+        "L5.1"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
+      "semantic_issue_ids": [],
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+    },
+    {
+      "id": "P7.1",
+      "name": "Proposition 7.1",
+      "source": {
+        "section": "7",
+        "statement_pages": [
+          33
+        ],
+        "proof_page_range": [
+          34,
+          42
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=33"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 153,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "P2.1",
+        "L5.3",
+        "L5.4",
+        "L5.6"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Character averaging, reciprocity/Ramanujan decomposition, generic large sieve, residues and error estimates"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual kappa/lambda/xi/Sj/E and Theta1; uniformity in bounded sequences"
+      ],
+      "semantic_issue_ids": [
+        "consume_L5.6_nonprincipal_only",
+        "paper_L5.2_i_ii_main_term_likely_L5.4",
+        "generic_all_moduli_large_sieve_not_just_L3.3"
+      ]
+    },
+    {
+      "id": "L8.1",
+      "name": "Lemma 8.1",
+      "source": {
+        "section": "8",
+        "statement_pages": [
+          42
+        ],
+        "proof_page_range": [
+          42,
+          44
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=42"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 154,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "P2.2",
+        "L5.2",
+        "L5.9",
+        "L6.1",
+        "L3.3"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Actual residue sum, reflected contour, shifted-L fourth moment and aggregate error"
+      ],
+      "missing_specification_or_engineering": [
+        "Define Theta1 integral separately from P7.1 evaluation; actual finite zero sets"
+      ],
+      "semantic_issue_ids": [
+        "no_dependency_on_P7.1_arithmetic_evaluation",
+        "zero_boundary_and_uniform_sequence_bounds"
+      ]
+    },
+    {
+      "id": "L8.2",
+      "name": "Lemma 8.2",
+      "source": {
+        "section": "8",
+        "statement_pages": [
+          45
+        ],
+        "proof_page_range": [
+          45
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=45"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 155,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [
+        "L5.8"
+      ],
+      "missing_mathematics": [
+        "Smoothed/logarithmic Perron identity, contour tails, L5.8 substitution and double-pole residue"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual beta shifts, finite strict cutoff, uniform x and mu"
+      ],
+      "semantic_issue_ids": [
+        "paper_L5.6_citation_not_relevant_to_chi_sum",
+        "contour_error_needs_actual_proof"
+      ]
+    },
+    {
+      "id": "L8.3",
+      "name": "Lemma 8.3",
+      "source": {
+        "section": "8",
+        "statement_pages": [
+          46
+        ],
+        "proof_page_range": [
+          101,
+          103
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=46",
+        "proof_section": "Appendix A"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 156,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Prime-power coefficient identities, multiplicativity, normally convergent correction Euler product, small-shift errors"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual kappa/lambda/xi from Section 7; analytic extension and local factors"
+      ],
+      "semantic_issue_ids": [
+        "analytic_extension_not_totalized_quotient",
+        "strict_vs_closed_five_alpha_boundary"
+      ]
+    },
+    {
+      "id": "L8.4",
+      "name": "Lemma 8.4",
+      "source": {
+        "section": "8",
+        "statement_pages": [
+          46
+        ],
+        "proof_page_range": [
+          46,
+          47
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=46"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 157,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "L8.3",
+        "L5.5"
+      ],
+      "inferred_numbered_dependencies": [
+        "L5.8"
+      ],
+      "missing_mathematics": [
+        "L-ratio contour identity, zero exclusion, linearization and residues"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual U/Pi and strict cutoff; use corrected references"
+      ],
+      "semantic_issue_ids": [
+        "paper_L5.6_linearization_likely_L5.8"
+      ]
+    },
+    {
+      "id": "L10.1",
+      "name": "Lemma 10.1",
+      "source": {
+        "section": "10",
+        "statement_pages": [
+          53
+        ],
+        "proof_page_range": [
+          53,
+          55
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=53"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 158,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "L5.8"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Piecewise tent-weight Perron evaluation in three ranges"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual ftilde and V1j; exact rational endpoints"
+      ],
+      "semantic_issue_ids": [
+        "paper_contour_reference_L8.1_likely_L8.2"
+      ]
+    },
+    {
+      "id": "L10.2",
+      "name": "Lemma 10.2",
+      "source": {
+        "section": "10",
+        "statement_pages": [
+          55
+        ],
+        "proof_page_range": [
+          55,
+          57
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=55"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 159,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "L5.8"
+      ],
+      "inferred_numbered_dependencies": [
+        "L8.3",
+        "L8.4"
+      ],
+      "missing_mathematics": [
+        "U-weighted tent Perron evaluation and complementary ranges"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual V2j and Pi; uniform d,r cutoff"
+      ],
+      "semantic_issue_ids": [
+        "paper_contour_reference_L8.1_likely_L8.4",
+        "paper_L8.2_for_U_likely_L8.3"
+      ]
+    },
+    {
+      "id": "L11.1",
+      "name": "Lemma 11.1",
+      "source": {
+        "section": "11",
+        "statement_pages": [
+          63
+        ],
+        "proof_page_range": [
+          63,
+          64
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=63"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "in_progress_unverified",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 160,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Gaussian reflection plus tail integration for a triangular profile"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual gtilde1 and ftilde; intervals and eta endpoints"
+      ],
+      "semantic_issue_ids": [
+        "printed_T_for_P_and_broken_equation_references"
+      ],
+      "shared_implementation_inputs": [
+        "Existing Gaussian infrastructure associated with L6.1; the numbered L6.1 statement is not by itself a direct proof."
+      ],
+      "active_work": "Parent reports an independent Lemma 11.1 worker is active; no proof checked or completion claimed by this audit."
+    },
+    {
+      "id": "L11.2",
+      "name": "Lemma 11.2",
+      "source": {
+        "section": "11",
+        "statement_pages": [
+          65
+        ],
+        "proof_page_range": [
+          65
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=65"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 161,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Approximate functional equation for composite primitive chi*psi and integrated smoothing parameter"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual E2, Jtilde1/2; conductor Dp normalization"
+      ],
+      "semantic_issue_ids": [
+        "E2_vs_E_notation",
+        "L6.1_prime_conductor_not_directly_applicable_to_chi_psi"
+      ],
+      "shared_implementation_inputs": [
+        "Existing Gaussian infrastructure associated with L6.1; the numbered L6.1 statement is not by itself a direct proof."
+      ]
+    },
+    {
+      "id": "L12.1",
+      "name": "Lemma 12.1",
+      "source": {
+        "section": "12",
+        "statement_pages": [
+          68
+        ],
+        "proof_page_range": [
+          68
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=68"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 162,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "L5.8"
+      ],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Truncated shifted-chi sums via L5.8 and contour/tail estimates"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual kappa13 and exact P-double-prime endpoints"
+      ],
+      "semantic_issue_ids": []
+    },
+    {
+      "id": "L12.2",
+      "name": "Lemma 12.2",
+      "source": {
+        "section": "12",
+        "statement_pages": [
+          69
+        ],
+        "proof_page_range": [
+          69,
+          70
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=69"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 163,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "L5.8"
+      ],
+      "inferred_numbered_dependencies": [
+        "L8.3",
+        "L8.4"
+      ],
+      "missing_mathematics": [
+        "U-weighted shifted logarithmic residue evaluation"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual xi_j and kappa13, uniform d,r"
+      ],
+      "semantic_issue_ids": []
+    },
+    {
+      "id": "L12.3",
+      "name": "Lemma 12.3",
+      "source": {
+        "section": "12",
+        "statement_pages": [
+          70
+        ],
+        "proof_page_range": [
+          70
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=70"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 164,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [
+        "L8.3",
+        "L12.1"
+      ],
+      "missing_mathematics": [
+        "Complementary-range truncated U-weighted estimate"
+      ],
+      "missing_specification_or_engineering": [
+        "Uniform strict cutoff and Pi-normalization"
+      ],
+      "semantic_issue_ids": []
+    },
+    {
+      "id": "P14.1",
+      "name": "Proposition 14.1",
+      "source": {
+        "section": "14",
+        "statement_pages": [
+          76
+        ],
+        "proof_page_range": [
+          76,
+          79
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=76"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 165,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "L5.3",
+        "L5.4",
+        "L5.6"
+      ],
+      "inferred_numbered_dependencies": [
+        "P2.1"
+      ],
+      "missing_mathematics": [
+        "Twisted mean formula, Gauss reciprocity, conductor splitting and large sieve"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual Theta2 and kappa*/a* assumptions; separate shared core from P7.1"
+      ],
+      "semantic_issue_ids": [
+        "consume_L5.6_nonprincipal_only",
+        "P7.1_proof_method_not_logical_result_dependency",
+        "generic_all_moduli_large_sieve_not_just_L3.3"
+      ]
+    },
+    {
+      "id": "L15.1",
+      "name": "Lemma 15.1",
+      "source": {
+        "section": "15",
+        "statement_pages": [
+          86
+        ],
+        "proof_page_range": [
+          106,
+          108
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=86",
+        "proof_section": "Appendix B"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 166,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [
+        "L3.1",
+        "L3.2"
+      ],
+      "missing_mathematics": [
+        "Mobius/nu tail replacement, small-prime exclusion, coprime factorization, zeta-ratio residues"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual b/rho*_j/N(Q), e_j; uniform n1"
+      ],
+      "semantic_issue_ids": [
+        "paper_L3.2_for_B1_may_need_L3.1",
+        "paper_L8.1_contour_reference_is_analogy_or_typo"
+      ]
+    },
+    {
+      "id": "L15.2",
+      "name": "Lemma 15.2",
+      "source": {
+        "section": "15",
+        "statement_pages": [
+          87
+        ],
+        "proof_page_range": [
+          103,
+          104
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=87",
+        "proof_section": "Appendix A"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 167,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Prime-local geometric-series identities and global product truncation"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual M1 and its analytic extension"
+      ],
+      "semantic_issue_ids": [
+        "analytic_extension_not_totalized_quotient"
+      ]
+    },
+    {
+      "id": "L15.3",
+      "name": "Lemma 15.3",
+      "source": {
+        "section": "15",
+        "statement_pages": [
+          87
+        ],
+        "proof_page_range": [
+          105
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=87",
+        "proof_section": "Appendix A"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 168,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Euler correction normal convergence and evaluation at one"
+      ],
+      "missing_specification_or_engineering": [
+        "Consistent U1j name; actual varpi1j and regularized quotient"
+      ],
+      "semantic_issue_ids": [
+        "U1j_vs_U2j_label_mismatch",
+        "analytic_extension_not_totalized_quotient"
+      ]
+    },
+    {
+      "id": "L16.1",
+      "name": "Lemma 16.1",
+      "source": {
+        "section": "16",
+        "statement_pages": [
+          92
+        ],
+        "proof_page_range": [
+          105
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=92",
+        "proof_section": "Appendix A"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 169,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [],
+      "missing_mathematics": [
+        "Euler correction product near one with special prime 2"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual M2*, pconstant, and both chi(2) branches"
+      ],
+      "semantic_issue_ids": [
+        "chi_two_equals_one_euler_factor_exception"
+      ]
+    },
+    {
+      "id": "L16.2",
+      "name": "Lemma 16.2",
+      "source": {
+        "section": "16",
+        "statement_pages": [
+          94
+        ],
+        "proof_page_range": [
+          105,
+          106
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=94",
+        "proof_section": "Appendix A"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 170,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [],
+      "inferred_numbered_dependencies": [
+        "L16.1"
+      ],
+      "missing_mathematics": [
+        "Normalized local factors, global Euler convergence and evaluation at one"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual varpi2j; avoid division by vanishing ordinary p=2 factor"
+      ],
+      "semantic_issue_ids": [
+        "chi_two_equals_one_euler_factor_exception",
+        "analytic_extension_not_totalized_quotient"
+      ]
+    },
+    {
+      "id": "L17.1",
+      "name": "Lemma 17.1",
+      "source": {
+        "section": "17",
+        "statement_pages": [
+          96
+        ],
+        "proof_page_range": [
+          108,
+          109
+        ],
+        "url": "https://arxiv.org/pdf/2211.02515v1#page=96",
+        "proof_section": "Appendix B"
+      },
+      "baseline_ledger_status": "unstarted",
+      "working_status": "unstarted",
+      "status_evidence": {
+        "ledger_path": "progress.md",
+        "ledger_line": 171,
+        "fresh_kernel_check": false,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": false
+      },
+      "known_numbered_dependencies": [
+        "L3.1"
+      ],
+      "inferred_numbered_dependencies": [
+        "L5.8"
+      ],
+      "missing_mathematics": [
+        "Gaussian replacement from L3.1, explicit nu-square Euler product and residue at zero"
+      ],
+      "missing_specification_or_engineering": [
+        "Actual a=(6/pi^2)*Lprime^2*product(q/(q+1)); strict n<D^4; uniform o(1)"
+      ],
+      "semantic_issue_ids": [
+        "strict_n_less_D4_endpoint",
+        "unnumbered_contour_step_incomplete_in_paper"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "P2.4",
+      "to": "T1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        11
+      ]
+    },
+    {
+      "from": "P2.5",
+      "to": "T1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        11
+      ]
+    },
+    {
+      "from": "P2.6",
+      "to": "T1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        11
+      ]
+    },
+    {
+      "from": "L2.3",
+      "to": "T1",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        11
+      ]
+    },
+    {
+      "from": "L5.7",
+      "to": "T1",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        11
+      ]
+    },
+    {
+      "from": "T1",
+      "to": "T2",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        3
+      ]
+    },
+    {
+      "from": "L3.4",
+      "to": "P2.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        16
+      ]
+    },
+    {
+      "from": "L3.5",
+      "to": "P2.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        16
+      ]
+    },
+    {
+      "from": "L3.6",
+      "to": "P2.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        16
+      ]
+    },
+    {
+      "from": "L4.5",
+      "to": "P2.2",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        16,
+        23
+      ]
+    },
+    {
+      "from": "L4.6",
+      "to": "P2.2",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        16,
+        23
+      ]
+    },
+    {
+      "from": "L4.7",
+      "to": "P2.2",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        16,
+        23
+      ]
+    },
+    {
+      "from": "L4.2",
+      "to": "P2.2",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        16,
+        23
+      ]
+    },
+    {
+      "from": "P2.2",
+      "to": "L2.3",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        11,
+        12
+      ]
+    },
+    {
+      "from": "L8.1",
+      "to": "P2.4",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        53,
+        62
+      ]
+    },
+    {
+      "from": "P7.1",
+      "to": "P2.4",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        53,
+        62
+      ]
+    },
+    {
+      "from": "L10.1",
+      "to": "P2.4",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        53,
+        62
+      ]
+    },
+    {
+      "from": "L10.2",
+      "to": "P2.4",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        53,
+        62
+      ]
+    },
+    {
+      "from": "L8.2",
+      "to": "P2.4",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        53,
+        62
+      ]
+    },
+    {
+      "from": "L8.3",
+      "to": "P2.4",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        53,
+        62
+      ]
+    },
+    {
+      "from": "L8.4",
+      "to": "P2.4",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        53,
+        62
+      ]
+    },
+    {
+      "from": "L5.7",
+      "to": "P2.4",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        53,
+        62
+      ]
+    },
+    {
+      "from": "L2.3",
+      "to": "P2.5",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L8.1",
+      "to": "P2.5",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "P7.1",
+      "to": "P2.5",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L12.1",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L12.2",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L12.3",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "P14.1",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L15.1",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L15.2",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L15.3",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L16.1",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L16.2",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L17.1",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L8.2",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L8.4",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L4.8",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L5.1",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L5.2",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L6.1",
+      "to": "P2.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        99,
+        100
+      ]
+    },
+    {
+      "from": "L11.1",
+      "to": "P2.6",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        62,
+        65
+      ]
+    },
+    {
+      "from": "L11.2",
+      "to": "P2.6",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        62,
+        65
+      ]
+    },
+    {
+      "from": "L8.1",
+      "to": "P2.6",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        62,
+        65
+      ]
+    },
+    {
+      "from": "P7.1",
+      "to": "P2.6",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        62,
+        65
+      ]
+    },
+    {
+      "from": "L2.3",
+      "to": "P2.6",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        62,
+        65
+      ]
+    },
+    {
+      "from": "L5.7",
+      "to": "P2.6",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        62,
+        65
+      ]
+    },
+    {
+      "from": "L3.3",
+      "to": "L3.4",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "from": "L3.1",
+      "to": "L3.5",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        15
+      ]
+    },
+    {
+      "from": "L3.3",
+      "to": "L3.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        15
+      ]
+    },
+    {
+      "from": "L3.2",
+      "to": "L3.6",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        15,
+        16
+      ]
+    },
+    {
+      "from": "L3.3",
+      "to": "L3.6",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        15,
+        16
+      ]
+    },
+    {
+      "from": "L4.1",
+      "to": "L4.3",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        17
+      ]
+    },
+    {
+      "from": "L4.2",
+      "to": "L4.3",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        17
+      ]
+    },
+    {
+      "from": "L4.1",
+      "to": "L4.5",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        21,
+        22
+      ]
+    },
+    {
+      "from": "L4.2",
+      "to": "L4.5",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        21,
+        22
+      ]
+    },
+    {
+      "from": "L4.3",
+      "to": "L4.5",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        21,
+        22
+      ]
+    },
+    {
+      "from": "L4.4",
+      "to": "L4.5",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        21,
+        22
+      ]
+    },
+    {
+      "from": "L4.3",
+      "to": "L4.6",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        22,
+        23
+      ]
+    },
+    {
+      "from": "L4.4",
+      "to": "L4.6",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        22,
+        23
+      ]
+    },
+    {
+      "from": "L4.5",
+      "to": "L4.6",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        22,
+        23
+      ]
+    },
+    {
+      "from": "L4.6",
+      "to": "L4.7",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        23
+      ]
+    },
+    {
+      "from": "L4.1",
+      "to": "L4.8",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        23
+      ]
+    },
+    {
+      "from": "L4.4",
+      "to": "L4.8",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        23
+      ]
+    },
+    {
+      "from": "L4.2",
+      "to": "L4.8",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        23
+      ]
+    },
+    {
+      "from": "L5.1",
+      "to": "L5.2",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        24,
+        25
+      ]
+    },
+    {
+      "from": "L5.3",
+      "to": "L5.4",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        28
+      ]
+    },
+    {
+      "from": "L5.7",
+      "to": "L5.5",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [],
+      "evidence": "Lemma55SimpleRealZero.lean imports and uses Lemma57LeftQuadraticGrowth; paper supplies no proof for 5.5."
+    },
+    {
+      "from": "L5.5",
+      "to": "L5.6",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": []
+    },
+    {
+      "from": "P2.2",
+      "to": "L5.9",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        29,
+        30
+      ]
+    },
+    {
+      "from": "L5.1",
+      "to": "L6.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        30,
+        32
+      ]
+    },
+    {
+      "from": "P2.1",
+      "to": "P7.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        34,
+        42
+      ]
+    },
+    {
+      "from": "L5.3",
+      "to": "P7.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        34,
+        42
+      ]
+    },
+    {
+      "from": "L5.4",
+      "to": "P7.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        34,
+        42
+      ]
+    },
+    {
+      "from": "L5.6",
+      "to": "P7.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        34,
+        42
+      ],
+      "required_port": "nonprincipal_r_gt_one",
+      "application_obligation": "Primitive modulus 1<r<D must imply evaluation-sequence distinction from chi."
+    },
+    {
+      "from": "P2.2",
+      "to": "L8.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        42,
+        44
+      ]
+    },
+    {
+      "from": "L5.2",
+      "to": "L8.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        42,
+        44
+      ]
+    },
+    {
+      "from": "L5.9",
+      "to": "L8.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        42,
+        44
+      ]
+    },
+    {
+      "from": "L6.1",
+      "to": "L8.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        42,
+        44
+      ]
+    },
+    {
+      "from": "L3.3",
+      "to": "L8.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        42,
+        44
+      ]
+    },
+    {
+      "from": "L5.8",
+      "to": "L8.2",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        45
+      ]
+    },
+    {
+      "from": "L8.3",
+      "to": "L8.4",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        46,
+        47
+      ]
+    },
+    {
+      "from": "L5.5",
+      "to": "L8.4",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        46,
+        47
+      ]
+    },
+    {
+      "from": "L5.8",
+      "to": "L8.4",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        46,
+        47
+      ]
+    },
+    {
+      "from": "L5.8",
+      "to": "L10.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        53,
+        55
+      ]
+    },
+    {
+      "from": "L5.8",
+      "to": "L10.2",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        55,
+        57
+      ]
+    },
+    {
+      "from": "L8.3",
+      "to": "L10.2",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        55,
+        57
+      ]
+    },
+    {
+      "from": "L8.4",
+      "to": "L10.2",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        55,
+        57
+      ]
+    },
+    {
+      "from": "L5.8",
+      "to": "L12.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        68
+      ]
+    },
+    {
+      "from": "L5.8",
+      "to": "L12.2",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        69,
+        70
+      ]
+    },
+    {
+      "from": "L8.3",
+      "to": "L12.2",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        69,
+        70
+      ]
+    },
+    {
+      "from": "L8.4",
+      "to": "L12.2",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        69,
+        70
+      ]
+    },
+    {
+      "from": "L8.3",
+      "to": "L12.3",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        70
+      ]
+    },
+    {
+      "from": "L12.1",
+      "to": "L12.3",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        70
+      ]
+    },
+    {
+      "from": "L5.3",
+      "to": "P14.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        76,
+        79
+      ]
+    },
+    {
+      "from": "L5.4",
+      "to": "P14.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        76,
+        79
+      ]
+    },
+    {
+      "from": "L5.6",
+      "to": "P14.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        76,
+        79
+      ],
+      "required_port": "nonprincipal_r_gt_one",
+      "application_obligation": "Primitive induction of chi*conj(theta), conductor below T, exclusion of principal and chi after removing the two exceptional terms (pp78-79)."
+    },
+    {
+      "from": "P2.1",
+      "to": "P14.1",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        76,
+        79
+      ]
+    },
+    {
+      "from": "L3.1",
+      "to": "L15.1",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        106,
+        108
+      ]
+    },
+    {
+      "from": "L3.2",
+      "to": "L15.1",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        106,
+        108
+      ]
+    },
+    {
+      "from": "L16.1",
+      "to": "L16.2",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        105,
+        106
+      ]
+    },
+    {
+      "from": "L3.1",
+      "to": "L17.1",
+      "kind": "accepted_explicit_paper_citation",
+      "proof_pages": [
+        108,
+        109
+      ]
+    },
+    {
+      "from": "L5.8",
+      "to": "L17.1",
+      "kind": "inferred_mathematical_or_code_dependency",
+      "proof_pages": [
+        108,
+        109
+      ]
+    }
+  ],
+  "status_provenance": {
+    "authoritative_historical_sources": [
+      "progress.md:121-171",
+      "audit/STEP137_STATUS.md",
+      "audit/lean_kernel_verification.txt"
+    ],
+    "historical_verification_platform": "Lean 4.30.0, arm64-apple-darwin24.6.0",
+    "historical_verification_utc": [
+      "2026-10-02T11:01:20Z",
+      "2026-10-02T11:17:46Z"
+    ],
+    "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
+  }
+}

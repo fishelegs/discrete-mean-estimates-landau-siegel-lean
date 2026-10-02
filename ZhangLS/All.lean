@@ -267,6 +267,10 @@ import ZhangLS.Spec.CharacterPeriodSum
 import ZhangLS.Spec.DirichletLSeries
 import ZhangLS.Spec.DivisorCharacterSum
 import ZhangLS.Spec.DivisorCharacterSumNonnegative
+import ZhangLS.Spec.Lemma111
+import ZhangLS.Spec.Lemma111GaussianBounds
+import ZhangLS.Spec.Lemma111GaussianPrimitive
+import ZhangLS.Spec.Lemma111SmoothedTent
 import ZhangLS.Spec.Lemma23
 import ZhangLS.Spec.Lemma23AnalyticLogBranch
 import ZhangLS.Spec.Lemma23ArgumentPrinciple
