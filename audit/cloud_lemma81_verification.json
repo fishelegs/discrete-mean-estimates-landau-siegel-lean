@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T17:25:19Z",
+  "base_commit": "405b99843227390a13ab70da8e7ace48b8334ba4",
+  "completion_kind": "original_statement_with_notation_clarification",
+  "notation": "The undefined one-variable Z-tilde is read as the strict actual L-zero set Z in(2.14), as supported by repeated source usage.",
+  "production_modules": 37,
+  "audit_modules": 1,
+  "public_theorem_axiom_checks": 155,
+  "semantic_examples": 9,
+  "dependency_build_jobs": 4064,
+  "full_project_jobs": 5060,
+  "source_files": 1174,
+  "spec_imports": 806,
+  "full_project_imports": 1071,
+  "independent_review": "ACCEPT with the explicit notation qualification",
+  "strict_candidates": 380,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 8,
+  "new_candidate_review": "The eight new exact-h candidates return derived symmetry facts, a proved residue limit, a reflected cut, a convolution count, a proved Gaussian bound, or proved rectangle integral identities after rewriting. No final contour or moment estimate is assumed. The older mass-component candidate is unchanged.",
+  "logs": {
+    "lemma81-integration-build.log": {
+      "bytes": 65312,
+      "sha256": "802f5877288f9c68d2cf519c201cfa1fdd22008c95d831975f1205df5b90f6d1"
+    },
+    "lemma81-integration-axioms.log": {
+      "bytes": 18391,
+      "sha256": "ab74d25ea2ad21d19a91c6f71f7952251f0aedaa5083c97a8f1218584c946afc"
+    },
+    "lemma81-full-project.log": {
+      "bytes": 200096,
+      "sha256": "6a82b819cd52a8ed6ba6ce03c232487dcc8c9c9964d98f8aff69c4ff91388d81"
+    },
+    "lemma81-strict-audit.log": {
+      "bytes": 39003,
+      "sha256": "9775dfa6e4e3f61dac4fbd013f7544adc40eed4d44367b0c1111a2a39eb50ba0"
+    }
+  }
+}

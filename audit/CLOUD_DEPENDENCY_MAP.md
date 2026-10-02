@@ -90,7 +90,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 | Lemma 5.9 | 29 / 29–30 | C | P2.2 |
 | Lemma 6.1 | 30 / 30–32 | C | L5.1 |
 | Proposition 7.1 | 33 / 34–42 | U | P2.1, L5.3, L5.4, L5.6 |
-| Lemma 8.1 | 42 / 42–44 | U | P2.2, L5.2, L5.9, L6.1, L3.3 |
+| Lemma 8.1 | 42 / 42–44 | V | P2.2, L5.2, L5.9, L6.1, L3.3 |
 | Lemma 8.2 | 45 / 45 | V | ~L5.8 |
 | Lemma 8.3 | 46 / 101–103 | V | — |
 | Lemma 8.4 | 46 / 46–47 | U | L8.3, L5.5, ~L5.8 |
@@ -143,3 +143,5 @@ Original11.2 is now [centrally verified](CLOUD_LEMMA112_STATUS.md), bringing the
 Original8.2 is [centrally verified](CLOUD_LEMMA82_STATUS.md) by actual Abel tails and Taylor estimates, bringing the ledger to31 original statements plus1 explicit repaired statement.16.1 and8.1 are the next accepted packages in integration.
 
 Original16.1 is [centrally verified](CLOUD_LEMMA161_STATUS.md), including its exact exceptional-prime normalization and original L^-8 error. Ledger:32 original statements plus1 explicit repair. Independent7.1 and14.1 are now active, alongside8.4 and15.3;8.1 is the next accepted package in live integration.
+
+[8.1 is centrally verified](CLOUD_LEMMA81_STATUS.md), with the explicit Z-tilde=strict(2.14)Z notation clarification. Every actual contour/moment/height error is proved, with no(A). Ledger:33 original statements including this clarification, plus1 explicit repair. The repaired15.3 package awaits independent acceptance; its changed shifted-L extraction still requires downstream residue reconstruction.
