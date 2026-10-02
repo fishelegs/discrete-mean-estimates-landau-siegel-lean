@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T18:14:35.317481+00:00",
+  "base_commit": "08f3bef9875f757e1e90e9a3d909aa40134ad439",
+  "completion_kind": "original_statement",
+  "production_modules": 6,
+  "audit_modules": 1,
+  "public_declaration_axiom_checks": 66,
+  "semantic_regressions": 17,
+  "dependency_build_jobs": 3929,
+  "full_project_jobs": 5110,
+  "source_files": 1227,
+  "spec_imports": 856,
+  "full_project_imports": 1121,
+  "independent_review": "ACCEPT with scope qualifier: existential D0(cprime), no executable threshold/effectivity certificate claimed",
+  "source_hashes_unchanged_since_promotion": true,
+  "upstream_frozen_project_modules": 250,
+  "strict_candidates": 386,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "logs": {
+    "lemma101-integration-build.log": {
+      "bytes": 19322,
+      "sha256": "4c925ab0bc326fde57c3eb00fb67c89907e4a6f6c10000f16d37ea88d14dc533"
+    },
+    "lemma101-integration-axioms.log": {
+      "bytes": 6710,
+      "sha256": "f1c3021bfa6ebf92c95d15a5c49f64f7d7e45704d6371cf526c66c92b491e680"
+    },
+    "lemma101-full-project.log": {
+      "bytes": 210374,
+      "sha256": "ab03711991c37e3b9061c157de0eb15ccfbc073bad4da377da46268648df7996"
+    },
+    "lemma101-strict-audit.log": {
+      "bytes": 39517,
+      "sha256": "4fba8b72a5fb953b6a9e2c12fc0d525a89ad0a8fef60ebb9630d3015b7af6a92"
+    }
+  }
+}

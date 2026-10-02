@@ -1,5 +1,7 @@
 # 张益唐论文 Lean 形式化进度
 
+云端里程碑（2026-10-02 18:12 UTC）：完整原[ Lemma 10.1](ZhangLS/Spec/Lemma101.lean)已中央核验，四段原始范围、严格端点、真实无限和/Fin3索引、同c′和(A)保留，指数κ=1/2与绝对C显式；D₀(c′)为已证存在阈值，未宣称可执行effectivity证书。直接真实Abel/Taylor路线不依赖未完成7.1或8.4、不使用未定义α₁。6模块、66标准公理记录、17回归、独立审查及5110项全库构建PASS。现 **34项原陈述（8.1含记号澄清）+2项修订陈述**，共36/51。详见[验证证据](audit/CLOUD_LEMMA101_STATUS.md)。
+
 共享数学组件（2026-10-02 18:03 UTC）：[全模数primitive-character大筛](ZhangLS/Spec/AllModuliLargeSieve.lean)已验证，包含复合模数、任意移位有限支持与q/φ(q)权重，统一显式常数(32+π²)(R²+N)。4模块、21标准公理接口、17回归、5104项全库构建PASS；7.1和14.1可共同使用，不将此前prime-only大筛误作全模数结果。编号进度仍33原+2修订=35/51。详见[证据](audit/CLOUD_ALL_MODULI_LARGE_SIEVE_STATUS.md)。
 
 云端修订里程碑（2026-10-02 17:47 UTC）：[ Lemma 15.3显式修订版](ZhangLS/Spec/Lemma153Repaired.lean)已中央核验。真实varpi/M比值不变，Euler提取由原L(s,χ)²显式改为已证L(s−βⱼ,χ)²；保留全三移位和共享c′，精确φ(D)²/D²与q∤D主积，误差O(α)。全半平面界保留D依赖，窄带界为统一C(1+loglogD)^18。40新模块、190标准公理记录、8回归、独立ACCEPT AS REPAIRED及5100项完整构建PASS。现 **33项原陈述（8.1含记号澄清）+2项修订陈述**，共35/51；原未移位解析性与下游Mellin残数重建仍未证明。详见[修订证据](audit/CLOUD_LEMMA153_REPAIRED_STATUS.md)。
@@ -191,7 +193,7 @@ Step 78 最终接合已通过单文件 Lean 内核检查、模块构建及新增
 | Lemma 8.2 | §8，加权字符和 | ✅ 完成 | 原目标lemma82_original；实际Abel尾/Taylor证明，53接口、13回归及完整构建PASS。 |
 | Lemma 8.3 | §8，\(\Xi_{11}\) 估计；附录A | ✅ 完成 | 原陈述lemma83_original已证明：实际级数及延拓、严格dr cutoff、闭5α盘、加性L^-8误差与Π=0分支；33模块、275公开接口公理记录、5回归及完整构建通过。 |
 | Lemma 8.4 | §8，实际ξ加权和 | 🟡 进行中 | 已完成8.3解锁；实际Perron/圈积分及左轮廓多项式logD倒数L界正在证明，保留Π=0分支。 |
-| Lemma 10.1 | §10，分段加权χ和 | 🔄 进行中 | 原四段目标已冻结；真实Abel桥与严格端点估计进行中，不依赖未完成7.1/8.4。 |
+| Lemma 10.1 | §10，分段加权χ和 | ✅ 完成 | 原四段目标、实际无限和、原β/端点及统一C；6模块、66接口、17回归与完整构建通过。D₀为存在性阈值，effectivity证书另列。 |
 | Lemma 10.2 | §10，Proposition 2.4 的证明 | ⚪ 未开始 | — |
 | Lemma 11.1 | §11，Gaussian 平滑帐篷逼近 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma111.lean)，`lemma111_proved : Lemma111Target`；C=4000、c=1，真实 Gaussian/帐篷、闭内部区间和开过渡区间、统一阈值均保留。4 模块及依赖、8 回归、32 标准公理接口通过，独立语义审查接受；[云端聚焦核验范围](audit/CLOUD_LEMMA111_STATUS.md)，未冒充新全仓验证。 |
 | Lemma 11.2 | §11，复合导子χψ近似函数方程 | ✅ 完成 | 原陈述lemma112_proved，真实无穷和/E₂/Dp/D·t₀；19模块、144公开接口、12回归及完整构建通过。 |

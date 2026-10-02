@@ -14,6 +14,12 @@ import ZhangLS.Spec.CharacterPeriodSum
 import ZhangLS.Spec.DirichletLSeries
 import ZhangLS.Spec.DivisorCharacterSum
 import ZhangLS.Spec.DivisorCharacterSumNonnegative
+import ZhangLS.Spec.Lemma101
+import ZhangLS.Spec.Lemma101Definitions
+import ZhangLS.Spec.Lemma101Estimates
+import ZhangLS.Spec.Lemma101ExactBridge
+import ZhangLS.Spec.Lemma101Ranges
+import ZhangLS.Spec.Lemma101WeightedBounds
 import ZhangLS.Spec.Lemma111
 import ZhangLS.Spec.Lemma111GaussianBounds
 import ZhangLS.Spec.Lemma111GaussianPrimitive
