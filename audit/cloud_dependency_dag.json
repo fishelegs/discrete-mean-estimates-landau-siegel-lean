@@ -1840,7 +1840,7 @@
         "url": "https://arxiv.org/pdf/2211.02515v1#page=33"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "unstarted",
+      "working_status": "in_progress",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 163,
@@ -1866,9 +1866,9 @@
         "paper_L5.2_i_ii_main_term_likely_L5.4",
         "generic_all_moduli_large_sieve_not_just_L3.3"
       ],
-      "scheduling_status": "dependency-audit",
-      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
-      "proof_status": "unstarted",
+      "scheduling_status": "active",
+      "dispatch_reason": "Independent frontier using completed2.1,5.3,5.4 and the proved nonprincipal5.6 port; conductor distinctions must be proved.",
+      "proof_status": "in_progress",
       "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [
@@ -1881,7 +1881,9 @@
           "Character averaging, reciprocity/Ramanujan decomposition, generic large sieve, residues and error estimates",
           "Actual kappa/lambda/xi/Sj/E and Theta1; uniformity in bounded sequences"
         ]
-      }
+      },
+      "scheduling_phase": "proof",
+      "active_work": "Original discrete-mean target and actual arithmetic/character-averaging proof are under construction."
     },
     {
       "id": "L8.1",
@@ -1925,7 +1927,7 @@
         "no_dependency_on_P7.1_arithmetic_evaluation",
         "zero_boundary_and_uniform_sequence_bounds"
       ],
-      "active_work": "Independent proof development is ongoing; full numbered target is not yet verified.",
+      "active_work": "Full proof package frozen; central integration and independent semantic acceptance pending. Not counted complete yet.",
       "scheduling_status": "active",
       "dispatch_reason": "Actual contour residues/boundaries plus unconditional prime-mass normalization",
       "proof_status": "in_progress",
@@ -1946,7 +1948,8 @@
       },
       "verified_components": [
         "Unconditional actual prime-mass lower bound and uniform error absorption, without(A); original8.1 remains unproved."
-      ]
+      ],
+      "scheduling_phase": "central_verification"
     },
     {
       "id": "L8.2",
@@ -1997,8 +2000,8 @@
           "Actual beta shifts, finite strict cutoff, uniform x and mu"
         ]
       },
-      "active_work": "Independent original8.2 branch started, using actual periodic-character Abel tails and Taylor derivative bounds; no need for8.1 or7.1.",
-      "scheduling_phase": "proof"
+      "active_work": "Full proof package frozen; central integration and independent semantic acceptance pending. Not counted complete yet.",
+      "scheduling_phase": "central_verification"
     },
     {
       "id": "L8.3",
@@ -2595,29 +2598,30 @@
         "proof_section": "Appendix A"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "in_progress",
+      "working_status": "complete_repaired_fresh_kernel_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 177,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
-        "trusted_capstone_found": false
+        "trusted_capstone_found": true,
+        "capstone": "lemma152_repaired_proved",
+        "verification_report": "audit/CLOUD_LEMMA152_REPAIRED_STATUS.md",
+        "axiom_report": "audit/cloud_lemma152_axioms.log"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
-      "missing_mathematics": [
-        "Prime-local geometric-series identities and global product truncation"
-      ],
+      "missing_mathematics": [],
       "missing_specification_or_engineering": [
-        "Actual M1 and its analytic extension"
+        "The printed alpha-one remains undefined; this completion is the explicit O(alpha) repair."
       ],
       "semantic_issue_ids": [
         "analytic_extension_not_totalized_quotient",
         "undefined_alpha_one"
       ],
-      "scheduling_status": "active",
-      "dispatch_reason": "Independent original15.2 branch is constructing actual M1/coefficient Euler identities, continuation and the uniform product estimate.",
-      "proof_status": "in_progress",
+      "scheduling_status": "done",
+      "dispatch_reason": "Completed repaired target; keep separate from original-statement count.",
+      "proof_status": "complete",
       "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [],
@@ -2627,9 +2631,10 @@
           "Genuine global Euler product and truncation bounds"
         ]
       },
-      "active_work": "Frozen capstone is compiled in its proof branch; central relocated-import verification and independent statement review pending. Not yet counted complete.",
+      "active_work": "Explicit O(alpha) repaired theorem centrally verified; actual M1, strict disc and shared shift constant retained.",
       "source_alignment_note": "Official v1 TeX has28 alpha-one uses and no located definition; no arbitrary error scale is substituted.",
-      "scheduling_phase": "central_verification"
+      "scheduling_phase": "done",
+      "completion_kind": "source_repaired"
     },
     {
       "id": "L15.3",
@@ -2728,8 +2733,8 @@
           "Near-one correction product and uniform error bounds"
         ]
       },
-      "active_work": "Original16.1 actual one-shift Euler normalization proof started; preserve the exceptional prime2 replacement and prove explicit L^-8 without undefined alpha-one.",
-      "scheduling_phase": "proof"
+      "active_work": "Full proof package frozen; central integration and independent semantic acceptance pending. Not counted complete yet.",
+      "scheduling_phase": "central_verification"
     },
     {
       "id": "L16.2",
@@ -3757,16 +3762,16 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T15:52:37Z",
-    "completed": 30,
+    "verified_at_utc": "2026-10-02T16:20:57Z",
+    "completed": 31,
     "in_progress": 7,
-    "unstarted": 14,
-    "note": "Original11.2 centrally verified; repaired15.2 in integration. Active proof branches8.1,8.2,8.4,15.3,16.1.",
+    "unstarted": 13,
+    "note": "31 addressed nodes consist of30 original statements and1 explicit source-repaired15.2.8.1/8.2/16.1 in central acceptance;7.1/8.4/15.3 active.",
     "original_completed": 30,
-    "repaired_completed": 0
+    "repaired_completed": 1
   },
   "scheduling_semantics": {
-    "proof_status": "Mathematical completion state: complete, partial, in_progress or unstarted; separate from dispatch.",
+    "proof_status": "Mathematical completion state; complete must be read together with completion_kind (original_statement or source_repaired). Dispatch and verification phase are separate.",
     "scheduling_status": {
       "done": "Recorded complete",
       "active": "An actual proof branch is currently working",
@@ -3808,7 +3813,7 @@
   "repair_discipline": {
     "authorized": "Evidence-based source repairs allowed; retain original and repaired statement distinctions.",
     "original_completed": 30,
-    "repaired_completed": 0,
+    "repaired_completed": 1,
     "unresolved_alpha_one": "audit/CLOUD_ERROR_SCALE_RECONSTRUCTION.md",
     "no_axiom_or_sorry": true
   }

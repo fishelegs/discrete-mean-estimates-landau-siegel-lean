@@ -135,3 +135,7 @@ The [complete original8.3 target](CLOUD_LEMMA83_STATUS.md) is now centrally veri
 Scheduling update15:36 UTC: independent8.2 and16.1 branches have started.11.2 and repaired15.2 are frozen and in central verification;8.1 and15.3 continue proof work. These phases are distinct from completion, which remains29 original statements and zero centrally accepted repaired statements.
 
 Original11.2 is now [centrally verified](CLOUD_LEMMA112_STATUS.md), bringing the original-statement count to30/51.8.4 has started using completed8.3;8.1,8.2,15.3,16.1 continue. Repaired15.2 is in central integration and is not yet counted complete.
+
+## Explicitly repaired15.2 verified
+
+[15.2 with proved O(alpha)](CLOUD_LEMMA152_REPAIRED_STATUS.md) is centrally verified. The count is30 original statements plus1 repaired statement, not31 verbatim originals. Genuine M1 coefficients, continuation and the exact main product are unchanged.8.1,8.2 and16.1 are frozen and in central acceptance; active proof work continues on7.1,8.4 and repaired15.3, with a shared quantitative reciprocal-L helper.

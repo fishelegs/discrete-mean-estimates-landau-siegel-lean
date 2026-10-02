@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T16:20:57Z",
+  "base_commit": "a953ec0b90e359745911d7b68f12bb8c2ba520e7",
+  "completion_kind": "source_repaired",
+  "new_modules": 21,
+  "theorem_interfaces": 100,
+  "semantic_regressions": 6,
+  "dependency_build_jobs": 3920,
+  "full_project_jobs": 4995,
+  "source_files": 1106,
+  "spec_imports": 741,
+  "full_project_imports": 1006,
+  "independent_semantic_review": "ACCEPT as explicit O(alpha) repair, not verbatim O(alpha-one)",
+  "strict_audit": {
+    "exit_code": 1,
+    "candidates": 370,
+    "new_candidates": 0
+  },
+  "source_hashes_unchanged_since_promotion": true,
+  "logs": {
+    "lemma152-integration-build.log": {
+      "bytes": 34992,
+      "sha256": "47ea33e6514b86c4113f251ce8ad8bda6c959f2a08bbda17a562932df91787a5"
+    },
+    "lemma152-integration-axioms.log": {
+      "bytes": 10539,
+      "sha256": "644073fcf053e78884058d0697aedd29c70d84dfbf01f7e5b7d7a48d9bb7da34"
+    },
+    "lemma152-full-project.log": {
+      "bytes": 190617,
+      "sha256": "aaf9d9cc273f49026c79f049fe34c4b534f9dcc171e2fe39c2fba3b5365df5c6"
+    },
+    "lemma152-strict-audit.log": {
+      "bytes": 38116,
+      "sha256": "b9eddcccc0e13e3e97254d239a9d43aaf2d3f1dc237576c77b58f0632c279dc8"
+    }
+  }
+}
