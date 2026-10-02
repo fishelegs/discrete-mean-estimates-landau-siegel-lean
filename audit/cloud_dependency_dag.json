@@ -2676,7 +2676,7 @@
         "b_chi_psi_versus_psi_basis",
         "B3_literal_P12_versus_H14_support_endpoint"
       ],
-      "scheduling_status": "queued",
+      "scheduling_status": "active",
       "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
       "proof_status": "partial",
       "queue_priority": null,
@@ -2690,8 +2690,8 @@
           "Actual b/rho*_j/N(Q), e_j; uniform n1"
         ]
       },
-      "scheduling_phase": "rough_collision_uniform_asymptotic_and_global_contour",
-      "active_work": "Actual B product, exact chi-psi/psi coefficient conversion, shifted L-ratio convolution and uniform tau5 admissibility centrally verified. Full rough-domain uniform asymptotic, tail cutoff repair and global contour errors remain open."
+      "scheduling_phase": "actual_rough_prime_collision_and_uniform_asymptotic",
+      "active_work": "Independent actual rough-prime collision bound is active, preserving rho_j and strict q<D^4. Actual B and local-residue components are centrally verified; full single-kernel/outer asymptotic remains open."
     },
     {
       "id": "L15.2",
@@ -2874,13 +2874,15 @@
         "proof_section": "Appendix A"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "in_progress",
+      "working_status": "actual_arithmetic_euler_stage1_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 180,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
-        "trusted_capstone_found": false
+        "trusted_capstone_found": false,
+        "component_report": "audit/CLOUD_LEMMA162_STAGE1_STATUS.md",
+        "original_target_proved": false
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
@@ -2909,8 +2911,8 @@
           "Actual varpi2j; avoid division by vanishing ordinary p=2 factor"
         ]
       },
-      "scheduling_phase": "actual_analytic_and_source_audit",
-      "active_work": "Actual general M2 series/continuation and local Euler extraction under construction. Source normalization at chi(2)=1 and shifted zeta/L factors require explicit repair; full actual varpi Euler bridge remains unproved."
+      "scheduling_phase": "corrected_actual_analytic_product_and_downstream_budget",
+      "active_work": "Central and independent-ACCEPT actual M2/varpi Euler bridge preserves exceptional q=2 and original shifts. Corrected analytic product, uniform bounds, old-center witness discharge and downstream budgets remain under proof."
     },
     {
       "id": "L17.1",
@@ -3904,7 +3906,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T23:01:05.096771+00:00",
+    "verified_at_utc": "2026-10-02T23:17:19.918739+00:00",
     "completed": 36,
     "in_progress": 3,
     "unstarted": 7,
@@ -4144,6 +4146,18 @@
       "standalone_audit_files": 7,
       "original_examples": 43,
       "full_mean_targets_proved": false
+    },
+    {
+      "id": "L16.2_actual_arithmetic_euler_stage1",
+      "status": "verified",
+      "report": "audit/CLOUD_LEMMA162_STAGE1_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 23,
+      "public_declaration_checks": 174,
+      "semantic_regressions": 7,
+      "assumption_A": false,
+      "corrected_analytic_product_proved": false,
+      "old_center_witness_conditional": true
     }
   ],
   "repair_discipline": {

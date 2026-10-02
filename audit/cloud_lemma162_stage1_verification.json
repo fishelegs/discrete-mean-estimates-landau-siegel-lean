@@ -1,0 +1,139 @@
+{
+  "status": "PASS_ACTUAL_LEMMA162_ARITHMETIC_EULER_STAGE1",
+  "verified_at_utc": "2026-10-02T23:17:19.918739+00:00",
+  "base_commit": "3c989d7e16885687785203a4830b658a488a2149",
+  "production_modules": 23,
+  "standalone_audit_files": 2,
+  "public_declaration_checks": 174,
+  "semantic_regressions": 7,
+  "full_project_jobs": 5430,
+  "source_files": 1586,
+  "spec_imports": 1176,
+  "full_imports": 1441,
+  "source_relocation": "package-local imports qualified only relative to frozen v2",
+  "strict_candidates": 419,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 1,
+  "strict_new_review": "Lemma162OddM:146 returns the previously proved actual odd-product pair identity after denominator algebra; the baseline nonzero premise is explicit and is discharged for the paper capstone.",
+  "numbered_completion_count_change": 0,
+  "original_lemma162_complete": false,
+  "repaired_lemma162_complete": false,
+  "actual_original_arithmetic_euler_bridge": true,
+  "corrected_analytic_product_factorization_proved": false,
+  "old_center_witness_conditional": true,
+  "assumption_A_in_actual_bridge": false,
+  "independent_semantic_review": "ACCEPT for bounded stage1-v2 scope",
+  "archive_sha256": "6d73dbbe344784d37312f76bb88abbc1f25958d0a3262f77158c423df15032d1",
+  "manifest_sha256": "629ed690731210262c45bd0bd3e524190577f681b728648ac1742d7a121c797f",
+  "declaration_audit_note": "Unpublished v1 missed seven same-line attributed lemmas. V2 and this central audit explicitly cover all174. Mathematical source is unchanged apart from comments and import relocation.",
+  "logs": {
+    "lemma162-stage1-full-project.log": {
+      "bytes": 246421,
+      "sha256": "62636e0d00a23be8cab4507b315400a36c1ac5d4ee7bfdbc3e010691a3ad0eae"
+    },
+    "lemma162-stage1-strict-audit.log": {
+      "bytes": 42495,
+      "sha256": "1b4ba915ec4eee97027b627a94dfbee5282883940f019f0fbe6b82749613a0b9"
+    },
+    "CloudLemma162StageOneAxioms.log": {
+      "bytes": 18411,
+      "sha256": "1481254dd69a9c2eda2c00b1f208b1bbbbdef33a000f64f1178ac538e22d338c"
+    },
+    "CloudLemma162StageOneRegression.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Lemma162ActualCoefficientNorm.log": {
+      "bytes": 52039,
+      "sha256": "08ef7dd33573c4087d377825ca613f02423b38ee09256d0068414d2f74b4458f"
+    },
+    "Lemma162ActualDirichletSeries.log": {
+      "bytes": 52039,
+      "sha256": "1071e1aaba8160f0740850c0708f61d51d884f0abaa156013eafeb479af3ec84"
+    },
+    "Lemma162ActualMLocal.log": {
+      "bytes": 42746,
+      "sha256": "e6ab06aaa1e9a0481585780e039a8ee19d08231179bb7306f703102331c31937"
+    },
+    "Lemma162CoefficientReassembly.log": {
+      "bytes": 47019,
+      "sha256": "80eacaa28adaf4f4995eafd516e7efb27e8aa112e0ed41145763e4fcd9aee470"
+    },
+    "Lemma162CubicNormSeries.log": {
+      "bytes": 43143,
+      "sha256": "fa51681a80458de98419c0a4c9151f15b2720163a1998ce556ceec82166c18db"
+    },
+    "Lemma162Definitions.log": {
+      "bytes": 42745,
+      "sha256": "6113984be61c8acb2a09c8b25744c63e1fce7618f99f2d5356a5cb6b39288760"
+    },
+    "Lemma162GeneralMContinuation.log": {
+      "bytes": 42754,
+      "sha256": "d664b4d6b5d98e7a68283c177a26dea98a90ab1c3255363544e233c259161da8"
+    },
+    "Lemma162GeneralMEuler.log": {
+      "bytes": 42747,
+      "sha256": "5309292adbe5bd1eec9d0702c635f4ddf7b676cf1f7a95cd35b999914046cd48"
+    },
+    "Lemma162GeneralMNorm.log": {
+      "bytes": 42746,
+      "sha256": "6182cb3f4b45043c918ba3dfaed1969408dc84749b3e0451ff8aaacce8bf3ee6"
+    },
+    "Lemma162GeneralMSeries.log": {
+      "bytes": 42748,
+      "sha256": "5dc73d099e233d1069f97978950ecd35d6550ff98d3f11d800c3b4ec4d911518"
+    },
+    "Lemma162HadamardH2H3.log": {
+      "bytes": 26708,
+      "sha256": "21c4a7ba1e57e33d81cbad7e5eed23a6cfae9bf42aa5bcd2cf58dbb8945d5aa2"
+    },
+    "Lemma162LocalExtraction.log": {
+      "bytes": 42749,
+      "sha256": "5e7a12cd9eef77b6396f2a786013ae0ea08aabeeb53f37e40be0970269ecd843"
+    },
+    "Lemma162NuChi.log": {
+      "bytes": 42739,
+      "sha256": "cd863abd41b13e91255f0cf43870d43e7027821a581c4145ef38ba591f2fb9d3"
+    },
+    "Lemma162NuChiLocalH3.log": {
+      "bytes": 42746,
+      "sha256": "5ba7688f5894b35a74bf19e4e97d6684dcbc4d5f4572984a37512ab34db55f3c"
+    },
+    "Lemma162NuChiNorm.log": {
+      "bytes": 42743,
+      "sha256": "a2d133d082c96c09b9f5bb92f1a3bb0d8c434b8a94fa4f0151a7204d592090bc"
+    },
+    "Lemma162OddCoefficientNorm.log": {
+      "bytes": 47016,
+      "sha256": "fb313a3aef0c2198f0b1a64e77b2705d1be53480afb57ce2f87d3e41862d9f18"
+    },
+    "Lemma162OddLocalRatio.log": {
+      "bytes": 47011,
+      "sha256": "5086c5124f6bc4f3f0b04169e3a72607a53a555bb9a8a0ff5cddae27e5395f88"
+    },
+    "Lemma162OddM.log": {
+      "bytes": 47002,
+      "sha256": "49012cd165f36113f1240d197445c3bd63fda88300bab5268ad856de860cef3b"
+    },
+    "Lemma162OddVarpi.log": {
+      "bytes": 47006,
+      "sha256": "da93fbc98afce473770cbbce5e5bc9252b641e21e9ddf5933c40deaf8c7976d4"
+    },
+    "Lemma162OriginalValueWitness.log": {
+      "bytes": 42754,
+      "sha256": "da34ce2f21c0d5e662e27dfffb5de7d2d753b990fc2c06895da681d5f7b8708c"
+    },
+    "Lemma162PaperArithmeticBridge.log": {
+      "bytes": 54070,
+      "sha256": "a4be4c48a382da8b8368a690becf9bfd21276b25242616e7ffddc97696d6317f"
+    },
+    "Lemma162PrimeSupportedConvolution.log": {
+      "bytes": 7227,
+      "sha256": "182c2269cef7d1bb28f99e3530ccdb1832a99a87bf0dc6008c5eaf20bd045f63"
+    },
+    "Lemma162PrimeSupportedSeries.log": {
+      "bytes": 33824,
+      "sha256": "84e2bc096dff082c3dcdcaca907e42ed1d90c2bda64f8bbe86ff341ebd204ca0"
+    }
+  }
+}
