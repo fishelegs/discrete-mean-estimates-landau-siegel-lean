@@ -1122,7 +1122,13 @@ import ZhangLS.Spec.Lemma83ZeroShift
 import ZhangLS.Spec.Lemma84ActualBoundaryBounds
 import ZhangLS.Spec.Lemma84ActualPoleStructure
 import ZhangLS.Spec.Lemma84ArithmeticCircle
+import ZhangLS.Spec.Lemma84BoundaryHarmonic
+import ZhangLS.Spec.Lemma84BoundaryInnerBound
 import ZhangLS.Spec.Lemma84BoundaryIntegralBounds
+import ZhangLS.Spec.Lemma84BoundaryLittleO
+import ZhangLS.Spec.Lemma84BoundaryMainBound
+import ZhangLS.Spec.Lemma84BoundaryPerronBound
+import ZhangLS.Spec.Lemma84BoundaryTotalBound
 import ZhangLS.Spec.Lemma84CircleApproximation
 import ZhangLS.Spec.Lemma84CircleBudget
 import ZhangLS.Spec.Lemma84CircleError

@@ -1,0 +1,42 @@
+{
+  "status": "PASS_FULL_WEIGHTED_XI_REPLACEMENT",
+  "verified_at_utc": "2026-10-02T19:49:00.918621+00:00",
+  "base_commit": "58bfdd81529397bc945710d80a4fd83006fadf01",
+  "completion_kind": "actual_source_full_weighted_xi_error_bridge",
+  "numbered_completion_count_change": 0,
+  "production_modules": 6,
+  "audit_modules": 1,
+  "public_declaration_axiom_checks": 21,
+  "semantic_examples": 1,
+  "additional_interface_checks": true,
+  "dependency_build_jobs": 3984,
+  "full_project_jobs": 5181,
+  "source_files": 1303,
+  "spec_imports": 927,
+  "full_project_imports": 1192,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 389,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "full_boundary_estimate_proved": true,
+  "source_equation_8_11_proved": false,
+  "original_Lemma84Target_proved": false,
+  "logs": {
+    "lemma84-boundary-integration-build.log": {
+      "bytes": 37855,
+      "sha256": "99cccad731c16d2443f34600770aa66944f467448da179d5eabd29acb735e119"
+    },
+    "lemma84-boundary-integration-axioms.log": {
+      "bytes": 55833,
+      "sha256": "6d83755702b08d32c0032ccbdda0c2bc8d78f8cd4ee2fa55e2e28c1bb19b8287"
+    },
+    "lemma84-boundary-full-project.log": {
+      "bytes": 219880,
+      "sha256": "2bd7473e17b03397580d42e591bd09d6628118ec30966cb436a06b5845a3d23f"
+    },
+    "lemma84-boundary-strict-audit.log": {
+      "bytes": 39773,
+      "sha256": "3eea83b30106b77019aaf19bd03803b13b1efb0aa51d46dbde79986a3e7648fa"
+    }
+  }
+}

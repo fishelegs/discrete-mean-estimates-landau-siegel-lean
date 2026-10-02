@@ -2144,7 +2144,8 @@
         "component_report": "audit/CLOUD_LEMMA84_QUANTITATIVE_STATUS.md",
         "component_axiom_report": "audit/cloud_lemma84_quantitative_axioms.log",
         "original_target_proved": false,
-        "weighted_interior_report": "audit/CLOUD_LEMMA84_WEIGHTED_STATUS.md"
+        "weighted_interior_report": "audit/CLOUD_LEMMA84_WEIGHTED_STATUS.md",
+        "boundary_report": "audit/CLOUD_LEMMA84_BOUNDARY_STATUS.md"
       },
       "known_numbered_dependencies": [
         "L8.3",
@@ -2154,16 +2155,16 @@
         "L5.8"
       ],
       "missing_mathematics": [
-        "Original uniform L^-6 requires controlling the exposed Pi multiplier or a sharper Taylor/joint estimate.",
-        "Actual weighted Section8 application includes both cutoff boundary layers and later arithmetic approximations."
+        "Original uniform L^-6 requires controlling exposed Pi or sharper joint estimate.",
+        "First-factor replacement, identity8.10, arithmetic summatory/partial-integration to8.11 and Proposition7.1 support interface."
       ],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [
         "paper_L5.6_linearization_likely_L5.8"
       ],
-      "scheduling_status": "active",
+      "scheduling_status": "queued",
       "dispatch_reason": "Completed8.3 unlocked this independent numbered frontier;5.5/5.8 are available, full literal5.6 is not assumed.",
-      "proof_status": "in_progress",
+      "proof_status": "partial",
       "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [
@@ -2176,8 +2177,8 @@
           "Actual U/Pi and strict cutoff; use corrected references"
         ]
       },
-      "scheduling_phase": "boundary_and_full_application_proof",
-      "active_work": "Actual Section8 source weighted interior replacement now centrally verified as o(alpha), preserving exact boundary. Boundary-layer estimates are under proof; original uniformL^-6 and complete8.11 remain open.",
+      "scheduling_phase": "remaining_application_and_original_exponent",
+      "active_work": "Full actual weighted xi replacement including boundary is centrally verified. Original uniform L^-6, first-factor replacement, identity8.10 and complete8.11 remain queued.",
       "ports": {
         "actual_contour_transfer": {
           "status": "complete_fresh_kernel_verified",
@@ -2445,9 +2446,9 @@
         "Actual kappa13 and exact P-double-prime endpoints"
       ],
       "semantic_issue_ids": [],
-      "scheduling_status": "active",
+      "scheduling_status": "queued",
       "dispatch_reason": "Independent frontier using5.8 and actual Abel tails; precise phase/endpoint audit may expose a required source repair.",
-      "proof_status": "in_progress",
+      "proof_status": "partial",
       "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [
@@ -2458,8 +2459,8 @@
           "Actual kappa13 and exact P-double-prime endpoints"
         ]
       },
-      "scheduling_phase": "source_audit_and_exact_phase_proof",
-      "active_work": "Original truncated sum and exact phase main term under proof. Printed10^-5 phase linearization budget requires rigorous checking; no actual character counterexample or completed original claim is asserted."
+      "scheduling_phase": "exact_repaired_package_central_review",
+      "active_work": "Exact-phase concrete replacement completed in isolated work and queued for central review. Original alpha1 notation and printed phase-linearization budget remain unresolved."
     },
     {
       "id": "L12.2",
@@ -2641,7 +2642,7 @@
         "proof_section": "Appendix B"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "unstarted",
+      "working_status": "in_progress",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 176,
@@ -2664,9 +2665,9 @@
         "paper_L3.2_for_B1_may_need_L3.1",
         "paper_L8.1_contour_reference_is_analogy_or_typo"
       ],
-      "scheduling_status": "dependency-audit",
+      "scheduling_status": "active",
       "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
-      "proof_status": "unstarted",
+      "proof_status": "in_progress",
       "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [
@@ -2677,7 +2678,9 @@
           "Mobius/nu tail replacement, small-prime exclusion, coprime factorization, zeta-ratio residues",
           "Actual b/rho*_j/N(Q), e_j; uniform n1"
         ]
-      }
+      },
+      "scheduling_phase": "actual_coefficient_basis_and_tail_reconstruction",
+      "active_work": "Reconstruct actual b/rho/N(Q) definitions and AppendixB residues; distinguish chi-psi versus psi coefficient bases and exact cutoff endpoints before any repaired asymptotic."
     },
     {
       "id": "L15.2",
@@ -3888,14 +3891,14 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T19:09:15.070354+00:00",
+    "verified_at_utc": "2026-10-02T19:49:00.918621+00:00",
     "completed": 36,
-    "in_progress": 4,
-    "unstarted": 10,
+    "in_progress": 3,
+    "unstarted": 9,
     "note": "36 local nodes addressed, not final proof completion. Current2.5 numerical route blocked by concrete Section8 c12/c1 mismatch; verified local compatibility components remain valid.",
     "original_completed": 34,
     "repaired_completed": 2,
-    "partial": 1,
+    "partial": 3,
     "main_chain_status": "blocked_numerical_inconsistency"
   },
   "scheduling_semantics": {
@@ -3999,6 +4002,17 @@
       "semantic_examples": 3,
       "interior_error_little_o_alpha": true,
       "full_boundary_or_8_11_proved": false
+    },
+    {
+      "id": "L8.4_actual_full_weighted_xi_replacement",
+      "status": "verified",
+      "report": "audit/CLOUD_LEMMA84_BOUNDARY_STATUS.md",
+      "original_numbered_result_completed": false,
+      "assumption_A": true,
+      "new_modules": 6,
+      "public_declaration_checks": 21,
+      "full_boundary_estimate_proved": true,
+      "source_equation_8_11_proved": false
     }
   ],
   "repair_discipline": {
