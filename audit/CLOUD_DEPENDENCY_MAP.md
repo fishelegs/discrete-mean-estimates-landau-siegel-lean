@@ -145,3 +145,7 @@ Original8.2 is [centrally verified](CLOUD_LEMMA82_STATUS.md) by actual Abel tail
 Original16.1 is [centrally verified](CLOUD_LEMMA161_STATUS.md), including its exact exceptional-prime normalization and original L^-8 error. Ledger:32 original statements plus1 explicit repair. Independent7.1 and14.1 are now active, alongside8.4 and15.3;8.1 is the next accepted package in live integration.
 
 [8.1 is centrally verified](CLOUD_LEMMA81_STATUS.md), with the explicit Z-tilde=strict(2.14)Z notation clarification. Every actual contour/moment/height error is proved, with no(A). Ledger:33 original statements including this clarification, plus1 explicit repair. The repaired15.3 package awaits independent acceptance; its changed shifted-L extraction still requires downstream residue reconstruction.
+
+## Explicit repaired15.3 centrally verified
+
+[15.3 repaired](CLOUD_LEMMA153_REPAIRED_STATUS.md) now proves the actual shifted-L continuation and exact center asymptotic; original unshifted analyticity/downstream residues remain open. Ledger33 original+2 repaired=35/51. The actual formalization adds15.2 and8.3 inputs to15.3 and8.2 input to active10.1; these are labeled formalization edges, not invented printed citations. The expanded graph is acyclic. Active branches7.1/14.1 share a new all-moduli large-sieve proof effort while8.4 and10.1 proceed independently;12.1 is next queued.

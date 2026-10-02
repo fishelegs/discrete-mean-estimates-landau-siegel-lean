@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-02T17:50:16.839775+00:00",
+  "base_commit": "c6a0427a18dc2e0cf6377f3682b43362e482e2b9",
+  "completion_kind": "source_repaired",
+  "production_modules": 40,
+  "audit_modules": 1,
+  "public_declaration_axiom_checks": 190,
+  "semantic_examples": 8,
+  "dependency_build_jobs": 3960,
+  "full_project_jobs": 5100,
+  "source_files": 1215,
+  "spec_imports": 846,
+  "full_project_imports": 1111,
+  "independent_review": "ACCEPT AS REPAIRED; no blocking semantic fixes",
+  "source_hashes_unchanged_since_import_normalization": true,
+  "deduplicated_existing_module": "Lemma153MNonzero",
+  "strict_candidates": 383,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 3,
+  "new_candidate_review": "ActualLocal:98 returns a proved local nonzero result after the actual closed-series identity. VarpiMultiplicative:46 returns the proved pair product after justified division. ZeroGlobal:106 casts the standard totient product formula. None assumes the final conclusion.",
+  "linter_warnings": "Component proof-style/unused-tactic warnings retained; self-contained regressions and axiom audit are warning-free.",
+  "logs": {
+    "lemma153-integration-build.log": {
+      "bytes": 45806,
+      "sha256": "3a528d0635ad8f728602f808e889727bf117df84fd576f2ac9e1cf4957be9b3c"
+    },
+    "lemma153-integration-axioms.log": {
+      "bytes": 20392,
+      "sha256": "75e6361239d5f9a0e77a2d40e6084f342527b05effc2a211629a97c859654444"
+    },
+    "lemma153-full-project.log": {
+      "bytes": 209903,
+      "sha256": "9e5691bfa655cc3babcbc4742c504fe6ce5ca9b045fa1652432c058daf1a6dd8"
+    },
+    "lemma153-strict-audit.log": {
+      "bytes": 39260,
+      "sha256": "fb1d8d5d2aa5302dd71dfc03054108b178ecde29c5524e3c25c6f3b655df0b09"
+    }
+  }
+}

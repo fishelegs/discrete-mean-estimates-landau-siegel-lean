@@ -71,7 +71,9 @@
       "T2"
     ],
     "baseline_local_import_module_count": 894,
-    "baseline_local_import_cycles": false
+    "baseline_local_import_cycles": false,
+    "post_integration_acyclic": true,
+    "current_edge_count": 106
   },
   "frontiers": [
     {
@@ -1883,7 +1885,8 @@
         ]
       },
       "scheduling_phase": "proof",
-      "active_work": "Original discrete-mean target and actual arithmetic/character-averaging proof are under construction."
+      "active_work": "Original discrete-mean target and actual arithmetic/character-averaging proof are under construction.",
+      "shared_support_active": "Genuine all-moduli primitive-character large sieve; separate from either final proposition."
     },
     {
       "id": "L8.1",
@@ -2126,7 +2129,7 @@
         "url": "https://arxiv.org/pdf/2211.02515v1#page=53"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "unstarted",
+      "working_status": "in_progress",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 168,
@@ -2147,19 +2150,22 @@
       "semantic_issue_ids": [
         "paper_contour_reference_L8.1_likely_L8.2"
       ],
-      "scheduling_status": "dependency-audit",
-      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
-      "proof_status": "unstarted",
+      "scheduling_status": "active",
+      "dispatch_reason": "Independent frontier with completed5.8 and8.2 actual Abel tails, not dependent on unfinished7.1 or8.4.",
+      "proof_status": "in_progress",
       "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [
-          "L5.8"
+          "L5.8",
+          "L8.2"
         ],
         "mathematical_and_library_inputs": [
           "Piecewise tent-weight Perron evaluation in three ranges",
           "Actual ftilde and V1j; exact rational endpoints"
         ]
-      }
+      },
+      "scheduling_phase": "proof",
+      "active_work": "Original four-range target frozen; exact actual-sum to Abel-polynomial bridge checked; endpoint/Taylor bounds in progress."
     },
     {
       "id": "L10.2",
@@ -2353,10 +2359,10 @@
         "Actual kappa13 and exact P-double-prime endpoints"
       ],
       "semantic_issue_ids": [],
-      "scheduling_status": "dependency-audit",
-      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "scheduling_status": "queued",
+      "dispatch_reason": "Next independent frontier after a slot frees; actual shifted-chi sums can share established Abel estimates with10.1.",
       "proof_status": "unstarted",
-      "queue_priority": null,
+      "queue_priority": 1,
       "actual_prerequisites": {
         "numbered_results": [
           "L5.8"
@@ -2528,7 +2534,8 @@
         ]
       },
       "scheduling_phase": "proof",
-      "active_work": "Original Section14 discrete-mean definitions and product-character primitive-inducer cancellation are being proved."
+      "active_work": "Original Section14 discrete-mean definitions and product-character primitive-inducer cancellation are being proved.",
+      "shared_support_active": "Genuine all-moduli primitive-character large sieve; separate from either final proposition."
     },
     {
       "id": "L15.1",
@@ -2653,42 +2660,50 @@
         "proof_section": "Appendix A"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "in_progress",
+      "working_status": "complete_repaired_fresh_kernel_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 178,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
-        "trusted_capstone_found": false
+        "trusted_capstone_found": true,
+        "capstone": "lemma153_repaired_proved",
+        "verification_report": "audit/CLOUD_LEMMA153_REPAIRED_STATUS.md",
+        "axiom_report": "audit/cloud_lemma153_axioms.log"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
       "missing_mathematics": [
-        "Euler correction normal convergence and evaluation at one"
+        "Original unshifted-L analyticity and downstream shifted-L Mellin residue reconstruction are not proved."
       ],
       "missing_specification_or_engineering": [
-        "Consistent U1j name; actual varpi1j and regularized quotient"
+        "Printed alpha-one remains undefined; this theorem uses explicit O(alpha)."
       ],
       "semantic_issue_ids": [
         "U1j_vs_U2j_label_mismatch",
         "analytic_extension_not_totalized_quotient",
         "undefined_alpha_one"
       ],
-      "scheduling_status": "active",
-      "dispatch_reason": "Independent Lemma15.3 source audit and actual local Euler correction proof started after shared convergence support completed.",
-      "proof_status": "in_progress",
+      "scheduling_status": "done",
+      "dispatch_reason": "Completed repaired target with exact arithmetic and explicit rates; original printed target is not claimed.",
+      "proof_status": "complete",
       "queue_priority": null,
       "actual_prerequisites": {
-        "numbered_results": [],
+        "numbered_results": [
+          "L15.2",
+          "L8.3"
+        ],
         "mathematical_and_library_inputs": [
-          "Actual varpi1j and consistently named U1j",
-          "Analytic correction continuation and normal convergence",
-          "Evaluation at1 without dividing through unproved nonzero denominators"
+          "Actual general M continuation and local ratio theorem",
+          "Genuine varpi multiplicativity/absolute Dirichlet series",
+          "All three original normalization denominators proved nonzero",
+          "Normal convergence, exact ramification and quantitative center product perturbation"
         ]
       },
       "source_alignment_note": "Official v1 TeX has28 alpha-one uses and no located definition; no arbitrary error scale is substituted.",
-      "active_work": "Complete source-repaired shifted-L continuation and main-value package frozen; independent acceptance in progress. Original unshifted analyticity and downstream residue update are not claimed.",
-      "scheduling_phase": "central_verification"
+      "active_work": "Complete explicitly shifted-L Euler continuation and center theorem centrally verified.",
+      "scheduling_phase": "done",
+      "completion_kind": "source_repaired"
     },
     {
       "id": "L16.1",
@@ -3749,6 +3764,24 @@
         108,
         109
       ]
+    },
+    {
+      "from": "L15.2",
+      "to": "L15.3",
+      "kind": "verified_formalization_dependency",
+      "note": "Actual repaired/formal proof input; not asserted as an explicit printed citation."
+    },
+    {
+      "from": "L8.3",
+      "to": "L15.3",
+      "kind": "verified_formalization_dependency",
+      "note": "Actual repaired/formal proof input; not asserted as an explicit printed citation."
+    },
+    {
+      "from": "L8.2",
+      "to": "L10.1",
+      "kind": "verified_formalization_dependency",
+      "note": "Actual repaired/formal proof input; not asserted as an explicit printed citation."
     }
   ],
   "status_provenance": {
@@ -3765,13 +3798,14 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T17:25:19Z",
-    "completed": 34,
-    "in_progress": 5,
-    "unstarted": 12,
-    "note": "33 original statements including8.1 notation clarification, plus1 repaired15.2. Repaired15.3 in independent review;7.1/14.1/8.4 active.",
+    "verified_at_utc": "2026-10-02T17:50:16.839775+00:00",
+    "completed": 35,
+    "in_progress": 4,
+    "unstarted": 11,
+    "note": "33 original statements incl8.1 notation clarification +2 repaired15.2/15.3. Active7.1/14.1/8.4/10.1; shared all-moduli large sieve;12.1 next queued.",
     "original_completed": 33,
-    "repaired_completed": 1
+    "repaired_completed": 2,
+    "partial": 1
   },
   "scheduling_semantics": {
     "proof_status": "Mathematical completion state; complete must be read together with completion_kind (original_statement or source_repaired). Dispatch and verification phase are separate.",
@@ -3816,7 +3850,7 @@
   "repair_discipline": {
     "authorized": "Evidence-based source repairs allowed; retain original and repaired statement distinctions.",
     "original_completed": 33,
-    "repaired_completed": 1,
+    "repaired_completed": 2,
     "unresolved_alpha_one": "audit/CLOUD_ERROR_SCALE_RECONSTRUCTION.md",
     "no_axiom_or_sorry": true,
     "notation_clarified_originals": [

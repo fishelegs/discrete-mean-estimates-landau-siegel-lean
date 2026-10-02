@@ -38,3 +38,7 @@ The original literal5.6 modulus-one branch is still not used circularly. Its pro
 ## Verification of the six budget interfaces
 
 Lean4.30.0, Linux x86_64, 2026-10-02: six theorem interfaces use only standard axioms; three expanded regressions pass without warnings; all4920 project build jobs pass; coverage668/933 and placeholder/structure checks pass for1030 Lean sources. The strict heuristic audit retains361 candidates and nonzero exit, with no new candidate from this module. See [regressions](CloudErrorScaleRegression.lean), [axiom output](cloud_error_scale_axioms.log), and [hashes/verification](cloud_error_scale_verification.json). This verifies the budget implications only, not the estimates listed as pending above.
+
+## Verified updates to the earlier gap ledger
+
+15.2 now has a proved uniform O(alpha) repair.15.3 now has a proved shifted-L repair with the exact center main product and uniform O(alpha), but still needs the separate downstream residue reconstruction. Original16.1 has since been proved using the stronger O(alpha) local calculation, resolving the specific AppendixA-to-L^-8 issue for that lemma without assigning a meaning to alpha-one. The remaining15.22/15.23 and16.14 propagation gaps above are still open.
