@@ -12,3 +12,7 @@ Relevant locations:
 - Further occurrences occur in Sections8,10,12,15–17 and AppendicesA/B
 
 This is a precise unresolved source-specification issue, **not a demonstrated false mathematical claim**. It is not legitimate to choose an arbitrary power of log D for alpha-one and report the original lemmas as proved. Work on15.2 is proving an explicit-rate statement using the defined alpha; comparison with the paper's alpha-one remains a separate obligation. Lemma15.3 also switches the U1j/U2j labels between its definition and conclusion; AppendixA uses U1j throughout. Any interpretation must retain the actual arithmetic coefficients and be stated explicitly.
+
+## Evidence-based reconstruction
+
+The subsequent [explicit-scale reconstruction ledger](CLOUD_ERROR_SCALE_RECONSTRUCTION.md) maps every occurrence and records six formally proved budget interfaces. It keeps original and repaired statements separate and does not declare a new definition of alpha-one.

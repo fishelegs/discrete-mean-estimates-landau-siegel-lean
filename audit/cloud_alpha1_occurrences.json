@@ -1,0 +1,205 @@
+{
+  "source_url": "https://arxiv.org/src/2211.02515v1",
+  "source_sha256": "5dc202bdc414fb743004ae32e8dec0dd284636f7197b1cab78a46336e0cde30b",
+  "uses": 28,
+  "definition_found": false,
+  "repair_policy": "Use proved explicit rates and record original/repaired statements separately; do not choose a definition solely to obtain a desired conclusion.",
+  "occurrences": [
+    {
+      "source_line": 1972,
+      "category": "phase",
+      "role": "Shifted (p t0) phases",
+      "required_check": "Keep beta perturbation alpha*L and alpha*log(t0) separately; eventual O(L^-7) envelope is plausible but these phase estimates are not yet proved by the budget module.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 2460,
+      "category": "finite_euler",
+      "role": "Finite products over divisors",
+      "required_check": "Use actual sum(log q/q) bounds and explicit product perturbation. Do not lose log-log factors by reusing the same opaque error symbol.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 2785,
+      "category": "boundary",
+      "role": "Section10/12 cutoff boundary layers",
+      "required_check": "Exact width logT/logP=L^(-79/10) is proved; the actual coefficient/sum bounds at these locations remain separate obligations.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 3482,
+      "category": "boundary",
+      "role": "Section10/12 cutoff boundary layers",
+      "required_check": "Exact width logT/logP=L^(-79/10) is proved; the actual coefficient/sum bounds at these locations remain separate obligations.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 3492,
+      "category": "boundary",
+      "role": "Section10/12 cutoff boundary layers",
+      "required_check": "Exact width logT/logP=L^(-79/10) is proved; the actual coefficient/sum bounds at these locations remain separate obligations.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 3512,
+      "category": "boundary",
+      "role": "Section10/12 cutoff boundary layers",
+      "required_check": "Exact width logT/logP=L^(-79/10) is proved; the actual coefficient/sum bounds at these locations remain separate obligations.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 4275,
+      "category": "lemma151",
+      "role": "Lemma15.1 arithmetic evaluation",
+      "required_check": "Retain tau2(n1) and the actual boundary/residue errors through the later n1 sum.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 4311,
+      "category": "large_prime",
+      "role": "Large-prime shifted coefficient bounds",
+      "required_check": "Keep small shift*log q and nu(q) separately before summation; divisibility/support are essential.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 4335,
+      "category": "lemma152",
+      "role": "Lemma15.2 M1 value",
+      "required_check": "Active explicit O(alpha) reconstruction; the actual continuation is proved in the working branch but the final perturbation is still pending.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 4350,
+      "category": "lemma153",
+      "role": "Lemma15.3 value and local factors",
+      "required_check": "Active exact-coefficient audit; U1j/U2j label switch and shifted L-factor extraction require explicit repair. Local errors must be summed with their own prime decay.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 4355,
+      "category": "section15_transfer",
+      "role": "Section15 smoothing and residue transfer",
+      "required_check": "Keep exact local scales and L-prime powers. Six verified budget interfaces support these products, but no contour identity is inferred from them.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 4356,
+      "category": "section15_transfer",
+      "role": "Section15 smoothing and residue transfer",
+      "required_check": "Keep exact local scales and L-prime powers. Six verified budget interfaces support these products, but no contour identity is inferred from them.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 4361,
+      "category": "section15_transfer",
+      "role": "Section15 smoothing and residue transfer",
+      "required_check": "Keep exact local scales and L-prime powers. Six verified budget interfaces support these products, but no contour identity is inferred from them.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 4628,
+      "category": "large_prime",
+      "role": "Large-prime shifted coefficient bounds",
+      "required_check": "Keep small shift*log q and nu(q) separately before summation; divisibility/support are essential.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 4686,
+      "category": "phase",
+      "role": "Shifted (p t0) phases",
+      "required_check": "Keep beta perturbation alpha*L and alpha*log(t0) separately; eventual O(L^-7) envelope is plausible but these phase estimates are not yet proved by the budget module.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 4762,
+      "category": "phase",
+      "role": "Shifted (p t0) phases",
+      "required_check": "Keep beta perturbation alpha*L and alpha*log(t0) separately; eventual O(L^-7) envelope is plausible but these phase estimates are not yet proved by the budget module.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 4848,
+      "category": "phase",
+      "role": "Shifted (p t0) phases",
+      "required_check": "Keep beta perturbation alpha*L and alpha*log(t0) separately; eventual O(L^-7) envelope is plausible but these phase estimates are not yet proved by the budget module.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 5005,
+      "category": "finite_euler",
+      "role": "Finite products over divisors",
+      "required_check": "Use actual sum(log q/q) bounds and explicit product perturbation. Do not lose log-log factors by reusing the same opaque error symbol.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 5179,
+      "category": "lemma153",
+      "role": "Lemma15.3 value and local factors",
+      "required_check": "Active exact-coefficient audit; U1j/U2j label switch and shifted L-factor extraction require explicit repair. Local errors must be summed with their own prime decay.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 5183,
+      "category": "lemma153",
+      "role": "Lemma15.3 value and local factors",
+      "required_check": "Active exact-coefficient audit; U1j/U2j label switch and shifted L-factor extraction require explicit repair. Local errors must be summed with their own prime decay.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 5219,
+      "category": "section16_euler",
+      "role": "AppendixA M2 values and normalized ratios",
+      "required_check": "The displayed alpha-one error does not by itself imply the original L^-8 statement of16.1; derive the sharper original local-prime budget.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 5227,
+      "category": "section16_euler",
+      "role": "AppendixA M2 values and normalized ratios",
+      "required_check": "The displayed alpha-one error does not by itself imply the original L^-8 statement of16.1; derive the sharper original local-prime budget.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 5301,
+      "category": "appendixB",
+      "role": "AppendixB shifted residues and integrated cutoff",
+      "required_check": "Log(P2)/logP and l1<T create logT/logP terms. Every residue and smoothing remainder must retain its exact scale.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 5306,
+      "category": "appendixB",
+      "role": "AppendixB shifted residues and integrated cutoff",
+      "required_check": "Log(P2)/logP and l1<T create logT/logP terms. Every residue and smoothing remainder must retain its exact scale.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 5313,
+      "category": "appendixB",
+      "role": "AppendixB shifted residues and integrated cutoff",
+      "required_check": "Log(P2)/logP and l1<T create logT/logP terms. Every residue and smoothing remainder must retain its exact scale.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 5318,
+      "category": "appendixB",
+      "role": "AppendixB shifted residues and integrated cutoff",
+      "required_check": "Log(P2)/logP and l1<T create logT/logP terms. Every residue and smoothing remainder must retain its exact scale.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 5323,
+      "category": "appendixB",
+      "role": "AppendixB shifted residues and integrated cutoff",
+      "required_check": "Log(P2)/logP and l1<T create logT/logP terms. Every residue and smoothing remainder must retain its exact scale.",
+      "status": "mapped_not_fully_reproved"
+    },
+    {
+      "source_line": 5333,
+      "category": "appendixB",
+      "role": "AppendixB shifted residues and integrated cutoff",
+      "required_check": "Log(P2)/logP and l1<T create logT/logP terms. Every residue and smoothing remainder must retain its exact scale.",
+      "status": "mapped_not_fully_reproved"
+    }
+  ]
+}

@@ -3785,6 +3785,21 @@
       "assumption_A": false,
       "new_modules": 8,
       "theorem_interfaces": 36
+    },
+    {
+      "id": "explicit_error_scale_budget",
+      "status": "verified",
+      "report": "audit/CLOUD_ERROR_SCALE_RECONSTRUCTION.md",
+      "original_numbered_result_completed": false,
+      "theorem_interfaces": 6,
+      "semantic_regressions": 3
     }
-  ]
+  ],
+  "repair_discipline": {
+    "authorized": "Evidence-based source repairs allowed; retain original and repaired statement distinctions.",
+    "original_completed": 28,
+    "repaired_completed": 0,
+    "unresolved_alpha_one": "audit/CLOUD_ERROR_SCALE_RECONSTRUCTION.md",
+    "no_axiom_or_sorry": true
+  }
 }

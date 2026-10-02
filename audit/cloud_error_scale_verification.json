@@ -1,0 +1,38 @@
+{
+  "base_commit": "994086b02d4e21a70adb804ae52dd5e1e8cee666",
+  "verified_at_utc": "2026-10-02T15:16:12Z",
+  "status": "PASS",
+  "new_theorem_interfaces": 6,
+  "semantic_regressions": 3,
+  "source_files": 1030,
+  "spec_imports": 668,
+  "full_project_imports": 933,
+  "full_project_jobs": 4920,
+  "strict_candidates": 361,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "sources": {
+    "ZhangLS/Spec/PaperErrorScaleBudget.lean": "dd00d7b563c2e028a5f42d0a37c26bc2b3986e14ca52510ae3fd7b3845e8bf2c",
+    "audit/CloudErrorScaleRegression.lean": "247721d0caa738b43449daa4b0b66e17f055cc9950a51fdc79ca781736ed4a7f",
+    "ZhangLS/Spec/All.lean": "0f1d2c9f667560152a86737f0737f92c85a515df680e9693c1356af4a756ed71",
+    "ZhangLS/All.lean": "c3cf31969d2d725a653efb28495943a6356436637e055ae7d3b4675b7e4a16fb"
+  },
+  "logs": {
+    "error-budget-build.log": {
+      "bytes": 11663,
+      "sha256": "1f1a5b145f042edf739ff214fdf73ce58cffdc82cf1bb324eb3f6bba64a2e710"
+    },
+    "error-budget-axioms.log": {
+      "bytes": 595,
+      "sha256": "21dea9ffdf338aea77e0433fef2927e2e9fbe4902aa43b5e68329872ae5d0d8e"
+    },
+    "error-budget-full.log": {
+      "bytes": 165383,
+      "sha256": "ab9a4093b0770402f19582229de9ed3e1fb57e72ea154d0fbb80a087349aa7db"
+    },
+    "error-budget-strict.log": {
+      "bytes": 37327,
+      "sha256": "5280442e22c136ca1932ff3b8af1ce2732ee35055c8a6ff80203ab4a55fd4359"
+    }
+  }
+}
