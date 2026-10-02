@@ -1,0 +1,9 @@
+VERIFICATION=PASS
+command=lake build +ZhangLS.Spec.Lemma36GoodFamily:olean
+exit_code=0
+complete_log_sha256=1b827d0dbbfea2a1b2528619787d96d8dab1b09892546e93356064782e8e46fc
+complete_log_bytes=111281
+summary_note=Repeated historical linter warnings omitted; theorem sources and all new regressions/axiom reports are retained for reproduction.
+
+✔ [4638/4638] Built ZhangLS.Spec.Lemma36GoodFamily (4.2s)
+Build completed successfully (4638 jobs).

@@ -177,7 +177,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 121,
+        "ledger_line": 127,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "target_path": "ZhangLS/Spec/PaperTheorems.lean"
@@ -220,7 +220,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 122,
+        "ledger_line": 128,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "target_path": "ZhangLS/Spec/PaperTheorems.lean"
@@ -254,10 +254,10 @@
         "url": "https://arxiv.org/pdf/2211.02515v1#page=6"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "unstarted",
+      "working_status": "in_progress",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 123,
+        "ledger_line": 129,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -274,7 +274,8 @@
       "missing_specification_or_engineering": [
         "Actual dependent prime-character finite family; strict complement equivalence"
       ],
-      "semantic_issue_ids": []
+      "semantic_issue_ids": [],
+      "active_work": "Independent proof development is ongoing; full numbered target is not yet verified."
     },
     {
       "id": "P2.2",
@@ -294,7 +295,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 124,
+        "ledger_line": 130,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Proposition22.lean",
@@ -338,7 +339,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 125,
+        "ledger_line": 131,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma23.lean",
@@ -381,7 +382,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 126,
+        "ledger_line": 132,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -425,7 +426,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 127,
+        "ledger_line": 133,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -480,7 +481,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 128,
+        "ledger_line": 134,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -521,7 +522,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 129,
+        "ledger_line": 135,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma31.lean",
@@ -557,7 +558,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 130,
+        "ledger_line": 136,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma32OriginalTargetClosure.lean",
@@ -595,7 +596,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 131,
+        "ledger_line": 137,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma33.lean",
@@ -634,7 +635,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 132,
+        "ledger_line": 138,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma34.lean",
@@ -672,7 +673,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 133,
+        "ledger_line": 139,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma35.lean",
@@ -711,28 +712,28 @@
         "url": "https://arxiv.org/pdf/2211.02515v1#page=16"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "in_progress_unverified",
+      "working_status": "complete_fresh_kernel_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 134,
-        "fresh_kernel_check": false,
-        "old_completion_revalidated": false
+        "ledger_line": 140,
+        "fresh_kernel_check": true,
+        "old_completion_revalidated": false,
+        "trusted_capstone_found": true,
+        "capstone": "lemma36_proved",
+        "verification_report": "audit/CLOUD_LEMMA36_STATUS.md",
+        "axiom_report": "audit/cloud_lemma36_axioms.txt"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
         "L3.2",
         "L3.3"
       ],
-      "missing_mathematics": [
-        "Varsigma domination plus completed weighted tail and first large-sieve estimate"
-      ],
-      "missing_specification_or_engineering": [
-        "Actual X4 endpoint/integral square mean; strict exceptional count closure"
-      ],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
       "semantic_issue_ids": [
         "paper_first_assertion_L3.2_and_L3.1_should_be_L3.3_and_L3.2"
       ],
-      "active_work": "Parent reports separate five-file Lemma36 effort; no claim of checking or completion here."
+      "active_work": "Complete original target, fresh kernel/regression/standard-axiom checks and independent statement review passed."
     },
     {
       "id": "L4.1",
@@ -751,7 +752,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 135,
+        "ledger_line": 141,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma23GoodSet.lean",
@@ -787,7 +788,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 136,
+        "ledger_line": 142,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma23ProductApproximation.lean",
@@ -823,7 +824,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 137,
+        "ledger_line": 143,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma23SectionFourLogDerivative.lean",
@@ -865,7 +866,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 138,
+        "ledger_line": 144,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma44ApproximateFunctionalEquation.lean",
@@ -903,7 +904,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 139,
+        "ledger_line": 145,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma45ZeroFree.lean",
@@ -946,7 +947,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 140,
+        "ledger_line": 146,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma46ZeroAnalysis.lean",
@@ -987,7 +988,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 141,
+        "ledger_line": 147,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma47ThreeZeros.lean",
@@ -1026,7 +1027,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 142,
+        "ledger_line": 148,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma48InverseFactor.lean",
@@ -1067,7 +1068,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 143,
+        "ledger_line": 149,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma51.lean",
@@ -1103,7 +1104,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 144,
+        "ledger_line": 150,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma52.lean",
@@ -1141,7 +1142,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 145,
+        "ledger_line": 151,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma53.lean",
@@ -1176,7 +1177,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 146,
+        "ledger_line": 152,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma54.lean",
@@ -1212,7 +1213,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 147,
+        "ledger_line": 153,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma55FullZeroExclusion.lean",
@@ -1248,7 +1249,7 @@
       "working_status": "partial_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 148,
+        "ledger_line": 154,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma56ActualPrimeMassNormalization.lean",
@@ -1300,7 +1301,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 149,
+        "ledger_line": 155,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma57LeftQuadraticGrowth.lean",
@@ -1336,7 +1337,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 150,
+        "ledger_line": 156,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma58.lean",
@@ -1373,7 +1374,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 151,
+        "ledger_line": 157,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma59.lean",
@@ -1412,7 +1413,7 @@
       "working_status": "complete_reported",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 152,
+        "ledger_line": 158,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma61.lean",
@@ -1450,7 +1451,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 153,
+        "ledger_line": 159,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1489,10 +1490,10 @@
         "url": "https://arxiv.org/pdf/2211.02515v1#page=42"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "unstarted",
+      "working_status": "in_progress",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 154,
+        "ledger_line": 160,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1506,7 +1507,8 @@
       ],
       "inferred_numbered_dependencies": [],
       "missing_mathematics": [
-        "Actual residue sum, reflected contour, shifted-L fourth moment and aggregate error"
+        "Actual residue sum, reflected contour, shifted-L fourth moment and aggregate error",
+        "Unconditional prime-mass normalization (2.9), or a direct actual-prime-mass aggregate bound; the existing (A)-conditional lower bound cannot establish the unconditional original statement."
       ],
       "missing_specification_or_engineering": [
         "Define Theta1 integral separately from P7.1 evaluation; actual finite zero sets"
@@ -1514,7 +1516,8 @@
       "semantic_issue_ids": [
         "no_dependency_on_P7.1_arithmetic_evaluation",
         "zero_boundary_and_uniform_sequence_bounds"
-      ]
+      ],
+      "active_work": "Independent proof development is ongoing; full numbered target is not yet verified."
     },
     {
       "id": "L8.2",
@@ -1533,7 +1536,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 155,
+        "ledger_line": 161,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1572,7 +1575,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 156,
+        "ledger_line": 162,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1608,7 +1611,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 157,
+        "ledger_line": 163,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1648,7 +1651,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 158,
+        "ledger_line": 164,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1685,7 +1688,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 159,
+        "ledger_line": 165,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1723,29 +1726,28 @@
         "url": "https://arxiv.org/pdf/2211.02515v1#page=63"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "in_progress_unverified",
+      "working_status": "complete_fresh_kernel_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 160,
-        "fresh_kernel_check": false,
+        "ledger_line": 166,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
-        "trusted_capstone_found": false
+        "trusted_capstone_found": true,
+        "capstone": "lemma111_proved",
+        "verification_report": "audit/CLOUD_LEMMA111_STATUS.md",
+        "axiom_report": "audit/cloud_lemma111_axioms.txt"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
-      "missing_mathematics": [
-        "Gaussian reflection plus tail integration for a triangular profile"
-      ],
-      "missing_specification_or_engineering": [
-        "Actual gtilde1 and ftilde; intervals and eta endpoints"
-      ],
+      "missing_mathematics": [],
+      "missing_specification_or_engineering": [],
       "semantic_issue_ids": [
         "printed_T_for_P_and_broken_equation_references"
       ],
       "shared_implementation_inputs": [
         "Existing Gaussian infrastructure associated with L6.1; the numbered L6.1 statement is not by itself a direct proof."
       ],
-      "active_work": "Parent reports an independent Lemma 11.1 worker is active; no proof checked or completion claimed by this audit."
+      "active_work": "Complete original target, fresh kernel/regression/standard-axiom checks and independent statement review passed."
     },
     {
       "id": "L11.2",
@@ -1764,7 +1766,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 161,
+        "ledger_line": 167,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1802,7 +1804,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 162,
+        "ledger_line": 168,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1837,7 +1839,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 163,
+        "ledger_line": 169,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1874,7 +1876,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 164,
+        "ledger_line": 170,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1910,7 +1912,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 165,
+        "ledger_line": 171,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1954,7 +1956,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 166,
+        "ledger_line": 172,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -1994,7 +1996,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 167,
+        "ledger_line": 173,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -2029,7 +2031,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 168,
+        "ledger_line": 174,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -2065,7 +2067,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 169,
+        "ledger_line": 175,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -2101,7 +2103,7 @@
       "working_status": "unstarted",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 170,
+        "ledger_line": 176,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -2137,10 +2139,10 @@
         "proof_section": "Appendix B"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "unstarted",
+      "working_status": "in_progress",
       "status_evidence": {
         "ledger_path": "progress.md",
-        "ledger_line": 171,
+        "ledger_line": 177,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false
@@ -2160,7 +2162,8 @@
       "semantic_issue_ids": [
         "strict_n_less_D4_endpoint",
         "unnumbered_contour_step_incomplete_in_paper"
-      ]
+      ],
+      "active_work": "Independent proof development is ongoing; full numbered target is not yet verified."
     }
   ],
   "edges": [
@@ -3081,5 +3084,12 @@
       "2026-10-02T11:17:46Z"
     ],
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
+  },
+  "current_status_update": {
+    "verified_at_utc": "2026-10-02T12:41:37Z",
+    "completed": 26,
+    "in_progress": 4,
+    "unstarted": 21,
+    "note": "Historical baseline counts remain separately preserved. New complete targets are Lemmas11.1 and3.6; current source/axiom reports are cited per node."
   }
 }

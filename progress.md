@@ -1,5 +1,7 @@
 # 张益唐论文 Lean 形式化进度
 
+云端里程碑（2026-10-02）：[完整 Lemma 3.6](ZhangLS/Spec/Lemma36.lean) 的 `lemma36_proved : Lemma36Target` 已通过内核及原文语义检查。真实截断卷积满足 |varsigma(n)|≤|ν(n)|τ₂(n)，已完成3.2与3.3的实际均值接合；4L权重积分和34L²均方损失导出原文异常数≤C𝒫L^-739。6模块及依赖、16个回归、45个标准公理接口通过。累计 **26/51完成，4项进行中（2.1、5.6、8.1、17.1），21项未开始**。新引理、所需依赖及新云端完整lake build（4881项，含两层聚合）均通过；逐Spec重检和全部旧回归遍历仍另行进行。详见[证据与范围](audit/CLOUD_LEMMA36_STATUS.md)。
+
 云端里程碑（2026-10-02）：[完整 Lemma 11.1](ZhangLS/Spec/Lemma111.lean) 的 `lemma111_proved : Lemma111Target` 已通过固定 Lean 4.30.0 内核验证。保留真实 Gaussian、原文帐篷函数、两个闭内部区间和三个开过渡区间；显式绝对常数 C=4000、c=1，并证明对所有 y>0 的更强统一误差 4000L^-24。4 个模块及其依赖构建、8 个原文展开/边界回归、32 个标准公理接口通过，独立语义审查接受。累计 **25/51 完成，4 项进行中（3.6、5.6、8.1、17.1），22 项未开始**。本轮是新引理及依赖的聚焦验证，尚未宣称旧模块/全部回归的新云端全量 PASS。详见 [验证范围与证据](audit/CLOUD_LEMMA111_STATUS.md) 和 [51 条结果依赖图](audit/CLOUD_DEPENDENCY_MAP.md)。
 
 历史状态说明：根目录 STEP141_STATUS.md 是冻结于 Step127 的旧临时记录；已完成 3.2 的依据是实际源码及 audit/STEP137_STATUS.md，不能按文件编号大小判断最新数学进度。
@@ -124,7 +126,7 @@ Step 78 最终接合已通过单文件 Lean 内核检查、模块构建及新增
 |---|---|---|---|
 | Theorem 1 | §1，\(L(1,\chi)>c_1(\log D)^{-2022}\) | ⚪ 未开始 | [可信目标](ZhangLS/Spec/PaperTheorems.lean) 已定义；未证明。旧版 [Theorem1.lean](ZhangLS/Theorem1.lean) 不是该目标的证明。 |
 | Theorem 2 | §1，实轴零点排除区域 | ⚪ 未开始 | [可信目标](ZhangLS/Spec/PaperTheorems.lean) 已定义；未证明。 |
-| Proposition 2.1 | §2，集合 \(\Psi_2\) 的估计 | ⚪ 未开始 | — |
+| Proposition 2.1 | §2，集合 \(\Psi_2\) 的估计 | 🟡 进行中 | 已证三个实际坏集的并集上界；正在核验真实Ψ₂=Ψ\Ψ₁的精确成员桥及原文完整目标，尚未计作完成。 |
 | Proposition 2.2 | §2，\(\Psi_1\) 的零点性质 | ✅ 完成 | [Proposition22.lean](ZhangLS/Spec/Proposition22.lean)，`proposition22_proved : Proposition22Target`：真实 Ψ₁、原始完整 Ω 内实际乘积零点均在临界线且为单根；任意相邻零点满足 \(\lvert\gamma'-\gamma-\alpha\rvert\le C\alpha^2\mathcal L\)。常数／充分大模数阈值统一存在；闭薄层等号、实际乘积导数、邻近零点 Rouché 及 Ω 高度边界均已闭合。模块、原始陈述／闭边界回归和十项公理检查通过，Step 83 全量审计 PASS。 |
 | Lemma 2.3 | §2，零点相关估计 | ✅ 完成 | [Lemma23.lean](ZhangLS/Spec/Lemma23.lean)，`lemma23_proved : Lemma23Target`：真实 Ψ₁、原始较小零点区域内实际 L 函数零点，原文三个位移与实际 M′ 分母下，证明 C* 为实且非负，并证明 M′≠0。统一误差常数同时满足严格的 Proposition 2.2 间距界；三个连续后继零点、两个无零区间、L′≠0、实际分支及系数接合均已闭合。分支存在且对每个有效分支成立，不外加位置、单根、间距或无零区间结论。四个模块、展开原始陈述回归和八项公理检查通过；Step 84 全量审计 PASS。 |
 | Proposition 2.4 | §2，主要均值下界 | ⚪ 未开始 | [旧版占位](ZhangLS/MainTerms.lean) 含关键结论作为前提；不算证明。 |
@@ -135,7 +137,7 @@ Step 78 最终接合已通过单文件 Lean 内核检查、模块构建及新增
 | Lemma 3.3 | §3，正交均值与大筛估计 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma33.lean) 的 `lemma33_proved : Lemma33Target` 保留原始Ψ、严格素数区间、实际Dirichlet和、原文𝒫、两条原始长度／能量及统一量词次序。第一条常数1；第二条由真实采样／Fourier／分数分离／Gauss转换闭合。共同C=32+π²，D₀=ceil(exp3)，无需(A)。8模块、44标准公理接口、3原文展开回归通过；Step123全量PASS（402模块、480导入、555源码、72回归，指纹不变）。 |
 | Lemma 3.4 | §3，条件(3.4)异常集计数 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma34.lean) 的 `lemma34_proved : Lemma34Target` 保留原始Ψ、严格素数区间、实际ν20/υ20、s0、D80端点和积分、原始严格B阈值及原文𝒫。完整B均方界由约数卷积、加权调和数界、实际字符正交性和加权柯西推出；异常数≤C𝒫L^-740，C=51208·81^1600、D₀=ceil(exp3)，无需(A)。13模块、44标准公理接口、4原文展开回归及Step124全量PASS（415模块、493导入、569源码、73回归），指纹不变。 |
 | Lemma 3.5 | §3，实际X₃异常集 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma35.lean) 的 `lemma35_proved : Lemma35Target` 保留原始Ψ、实际X₃端点/积分、严格L^-585条件、𝒫、(A)与统一量词。C=50400(32+π²)，阈值由既有估计推出；可积性、质量比较与均方均已导出，计数L^-746蕴含原文L^-739。8模块、29标准公理接口、6回归（5原文展开）及Step126全量PASS（446模块、524导入、602源码、75回归），全部指纹不变。 |
-| Lemma 3.6 | §3，实际 X₄ 条件(3.6)异常集 | 🟡 进行中 | 云端实际系数主界与积分均方组件已单独验证；原始目标最终接合尚未发布，不计为完成。 |
+| Lemma 3.6 | §3，实际 X₄ 条件(3.6)异常集 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma36.lean)，`lemma36_proved : Lemma36Target`；实际ντ₂系数主界、3.2加权能量与3.3第一均值、真实积分可积性和34L²损失给出原文C𝒫L^-739，严格阈值与统一量词保留。6模块/所需依赖、16回归、45标准公理接口及独立语义检查通过；[核验范围](audit/CLOUD_LEMMA36_STATUS.md)。 |
 | Lemma 4.1 | §4，\(F,G\) 的统一界 | ✅ 完成 | [Lemma23GoodSet.lean](ZhangLS/Spec/Lemma23GoodSet.lean)，`lemma23_lemma41`：真实 \(\psi\in\Psi_1\)、完整 \(\Omega_1\)、\(\log D\ge3\) 下，\(|F|+|G|\le2\mathcal L^{79}\)。实际展开、积分可积性、核界和虚部余量均已证明。 |
 | Lemma 4.2 | §4，截断乘积近似 \(1\) | ✅ 完成 | [Lemma23ProductApproximation.lean](ZhangLS/Spec/Lemma23ProductApproximation.lean)，`lemma23_lemma42`：同一区域内 \(|FG-1|\le4\mathcal L^{-227}\)。真实 \(\varsigma\) 混合卷积、低次系数消去、\(X_4\) 与 Abel 尾和均已证明；输入仅为 \(\Psi_1\) 的定义条件。 |
 | Lemma 4.3 | §4，\(F'/F=O(\mathcal L)\) | ✅ 完成 | [Lemma23SectionFourLogDerivative.lean](ZhangLS/Spec/Lemma23SectionFourLogDerivative.lean)，`lemma23_lemma43_at_explicit_threshold`：\(D\ge3^{3^{200}}\)、真实 \(\psi\in\Psi_1\)、完整 \(\Omega_2\) 下，\(\|F'/F\|\le140800\mathcal L\)。双边界、无零性、圆盘包含关系和对数阈值均已提供；未把这些结论作为输入。 |

@@ -1,5 +1,7 @@
 # Discrete mean estimates and the Landau–Siegel zero — Lean 形式化
 
+云端里程碑（2026-10-02）：[完整 Lemma 3.6](ZhangLS/Spec/Lemma36.lean) 的 `lemma36_proved : Lemma36Target` 已通过内核及原文语义检查。真实截断卷积满足 |varsigma(n)|≤|ν(n)|τ₂(n)，已完成3.2与3.3的实际均值接合；4L权重积分和34L²均方损失导出原文异常数≤C𝒫L^-739。6模块及依赖、16个回归、45个标准公理接口通过。累计 **26/51完成，4项进行中（2.1、5.6、8.1、17.1），21项未开始**。新引理、所需依赖及新云端完整lake build（4881项，含两层聚合）均通过；逐Spec重检和全部旧回归遍历仍另行进行。详见[证据与范围](audit/CLOUD_LEMMA36_STATUS.md)。
+
 云端里程碑（2026-10-02）：[完整 Lemma 11.1](ZhangLS/Spec/Lemma111.lean) 的 `lemma111_proved : Lemma111Target` 已通过固定 Lean 4.30.0 内核验证。保留真实 Gaussian、原文帐篷函数、两个闭内部区间和三个开过渡区间；显式绝对常数 C=4000、c=1，并证明对所有 y>0 的更强统一误差 4000L^-24。4 个模块及其依赖构建、8 个原文展开/边界回归、32 个标准公理接口通过，独立语义审查接受。累计 **25/51 完成，4 项进行中（3.6、5.6、8.1、17.1），22 项未开始**。本轮是新引理及依赖的聚焦验证，尚未宣称旧模块/全部回归的新云端全量 PASS。详见 [验证范围与证据](audit/CLOUD_LEMMA111_STATUS.md) 和 [51 条结果依赖图](audit/CLOUD_DEPENDENCY_MAP.md)。
 
 历史状态说明：根目录 STEP141_STATUS.md 是冻结于 Step127 的旧临时记录；已完成 3.2 的依据是实际源码及 audit/STEP137_STATUS.md，不能按文件编号大小判断最新数学进度。

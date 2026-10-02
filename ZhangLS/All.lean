@@ -533,6 +533,12 @@ import ZhangLS.Spec.Lemma35Mean
 import ZhangLS.Spec.Lemma35PrimeMass
 import ZhangLS.Spec.Lemma35UniformMean
 import ZhangLS.Spec.Lemma35WeightLength
+import ZhangLS.Spec.Lemma36
+import ZhangLS.Spec.Lemma36CoefficientMajorant
+import ZhangLS.Spec.Lemma36GoodFamily
+import ZhangLS.Spec.Lemma36Integrability
+import ZhangLS.Spec.Lemma36IntegralMean
+import ZhangLS.Spec.Lemma36Mean
 import ZhangLS.Spec.Lemma44ApproximateFunctionalEquation
 import ZhangLS.Spec.Lemma44CharacterProduct
 import ZhangLS.Spec.Lemma44ComplexCharacterAbel

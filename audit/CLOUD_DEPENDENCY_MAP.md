@@ -5,7 +5,7 @@ Primary source: [Zhang, arXiv:2211.02515v1](https://arxiv.org/pdf/2211.02515v1),
 
 ## Scope and status discipline
 
-The baseline ledger has **24/51 reported complete, 1 partial (5.6), 26 unstarted**. This audit inspected statements, selected proof implementations, foundational definitions, source imports, the ledger, and all numbered-result locations/dependency references in the paper. It did **not** rebuild Lean, rerun the axiom checker, or independently revalidate all 24 old completions. “Complete” in the graph therefore means **historically reported complete**, not a fresh audit verdict. The ongoing five-file Lemma 3.6 effort and independent Lemma 11.1 effort are separate and unverified by this audit.
+The baseline ledger has **24/51 reported complete, 1 partial (5.6), 26 unstarted**. This audit inspected statements, selected proof implementations, foundational definitions, source imports, the ledger, and all numbered-result locations/dependency references in the paper. It did **not** rebuild Lean, rerun the axiom checker, or independently revalidate all 24 old completions. “Complete” in the graph therefore means **historically reported complete**, not a fresh audit verdict. Subsequent cloud milestones completed original Lemmas11.1 and3.6: see CLOUD_LEMMA111_STATUS.md and CLOUD_LEMMA36_STATUS.md for fresh kernel, regression and axiom evidence. The current ledger is26/51 complete; baseline provenance remains distinguished from these new checks.
 
 Use evidence content rather than the largest step number. `audit/STEP137_STATUS.md` and `audit/lean_kernel_verification.txt` report a complete 3.2 and a 2026-10-02 11:01:20–11:17:46 UTC full PASS on Lean 4.30.0, arm64 macOS. Root `STEP141_STATUS.md` describes older temporary work against a frozen Step127 tree and still calls 3.2 unproved. It is not newer mathematical status and is not evidence of a current Linux build.
 
@@ -19,7 +19,7 @@ The JSON has exactly 51 result nodes. Edges point prerequisite → consumer and 
 4. **Lemma 8.1, contour-to-discrete-zero identity** (pp42–44). Its needed numbered inputs are completed 2.2, 5.2, 5.9, 6.1 and 3.3. Θ₁ in its conclusion is an actual contour integral definition, so **8.1 does not require the arithmetic evaluation in 7.1**. New work includes genuine finite zero sums, uniform coefficient bounds, boundary choice, residues, reflection and aggregate moments. Larger scope than 11.1, but independently schedulable.
 5. **Lemma 8.2** (p45) is another independent contour/Taylor branch, provided its contour errors are proved directly and the erroneous-looking 5.6 citation is not accepted as a black box. Completed 5.8 gives the needed local L-linearization.
 
-After 3.6 passes full checking, **Proposition 2.1** is the immediate finite-union/counting assembly from 3.4, 3.5 and 3.6. Then 7.1 and 14.1 can share generic character-averaging, conductor and large-sieve infrastructure. Their statements do not need to be proved in paper order; 14.1 references the *method* of 7.1, while its actual exceptional-set prerequisite is 2.1.
+With the original3.6 target now freshly verified, **Proposition 2.1** is the immediate finite-union/counting assembly from 3.4, 3.5 and 3.6. Then 7.1 and 14.1 can share generic character-averaging, conductor and large-sieve infrastructure. Their statements do not need to be proved in paper order; 14.1 references the *method* of 7.1, while its actual exceptional-set prerequisite is 2.1.
 
 ## Lemma 5.6: principal-character obstruction and circularity
 
@@ -53,7 +53,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 
 ## Numbered-node index
 
-`C` = historical completion reported, not revalidated here; `P` = partial; `U` = unstarted in baseline. `*` = active independent effort reported by parent. Dependencies marked `~` are inferred/corrected rather than accepted explicit paper citations. A 5.6 dependency always means its r > 1 port. Empty prerequisites do not mean no mathematical work or library input.
+`C` = historical completion reported, not revalidated here; `P` = partial; `U` = unstarted in baseline. `*` = active independent effort. `V` = a subsequently completed cloud milestone with its own fresh verification report. Dependencies marked `~` are inferred/corrected rather than accepted explicit paper citations. A 5.6 dependency always means its r > 1 port. Empty prerequisites do not mean no mathematical work or library input.
 
 | Result | Statement page / proof pages | Status | Numbered prerequisites |
 |---|---|---|---|
@@ -70,7 +70,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 | Lemma 3.3 | 14 / 14 | C | — |
 | Lemma 3.4 | 15 / 14–15 | C | L3.3 |
 | Lemma 3.5 | 15 / 15 | C | L3.1, ~L3.3 |
-| Lemma 3.6 | 16 / 15–16 | U* | ~L3.2, ~L3.3 |
+| Lemma 3.6 | 16 / 15–16 | V | ~L3.2, ~L3.3 |
 | Lemma 4.1 | 16 / 16 | C | — |
 | Lemma 4.2 | 17 / 17 | C | — |
 | Lemma 4.3 | 17 / 17 | C | L4.1, L4.2 |
@@ -96,7 +96,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 | Lemma 8.4 | 46 / 46–47 | U | L8.3, L5.5, ~L5.8 |
 | Lemma 10.1 | 53 / 53–55 | U | L5.8 |
 | Lemma 10.2 | 55 / 55–57 | U | L5.8, ~L8.3, ~L8.4 |
-| Lemma 11.1 | 63 / 63–64 | U* | — |
+| Lemma 11.1 | 63 / 63–64 | V | — |
 | Lemma 11.2 | 65 / 65 | U | — |
 | Lemma 12.1 | 68 / 68 | U | L5.8 |
 | Lemma 12.2 | 69 / 69–70 | U | L5.8, ~L8.3, ~L8.4 |
@@ -115,3 +115,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 2. Prove needed mathematical inputs, including convergence/analytic continuation and prime/character/zero set bridges
 3. Check statement expansion against the paper, check dependency axioms, compile the module and fresh regressions, then run the centralized integration audit
 4. Update completion only after the complete original target is verified; component proofs and corrected/restricted statements remain labeled as such
+
+## Additional 8.1 normalization obligation
+
+The original8.1 does not assume(A). Its proof normalizes a P²L^-78 aggregate error using the unconditional prime-mass asymptotic(2.9). The available actual prime-mass lower bound in the trusted layer assumes(A), so it cannot silently close this unconditional target. An unconditional prime-mass bound or a stronger estimate expressed directly in the actual mass remains required. This does not obstruct the separately verified local kernel and reflection components.
