@@ -1,0 +1,2384 @@
+{
+  "summary": {
+    "modules": 117,
+    "public_declarations": 624,
+    "new_modules": 110,
+    "new_public_declarations": 559,
+    "modules_added_to_prior_union": 39,
+    "production_project_closure_modules": 1018,
+    "production_and_regression_project_closure_modules": 1018,
+    "published_readonly_modules": 901,
+    "standalone_original_regressions": 14,
+    "production_source_conflicts": 0,
+    "live_source_conflicts": 0
+  },
+  "modules_in_topological_order": [
+    {
+      "module": "ZhangLS.Spec.InducedGaussFiniteSums",
+      "target_path": "ZhangLS/Spec/InducedGaussFiniteSums.lean",
+      "sha256": "68119ec39055c9f0915d1110212a23a552e53658d78bd3794ec71b818de762d4",
+      "declarations": [
+        "ZhangLS.Spec.inducedGauss_sum_zmod_eq_range",
+        "ZhangLS.Spec.inducedGauss_sum_range_multiples",
+        "ZhangLS.Spec.inducedGauss_changeLevel_nat",
+        "ZhangLS.Spec.inducedGauss_mobius_indicator",
+        "ZhangLS.Spec.inducedGauss_mobius_indicator_divisors",
+        "ZhangLS.Spec.inducedGauss_scaled_additive"
+      ],
+      "declaration_count": 6,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma23PrimitiveGaussSum"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.CoprimeGaussResidues",
+      "target_path": "ZhangLS/Spec/CoprimeGaussResidues.lean",
+      "sha256": "c0a690583ad23453fdc68c72bcfcf8e0351c670914107d1d4dcabb0780fadc99",
+      "declarations": [
+        "ZhangLS.Spec.coprimeGaussResidueEquiv",
+        "ZhangLS.Spec.coprimeGauss_residue_coordinates",
+        "ZhangLS.Spec.coprimeGauss_residue_nat",
+        "ZhangLS.Spec.coprimeGauss_additive_factorization"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.InducedGaussFiniteSums"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.AdditiveReciprocity",
+      "target_path": "ZhangLS/Spec/AdditiveReciprocity.lean",
+      "sha256": "b0da38e0d80a3bc3f10b963f754ff2fa7745d051b4e6a0aeebb6a4ddc4702786",
+      "declarations": [
+        "ZhangLS.Spec.additiveReciprocity_stdAddChar",
+        "ZhangLS.Spec.additiveReciprocity_product_phase",
+        "ZhangLS.Spec.additiveReciprocity_delta"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.CoprimeGaussResidues"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma53Kernels"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.CoprimeGaussRealTwist",
+      "target_path": "ZhangLS/Spec/CoprimeGaussRealTwist.lean",
+      "sha256": "74d4e9dc3f5ba5b85b0fa60165b0776c566023ac74a34eee35df8d07e8805742",
+      "declarations": [
+        "ZhangLS.Spec.coprimeGauss_real_twist_values",
+        "ZhangLS.Spec.coprimeGauss_real_twist_formula"
+      ],
+      "declaration_count": 2,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.CoprimeGaussResidues"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma44ProductDirichletSeries"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.InducedGaussInflation",
+      "target_path": "ZhangLS/Spec/InducedGaussInflation.lean",
+      "sha256": "61c77cc75419623b79e61af189fd1e6a66e475f65dd020266b7431a91e1b3458",
+      "declarations": [
+        "ZhangLS.Spec.inducedGaussInflation",
+        "ZhangLS.Spec.inducedGauss_inflation_zero",
+        "ZhangLS.Spec.inducedGauss_inflation_one",
+        "ZhangLS.Spec.inducedGauss_inflation_formula"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.InducedGaussFiniteSums"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.InducedGaussFormula",
+      "target_path": "ZhangLS/Spec/InducedGaussFormula.lean",
+      "sha256": "ab4e271a5bd674c22dd00a71bd8ffbcece94c44f31c8d80adbc3e7880e4450bd",
+      "declarations": [
+        "ZhangLS.Spec.inducedGauss_coprime_sum_mobius",
+        "ZhangLS.Spec.inducedGauss_divisor_inner",
+        "ZhangLS.Spec.inducedGauss_changeLevel_formula"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.InducedGaussInflation"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.InducedGaussConductor",
+      "target_path": "ZhangLS/Spec/InducedGaussConductor.lean",
+      "sha256": "f37a521dfef987c0e5c5d2ea8d6d1df7968be9bcf0439c32966468f899fa796a",
+      "declarations": [
+        "ZhangLS.Spec.inducedGauss_changeLevel_formula_dvd",
+        "ZhangLS.Spec.inducedGauss_conductor_formula",
+        "ZhangLS.Spec.inducedGauss_level_one_value",
+        "ZhangLS.Spec.inducedGauss_primitive_norm",
+        "ZhangLS.Spec.inducedGauss_mobius_norm_le_one",
+        "ZhangLS.Spec.inducedGauss_changeLevel_norm_le",
+        "ZhangLS.Spec.inducedGauss_norm_le_sqrt_conductor",
+        "ZhangLS.Spec.inducedGauss_inverse_norm_le_sqrt_conductor",
+        "ZhangLS.Spec.inducedGauss_nonprincipal_conductor_gt_one"
+      ],
+      "declaration_count": 9,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.InducedGaussFormula"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71GaussAverage",
+      "target_path": "ZhangLS/Spec/Proposition71GaussAverage.lean",
+      "sha256": "e52a3bb787cebb4e409f5e4bbdc99596eb22ab2f2d4cd03b7aea8ac28f7f2eb0",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_prime_primitive_iff",
+        "ZhangLS.Spec.proposition71_full_gauss_average",
+        "ZhangLS.Spec.proposition71_principal_gauss",
+        "ZhangLS.Spec.proposition71_primitive_gauss_average",
+        "ZhangLS.Spec.proposition71_primitive_gauss_error",
+        "ZhangLS.Spec.proposition71_gauss_average_nonunit",
+        "ZhangLS.Spec.proposition71_primitive_gauss_average_all"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma33GaussTransform"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.CoprimeGaussPrimeAverage",
+      "target_path": "ZhangLS/Spec/CoprimeGaussPrimeAverage.lean",
+      "sha256": "d2471b5dc335b4b3523a743b2b6e312c600f54c9842b365b55a2ed0b343ac34d",
+      "declarations": [
+        "ZhangLS.Spec.coprimeGauss_prime_average_summand",
+        "ZhangLS.Spec.coprimeGauss_full_prime_average",
+        "ZhangLS.Spec.coprimeGauss_primitive_prime_average",
+        "ZhangLS.Spec.coprimeGauss_primitive_prime_average_error",
+        "ZhangLS.Spec.coprimeGauss_primitive_average_nonunit"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.CoprimeGaussRealTwist",
+        "ZhangLS.Spec.InducedGaussConductor",
+        "ZhangLS.Spec.Proposition71GaussAverage"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141DivisorBounds",
+      "target_path": "ZhangLS/Spec/Proposition141DivisorBounds.lean",
+      "sha256": "0ac4b70189d5f06b27ed5ff186b2d733f31bd7859aed19f60a79f047b1d14157",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_multichoose_five_square_le",
+        "ZhangLS.Spec.proposition141_tau_five_square_le",
+        "ZhangLS.Spec.proposition141_tau_five_square_harmonic_bound",
+        "ZhangLS.Spec.proposition141_bounded_coefficient_harmonic_energy",
+        "ZhangLS.Spec.proposition141_bounded_coefficient_interval_energy"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma34CoefficientEnergy",
+        "ZhangLS.Spec.Lemma34DivisorFunction",
+        "ZhangLS.Spec.Lemma34Multichoose"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141DivisorBudget",
+      "target_path": "ZhangLS/Spec/Proposition141DivisorBudget.lean",
+      "sha256": "b076c18d8911f134b7e8ff267e591239017bbc30c1f2be7ca3082c0500815c32",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_multichoose_six_le_pow",
+        "ZhangLS.Spec.proposition141_multichoose_six_prime_bound",
+        "ZhangLS.Spec.proposition141_tau_six_linear_bound",
+        "ZhangLS.Spec.proposition141_divisor_tau_five_sum",
+        "ZhangLS.Spec.proposition141_divisor_tau_five_budget"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141DivisorBounds"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.DivisorPowerBudget",
+      "target_path": "ZhangLS/Spec/DivisorPowerBudget.lean",
+      "sha256": "d5be59e6c7124f96f6231a549ad7f7e69d48ec6469a3f6e8b11631c7298687e8",
+      "declarations": [
+        "ZhangLS.Spec.divisorPower_multichoose_le_pow",
+        "ZhangLS.Spec.divisorPower_multichoose_prime_bound",
+        "ZhangLS.Spec.divisorPower_tau_linear_bound",
+        "ZhangLS.Spec.divisorPower_multichoose_six_square",
+        "ZhangLS.Spec.divisorPower_tau_six_square",
+        "ZhangLS.Spec.divisorPower_tau_six_sqrt",
+        "ZhangLS.Spec.divisorPower_divisor_tau_five_sqrt"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141DivisorBudget"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.DivisorSmallPowerBudget",
+      "target_path": "ZhangLS/Spec/DivisorSmallPowerBudget.lean",
+      "sha256": "06631f7d7b5c53f0a14622452aa9049415bb8b00fdd71698a63fde0abf9eeb14",
+      "declarations": [
+        "ZhangLS.Spec.divisorPower_multichoose_square",
+        "ZhangLS.Spec.divisorPower_tau_square",
+        "ZhangLS.Spec.divisorPower_tau_fourth",
+        "ZhangLS.Spec.divisorPowerQuarterConstant",
+        "ZhangLS.Spec.divisorPower_quarter_constant_pos",
+        "ZhangLS.Spec.divisorPower_tau_quarter",
+        "ZhangLS.Spec.divisorPower_divisor_tau_five_quarter"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.DivisorPowerBudget"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.InducedGaussMainCharacters",
+      "target_path": "ZhangLS/Spec/InducedGaussMainCharacters.lean",
+      "sha256": "b8fd554acc5b2e0c7048bfb7544909f429f6cbeffe461b49d90a54746436a739",
+      "declarations": [
+        "ZhangLS.Spec.inducedGauss_principal_value",
+        "ZhangLS.Spec.inducedGauss_changeLevel_neg_nat",
+        "ZhangLS.Spec.inducedGauss_phase_product",
+        "ZhangLS.Spec.inducedGauss_real_changeLevel_inv",
+        "ZhangLS.Spec.inducedGauss_real_phase_product",
+        "ZhangLS.Spec.inducedGauss_totient_denominator",
+        "ZhangLS.Spec.inducedGauss_coprime_filter",
+        "ZhangLS.Spec.inducedGauss_real_square"
+      ],
+      "declaration_count": 8,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.InducedGaussConductor"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.RealDirichletCharacter"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma54EighthWeightedKernels",
+      "target_path": "ZhangLS/Spec/Lemma54EighthWeightedKernels.lean",
+      "sha256": "ccb2a399f2422f1f862b3f5a3bd7d4a8319d9aaaff32e32c2151efff4f5e8e48",
+      "declarations": [
+        "ZhangLS.Spec.lemma54EighthConstant",
+        "ZhangLS.Spec.lemma54EighthMajorant",
+        "ZhangLS.Spec.lemma54_eighth_weighted_constant_pos",
+        "ZhangLS.Spec.lemma54_eighth_contour_factor_pow_bound",
+        "ZhangLS.Spec.lemma54_eighth_weighted_majorant_factorization",
+        "ZhangLS.Spec.lemma54_eighth_weighted_majorant_integrable",
+        "ZhangLS.Spec.lemma54_eighth_weighted_kernel_norm_real",
+        "ZhangLS.Spec.lemma54_eighth_weighted_kernel_integrable",
+        "ZhangLS.Spec.lemma54_eighth_weighted_majorant_integral_bound",
+        "ZhangLS.Spec.lemma54_eighth_weighted_ray_norm_bound"
+      ],
+      "declaration_count": 10,
+      "status": "already_published_identical",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma54WeightedKernels"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma54EighthContourEstimates",
+      "target_path": "ZhangLS/Spec/Lemma54EighthContourEstimates.lean",
+      "sha256": "ea3a81cfddbb532a8e3fd3e39cbe54e6153830470ae9144ccf6865b38c17f90b",
+      "declarations": [
+        "ZhangLS.Spec.lemma54_eighth_weighted_kernel_norm_left",
+        "ZhangLS.Spec.lemma54_eighth_weighted_left_tail_bound",
+        "ZhangLS.Spec.lemma54_eighth_weighted_vertical_point_bound",
+        "ZhangLS.Spec.lemma54_eighth_weighted_vertical_bound",
+        "ZhangLS.Spec.lemma54_eighth_weighted_left_vertical_bound",
+        "ZhangLS.Spec.lemma54_eighth_weighted_ray_integrable",
+        "ZhangLS.Spec.lemma54_eighth_weighted_right_ray_bound"
+      ],
+      "declaration_count": 7,
+      "status": "already_published_identical",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Lemma54EighthWeightedKernels"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma54EighthContour",
+      "target_path": "ZhangLS/Spec/Lemma54EighthContour.lean",
+      "sha256": "f5eeb0817045f09581adbc415c05f22a61223f351602ea103652f0c7df0e29a4",
+      "declarations": [
+        "ZhangLS.Spec.lemma54_eighth_weighted_majorant_tendsto_zero",
+        "ZhangLS.Spec.lemma54_eighth_weighted_right_vertical_tendsto_zero",
+        "ZhangLS.Spec.lemma54_eighth_weighted_infinite_contour_shift",
+        "ZhangLS.Spec.lemma54EighthDerivativeTail",
+        "ZhangLS.Spec.lemma54_eighth_weighted_large_range_estimate"
+      ],
+      "declaration_count": 5,
+      "status": "already_published_identical",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Lemma54EighthContourEstimates"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma54WeightedContour"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma54EighthIntegrals",
+      "target_path": "ZhangLS/Spec/Lemma54EighthIntegrals.lean",
+      "sha256": "0e057e7cb42149f620613798f3837d3692a998913476667006bae22be285b761",
+      "declarations": [
+        "ZhangLS.Spec.lemma54EighthIntegral",
+        "ZhangLS.Spec.lemma54_eighth_integral_zero",
+        "ZhangLS.Spec.lemma54_eighth_integral_zero_actual",
+        "ZhangLS.Spec.lemma54_eighth_kernel_hasDerivAt",
+        "ZhangLS.Spec.lemma54_eighth_integral_hasDerivAt",
+        "ZhangLS.Spec.lemma54_eighth_integral_continuous",
+        "ZhangLS.Spec.lemma54_eighth_integral_norm_bound",
+        "ZhangLS.Spec.lemma54_eighth_integral_large_range",
+        "ZhangLS.Spec.lemma54_eighth_integral_isBigO_atTop",
+        "ZhangLS.Spec.lemma54_eighth_integral_isBigO_at_zero",
+        "ZhangLS.Spec.lemma54_eighth_integral_mellin_convergent",
+        "ZhangLS.Spec.lemma54_eighth_integral_boundary_products",
+        "ZhangLS.Spec.lemma54_eighth_mellin_step",
+        "ZhangLS.Spec.lemma54_eighth_zero_mellin_actual"
+      ],
+      "declaration_count": 14,
+      "status": "already_published_identical",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Lemma54EighthContour"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma54IntegrationByParts"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma54EighthMoment",
+      "target_path": "ZhangLS/Spec/Lemma54EighthMoment.lean",
+      "sha256": "1417a6ec84d02be4a21c2661bbe868c5e7094cf3623c867c6119a9410c667c23",
+      "declarations": [
+        "ZhangLS.Spec.lemma54EighthMoment",
+        "ZhangLS.Spec.lemma54EighthGlobalConstant",
+        "ZhangLS.Spec.lemma54EighthLogConstant",
+        "ZhangLS.Spec.lemma54EighthExpConstant",
+        "ZhangLS.Spec.lemma54EighthMomentConstant",
+        "ZhangLS.Spec.lemma54_eighth_constants_pos",
+        "ZhangLS.Spec.lemma54_eighth_moment_integrable",
+        "ZhangLS.Spec.lemma54_eighth_global_norm_bound",
+        "ZhangLS.Spec.lemma54_eighth_small_moment_bound",
+        "ZhangLS.Spec.lemma54EighthMomentEnvelope",
+        "ZhangLS.Spec.lemma54_eighth_envelope_integrable",
+        "ZhangLS.Spec.lemma54_eighth_envelope_nonneg",
+        "ZhangLS.Spec.lemma54_eighth_envelope_bound",
+        "ZhangLS.Spec.lemma54_eighth_envelope_integral_bound",
+        "ZhangLS.Spec.lemma54_eighth_moment_uniform_bound"
+      ],
+      "declaration_count": 15,
+      "status": "already_published_identical",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Lemma54EighthIntegrals"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma54LargeSecondMoment"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma54EighthMellin",
+      "target_path": "ZhangLS/Spec/Lemma54EighthMellin.lean",
+      "sha256": "684af2f318912c509c9a7bc3e547e9eff535014cdc28acdf2fb894acb7621ab0",
+      "declarations": [
+        "ZhangLS.Spec.lemma54_eighth_mellin_iteration",
+        "ZhangLS.Spec.lemma54_eighth_mellin_integral_identity",
+        "ZhangLS.Spec.lemma54_eighth_norm_shift_le",
+        "ZhangLS.Spec.lemma54_eighth_mellin_bound_by_moment",
+        "ZhangLS.Spec.lemma54_eighth_mellin_line_bound",
+        "ZhangLS.Spec.lemma54_eighth_mellin_frequency_bound",
+        "ZhangLS.Spec.lemma54_eighth_mellin_explicit_threshold"
+      ],
+      "declaration_count": 7,
+      "status": "already_published_identical",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Lemma54EighthMoment"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma54EighthHeightTail",
+      "target_path": "ZhangLS/Spec/Lemma54EighthHeightTail.lean",
+      "sha256": "b52670f35fd3bad9cea06f57bc9eb6e09afe5d547ec2a55c7f7728d46c01eef9",
+      "declarations": [
+        "ZhangLS.Spec.lemma54_eighth_arctan_le_self",
+        "ZhangLS.Spec.lemma54_eighth_positive_cauchy_tail",
+        "ZhangLS.Spec.lemma54_eighth_negative_cauchy_tail",
+        "ZhangLS.Spec.lemma54_eighth_weight_le_cauchy",
+        "ZhangLS.Spec.lemma54_eighth_weight_tail_point",
+        "ZhangLS.Spec.lemma54_eighth_bounded_weight_integrable",
+        "ZhangLS.Spec.lemma54_eighth_window_and_tail"
+      ],
+      "declaration_count": 7,
+      "status": "already_published_identical",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Lemma54EighthMellin"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma54EighthActualTail",
+      "target_path": "ZhangLS/Spec/Lemma54EighthActualTail.lean",
+      "sha256": "ffe39bb819ca403e47cb906581139874122fbe3c5e5ba45193e3af0c730a9b64",
+      "declarations": [
+        "ZhangLS.Spec.lemma54_eighth_actual_line_continuous",
+        "ZhangLS.Spec.lemma54_eighth_actual_product_integrable",
+        "ZhangLS.Spec.lemma54_eighth_actual_window_and_tail"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Lemma54EighthHeightTail"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141CharacterExpansion",
+      "target_path": "ZhangLS/Spec/Proposition141CharacterExpansion.lean",
+      "sha256": "92147f82b90fce89d96ea728f0b45763317c63d187b1e4f4235813a263ce22cf",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_general_hermitian_orthogonality",
+        "ZhangLS.Spec.proposition141_general_gauss_average",
+        "ZhangLS.Spec.proposition141_additive_phase_character_expansion",
+        "ZhangLS.Spec.proposition141_nonunit_character_phase_zero"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma33GaussTransform"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141Conductor",
+      "target_path": "ZhangLS/Spec/Proposition141Conductor.lean",
+      "sha256": "93abf4f2557cefe61b6215752065ee50ad90944d6994ad9fb78b21dac0670a07",
+      "declarations": [
+        "ZhangLS.Spec.proposition141PrimeCharacter",
+        "ZhangLS.Spec.proposition141_equal_nat_evaluations_induce",
+        "ZhangLS.Spec.proposition141_prime_character_nonprincipal",
+        "ZhangLS.Spec.proposition141_prime_character_not_chi_induced",
+        "ZhangLS.Spec.proposition141_actual_product_inducer_admissible",
+        "ZhangLS.Spec.proposition141_product_conductor_le",
+        "ZhangLS.Spec.proposition141_product_inducer_eval"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma56ActualPrimeMassNormalization",
+        "ZhangLS.Spec.Lemma56TwistClassification"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141SmallConductor",
+      "target_path": "ZhangLS/Spec/Proposition141SmallConductor.lean",
+      "sha256": "fbbe75337b3fb24f7eda2c19f30b21b40308d07b659bdedc865327d69ef1b5cf",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_small_product_conductor_lt_fourth",
+        "ZhangLS.Spec.proposition141_uniform_fourth_lt_T",
+        "ZhangLS.Spec.proposition141_small_product_inducer_prime_bound",
+        "ZhangLS.Spec.proposition141ProductPrimeSum",
+        "ZhangLS.Spec.proposition141_actual_prime_sum_eq_inducer",
+        "ZhangLS.Spec.proposition141_small_actual_product_prime_bound"
+      ],
+      "declaration_count": 6,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141Conductor"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141ComplexShift",
+      "target_path": "ZhangLS/Spec/Proposition141ComplexShift.lean",
+      "sha256": "1ff173d19727a694e07c63e0ae1c42621d314fcbc084eccda766d857b5e1a719",
+      "declarations": [
+        "ZhangLS.Spec.proposition141ShiftedPrimeSum",
+        "ZhangLS.Spec.proposition141_shifted_prime_weight_identity",
+        "ZhangLS.Spec.proposition141_real_shift_weight_mono",
+        "ZhangLS.Spec.proposition141_shifted_finite_prime_budget",
+        "ZhangLS.Spec.proposition141_complex_shift_parameters",
+        "ZhangLS.Spec.proposition141_complex_shift_weight_bound",
+        "ZhangLS.Spec.proposition141_prime_window_sum_eq",
+        "ZhangLS.Spec.proposition141_actual_shifted_prime_weight_budget",
+        "ZhangLS.Spec.proposition141_shifted_height_margin"
+      ],
+      "declaration_count": 9,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141SmallConductor"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71ConvolutionSplit",
+      "target_path": "ZhangLS/Spec/Proposition71ConvolutionSplit.lean",
+      "sha256": "18b9efefb800fa6e9b53d11d1cb7b9dcbc649c4887b41fabb2ddabcbfc66d894",
+      "declarations": [
+        "ZhangLS.Spec.proposition71SplitPairs",
+        "ZhangLS.Spec.proposition71_split_mem",
+        "ZhangLS.Spec.proposition71_split_gcd",
+        "ZhangLS.Spec.proposition71_split_injective",
+        "ZhangLS.Spec.proposition71_split_surjective",
+        "ZhangLS.Spec.proposition71_divisor_pair_split",
+        "ZhangLS.Spec.proposition71_kappa_convolution_split"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma83Definitions"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71DivisorWeights",
+      "target_path": "ZhangLS/Spec/Proposition71DivisorWeights.lean",
+      "sha256": "585ced3d9f25331f68ea3fdf3f16d39f060c83a6cdbc5282506c0b9fe495e33b",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_nat_divisor_pair_split",
+        "ZhangLS.Spec.proposition71_convolution_submultiplicative",
+        "ZhangLS.Spec.proposition71_tau_submultiplicative",
+        "ZhangLS.Spec.proposition71_reciprocal_totient_le_tau",
+        "ZhangLS.Spec.proposition71_reciprocal_product_totient"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71ConvolutionSplit"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma34CoefficientEnergy"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71ConductorWeights",
+      "target_path": "ZhangLS/Spec/Proposition71ConductorWeights.lean",
+      "sha256": "c5a4b38049a8cf0b678211b54bd0d55132c7823fa3b092af9964d88033875aa7",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_tau_harmonic_bound",
+        "ZhangLS.Spec.proposition71_small_conductor_weight_sum",
+        "ZhangLS.Spec.proposition71_quarter_split_small_budget",
+        "ZhangLS.Spec.proposition71_quarter_split_large_budget"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71DivisorWeights"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71CharacterConductorWeights",
+      "target_path": "ZhangLS/Spec/Proposition71CharacterConductorWeights.lean",
+      "sha256": "2bdb716fac48110e894677a532952206eb044acf0e2b57a359faa8ebb1ea8682",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_primitive_character_count",
+        "ZhangLS.Spec.proposition71_three_halves_eq_mul_sqrt",
+        "ZhangLS.Spec.proposition71_counted_totient_weight",
+        "ZhangLS.Spec.proposition71_sqrt_conductor_sum",
+        "ZhangLS.Spec.proposition71_counted_conductor_weight_sum"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71ConductorWeights"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141ConductorBudget",
+      "target_path": "ZhangLS/Spec/Proposition141ConductorBudget.lean",
+      "sha256": "63f3732d0216db1da0b2bf90405b082eee3c93530b0a1dc6f05e92ebe0da98d2",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_conductor_congruence",
+        "ZhangLS.Spec.proposition141SmallConductorModuli",
+        "ZhangLS.Spec.proposition141_small_counted_weight_sum",
+        "ZhangLS.Spec.proposition141_eighth_counted_tail_identity",
+        "ZhangLS.Spec.proposition141_eighth_gauss_tail_identity",
+        "ZhangLS.Spec.proposition141_eighth_divisor_tail_budget"
+      ],
+      "declaration_count": 6,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71CharacterConductorWeights",
+        "ZhangLS.Spec.Proposition141DivisorBudget"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141ShiftedEstimate",
+      "target_path": "ZhangLS/Spec/Proposition141ShiftedEstimate.lean",
+      "sha256": "515b5f0ebdcb9d9f20eae19645d58e332875bea2b354d331270a6e516a9ff732",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_uniform_shifted_primitive_prime_absolute_bound",
+        "ZhangLS.Spec.proposition141_uniform_shifted_primitive_prime_normalized_bound",
+        "ZhangLS.Spec.proposition141ShiftedProductPrimeSum",
+        "ZhangLS.Spec.proposition141_shifted_product_prime_sum_eq_inducer",
+        "ZhangLS.Spec.proposition141_uniform_small_shifted_product_prime_bound"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141ComplexShift"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141EighthPrimeIntegral",
+      "target_path": "ZhangLS/Spec/Proposition141EighthPrimeIntegral.lean",
+      "sha256": "640219cb1a6896f1a17c7686dbf275f4f8d71b1d5f03b0f0c27a05e5c85cc870",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_small_shift_power_norm",
+        "ZhangLS.Spec.proposition141_shifted_product_prime_continuous",
+        "ZhangLS.Spec.proposition141_shifted_product_prime_global_bound",
+        "ZhangLS.Spec.proposition141ActualPrimeMellinIntegral",
+        "ZhangLS.Spec.proposition141_uniform_small_product_mellin_integral_bound"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141ShiftedEstimate",
+        "ZhangLS.Spec.Lemma54EighthActualTail"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71MellinInversion",
+      "target_path": "ZhangLS/Spec/Proposition71MellinInversion.lean",
+      "sha256": "87f17d30b9def21a082b697fd93921754228f348daf6084d50759b11fb3af0e2",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_actual_delta_vertical_integrable",
+        "ZhangLS.Spec.proposition71_actual_delta_mellin_inversion",
+        "ZhangLS.Spec.proposition71_actual_scaled_delta_mellin"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma54"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71MellinFiniteSum",
+      "target_path": "ZhangLS/Spec/Proposition71MellinFiniteSum.lean",
+      "sha256": "81e71734699e821737dc12b9ad75e1df076bdb9fcec090b414ddda7c9eb10db4",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_inverse_mellin_integrand_integrable",
+        "ZhangLS.Spec.proposition71_scaled_mellin_power",
+        "ZhangLS.Spec.proposition71_extracted_scale_norm",
+        "ZhangLS.Spec.proposition71_actual_finite_mellin_sum"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71MellinInversion"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141SmallKernel",
+      "target_path": "ZhangLS/Spec/Proposition141SmallKernel.lean",
+      "sha256": "e3c656b9dd32b514156270fb56fc911233193767d76bd25b737eef4336805118",
+      "declarations": [
+        "ZhangLS.Spec.proposition141ActualShiftedPrimeKernel",
+        "ZhangLS.Spec.proposition141_actual_shifted_prime_mellin_identity",
+        "ZhangLS.Spec.proposition141_actual_shifted_prime_kernel_integral_bound",
+        "ZhangLS.Spec.proposition141_uniform_small_shifted_prime_kernel_bound"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141EighthPrimeIntegral",
+        "ZhangLS.Spec.Proposition71MellinFiniteSum"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141Objects",
+      "target_path": "ZhangLS/Spec/Proposition141Objects.lean",
+      "sha256": "02fa12fab88de5fdc2c5e12fa8aa23457d7f541040d7342b17e27aa7aa190b57",
+      "declarations": [
+        "ZhangLS.Spec.Proposition141KappaBound",
+        "ZhangLS.Spec.Proposition141AdmissibleSequence",
+        "ZhangLS.Spec.proposition141Indices",
+        "ZhangLS.Spec.proposition141KappaSeries",
+        "ZhangLS.Spec.proposition141Polynomial",
+        "ZhangLS.Spec.proposition141SegmentIntegral",
+        "ZhangLS.Spec.proposition141Integral",
+        "ZhangLS.Spec.proposition141ShiftWeight",
+        "ZhangLS.Spec.proposition141ThetaTwo",
+        "ZhangLS.Spec.proposition141AmbientMean",
+        "ZhangLS.Spec.proposition141InnerMain",
+        "ZhangLS.Spec.proposition141MainTerm",
+        "ZhangLS.Spec.Proposition141Target",
+        "ZhangLS.Spec.proposition141_mem_indices",
+        "ZhangLS.Spec.proposition141_segment_real_part",
+        "ZhangLS.Spec.proposition141_zero_shift"
+      ],
+      "declaration_count": 16,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Proposition21",
+        "ZhangLS.Spec.Lemma61Parameters",
+        "ZhangLS.Spec.Lemma53Kernels",
+        "ZhangLS.Spec.Lemma32SeriesConvergence"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141SmallCoefficientSum",
+      "target_path": "ZhangLS/Spec/Proposition141SmallCoefficientSum.lean",
+      "sha256": "8b42efe3f27fa95097920610b91d967522768101c297496b75555b1b0b3ee0d0",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_kappa_three_factor_bound",
+        "ZhangLS.Spec.proposition141_kappa_finite_harmonic_bound",
+        "ZhangLS.Spec.proposition141FiniteSmallCharacterSum",
+        "ZhangLS.Spec.proposition141_uniform_finite_small_character_sum_bound"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141SmallKernel",
+        "ZhangLS.Spec.Proposition141Objects",
+        "ZhangLS.Spec.Proposition71DivisorWeights"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71MellinDoubleSum",
+      "target_path": "ZhangLS/Spec/Proposition71MellinDoubleSum.lean",
+      "sha256": "64a2199c80b54fd3b154afa28181756bb8c2edeb65efcc4e0e3a139c8563ee9c",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_positive_ratio_cpow",
+        "ZhangLS.Spec.proposition71_finite_mellin_integrand_integrable",
+        "ZhangLS.Spec.proposition71DoubleMellinIntegrand",
+        "ZhangLS.Spec.proposition71_double_mellin_integrand_expansion",
+        "ZhangLS.Spec.proposition71_double_mellin_integrand_integrable",
+        "ZhangLS.Spec.proposition71_actual_double_mellin_sum"
+      ],
+      "declaration_count": 6,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71MellinFiniteSum"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141DoubleMellin",
+      "target_path": "ZhangLS/Spec/Proposition141DoubleMellin.lean",
+      "sha256": "1bdc4d742a6d8aedb9a5606ecb036a1120e512676d58bd5190d6524f2bec3f01",
+      "declarations": [
+        "ZhangLS.Spec.proposition141DoubleMellinIntegrand",
+        "ZhangLS.Spec.proposition141_double_mellin_integrand_eq",
+        "ZhangLS.Spec.proposition141_double_mellin_integrable",
+        "ZhangLS.Spec.proposition141_actual_double_mellin_identity"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141SmallCoefficientSum",
+        "ZhangLS.Spec.Proposition71MellinDoubleSum"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141Support",
+      "target_path": "ZhangLS/Spec/Proposition141Support.lean",
+      "sha256": "60bfd67e4bcba304971014cd9afe801e9e310ef3e899767459e4d8ed12f5cf46",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_kappa_series_summable",
+        "ZhangLS.Spec.proposition141_nonzero_support",
+        "ZhangLS.Spec.proposition141_nonzero_product_indices",
+        "ZhangLS.Spec.proposition141_omitted_coefficient_zero",
+        "ZhangLS.Spec.proposition141_uniform_t0_le_D",
+        "ZhangLS.Spec.proposition141_uniform_support_modulus_bound",
+        "ZhangLS.Spec.proposition141_supported_modulus_coprime_prime"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141Objects",
+        "ZhangLS.Spec.Proposition141SmallConductor"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma61GaussianWeights"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141GlobalShift",
+      "target_path": "ZhangLS/Spec/Proposition141GlobalShift.lean",
+      "sha256": "3934a6ec73cf32b73601c2faf9f0bb5e0b16af0dfce13a41776caa00be144439",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_t0_log_bounds",
+        "ZhangLS.Spec.proposition141_t0_shift_norm",
+        "ZhangLS.Spec.proposition141_prime_t0_shift_factor",
+        "ZhangLS.Spec.proposition141_prime_t0_shift_norm",
+        "ZhangLS.Spec.proposition141_prime_t0_shift_sum",
+        "ZhangLS.Spec.proposition141_prime_windows_equal",
+        "ZhangLS.Spec.proposition141_actual_prime_masses_equal"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141EighthPrimeIntegral",
+        "ZhangLS.Spec.Proposition141Support"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma33FirstMean"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71DeltaLargeTail",
+      "target_path": "ZhangLS/Spec/Proposition71DeltaLargeTail.lean",
+      "sha256": "30ce8789c5a318a3fe59e41fc671858830067762419129e26aecc9f9d475ecb0",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_large_log_exponent",
+        "ZhangLS.Spec.proposition71_large_power_exponent",
+        "ZhangLS.Spec.proposition71_tail_exp_factor",
+        "ZhangLS.Spec.proposition71LargeDeltaTailConstant",
+        "ZhangLS.Spec.proposition71_large_delta_tail_constant_pos",
+        "ZhangLS.Spec.proposition71_actual_large_delta_tail"
+      ],
+      "declaration_count": 6,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma53"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141InfiniteCoefficientTail",
+      "target_path": "ZhangLS/Spec/Proposition141InfiniteCoefficientTail.lean",
+      "sha256": "a716557cabbb267034c06f23ae32b84ac35a3256d10afd5b84e0dcc5194403c0",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_tau_five_square_summable",
+        "ZhangLS.Spec.proposition141TauFiveSquareMass",
+        "ZhangLS.Spec.proposition141_tau_five_square_mass_nonneg",
+        "ZhangLS.Spec.proposition141_dilated_kappa_square_summable",
+        "ZhangLS.Spec.proposition141_dilated_kappa_square_sum",
+        "ZhangLS.Spec.proposition141_scaled_large_delta_tail",
+        "ZhangLS.Spec.proposition141DilatedDeltaTailTerm",
+        "ZhangLS.Spec.proposition141_dilated_delta_tail_majorant",
+        "ZhangLS.Spec.proposition141_dilated_delta_tail_summable",
+        "ZhangLS.Spec.proposition141_dilated_delta_tail_bound"
+      ],
+      "declaration_count": 10,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141SmallCoefficientSum",
+        "ZhangLS.Spec.Proposition71DeltaLargeTail"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141LargeSieveMoments",
+      "target_path": "ZhangLS/Spec/Proposition141LargeSieveMoments.lean",
+      "sha256": "06bb6213f5d8688d4b24fa56adb67b8a81493afa93db90dc43a0e71712d509a7",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_actual_kappa_interval_energy",
+        "ZhangLS.Spec.proposition141_actual_weighted_kappa_mean",
+        "ZhangLS.Spec.proposition141_actual_shifted_prime_energy",
+        "ZhangLS.Spec.proposition141_actual_weighted_prime_mean"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141GlobalShift",
+        "ZhangLS.Spec.Proposition141DivisorBounds",
+        "ZhangLS.Spec.Proposition141SmallCoefficientSum"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.AllModuliLargeSieve"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.TauDirichletValues",
+      "target_path": "ZhangLS/Spec/TauDirichletValues.lean",
+      "sha256": "72e8e9282bc38252b6c1fcff09a2f151c1bab8fe57f17583adb2724aa5cead1b",
+      "declarations": [
+        "ZhangLS.Spec.tauDirichlet_lseries_value",
+        "ZhangLS.Spec.tauDirichlet_square_mass",
+        "ZhangLS.Spec.tauDirichlet_five_square_mass_le"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma32SeriesConvergence"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141PrimeInfiniteTail",
+      "target_path": "ZhangLS/Spec/Proposition141PrimeInfiniteTail.lean",
+      "sha256": "24e74ec0eb780ff62ca191125568e6b9f8d70f389ac93f5ac87a08dca6a7199b",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_tau_five_square_mass_eq",
+        "ZhangLS.Spec.proposition141_tau_five_square_mass_le",
+        "ZhangLS.Spec.proposition141_dilated_delta_tail_explicit_bound",
+        "ZhangLS.Spec.proposition141_prime_tail_shift_norm",
+        "ZhangLS.Spec.proposition141_prime_card_le_mass",
+        "ZhangLS.Spec.proposition141_prime_summed_infinite_tail",
+        "ZhangLS.Spec.proposition141_prime_tail_interchange"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141InfiniteCoefficientTail",
+        "ZhangLS.Spec.Proposition141GlobalShift",
+        "ZhangLS.Spec.TauDirichletValues"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141MainSeriesConvergence",
+      "target_path": "ZhangLS/Spec/Proposition141MainSeriesConvergence.lean",
+      "sha256": "661d747536af63a81cd48023b876272aa70828c610b5cc8c081244547bbe2bd9",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_dilated_delta_series_summable",
+        "ZhangLS.Spec.proposition141_coprime_delta_series_summable",
+        "ZhangLS.Spec.proposition141_original_main_series_summable"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141PrimeInfiniteTail"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141OffDiagonal",
+      "target_path": "ZhangLS/Spec/Proposition141OffDiagonal.lean",
+      "sha256": "94b66ae554b87abc66586d3e4318a0e38eac80c117023f97890237d946e37126",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_off_diagonal_not_dvd",
+        "ZhangLS.Spec.proposition141_lift_ne_chi_of_not_dvd",
+        "ZhangLS.Spec.proposition141_off_diagonal_inducer_admissible",
+        "ZhangLS.Spec.proposition141_off_diagonal_product_conductor_le",
+        "ZhangLS.Spec.proposition141_off_diagonal_inducer_eval",
+        "ZhangLS.Spec.proposition141_small_off_diagonal_inducer_prime_bound"
+      ],
+      "declaration_count": 6,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141SmallConductor"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141OffDiagonalKernel",
+      "target_path": "ZhangLS/Spec/Proposition141OffDiagonalKernel.lean",
+      "sha256": "63c44d17be9791764a6ec9abbecfef2198d54535f929ee614f82d05731a5a1bc",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_prime_kernel_changeLevel",
+        "ZhangLS.Spec.proposition141_uniform_off_diagonal_small_kernel_bound",
+        "ZhangLS.Spec.proposition141_supported_off_diagonal_common_modulus",
+        "ZhangLS.Spec.proposition141_uniform_supported_off_diagonal_small_kernel_bound"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141SmallKernel",
+        "ZhangLS.Spec.Proposition141OffDiagonal",
+        "ZhangLS.Spec.Proposition141Support"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141PrimitiveSmallSum",
+      "target_path": "ZhangLS/Spec/Proposition141PrimitiveSmallSum.lean",
+      "sha256": "d5bf123b7d4590997d654ea88a0b1cb1713f4e211e11a85c969f619f659c109d",
+      "declarations": [
+        "ZhangLS.Spec.proposition141PrimitiveFiniteCharacterSum",
+        "ZhangLS.Spec.proposition141_prime_coprime_extra_factor",
+        "ZhangLS.Spec.proposition141_primitive_lifted_finite_sum",
+        "ZhangLS.Spec.proposition141_primitive_lift_nonprincipal",
+        "ZhangLS.Spec.proposition141_uniform_primitive_small_character_sum_bound"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141SmallCoefficientSum",
+        "ZhangLS.Spec.InducedGaussFiniteSums"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141SmallConductorRow",
+      "target_path": "ZhangLS/Spec/Proposition141SmallConductorRow.lean",
+      "sha256": "95651cfb7fa3e6400620b4d1e03fb11dc6b192e5b11408af59a9f65ce8799960",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_primitive_subfamily_card",
+        "ZhangLS.Spec.proposition141_counted_row_scalar",
+        "ZhangLS.Spec.proposition141_uniform_small_conductor_row_bound"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141PrimitiveSmallSum",
+        "ZhangLS.Spec.Proposition71CharacterConductorWeights"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141SmallConductorAggregate",
+      "target_path": "ZhangLS/Spec/Proposition141SmallConductorAggregate.lean",
+      "sha256": "b6376136ca4807237169756ee8e201cd5ca14bed19ea3a516874fc49cb78fcbb",
+      "declarations": [
+        "ZhangLS.Spec.proposition141SmallSupportedModuli",
+        "ZhangLS.Spec.proposition141SmallPrimitiveFamily",
+        "ZhangLS.Spec.proposition141_small_supported_mem",
+        "ZhangLS.Spec.proposition141FiniteSmallConductorAggregate",
+        "ZhangLS.Spec.proposition141_small_supported_weight_sum",
+        "ZhangLS.Spec.proposition141_uniform_finite_small_conductor_aggregate"
+      ],
+      "declaration_count": 6,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141SmallConductorRow",
+        "ZhangLS.Spec.Proposition141ConductorBudget"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141SupportedPrimeBound",
+      "target_path": "ZhangLS/Spec/Proposition141SupportedPrimeBound.lean",
+      "sha256": "ef9eccd4937531ad98af3d74c14396eabbabb7cfdbfcc0c8c6fb0ac797b0b021",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_small_supported_product_prime_bound",
+        "ZhangLS.Spec.proposition141_off_diagonal_actual_prime_sum_eq_inducer",
+        "ZhangLS.Spec.proposition141_small_actual_off_diagonal_prime_bound"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141Support",
+        "ZhangLS.Spec.Proposition141OffDiagonal"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141TailRates",
+      "target_path": "ZhangLS/Spec/Proposition141TailRates.lean",
+      "sha256": "e7cd8d4d27c60aeaf4316013486af37f5dc8386bf14f5b78355a10e0b5c9604e",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_large_tail_prime_power_absorption",
+        "ZhangLS.Spec.proposition141_actual_tail_prime_power_absorption",
+        "ZhangLS.Spec.proposition141_actual_large_tail_decay",
+        "ZhangLS.Spec.proposition141_actual_tail_polynomial_rate"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141GlobalShift"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71WeightedCauchy",
+      "target_path": "ZhangLS/Spec/Proposition71WeightedCauchy.lean",
+      "sha256": "e6e59f7c15f9879cc4a27458592e53247f4a3caa987acb91a7a0bd34bef51b43",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_weighted_cauchy",
+        "ZhangLS.Spec.proposition71_weighted_primitive_cauchy",
+        "ZhangLS.Spec.proposition71_weighted_primitive_cauchy_bound"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.AllModuliLargeSieve"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition141WeightedBilinear",
+      "target_path": "ZhangLS/Spec/Proposition141WeightedBilinear.lean",
+      "sha256": "cd900d5de2fb8fb8865e41b2eccf3690b842c620f7b69eefc62b935fa072e2e9",
+      "declarations": [
+        "ZhangLS.Spec.proposition141_actual_weighted_bilinear_mean"
+      ],
+      "declaration_count": 1,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition141LargeSieveMoments",
+        "ZhangLS.Spec.Proposition71WeightedCauchy"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71ArithmeticFactors",
+      "target_path": "ZhangLS/Spec/Proposition71ArithmeticFactors.lean",
+      "sha256": "c05f8365a73e8b74fc01d65fddc8feb7dbd8717c18df996c7b9c46cd6cb720ca",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_prime_support_union",
+        "ZhangLS.Spec.proposition71_lambda_factorization",
+        "ZhangLS.Spec.proposition71_xi_factor_extraction"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma83Definitions"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71Objects",
+      "target_path": "ZhangLS/Spec/Proposition71Objects.lean",
+      "sha256": "3a60a48f9e985ef91009880c61051a5a6393a26a612c5b70cf75dcf9fa1da4f3",
+      "declarations": [
+        "ZhangLS.Spec.proposition71ArithmeticSum",
+        "ZhangLS.Spec.proposition71ErrorScale",
+        "ZhangLS.Spec.proposition71MainTerm",
+        "ZhangLS.Spec.Proposition71AtConstant",
+        "ZhangLS.Spec.Proposition71Target",
+        "ZhangLS.Spec.proposition71_mem_indices",
+        "ZhangLS.Spec.proposition71_good_family_exact"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma81Objects",
+        "ZhangLS.Spec.Lemma83Definitions",
+        "ZhangLS.Spec.Proposition21"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71CoefficientEnergy",
+      "target_path": "ZhangLS/Spec/Proposition71CoefficientEnergy.lean",
+      "sha256": "bbdf0c0a1b6e64f87d901f885910224dfd7c629a78f04de009ef03689b60ed46",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_convolution_majorant",
+        "ZhangLS.Spec.proposition71_power_coefficient_majorant",
+        "ZhangLS.Spec.proposition71_moebius_coefficient_majorant",
+        "ZhangLS.Spec.proposition71_actual_kappa_le_tau_four",
+        "ZhangLS.Spec.proposition71ArithmeticSequence",
+        "ZhangLS.Spec.proposition71_arithmetic_sequence_positive",
+        "ZhangLS.Spec.proposition71_actual_convolution_le_tau_five",
+        "ZhangLS.Spec.proposition71_multichoose_five_square_le_twentyfive",
+        "ZhangLS.Spec.proposition71_tau_five_square_le_twentyfive",
+        "ZhangLS.Spec.proposition71_tau_five_square_harmonic_sum",
+        "ZhangLS.Spec.proposition71_actual_convolution_harmonic_energy"
+      ],
+      "declaration_count": 11,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71Objects"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma34CoefficientEnergy"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71Conductor",
+      "target_path": "ZhangLS/Spec/Proposition71Conductor.lean",
+      "sha256": "5fda90238834d9650bc4d9ab42b2e2d120f95239ee81441f5c2bcf1a66e1c74b",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_nonprincipal_conductor_gt_one",
+        "ZhangLS.Spec.proposition71_equal_nat_evaluations_changeLevel",
+        "ZhangLS.Spec.proposition71_small_primitive_distinct",
+        "ZhangLS.Spec.proposition71_actual_inducer_admissible",
+        "ZhangLS.Spec.proposition71_small_conductor_lt_T",
+        "ZhangLS.Spec.proposition71_small_actual_inducer_prime_bound"
+      ],
+      "declaration_count": 6,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma56ActualPrimeMassNormalization",
+        "ZhangLS.Spec.Lemma56TwistClassification"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71ConductorAggregateAlgebra",
+      "target_path": "ZhangLS/Spec/Proposition71ConductorAggregateAlgebra.lean",
+      "sha256": "9ef25a2bad1fe63258f20c9f6b9e4e1f6dcd1b78dcb8fb9fe61646af3b54ddd9",
+      "declarations": [
+        "ZhangLS.Spec.proposition71ConductorNormAggregate",
+        "ZhangLS.Spec.proposition71_conductor_norm_aggregate_nonneg",
+        "ZhangLS.Spec.proposition71_conductor_norm_aggregate_bound"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71CharacterConductorWeights"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71ConductorAggregateOrder",
+      "target_path": "ZhangLS/Spec/Proposition71ConductorAggregateOrder.lean",
+      "sha256": "11d319856e48d59798a150baa32dae83c145a85195e50b641eb454b33f973343",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_conductor_aggregate_mono",
+        "ZhangLS.Spec.proposition71_conductor_aggregate_le_add",
+        "ZhangLS.Spec.proposition71_conductor_aggregate_predicate_split",
+        "ZhangLS.Spec.proposition71_conductor_aggregate_cover"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71ConductorAggregateAlgebra"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71ConductorModulusRestriction",
+      "target_path": "ZhangLS/Spec/Proposition71ConductorModulusRestriction.lean",
+      "sha256": "9979f3ce715c6c7b22e7f10d31b201bed62bab20b87fa683a9ac734e5aa6eedd",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_conductor_aggregate_upper_restrict"
+      ],
+      "declaration_count": 1,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71ConductorAggregateOrder"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71DeltaGaussianTail",
+      "target_path": "ZhangLS/Spec/Proposition71DeltaGaussianTail.lean",
+      "sha256": "3cc710c62572af235ec2b6ca27ce462bf225fd568386a5c40bec625624c5abfc",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_gaussian_clearance_budget",
+        "ZhangLS.Spec.proposition71_actual_gaussian_offcenter",
+        "ZhangLS.Spec.proposition71OffCenterDeltaConstant",
+        "ZhangLS.Spec.proposition71_offcenter_delta_constant_pos",
+        "ZhangLS.Spec.proposition71_actual_delta_offcenter"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71DeltaLargeTail"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma44LongSum"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71Support",
+      "target_path": "ZhangLS/Spec/Proposition71Support.lean",
+      "sha256": "9bba5db8c5d68f0a31b6c11388e4db221a3e6b8f1fc9e9eab2388f38b7e1ccce",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_cutoff_le_P",
+        "ZhangLS.Spec.proposition71_short_index_lt_prime",
+        "ZhangLS.Spec.proposition71_short_index_unit",
+        "ZhangLS.Spec.proposition71_supported_second_index_unit",
+        "ZhangLS.Spec.proposition71_divisible_long_index_zero",
+        "ZhangLS.Spec.proposition71_factors_le_product",
+        "ZhangLS.Spec.proposition71_omitted_positive_coefficient_zero"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71Objects",
+        "ZhangLS.Spec.Proposition71GaussAverage"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71LocalizedGeometry",
+      "target_path": "ZhangLS/Spec/Proposition71LocalizedGeometry.lean",
+      "sha256": "dbe1df653f23a93de87a47c3938168b45588f10e8e561148cf6d2a2e9a22c366",
+      "declarations": [
+        "ZhangLS.Spec.proposition71LocalScale",
+        "ZhangLS.Spec.proposition71LocalizedIndices",
+        "ZhangLS.Spec.proposition71_mem_localized_indices",
+        "ZhangLS.Spec.proposition71_uniform_localized_geometry",
+        "ZhangLS.Spec.proposition71_localized_length_budget"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71Support"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma81SixOneLengths"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71DeltaLocalization",
+      "target_path": "ZhangLS/Spec/Proposition71DeltaLocalization.lean",
+      "sha256": "e00e9f2596209da454f93e38da63b01edd2a66d83950b5bef9f1c7e1a0f7bd1b",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_paper_prime_le_three_halves_P",
+        "ZhangLS.Spec.proposition71_offlocalized_clearance",
+        "ZhangLS.Spec.proposition71_actual_offlocalized_delta"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71DeltaGaussianTail",
+        "ZhangLS.Spec.Proposition71LocalizedGeometry"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.AllModuliLargeSieve"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71DyadicCoefficientEnergy",
+      "target_path": "ZhangLS/Spec/Proposition71DyadicCoefficientEnergy.lean",
+      "sha256": "e3c8d08d7c0ddbccfeb9b7f16d7f869c9c7d6f38500895ce1c93c57fe19c914e",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_actual_dyadic_coefficient_energy",
+        "ZhangLS.Spec.proposition71_actual_weighted_dyadic_kappa_mean",
+        "ZhangLS.Spec.proposition71_actual_localized_kappa_mean"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71CoefficientEnergy",
+        "ZhangLS.Spec.Proposition71DivisorWeights"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.AllModuliLargeSieve"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71DyadicCover",
+      "target_path": "ZhangLS/Spec/Proposition71DyadicCover.lean",
+      "sha256": "68bc48664170f9c70981d44fe59994d45ef92cff60e20a038e51051195d9d579",
+      "declarations": [
+        "ZhangLS.Spec.proposition71DyadicScale",
+        "ZhangLS.Spec.proposition71DyadicBlockCount",
+        "ZhangLS.Spec.proposition71_dyadic_scale_lower",
+        "ZhangLS.Spec.proposition71_dyadic_scale_pos",
+        "ZhangLS.Spec.proposition71_dyadic_block_count_bound",
+        "ZhangLS.Spec.proposition71_dyadic_cover",
+        "ZhangLS.Spec.proposition71_dyadic_cover_unique"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.AllModuliLargeSieve"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71DyadicPrimeMean",
+      "target_path": "ZhangLS/Spec/Proposition71DyadicPrimeMean.lean",
+      "sha256": "62a791bb7824bb73cf3aa163c58e13bf01ba9ac3dda6ec6f9cbfca2f61161a0c",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_primitive_inverse_sum",
+        "ZhangLS.Spec.proposition71_paper_prime_le_twice_P",
+        "ZhangLS.Spec.proposition71_actual_prime_coefficient_energy",
+        "ZhangLS.Spec.proposition71_actual_weighted_dyadic_prime_mean",
+        "ZhangLS.Spec.proposition71_actual_weighted_dyadic_inverse_prime_mean"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71DyadicCoefficientEnergy"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71SigmaMellin",
+      "target_path": "ZhangLS/Spec/Proposition71SigmaMellin.lean",
+      "sha256": "b03875f4f39d48aa59c05880a02aad5a9e3cb65d53eeaaa656c58551bc77be28",
+      "declarations": [
+        "ZhangLS.Spec.proposition71KappaCharacterPolynomial",
+        "ZhangLS.Spec.proposition71PrimeCharacterPolynomial",
+        "ZhangLS.Spec.proposition71SigmaOnSet",
+        "ZhangLS.Spec.proposition71SigmaMellinIntegrand",
+        "ZhangLS.Spec.proposition71_kappa_character_polynomial_factor",
+        "ZhangLS.Spec.proposition71_prime_character_polynomial_factor",
+        "ZhangLS.Spec.proposition71_sigma_integrand_eq_double",
+        "ZhangLS.Spec.proposition71_actual_sigma_mellin",
+        "ZhangLS.Spec.proposition71_sigma_mellin_integrable",
+        "ZhangLS.Spec.proposition71_sigma_mellin_norm"
+      ],
+      "declaration_count": 10,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71MellinDoubleSum",
+        "ZhangLS.Spec.Proposition71DyadicPrimeMean"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71DyadicMellinMean",
+      "target_path": "ZhangLS/Spec/Proposition71DyadicMellinMean.lean",
+      "sha256": "813451b2abb19a2b1b50578def2589001c48604783172e1fc085754e09e61ed8",
+      "declarations": [
+        "ZhangLS.Spec.proposition71DyadicCharacters",
+        "ZhangLS.Spec.proposition71_mem_dyadic_characters",
+        "ZhangLS.Spec.proposition71DyadicSigmaNormSum",
+        "ZhangLS.Spec.proposition71DyadicPolynomialNormSum",
+        "ZhangLS.Spec.proposition71_dyadic_sigma_norm_sum_expanded",
+        "ZhangLS.Spec.proposition71_dyadic_mellin_product_integrable",
+        "ZhangLS.Spec.proposition71_actual_dyadic_mellin_mean"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71SigmaMellin",
+        "ZhangLS.Spec.Proposition71WeightedCauchy"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71DyadicSigmaBound",
+      "target_path": "ZhangLS/Spec/Proposition71DyadicSigmaBound.lean",
+      "sha256": "bcd5ec01d67fffb436d649cd85b64bfd658b8e5e0d8d7f515a60a158c6c881d4",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_actual_delta_norm_integral",
+        "ZhangLS.Spec.proposition71_actual_dyadic_product_bound",
+        "ZhangLS.Spec.proposition71_actual_weighted_dyadic_sigma_bound"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71DyadicMellinMean"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71ExceptionalMoments",
+      "target_path": "ZhangLS/Spec/Proposition71ExceptionalMoments.lean",
+      "sha256": "bead8dc5724c3dd4608278ebd707096bb3e61998b9e17dc6fb313ff0df9ecfb8",
+      "declarations": [
+        "ZhangLS.Spec.proposition71TruncatedKappaCoefficient",
+        "ZhangLS.Spec.proposition71TruncatedKappaPolynomial",
+        "ZhangLS.Spec.proposition71_strict_polynomial_eq_LSeries",
+        "ZhangLS.Spec.proposition71_mem_long_indices",
+        "ZhangLS.Spec.proposition71_truncated_coefficient_majorant",
+        "ZhangLS.Spec.proposition71_truncated_coefficient_energy",
+        "ZhangLS.Spec.proposition71_actual_kappa_second_moment",
+        "ZhangLS.Spec.proposition71_exceptional_holder"
+      ],
+      "declaration_count": 8,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71CoefficientEnergy"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma33",
+        "ZhangLS.Spec.Lemma81ActualPolynomialMoments"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71Phase",
+      "target_path": "ZhangLS/Spec/Proposition71Phase.lean",
+      "sha256": "5594f475bf310a72a762ed24af2fc16ba64c1dcf5ab8790cf624b19665bfb273",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_imaginary_phase_distance",
+        "ZhangLS.Spec.proposition71_prime_window_log_error",
+        "ZhangLS.Spec.proposition71_actual_prime_phase_rate",
+        "ZhangLS.Spec.proposition71_actual_phase_rate",
+        "ZhangLS.Spec.proposition71_uniform_phase_budget"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma52Product",
+        "ZhangLS.Spec.Lemma56"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71PhaseSummation",
+      "target_path": "ZhangLS/Spec/Proposition71PhaseSummation.lean",
+      "sha256": "816a8200059375d9815c08256e8c2119886e981b45018dbcbeffe843cdeb6b53",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_prime_windows_equal",
+        "ZhangLS.Spec.proposition71_actual_prime_masses_equal",
+        "ZhangLS.Spec.proposition71_weighted_three_norm",
+        "ZhangLS.Spec.proposition71_summed_phase_budget",
+        "ZhangLS.Spec.proposition71_actual_arithmetic_phase_budget"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71Phase",
+        "ZhangLS.Spec.Proposition71Objects"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71ExceptionalLittleO",
+      "target_path": "ZhangLS/Spec/Proposition71ExceptionalLittleO.lean",
+      "sha256": "96d037fb9c34487ae3baf63429d6a45bf7dc34e325ac92424fcafb07a8dd9eca",
+      "declarations": [
+        "ZhangLS.Spec.proposition71ExceptionalPolynomialMean",
+        "ZhangLS.Spec.proposition71_exceptional_mean_nonneg",
+        "ZhangLS.Spec.proposition71_exceptional_fourth_power_budget",
+        "ZhangLS.Spec.proposition71_original_seven_five"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71ExceptionalMoments",
+        "ZhangLS.Spec.Proposition71PhaseSummation"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma56ActualPrimeMassNormalization"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71LargeLArgument",
+      "target_path": "ZhangLS/Spec/Proposition71LargeLArgument.lean",
+      "sha256": "2bf02c7287c3ee273f1809c060e0f603c0bdbb1e1c834d5a01329591a2dac3e8",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_log_power_linear_quarter_threshold",
+        "ZhangLS.Spec.proposition71_uniform_large_l_geometry",
+        "ZhangLS.Spec.proposition71_uniform_large_l_argument"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71DeltaLocalization"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71LargeLPrimeKernel",
+      "target_path": "ZhangLS/Spec/Proposition71LargeLPrimeKernel.lean",
+      "sha256": "3504a247741aaa8133d1777d1ed46a946ec8c67739767484a472f166888c4f8e",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_prime_second_mass_bound",
+        "ZhangLS.Spec.proposition71_positive_imaginary_power_norm",
+        "ZhangLS.Spec.proposition71_ratio_inverse_square",
+        "ZhangLS.Spec.proposition71_large_l_prime_kernel"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71LargeLArgument"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71TauDirichlet",
+      "target_path": "ZhangLS/Spec/Proposition71TauDirichlet.lean",
+      "sha256": "d1d2db89b15dac10b1ccaf8b683817eb65bbd23cb7cfc74fa74b067788016eed",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_tau_five_quadratic_summable",
+        "ZhangLS.Spec.proposition71TauFiveQuadraticMass",
+        "ZhangLS.Spec.proposition71_tau_five_quadratic_mass_pos",
+        "ZhangLS.Spec.proposition71_actual_dilated_kappa_majorant",
+        "ZhangLS.Spec.proposition71_tau_dominated_series_summable",
+        "ZhangLS.Spec.proposition71_tau_dominated_tsum_bound"
+      ],
+      "declaration_count": 6,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71CoefficientEnergy",
+        "ZhangLS.Spec.Proposition71DivisorWeights"
+      ],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma32SeriesConvergence"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71SigmaLargeLTail",
+      "target_path": "ZhangLS/Spec/Proposition71SigmaLargeLTail.lean",
+      "sha256": "c25a29633d609db6ca54c14c8118a6584400e60765aa68cb49f51a9a8abcd3aa",
+      "declarations": [
+        "ZhangLS.Spec.proposition71SigmaTerm",
+        "ZhangLS.Spec.proposition71SigmaLargeLTerm",
+        "ZhangLS.Spec.proposition71SigmaLargeLTail",
+        "ZhangLS.Spec.proposition71_large_l_term_majorant",
+        "ZhangLS.Spec.proposition71_large_l_tail_bound"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71LargeLPrimeKernel",
+        "ZhangLS.Spec.Proposition71TauDirichlet"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71LocalizedSigmaSquare",
+      "target_path": "ZhangLS/Spec/Proposition71LocalizedSigmaSquare.lean",
+      "sha256": "2f4f2dc4b1be3cba86098b7475e3a08a135910bea25382120111bcbf3f180b22",
+      "declarations": [
+        "ZhangLS.Spec.proposition71SigmaStar",
+        "ZhangLS.Spec.proposition71LocalizedDyadicMean",
+        "ZhangLS.Spec.proposition71_localized_dyadic_mean_expanded",
+        "ZhangLS.Spec.proposition71_localized_dyadic_mean_nonneg",
+        "ZhangLS.Spec.proposition71LargeMeanSquareConstant",
+        "ZhangLS.Spec.proposition71_large_mean_square_constant_pos",
+        "ZhangLS.Spec.proposition71_actual_localized_sigma_square"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71LocalizedGeometry",
+        "ZhangLS.Spec.Proposition71DyadicSigmaBound"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71SigmaSeries",
+      "target_path": "ZhangLS/Spec/Proposition71SigmaSeries.lean",
+      "sha256": "47c840544d713e7f15a6b947741cba39488edc6b5031cacdf9767e0ab1867913",
+      "declarations": [
+        "ZhangLS.Spec.proposition71SigmaSeries",
+        "ZhangLS.Spec.proposition71SigmaOffLocalTerm",
+        "ZhangLS.Spec.proposition71SigmaOffLocalTail",
+        "ZhangLS.Spec.proposition71_tsum_finite_split",
+        "ZhangLS.Spec.proposition71_sigma_series_summable",
+        "ZhangLS.Spec.proposition71_sigma_local_finite_sum",
+        "ZhangLS.Spec.proposition71_sigma_exact_localization"
+      ],
+      "declaration_count": 7,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71SigmaLargeLTail",
+        "ZhangLS.Spec.Proposition71LocalizedSigmaSquare"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71OffLocalMajorant",
+      "target_path": "ZhangLS/Spec/Proposition71OffLocalMajorant.lean",
+      "sha256": "8a829b851ac8aa9ccfed7a7d87dcda4b095f08281dc961b0676a2afcd430781f",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_offlocal_prime_kernel",
+        "ZhangLS.Spec.proposition71_offlocal_sigma_term",
+        "ZhangLS.Spec.proposition71_offlocal_term_majorant"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71SigmaSeries"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71OffLocalTail",
+      "target_path": "ZhangLS/Spec/Proposition71OffLocalTail.lean",
+      "sha256": "971c5628c086614ce28eb660fe08f57de3bbc5ca0fb849c2d860aaadfb654e02",
+      "declarations": [
+        "ZhangLS.Spec.proposition71OffLocalTailConstant",
+        "ZhangLS.Spec.proposition71_offlocal_tail_constant_pos",
+        "ZhangLS.Spec.proposition71_actual_offlocal_tail_bound"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71OffLocalMajorant"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71TailScalarBudget",
+      "target_path": "ZhangLS/Spec/Proposition71TailScalarBudget.lean",
+      "sha256": "e5242e459bb8de0bceb0745cf63a16d94f9b3494b491f3170a8865ebf1aef9ea",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_tail_scalar_budget"
+      ],
+      "declaration_count": 1,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71DeltaLargeTail"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71OffLocalAggregate",
+      "target_path": "ZhangLS/Spec/Proposition71OffLocalAggregate.lean",
+      "sha256": "4429dd1be7cf56d3a0f2a466896af34c61894882b38b46492ee22b390f1904e4",
+      "declarations": [
+        "ZhangLS.Spec.proposition71OffLocalConductorAggregate",
+        "ZhangLS.Spec.proposition71_hr_le_cutoff_of_dhr",
+        "ZhangLS.Spec.proposition71_offlocal_conductor_aggregate_bound",
+        "ZhangLS.Spec.proposition71OffLocalLargeAggregate",
+        "ZhangLS.Spec.proposition71_offlocal_large_aggregate_power_saving"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71OffLocalTail",
+        "ZhangLS.Spec.Proposition71ConductorAggregateAlgebra",
+        "ZhangLS.Spec.Proposition71DyadicCover",
+        "ZhangLS.Spec.Proposition71TailScalarBudget"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71MellinPrimeBound",
+      "target_path": "ZhangLS/Spec/Proposition71MellinPrimeBound.lean",
+      "sha256": "2e2217e28cae12e459d1c42dc7fc23ec93bcf03f4d3d2a992b5c06ce5bb4b405",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_weighted_prime_polynomial_continuous",
+        "ZhangLS.Spec.proposition71_weighted_prime_polynomial_norm",
+        "ZhangLS.Spec.proposition71_weighted_prime_kernel_integrable",
+        "ZhangLS.Spec.proposition71_actual_mellin_prime_bound"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71MellinFiniteSum"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71WeightedHeightTail",
+      "target_path": "ZhangLS/Spec/Proposition71WeightedHeightTail.lean",
+      "sha256": "f8ab6db4b53128cc78ee28bdd0437fc2aceebdba0e210e2b7c7334e2fb303501",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_arctan_le_self",
+        "ZhangLS.Spec.proposition71_positive_cauchy_tail",
+        "ZhangLS.Spec.proposition71_negative_cauchy_tail",
+        "ZhangLS.Spec.proposition71_bounded_cauchy_integrable",
+        "ZhangLS.Spec.proposition71_cauchy_window_and_tail"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71MellinPrimeBound"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71SmallConductorIntegral",
+      "target_path": "ZhangLS/Spec/Proposition71SmallConductorIntegral.lean",
+      "sha256": "df6d67b814e9146f05e6731df41305231473b862620086fb5bbed22506e24fd8",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_actual_prime_sum_continuous",
+        "ZhangLS.Spec.proposition71_actual_prime_sum_trivial_bound",
+        "ZhangLS.Spec.proposition71_actual_inducer_weighted_prime_integral",
+        "ZhangLS.Spec.proposition71_decay_le_inverse_modulus",
+        "ZhangLS.Spec.proposition71_actual_inducer_weighted_prime_integral_inverse_D"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71Conductor",
+        "ZhangLS.Spec.Proposition71WeightedHeightTail"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71SmallConductorKernel",
+      "target_path": "ZhangLS/Spec/Proposition71SmallConductorKernel.lean",
+      "sha256": "8eb56681cebb15cf9ce5b244314d59d491408c51c6540a084468bb5ccd940fcd",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_small_primitive_weighted_integral",
+        "ZhangLS.Spec.proposition71_prime_shift_polynomial",
+        "ZhangLS.Spec.proposition71_small_primitive_delta_sum"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71SmallConductorIntegral",
+        "ZhangLS.Spec.Proposition71MellinPrimeBound"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71SmallSigma",
+      "target_path": "ZhangLS/Spec/Proposition71SmallSigma.lean",
+      "sha256": "b9a186477d33d2550b7803590bdac9553e784c82dd74b5a26a96a52fef5e5953",
+      "declarations": [
+        "ZhangLS.Spec.proposition71SigmaTruncated",
+        "ZhangLS.Spec.proposition71_actual_small_sigma_bound"
+      ],
+      "declaration_count": 2,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71SmallConductorKernel",
+        "ZhangLS.Spec.Proposition71ConductorWeights",
+        "ZhangLS.Spec.Proposition71CoefficientEnergy"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71SmallConductorAggregate",
+      "target_path": "ZhangLS/Spec/Proposition71SmallConductorAggregate.lean",
+      "sha256": "c1597c971722274b88ee08554bdbc748f2bcca29481fd2945a262c81a4a822a4",
+      "declarations": [
+        "ZhangLS.Spec.proposition71SmallConductorAggregate",
+        "ZhangLS.Spec.proposition71_small_conductor_aggregate_bound"
+      ],
+      "declaration_count": 2,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71SmallSigma",
+        "ZhangLS.Spec.Proposition71CharacterConductorWeights"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71QuarterConductorSaving",
+      "target_path": "ZhangLS/Spec/Proposition71QuarterConductorSaving.lean",
+      "sha256": "4a436cc492fe52d834a5bbad7764ab05116ff2a9dd2c21e8d4423c8bba759728",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_log_power_eighth_threshold",
+        "ZhangLS.Spec.proposition71_quarter_small_conductor_power_saving"
+      ],
+      "declaration_count": 2,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71SmallConductorAggregate"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71LocalizedDyadicSaving",
+      "target_path": "ZhangLS/Spec/Proposition71LocalizedDyadicSaving.lean",
+      "sha256": "c0ee5061f92cf4fd2c63383c3e3ede6a559941a54cc91bb68e4db719b4e633ab",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_actual_localized_dyadic_power_saving"
+      ],
+      "declaration_count": 1,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71LocalizedSigmaSquare",
+        "ZhangLS.Spec.Proposition71QuarterConductorSaving"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71LargeConductorWeights",
+      "target_path": "ZhangLS/Spec/Proposition71LargeConductorWeights.lean",
+      "sha256": "db9185166aa6e7444606674c8854953fef3c98fe1c308411f1f01020f5ac6d66",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_large_conductor_weight",
+        "ZhangLS.Spec.proposition71LocalizedConductorBlock",
+        "ZhangLS.Spec.proposition71_localized_conductor_block_nonneg",
+        "ZhangLS.Spec.proposition71_localized_conductor_block_le_mean",
+        "ZhangLS.Spec.proposition71_localized_conductor_block_bound"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71LocalizedDyadicSaving"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71LargeConductorAggregate",
+      "target_path": "ZhangLS/Spec/Proposition71LargeConductorAggregate.lean",
+      "sha256": "d93592c190243cb6cd7ca0f70f00ac74e3c9b9b0f551c19f250885d88b8476d1",
+      "declarations": [
+        "ZhangLS.Spec.proposition71LocalizedDyadicAggregate",
+        "ZhangLS.Spec.proposition71_localized_dyadic_aggregate_nonneg",
+        "ZhangLS.Spec.proposition71_localized_dyadic_aggregate_bound"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71LargeConductorWeights"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71FullSigmaBlock",
+      "target_path": "ZhangLS/Spec/Proposition71FullSigmaBlock.lean",
+      "sha256": "47c062437e6e286cf8d404c7652d7e7dc6a361f99ecb19ff94c5327a0b41da85",
+      "declarations": [
+        "ZhangLS.Spec.proposition71FullSigmaConductorBlock",
+        "ZhangLS.Spec.proposition71_dhR_le_cutoff",
+        "ZhangLS.Spec.proposition71_strict_localized_aggregate_le",
+        "ZhangLS.Spec.proposition71_full_sigma_block_le_local_and_tail"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71ConductorAggregateOrder",
+        "ZhangLS.Spec.Proposition71OffLocalAggregate",
+        "ZhangLS.Spec.Proposition71LargeConductorAggregate"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71LargeConductorSaving",
+      "target_path": "ZhangLS/Spec/Proposition71LargeConductorSaving.lean",
+      "sha256": "a40a46fe3109547a1743fa8966d908a7a770b5470c61cc5b8d855700e4d346a4",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_log_power_rpow_threshold",
+        "ZhangLS.Spec.proposition71LocalizedLargeAggregate",
+        "ZhangLS.Spec.proposition71_localized_large_aggregate_nonneg",
+        "ZhangLS.Spec.proposition71_localized_large_aggregate_power_saving"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71LargeConductorAggregate",
+        "ZhangLS.Spec.Proposition71DyadicCover"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71FullLargeConductor",
+      "target_path": "ZhangLS/Spec/Proposition71FullLargeConductor.lean",
+      "sha256": "246cdc782905d4d1f4d68074f50b7a6576bed771d9688229678ca86ec3bdf063",
+      "declarations": [
+        "ZhangLS.Spec.proposition71ActualLargeConductorAggregate",
+        "ZhangLS.Spec.proposition71_actual_large_conductor_dyadic_cover",
+        "ZhangLS.Spec.proposition71_actual_large_conductor_power_saving"
+      ],
+      "declaration_count": 3,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71FullSigmaBlock",
+        "ZhangLS.Spec.Proposition71LargeConductorSaving"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71SigmaTruncation",
+      "target_path": "ZhangLS/Spec/Proposition71SigmaTruncation.lean",
+      "sha256": "c7cca56101e2ba27d5fc847a92e27e8234ee63a929d48cb3044d7ce05b9875a7",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_mem_sigma_truncation",
+        "ZhangLS.Spec.proposition71_sigma_truncated_finite_sum",
+        "ZhangLS.Spec.proposition71_sigma_truncation_complement",
+        "ZhangLS.Spec.proposition71_sigma_exact_truncation"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71SigmaSeries",
+        "ZhangLS.Spec.Proposition71SmallSigma"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71OuterTailBudget",
+      "target_path": "ZhangLS/Spec/Proposition71OuterTailBudget.lean",
+      "sha256": "0d302e4c06965fd59c4a75672f0dc844029be9aafb5a13d53a251b3bae8efaec",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_outer_tail_budget"
+      ],
+      "declaration_count": 1,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71OffLocalAggregate"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71LargeLTailAggregate",
+      "target_path": "ZhangLS/Spec/Proposition71LargeLTailAggregate.lean",
+      "sha256": "309da676238fec53359093063e1ce07673c1d45bda7e6d23a1f24d3160e23ed1",
+      "declarations": [
+        "ZhangLS.Spec.proposition71LargeLTailAggregate",
+        "ZhangLS.Spec.proposition71_large_l_tail_aggregate_bound"
+      ],
+      "declaration_count": 2,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71OuterTailBudget"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71FullSmallConductor",
+      "target_path": "ZhangLS/Spec/Proposition71FullSmallConductor.lean",
+      "sha256": "f35b5cf055153a6234d1fd3083aadd6bb7c82b8178ed48627955e6d7e7c38ba4",
+      "declarations": [
+        "ZhangLS.Spec.proposition71ActualSmallConductorAggregate",
+        "ZhangLS.Spec.proposition71_strict_truncated_aggregate_le",
+        "ZhangLS.Spec.proposition71_D_le_P",
+        "ZhangLS.Spec.proposition71_actual_small_conductor_power_saving"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71SigmaTruncation",
+        "ZhangLS.Spec.Proposition71LargeLTailAggregate",
+        "ZhangLS.Spec.Proposition71ConductorAggregateOrder",
+        "ZhangLS.Spec.Proposition71QuarterConductorSaving"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71FullConductorAggregate",
+      "target_path": "ZhangLS/Spec/Proposition71FullConductorAggregate.lean",
+      "sha256": "68fd6f5b667cec686f416edd897062eb1a7bafb5d16410ad76f095bbd6966c43",
+      "declarations": [
+        "ZhangLS.Spec.proposition71ActualConductorAggregate",
+        "ZhangLS.Spec.proposition71_strict_triple_indices",
+        "ZhangLS.Spec.proposition71_actual_conductor_split",
+        "ZhangLS.Spec.proposition71_actual_conductor_power_saving"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71FullLargeConductor",
+        "ZhangLS.Spec.Proposition71FullSmallConductor",
+        "ZhangLS.Spec.Proposition71ConductorModulusRestriction"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71LocalResidues",
+      "target_path": "ZhangLS/Spec/Proposition71LocalResidues.lean",
+      "sha256": "d3f0c70a319ba84232b206597a29ed0b8c2395fe3522128a7f42ab27b630ce58",
+      "declarations": [
+        "ZhangLS.Spec.proposition71ResidueIntegrand",
+        "ZhangLS.Spec.proposition71PoleNumerator",
+        "ZhangLS.Spec.proposition71ActualR",
+        "ZhangLS.Spec.proposition71_cyclic_zeta_product",
+        "ZhangLS.Spec.proposition71_zeta_analyticAt",
+        "ZhangLS.Spec.proposition71_pole_numerator_analytic",
+        "ZhangLS.Spec.proposition71_integrand_regularization",
+        "ZhangLS.Spec.proposition71_actual_local_factorization",
+        "ZhangLS.Spec.proposition71_residue_limit",
+        "ZhangLS.Spec.proposition71_actual_zeta_denominator_nonzero",
+        "ZhangLS.Spec.proposition71_actual_residue_formula",
+        "ZhangLS.Spec.proposition71_actual_residue_local_data"
+      ],
+      "declaration_count": 12,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Section15PaperBridge"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71Mobius",
+      "target_path": "ZhangLS/Spec/Proposition71Mobius.lean",
+      "sha256": "039c4f5320d78a18b7510bf768b8e4a5e8ca05b9eb5687955121edf5a1c58f81",
+      "declarations": [
+        "ZhangLS.Spec.proposition71_mobius_coprime_indicator",
+        "ZhangLS.Spec.proposition71_mobius_insert",
+        "ZhangLS.Spec.proposition71_mobius_coprime_factor",
+        "ZhangLS.Spec.proposition71_mobius_factor_all"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma83Definitions"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71OriginalSmallConductor",
+      "target_path": "ZhangLS/Spec/Proposition71OriginalSmallConductor.lean",
+      "sha256": "f09257c45f7b971d66d3a54ec5092ebcb6f0ab392f371597506a98aad733b5d0",
+      "declarations": [
+        "ZhangLS.Spec.proposition71OriginalSigmaTruncated",
+        "ZhangLS.Spec.proposition71_original_sigma_expanded",
+        "ZhangLS.Spec.proposition71OriginalQuarterAggregate",
+        "ZhangLS.Spec.proposition71_beta_three_height_margin",
+        "ZhangLS.Spec.proposition71_original_quarter_aggregate_power_saving"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71QuarterConductorSaving"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71OriginalConductorLittleO",
+      "target_path": "ZhangLS/Spec/Proposition71OriginalConductorLittleO.lean",
+      "sha256": "c5a73e151e9e1e8e1ecdc1f82c4460c21cfa3a1a15b1b147811d46d9f095b035",
+      "declarations": [
+        "ZhangLS.Spec.proposition71OriginalSigmaSeries",
+        "ZhangLS.Spec.proposition71_original_sigma_series_expanded",
+        "ZhangLS.Spec.proposition71OriginalConductorAggregate",
+        "ZhangLS.Spec.proposition71_original_seven_thirteen_majorant_little_o"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71FullConductorAggregate",
+        "ZhangLS.Spec.Proposition71OriginalSmallConductor"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71OriginalLargeConductor",
+      "target_path": "ZhangLS/Spec/Proposition71OriginalLargeConductor.lean",
+      "sha256": "8ce98efb1aac166a3e87b1707b967fdd8edaf4cec259493dbc3f8a02b0410564",
+      "declarations": [
+        "ZhangLS.Spec.proposition71OriginalSigmaStar",
+        "ZhangLS.Spec.proposition71_original_sigma_star_expanded",
+        "ZhangLS.Spec.proposition71OriginalLocalizedLargeAggregate",
+        "ZhangLS.Spec.proposition71_original_localized_large_power_saving",
+        "ZhangLS.Spec.proposition71_original_localized_large_little_o"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "retained_identical",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71LargeConductorSaving"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71ResidueCorrection",
+      "target_path": "ZhangLS/Spec/Proposition71ResidueCorrection.lean",
+      "sha256": "7cc824ce4d2fa35e3a104e1073cabcd6b6c1069ec209ac9e2f6bef220d1c2cf2",
+      "declarations": [
+        "ZhangLS.Spec.proposition71ResidueCorrection",
+        "ZhangLS.Spec.proposition71ResidueFactorConstant",
+        "ZhangLS.Spec.proposition71_residue_factor_constant_pos",
+        "ZhangLS.Spec.proposition71_actual_residue_regular_formula",
+        "ZhangLS.Spec.proposition71_actual_poles_in_delta_disk",
+        "ZhangLS.Spec.proposition71_actual_delta_log_error_threshold",
+        "ZhangLS.Spec.proposition71_actual_delta_error_threshold",
+        "ZhangLS.Spec.proposition71_actual_zeta_factor_errors",
+        "ZhangLS.Spec.proposition71_actual_correction_error",
+        "ZhangLS.Spec.proposition71_residue_parameters_threshold"
+      ],
+      "declaration_count": 10,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71LocalResidues"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71ResidueScalar",
+      "target_path": "ZhangLS/Spec/Proposition71ResidueScalar.lean",
+      "sha256": "9503f350a5f8d1bae86da6e5158d1d492cf25c674a25246b6ff2f00855bd92eb",
+      "declarations": [
+        "ZhangLS.Spec.proposition71ResidueGeometric",
+        "ZhangLS.Spec.proposition71ResidueCoefficient",
+        "ZhangLS.Spec.proposition71ResidueSignedWeight",
+        "ZhangLS.Spec.proposition71ResidueWeight",
+        "ZhangLS.Spec.proposition71ResiduePhaseSign",
+        "ZhangLS.Spec.proposition71_residue_real_bounds",
+        "ZhangLS.Spec.proposition71_residue_geometric_formula",
+        "ZhangLS.Spec.proposition71_residue_geometric_norm",
+        "ZhangLS.Spec.proposition71_residue_geometric_error",
+        "ZhangLS.Spec.proposition71ResiduePhaseConstant",
+        "ZhangLS.Spec.proposition71_residue_prime_log_error",
+        "ZhangLS.Spec.proposition71_residue_prime_offset_errors",
+        "ZhangLS.Spec.proposition71_residue_prime_phase_norm",
+        "ZhangLS.Spec.proposition71_residue_prime_phase",
+        "ZhangLS.Spec.proposition71_residue_phase_sign_norm",
+        "ZhangLS.Spec.proposition71_residue_signed_weight_identity",
+        "ZhangLS.Spec.proposition71ResidueScalarConstant",
+        "ZhangLS.Spec.proposition71_residue_scalar_constant_pos",
+        "ZhangLS.Spec.proposition71_residue_scalar_normalization",
+        "ZhangLS.Spec.proposition71_eventual_residue_scalar_normalization"
+      ],
+      "declaration_count": 20,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [],
+      "external_project_dependencies": [
+        "ZhangLS.Spec.Lemma153ActualShiftRatio",
+        "ZhangLS.Spec.Lemma56"
+      ]
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition71ResidueNormalization",
+      "target_path": "ZhangLS/Spec/Proposition71ResidueNormalization.lean",
+      "sha256": "8c5f4a355d653830189fbde5a29120ab9cf3f3e78febbc2467e9374cfbca8ca6",
+      "declarations": [
+        "ZhangLS.Spec.proposition71ResidueNormalizationConstant",
+        "ZhangLS.Spec.proposition71_residue_normalization_constant_pos",
+        "ZhangLS.Spec.proposition71_actual_residue_normalization_bound",
+        "ZhangLS.Spec.proposition71_actual_residue_normalization",
+        "ZhangLS.Spec.proposition71_actual_residue_nonzero"
+      ],
+      "declaration_count": 5,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71ResidueCorrection",
+        "ZhangLS.Spec.Proposition71ResidueScalar"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Section721FiniteReindex",
+      "target_path": "ZhangLS/Spec/Section721FiniteReindex.lean",
+      "sha256": "2022d42c1d4ad1a18220e4f15f9aa6b2104c048dd9b267aaf86b66e65fed06db",
+      "declarations": [
+        "ZhangLS.Spec.Section721PositiveLowerSet",
+        "ZhangLS.Spec.section721_indices_lower",
+        "ZhangLS.Spec.section721_common_divisor_reindex",
+        "ZhangLS.Spec.section721_product_reindex"
+      ],
+      "declaration_count": 4,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Proposition71Mobius",
+        "ZhangLS.Spec.Proposition71ArithmeticFactors",
+        "ZhangLS.Spec.Proposition71Objects"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Section721ArithmeticWeights",
+      "target_path": "ZhangLS/Spec/Section721ArithmeticWeights.lean",
+      "sha256": "e691d33ee78cbfe0c8835e49f7645ecd309142baf86de0c9d5f00d774e146588",
+      "declarations": [
+        "ZhangLS.Spec.section721_weight_rearrangement"
+      ],
+      "declaration_count": 1,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Section721FiniteReindex"
+      ],
+      "external_project_dependencies": []
+    },
+    {
+      "module": "ZhangLS.Spec.Section721FiniteRearrangement",
+      "target_path": "ZhangLS/Spec/Section721FiniteRearrangement.lean",
+      "sha256": "4c0253871a24750ba25f73b0ed5f659df80af4f6b8ebd029b2a61ea42556ebf7",
+      "declarations": [
+        "ZhangLS.Spec.section721StarArithmeticSum",
+        "ZhangLS.Spec.section721StarTerm",
+        "ZhangLS.Spec.section721ReindexedTerm",
+        "ZhangLS.Spec.section721_supported_le_mem",
+        "ZhangLS.Spec.section721_omitted_star_coefficient_zero",
+        "ZhangLS.Spec.section721_star_term_cutoff_zero",
+        "ZhangLS.Spec.section721_star_term_substitution",
+        "ZhangLS.Spec.section721_star_inner_reindex",
+        "ZhangLS.Spec.section721_divisor_sum_collapse",
+        "ZhangLS.Spec.section721_convolution_collapse",
+        "ZhangLS.Spec.section721_star_eq_arithmetic_sum"
+      ],
+      "declaration_count": 11,
+      "status": "new",
+      "change_from_prior_union": "added",
+      "local_dependencies": [
+        "ZhangLS.Spec.Section721ArithmeticWeights"
+      ],
+      "external_project_dependencies": []
+    }
+  ],
+  "frozen_preparation_manifest_sha256": "2e281ad1d52120b4cca968bac7fbd234c661e15b8e3218aa7490da1ba83a1785"
+}

@@ -1,0 +1,280 @@
+{
+  "candidate_count": 413,
+  "previous_count": 392,
+  "new_candidates": [
+    {
+      "path": "ZhangLS/Spec/InducedGaussConductor.lean",
+      "line": 93,
+      "decl": "theorem inducedGauss_norm_le_sqrt_conductor {N : \u2115} [NeZero N]",
+      "local_origin": "have hh := inducedGauss_changeLevel_norm_le \u03b8.primitiveCharacter \u03b8.conductor_dvd_level",
+      "context": [
+        "  letI : NeZero \u03b8.conductor := \u27e8\u03b8.conductor_ne_zero\u27e9",
+        "  have hh := inducedGauss_changeLevel_norm_le \u03b8.primitiveCharacter \u03b8.conductor_dvd_level",
+        "  rw [changeLevel_primitiveCharacter,inducedGauss_primitive_norm \u03b8.primitiveCharacter",
+        "    \u03b8.primitiveCharacter_isPrimitive] at hh",
+        "  exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition141ComplexShift.lean",
+      "line": 123,
+      "decl": "theorem proposition141_complex_shift_parameters {D : \u2115} (hL : 2000 \u2264 lemma23PaperL D)",
+      "local_origin": "have hh := pow_le_pow_left\u2080 (by norm_num : (0:\u211d)\u22642) hL2 9",
+      "context": [
+        "  have hlog : 512 \u2264 Real.log (lemma23PaperP D) := by",
+        "    rw [lemma23PaperP,Real.log_exp]",
+        "    have hh := pow_le_pow_left\u2080 (by norm_num : (0:\u211d)\u22642) hL2 9",
+        "    norm_num at hh",
+        "    exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition141DivisorBudget.lean",
+      "line": 60,
+      "decl": "theorem proposition141_tau_six_linear_bound (n : \u2115) :",
+      "local_origin": "have hh := card_le_card hs",
+      "context": [
+        "    omega",
+        "  have hc : (n.primeFactors.filter (fun p => p<6)).card\u22643 := by",
+        "    have hh := card_le_card hs",
+        "    norm_num at hh",
+        "    exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition141OffDiagonal.lean",
+      "line": 58,
+      "decl": "theorem proposition141_off_diagonal_inducer_admissible {D m : \u2115} [NeZero m]",
+      "local_origin": "have hh := proposition141_actual_product_inducer_admissible \u03c7 (D.dvd_mul_right m)",
+      "context": [
+        "    (\u03b8.changeLevel (m.dvd_mul_left D)) hn",
+        "    (proposition141_lift_ne_chi_of_not_dvd \u03c7 \u03b8 hDm)",
+        "  dsimp only at hh \u22a2",
+        "  rw [he] at hh",
+        "  exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition141OffDiagonal.lean",
+      "line": 112,
+      "decl": "theorem proposition141_small_off_diagonal_inducer_prime_bound :",
+      "local_origin": "have hh := hbound \u03c7 (D.dvd_mul_right m) (\u03b8.changeLevel (m.dvd_mul_left D)) hDN hA hn",
+      "context": [
+        "    simp only [proposition141PrimeCharacter,lemma44CharacterTwist,map_inv]",
+        "  have hh := hbound \u03c7 (D.dvd_mul_right m) (\u03b8.changeLevel (m.dvd_mul_left D)) hDN hA hn",
+        "    (proposition141_lift_ne_chi_of_not_dvd \u03c7 \u03b8 hDm) hc \u03c4 h\u03c4",
+        "  rw [he] at hh",
+        "  exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition141PrimitiveSmallSum.lean",
+      "line": 94,
+      "decl": "theorem proposition141_uniform_primitive_small_character_sum_bound :",
+      "local_origin": "header/local context required",
+      "context": [
+        "  letI : NeZero (r*h) := \u27e8Nat.mul_ne_zero (NeZero.ne r) (NeZero.ne h)\u27e9",
+        "  have hn := proposition141_primitive_lift_nonprincipal (h:=h) \u03b8 hprim hr",
+        "  have hc : (\u03b8.changeLevel (r.dvd_mul_right h)).conductor<D^3 := by",
+        "    rw [lemma44_conductor_changeLevel \u03b8,show \u03b8.conductor=r from hprim]",
+        "    exact hrD"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71DeltaLargeTail.lean",
+      "line": 64,
+      "decl": "lemma proposition71_large_power_exponent {L x : \u211d} (hL : 2000\u2264L) (hx : L^500\u2264x) :",
+      "local_origin": "have hh := Real.rpow_le_rpow (pow_nonneg hLp.le 500) hx (by norm_num : (0:\u211d)\u226499/100)",
+      "context": [
+        "  have h495 : L^495\u2264x^(99/100 : \u211d) := by",
+        "    have hh := Real.rpow_le_rpow (pow_nonneg hLp.le 500) hx (by norm_num : (0:\u211d)\u226499/100)",
+        "    rw [\u2190Real.rpow_natCast L 500,\u2190Real.rpow_mul hLp.le] at hh",
+        "    norm_num only [show (500 : \u211d)*(99/100)=495 by norm_num,Real.rpow_natCast,Real.rpow_ofNat] at hh",
+        "    exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71DeltaLargeTail.lean",
+      "line": 73,
+      "decl": "lemma proposition71_large_power_exponent {L x : \u211d} (hL : 2000\u2264L) (hx : L^500\u2264x) :",
+      "local_origin": "have hh := Real.rpow_le_rpow (pow_nonneg hLp.le 500) hx (by norm_num : (0:\u211d)\u226489/100)",
+      "context": [
+        "  have h445 : L^445\u2264x^(89/100 : \u211d) := by",
+        "    have hh := Real.rpow_le_rpow (pow_nonneg hLp.le 500) hx (by norm_num : (0:\u211d)\u226489/100)",
+        "    rw [\u2190Real.rpow_natCast L 500,\u2190Real.rpow_mul hLp.le] at hh",
+        "    norm_num only [show (500 : \u211d)*(89/100)=445 by norm_num,Real.rpow_natCast,Real.rpow_ofNat] at hh",
+        "    exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71DeltaLargeTail.lean",
+      "line": 89,
+      "decl": "lemma proposition71_large_power_exponent {L x : \u211d} (hL : 2000\u2264L) (hx : L^500\u2264x) :",
+      "local_origin": "have hh := mul_le_mul_of_nonneg_right hfactor (Real.rpow_nonneg hxp.le (1/10 : \u211d))",
+      "context": [
+        "  have hprod : 40*L^400*x^(1/10 : \u211d)\u2264x^(99/100 : \u211d) := by",
+        "    have hh := mul_le_mul_of_nonneg_right hfactor (Real.rpow_nonneg hxp.le (1/10 : \u211d))",
+        "    rw [\u2190Real.rpow_add hxp] at hh",
+        "    norm_num only [show (89/100 : \u211d)+1/10=99/100 by norm_num] at hh",
+        "    exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71ExceptionalLittleO.lean",
+      "line": 75,
+      "decl": "theorem proposition71_exceptional_fourth_power_budget :",
+      "local_origin": "have hh := pow_le_pow_left\u2080 (sq_nonneg (lemma23PaperP D)) hPm 3",
+      "context": [
+        "    linarith",
+        "  have hP6 : lemma23PaperP D^6\u226464*lemma33ActualPrimeMass D^3*lemma23PaperL D^231 := by",
+        "    have hh := pow_le_pow_left\u2080 (sq_nonneg (lemma23PaperP D)) hPm 3",
+        "    norm_num only [mul_pow,\u2190pow_mul] at hh",
+        "    exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71GaussAverage.lean",
+      "line": 108,
+      "decl": "theorem proposition71_primitive_gauss_error {p : \u2115} [NeZero p] (hp : p.Prime)",
+      "local_origin": "have hh := norm_sub_le (1 : \u2102) (ZMod.stdAddChar (l*k\u207b\u00b9))",
+      "context": [
+        "    exact Circle.norm_coe _",
+        "  have hh := norm_sub_le (1 : \u2102) (ZMod.stdAddChar (l*k\u207b\u00b9))",
+        "  rw [hn,norm_one] at hh",
+        "  norm_num at hh \u22a2",
+        "  exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71LargeConductorSaving.lean",
+      "line": 28,
+      "decl": "lemma proposition71_log_power_rpow_threshold (k : \u2115) {s : \u211d} (hs : 0<s) :",
+      "local_origin": "have hh := hD\u2080 D hD",
+      "context": [
+        "  have hh := hD\u2080 D hD",
+        "  simp only [Real.rpow_natCast,one_mul,Real.norm_eq_abs,",
+        "    abs_of_nonneg (pow_nonneg (Real.log_natCast_nonneg D) k),",
+        "    abs_of_nonneg (Real.rpow_nonneg (Nat.cast_nonneg D) s)] at hh",
+        "  exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71LocalResidues.lean",
+      "line": 161,
+      "decl": "theorem proposition71_actual_residue_local_data {D : \u2115} (hD : 1<D)",
+      "local_origin": "have ht := proposition71_residue_limit hD hL (lemma83PaperBeta D c)",
+      "context": [
+        "  refine \u27e8proposition71_pole_numerator_analytic hD hL (lemma83PaperBeta D c)",
+        "    (lemma83_beta_re D c) j (hd.1 j) hd.2 hz,",
+        "    proposition71_actual_local_factorization D (lemma83PaperBeta D c) j,?_\u27e9",
+        "  rw [proposition71ActualR,ht.limUnder_eq]",
+        "  exact ht"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71Phase.lean",
+      "line": 21,
+      "decl": "lemma proposition71_imaginary_phase_distance (x : \u211d) :",
+      "local_origin": "have he := Complex.exp_nat_mul ((Real.pi : \u2102)*I) 3",
+      "context": [
+        "  have h3 : Complex.exp (I * ((3*Real.pi : \u211d) : \u2102)) = -1 := by",
+        "    rw [show I * ((3*Real.pi : \u211d) : \u2102) = 3 * ((Real.pi : \u2102)*I) by push_cast; ring]",
+        "    have he := Complex.exp_nat_mul ((Real.pi : \u2102)*I) 3",
+        "    norm_num [Complex.exp_pi_mul_I] at he",
+        "    exact he"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71QuarterConductorSaving.lean",
+      "line": 28,
+      "decl": "lemma proposition71_log_power_eighth_threshold (k : \u2115) :",
+      "local_origin": "have hh := hD\u2080 D hD",
+      "context": [
+        "  have hh := hD\u2080 D hD",
+        "  simp only [Real.rpow_natCast,one_mul,Real.norm_eq_abs,",
+        "    abs_of_nonneg (pow_nonneg (Real.log_natCast_nonneg D) k),",
+        "    abs_of_nonneg (Real.rpow_nonneg (Nat.cast_nonneg D) (1/8 : \u211d))] at hh",
+        "  exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71SigmaSeries.lean",
+      "line": 72,
+      "decl": "theorem proposition71_sigma_exact_localization {D r : \u2115} (c b : \u211d)",
+      "local_origin": "have hh := proposition71_tsum_finite_split hs (proposition71LocalizedIndices D R h)",
+      "context": [
+        "      proposition71SigmaStar D c b a R h d \u03b8+",
+        "        proposition71SigmaOffLocalTail D c b a R h d \u03b8 := by",
+        "  have hh := proposition71_tsum_finite_split hs (proposition71LocalizedIndices D R h)",
+        "  rw [proposition71_sigma_local_finite_sum] at hh",
+        "  exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71SigmaTruncation.lean",
+      "line": 49,
+      "decl": "theorem proposition71_sigma_exact_truncation {D r : \u2115} (c b : \u211d)",
+      "local_origin": "have hh := proposition71_tsum_finite_split hs ((Icc 1 \u230alemma23PaperP D^2\u230b\u208a).filter (fun l => l.Coprime h))",
+      "context": [
+        "    proposition71SigmaSeries D c b a h d \u03b8=",
+        "      proposition71SigmaTruncated D c b a h d \u03b8+proposition71SigmaLargeLTail D c b a h d \u03b8 := by",
+        "  have hh := proposition71_tsum_finite_split hs ((Icc 1 \u230alemma23PaperP D^2\u230b\u208a).filter (fun l => l.Coprime h))",
+        "  simp only [proposition71_sigma_truncated_finite_sum,proposition71_sigma_truncation_complement] at hh",
+        "  exact hh"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71TailScalarBudget.lean",
+      "line": 25,
+      "decl": "lemma proposition71_tail_scalar_budget {D : \u2115} (hD : 1<D)",
+      "local_origin": "have he := pow_le_pow_left\u2080 hLp.le hh 72",
+      "context": [
+        "    have hh : L\u2264Real.exp L := by linarith [Real.add_one_le_exp L]",
+        "    have he := pow_le_pow_left\u2080 hLp.le hh 72",
+        "    rw [\u2190Real.exp_nat_mul] at he",
+        "    norm_num only [Nat.cast_ofNat] at he",
+        "    exact he"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71WeightedHeightTail.lean",
+      "line": 85,
+      "decl": "theorem proposition71_cauchy_window_and_tail (f : \u211d \u2192 \u2102) (hf : Continuous f)",
+      "local_origin": "have hwin := mul_le_mul_of_nonneg_right (hwindow t ht) hw0",
+      "context": [
+        "        have hwin := mul_le_mul_of_nonneg_right (hwindow t ht) hw0",
+        "        dsimp [v]",
+        "        simp only [Set.indicator_apply,mem_Iic,mem_Ioi,if_neg hleft,if_neg hright,",
+        "          add_zero,mul_zero]",
+        "        exact hwin"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/Section721ArithmeticWeights.lean",
+      "line": 41,
+      "decl": "theorem section721_weight_rearrangement (b : \u2102) {a d r k m : \u2115}",
+      "local_origin": "\u00b7 have hmu : (ArithmeticFunction.moebius (r*k) : \u2102)*(ArithmeticFunction.moebius r : \u2102) =",
+      "context": [
+        "      Complex.natCast_mul_natCast_cpow,Complex.natCast_mul_natCast_cpow,",
+        "      Complex.cpow_sub 1 b hrn,Complex.cpow_one,",
+        "      Complex.cpow_sub 1 b hkn,Complex.cpow_one]",
+        "    field_simp",
+        "    exact hmu"
+      ]
+    },
+    {
+      "path": "ZhangLS/Spec/TauDirichletValues.lean",
+      "line": 63,
+      "decl": "theorem tauDirichlet_five_square_mass_le :",
+      "local_origin": "have hh := pow_le_pow_left\u2080 (by positivity : 0\u2264Real.pi^2/6) hb 5",
+      "context": [
+        "  have hpi4 := Real.pi_le_four",
+        "  have hb : Real.pi^2/6\u22643 := by nlinarith",
+        "  have hh := pow_le_pow_left\u2080 (by positivity : 0\u2264Real.pi^2/6) hb 5",
+        "  norm_num at hh \u22a2",
+        "  exact hh"
+      ]
+    }
+  ],
+  "review": "All 21 new candidates have explicitly derived local origins or genuine geometric/precondition interfaces. No capstone assumes the requested mean-value conclusion. The generic Cauchy window/tail helper receives pointwise bounds and is discharged by concrete downstream kernel theorems. This review does not turn the legacy strict audit into a clean result."
+}

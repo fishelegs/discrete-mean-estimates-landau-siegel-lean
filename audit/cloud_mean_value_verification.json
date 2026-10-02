@@ -1,0 +1,51 @@
+{
+  "status": "PASS_ACTUAL_SHARED_MEAN_VALUE_COMPONENTS",
+  "verified_at_utc": "2026-10-02T22:19:55.792592+00:00",
+  "base_commit": "25ed16a51c221eccd2581ad168745d787f087add",
+  "completion_kind": "partial_actual_mean_value_components",
+  "numbered_completion_count_change": 0,
+  "new_production_modules": 110,
+  "total_packet_production_modules": 117,
+  "new_public_declarations": 559,
+  "public_declaration_axiom_checks": 624,
+  "standalone_audit_files": 17,
+  "original_example_checks_including_historical_repetitions": 140,
+  "serial_module_targets_passed": 110,
+  "full_project_jobs": 5331,
+  "source_files": 1475,
+  "spec_imports": 1077,
+  "full_project_imports": 1342,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 413,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 21,
+  "proposition71_proved": false,
+  "proposition141_proved": false,
+  "equation_7_11_proved": false,
+  "equation_7_21_finite_identity_proved": true,
+  "original_7_13_positive_majorant_little_o_proved": true,
+  "original_7_13_gauss_attachment_proved": false,
+  "logs": {
+    "mean-union-full-project.log": {
+      "bytes": 239995,
+      "sha256": "b5bac5a2f0fbf2d0a9fb12f01243e5c79d1402e8ae248f62ac1bba9586c002c9"
+    },
+    "mean-union-strict-audit.log": {
+      "bytes": 41949,
+      "sha256": "1ef6c979727badf0987f113cff5dd7aea7867af516799a525bce7b8c896a04ee"
+    },
+    "mean-union-serial-build-results.json": {
+      "bytes": 22034,
+      "sha256": "3083997e49b020eab79577d05227bf02809230848d3696d80a9d5f8652211c21"
+    },
+    "mean-union-serial-audit-results.json": {
+      "bytes": 3602,
+      "sha256": "4e06295e7eabf07aa74d9cae7e67512286d05f3b5ae36bc94901bde82e8f2a01"
+    },
+    "mean-union-serial-run.log": {
+      "bytes": 9181,
+      "sha256": "a184b7adaf2a015951c1f72f54b93d318289473cf5d993a371c34b6e740664af"
+    }
+  },
+  "build_note": "An initial parallel multi-target attempt was interrupted and is not counted as successful. After stopping task-owned builds, one minimal proof and one real small module passed; the complete 110-target build was rerun sequentially, followed by all 17 standalone audits and the whole-project build."
+}

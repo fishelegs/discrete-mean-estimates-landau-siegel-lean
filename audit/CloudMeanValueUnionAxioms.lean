@@ -1,0 +1,743 @@
+import ZhangLS.Spec.InducedGaussFiniteSums
+import ZhangLS.Spec.CoprimeGaussResidues
+import ZhangLS.Spec.AdditiveReciprocity
+import ZhangLS.Spec.CoprimeGaussRealTwist
+import ZhangLS.Spec.InducedGaussInflation
+import ZhangLS.Spec.InducedGaussFormula
+import ZhangLS.Spec.InducedGaussConductor
+import ZhangLS.Spec.Proposition71GaussAverage
+import ZhangLS.Spec.CoprimeGaussPrimeAverage
+import ZhangLS.Spec.Proposition141DivisorBounds
+import ZhangLS.Spec.Proposition141DivisorBudget
+import ZhangLS.Spec.DivisorPowerBudget
+import ZhangLS.Spec.DivisorSmallPowerBudget
+import ZhangLS.Spec.InducedGaussMainCharacters
+import ZhangLS.Spec.Lemma54EighthWeightedKernels
+import ZhangLS.Spec.Lemma54EighthContourEstimates
+import ZhangLS.Spec.Lemma54EighthContour
+import ZhangLS.Spec.Lemma54EighthIntegrals
+import ZhangLS.Spec.Lemma54EighthMoment
+import ZhangLS.Spec.Lemma54EighthMellin
+import ZhangLS.Spec.Lemma54EighthHeightTail
+import ZhangLS.Spec.Lemma54EighthActualTail
+import ZhangLS.Spec.Proposition141CharacterExpansion
+import ZhangLS.Spec.Proposition141Conductor
+import ZhangLS.Spec.Proposition141SmallConductor
+import ZhangLS.Spec.Proposition141ComplexShift
+import ZhangLS.Spec.Proposition71ConvolutionSplit
+import ZhangLS.Spec.Proposition71DivisorWeights
+import ZhangLS.Spec.Proposition71ConductorWeights
+import ZhangLS.Spec.Proposition71CharacterConductorWeights
+import ZhangLS.Spec.Proposition141ConductorBudget
+import ZhangLS.Spec.Proposition141ShiftedEstimate
+import ZhangLS.Spec.Proposition141EighthPrimeIntegral
+import ZhangLS.Spec.Proposition71MellinInversion
+import ZhangLS.Spec.Proposition71MellinFiniteSum
+import ZhangLS.Spec.Proposition141SmallKernel
+import ZhangLS.Spec.Proposition141Objects
+import ZhangLS.Spec.Proposition141SmallCoefficientSum
+import ZhangLS.Spec.Proposition71MellinDoubleSum
+import ZhangLS.Spec.Proposition141DoubleMellin
+import ZhangLS.Spec.Proposition141Support
+import ZhangLS.Spec.Proposition141GlobalShift
+import ZhangLS.Spec.Proposition71DeltaLargeTail
+import ZhangLS.Spec.Proposition141InfiniteCoefficientTail
+import ZhangLS.Spec.Proposition141LargeSieveMoments
+import ZhangLS.Spec.TauDirichletValues
+import ZhangLS.Spec.Proposition141PrimeInfiniteTail
+import ZhangLS.Spec.Proposition141MainSeriesConvergence
+import ZhangLS.Spec.Proposition141OffDiagonal
+import ZhangLS.Spec.Proposition141OffDiagonalKernel
+import ZhangLS.Spec.Proposition141PrimitiveSmallSum
+import ZhangLS.Spec.Proposition141SmallConductorRow
+import ZhangLS.Spec.Proposition141SmallConductorAggregate
+import ZhangLS.Spec.Proposition141SupportedPrimeBound
+import ZhangLS.Spec.Proposition141TailRates
+import ZhangLS.Spec.Proposition71WeightedCauchy
+import ZhangLS.Spec.Proposition141WeightedBilinear
+import ZhangLS.Spec.Proposition71ArithmeticFactors
+import ZhangLS.Spec.Proposition71Objects
+import ZhangLS.Spec.Proposition71CoefficientEnergy
+import ZhangLS.Spec.Proposition71Conductor
+import ZhangLS.Spec.Proposition71ConductorAggregateAlgebra
+import ZhangLS.Spec.Proposition71ConductorAggregateOrder
+import ZhangLS.Spec.Proposition71ConductorModulusRestriction
+import ZhangLS.Spec.Proposition71DeltaGaussianTail
+import ZhangLS.Spec.Proposition71Support
+import ZhangLS.Spec.Proposition71LocalizedGeometry
+import ZhangLS.Spec.Proposition71DeltaLocalization
+import ZhangLS.Spec.Proposition71DyadicCoefficientEnergy
+import ZhangLS.Spec.Proposition71DyadicCover
+import ZhangLS.Spec.Proposition71DyadicPrimeMean
+import ZhangLS.Spec.Proposition71SigmaMellin
+import ZhangLS.Spec.Proposition71DyadicMellinMean
+import ZhangLS.Spec.Proposition71DyadicSigmaBound
+import ZhangLS.Spec.Proposition71ExceptionalMoments
+import ZhangLS.Spec.Proposition71Phase
+import ZhangLS.Spec.Proposition71PhaseSummation
+import ZhangLS.Spec.Proposition71ExceptionalLittleO
+import ZhangLS.Spec.Proposition71LargeLArgument
+import ZhangLS.Spec.Proposition71LargeLPrimeKernel
+import ZhangLS.Spec.Proposition71TauDirichlet
+import ZhangLS.Spec.Proposition71SigmaLargeLTail
+import ZhangLS.Spec.Proposition71LocalizedSigmaSquare
+import ZhangLS.Spec.Proposition71SigmaSeries
+import ZhangLS.Spec.Proposition71OffLocalMajorant
+import ZhangLS.Spec.Proposition71OffLocalTail
+import ZhangLS.Spec.Proposition71TailScalarBudget
+import ZhangLS.Spec.Proposition71OffLocalAggregate
+import ZhangLS.Spec.Proposition71MellinPrimeBound
+import ZhangLS.Spec.Proposition71WeightedHeightTail
+import ZhangLS.Spec.Proposition71SmallConductorIntegral
+import ZhangLS.Spec.Proposition71SmallConductorKernel
+import ZhangLS.Spec.Proposition71SmallSigma
+import ZhangLS.Spec.Proposition71SmallConductorAggregate
+import ZhangLS.Spec.Proposition71QuarterConductorSaving
+import ZhangLS.Spec.Proposition71LocalizedDyadicSaving
+import ZhangLS.Spec.Proposition71LargeConductorWeights
+import ZhangLS.Spec.Proposition71LargeConductorAggregate
+import ZhangLS.Spec.Proposition71FullSigmaBlock
+import ZhangLS.Spec.Proposition71LargeConductorSaving
+import ZhangLS.Spec.Proposition71FullLargeConductor
+import ZhangLS.Spec.Proposition71SigmaTruncation
+import ZhangLS.Spec.Proposition71OuterTailBudget
+import ZhangLS.Spec.Proposition71LargeLTailAggregate
+import ZhangLS.Spec.Proposition71FullSmallConductor
+import ZhangLS.Spec.Proposition71FullConductorAggregate
+import ZhangLS.Spec.Proposition71LocalResidues
+import ZhangLS.Spec.Proposition71Mobius
+import ZhangLS.Spec.Proposition71OriginalSmallConductor
+import ZhangLS.Spec.Proposition71OriginalConductorLittleO
+import ZhangLS.Spec.Proposition71OriginalLargeConductor
+import ZhangLS.Spec.Proposition71ResidueCorrection
+import ZhangLS.Spec.Proposition71ResidueScalar
+import ZhangLS.Spec.Proposition71ResidueNormalization
+import ZhangLS.Spec.Section721FiniteReindex
+import ZhangLS.Spec.Section721ArithmeticWeights
+import ZhangLS.Spec.Section721FiniteRearrangement
+
+/-! Standalone audit. Original targets remain UNPROVED. -/
+#print axioms ZhangLS.Spec.inducedGauss_sum_zmod_eq_range
+#print axioms ZhangLS.Spec.inducedGauss_sum_range_multiples
+#print axioms ZhangLS.Spec.inducedGauss_changeLevel_nat
+#print axioms ZhangLS.Spec.inducedGauss_mobius_indicator
+#print axioms ZhangLS.Spec.inducedGauss_mobius_indicator_divisors
+#print axioms ZhangLS.Spec.inducedGauss_scaled_additive
+#print axioms ZhangLS.Spec.coprimeGaussResidueEquiv
+#print axioms ZhangLS.Spec.coprimeGauss_residue_coordinates
+#print axioms ZhangLS.Spec.coprimeGauss_residue_nat
+#print axioms ZhangLS.Spec.coprimeGauss_additive_factorization
+#print axioms ZhangLS.Spec.additiveReciprocity_stdAddChar
+#print axioms ZhangLS.Spec.additiveReciprocity_product_phase
+#print axioms ZhangLS.Spec.additiveReciprocity_delta
+#print axioms ZhangLS.Spec.coprimeGauss_real_twist_values
+#print axioms ZhangLS.Spec.coprimeGauss_real_twist_formula
+#print axioms ZhangLS.Spec.inducedGaussInflation
+#print axioms ZhangLS.Spec.inducedGauss_inflation_zero
+#print axioms ZhangLS.Spec.inducedGauss_inflation_one
+#print axioms ZhangLS.Spec.inducedGauss_inflation_formula
+#print axioms ZhangLS.Spec.inducedGauss_coprime_sum_mobius
+#print axioms ZhangLS.Spec.inducedGauss_divisor_inner
+#print axioms ZhangLS.Spec.inducedGauss_changeLevel_formula
+#print axioms ZhangLS.Spec.inducedGauss_changeLevel_formula_dvd
+#print axioms ZhangLS.Spec.inducedGauss_conductor_formula
+#print axioms ZhangLS.Spec.inducedGauss_level_one_value
+#print axioms ZhangLS.Spec.inducedGauss_primitive_norm
+#print axioms ZhangLS.Spec.inducedGauss_mobius_norm_le_one
+#print axioms ZhangLS.Spec.inducedGauss_changeLevel_norm_le
+#print axioms ZhangLS.Spec.inducedGauss_norm_le_sqrt_conductor
+#print axioms ZhangLS.Spec.inducedGauss_inverse_norm_le_sqrt_conductor
+#print axioms ZhangLS.Spec.inducedGauss_nonprincipal_conductor_gt_one
+#print axioms ZhangLS.Spec.proposition71_prime_primitive_iff
+#print axioms ZhangLS.Spec.proposition71_full_gauss_average
+#print axioms ZhangLS.Spec.proposition71_principal_gauss
+#print axioms ZhangLS.Spec.proposition71_primitive_gauss_average
+#print axioms ZhangLS.Spec.proposition71_primitive_gauss_error
+#print axioms ZhangLS.Spec.proposition71_gauss_average_nonunit
+#print axioms ZhangLS.Spec.proposition71_primitive_gauss_average_all
+#print axioms ZhangLS.Spec.coprimeGauss_prime_average_summand
+#print axioms ZhangLS.Spec.coprimeGauss_full_prime_average
+#print axioms ZhangLS.Spec.coprimeGauss_primitive_prime_average
+#print axioms ZhangLS.Spec.coprimeGauss_primitive_prime_average_error
+#print axioms ZhangLS.Spec.coprimeGauss_primitive_average_nonunit
+#print axioms ZhangLS.Spec.proposition141_multichoose_five_square_le
+#print axioms ZhangLS.Spec.proposition141_tau_five_square_le
+#print axioms ZhangLS.Spec.proposition141_tau_five_square_harmonic_bound
+#print axioms ZhangLS.Spec.proposition141_bounded_coefficient_harmonic_energy
+#print axioms ZhangLS.Spec.proposition141_bounded_coefficient_interval_energy
+#print axioms ZhangLS.Spec.proposition141_multichoose_six_le_pow
+#print axioms ZhangLS.Spec.proposition141_multichoose_six_prime_bound
+#print axioms ZhangLS.Spec.proposition141_tau_six_linear_bound
+#print axioms ZhangLS.Spec.proposition141_divisor_tau_five_sum
+#print axioms ZhangLS.Spec.proposition141_divisor_tau_five_budget
+#print axioms ZhangLS.Spec.divisorPower_multichoose_le_pow
+#print axioms ZhangLS.Spec.divisorPower_multichoose_prime_bound
+#print axioms ZhangLS.Spec.divisorPower_tau_linear_bound
+#print axioms ZhangLS.Spec.divisorPower_multichoose_six_square
+#print axioms ZhangLS.Spec.divisorPower_tau_six_square
+#print axioms ZhangLS.Spec.divisorPower_tau_six_sqrt
+#print axioms ZhangLS.Spec.divisorPower_divisor_tau_five_sqrt
+#print axioms ZhangLS.Spec.divisorPower_multichoose_square
+#print axioms ZhangLS.Spec.divisorPower_tau_square
+#print axioms ZhangLS.Spec.divisorPower_tau_fourth
+#print axioms ZhangLS.Spec.divisorPowerQuarterConstant
+#print axioms ZhangLS.Spec.divisorPower_quarter_constant_pos
+#print axioms ZhangLS.Spec.divisorPower_tau_quarter
+#print axioms ZhangLS.Spec.divisorPower_divisor_tau_five_quarter
+#print axioms ZhangLS.Spec.inducedGauss_principal_value
+#print axioms ZhangLS.Spec.inducedGauss_changeLevel_neg_nat
+#print axioms ZhangLS.Spec.inducedGauss_phase_product
+#print axioms ZhangLS.Spec.inducedGauss_real_changeLevel_inv
+#print axioms ZhangLS.Spec.inducedGauss_real_phase_product
+#print axioms ZhangLS.Spec.inducedGauss_totient_denominator
+#print axioms ZhangLS.Spec.inducedGauss_coprime_filter
+#print axioms ZhangLS.Spec.inducedGauss_real_square
+#print axioms ZhangLS.Spec.lemma54EighthConstant
+#print axioms ZhangLS.Spec.lemma54EighthMajorant
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_constant_pos
+#print axioms ZhangLS.Spec.lemma54_eighth_contour_factor_pow_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_majorant_factorization
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_majorant_integrable
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_kernel_norm_real
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_kernel_integrable
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_majorant_integral_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_ray_norm_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_kernel_norm_left
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_left_tail_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_vertical_point_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_vertical_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_left_vertical_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_ray_integrable
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_right_ray_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_majorant_tendsto_zero
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_right_vertical_tendsto_zero
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_infinite_contour_shift
+#print axioms ZhangLS.Spec.lemma54EighthDerivativeTail
+#print axioms ZhangLS.Spec.lemma54_eighth_weighted_large_range_estimate
+#print axioms ZhangLS.Spec.lemma54EighthIntegral
+#print axioms ZhangLS.Spec.lemma54_eighth_integral_zero
+#print axioms ZhangLS.Spec.lemma54_eighth_integral_zero_actual
+#print axioms ZhangLS.Spec.lemma54_eighth_kernel_hasDerivAt
+#print axioms ZhangLS.Spec.lemma54_eighth_integral_hasDerivAt
+#print axioms ZhangLS.Spec.lemma54_eighth_integral_continuous
+#print axioms ZhangLS.Spec.lemma54_eighth_integral_norm_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_integral_large_range
+#print axioms ZhangLS.Spec.lemma54_eighth_integral_isBigO_atTop
+#print axioms ZhangLS.Spec.lemma54_eighth_integral_isBigO_at_zero
+#print axioms ZhangLS.Spec.lemma54_eighth_integral_mellin_convergent
+#print axioms ZhangLS.Spec.lemma54_eighth_integral_boundary_products
+#print axioms ZhangLS.Spec.lemma54_eighth_mellin_step
+#print axioms ZhangLS.Spec.lemma54_eighth_zero_mellin_actual
+#print axioms ZhangLS.Spec.lemma54EighthMoment
+#print axioms ZhangLS.Spec.lemma54EighthGlobalConstant
+#print axioms ZhangLS.Spec.lemma54EighthLogConstant
+#print axioms ZhangLS.Spec.lemma54EighthExpConstant
+#print axioms ZhangLS.Spec.lemma54EighthMomentConstant
+#print axioms ZhangLS.Spec.lemma54_eighth_constants_pos
+#print axioms ZhangLS.Spec.lemma54_eighth_moment_integrable
+#print axioms ZhangLS.Spec.lemma54_eighth_global_norm_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_small_moment_bound
+#print axioms ZhangLS.Spec.lemma54EighthMomentEnvelope
+#print axioms ZhangLS.Spec.lemma54_eighth_envelope_integrable
+#print axioms ZhangLS.Spec.lemma54_eighth_envelope_nonneg
+#print axioms ZhangLS.Spec.lemma54_eighth_envelope_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_envelope_integral_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_moment_uniform_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_mellin_iteration
+#print axioms ZhangLS.Spec.lemma54_eighth_mellin_integral_identity
+#print axioms ZhangLS.Spec.lemma54_eighth_norm_shift_le
+#print axioms ZhangLS.Spec.lemma54_eighth_mellin_bound_by_moment
+#print axioms ZhangLS.Spec.lemma54_eighth_mellin_line_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_mellin_frequency_bound
+#print axioms ZhangLS.Spec.lemma54_eighth_mellin_explicit_threshold
+#print axioms ZhangLS.Spec.lemma54_eighth_arctan_le_self
+#print axioms ZhangLS.Spec.lemma54_eighth_positive_cauchy_tail
+#print axioms ZhangLS.Spec.lemma54_eighth_negative_cauchy_tail
+#print axioms ZhangLS.Spec.lemma54_eighth_weight_le_cauchy
+#print axioms ZhangLS.Spec.lemma54_eighth_weight_tail_point
+#print axioms ZhangLS.Spec.lemma54_eighth_bounded_weight_integrable
+#print axioms ZhangLS.Spec.lemma54_eighth_window_and_tail
+#print axioms ZhangLS.Spec.lemma54_eighth_actual_line_continuous
+#print axioms ZhangLS.Spec.lemma54_eighth_actual_product_integrable
+#print axioms ZhangLS.Spec.lemma54_eighth_actual_window_and_tail
+#print axioms ZhangLS.Spec.proposition141_general_hermitian_orthogonality
+#print axioms ZhangLS.Spec.proposition141_general_gauss_average
+#print axioms ZhangLS.Spec.proposition141_additive_phase_character_expansion
+#print axioms ZhangLS.Spec.proposition141_nonunit_character_phase_zero
+#print axioms ZhangLS.Spec.proposition141PrimeCharacter
+#print axioms ZhangLS.Spec.proposition141_equal_nat_evaluations_induce
+#print axioms ZhangLS.Spec.proposition141_prime_character_nonprincipal
+#print axioms ZhangLS.Spec.proposition141_prime_character_not_chi_induced
+#print axioms ZhangLS.Spec.proposition141_actual_product_inducer_admissible
+#print axioms ZhangLS.Spec.proposition141_product_conductor_le
+#print axioms ZhangLS.Spec.proposition141_product_inducer_eval
+#print axioms ZhangLS.Spec.proposition141_small_product_conductor_lt_fourth
+#print axioms ZhangLS.Spec.proposition141_uniform_fourth_lt_T
+#print axioms ZhangLS.Spec.proposition141_small_product_inducer_prime_bound
+#print axioms ZhangLS.Spec.proposition141ProductPrimeSum
+#print axioms ZhangLS.Spec.proposition141_actual_prime_sum_eq_inducer
+#print axioms ZhangLS.Spec.proposition141_small_actual_product_prime_bound
+#print axioms ZhangLS.Spec.proposition141ShiftedPrimeSum
+#print axioms ZhangLS.Spec.proposition141_shifted_prime_weight_identity
+#print axioms ZhangLS.Spec.proposition141_real_shift_weight_mono
+#print axioms ZhangLS.Spec.proposition141_shifted_finite_prime_budget
+#print axioms ZhangLS.Spec.proposition141_complex_shift_parameters
+#print axioms ZhangLS.Spec.proposition141_complex_shift_weight_bound
+#print axioms ZhangLS.Spec.proposition141_prime_window_sum_eq
+#print axioms ZhangLS.Spec.proposition141_actual_shifted_prime_weight_budget
+#print axioms ZhangLS.Spec.proposition141_shifted_height_margin
+#print axioms ZhangLS.Spec.proposition71SplitPairs
+#print axioms ZhangLS.Spec.proposition71_split_mem
+#print axioms ZhangLS.Spec.proposition71_split_gcd
+#print axioms ZhangLS.Spec.proposition71_split_injective
+#print axioms ZhangLS.Spec.proposition71_split_surjective
+#print axioms ZhangLS.Spec.proposition71_divisor_pair_split
+#print axioms ZhangLS.Spec.proposition71_kappa_convolution_split
+#print axioms ZhangLS.Spec.proposition71_nat_divisor_pair_split
+#print axioms ZhangLS.Spec.proposition71_convolution_submultiplicative
+#print axioms ZhangLS.Spec.proposition71_tau_submultiplicative
+#print axioms ZhangLS.Spec.proposition71_reciprocal_totient_le_tau
+#print axioms ZhangLS.Spec.proposition71_reciprocal_product_totient
+#print axioms ZhangLS.Spec.proposition71_tau_harmonic_bound
+#print axioms ZhangLS.Spec.proposition71_small_conductor_weight_sum
+#print axioms ZhangLS.Spec.proposition71_quarter_split_small_budget
+#print axioms ZhangLS.Spec.proposition71_quarter_split_large_budget
+#print axioms ZhangLS.Spec.proposition71_primitive_character_count
+#print axioms ZhangLS.Spec.proposition71_three_halves_eq_mul_sqrt
+#print axioms ZhangLS.Spec.proposition71_counted_totient_weight
+#print axioms ZhangLS.Spec.proposition71_sqrt_conductor_sum
+#print axioms ZhangLS.Spec.proposition71_counted_conductor_weight_sum
+#print axioms ZhangLS.Spec.proposition141_conductor_congruence
+#print axioms ZhangLS.Spec.proposition141SmallConductorModuli
+#print axioms ZhangLS.Spec.proposition141_small_counted_weight_sum
+#print axioms ZhangLS.Spec.proposition141_eighth_counted_tail_identity
+#print axioms ZhangLS.Spec.proposition141_eighth_gauss_tail_identity
+#print axioms ZhangLS.Spec.proposition141_eighth_divisor_tail_budget
+#print axioms ZhangLS.Spec.proposition141_uniform_shifted_primitive_prime_absolute_bound
+#print axioms ZhangLS.Spec.proposition141_uniform_shifted_primitive_prime_normalized_bound
+#print axioms ZhangLS.Spec.proposition141ShiftedProductPrimeSum
+#print axioms ZhangLS.Spec.proposition141_shifted_product_prime_sum_eq_inducer
+#print axioms ZhangLS.Spec.proposition141_uniform_small_shifted_product_prime_bound
+#print axioms ZhangLS.Spec.proposition141_small_shift_power_norm
+#print axioms ZhangLS.Spec.proposition141_shifted_product_prime_continuous
+#print axioms ZhangLS.Spec.proposition141_shifted_product_prime_global_bound
+#print axioms ZhangLS.Spec.proposition141ActualPrimeMellinIntegral
+#print axioms ZhangLS.Spec.proposition141_uniform_small_product_mellin_integral_bound
+#print axioms ZhangLS.Spec.proposition71_actual_delta_vertical_integrable
+#print axioms ZhangLS.Spec.proposition71_actual_delta_mellin_inversion
+#print axioms ZhangLS.Spec.proposition71_actual_scaled_delta_mellin
+#print axioms ZhangLS.Spec.proposition71_inverse_mellin_integrand_integrable
+#print axioms ZhangLS.Spec.proposition71_scaled_mellin_power
+#print axioms ZhangLS.Spec.proposition71_extracted_scale_norm
+#print axioms ZhangLS.Spec.proposition71_actual_finite_mellin_sum
+#print axioms ZhangLS.Spec.proposition141ActualShiftedPrimeKernel
+#print axioms ZhangLS.Spec.proposition141_actual_shifted_prime_mellin_identity
+#print axioms ZhangLS.Spec.proposition141_actual_shifted_prime_kernel_integral_bound
+#print axioms ZhangLS.Spec.proposition141_uniform_small_shifted_prime_kernel_bound
+#print axioms ZhangLS.Spec.Proposition141KappaBound
+#print axioms ZhangLS.Spec.Proposition141AdmissibleSequence
+#print axioms ZhangLS.Spec.proposition141Indices
+#print axioms ZhangLS.Spec.proposition141KappaSeries
+#print axioms ZhangLS.Spec.proposition141Polynomial
+#print axioms ZhangLS.Spec.proposition141SegmentIntegral
+#print axioms ZhangLS.Spec.proposition141Integral
+#print axioms ZhangLS.Spec.proposition141ShiftWeight
+#print axioms ZhangLS.Spec.proposition141ThetaTwo
+#print axioms ZhangLS.Spec.proposition141AmbientMean
+#print axioms ZhangLS.Spec.proposition141InnerMain
+#print axioms ZhangLS.Spec.proposition141MainTerm
+#print axioms ZhangLS.Spec.Proposition141Target
+#print axioms ZhangLS.Spec.proposition141_mem_indices
+#print axioms ZhangLS.Spec.proposition141_segment_real_part
+#print axioms ZhangLS.Spec.proposition141_zero_shift
+#print axioms ZhangLS.Spec.proposition141_kappa_three_factor_bound
+#print axioms ZhangLS.Spec.proposition141_kappa_finite_harmonic_bound
+#print axioms ZhangLS.Spec.proposition141FiniteSmallCharacterSum
+#print axioms ZhangLS.Spec.proposition141_uniform_finite_small_character_sum_bound
+#print axioms ZhangLS.Spec.proposition71_positive_ratio_cpow
+#print axioms ZhangLS.Spec.proposition71_finite_mellin_integrand_integrable
+#print axioms ZhangLS.Spec.proposition71DoubleMellinIntegrand
+#print axioms ZhangLS.Spec.proposition71_double_mellin_integrand_expansion
+#print axioms ZhangLS.Spec.proposition71_double_mellin_integrand_integrable
+#print axioms ZhangLS.Spec.proposition71_actual_double_mellin_sum
+#print axioms ZhangLS.Spec.proposition141DoubleMellinIntegrand
+#print axioms ZhangLS.Spec.proposition141_double_mellin_integrand_eq
+#print axioms ZhangLS.Spec.proposition141_double_mellin_integrable
+#print axioms ZhangLS.Spec.proposition141_actual_double_mellin_identity
+#print axioms ZhangLS.Spec.proposition141_kappa_series_summable
+#print axioms ZhangLS.Spec.proposition141_nonzero_support
+#print axioms ZhangLS.Spec.proposition141_nonzero_product_indices
+#print axioms ZhangLS.Spec.proposition141_omitted_coefficient_zero
+#print axioms ZhangLS.Spec.proposition141_uniform_t0_le_D
+#print axioms ZhangLS.Spec.proposition141_uniform_support_modulus_bound
+#print axioms ZhangLS.Spec.proposition141_supported_modulus_coprime_prime
+#print axioms ZhangLS.Spec.proposition141_t0_log_bounds
+#print axioms ZhangLS.Spec.proposition141_t0_shift_norm
+#print axioms ZhangLS.Spec.proposition141_prime_t0_shift_factor
+#print axioms ZhangLS.Spec.proposition141_prime_t0_shift_norm
+#print axioms ZhangLS.Spec.proposition141_prime_t0_shift_sum
+#print axioms ZhangLS.Spec.proposition141_prime_windows_equal
+#print axioms ZhangLS.Spec.proposition141_actual_prime_masses_equal
+#print axioms ZhangLS.Spec.proposition71_large_log_exponent
+#print axioms ZhangLS.Spec.proposition71_large_power_exponent
+#print axioms ZhangLS.Spec.proposition71_tail_exp_factor
+#print axioms ZhangLS.Spec.proposition71LargeDeltaTailConstant
+#print axioms ZhangLS.Spec.proposition71_large_delta_tail_constant_pos
+#print axioms ZhangLS.Spec.proposition71_actual_large_delta_tail
+#print axioms ZhangLS.Spec.proposition141_tau_five_square_summable
+#print axioms ZhangLS.Spec.proposition141TauFiveSquareMass
+#print axioms ZhangLS.Spec.proposition141_tau_five_square_mass_nonneg
+#print axioms ZhangLS.Spec.proposition141_dilated_kappa_square_summable
+#print axioms ZhangLS.Spec.proposition141_dilated_kappa_square_sum
+#print axioms ZhangLS.Spec.proposition141_scaled_large_delta_tail
+#print axioms ZhangLS.Spec.proposition141DilatedDeltaTailTerm
+#print axioms ZhangLS.Spec.proposition141_dilated_delta_tail_majorant
+#print axioms ZhangLS.Spec.proposition141_dilated_delta_tail_summable
+#print axioms ZhangLS.Spec.proposition141_dilated_delta_tail_bound
+#print axioms ZhangLS.Spec.proposition141_actual_kappa_interval_energy
+#print axioms ZhangLS.Spec.proposition141_actual_weighted_kappa_mean
+#print axioms ZhangLS.Spec.proposition141_actual_shifted_prime_energy
+#print axioms ZhangLS.Spec.proposition141_actual_weighted_prime_mean
+#print axioms ZhangLS.Spec.tauDirichlet_lseries_value
+#print axioms ZhangLS.Spec.tauDirichlet_square_mass
+#print axioms ZhangLS.Spec.tauDirichlet_five_square_mass_le
+#print axioms ZhangLS.Spec.proposition141_tau_five_square_mass_eq
+#print axioms ZhangLS.Spec.proposition141_tau_five_square_mass_le
+#print axioms ZhangLS.Spec.proposition141_dilated_delta_tail_explicit_bound
+#print axioms ZhangLS.Spec.proposition141_prime_tail_shift_norm
+#print axioms ZhangLS.Spec.proposition141_prime_card_le_mass
+#print axioms ZhangLS.Spec.proposition141_prime_summed_infinite_tail
+#print axioms ZhangLS.Spec.proposition141_prime_tail_interchange
+#print axioms ZhangLS.Spec.proposition141_dilated_delta_series_summable
+#print axioms ZhangLS.Spec.proposition141_coprime_delta_series_summable
+#print axioms ZhangLS.Spec.proposition141_original_main_series_summable
+#print axioms ZhangLS.Spec.proposition141_off_diagonal_not_dvd
+#print axioms ZhangLS.Spec.proposition141_lift_ne_chi_of_not_dvd
+#print axioms ZhangLS.Spec.proposition141_off_diagonal_inducer_admissible
+#print axioms ZhangLS.Spec.proposition141_off_diagonal_product_conductor_le
+#print axioms ZhangLS.Spec.proposition141_off_diagonal_inducer_eval
+#print axioms ZhangLS.Spec.proposition141_small_off_diagonal_inducer_prime_bound
+#print axioms ZhangLS.Spec.proposition141_prime_kernel_changeLevel
+#print axioms ZhangLS.Spec.proposition141_uniform_off_diagonal_small_kernel_bound
+#print axioms ZhangLS.Spec.proposition141_supported_off_diagonal_common_modulus
+#print axioms ZhangLS.Spec.proposition141_uniform_supported_off_diagonal_small_kernel_bound
+#print axioms ZhangLS.Spec.proposition141PrimitiveFiniteCharacterSum
+#print axioms ZhangLS.Spec.proposition141_prime_coprime_extra_factor
+#print axioms ZhangLS.Spec.proposition141_primitive_lifted_finite_sum
+#print axioms ZhangLS.Spec.proposition141_primitive_lift_nonprincipal
+#print axioms ZhangLS.Spec.proposition141_uniform_primitive_small_character_sum_bound
+#print axioms ZhangLS.Spec.proposition141_primitive_subfamily_card
+#print axioms ZhangLS.Spec.proposition141_counted_row_scalar
+#print axioms ZhangLS.Spec.proposition141_uniform_small_conductor_row_bound
+#print axioms ZhangLS.Spec.proposition141SmallSupportedModuli
+#print axioms ZhangLS.Spec.proposition141SmallPrimitiveFamily
+#print axioms ZhangLS.Spec.proposition141_small_supported_mem
+#print axioms ZhangLS.Spec.proposition141FiniteSmallConductorAggregate
+#print axioms ZhangLS.Spec.proposition141_small_supported_weight_sum
+#print axioms ZhangLS.Spec.proposition141_uniform_finite_small_conductor_aggregate
+#print axioms ZhangLS.Spec.proposition141_small_supported_product_prime_bound
+#print axioms ZhangLS.Spec.proposition141_off_diagonal_actual_prime_sum_eq_inducer
+#print axioms ZhangLS.Spec.proposition141_small_actual_off_diagonal_prime_bound
+#print axioms ZhangLS.Spec.proposition141_large_tail_prime_power_absorption
+#print axioms ZhangLS.Spec.proposition141_actual_tail_prime_power_absorption
+#print axioms ZhangLS.Spec.proposition141_actual_large_tail_decay
+#print axioms ZhangLS.Spec.proposition141_actual_tail_polynomial_rate
+#print axioms ZhangLS.Spec.proposition71_weighted_cauchy
+#print axioms ZhangLS.Spec.proposition71_weighted_primitive_cauchy
+#print axioms ZhangLS.Spec.proposition71_weighted_primitive_cauchy_bound
+#print axioms ZhangLS.Spec.proposition141_actual_weighted_bilinear_mean
+#print axioms ZhangLS.Spec.proposition71_prime_support_union
+#print axioms ZhangLS.Spec.proposition71_lambda_factorization
+#print axioms ZhangLS.Spec.proposition71_xi_factor_extraction
+#print axioms ZhangLS.Spec.proposition71ArithmeticSum
+#print axioms ZhangLS.Spec.proposition71ErrorScale
+#print axioms ZhangLS.Spec.proposition71MainTerm
+#print axioms ZhangLS.Spec.Proposition71AtConstant
+#print axioms ZhangLS.Spec.Proposition71Target
+#print axioms ZhangLS.Spec.proposition71_mem_indices
+#print axioms ZhangLS.Spec.proposition71_good_family_exact
+#print axioms ZhangLS.Spec.proposition71_convolution_majorant
+#print axioms ZhangLS.Spec.proposition71_power_coefficient_majorant
+#print axioms ZhangLS.Spec.proposition71_moebius_coefficient_majorant
+#print axioms ZhangLS.Spec.proposition71_actual_kappa_le_tau_four
+#print axioms ZhangLS.Spec.proposition71ArithmeticSequence
+#print axioms ZhangLS.Spec.proposition71_arithmetic_sequence_positive
+#print axioms ZhangLS.Spec.proposition71_actual_convolution_le_tau_five
+#print axioms ZhangLS.Spec.proposition71_multichoose_five_square_le_twentyfive
+#print axioms ZhangLS.Spec.proposition71_tau_five_square_le_twentyfive
+#print axioms ZhangLS.Spec.proposition71_tau_five_square_harmonic_sum
+#print axioms ZhangLS.Spec.proposition71_actual_convolution_harmonic_energy
+#print axioms ZhangLS.Spec.proposition71_nonprincipal_conductor_gt_one
+#print axioms ZhangLS.Spec.proposition71_equal_nat_evaluations_changeLevel
+#print axioms ZhangLS.Spec.proposition71_small_primitive_distinct
+#print axioms ZhangLS.Spec.proposition71_actual_inducer_admissible
+#print axioms ZhangLS.Spec.proposition71_small_conductor_lt_T
+#print axioms ZhangLS.Spec.proposition71_small_actual_inducer_prime_bound
+#print axioms ZhangLS.Spec.proposition71ConductorNormAggregate
+#print axioms ZhangLS.Spec.proposition71_conductor_norm_aggregate_nonneg
+#print axioms ZhangLS.Spec.proposition71_conductor_norm_aggregate_bound
+#print axioms ZhangLS.Spec.proposition71_conductor_aggregate_mono
+#print axioms ZhangLS.Spec.proposition71_conductor_aggregate_le_add
+#print axioms ZhangLS.Spec.proposition71_conductor_aggregate_predicate_split
+#print axioms ZhangLS.Spec.proposition71_conductor_aggregate_cover
+#print axioms ZhangLS.Spec.proposition71_conductor_aggregate_upper_restrict
+#print axioms ZhangLS.Spec.proposition71_gaussian_clearance_budget
+#print axioms ZhangLS.Spec.proposition71_actual_gaussian_offcenter
+#print axioms ZhangLS.Spec.proposition71OffCenterDeltaConstant
+#print axioms ZhangLS.Spec.proposition71_offcenter_delta_constant_pos
+#print axioms ZhangLS.Spec.proposition71_actual_delta_offcenter
+#print axioms ZhangLS.Spec.proposition71_cutoff_le_P
+#print axioms ZhangLS.Spec.proposition71_short_index_lt_prime
+#print axioms ZhangLS.Spec.proposition71_short_index_unit
+#print axioms ZhangLS.Spec.proposition71_supported_second_index_unit
+#print axioms ZhangLS.Spec.proposition71_divisible_long_index_zero
+#print axioms ZhangLS.Spec.proposition71_factors_le_product
+#print axioms ZhangLS.Spec.proposition71_omitted_positive_coefficient_zero
+#print axioms ZhangLS.Spec.proposition71LocalScale
+#print axioms ZhangLS.Spec.proposition71LocalizedIndices
+#print axioms ZhangLS.Spec.proposition71_mem_localized_indices
+#print axioms ZhangLS.Spec.proposition71_uniform_localized_geometry
+#print axioms ZhangLS.Spec.proposition71_localized_length_budget
+#print axioms ZhangLS.Spec.proposition71_paper_prime_le_three_halves_P
+#print axioms ZhangLS.Spec.proposition71_offlocalized_clearance
+#print axioms ZhangLS.Spec.proposition71_actual_offlocalized_delta
+#print axioms ZhangLS.Spec.proposition71_actual_dyadic_coefficient_energy
+#print axioms ZhangLS.Spec.proposition71_actual_weighted_dyadic_kappa_mean
+#print axioms ZhangLS.Spec.proposition71_actual_localized_kappa_mean
+#print axioms ZhangLS.Spec.proposition71DyadicScale
+#print axioms ZhangLS.Spec.proposition71DyadicBlockCount
+#print axioms ZhangLS.Spec.proposition71_dyadic_scale_lower
+#print axioms ZhangLS.Spec.proposition71_dyadic_scale_pos
+#print axioms ZhangLS.Spec.proposition71_dyadic_block_count_bound
+#print axioms ZhangLS.Spec.proposition71_dyadic_cover
+#print axioms ZhangLS.Spec.proposition71_dyadic_cover_unique
+#print axioms ZhangLS.Spec.proposition71_primitive_inverse_sum
+#print axioms ZhangLS.Spec.proposition71_paper_prime_le_twice_P
+#print axioms ZhangLS.Spec.proposition71_actual_prime_coefficient_energy
+#print axioms ZhangLS.Spec.proposition71_actual_weighted_dyadic_prime_mean
+#print axioms ZhangLS.Spec.proposition71_actual_weighted_dyadic_inverse_prime_mean
+#print axioms ZhangLS.Spec.proposition71KappaCharacterPolynomial
+#print axioms ZhangLS.Spec.proposition71PrimeCharacterPolynomial
+#print axioms ZhangLS.Spec.proposition71SigmaOnSet
+#print axioms ZhangLS.Spec.proposition71SigmaMellinIntegrand
+#print axioms ZhangLS.Spec.proposition71_kappa_character_polynomial_factor
+#print axioms ZhangLS.Spec.proposition71_prime_character_polynomial_factor
+#print axioms ZhangLS.Spec.proposition71_sigma_integrand_eq_double
+#print axioms ZhangLS.Spec.proposition71_actual_sigma_mellin
+#print axioms ZhangLS.Spec.proposition71_sigma_mellin_integrable
+#print axioms ZhangLS.Spec.proposition71_sigma_mellin_norm
+#print axioms ZhangLS.Spec.proposition71DyadicCharacters
+#print axioms ZhangLS.Spec.proposition71_mem_dyadic_characters
+#print axioms ZhangLS.Spec.proposition71DyadicSigmaNormSum
+#print axioms ZhangLS.Spec.proposition71DyadicPolynomialNormSum
+#print axioms ZhangLS.Spec.proposition71_dyadic_sigma_norm_sum_expanded
+#print axioms ZhangLS.Spec.proposition71_dyadic_mellin_product_integrable
+#print axioms ZhangLS.Spec.proposition71_actual_dyadic_mellin_mean
+#print axioms ZhangLS.Spec.proposition71_actual_delta_norm_integral
+#print axioms ZhangLS.Spec.proposition71_actual_dyadic_product_bound
+#print axioms ZhangLS.Spec.proposition71_actual_weighted_dyadic_sigma_bound
+#print axioms ZhangLS.Spec.proposition71TruncatedKappaCoefficient
+#print axioms ZhangLS.Spec.proposition71TruncatedKappaPolynomial
+#print axioms ZhangLS.Spec.proposition71_strict_polynomial_eq_LSeries
+#print axioms ZhangLS.Spec.proposition71_mem_long_indices
+#print axioms ZhangLS.Spec.proposition71_truncated_coefficient_majorant
+#print axioms ZhangLS.Spec.proposition71_truncated_coefficient_energy
+#print axioms ZhangLS.Spec.proposition71_actual_kappa_second_moment
+#print axioms ZhangLS.Spec.proposition71_exceptional_holder
+#print axioms ZhangLS.Spec.proposition71_imaginary_phase_distance
+#print axioms ZhangLS.Spec.proposition71_prime_window_log_error
+#print axioms ZhangLS.Spec.proposition71_actual_prime_phase_rate
+#print axioms ZhangLS.Spec.proposition71_actual_phase_rate
+#print axioms ZhangLS.Spec.proposition71_uniform_phase_budget
+#print axioms ZhangLS.Spec.proposition71_prime_windows_equal
+#print axioms ZhangLS.Spec.proposition71_actual_prime_masses_equal
+#print axioms ZhangLS.Spec.proposition71_weighted_three_norm
+#print axioms ZhangLS.Spec.proposition71_summed_phase_budget
+#print axioms ZhangLS.Spec.proposition71_actual_arithmetic_phase_budget
+#print axioms ZhangLS.Spec.proposition71ExceptionalPolynomialMean
+#print axioms ZhangLS.Spec.proposition71_exceptional_mean_nonneg
+#print axioms ZhangLS.Spec.proposition71_exceptional_fourth_power_budget
+#print axioms ZhangLS.Spec.proposition71_original_seven_five
+#print axioms ZhangLS.Spec.proposition71_log_power_linear_quarter_threshold
+#print axioms ZhangLS.Spec.proposition71_uniform_large_l_geometry
+#print axioms ZhangLS.Spec.proposition71_uniform_large_l_argument
+#print axioms ZhangLS.Spec.proposition71_prime_second_mass_bound
+#print axioms ZhangLS.Spec.proposition71_positive_imaginary_power_norm
+#print axioms ZhangLS.Spec.proposition71_ratio_inverse_square
+#print axioms ZhangLS.Spec.proposition71_large_l_prime_kernel
+#print axioms ZhangLS.Spec.proposition71_tau_five_quadratic_summable
+#print axioms ZhangLS.Spec.proposition71TauFiveQuadraticMass
+#print axioms ZhangLS.Spec.proposition71_tau_five_quadratic_mass_pos
+#print axioms ZhangLS.Spec.proposition71_actual_dilated_kappa_majorant
+#print axioms ZhangLS.Spec.proposition71_tau_dominated_series_summable
+#print axioms ZhangLS.Spec.proposition71_tau_dominated_tsum_bound
+#print axioms ZhangLS.Spec.proposition71SigmaTerm
+#print axioms ZhangLS.Spec.proposition71SigmaLargeLTerm
+#print axioms ZhangLS.Spec.proposition71SigmaLargeLTail
+#print axioms ZhangLS.Spec.proposition71_large_l_term_majorant
+#print axioms ZhangLS.Spec.proposition71_large_l_tail_bound
+#print axioms ZhangLS.Spec.proposition71SigmaStar
+#print axioms ZhangLS.Spec.proposition71LocalizedDyadicMean
+#print axioms ZhangLS.Spec.proposition71_localized_dyadic_mean_expanded
+#print axioms ZhangLS.Spec.proposition71_localized_dyadic_mean_nonneg
+#print axioms ZhangLS.Spec.proposition71LargeMeanSquareConstant
+#print axioms ZhangLS.Spec.proposition71_large_mean_square_constant_pos
+#print axioms ZhangLS.Spec.proposition71_actual_localized_sigma_square
+#print axioms ZhangLS.Spec.proposition71SigmaSeries
+#print axioms ZhangLS.Spec.proposition71SigmaOffLocalTerm
+#print axioms ZhangLS.Spec.proposition71SigmaOffLocalTail
+#print axioms ZhangLS.Spec.proposition71_tsum_finite_split
+#print axioms ZhangLS.Spec.proposition71_sigma_series_summable
+#print axioms ZhangLS.Spec.proposition71_sigma_local_finite_sum
+#print axioms ZhangLS.Spec.proposition71_sigma_exact_localization
+#print axioms ZhangLS.Spec.proposition71_offlocal_prime_kernel
+#print axioms ZhangLS.Spec.proposition71_offlocal_sigma_term
+#print axioms ZhangLS.Spec.proposition71_offlocal_term_majorant
+#print axioms ZhangLS.Spec.proposition71OffLocalTailConstant
+#print axioms ZhangLS.Spec.proposition71_offlocal_tail_constant_pos
+#print axioms ZhangLS.Spec.proposition71_actual_offlocal_tail_bound
+#print axioms ZhangLS.Spec.proposition71_tail_scalar_budget
+#print axioms ZhangLS.Spec.proposition71OffLocalConductorAggregate
+#print axioms ZhangLS.Spec.proposition71_hr_le_cutoff_of_dhr
+#print axioms ZhangLS.Spec.proposition71_offlocal_conductor_aggregate_bound
+#print axioms ZhangLS.Spec.proposition71OffLocalLargeAggregate
+#print axioms ZhangLS.Spec.proposition71_offlocal_large_aggregate_power_saving
+#print axioms ZhangLS.Spec.proposition71_weighted_prime_polynomial_continuous
+#print axioms ZhangLS.Spec.proposition71_weighted_prime_polynomial_norm
+#print axioms ZhangLS.Spec.proposition71_weighted_prime_kernel_integrable
+#print axioms ZhangLS.Spec.proposition71_actual_mellin_prime_bound
+#print axioms ZhangLS.Spec.proposition71_arctan_le_self
+#print axioms ZhangLS.Spec.proposition71_positive_cauchy_tail
+#print axioms ZhangLS.Spec.proposition71_negative_cauchy_tail
+#print axioms ZhangLS.Spec.proposition71_bounded_cauchy_integrable
+#print axioms ZhangLS.Spec.proposition71_cauchy_window_and_tail
+#print axioms ZhangLS.Spec.proposition71_actual_prime_sum_continuous
+#print axioms ZhangLS.Spec.proposition71_actual_prime_sum_trivial_bound
+#print axioms ZhangLS.Spec.proposition71_actual_inducer_weighted_prime_integral
+#print axioms ZhangLS.Spec.proposition71_decay_le_inverse_modulus
+#print axioms ZhangLS.Spec.proposition71_actual_inducer_weighted_prime_integral_inverse_D
+#print axioms ZhangLS.Spec.proposition71_small_primitive_weighted_integral
+#print axioms ZhangLS.Spec.proposition71_prime_shift_polynomial
+#print axioms ZhangLS.Spec.proposition71_small_primitive_delta_sum
+#print axioms ZhangLS.Spec.proposition71SigmaTruncated
+#print axioms ZhangLS.Spec.proposition71_actual_small_sigma_bound
+#print axioms ZhangLS.Spec.proposition71SmallConductorAggregate
+#print axioms ZhangLS.Spec.proposition71_small_conductor_aggregate_bound
+#print axioms ZhangLS.Spec.proposition71_log_power_eighth_threshold
+#print axioms ZhangLS.Spec.proposition71_quarter_small_conductor_power_saving
+#print axioms ZhangLS.Spec.proposition71_actual_localized_dyadic_power_saving
+#print axioms ZhangLS.Spec.proposition71_large_conductor_weight
+#print axioms ZhangLS.Spec.proposition71LocalizedConductorBlock
+#print axioms ZhangLS.Spec.proposition71_localized_conductor_block_nonneg
+#print axioms ZhangLS.Spec.proposition71_localized_conductor_block_le_mean
+#print axioms ZhangLS.Spec.proposition71_localized_conductor_block_bound
+#print axioms ZhangLS.Spec.proposition71LocalizedDyadicAggregate
+#print axioms ZhangLS.Spec.proposition71_localized_dyadic_aggregate_nonneg
+#print axioms ZhangLS.Spec.proposition71_localized_dyadic_aggregate_bound
+#print axioms ZhangLS.Spec.proposition71FullSigmaConductorBlock
+#print axioms ZhangLS.Spec.proposition71_dhR_le_cutoff
+#print axioms ZhangLS.Spec.proposition71_strict_localized_aggregate_le
+#print axioms ZhangLS.Spec.proposition71_full_sigma_block_le_local_and_tail
+#print axioms ZhangLS.Spec.proposition71_log_power_rpow_threshold
+#print axioms ZhangLS.Spec.proposition71LocalizedLargeAggregate
+#print axioms ZhangLS.Spec.proposition71_localized_large_aggregate_nonneg
+#print axioms ZhangLS.Spec.proposition71_localized_large_aggregate_power_saving
+#print axioms ZhangLS.Spec.proposition71ActualLargeConductorAggregate
+#print axioms ZhangLS.Spec.proposition71_actual_large_conductor_dyadic_cover
+#print axioms ZhangLS.Spec.proposition71_actual_large_conductor_power_saving
+#print axioms ZhangLS.Spec.proposition71_mem_sigma_truncation
+#print axioms ZhangLS.Spec.proposition71_sigma_truncated_finite_sum
+#print axioms ZhangLS.Spec.proposition71_sigma_truncation_complement
+#print axioms ZhangLS.Spec.proposition71_sigma_exact_truncation
+#print axioms ZhangLS.Spec.proposition71_outer_tail_budget
+#print axioms ZhangLS.Spec.proposition71LargeLTailAggregate
+#print axioms ZhangLS.Spec.proposition71_large_l_tail_aggregate_bound
+#print axioms ZhangLS.Spec.proposition71ActualSmallConductorAggregate
+#print axioms ZhangLS.Spec.proposition71_strict_truncated_aggregate_le
+#print axioms ZhangLS.Spec.proposition71_D_le_P
+#print axioms ZhangLS.Spec.proposition71_actual_small_conductor_power_saving
+#print axioms ZhangLS.Spec.proposition71ActualConductorAggregate
+#print axioms ZhangLS.Spec.proposition71_strict_triple_indices
+#print axioms ZhangLS.Spec.proposition71_actual_conductor_split
+#print axioms ZhangLS.Spec.proposition71_actual_conductor_power_saving
+#print axioms ZhangLS.Spec.proposition71ResidueIntegrand
+#print axioms ZhangLS.Spec.proposition71PoleNumerator
+#print axioms ZhangLS.Spec.proposition71ActualR
+#print axioms ZhangLS.Spec.proposition71_cyclic_zeta_product
+#print axioms ZhangLS.Spec.proposition71_zeta_analyticAt
+#print axioms ZhangLS.Spec.proposition71_pole_numerator_analytic
+#print axioms ZhangLS.Spec.proposition71_integrand_regularization
+#print axioms ZhangLS.Spec.proposition71_actual_local_factorization
+#print axioms ZhangLS.Spec.proposition71_residue_limit
+#print axioms ZhangLS.Spec.proposition71_actual_zeta_denominator_nonzero
+#print axioms ZhangLS.Spec.proposition71_actual_residue_formula
+#print axioms ZhangLS.Spec.proposition71_actual_residue_local_data
+#print axioms ZhangLS.Spec.proposition71_mobius_coprime_indicator
+#print axioms ZhangLS.Spec.proposition71_mobius_insert
+#print axioms ZhangLS.Spec.proposition71_mobius_coprime_factor
+#print axioms ZhangLS.Spec.proposition71_mobius_factor_all
+#print axioms ZhangLS.Spec.proposition71OriginalSigmaTruncated
+#print axioms ZhangLS.Spec.proposition71_original_sigma_expanded
+#print axioms ZhangLS.Spec.proposition71OriginalQuarterAggregate
+#print axioms ZhangLS.Spec.proposition71_beta_three_height_margin
+#print axioms ZhangLS.Spec.proposition71_original_quarter_aggregate_power_saving
+#print axioms ZhangLS.Spec.proposition71OriginalSigmaSeries
+#print axioms ZhangLS.Spec.proposition71_original_sigma_series_expanded
+#print axioms ZhangLS.Spec.proposition71OriginalConductorAggregate
+#print axioms ZhangLS.Spec.proposition71_original_seven_thirteen_majorant_little_o
+#print axioms ZhangLS.Spec.proposition71OriginalSigmaStar
+#print axioms ZhangLS.Spec.proposition71_original_sigma_star_expanded
+#print axioms ZhangLS.Spec.proposition71OriginalLocalizedLargeAggregate
+#print axioms ZhangLS.Spec.proposition71_original_localized_large_power_saving
+#print axioms ZhangLS.Spec.proposition71_original_localized_large_little_o
+#print axioms ZhangLS.Spec.proposition71ResidueCorrection
+#print axioms ZhangLS.Spec.proposition71ResidueFactorConstant
+#print axioms ZhangLS.Spec.proposition71_residue_factor_constant_pos
+#print axioms ZhangLS.Spec.proposition71_actual_residue_regular_formula
+#print axioms ZhangLS.Spec.proposition71_actual_poles_in_delta_disk
+#print axioms ZhangLS.Spec.proposition71_actual_delta_log_error_threshold
+#print axioms ZhangLS.Spec.proposition71_actual_delta_error_threshold
+#print axioms ZhangLS.Spec.proposition71_actual_zeta_factor_errors
+#print axioms ZhangLS.Spec.proposition71_actual_correction_error
+#print axioms ZhangLS.Spec.proposition71_residue_parameters_threshold
+#print axioms ZhangLS.Spec.proposition71ResidueGeometric
+#print axioms ZhangLS.Spec.proposition71ResidueCoefficient
+#print axioms ZhangLS.Spec.proposition71ResidueSignedWeight
+#print axioms ZhangLS.Spec.proposition71ResidueWeight
+#print axioms ZhangLS.Spec.proposition71ResiduePhaseSign
+#print axioms ZhangLS.Spec.proposition71_residue_real_bounds
+#print axioms ZhangLS.Spec.proposition71_residue_geometric_formula
+#print axioms ZhangLS.Spec.proposition71_residue_geometric_norm
+#print axioms ZhangLS.Spec.proposition71_residue_geometric_error
+#print axioms ZhangLS.Spec.proposition71ResiduePhaseConstant
+#print axioms ZhangLS.Spec.proposition71_residue_prime_log_error
+#print axioms ZhangLS.Spec.proposition71_residue_prime_offset_errors
+#print axioms ZhangLS.Spec.proposition71_residue_prime_phase_norm
+#print axioms ZhangLS.Spec.proposition71_residue_prime_phase
+#print axioms ZhangLS.Spec.proposition71_residue_phase_sign_norm
+#print axioms ZhangLS.Spec.proposition71_residue_signed_weight_identity
+#print axioms ZhangLS.Spec.proposition71ResidueScalarConstant
+#print axioms ZhangLS.Spec.proposition71_residue_scalar_constant_pos
+#print axioms ZhangLS.Spec.proposition71_residue_scalar_normalization
+#print axioms ZhangLS.Spec.proposition71_eventual_residue_scalar_normalization
+#print axioms ZhangLS.Spec.proposition71ResidueNormalizationConstant
+#print axioms ZhangLS.Spec.proposition71_residue_normalization_constant_pos
+#print axioms ZhangLS.Spec.proposition71_actual_residue_normalization_bound
+#print axioms ZhangLS.Spec.proposition71_actual_residue_normalization
+#print axioms ZhangLS.Spec.proposition71_actual_residue_nonzero
+#print axioms ZhangLS.Spec.Section721PositiveLowerSet
+#print axioms ZhangLS.Spec.section721_indices_lower
+#print axioms ZhangLS.Spec.section721_common_divisor_reindex
+#print axioms ZhangLS.Spec.section721_product_reindex
+#print axioms ZhangLS.Spec.section721_weight_rearrangement
+#print axioms ZhangLS.Spec.section721StarArithmeticSum
+#print axioms ZhangLS.Spec.section721StarTerm
+#print axioms ZhangLS.Spec.section721ReindexedTerm
+#print axioms ZhangLS.Spec.section721_supported_le_mem
+#print axioms ZhangLS.Spec.section721_omitted_star_coefficient_zero
+#print axioms ZhangLS.Spec.section721_star_term_cutoff_zero
+#print axioms ZhangLS.Spec.section721_star_term_substitution
+#print axioms ZhangLS.Spec.section721_star_inner_reindex
+#print axioms ZhangLS.Spec.section721_divisor_sum_collapse
+#print axioms ZhangLS.Spec.section721_convolution_collapse
+#print axioms ZhangLS.Spec.section721_star_eq_arithmetic_sum
