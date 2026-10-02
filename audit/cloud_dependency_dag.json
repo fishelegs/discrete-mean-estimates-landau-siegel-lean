@@ -201,7 +201,24 @@
         "effectivity_not_formalized",
         "small_conductor_reduction",
         "legacy_tautology_not_target"
-      ]
+      ],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "P2.4",
+          "P2.5",
+          "P2.6",
+          "L2.3",
+          "L5.7"
+        ],
+        "mathematical_and_library_inputs": [
+          "Actual Xi*_1/2/3 and a, positivity, contradiction, and finite-conductor reduction",
+          "Uniform asymptotic quantifiers; effective witness representation"
+        ]
+      }
     },
     {
       "id": "T2",
@@ -238,7 +255,20 @@
       "semantic_issue_ids": [
         "effectivity_not_formalized",
         "legacy_tautology_not_target"
-      ]
+      ],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "T1"
+        ],
+        "mathematical_and_library_inputs": [
+          "Real-axis derivative control translating T1 into exponent 2024",
+          "Quantified uniform constants and small moduli"
+        ]
+      }
     },
     {
       "id": "P2.1",
@@ -263,7 +293,8 @@
         "trusted_capstone_found": true,
         "capstone": "proposition21_proved",
         "verification_report": "audit/CLOUD_PROPOSITION21_STATUS.md",
-        "axiom_report": "audit/cloud_proposition21_axioms.txt"
+        "axiom_report": "audit/cloud_proposition21_axioms.txt",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L3.4",
@@ -274,7 +305,19 @@
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "active_work": "Complete original complement bound, central checks and independent semantic review passed."
+      "active_work": "Complete original complement bound, central checks and independent semantic review passed.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L3.4",
+          "L3.5",
+          "L3.6"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "P2.2",
@@ -295,7 +338,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 134,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Proposition22.lean",
         "symbol": "proposition22_proved",
@@ -304,7 +347,8 @@
           "ZhangLS.Spec.Proposition22Zeros",
           "ZhangLS.Spec.Proposition22Neighbor"
         ],
-        "source_sha256": "6d733e3a41db8bde330b206feeb47f0fe8ebc1bdfaa327719422e57525a959de"
+        "source_sha256": "6d733e3a41db8bde330b206feeb47f0fe8ebc1bdfaa327719422e57525a959de",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L4.5",
@@ -318,7 +362,20 @@
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
       "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
-      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L4.5",
+          "L4.6",
+          "L4.7",
+          "L4.2"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L2.3",
@@ -339,7 +396,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 135,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma23.lean",
         "symbol": "lemma23_proved",
@@ -348,7 +405,8 @@
           "ZhangLS.Spec.Lemma23ZeroData",
           "ZhangLS.Spec.Lemma23DirichletBranch"
         ],
-        "source_sha256": "330a5b5995311ff8e9a742e4454da147031d5ab3cc771ddf6e267c20628c984a"
+        "source_sha256": "330a5b5995311ff8e9a742e4454da147031d5ab3cc771ddf6e267c20628c984a",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
@@ -360,7 +418,17 @@
         "paper_reference_2_dot_incomplete"
       ],
       "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
-      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "P2.2"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "P2.4",
@@ -404,7 +472,27 @@
       "missing_specification_or_engineering": [
         "Actual H/J, Xi*, a, decimals as exact rationals, uniform o(P)"
       ],
-      "semantic_issue_ids": []
+      "semantic_issue_ids": [],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L8.1",
+          "P7.1",
+          "L10.1",
+          "L10.2",
+          "L8.2",
+          "L8.3",
+          "L8.4",
+          "L5.7"
+        ],
+        "mathematical_and_library_inputs": [
+          "Sections 8–10 arithmetic evaluations and certified numerical lower bound",
+          "Actual H/J, Xi*, a, decimals as exact rationals, uniform o(P)"
+        ]
+      }
     },
     {
       "id": "P2.5",
@@ -459,7 +547,38 @@
       "missing_specification_or_engineering": [
         "Actual Phi components and all arithmetic coefficient definitions"
       ],
-      "semantic_issue_ids": []
+      "semantic_issue_ids": [],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L2.3",
+          "L8.1",
+          "P7.1",
+          "L12.1",
+          "L12.2",
+          "L12.3",
+          "P14.1",
+          "L15.1",
+          "L15.2",
+          "L15.3",
+          "L16.1",
+          "L16.2",
+          "L17.1",
+          "L8.2",
+          "L8.4",
+          "L4.8",
+          "L5.1",
+          "L5.2",
+          "L6.1"
+        ],
+        "mathematical_and_library_inputs": [
+          "Sections 12–18 cross-term evaluations and certified cancellation to (2.32); Cauchy combination with (2.33)",
+          "Actual Phi components and all arithmetic coefficient definitions"
+        ]
+      }
     },
     {
       "id": "P2.6",
@@ -501,7 +620,25 @@
       "missing_specification_or_engineering": [
         "Actual J/Jtilde/E2 and uniform o(aP)"
       ],
-      "semantic_issue_ids": []
+      "semantic_issue_ids": [],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L11.1",
+          "L11.2",
+          "L8.1",
+          "P7.1",
+          "L2.3",
+          "L5.7"
+        ],
+        "mathematical_and_library_inputs": [
+          "Smoothed J functional relation; weighted error mean and Section 9 comparison",
+          "Actual J/Jtilde/E2 and uniform o(aP)"
+        ]
+      }
     },
     {
       "id": "L3.1",
@@ -522,7 +659,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 139,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma31.lean",
         "symbol": "lemma31_proved",
@@ -530,14 +667,23 @@
         "direct_imports": [
           "ZhangLS.Spec.Lemma31TotalWeight"
         ],
-        "source_sha256": "245b1d462d8fcb956aa418f18462ff52d7c917b2eb0c5a56a000e2437a7f60b1"
+        "source_sha256": "245b1d462d8fcb956aa418f18462ff52d7c917b2eb0c5a56a000e2437a7f60b1",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L3.2",
@@ -558,7 +704,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 140,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma32OriginalTargetClosure.lean",
         "symbol": "lemma32_proved",
@@ -567,7 +713,8 @@
           "ZhangLS.Spec.Lemma32ActualUniformBurgess",
           "ZhangLS.Spec.Lemma32BurgessReduction"
         ],
-        "source_sha256": "3972ec370756d3f09c9923c6fcf66ff1574a7cee582d13b2cf2b9a4cc73928b3"
+        "source_sha256": "3972ec370756d3f09c9923c6fcf66ff1574a7cee582d13b2cf2b9a4cc73928b3",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
@@ -576,7 +723,15 @@
       "semantic_issue_ids": [
         "paper_proof_sketch_not_dependency_on_L3.1"
       ],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L3.3",
@@ -596,7 +751,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 141,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma33.lean",
         "symbol": "lemma33_proved",
@@ -607,14 +762,23 @@
           "ZhangLS.Spec.Lemma33AdditiveLargeSieve",
           "ZhangLS.Spec.Lemma33ActualSamples"
         ],
-        "source_sha256": "c7ab0f6de943ebbbb90b7bd3abfe5efc978cdbf672bab195854941ae88ff320a"
+        "source_sha256": "c7ab0f6de943ebbbb90b7bd3abfe5efc978cdbf672bab195854941ae88ff320a",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L3.4",
@@ -635,7 +799,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 142,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma34.lean",
         "symbol": "lemma34_proved",
@@ -644,7 +808,8 @@
           "ZhangLS.Spec.Lemma34BSecondMoment",
           "ZhangLS.Spec.Lemma33"
         ],
-        "source_sha256": "1f4716bd07abaa9a9672260c8c5a548288b7b1bf95ada88657be43318dffb042"
+        "source_sha256": "1f4716bd07abaa9a9672260c8c5a548288b7b1bf95ada88657be43318dffb042",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L3.3"
@@ -653,7 +818,17 @@
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L3.3"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L3.5",
@@ -673,7 +848,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 143,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma35.lean",
         "symbol": "lemma35_proved",
@@ -681,7 +856,8 @@
         "direct_imports": [
           "ZhangLS.Spec.Lemma35BSecondMoment"
         ],
-        "source_sha256": "86c461bf7a41dae0b948fc768db83fe72adc3c143858ec849b79bc3084da5384"
+        "source_sha256": "86c461bf7a41dae0b948fc768db83fe72adc3c143858ec849b79bc3084da5384",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L3.1"
@@ -694,7 +870,18 @@
       "semantic_issue_ids": [
         "paper_second_assertion_L3.2_means_L3.3"
       ],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L3.1",
+          "L3.3"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L3.6",
@@ -720,7 +907,8 @@
         "trusted_capstone_found": true,
         "capstone": "lemma36_proved",
         "verification_report": "audit/CLOUD_LEMMA36_STATUS.md",
-        "axiom_report": "audit/cloud_lemma36_axioms.txt"
+        "axiom_report": "audit/cloud_lemma36_axioms.txt",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
@@ -732,7 +920,18 @@
       "semantic_issue_ids": [
         "paper_first_assertion_L3.2_and_L3.1_should_be_L3.3_and_L3.2"
       ],
-      "active_work": "Complete original target, fresh kernel/regression/standard-axiom checks and independent statement review passed."
+      "active_work": "Complete original target, fresh kernel/regression/standard-axiom checks and independent statement review passed.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L3.2",
+          "L3.3"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L4.1",
@@ -752,7 +951,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 145,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma23GoodSet.lean",
         "symbol": "lemma23_lemma41",
@@ -760,7 +959,8 @@
         "direct_imports": [
           "ZhangLS.Spec.Lemma23X1Expansion"
         ],
-        "source_sha256": "ae75451e0cff47b7fd66e0c479608074431bdb5f300b8280f5a3fbccb3cd3045"
+        "source_sha256": "ae75451e0cff47b7fd66e0c479608074431bdb5f300b8280f5a3fbccb3cd3045",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
@@ -768,7 +968,15 @@
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
       "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
-      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L4.2",
@@ -788,7 +996,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 146,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma23ProductApproximation.lean",
         "symbol": "lemma23_lemma42",
@@ -796,7 +1004,8 @@
         "direct_imports": [
           "ZhangLS.Spec.Lemma23GoodSet"
         ],
-        "source_sha256": "7eee95ce43d22d6123d7a4e158a384d0ccca1b2404cb1492f617619c1be20e68"
+        "source_sha256": "7eee95ce43d22d6123d7a4e158a384d0ccca1b2404cb1492f617619c1be20e68",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
@@ -804,7 +1013,15 @@
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
       "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
-      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L4.3",
@@ -824,7 +1041,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 147,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma23SectionFourLogDerivative.lean",
         "symbol": "lemma23_lemma43_at_explicit_threshold",
@@ -834,7 +1051,8 @@
           "ZhangLS.Spec.Lemma23BorelCaratheodory",
           "Mathlib.Analysis.Complex.ExponentialBounds"
         ],
-        "source_sha256": "6ebc5209aba1f5b90de8f8799fd17619bd97e482488f3c25b47aceabce0aede3"
+        "source_sha256": "6ebc5209aba1f5b90de8f8799fd17619bd97e482488f3c25b47aceabce0aede3",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L4.1",
@@ -845,7 +1063,18 @@
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
       "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
-      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L4.1",
+          "L4.2"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L4.4",
@@ -866,7 +1095,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 148,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma44ApproximateFunctionalEquation.lean",
         "symbol": "lemma44_actual_approximate_functional_equation",
@@ -875,7 +1104,8 @@
           "ZhangLS.Spec.Lemma44LeftContourSplit",
           "ZhangLS.Spec.Lemma44ReflectedPolynomialBounds"
         ],
-        "source_sha256": "8dd9770207e3f702bd4ba427e6630e6a8089be4b4bd3d4eeaddbce91b3eb1046"
+        "source_sha256": "8dd9770207e3f702bd4ba427e6630e6a8089be4b4bd3d4eeaddbce91b3eb1046",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
@@ -883,7 +1113,15 @@
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
       "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
-      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L4.5",
@@ -904,7 +1142,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 149,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma45ZeroFree.lean",
         "symbol": "lemma45_actual_product_ne_zero",
@@ -913,7 +1151,8 @@
           "ZhangLS.Spec.Lemma45HorizontalQuotient",
           "ZhangLS.Spec.Lemma45ErrorBudget"
         ],
-        "source_sha256": "b9c775d544201c8f583209a5e3882315359ce6fd9e3a60cb610af677e8f59517"
+        "source_sha256": "b9c775d544201c8f583209a5e3882315359ce6fd9e3a60cb610af677e8f59517",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L4.1",
@@ -926,7 +1165,20 @@
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
       "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
-      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L4.1",
+          "L4.2",
+          "L4.3",
+          "L4.4"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L4.6",
@@ -947,7 +1199,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 150,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma46ZeroAnalysis.lean",
         "symbol": "lemma46_proved",
@@ -956,7 +1208,8 @@
           "ZhangLS.Spec.Lemma46RoucheLocal",
           "Mathlib.Analysis.Calculus.Deriv.Shift"
         ],
-        "source_sha256": "10021360bbcc4681d079be77a00514692ff562845819af3279b728f3e04eb5f1"
+        "source_sha256": "10021360bbcc4681d079be77a00514692ff562845819af3279b728f3e04eb5f1",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
@@ -968,7 +1221,19 @@
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
       "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
-      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L4.3",
+          "L4.4",
+          "L4.5"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L4.7",
@@ -988,7 +1253,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 151,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma47ThreeZeros.lean",
         "symbol": "lemma47_proved",
@@ -997,7 +1262,8 @@
           "ZhangLS.Spec.Lemma47ModelApproximation",
           "ZhangLS.Spec.Lemma47ModelBoundary"
         ],
-        "source_sha256": "eb6054c630d9bfb7cb1cb3d88910e8f08d5414b833e5af80f1cb9ccd656b9066"
+        "source_sha256": "eb6054c630d9bfb7cb1cb3d88910e8f08d5414b833e5af80f1cb9ccd656b9066",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L4.6"
@@ -1007,7 +1273,17 @@
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
       "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
-      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L4.6"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L4.8",
@@ -1027,7 +1303,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 152,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma48InverseFactor.lean",
         "symbol": "lemma48_proved",
@@ -1035,7 +1311,8 @@
         "direct_imports": [
           "ZhangLS.Spec.Lemma48ZeroRegion"
         ],
-        "source_sha256": "13659e4d2f817c6ae48af07ab5195773f6eebb313e438999a0ccdedea15e2f5d"
+        "source_sha256": "13659e4d2f817c6ae48af07ab5195773f6eebb313e438999a0ccdedea15e2f5d",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L4.1",
@@ -1048,7 +1325,19 @@
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
       "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
-      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L4.1",
+          "L4.4",
+          "L4.2"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L5.1",
@@ -1068,7 +1357,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 153,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma51.lean",
         "symbol": "lemma51_proved",
@@ -1076,14 +1365,23 @@
         "direct_imports": [
           "ZhangLS.Spec.Lemma51ShiftEstimates"
         ],
-        "source_sha256": "bd0637e010c6bf44404c65d5f57caa6d3b55a0f8bc4859865570d8bc0c4bfb3c"
+        "source_sha256": "bd0637e010c6bf44404c65d5f57caa6d3b55a0f8bc4859865570d8bc0c4bfb3c",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L5.2",
@@ -1104,7 +1402,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 154,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma52.lean",
         "symbol": "lemma52_proved",
@@ -1112,7 +1410,8 @@
         "direct_imports": [
           "ZhangLS.Spec.Lemma52Product"
         ],
-        "source_sha256": "081473275101ca48fe48205c6b094ab5fb3ab3cdaf25d2e19dda981e63bfa857"
+        "source_sha256": "081473275101ca48fe48205c6b094ab5fb3ab3cdaf25d2e19dda981e63bfa857",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L5.1"
@@ -1121,7 +1420,17 @@
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L5.1"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L5.3",
@@ -1142,7 +1451,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 155,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma53.lean",
         "symbol": "lemma53_proved",
@@ -1150,14 +1459,23 @@
         "direct_imports": [
           "ZhangLS.Spec.Lemma53LargeRange"
         ],
-        "source_sha256": "9866ae6d9d13855cebc047807cd2ba7e38a359f99a2524a1b75c9ea1fb2c1981"
+        "source_sha256": "9866ae6d9d13855cebc047807cd2ba7e38a359f99a2524a1b75c9ea1fb2c1981",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L5.4",
@@ -1177,7 +1495,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 156,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma54.lean",
         "symbol": "lemma54_proved",
@@ -1186,7 +1504,8 @@
           "ZhangLS.Spec.Lemma54UniformSecondMoment",
           "ZhangLS.Spec.Lemma54DiskErrorAbsorption"
         ],
-        "source_sha256": "2c3b173c308948c2673c996bcf6809dabc7e9e750f5120e04b7bfad13c18259c"
+        "source_sha256": "2c3b173c308948c2673c996bcf6809dabc7e9e750f5120e04b7bfad13c18259c",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L5.3"
@@ -1195,7 +1514,17 @@
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L5.3"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L5.5",
@@ -1213,7 +1542,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 157,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma55FullZeroExclusion.lean",
         "symbol": "lemma55_proved",
@@ -1222,7 +1551,8 @@
           "ZhangLS.Spec.Lemma55FourZeroDetection",
           "ZhangLS.Spec.Lemma55UniformRepulsionBudget"
         ],
-        "source_sha256": "55f980ef79d3eb361e1d6cc4c082440394dbff949629035e9ae06e6e676abcb8"
+        "source_sha256": "55f980ef79d3eb361e1d6cc4c082440394dbff949629035e9ae06e6e676abcb8",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
@@ -1231,7 +1561,17 @@
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L5.7"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L5.6",
@@ -1281,6 +1621,19 @@
           "status": "blocked_specification",
           "target": "ZhangLS/Spec/Lemma56.lean:Lemma56Target"
         }
+      },
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "partial",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L5.5"
+        ],
+        "mathematical_and_library_inputs": [
+          "Nonprincipal branch exists; literal principal branch would already imply eventual not-(A)",
+          "Preserve original target; expose restricted port explicitly; do not silently add 1<r"
+        ]
       }
     },
     {
@@ -1301,7 +1654,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 159,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma57LeftQuadraticGrowth.lean",
         "symbol": "lemma57_target_proved",
@@ -1310,14 +1663,23 @@
           "ZhangLS.Spec.Lemma57CriticalStripGrowth",
           "ZhangLS.Spec.Lemma57QuadraticConductorThreshold"
         ],
-        "source_sha256": "9683eccbee0b881f34aba6adac8ad290db1a56eddf6a1d0a4199784ec824e528"
+        "source_sha256": "9683eccbee0b881f34aba6adac8ad290db1a56eddf6a1d0a4199784ec824e528",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L5.8",
@@ -1337,7 +1699,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 160,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma58.lean",
         "symbol": "lemma58_proved",
@@ -1346,14 +1708,23 @@
           "ZhangLS.Spec.Lemma55SimpleRealZero",
           "ZhangLS.Spec.Lemma44LongSum"
         ],
-        "source_sha256": "50a3657cd5eceb267637065d35f0c175964e3c00105d4b6bd43cb0e4362d3beb"
+        "source_sha256": "50a3657cd5eceb267637065d35f0c175964e3c00105d4b6bd43cb0e4362d3beb",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L5.9",
@@ -1374,7 +1745,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 161,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma59.lean",
         "symbol": "lemma59_proved",
@@ -1382,7 +1753,8 @@
         "direct_imports": [
           "ZhangLS.Spec.Lemma59FiniteComplexProducts"
         ],
-        "source_sha256": "954fe0985031ef902190c94515417e17adc9a22f0afde072ed118c7248a6df39"
+        "source_sha256": "954fe0985031ef902190c94515417e17adc9a22f0afde072ed118c7248a6df39",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "P2.2"
@@ -1392,7 +1764,17 @@
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
       "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
-      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty."
+      "good_set_scope": "Conditional on actual Psi1 membership. No dependency on proving that Psi1 is large or nonempty.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "P2.2"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L6.1",
@@ -1413,7 +1795,7 @@
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 162,
-        "fresh_kernel_check": false,
+        "fresh_kernel_check": true,
         "old_completion_revalidated": false,
         "capstone_path": "ZhangLS/Spec/Lemma61.lean",
         "symbol": "lemma61_proved",
@@ -1421,7 +1803,8 @@
         "direct_imports": [
           "ZhangLS.Spec.Lemma61Approximation"
         ],
-        "source_sha256": "25b487be9b9a0f66bb345b6552987d1e8a8f65c0e2c1785a2c14c5424d972cf0"
+        "source_sha256": "25b487be9b9a0f66bb345b6552987d1e8a8f65c0e2c1785a2c14c5424d972cf0",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L5.1"
@@ -1430,7 +1813,17 @@
       "missing_mathematics": [],
       "missing_specification_or_engineering": [],
       "semantic_issue_ids": [],
-      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass."
+      "remaining_audit": "Historical completion is reported by the ledger, not independently revalidated in this source/DAG pass.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L5.1"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "P7.1",
@@ -1472,7 +1865,23 @@
         "consume_L5.6_nonprincipal_only",
         "paper_L5.2_i_ii_main_term_likely_L5.4",
         "generic_all_moduli_large_sieve_not_just_L3.3"
-      ]
+      ],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "P2.1",
+          "L5.3",
+          "L5.4",
+          "L5.6"
+        ],
+        "mathematical_and_library_inputs": [
+          "Character averaging, reciprocity/Ramanujan decomposition, generic large sieve, residues and error estimates",
+          "Actual kappa/lambda/xi/Sj/E and Theta1; uniformity in bounded sequences"
+        ]
+      }
     },
     {
       "id": "L8.1",
@@ -1516,7 +1925,25 @@
         "no_dependency_on_P7.1_arithmetic_evaluation",
         "zero_boundary_and_uniform_sequence_bounds"
       ],
-      "active_work": "Independent proof development is ongoing; full numbered target is not yet verified."
+      "active_work": "Independent proof development is ongoing; full numbered target is not yet verified.",
+      "scheduling_status": "active",
+      "dispatch_reason": "Actual contour residues/boundaries plus unconditional prime-mass normalization",
+      "proof_status": "in_progress",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "P2.2",
+          "L5.2",
+          "L5.9",
+          "L6.1",
+          "L3.3"
+        ],
+        "mathematical_and_library_inputs": [
+          "Actual residue sum, reflected contour, shifted-L fourth moment and aggregate error",
+          "Unconditional prime-mass normalization (2.9), or a direct actual-prime-mass aggregate bound; the existing (A)-conditional lower bound cannot establish the unconditional original statement.",
+          "Define Theta1 integral separately from P7.1 evaluation; actual finite zero sets"
+        ]
+      }
     },
     {
       "id": "L8.2",
@@ -1553,7 +1980,20 @@
       "semantic_issue_ids": [
         "paper_L5.6_citation_not_relevant_to_chi_sum",
         "contour_error_needs_actual_proof"
-      ]
+      ],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L5.8"
+        ],
+        "mathematical_and_library_inputs": [
+          "Smoothed/logarithmic Perron identity, contour tails, L5.8 substitution and double-pole residue",
+          "Actual beta shifts, finite strict cutoff, uniform x and mu"
+        ]
+      }
     },
     {
       "id": "L8.3",
@@ -1591,7 +2031,20 @@
         "analytic_extension_not_totalized_quotient",
         "strict_vs_closed_five_alpha_boundary"
       ],
-      "active_work": "Exact original coefficient/Euler definitions and local-factor proofs are in development; full numbered target remains unproved."
+      "active_work": "Exact original coefficient/Euler definitions and local-factor proofs are in development; full numbered target remains unproved.",
+      "scheduling_status": "active",
+      "dispatch_reason": "Actual coefficient identities, correction Euler product, finite-prime Rankin bounds",
+      "proof_status": "in_progress",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": [
+          "Actual Section7 kappa/lambda/xi definitions",
+          "Prime-power generating functions and multiplicativity",
+          "Normally convergent correction product",
+          "Finite prime-product and logarithmic-weight bounds; additive error handles vanishing prime2 factor"
+        ]
+      }
     },
     {
       "id": "L8.4",
@@ -1631,7 +2084,22 @@
       ],
       "semantic_issue_ids": [
         "paper_L5.6_linearization_likely_L5.8"
-      ]
+      ],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L8.3",
+          "L5.5",
+          "L5.8"
+        ],
+        "mathematical_and_library_inputs": [
+          "L-ratio contour identity, zero exclusion, linearization and residues",
+          "Actual U/Pi and strict cutoff; use corrected references"
+        ]
+      }
     },
     {
       "id": "L10.1",
@@ -1668,7 +2136,20 @@
       ],
       "semantic_issue_ids": [
         "paper_contour_reference_L8.1_likely_L8.2"
-      ]
+      ],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L5.8"
+        ],
+        "mathematical_and_library_inputs": [
+          "Piecewise tent-weight Perron evaluation in three ranges",
+          "Actual ftilde and V1j; exact rational endpoints"
+        ]
+      }
     },
     {
       "id": "L10.2",
@@ -1709,7 +2190,22 @@
       "semantic_issue_ids": [
         "paper_contour_reference_L8.1_likely_L8.4",
         "paper_L8.2_for_U_likely_L8.3"
-      ]
+      ],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L5.8",
+          "L8.3",
+          "L8.4"
+        ],
+        "mathematical_and_library_inputs": [
+          "U-weighted tent Perron evaluation and complementary ranges",
+          "Actual V2j and Pi; uniform d,r cutoff"
+        ]
+      }
     },
     {
       "id": "L11.1",
@@ -1735,7 +2231,8 @@
         "trusted_capstone_found": true,
         "capstone": "lemma111_proved",
         "verification_report": "audit/CLOUD_LEMMA111_STATUS.md",
-        "axiom_report": "audit/cloud_lemma111_axioms.txt"
+        "axiom_report": "audit/cloud_lemma111_axioms.txt",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [],
@@ -1747,7 +2244,15 @@
       "shared_implementation_inputs": [
         "Existing Gaussian infrastructure associated with L6.1; the numbered L6.1 statement is not by itself a direct proof."
       ],
-      "active_work": "Complete original target, fresh kernel/regression/standard-axiom checks and independent statement review passed."
+      "active_work": "Complete original target, fresh kernel/regression/standard-axiom checks and independent statement review passed.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": []
+      }
     },
     {
       "id": "L11.2",
@@ -1763,7 +2268,7 @@
         "url": "https://arxiv.org/pdf/2211.02515v1#page=65"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "unstarted",
+      "working_status": "in_progress",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 171,
@@ -1785,7 +2290,24 @@
       ],
       "shared_implementation_inputs": [
         "Existing Gaussian infrastructure associated with L6.1; the numbered L6.1 statement is not by itself a direct proof."
-      ]
+      ],
+      "scheduling_status": "active",
+      "dispatch_reason": "Composite-conductor chi*psi Gaussian functional equation and integrated smoothing",
+      "proof_status": "in_progress",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": [
+          "Primitive composite chi*psi conductor Dp bridge",
+          "Generic Gaussian Mellin/functional-equation infrastructure underlying6.1; prime-conductor6.1 alone does not instantiate",
+          "Actual Jtilde1/Jtilde2/E2 and integrated tent smoothing with D*t0 normalization"
+        ],
+        "available_verified_inputs": [
+          "Lemma44CharacterProduct/ProductDirichletSeries supplies the primitive conductor-Dp product and inverse/evaluation bridges",
+          "Completed11.1 actual smoothed tent and generic Gaussian infrastructure underlying6.1"
+        ]
+      },
+      "active_work": "An independent original11.2 proof branch is active; full target remains unproved."
     },
     {
       "id": "L12.1",
@@ -1819,7 +2341,20 @@
       "missing_specification_or_engineering": [
         "Actual kappa13 and exact P-double-prime endpoints"
       ],
-      "semantic_issue_ids": []
+      "semantic_issue_ids": [],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L5.8"
+        ],
+        "mathematical_and_library_inputs": [
+          "Truncated shifted-chi sums via L5.8 and contour/tail estimates",
+          "Actual kappa13 and exact P-double-prime endpoints"
+        ]
+      }
     },
     {
       "id": "L12.2",
@@ -1857,7 +2392,22 @@
       "missing_specification_or_engineering": [
         "Actual xi_j and kappa13, uniform d,r"
       ],
-      "semantic_issue_ids": []
+      "semantic_issue_ids": [],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L5.8",
+          "L8.3",
+          "L8.4"
+        ],
+        "mathematical_and_library_inputs": [
+          "U-weighted shifted logarithmic residue evaluation",
+          "Actual xi_j and kappa13, uniform d,r"
+        ]
+      }
     },
     {
       "id": "L12.3",
@@ -1892,7 +2442,21 @@
       "missing_specification_or_engineering": [
         "Uniform strict cutoff and Pi-normalization"
       ],
-      "semantic_issue_ids": []
+      "semantic_issue_ids": [],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L8.3",
+          "L12.1"
+        ],
+        "mathematical_and_library_inputs": [
+          "Complementary-range truncated U-weighted estimate",
+          "Uniform strict cutoff and Pi-normalization"
+        ]
+      }
     },
     {
       "id": "P14.1",
@@ -1935,7 +2499,23 @@
         "consume_L5.6_nonprincipal_only",
         "P7.1_proof_method_not_logical_result_dependency",
         "generic_all_moduli_large_sieve_not_just_L3.3"
-      ]
+      ],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L5.3",
+          "L5.4",
+          "L5.6",
+          "P2.1"
+        ],
+        "mathematical_and_library_inputs": [
+          "Twisted mean formula, Gauss reciprocity, conductor splitting and large sieve",
+          "Actual Theta2 and kappa*/a* assumptions; separate shared core from P7.1"
+        ]
+      }
     },
     {
       "id": "L15.1",
@@ -1975,7 +2555,21 @@
       "semantic_issue_ids": [
         "paper_L3.2_for_B1_may_need_L3.1",
         "paper_L8.1_contour_reference_is_analogy_or_typo"
-      ]
+      ],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L3.1",
+          "L3.2"
+        ],
+        "mathematical_and_library_inputs": [
+          "Mobius/nu tail replacement, small-prime exclusion, coprime factorization, zeta-ratio residues",
+          "Actual b/rho*_j/N(Q), e_j; uniform n1"
+        ]
+      }
     },
     {
       "id": "L15.2",
@@ -1993,7 +2587,7 @@
         "proof_section": "Appendix A"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "unstarted",
+      "working_status": "in_progress",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 177,
@@ -2010,8 +2604,23 @@
         "Actual M1 and its analytic extension"
       ],
       "semantic_issue_ids": [
-        "analytic_extension_not_totalized_quotient"
-      ]
+        "analytic_extension_not_totalized_quotient",
+        "undefined_alpha_one"
+      ],
+      "scheduling_status": "active",
+      "dispatch_reason": "Independent original15.2 branch is constructing actual M1/coefficient Euler identities, continuation and the uniform product estimate.",
+      "proof_status": "in_progress",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": [
+          "Actual M1 arithmetic coefficients and analytic extension",
+          "Prime-local geometric-series identities",
+          "Genuine global Euler product and truncation bounds"
+        ]
+      },
+      "active_work": "Original15.2 is actively being formalized; full target remains unproved.",
+      "source_alignment_note": "Official v1 TeX has28 alpha-one uses and no located definition; no arbitrary error scale is substituted."
     },
     {
       "id": "L15.3",
@@ -2046,8 +2655,22 @@
       ],
       "semantic_issue_ids": [
         "U1j_vs_U2j_label_mismatch",
-        "analytic_extension_not_totalized_quotient"
-      ]
+        "analytic_extension_not_totalized_quotient",
+        "undefined_alpha_one"
+      ],
+      "scheduling_status": "queued",
+      "dispatch_reason": "Next independent theorem branch after a current slot is released; do not infer proof completion from readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": 1,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": [
+          "Actual varpi1j and consistently named U1j",
+          "Analytic correction continuation and normal convergence",
+          "Evaluation at1 without dividing through unproved nonzero denominators"
+        ]
+      },
+      "source_alignment_note": "Official v1 TeX has28 alpha-one uses and no located definition; no arbitrary error scale is substituted."
     },
     {
       "id": "L16.1",
@@ -2082,7 +2705,19 @@
       ],
       "semantic_issue_ids": [
         "chi_two_equals_one_euler_factor_exception"
-      ]
+      ],
+      "scheduling_status": "queued",
+      "dispatch_reason": "Next independent theorem branch after a current slot is released; do not infer proof completion from readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": 2,
+      "actual_prerequisites": {
+        "numbered_results": [],
+        "mathematical_and_library_inputs": [
+          "Actual M2*, pconstant and both chi(2) branches",
+          "Special prime2 Euler-factor normalization",
+          "Near-one correction product and uniform error bounds"
+        ]
+      }
     },
     {
       "id": "L16.2",
@@ -2121,7 +2756,20 @@
       "semantic_issue_ids": [
         "chi_two_equals_one_euler_factor_exception",
         "analytic_extension_not_totalized_quotient"
-      ]
+      ],
+      "scheduling_status": "dependency-audit",
+      "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
+      "proof_status": "unstarted",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L16.1"
+        ],
+        "mathematical_and_library_inputs": [
+          "Normalized local factors, global Euler convergence and evaluation at one",
+          "Actual varpi2j; avoid division by vanishing ordinary p=2 factor"
+        ]
+      }
     },
     {
       "id": "L17.1",
@@ -2148,7 +2796,8 @@
         "trusted_capstone_found": true,
         "capstone": "lemma171_proved",
         "verification_report": "audit/CLOUD_LEMMA171_STATUS.md",
-        "axiom_report": "audit/cloud_lemma171_axioms.txt"
+        "axiom_report": "audit/cloud_lemma171_axioms.txt",
+        "kernel_snapshot_commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c"
       },
       "known_numbered_dependencies": [
         "L3.1"
@@ -2162,7 +2811,18 @@
         "strict_n_less_D4_endpoint",
         "unnumbered_contour_step_incomplete_in_paper"
       ],
-      "active_work": "Complete original absolute uniform target, central kernel/regression/axiom checks and independent statement review passed."
+      "active_work": "Complete original absolute uniform target, central kernel/regression/axiom checks and independent statement review passed.",
+      "scheduling_status": "done",
+      "dispatch_reason": "Original numbered result recorded complete; status_evidence distinguishes historical source review from fresh verification.",
+      "proof_status": "complete",
+      "queue_priority": null,
+      "actual_prerequisites": {
+        "numbered_results": [
+          "L3.1",
+          "L5.8"
+        ],
+        "mathematical_and_library_inputs": []
+      }
     }
   ],
   "edges": [
@@ -3085,10 +3745,31 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T13:50:37Z",
+    "verified_at_utc": "2026-10-02T14:43:00Z",
     "completed": 28,
-    "in_progress": 3,
-    "unstarted": 20,
-    "note": "New complete targets: Lemmas11.1,3.6,17.1 and Proposition2.1; historical baseline provenance retained."
+    "in_progress": 5,
+    "unstarted": 18,
+    "note": "28 complete;4 active original-result branches and partial5.6;15.3 next queued. Frozen full kernel recheck passed. The alpha-one source notation remains unresolved."
+  },
+  "scheduling_semantics": {
+    "proof_status": "Mathematical completion state: complete, partial, in_progress or unstarted; separate from dispatch.",
+    "scheduling_status": {
+      "done": "Recorded complete",
+      "active": "An actual proof branch is currently working",
+      "queued": "Concrete next branch, not currently proving",
+      "dependency-audit": "Prerequisites/source/library mapping still to be resolved before dispatch"
+    },
+    "zero_numbered_indegree_warning": "No incoming numbered-result edge does not mean no mathematical definitions, library inputs or omitted proof steps."
+  },
+  "kernel_snapshot": {
+    "commit": "c3a134df5de7c5e215a69fe249275e91a1b7610c",
+    "status": "PASS",
+    "completed_at_utc": "2026-10-02T14:29:31.768399+00:00",
+    "spec_files": 659,
+    "audit_files": 92,
+    "tracked_lean_sources": 1019,
+    "unchanged_source_hashes": true,
+    "report": "audit/CLOUD_FULL_RECHECK_STATUS.md",
+    "semantic_scope": "Kernel recheck, not a new independent semantic review of every baseline completion."
   }
 }

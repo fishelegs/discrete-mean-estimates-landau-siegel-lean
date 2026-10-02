@@ -1,0 +1,3039 @@
+{
+  "axiom_output_records": 5290,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "nonstandard_axiom_output_records": [],
+  "logs": {
+    "ZhangLS__Spec__CharacterAbelAnalyticContinuation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__CharacterAbelIntegralBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__CharacterLSeriesAbel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__CharacterPeriodSum.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__DirichletLSeries.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__DivisorCharacterSum.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__DivisorCharacterSumNonnegative.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma111.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma111GaussianBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma111GaussianPrimitive.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma111SmoothedTent.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171AnalyticCorrection.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171ContourFinite.lean.log": {
+      "bytes": 264,
+      "sha256": "8f64049453108e9252fc552386af5fab6ef0db1f217e3770386c7b78d541c7af"
+    },
+    "ZhangLS__Spec__Lemma171ContourGrowth.lean.log": {
+      "bytes": 3010,
+      "sha256": "4f78ab48088bd2053032924c4a11d2153064e5207a9239271e0a6d6e4430fbd4"
+    },
+    "ZhangLS__Spec__Lemma171ContourHorizontal.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171ContourInfinite.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171CorrectionBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171DirichletSeries.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171EulerFactors.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171GaussianComparison.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171GaussianMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171GaussianTail.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171GaussianUnsmoothing.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171LeftAbsorption.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171LeftIntegral.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171LeftMajorant.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171Residue.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171ResidueBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171Target.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma171UniformThresholds.lean.log": {
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    "ZhangLS__Spec__Lemma23.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23AnalyticLogBranch.lean.log": {
+      "bytes": 344,
+      "sha256": "78511cc35d41cc7fe9254230c2574bd15c31d098c04ea275f16e576e82910132"
+    },
+    "ZhangLS__Spec__Lemma23ArgumentPrinciple.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23ArithmeticCoefficients.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23BorelCaratheodory.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23CharacterOrthogonality.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23CoefficientBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23DirichletBranch.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23DirichletConjugation.lean.log": {
+      "bytes": 421,
+      "sha256": "10ccffb7bf446e22ff244a2375bcd5b5521fa483194188fc4c799d60b108c95d"
+    },
+    "ZhangLS__Spec__Lemma23DirichletFunctionalEquation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23DirichletUnitModulus.lean.log": {
+      "bytes": 205,
+      "sha256": "1ddaa744173ca3768c6694de23c30710269bc263409fe986911a2539c0a30da4"
+    },
+    "ZhangLS__Spec__Lemma23FiniteDirichletApproximation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23GeneralArgumentPrinciple.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23GoodSet.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23ModelRouche.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23ModelZeros.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23Nu20Bounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23PrimitiveGaussSum.lean.log": {
+      "bytes": 201,
+      "sha256": "d1ee94483a9371ab99f6339cd06b51390fca59b1c72eced099e789d81f8c0d88"
+    },
+    "ZhangLS__Spec__Lemma23ProductApproximation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23RealSign.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23RoucheIntegral.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23SectionFourLogDerivative.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23SuccessiveZeros.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23X1Expansion.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23ZeroData.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23ZeroGapArithmetic.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23ZeroGapDirichlet.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma23ZeroIntervals.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31Absorption.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31CharacterAbel.lean.log": {
+      "bytes": 158,
+      "sha256": "7d3e84dcfdc0871fe4164e6a692862ed56c4c8463a66b2d6c69e0f8038d93563"
+    },
+    "ZhangLS__Spec__Lemma31CharacterKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31CumulativeBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31DiscreteAbel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31FloorError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31HarmonicTruncation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31HyperbolaError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31HyperbolaInputs.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31LinearTail.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31NormalizedTail.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31NuAbel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31NuIntegralBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31OrderedArithmetic.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31PaperScale.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31PowerIntegrals.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31PrimeSquare.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31RealCoefficients.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31SquareMajorant.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31TotalWeight.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31WeightedKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma31WeightedTail.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32AbelMajorants.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32AbelSquareRootBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualBurgessParameters.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualCRTCharacter.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualCollisionBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualCurvePointCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualGammaMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualHasseCorrelation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualOddCurveCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualPrimeCorrelation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualPrimeCurveCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualRepeatedCorrelation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualResidue.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualRootWeights.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualSeriesIdentity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualTailReduction.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ActualUniformBurgess.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32AffineCharacterCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32AnalyticCorrection.lean.log": {
+      "bytes": 163,
+      "sha256": "51c86c912ded2312eeb83b9fb1ce34310837794ab686027c9986aee721c190d5"
+    },
+    "ZhangLS__Spec__Lemma32BoundaryLinearity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessAbelScale.lean.log": {
+      "bytes": 200,
+      "sha256": "7deb377fac7cddffd87b0c53a5fb93e78dc4f95637ba6b89c1c49365964a9daa"
+    },
+    "ZhangLS__Spec__Lemma32BurgessAmplitudeBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessAmplitudeFourth.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessBlockMomentBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessBlockNormalization.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessBlockParameters.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessCollisionParameters.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessCongruenceCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessDeterminant.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessEndpointBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessFloorBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessFourthMoment.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessGlobalConstant.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessInductionBoundary.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessIntervalBoundary.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessLeftError.lean.log": {
+      "bytes": 200,
+      "sha256": "25fb4dc63f4773779e538413074d025f863aa6f930bd07ef28ea46041f5ff45d"
+    },
+    "ZhangLS__Spec__Lemma32BurgessLineCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessMultiplicity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessMultiplicityEnergy.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessMultiplicitySquare.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessMultiplierParameters.lean.log": {
+      "bytes": 211,
+      "sha256": "7da28af79686db13bfef513963282cd8e536126535a64fefd205df530b2f0d25"
+    },
+    "ZhangLS__Spec__Lemma32BurgessNormalization.lean.log": {
+      "bytes": 344,
+      "sha256": "4fd1196d8733dd2649cb12c6d23e9452d135c22f26dc467e73efcc818ec1de91"
+    },
+    "ZhangLS__Spec__Lemma32BurgessPairings.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessPowerAlgebra.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessReduction.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessResidueCollision.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessShiftAmplification.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessShiftCharacter.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32BurgessWeightedMoment.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CRTConductorDescent.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ChangeLevelConductor.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CharacterEquivPullback.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CircleIntegral.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CircleIntegrand.lean.log": {
+      "bytes": 340,
+      "sha256": "312da9483f5425d870b52a258bad96fe3eaec8957b0ec97fec66b0fa91721cfc"
+    },
+    "ZhangLS__Spec__Lemma32CircleRegularity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CoefficientMajorant.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CollisionTupleCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CompositeCorrelation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CompositeFourthMoment.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CoprimeCorrelationFactor.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CoprimeCountError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CoprimeDensity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32CoprimeMobiusCount.lean.log": {
+      "bytes": 315,
+      "sha256": "092cfa35bbbf896ca9532e42c884ce970f2cce5772c2c16cdf37ff832b1ee888"
+    },
+    "ZhangLS__Spec__Lemma32CorrectionProduct.lean.log": {
+      "bytes": 161,
+      "sha256": "8d4d73bdba3357a13e570256abf7ea27dff6781ad425fa884a0584d82fc561f7"
+    },
+    "ZhangLS__Spec__Lemma32CorrelationFactorDivisor.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32DistinctMomentPointCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32DistinctRootFieldSize.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32DivisorGcdAverage.lean.log": {
+      "bytes": 314,
+      "sha256": "68f81c656c5d099726582739f8abe9d263f24ba05f396c424a010f2ce096d3a1"
+    },
+    "ZhangLS__Spec__Lemma32DivisorSummatory.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32EulerFactors.lean.log": {
+      "bytes": 674,
+      "sha256": "9bb3e854fd64e7fc6cd6db8c87319398a0880a96cda86bcacf73307d23e98ae4"
+    },
+    "ZhangLS__Spec__Lemma32EulerLocalIdentity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32FiniteActualCurvePoints.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32FiniteShift.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32FiniteShiftAverage.lean.log": {
+      "bytes": 173,
+      "sha256": "b4770249923a52f29e5cd461ea87558be91ccfa8663c995185737e141c376e48"
+    },
+    "ZhangLS__Spec__Lemma32FourierChordLower.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32FourierGeometricKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32FourierKernelReciprocal.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32FourierKernelSummatory.lean.log": {
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    "ZhangLS__Spec__Lemma32FourthMomentRemainder.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32FullGammaMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32GammaLocal.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32GammaMellin.lean.log": {
+      "bytes": 182,
+      "sha256": "8f93ddc912cef8b492771f53d18ac51dfae767b22cbfab8abef6952113fa340d"
+    },
+    "ZhangLS__Spec__Lemma32GammaStripDecay.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32GammaVertical.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32Geometric.lean.log": {
+      "bytes": 181,
+      "sha256": "b887d308402ef6c71f4ee2fd1cc053af937c6d7c051a6e69293a8169f1d6c75c"
+    },
+    "ZhangLS__Spec__Lemma32GlobalAnalyticity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32GlobalCorrectionGrowth.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32GlobalHeightGrowth.lean.log": {
+      "bytes": 340,
+      "sha256": "923c8eb1ba5346e5fad1f02eaac820d510c5279c5fb2ebd4e5f7da75a6d54b5a"
+    },
+    "ZhangLS__Spec__Lemma32HorizontalDecay.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32InfiniteShift.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32IntegerCRTCorrelation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32IntervalFourierCompletion.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32IsolatedRootWeights.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32LaurentCoefficients.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32LeftErrorAbsorption.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32LeftIntegralBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32LeftIntegrandBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32LeftKernelContinuity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32LeftKernelIntegrability.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32LeftSmoothing.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32LocalBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32LocalL.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32LocalSeries.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32MellinTerms.lean.log": {
+      "bytes": 1229,
+      "sha256": "e5c34761f017d4c86427d6fea4e585e3a9efd6c3310b115a19c3ddbbcffd150c"
+    },
+    "ZhangLS__Spec__Lemma32ModulusFactors.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32MonicCubicNormalization.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32MultiplierGcdAverage.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32NormalizedCubicSums.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32NormalizedFiniteShift.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32OddKernelDescent.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32OddPrimePowerConductor.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32OriginalCircle.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32OriginalMellinDifference.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32OriginalTargetClosure.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimeCoefficients.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimeFactorPower.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimeFourthMomentSplit.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimeGcdCorrelation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimeHasseFourthMoment.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimePowerReductionKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimeRootDifferenceBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimeUnpairedHasseBound.lean.log": {
+      "bytes": 361,
+      "sha256": "ffdde1deb816ba969e55dffccec4362125bbad7204e10764443845ab5b824f08"
+    },
+    "ZhangLS__Spec__Lemma32PrimitiveCRTCharacters.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimitiveCRTNontrivial.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimitiveDivisorCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimitiveModulusExponents.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimitiveModulusShape.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimitivePolyaVinogradov.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrimitiveUnitDensitySaving.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32PrincipalBoundary.lean.log": {
+      "bytes": 266,
+      "sha256": "77cf48dbb65f2d6d154513464a113b3ef7b9b9879cee814eef9035d69e9d3bce"
+    },
+    "ZhangLS__Spec__Lemma32PrincipalParts.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ProductAnalytic.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ProductBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ProductCharacter.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ProductConvergence.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ProductDifference.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ProductQuadraticCharacter.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32QuadraticCharacterUniqueness.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32QuadraticCorrelation.lean.log": {
+      "bytes": 204,
+      "sha256": "215411636d87f8b7981e4b3aee2c30b3215bc24b89d1b2c3b7000424b896e2b3"
+    },
+    "ZhangLS__Spec__Lemma32QuadraticGaussNorm.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32QuarterPowerIntegrals.lean.log": {
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    "ZhangLS__Spec__Lemma32QuarticCollisionBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32QuarticCubicSubstitution.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32QuarticCubicSums.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32QuarticCurveElliptic.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32QuarticPairingClassification.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32QuarticPermutations.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32QuarticTrivialBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32QuarticWeierstrass.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32RamificationNorm.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32RamificationPowerSaving.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32RamificationPrimeSaving.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32RealPrimitiveCRTCharacter.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32RealSmoothing.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32RectanglePowers.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32RectangleWinding.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32RegularFactors.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32RegularNumerator.lean.log": {
+      "bytes": 334,
+      "sha256": "43cdff120819340ab2813ce781e9b1f32255203046791119f2ed01655632d913"
+    },
+    "ZhangLS__Spec__Lemma32RepeatedRootCorrelation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ResidueCircle.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32RootDifferenceAverage.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32RootGcdProduct.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32SeriesConvergence.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ShortCongruenceClass.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32SmoothingCircle.lean.log": {
+      "bytes": 440,
+      "sha256": "1e444f80f7d53a6f97120d5a4bb0429d96c6252b314aa1386a7efa02cf43e8d7"
+    },
+    "ZhangLS__Spec__Lemma32SmoothingWindow.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32SquarefreeCorrelation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32StripLSeriesGrowth.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32SymmetricCollisionCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32SymmetricTriangleSum.lean.log": {
+      "bytes": 248,
+      "sha256": "d76f2c907169ec92baa4c8c97f5a4a3de22731b2f961da7d18fc02a0f1a39814"
+    },
+    "ZhangLS__Spec__Lemma32TermMellinIdentity.lean.log": {
+      "bytes": 471,
+      "sha256": "4a2aa06b9d2a7ef382763f1dfc0172e3c51d3f3c86fcdee13bf2aaf7be77474b"
+    },
+    "ZhangLS__Spec__Lemma32TwoPowerConductor.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32TwoPowerKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32UniformFourthMoment.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32UniformProduct.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32UnitMultiplierLower.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32UnitPrimePowerSaving.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32UnpairedSingleton.lean.log": {
+      "bytes": 350,
+      "sha256": "a4806295bbb7612e9ea1d9d9a47288f98f5b21e09247eff3904c18ffab3e1021"
+    },
+    "ZhangLS__Spec__Lemma32VerticalIntegrability.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32WeierstrassAffineCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32WeightedEuler.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma32ZetaCircle.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma33.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma33ActualSamples.lean.log": {
+      "bytes": 638,
+      "sha256": "c378a89b814acde619f03f93cbfc094e6f0034ff0b9b2e95ceec5b1568912fbf"
+    },
+    "ZhangLS__Spec__Lemma33AdditiveLargeSieve.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma33FirstMean.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma33Fourier.lean.log": {
+      "bytes": 929,
+      "sha256": "3e013884e652a8bcab10140db9153e1922855ad035fb706edab6d4cb541c78a4"
+    },
+    "ZhangLS__Spec__Lemma33Fractions.lean.log": {
+      "bytes": 153,
+      "sha256": "65c9a0072f58afdb7e5876fa8875b627ff1f286edbd1e95f2400cdd0969ce8e8"
+    },
+    "ZhangLS__Spec__Lemma33GaussTransform.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma33Sampling.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma34.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma34BSecondMoment.lean.log": {
+      "bytes": 193,
+      "sha256": "bde6fd4e9ca0a2135197f48b7e3701b94507ea58d16d802c7b67edf519f79b91"
+    },
+    "ZhangLS__Spec__Lemma34CoefficientEnergy.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma34DivisorFunction.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma34DivisorSquare.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma34IntegralMean.lean.log": {
+      "bytes": 420,
+      "sha256": "85349110edc90c0a871a5137cb36a74ea5fb811eccd4f7cfa594610d3fd43051"
+    },
+    "ZhangLS__Spec__Lemma34Multichoose.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma34PartialIntegrability.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma34ShortMean.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma34TupleConvolution.lean.log": {
+      "bytes": 507,
+      "sha256": "bf406bbb3f66f1edecc1de7ef4e80b2b351b8619b34c85506a5a4dbb8fcc61f6"
+    },
+    "ZhangLS__Spec__Lemma34UniformMean.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma34WeightedCauchy.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma34WeightedConvolution.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma35.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma35BSecondMoment.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma35Integrability.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma35IntegralMean.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma35Mean.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma35PrimeMass.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma35UniformMean.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma35WeightLength.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma36.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma36CoefficientMajorant.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma36GoodFamily.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma36Integrability.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma36IntegralMean.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma36Mean.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44ApproximateFunctionalEquation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44CharacterProduct.lean.log": {
+      "bytes": 666,
+      "sha256": "b3dc123f29c6a2b370d010de00f65deec0705edc2e751f5f26e8fc2f9f1637b4"
+    },
+    "ZhangLS__Spec__Lemma44ComplexCharacterAbel.lean.log": {
+      "bytes": 165,
+      "sha256": "71168e85e7e90855de528f6ff446269c0a7dcdabd3b766a1dbea26b1accaee06"
+    },
+    "ZhangLS__Spec__Lemma44DirichletFactorEstimates.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44FiniteGaussianMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44FiniteProductShift.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44GammaLogDerivative.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44GaussianLongSum.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44GaussianVerticalTail.lean.log": {
+      "bytes": 1305,
+      "sha256": "7355b8e89ded41ebb0536768d4fabb22f9af35fe7d7c605947a1401faf7695d2"
+    },
+    "ZhangLS__Spec__Lemma44HorizontalGrowth.lean.log": {
+      "bytes": 169,
+      "sha256": "7e2a7c3fc7719ce9c4e2b873a62611e602c56003ba0eac6b05727e2f35d836e3"
+    },
+    "ZhangLS__Spec__Lemma44HorizontalIntegrals.lean.log": {
+      "bytes": 163,
+      "sha256": "3ac3b3aa0b162886d499e808dfc219029d3afc23e801f68e30c733631d73b1b0"
+    },
+    "ZhangLS__Spec__Lemma44HorizontalKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44InitialLeftEstimates.lean.log": {
+      "bytes": 204,
+      "sha256": "9f0a0f0cba73f6b6c969492111bb053a5a66514d43aef90c0acd75b3ae5d307e"
+    },
+    "ZhangLS__Spec__Lemma44LeftContourSplit.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44LocalRectangle.lean.log": {
+      "bytes": 840,
+      "sha256": "64c92b23fe86a1bde7f1c259bae2b0ccce08df92a4251397eb740f42cdd90ce0"
+    },
+    "ZhangLS__Spec__Lemma44LongSum.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44MiddleContour.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44ModulusControl.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44PolynomialGrowth.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44ProductDirichletSeries.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44ProductMellin.lean.log": {
+      "bytes": 168,
+      "sha256": "0cc58733f70d900dc4e334534dd1e41d5bdaf320749636db5baac5e91472b323"
+    },
+    "ZhangLS__Spec__Lemma44ProductResidue.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44ReflectedLongSum.lean.log": {
+      "bytes": 200,
+      "sha256": "dd26b39289de47296ee1f398d39db514ae1447b86c317c4385e8409920739b19"
+    },
+    "ZhangLS__Spec__Lemma44ReflectedPolynomialBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44ReflectedPolynomialContours.lean.log": {
+      "bytes": 730,
+      "sha256": "6e257f0e42dd8a34216a96b7f0a064f76cb8cd3d178aa2c0fa210593e570aa41"
+    },
+    "ZhangLS__Spec__Lemma44ReflectedSeriesSplit.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44ReflectedTail.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44ReflectedTailContour.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44RightMellinApproximation.lean.log": {
+      "bytes": 178,
+      "sha256": "5d9b21d6c3315c3d6428156ae8ad14c5c2c1855153dbd6b6cef2ae308205a6df"
+    },
+    "ZhangLS__Spec__Lemma44RightVerticalTruncation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44SectionFourGamma.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44SmoothedTail.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma44SmoothedTruncation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma45ErrorBudget.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma45HorizontalQuotient.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma45Normalization.lean.log": {
+      "bytes": 328,
+      "sha256": "c5ed3f62ca767a1dbe2bce437463a9b8674544c5f0b83cfcf6f2a9bb1545b901"
+    },
+    "ZhangLS__Spec__Lemma45ZeroFree.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma46AnalyticSymmetry.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma46ExponentialTransport.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma46LocalGeometry.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma46LogDerivative.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma46ModelApproximation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma46ModelBoundary.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma46RoucheLocal.lean.log": {
+      "bytes": 155,
+      "sha256": "4bd5b4cdf81a6470422bb46daf4cb58e6f36fd20f4ce3500f20924d606b34937"
+    },
+    "ZhangLS__Spec__Lemma46SingleZero.lean.log": {
+      "bytes": 607,
+      "sha256": "59eee466d63f5c5fe008476351588e85b10ca618bd80116dd2f0870ee17f4b8f"
+    },
+    "ZhangLS__Spec__Lemma46ZeroAnalysis.lean.log": {
+      "bytes": 355,
+      "sha256": "cf07eac5eca11cd355069ca629723545135fe7abfafc2bf185e19aa69d86012a"
+    },
+    "ZhangLS__Spec__Lemma47ModelApproximation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma47ModelBoundary.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma47OuterGeometry.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma47Reflection.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma47ThreeZeros.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma48InverseFactor.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma48ZeroRegion.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma51.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma51GammaAsymptotic.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma51GammaEuler.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma51GammaFactors.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma51Modulus.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma51Parameters.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma51ShiftEstimates.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma51VerticalTransport.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma52.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma52BranchTransport.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma52Offsets.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma52Product.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma52ShiftEstimates.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma53.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma53ExponentialSubstitution.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma53FiniteContours.lean.log": {
+      "bytes": 1821,
+      "sha256": "1d9a2d850082a813d14597978958bc2e41104f11230964691097f3f494518c67"
+    },
+    "ZhangLS__Spec__Lemma53GammaLaplace.lean.log": {
+      "bytes": 392,
+      "sha256": "b5214da882b1e2c83fda6eb176f9e4008d7f63320e755e9cec719d68b49511dc"
+    },
+    "ZhangLS__Spec__Lemma53GaussianInverse.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma53Kernels.lean.log": {
+      "bytes": 1409,
+      "sha256": "a156df4c649285a10ee6332bd14914f77b8361d4decef782503a8f4a2c2e04f9"
+    },
+    "ZhangLS__Spec__Lemma53LargeContourEstimates.lean.log": {
+      "bytes": 166,
+      "sha256": "b3cebef94f257e317dd485935e5c4423e89c4acb889dbc92a9bceed5a30e1ce8"
+    },
+    "ZhangLS__Spec__Lemma53LargeRange.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma53LargeRangeParameters.lean.log": {
+      "bytes": 410,
+      "sha256": "3096ce1e268e14506bf5e58e65c98e751aecf303396f2fa1cadcefc86cb1dffb"
+    },
+    "ZhangLS__Spec__Lemma53MellinBoundary.lean.log": {
+      "bytes": 522,
+      "sha256": "b85957766487f4ef30c1850928a8c21e548ff57046ec35358e6e54adcd4bd7d1"
+    },
+    "ZhangLS__Spec__Lemma53MellinConvergence.lean.log": {
+      "bytes": 881,
+      "sha256": "eb48dd844b93a7f2badad50cc9791fdb3baf14f12d143c93fb4268a33a381088"
+    },
+    "ZhangLS__Spec__Lemma53MellinIdentity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma53OscillatoryEstimates.lean.log": {
+      "bytes": 1607,
+      "sha256": "431b95e0b80893ba9f8b74ce24c5a4ca964f7183f2487e7a7c9a0ed7ea18e9fe"
+    },
+    "ZhangLS__Spec__Lemma53RegularizedMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma53SmallRange.lean.log": {
+      "bytes": 165,
+      "sha256": "5513d3945b739d2989f0c773d208900a1d703009903c03ab16d2566c6fd8814e"
+    },
+    "ZhangLS__Spec__Lemma53SmallRangeParameters.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma53StationaryContour.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54ActualDerivatives.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54ActualGaussianConcentration.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54CentralDeltaApproximation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54CentralMellinWeight.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54CentralWindow.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54DerivativeBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54DerivativeDecay.lean.log": {
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    "ZhangLS__Spec__Lemma54DiskErrorAbsorption.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54FullDiskBudget.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54GaussianConcentration.lean.log": {
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    "ZhangLS__Spec__Lemma54GaussianMoments.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54GaussianNormalization.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54HalfPowerMoments.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54IntegrationByParts.lean.log": {
+      "bytes": 404,
+      "sha256": "30f52ec6c7d90b779840fe7e784fc1c72727726b697df75c8ae0dc919d1e782a"
+    },
+    "ZhangLS__Spec__Lemma54KernelDerivatives.lean.log": {
+      "bytes": 1333,
+      "sha256": "73e1266765d732c8bb9f2fd69972a4609f25f669e792397a97c59670a5679a18"
+    },
+    "ZhangLS__Spec__Lemma54LargeExteriorMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54LargeSecondMoment.lean.log": {
+      "bytes": 201,
+      "sha256": "011e3c66590ecc813d2c293def138324d78bca615b2c9144b2dd61674ac60c75"
+    },
+    "ZhangLS__Spec__Lemma54LargeTailDamping.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54LogTailMoments.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54MellinAnalytic.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54MellinDecay.lean.log": {
+      "bytes": 156,
+      "sha256": "d093dc5f2d8fcd3375ceb27b1435c2671b5fb7a239ac0a70fd67d90ce124a2f5"
+    },
+    "ZhangLS__Spec__Lemma54MellinSecondMoment.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54NearZeroMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54SmallExteriorMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54SmallSecondMoment.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54UniformSecondMoment.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54WeightedContour.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma54WeightedContourEstimates.lean.log": {
+      "bytes": 417,
+      "sha256": "473fa11abf15fead3945d7d47510968ebe3a1401de88812f3db4404c3a4adf09"
+    },
+    "ZhangLS__Spec__Lemma54WeightedKernels.lean.log": {
+      "bytes": 314,
+      "sha256": "d279691feed6947572550768e2b322d44744d29650d11c8445b4da2d4c2c4002"
+    },
+    "ZhangLS__Spec__Lemma55.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ActualLocalZeros.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ActualZeroDetection.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55CombinedPowerUpperBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ExceptionalLocalTail.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ExceptionalPoleComparison.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ExceptionalZeroRemoval.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55FejerDetection.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55FejerKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55FourZeroDetection.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55FourZeroFamilies.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55FullZeroExclusion.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55HighHeightDisk.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55HigherLogDerivative.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55JensenZeroCount.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55LocalDerivatives.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55LocalLogDerivative.lean.log": {
+      "bytes": 172,
+      "sha256": "5811032e918db2abb032cf5207fc329291ac80f31b6ccb6ddd4a86bf3e89d0bc"
+    },
+    "ZhangLS__Spec__Lemma55LocalUniqueness.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55MangoldtPositivity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55NearOneBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55NearTwoBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55OriginalRegionCover.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55OriginalRegionZeros.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55SimpleRealZero.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55UniformRepulsionBudget.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55WeightedPowerError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZeroFactorBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZeroFactorization.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZeroNormalization.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZeroPowerDerivatives.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZeroRemovedBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZeroRemovedLog.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZetaHigherLogDerivative.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZetaLocalData.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZetaLocalLogDerivative.lean.log": {
+      "bytes": 176,
+      "sha256": "6710a78150462eaff7d3e48fa34791a6d7a6bac5ac168e2cf76145a179df5753"
+    },
+    "ZhangLS__Spec__Lemma55ZetaLocalZeros.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZetaWeightedPowerError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZetaZeroFactorBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZetaZeroFactorization.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZetaZeroPowerDerivatives.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZetaZeroRemovedBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma55ZetaZeroRemovedLog.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56AbelContinuation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56AbelIntegralBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ActualLocalZeros.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ActualPrimeMassIdentity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ActualPrimeMassLower.lean.log": {
+      "bytes": 204,
+      "sha256": "a4f98595a25f6d60a14b140620939a7e6e836b1df302848bf57de31c3d173d68"
+    },
+    "ZhangLS__Spec__Lemma56ActualPrimeMassNormalization.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ActualPrimeMassScales.lean.log": {
+      "bytes": 165,
+      "sha256": "e63ea98a5f3948be5d395a749440b5fb5afcd59a68d3fb77ccda6a24c6366cee"
+    },
+    "ZhangLS__Spec__Lemma56ActualZeroDetection.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56CharacterAbel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56FiniteAbelBudget.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56FourZeroDetection.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56FourZeroFamilies.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56GaussianContour.lean.log": {
+      "bytes": 483,
+      "sha256": "6d4412c0539f119de6debd88d5e5d07e116dfa50dd0a0b814eb815f884431b58"
+    },
+    "ZhangLS__Spec__Lemma56GaussianKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56GaussianMarginBudget.lean.log": {
+      "bytes": 204,
+      "sha256": "382000f428b04c11d251366f39be3bbbd329513ededb261b6e9801b8554f8203"
+    },
+    "ZhangLS__Spec__Lemma56GaussianMellinIdentity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56GaussianMellinTerms.lean.log": {
+      "bytes": 164,
+      "sha256": "7b12026c9c20034b2e0edd9d86255df486d1da306ae9f6ac26bde9dd0e3368e8"
+    },
+    "ZhangLS__Spec__Lemma56GaussianNorm.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56GaussianPhaseTerms.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56GaussianRightEnvelope.lean.log": {
+      "bytes": 410,
+      "sha256": "710deb1301077e0086ad00c1d3cc7577615e153fc14fa15e7de256cc7500406e"
+    },
+    "ZhangLS__Spec__Lemma56GaussianRightTruncation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56GeneralRepulsionBudget.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56HighLogDerivative.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56HighZeroExclusion.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56HigherLogDerivative.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56JensenBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56LocalLogDerivative.lean.log": {
+      "bytes": 172,
+      "sha256": "9cc900cba4296aad8a88c334170b41f349404ca36a291a89f9e154aa653c774b"
+    },
+    "ZhangLS__Spec__Lemma56LocalLogDerivativeBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56LogBudgetZeroExclusion.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56MangoldtMajorant.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56MangoldtPositivity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56MarginLogDerivative.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56MarginZeroExclusion.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56MixedLogDetection.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56MixedPowerUpperBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56NearTwoBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronArithmeticError.lean.log": {
+      "bytes": 164,
+      "sha256": "7204f01889731bd94e44e486258c40c9977ccc01706a0226f77ebf5f3d50048a"
+    },
+    "ZhangLS__Spec__Lemma56PerronContour.lean.log": {
+      "bytes": 325,
+      "sha256": "5ff4f5f5aded83e58e60d797bc02bf0110c4109791d458025aa25604f87eaba8"
+    },
+    "ZhangLS__Spec__Lemma56PerronExterior.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronFarError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronHorizontal.lean.log": {
+      "bytes": 200,
+      "sha256": "3009912618fdfae7bd059d791b84f51d18c013fbc2f0f6afe5a1888c2ce288da"
+    },
+    "ZhangLS__Spec__Lemma56PerronHorizontalBudget.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronLeftBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronMangoldtWindow.lean.log": {
+      "bytes": 1004,
+      "sha256": "90c8b2ff25b1c860eee5f3601584a9b7146d7a601e2d9c06fed37759d74f0868"
+    },
+    "ZhangLS__Spec__Lemma56PerronMarginBudget.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronMellinIdentity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronMellinTerms.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronNearError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronPaperScales.lean.log": {
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    "ZhangLS__Spec__Lemma56PerronRectangleNorm.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronRightTruncation.lean.log": {
+      "bytes": 166,
+      "sha256": "388aa37a37fad7d953680ba48e11f8104f3e886e0d5dc47d3c1c445b02b19187"
+    },
+    "ZhangLS__Spec__Lemma56PerronUnsmoothingBudget.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronUnsmoothingError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PerronUnsmoothingScales.lean.log": {
+      "bytes": 207,
+      "sha256": "311a9790120c724462578ba02583aab9fc2e388fe7eb3d2df9f042d6d1323da3"
+    },
+    "ZhangLS__Spec__Lemma56PerronVertical.lean.log": {
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    "ZhangLS__Spec__Lemma56PerronWeightBounds.lean.log": {
+      "bytes": 1464,
+      "sha256": "e1954a0d99816604a8bef184055aae9a887533e01476fb6bdb11659f20e4e1d3"
+    },
+    "ZhangLS__Spec__Lemma56PerronWeightDecay.lean.log": {
+      "bytes": 201,
+      "sha256": "20bc758d8507db991e2a42443cf0e5738baa8d2f529581e7713e28c8da4eab71"
+    },
+    "ZhangLS__Spec__Lemma56PerronWindowBudget.lean.log": {
+      "bytes": 202,
+      "sha256": "633d36b18b29ae3a7a3b036c9281820f1d64b66df9119b111941f14b9a675736"
+    },
+    "ZhangLS__Spec__Lemma56PerronWindowLeft.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrimeLogWindow.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrimeMassBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrimeMassNormalization.lean.log": {
+      "bytes": 206,
+      "sha256": "0e8254835a63a63d681303e4d0dfd16a3de7a3ecbaa374cb60809d0e79b0a402"
+    },
+    "ZhangLS__Spec__Lemma56PrimeMassReduction.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrimePowerBudget.lean.log": {
+      "bytes": 200,
+      "sha256": "f47fb01c11b8d1be8fe3cd6f4d02cbb2574802b8b18cdc1cf68460858babe810"
+    },
+    "ZhangLS__Spec__Lemma56PrimePowerError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrimeWeightBudget.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrimeWeightIdentity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrimeWeightParameters.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrimeWindowAbsolute.lean.log": {
+      "bytes": 203,
+      "sha256": "2abc628168404237e2a8eff93f5819f6a6e1fb1d8192006967e24cea92d96759"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalBoundary.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalMassContourBudget.lean.log": {
+      "bytes": 389,
+      "sha256": "beed93df4bf6aedbf6792baf740f41a28ff742400a7f0fbc52eec4ca99ab285b"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalMassMainError.lean.log": {
+      "bytes": 792,
+      "sha256": "004ce427f5f94c51daf7076a34129a1fc0a98f7eb86f069b0cfbfc5c68af4a9d"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalMassScales.lean.log": {
+      "bytes": 342,
+      "sha256": "3ed1f997694687ecee18b2b8441a4b6ad0266d1bd929a23ede8eabfeef2fdb4b"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalMassSharpMangoldt.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalMassSharpPrime.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalMassUnsmoothing.lean.log": {
+      "bytes": 1784,
+      "sha256": "d1f22497b9a44122e1582a8de3d5f0b9d95e23d38894ebcb6b43b6a41eba928d"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalPerronArithmetic.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalPerronBoundaryBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalPerronContour.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalPerronEdges.lean.log": {
+      "bytes": 850,
+      "sha256": "bb19635eb3739df15854c055497935aa96ce2791358766e471e87f2e177179f4"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalPerronKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalPerronMainError.lean.log": {
+      "bytes": 834,
+      "sha256": "bb7508a518fc795c8f13649212dbd605a2bbd6c39fcea3126c9579afc775fb02"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalPerronMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56PrincipalPerronResidue.lean.log": {
+      "bytes": 854,
+      "sha256": "7d08c5610d02df6f5a971ab820e5a72376f54f6ab8f92af793ae7cc76a586ef5"
+    },
+    "ZhangLS__Spec__Lemma56SharpMangoldtWindow.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56TwistClassification.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56TwistedGaussianContour.lean.log": {
+      "bytes": 334,
+      "sha256": "b7be2c8b019d0e939afcd502df5eb574e38a344322045ba76d688ebe613e287c"
+    },
+    "ZhangLS__Spec__Lemma56TwistedGaussianHorizontal.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56TwistedGaussianLeftBound.lean.log": {
+      "bytes": 208,
+      "sha256": "c6a6ce6b5618b7e079d841b0a2d8d608caaac0026cfaea98a686d9261d109323"
+    },
+    "ZhangLS__Spec__Lemma56TwistedGaussianMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56TwistedGaussianVertical.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56UniformRepulsionBudget.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56WeakZeroExclusion.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56WeightedPowerError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ZeroFactorBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ZeroFactorization.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ZeroPowerDerivatives.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ZeroRemovedBounds.lean.log": {
+      "bytes": 161,
+      "sha256": "80bb96f969f36a25e29a4e0f05c436e8bea24be920b96486d998fe5860487f65"
+    },
+    "ZhangLS__Spec__Lemma56ZeroRemovedLog.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ZetaLogDerivativeLeft.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ZetaLogDerivativeLocal.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ZetaLogDerivativeStrip.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ZetaOffRealLogDerivative.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ZetaRepulsionDetection.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma56ZetaZeroExclusion.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57.lean.log": {
+      "bytes": 291,
+      "sha256": "9efcb7cb117bdb8ef19e0c4f6c95aa03be47c4b0f8043bc50dc5ff284c981ba2"
+    },
+    "ZhangLS__Spec__Lemma57Arithmetic.lean.log": {
+      "bytes": 157,
+      "sha256": "b516fe25991a70c792cc0e12526b2883f2b5dfdae9f693084f0775e2cc775414"
+    },
+    "ZhangLS__Spec__Lemma57CompletedDirichletStripBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57CompletedStripBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57ContourAnalyticity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57ContourGrowth.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57ContourShiftLimit.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57CriticalStripGrowth.lean.log": {
+      "bytes": 268,
+      "sha256": "2607dc3bc5d708bbde427b2edc9e0da6881c0fde5999e2e6506a5ecb8ca83383"
+    },
+    "ZhangLS__Spec__Lemma57FullSmoothedSeries.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57GammaFactorGrowth.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57GaussianGlobal.lean.log": {
+      "bytes": 479,
+      "sha256": "448b9ec197cdcbf9c3206015a644d1de323f32cb5cd87a8656967144ad348746"
+    },
+    "ZhangLS__Spec__Lemma57GaussianMellinKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57GaussianMellinTransform.lean.log": {
+      "bytes": 608,
+      "sha256": "3d69d04395ff7d816ac94c9a80b702e6bc043a01e851f1274d85839e69120823"
+    },
+    "ZhangLS__Spec__Lemma57GaussianQuadraticMoment.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57GaussianWeight.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57LAtOnePositivity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57LeftQuadraticGrowth.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57MellinContour.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57MellinIdentity.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57PrincipalPart.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57QuadraticConductorThreshold.lean.log": {
+      "bytes": 440,
+      "sha256": "8d446c8ca39c9d03d0eeff7a857b1ddecf7435acaf273d3093b8425836494e17"
+    },
+    "ZhangLS__Spec__Lemma57RectangleWinding.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57ResidueBudget.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57ShiftedGammaGrowth.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57ShiftedIntegralEnvelope.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma57SmoothedSum.lean.log": {
+      "bytes": 156,
+      "sha256": "f8320ceebff4393f0d2f6901847b2f477d93a090c7617db7434d94f58d5b453a"
+    },
+    "ZhangLS__Spec__Lemma57SmoothedSummability.lean.log": {
+      "bytes": 164,
+      "sha256": "55ddfbf61939f0663291ab8213a0af0afe5d5d4a0b2b3883abb5e2732c36b39d"
+    },
+    "ZhangLS__Spec__Lemma58.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59ActualLocalZeros.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59ExtendedActualZeros.lean.log": {
+      "bytes": 367,
+      "sha256": "ba8f3e57c27de93810523f798a4190c707fa69b2e7cf43d4bfde571f059ff1f5"
+    },
+    "ZhangLS__Spec__Lemma59ExtendedApproximation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59ExtendedContourBudgets.lean.log": {
+      "bytes": 927,
+      "sha256": "bb9e51d0893a0ae318d58a1c84c785d8e72e8cb56b9d17de754bf0a17148cd3a"
+    },
+    "ZhangLS__Spec__Lemma59ExtendedFiniteContours.lean.log": {
+      "bytes": 207,
+      "sha256": "377b14ed2a213a567ef92b2c81f7c6c95c075f745f3e93d428c6dc5b13f9cf83"
+    },
+    "ZhangLS__Spec__Lemma59ExtendedGammaAndSums.lean.log": {
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    "ZhangLS__Spec__Lemma59ExtendedNormalizedProduct.lean.log": {
+      "bytes": 354,
+      "sha256": "b9caf6042c82bc723a2e594b7241b53fcf4a033e97d313a3f2a10274f9047b9b"
+    },
+    "ZhangLS__Spec__Lemma59ExtendedPolynomialBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59ExtendedPolynomialLog.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59ExtendedRouche.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59FiniteComplexProducts.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59FiniteZeroProducts.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59LocalZeroBudgets.lean.log": {
+      "bytes": 342,
+      "sha256": "0bd5afe2beb096da9f2cc4283ade23f50fe62b1cd1aa5dc7240e4a3911ba4c25"
+    },
+    "ZhangLS__Spec__Lemma59Parameters.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59RelaxedProducts.lean.log": {
+      "bytes": 679,
+      "sha256": "7545818a6df3356302ca368ee6c63ea3912f85a924fa5c2f27dbd89bdd7470f1"
+    },
+    "ZhangLS__Spec__Lemma59SimpleLocalZeros.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59UniformPolynomialInputs.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59ZeroFactorBounds.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59ZeroFactorization.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59ZeroRemovedBounds.lean.log": {
+      "bytes": 161,
+      "sha256": "1ff36d63d351c3096d89e18b34627849013207d69d7770fab6a023dc62757f29"
+    },
+    "ZhangLS__Spec__Lemma59ZeroRemovedLog.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma59ZeroRemovedShift.lean.log": {
+      "bytes": 553,
+      "sha256": "c219378de0766114295345f3b86b47cab05a81c59ac82d7f9a7eccc91ae3bf33"
+    },
+    "ZhangLS__Spec__Lemma61.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61ActualZError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61Approximation.lean.log": {
+      "bytes": 496,
+      "sha256": "9836437a2b8d0b49fe36e61a17fd009f1d2c963a3be0de10110d8bf8699fbca8"
+    },
+    "ZhangLS__Spec__Lemma61ComplexZShift.lean.log": {
+      "bytes": 158,
+      "sha256": "a29779b732ed9e54672e50a036209ddeead17aeaa340c3f85fbf647bd44f7488"
+    },
+    "ZhangLS__Spec__Lemma61ErrorContourKernel.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61ErrorHorizontalBounds.lean.log": {
+      "bytes": 206,
+      "sha256": "6a6577537c864b864b208917da610c44897818250da8fc5545192b6e89a52b72"
+    },
+    "ZhangLS__Spec__Lemma61ErrorLineShift.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61ErrorRegularPart.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61GammaApproximation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61GaussianCutoff.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61GaussianMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61GaussianWeights.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61HorizontalKernel.lean.log": {
+      "bytes": 10552,
+      "sha256": "0df4681a5955a9dc7060681fc50fcc1864815b90ffdb79efc47a40738c00021a"
+    },
+    "ZhangLS__Spec__Lemma61HorizontalLBounds.lean.log": {
+      "bytes": 688,
+      "sha256": "0e77103cfc218481284634d9976907ddb7b67378ab8d5003730f2cd0ce09447d"
+    },
+    "ZhangLS__Spec__Lemma61HorizontalTruncation.lean.log": {
+      "bytes": 548,
+      "sha256": "59099e43659668afb7113405b7e4236a1206b91692f88f98ae203314369e70a5"
+    },
+    "ZhangLS__Spec__Lemma61LeftApproximation.lean.log": {
+      "bytes": 500,
+      "sha256": "dc61541b76994e95d2aa7f7a2fa94600e06ad21006d9a1532bc37b437d927ff9"
+    },
+    "ZhangLS__Spec__Lemma61LeftIntegralSplit.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61OriginalLeftError.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61Parameters.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61ReciprocalFarLeft.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61ReciprocalModel.lean.log": {
+      "bytes": 299,
+      "sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164"
+    },
+    "ZhangLS__Spec__Lemma61ReciprocalSeriesSplit.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61ReciprocalTailKernel.lean.log": {
+      "bytes": 498,
+      "sha256": "6867f23dd8f40303a45bcc4031ca2654009fbb5c9bb100f9032955ba5ff7e09e"
+    },
+    "ZhangLS__Spec__Lemma61ReciprocalTailRectangle.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61ReciprocalTailTruncation.lean.log": {
+      "bytes": 502,
+      "sha256": "8945e02591c8e6e846560291aeaef696b9d137e381a6812c6291de1d29d2be72"
+    },
+    "ZhangLS__Spec__Lemma61RightTruncation.lean.log": {
+      "bytes": 699,
+      "sha256": "efab1759f2c174573d40331a9dd1e1a82a099d3ed90a1bb8f21e9356428300ef"
+    },
+    "ZhangLS__Spec__Lemma61ShortCutoff.lean.log": {
+      "bytes": 195,
+      "sha256": "12a31ef748089841abfde503c4fa4b03dc161f5d5c7a85f5f992f9e577df686e"
+    },
+    "ZhangLS__Spec__Lemma61ShortMellin.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Lemma61ShortTruncation.lean.log": {
+      "bytes": 399,
+      "sha256": "9ca9c114463868f3091ce57d4c53181665d57cfebe0f7fe48726e21b0675053f"
+    },
+    "ZhangLS__Spec__Lemma61SingleResidue.lean.log": {
+      "bytes": 2504,
+      "sha256": "2cd25f247778fb5c728f592b2dee08f3061ad20392d89e653fc6e8c30b1f137c"
+    },
+    "ZhangLS__Spec__Lemma61WideZBounds.lean.log": {
+      "bytes": 3413,
+      "sha256": "01c6403de972d572386abc403b7c5f58e84a418957db1633acee65c923d48912"
+    },
+    "ZhangLS__Spec__PaperTheorems.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Proposition21.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Proposition22.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Proposition22ModelNearZero.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Proposition22Neighbor.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__Proposition22Zeros.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__RealAxisAtOne.lean.log": {
+      "bytes": 160,
+      "sha256": "099a4539a80e1f5097c558b5e79814a9e8ee0cb391c206b51faa704ad8bde193"
+    },
+    "ZhangLS__Spec__RealAxisContinuation.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__RealAxisDerivativeAtOne.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__RealAxisLFunction.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__RealAxisSeries.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__RealDirichletCharacter.lean.log": {
+      "bytes": 169,
+      "sha256": "543f8624dda0e7789999ebd05682335a8e8600fcf2050fd6883deb040a601992"
+    },
+    "ZhangLS__Spec__ReciprocalDivisorBound.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__ReciprocalDivisorEulerFactorization.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__ReciprocalDivisorEulerLoss.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ZhangLS__Spec__RiemannZetaCriticalLineBound.lean.log": {
+      "bytes": 2423,
+      "sha256": "66d7fe8cab6c253808572448a49a203096cf5cdee90c5447ea05736008f53f38"
+    },
+    "audit__CloudLemma111Regression.lean.log": {
+      "bytes": 3225,
+      "sha256": "4b19b290282b54276cf8cf3add21a4f4b60f6a059dcf64adb9cb38d48686b462"
+    },
+    "audit__CloudLemma171Regression.lean.log": {
+      "bytes": 15456,
+      "sha256": "b5173a153f595c07b99ca2a78cbdf70b22cdc9ff71a022b42c37e7afc9b4b0e6"
+    },
+    "audit__CloudLemma36CoefficientRegression.lean.log": {
+      "bytes": 1849,
+      "sha256": "a71b51a4d8f1de03961970372500ddfe4db5e7f62ad82ac8ecd57d364595f8db"
+    },
+    "audit__CloudLemma36IntegralRegression.lean.log": {
+      "bytes": 1399,
+      "sha256": "055d3e17584cff613c49cc4b8394b2c755fa1498e09a684f883d95b428617b9b"
+    },
+    "audit__CloudLemma36Regression.lean.log": {
+      "bytes": 4815,
+      "sha256": "84ae97a6e511329052d9be889855fbd26331ed6459b9b03794ce12aca7f4c2f0"
+    },
+    "audit__CloudProposition21Regression.lean.log": {
+      "bytes": 501,
+      "sha256": "1abb86046617a85600139a6418f92d937ed95e81884f4f4f61cd2f8a3badc6e4"
+    },
+    "audit__LegacyAssumptionARegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step100Lemma55ZetaLocalRegression.lean.log": {
+      "bytes": 7919,
+      "sha256": "33904781785cffa9828fff6273e603e4ae251ab08af7016b7b2bd3126074a0e1"
+    },
+    "audit__Step101Lemma55FullExclusionRegression.lean.log": {
+      "bytes": 5648,
+      "sha256": "b4e505bb9c949704efc10a9c83d27ec8269db45208a740f409e74e83b0259911"
+    },
+    "audit__Step102Lemma58Regression.lean.log": {
+      "bytes": 727,
+      "sha256": "d4672fd08c427acc6c638517a81a01a8f5dbd1249e6b7c605ce5b38d8930dfab"
+    },
+    "audit__Step103Lemma56FoundationsRegression.lean.log": {
+      "bytes": 6719,
+      "sha256": "5d238ebd703c6a3b4c262f14e29cd3d4cc3d143e27d5a25f966254e142c08473"
+    },
+    "audit__Step104Lemma56ZeroFactorsRegression.lean.log": {
+      "bytes": 9324,
+      "sha256": "a3de6ff42adeb74df58ac0a1729481e04b1d2d5ee4bd30dc0adce7c1c4b5431b"
+    },
+    "audit__Step105Lemma56HighZeroRegression.lean.log": {
+      "bytes": 4301,
+      "sha256": "2e2ad634fe3b390ff39b19d60bb4af521ade78df419621764193c8e143edfdab"
+    },
+    "audit__Step106Lemma56TwistedGaussianRegression.lean.log": {
+      "bytes": 7080,
+      "sha256": "513198c6f59b939304911470feb2a58aece907c3d9d985d9dfd8957c2fb7f183"
+    },
+    "audit__Step107Lemma56PerronWindowRegression.lean.log": {
+      "bytes": 6081,
+      "sha256": "8cde3c0094832a49746345e4acceffef9e362640234dcd36b88b8ef32a1a7aa2"
+    },
+    "audit__Step108Lemma56SharpPrimeRegression.lean.log": {
+      "bytes": 2749,
+      "sha256": "690850f5d4874e6f683a13e9b1170396484a8e50f239fb3c9c9e52ca3fd181b4"
+    },
+    "audit__Step109Lemma56MassZetaRegression.lean.log": {
+      "bytes": 3133,
+      "sha256": "8223fe05b7e3b0eb38ebadc49f9eaff451cbbe23a74f8bb0adbd1d84895d19f7"
+    },
+    "audit__Step110Lemma56PrincipalMainRegression.lean.log": {
+      "bytes": 1681,
+      "sha256": "5ff0c4615a40e50814c694768b7c66d3d8ef663cfea951055c916f2ad78996ba"
+    },
+    "audit__Step111Lemma56PrincipalMassRegression.lean.log": {
+      "bytes": 3442,
+      "sha256": "5fec66fba6cfa3b6a77ce2275bf065453bd4242dc8d3ca3fc4fcbbf8f288dd81"
+    },
+    "audit__Step112Lemma56ActualMassRegression.lean.log": {
+      "bytes": 1661,
+      "sha256": "7ae4877cd9a73d1768f986b572a1c165d8e5d49201ff82cd7207ed6a8027bb6d"
+    },
+    "audit__Step113Lemma59AuxiliaryRegression.lean.log": {
+      "bytes": 2909,
+      "sha256": "75b3ab9dd43f0a6310c11d04662e9e1de292ed602420a5f5403b9b0d03f12df3"
+    },
+    "audit__Step114Lemma59ActualZerosRegression.lean.log": {
+      "bytes": 1339,
+      "sha256": "173e1ff516499b1ba9e0f311b30c2a13b1836ed685356f80469a9816cf1bfab6"
+    },
+    "audit__Step115Lemma59FactorInputsRegression.lean.log": {
+      "bytes": 3794,
+      "sha256": "73846da385f9439bb6a8708f6ebb3fb542f2057a0f36c8b47d279a78283b6855"
+    },
+    "audit__Step116Lemma59FullQuotientRegression.lean.log": {
+      "bytes": 12241,
+      "sha256": "aecc0ac9766a9fa3bb4982fc1203b4fa20b66e9893e2e6527023420382e65698"
+    },
+    "audit__Step117Lemma61GaussianInputsRegression.lean.log": {
+      "bytes": 3495,
+      "sha256": "8ca6374ba5de5e9758bc4bc332312a2ed660b62fec982f6a5ac40decd43aa930"
+    },
+    "audit__Step118Lemma61ActualZErrorRegression.lean.log": {
+      "bytes": 3022,
+      "sha256": "4cbafb74679c90101ddc126e89e491fb6aa979e528167c062e2a5e61da766d64"
+    },
+    "audit__Step119Lemma61ResidueRightTailRegression.lean.log": {
+      "bytes": 1669,
+      "sha256": "6fb91e366b737ede7032bcd3886b75a6af85ed895f9940c1008cf81ee2a5e59e"
+    },
+    "audit__Step120Lemma61ReciprocalTailRegression.lean.log": {
+      "bytes": 2708,
+      "sha256": "57030dcd9bd7740a8c23c25143c8d085b4c24a27d229ad7c3c1de0f4076d3748"
+    },
+    "audit__Step121Lemma61OriginalLeftErrorRegression.lean.log": {
+      "bytes": 2158,
+      "sha256": "2fcf49fd111f6013b15b4903d033db06a05813ca64804fe9b2153dda7ef6ae7c"
+    },
+    "audit__Step122Lemma61CompleteRegression.lean.log": {
+      "bytes": 4323,
+      "sha256": "2cb47375d34d3f4b4502e6df36a39f65a9f2ac79fbbb305c8e80b5b3ee64c5f7"
+    },
+    "audit__Step123Lemma33CompleteRegression.lean.log": {
+      "bytes": 4737,
+      "sha256": "3b09cdfb062e6fa8ccd9ae248c7db11f7232b5ca71bad6e52be48de1a1a81ca9"
+    },
+    "audit__Step124Lemma34CompleteRegression.lean.log": {
+      "bytes": 4638,
+      "sha256": "f376666f19ce21d4f1a20e3b6fcd463823b8be653d2bdbfad5656b011e0217a5"
+    },
+    "audit__Step125Lemma31CompleteRegression.lean.log": {
+      "bytes": 8169,
+      "sha256": "60a86f9f99b9f95b01de24427d919ca8d65808c2bad235b70ee986e03df1e4c9"
+    },
+    "audit__Step126Lemma35CompleteRegression.lean.log": {
+      "bytes": 3063,
+      "sha256": "7435af365942ae61241c11dcd22dde0bfe123081ab57800c207595ea5e2ce3b1"
+    },
+    "audit__Step127Lemma32CircleRegression.lean.log": {
+      "bytes": 9384,
+      "sha256": "e99765bb03f0df190a18561f19f2327830b6ac0203eccec2e0f77c4ac28bd957"
+    },
+    "audit__Step128Lemma32MellinResidueRegression.lean.log": {
+      "bytes": 16534,
+      "sha256": "5e41970d67daca160deea9b020a6512886841ed45baf874f4a5eec5a1eb97ebf"
+    },
+    "audit__Step129Lemma32InfiniteShiftRegression.lean.log": {
+      "bytes": 23046,
+      "sha256": "3478722d77a1438addca5927137d9b0b864c21f1e0e92c9a08c0b34ec3b05c27"
+    },
+    "audit__Step130Lemma32ArithmeticReductionRegression.lean.log": {
+      "bytes": 32301,
+      "sha256": "300a6260e8781ff39fba78eed08e26b0f19f6034a4a6bc4c3ed3fe3dbd1ce535"
+    },
+    "audit__Step131Lemma32CollisionPointRegression.lean.log": {
+      "bytes": 34677,
+      "sha256": "722e7a262c41875e883d9998df34ae431483ca346eb7f80dec7dc2bb409e097f"
+    },
+    "audit__Step132Lemma32CRTConductorRegression.lean.log": {
+      "bytes": 39309,
+      "sha256": "dc2160fb7aac28d9e17e6102773970b082382f723d9ae8403386c7be27a54b48"
+    },
+    "audit__Step133Lemma32HasseArithmeticRegression.lean.log": {
+      "bytes": 40835,
+      "sha256": "0b61c3b396f5e7f6b42d25080f12178c2c4bfbf964dcd7318174c672365e6b0f"
+    },
+    "audit__Step134Lemma32CompositeMomentRegression.lean.log": {
+      "bytes": 44954,
+      "sha256": "4e503a4efb63126da1b0571e4f88f2d6b9e7a5a9bd54bf068517aa67ff9076c3"
+    },
+    "audit__Step135Lemma32BurgessAmplificationRegression.lean.log": {
+      "bytes": 51997,
+      "sha256": "71f676ee43cd0ebff4f83a15298da77c488b6702e4a20ca03501edaacd95752c"
+    },
+    "audit__Step136Lemma32FourierCompletionRegression.lean.log": {
+      "bytes": 55629,
+      "sha256": "ef36fc40b5faad39bf061aefe0e64a7b315639a6e751e94477a253631ad6387b"
+    },
+    "audit__Step137Lemma32OriginalTargetRegression.lean.log": {
+      "bytes": 58572,
+      "sha256": "315fe32a883be92bd2df66c26c9028e683945498d650e11f2d7427491b6fa69f"
+    },
+    "audit__Step30GaussianRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step31LegacyRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step32MellinContourRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step33GaussianMellinKernelRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step34GaussianMellinTransformRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step35MellinIdentityRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step36ContourShiftLimitRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step37ContourAnalyticityRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step38RectangleWindingRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step39PrincipalPartRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step40ContourGrowthRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step41CriticalStripGrowthRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step42CompletedStripBoundsRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step43GammaFactorGrowthRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step44CompletedDirichletStripRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step45ShiftedGammaAndContourRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step46ShiftedIntegralEnvelopeRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step47LAtOnePositivityRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step48ResidueBudgetRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step49GaussianQuadraticMomentRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step50QuadraticConductorThresholdRegression.lean.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit__Step74GoodSetSectionFourRegression.lean.log": {
+      "bytes": 292,
+      "sha256": "fa84d447f0222f757087634629dddb31f7292e29acc38df81821b4ba4ac58c74"
+    },
+    "audit__Step75GammaAndLongSumRegression.lean.log": {
+      "bytes": 617,
+      "sha256": "d7550b7c6b576e5a1dd6e2555b883fd806548e016947f10de0ee40f03781342c"
+    },
+    "audit__Step76GaussianMiddleContourRegression.lean.log": {
+      "bytes": 875,
+      "sha256": "506c85731712788d47c5aa6ba4e6ffbbd87df48dde3cd3127633b8d2831d5cff"
+    },
+    "audit__Step77ProductMellinRegression.lean.log": {
+      "bytes": 1011,
+      "sha256": "3af54775afdbda3bd902481c343e6719b4784928bf793c554bdd36ad1b667b2b"
+    },
+    "audit__Step78Lemma44CompletionRegression.lean.log": {
+      "bytes": 1251,
+      "sha256": "038f42afbe96af5ef765dea914ba930da5a6c9395e734a347efba9ccd7556bc9"
+    },
+    "audit__Step79Lemma45ZeroFreeRegression.lean.log": {
+      "bytes": 1122,
+      "sha256": "b5ed698f3a6011a32db3014c3c542502d9d90a475a14152f8629ba81ff884998"
+    },
+    "audit__Step80Lemma46ZeroAnalysisRegression.lean.log": {
+      "bytes": 1164,
+      "sha256": "b7cac04a99e6c41a0c6c8ad528e14da055374a5d07c507de6fba19d66b222e36"
+    },
+    "audit__Step81Lemma47ThreeZerosRegression.lean.log": {
+      "bytes": 1072,
+      "sha256": "4f0b200ae7b024c582fda428f982874524abf26ff63d26c0c0a9014ea491eed9"
+    },
+    "audit__Step82Lemma48InverseFactorRegression.lean.log": {
+      "bytes": 1028,
+      "sha256": "4e34ac9cba4a9d7a85f0d8f343d8d26976f7a6349ddaf9941726a0a2dfbd7c92"
+    },
+    "audit__Step83Proposition22Regression.lean.log": {
+      "bytes": 1103,
+      "sha256": "c6c9195b364b6ca566263b16e0633898db125a4c72444eefcaa812a38eb76e00"
+    },
+    "audit__Step84Lemma23Regression.lean.log": {
+      "bytes": 867,
+      "sha256": "9ed24617dfefec68dcf0576caf636962a159a290775a893b71324fbc567281ec"
+    },
+    "audit__Step85Lemma51Regression.lean.log": {
+      "bytes": 1044,
+      "sha256": "08c47cf80d8aa6e429294d2ee3b57514cd67d19cc87fe0628225cdeaa091da1e"
+    },
+    "audit__Step86Lemma52Regression.lean.log": {
+      "bytes": 1022,
+      "sha256": "d3d967f994b39cf036c4cb61ca640485cfd0492f1ff4ed6555d1a044644d075c"
+    },
+    "audit__Step87Lemma53FoundationsRegression.lean.log": {
+      "bytes": 1186,
+      "sha256": "ebfd7197fbd323605ba3b4dbe14cb7d332b41cfa4685611786adc036d8975176"
+    },
+    "audit__Step88Lemma53MellinIdentityRegression.lean.log": {
+      "bytes": 1375,
+      "sha256": "0fcce8d1a789c673c2f987736af647b31f031536582db02c031dfa07405ed438"
+    },
+    "audit__Step89Lemma53SmallRangeRegression.lean.log": {
+      "bytes": 1081,
+      "sha256": "a35e823cd22902a831d5964d32c7cbb65e61ea3e014e24a4123f83b0eed6f504"
+    },
+    "audit__Step90Lemma53Regression.lean.log": {
+      "bytes": 1264,
+      "sha256": "359de6385946ccc6b36f0be275c6226e83b2ecaeccc41fc578a00da363dc95bc"
+    },
+    "audit__Step91Lemma54FoundationsRegression.lean.log": {
+      "bytes": 1633,
+      "sha256": "b17dd4a71a2dc2ab074138563ce5873e1e114de03fd89d0e9853c76806ae5479"
+    },
+    "audit__Step92Lemma54WeightedDerivativeRegression.lean.log": {
+      "bytes": 1935,
+      "sha256": "ffc50b441114b3e1407bf5d2132763438cf8756d5bb1f623afbc31e649e9040a"
+    },
+    "audit__Step93Lemma54StripRegression.lean.log": {
+      "bytes": 1456,
+      "sha256": "a819dd2a3747f150cd8a0a782deeae9773f1135a3d1bb27e36bf35ebea1f8d93"
+    },
+    "audit__Step94Lemma54GaussianRegression.lean.log": {
+      "bytes": 2719,
+      "sha256": "62fb24bdd077558067dae3e59c089307e1e3dd0cf2f1ce2f6c94257c6b4d27ca"
+    },
+    "audit__Step95Lemma54CompletionRegression.lean.log": {
+      "bytes": 2049,
+      "sha256": "e1c50da6ab8452cc786a95792000ccd2ece64735e654f61f8b704774cef2f298"
+    },
+    "audit__Step96Lemma55LocalZeroRegression.lean.log": {
+      "bytes": 2115,
+      "sha256": "b8cfc3c506292236da2b26b912e79f59d97870acab0faf0fecf3af362fb2c6c7"
+    },
+    "audit__Step97Lemma55FullRegionZerosRegression.lean.log": {
+      "bytes": 3021,
+      "sha256": "e9e66f576abbcc187f80a678855bcb3a5308ddaf71c259cb8b42605ede65a8e0"
+    },
+    "audit__Step98Lemma55LogDerivativeRegression.lean.log": {
+      "bytes": 3817,
+      "sha256": "86288183d03cc6a83f88fa6ff6ad6df61a77163b9e05fc656cece84e1eb1acef"
+    },
+    "audit__Step99Lemma55PowerDetectionRegression.lean.log": {
+      "bytes": 6878,
+      "sha256": "0c48a6a535f6035cab4d72c1fff7d6888de30b0a59c67679d6bbe741b17022b3"
+    },
+    "full_coverage.log": {
+      "bytes": 34,
+      "sha256": "1c8079210703c839a628e484b38ffb5013744ff74ae38b64408fe228c7e81117"
+    },
+    "full_project.log": {
+      "bytes": 165259,
+      "sha256": "faf0f4141f31587e0d6e52188fed05d0115e06dc677522fb5fdcf412fb1187f3"
+    },
+    "placeholders.log": {
+      "bytes": 65,
+      "sha256": "e405d73af26e4c31f38278adc6ee218487a07e8b80ed2c3b20bceeeed2b63dce"
+    },
+    "spec_aggregate.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "spec_coverage.log": {
+      "bytes": 39,
+      "sha256": "d0e5d102be0efe952c57ac672388d4e2a4093c2fd1ca0271cc6e90d0e4160757"
+    },
+    "structure.log": {
+      "bytes": 46,
+      "sha256": "be5fa4bc8ae92f0f960ab37021081f8499ee925249a1d456858b74ac1bff2a15"
+    }
+  }
+}
