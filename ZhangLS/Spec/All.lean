@@ -34,6 +34,12 @@ import ZhangLS.Spec.DivisorCharacterSum
 import ZhangLS.Spec.DivisorCharacterSumNonnegative
 import ZhangLS.Spec.DivisorPowerBudget
 import ZhangLS.Spec.DivisorSmallPowerBudget
+import ZhangLS.Spec.FixedModulusGcdAttachment
+import ZhangLS.Spec.FixedModulusGcdBridge
+import ZhangLS.Spec.FixedModulusGcdOriginalPhase
+import ZhangLS.Spec.FixedModulusGcdRegression
+import ZhangLS.Spec.FixedModulusGcdSourceIndex
+import ZhangLS.Spec.FixedModulusGcdSums
 import ZhangLS.Spec.InducedGaussConductor
 import ZhangLS.Spec.InducedGaussFiniteSums
 import ZhangLS.Spec.InducedGaussFormula
@@ -1058,6 +1064,7 @@ import ZhangLS.Spec.Proposition22
 import ZhangLS.Spec.Proposition22ModelNearZero
 import ZhangLS.Spec.Proposition22Neighbor
 import ZhangLS.Spec.Proposition22Zeros
+import ZhangLS.Spec.Proposition71ActualKappaSeries
 import ZhangLS.Spec.Proposition71ArithmeticFactors
 import ZhangLS.Spec.Proposition71CharacterConductorWeights
 import ZhangLS.Spec.Proposition71CoefficientEnergy
@@ -1080,10 +1087,18 @@ import ZhangLS.Spec.Proposition71DyadicPrimeMean
 import ZhangLS.Spec.Proposition71DyadicSigmaBound
 import ZhangLS.Spec.Proposition71ExceptionalLittleO
 import ZhangLS.Spec.Proposition71ExceptionalMoments
+import ZhangLS.Spec.Proposition71FiniteContourShift
+import ZhangLS.Spec.Proposition71FiniteContourZBound
+import ZhangLS.Spec.Proposition71FiniteCriticalMean
+import ZhangLS.Spec.Proposition71FiniteExceptionalContour
+import ZhangLS.Spec.Proposition71FinitePolynomialGrowth
 import ZhangLS.Spec.Proposition71FrontCoefficientBounds
 import ZhangLS.Spec.Proposition71FrontContourObjects
 import ZhangLS.Spec.Proposition71FrontFamilyRate
+import ZhangLS.Spec.Proposition71FrontHeadTail
 import ZhangLS.Spec.Proposition71FrontIntegrands
+import ZhangLS.Spec.Proposition71FrontLargeTail
+import ZhangLS.Spec.Proposition71FrontLargeTailRate
 import ZhangLS.Spec.Proposition71FrontSegment
 import ZhangLS.Spec.Proposition71FrontUniformRate
 import ZhangLS.Spec.Proposition71FullConductorAggregate
@@ -1096,6 +1111,7 @@ import ZhangLS.Spec.Proposition71GaussAverage
 import ZhangLS.Spec.Proposition71GenericExceptionalMoments
 import ZhangLS.Spec.Proposition71GenericExceptionalSaving
 import ZhangLS.Spec.Proposition71HorizontalLogNorm
+import ZhangLS.Spec.Proposition71InfiniteExceptionalContour
 import ZhangLS.Spec.Proposition71LargeConductorAggregate
 import ZhangLS.Spec.Proposition71LargeConductorSaving
 import ZhangLS.Spec.Proposition71LargeConductorWeights
@@ -1116,6 +1132,10 @@ import ZhangLS.Spec.Proposition71OffLocalAggregate
 import ZhangLS.Spec.Proposition71OffLocalMajorant
 import ZhangLS.Spec.Proposition71OffLocalTail
 import ZhangLS.Spec.Proposition71OriginalConductorLittleO
+import ZhangLS.Spec.Proposition71OriginalDeltaReduction
+import ZhangLS.Spec.Proposition71OriginalExceptional
+import ZhangLS.Spec.Proposition71OriginalFamilyExtension
+import ZhangLS.Spec.Proposition71OriginalFrontAttachment
 import ZhangLS.Spec.Proposition71OriginalFrontTransform
 import ZhangLS.Spec.Proposition71OriginalLargeConductor
 import ZhangLS.Spec.Proposition71OriginalSmallConductor
@@ -1180,3 +1200,6 @@ import ZhangLS.Spec.Section8UpstreamKernels
 import ZhangLS.Spec.Section8UpstreamLimits
 import ZhangLS.Spec.ShiftedAdditiveLargeSieve
 import ZhangLS.Spec.TauDirichletValues
+import ZhangLS.Spec.TauWeightedDeltaCoefficients
+import ZhangLS.Spec.TauWeightedDeltaGeometry
+import ZhangLS.Spec.TauWeightedDeltaSum

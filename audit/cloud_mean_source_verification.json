@@ -1,0 +1,144 @@
+{
+  "status": "PASS_ORIGINAL_SECTION7_SOURCE_REDUCTION_AND_SHARED_ARITHMETIC",
+  "verified_at_utc": "2026-10-02T23:38:42.133521+00:00",
+  "base_commit": "2722c2bd821bdbf4a2fbcc1e0a641b8f4d963607",
+  "new_modules": 23,
+  "standalone_audit_files": 3,
+  "public_declaration_checks": 123,
+  "zero_axiom_declarations": 2,
+  "original_example_regressions": 19,
+  "source_dependency_closure": 942,
+  "full_project_jobs": 5453,
+  "source_files": 1612,
+  "spec_imports": 1199,
+  "full_imports": 1464,
+  "source_relocation": "package-local fixed-gcd imports qualified only; other source bytes unchanged",
+  "strict_candidates": 422,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 3,
+  "numbered_completion_count_change": 0,
+  "original_equation_7_3_proved": true,
+  "original_equation_7_6_proved": true,
+  "actual_theta_one_to_primitive_gauss_delta_one_proved": true,
+  "proposition71_complete": false,
+  "proposition141_complete": false,
+  "logs": {
+    "mean-source-full-project.log": {
+      "bytes": 253524,
+      "sha256": "4b4f8f5cf8cc3e13ca2822e58f43f70802174e2c9daf8e4f352a8dfb56f862c7"
+    },
+    "mean-source-strict-audit.log": {
+      "bytes": 42776,
+      "sha256": "e348b74b5f397ceb5ddcaf962f67021b9247c15aae7f8c3b34487ccea1a7b02c"
+    },
+    "CloudMeanSourceP71ActualRegression.log": {
+      "bytes": 558492,
+      "sha256": "e2030e4e47519bafa5ae6d5e469dfcb98cac086d5bbaa181d962b3f089c3faab"
+    },
+    "CloudMeanSourcePublicAxioms.log": {
+      "bytes": 13015,
+      "sha256": "e4cb0c6f10e8fb3b0500f1138d1e26f130e652cd7d9ba0bfbd92b141ce8ad8f4"
+    },
+    "CloudMeanSourceTauDeltaRegression.log": {
+      "bytes": 2226,
+      "sha256": "118555bdfc75ff154b902828441b57ad8b368946ca0b431c93438f38f076cda2"
+    },
+    "FixedModulusGcdAttachment.log": {
+      "bytes": 1091,
+      "sha256": "53048d2f0547fcf60fc9c542fedc6b685cb5baf7c7b389823676f6594f1e98de"
+    },
+    "FixedModulusGcdBridge.log": {
+      "bytes": 1087,
+      "sha256": "c0006f05f6914a9668c2893d2188353ded4b8332f6255bd94a45370079c980a2"
+    },
+    "FixedModulusGcdOriginalPhase.log": {
+      "bytes": 9205,
+      "sha256": "5f547706048ec8378cc41d227e5ff76866cece86b5920cca99dcd155932184e7"
+    },
+    "FixedModulusGcdRegression.log": {
+      "bytes": 118328,
+      "sha256": "c3cf78f7967e20d49d3971f0f715ceb1a3b8e55a657c7945ed3788bbe4b207d3"
+    },
+    "FixedModulusGcdSourceIndex.log": {
+      "bytes": 9203,
+      "sha256": "09d08035c7a67bd489745b9e05b3ee9e52f606572e88603bac854dbfc7b00fce"
+    },
+    "FixedModulusGcdSums.log": {
+      "bytes": 9196,
+      "sha256": "8e88a985737963c51225d3972090daceb0d241537670aa0ab82154434bb8b9df"
+    },
+    "Proposition71ActualKappaSeries.log": {
+      "bytes": 118744,
+      "sha256": "540b7f385789aeaaa0dd0a4711c16228a1bcb963ad3b00f6274567d6ab9f4fb4"
+    },
+    "Proposition71FiniteContourShift.log": {
+      "bytes": 64787,
+      "sha256": "bd9d7b79bf51dda4b6d0d75592640dcf0e2555011e10700c6cf70a827645c48d"
+    },
+    "Proposition71FiniteContourZBound.log": {
+      "bytes": 17545,
+      "sha256": "a7b606909994ae2bd05d2dececca3a9062b8e49e83d511e4cf3b4e60ec4e7282"
+    },
+    "Proposition71FiniteCriticalMean.log": {
+      "bytes": 142359,
+      "sha256": "d10f6a651fa08f043c4b0d7fa74e878ed2ff9377b94a014ce6d479ca5961d916"
+    },
+    "Proposition71FiniteExceptionalContour.log": {
+      "bytes": 154791,
+      "sha256": "6c81d70d60b26476e4964ca3e24d1b7efef3c5650a563355c12e7742d2d63b70"
+    },
+    "Proposition71FinitePolynomialGrowth.log": {
+      "bytes": 24976,
+      "sha256": "a74c950ac97f366548153f63c5584b307a07e8b606e4ee902171f38e85bd6c46"
+    },
+    "Proposition71FrontHeadTail.log": {
+      "bytes": 157211,
+      "sha256": "4022b5ae65cb9f9ebbd538b37f3e93f7dc1b75e76f42163b6de15b19eb728e59"
+    },
+    "Proposition71FrontLargeTail.log": {
+      "bytes": 133638,
+      "sha256": "dc58cef835310966bef58c9e68a4e791348433d398dd8307227a12fa4794b08c"
+    },
+    "Proposition71FrontLargeTailRate.log": {
+      "bytes": 133916,
+      "sha256": "9b9cc43643b56a998abf0cf2462d1adb6666295919492422354adb4dce5146b8"
+    },
+    "Proposition71InfiniteExceptionalContour.log": {
+      "bytes": 157224,
+      "sha256": "542c02b3ab7e8c127425dd81dbcf0d295ae9b8b5ca77c191ad44a7d92f392aed"
+    },
+    "Proposition71OriginalDeltaReduction.log": {
+      "bytes": 158818,
+      "sha256": "8afa3ff251717436d4daa44fc3aabe720b754188921f7c242a9c947641e7a158"
+    },
+    "Proposition71OriginalExceptional.log": {
+      "bytes": 158815,
+      "sha256": "d0bc2ee31e9be27dad6b98fe80d3f9e0e6bc494f157a24a0d896598907e5e717"
+    },
+    "Proposition71OriginalFamilyExtension.log": {
+      "bytes": 158819,
+      "sha256": "d5922695490e7c134fa46e0e118c36557653a25dc7f7b50178bff0eef5d92541"
+    },
+    "Proposition71OriginalFrontAttachment.log": {
+      "bytes": 158819,
+      "sha256": "edff05f4a4582815780cc8aacad4b7d1abb2d77a31ec4826f698b74aa8b3ca3e"
+    },
+    "TauWeightedDeltaCoefficients.log": {
+      "bytes": 26333,
+      "sha256": "2018df76dbb344cbbb811a718f5fc37a77159f46268b4e4ce2e0fa6cd76c154b"
+    },
+    "TauWeightedDeltaGeometry.log": {
+      "bytes": 26329,
+      "sha256": "30e88545c85fa5e2c3b9c02a155f58cd4c554bbadaacd7ee3294cafffc70e83e"
+    },
+    "TauWeightedDeltaSum.log": {
+      "bytes": 26324,
+      "sha256": "1039cfbe694ae3e45681b6ad71396ec2fcdbf485cef3664d11274f2b3016ed63"
+    }
+  },
+  "strict_new_review": {
+    "FixedModulusGcdAttachment:81": "Returns the genuine composite-modulus expansion after both actual units and the quotient phase are proved.",
+    "FixedModulusGcdSourceIndex:52": "Returns the actual gcd equivalence preimage equality in the surjectivity proof.",
+    "Proposition71OriginalFamilyExtension:52": "Returns the already proved original7.3 estimate after exact family partition algebra."
+  }
+}

@@ -213,7 +213,7 @@
       "risk": "high; reject the apparent erroneous citation to L5.6 rather than importing its full target"
     }
   ],
-  "critical_circularity_warning": "Trying to prove L5.6.literal_all_primitive from the final contradiction, while requiring that same full target for P7.1/P14.1, creates a circular proof plan. Route these consumers only through the independently proved r>1 port. Full L5.6 can be revisited after eventual not-(A), with that ex-falso route explicitly disclosed.",
+  "critical_circularity_warning": "Full literal L5.6 is not an analytic input: P7.1/P14.1 must use the independently proved r>1 port and genuine principal branches. A later ex-falso proof from final not-(A) would not count as source-level validation of that prime-sum estimate. Explicit citation/use scope is audited in audit/CLOUD_LEMMA56_USE_SCOPE.md.",
   "nodes": [
     {
       "id": "T1",
@@ -1661,7 +1661,8 @@
         "direct_imports": [
           "ZhangLS.Spec.Lemma56ActualPrimeMassLower"
         ],
-        "source_sha256": "fa5a2db30dc251a236dfcc5d9917e18726cceb80f8848c6fef17e85ad5cbf409"
+        "source_sha256": "fa5a2db30dc251a236dfcc5d9917e18726cceb80f8848c6fef17e85ad5cbf409",
+        "source_use_audit": "audit/CLOUD_LEMMA56_USE_SCOPE.md"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
@@ -1947,7 +1948,7 @@
         ]
       },
       "scheduling_phase": "proof",
-      "active_work": "Central common J(1)-to-actual Delta1 front, genuine auxiliary zeta strip, original majorant/residues/7.21 verified. Original7.3/7.6 source attachment worker-verified and queued for central acceptance. Gauss/restoration, conductor-to7.13, actual7.19 and outer assembly remain.",
+      "active_work": "Original7.3/7.6 and actual Theta1-to-primitive-Gauss/Delta1 mean centrally verified. Gauss corrections worker-verified; actual conductor-to7.13 and global7.19/main S/E attachments continue.",
       "shared_support_active": "All-moduli weighted primitive large sieve and genuine eighth-order actual delta Mellin decay now centrally verified. Actual prime/kernel glue, outer averages and l-tails remain separate."
     },
     {
@@ -2629,7 +2630,7 @@
         ]
       },
       "scheduling_phase": "proof",
-      "active_work": "Central actual normalized localized large-conductor aggregate and family/positive-gcd reindex verified. Fixed-D phase/gcd wrapper and shared actual absolute Delta estimate worker-verified. Original source attachments, omitted tails and induced-main normalization remain active.",
+      "active_work": "Exact fixed-D gcd/phase/source-inner reindex and absolute tau5-Delta bound centrally verified. Complete infinite-l large majorant and full principal correction worker-frozen, awaiting central acceptance; small tails and source/main assembly continue.",
       "shared_support_active": "All-moduli weighted primitive large sieve and genuine eighth-order actual delta Mellin decay now centrally verified. Actual prime/kernel glue, outer averages and l-tails remain separate."
     },
     {
@@ -3906,7 +3907,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T23:17:19.918739+00:00",
+    "verified_at_utc": "2026-10-02T23:38:42.133521+00:00",
     "completed": 36,
     "in_progress": 3,
     "unstarted": 7,
@@ -4158,6 +4159,18 @@
       "assumption_A": false,
       "corrected_analytic_product_proved": false,
       "old_center_witness_conditional": true
+    },
+    {
+      "id": "original_section7_analytic_and_shared_arithmetic_attachments",
+      "status": "verified",
+      "report": "audit/CLOUD_MEAN_SOURCE_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 23,
+      "public_declaration_checks": 123,
+      "original_examples": 19,
+      "original_7_3_and_7_6_proved": true,
+      "actual_theta_one_gauss_delta_one_reduction": true,
+      "full_mean_targets_proved": false
     }
   ],
   "repair_discipline": {

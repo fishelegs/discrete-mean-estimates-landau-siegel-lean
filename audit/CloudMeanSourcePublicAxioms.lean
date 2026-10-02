@@ -1,0 +1,147 @@
+import ZhangLS.Spec.Proposition71FiniteContourZBound
+import ZhangLS.Spec.Proposition71FinitePolynomialGrowth
+import ZhangLS.Spec.Proposition71FrontLargeTail
+import ZhangLS.Spec.Proposition71ActualKappaSeries
+import ZhangLS.Spec.TauWeightedDeltaGeometry
+import ZhangLS.Spec.FixedModulusGcdBridge
+import ZhangLS.Spec.Proposition71FiniteContourShift
+import ZhangLS.Spec.Proposition71FrontLargeTailRate
+import ZhangLS.Spec.TauWeightedDeltaSum
+import ZhangLS.Spec.FixedModulusGcdAttachment
+import ZhangLS.Spec.Proposition71FiniteCriticalMean
+import ZhangLS.Spec.TauWeightedDeltaCoefficients
+import ZhangLS.Spec.FixedModulusGcdSourceIndex
+import ZhangLS.Spec.Proposition71FiniteExceptionalContour
+import ZhangLS.Spec.Proposition71FrontHeadTail
+import ZhangLS.Spec.FixedModulusGcdOriginalPhase
+import ZhangLS.Spec.Proposition71InfiniteExceptionalContour
+import ZhangLS.Spec.FixedModulusGcdSums
+import ZhangLS.Spec.Proposition71OriginalFrontAttachment
+import ZhangLS.Spec.FixedModulusGcdRegression
+import ZhangLS.Spec.Proposition71OriginalExceptional
+import ZhangLS.Spec.Proposition71OriginalFamilyExtension
+import ZhangLS.Spec.Proposition71OriginalDeltaReduction
+
+#print axioms ZhangLS.Spec.fixedDCoprimeGcdEquiv
+#print axioms ZhangLS.Spec.fixedDCoprimeGcdForget
+#print axioms ZhangLS.Spec.fixedDCoprimeGcdIndex
+#print axioms ZhangLS.Spec.fixedDCoprimeGcdLift
+#print axioms ZhangLS.Spec.fixedDCoprimeGcd_filtered_nested_tsum
+#print axioms ZhangLS.Spec.fixedDCoprimeGcd_filtered_tsum
+#print axioms ZhangLS.Spec.fixedDCoprimeGcd_lift_gcd
+#print axioms ZhangLS.Spec.fixedDCoprimeGcd_lift_injective
+#print axioms ZhangLS.Spec.fixedDCoprimeGcd_lift_surjective
+#print axioms ZhangLS.Spec.fixedDCoprimeGcd_tsum_reindex
+#print axioms ZhangLS.Spec.fixedDGcdEquiv
+#print axioms ZhangLS.Spec.fixedDGcdIndex
+#print axioms ZhangLS.Spec.fixedDGcdLift
+#print axioms ZhangLS.Spec.fixedDGcd_additive_quotient
+#print axioms ZhangLS.Spec.fixedDGcd_cast_inverse
+#print axioms ZhangLS.Spec.fixedDGcd_character_zero_extension
+#print axioms ZhangLS.Spec.fixedDGcd_coprime_iff
+#print axioms ZhangLS.Spec.fixedDGcd_coprime_tsum_reindex
+#print axioms ZhangLS.Spec.fixedDGcd_divisor_inverse_phase
+#print axioms ZhangLS.Spec.fixedDGcd_divisor_quotient_pos
+#print axioms ZhangLS.Spec.fixedDGcd_inverse_divisor
+#print axioms ZhangLS.Spec.fixedDGcd_inverse_phase_quotient
+#print axioms ZhangLS.Spec.fixedDGcd_inverse_quotient
+#print axioms ZhangLS.Spec.fixedDGcd_lift_gcd
+#print axioms ZhangLS.Spec.fixedDGcd_lift_injective
+#print axioms ZhangLS.Spec.fixedDGcd_lift_surjective
+#print axioms ZhangLS.Spec.fixedDGcd_nested_tsum
+#print axioms ZhangLS.Spec.fixedDGcd_nonSquarefreeRegression
+#print axioms ZhangLS.Spec.fixedDGcd_original_deltaOne_phase
+#print axioms ZhangLS.Spec.fixedDGcd_original_delta_phase
+#print axioms ZhangLS.Spec.fixedDGcd_original_innerMain_reindex
+#print axioms ZhangLS.Spec.fixedDGcd_phase_character_expansion
+#print axioms ZhangLS.Spec.fixedDGcd_quotient_isUnit
+#print axioms ZhangLS.Spec.fixedDGcd_quotient_p_isUnit
+#print axioms ZhangLS.Spec.fixedDGcd_quotient_pos
+#print axioms ZhangLS.Spec.fixedDGcd_scaled_kernel_argument
+#print axioms ZhangLS.Spec.fixedDGcd_tsum_reindex
+#print axioms ZhangLS.Spec.proposition71FiniteFrontKernel
+#print axioms ZhangLS.Spec.proposition71FrontLargeTailConstant
+#print axioms ZhangLS.Spec.proposition71InfiniteFrontKernel
+#print axioms ZhangLS.Spec.proposition71LongHead
+#print axioms ZhangLS.Spec.proposition71LongTail
+#print axioms ZhangLS.Spec.proposition71OriginalDeltaOneMean
+#print axioms ZhangLS.Spec.proposition71ShortLinearMass
+#print axioms ZhangLS.Spec.proposition71_Z_log_derivative_wide
+#print axioms ZhangLS.Spec.proposition71_actual_C_contour_eq_infinite
+#print axioms ZhangLS.Spec.proposition71_actual_C_infinite_kernel
+#print axioms ZhangLS.Spec.proposition71_actual_C_strict_front_contour
+#print axioms ZhangLS.Spec.proposition71_actual_C_strict_front_kernel
+#print axioms ZhangLS.Spec.proposition71_actual_family_partition
+#print axioms ZhangLS.Spec.proposition71_actual_ratio_convolution
+#print axioms ZhangLS.Spec.proposition71_arithmetic_sequence_LSeries
+#print axioms ZhangLS.Spec.proposition71_arithmetic_sequence_strict_support
+#print axioms ZhangLS.Spec.proposition71_delta_one_norm_eq_delta
+#print axioms ZhangLS.Spec.proposition71_delta_one_scaled_tail
+#print axioms ZhangLS.Spec.proposition71_finite_critical_exceptional_little_o
+#print axioms ZhangLS.Spec.proposition71_finite_exceptional_contour_little_o
+#print axioms ZhangLS.Spec.proposition71_finite_front_boundary_envelope
+#print axioms ZhangLS.Spec.proposition71_finite_front_critical_norm
+#print axioms ZhangLS.Spec.proposition71_finite_front_differentiableAt
+#print axioms ZhangLS.Spec.proposition71_finite_front_segment_integrable
+#print axioms ZhangLS.Spec.proposition71_finite_front_shift
+#print axioms ZhangLS.Spec.proposition71_finite_tau_polynomial_norm
+#print axioms ZhangLS.Spec.proposition71_front_conductor_log_bound
+#print axioms ZhangLS.Spec.proposition71_front_large_tail_constant_pos
+#print axioms ZhangLS.Spec.proposition71_front_large_tail_contour_rate
+#print axioms ZhangLS.Spec.proposition71_front_large_tail_main_rate
+#print axioms ZhangLS.Spec.proposition71_front_large_tail_term_bound
+#print axioms ZhangLS.Spec.proposition71_front_large_tail_tsum_bound
+#print axioms ZhangLS.Spec.proposition71_infinite_contour_head_tail
+#print axioms ZhangLS.Spec.proposition71_infinite_exceptional_contour_little_o
+#print axioms ZhangLS.Spec.proposition71_infinite_front_differentiableAt
+#print axioms ZhangLS.Spec.proposition71_infinite_front_eq_actual_kernel
+#print axioms ZhangLS.Spec.proposition71_infinite_front_head_tail
+#print axioms ZhangLS.Spec.proposition71_infinite_front_segment_integrable
+#print axioms ZhangLS.Spec.proposition71_inverse_Z_finite_contour_bound
+#print axioms ZhangLS.Spec.proposition71_kappa_twist_LSeries_ratio
+#print axioms ZhangLS.Spec.proposition71_kappa_twist_summable
+#print axioms ZhangLS.Spec.proposition71_long_finite_polynomial_exponential
+#print axioms ZhangLS.Spec.proposition71_long_head_majorant
+#print axioms ZhangLS.Spec.proposition71_long_head_series_eq_finite
+#print axioms ZhangLS.Spec.proposition71_long_head_tail
+#print axioms ZhangLS.Spec.proposition71_long_series_head_tail
+#print axioms ZhangLS.Spec.proposition71_long_tail_majorant
+#print axioms ZhangLS.Spec.proposition71_normalized_segment_const_mul
+#print axioms ZhangLS.Spec.proposition71_original_delta_one_reduction
+#print axioms ZhangLS.Spec.proposition71_original_delta_one_series_summable
+#print axioms ZhangLS.Spec.proposition71_original_full_family_C_reduction
+#print axioms ZhangLS.Spec.proposition71_original_polynomial_eq_cutoff_prefix
+#print axioms ZhangLS.Spec.proposition71_original_seven_six
+#print axioms ZhangLS.Spec.proposition71_original_seven_three
+#print axioms ZhangLS.Spec.proposition71_original_seven_three_normalized
+#print axioms ZhangLS.Spec.proposition71_original_short_shifted_power
+#print axioms ZhangLS.Spec.proposition71_original_short_support_geometry
+#print axioms ZhangLS.Spec.proposition71_primitive_gauss_normalized_norm_le_one
+#print axioms ZhangLS.Spec.proposition71_short_finite_polynomial_norm
+#print axioms ZhangLS.Spec.proposition71_short_linear_mass_bound
+#print axioms ZhangLS.Spec.proposition71_short_linear_mass_nonneg
+#print axioms ZhangLS.Spec.proposition71_tau_unweighted_sum
+#print axioms ZhangLS.Spec.proposition71_twisted_coefficient_majorant
+#print axioms ZhangLS.Spec.proposition71_unnormalized_segment_eq
+#print axioms ZhangLS.Spec.tauDeltaAbsoluteConstant
+#print axioms ZhangLS.Spec.tauDeltaDilatedAbsolute
+#print axioms ZhangLS.Spec.tauDeltaDilatedTerm
+#print axioms ZhangLS.Spec.tauDeltaHead
+#print axioms ZhangLS.Spec.tauDeltaUniformConstant
+#print axioms ZhangLS.Spec.tauDelta_absolute_constant_pos
+#print axioms ZhangLS.Spec.tauDelta_actual_absolute_head_tail
+#print axioms ZhangLS.Spec.tauDelta_actual_absolute_sum
+#print axioms ZhangLS.Spec.tauDelta_actual_dilated_absolute_sum
+#print axioms ZhangLS.Spec.tauDelta_actual_dilated_character_sum
+#print axioms ZhangLS.Spec.tauDelta_actual_uniform_bound
+#print axioms ZhangLS.Spec.tauDelta_dilated_absolute_majorant
+#print axioms ZhangLS.Spec.tauDelta_dilated_term_norm_le
+#print axioms ZhangLS.Spec.tauDelta_head_geometry
+#print axioms ZhangLS.Spec.tauDelta_head_hasSum
+#print axioms ZhangLS.Spec.tauDelta_scaled_large_tail
+#print axioms ZhangLS.Spec.tauDelta_t0_cutoff
+#print axioms ZhangLS.Spec.tauDelta_tail_scale
+#print axioms ZhangLS.Spec.tauDelta_tau_five_partial_sum
+#print axioms ZhangLS.Spec.tauDelta_tau_five_square_summable
+#print axioms ZhangLS.Spec.tauDelta_term_majorant
+#print axioms ZhangLS.Spec.tauDelta_uniform_constant_pos
