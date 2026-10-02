@@ -1,0 +1,38 @@
+{
+  "status": "PASS_ACTUAL_SECTION10_FULL_WEIGHTED_XI_REPLACEMENT",
+  "verified_at_utc": "2026-10-02T22:39:31.902758+00:00",
+  "completion_kind": "partial_original_pointwise_target_explicitly_open",
+  "numbered_completion_count_change": 0,
+  "production_modules": 28,
+  "public_declarations": 89,
+  "standalone_audit_files": 1,
+  "semantic_regressions": 9,
+  "serial_module_targets_passed": 28,
+  "full_project_jobs": 5365,
+  "source_files": 1511,
+  "spec_imports": 1111,
+  "full_project_imports": 1376,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 414,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 1,
+  "strict_new_review": "Lemma102MixedInteriorLittleO:47 returns hh derived locally by multiplying the eventual epsilon*L inequality; it is not an assumed weighted conclusion.",
+  "original_lemma102_proved": false,
+  "actual_source_weighted_xi_replacement_little_o_alpha": true,
+  "first_factor_or_final_mean_asymptotics_proved": false,
+  "original_target_source_sha256": "9b5e0b0775fd87cffa4b46d68c6c9539f968c6e9a2df93871fa3babf5b3d99d8",
+  "logs": {
+    "lemma102-full-integration-regression.log": {
+      "bytes": 9475,
+      "sha256": "559cabb81ac7fa2c90b871e1719bebc2b80fa6488c50d9662f6ea3d6c8178bbb"
+    },
+    "lemma102-full-project.log": {
+      "bytes": 243840,
+      "sha256": "9a8e4cb5a240c87e5bad9ef42f75cf5ba602b6f4ea49c367e2692482a2c9cdf9"
+    },
+    "lemma102-full-strict-audit.log": {
+      "bytes": 42041,
+      "sha256": "49203c0e8381271522f5b5fde0c0ebf55e94451ec2946267bb8f3388a8a5c0a5"
+    }
+  }
+}
