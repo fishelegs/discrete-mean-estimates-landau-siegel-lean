@@ -1,0 +1,44 @@
+{
+  "status": "PASS_GENUINE_ARITHMETIC_AND_LOCAL_RESIDUE_BRIDGES",
+  "verified_at_utc": "2026-10-02T20:49:08.202763+00:00",
+  "base_commit": "eeb2079c4ccd89fc5df7336998c0712b1180659f",
+  "completion_kind": "partial_actual_arithmetic_and_residue_components",
+  "numbered_completion_count_change": 0,
+  "production_modules": 6,
+  "audit_modules": 1,
+  "production_public_declarations": 62,
+  "named_audit_regressions": 7,
+  "public_declaration_axiom_checks": 69,
+  "dependency_build_jobs": 3859,
+  "full_project_jobs": 5221,
+  "source_files": 1348,
+  "spec_imports": 967,
+  "full_project_imports": 1232,
+  "source_hashes_unchanged_since_promotion": true,
+  "strict_candidates": 392,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "original_lemma151_proved": false,
+  "source_alpha1_defined": false,
+  "arithmetic_replacement_decay_rate_proved": false,
+  "local_residue_error": "explicit actual analytic deviations, not a claimed global Big-O",
+  "global_contour_or_uniform_single_kernel_asymptotic_proved": false,
+  "logs": {
+    "lemma151-arithmetic-integration-build.log": {
+      "bytes": 17293,
+      "sha256": "c64b8d7f69c3b2ec323d0fdd559f7470b3baa962fb10bd0b45a7f9bcbb2c968e"
+    },
+    "lemma151-arithmetic-integration-axioms.log": {
+      "bytes": 6820,
+      "sha256": "160607aad0dcaf579bf19078061e673bd3d0c687c06b88b8fa8d7080dabdda26"
+    },
+    "lemma151-arithmetic-full-project.log": {
+      "bytes": 223165,
+      "sha256": "a61356dc53834e6757b2ad9b32c1633d223d43fb609b35f98db695dbc9104c73"
+    },
+    "lemma151-arithmetic-strict-audit.log": {
+      "bytes": 40036,
+      "sha256": "df16e12d2f6034b130aef951bb483a759104aba49327ca0798f50ab8245052a9"
+    }
+  }
+}

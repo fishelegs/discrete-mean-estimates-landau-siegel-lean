@@ -63,6 +63,12 @@ import ZhangLS.Spec.Lemma121Ranges
 import ZhangLS.Spec.Lemma121RepairedHigh
 import ZhangLS.Spec.Lemma121Transition
 import ZhangLS.Spec.Lemma121UniformPolynomial
+import ZhangLS.Spec.Lemma151Arithmetic
+import ZhangLS.Spec.Lemma151Basis
+import ZhangLS.Spec.Lemma151Definitions
+import ZhangLS.Spec.Lemma151LocalResidue
+import ZhangLS.Spec.Lemma151TailIntegral
+import ZhangLS.Spec.Lemma151WeightedError
 import ZhangLS.Spec.Lemma152ActualContinuation
 import ZhangLS.Spec.Lemma152CoefficientMultiplicative
 import ZhangLS.Spec.Lemma152CorrectionBounds

@@ -2644,13 +2644,15 @@
         "proof_section": "Appendix B"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "in_progress",
+      "working_status": "actual_arithmetic_local_residue_components_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 176,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
-        "trusted_capstone_found": false
+        "trusted_capstone_found": false,
+        "component_report": "audit/CLOUD_LEMMA151_ARITHMETIC_STATUS.md",
+        "original_target_proved": false
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
@@ -2665,11 +2667,13 @@
       ],
       "semantic_issue_ids": [
         "paper_L3.2_for_B1_may_need_L3.1",
-        "paper_L8.1_contour_reference_is_analogy_or_typo"
+        "paper_L8.1_contour_reference_is_analogy_or_typo",
+        "b_chi_psi_versus_psi_basis",
+        "B3_literal_P12_versus_H14_support_endpoint"
       ],
       "scheduling_status": "queued",
       "dispatch_reason": "Audit actual mathematical/definition/library prerequisites before assigning a proof branch; numbered in-degree alone is not readiness.",
-      "proof_status": "in_progress",
+      "proof_status": "partial",
       "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [
@@ -2681,8 +2685,8 @@
           "Actual b/rho*_j/N(Q), e_j; uniform n1"
         ]
       },
-      "scheduling_phase": "arithmetic_and_source_basis_central_review",
-      "active_work": "Genuine arithmetic/local-residue package delivered for central review; complete original asymptotic still unproved."
+      "scheduling_phase": "basis_propagation_rough_collisions_and_global_asymptotic",
+      "active_work": "Actual nu convolution, rough-domain basis conversion and genuine zeta local residue centrally verified. Full asymptotic, coefficient-basis propagation and rough collision/global contour errors remain open."
     },
     {
       "id": "L15.2",
@@ -3893,14 +3897,14 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T20:33:46.716286+00:00",
+    "verified_at_utc": "2026-10-02T20:49:08.202763+00:00",
     "completed": 36,
-    "in_progress": 3,
+    "in_progress": 2,
     "unstarted": 9,
     "note": "36 local nodes addressed, not final proof completion. Current2.5 numerical route blocked by concrete Section8 c12/c1 mismatch; verified local compatibility components remain valid.",
     "original_completed": 34,
     "repaired_completed": 2,
-    "partial": 3,
+    "partial": 4,
     "main_chain_status": "blocked_numerical_inconsistency"
   },
   "scheduling_semantics": {
@@ -4063,6 +4067,16 @@
       "semantic_regressions": 4,
       "pointwise_limits_proved": true,
       "uniform_integral_limit_proved": false
+    },
+    {
+      "id": "L15.1_actual_arithmetic_and_local_residue",
+      "status": "verified",
+      "report": "audit/CLOUD_LEMMA151_ARITHMETIC_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 6,
+      "public_declaration_checks": 69,
+      "named_semantic_regressions": 7,
+      "full_arithmetic_asymptotic_proved": false
     }
   ],
   "repair_discipline": {
