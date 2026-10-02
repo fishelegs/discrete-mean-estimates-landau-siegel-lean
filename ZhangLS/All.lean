@@ -732,6 +732,7 @@ import ZhangLS.Spec.Lemma34IntegralMean
 import ZhangLS.Spec.Lemma34Multichoose
 import ZhangLS.Spec.Lemma34PartialIntegrability
 import ZhangLS.Spec.Lemma34ShortMean
+import ZhangLS.Spec.Lemma34TauProduct
 import ZhangLS.Spec.Lemma34TupleConvolution
 import ZhangLS.Spec.Lemma34UniformMean
 import ZhangLS.Spec.Lemma34WeightedCauchy

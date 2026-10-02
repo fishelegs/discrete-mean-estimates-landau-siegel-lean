@@ -1,0 +1,35 @@
+{
+  "status": "PASS_GENERAL_ACTUAL_TAU_PRODUCT",
+  "verified_at_utc": "2026-10-02T22:47:41.113450+00:00",
+  "production_modules": 1,
+  "production_declarations": 14,
+  "named_regressions": 14,
+  "public_axiom_checks": 28,
+  "full_project_jobs": 5366,
+  "source_files": 1513,
+  "spec_imports": 1112,
+  "full_imports": 1377,
+  "source_hashes_unchanged": true,
+  "strict_candidates": 414,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "numbered_completion_count_change": 0,
+  "logs": {
+    "tau-product-integration-build.log": {
+      "bytes": 332,
+      "sha256": "427e5f53773fcfe404c80ac625c9a5338aab64cfc1d9c062a0d8c02985582df8"
+    },
+    "tau-product-integration-audit.log": {
+      "bytes": 3027,
+      "sha256": "f707c421942668887717767a12c21c5bddef944b0c99b625c5c99a5105a13760"
+    },
+    "tau-product-full-project.log": {
+      "bytes": 243840,
+      "sha256": "9971fa7f13c9994cfc4ab29b394b5d51b0ecb45ee30053a84a6424b46b5ac159"
+    },
+    "tau-product-strict-audit.log": {
+      "bytes": 42041,
+      "sha256": "49203c0e8381271522f5b5fde0c0ebf55e94451ec2946267bb8f3388a8a5c0a5"
+    }
+  }
+}

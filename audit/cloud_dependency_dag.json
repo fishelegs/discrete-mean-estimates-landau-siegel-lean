@@ -3904,7 +3904,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T22:39:31.902758+00:00",
+    "verified_at_utc": "2026-10-02T22:47:41.113450+00:00",
     "completed": 36,
     "in_progress": 3,
     "unstarted": 7,
@@ -4120,6 +4120,19 @@
       "full_boundary_replacement_little_o_alpha": true,
       "original_pointwise_target_proved": false,
       "final_mean_asymptotics_proved": false
+    },
+    {
+      "id": "general_actual_tau_product_majorant",
+      "status": "verified",
+      "report": "audit/CLOUD_TAU_PRODUCT_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 1,
+      "public_declaration_checks": 28,
+      "named_regressions": 14,
+      "consumers": [
+        "P7.1",
+        "P14.1"
+      ]
     }
   ],
   "repair_discipline": {
