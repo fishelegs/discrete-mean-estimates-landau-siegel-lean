@@ -1,0 +1,84 @@
+{
+  "finite_complex_coefficient_cases": 35,
+  "coefficient_endpoint": 840,
+  "real_primitive_fixture_conductors": [
+    5,
+    7,
+    8,
+    12,
+    21,
+    24,
+    28
+  ],
+  "fixtures_claimed_to_satisfy_A": false,
+  "universal_sparse_ratio_polynomials_ascending": {
+    "r9_split": [
+      2,
+      23,
+      33,
+      13
+    ],
+    "r9_ramified": [
+      5,
+      6
+    ],
+    "r9_inert": [
+      0,
+      16,
+      24
+    ],
+    "r54_split": [
+      60,
+      321,
+      548,
+      390,
+      101
+    ],
+    "r54_ramified": [
+      42,
+      93,
+      49
+    ],
+    "r54_inert": [
+      0,
+      190,
+      528,
+      392
+    ]
+  },
+  "ramanujan_gcd_cases": 32400,
+  "divisor_envelope_endpoint": 840,
+  "finite_gcd_principal_reindexing": "exact complex equality with rational nonconstant kernel",
+  "rational_budgets": {
+    "tail_linear": "-2013",
+    "sparse_unweighted": "-1997",
+    "sparse_high_weighted": "-1907",
+    "sparse_low_weighted": "-1853/2",
+    "defect_energy": "-953/2",
+    "whole_mean_tail": "-627/4",
+    "whole_deleted_log": "613/2",
+    "principal_sparse_l1": "-1799/4",
+    "principal_prefactor": "404",
+    "principal_error": "-183/4",
+    "whole_R2000_tail": "-1399/100",
+    "principal_R2000_tail": "-1449/100",
+    "Y_length_margin": "49/100",
+    "g_resonance_margin": "3/400",
+    "support_cutoff_leading_margin": "199/400",
+    "lambda_derivative_half_multiplier": "8000",
+    "lambda_mass_half_multiplier_without_pi": "11/500"
+  },
+  "sign_check": "Re(-i*(x+i*y))=y=Im(x+i*y)",
+  "complex_nonprincipal_chain": [
+    "J=-i(R_pr+R_np)+o(1)",
+    "J=Theta/(a*Mcal)+o(1)",
+    "-i*R_pr=Principal/(a*Mcal)+o(1)",
+    "Theta-Principal=o(Mcal)",
+    "-i*R_np=o(1)"
+  ],
+  "analytic_proof_location": "INDEPENDENT_REVIEW.md, Sections 1-7",
+  "compiler_or_Lean_run": false,
+  "AFE_used_to_assign_constant": false,
+  "strict_gain_proved": false,
+  "result": "PASS: independent exact finite checks only; analytic acceptance is in INDEPENDENT_REVIEW.md"
+}

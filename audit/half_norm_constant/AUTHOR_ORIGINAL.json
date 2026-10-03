@@ -1,0 +1,33 @@
+{
+  "finite_coefficient_cases": 16,
+  "coefficient_fixture_endpoint": 600,
+  "fixtures_not_claimed_to_satisfy_A": true,
+  "fixture_cutoffs_test_an_identity_valid_for_every_X": true,
+  "ramanujan_gcd_cases": 19600,
+  "divisor_envelope_endpoint": 600,
+  "rational_budgets": {
+    "sparse_weighted_energy": "-1853/2",
+    "defect_energy": "-953/2",
+    "whole_mean_tail": "-627/4",
+    "whole_mean_deleted_log": "613/2",
+    "principal_sparse_l1": "-1799/4",
+    "principal_prefactor": "404",
+    "principal_error": "-183/4",
+    "whole_safe_tail_R2000": "-1399/100",
+    "principal_safe_tail_R2000": "-1449/100",
+    "Y_below_P2": "49/100",
+    "g_tail_resonance_margin": "3/400"
+  },
+  "sign_identity": "Re(-i*z)=Im(z); both original source means contain -i*w_p",
+  "complex_nonprincipal_chain": [
+    "Jright=Theta_H/(a*Mcal)+o(1)",
+    "-i*R_D=Jright+o(1)",
+    "-i*R_pr=PrincipalMean_P7/(a*Mcal)+o(1)",
+    "Theta_H-PrincipalMean_P7=o(Mcal)",
+    "-i*R_np=o(1)"
+  ],
+  "accepted_input_hashes_verified": 4,
+  "source_manifest_entries": 23,
+  "analytic_or_Lean_verification": false,
+  "result": "PASS: exact finite algebra and rational budgets only"
+}

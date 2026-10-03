@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "status": "source_only_independently_reviewed",
+  "lean_certification": false,
+  "strict_gain_proved": false,
+  "final_exponent_2024_proved": false,
+  "independent_review_original_sha256": "4b359bd05a58c11a3aec508b740dab02b741b2558aa6e41b43174e4b70403e9c",
+  "remaining_target": "Re Delta_rho,high <= (1/2-epsilon)m_H + o(1)",
+  "high_rho_label_condition": "2K>P^(99/100)",
+  "portable_checks": {
+    "check_author.py": "AUTHOR_RERUN.json",
+    "check_independent.py": "INDEPENDENT_RERUN.json"
+  },
+  "files": [
+    {
+      "path": "AUTHOR_ORIGINAL.json",
+      "sha256": "47e65e1f9d83f1e3e2a34f21b8efedfd7bf25d580120b0ef8d387c35be998a2b",
+      "bytes": 1152
+    },
+    {
+      "path": "AUTHOR_RERUN.json",
+      "sha256": "c26454e64ae28e0fb2fc7bd6c855a1d6dc366dd15979f60c78ef066eb078709f",
+      "bytes": 1080
+    },
+    {
+      "path": "AUTHOR_SOURCE_MANIFEST.json",
+      "sha256": "c6b1b64f76f5202be38e3384df38bf249cec1079154767358c2f6a651aeadcef",
+      "bytes": 2723
+    },
+    {
+      "path": "INDEPENDENT_ORIGINAL.json",
+      "sha256": "896dbe1d2825753852e1facdbab35cca2cdb185cae82122c7bbc203b522be63e",
+      "bytes": 2101
+    },
+    {
+      "path": "INDEPENDENT_RERUN.json",
+      "sha256": "8eba62ce0acf345b613e3784a87c409930ed079287a489b8cec09790d0c10aee",
+      "bytes": 1978
+    },
+    {
+      "path": "INDEPENDENT_REVIEW.md",
+      "sha256": "9aa0dfd944b3f3a2c86791cf48e077ef0a56f9bf846f3681297f27115d51e186",
+      "bytes": 18910
+    },
+    {
+      "path": "INDEPENDENT_SOURCE_MANIFEST.json",
+      "sha256": "e42be6f641ab1a6a795ab5d7dd4f865df90f7d6a1d970914e797831357e29de3",
+      "bytes": 4581
+    },
+    {
+      "path": "PROOF.md",
+      "sha256": "0a77d306a53b6cefc46b074c2696287e12387e1d42c1a209d41b364d9130d1e0",
+      "bytes": 19292
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "58cd6ba53e98bc7febeb9aa14d5c11a84987e8265c677ad429bdf3cb112ba3eb",
+      "bytes": 3410
+    },
+    {
+      "path": "REPRODUCE.md",
+      "sha256": "399cafb1150735875465cc20d95c4ea3a06eaea49adad579fbdc8b25a68908d9",
+      "bytes": 2389
+    },
+    {
+      "path": "REVIEW_SCOPE.md",
+      "sha256": "57d815636dd07447162436e3151271b360e1c100814366c79f445c99cb180627",
+      "bytes": 690
+    },
+    {
+      "path": "SOURCE_HASHES.json",
+      "sha256": "1ce716794f5f9bc24ef4ea81f96a859f8d79e8eb91c710cd8911916f5c5b189b",
+      "bytes": 5787
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "87a3cf0c28968fb645b339a09f573cb2d4c91139d8f8c53265630c937e76b7a9",
+      "bytes": 2017
+    },
+    {
+      "path": "check_author.py",
+      "sha256": "6ab984585a866c38b25a9aade5c7b6f293c1de5875db1b35c9936b8afa47f123",
+      "bytes": 5853
+    },
+    {
+      "path": "check_independent.py",
+      "sha256": "8812ef592e135badfd041363db701e6b5cd1db6642aa2f5d3deedc316070952d",
+      "bytes": 9772
+    },
+    {
+      "path": "verify_bundle.py",
+      "sha256": "ec10ef7dbf568dc262d4b505b73f75571c184a07705d3dc87f5fc9db6d136b09",
+      "bytes": 7560
+    }
+  ]
+}

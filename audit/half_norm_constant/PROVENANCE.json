@@ -1,0 +1,73 @@
+{
+  "evidence_kind": "Source-level mathematical proof with final independent acceptance; no Lean certification",
+  "historical_originals": [
+    {
+      "source_id": "author_proof",
+      "sha256": "7fd1bf67bb8bd94474c14467d05c7a36144401e009fa21f14a85291ad5414724",
+      "bytes": 18602
+    },
+    {
+      "source_id": "author_checker",
+      "sha256": "306bd85d58b6c3cf2ce0911be3274565edf892ceca2317f199ae5b907d434082",
+      "bytes": 7874
+    },
+    {
+      "source_id": "author_receipt",
+      "sha256": "47e65e1f9d83f1e3e2a34f21b8efedfd7bf25d580120b0ef8d387c35be998a2b",
+      "bytes": 1152
+    },
+    {
+      "source_id": "author_manifest",
+      "sha256": "c1068fdf1b2029392970bfc49dfda6e9afb283d3b2635bb68ec56a51f1d6d5ca",
+      "bytes": 3962
+    },
+    {
+      "source_id": "independent_review",
+      "sha256": "4b359bd05a58c11a3aec508b740dab02b741b2558aa6e41b43174e4b70403e9c",
+      "bytes": 18658
+    },
+    {
+      "source_id": "independent_scope",
+      "sha256": "1839ec69e58a3d794735cac841149cc91ddef36fa69cf8f01484eb21095de64e",
+      "bytes": 808
+    },
+    {
+      "source_id": "independent_checker",
+      "sha256": "fd28b560a5aa61edfae6264af1d12f229364ff26da7021fcf64ae1c6eaeab7e6",
+      "bytes": 11524
+    },
+    {
+      "source_id": "independent_receipt",
+      "sha256": "896dbe1d2825753852e1facdbab35cca2cdb185cae82122c7bbc203b522be63e",
+      "bytes": 2101
+    },
+    {
+      "source_id": "independent_manifest",
+      "sha256": "28a9799be336859f50bc0ede3d2c9a9447c6c7d0a17cd99ea57d04281a1b43e4",
+      "bytes": 6662
+    }
+  ],
+  "historical_source_baseline": "e4666bb9562d2ab84f5fa042d0e4538193660b7c",
+  "original_report_sha256_verified": true,
+  "original_input_fingerprints_verified": true,
+  "independent_review_final_decision": "ACCEPT at source level for the actual right-term half-norm constant and complex nonprincipal o(1); no strict gain",
+  "independent_review_original_sha256": "4b359bd05a58c11a3aec508b740dab02b741b2558aa6e41b43174e4b70403e9c",
+  "independent_review_finalized": true,
+  "original_author_manifest_entries_verified": 23,
+  "original_independent_manifest_entries_verified": 39,
+  "curation": [
+    "Preserved the full mathematical proof and independent review without changing any argument or estimate.",
+    "Replaced environment-specific locations and operational statements with public evidence references.",
+    "Updated the proof front matter to record the final independent source-level acceptance.",
+    "Retained original receipt bytes and hashes separately from portable rerun receipts.",
+    "Portable checkers retain all finite mathematical checks and print JSON; location-dependent source checks are handled by verify_bundle.py.",
+    "Original source manifests retain every hash with neutral source identifiers; original manifest byte hashes are preserved here.",
+    "Pinned historical dependency hashes and distinct public artifact hashes separately."
+  ],
+  "portable_check_scope": "Finite algebra, exact local-ratio polynomials, rational exponents and input integrity only. The analytic proof is in PROOF.md and INDEPENDENT_REVIEW.md.",
+  "public_proof_sha256": "0a77d306a53b6cefc46b074c2696287e12387e1d42c1a209d41b364d9130d1e0",
+  "public_independent_review_sha256": "9aa0dfd944b3f3a2c86791cf48e077ef0a56f9bf846f3681297f27115d51e186",
+  "lean_certification": false,
+  "strict_gain_proved": false,
+  "final_exponent_2024_proved": false
+}
