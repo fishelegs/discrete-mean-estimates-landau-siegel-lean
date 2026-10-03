@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-03T14:31:41.393351+00:00",
-  "base_commit": "975114abbb14f77426af3cff767b1f37e6c67d04",
+  "updated_utc": "2026-10-03T14:58:30.522627+00:00",
+  "base_commit": "55364eaa0f7e8e39105959ea4c28fd391007597f",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
@@ -86,7 +86,7 @@
       "status": "open",
       "verification": "已核对有限算子和相位；所需主项未证明",
       "result": "保留四类同余/Kl2/逆加性/Kl3算子；配对变换含 H=(Zψ Zχψ)G−Gdual，不能自动抵消。",
-      "gap": "须对实际 Gram 和目标向量同时求值，并证明能提供增益的实际 Schur 目标残差或下一阶带符号主项。浮点或旧 leading 模型不够。",
+      "gap": "须评价真实主项及完整增强投影缺口；固定smooth窄旧span已有常数级缺口，局部L^-8增量不足。先证合法近阈值baseline或足够常数级增益，再判断符号和误差。",
       "dependency_mode": "R2 AND (direct_arithmetic OR R3_structured_reduction OR another_valid_attachment)",
       "dependencies": [
         "R2"
@@ -96,12 +96,14 @@
       ],
       "evidence": [
         "audit/CLOUD_SHORT_UPSILON_STATUS.md",
-        "audit/paired_phase_attachment/STATUS.md"
+        "audit/paired_phase_attachment/STATUS.md",
+        "audit/narrow_baseline/STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "已启动实际目标在三方向补空间上的定量投影研究；核查真实主项/符号及可能的J缺陷转换，尚无有利符号结论。",
-      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
-      "proof_status": "open"
+      "execution_note": "重新校准候选baseline及完整增益；固定smooth窄支持的小L^-8增量子分支已暂停，整个主算术符号目标继续。",
+      "checked_utc": "2026-10-03T14:58:30.522627+00:00",
+      "proof_status": "open",
+      "branch_status": "suspended_recalibration_for_fixed_smooth_narrow_small_gain_only"
     },
     {
       "id": "R5",
@@ -109,7 +111,7 @@
       "status": "source_reviewed_partial",
       "verification": "限定三方向扩充和旧二维span的来源层证明已独立复核；尚非Lean",
       "result": "对三个固定剖面证明实际Gram≥λI/2；实际单位根数相位后，可选全局有界组合正交指定旧二维span，实际残差平方范数≥λ/2。",
-      "gap": "仅覆盖新A支撑[.502,.504]、旧A同窗及旧B[.499,.500]；不含原宽H1/H2或此前单个rA，不给目标投影或严格gain。误差仅足常数级非退化，未达L^-8符号精度。",
+      "gap": "限定三方向真实范数的来源层结论保留；它不保证旧span接近最优、目标投影非零或strict gain。固定smooth窄旧span有独立常数缺口；原宽H1/H2、任意旧rA和L^-8符号精度仍未完成。",
       "dependency_mode": "actual_Gram_attachment_plus_nondegeneracy; may_proceed_with_R4_in_parallel",
       "dependencies": [
         "R2"
@@ -124,7 +126,7 @@
       ],
       "execution_status": "active",
       "execution_note": "14:27 UTC起已启动Lean形式化，先证真实Pi卷积消去，再接实际平滑主范数和限定三方向Gram；来源层结论不自动算Lean完成。",
-      "checked_utc": "2026-10-03T14:31:41.393351+00:00",
+      "checked_utc": "2026-10-03T14:58:30.522627+00:00",
       "proof_status": "source_reviewed_partial"
     },
     {
@@ -156,7 +158,7 @@
       "status": "open",
       "verification": "尚未证明；当前没有修复成功结论",
       "result": "当前路线的共同门槛是完整合法比值超过所需阈值，且仍有覆盖全部误差的严格裕量。",
-      "gap": "需要 R4 的真实有利主项、R5 的合法分母/残差下界与 R6 的完整误差界共同成立；单独改善误差不产生增益。",
+      "gap": "须先校准实际baseline与完整目标范数，再让R4有利主项、R5合法归一化和R6误差共同闭合。当前固定smooth窄baseline的小增量分支不足，整体strict gain仍未证明。",
       "dependency_mode": "AND",
       "dependencies": [
         "R4",
@@ -166,7 +168,7 @@
       "evidence": [],
       "execution_status": "waiting_dependencies",
       "execution_note": "等待R4、R5、R6共同闭合；当前无严格gain。",
-      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "checked_utc": "2026-10-03T14:58:30.522627+00:00",
       "proof_status": "open"
     },
     {
@@ -264,8 +266,27 @@
   "warnings": [
     "R1的L^-13标量下界与R2的L^-14表示误差不是同一对象，不能直接比较得出严格gain。",
     "R3比R2更小的新增误差不会把总误差自动提升到L^-225。",
-    "来源复核、局部Lean证明和完整原主定理证明必须分开。"
+    "来源复核、局部Lean证明和完整原主定理证明必须分开。",
+    "固定smooth窄旧span的常数级baseline缺口只排除把小L^-8下界直接当修复充分条件；不排除所有支持/系数/方法。"
   ],
   "numbered_progress_note": "Repaired pointwise Lemma15.1 is verified; this does not complete any repair critical-path node or establish strict gain.",
-  "execution_status_semantics": "实际执行状态独立于证明状态；来源复核完成不自动表示Lean形式化正在运行。"
+  "execution_status_semantics": "实际执行状态独立于证明状态；来源复核完成不自动表示Lean形式化正在运行。",
+  "branch_assessments": [
+    {
+      "id": "fixed_smooth_narrow_old_span_small_gain",
+      "status": "suspended_recalibration",
+      "scope": "固定χ乘smooth旧A[.502,.504]、旧B[.499,.500]，函数先于D和χ固定；不含任意bounded系数或不受控D依赖profile。",
+      "evidence_status": "source_reviewed",
+      "result": "实际同aM归一目标残差最终≥250/π；目标范数趋8000/π+44π/375，相对缺口>2.9%。仅L^-8新增投影下界不足恢复完整比值。",
+      "dependency_note": "使用P2.6已私有kernel PASS的uniform BV实际范数；该输入中央验收/发布尚待完成。tent附件和baseline本身尚非Lean。",
+      "not_excluded": [
+        "constant-size actual phase gain",
+        "arbitrary bounded narrow-window coefficients with new valid estimates",
+        "wider legally attached old supports",
+        "changed frequencies or other methods"
+      ],
+      "report": "audit/narrow_baseline/STATUS.md",
+      "checked_utc": "2026-10-03T14:58:30.522627+00:00"
+    }
+  ]
 }

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "Coercivity and support constants only; actual attachment remains a separate proof obligation",
+  "support_width": "1/250",
+  "coercivity_margin_above_4_over_pi_lower_bound": "1137686806/1052734375",
+  "gap_interval": [
+    "401/800",
+    "2007/4000"
+  ],
+  "delta_max": "1/4000",
+  "gap_derivative_energy": "125",
+  "limiting_absolute_gap": "500/pi",
+  "eventual_actual_gap_if_attachment_holds": "250/pi",
+  "limiting_target_norm": "8000/pi+44*pi/375",
+  "eventual_relative_gap_lower_bound_if_attachment_holds": "765625/25679841",
+  "relative_gap_exceeds": "29/1000",
+  "no_claim_for_arbitrary_bounded_coefficient_sequences": true,
+  "no_Lean_certificate": true
+}

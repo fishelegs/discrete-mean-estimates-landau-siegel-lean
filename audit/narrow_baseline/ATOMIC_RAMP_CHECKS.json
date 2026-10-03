@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "four_regions": [
+    {
+      "region": 0,
+      "status": "exact identity"
+    },
+    {
+      "region": 1,
+      "status": "exact identity"
+    },
+    {
+      "region": 2,
+      "status": "exact identity"
+    },
+    {
+      "region": 3,
+      "status": "exact identity"
+    }
+  ],
+  "endpoint_atom_kernel_is_zero": true,
+  "ell": "arbitrary nonzero complex symbolic parameter",
+  "includes_three_literal_jump_atoms": true,
+  "not_a_Lean_or_asymptotic_certificate": true
+}
