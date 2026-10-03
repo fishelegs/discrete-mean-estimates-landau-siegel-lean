@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-03T14:23:57.561783+00:00",
-  "base_commit": "61c82ec022a2a5c4e6bf356de14136c730a2d404",
+  "updated_utc": "2026-10-03T14:31:41.393351+00:00",
+  "base_commit": "975114abbb14f77426af3cff767b1f37e6c67d04",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
@@ -77,7 +77,8 @@
       "execution_status": "waiting_R2_attachment",
       "execution_note": "本批5模块、56公开/80owned、5709全库中央核验完成；有限桥已完成，解析轮廓附件等待R2。",
       "checked_utc": "2026-10-03T14:23:57.561783+00:00",
-      "proof_status": "partial_lean_proved"
+      "proof_status": "partial_lean_proved",
+      "published_commit": "975114abbb14f77426af3cff767b1f37e6c67d04"
     },
     {
       "id": "R4",
@@ -121,9 +122,9 @@
         "audit/actual_gram_bridge/STATUS.md",
         "audit/actual_gram_bridge/INDEPENDENT_REVIEW.md"
       ],
-      "execution_status": "formalization_queued",
-      "execution_note": "来源证明和第二独立审查已完成；Lean形式化排队。R4定量目标投影正在独立推进。",
-      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "execution_status": "active",
+      "execution_note": "14:27 UTC起已启动Lean形式化，先证真实Pi卷积消去，再接实际平滑主范数和限定三方向Gram；来源层结论不自动算Lean完成。",
+      "checked_utc": "2026-10-03T14:31:41.393351+00:00",
       "proof_status": "source_reviewed_partial"
     },
     {
