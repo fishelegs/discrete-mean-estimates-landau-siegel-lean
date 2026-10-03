@@ -1,0 +1,65 @@
+{
+  "status": "PASS_ACTUAL_LEMMA151_ROUGH_COLLISION_AND_SMOOTH_SPLIT",
+  "verified_at_utc": "2026-10-03T00:43:34.372727+00:00",
+  "base_commit": "59f82655828a780a1be41c08676ff11f4dbf2ade",
+  "production_and_regression_modules": 6,
+  "standalone_axiom_audits": 1,
+  "public_declaration_checks": 40,
+  "named_source_and_endpoint_regressions": 12,
+  "published_project_dependencies": 244,
+  "private_modules": 6,
+  "full_project_jobs": 5459,
+  "source_files": 1619,
+  "spec_imports": 1205,
+  "full_imports": 1470,
+  "source_relocation": "imports only",
+  "source_hashes_unchanged_after_build_and_session_recovery": true,
+  "strict_candidates": 422,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "numbered_completion_count_change": 0,
+  "complete_lemma151_proved": false,
+  "actual_collision_little_o_alpha": true,
+  "external_n1_weight_sum_accounted": false,
+  "single_kernel_contour_asymptotic_proved": false,
+  "archive_sha256": "4ea2a0d66b5c53bf66630f5d80195985a4a97e04095854d09ef133aabb047224",
+  "manifest_sha256": "8e5a92a7e40430747c6b99cbdf718785335d0b24af15aa5a08ec40156b3297d4",
+  "logs": {
+    "rough-collision-integration-axioms.log": {
+      "bytes": 4252,
+      "sha256": "513f12c4000c75a671a736d92a30f3d7b1fcedc62d75daf13f37254eff1f34b0"
+    },
+    "rough-collision-full-project.log": {
+      "bytes": 253524,
+      "sha256": "dfbbf8979d13604dbbebaab0dddbdf9c3d497a01a8546192838811741f8d18c9"
+    },
+    "rough-collision-strict-audit.log": {
+      "bytes": 42776,
+      "sha256": "e348b74b5f397ceb5ddcaf962f67021b9247c15aae7f8c3b34487ccea1a7b02c"
+    },
+    "rough-collision-RoughCollisionArithmetic.log": {
+      "bytes": 18292,
+      "sha256": "5a47af5fb0d6d3d2e788de0b84f797e4441f3e1503ef01a52ecfb068791e4c1d"
+    },
+    "rough-collision-RoughCollisionBound.log": {
+      "bytes": 18287,
+      "sha256": "05bbd0764d65605dd00a5e88839fd22fc64585503cede5f5ac0ad0ed20148462"
+    },
+    "rough-collision-RoughCollisionBudget.log": {
+      "bytes": 18288,
+      "sha256": "153afc196f52363c44edc03f7604ab71e96688e1a6d31db357b5c4b9af0fd451"
+    },
+    "rough-collision-RoughCollisionKernels.log": {
+      "bytes": 18289,
+      "sha256": "6b4655200895afc1dc8f8925bb1fa6f7c770dc41e1f4c5b6650fb3381a26dcd9"
+    },
+    "rough-collision-RoughCollisionRegressions.log": {
+      "bytes": 18293,
+      "sha256": "54ec12ac8b5b43ee431d2ba7cdeeba2eedadf45867d80c0c37fb4dd2991c5a83"
+    },
+    "rough-collision-RoughCollisionSmoothSplit.log": {
+      "bytes": 18293,
+      "sha256": "6b29a27b69d9d38c665ec18ae25cc5535ff0665886b6ee566000b7d4e0b21059"
+    }
+  }
+}

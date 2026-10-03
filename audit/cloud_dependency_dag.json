@@ -2658,7 +2658,8 @@
         "trusted_capstone_found": false,
         "component_report": "audit/CLOUD_LEMMA151_ARITHMETIC_STATUS.md",
         "original_target_proved": false,
-        "actual_B_component_report": "audit/CLOUD_ACTUAL_B_STATUS.md"
+        "actual_B_component_report": "audit/CLOUD_ACTUAL_B_STATUS.md",
+        "rough_collision_component_report": "audit/CLOUD_ROUGH_COLLISION_STATUS.md"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
@@ -2691,8 +2692,8 @@
           "Actual b/rho*_j/N(Q), e_j; uniform n1"
         ]
       },
-      "scheduling_phase": "actual_rough_prime_collision_and_uniform_asymptotic",
-      "active_work": "Independent actual rough-prime collision bound is active, preserving rho_j and strict q<D^4. Actual B and local-residue components are centrally verified; full single-kernel/outer asymptotic remains open."
+      "scheduling_phase": "actual_single_kernel_contour_and_full_rough_sum_attachments",
+      "active_work": "Central actual rough collision o(alpha), smooth/rough B split and finite chi(n1)*tau2(n1) divisor budget verified. Full zeta-kernel Perron/circle comparison is active; rho-star replacement, full-sum reindex and external n1 weights remain open."
     },
     {
       "id": "L15.2",
@@ -3907,7 +3908,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-02T23:38:42.133521+00:00",
+    "verified_at_utc": "2026-10-03T00:43:34.372727+00:00",
     "completed": 36,
     "in_progress": 3,
     "unstarted": 7,
@@ -4171,6 +4172,17 @@
       "original_7_3_and_7_6_proved": true,
       "actual_theta_one_gauss_delta_one_reduction": true,
       "full_mean_targets_proved": false
+    },
+    {
+      "id": "L15.1_actual_rough_collision_and_smooth_split",
+      "status": "verified",
+      "report": "audit/CLOUD_ROUGH_COLLISION_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 6,
+      "public_declaration_checks": 40,
+      "named_regressions": 12,
+      "collision_little_o_alpha": true,
+      "external_n1_weight_sum_proved": false
     }
   ],
   "repair_discipline": {

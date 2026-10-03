@@ -1177,6 +1177,12 @@ import ZhangLS.Spec.ReciprocalDivisorBound
 import ZhangLS.Spec.ReciprocalDivisorEulerFactorization
 import ZhangLS.Spec.ReciprocalDivisorEulerLoss
 import ZhangLS.Spec.RiemannZetaCriticalLineBound
+import ZhangLS.Spec.RoughCollisionArithmetic
+import ZhangLS.Spec.RoughCollisionBound
+import ZhangLS.Spec.RoughCollisionBudget
+import ZhangLS.Spec.RoughCollisionKernels
+import ZhangLS.Spec.RoughCollisionRegressions
+import ZhangLS.Spec.RoughCollisionSmoothSplit
 import ZhangLS.Spec.Section15ActualResidues
 import ZhangLS.Spec.Section15AnalyticFactorBounds
 import ZhangLS.Spec.Section15LeadingResidueBudget
