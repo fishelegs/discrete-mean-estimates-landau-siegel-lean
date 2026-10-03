@@ -264,8 +264,12 @@ import ZhangLS.Spec.ActualGramArithmeticAttachment
 import ZhangLS.Spec.ActualGramClosedWeightLayer
 import ZhangLS.Spec.ActualGramFiniteSuperposition
 import ZhangLS.Spec.ActualGramLogKernelBridge
+import ZhangLS.Spec.ActualGramMainKernelBridge
+import ZhangLS.Spec.ActualGramOneSidedSuperposition
+import ZhangLS.Spec.ActualGramOriginalScaling
 import ZhangLS.Spec.ActualGramPiCollapse
 import ZhangLS.Spec.ActualGramRamp
+import ZhangLS.Spec.ActualGramSmoothingBounds
 import ZhangLS.Spec.ActualPhaseArchBounds
 import ZhangLS.Spec.ActualPhaseKappaMajorant
 import ZhangLS.Spec.ActualPhaseObjects

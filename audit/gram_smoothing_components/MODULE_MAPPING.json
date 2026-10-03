@@ -1,0 +1,27 @@
+{
+  "modules": {
+    "ActualGramPiCollapse": "ZhangLS.Spec.ActualGramPiCollapse",
+    "ActualGramArithmeticAttachment": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "ActualGramRamp": "ZhangLS.Spec.ActualGramRamp",
+    "ActualGramClosedWeightLayer": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+    "ActualGramFiniteSuperposition": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "ActualGramLogKernelBridge": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "ActualGramOriginalScaling": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "ActualGramOneSidedSuperposition": "ZhangLS.Spec.ActualGramOneSidedSuperposition",
+    "ActualGramMainKernelBridge": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "ActualGramSmoothingBounds": "ZhangLS.Spec.ActualGramSmoothingBounds"
+  },
+  "owner_counts": {
+    "ZhangLS.Spec.ActualGramArithmeticAttachment": 21,
+    "ZhangLS.Spec.ActualGramClosedWeightLayer": 2,
+    "ZhangLS.Spec.ActualGramPiCollapse": 9,
+    "ZhangLS.Spec.ActualGramSmoothingBounds": 11,
+    "ZhangLS.Spec.ActualGramMainKernelBridge": 15,
+    "ZhangLS.Spec.ActualGramLogKernelBridge": 17,
+    "ZhangLS.Spec.ActualGramFiniteSuperposition": 8,
+    "ZhangLS.Spec.ActualGramRamp": 10,
+    "ZhangLS.Spec.ActualGramOriginalScaling": 15,
+    "ZhangLS.Spec.ActualGramOneSidedSuperposition": 2
+  },
+  "declaration_names": "identity; actual owners must still be checked including lemma82SmoothingBeta.eq_1"
+}

@@ -1,0 +1,76 @@
+{
+  "evidence_kind": "Source-level mathematical proof with final independent acceptance; no Lean certification",
+  "historical_originals": [
+    {
+      "source_id": "author_proof",
+      "sha256": "406fc6bb49533adbbce81142924a2ad4d11517c532a5361094a4074c7f5b409b",
+      "bytes": 23042
+    },
+    {
+      "source_id": "author_checker",
+      "sha256": "c693b720ae34286263845f29d18cfdf177cd410657f7782f1368ca9e0d3c2fe7",
+      "bytes": 6893
+    },
+    {
+      "source_id": "author_receipt",
+      "sha256": "762ec08b7bcad4ada2eeff6ba4bc4ee3c8e829838ab6a6936ba086dcf203efde",
+      "bytes": 1003
+    },
+    {
+      "source_id": "author_manifest",
+      "sha256": "dc627375271f41392ef6401a906d44b3f965b6c17ef1b66f3d859b56d6701ff8",
+      "bytes": 1414
+    },
+    {
+      "source_id": "independent_review",
+      "sha256": "2b0058599fb94c7da901c017d380bd8fecc8d9113545cac5a913812aa0763c30",
+      "bytes": 22211
+    },
+    {
+      "source_id": "independent_checker",
+      "sha256": "727c3446cc527bbb6cca7e512b9e869a7f6ef540b4c6a595ae381d4e6875fbeb",
+      "bytes": 10290
+    },
+    {
+      "source_id": "independent_receipt",
+      "sha256": "28a76e130aa28ed291ee8699aa855a129cd7dd534119d0bfaaf27f5abb8bb4bc",
+      "bytes": 1558
+    },
+    {
+      "source_id": "independent_manifest",
+      "sha256": "12f6bf8cb4a1639d3647f063f1c890e3d65a706475ccd88829e9650b1206b071",
+      "bytes": 2924
+    }
+  ],
+  "historical_source_baseline": "e4666bb9562d2ab84f5fa042d0e4538193660b7c",
+  "original_report_sha256_verified": true,
+  "original_input_fingerprints_verified": true,
+  "original_author_manifest_entries_verified": 9,
+  "original_independent_manifest_entries_verified": 18,
+  "independent_review_original_sha256": "2b0058599fb94c7da901c017d380bd8fecc8d9113545cac5a913812aa0763c30",
+  "independent_review_finalized": true,
+  "independent_review_final_decision": "ACCEPT at source level for the high-rho small-rare-part split; no full rare-part signed gain",
+  "public_proof_sha256": "36a976448d6de3a81cca661def36e8e6aaac9d8ccec6303f3776f89ec0ebfb2f",
+  "public_independent_review_sha256": "d457d8bd6d0d076ea7d8b54b2389128e58c4046fd0f5ed11d51b650824796e3f",
+  "curation": [
+    "Preserved the complete mathematical proof and independent review, all cutoff and whole-label conditions, and all historical source hashes.",
+    "Replaced original locations and operational statements with public evidence references.",
+    "Updated proof front matter to record final independent acceptance.",
+    "Applied the independent review's literature-scope refinements: Wright Theorem 2.2 retains sqrt(x)<q and D^-1; Wright Theorem 3.2 has a maximum over residues and an ambiguous displayed error formula that is not repaired or used.",
+    "Clarified the split-prime coefficient example as conditional, not an existence assertion in every masked box.",
+    "Updated the current remaining target using the separately accepted half-norm comparison; this comparison is not an input to the original split proof or its independent review.",
+    "Preserved original receipt bytes; portable checkers retain all mathematical checks and print JSON without changing files.",
+    "Moved historical-location fingerprint checks to the bundle verifier and preserved every original manifest entry under a neutral identifier.",
+    "Numerical Gauss/Fourier raw errors may vary with versions, but retain the original strict 1e-35 tolerance; all other mathematical receipt fields must match exactly."
+  ],
+  "portable_check_scope": "Finite arithmetic, exact rational budgets, sampled normalized transforms and package integrity only; the uniform analytic argument is written in the proof and independent review.",
+  "lean_certification": false,
+  "strict_gain_proved": false,
+  "full_rare_part_signed_bound_proved": false,
+  "final_exponent_2024_proved": false,
+  "tested_environment": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  }
+}

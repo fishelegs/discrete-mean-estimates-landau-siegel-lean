@@ -1,0 +1,20 @@
+{
+  "source_packages": {
+    "frozen_manifest_sha256": "dbaec11e47f0ae82530d279264d5839be94ad3d064de4cdd6a4ea19dbfec3fd6",
+    "archive_sha256": "95479749e91a9adf7314cd1d81a6b0c9b71844f38ef2d817c69bda7bc865598a",
+    "independent_review_manifest_sha256": "a81467890239eedffe2bde8b632896835b5abe698fd79e120cfb1c61fd087d14"
+  },
+  "original_review_sha256": "07a7849730ceb703fc21b410d70004f6919fde6f56a28b5b69c315fc42c4e5f4",
+  "original_independent_verifier_sha256": "aa152ee5f37a554977edc35df1e78216d5b47c9515fd4c8bf19fb904e63c74d1",
+  "original_check_results_sha256": "b795309a3a2ea7bea2ab4aa0c3b39ae3a92edef0a493b78ff1d08446134db1eb",
+  "independent_check_summary": {
+    "checks": 112,
+    "pin_records": 92296,
+    "unique_paths": 39207,
+    "bytes": 5957528728,
+    "failures": 0,
+    "successful_receipts": 11,
+    "inherited_sources_objects_logs_and_owned_records_unchanged": true
+  },
+  "curation": "Local process descriptions and workspace paths removed; mathematical assertions retained. Central replay is separate."
+}

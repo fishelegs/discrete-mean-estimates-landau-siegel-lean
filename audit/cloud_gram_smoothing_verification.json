@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "proof_baseline_commit": "e4666bb9562d2ab84f5fa042d0e4538193660b7c",
+  "publication_base_commit": "a56205bd5a41d1446afb37d456f986df401f22b5",
+  "intervening_commits_have_no_Lean_or_configuration_changes": true,
+  "checked_utc": "2026-10-03T20:51:05.539693+00:00",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "scope": "Original scaling, one-sided finite superposition, literal original main kernels and actual real-x pointwise smoothing errors only. Integrated profile errors, actual Gram lower bound and strict gain remain open.",
+  "new_proof_modules": [
+    "ZhangLS.Spec.ActualGramOriginalScaling",
+    "ZhangLS.Spec.ActualGramOneSidedSuperposition",
+    "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "ZhangLS.Spec.ActualGramSmoothingBounds"
+  ],
+  "audited_modules": [
+    "ZhangLS.Spec.ActualGramPiCollapse",
+    "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "ZhangLS.Spec.ActualGramRamp",
+    "ZhangLS.Spec.ActualGramClosedWeightLayer",
+    "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "ZhangLS.Spec.ActualGramOriginalScaling",
+    "ZhangLS.Spec.ActualGramOneSidedSuperposition",
+    "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "ZhangLS.Spec.ActualGramSmoothingBounds"
+  ],
+  "new_public_declarations": 22,
+  "new_owned_declarations": 43,
+  "public_declarations": 63,
+  "all_owned_declarations": 110,
+  "owner_counts": {
+    "ZhangLS.Spec.ActualGramArithmeticAttachment": 21,
+    "ZhangLS.Spec.ActualGramClosedWeightLayer": 2,
+    "ZhangLS.Spec.ActualGramPiCollapse": 9,
+    "ZhangLS.Spec.ActualGramSmoothingBounds": 11,
+    "ZhangLS.Spec.ActualGramMainKernelBridge": 15,
+    "ZhangLS.Spec.ActualGramLogKernelBridge": 17,
+    "ZhangLS.Spec.ActualGramFiniteSuperposition": 8,
+    "ZhangLS.Spec.ActualGramRamp": 10,
+    "ZhangLS.Spec.ActualGramOriginalScaling": 15,
+    "ZhangLS.Spec.ActualGramOneSidedSuperposition": 2
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "full_project_jobs": 5760,
+  "source_guards": 1960,
+  "spec_imports": 1506,
+  "all_imports": 1771,
+  "strict_audit": {
+    "baseline_candidates": 446,
+    "new_candidates": 1,
+    "current_candidates": 447,
+    "unresolved_new_candidates": 0,
+    "exit_code": 1,
+    "nonzero_exit_preserved": true,
+    "reviews": [
+      {
+        "path": "ZhangLS/Spec/ActualGramOriginalScaling.lean",
+        "line": 70,
+        "declaration": "actualGram_original_moving_T_band",
+        "status": "REVIEWED_LOCAL_DERIVATION",
+        "reason": "h is obtained from the proved generic logarithmic moving-band equivalence with genuine positive log(P), q and original T. Rewriting the actual positive-base power identity and log(exp(...)) gives the result. It is not a theorem hypothesis or an assumed arithmetic/Gram bound."
+      }
+    ]
+  },
+  "dependency_pins": {
+    "imported_modules": 6956,
+    "imported_module_names_sha256": "ea0aafeae6e05148fb66985f4ceac4580ae84b1b168d7ebbd16ec1e83a33dbbb",
+    "imported_source_manifest_sha256": "05293c0d0bd06d5a1220b313e5b377ae45dc9219052344c7ff6dc81102d69962",
+    "all_imported_sources_rehashed_before_and_after": true,
+    "unique_frozen_source_object_component_files_rehashed": 39186
+  },
+  "numbered_ledger": {
+    "original": 37,
+    "repaired": 3,
+    "complete": 40,
+    "total": 51
+  },
+  "full_integrated_profile_error_proved": false,
+  "actual_Gram_lower_bound_proved": false,
+  "strict_gain_proved": false,
+  "pointwise_second_interior_error": "3 L^-5 from the explicitly repaired statement; not original general L^-6 Lemma84Target",
+  "hosted_ci": "Local central checks passed; hosted CI is tracked separately."
+}

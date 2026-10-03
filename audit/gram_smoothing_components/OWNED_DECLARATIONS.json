@@ -1,0 +1,932 @@
+{
+  "count": 110,
+  "new": 43,
+  "inherited": 67,
+  "declarations": [
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramFirst.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+      "declaration": "ZhangLS.Spec.actualGram_weight_product_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_character_prime_denominator",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+      "declaration": "ZhangLS.Spec.actualGram_actual_weight_closed_layer",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGramFirstBoundaryBudget._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_second_main_kernel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_positive_cutoff_cpow",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_second_smoothed_superposition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramSecond",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_ramp_of_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_ramp_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_P7_profile_factorization",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGramSecondBoundaryBudget",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_squarefree_divisor_expansion._simp_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_mu6_scaled",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_log_scale",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_mu6_negative_scaled",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_profile_conjugate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_fixed_interval_ramp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGramClippedRamp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_ramp_antiderivative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramProfileSequence",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramSecond.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGramSecondBoundaryBudget._proof_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.lemma83Pi.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_finite_main_attachment",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_totient_ratio_product",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_log_scale_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGram_second_small_error",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_exponential_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_mu6_nonzero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_pi_divisor_collapse",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_density_integral",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_7",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_squarefree_divisor_expansion._simp_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGramFirstBoundaryBudget._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_first_main_superposition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_exponential_antiderivative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_log_moving_band",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_local_pi_collapse",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_moving_T_band",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGramRampDensity.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_ramp_continuous",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_first_main_kernel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_totient_prime_product",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_kernel_second",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_8",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGramSecondBoundaryBudget._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGramSecondBoundaryBudget._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOneSidedSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_log_superposition_from_product",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_finite_ramp_superposition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGramRampDensity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGram_first_small_error",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGramRampDensity._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_first_smoothed_superposition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_character_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_sum_eq_smoothed",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_ratio_scale",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_7",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGram_smoothing_errors_uniform",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_character_square",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.lemma82SmoothingBeta.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramFirst",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_P7_profile_factorization._simp_1_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_volterra_terminal_extension",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGramFirstBoundaryBudget",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_8",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_second_main_superposition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGramClippedRamp.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGramLogSmoothedSum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOneSidedSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_ramp_above_left_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_exp_power",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_ramp_of_ge",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_smoothing_cutoff_inside_original",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_sum_eq_smoothed._simp_1_1",
+      "axioms": []
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramProfileSequence.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_second_main_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGram_smoothing_errors_uniform._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_kernel_first",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothed_superposition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_squarefree_divisor_expansion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_first_main_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_ramp_density_continuous",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

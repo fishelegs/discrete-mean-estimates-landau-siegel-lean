@@ -1,0 +1,64 @@
+{
+  "result": "PASS",
+  "scope": "Independent finite arithmetic, normalized transform samples, and exact budgets; written review supplies analytic proof. No Lean/compiler execution.",
+  "candidate_sha256": "406fc6bb49533adbbce81142924a2ad4d11517c532a5361094a4074c7f5b409b",
+  "discriminants": [
+    -3,
+    -4,
+    5,
+    8,
+    12,
+    13,
+    17,
+    24
+  ],
+  "integers_per_case": 1536,
+  "strict_cutoffs": [
+    1,
+    2,
+    5,
+    17,
+    64
+  ],
+  "integer_cutoff_checks": 61440,
+  "negative_rho_examples": 3839,
+  "nonzero_ramified_examples": 2564,
+  "strict_vs_weak_boundary_differences": 3855,
+  "universal_ratio_polynomials": {
+    "tau2_squared_le_tau4": "j**2 + j",
+    "tau3_at_square_le_tau6": "6*j**2 + 6*j"
+  },
+  "local_envelopes_checked_through": 1000,
+  "scale_orderings_checked": 120,
+  "squaring_family_moment_checks": 7,
+  "normalized_gauss_max_error": "3.065340390710537342645658463446691537175573e-45",
+  "normalized_fourier_checks": 20,
+  "normalized_fourier_max_error": "1.40266691985638427509455353796109769000221532e-47",
+  "high_points": [
+    "21/20",
+    "1103/600",
+    "56/25",
+    "301/100"
+  ],
+  "high_values": [
+    "-17/2000",
+    "-49/200",
+    "-49/200",
+    "-91/1000"
+  ],
+  "low_points": [
+    "99/100",
+    "1989/2000",
+    "21/20"
+  ],
+  "low_values": [
+    "-49/200",
+    "-1969/8000",
+    "-223/1000"
+  ],
+  "high_log_cost": "919/2 < 500",
+  "low_log_cost": "797 < 1000",
+  "final_power_slack": "7/2000",
+  "fourier_tail_power": "-20",
+  "mellin_tail_power": "-20"
+}

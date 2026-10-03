@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-03T20:31:42.323580+00:00",
+  "generated_utc": "2026-10-03T20:58:56.469589+00:00",
   "baseline_commit": "58a9273c38961411a5f06ab2db4bdf565ef30794",
   "paper": {
     "arxiv": "2211.02515v1",
@@ -4378,6 +4378,29 @@
       "complex_nonprincipal_o1": true,
       "remaining": "Re Delta_rho,high <= (1/2-epsilon)m_H+o(1)",
       "strict_gain_proved": false
+    },
+    {
+      "id": "actual_gram_scaling_smoothing_components",
+      "status": "verified",
+      "report": "audit/CLOUD_GRAM_SMOOTHING_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 4,
+      "new_public": 22,
+      "new_owned": 43,
+      "all_public": 63,
+      "all_owned": 110,
+      "profile_integrated_error_proved": false,
+      "actual_Gram_nondegeneracy_proved": false
+    },
+    {
+      "id": "small_rare_high_rho_split",
+      "status": "source_reviewed_not_Lean",
+      "report": "audit/high_rho_split/STATUS.md",
+      "original_numbered_result_completed": false,
+      "bound": "O(a^-1 P^-1/200) on b_chi(v)<=P^.01",
+      "quadratic_characters_retained": true,
+      "remaining_split_prime_part": ">P^.009 eventually",
+      "remaining_signed_gap_proved": false
     }
   ],
   "repair_discipline": {
@@ -4518,7 +4541,7 @@
     "separate_from_numbered_51": true,
     "node_count": 8,
     "strict_gain_proved": false,
-    "updated_utc": "2026-10-03T20:31:42.323580+00:00",
+    "updated_utc": "2026-10-03T20:58:56.469589+00:00",
     "branch_status_updated_utc": "2026-10-03T14:58:30.522627+00:00",
     "fixed_smooth_narrow_small_gain_branch": "suspended_recalibration"
   }

@@ -1,0 +1,61 @@
+{
+  "scope": "Finite arithmetic and exact rational budgets only; not analytic or Lean verification",
+  "integers_per_character_cutoff": 4000,
+  "characters": [
+    3,
+    4,
+    5,
+    8,
+    12,
+    13
+  ],
+  "cutoffs": [
+    1,
+    5,
+    20,
+    50,
+    75
+  ],
+  "coefficient_checks": 120000,
+  "negative_rho_seen": true,
+  "nonzero_ramified_examples": 3789,
+  "local_divisor_checks_through_exponent": 500,
+  "square_map_primes": [
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29
+  ],
+  "high_piecewise_points": [
+    "21/20",
+    "1103/600",
+    "56/25",
+    "301/100"
+  ],
+  "high_piecewise_values": [
+    "-17/2000",
+    "-49/200",
+    "-49/200",
+    "-91/1000"
+  ],
+  "high_maximum": "-17/2000",
+  "low_piecewise_points": [
+    "99/100",
+    "1989/2000",
+    "21/20"
+  ],
+  "low_piecewise_values": [
+    "-49/200",
+    "-1969/8000",
+    "-223/1000"
+  ],
+  "low_maximum": "-223/1000",
+  "high_log_budget": "919/2 < 500",
+  "low_log_budget": "797 < 1000",
+  "result": "PASS"
+}

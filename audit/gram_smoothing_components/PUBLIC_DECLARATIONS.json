@@ -1,0 +1,259 @@
+{
+  "count": 63,
+  "new": 22,
+  "inherited": 41,
+  "declarations": [
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_totient_prime_product"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_squarefree_divisor_expansion"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_character_prime_denominator"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_local_pi_collapse"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_totient_ratio_product"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_pi_divisor_collapse"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_character_mul"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_character_square"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramProfileSequence"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_profile_conjugate"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramFirst"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramSecond"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_P7_profile_factorization"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_finite_main_attachment"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGramRampDensity"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_ramp_antiderivative"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_ramp_identity"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_exponential_antiderivative"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_exponential_identity"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_first_main_identity"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_density_integral"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_second_main_identity"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+      "declaration": "ZhangLS.Spec.actualGram_weight_product_endpoint"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+      "declaration": "ZhangLS.Spec.actualGram_actual_weight_closed_layer"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGramClippedRamp"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_ramp_of_le"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_ramp_of_ge"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_ramp_continuous"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_ramp_density_continuous"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_fixed_interval_ramp"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_finite_ramp_superposition"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGramLogSmoothedSum"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_smoothing_cutoff_inside_original"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_sum_eq_smoothed"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothed_superposition"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_kernel_first"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_kernel_second"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_first_smoothed_superposition"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_second_smoothed_superposition"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_log_scale"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_log_scale_pos"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_mu6_scaled"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_mu6_negative_scaled"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_exp_power"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_log_moving_band"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+      "declaration": "ZhangLS.Spec.actualGram_original_moving_T_band"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOneSidedSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_ramp_above_left_endpoint"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramOneSidedSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_log_superposition_from_product"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_ratio_scale"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_positive_cutoff_cpow"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_first_main_kernel"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_mu6_nonzero"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_second_main_kernel"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_first_main_superposition"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_second_main_superposition"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_volterra_terminal_extension"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGramFirstBoundaryBudget"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGramSecondBoundaryBudget"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGram_first_small_error"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGram_second_small_error"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+      "declaration": "ZhangLS.Spec.actualGram_smoothing_errors_uniform"
+    }
+  ]
+}

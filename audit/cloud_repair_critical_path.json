@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-03T20:31:42.323580+00:00",
-  "base_commit": "e4666bb9562d2ab84f5fa042d0e4538193660b7c",
+  "updated_utc": "2026-10-03T20:58:56.469589+00:00",
+  "base_commit": "a56205bd5a41d1446afb37d456f986df401f22b5",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
@@ -87,8 +87,8 @@
       "name": "主算术矩阵与目标残差的符号",
       "status": "open",
       "verification": "右侧半范数常数及复数nonprincipal=o(1)已第二独立来源复核；high-rho严格界未证",
-      "result": "通过真实有限M/D删除误差及原P7 complex桥，Re J_right∞=Im R_pr=m_H/2+o(1)，且R_np=o(1)。这不是从实部等式推复数，也未用AFE赋予常数。",
-      "gap": "唯一此分叉的新增signed门槛为Re Delta_rho,high≤(1/2−epsilon)m_H+o(1)，epsilon固定正；high项保留全部2K>P^.99标签/原Long masks。已知≤另一半而无严格余量仍不够。",
+      "result": "通过真实有限M/D删除误差及原P7 complex桥，Re J_right∞=Im R_pr=m_H/2+o(1)，且R_np=o(1)。这不是从实部等式推复数，也未用AFE赋予常数。 high-rho中b_chi(v)≤P^.01的精确部分已独立来源界为O(a^-1P^-1/200)，二次字符的principal-image项保留。",
+      "gap": "仍需Re Delta_large-rare≤(1/2−epsilon)m_H+o(1)，epsilon固定正。剩余保留原Long/高标签/finite M条件，且其split-prime部分>P^.009；已有source归约未给这个严格signed界。",
       "dependency_mode": "R2 AND (direct_arithmetic OR R3_structured_reduction OR another_valid_attachment)",
       "dependencies": [
         "R2"
@@ -107,11 +107,12 @@
         "audit/signed_phase_refinements/STATUS.md",
         "audit/completed_right_mean/STATUS.md",
         "audit/sparse_long_reduction/STATUS.md",
-        "audit/half_norm_constant/STATUS.md"
+        "audit/half_norm_constant/STATUS.md",
+        "audit/high_rho_split/STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "实际high-rho的square/rare结构在推进；新的小split-part子范围削减候选正独审，尚未计作已接受结果。右侧常数来源证明已完成，Lean形式化尚未启动。",
-      "checked_utc": "2026-10-03T20:31:42.323580+00:00",
+      "execution_note": "大split-prime的真实加性/双线性配对与完整预算在研究；更强squarefree-core削减只是新候选，尚未计入本次接受结论。",
+      "checked_utc": "2026-10-03T20:58:56.469589+00:00",
       "proof_status": "open",
       "branch_status": "suspended_recalibration_for_fixed_smooth_narrow_small_gain_only",
       "alternative_routes": [
@@ -139,8 +140,8 @@
       "id": "R5",
       "name": "实际 Gram 与 Schur 残差下界",
       "status": "partial_lean_proved",
-      "verification": "真实Pi/P7算术与有限剖面叠加已中央Lean核验；三方向Gram下界仍为独立来源层",
-      "result": "真实Pi除子消去、P7 profile算术、exp-ramp/闭权重层及原K1/K2有限叠加已证。限定三方向Gram和旧二维span残差下界另有来源复核，尚未Lean。",
+      "verification": "十个真实算术/有限叠加/scaling/点态误差模块已中央Lean核验；完整实际Gram下界仍为来源层目标",
+      "result": "真实Pi除子消去、P7 profile算术、exp-ramp/闭权重层及原K1/K2有限叠加已证。限定三方向Gram和旧二维span残差下界另有来源复核，尚未Lean。 新增原scaled shifts、true product endpoint单侧积分、literal main与任意real-x点态small/interior误差已中央Lean核验。",
       "gap": "限定三方向真实范数的来源层结论保留；它不保证旧span接近最优、目标投影非零或strict gain。固定smooth窄旧span有独立常数缺口；原宽H1/H2、任意旧rA和L^-8符号精度仍未完成。",
       "dependency_mode": "actual_Gram_attachment_plus_nondegeneracy; may_proceed_with_R4_in_parallel",
       "dependencies": [
@@ -153,11 +154,12 @@
       "evidence": [
         "audit/actual_gram_bridge/STATUS.md",
         "audit/actual_gram_bridge/INDEPENDENT_REVIEW.md",
-        "audit/CLOUD_PHASE_GRAM_COMPONENTS_STATUS.md"
+        "audit/CLOUD_PHASE_GRAM_COMPONENTS_STATUS.md",
+        "audit/CLOUD_GRAM_SMOOTHING_STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "六组件中央已PASS并随本提交发布；继续original scaling、剖面支持、误差积分和真实外和。",
-      "checked_utc": "2026-10-03T20:31:42.323580+00:00",
+      "execution_note": "新四模块中央PASS；继续真实profile误差积分、完整P7活动支撑与外和。原8.4一般L^-6未因此完成，当前第二interior使用repaired3L^-5。",
+      "checked_utc": "2026-10-03T20:51:05.539693+00:00",
       "proof_status": "partial_lean_proved"
     },
     {
@@ -165,7 +167,7 @@
       "name": "归一化后的全部误差传递",
       "status": "open",
       "verification": "当前signed分叉的已付误差是o(1)；高rho有利主项和严格余量仍缺",
-      "result": "右侧branch误差O(a^-1L^-11/2)主导已发布组合；有限M/D删除、有限边界和低rho误差均更小或单列power-small。实际a>1/2与固定m_H下界不能省略。",
+      "result": "右侧branch误差O(a^-1L^-11/2)主导已发布组合；有限M/D删除、有限边界和低rho误差均更小或单列power-small。实际a>1/2与固定m_H下界不能省略。 新小b_chi项的P^-1/200误差比已付L^-11/2更小；仍按同一aM/m_H核算。",
       "gap": "先取得高rho相对m_H的固定严格余量，随后用同一归一化让全部o(1)小于该余量；不能把更小单项误差当总精度，也不能把半范数等式当严格gain。若只得趋零gain，必须另证更强相对精度与非退化。",
       "dependency_mode": "AND",
       "dependencies": [
@@ -182,7 +184,7 @@
       ],
       "execution_status": "blocked_by_R4_R5",
       "execution_note": "旧Gram/Schur路线仍须R4/R5；独立weighted Z2分叉可使用明确的实际m_H下界，但其high-rho严格常数仍缺。",
-      "checked_utc": "2026-10-03T20:31:42.323580+00:00",
+      "checked_utc": "2026-10-03T20:58:56.469589+00:00",
       "proof_status": "open"
     },
     {
@@ -396,10 +398,20 @@
       "status": "active_research",
       "evidence_status": "open_after_source_reviewed_reductions",
       "scope": "原good family、同一m_H和aM归一化；精确剩余2K>P^.99标签，保留原Long masks/finite M删除。",
-      "result": "已有右侧半范数及复数nonprincipal消除，将本分叉目标收窄到一个具体high-rho signed不等式。",
-      "gap": "Re Delta_rho,high≤(1/2−epsilon)m_H+o(1)尚未证明。平方/rare进一步候选仍需独审；不意味着主定理一半已证明。",
-      "report": "audit/half_norm_constant/STATUS.md",
-      "checked_utc": "2026-10-03T20:31:42.323580+00:00"
+      "result": "右侧半范数已定；高rho的小b_chi部分可用真实mixed moments付掉，保留quadratic的+P项。",
+      "gap": "剩余large-rare signed项仍须严格低于m_H/2。残余split-prime部分>P^.009并不意味着一定有单个那么大的素因子。",
+      "report": "audit/high_rho_split/STATUS.md",
+      "checked_utc": "2026-10-03T20:58:56.469589+00:00"
+    },
+    {
+      "id": "small_rare_part_high_rho_reduction",
+      "status": "source_reduction_complete_remaining_signed_gap_open",
+      "evidence_status": "source_reviewed_not_Lean",
+      "scope": "原high-rho whole标签与所有mask；b_chi(v)是split或ramified素数部分，限定b_chi(v)≤P^.01；二次字符完整保留。",
+      "result": "该精确部分O(a^-1P^-1/200)。ramified部分≤D21，故剩余split-prime部分>P^.009最终成立。mixed fourth moments包含quadratic principal-image的+P及所有(P²+Y)真实长度损耗。",
+      "gap": "未证明剩余Re Delta_large-rare≤(1/2−epsilon)m_H+o(1)；近期素数progression结果不自动给所需带权mixed mean。",
+      "report": "audit/high_rho_split/STATUS.md",
+      "checked_utc": "2026-10-03T20:58:56.469589+00:00"
     }
   ]
 }

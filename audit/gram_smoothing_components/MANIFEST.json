@@ -1,0 +1,115 @@
+{
+  "checked_utc": "2026-10-03T20:51:05.539693+00:00",
+  "files": [
+    {
+      "path": "ZhangLS/All.lean",
+      "sha256": "ecb6905206729ed6f28d593203f51e0b7b3b37b555f4a6a89d2456c2f3acf533",
+      "bytes": 84592
+    },
+    {
+      "path": "ZhangLS/Spec/ActualGramMainKernelBridge.lean",
+      "sha256": "90aba936dc12e99eac0f96fa0def4892fcbf509c02387a7fe13e85b135f555d7",
+      "bytes": 7017
+    },
+    {
+      "path": "ZhangLS/Spec/ActualGramOneSidedSuperposition.lean",
+      "sha256": "43c8de586b511893125cfa327fd7be2b410188fb008b87c86ebb468ea73411cd",
+      "bytes": 5884
+    },
+    {
+      "path": "ZhangLS/Spec/ActualGramOriginalScaling.lean",
+      "sha256": "46b2cbee9f54260c5381254bda952400a76ecd30a5bd7cf914a48a506699b093",
+      "bytes": 3365
+    },
+    {
+      "path": "ZhangLS/Spec/ActualGramSmoothingBounds.lean",
+      "sha256": "056cfb6353550f332b4ae1124641193f0a73e5e045f53a0730f00aa76a175c0b",
+      "bytes": 6102
+    },
+    {
+      "path": "ZhangLS/Spec/All.lean",
+      "sha256": "ea3c43a9ef447db5e4912be3fe4fc085fc012faaaa5c8f29d89f282db08769f9",
+      "bytes": 69076
+    },
+    {
+      "path": "audit/CLOUD_GRAM_SMOOTHING_STATUS.md",
+      "sha256": "b7e5bbcf54e4f8c3e108ba30fcba72ba1282337c4548a0a1194da64286346287",
+      "bytes": 3218
+    },
+    {
+      "path": "audit/CloudGramSmoothingAxioms.lean",
+      "sha256": "ae1621bf0728c32b14dad923a70f181e7a2e154c6162afe7cb21f1cf12f8189a",
+      "bytes": 24208
+    },
+    {
+      "path": "audit/cloud_gram_smoothing_verification.json",
+      "sha256": "c0d09e3b8d19cfe8372f64ad78013a9edc5acbe35528e01f02b72196515d7db2",
+      "bytes": 3706
+    },
+    {
+      "path": "audit/gram_smoothing_components/CENTRAL_GATES.json",
+      "sha256": "5870516838cf3b53e7894dc384bf8346026064d91fa2c09916fb21385323b586",
+      "bytes": 2245
+    },
+    {
+      "path": "audit/gram_smoothing_components/EXACT_INVENTORY_CHECK.json",
+      "sha256": "321f1d710037a4ed202c89a632e3f529cf9ca0cd8f8302631ad2e429e0a02de1",
+      "bytes": 355
+    },
+    {
+      "path": "audit/gram_smoothing_components/INDEPENDENT_REVIEW.md",
+      "sha256": "012b147a0cbb0510f0d2facd8e655a45333f3cd9e37d742b507d8f4a878c0a0b",
+      "bytes": 19281
+    },
+    {
+      "path": "audit/gram_smoothing_components/LOG_HASHES.json",
+      "sha256": "191a2b2e532e08bd8c79715087450956419d68113edae93d3b8b54f309812cb2",
+      "bytes": 1804
+    },
+    {
+      "path": "audit/gram_smoothing_components/MODULE_MAPPING.json",
+      "sha256": "cbd731868c96087c117a53acd8429a31c25fc1a502d94858aa19fd91e70b4299",
+      "bytes": 1406
+    },
+    {
+      "path": "audit/gram_smoothing_components/OWNED_DECLARATIONS.json",
+      "sha256": "2ea0d397d8c78ae5fba4795bac180d3915c4267aeb51dee787fd0edc750e6afb",
+      "bytes": 24378
+    },
+    {
+      "path": "audit/gram_smoothing_components/PROVENANCE.json",
+      "sha256": "04835aa42e7a1007ec4e5383552c8aa0f1d0b78165cd3dfc17129725ff2cdf70",
+      "bytes": 1028
+    },
+    {
+      "path": "audit/gram_smoothing_components/PUBLIC_DECLARATIONS.json",
+      "sha256": "7d35bbb598019449f653a8b8388c8321c73c9659915fb1622ad703216b43a812",
+      "bytes": 8732
+    },
+    {
+      "path": "audit/gram_smoothing_components/REPRODUCE.md",
+      "sha256": "63b9f5edbe142b97a41707c8762637ef64d1393684d9f0d72158d7502d1538c2",
+      "bytes": 1036
+    },
+    {
+      "path": "audit/gram_smoothing_components/SOURCE_HASHES.json",
+      "sha256": "229f5a43791c7ba77dbaaad0d748255863bfd55f680e8cdbb5235d0a88901667",
+      "bytes": 1242
+    },
+    {
+      "path": "audit/gram_smoothing_components/STRICT_AUDIT_REVIEW.json",
+      "sha256": "02e064c36b85148b928df87a1e811bb720b1c49653316566f2a8488fa2ab9830",
+      "bytes": 679
+    },
+    {
+      "path": "audit/gram_smoothing_components/check_audit.py",
+      "sha256": "090214303c617f7a427808057f2022aff5491858ff967d71216eea2606c32a3f",
+      "bytes": 1249
+    },
+    {
+      "path": "audit/gram_smoothing_components/verify_package.py",
+      "sha256": "f5eb9e93c6d34e9e3871e1efcba3c5bee5c7f5e0b009baad2da3a7f00a665c5f",
+      "bytes": 349
+    }
+  ]
+}

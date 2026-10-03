@@ -1,0 +1,79 @@
+[
+  {
+    "target": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T20:18:04.924170+00:00",
+    "finished_utc": "2026-10-03T20:21:36.705468+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualGramOneSidedSuperposition",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T20:21:36.706374+00:00",
+    "finished_utc": "2026-10-03T20:28:05.359764+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T20:28:05.360666+00:00",
+    "finished_utc": "2026-10-03T20:30:46.588653+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T20:30:46.590308+00:00",
+    "finished_utc": "2026-10-03T20:32:24.560979+00:00"
+  },
+  {
+    "target": "CloudGramSmoothingAxioms",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T20:32:24.561793+00:00",
+    "finished_utc": "2026-10-03T20:36:37.552716+00:00"
+  },
+  {
+    "target": "full-project",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T20:36:38.649887+00:00",
+    "finished_utc": "2026-10-03T20:44:50.672731+00:00"
+  },
+  {
+    "target": "spec-imports",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T20:44:50.673510+00:00",
+    "finished_utc": "2026-10-03T20:44:50.748225+00:00"
+  },
+  {
+    "target": "all-imports",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T20:44:50.748539+00:00",
+    "finished_utc": "2026-10-03T20:44:50.831382+00:00"
+  },
+  {
+    "target": "placeholders",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T20:44:50.831643+00:00",
+    "finished_utc": "2026-10-03T20:44:55.389297+00:00"
+  },
+  {
+    "target": "structure",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T20:44:55.390253+00:00",
+    "finished_utc": "2026-10-03T20:44:59.044270+00:00"
+  },
+  {
+    "target": "strict-audit",
+    "exit_code": 1,
+    "expected_exit": 1,
+    "started_utc": "2026-10-03T20:44:59.044583+00:00",
+    "finished_utc": "2026-10-03T20:45:02.079354+00:00"
+  }
+]
