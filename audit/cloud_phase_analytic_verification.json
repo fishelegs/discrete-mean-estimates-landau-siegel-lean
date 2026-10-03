@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "base_commit": "66d615c5bdd7ec37e99f4d52607412bfa3b8c0ee",
+  "checked_utc": "2026-10-03T19:55:09.359437+00:00",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "scope": "Actual safe-half-plane infinite/strict-finite splits and exact-conductor gamma envelopes only. Full R2 L^-14 and strict gain remain open.",
+  "proof_modules": [
+    "ZhangLS.Spec.ActualPhaseSafeSeries",
+    "ZhangLS.Spec.ActualPhaseArchBounds"
+  ],
+  "public_declarations": 29,
+  "public_definitions": 9,
+  "public_proved_results": 20,
+  "all_owned_declarations": 45,
+  "generated_declarations": 16,
+  "owner_counts": {
+    "ZhangLS.Spec.ActualPhaseSafeSeries": 33,
+    "ZhangLS.Spec.ActualPhaseArchBounds": 12
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "full_project_jobs": 5756,
+  "source_guards": 1955,
+  "spec_imports": 1502,
+  "all_imports": 1767,
+  "strict_audit": {
+    "baseline_candidates": 445,
+    "new_candidates": 1,
+    "current_candidates": 446,
+    "unresolved_new_candidates": 0,
+    "exit_code": 1,
+    "nonzero_exit_preserved": true,
+    "reviews": [
+      {
+        "path": "ZhangLS/Spec/ActualPhaseArchBounds.lean",
+        "line": 185,
+        "declaration": "actualPhase_arch_norm_one",
+        "status": "REVIEWED_LOCAL_DERIVATION",
+        "reason": "hh is constructed from the previously proved actual Z critical-line unit-modulus theorem. Exact root/arch factorization and the proved primitive root-number norm rewrite it into the conclusion. It is not a supplied arch norm, desired completion error or theorem target assumption."
+      }
+    ]
+  },
+  "dependency_pins": {
+    "imported_modules": 6877,
+    "imported_module_names_sha256": "2667bf318be147882027d3709f011806cdb8c0d29d9a7d54f846966fe3e57825",
+    "imported_source_manifest_sha256": "1c69944020138ecf98524904a8e774f0ca91be0e8506eeaf76f6cd074aefcb56",
+    "all_imported_sources_rehashed_before_and_after": true,
+    "unique_frozen_source_object_component_files_rehashed": 38934
+  },
+  "numbered_ledger": {
+    "original": 37,
+    "repaired": 3,
+    "complete": 40,
+    "total": 51
+  },
+  "full_R2_precision_proved": false,
+  "strict_gain_proved": false,
+  "hosted_ci": "Local central checks passed; hosted CI is tracked separately."
+}

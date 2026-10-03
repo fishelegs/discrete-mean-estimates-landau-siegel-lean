@@ -1,0 +1,106 @@
+{
+  "source_proof_base": "ae8003c332174819f097e728ea1532b7340c758f",
+  "public_base": "66d615c5bdd7ec37e99f4d52607412bfa3b8c0ee",
+  "unchanged_referenced_Lean_sources": [
+    {
+      "path": "ZhangLS/Spec/Lemma171.lean",
+      "sha256": "8a719fdcb38b20d714c9d40b1da3e4b126fa73d9052a81c84d95ae0aa5439a38"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma171Target.lean",
+      "sha256": "4eaa511241d60c5b75fce7eabba89800728dc07d59001e7ad578da045b4470bc"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma23ZeroData.lean",
+      "sha256": "78d6b63ce0ce0e3c3391ff93a8a9afaf28bb201c31a92cfe770513f6ccd4bc79"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33.lean",
+      "sha256": "c7ab0f6de943ebbbb90b7bd3abfe5efc978cdbf672bab195854941ae88ff320a"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma51GammaFactors.lean",
+      "sha256": "acf154078af78b7be85f7a49a81cb54c4cf5df7fd9e013b8e8b52b929e15fd5e"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma52BranchTransport.lean",
+      "sha256": "b8c3fd82083dce9884a4fed69db17146fe4ce1f572c0ef33728e17e33fc52a46"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma52Offsets.lean",
+      "sha256": "a7174d4e8b4c34a3b326ebc9b1e268a347a82aac038f44bf1ad3333c10f3df20"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma52Product.lean",
+      "sha256": "cf49ae2069b65c4c7273e47696dc8d73603a2e370ae886a05ee6177ffe2fbb34"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma53Kernels.lean",
+      "sha256": "c35b271710eca0eecea9b9448244a722b7947e30a488a7fd16920acbcaebe0e7"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma56ActualPrimeMassLower.lean",
+      "sha256": "e49d089f3eafbc3de7bedcbf82fc7338fcde1298d23aae703759757ce7d7ef26"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma56ActualPrimeMassNormalization.lean",
+      "sha256": "fa5a2db30dc251a236dfcc5d9917e18726cceb80f8848c6fef17e85ad5cbf409"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma61Parameters.lean",
+      "sha256": "45a6ca1c4380ca5e1d3524bea4193e31b08acaaf38484d556949cd126e1cd7e3"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition141Objects.lean",
+      "sha256": "02fa12fab88de5fdc2c5e12fa8aa23457d7f541040d7342b17e27aa7aa190b57"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition21.lean",
+      "sha256": "de2581c152c6d9a94ce37193c978856333702275a2374614224af99672f810c8"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71Objects.lean",
+      "sha256": "3a60a48f9e985ef91009880c61051a5a6393a26a612c5b70cf75dcf9fa1da4f3"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71OriginalExceptional.lean",
+      "sha256": "526d40c7653e024e02539ac92a7b3080b4ff611f7e8d9258a8b2874d34eb4f54"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71OriginalFrontAttachment.lean",
+      "sha256": "d70149fbbfa7371d4c164a5ee7f5401a31b0f76cc1da015d1e94fd5e027d3eac"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31.lean",
+      "sha256": "245b1d462d8fcb956aa418f18462ff52d7c917b2eb0c5a56a000e2437a7f60b1"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31LinearTail.lean",
+      "sha256": "82956684414d2c5aee2035b54d91739e93faddae467d6f660c5bf0766501b835"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31TotalWeight.lean",
+      "sha256": "3678924c2b115b1beff5973ee63608178a89aade8177dedacd77c2b33136fba0"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31WeightedTail.lean",
+      "sha256": "42d9553e45a62003ec1efdef220bd1363ef939287a7aa457da8c5e8a0c38c769"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33AdditiveLargeSieve.lean",
+      "sha256": "d36c833b9f50cb70015236572ba3a40d7404c942407d607a1b9ccd8ab2422035"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33Sampling.lean",
+      "sha256": "debe3be97cde4d15f74bac75d13bc88e6f5aa2c040abe80b5c81444543f08ac4"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31NormalizedTail.lean",
+      "sha256": "b5b691b75f963791be145603c5993e3c126be2164ec46ee47f1d753b29cdd93b"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33ActualSamples.lean",
+      "sha256": "968ae1613ddef523fd71562d269ecf0a01d142a658a04ae22b29e7394c3a1018"
+    }
+  ]
+}

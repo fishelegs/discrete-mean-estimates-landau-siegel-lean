@@ -1,0 +1,49 @@
+{
+  "all_passed": true,
+  "check_groups": 27,
+  "checks": {
+    "original_finite_D_shift_identity": true,
+    "branch_shift_cancellation": true,
+    "all_four_parities": true,
+    "gauss_phase_identity": true,
+    "real_part_sign": true,
+    "branch_global_sign_invariance": true,
+    "constant_length_margin": true,
+    "dual_length_exponent": true,
+    "direct_length_exponent": true,
+    "profile_width": true,
+    "energy_exponents": true,
+    "absolute_core_budget": true,
+    "stationary_and_scalar_payment": true,
+    "upstream_sparse_payment": true,
+    "mixed4_per_box": true,
+    "mixed4_all_boxes": true,
+    "mixed_mass_threshold": true,
+    "gaussian_mass_constant": true,
+    "principal_concrete_margin": true,
+    "principal_fixed_factor_budget": true,
+    "legal_leading_scale_example": true,
+    "example_mixed_product_exceeds_sieve_length": true,
+    "exact_primitive_orthogonality_and_two_parities": true,
+    "exact_diagonal_off_principal_split": true,
+    "principal_multiplicativity_above_p": true,
+    "opposite_shift_conjugation_with_ramification": true,
+    "ramified_local_collapse": true
+  },
+  "details": {
+    "principal_J100_decay_before_P_o1_cost": "49949/1000",
+    "example_product_leading_exponent": "14401/4000",
+    "cyclotomic_prime_list": [
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19
+    ],
+    "cyclotomic_pairs_checked": 4399
+  },
+  "cyclotomic_pairs_checked": 4399,
+  "scope": "Exact finite arithmetic only; not an analytic or Lean proof."
+}

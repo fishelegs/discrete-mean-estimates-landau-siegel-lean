@@ -1,0 +1,89 @@
+{
+  "decision": "ACCEPT at source level in REVIEW.md; finite checks are supplementary",
+  "groups": 25,
+  "checks": {
+    "all_candidate_manifest_inputs_unchanged": true,
+    "requested_candidate_hash": true,
+    "symbolic_local_ratio_polynomial_proofs": true,
+    "local_majorants_and_tau144_samples": true,
+    "exact_gaussian_integer_convolutions_support_majorants": true,
+    "rho_has_both_signs": true,
+    "both_character_parities_tested": true,
+    "selected_three_factor_geometry": true,
+    "r4_tail": true,
+    "r9_tail": true,
+    "r54_tail": true,
+    "split_D108_energy": true,
+    "D_energy": true,
+    "C_energy": true,
+    "per_octuple": true,
+    "aggregate": true,
+    "optional_E_energy": true,
+    "optional_box_energy": true,
+    "D_power": true,
+    "profile_endpoint": true,
+    "low_rho_base_length": true,
+    "whole_polynomial_length": true,
+    "fourier_tail_fixed_order": true,
+    "auxiliary_tail_fixed_order": true,
+    "positive_negative_zero_height_fourier_normalizations": true
+  },
+  "counts": {
+    "candidate_manifest_entries": 14,
+    "local_convolution_majorants": 3609,
+    "finite_refactorizations": 19200,
+    "geometry_samples": 3125,
+    "numerical_fourier_checks": 28
+  },
+  "ratio_polynomials_ascending": {
+    "split4": [
+      0,
+      5,
+      4
+    ],
+    "inert4": [
+      1,
+      4
+    ],
+    "ramified4": [
+      2
+    ],
+    "split9": [
+      2,
+      23,
+      33,
+      13
+    ],
+    "inert9": [
+      0,
+      16,
+      24
+    ],
+    "ramified9": [
+      5,
+      6
+    ],
+    "split54": [
+      60,
+      321,
+      548,
+      390,
+      101
+    ],
+    "inert54": [
+      0,
+      190,
+      528,
+      392
+    ],
+    "ramified54": [
+      42,
+      93,
+      49
+    ]
+  },
+  "length_exponent": "79867/40000",
+  "length_margin_below_2_minus_2kappa": "53/40000",
+  "max_numerical_fourier_absolute_error": 5.74991721843338e-14,
+  "warning": "No compiler invocation, exceptional-character instance, transitive Lean closure, or signed gain is certified."
+}

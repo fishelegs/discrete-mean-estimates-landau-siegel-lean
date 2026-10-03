@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "exponent_budgets": true,
+    "gauss_primitive_principal_nonunit_exact": true,
+    "additive_reciprocity_exact": true,
+    "five_factor_cosine_identity_numeric": true,
+    "masked_finite_convolution_numeric": true
+  },
+  "limits": "Finite algebra checks only; no analytic theorem verification, no numerical exceptional-character experiment, no compiler."
+}

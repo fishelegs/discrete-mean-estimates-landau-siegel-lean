@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "lengths_tail_resonance_and_power_margins": true,
+    "energy_holder_and_gaussian_exponents": true,
+    "exact_shift_sum_and_positive_branch_exponent": true,
+    "all_prime_baselines_and_cosine_coefficients": true,
+    "all_prime_power_short_majorant_and_tau49_envelope": true,
+    "direct_primitive_character_gauss_sum_exact_cyclotomic": true,
+    "principal_and_long_nonunit_branches_exact": true,
+    "additive_reciprocity_and_delta_phase_exact": true,
+    "finite_masked_total_coefficients_exact_symbolic": true,
+    "D_deletion_not_replaced_by_D_coprimality": true
+  },
+  "counts": {
+    "local_prime_power_indices": 501,
+    "exact_gauss_cases": 1964,
+    "exact_reciprocity_cases": 1807,
+    "masked_convolution_cases": 720
+  },
+  "limits": "Finite exact algebra only; no analytic theorem certification, exceptional-character experiment, Lean certification, or signed gain."
+}

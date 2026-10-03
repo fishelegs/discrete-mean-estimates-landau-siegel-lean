@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-03T19:09:04.838027+00:00",
+  "generated_utc": "2026-10-03T19:56:04.443980+00:00",
   "baseline_commit": "58a9273c38961411a5f06ab2db4bdf565ef30794",
   "paper": {
     "arxiv": "2211.02515v1",
@@ -4340,6 +4340,34 @@
       "ordinary_pairing_signed_bound_proved": false,
       "global_long_complement_proved": false,
       "strict_gain_proved": false
+    },
+    {
+      "id": "actual_phase_safe_series_gamma",
+      "status": "verified",
+      "report": "audit/CLOUD_PHASE_ANALYTIC_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 2,
+      "public_declaration_checks": 29,
+      "all_owned_checks": 45,
+      "full_R2_precision_proved": false,
+      "strict_gain_proved": false
+    },
+    {
+      "id": "completed_right_signed_functional",
+      "status": "source_reviewed_not_Lean",
+      "report": "audit/completed_right_mean/STATUS.md",
+      "original_numbered_result_completed": false,
+      "actual_Psi2_error": "O(a^-1 L^-77)",
+      "signed_main_constant_proved": false
+    },
+    {
+      "id": "sparse_long_low_rho_reduction",
+      "status": "source_reviewed_not_Lean",
+      "report": "audit/sparse_long_reduction/STATUS.md",
+      "original_numbered_result_completed": false,
+      "retained_labels": "2K>P^.99",
+      "low_label_error": "O(a^-1 L^-501/4)",
+      "high_signed_bound_proved": false
     }
   ],
   "repair_discipline": {
@@ -4480,7 +4508,7 @@
     "separate_from_numbered_51": true,
     "node_count": 8,
     "strict_gain_proved": false,
-    "updated_utc": "2026-10-03T19:09:04.838027+00:00",
+    "updated_utc": "2026-10-03T19:56:04.443980+00:00",
     "branch_status_updated_utc": "2026-10-03T14:58:30.522627+00:00",
     "fixed_smooth_narrow_small_gain_branch": "suspended_recalibration"
   }

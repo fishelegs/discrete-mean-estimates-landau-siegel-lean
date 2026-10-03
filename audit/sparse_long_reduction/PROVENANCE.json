@@ -1,0 +1,72 @@
+{
+  "evidence_kind": "Source-level mathematical proof with final independent acceptance; no Lean certification",
+  "historical_originals": [
+    {
+      "historical_label": "sparse-long-pairing-research/REPORT.md",
+      "sha256": "a6930f429486bf50e8966f1c5e377e37b4a49a182d8866c78399fa2be675323e",
+      "bytes": 21030
+    },
+    {
+      "historical_label": "sparse-long-pairing-research/check_finite.py",
+      "sha256": "8e478745c41b18d2c7152a56d4f2be313477ded176bbcd9393553a31b688d0d5",
+      "bytes": 7343
+    },
+    {
+      "historical_label": "sparse-long-pairing-research/CHECKS.json",
+      "sha256": "61c1cfa8e85f23a60582592389ac8fa6779b8f47b3a2a0af414d941d8cb025c4",
+      "bytes": 2083
+    },
+    {
+      "historical_label": "sparse-long-pairing-research/MANIFEST.json",
+      "sha256": "c8e27626064d3b2b62461581b2866be775269e2412e09da88aab7f1acb290386",
+      "bytes": 2178
+    },
+    {
+      "historical_label": "sparse-long-pairing-independent-review/REVIEW.md",
+      "sha256": "bbc9ad4970039f4e9acd2167421f534021b0f5a60cfba6442a17b5bcb4add123",
+      "bytes": 22497
+    },
+    {
+      "historical_label": "sparse-long-pairing-independent-review/check_independent.py",
+      "sha256": "dda61b97f1f836ae3cbd1ffc15ab3683b053107c407f33beaca9ecb349a22508",
+      "bytes": 9199
+    },
+    {
+      "historical_label": "sparse-long-pairing-independent-review/CHECKS.json",
+      "sha256": "bcbb710576ba724e66cd7f2ede82a1aa9ad6f16e2213da2aa117281c74bec275",
+      "bytes": 2011
+    },
+    {
+      "historical_label": "sparse-long-pairing-independent-review/MANIFEST.json",
+      "sha256": "ffbbd146796270b4a4faedc11477ef6705c86f1ef1eb4cc75f3ea34a74ea1e72",
+      "bytes": 3484
+    }
+  ],
+  "historical_source_baseline": "66d615c5bdd7ec37e99f4d52607412bfa3b8c0ee",
+  "original_report_sha256_verified": true,
+  "original_input_fingerprints_verified": true,
+  "curation": [
+    "Preserved the complete mathematical argument, scope and limitations.",
+    "Replaced environment-specific locations and process references with public evidence references.",
+    "Removed filesystem-specific bookkeeping from the author check script; finite mathematical checks are unchanged.",
+    "Preserved original finite-check receipt separately; portable reruns have their own receipt.",
+    "Historical source hashes are distinct from current public-file hashes.",
+    "Preserved the full independent mathematical review, including all-real-height exact Fourier symbols, the fixed-order tail proof and the whole-label high-rho remainder.",
+    "Adopted the independent review's harmless fixed-constant wording corrections: intersecting dyadic V/M labels carry a factor 2, and P or DP is a conductor scale q_scale rather than a literal maximum. The unchanged 64F cutoff already pays the conductor factor 2.",
+    "Used the exact condition 2K>P^.99 for the high-rho labels throughout; no pointwise v threshold is substituted.",
+    "Removed original-location hash checks from the independent script; preserved all 23 mathematical/numerical groups, with input fingerprints checked by the bundle verifier.",
+    "The numerical Fourier checks retain their original 5e-10 acceptance tolerance. The verifier compares exact outputs literally and permits only the explicitly labeled raw floating error to vary within that tolerance."
+  ],
+  "portable_check_scope": "Only finite algebra, rational exponent arithmetic, numerical identities where labeled, and input integrity; not analytic theorem certification.",
+  "independent_review_final_decision": "ACCEPT at source level for the exact low-rho label reduction; no signed gain",
+  "independent_review_original_sha256": "bbc9ad4970039f4e9acd2167421f534021b0f5a60cfba6442a17b5bcb4add123",
+  "independent_review_input_entries_verified": 18,
+  "independent_review_artifact_entries_verified": 3,
+  "historical_independent_check_groups": 25,
+  "portable_independent_mathematical_check_groups": 23,
+  "tested_environment": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "scipy": "1.17.0"
+  }
+}

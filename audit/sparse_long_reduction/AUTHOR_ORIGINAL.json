@@ -1,0 +1,119 @@
+{
+  "status": "all finite checks passed; analytic candidate requires independent review",
+  "groups": 23,
+  "checks": {
+    "prime_local_majorants_2259": true,
+    "ratio_polynomial_identities": true,
+    "chi_upsilon_is_mu_mod_5": true,
+    "chi_upsilon_is_mu_mod_8": true,
+    "chi_upsilon_is_mu_mod_12": true,
+    "exact_refactorizations_6300": true,
+    "rho_has_no_forced_positive_sign": true,
+    "tail_r4_exponent": true,
+    "tail_r9_exponent": true,
+    "tail_r54_exponent": true,
+    "small_rho_weighted_energy": true,
+    "D_energy": true,
+    "per_box_energy": true,
+    "aggregate_energy": true,
+    "stronger_E_energy": true,
+    "stronger_old_box_exponent": true,
+    "profile_length_exponent": true,
+    "low_rho_base_length": true,
+    "spectral_and_frequency_length_margin": true,
+    "exact_final_length": true,
+    "selected_completion_geometry_1024": true,
+    "frozen_complement_report": true,
+    "frozen_interface": true
+  },
+  "ratio_polynomials_ascending_coefficients": {
+    "r4_split": [
+      0,
+      5,
+      4
+    ],
+    "r4_inert": [
+      1,
+      4
+    ],
+    "r4_ramified": [
+      2
+    ],
+    "r9_split": [
+      2,
+      23,
+      33,
+      13
+    ],
+    "r9_inert": [
+      0,
+      16,
+      24
+    ],
+    "r9_ramified": [
+      5,
+      6
+    ],
+    "r54_split": [
+      60,
+      321,
+      548,
+      390,
+      101
+    ],
+    "r54_inert": [
+      0,
+      190,
+      528,
+      392
+    ],
+    "r54_ramified": [
+      42,
+      93,
+      49
+    ]
+  },
+  "rho_positive_examples_modulus_cutoff_n_value": [
+    [
+      5,
+      2,
+      4,
+      1
+    ],
+    [
+      5,
+      2,
+      5,
+      1
+    ],
+    [
+      5,
+      2,
+      9,
+      1
+    ]
+  ],
+  "rho_negative_examples_modulus_cutoff_n_value": [
+    [
+      5,
+      2,
+      20,
+      -1
+    ],
+    [
+      5,
+      2,
+      36,
+      -1
+    ],
+    [
+      5,
+      2,
+      44,
+      -2
+    ]
+  ],
+  "final_length_exponent": "79867/40000",
+  "remaining_length_margin": "53/40000",
+  "warning": "No Lean, exceptional-character instance, analytic certification, or signed gain."
+}

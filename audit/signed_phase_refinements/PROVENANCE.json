@@ -1,0 +1,42 @@
+{
+  "original_artifacts": [
+    {
+      "source_label": "core-pairing-constant-research/REPORT.md",
+      "historical_sha256": "5c3033f4151a98d9846b647a8950ea996a1fad8f0fef41ea614bd90dd668f28e",
+      "public_file": "CORE_PROOF.md",
+      "curation": "Process descriptions removed; paths replaced with evidence references; mathematical text retained."
+    },
+    {
+      "source_label": "core-pairing-independent-review/REVIEW.md",
+      "historical_sha256": "b8154347fc64854b0c3c360cc988d48cf7e3fe3fe7c8c864897a7ab9d8ce46a0",
+      "public_file": "CORE_INDEPENDENT_REVIEW.md",
+      "curation": "Process descriptions removed; paths replaced with evidence references; mathematical text retained."
+    },
+    {
+      "source_label": "long-pairing-complement-research/REPORT.md",
+      "historical_sha256": "da3091adfc403c1f5951a41d4334e8e6205c4416b2bf7c292fe8abf8c7894b02",
+      "public_file": "COMPLEMENT_PROOF.md",
+      "curation": "Process descriptions removed; paths replaced with evidence references; mathematical text retained."
+    },
+    {
+      "source_label": "long-pairing-complement-independent-review/REVIEW.md",
+      "historical_sha256": "87f62ac05ee003de2570b942967cdd1449a5996d7365f4b6cae0f6c7a1a45cdf",
+      "public_file": "COMPLEMENT_INDEPENDENT_REVIEW.md",
+      "curation": "Process descriptions removed; paths replaced with evidence references; mathematical text retained."
+    },
+    {
+      "source_label": "core-pairing-independent-review/MANIFEST.json",
+      "historical_sha256": "e488754d05e763604f7d14379cc0b2d73ae84a0695feaeb2d0f889378d8bb9b5",
+      "purpose": "Original independently verified input fingerprints; this publication preserves source identities without private workspace locations."
+    },
+    {
+      "source_label": "long-pairing-complement-independent-review/MANIFEST.json",
+      "historical_sha256": "2f2385ba76ee4a12ef7c59de4f8799516b8b5c317df3863aad46da0e5ab2f7a3",
+      "purpose": "Original independently verified input fingerprints; this publication preserves source identities without private workspace locations."
+    }
+  ],
+  "interface_sha256": "3cba7904b89c904326406849fefb6f102a6f96625a7d7230b7dba9ccf8e4a530",
+  "historical_core_review_checks": 50,
+  "historical_complement_review_check_groups": 27,
+  "portable_check_scope": "Historical counts include source hashes and repository HEAD checks. Portable reruns execute the exact arithmetic portions and verify current public evidence separately; their smaller group counts do not stand for missing mathematical tests."
+}

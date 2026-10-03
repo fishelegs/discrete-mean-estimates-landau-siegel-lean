@@ -1,0 +1,38 @@
+{
+  "all_passed": true,
+  "check_groups": 24,
+  "checks": {
+    "original_square_tail_constant": true,
+    "extended_square_tail_constant": true,
+    "sparse_error_energy": true,
+    "per_box_exponent": true,
+    "refined_box_count_exponent": true,
+    "boundary_100_error": true,
+    "right_infinity_absolute_P_exponent": true,
+    "core_first_margin": true,
+    "core_F_triple_margin": true,
+    "quintuple_support_ratio": true,
+    "constant_resonance_label_ratio": true,
+    "generalized_n_bound": true,
+    "linear_tail_exponent": true,
+    "square_tail_exponent": true,
+    "global_long_budget": true,
+    "boundary_main_only_crude": true,
+    "core_error_absorption": true,
+    "uniform_stirling_margin": true,
+    "gaussian_horizontal_margin": true,
+    "shell_length_and_subunit_scale_tests": true,
+    "shell_decay_exponent": true,
+    "prime_power_divisor_envelopes": true,
+    "convolution_error_sign_and_opposite_shift": true,
+    "both_parities_all_frequency_signs": true
+  },
+  "counts": {
+    "reconstructed_candidate_checks": 12,
+    "shell_inequalities": 420,
+    "prime_power_divisor_inequalities": 1203,
+    "truncated_convolution_sign_checks": 1800,
+    "parity_and_frequency_sign_cases": 32
+  },
+  "scope": "Exact finite arithmetic only; not an analytic or Lean proof."
+}

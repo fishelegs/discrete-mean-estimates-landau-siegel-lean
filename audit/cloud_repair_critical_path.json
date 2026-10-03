@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-03T19:09:04.838027+00:00",
-  "base_commit": "ae8003c332174819f097e728ea1532b7340c758f",
+  "updated_utc": "2026-10-03T19:56:04.443980+00:00",
+  "base_commit": "66d615c5bdd7ec37e99f4d52607412bfa3b8c0ee",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
@@ -18,7 +18,7 @@
     "partial_lean_proved": "部分明确接口已中央Lean核验，节点其余附件尚未完成",
     "source_reviewed_partial": "限定作用域的来源层结论已独立复核，尚非整个节点或Lean完成"
   },
-  "central_decision": "原主结论尚未恢复。R2/R5的实际对象、系数和有限算术/剖面组件已中央Lean核验；完整精度接口、实际Gram下界及带符号严格gain仍待证明。",
+  "central_decision": "原主结论尚未恢复。新的来源桥已付completed-right的实际Psi2并把剩余化为有限倒数相位R_D及高rho配对。还需独立有利常数及联合严格界；这些来源归约尚非Lean。R2实际safe-series/gamma组件已中央核验，完整精度及实际Gram仍缺。",
   "nodes": [
     {
       "id": "R1",
@@ -35,7 +35,7 @@
       "published_commit": "8bdae40152843c289650c1483d86c73b7a8aaf28",
       "execution_status": "done",
       "execution_note": "已经发布并验证；未把该标量下界当作实际Gram下界。",
-      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
+      "checked_utc": "2026-10-03T19:56:04.443980+00:00",
       "proof_status": "lean_proved"
     },
     {
@@ -43,18 +43,19 @@
       "name": "真实相位均值的精度接口",
       "status": "partial_lean_proved",
       "verification": "实际矩形/四类变换、支撑与kappa系数能量已中央Lean核验；完整L^-14接口尚非Lean",
-      "result": "实际同compatible c的C1/T1有限矩形、精确变换及strict支撑已证；kappa L^36与严格截断平方L^144系数能量已证。",
+      "result": "实际同compatible c的C1/T1有限矩形、精确变换及strict支撑已证；kappa L^36与严格截断平方L^144系数能量已证。 新增safe半平面的实际无限/严格有限分拆、精确conductor gamma包络及原高度几何已中央Lean核验。",
       "gap": "完整O(a^-1 L^-14)有限窗口接口、水平边/尾及族矩附件尚未闭合；主算术和和有利符号仍未求值。",
       "dependency_mode": "required_for_current_phase_route",
       "dependencies": [],
       "evidence": [
         "audit/annular_covariance/STATUS.md",
         "audit/structured_covariance/STATUS.md",
-        "audit/CLOUD_PHASE_GRAM_COMPONENTS_STATUS.md"
+        "audit/CLOUD_PHASE_GRAM_COMPONENTS_STATUS.md",
+        "audit/CLOUD_PHASE_ANALYTIC_STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "六组件中央已PASS并随本提交发布；继续safe-line级数、arch/tail界和实际族矩附件。",
-      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
+      "execution_note": "前六组件已发布；新safe-series/gamma两组件中央PASS，随本提交发布。继续真实off-central B及尾界；完整L^-14仍缺。",
+      "checked_utc": "2026-10-03T19:56:04.443980+00:00",
       "proof_status": "partial_lean_proved"
     },
     {
@@ -77,7 +78,7 @@
       ],
       "execution_status": "waiting_R2_attachment",
       "execution_note": "本批5模块、56公开/80owned、5709全库中央核验完成；有限桥已完成，解析轮廓附件等待R2。",
-      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
+      "checked_utc": "2026-10-03T19:56:04.443980+00:00",
       "proof_status": "partial_lean_proved",
       "published_commit": "975114abbb14f77426af3cff767b1f37e6c67d04"
     },
@@ -85,9 +86,9 @@
       "id": "R4",
       "name": "主算术矩阵与目标残差的符号",
       "status": "open",
-      "verification": "主项符号未证明；真实signed Z2轮廓/右项及有限long-eta双长度桥已经独立来源复核，尚非Lean",
-      "result": "实际signed Z2右项已来源界为O(a^-1 P^-.49)，左项为degree3、kappa长至P³；有限T2/T3以整体二次型保持Psi1并移除旧P^.502的逐项损失。",
-      "gap": "有限T3仅在两条实际多项式长度均<P²时成立；已支付cX替换，但普通chi除子配对的有利常数及保留的长补集尚无独立signed界。全局完成还引入right∞，不能把其贡献丢弃或把AFE重写当gain。",
+      "verification": "completed-right/低rho归约均经独立来源复核；最终有利signed常数未证",
+      "result": "原masked能量O(L^82)已在来源层支付实际Psi2为O(a^-1L^-77)，J_right∞=−iR_D+O(a^-1L^-11/2)+O(a^-1P^-.49)。长误差中2K≤P^.99标签另付O(a^-1L^-501/4)，高标签保留。",
+      "gap": "需要Im(R_D)+Re(Delta_rho,high)≤(1−ε)m_H+o(1)。R_D的Ramanujan主项、nonprincipal聚合和高rho有利常数尚未得到；nonexceptional prime estimate的q<exp(L^1.1)不覆盖全部m≤exp(.5025L^9)。",
       "dependency_mode": "R2 AND (direct_arithmetic OR R3_structured_reduction OR another_valid_attachment)",
       "dependencies": [
         "R2"
@@ -102,11 +103,14 @@
         "audit/joint_phase/STATUS.md",
         "audit/zero_measure_phase/STATUS.md",
         "audit/weighted_signed_phase/STATUS.md",
-        "audit/long_eta_finite_bridge/STATUS.md"
+        "audit/long_eta_finite_bridge/STATUS.md",
+        "audit/signed_phase_refinements/STATUS.md",
+        "audit/completed_right_mean/STATUS.md",
+        "audit/sparse_long_reduction/STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "继续独立研究有限core实际leading pairing及其长补集；有限桥仅来源层，完整带符号界/严格gain仍未证明。",
-      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
+      "execution_note": "Ramanujan实际主项常数在研究；大conductor非主项及高rho所需新signed估计仍未闭合。已完成来源归约不会自动提供有利符号。",
+      "checked_utc": "2026-10-03T19:56:04.443980+00:00",
       "proof_status": "open",
       "branch_status": "suspended_recalibration_for_fixed_smooth_narrow_small_gain_only",
       "alternative_routes": [
@@ -152,7 +156,7 @@
       ],
       "execution_status": "active",
       "execution_note": "六组件中央已PASS并随本提交发布；继续original scaling、剖面支持、误差积分和真实外和。",
-      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
+      "checked_utc": "2026-10-03T19:56:04.443980+00:00",
       "proof_status": "partial_lean_proved"
     },
     {
@@ -175,7 +179,7 @@
       "evidence": [],
       "execution_status": "blocked_by_R4_R5",
       "execution_note": "限定R5来源下界有进展；仍等待实际有利目标及适合该增益的完整归一化误差预算。",
-      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
+      "checked_utc": "2026-10-03T19:56:04.443980+00:00",
       "proof_status": "open"
     },
     {
@@ -194,7 +198,7 @@
       "evidence": [],
       "execution_status": "waiting_dependencies",
       "execution_note": "等待R4、R5、R6共同闭合；当前无严格gain。",
-      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
+      "checked_utc": "2026-10-03T19:56:04.443980+00:00",
       "proof_status": "open"
     },
     {
@@ -213,7 +217,7 @@
       "original_exponents_preserved": true,
       "execution_status": "waiting_dependencies",
       "execution_note": "等待R7及采用路线的其余论文/解析义务，原主结论未恢复。",
-      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
+      "checked_utc": "2026-10-03T19:56:04.443980+00:00",
       "proof_status": "open"
     }
   ],
@@ -353,6 +357,36 @@
       "gap": "只有有限算术替换；普通chi除子配对的有利符号和长补集尚缺。不能全局延长S_X再忽略新right∞，未得到Z2或strict gain。",
       "report": "audit/long_eta_finite_bridge/STATUS.md",
       "checked_utc": "2026-10-03T19:09:04.838027+00:00"
+    },
+    {
+      "id": "finite_core_scalar_and_extended_boundary",
+      "status": "active_research",
+      "evidence_status": "source_reviewed_not_Lean",
+      "scope": "共同固定profile/精确finite core；exact complement仅扩展到dyadic2N≤P²L^100，L=logD。",
+      "result": "core=−i(Delta+Off−Bad)+O(a^-1L^-226)+O(a^-1P^-10)；finiteboundary误差O(a^-1L^-187/4)；actual I_left^X=J_right∞+Δlong+o1。",
+      "gap": "独立有利常数和全joint signed界未证；completed-right不可删除，近P4 mixed4仅为未证明充分接口。",
+      "report": "audit/signed_phase_refinements/STATUS.md",
+      "checked_utc": "2026-10-03T19:55:09.359437+00:00"
+    },
+    {
+      "id": "completed_right_finite_signed_functional",
+      "status": "active_research",
+      "evidence_status": "source_reviewed_not_Lean",
+      "scope": "原real profile、finite M删除和相同aM；正B_beta，实际Psi2不靠假设删除。",
+      "result": "masked coefficient energy O(L^82)和actualPsi2 O(a^-1L^-77)；J_right∞=−iR_D+O(a^-1L^-11/2)+O(a^-1P^-.49)。R_D为明确有限reciprocal-modulus-m功能，保留prime权与两profile。",
+      "gap": "ImR_D尚无有利常数。既有素数输入q<exp(L^1.1)并不覆盖全部大m，尚须对应conductor/height前提及聚合界。",
+      "report": "audit/completed_right_mean/STATUS.md",
+      "checked_utc": "2026-10-03T19:56:04.443980+00:00"
+    },
+    {
+      "id": "sparse_long_low_rho_payment",
+      "status": "source_reduction_complete_further_signed_gap_open",
+      "evidence_status": "source_reviewed_not_Lean",
+      "scope": "原Long标签细分；仅低标签2K≤P^.99，所有边界盒完整保留；不是字面pointwise v cutoff。",
+      "result": "E_X=−(chi*power_-beta3)*rho_X，选择五个smooth因子中的三个完成；Delta_long=Delta_rho,high+O(a^-1L^-501/4)+O(a^-1P^-10)。",
+      "gap": "high剩余是2K>P^.99的完整标签，未给有利signed界。该分支原L^-187/4误差仍保留；合并completed-right后总已知o1误差由L^-11/2界控制。",
+      "report": "audit/sparse_long_reduction/STATUS.md",
+      "checked_utc": "2026-10-03T19:56:04.443980+00:00"
     }
   ]
 }

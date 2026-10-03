@@ -1,0 +1,65 @@
+{
+  "evidence_kind": "Source-level mathematical proof with final independent acceptance; no Lean certification",
+  "historical_originals": [
+    {
+      "historical_label": "completed-right-mean-research/REPORT.md",
+      "sha256": "46a3697d7dce3228f84817dafefbc8d9fc34e19b1e0e63323853d2df3d735670",
+      "bytes": 25658
+    },
+    {
+      "historical_label": "completed-right-mean-research/check_algebra.py",
+      "sha256": "170aba2971df529febe422417b82e60abe53dee91e2af10411e31fbf47ec35e5",
+      "bytes": 4661
+    },
+    {
+      "historical_label": "completed-right-mean-research/CHECKS.json",
+      "sha256": "290b4b059141cf5f1b2c99db508b1f2763600602dcdc48e3936cc3dba2135dfc",
+      "bytes": 377
+    },
+    {
+      "historical_label": "completed-right-mean-research/MANIFEST.json",
+      "sha256": "282e9185849eec8664f3d683ca497f1cd76cc04c3533c5cf50e90f6b974ee534",
+      "bytes": 3583
+    },
+    {
+      "historical_label": "completed-right-mean-independent-review/REVIEW.md",
+      "sha256": "f2ec027691f680cd5f2c6de3ff1993fd0cdad2edf691069ac3a2a5137b42ecaf",
+      "bytes": 18540
+    },
+    {
+      "historical_label": "completed-right-mean-independent-review/check_independent.py",
+      "sha256": "ddabc5488d87a660026497af9bfbdc77a773a60d48dac885f7699438e14d3a42",
+      "bytes": 11930
+    },
+    {
+      "historical_label": "completed-right-mean-independent-review/CHECKS.json",
+      "sha256": "23c96fc229fd33c077d86db188dbcdcc85f415b3607a2f8112b1b9dc2fa43c36",
+      "bytes": 3165
+    },
+    {
+      "historical_label": "completed-right-mean-independent-review/MANIFEST.json",
+      "sha256": "8cf6e9e4cfec760e776b682473b7d51c17fb7435c55b508415cb567c9901f06e",
+      "bytes": 7085
+    }
+  ],
+  "historical_source_baseline": "66d615c5bdd7ec37e99f4d52607412bfa3b8c0ee",
+  "original_report_sha256_verified": true,
+  "original_input_fingerprints_verified": true,
+  "curation": [
+    "Preserved the complete mathematical argument, scope and limitations.",
+    "Replaced environment-specific locations and process references with public evidence references.",
+    "Removed filesystem-specific bookkeeping from the author check script; finite mathematical checks are unchanged.",
+    "Preserved original finite-check receipt separately; portable reruns have their own receipt.",
+    "Historical source hashes are distinct from current public-file hashes.",
+    "Preserved the full independent mathematical review, including the exact conductor, shift and height limitations of the optional prime-sum route.",
+    "Removed unrelated worktree inventory from the historical independent receipt; original receipt hash and the distinct curated receipt are both identified.",
+    "Moved original source-premise inventory to SOURCE_SCOPE.json and the optional repository verifier; exact independent mathematical checks are unchanged.",
+    "Added an explicitly attributed review clarification to the public proof: excluding chi alone does not meet the source prime-estimate conductor/height premises."
+  ],
+  "portable_check_scope": "Only finite algebra, rational exponent arithmetic, numerical identities where labeled, and input integrity; not analytic theorem certification.",
+  "independent_review_final_decision": "ACCEPT at source level for the stated completed-right reduction; no signed gain",
+  "independent_review_original_sha256": "f2ec027691f680cd5f2c6de3ff1993fd0cdad2edf691069ac3a2a5137b42ecaf",
+  "independent_review_manifest_entries_verified": 41,
+  "historical_independent_check_groups": 13,
+  "portable_independent_mathematical_check_groups": 10
+}

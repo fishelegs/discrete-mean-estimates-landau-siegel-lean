@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "date_utc": "2026-10-03",
+  "scope": "Source-level finite-core and exact-complement interface; no Lean or publication claim",
+  "kappa": "1/1000",
+  "K_power_tail": "10",
+  "fixed_profile": {
+    "beta_bump": "beta(v)=exp(-1/(v(1-v))) for 0<v<1, and 0 otherwise",
+    "F0": "beta'''/sup|beta'''|",
+    "f": "f(x)=F0(2000*(x-251/500))",
+    "h": "h(m)=chi(m)*f(log(m)/log(P))",
+    "support_exponents": ["251/500", "201/400"],
+    "lambda": "(16000/pi)*integral_0^1 |F0'|^2 + (11*pi/250)*integral_0^1 |F0|^2",
+    "actual_mass": "m_H=lambda+o(1), hence m_H>=lambda/2 eventually"
+  },
+  "scales": {
+    "L": "log D",
+    "B": "log P=L^9",
+    "X": "D^20",
+    "U": "D^20*P^(201/400)",
+    "T0": "2*pi*L^519",
+    "Tstar": "4*(T0+L^405+max_j |Im(beta_j)|+1)",
+    "F": "P^(kappa/8)",
+    "Cdual": "64",
+    "Clength": "2^20"
+  },
+  "partition": {
+    "rho": "A fixed C-infinity nonincreasing cutoff equal to 1 on (-infinity,1], equal to 0 on [2,infinity); on (1,2), rho(x)=b(2-x)/(b(2-x)+b(x-1)), b(y)=exp(-1/y) for y>0 and 0 otherwise",
+    "phi": "phi(x)=rho(x)-rho(2*x), supported in [1/2,2]; sum_{k>=0} phi(n/2^k)=1 for every integer n>=1",
+    "labels": "N,R,S,M are 2^k, k>=0; use phi(n/N) phi(r/R) phi(s/S) phi(m/M)",
+    "near_labels": "Keep (N,R,S) if [N*R*S/8,8*N*R*S] intersects [P^2.9992,P^3.0008]. Keep M if [M/2,2*M] intersects [P^.502,P^.5025].",
+    "finite_localization": "For D sufficiently large every whole retained n*r*s support is inside [P^2.998,P^3.002]. The artificial hard product localization is identically one there and is removed before Poisson.",
+    "far_labels": "All other labels belong to the already paid scalar nonresonant tails; they are not silently included in core or dropped without that accepted estimate."
+  },
+  "exact_core_criterion": {
+    "first": "Clength*N <= P^(2-2*kappa)",
+    "second": "Clength*U*D*P^3*Tstar^3/(M*R*S) <= P^(2-2*kappa)",
+    "selection": "Both inequalities on whole-polynomial maximum lengths; common label selection independent of p, psi and individual summands.",
+    "dual_cutoffs": ["H_R=floor(64*F*P*Tstar/R)", "H_S=floor(64*F*P*Tstar/S)", "H_M=floor(64*F*D*P*Tstar/M)"],
+    "actual_final_lengths": ["D3_length <= 2*N", "C3_length <= U*H_R*H_S*H_M <= 64^3*F^3*U*D*P^3*Tstar^3/(M*R*S)"],
+    "upper_margin": "Both final lengths <=P^(2-13*kappa/8), hence <=floor(P^2) eventually; any cutoff below 1 means its whole transform was paid as a Fourier tail."
+  },
+  "decomposition": {
+    "original_left": "I_left is the original good-family safe-left mean with the actual -i*B_beta^(-1)*Z_psi^2*Z_chipsi scalar, actual gamma factors, actual a*Mcal normalizer and Gaussian",
+    "safe_regrouping": "c_X=conjugate(eta_beta3)*nu_[1,X] on Re(s)=-1/2 before localization or central-line shift",
+    "core": "All near labels satisfying both exact_core_criterion inequalities; after three true Poisson completions keep both signs, exact i^(2a+b), inherited Gamma/B_beta scalar, and common dual cutoffs; replace c_X by chi*power_(-beta3) only here",
+    "D3_convention": "In C3_psi*conjugate(D3_psi), D3 coefficients are chi*power_(+beta3), where power_gamma(n)=n^(-gamma)",
+    "complement": "All near labels failing at least one core inequality, with original c_X; no global S_infinity replacement",
+    "tails": "Original safe infinite scalar tails, far-label tails and core dual Fourier tails are separate paid errors, not part of the complement main; optional long-pure removal must be stated with its own paid error and otherwise those labels stay in complement",
+    "comparison_error": "O(a^(-1)*L^(-623/4))+O(a^(-1)*P^(-10)) under the accepted source review",
+    "normalizer": "a=(6/pi^2)*L'(1,chi)^2*product_{q|D}q/(q+1)>1/2; Mcal=sum_actual_primes p",
+    "target": "Re(core+complement) <= (1-epsilon)*m_H+o(1), fixed epsilon>0, without changing original assumption exponent -2022 or final target 2024"
+  },
+  "upstream_sources": {
+    "long_eta_report_sha256": "c3261d2be8eafc0b177d4a0fc71fd53f3f2031154e0686529f37f83e0d4a5ce7",
+    "independent_review_sha256": "2a6251541b2bd7393f2d4406991535f5652e6a5a9fa3e3917a3be91244bee2cb"
+  }
+}

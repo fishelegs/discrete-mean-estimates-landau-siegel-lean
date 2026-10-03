@@ -1,0 +1,110 @@
+{
+  "checked_utc": "2026-10-03T19:55:09.359437+00:00",
+  "files": [
+    {
+      "path": "ZhangLS/All.lean",
+      "sha256": "d756d3209e614eb458f060fa8eb92e9e92c53c02e2ea8097b4af0c3c80633f54",
+      "bytes": 84401
+    },
+    {
+      "path": "ZhangLS/Spec/ActualPhaseArchBounds.lean",
+      "sha256": "ada5128726feb2a4182de87246713ecd4db1adf00ee4d9f36d02843b00cd203f",
+      "bytes": 9276
+    },
+    {
+      "path": "ZhangLS/Spec/ActualPhaseSafeSeries.lean",
+      "sha256": "2836c4776fc121dede778a0593e1d8f34a2680502184d143e270c9755f7a4e73",
+      "bytes": 13645
+    },
+    {
+      "path": "ZhangLS/Spec/All.lean",
+      "sha256": "a30fbd91afd919e547ae7a1fb0d98fb0cf1290b2368eccf7a728d5ba16b10b34",
+      "bytes": 68885
+    },
+    {
+      "path": "audit/CLOUD_PHASE_ANALYTIC_STATUS.md",
+      "sha256": "1fe6e234a93098419f0e1bddbb474af8482d9fe3f76576a64cb1d32a3a8059b0",
+      "bytes": 2781
+    },
+    {
+      "path": "audit/CloudPhaseAnalyticAxioms.lean",
+      "sha256": "1e5ae58473c5538c4cecec96ee24d5149a3fdc02601b285588ee44ecb1e2ce7b",
+      "bytes": 10938
+    },
+    {
+      "path": "audit/cloud_phase_analytic_verification.json",
+      "sha256": "cc1a689768ada6d74a1e9945947cbd3b158f6203815c0109d473e34ad840c0a5",
+      "bytes": 2311
+    },
+    {
+      "path": "audit/phase_analytic_components/CENTRAL_GATES.json",
+      "sha256": "edd431e6733c32d5a29d3eeafe9017886741f973a459a0b21ebb68060f4c2fea",
+      "bytes": 1792
+    },
+    {
+      "path": "audit/phase_analytic_components/EXACT_INVENTORY_CHECK.json",
+      "sha256": "c2aaf5cf67956dfaf9158f7e428a9a86c0a3db83e41e3fb2a4cc877918706137",
+      "bytes": 353
+    },
+    {
+      "path": "audit/phase_analytic_components/INDEPENDENT_CHECK_SUMMARY.json",
+      "sha256": "00d75dcd3f175cfaba97fb833d6db9d1b97acc167d893c84d4ea9941766465c7",
+      "bytes": 821
+    },
+    {
+      "path": "audit/phase_analytic_components/INDEPENDENT_REVIEW.md",
+      "sha256": "457a69de8676d9723d8334832957d821ce6009aff808bd6d086a5ed2c4e7aa74",
+      "bytes": 14901
+    },
+    {
+      "path": "audit/phase_analytic_components/LOG_HASHES.json",
+      "sha256": "7bf42ce7823b672885d10f1123553c33a42d2feb756c9ac289d3e4a7ae5ff056",
+      "bytes": 1430
+    },
+    {
+      "path": "audit/phase_analytic_components/MODULE_MAPPING.json",
+      "sha256": "8dc50a698876641b53dba9b41473317a2ef396abfc189c92dad6d904cbc90df0",
+      "bytes": 770
+    },
+    {
+      "path": "audit/phase_analytic_components/OWNED_DECLARATIONS.json",
+      "sha256": "070d464a356033b8849ffee3a7efb970a767dda3cdf200b8917eead8d9cea3b5",
+      "bytes": 9901
+    },
+    {
+      "path": "audit/phase_analytic_components/PROVENANCE.json",
+      "sha256": "4d2d0dbd60f351b736a39d3257ec42dcfa5b597a404d8977a96d7fc308e96d2a",
+      "bytes": 584
+    },
+    {
+      "path": "audit/phase_analytic_components/PUBLIC_DECLARATIONS.json",
+      "sha256": "97f614959350bc0b19bd9e0ebfe9be82eab1deeba0a935ed662a5c558b5a2bb0",
+      "bytes": 3950
+    },
+    {
+      "path": "audit/phase_analytic_components/REPRODUCE.md",
+      "sha256": "6ef352ccc2e2992fe0e655e2e0084c52b82bd5def206ef16acb3e49104d77944",
+      "bytes": 978
+    },
+    {
+      "path": "audit/phase_analytic_components/SOURCE_HASHES.json",
+      "sha256": "2c133a5200c5d84637693d5886ffa9dc924b4a431f39664f304071a85e5d77d4",
+      "bytes": 913
+    },
+    {
+      "path": "audit/phase_analytic_components/STRICT_AUDIT_REVIEW.json",
+      "sha256": "132dfb9ed67b6e043b2445773ec272615070f1ceaab185b0946446cb0527f3bb",
+      "bytes": 673
+    },
+    {
+      "path": "audit/phase_analytic_components/check_audit.py",
+      "sha256": "dcfa9432b6b2bd99fa477c631ddd4d95f0034ff474067b37a7215a0181e20974",
+      "bytes": 1245
+    },
+    {
+      "path": "audit/phase_analytic_components/verify_package.py",
+      "sha256": "f5eb9e93c6d34e9e3871e1efcba3c5bee5c7f5e0b009baad2da3a7f00a665c5f",
+      "bytes": 349
+    }
+  ]
+}

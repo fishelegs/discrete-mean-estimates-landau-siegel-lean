@@ -1,0 +1,123 @@
+{
+  "count": 29,
+  "definitions": 9,
+  "proved_results": 20,
+  "declarations": [
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseKappa"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseStrictIndices"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_mem_strict_indices"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseCRightCutoff"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseLongCutoff"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseKappaPolynomial"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseKappaTail"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_polynomial_eq_exp_sum"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_polynomial_analytic"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_series_analytic"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_actual_kappa_series"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_actual_kappa_split"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_polynomial_units"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_power_coefficient_conj"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_conj"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_negative_shift_kappa"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_actual_dual_kappa_series"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseDualKappaPolynomial"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseDualKappaTail"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_actual_dual_kappa_split"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_dual_kappa_polynomial_units"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_regression_kappa_endpoint"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_dual_polynomial_on_critical_line"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseGammaError"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_source_gamma_error_le"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_Z_horizontal_envelope"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_norm_one"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_source_far_rectangle_geometry"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_arch_norm_one"
+    }
+  ]
+}

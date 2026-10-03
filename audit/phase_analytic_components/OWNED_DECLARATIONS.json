@@ -1,0 +1,393 @@
+{
+  "count": 45,
+  "generated": 16,
+  "declarations": [
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_power_coefficient_conj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseKappa.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_series_analytic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseLongCutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_negative_shift_kappa",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_conj",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseGammaError._proof_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseLongCutoff._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseKappaPolynomial.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseGammaError._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_norm_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseStrictIndices.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_mem_strict_indices._simp_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_dual_polynomial_on_critical_line",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseCRightCutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_polynomial_eq_exp_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseGammaError._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_source_gamma_error_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_polynomial_units",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_mem_strict_indices._simp_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseDualKappaPolynomial.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_actual_kappa_split",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseKappaTail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_regression_kappa_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_Z_horizontal_envelope._simp_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_mem_strict_indices",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseCRightCutoff._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseKappaPolynomial",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseGammaError._proof_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseGammaError.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_actual_dual_kappa_split",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_actual_dual_kappa_series",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseGammaError",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseDualKappaPolynomial",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_dual_kappa_polynomial_units",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_Z_horizontal_envelope",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseStrictIndices",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_polynomial_analytic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseDualKappaTail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhase_actual_kappa_series",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseLongCutoff._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_source_far_rectangle_geometry",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseCRightCutoff._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSafeSeries",
+      "declaration": "ZhangLS.Spec.actualPhaseKappa",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseArchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_arch_norm_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

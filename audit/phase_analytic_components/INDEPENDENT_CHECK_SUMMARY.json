@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-03T19:33:35.839551+00:00",
+  "archive_sha256": "872fdb728a1e551eab99aacd3ded47f09f559c33f1479c5d2716e08ddd2b53d0",
+  "public": 29,
+  "owned": 45,
+  "generated": 16,
+  "owner_counts": {
+    "ActualPhaseSafeSeries": 33,
+    "ActualPhaseArchBounds": 12
+  },
+  "public_kinds": {
+    "def": 9,
+    "theorem": 20
+  },
+  "loaded_modules": 6877,
+  "component_counts": {
+    ".olean": 6877,
+    ".olean.private": 6100,
+    ".olean.server": 6100,
+    ".ir": 6100,
+    ".ilean": 6873
+  },
+  "counts": {
+    "unique_paths_hashed": 38978,
+    "bytes_hashed": 5823749839,
+    "assertions": 176970,
+    "pins": 45857
+  },
+  "errors": [],
+  "proof_recompiled": false,
+  "scope": "Independent static source/receipt/hash/inventory review; central compiler validation remains required."
+}

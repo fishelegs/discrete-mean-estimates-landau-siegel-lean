@@ -1,0 +1,75 @@
+{
+  "repository_sources": [
+    {
+      "path": "ZhangLS/Spec/Lemma31LinearTail.lean",
+      "sha256": "82956684414d2c5aee2035b54d91739e93faddae467d6f660c5bf0766501b835"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31OrderedArithmetic.lean",
+      "sha256": "03918df9ea74ebb4f40dfd1dc7e952722e2bd850b6cbcf777381eb022cb9c99f"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31TotalWeight.lean",
+      "sha256": "3678924c2b115b1beff5973ee63608178a89aade8177dedacd77c2b33136fba0"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31WeightedTail.lean",
+      "sha256": "42d9553e45a62003ec1efdef220bd1363ef939287a7aa457da8c5e8a0c38c769"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33.lean",
+      "sha256": "c7ab0f6de943ebbbb90b7bd3abfe5efc978cdbf672bab195854941ae88ff320a"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33ActualSamples.lean",
+      "sha256": "968ae1613ddef523fd71562d269ecf0a01d142a658a04ae22b29e7394c3a1018"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33FirstMean.lean",
+      "sha256": "0bb88046a6ff915262da87b165912814c69a0d931e306238835832af69c37810"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma36CoefficientMajorant.lean",
+      "sha256": "b6d020c846a76550c7b8cdaa3c5dfaf4785373db6ea836615cfd86d42dce42fa"
+    }
+  ],
+  "public_dependencies": [
+    {
+      "historical_label": "long-pairing-complement-research/REPORT.md",
+      "historical_sha256": "da3091adfc403c1f5951a41d4334e8e6205c4416b2bf7c292fe8abf8c7894b02",
+      "path": "audit/signed_phase_refinements/COMPLEMENT_PROOF.md",
+      "public_sha256": "8d3666a3a1fe141ea444e1cd7ec91df2c56527864372c7f08867286655b90ff7"
+    },
+    {
+      "historical_label": "long-pairing-complement-independent-review/REVIEW.md",
+      "historical_sha256": "87f62ac05ee003de2570b942967cdd1449a5996d7365f4b6cae0f6c7a1a45cdf",
+      "path": "audit/signed_phase_refinements/COMPLEMENT_INDEPENDENT_REVIEW.md",
+      "public_sha256": "54dc8e693ca633db1a8fdf7a16fc5797b93fe1fe4e161fb59dc862996c643e25"
+    },
+    {
+      "historical_label": "long-eta-sign-research/REPORT.md",
+      "historical_sha256": "c3261d2be8eafc0b177d4a0fc71fd53f3f2031154e0686529f37f83e0d4a5ce7",
+      "path": "audit/long_eta_finite_bridge/PROOF.md",
+      "public_sha256": "95d46cd2a3628cbb01fe389be71a46825820ade92c4f5d319c34e4cfbea2dfdc"
+    },
+    {
+      "historical_label": "long-eta-reduction-independent-review/REVIEW.md",
+      "historical_sha256": "2a6251541b2bd7393f2d4406991535f5652e6a5a9fa3e3917a3be91244bee2cb",
+      "path": "audit/long_eta_finite_bridge/INDEPENDENT_REVIEW.md",
+      "public_sha256": "bd3ba71330312827b79e99fd04d8ddc323977e799cc94fa167d1cb6a5012c315"
+    },
+    {
+      "historical_label": "core-pairing-independent-review/REVIEW.md",
+      "historical_sha256": "b8154347fc64854b0c3c360cc988d48cf7e3fe3fe7c8c864897a7ab9d8ce46a0",
+      "path": "audit/signed_phase_refinements/CORE_INDEPENDENT_REVIEW.md",
+      "public_sha256": "29a5e56739ed79da4421c9671654f9995ebded74ffe7e99938f0202e4c6c3525"
+    },
+    {
+      "historical_label": "long-eta-interface-choice.json",
+      "historical_sha256": "3cba7904b89c904326406849fefb6f102a6f96625a7d7230b7dba9ccf8e4a530",
+      "path": "audit/signed_phase_refinements/INTERFACE.json",
+      "public_sha256": "3cba7904b89c904326406849fefb6f102a6f96625a7d7230b7dba9ccf8e4a530"
+    }
+  ],
+  "historical_dependencies": []
+}

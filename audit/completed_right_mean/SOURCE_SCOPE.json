@@ -1,0 +1,48 @@
+{
+  "ZhangLS/Spec/Lemma33.lean": [
+    "lemma33_actual_second_Dirichlet_mean_bound",
+    "⌊lemma23PaperP D ^ 2⌋₊"
+  ],
+  "ZhangLS/Spec/Proposition71ExceptionalMoments.lean": [
+    "proposition71_exceptional_holder",
+    "(E F : Finset ι)",
+    "(f g : ι → ℂ)"
+  ],
+  "ZhangLS/Spec/Proposition21.lean": [
+    "proposition21_proved",
+    "^(-739 : ℤ)"
+  ],
+  "ZhangLS/Spec/Proposition71DeltaOneDoubleSeries.lean": [
+    "proposition71_actual_delta_one_double_series",
+    "LSeriesSummable c (3/2 : ℂ)",
+    "(hS : ∀n∈S, 0<n)"
+  ],
+  "ZhangLS/Spec/Proposition71GaussDecomposition.lean": [
+    "proposition71_normalized_gauss_decomposition",
+    "(hk : IsUnit k)",
+    "if l=0 then 1 else 0"
+  ],
+  "ZhangLS/Spec/Proposition71ReciprocalGamma.lean": [
+    "proposition71_reciprocal_Z_exact",
+    "(1+θ (-1)*Complex.exp"
+  ],
+  "ZhangLS/Spec/Lemma51GammaFactors.lean": [
+    "lemma51_DirichletZ_logDeriv_sharp",
+    "(hre : 0 < s.re)",
+    "(hre' : s.re < 1)",
+    "18 / s.im"
+  ],
+  "ZhangLS/Spec/Lemma23.lean": [
+    "def Lemma23ActualBranch",
+    "ContinuousOn Y upperHalfPlaneSet"
+  ],
+  "ZhangLS/Spec/Proposition141Objects.lean": [
+    "Proposition141KappaBound",
+    "lemma34Tau 5 n",
+    "lemma44CharacterTwist χ ψ"
+  ],
+  "ZhangLS/Spec/Proposition141ShiftedEstimate.lean": [
+    "(q:ℝ)<lemma56PaperT D",
+    "|τ+β.im|≤D"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "decision": "ACCEPT at source level for the stated completed-right reduction; no signed gain",
+  "checks": {
+    "frozen_candidate_and_interface": true,
+    "candidate_manifest_all_inputs_unchanged": true,
+    "lengths_tail_resonance_and_power_margins": true,
+    "energy_holder_and_gaussian_exponents": true,
+    "exact_shift_sum_and_positive_branch_exponent": true,
+    "all_prime_baselines_and_cosine_coefficients": true,
+    "all_prime_power_short_majorant_and_tau49_envelope": true,
+    "direct_primitive_character_gauss_sum_exact_cyclotomic": true,
+    "principal_and_long_nonunit_branches_exact": true,
+    "additive_reciprocity_and_delta_phase_exact": true,
+    "finite_masked_total_coefficients_exact_symbolic": true,
+    "D_deletion_not_replaced_by_D_coprimality": true,
+    "source_statement_scope_inventory": true
+  },
+  "counts": {
+    "candidate_manifest_entries": 20,
+    "local_prime_power_indices": 501,
+    "exact_gauss_cases": 1964,
+    "exact_reciprocity_cases": 1807,
+    "masked_convolution_cases": 720
+  },
+  "source_scope": {
+    "ZhangLS/Spec/Lemma33.lean": [
+      "lemma33_actual_second_Dirichlet_mean_bound",
+      "⌊lemma23PaperP D ^ 2⌋₊"
+    ],
+    "ZhangLS/Spec/Proposition71ExceptionalMoments.lean": [
+      "proposition71_exceptional_holder",
+      "(E F : Finset ι)",
+      "(f g : ι → ℂ)"
+    ],
+    "ZhangLS/Spec/Proposition21.lean": [
+      "proposition21_proved",
+      "^(-739 : ℤ)"
+    ],
+    "ZhangLS/Spec/Proposition71DeltaOneDoubleSeries.lean": [
+      "proposition71_actual_delta_one_double_series",
+      "LSeriesSummable c (3/2 : ℂ)",
+      "(hS : ∀n∈S, 0<n)"
+    ],
+    "ZhangLS/Spec/Proposition71GaussDecomposition.lean": [
+      "proposition71_normalized_gauss_decomposition",
+      "(hk : IsUnit k)",
+      "if l=0 then 1 else 0"
+    ],
+    "ZhangLS/Spec/Proposition71ReciprocalGamma.lean": [
+      "proposition71_reciprocal_Z_exact",
+      "(1+θ (-1)*Complex.exp"
+    ],
+    "ZhangLS/Spec/Lemma51GammaFactors.lean": [
+      "lemma51_DirichletZ_logDeriv_sharp",
+      "(hre : 0 < s.re)",
+      "(hre' : s.re < 1)",
+      "18 / s.im"
+    ],
+    "ZhangLS/Spec/Lemma23.lean": [
+      "def Lemma23ActualBranch",
+      "ContinuousOn Y upperHalfPlaneSet"
+    ],
+    "ZhangLS/Spec/Proposition141Objects.lean": [
+      "Proposition141KappaBound",
+      "lemma34Tau 5 n",
+      "lemma44CharacterTwist χ ψ"
+    ],
+    "ZhangLS/Spec/Proposition141ShiftedEstimate.lean": [
+      "(q:ℝ)<lemma56PaperT D",
+      "|τ+β.im|≤D"
+    ]
+  },
+  "repository_head_observed": "66d615c5bdd7ec37e99f4d52607412bfa3b8c0ee",
+  "limits": "Finite exact algebra and provenance only; no analytic theorem certification, exceptional-character experiment, Lean certification, or signed gain."
+}
