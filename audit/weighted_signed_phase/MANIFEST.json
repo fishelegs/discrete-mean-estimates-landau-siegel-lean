@@ -1,0 +1,130 @@
+{
+  "format_version": 1,
+  "bundle": "weighted_signed_phase",
+  "status": "SOURCE_ONLY_INDEPENDENTLY_REVIEWED",
+  "date": "2026-10-03",
+  "files": [
+    {
+      "path": "ALGEBRA_REVIEW.md",
+      "sha256": "8ff9ee1fb7e4eec96767e0373e2d2012e95690243f2d92de7ab44b532b079db1",
+      "bytes": 11756
+    },
+    {
+      "path": "INDEPENDENT_REVIEW.md",
+      "sha256": "11ade2682906e01b7a43769a708608da90e25a3d5878d9164b958d0ff3ef0b63",
+      "bytes": 24731
+    },
+    {
+      "path": "PROOF.md",
+      "sha256": "640649a68965fc6eb2d2e758ba06610dede88f708754102288ea54c5a6f43821",
+      "bytes": 33174
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "24e490877044fc6e52d55d371a33bbd41a391c8f522a4435409afcd9cbb5d771",
+      "bytes": 9747
+    },
+    {
+      "path": "REPRODUCE.md",
+      "sha256": "2d23c0dbb650f4f5c1d3a68b40b2df432c03d1ed938239324309401af6480f0a",
+      "bytes": 2101
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "cf6a0f7840ed8cd07fde3db3fa73e2bc4997c19ba6d5b6d83733409af9a85c6e",
+      "bytes": 2875
+    },
+    {
+      "path": "checks/check_algebra.py",
+      "sha256": "2978bb5e8b165136a14fb665eec8904afb891e4602f2cddaba20f5a8a4720cd8",
+      "bytes": 7814
+    },
+    {
+      "path": "checks/check_author.py",
+      "sha256": "9b90330102b64490babfe9136abedd8f2e85ac2c329072e8380414fc88594a1b",
+      "bytes": 3381
+    },
+    {
+      "path": "checks/check_independent.py",
+      "sha256": "333bf2d39e07cf9a35c52088c97c21a39e2eb4d6537e6714e485653d0fb1415d",
+      "bytes": 4969
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "96464f405b58137236b9c10c698be08a780ff7d062dd918ac40c0460f1b0831f",
+      "bytes": 28
+    },
+    {
+      "path": "results/ALGEBRA_ORIGINAL.json",
+      "sha256": "57b7b74c59b4431c29a244b805d2c38e4587662740e96808a52cbde226c2b5ac",
+      "bytes": 899
+    },
+    {
+      "path": "results/ALGEBRA_RERUN.json",
+      "sha256": "57b7b74c59b4431c29a244b805d2c38e4587662740e96808a52cbde226c2b5ac",
+      "bytes": 899
+    },
+    {
+      "path": "results/AUTHOR_ORIGINAL.json",
+      "sha256": "12c04086c1ace8f69fd9e95cd842c20b5405b324d7e6165fd81f547c1ae94e83",
+      "bytes": 502
+    },
+    {
+      "path": "results/AUTHOR_RERUN.json",
+      "sha256": "12c04086c1ace8f69fd9e95cd842c20b5405b324d7e6165fd81f547c1ae94e83",
+      "bytes": 502
+    },
+    {
+      "path": "results/INDEPENDENT_ORIGINAL.json",
+      "sha256": "efb41280231b831820e4ae855781f29dab3ab0c9872a1158acff8816d4b76986",
+      "bytes": 1706
+    },
+    {
+      "path": "results/INDEPENDENT_RERUN.json",
+      "sha256": "8b7df2ec16dbd8703da75ecd6949ee2daa26e21adbc42eb3a7c6ba5a653f7951",
+      "bytes": 1718
+    },
+    {
+      "path": "verify_bundle.py",
+      "sha256": "a00ce70054caafdf4b86e0ac2e2d8d8f7f5ece5088800efa0f3e0e66887a236a",
+      "bytes": 2568
+    }
+  ],
+  "receipts": [
+    "results/ALGEBRA_ORIGINAL.json",
+    "results/ALGEBRA_RERUN.json",
+    "results/AUTHOR_ORIGINAL.json",
+    "results/AUTHOR_RERUN.json",
+    "results/INDEPENDENT_ORIGINAL.json",
+    "results/INDEPENDENT_RERUN.json"
+  ],
+  "checks": [
+    {
+      "script": "checks/check_author.py",
+      "baseline": "results/AUTHOR_RERUN.json",
+      "stable_fields": [
+        "counts",
+        "exact_exponents"
+      ]
+    },
+    {
+      "script": "checks/check_independent.py",
+      "baseline": "results/INDEPENDENT_RERUN.json",
+      "stable_fields": [
+        "candidate_sha256",
+        "exact_tests",
+        "budgets",
+        "long_pure_certificates"
+      ]
+    },
+    {
+      "script": "checks/check_algebra.py",
+      "baseline": "results/ALGEBRA_RERUN.json",
+      "stable_fields": [
+        "counts",
+        "exact_check_ring"
+      ]
+    }
+  ],
+  "trust_boundary": "Local bytes and finite checks only; no Lean certification, signed gain or full Z2 result."
+}

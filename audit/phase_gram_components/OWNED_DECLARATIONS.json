@@ -1,0 +1,1733 @@
+{
+  "count": 203,
+  "declarations": [
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_quotient_functional_equation._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseTwistRoot.congr_simp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseShiftRatio.congr_simp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseDualLQuotient",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseRoot",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_root_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+      "declaration": "ZhangLS.Spec.actualPhase_regression_cstar",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseShiftRatio.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_exact._simp_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_T_right_integrand",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_dual._simp_1_6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhaseTZeroSum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+      "declaration": "ZhangLS.Spec.actualPhase_regression_T_conjugation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhase_uniform_zero_critical",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_T_left_integrand",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_ratio_arch",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_quotient_functional_equation._simp_1_9",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseBranch",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_CTest_analytic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_exact._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_ratio_arch._simp_1_6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_twist_Z_eq_root_arch",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_TTest_analytic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_ratio_arch._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhase_rectangle_residue_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+      "declaration": "ZhangLS.Spec.actualPhase_regression_source_shifts",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_exact._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhaseHorizontal",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_integrand_eq_quotient",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_quotient_functional_equation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseTTest",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseCTest",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_TTest_on_critical_line",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseNumerator",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_Z_eq_root_mul_arch",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseArch.congr_simp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_square",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_quotient_functional_equation._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_dual._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_ratio_arch._simp_1_9",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseLQuotient",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+      "declaration": "ZhangLS.Spec.actualPhase_regression_upper_zero_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_quotient_functional_equation._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+      "declaration": "ZhangLS.Spec.actualPhase_regression_original_polynomial_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseIntegrand",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseRoot._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+      "declaration": "ZhangLS.Spec.actualPhase_regression_psi1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseIntegrand.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_quotient_functional_equation._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_neg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_dual._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_ratio_arch._simp_1_8",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_dual",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_ratio_arch._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseDualLQuotient.congr_simp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseTwistArch.congr_simp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhase_uniform_C_T_rectangle",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_exact._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_ratio_arch._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhase_rectangle_orientation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhaseCOne",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_C_right_integrand",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_ratio_arch._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_quotient_functional_equation._simp_1_8",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseTwistArch._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseTwistRoot",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhaseVertical",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_exact._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseTwistArch",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_C_left_integrand",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseResidue",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_numerator_div_deriv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_exact._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhase_exists_compatible_shift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_quotient_functional_equation._simp_1_6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhaseVertical._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseShiftRatio",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_dual._simp_1_8",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseTwistZ",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_exact._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhaseTOne",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+      "declaration": "ZhangLS.Spec.actualPhase_regression_psi2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhaseCZeroSum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseArch._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_dual._simp_1_9",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_dual._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_Ctilde_dual._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseRectangle",
+      "declaration": "ZhangLS.Spec.actualPhaseCOne._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhaseDualLQuotient.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhaseArch",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_functional_equation_at",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+      "declaration": "ZhangLS.Spec.actualPhase_regression_lower_zero_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseTransforms",
+      "declaration": "ZhangLS.Spec.actualPhase_root_cancel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+      "declaration": "ZhangLS.Spec.actualPhase_regression_normalizer",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseObjects",
+      "declaration": "ZhangLS.Spec.actualPhase_numerator_analytic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_prime_power_tau_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_local_kappa_tau_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.actualPhase_B_admissible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_truncated_square_L144",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_truncated_square_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_paper_kappa_second_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_log_prefix_power_budget._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.ActualPhaseASequence._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.actualPhase_supported_index_present._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.ActualPhaseASequence._proof_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_truncated_kappa_tau_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.actualPhase_A_admissible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.actualPhase_J_admissible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_truncated_kappa_source_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhaseTruncatedKappa.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.ActualPhaseASequence",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.ActualPhaseASequence._proof_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.actualPhase_support_ceiling_lt_original_cutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.actualPhase_supported_index_present",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_paper_kappa_second_L36",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.ActualPhaseBSequence",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_paper_kappa_tau_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.ActualPhaseWindowSequence",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.ActualPhaseBSequence._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_truncated_kappa_source_coefficient",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhaseTruncatedKappa",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_local_kappa_cancellation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.ActualPhaseBSequence._proof_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhaseTruncatedKappa._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_log_prefix_power_budget",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_uniform_paper_kappa_tau_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_tau_two_finite",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.ActualPhaseASequence._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.ActualPhaseJSequence",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.actualPhase_window_admissible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_truncated_square_tau_four",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.ActualPhaseBSequence._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseSupport",
+      "declaration": "ZhangLS.Spec.actualPhase_A_is_J",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_local_h3_recursion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_tau_two_global",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramFirst.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+      "declaration": "ZhangLS.Spec.actualGram_weight_product_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_character_prime_denominator",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+      "declaration": "ZhangLS.Spec.actualGram_actual_weight_closed_layer",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_second_smoothed_superposition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramSecond",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_ramp_of_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_ramp_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_P7_profile_factorization",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_squarefree_divisor_expansion._simp_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_profile_conjugate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_fixed_interval_ramp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGramClippedRamp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_ramp_antiderivative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramProfileSequence",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramSecond.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.lemma83Pi.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_finite_main_attachment",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_totient_ratio_product",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_exponential_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_pi_divisor_collapse",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_density_integral",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_7",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_squarefree_divisor_expansion._simp_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_exponential_antiderivative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_local_pi_collapse",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGramRampDensity.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_ramp_continuous",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_totient_prime_product",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_kernel_second",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_8",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_finite_ramp_superposition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGramRampDensity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGramRampDensity._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_first_smoothed_superposition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_character_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_sum_eq_smoothed",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_character_square",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramFirst",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_P7_profile_factorization._simp_1_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGramClippedRamp.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGramLogSmoothedSum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_ramp_of_ge",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_smoothing_cutoff_inside_original",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_clipped_sum_eq_smoothed._simp_1_1",
+      "axioms": []
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "declaration": "ZhangLS.Spec.actualGramProfileSequence.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_second_main_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_kernel_first",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothed_superposition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+      "declaration": "ZhangLS.Spec.actualGram_squarefree_divisor_expansion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+      "declaration": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramRamp",
+      "declaration": "ZhangLS.Spec.actualGram_first_main_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "declaration": "ZhangLS.Spec.actualGram_ramp_density_continuous",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

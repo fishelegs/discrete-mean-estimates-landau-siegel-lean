@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "scope": "Finite identities and exact exponent checks only; no sign theorem or asymptotic certification.",
+  "counts": {
+    "convolution": 3520,
+    "tail": 17600,
+    "kappa": 3520,
+    "divisor": 2765,
+    "fourier": 4,
+    "root_cancellation": 109
+  },
+  "exponents": {
+    "eta_weighted_energy": "108",
+    "nu_tail_weighted_energy": "-1687/2",
+    "H_weighted_energy": "27",
+    "error_energy": "-1417/2",
+    "C_energy": "225",
+    "per_box_error": "-659/4",
+    "all_box_error": "-551/4"
+  },
+  "strong_exponents": {
+    "eta_weighted_energy": "72",
+    "nu_tail_weighted_energy": "-1867/2",
+    "error_energy": "-1723/2",
+    "C3_energy": "324",
+    "per_box_error": "-767/4",
+    "all_box_error": "-623/4"
+  },
+  "length_examples": [
+    {
+      "r": "1",
+      "s": "1",
+      "n": "1",
+      "C": "201/400",
+      "D": "601/400"
+    },
+    {
+      "r": "9/10",
+      "s": "9/10",
+      "n": "6/5",
+      "C": "281/400",
+      "D": "681/400"
+    },
+    {
+      "r": "4/5",
+      "s": "4/5",
+      "n": "7/5",
+      "C": "361/400",
+      "D": "761/400"
+    }
+  ],
+  "strong_length_example": {
+    "r": "3/5",
+    "s": "3/5",
+    "n": "9/5",
+    "C3": "9/5",
+    "D3": "9/5",
+    "old_D": "921/400"
+  },
+  "max_fourier_error": "6.87749318769028066704535511150920757131057092e-46"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-03T17:43:18.302855+00:00",
-  "base_commit": "6762dd9d1965823a31af9c0cf8e2578974686a91",
+  "updated_utc": "2026-10-03T19:09:04.838027+00:00",
+  "base_commit": "ae8003c332174819f097e728ea1532b7340c758f",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
@@ -18,7 +18,7 @@
     "partial_lean_proved": "部分明确接口已中央Lean核验，节点其余附件尚未完成",
     "source_reviewed_partial": "限定作用域的来源层结论已独立复核，尚非整个节点或Lean完成"
   },
-  "central_decision": "原主结论尚未恢复。新的正误差采样可接到真实零点，但corrected phase在该测度下趋−1；仍须独立算术符号估计、实际正范数及完整严格裕量。",
+  "central_decision": "原主结论尚未恢复。R2/R5的实际对象、系数和有限算术/剖面组件已中央Lean核验；完整精度接口、实际Gram下界及带符号严格gain仍待证明。",
   "nodes": [
     {
       "id": "R1",
@@ -35,26 +35,27 @@
       "published_commit": "8bdae40152843c289650c1483d86c73b7a8aaf28",
       "execution_status": "done",
       "execution_note": "已经发布并验证；未把该标量下界当作实际Gram下界。",
-      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
+      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
       "proof_status": "lean_proved"
     },
     {
       "id": "R2",
       "name": "真实相位均值的精度接口",
-      "status": "source_reviewed",
-      "verification": "独立来源分析复核；完整接口尚非 Lean",
-      "result": "明确固定支撑类内实际有限窗口 C1/T1=R−L 的表示，误差 O(a^-1 L^-14)，保留 exact gamma、字符、共轭和截断。",
-      "gap": "表示中的主算术和未求值；该误差不能直接与 R1 的不同对象下界相减。",
+      "status": "partial_lean_proved",
+      "verification": "实际矩形/四类变换、支撑与kappa系数能量已中央Lean核验；完整L^-14接口尚非Lean",
+      "result": "实际同compatible c的C1/T1有限矩形、精确变换及strict支撑已证；kappa L^36与严格截断平方L^144系数能量已证。",
+      "gap": "完整O(a^-1 L^-14)有限窗口接口、水平边/尾及族矩附件尚未闭合；主算术和和有利符号仍未求值。",
       "dependency_mode": "required_for_current_phase_route",
       "dependencies": [],
       "evidence": [
         "audit/annular_covariance/STATUS.md",
-        "audit/structured_covariance/STATUS.md"
+        "audit/structured_covariance/STATUS.md",
+        "audit/CLOUD_PHASE_GRAM_COMPONENTS_STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "Lean形式化继续；实际分离矩形/四类变换及部分系数附件已有私有检查，完整L^-14接口和中央发布尚待完成。",
-      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
-      "proof_status": "source_reviewed"
+      "execution_note": "六组件中央已PASS并随本提交发布；继续safe-line级数、arch/tail界和实际族矩附件。",
+      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
+      "proof_status": "partial_lean_proved"
     },
     {
       "id": "R3",
@@ -76,7 +77,7 @@
       ],
       "execution_status": "waiting_R2_attachment",
       "execution_note": "本批5模块、56公开/80owned、5709全库中央核验完成；有限桥已完成，解析轮廓附件等待R2。",
-      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
+      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
       "proof_status": "partial_lean_proved",
       "published_commit": "975114abbb14f77426af3cff767b1f37e6c67d04"
     },
@@ -84,9 +85,9 @@
       "id": "R4",
       "name": "主算术矩阵与目标残差的符号",
       "status": "open",
-      "verification": "已核对有限算子和相位；所需主项未证明",
-      "result": "保留四类同余/Kl2/逆加性/Kl3算子；配对变换含 H=(Zψ Zχψ)G−Gdual，不能自动抵消。",
-      "gap": "须评价真实主项及完整增强投影缺口；固定smooth窄旧span已有常数级缺口，局部L^-8增量不足。先证合法近阈值baseline或足够常数级增益，再判断符号和误差。",
+      "verification": "主项符号未证明；真实signed Z2轮廓/右项及有限long-eta双长度桥已经独立来源复核，尚非Lean",
+      "result": "实际signed Z2右项已来源界为O(a^-1 P^-.49)，左项为degree3、kappa长至P³；有限T2/T3以整体二次型保持Psi1并移除旧P^.502的逐项损失。",
+      "gap": "有限T3仅在两条实际多项式长度均<P²时成立；已支付cX替换，但普通chi除子配对的有利常数及保留的长补集尚无独立signed界。全局完成还引入right∞，不能把其贡献丢弃或把AFE重写当gain。",
       "dependency_mode": "R2 AND (direct_arithmetic OR R3_structured_reduction OR another_valid_attachment)",
       "dependencies": [
         "R2"
@@ -99,11 +100,13 @@
         "audit/paired_phase_attachment/STATUS.md",
         "audit/narrow_baseline/STATUS.md",
         "audit/joint_phase/STATUS.md",
-        "audit/zero_measure_phase/STATUS.md"
+        "audit/zero_measure_phase/STATUS.md",
+        "audit/weighted_signed_phase/STATUS.md",
+        "audit/long_eta_finite_bridge/STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "独立评价真实weighted signed Z2；共同高度21/22来源桥与真实零点正采样已复核，后者只给source对称分支，corrected trial仍退化。κ结构化Poisson的long-pure子范围已独立来源复核，middleη及全矩阵仍未闭合。",
-      "checked_utc": "2026-10-03T17:43:18.302855+00:00",
+      "execution_note": "继续独立研究有限core实际leading pairing及其长补集；有限桥仅来源层，完整带符号界/严格gain仍未证明。",
+      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
       "proof_status": "open",
       "branch_status": "suspended_recalibration_for_fixed_smooth_narrow_small_gain_only",
       "alternative_routes": [
@@ -130,9 +133,9 @@
     {
       "id": "R5",
       "name": "实际 Gram 与 Schur 残差下界",
-      "status": "source_reviewed_partial",
-      "verification": "限定三方向扩充和旧二维span的来源层证明已独立复核；尚非Lean",
-      "result": "对三个固定剖面证明实际Gram≥λI/2；实际单位根数相位后，可选全局有界组合正交指定旧二维span，实际残差平方范数≥λ/2。",
+      "status": "partial_lean_proved",
+      "verification": "真实Pi/P7算术与有限剖面叠加已中央Lean核验；三方向Gram下界仍为独立来源层",
+      "result": "真实Pi除子消去、P7 profile算术、exp-ramp/闭权重层及原K1/K2有限叠加已证。限定三方向Gram和旧二维span残差下界另有来源复核，尚未Lean。",
       "gap": "限定三方向真实范数的来源层结论保留；它不保证旧span接近最优、目标投影非零或strict gain。固定smooth窄旧span有独立常数缺口；原宽H1/H2、任意旧rA和L^-8符号精度仍未完成。",
       "dependency_mode": "actual_Gram_attachment_plus_nondegeneracy; may_proceed_with_R4_in_parallel",
       "dependencies": [
@@ -144,12 +147,13 @@
       ],
       "evidence": [
         "audit/actual_gram_bridge/STATUS.md",
-        "audit/actual_gram_bridge/INDEPENDENT_REVIEW.md"
+        "audit/actual_gram_bridge/INDEPENDENT_REVIEW.md",
+        "audit/CLOUD_PHASE_GRAM_COMPONENTS_STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "真实Pi卷积/算术附件、exp-ramp/闭权重边界模块已有私有PASS；继续连续剖面、密度与真实外和，完整范数附件尚待中央验收。",
-      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
-      "proof_status": "source_reviewed_partial"
+      "execution_note": "六组件中央已PASS并随本提交发布；继续original scaling、剖面支持、误差积分和真实外和。",
+      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
+      "proof_status": "partial_lean_proved"
     },
     {
       "id": "R6",
@@ -171,7 +175,7 @@
       "evidence": [],
       "execution_status": "blocked_by_R4_R5",
       "execution_note": "限定R5来源下界有进展；仍等待实际有利目标及适合该增益的完整归一化误差预算。",
-      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
+      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
       "proof_status": "open"
     },
     {
@@ -190,7 +194,7 @@
       "evidence": [],
       "execution_status": "waiting_dependencies",
       "execution_note": "等待R4、R5、R6共同闭合；当前无严格gain。",
-      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
+      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
       "proof_status": "open"
     },
     {
@@ -209,7 +213,7 @@
       "original_exponents_preserved": true,
       "execution_status": "waiting_dependencies",
       "execution_note": "等待R7及采用路线的其余论文/解析义务，原主结论未恢复。",
-      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
+      "checked_utc": "2026-10-03T19:09:04.838027+00:00",
       "proof_status": "open"
     }
   ],
@@ -333,12 +337,22 @@
     {
       "id": "actual_weighted_signed_phase_correlation",
       "status": "active_research",
-      "evidence_status": "open",
+      "evidence_status": "source_reviewed_partial_not_Lean",
       "scope": "新的独立算术估计；在同一真实加权零点及实际正范数试验上获得足够常数级符号分离。",
-      "result": "已明确Z2作为与相位趋−1来源结论相比较的独立义务；正在评价合法轮廓/算术表示。",
-      "gap": "共同高度矩和正采样不能提供所需signed cancellation；不能把同一AFE重写当新增证据。",
-      "report": "audit/zero_measure_phase/PROOF.md",
-      "checked_utc": "2026-10-03T17:43:18.302855+00:00"
+      "result": "真实原right项O(a^-1P^-.49)、left degree3算术签名已复核；有限T3将实际eta*nu替换为chi*power_-beta3，使用原Psi1整体二次型并保留全部parity/ramification。",
+      "gap": "有限双长度<P²及精确频率尾条件必需；余下配对常数符号与长补集未证。全局完成的新right项不可继承原right小量界。",
+      "report": "audit/weighted_signed_phase/STATUS.md",
+      "checked_utc": "2026-10-03T19:09:04.838027+00:00"
+    },
+    {
+      "id": "finite_long_eta_T2_T3_reduction",
+      "status": "active_research",
+      "evidence_status": "source_reviewed_not_Lean",
+      "scope": "固定实际有限盒；T3要求两条确切变换多项式长度均<P²。保留Psi1、所有parity、DGauss和实际M删除。",
+      "result": "三次有限Poisson及整体large-sieve移除旧P^.502逐项损失；cX→chi*power_-beta3总误差O(a^-1L^-623/4)。C·conj(D)表示中的D使用opposite power_+beta3。",
+      "gap": "只有有限算术替换；普通chi除子配对的有利符号和长补集尚缺。不能全局延长S_X再忽略新right∞，未得到Z2或strict gain。",
+      "report": "audit/long_eta_finite_bridge/STATUS.md",
+      "checked_utc": "2026-10-03T19:09:04.838027+00:00"
     }
   ]
 }

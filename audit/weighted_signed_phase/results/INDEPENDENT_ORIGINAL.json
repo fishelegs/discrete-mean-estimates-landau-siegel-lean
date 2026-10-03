@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "candidate_sha256": "ab74a957e20dd7a507041d975e83e3e6c6107e6fb1b42f1715c5af2c3efe45fc",
+  "exact_tests": {
+    "regrouping": 180,
+    "prime_power": 20,
+    "d_mask_counterexample": 1,
+    "long_pure_margin_certificates": 9
+  },
+  "budgets": {
+    "right": "-1989/4000",
+    "right_margin_to_minus_049": "29/4000",
+    "kappa_limiting_range": [
+      "5999/2000",
+      "6001/2000"
+    ],
+    "central_cost": "751/500",
+    "once_completed_cost": "501/500",
+    "twice_completed_cost": "251/500"
+  },
+  "long_pure_certificates": [
+    {
+      "delta": "1/1000",
+      "K": 1,
+      "fixed_order": 13006,
+      "exponent": "-16003/4000"
+    },
+    {
+      "delta": "1/1000",
+      "K": 5,
+      "fixed_order": 21006,
+      "exponent": "-32003/4000"
+    },
+    {
+      "delta": "1/1000",
+      "K": 20,
+      "fixed_order": 51006,
+      "exponent": "-92003/4000"
+    },
+    {
+      "delta": "1/100",
+      "K": 1,
+      "fixed_order": 1301,
+      "exponent": "-16029/4000"
+    },
+    {
+      "delta": "1/100",
+      "K": 5,
+      "fixed_order": 2101,
+      "exponent": "-32029/4000"
+    },
+    {
+      "delta": "1/100",
+      "K": 20,
+      "fixed_order": 5101,
+      "exponent": "-92029/4000"
+    },
+    {
+      "delta": "1/10",
+      "K": 1,
+      "fixed_order": 131,
+      "exponent": "-16389/4000"
+    },
+    {
+      "delta": "1/10",
+      "K": 5,
+      "fixed_order": 211,
+      "exponent": "-32389/4000"
+    },
+    {
+      "delta": "1/10",
+      "K": 20,
+      "fixed_order": 511,
+      "exponent": "-92389/4000"
+    }
+  ],
+  "scope": "Exact finite algebra/rational budgets only. Analytic contour and Poisson proofs are in REVIEW.md; this is not their machine certification."
+}

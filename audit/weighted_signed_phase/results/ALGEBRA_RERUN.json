@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "counts": {
+    "cubic_fourier_exact": 3650,
+    "primitive_brace_fourier_exact": 7300,
+    "primitive_gauss_moments": 384,
+    "crt_root_numbers": 1436,
+    "good_family_and_bad_correction": 1440,
+    "branch_common_factor": 24,
+    "branch_square_identity": 24,
+    "functional_equation_multiplier": 24
+  },
+  "max_absolute_errors": {
+    "primitive_gauss_moments": 1.942251920666174e-14,
+    "crt_root_numbers": 2.220446049250313e-15,
+    "good_family_and_bad_correction": 1.9885083071036744e-14,
+    "branch_common_factor": 2.336382752037036e-69,
+    "branch_square_identity": 6.091585090874268e-71,
+    "functional_equation_multiplier": 9.5140957004427e-66
+  },
+  "exact_check_ring": "Z[X]/(1+X+...+X^(p-1)); denominators cleared",
+  "scope": "Finite algebra and branch-product regression only; no analytic bounds, repository edits, Lean compilation, or publication."
+}

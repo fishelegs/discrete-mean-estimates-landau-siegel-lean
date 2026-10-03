@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "counts": {
+    "gauss_moments": 128,
+    "crt_parity": 160,
+    "double_fourier": 1456
+  },
+  "max_absolute_error": 4.248350936769296e-13,
+  "scope": "Finite parity/CRT/Fourier regression only; not an analytic estimate or Lean certificate.",
+  "exact_exponents": {
+    "right_bound": "-1989/4000 + o(1)",
+    "left_bare_pair_cost": "1 + theta - saving + o(1)",
+    "normalization": "a * sum_p p",
+    "inverse_error_squared": "-1077/2",
+    "phase_error_squared": "-203"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "edition": "public-source-only-2026-10-03",
+  "evidence_kind": "Mathematical source proof and independent source review; no Lean certification",
+  "original_inputs_verified": true,
+  "historical_originals": [
+    {
+      "historical_label": "weighted-phase-correlation-evaluation/REPORT.md",
+      "original_sha256": "ab74a957e20dd7a507041d975e83e3e6c6107e6fb1b42f1715c5af2c3efe45fc",
+      "original_bytes": 32273,
+      "public_file": "PROOF.md"
+    },
+    {
+      "historical_label": "weighted-phase-signature-independent-review/REVIEW.md",
+      "original_sha256": "b7a1a71c5f7838977dcfe162a3680784b2628fa961d0d76665bbc610e3f720d5",
+      "original_bytes": 24368,
+      "public_file": "INDEPENDENT_REVIEW.md"
+    },
+    {
+      "historical_label": "weighted-phase-correlation-evaluation/check_finite.py",
+      "original_sha256": "1beeffa0b972c7b49989094a1ca3eb27da3a0495871d5f0b515ce06cb0534458",
+      "original_bytes": 3111,
+      "public_file": "checks/check_author.py"
+    },
+    {
+      "historical_label": "weighted-phase-signature-independent-review/check_independent.py",
+      "original_sha256": "8891a9f8cc4a0a18f4a64d77f510a4d4c286c1240d26cdfc4371d458fb4c9289",
+      "original_bytes": 4686,
+      "public_file": "checks/check_independent.py"
+    },
+    {
+      "historical_label": "weighted-phase-correlation-evaluation/CHECKS.json",
+      "original_sha256": "12c04086c1ace8f69fd9e95cd842c20b5405b324d7e6165fd81f547c1ae94e83",
+      "original_bytes": 502,
+      "public_file": "results/AUTHOR_ORIGINAL.json"
+    },
+    {
+      "historical_label": "weighted-phase-signature-independent-review/CHECKS.json",
+      "original_sha256": "efb41280231b831820e4ae855781f29dab3ab0c9872a1158acff8816d4b76986",
+      "original_bytes": 1706,
+      "public_file": "results/INDEPENDENT_ORIGINAL.json"
+    },
+    {
+      "historical_label": "weighted-phase-correlation-evaluation/MANIFEST.json",
+      "original_sha256": "2a5eea7fff64887d3bad9598d954ab08dd147584319ca0d3aac27ddffa82b12d",
+      "original_bytes": 1410,
+      "public_file": null
+    },
+    {
+      "historical_label": "weighted-phase-signature-independent-review/MANIFEST.json",
+      "original_sha256": "fb9c9018c54dac9d8155d2582df8c10a2557a3a4aa1382b7e3b848478c153a87",
+      "original_bytes": 5905,
+      "public_file": null
+    },
+    {
+      "historical_label": "weighted-phase-signature-independent-review/algebra/REVIEW.md",
+      "original_sha256": "7053047379314c22737764da46a5e1e90ec0ecf679e82d2809b03ac921ad0473",
+      "original_bytes": 11795,
+      "public_file": "ALGEBRA_REVIEW.md"
+    },
+    {
+      "historical_label": "weighted-phase-signature-independent-review/algebra/check_independent.py",
+      "original_sha256": "43f733190fb385a8ff8051d25b6bdb711ea0a400b6d1e200428e373cb84d2d29",
+      "original_bytes": 7543,
+      "public_file": "checks/check_algebra.py"
+    },
+    {
+      "historical_label": "weighted-phase-signature-independent-review/algebra/CHECKS.json",
+      "original_sha256": "57b7b74c59b4431c29a244b805d2c38e4587662740e96808a52cbde226c2b5ac",
+      "original_bytes": 899,
+      "public_file": "results/ALGEBRA_ORIGINAL.json"
+    }
+  ],
+  "historical_source_dependencies": [
+    {
+      "source_label": "weighted-phase-correlation-evaluation/REPORT.md",
+      "sha256": "ab74a957e20dd7a507041d975e83e3e6c6107e6fb1b42f1715c5af2c3efe45fc",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "zero-measure-phase-independent-review/REVIEW.md",
+      "sha256": "7c58165483ee8f92e274de2bfadca09bcd6f642f55e51cc7eb19bdd5c5ef3854",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "structured-phase-independent-review/REVIEW.md",
+      "sha256": "e9fe2d65345fe6af60e59a1a5e5b66e341c90c87a859792eef2dd43c3993bc64",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "audit/actual_gram_bridge/DERIVATION.md",
+      "sha256": "402e223a97634cfc639186c201a46b5b4cc5e4a7c8f74105136a3416289e9177",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma23.lean",
+      "sha256": "330a5b5995311ff8e9a742e4454da147031d5ab3cc771ddf6e267c20628c984a",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma23ZeroData.lean",
+      "sha256": "78d6b63ce0ce0e3c3391ff93a8a9afaf28bb201c31a92cfe770513f6ccd4bc79",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma23GoodSet.lean",
+      "sha256": "ae75451e0cff47b7fd66e0c479608074431bdb5f300b8280f5a3fbccb3cd3045",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma53Kernels.lean",
+      "sha256": "c35b271710eca0eecea9b9448244a722b7947e30a488a7fd16920acbcaebe0e7",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma59SimpleLocalZeros.lean",
+      "sha256": "5924e10ffa2cd978581b41d81afa9895e9d86527063daeeba96881ce26961f5e",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma81ActualRectangleBoundary.lean",
+      "sha256": "1183bc776f7f76d2ff97a79f3dd54368c503636b02dd2354ab709b4ce574d327",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma81WideCoarseBounds.lean",
+      "sha256": "caa9a9a4304a6321af29606ab3341de8bcf712dd092e93e080455b6991bb87ac",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma81WideQuotientBound.lean",
+      "sha256": "0993b169302a35bf2428a0500874f62a722ac0d98aa3441d51d075c5a4e24be1",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma81DeformationGeometry.lean",
+      "sha256": "701404ce592f2d1645f514b4df0dabb50bc4d4c222ce0f8ff7bd570387f05f91",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma81ActualResidueDeformation.lean",
+      "sha256": "1d6bdf22a21c7b0f4ea58a591384b32b00c4c7eddff6929b996b95d0c7dd8559",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma81HeightAdjustment.lean",
+      "sha256": "df280a7cd46cc930825656513ba558c914c3f28c574ba39660a38275cb4b6cce",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma81KernelReplacement.lean",
+      "sha256": "885141792def5856e28194082e7396d1fd8ad83787fbdebdc68c6885621653c6",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma83Definitions.lean",
+      "sha256": "9b12c978aae18664b30918a52f3471ee54a7ad7542ece45adb40d8d1b99b46be",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Proposition141Objects.lean",
+      "sha256": "02fa12fab88de5fdc2c5e12fa8aa23457d7f541040d7342b17e27aa7aa190b57",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "zero-measure-phase-bridge/PROOF.md",
+      "sha256": "e491c91d209074e2501d1422a75af5eb70a4f6e3b896063535ba1e814b581fc7",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "corrected-joint-phase-bridge/PROOF.md",
+      "sha256": "6853d48a231acc5e69f6546ecdb53cb38360045964fa662dcc677c7e4aee2e77",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "phase-mainterm-cancellation/MOEBIUS_REGROUPING.md",
+      "sha256": "69eea6fa4ddb10f63e405f6cbc8ebfc46aae4d94d49c6eade1da9ac70e68e1af",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    }
+  ],
+  "editorial_changes": [
+    "Removed absolute local working directories and operational history; preserved the complete mathematical arguments and their limitations.",
+    "Distinguished original assumption exponent -2022 from the separate target exponent -2024.",
+    "Kept historical hashes as provenance; current public-file hashes are recorded separately in MANIFEST.json.",
+    "Made check scripts portable with an explicit output argument and a local-manifest integrity check instead of an absolute candidate path.",
+    "Historical receipts are byte-preserved. Rerun receipts are separately named; exact algebra and numerical regressions are distinguished.",
+    "Parenthesized B_beta with exactly one denominator Y(s), as required by the independent algebra review.",
+    "Included the full independent finite-algebra supplement."
+  ]
+}

@@ -1,0 +1,135 @@
+[
+  {
+    "target": "ZhangLS.Spec.ActualPhaseObjects",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:15:14.708489+00:00",
+    "finished_utc": "2026-10-03T18:17:03.934480+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualPhaseRectangle",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:17:03.935370+00:00",
+    "finished_utc": "2026-10-03T18:18:49.451454+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualPhaseTransforms",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:18:49.452161+00:00",
+    "finished_utc": "2026-10-03T18:20:40.997921+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:20:40.998738+00:00",
+    "finished_utc": "2026-10-03T18:23:10.477405+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualPhaseSupport",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:23:10.478429+00:00",
+    "finished_utc": "2026-10-03T18:25:06.613627+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:25:06.614459+00:00",
+    "finished_utc": "2026-10-03T18:27:40.712398+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualGramPiCollapse",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:27:40.713234+00:00",
+    "finished_utc": "2026-10-03T18:31:35.972814+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:31:35.974355+00:00",
+    "finished_utc": "2026-10-03T18:34:09.213267+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualGramRamp",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:34:09.214438+00:00",
+    "finished_utc": "2026-10-03T18:38:24.819498+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:38:24.820517+00:00",
+    "finished_utc": "2026-10-03T18:40:11.748985+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:40:11.749860+00:00",
+    "finished_utc": "2026-10-03T18:42:04.678535+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:42:04.679445+00:00",
+    "finished_utc": "2026-10-03T18:44:53.073831+00:00"
+  },
+  {
+    "target": "CloudPhaseGramComponentsAxioms",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:44:53.074205+00:00",
+    "finished_utc": "2026-10-03T18:49:12.052033+00:00"
+  },
+  {
+    "target": "full-project",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:49:13.537717+00:00",
+    "finished_utc": "2026-10-03T18:59:10.218726+00:00"
+  },
+  {
+    "target": "spec-imports",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:59:10.219222+00:00",
+    "finished_utc": "2026-10-03T18:59:10.292593+00:00"
+  },
+  {
+    "target": "all-imports",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:59:10.292866+00:00",
+    "finished_utc": "2026-10-03T18:59:10.404637+00:00"
+  },
+  {
+    "target": "placeholders",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:59:10.404907+00:00",
+    "finished_utc": "2026-10-03T18:59:14.924565+00:00"
+  },
+  {
+    "target": "structure",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T18:59:14.924830+00:00",
+    "finished_utc": "2026-10-03T18:59:18.877017+00:00"
+  },
+  {
+    "target": "strict-audit",
+    "exit_code": 1,
+    "expected_exit": 1,
+    "started_utc": "2026-10-03T18:59:18.877437+00:00",
+    "finished_utc": "2026-10-03T18:59:21.990582+00:00"
+  }
+]

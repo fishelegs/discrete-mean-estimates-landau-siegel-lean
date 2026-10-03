@@ -1,0 +1,27 @@
+{
+  "reviews": [
+    {
+      "source": "phase-gram-components-independent-review/REVIEW.md",
+      "original_sha256": "a016cbf7558ee31b039d479cd5e362c6fdb6538e9f9110115c8387e48b3c0d7b",
+      "public_copy": "INDEPENDENT_COMPONENT_REVIEW.md",
+      "curation": "Mathematical statements retained; local workspace/process paragraphs removed, local paths replaced with evidence labels. Historical acceptance scope is separate from the subsequent central verification."
+    },
+    {
+      "source": "gram-superposition-independent-review/REVIEW.md",
+      "original_sha256": "07bda22de9ad57acab862b4b2978c3fee0c737d98c1b2a4ab4429cc3f33c1bf8",
+      "public_copy": "INDEPENDENT_SUPERPOSITION_REVIEW.md",
+      "curation": "Mathematical statements retained; local workspace/process paragraphs removed, local paths replaced with evidence labels. Historical acceptance scope is separate from the subsequent central verification."
+    }
+  ],
+  "source_packages": {
+    "rectangle_manifest_sha256": "e88f345d7f90ec0f8bdac8eff8caca4cedf38305416fcab1492177a37098b89f",
+    "support_kappa_manifest_sha256": "e004d216ee7c7a3c8fb445963f8a114d6d25c06fb6f3f6a90f36754448623b10",
+    "gram_superposition_manifest_sha256": "8d748a2a75eaf89c82bb62abccb013af866082ef73f87ff39c2767a664910254"
+  },
+  "source_archives": {
+    "rectangle": "3dfd338b06afeb220f8caccaf63316596384c8a7a25f53839f1c0ce49c1fef51",
+    "support_kappa": "daa324d850c011560bbf28823023452b045a41eaa863e99d0b591e019a021b7e"
+  },
+  "central_import_changes": "Only imports renamed; all declaration names and proof bodies retained.",
+  "central_unique_frozen_files_rehashed": 39252
+}

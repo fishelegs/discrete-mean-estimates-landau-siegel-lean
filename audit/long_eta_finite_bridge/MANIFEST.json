@@ -1,0 +1,101 @@
+{
+  "format_version": 1,
+  "bundle": "long_eta_finite_bridge",
+  "status": "SOURCE_ONLY_INDEPENDENTLY_REVIEWED",
+  "date": "2026-10-03",
+  "files": [
+    {
+      "path": "INDEPENDENT_REVIEW.md",
+      "sha256": "bd3ba71330312827b79e99fd04d8ddc323977e799cc94fa167d1cb6a5012c315",
+      "bytes": 27962
+    },
+    {
+      "path": "PROOF.md",
+      "sha256": "95d46cd2a3628cbb01fe389be71a46825820ade92c4f5d319c34e4cfbea2dfdc",
+      "bytes": 32517
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "6b6c48482c09efa0af60de32e12970fec96a1bf7d25e47c20dde05e8382d3b73",
+      "bytes": 6428
+    },
+    {
+      "path": "REPRODUCE.md",
+      "sha256": "7e80ecce3d6431d4118e4b6ba5a5d8bd8dfc98dca339452e849227cf3bf6149e",
+      "bytes": 2514
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "719b2d8c8dd501eb44a8aad4e645eb9ddbec1c7e84e3e2a8b64ca346e6fdda2a",
+      "bytes": 3322
+    },
+    {
+      "path": "checks/check_author.py",
+      "sha256": "c29e46a7cad36c4baf845ea29b67408cf7a3ca739cef42d55f7d072e008a86e5",
+      "bytes": 7525
+    },
+    {
+      "path": "checks/check_independent.py",
+      "sha256": "3853720764ef342939900ce38ab5f6c4bbffebbc25870d68fade26d131b41627",
+      "bytes": 5734
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "96464f405b58137236b9c10c698be08a780ff7d062dd918ac40c0460f1b0831f",
+      "bytes": 28
+    },
+    {
+      "path": "results/AUTHOR_ORIGINAL.json",
+      "sha256": "ac47a3db54ce54b745c0edb3e300c1d9bd80840ac0c1a1d2d78e488a3569d58a",
+      "bytes": 1315
+    },
+    {
+      "path": "results/AUTHOR_RERUN.json",
+      "sha256": "79de246ca31a5fc194a74810171393f36aeffb4b9e19e76950a624d08d204af5",
+      "bytes": 1512
+    },
+    {
+      "path": "results/INDEPENDENT_ORIGINAL.json",
+      "sha256": "67618d5d58ec4635fa418fd9c2839d762a244a0bbcae3bb3e5c6e37131beacf1",
+      "bytes": 663
+    },
+    {
+      "path": "results/INDEPENDENT_RERUN.json",
+      "sha256": "67618d5d58ec4635fa418fd9c2839d762a244a0bbcae3bb3e5c6e37131beacf1",
+      "bytes": 663
+    },
+    {
+      "path": "verify_bundle.py",
+      "sha256": "a00ce70054caafdf4b86e0ac2e2d8d8f7f5ece5088800efa0f3e0e66887a236a",
+      "bytes": 2568
+    }
+  ],
+  "receipts": [
+    "results/AUTHOR_ORIGINAL.json",
+    "results/AUTHOR_RERUN.json",
+    "results/INDEPENDENT_ORIGINAL.json",
+    "results/INDEPENDENT_RERUN.json"
+  ],
+  "checks": [
+    {
+      "script": "checks/check_author.py",
+      "baseline": "results/AUTHOR_RERUN.json",
+      "stable_fields": [
+        "counts",
+        "exponents",
+        "strong_exponents",
+        "length_examples",
+        "strong_length_example"
+      ]
+    },
+    {
+      "script": "checks/check_independent.py",
+      "baseline": "results/INDEPENDENT_RERUN.json",
+      "stable_fields": [
+        "counts",
+        "budgets"
+      ]
+    }
+  ],
+  "trust_boundary": "Local bytes and finite checks only; no Lean certification, signed gain or full Z2 result."
+}

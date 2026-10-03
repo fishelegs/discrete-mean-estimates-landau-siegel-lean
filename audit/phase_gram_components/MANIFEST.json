@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-10-03T19:09:04.838027+00:00",
+  "scope": "Proof-source, exact inventory and scoped public review/evidence for twelve actual phase/Gram components. Mutable global progress ledgers are not pinned here.",
+  "files": [
+    {
+      "path": "ZhangLS/All.lean",
+      "sha256": "695dad8c5d292482aea8417af20546b191b8c041bd5f4615e375904ec81980c3",
+      "bytes": 84317
+    },
+    {
+      "path": "ZhangLS/Spec/ActualGramArithmeticAttachment.lean",
+      "sha256": "de2e1556cfcb5b412b886f6619cf19d295186974783899887604c517cea4eb38",
+      "bytes": 6203
+    },
+    {
+      "path": "ZhangLS/Spec/ActualGramClosedWeightLayer.lean",
+      "sha256": "9b37cb9931b0765680422c5643464f6bf764b83c2b1caf7aa3192c55b111027a",
+      "bytes": 3969
+    },
+    {
+      "path": "ZhangLS/Spec/ActualGramFiniteSuperposition.lean",
+      "sha256": "8cd21fdb220f304bcbad5e809f23342da4995897cbced5381a1e6de34b0cb75a",
+      "bytes": 7344
+    },
+    {
+      "path": "ZhangLS/Spec/ActualGramLogKernelBridge.lean",
+      "sha256": "130663e333e2e401cf8c579cf5f7ab796294ebeb183248b41789d043ed12394e",
+      "bytes": 9439
+    },
+    {
+      "path": "ZhangLS/Spec/ActualGramPiCollapse.lean",
+      "sha256": "73f95306f63588ed48988932fc6ca63dacedddbbc31ac9c55248763044e92603",
+      "bytes": 7449
+    },
+    {
+      "path": "ZhangLS/Spec/ActualGramRamp.lean",
+      "sha256": "aa06fd6166dafa3abf7d5b6cd5a10fdc1b472bfe9e4f26d01c48e1bbf252bcba",
+      "bytes": 8472
+    },
+    {
+      "path": "ZhangLS/Spec/ActualPhaseKappaMajorant.lean",
+      "sha256": "75c02405254444cf9d6a7ef5e7f6ccf11f3a57065f20049ea81f438bfaa576a4",
+      "bytes": 14404
+    },
+    {
+      "path": "ZhangLS/Spec/ActualPhaseObjects.lean",
+      "sha256": "7207d125a7ca4b568ac7547f8d79cfe6a16d4fc77f1192efea5026dfefbeba72",
+      "bytes": 9469
+    },
+    {
+      "path": "ZhangLS/Spec/ActualPhaseRectangle.lean",
+      "sha256": "b775cf1ef89d80a1a36263d15b5d3ad3fd71631bd28ebb0fb7cd0c529b0941a8",
+      "bytes": 12858
+    },
+    {
+      "path": "ZhangLS/Spec/ActualPhaseSourceRegressions.lean",
+      "sha256": "45ccff6addcfd8e88ade2880281e9c0084505c23d2fb1ebf1b49b725c627f12a",
+      "bytes": 4034
+    },
+    {
+      "path": "ZhangLS/Spec/ActualPhaseSupport.lean",
+      "sha256": "b913b2087b01eafc34e9a46d17cac0248ad312e6cf743f0f646daa4898b06aac",
+      "bytes": 5421
+    },
+    {
+      "path": "ZhangLS/Spec/ActualPhaseTransforms.lean",
+      "sha256": "3d9ae6d14925baa00abe557f5faa26f1ee9222de9a3bd1427e3ff1e31dc469e2",
+      "bytes": 13780
+    },
+    {
+      "path": "ZhangLS/Spec/All.lean",
+      "sha256": "60a36541d89033ab2ee5fe00a5968794e4de8ebbc76f9cf51e18f1374ab819a2",
+      "bytes": 68801
+    },
+    {
+      "path": "audit/CLOUD_PHASE_GRAM_COMPONENTS_STATUS.md",
+      "sha256": "67d2fc720d021242211d96e0b26cfe9920b531521d3ce1caa7cb17a2c6b62f66",
+      "bytes": 3140
+    },
+    {
+      "path": "audit/CloudPhaseGramComponentsAxioms.lean",
+      "sha256": "ab27078732ccffe5abd2296d0cc65de243930f22e9db95f4995e877b768e45c8",
+      "bytes": 41624
+    },
+    {
+      "path": "audit/cloud_phase_gram_components_verification.json",
+      "sha256": "74b0cedf8063928dc9d66010d3768a5f39bc36c43c390c7ea014df63671b160c",
+      "bytes": 3774
+    },
+    {
+      "path": "audit/phase_gram_components/CENTRAL_GATES.json",
+      "sha256": "45d401ba76be52c3b462e522629784c3d4a8893bf42ce15336fb36f8ece7454a",
+      "bytes": 3970
+    },
+    {
+      "path": "audit/phase_gram_components/EXACT_INVENTORY_CHECK.json",
+      "sha256": "d3a00e5ea2bac49ec1c4fda2120cfbdffa27a7b393f84f4ebb66d19c9c62ef20",
+      "bytes": 356
+    },
+    {
+      "path": "audit/phase_gram_components/FINITE_REGRESSIONS.json",
+      "sha256": "c7a8e5d06b3e2822571faf539827de67bd940f4224efd2042ff3540b68b4bbc4",
+      "bytes": 1356
+    },
+    {
+      "path": "audit/phase_gram_components/INDEPENDENT_COMPONENT_REVIEW.md",
+      "sha256": "2ce8fa28b7df2ffb27e9a96498590c21b7dc3588ef854be87035fd67084cee84",
+      "bytes": 16076
+    },
+    {
+      "path": "audit/phase_gram_components/INDEPENDENT_SUPERPOSITION_REVIEW.md",
+      "sha256": "f867e2c837b98f19ec6a404b3f174280c6834944d68b950813a065f33007d270",
+      "bytes": 15506
+    },
+    {
+      "path": "audit/phase_gram_components/LOG_HASHES.json",
+      "sha256": "b684d43d8b9b1476b3ac03a1595b89b7f7afe3475ec833a663227f2a0cb70c46",
+      "bytes": 3200
+    },
+    {
+      "path": "audit/phase_gram_components/MODULE_MAPPING.json",
+      "sha256": "775021637042f55de8eed23f9312ba5c66906c34883d88749580d5408b91174d",
+      "bytes": 1558
+    },
+    {
+      "path": "audit/phase_gram_components/OWNED_DECLARATIONS.json",
+      "sha256": "bfbcb56d73dce16184157be2ef562cc23535f09c056efaa42c7f4ed027d06662",
+      "bytes": 44368
+    },
+    {
+      "path": "audit/phase_gram_components/PROVENANCE.json",
+      "sha256": "ac5c57bd3420bcdbc73140603d106d0e62d5a8ff2435a4df3456541415f727a7",
+      "bytes": 1628
+    },
+    {
+      "path": "audit/phase_gram_components/PUBLIC_DECLARATIONS.json",
+      "sha256": "11cf92c51ac13ce6ac5fa5926ff6819af87da16bd1ce6a7a108fc356871cdb0b",
+      "bytes": 16674
+    },
+    {
+      "path": "audit/phase_gram_components/REPRODUCE.md",
+      "sha256": "c16c7fbd17733757e5b730e96b587a338c3ea2ef567c92895ffe66a75060dba1",
+      "bytes": 1194
+    },
+    {
+      "path": "audit/phase_gram_components/SOURCE_HASHES.json",
+      "sha256": "05b4d039948a85f2f892fec04bccc4542cc9887bc14d75c3faed00f9ac2ff531",
+      "bytes": 2487
+    },
+    {
+      "path": "audit/phase_gram_components/STRICT_AUDIT_REVIEW.json",
+      "sha256": "afefe27cefa1de319a21b0919f599c175c2dc867ece3dc43fec60d3de5ba206d",
+      "bytes": 677
+    },
+    {
+      "path": "audit/phase_gram_components/STRICT_AUDIT_REVIEW.md",
+      "sha256": "8fa001b8cf8234b13e8e8c978bfc8fc3cc948159af52a259697fbeeb554034bf",
+      "bytes": 587
+    },
+    {
+      "path": "audit/phase_gram_components/check_audit.py",
+      "sha256": "a2fb54883185e5df7704cae00113dc0a23dbe4a1759c2df53fab17f297dc0aac",
+      "bytes": 1264
+    },
+    {
+      "path": "audit/phase_gram_components/finite_regressions.py",
+      "sha256": "a5288328c29e1c736cf46db5c4801da2414db27f9bf778b8d0d17d62c286c977",
+      "bytes": 4881
+    },
+    {
+      "path": "audit/phase_gram_components/verify_package.py",
+      "sha256": "f5eb9e93c6d34e9e3871e1efcba3c5bee5c7f5e0b009baad2da3a7f00a665c5f",
+      "bytes": 349
+    }
+  ]
+}

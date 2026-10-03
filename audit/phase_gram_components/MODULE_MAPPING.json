@@ -1,0 +1,31 @@
+{
+  "modules": {
+    "ActualPhaseObjects": "ZhangLS.Spec.ActualPhaseObjects",
+    "ActualPhaseRectangle": "ZhangLS.Spec.ActualPhaseRectangle",
+    "ActualPhaseTransforms": "ZhangLS.Spec.ActualPhaseTransforms",
+    "ActualPhaseSourceRegressions": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+    "ActualPhaseSupport": "ZhangLS.Spec.ActualPhaseSupport",
+    "ActualPhaseKappaMajorant": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+    "ActualGramPiCollapse": "ZhangLS.Spec.ActualGramPiCollapse",
+    "ActualGramArithmeticAttachment": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "ActualGramRamp": "ZhangLS.Spec.ActualGramRamp",
+    "ActualGramClosedWeightLayer": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+    "ActualGramFiniteSuperposition": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "ActualGramLogKernelBridge": "ZhangLS.Spec.ActualGramLogKernelBridge"
+  },
+  "declaration_names": "identity for all 203 actual owned names; no private-module prefixes",
+  "owner_counts": {
+    "ZhangLS.Spec.ActualPhaseTransforms": 46,
+    "ZhangLS.Spec.ActualPhaseObjects": 28,
+    "ZhangLS.Spec.ActualPhaseSourceRegressions": 9,
+    "ZhangLS.Spec.ActualPhaseRectangle": 13,
+    "ZhangLS.Spec.ActualPhaseKappaMajorant": 21,
+    "ZhangLS.Spec.ActualPhaseSupport": 19,
+    "ZhangLS.Spec.ActualGramArithmeticAttachment": 21,
+    "ZhangLS.Spec.ActualGramClosedWeightLayer": 2,
+    "ZhangLS.Spec.ActualGramPiCollapse": 9,
+    "ZhangLS.Spec.ActualGramLogKernelBridge": 17,
+    "ZhangLS.Spec.ActualGramFiniteSuperposition": 8,
+    "ZhangLS.Spec.ActualGramRamp": 10
+  }
+}

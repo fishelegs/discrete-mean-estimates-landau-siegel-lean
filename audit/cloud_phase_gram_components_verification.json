@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "base_commit": "ae8003c332174819f097e728ea1532b7340c758f",
+  "checked_utc": "2026-10-03T19:05:01.002331+00:00",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "scope": "Exact phase rectangle/support/kappa coefficient bounds and actual Gram arithmetic/superposition only. Full R2 L^-14, actual Gram nondegeneracy and strict gain remain unproved.",
+  "proof_modules": [
+    "ZhangLS.Spec.ActualPhaseObjects",
+    "ZhangLS.Spec.ActualPhaseRectangle",
+    "ZhangLS.Spec.ActualPhaseTransforms",
+    "ZhangLS.Spec.ActualPhaseSourceRegressions",
+    "ZhangLS.Spec.ActualPhaseSupport",
+    "ZhangLS.Spec.ActualPhaseKappaMajorant",
+    "ZhangLS.Spec.ActualGramPiCollapse",
+    "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "ZhangLS.Spec.ActualGramRamp",
+    "ZhangLS.Spec.ActualGramClosedWeightLayer",
+    "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "ZhangLS.Spec.ActualGramLogKernelBridge"
+  ],
+  "public_declarations": 125,
+  "all_owned_declarations": 203,
+  "owner_counts": {
+    "ZhangLS.Spec.ActualPhaseTransforms": 46,
+    "ZhangLS.Spec.ActualPhaseObjects": 28,
+    "ZhangLS.Spec.ActualPhaseSourceRegressions": 9,
+    "ZhangLS.Spec.ActualPhaseRectangle": 13,
+    "ZhangLS.Spec.ActualPhaseKappaMajorant": 21,
+    "ZhangLS.Spec.ActualPhaseSupport": 19,
+    "ZhangLS.Spec.ActualGramArithmeticAttachment": 21,
+    "ZhangLS.Spec.ActualGramClosedWeightLayer": 2,
+    "ZhangLS.Spec.ActualGramPiCollapse": 9,
+    "ZhangLS.Spec.ActualGramLogKernelBridge": 17,
+    "ZhangLS.Spec.ActualGramFiniteSuperposition": 8,
+    "ZhangLS.Spec.ActualGramRamp": 10
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "full_project_jobs": 5754,
+  "source_guards": 1952,
+  "spec_imports": 1500,
+  "all_imports": 1765,
+  "strict_audit": {
+    "baseline_candidates": 444,
+    "new_candidates": 1,
+    "current_candidates": 445,
+    "unresolved_new_candidates": 0,
+    "exit_code": 1,
+    "nonzero_exit_preserved": true,
+    "reviews": [
+      {
+        "path": "ZhangLS/Spec/ActualGramPiCollapse.lean",
+        "line": 115,
+        "declaration": "actualGram_totient_ratio_product",
+        "status": "REVIEWED_LOCAL_DERIVATION",
+        "reason": "hcast is locally constructed by congrArg casting the proved Mathlib identity Nat.totient_mul_prod_primeFactors n, then push_cast and the proved prime-factor predecessor cast identity. It is not a theorem hypothesis, target assumption, Gram estimate or normalized-energy premise."
+      }
+    ]
+  },
+  "dependency_pins": {
+    "imported_modules": 6978,
+    "imported_module_names_sha256": "73069ab1897e3ac5eb72d0f407efb916d21ecd7cccde8563619b04a5109a6d11",
+    "imported_source_manifest_sha256": "71c4fd6af6f5675c53e18a1bb80addfac9e1e3b8b7f862507156fc1ff31bae76",
+    "all_imported_sources_rehashed_before_and_after": true,
+    "unique_frozen_source_object_component_files_rehashed": 39252
+  },
+  "semantic_regressions": {
+    "named_actual_phase_regressions": 11,
+    "finite_exact_regressions": "audit/phase_gram_components/FINITE_REGRESSIONS.json"
+  },
+  "numbered_ledger": {
+    "original": 37,
+    "repaired": 3,
+    "total_complete": 40,
+    "denominator": 51
+  },
+  "remaining": [
+    "Complete actual R2 O(a^-1 L^-14) interface and moment/analytic tail attachments",
+    "Actual Gram asymptotic and quantitative nondegeneracy",
+    "Signed arithmetic main term, target projection, all relative errors and strict gain"
+  ],
+  "reports": [
+    "audit/phase_gram_components/INDEPENDENT_COMPONENT_REVIEW.md",
+    "audit/phase_gram_components/INDEPENDENT_SUPERPOSITION_REVIEW.md"
+  ],
+  "hosted_ci": "Local central checks passed. Hosted CI for the published commit is tracked separately and is not part of this local certificate."
+}

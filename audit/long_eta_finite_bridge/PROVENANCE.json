@@ -1,0 +1,122 @@
+{
+  "edition": "public-source-only-2026-10-03",
+  "evidence_kind": "Mathematical source proof and independent source review; no Lean certification",
+  "original_inputs_verified": true,
+  "historical_originals": [
+    {
+      "historical_label": "long-eta-sign-research/REPORT.md",
+      "original_sha256": "c3261d2be8eafc0b177d4a0fc71fd53f3f2031154e0686529f37f83e0d4a5ce7",
+      "original_bytes": 27247,
+      "public_file": "PROOF.md"
+    },
+    {
+      "historical_label": "long-eta-reduction-independent-review/REVIEW.md",
+      "original_sha256": "2a6251541b2bd7393f2d4406991535f5652e6a5a9fa3e3917a3be91244bee2cb",
+      "original_bytes": 26962,
+      "public_file": "INDEPENDENT_REVIEW.md"
+    },
+    {
+      "historical_label": "long-eta-sign-research/check_finite.py",
+      "original_sha256": "864dabfbdd46efb8a9fdb47bd5918e1958d3a5740d431d69bafa97dbe4b16022",
+      "original_bytes": 6827,
+      "public_file": "checks/check_author.py"
+    },
+    {
+      "historical_label": "long-eta-reduction-independent-review/check_independent.py",
+      "original_sha256": "b58c47ffd801cd9e2ff7d82cb130598f2ab799a9e81aa840a062f69738a995ca",
+      "original_bytes": 5446,
+      "public_file": "checks/check_independent.py"
+    },
+    {
+      "historical_label": "long-eta-sign-research/CHECKS.json",
+      "original_sha256": "ac47a3db54ce54b745c0edb3e300c1d9bd80840ac0c1a1d2d78e488a3569d58a",
+      "original_bytes": 1315,
+      "public_file": "results/AUTHOR_ORIGINAL.json"
+    },
+    {
+      "historical_label": "long-eta-reduction-independent-review/CHECKS.json",
+      "original_sha256": "67618d5d58ec4635fa418fd9c2839d762a244a0bbcae3bb3e5c6e37131beacf1",
+      "original_bytes": 663,
+      "public_file": "results/INDEPENDENT_ORIGINAL.json"
+    },
+    {
+      "historical_label": "long-eta-sign-research/MANIFEST.json",
+      "original_sha256": "95d439bd3ac60f3dde04f02c06abfee170caf554ffd4c03c3bc32e830bfa7f98",
+      "original_bytes": 2260,
+      "public_file": null
+    },
+    {
+      "historical_label": "long-eta-reduction-independent-review/MANIFEST.json",
+      "original_sha256": "47e08060139ef13c3f3270c8a17b8ad027156db925227f4d81f4bc34cb4ed769",
+      "original_bytes": 3203,
+      "public_file": null
+    }
+  ],
+  "historical_source_dependencies": [
+    {
+      "source_label": "weighted-phase-correlation-evaluation/REPORT.md",
+      "sha256": "ab74a957e20dd7a507041d975e83e3e6c6107e6fb1b42f1715c5af2c3efe45fc",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "weighted-phase-signature-independent-review/REVIEW.md",
+      "sha256": "b7a1a71c5f7838977dcfe162a3680784b2628fa961d0d76665bbc610e3f720d5",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "zero-measure-phase-independent-review/REVIEW.md",
+      "sha256": "7c58165483ee8f92e274de2bfadca09bcd6f642f55e51cc7eb19bdd5c5ef3854",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma31.lean",
+      "sha256": "245b1d462d8fcb956aa418f18462ff52d7c917b2eb0c5a56a000e2437a7f60b1",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma31PaperScale.lean",
+      "sha256": "874fc2182ef585a08b1550255ad30b5d6dee5267085c25c91dcc0e003c887999",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/Lemma33.lean",
+      "sha256": "c7ab0f6de943ebbbb90b7bd3abfe5efc978cdbf672bab195854941ae88ff320a",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "audit/actual_gram_bridge/DERIVATION.md",
+      "sha256": "402e223a97634cfc639186c201a46b5b4cc5e4a7c8f74105136a3416289e9177",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "long-eta-sign-research/REPORT.md",
+      "sha256": "c3261d2be8eafc0b177d4a0fc71fd53f3f2031154e0686529f37f83e0d4a5ce7",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "long-eta-sign-research/CHECKS.json",
+      "sha256": "ac47a3db54ce54b745c0edb3e300c1d9bd80840ac0c1a1d2d78e488a3569d58a",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "long-eta-sign-research/MANIFEST.json",
+      "sha256": "95d439bd3ac60f3dde04f02c06abfee170caf554ffd4c03c3bc32e830bfa7f98",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    },
+    {
+      "source_label": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+      "sha256": "f9b0e3a83707b63d5965a3e9809f4246f1948b4aee35d3dd3a4b7e560e23f174",
+      "availability": "Historical dependency; not a byte-integrity claim about a current external checkout."
+    }
+  ],
+  "editorial_changes": [
+    "Removed absolute local working directories and operational history; preserved the complete mathematical arguments and their limitations.",
+    "Distinguished original assumption exponent -2022 from the separate target exponent -2024.",
+    "Kept historical hashes as provenance; current public-file hashes are recorded separately in MANIFEST.json.",
+    "Made check scripts portable with an explicit output argument and a local-manifest integrity check instead of an absolute candidate path.",
+    "Historical receipts are byte-preserved. Rerun receipts are separately named; exact algebra and numerical regressions are distinguished.",
+    "Elevated both exact T2/T3 maximum-length inequalities, fixed .0005 profile width, and opposite reflected/unreflected shifts; copied the authoritative review tail proof into the public proof.",
+    "Clarified that global completion cannot identify the original left complement alone: the globally completed right contribution is also retained. No new complementary-region theorem is included.",
+    "Added an explicit profile-width field to the author checker illustration; the historical receipt is unaltered."
+  ]
+}

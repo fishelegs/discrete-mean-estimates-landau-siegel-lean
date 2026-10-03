@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-02T11:56:31.312339+00:00",
+  "generated_utc": "2026-10-03T19:09:04.838027+00:00",
   "baseline_commit": "58a9273c38961411a5f06ab2db4bdf565ef30794",
   "paper": {
     "arxiv": "2211.02515v1",
@@ -3948,7 +3948,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-03T17:43:18.186862+00:00",
+    "verified_at_utc": "2026-10-03T19:05:01.002331+00:00",
     "completed": 40,
     "in_progress": 1,
     "unstarted": 6,
@@ -4316,6 +4316,30 @@
       "original_target_proved": false,
       "full_equation_15_22_proved": false,
       "signed_gain_proved": false
+    },
+    {
+      "id": "actual_phase_gram_components",
+      "status": "verified",
+      "report": "audit/CLOUD_PHASE_GRAM_COMPONENTS_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 12,
+      "public_declaration_checks": 125,
+      "all_owned_checks": 203,
+      "full_R2_precision_proved": false,
+      "actual_Gram_nondegeneracy_proved": false,
+      "strict_gain_proved": false
+    },
+    {
+      "id": "finite_long_eta_signed_reduction",
+      "status": "source_reviewed_not_Lean",
+      "report": "audit/long_eta_finite_bridge/STATUS.md",
+      "original_numbered_result_completed": false,
+      "exact_both_lengths_lt_P_squared": true,
+      "whole_actual_Psi1_quadratic_form_retained": true,
+      "replacement_error": "O(a^-1 L^-623/4)",
+      "ordinary_pairing_signed_bound_proved": false,
+      "global_long_complement_proved": false,
+      "strict_gain_proved": false
     }
   ],
   "repair_discipline": {
@@ -4456,7 +4480,7 @@
     "separate_from_numbered_51": true,
     "node_count": 8,
     "strict_gain_proved": false,
-    "updated_utc": "2026-10-03T17:43:18.302855+00:00",
+    "updated_utc": "2026-10-03T19:09:04.838027+00:00",
     "branch_status_updated_utc": "2026-10-03T14:58:30.522627+00:00",
     "fixed_smooth_narrow_small_gain_branch": "suspended_recalibration"
   }

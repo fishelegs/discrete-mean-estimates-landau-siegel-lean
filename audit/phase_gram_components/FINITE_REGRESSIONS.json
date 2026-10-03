@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "independent_finite_exact_checks",
+      "passed": true,
+      "detail": {
+        "pi_collapse_n_range": [
+          1,
+          360
+        ],
+        "local_character_values": [
+          -1,
+          0,
+          1
+        ],
+        "pi_cases": 4150,
+        "includes_p2_chi2_eq1_vanishing_pi": true,
+        "kappa_gaussian_unit_recurrences": 768,
+        "zero_shift_strict_truncated_square_cases": 6000,
+        "not_a_substitute_for_kernel_replay": true
+      }
+    },
+    {
+      "name": "exact product endpoint reciprocal mass regression",
+      "passed": true,
+      "detail": {
+        "cases": 1000,
+        "range": "Q=1..1000",
+        "uses_actual_weight_pointwise_majorant": true
+      }
+    },
+    {
+      "name": "exact strict filtered cutoff including integral endpoints",
+      "passed": true,
+      "detail": {
+        "cases": 4920
+      }
+    },
+    {
+      "name": "exact fixed-interval compact C2 polynomial ramp incl lower tail and both endpoints",
+      "passed": true,
+      "detail": {
+        "cases": 27,
+        "arbitrary_complex_shift_via_exact_exponential_conjugation": true
+      }
+    },
+    {
+      "name": "exact second main derivative local and plus Volterra coefficients",
+      "passed": true,
+      "detail": {
+        "cases": 100
+      }
+    }
+  ]
+}

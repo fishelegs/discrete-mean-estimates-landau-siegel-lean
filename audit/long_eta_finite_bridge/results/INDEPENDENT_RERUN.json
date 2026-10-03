@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "Finite exact algebra and accounting plus moderate-height numerical change-of-variable checks only. Not a stationary-phase proof or sign theorem.",
+  "counts": {
+    "local_euler": 192,
+    "truncated_tail": 2400,
+    "ramified_deletion": 600,
+    "gauss_exact": 42,
+    "divisor": 6800,
+    "fourier_numeric": 6
+  },
+  "budgets": {
+    "two_error_energy": "-1417/2",
+    "two_per_box": "-659/4",
+    "two_aggregate": "-551/4",
+    "three_error_energy": "-1723/2",
+    "three_per_box": "-767/4",
+    "three_aggregate": "-623/4"
+  },
+  "max_fourier_relative_error": "1.206085543406965464746330960345483871303406707721435833e-59"
+}
