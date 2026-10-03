@@ -1,0 +1,226 @@
+[
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_sub_apply"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_character_inverse"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_mul_character_eq_moebius"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilonFourfold"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_kappa_eq_fivefold"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_norm_prime_power_le_nu"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_norm_le_nu"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_norm_le_nu_real"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilonKappa"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_apply"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_kappa_divisor_formula"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_kappa_factor_expansion"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_kappa_residual_convolution"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_kappa_residual_formula"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_convolution_norm_le_tau"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_power_norm_le_tau_one"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_character_norm_le_tau_one"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_fourfold_norm_le_tau_four"
+  },
+  {
+    "source": "ShortUpsilonArithmetic.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_kappa_norm_le_tau_six"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_weighted_convolution_le"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_convolution_sq_le"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilonEnergyWeight"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_energyWeight_apply"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_energyWeight_nonneg"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_convolution_sq_le_weight_convolution"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_convolution_harmonic_energy_le"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_tau_two_fourth_le"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_tau_four_sq_times_two_le"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_fourfold_harmonic_weight_le"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_nu_norm_le_tau_two"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_nu_mixed_weight_le"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_tail_harmonic_weight_sq_le"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_difference_weight_identity"
+  },
+  {
+    "source": "ShortUpsilonEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_sq_le_tail_harmonic"
+  },
+  {
+    "source": "ShortUpsilonFamilyError.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilonResidualPolynomial"
+  },
+  {
+    "source": "ShortUpsilonFamilyError.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilonSecondMomentConstant"
+  },
+  {
+    "source": "ShortUpsilonFamilyError.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_second_constant_pos"
+  },
+  {
+    "source": "ShortUpsilonFamilyError.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_actual_residual_second_moment"
+  },
+  {
+    "source": "ShortUpsilonFamilyError.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_actual_trilinear_error_sq"
+  },
+  {
+    "source": "ShortUpsilonFamilyError.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_actual_trilinear_error"
+  },
+  {
+    "source": "ShortUpsilonFamilyError.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_actual_trilinear_error_conjugate"
+  },
+  {
+    "source": "ShortUpsilonPaperEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilonErrorEnergy"
+  },
+  {
+    "source": "ShortUpsilonPaperEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_nonneg"
+  },
+  {
+    "source": "ShortUpsilonPaperEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_harmonic_paper_bound"
+  },
+  {
+    "source": "ShortUpsilonPaperEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_tail_restrict"
+  },
+  {
+    "source": "ShortUpsilonPaperEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_sq_le"
+  },
+  {
+    "source": "ShortUpsilonPaperEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_square_bound_to_integral_power"
+  },
+  {
+    "source": "ShortUpsilonPaperEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_le"
+  },
+  {
+    "source": "ShortUpsilonPaperEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_uniform_actual_error_energy"
+  },
+  {
+    "source": "ShortUpsilonPaperEnergy.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_masked_energy_le"
+  },
+  {
+    "source": "ShortUpsilonRegressions.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_regression_closed_cutoff"
+  },
+  {
+    "source": "ShortUpsilonRegressions.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_regression_empty_energy"
+  },
+  {
+    "source": "ShortUpsilonRegressions.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_regression_cutoff_energy"
+  },
+  {
+    "source": "ShortUpsilonRegressions.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_regression_ramified_local"
+  },
+  {
+    "source": "ShortUpsilonRegressions.lean",
+    "declaration": "ZhangLS.Spec.shortUpsilon_regression_original_shifts_full_endpoint"
+  }
+]

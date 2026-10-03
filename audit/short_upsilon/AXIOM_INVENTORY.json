@@ -1,0 +1,1170 @@
+{
+  "status": "PASS",
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "public_count": 56,
+  "all_owned_count": 80,
+  "owner_counts": {
+    "ZhangLS.Spec.ShortUpsilonArithmetic": 26,
+    "ZhangLS.Spec.ShortUpsilonEnergy": 27,
+    "ZhangLS.Spec.ShortUpsilonFamilyError": 10,
+    "ZhangLS.Spec.ShortUpsilonPaperEnergy": 11,
+    "ZhangLS.Spec.ShortUpsilonRegressions": 6
+  },
+  "public": [
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilonEnergyWeight",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilonErrorEnergy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilonFourfold",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilonKappa",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilonResidualPolynomial",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilonSecondMomentConstant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_actual_residual_second_moment",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_actual_trilinear_error",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_actual_trilinear_error_conjugate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_actual_trilinear_error_sq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_character_inverse",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_character_norm_le_tau_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_convolution_harmonic_energy_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_convolution_norm_le_tau",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_convolution_sq_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_convolution_sq_le_weight_convolution",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_difference_weight_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_energyWeight_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_energyWeight_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_sq_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_sq_le_tail_harmonic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_fourfold_harmonic_weight_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_fourfold_norm_le_tau_four",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_harmonic_paper_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_divisor_formula",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_eq_fivefold",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_factor_expansion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_norm_le_tau_six",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_residual_convolution",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_residual_formula",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_masked_energy_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_mul_character_eq_moebius",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_norm_le_nu",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_norm_le_nu_real",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_norm_prime_power_le_nu",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_nu_mixed_weight_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_nu_norm_le_tau_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_power_norm_le_tau_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_regression_closed_cutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_regression_cutoff_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_regression_empty_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_regression_original_shifts_full_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_regression_ramified_local",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_second_constant_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_square_bound_to_integral_power",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_sub_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_tail_harmonic_weight_sq_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_tail_restrict",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_tau_four_sq_times_two_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_tau_two_fourth_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_uniform_actual_error_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "ZhangLS.Spec.shortUpsilon_weighted_convolution_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "all_owned": [
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilonFourfold",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilonFourfold._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilonFourfold.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilonKappa",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilonKappa.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_character_inverse",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_character_norm_le_tau_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_convolution_norm_le_tau",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_fourfold_norm_le_tau_four",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_divisor_formula",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_eq_fivefold",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_factor_expansion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_norm_le_tau_six",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_residual_convolution",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_residual_formula",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_kappa_residual_formula._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_mul_character_eq_moebius",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_norm_le_nu",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_norm_le_nu_real",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_norm_prime_power_le_nu",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_norm_prime_power_le_nu._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_power_norm_le_tau_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "declaration": "ZhangLS.Spec.shortUpsilon_sub_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilonEnergyWeight",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilonEnergyWeight._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_convolution_harmonic_energy_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_convolution_sq_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_convolution_sq_le_weight_convolution",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_difference_weight_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_difference_weight_identity._proof_1_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_difference_weight_identity._proof_1_5",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_difference_weight_identity._simp_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_difference_weight_identity._simp_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_difference_weight_identity._simp_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_energyWeight_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_energyWeight_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_sq_le_tail_harmonic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_fourfold_harmonic_weight_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_nu_mixed_weight_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_nu_norm_le_tau_two",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_tail_harmonic_weight_sq_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_tail_harmonic_weight_sq_le._proof_1_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_tail_harmonic_weight_sq_le._simp_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_tail_harmonic_weight_sq_le._simp_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_tau_four_sq_times_two_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_tau_two_fourth_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_weighted_convolution_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_weighted_convolution_le._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_weighted_convolution_le._simp_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_weighted_convolution_le._simp_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonFamilyError",
+      "declaration": "ZhangLS.Spec.shortUpsilonResidualPolynomial",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonFamilyError",
+      "declaration": "ZhangLS.Spec.shortUpsilonSecondMomentConstant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonFamilyError",
+      "declaration": "ZhangLS.Spec.shortUpsilonSecondMomentConstant._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonFamilyError",
+      "declaration": "ZhangLS.Spec.shortUpsilonSecondMomentConstant._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonFamilyError",
+      "declaration": "ZhangLS.Spec.shortUpsilonSecondMomentConstant._proof_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonFamilyError",
+      "declaration": "ZhangLS.Spec.shortUpsilon_actual_residual_second_moment",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonFamilyError",
+      "declaration": "ZhangLS.Spec.shortUpsilon_actual_trilinear_error",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonFamilyError",
+      "declaration": "ZhangLS.Spec.shortUpsilon_actual_trilinear_error_conjugate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonFamilyError",
+      "declaration": "ZhangLS.Spec.shortUpsilon_actual_trilinear_error_sq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonFamilyError",
+      "declaration": "ZhangLS.Spec.shortUpsilon_second_constant_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilonErrorEnergy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilonErrorEnergy.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_sq_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_error_energy_sq_le._proof_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_harmonic_paper_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_masked_energy_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_square_bound_to_integral_power",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_tail_restrict",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "declaration": "ZhangLS.Spec.shortUpsilon_uniform_actual_error_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonRegressions",
+      "declaration": "ZhangLS.Spec.shortUpsilon_regression_closed_cutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonRegressions",
+      "declaration": "ZhangLS.Spec.shortUpsilon_regression_closed_cutoff._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonRegressions",
+      "declaration": "ZhangLS.Spec.shortUpsilon_regression_cutoff_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonRegressions",
+      "declaration": "ZhangLS.Spec.shortUpsilon_regression_empty_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonRegressions",
+      "declaration": "ZhangLS.Spec.shortUpsilon_regression_original_shifts_full_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ShortUpsilonRegressions",
+      "declaration": "ZhangLS.Spec.shortUpsilon_regression_ramified_local",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

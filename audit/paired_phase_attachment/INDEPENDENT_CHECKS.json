@@ -1,0 +1,29 @@
+{
+  "CRT_coordinate_basis_cases": 20259,
+  "CRT_max_error": 6.936895214610187e-15,
+  "actual_dirichlet_FE_cases": 8,
+  "actual_dirichlet_FE_max_relative_error": "1.9158919566165557751062836793692162261e-38",
+  "candidate_floating_checks_within_declared_tolerance": true,
+  "candidate_replay_exact_algebra_and_counts": true,
+  "candidate_sha256": "67e14df35a7d120d446c7dbdd4489c60ba7043b06ab9ffb412e89ddc46f06578",
+  "exact_integer_cyclotomic_Fourier_cases": 656,
+  "exact_rational_budgets": {
+    "A_B_J_sixth_log_power": "81",
+    "G_sixth_log_power": "36",
+    "afe_normalized": "-42",
+    "bad_family_normalized": "-14",
+    "delta_kappa_normalized": "-225",
+    "delta_normalized": "-105",
+    "matrix_precision_for_L_minus_8_norm_and_gain": "-16"
+  },
+  "exact_support_gaps": [
+    "1/2000",
+    "1/1000",
+    "3/1000",
+    "1/1000"
+  ],
+  "limitations": "Finite and algebraic checks only; no large-D mean, Gram lower bound, Lean build, or final theorem validation.",
+  "status": "PASS",
+  "symbolic_T_and_C_pairing": true,
+  "symbolic_universal_defect_identity": true
+}

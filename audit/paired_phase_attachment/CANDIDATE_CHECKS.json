@@ -1,0 +1,44 @@
+{
+  "CRT_completion_cases": 1152,
+  "budgets": {
+    "AFE_error": "-42",
+    "Cleft_gap": "1/1000",
+    "Cright_gap": "1/2000",
+    "G_cube_divisor_order": "6",
+    "G_sixth_harmonic_power": "36",
+    "Tleft_gap": "1/1000",
+    "Tright_gap": "3/1000",
+    "W1": "45",
+    "W2": "60",
+    "bad_family": "-14",
+    "delta_error": "-105",
+    "max_cube_length_exponent": "189/125",
+    "required_R6_exponent_example": "-16",
+    "sixth_holder_sum": "1"
+  },
+  "conductors": [
+    3,
+    4,
+    5,
+    8,
+    12
+  ],
+  "exact_gaussian_rational_defect_cases": 100,
+  "fourier_cases": 304,
+  "historical_fingerprint_note": "Historical mathematical-source fingerprints are recorded, not recomputed by this portable finite check.",
+  "historical_input_sha256": {
+    "annular_source_derivation": "1839df7636ee4adcdacae99228c5ecf4b089556815fcc6c17d5b0888e3a91ea2",
+    "fixed_log_window_addendum": "c457ac0dfb91b14a9bd45dee4615fa489cb98c2a90c0569d00a8ca3e0873c52e",
+    "phase_matrix_reduction": "ef06b73b6ef3a6cd848996e2c7ee701234229eb662b45e01e89ebb7e9cbc21cd",
+    "short_upsilon_independent_review": "1bd6033619e906f81dcd6fd31be5f18f8312c0b2e1c64787bdb76f62c7644cce",
+    "short_upsilon_source_derivation": "b5584906c40bc2447e45fc300d502eee23fe8a816b89987c3bae54a1e935266b"
+  },
+  "limitations": "Finite checks only; no assumption (A), large-D mean, actual Gram lower bound, or Lean verification.",
+  "max_CRT_completion_error": 1.1849580824096728e-14,
+  "max_fourier_error": 5.731375151869636e-15,
+  "primes": [
+    7,
+    11
+  ],
+  "status": "PASS"
+}

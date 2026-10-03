@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-03T12:46:53.216003+00:00",
-  "base_commit": "19fe47df390d5e93d75a3759ba2918ee8bbeaab9",
+  "updated_utc": "2026-10-03T14:23:57.561783+00:00",
+  "base_commit": "61c82ec022a2a5c4e6bf356de14136c730a2d404",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
@@ -14,7 +14,9 @@
     "lean_proved": "Lean中央核验且已发布",
     "source_reviewed": "数学来源分析经独立复核，尚非完整Lean接口",
     "source_reviewed_lean_in_progress": "来源分析已复核，Lean形式化在做",
-    "open": "要求已明确，尚未证明"
+    "open": "要求已明确，尚未证明",
+    "partial_lean_proved": "部分明确接口已中央Lean核验，节点其余附件尚未完成",
+    "source_reviewed_partial": "限定作用域的来源层结论已独立复核，尚非整个节点或Lean完成"
   },
   "central_decision": "尚不能确认弥补最终欠缺；须得到实际有利主项、合法归一化和压过全部误差的严格裕量。",
   "nodes": [
@@ -33,7 +35,8 @@
       "published_commit": "8bdae40152843c289650c1483d86c73b7a8aaf28",
       "execution_status": "done",
       "execution_note": "已经发布并验证；未把该标量下界当作实际Gram下界。",
-      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
+      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "proof_status": "lean_proved"
     },
     {
       "id": "R2",
@@ -48,17 +51,18 @@
         "audit/annular_covariance/STATUS.md",
         "audit/structured_covariance/STATUS.md"
       ],
-      "execution_status": "queued",
-      "execution_note": "来源复核已完成；完整C1/T1解析接口的Lean形式化尚未启动，当前先推进R3及原P2.6共享输入。",
-      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
+      "execution_status": "active",
+      "execution_note": "实际零点轮廓、精确分支与四类变换的Lean模块已私有验证；完整固定窗口精度接口继续形式化，尚未中央发布。",
+      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "proof_status": "source_reviewed"
     },
     {
       "id": "R3",
       "name": "短 υ 的实际 κ 替换",
-      "status": "source_reviewed_lean_in_progress",
-      "verification": "双独立来源复核；Lean 证明在做",
-      "result": "μ=υ*χ、|υ|≤ν；以 d≤D⁴ 截断 υ，系数能量误差 O(L^-645.5)，四个实际有限算子新增误差 O(a^-1 L^-225)。",
-      "gap": "余下 χ 与三纯幂的乘积约束主和未求值；总表示误差仍受 R2 的 L^-14 控制。",
+      "status": "partial_lean_proved",
+      "verification": "有限算术及实际族均值已中央Lean核验；轮廓附件仍为来源层",
+      "result": "真实υ卷积、d≤D⁴截断及全N≤floor(P²)能量S_N²≤1260·3^80 L^-1291已证；实际全primitive族三线性误差O(P² L^-302)已证。",
+      "gap": "实际C1/T1轮廓及归一化O(a^-1 L^-225)附件仍待R2；结构化主和未求值，总表示误差仍受L^-14控制。",
       "dependency_mode": "optional_reduction_for_R4",
       "dependencies": [
         "R2",
@@ -67,11 +71,13 @@
         "L8.1"
       ],
       "evidence": [
-        "audit/CLOUD_SHORT_UPSILON_STATUS.md"
+        "audit/CLOUD_SHORT_UPSILON_STATUS.md",
+        "audit/cloud_short_upsilon_verification.json"
       ],
-      "execution_status": "active",
-      "execution_note": "正在形式化实际υ/κ恒等式、全P²截断能量和真实2/4/4桥。",
-      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
+      "execution_status": "waiting_R2_attachment",
+      "execution_note": "本批5模块、56公开/80owned、5709全库中央核验完成；有限桥已完成，解析轮廓附件等待R2。",
+      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "proof_status": "partial_lean_proved"
     },
     {
       "id": "R4",
@@ -88,19 +94,21 @@
         "R3"
       ],
       "evidence": [
-        "audit/CLOUD_SHORT_UPSILON_STATUS.md"
+        "audit/CLOUD_SHORT_UPSILON_STATUS.md",
+        "audit/paired_phase_attachment/STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "实际配对主项研究已启动：核查H缺项的全族加权误差、坏族与重新接入积分条件，检验是否产生可计算目标残差。",
-      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
+      "execution_note": "已启动实际目标在三方向补空间上的定量投影研究；核查真实主项/符号及可能的J缺陷转换，尚无有利符号结论。",
+      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "proof_status": "open"
     },
     {
       "id": "R5",
       "name": "实际 Gram 与 Schur 残差下界",
-      "status": "open",
-      "verification": "尚未证明",
-      "result": "归一化义务已明确：实际零点测度下的试验向量残差必须有可用的正下界。",
-      "gap": "固定支撑宽度、普通系数质量、旧模型正性或 M1 标量正性均不能代替此界；若残差随 D 趋零，须保留其真实量级。",
+      "status": "source_reviewed_partial",
+      "verification": "限定三方向扩充和旧二维span的来源层证明已独立复核；尚非Lean",
+      "result": "对三个固定剖面证明实际Gram≥λI/2；实际单位根数相位后，可选全局有界组合正交指定旧二维span，实际残差平方范数≥λ/2。",
+      "gap": "仅覆盖新A支撑[.502,.504]、旧A同窗及旧B[.499,.500]；不含原宽H1/H2或此前单个rA，不给目标投影或严格gain。误差仅足常数级非退化，未达L^-8符号精度。",
       "dependency_mode": "actual_Gram_attachment_plus_nondegeneracy; may_proceed_with_R4_in_parallel",
       "dependencies": [
         "R2"
@@ -109,10 +117,14 @@
         "R4",
         "R1"
       ],
-      "evidence": [],
-      "execution_status": "queued",
-      "execution_note": "可以和R4并行，但尚未启动专门证明；需明确实际范数附件及残差量级。",
-      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
+      "evidence": [
+        "audit/actual_gram_bridge/STATUS.md",
+        "audit/actual_gram_bridge/INDEPENDENT_REVIEW.md"
+      ],
+      "execution_status": "formalization_queued",
+      "execution_note": "来源证明和第二独立审查已完成；Lean形式化排队。R4定量目标投影正在独立推进。",
+      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "proof_status": "source_reviewed_partial"
     },
     {
       "id": "R6",
@@ -133,8 +145,9 @@
       ],
       "evidence": [],
       "execution_status": "blocked_by_R4_R5",
-      "execution_note": "等待实际候选主项与Gram/残差下界，才能闭合完整相对误差预算。",
-      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
+      "execution_note": "限定R5来源下界有进展；仍等待实际有利目标及适合该增益的完整归一化误差预算。",
+      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "proof_status": "open"
     },
     {
       "id": "R7",
@@ -152,7 +165,8 @@
       "evidence": [],
       "execution_status": "waiting_dependencies",
       "execution_note": "等待R4、R5、R6共同闭合；当前无严格gain。",
-      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
+      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "proof_status": "open"
     },
     {
       "id": "R8",
@@ -170,7 +184,8 @@
       "original_exponents_preserved": true,
       "execution_status": "waiting_dependencies",
       "execution_note": "等待R7及采用路线的其余论文/解析义务，原主结论未恢复。",
-      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
+      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "proof_status": "open"
     }
   ],
   "edges": [

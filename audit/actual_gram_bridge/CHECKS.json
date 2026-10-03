@@ -1,0 +1,35 @@
+{
+  "superposition_and_both_residue_kernels": "exact differential identities",
+  "pi_prime_power_collapse": "universal rational identity, including ramification and vanishing Pi",
+  "full_complex_polarization": [
+    "8/pi",
+    "-24*I",
+    "24*I",
+    "88*pi",
+    "24*I*pi**2",
+    "-24*I*pi**2"
+  ],
+  "raw_Sj_error_exponents": {
+    "actual_first_times_xi_interior": "-11",
+    "actual_first_times_xi_moving_layer": "-19/2",
+    "first_interior_times_xi_main": "-13",
+    "first_moving_layer_times_xi_main": "-127/10"
+  },
+  "normalized_arithmetic_error_exponent": "-1/2, with fixed polylog and a^-1 retained",
+  "three_fixed_profile_supports": [
+    [
+      "251/500",
+      "201/400"
+    ],
+    [
+      "2011/4000",
+      "2013/4000"
+    ],
+    [
+      "1007/2000",
+      "63/125"
+    ]
+  ],
+  "lambda_scaling": "16000 I1/pi + 11 pi I0/250",
+  "ramified_density_factor": "q/(q+1), exact"
+}

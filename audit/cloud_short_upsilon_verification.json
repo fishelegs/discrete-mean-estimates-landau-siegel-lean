@@ -1,0 +1,207 @@
+{
+  "status": "PASS",
+  "base_commit": "61c82ec022a2a5c4e6bf356de14136c730a2d404",
+  "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "scope": "Finite actual arithmetic and full primitive-family norm estimate; actual C1/T1 contour attachment remains source-level.",
+  "proof_modules": [
+    "ZhangLS.Spec.ShortUpsilonArithmetic",
+    "ZhangLS.Spec.ShortUpsilonEnergy",
+    "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+    "ZhangLS.Spec.ShortUpsilonFamilyError",
+    "ZhangLS.Spec.ShortUpsilonRegressions"
+  ],
+  "public_declarations": 56,
+  "all_owned_declarations": 80,
+  "owner_counts": {
+    "ZhangLS.Spec.ShortUpsilonArithmetic": 26,
+    "ZhangLS.Spec.ShortUpsilonEnergy": 27,
+    "ZhangLS.Spec.ShortUpsilonFamilyError": 10,
+    "ZhangLS.Spec.ShortUpsilonPaperEnergy": 11,
+    "ZhangLS.Spec.ShortUpsilonRegressions": 6
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "lean_regression_theorems": 5,
+  "finite_arithmetic_endpoint_cases": 56,
+  "full_project_jobs": 5709,
+  "source_guards": 1905,
+  "spec_imports": 1455,
+  "all_imports": 1720,
+  "strict_audit": {
+    "exit_code": 1,
+    "candidates": 442,
+    "new_candidates": 0,
+    "unresolved_new_candidates": 0,
+    "note": "The existing reviewed heuristic baseline remains nonzero; this is not a claim of global source-semantic completeness."
+  },
+  "dependency_pins": {
+    "external_source_and_object_pairs_rehashed": 6067,
+    "loaded_import_header_modules": 6072,
+    "dependency_manifest_nodes_including_private_audit_root": 6073,
+    "imported_module_names_sha256": "08e5c77501683a271fc6f755c8064d76de842e1cc9281c8eb2826ba9d0370be4",
+    "original_archive_sha256": "c9329155e717761e768feaa0c6442fcaa1bd76fd2beb286b88c2afe28ff95764"
+  },
+  "source_fingerprints": [
+    {
+      "path": "ZhangLS/Spec/ShortUpsilonArithmetic.lean",
+      "sha256": "720510e818bb6fbb315896ac9367b4b6d8da130b5d1f79f503fe58d3ef96ec37"
+    },
+    {
+      "path": "ZhangLS/Spec/ShortUpsilonEnergy.lean",
+      "sha256": "0de1769388a780a01703437405dbcde3da8bbea4f41600f15b235a7069a1ac69"
+    },
+    {
+      "path": "ZhangLS/Spec/ShortUpsilonPaperEnergy.lean",
+      "sha256": "12d9cb471682ea51f765a26f37fcc6f4357105a2602ff785d14784eb727e6740"
+    },
+    {
+      "path": "ZhangLS/Spec/ShortUpsilonFamilyError.lean",
+      "sha256": "a2bdd7b9b1e4cc49c30d980bc6eded4fa98bae47c6fa791eb2411ab0b38f853e"
+    },
+    {
+      "path": "ZhangLS/Spec/ShortUpsilonRegressions.lean",
+      "sha256": "e2054a1187be9221c00e057a75dcaaf5422b164986726ddfa8d57e3e33eeef92"
+    },
+    {
+      "path": "audit/CloudShortUpsilonAxioms.lean",
+      "sha256": "9651056148c9268268acbefdfea3833f366f18512045ba8ba8cd3178e2661610"
+    },
+    {
+      "path": "ZhangLS/Spec/All.lean",
+      "sha256": "55a165d07f9d19db05b3ae73da830e72c556b7a9fbc8a5bc1464ecee5f4322c2"
+    },
+    {
+      "path": "ZhangLS/All.lean",
+      "sha256": "2a05eb2f30a1e2c4c8a8156547e2de0209a1ff6e2e536009662f2aaae1646039"
+    }
+  ],
+  "commands": [
+    {
+      "target": "ZhangLS.Spec.ShortUpsilonArithmetic",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T13:35:04.320830+00:00",
+      "finished_utc": "2026-10-03T13:36:57.495416+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.ShortUpsilonEnergy",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T13:36:57.496431+00:00",
+      "finished_utc": "2026-10-03T13:44:38.906015+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.ShortUpsilonPaperEnergy",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T13:44:38.906776+00:00",
+      "finished_utc": "2026-10-03T13:51:30.823532+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.ShortUpsilonFamilyError",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T13:51:30.824528+00:00",
+      "finished_utc": "2026-10-03T13:53:01.213604+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.ShortUpsilonRegressions",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T13:53:01.213905+00:00",
+      "finished_utc": "2026-10-03T13:54:31.106639+00:00"
+    },
+    {
+      "target": "CloudShortUpsilonAxioms",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T13:54:31.107403+00:00",
+      "finished_utc": "2026-10-03T13:56:57.702699+00:00"
+    },
+    {
+      "target": "full-project",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T14:02:08.226001+00:00",
+      "finished_utc": "2026-10-03T14:09:31.457957+00:00"
+    },
+    {
+      "target": "spec-imports",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T14:09:31.458632+00:00",
+      "finished_utc": "2026-10-03T14:09:31.531622+00:00"
+    },
+    {
+      "target": "all-imports",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T14:09:31.531931+00:00",
+      "finished_utc": "2026-10-03T14:09:31.621141+00:00"
+    },
+    {
+      "target": "placeholders",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T14:09:31.621416+00:00",
+      "finished_utc": "2026-10-03T14:09:36.556872+00:00"
+    },
+    {
+      "target": "structure",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T14:09:36.557294+00:00",
+      "finished_utc": "2026-10-03T14:09:41.173452+00:00"
+    },
+    {
+      "target": "strict-audit",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "started_utc": "2026-10-03T14:09:41.173783+00:00",
+      "finished_utc": "2026-10-03T14:09:45.152492+00:00"
+    }
+  ],
+  "log_fingerprints": {
+    "CloudShortUpsilonAxioms.log": "97d49dc071b77d3435057d487e753b2bd8d0c3063908e16d9abac9056edf3c4e",
+    "ZhangLS.Spec.ShortUpsilonArithmetic.log": "6370292f6dd53c53d7e671319bc9cee4862889776c57c2f047bc9fe76a3b352e",
+    "ZhangLS.Spec.ShortUpsilonEnergy.log": "6d9aa57e16cf4e81101bdf1d8af4e2ed080baba1658e2310fb72f6e33ad53a90",
+    "ZhangLS.Spec.ShortUpsilonFamilyError.log": "aebba3a00d37a9cde087e2394bc32443659e98298418f3e2308eddcaf73f1d42",
+    "ZhangLS.Spec.ShortUpsilonPaperEnergy.log": "8e95ce6a5e16b487b332f84405336f75439312930c022eb820f322ff91ea61cc",
+    "ZhangLS.Spec.ShortUpsilonRegressions.log": "4323c3292bca68c533eee123d83c32fd11a641a59c7f8936f85578aef4d36d55",
+    "all-imports.log": "c625c13c48efe8989a2b9c9e8f7e2705524712cc8abb84138a93210fd85706cd",
+    "full-project.log": "e35d46786a7ec73bfbec9ddf600d1770067645a9b462b41ae0aa23e9120ddd61",
+    "placeholders.log": "6c922d55aaf5f2b587ac3e86e1259365faf0f440b0f75406d147801574478b2c",
+    "spec-imports.log": "b982d54c78845f07893231341108148537bb103308df8b59fadd50ce8438b779",
+    "strict-audit.log": "fcd4cc1530320ba5ec0c5e80866278ede26f5b9241c6b1b4150e1deb8382e804",
+    "structure.log": "bdef19e51e9e798217d86a19edfdca834b70c6264e584a97be12fc9c8c4222a7"
+  },
+  "exact_inventory_check": {
+    "status": "PASS",
+    "public": 56,
+    "owned": 80,
+    "owners": 5,
+    "loaded_modules": 6072,
+    "source_sha256": "9651056148c9268268acbefdfea3833f366f18512045ba8ba8cd3178e2661610",
+    "object_sha256": "6be8ffa78e78f3e25c401c988a9cf37e305357ac165b55c48c95949a16da7223",
+    "log_sha256": "97d49dc071b77d3435057d487e753b2bd8d0c3063908e16d9abac9056edf3c4e"
+  },
+  "unchanged_numbered_ledger": {
+    "original": 36,
+    "repaired": 3,
+    "total_complete": 39,
+    "total_numbered": 51
+  },
+  "source_attachment_normalized_L_minus_225_is_lean_proved": false,
+  "signed_gain_proved": false,
+  "actual_upstream_direct_reference_checks": {
+    "ZhangLS.Spec.shortUpsilon_uniform_actual_error_energy": "ZhangLS.Spec.lemma31_exponential_absorption_threshold",
+    "ZhangLS.Spec.shortUpsilon_error_energy_sq_le": "ZhangLS.Spec.lemma31_actual_square_paper_tail_le",
+    "ZhangLS.Spec.shortUpsilon_actual_residual_second_moment": "ZhangLS.Spec.lemma33_actual_second_Dirichlet_mean_bound",
+    "ZhangLS.Spec.shortUpsilon_actual_trilinear_error_sq": "ZhangLS.Spec.lemma81_actual_polynomial_fourth_moment"
+  }
+}

@@ -1706,6 +1706,11 @@ import ZhangLS.Spec.Section8UpstreamGeometry
 import ZhangLS.Spec.Section8UpstreamKernels
 import ZhangLS.Spec.Section8UpstreamLimits
 import ZhangLS.Spec.ShiftedAdditiveLargeSieve
+import ZhangLS.Spec.ShortUpsilonArithmetic
+import ZhangLS.Spec.ShortUpsilonEnergy
+import ZhangLS.Spec.ShortUpsilonFamilyError
+import ZhangLS.Spec.ShortUpsilonPaperEnergy
+import ZhangLS.Spec.ShortUpsilonRegressions
 import ZhangLS.Spec.TauDirichletValues
 import ZhangLS.Spec.TauWeightedDeltaCoefficients
 import ZhangLS.Spec.TauWeightedDeltaGeometry

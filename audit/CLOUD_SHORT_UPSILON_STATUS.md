@@ -1,6 +1,14 @@
 # Actual short-upsilon reduction and the remaining repair obligations
 
-Status: independently reviewed source-level mathematics; Lean formalization of the finite arithmetic bridge is in progress. No strict gain, completed actual Gram matrix, or main theorem follows from this report.
+Status: the finite actual arithmetic and full primitive-character-family error bridge have passed central Lean verification. The actual C1/T1 contour attachment remains independently reviewed source-level mathematics. R3 is partially Lean-proved; no strict gain or main theorem follows.
+
+## Newly verified Lean portion
+
+Five proof/regression modules prove the actual ramified convolution identities, the closed d<=D^4 cutoff, all N<=floor(P^2) energy bound S_N^2<=1260*3^80*L^-1291, and its explicit consequence S_N<=36*3^40*L^-640. One absolute conductor threshold is chosen before the character, all pure shift triples and N. Actual L3.1, L3.3 and L8.1 inputs yield the full primitive-family trilinear error O(B1 B2 P^2 L^-302), at every critical-line height, with its conjugate version. The complete product constraints and genuine residual polynomial are preserved.
+
+Central verification checked56 public declarations, all80 owned declarations in five nonempty owners, five Lean regression theorems, all6067 external source/object pins,5709 full-project build jobs and1905 source guards. Only propext, Classical.choice and Quot.sound occur. Strict heuristic candidates remain442 with zero added. The56 finite arithmetic endpoint checks were independently replayed. See [exact scope](short_upsilon/MATHEMATICAL_SCOPE.md), [inventories](short_upsilon/AXIOM_INVENTORY.json), [reproduction](short_upsilon/REPRODUCE.md) and [verification record](cloud_short_upsilon_verification.json).
+
+The normalized contour exponent -225 discussed below is source-level, not a newly proved Lean endpoint. R2 must still attach the actual finite contours, unit gamma factors and Gaussian integration.
 
 Let L=log D and P=exp(L^9). For the actual real primitive character and original assumption (A), set nu=1*chi and upsilon=mu*(mu chi), with Dirichlet convolution. Complete multiplicativity, including ramified primes, gives mu=upsilon*chi. The split/inert/ramified local values prove |upsilon|<=nu<=tau2. For purely imaginary beta,
 
@@ -34,7 +42,7 @@ not through zero. The existing actual good-family product approximation and appr
     H/Gdual = A_normalized - 2 + O(L^-100),
     A_normalized = L(s,psi)L(s,chi psi)/F(s,psi).
 
-At actual good-family zeros this gives H=-2 Gdual*(1+O(L^-100)). This range is the good family only. Inserting it into the full-family degree-four weighted contour needs additional resummation, weighted norm/error, and bad-family control; a zero identity alone does not attach that contour. Finite Fourier completion of one pure-power variable brings inverse-additive and Kl3 terms to a common Kl2 family, but does not remove the missing gamma factor or prove a saving.
+At actual good-family zeros this gives H=-2 Gdual*(1+O(L^-100)). This range is the good family only. The [independently reviewed weighted attachment](paired_phase_attachment/STATUS.md) now supplies the legal resummation, weighted norm/error and bad-family control at source level, preserving total error O(a^-1 L^-14). The signed resulting main integral remains unevaluated; a zero identity alone does not establish gain. Finite Fourier completion of one pure-power variable brings inverse-additive and Kl3 terms to a common Kl2 family, but does not remove the missing gamma factor or prove a saving.
 
 The remaining obligation is an actual evaluated matrix/target residual with a favorable sign, actual Gram/Schur nondegeneracy, and a complete relative error budget. If all new entries were merely o(1), the chosen zero-leading-moment trial would have no leading gain. A valid repair needs a nonzero actual target residual or a quantified next-order margin. These conditions are recorded as separate [critical-path nodes](cloud_repair_critical_path.json).
 
