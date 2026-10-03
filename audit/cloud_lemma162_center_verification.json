@@ -1,0 +1,84 @@
+{
+  "status": "PASS_CORRECTED_ACTUAL_V_CENTER_STRIP_DISK_AND_CAUCHY_COMPONENT",
+  "verified_at_utc": "2026-10-03T02:02:49.353817+00:00",
+  "base_commit": "8a14c3fa60f1ffb6aaf35178af2bb9477fb4761d",
+  "new_production_modules": 7,
+  "public_declaration_checks": 45,
+  "regressions": 12,
+  "standalone_audits": 2,
+  "full_project_jobs": 5478,
+  "source_files": 1642,
+  "spec_imports": 1224,
+  "full_imports": 1489,
+  "strict_candidates": 423,
+  "strict_exit_code": 1,
+  "source_relocation": "imports only",
+  "independent_rebuild_and_semantic_review": "ACCEPT:7 modules,45 declarations,12 regressions and ownership audit",
+  "independent_pinned_pairs": 65,
+  "archive_sha256": "44d7e8937ffeddf2836669ceccbbbebe64b34209acee123659ceafac5a21fd09",
+  "same_actual_corrected_V": true,
+  "original_beta_one_and_two": true,
+  "center_error": "C_center*pi/(log D)^9",
+  "thin_strip_bound": "C_strip*(1+log log D)^18",
+  "absolute_disk_radius": "1/(10 log D)",
+  "all_order_derivative_bound": "n!*C_sector*(10 log D)^n",
+  "printed_old_quotient_proved": false,
+  "complete_repaired_lemma162_proved": false,
+  "section16_mellin_residue_budget_proved": false,
+  "numbered_completion_count_change": 0,
+  "logs": {
+    "CloudLemma162CenterAxioms.log": {
+      "bytes": 4853,
+      "sha256": "0641def29070580e0d38c7b6caa8309518523312afb8f78c89af553fdf90bc83"
+    },
+    "CloudLemma162CenterRegression.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Lemma162CauchyBounds.log": {
+      "bytes": 54060,
+      "sha256": "3dddfd7751986425abf9b628fa0deefc22f675be8fc2679572c0f215c56a4568"
+    },
+    "Lemma162CenterComparison.log": {
+      "bytes": 52934,
+      "sha256": "e007a4c3b3251b4eac421fb87b6a9f9776f7695f6f65592737fc6fbc9980e983"
+    },
+    "Lemma162CorrectedCenter.log": {
+      "bytes": 54964,
+      "sha256": "ae71d13bd56ec0ab43ed560d3929d4f7ce5babdad152546bf4297baba45212e3"
+    },
+    "Lemma162CorrectedQuantitative.log": {
+      "bytes": 54970,
+      "sha256": "e3538bdfbb36429d13ad5f8e25be62a6ecc751348783e8fe46ce64ee15847fe9"
+    },
+    "Lemma162ExactCenter.log": {
+      "bytes": 52028,
+      "sha256": "2814fdc515df5dfe558c847710f1c92dc8672fbf2fb414515f0f03f239134095"
+    },
+    "Lemma162SectorBound.log": {
+      "bytes": 54059,
+      "sha256": "f432084559410a172dcc1ea97bf5c56e9298dd3e9cd934b5a82ca0127dc1b407"
+    },
+    "Lemma162ThinStripBound.log": {
+      "bytes": 54062,
+      "sha256": "edcd88c48dde09b2ea2a3095523f213d2316e6cc5c9b93a187e39823b9366d01"
+    },
+    "lemma162-center-full-project.log": {
+      "bytes": 253663,
+      "sha256": "40b9f586edf03d8d09d5c7b529f7f7e3457d2cd9e00244c0dc9f24b95be933ca"
+    },
+    "lemma162-center-placeholders.log": {
+      "bytes": 65,
+      "sha256": "953579b8f9db47dfccdcd311e7f44cf14064454d3638e6bea0397ee64605f4d3"
+    },
+    "lemma162-center-strict-audit.log": {
+      "bytes": 42873,
+      "sha256": "cfa1276fd9fd2dfed61ed1c4343c439c1c9202556e3a78c38257b66db6e6f13b"
+    },
+    "lemma162-center-structure.log": {
+      "bytes": 46,
+      "sha256": "82af13107e23616b3b2ce26fb248e71ddaf10e9583e36baac5a2a56980331894"
+    }
+  },
+  "new_strict_candidates": 0
+}

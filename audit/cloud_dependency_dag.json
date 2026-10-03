@@ -2876,7 +2876,7 @@
         "proof_section": "Appendix A"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "actual_shifted_analytic_bridge_and_old_center_verified",
+      "working_status": "corrected_actual_V_center_and_uniform_Cauchy_bounds_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 180,
@@ -2884,16 +2884,17 @@
         "old_completion_revalidated": false,
         "trusted_capstone_found": false,
         "component_report": "audit/CLOUD_LEMMA162_STAGE2_STATUS.md",
-        "original_target_proved": false
+        "original_target_proved": false,
+        "quantitative_corrected_component_report": "audit/CLOUD_LEMMA162_CENTER_STATUS.md"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
         "L16.1"
       ],
       "missing_mathematics": [
-        "Quantitative comparison with printed old-quotient center asymptotic",
-        "Corrected uniform bounds/center: separate packet pending central verification",
-        "Actual Mellin/residue and downstream error budgets"
+        "Actual shifted two-pole Mellin and residue cancellation",
+        "Finite cutoff/unsmoothing and final Section16 error budgets",
+        "Quantitative comparison with printed old-quotient center asymptotic"
       ],
       "missing_specification_or_engineering": [
         "Keep old quotient distinct from corrected V and preserve finite-D shifts"
@@ -2915,8 +2916,8 @@
           "Actual varpi2j; avoid division by vanishing ordinary p=2 factor"
         ]
       },
-      "scheduling_phase": "corrected_center_uniform_bounds_and_mellin_budget",
-      "active_work": "Actual corrected Euler factorization, analytic product and genuine old-quotient continuous center0 centrally verified. Quantitative corrected-V center and Cauchy bounds await central review; downstream Mellin/residue budgets remain open. No quantified contradiction to printed asymptotic is claimed."
+      "scheduling_phase": "actual_shifted_mellin_residue_and_unsmoothing_budget",
+      "active_work": "Actual corrected V center matches printed Euler main to explicit O(log^-9 D), with absolute disk/all-order Cauchy bounds; central and independent ACCEPT. Actual two-pole Section16 Mellin residue and final error budget remain active. Old quotient remains distinct with center0."
     },
     {
       "id": "L17.1",
@@ -3910,7 +3911,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-03T01:28:24.699689+00:00",
+    "verified_at_utc": "2026-10-03T02:02:49.353817+00:00",
     "completed": 36,
     "in_progress": 3,
     "unstarted": 7,
@@ -4197,6 +4198,18 @@
       "regressions": 19,
       "actual_old_continuous_center_zero": true,
       "printed_asymptotic_incompatibility_quantified": false
+    },
+    {
+      "id": "L16.2_corrected_actual_V_center_and_Cauchy",
+      "status": "verified",
+      "report": "audit/CLOUD_LEMMA162_CENTER_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 7,
+      "public_declaration_checks": 45,
+      "regressions": 12,
+      "center_error": "O(log^-9 D)",
+      "all_order_Cauchy": true,
+      "downstream_mellin_budget_proved": false
     }
   ],
   "repair_discipline": {

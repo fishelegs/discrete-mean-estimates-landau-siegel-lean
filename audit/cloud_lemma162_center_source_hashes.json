@@ -1,0 +1,56 @@
+[
+  {
+    "path": "ZhangLS/Spec/Lemma162ThinStripBound.lean",
+    "sha256": "b46fed995deaccf09c5d60f5f4ec6d877f946ed74c35c984e4fec05697a435b9",
+    "private_sha256": "f4614aa626f57a9469ae2449b72cf9cdba6d6df49cdf65e09e2c4293e0d97b2a",
+    "relocation": "imports only"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma162ExactCenter.lean",
+    "sha256": "849e42da94c97d7d325fda90519195506d5c12e153997d0323d839be8b269922",
+    "private_sha256": "ae78866a1426cfbd068f113bdf6a5a5ad24a155f8959923d45df27af432f9432",
+    "relocation": "imports only"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma162SectorBound.lean",
+    "sha256": "e47d0e86e0bb786c5152dec41d60744baf9f67f66ef29294f24b993d7a50814f",
+    "private_sha256": "ca7c4f5a8b9048e32f2ab053e55ef3493cc09df69ab23dd024bbeea76de631d6",
+    "relocation": "imports only"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma162CenterComparison.lean",
+    "sha256": "70a7bedd2bcfcf743420c741fcfa37240b6907949a1881d6d90ce28a7cbc0e37",
+    "private_sha256": "fdd3426fb32376176a880f913a835b1a3ba921f49d2707c25bd00be76f55642b",
+    "relocation": "imports only"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma162CorrectedCenter.lean",
+    "sha256": "fc0415b3d86a57ef8b0e408f04c3eebd8cf75bfd13becc88dae6fc8a5dccbc55",
+    "private_sha256": "a25e42c190e9fdf4dab9de32c9351f8b2a2cdaa9bfd89ff65b404f571815bdb2",
+    "relocation": "imports only"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma162CauchyBounds.lean",
+    "sha256": "75d75e1652b48a6e07de415e288162c4dff27af1c222de5812c48530d7b0cc29",
+    "private_sha256": "e423e20cd644f8bd127d213cb38c7dc8afd508a6e068d056436ce5b958b3d80c",
+    "relocation": "imports only"
+  },
+  {
+    "path": "ZhangLS/Spec/Lemma162CorrectedQuantitative.lean",
+    "sha256": "c6ae4d35696ebdc87446bfa61721401d32b4448cde2a86687b60521e665f4eb7",
+    "private_sha256": "fd928cc46152db2f84d2d89e8dfd6a63c7bc0077ac4504e19599a47ed854152d",
+    "relocation": "imports only"
+  },
+  {
+    "path": "audit/CloudLemma162CenterAxioms.lean",
+    "sha256": "53977872dbbafcb8c08e40c6d694686954b664abd33f74c41392d72edd994097",
+    "private_sha256": "76529dc912ac922780bbd8f98f352ec5057a60a4ba89d4117320adcfc6853b4d",
+    "relocation": "imports only"
+  },
+  {
+    "path": "audit/CloudLemma162CenterRegression.lean",
+    "sha256": "e0980bb288f5f1bf32261b1640e4f619c64dba37709cdab317085442dfc2ce13",
+    "private_sha256": "8d2d028e4c77f793f0e4a6d15ea4bade220b18efe5b2816242141d3d8607a8e1",
+    "relocation": "imports only"
+  }
+]
