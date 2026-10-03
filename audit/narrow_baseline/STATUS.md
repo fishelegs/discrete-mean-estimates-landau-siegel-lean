@@ -1,6 +1,6 @@
 # Fixed smooth narrow baseline: recalibration required
 
-The small-gain branch using two fixed chi-times-smooth old profiles in [.502,.504] and [.499,.500] is suspended for recalibration. Independent source review proves a constant actual target-projection deficit, conditional only on the stated original inputs, including the newly privately checked uniform BV estimate whose central publication is still pending.
+The small-gain branch using two fixed chi-times-smooth old profiles in [.502,.504] and [.499,.500] is suspended for recalibration. Independent source review proves a constant actual target-projection deficit, conditional only on the stated original inputs, including the uniform BV estimate now centrally verified with original Proposition2.6.
 
 The eventual normalized squared deficit is at least250/pi. The target squared norm tends to8000/pi+44pi/375 in the same actual c-star*omega/(a*M) normalization. Exact rational bounds give a relative deficit greater than2.9%. A lower bound merely of order L^-8 for an added projection component is therefore insufficient to establish the required full-ratio improvement.
 
@@ -12,6 +12,8 @@ The source proof extends the actual Gram attachment to the tent using a finite-m
 - [Independent review](INDEPENDENT_REVIEW.md)
 - [Exact coercivity and normalization checks](COERCIVITY_CHECKS.json)
 - [Symbolic atomic-ramp checks](ATOMIC_RAMP_CHECKS.json)
-- [Pinned sources and private BV source fingerprint](SOURCES.json)
+- [Pinned sources and original BV source fingerprint](SOURCES.json)
 
 Next candidates must first establish a legally attached near-threshold baseline or a sufficient constant-size improvement, then evaluate the complete augmented deficit and all propagated errors. Local determinant lower bounds alone do not provide that calibration.
+
+Update: the BV input is now independently rebuilt centrally; see [P2.6 verification](../CLOUD_PROPOSITION26_STATUS.md). This upgrades that input only. The tent extension and baseline theorem remain source-level.

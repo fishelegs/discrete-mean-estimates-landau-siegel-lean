@@ -1,0 +1,620 @@
+{
+  "status": "PASS",
+  "base_commit": "6762dd9d1965823a31af9c0cf8e2578974686a91",
+  "checked_utc": "2026-10-03T17:43:18.186862+00:00",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "scope": "Original Proposition26Target and actual same-compatible-c uniform BV/J-defect bounds; not a new main-term gain or proof of the main theorem.",
+  "proof_modules": [
+    "ZhangLS.Spec.Lemma111PrimitiveVariation",
+    "ZhangLS.Spec.Lemma111TentVariation",
+    "ZhangLS.Spec.Lemma111StrictVariation",
+    "ZhangLS.Spec.Lemma111GaussianFarTail",
+    "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+    "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+    "ZhangLS.Spec.Lemma83FiniteXiRegular",
+    "ZhangLS.Spec.Lemma83FiniteXiUniform",
+    "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+    "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+    "ZhangLS.Spec.Lemma83FiniteXiEuler",
+    "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+    "ZhangLS.Spec.Proposition26ChiHarmonic",
+    "ZhangLS.Spec.Proposition26ProfileBV",
+    "ZhangLS.Spec.Proposition26ConvolutionBV",
+    "ZhangLS.Spec.Proposition26ArithmeticInner",
+    "ZhangLS.Spec.Proposition26OuterWeight",
+    "ZhangLS.Spec.Proposition26ArithmeticBV",
+    "ZhangLS.Spec.Proposition26EnergyObjects",
+    "ZhangLS.Spec.Proposition26ArithmeticEnergy",
+    "ZhangLS.Spec.Proposition26OriginalObjects",
+    "ZhangLS.Spec.Proposition26E2Energy",
+    "ZhangLS.Spec.Proposition26EnergyAlgebra",
+    "ZhangLS.Spec.Proposition26Conjugation",
+    "ZhangLS.Spec.Proposition26ParameterBudget",
+    "ZhangLS.Spec.Proposition26UniformEnergy",
+    "ZhangLS.Spec.Proposition26RampProfiles",
+    "ZhangLS.Spec.Proposition26H2Energy",
+    "ZhangLS.Spec.Proposition26GaussianProfiles",
+    "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+    "ZhangLS.Spec.Proposition26GaussianEnergy",
+    "ZhangLS.Spec.Proposition26OriginalTransfer",
+    "ZhangLS.Spec.Proposition26Regressions"
+  ],
+  "public_declarations": 294,
+  "production_public": 279,
+  "regression_public": 15,
+  "all_owned_declarations": 437,
+  "production_owned": 422,
+  "regression_owned": 15,
+  "owner_counts": {
+    "ZhangLS.Spec.Proposition26GaussianProfiles": 27,
+    "ZhangLS.Spec.Lemma83FiniteXiRegular": 14,
+    "ZhangLS.Spec.Lemma83FiniteXiEuler": 11,
+    "ZhangLS.Spec.Proposition26E2Energy": 14,
+    "ZhangLS.Spec.Proposition26ProfileBV": 13,
+    "ZhangLS.Spec.Proposition26OriginalTransfer": 13,
+    "ZhangLS.Spec.Proposition26ConvolutionBV": 5,
+    "ZhangLS.Spec.Lemma83XiMoebiusConvolution": 7,
+    "ZhangLS.Spec.Proposition26ChiHarmonic": 5,
+    "ZhangLS.Spec.Proposition26EnergyObjects": 11,
+    "ZhangLS.Spec.Proposition26GaussianPolynomialBridge": 25,
+    "ZhangLS.Spec.Lemma111TentVariation": 32,
+    "ZhangLS.Spec.Lemma111GaussianFarTail": 15,
+    "ZhangLS.Spec.Lemma111PrimitiveVariation": 8,
+    "ZhangLS.Spec.Lemma83FiniteXiPerturbation": 21,
+    "ZhangLS.Spec.Proposition26GaussianEnergy": 21,
+    "ZhangLS.Spec.Lemma111StrictVariation": 13,
+    "ZhangLS.Spec.Proposition26UniformEnergy": 18,
+    "ZhangLS.Spec.Proposition26H2Energy": 12,
+    "ZhangLS.Spec.Proposition26OriginalObjects": 24,
+    "ZhangLS.Spec.Proposition26ParameterBudget": 9,
+    "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant": 12,
+    "ZhangLS.Spec.Lemma83FiniteXiLocalMass": 16,
+    "ZhangLS.Spec.Proposition26Conjugation": 14,
+    "ZhangLS.Spec.Lemma83FiniteShiftLambda": 12,
+    "ZhangLS.Spec.Proposition26OuterWeight": 7,
+    "ZhangLS.Spec.Lemma83FiniteXiUniform": 6,
+    "ZhangLS.Spec.Proposition26RampProfiles": 16,
+    "ZhangLS.Spec.Proposition26ArithmeticBV": 10,
+    "ZhangLS.Spec.Proposition26ArithmeticEnergy": 2,
+    "ZhangLS.Spec.Proposition26ArithmeticInner": 6,
+    "ZhangLS.Spec.Proposition26EnergyAlgebra": 3,
+    "ZhangLS.Spec.Proposition26Regressions": 15
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "lean_regression_theorems": 15,
+  "full_project_jobs": 5742,
+  "source_guards": 1939,
+  "spec_imports": 1488,
+  "all_imports": 1753,
+  "strict_audit": {
+    "status": "PASS",
+    "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43",
+    "baseline_candidates": 442,
+    "new_candidates": 2,
+    "current_candidates": 444,
+    "unresolved_new_candidates": 0,
+    "reviews": [
+      {
+        "path": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+        "line": 194,
+        "declaration": "lemma111_tent_one_zero_of_cutoff",
+        "status": "REVIEWED_LOCAL_DERIVATION",
+        "reason": "h is constructed immediately from Real.log_le_log applied to the genuine positive P1 and actual cutoff, then rewritten by log_rpow. It is not a theorem hypothesis or an assumed tail/energy target."
+      },
+      {
+        "path": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+        "line": 277,
+        "declaration": "lemma111_twice_P1_le_transfer_cutoff",
+        "status": "REVIEWED_LOCAL_DERIVATION",
+        "reason": "h is the proved library inequality Real.log_le_sub_one_of_pos at2, simplified to log2<=1. No intended norm or asymptotic conclusion is an input."
+      }
+    ],
+    "strict_exit_code_remains": 1
+  },
+  "source_fingerprints": [
+    {
+      "path": "ZhangLS/Spec/Proposition26ArithmeticBV.lean",
+      "sha256": "bd5af86e3516d982700cc6a1cd069a5c8c6322a4223fdf5713182b1c941a9f9a"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26ArithmeticEnergy.lean",
+      "sha256": "e7fd2c1d6ca6a6e5d024749b63cfc2a466505a72d2a6e9d6d7c85e9768ce0df1"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26ArithmeticInner.lean",
+      "sha256": "90870970d4a627eb6383f6d3240b87cd39678722f008181662092d8d810d3e6d"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26ChiHarmonic.lean",
+      "sha256": "21f410cb6be2498b260fa91453e400472064c59a919565399ba192688b0efce7"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26ConvolutionBV.lean",
+      "sha256": "19d9a8615a7c4967a00cd8ab05eef180108089f9801b9212d0facfb2574b8b50"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26E2Energy.lean",
+      "sha256": "236e9f271b0581527d8f14525402ca50e9c7a45a21f98017ce31ae16e20deee4"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26EnergyAlgebra.lean",
+      "sha256": "fa0ade7916e325958c738ee8396fb18313821a60a9b35248186a6ba4e44884d5"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26EnergyObjects.lean",
+      "sha256": "6b3d1980fc5508c72f360008a03d3940dbc1417520099c867a443789c3019be5"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26GaussianEnergy.lean",
+      "sha256": "f0ec7bca6bd2273e6c1992e2df0cdac2d64179ba9801a32556af025dbcf68ba9"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26H2Energy.lean",
+      "sha256": "483cbd6f466c539b0bfe802ade06b14c3eef36738a1f5ceffe9bfbafe66620ee"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26OriginalTransfer.lean",
+      "sha256": "72202b48a0627a66063eb460c08274df4b109b0a92f19b483c141423565edf1c"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26OuterWeight.lean",
+      "sha256": "f0bb368b0dbaa179a7caeb6e2e9f96ff8106ebcd0cf286e2ee64d4bfd6e2c8de"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26ParameterBudget.lean",
+      "sha256": "bef8b9a6e71aaf3db188182198f030b277cfc17648348acf9fe960080191aca9"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26UniformEnergy.lean",
+      "sha256": "b0f4afd7821de70bd01521b4a25df9deb3dc0aaff5002272803bd7a6aaa9bd3b"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma111PrimitiveVariation.lean",
+      "sha256": "81df74d66d2bacbbb5db28e9b1f86306d1d4fab1bbbba975a91ea77ed8f03724"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma111StrictVariation.lean",
+      "sha256": "69bb5023eea39eeb45a1ff73b6b6228b34c56eb55175568524777f92d3c84234"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma83FiniteShiftLambda.lean",
+      "sha256": "371b777efcd95ea49f4574ad3e74a222ccbd65c82c7f036c4ee793fec7528470"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma83FiniteXiRegular.lean",
+      "sha256": "c7c4481dddf5c40970f30892040b46a564080329ba2a4a39478d7f8cf1a99a8b"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma83FiniteXiUniform.lean",
+      "sha256": "abb12ad65341bff5f23358a869e989997d7c7974b9a51c20419a2ad97a328629"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma83XiMoebiusConvolution.lean",
+      "sha256": "60fed4faecea4e96e393f0595b5a46611b1bb364a30c9a70a3c7bf0f7bb0520f"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma83FiniteXiLocalMass.lean",
+      "sha256": "321255190e175ad9c92477d7a4eb9e3fa27d978100e3bde8e819e9e7240c7e53"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma83FiniteXiEuler.lean",
+      "sha256": "fc1d55f88dca9bcb611e302a4c66b1a4a049e171d8027ae0e040968b7038bc28"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma83OriginalFiniteXiMajorant.lean",
+      "sha256": "9dcad49a79622689ff6eff225ee82145cb9bc582936197260923cb8f6e392368"
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "path": "audit/CloudProposition26Axioms.lean",
+      "sha256": "355822004b6d40a3211556689af763833e36c3b7e8b3221b4bca22be0b63d70e"
+    },
+    {
+      "path": "ZhangLS/Spec/All.lean",
+      "sha256": "4f2ba62e927fedad418b76124a76e4000a8f444f73be4a5deb77ef370db15b5f"
+    },
+    {
+      "path": "ZhangLS/All.lean",
+      "sha256": "38c6f4198e66426f01c11f129c4078b188e349e51d8275ba1315e57a1073a3d4"
+    }
+  ],
+  "commands": [
+    {
+      "target": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:31:03.302971+00:00",
+      "finished_utc": "2026-10-03T15:32:33.971154+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Lemma111TentVariation",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:32:33.972558+00:00",
+      "finished_utc": "2026-10-03T15:34:07.008219+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Lemma111StrictVariation",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:34:07.008956+00:00",
+      "finished_utc": "2026-10-03T15:35:35.689873+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:35:35.690551+00:00",
+      "finished_utc": "2026-10-03T15:37:16.863229+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:37:16.864189+00:00",
+      "finished_utc": "2026-10-03T15:39:08.835353+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:39:08.836188+00:00",
+      "finished_utc": "2026-10-03T15:40:47.741826+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:40:47.745052+00:00",
+      "finished_utc": "2026-10-03T15:42:20.383715+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:42:20.384511+00:00",
+      "finished_utc": "2026-10-03T15:44:13.174103+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:44:13.174792+00:00",
+      "finished_utc": "2026-10-03T15:45:43.115406+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:45:43.116164+00:00",
+      "finished_utc": "2026-10-03T15:51:13.627446+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:51:13.628207+00:00",
+      "finished_utc": "2026-10-03T15:54:31.276175+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:54:31.276930+00:00",
+      "finished_utc": "2026-10-03T15:56:10.426523+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26ChiHarmonic",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:56:10.427138+00:00",
+      "finished_utc": "2026-10-03T15:57:40.647455+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26ProfileBV",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:57:40.648168+00:00",
+      "finished_utc": "2026-10-03T15:59:59.053993+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26ConvolutionBV",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T15:59:59.054627+00:00",
+      "finished_utc": "2026-10-03T16:02:21.105703+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26ArithmeticInner",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:02:21.106523+00:00",
+      "finished_utc": "2026-10-03T16:04:26.805644+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26OuterWeight",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:04:26.806685+00:00",
+      "finished_utc": "2026-10-03T16:05:47.164476+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:05:47.165216+00:00",
+      "finished_utc": "2026-10-03T16:08:01.281025+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:08:01.282152+00:00",
+      "finished_utc": "2026-10-03T16:09:23.024463+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26ArithmeticEnergy",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:09:23.025597+00:00",
+      "finished_utc": "2026-10-03T16:11:46.470997+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:11:46.471942+00:00",
+      "finished_utc": "2026-10-03T16:13:18.669562+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26E2Energy",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:13:18.670390+00:00",
+      "finished_utc": "2026-10-03T16:14:42.411563+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26EnergyAlgebra",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:14:42.412603+00:00",
+      "finished_utc": "2026-10-03T16:16:04.194139+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26Conjugation",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:16:04.194915+00:00",
+      "finished_utc": "2026-10-03T16:17:29.865821+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:17:29.866870+00:00",
+      "finished_utc": "2026-10-03T16:19:41.000248+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:19:41.000977+00:00",
+      "finished_utc": "2026-10-03T16:21:58.486844+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26RampProfiles",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:21:58.487665+00:00",
+      "finished_utc": "2026-10-03T16:24:16.283843+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26H2Energy",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:24:16.284732+00:00",
+      "finished_utc": "2026-10-03T16:26:38.005912+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:26:38.006614+00:00",
+      "finished_utc": "2026-10-03T16:28:47.668474+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:28:47.670125+00:00",
+      "finished_utc": "2026-10-03T16:30:50.152742+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:30:50.153877+00:00",
+      "finished_utc": "2026-10-03T16:33:00.580395+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:33:00.581622+00:00",
+      "finished_utc": "2026-10-03T16:35:16.650007+00:00"
+    },
+    {
+      "target": "ZhangLS.Spec.Proposition26Regressions",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:35:16.650812+00:00",
+      "finished_utc": "2026-10-03T16:37:39.962142+00:00"
+    },
+    {
+      "target": "CloudProposition26Axioms",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:37:39.963066+00:00",
+      "finished_utc": "2026-10-03T16:41:39.532121+00:00"
+    },
+    {
+      "target": "full-project",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T16:41:40.678206+00:00",
+      "finished_utc": "2026-10-03T17:37:48.592480+00:00"
+    },
+    {
+      "target": "spec-imports",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T17:37:48.593274+00:00",
+      "finished_utc": "2026-10-03T17:37:48.665369+00:00"
+    },
+    {
+      "target": "all-imports",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T17:37:48.665715+00:00",
+      "finished_utc": "2026-10-03T17:37:48.749563+00:00"
+    },
+    {
+      "target": "placeholders",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T17:37:48.749906+00:00",
+      "finished_utc": "2026-10-03T17:37:53.041633+00:00"
+    },
+    {
+      "target": "structure",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "started_utc": "2026-10-03T17:37:53.042064+00:00",
+      "finished_utc": "2026-10-03T17:37:56.631880+00:00"
+    },
+    {
+      "target": "strict-audit",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "started_utc": "2026-10-03T17:37:56.632260+00:00",
+      "finished_utc": "2026-10-03T17:37:59.592468+00:00"
+    }
+  ],
+  "exact_inventory_check": {
+    "status": "PASS",
+    "public": 294,
+    "owned": 437,
+    "owners": 33,
+    "loaded_modules": 7365,
+    "source_sha256": "355822004b6d40a3211556689af763833e36c3b7e8b3221b4bca22be0b63d70e",
+    "object_sha256": "961ee8bbeb911ea576aef4fd7f1344577dfcb0d12243be7d335a0e78d4754c95",
+    "log_sha256": "6ffd026365b387d401ac0981b137a2982f3e065ff1e7fda81c588546d069a4f0"
+  },
+  "dependency_pins": {
+    "actual_loaded_modules": 7365,
+    "actual_object_sidecar_metadata_files_rehashed": 60519,
+    "original_project_source_object_dependencies": 1251,
+    "central_dependency_sources_rehashed_before_and_after": 7365,
+    "imported_module_names_sha256": "cee3f691f59288999c8dc32057864628101a82445f46814d23ef973434fb7cff",
+    "private_component_manifest_sha256": "bdc6f64984af1b281d8aca8ccbf76b653fa6c33153cd9a731b791304e9254ebe",
+    "private_handoff_sha256": "6b30a58a920986f8096e9e968fda8c81f3ea33d92f1a3e179c61d6fd272d79a8",
+    "private_frozen_manifest_sha256": "7f24e67e7c83223e909a2357b6f84cfcd44783b4bc93846e9762a3f4f9d8799d",
+    "central_source_pin_manifest_sha256": "46b4545e52ff9758a861601acaefbc4b7f87522110e338bc79a4eff9d030405b",
+    "lean_executable_sha256": "3e0d0d3d801675359f2d4cf9815bfdb417b20b92fdd9d48b3b14c95bbae28bbf",
+    "scope_note": "Private object pins cover actual identified components. Central source pins are a fresh snapshot, not a claim that all third-party source text was included in the earlier frozen packet. No whole-OS/runtime closure claim."
+  },
+  "log_fingerprints": {
+    "CloudProposition26Axioms.log": "6ffd026365b387d401ac0981b137a2982f3e065ff1e7fda81c588546d069a4f0",
+    "ZhangLS.Spec.Lemma111GaussianFarTail.log": "bea5a3630a8594f20222807fa30e259a078ca25bdccab50e5a09c66623ea921d",
+    "ZhangLS.Spec.Lemma111PrimitiveVariation.log": "8ff34936d9b061d5f151fb309c28c3f228252b373d8cd942a4d053591b30441d",
+    "ZhangLS.Spec.Lemma111StrictVariation.log": "664de56c10af252a996f12e0a15d01a033fa8779394a23548be556725349f138",
+    "ZhangLS.Spec.Lemma111TentVariation.log": "87b463b55fc7592686edbddf68103229572046e0eff7f0406037108291b36291",
+    "ZhangLS.Spec.Lemma83FiniteShiftLambda.log": "734ea5074adc6a72546d358c234f6c9a26f5ac2407abc1a98a105858b703c63a",
+    "ZhangLS.Spec.Lemma83FiniteXiEuler.log": "0f7f5fdf6f0901fb6e985a4dc4408e5064f9292622613eb1ae3a09bfd5ba4afb",
+    "ZhangLS.Spec.Lemma83FiniteXiLocalMass.log": "25774cb11f5714eadcd5fca8d027993deb104995d497cf0015b9acd09f53476e",
+    "ZhangLS.Spec.Lemma83FiniteXiPerturbation.log": "2095080cb751db84ad7c01ec0325ad61a27a7a97ccad4b818759b43e9163a0c4",
+    "ZhangLS.Spec.Lemma83FiniteXiRegular.log": "2a631937396ff40c46cc6b38f19b3abf8572f98a3d0129e806af98dbf41d2d7c",
+    "ZhangLS.Spec.Lemma83FiniteXiUniform.log": "c5011f004987639a82b494618a7c076167ee6fbd03c5985e30fa6a14ac5726a8",
+    "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant.log": "c174bfc65131e0055a2c6be3e4c30b18852be358de3ad59e0f29d0da6d95f477",
+    "ZhangLS.Spec.Lemma83XiMoebiusConvolution.log": "f27735c4cd228651ec6cb31ec3ab8944987b7d57fe075e5ce39a5b324edba0a9",
+    "ZhangLS.Spec.Proposition26ArithmeticBV.log": "4a2a382227babc1a394eebabf370786590cc3de6cd9043184f5b73640a78bb4d",
+    "ZhangLS.Spec.Proposition26ArithmeticEnergy.log": "156141ce66e921dfc7e170ddd53bcb356508e8747c7ceac9bba6b44d83a3d168",
+    "ZhangLS.Spec.Proposition26ArithmeticInner.log": "b9a26b1f5f00729d75f1e3e2323c5c5b93e1c6c405a2c96368038a63d05e4f31",
+    "ZhangLS.Spec.Proposition26ChiHarmonic.log": "84c3258e09c0ff0e26bdc4dc2e0702af9f9258bb5b9c112ddd5f771dea97a5b9",
+    "ZhangLS.Spec.Proposition26Conjugation.log": "89d36a0f7cae757c8f8dcf8493dffb667215948c65ea1e46a5cac1735b8e3b3d",
+    "ZhangLS.Spec.Proposition26ConvolutionBV.log": "ce900cd5a9d58481c5ad6810b7e2ae8460da0a4aec1656862f6c07e8a8606f13",
+    "ZhangLS.Spec.Proposition26E2Energy.log": "38ed37dd474244cd7049d385c94ef147ec5158ef7ca0409e882fa730fe64e5f1",
+    "ZhangLS.Spec.Proposition26EnergyAlgebra.log": "a8bb876e1ad627486eb2dfd9568221e1af62aae54bbe1b57c1ba176f1842ac57",
+    "ZhangLS.Spec.Proposition26EnergyObjects.log": "25793d7950148b5cbc3ef0164c4fedfb0b7978412174b81aac6fb9c06e6f77af",
+    "ZhangLS.Spec.Proposition26GaussianEnergy.log": "ed8d3a5055d1f847eb528e7182194f46c45f13fa45960882153eafbb0cc2a519",
+    "ZhangLS.Spec.Proposition26GaussianPolynomialBridge.log": "919cee89da973963b0c11116a4281c786c4a3745ea604a1b5d67f668fd18b0e6",
+    "ZhangLS.Spec.Proposition26GaussianProfiles.log": "278a09281eac984702d40cc036b294bff6ba33bf7522c067429461c7d3a52e7c",
+    "ZhangLS.Spec.Proposition26H2Energy.log": "045eed5373f992e508b8da09de7200420d0e3b824d6d02d8e7bc7d35674c211b",
+    "ZhangLS.Spec.Proposition26OriginalObjects.log": "c04a41c83b75376f8d568337f6c35c179d1eed6e6e5cea2bcbeb025c2580ac93",
+    "ZhangLS.Spec.Proposition26OriginalTransfer.log": "6f51c21c9864dfad9d57a037b332396638c48241de6df50606f464a3eec96b29",
+    "ZhangLS.Spec.Proposition26OuterWeight.log": "d5315fbaf605e3ee679a7fdcc66454b0cf5f254e4907822e7bf92e80b102026a",
+    "ZhangLS.Spec.Proposition26ParameterBudget.log": "2722cded1df3f6945e85f674d6e9ecd16e275503aea5cf8427b028ab929fbdba",
+    "ZhangLS.Spec.Proposition26ProfileBV.log": "1b75ddf1a01731e1a3d4a0a56ad3d647a2836e34e7096e66469d4d4608746cda",
+    "ZhangLS.Spec.Proposition26RampProfiles.log": "36ebe8e70e0a7d5e70517c92428a57d708e3303ff95a1936f8afe22dde734289",
+    "ZhangLS.Spec.Proposition26Regressions.log": "e9a9d3a602e51b8fa8122b21e36d764b45c5d5e71932ff812061d745fb51f81c",
+    "ZhangLS.Spec.Proposition26UniformEnergy.log": "867f7a783b692009fc1613280304cbdf100b8b9c505383664e195e44ab513718",
+    "all-imports.log": "964ec1e9348c02fe05916d73e010a188f759d616d91bed90b6816208aa8f14c8",
+    "full-project.log": "8caf279731f23dc8ec0bd702f469c51a88ef436b67efc7b81fde3ae061d61ff8",
+    "placeholders.log": "ac8af22f01491779f003dc96c7235a4682d9c27a51ef11670551d834ccd8b176",
+    "spec-imports.log": "1016561098e07ae119fb2d171e577062e1471592925ad569a09facb1fd2e6a2d",
+    "strict-audit.log": "c758a80c92e38d9cd372537475331f4dc0b8bc3cdbef45c0fcfddc2499d9ef67",
+    "structure.log": "9bde1a74a3cbcd949e337b71b2389f084b971095d933975047e6c8f1c850cc14"
+  },
+  "regression_module_mapping": {
+    "FinalExpandedRegressions": "ZhangLS.Spec.Proposition26Regressions"
+  },
+  "independent_review": {
+    "status": "ACCEPT",
+    "report": "audit/proposition26/INDEPENDENT_REVIEW.md",
+    "complete_original_report_sha256": "069b7437565ebd45f09cf20381e81d1da2cfa00a87e78269f4d9a0e0f76eaa8f"
+  }
+}

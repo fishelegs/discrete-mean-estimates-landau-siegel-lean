@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "scope": "Finite regressions only; the asymptotic argument is in PROOF.md. No Lean run.",
+  "checks": {
+    "exact_budget_identities": 8,
+    "local_convolution_and_envelope": 39,
+    "divisor_product_prime_powers": 29952,
+    "divisor_submultiplicativity_prime_powers": 3888,
+    "ramified_deletion_coefficients": 283,
+    "double_cutoff_residual_coefficients": 21501,
+    "exact_multivariable_energy": 3,
+    "primitive_even_orthogonality": 3,
+    "root_crt": 18,
+    "twisted_root_moments": 96,
+    "global_phase_power_identity": 600,
+    "fejer_chord_lower_bound": 1005,
+    "finite_moment_obstruction": 21
+  },
+  "max_float_errors": {
+    "primitive_even_orthogonality": 1.687538997430238e-14,
+    "root_crt": 3.159750121719031e-15
+  },
+  "exact_exponents": {
+    "L2_norm": "-1979/4",
+    "L20_norm": "-251/4",
+    "L22_norm": "101/4",
+    "L21_norm": "-1399/84"
+  },
+  "fejer": {
+    "degree": 21,
+    "peak": 22,
+    "chord_error_coefficient": 3542,
+    "limiting_good_mass": "21/22"
+  }
+}

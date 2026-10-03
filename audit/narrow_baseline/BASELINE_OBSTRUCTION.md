@@ -1,6 +1,6 @@
 # Frozen baseline obstruction for fixed smooth narrow old profiles
 
-Publication boundary: this is a source-level mathematical audit, not a completed Lean dependency chain. It uses the actual uniform BV energy estimate, privately kernel-checked with the source hash below; central integration and publication of that estimate are still pending. No new numbered lemma or strict gain is claimed.
+Publication boundary: this is a source-level mathematical audit, not a completed Lean dependency chain. It uses the actual uniform BV energy estimate, privately kernel-checked with the source hash below; that same estimate has now passed central integration; see ../CLOUD_PROPOSITION26_STATUS.md. No new numbered lemma or strict gain is claimed.
 
 2026-10-03. Source-level result accepted after independent mathematical review.
 This is not a Lean theorem, not a signed phase estimate, and not an obstruction

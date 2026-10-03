@@ -1,0 +1,3762 @@
+{
+  "production_modules": 32,
+  "production_owned": 422,
+  "regression_modules": 1,
+  "regression_owned": 15,
+  "namespace_filter_used": false,
+  "declarations": [
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26GaussianCutoff._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26ErrorProfileOne.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_zero_shift._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_mass_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_actual_E2_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_twisted_coefficient_admissible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_defect_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ConvolutionBV",
+      "name": "ZhangLS.Spec.proposition26_convolution_profile_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_cutoff_indicator_variation._simp_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83XiMoebius.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ConvolutionBV",
+      "name": "ZhangLS.Spec.proposition26_character_cpow_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ChiHarmonic",
+      "name": "ZhangLS.Spec.proposition26_complex_variation_bound._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_zero_shift._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26SmoothedDefect._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ChiHarmonic",
+      "name": "ZhangLS.Spec.proposition26_chi_harmonic_range",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26RealOmega",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_twisted_polynomial_strict_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111ShiftScale",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_quartic_half_geometric_hasSum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_twice_P1_le_transfer_cutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111_primitive_zero_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_smoothed_one_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.Proposition26VariationBound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_local_kappa_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111Primitive.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26SmoothedDefect.congr_simp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_zero_shift._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_unsmoothing_energy_of_bv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_one_first_Ico",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.Proposition26BVNormAt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_unit_polynomial",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26PaperP2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_small_shift_log_budget",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_original_coordinate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83OriginalXiMajorantConstant._proof_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.Proposition26Target",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_J2_sub_Jtilde_polynomial",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_short_energy_integral",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26GaussianTailOne",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_first_endpoint_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_shift_prime_power",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_kappa_prime_power_zero_shift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111_primitive_monotone",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_short_polynomial_eq_twisted",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ChiHarmonic",
+      "name": "ZhangLS.Spec.proposition26_chi_harmonic_uniform",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_local_hasSum._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_quantitative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_uniform_bv_energy._simp_1_8",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_one_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_Jtilde2_critical_reflection",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111SmoothedOne.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83OriginalXiMajorantConstant._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_transfer_of_bv._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_twisted_coefficient_conjugate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_one_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_one_support",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_smoothed_energy_transfer",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_gaussian_interval_tail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_gaussian_tail_decay",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_triple_quotient_perturbation._simp_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26TotientSquareMass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_transfer_of_bv._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_local_hasSum._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26IotaThree.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_energy_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_d_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83XiZeroLocalTail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_regular_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26NormalizedGaussianProfile",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_prime_shift_mass_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_error_two_finite_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26Weight.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_add",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ConvolutionBV",
+      "name": "ZhangLS.Spec.proposition26_finite_product_reindex._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_triple_quotient_perturbation._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_HComponent_phase_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26TildeAlpha",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_local_h3_perturbation._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_shift_scale_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_totient_cancellation._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_normalized_tail_energy._simp_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26IotaThree._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_finite_phase_exponent._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_smoothed_energy_of_bv._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_one_admissible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_mass_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26PaperP2._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_two_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26GaussianCutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_zero_shift._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_J2_critical_reflection",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83OriginalXiMajorantConstant._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_twist_Z_critical_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_local_h3_perturbation._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26LambdaConstant._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_unit_mul_sub_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_cutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_error_gaussian_integrable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_frequency_size",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26J1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_P505_le_polynomial_cutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_prime_shift_term_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_tent_one_series_strict_finite",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_two_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_indicator_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_positive_antitone_variation._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26PaperP3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ConvolutionBV",
+      "name": "ZhangLS.Spec.proposition26_convolution_profile_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26Energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111TentErrorOne.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_normalized_gaussian_variation._simp_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_first_Ico_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_two_P505_tail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_original_Xi3_complex_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.lemma84Section8Cutoff.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_totient_cancellation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26XiThreeStar._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_real_profile_series_conjugate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_conjugate_variation._simp_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticEnergy",
+      "name": "ZhangLS.Spec.proposition26_main_term_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_uniform_bv_energy._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_local_hasSum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_original",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26ArithmeticBVConstant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_zero_shift._simp_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_kappa_tail_summable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_actual_lambda_uniform",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_triple_quotient_perturbation._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_cutoff_indicator_admissible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_smoothing_frequency_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_two_support",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticInner",
+      "name": "ZhangLS.Spec.proposition26_strict_indices_extend",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_positive_index_variation._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_r_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_short_energy_continuous",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26CutoffIndicator.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26IotaFour",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_cutoff_indicator_support",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26NormalizedGaussianProfile.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_d_zero_shift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_norm_pow_sub_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26ErrorProfileOne",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_sum_Icc_eq_range",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_local_h3_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_two_admissible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_totient_cancellation._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_normalized_gaussian_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_congr",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_normalized_tail_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_actual_E2_square",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_le_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ChiHarmonic",
+      "name": "ZhangLS.Spec.proposition26_chi_harmonic_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83XiMoebiusMass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111TentErrorProfile._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26Indicator",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_xi_lambda_majorant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111_primitive_sub_id_antitone",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_neg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26Ramp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83XiMoebiusMass.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83XiMoebius",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_outer_coefficient_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_alpha_log_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26JDefect",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_unsmoothing_energy_of_bv._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_tent_two_series_strict_finite",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_inverse_gaussian_scale",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticInner",
+      "name": "ZhangLS.Spec.proposition26_actual_first_inner_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_smoothed_defect_critical",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_totient_cancellation._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_frequency_point_budget",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_phase_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_local_hasSum._simp_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_transfer_of_bv._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_strict_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ConvolutionBV",
+      "name": "ZhangLS.Spec.proposition26_finite_product_reindex",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26PaperP2.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26IotaFour.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_unit_profile_support",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_smoothed_two_second_difference",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111PrimitiveError",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26ErrorProfileTwo",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26ArithmeticBVConstant._proof_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_prime_power",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26_polynomial_energy_eq._simp_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_strict_ceil_eq._simp_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_local_hasSum._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_one_P505_tail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_gaussian_tail_two_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_J1_sub_Jtilde_polynomial",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_error_finite_gaussian_mass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_tent_two_zero_of_cutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_kappa_mobius_correction_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26RealOmega._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_small_shift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_local_mass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111TentErrorOne",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111TentErrorTwo.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_twisted_polynomial_term",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_congr._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_first_Ico",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_uniform_bv_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26Indicator.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_mass_finite_euler._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26Weight._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_uniform_bv_energy._simp_1_9",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_profile_harmonic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_antitone_positive",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_triple_quotient_perturbation._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_series_strict_tail_reduction",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_inversion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26_outer_totient_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26_polynomial_energy_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26Energy.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26LambdaConstant._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_finite_reciprocal_square_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_HComponent_polynomial",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_xi_finite_mass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_smoothed_energy_of_bv._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_one_strict_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_error_gaussian_mass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_gaussian_tail_one_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_one_far_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_transfer_of_bv._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83OriginalXiMajorantConstant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_two_strict_tail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26PaperP3._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83PrimeShiftMass._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_actual_arithmetic_bv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_mem_polynomial_indices._simp_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_mass_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_mul._simp_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_triple_quotient_perturbation._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83_xi_eq_sum_moebius",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_lambda_constant_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_mul._simp_1_2",
+      "axioms": []
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_mem_polynomial_indices",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_prime_shift_mass_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_finite_harmonic_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_iota_four_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_normalized_tail_energy._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_positive_antitone_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_two_square_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_arithmetic_bv_constant_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_one_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_profile_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26ErrorGaussian._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_mem_polynomial_indices._simp_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26_omega_critical",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_zero_shift_kappa_tail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111SequenceVariation.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_smoothed_energy_of_bv._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.lemma81Cutoff.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_smoothing_beta_eq_imag",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26_actual_weight_data",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_kappa_prime_power_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26IotaThree._proof_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_r_mass_product_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_support",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26ArithmeticBVConstant._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticInner",
+      "name": "ZhangLS.Spec.proposition26_actual_first_inner_norm._simp_1_1",
+      "axioms": []
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111TentErrorTwo",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_conj_critical",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_baseline_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_zero_shift._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_strict_ceil_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_lambda_finite_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_initial_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_uniform_bv_energy._simp_1_6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111ShiftScale.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111TentErrorTwo._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_div_scale_eq_log_zpow",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26JDefect.congr_simp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_actual_defect_energy_split",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26TwistedCoefficient.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_normalized_tail_energy._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26JDefect._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_regular_zero_shift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_positive_index_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_short_polynomial_strict_terms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_smoothed_energy_of_bv._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26GaussianTailTwo",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26_totient_square_mass_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_transfer_of_bv._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26TotientSquareMass.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_normalized_gaussian_support",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_conjugate_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26J2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26Weight",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_local_h2_perturbation._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_two_far_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_short_cutoff_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_strict_ceil_eq._simp_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26HComponent",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_tent_zero_of_ge",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_transfer_of_bv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_congr._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_J2_eq_gaussian_cutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26CutoffIndicator",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_uniform_bv_energy._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_totient_cancellation._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_multiplicative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_arithmetic_bv_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_normalized_gaussian_polynomial",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_H2_energy_of_bv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26GaussianCutoff._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyAlgebra",
+      "name": "ZhangLS.Spec.proposition26_three_square_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_normalized_tail_energy._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26LambdaConstant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_energy_pointwise_constant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111SequenceVariation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26TwistedCoefficient",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_variation_norm_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_one_strict_tail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26J2._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_unit_polynomial._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_local_hasSum._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111_primitive_error_split",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_twisted_first_inner",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26SmoothedDefect",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_r_local_mass_ge_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_tent_one_zero_of_cutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111PrimitiveError.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_twisted_coefficient_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_iota_three_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_triple_quotient_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_cpow_shift_sub_one_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_uniform_bv_energy._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26ArithmeticBVConstant._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_transfer_of_bv._simp_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_transfer_of_bv._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_twisted_first_term",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_zero_shift_kappa_tail_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_norm_small_shift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_r_zero_shift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_defect_energy_of_bv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_product_sub_product_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_smoothed_energy_of_bv",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticEnergy",
+      "name": "ZhangLS.Spec.proposition26_polynomial_energy_arithmetic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_lambda_finite_bound._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_prime_mobius_weight_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111SmoothedTwo.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_kappa_tail_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_totient_cancellation._simp_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_xi_majorant_constant_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26XiThreeStar",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_xi_lambda_majorant_real",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26PaperP3._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26_original_cauchy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111TentErrorProfile._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111_primitive_error_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_error_gaussian_continuous",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_local_hasSum._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_smoothed_energy_of_bv._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_totient_cancellation._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_original_tent_two_coordinate",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticInner",
+      "name": "ZhangLS.Spec.proposition26_twisted_convolution_inner",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26_reciprocal_totient_square",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83PrimeShiftMass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26_real_omega_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_normalized_tail_energy._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_lambda_finite_shift_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticInner",
+      "name": "ZhangLS.Spec.proposition26_actual_second_inner_norm._simp_1_1",
+      "axioms": []
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_zero_shift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_triple_quotient_perturbation._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.lemma112ShortPolynomial.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_uniform_bv_energy._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_normalized_tail_energy._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_smoothed_energy_of_bv._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_local_h2_perturbation._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26TildeAlpha.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26_reciprocal_totient_square_summable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_normalized_tail_energy._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_shift_prime_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_mass_finite_euler",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_local_h2_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticInner",
+      "name": "ZhangLS.Spec.proposition26_actual_second_inner_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_phase_tail_power_difference",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_prime_power_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_one_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_energy_congr_on_zeros",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26_tau_four_quadratic_summable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26IotaThree",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_zero_local_tail_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_actual_three_defects",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_finite_phase_exponent",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_smoothed_energy_of_bv._simp_1_6",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_J1_eq_gaussian_cutoff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_totient_cancellation._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_cutoff_indicator_variation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26H2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26IotaThree._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_perturbation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_energy_add",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_error_one_finite_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyAlgebra",
+      "name": "ZhangLS.Spec.proposition26_polynomial_scalar",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26ErrorProfileTwo.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26ChiHarmonic",
+      "name": "ZhangLS.Spec.proposition26_complex_variation_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_local_hasSum._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_smoothed_two_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_uniform_bv_energy._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111TentErrorProfile",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26IotaFour._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_log_coordinate_monotone",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83XiRLocalMass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_triple_quotient_perturbation._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26ErrorGaussian",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26IotaFour._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_uniform_bv_energy._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_one_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.Proposition26BVNormAt._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_zero_shift._simp_1_7",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_proved",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26EnergyAlgebra",
+      "name": "ZhangLS.Spec.proposition26_energy_homogeneity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_full_gaussian_mass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_chi_BV",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_E2_square",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_chi_harmonic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_outer_phi",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_source_arithmetic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_H2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_J2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_actual_defect_package",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_literal_complex_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_actual_target",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_proved_target",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_uniform_BV",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_energy_homogeneity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_Xi3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

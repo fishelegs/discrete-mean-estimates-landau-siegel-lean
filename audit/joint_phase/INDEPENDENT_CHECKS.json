@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "exact_complex_power_cases": 784,
+  "covers_M_zero": true,
+  "L20_exponent": "-251/4",
+  "L22_exponent": "101/4",
+  "L21_exponent": "-1399/84",
+  "interpolation_weight": "10/21",
+  "Fejer_peak": 22,
+  "Fejer_quadratic_loss": 3542,
+  "external_hyper_Kloosterman_bound_formalized_here": false,
+  "scope": "Exact algebra and rational exponent checks; uniform character/arithmetic assertions are in the independently reviewed source proof, not numerically simulated."
+}

@@ -3,16 +3,17 @@
   "original_derivation_sha256": "26ea1c8751b743781f0a9d70bbe1b1a9b26a568dd346ec0c51d9c59bc481e21b",
   "original_independent_review_sha256": "499ea1b7a56734054225a444efc5d4cc7020b1cebb1b60783fe00724cb8364c5",
   "lean_proved": false,
-  "uniform_BV_central_publication_pending": true,
+  "uniform_BV_central_publication_pending": false,
   "curation": "Portable public status and source-scope wording; mathematical content unchanged.",
   "files": {
     "ATOMIC_RAMP_CHECKS.json": "5d1edb9b301ba8c46d6adc5f8ab28359e0b496e78d1a90ea46ae52fc498a794e",
-    "BASELINE_OBSTRUCTION.md": "8cfa9b8dce8af73e50a3d89419fb2581369a2ef6ce2534ee2399a76f6cc4003c",
+    "BASELINE_OBSTRUCTION.md": "a0761fc474bd6db11af5a2667e44279aa897470a5ca28d2045a4fd10c2eb5a29",
     "COERCIVITY_CHECKS.json": "c566bc27769c3ba8a3e3e030af9bed22f1610c4260376ff6536fbaeb1c64ff88",
     "INDEPENDENT_REVIEW.md": "28c95967620f864c189aaf2df338cd4d4ab65ae8d847388063396783145313d7",
     "SOURCES.json": "e677feb565835ddeefe9b0bb9bd5f00c0e5f045f77137a58e5d5a3fac350b677",
-    "STATUS.md": "b9d45861c8bf9358d696404a8ae2c5c6465a2bce06db990760ed8a19dfa7fd52",
+    "STATUS.md": "6e6822d36462105c7d9d648e2d3dfd8a52bfae2ff507ad57b19394d37d2d718b",
     "check_atomic_ramp.py": "96606a9e5f1723542a6014254a29c8db35f385bda4472c5e0247c92e710781cb",
     "check_coercivity.py": "1678568e9129665e1056c2621359f7e545639be35d0815de0fed61753647b083"
-  }
+  },
+  "uniform_BV_evidence": "audit/cloud_proposition26_verification.json"
 }

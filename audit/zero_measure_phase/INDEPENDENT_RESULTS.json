@@ -1,0 +1,31 @@
+{
+  "status": "PASS_FINITE_ONLY",
+  "independence": "New checker using prime-local Euler coefficients and rational complex arithmetic; candidate checker was read, not executed or imported.",
+  "counts": {
+    "unequal_cutoff_coefficients": 3220,
+    "equal_cutoff_coefficients": 17213,
+    "ramified_deletions": 6055,
+    "local_divisor_inequalities": 825,
+    "phase_zero_identities": 180,
+    "nonzero_product_splittings": 180,
+    "reflection_evaluations": 15,
+    "toy_lattice_samples": 1081
+  },
+  "budgets": {
+    "base_loss": "104",
+    "trial_loss": "131",
+    "e4": "-1915/4",
+    "e12": "-1339/4",
+    "base_inverse": "-1707/2",
+    "trial_inverse": "-1077/2",
+    "base_AFE": "-246",
+    "trial_AFE": "-203",
+    "H_cubed_length_P_exponent": "189/125",
+    "H_fourth_length_P_exponent": "252/125",
+    "unequal_cutoff_twelfth_power_length_D_exponent": "144",
+    "equal_cutoff_twelfth_power_length_D_exponent": "240",
+    "annulus_shift_height_alpha_multiple": "13/4",
+    "rectangle_width_over_radius_interval": "4"
+  },
+  "scope": "Finite regression checks only; no verification of an analytic asymptotic, assumption (A), actual L-zero data, Lean build, Z2, or main theorem."
+}

@@ -1,0 +1,2698 @@
+{
+  "status": "complete source-declared public inventory, all entries cross-checked to actual kernel owner records",
+  "production_modules": 32,
+  "regression_modules": 1,
+  "public_declarations": 294,
+  "source_declared_private_excluded": 0,
+  "all_source_declarations": 294,
+  "counts_by_module": {
+    "ZhangLS.Spec.Proposition26Regressions": 15,
+    "ZhangLS.Spec.Lemma111GaussianFarTail": 14,
+    "ZhangLS.Spec.Lemma111PrimitiveVariation": 6,
+    "ZhangLS.Spec.Lemma111StrictVariation": 10,
+    "ZhangLS.Spec.Lemma111TentVariation": 22,
+    "ZhangLS.Spec.Lemma83FiniteShiftLambda": 5,
+    "ZhangLS.Spec.Lemma83FiniteXiEuler": 10,
+    "ZhangLS.Spec.Lemma83FiniteXiLocalMass": 8,
+    "ZhangLS.Spec.Lemma83FiniteXiPerturbation": 16,
+    "ZhangLS.Spec.Lemma83FiniteXiRegular": 7,
+    "ZhangLS.Spec.Lemma83FiniteXiUniform": 6,
+    "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant": 7,
+    "ZhangLS.Spec.Lemma83XiMoebiusConvolution": 6,
+    "ZhangLS.Spec.Proposition26ArithmeticBV": 3,
+    "ZhangLS.Spec.Proposition26ArithmeticEnergy": 2,
+    "ZhangLS.Spec.Proposition26ArithmeticInner": 4,
+    "ZhangLS.Spec.Proposition26ChiHarmonic": 4,
+    "ZhangLS.Spec.Proposition26Conjugation": 13,
+    "ZhangLS.Spec.Proposition26ConvolutionBV": 4,
+    "ZhangLS.Spec.Proposition26E2Energy": 10,
+    "ZhangLS.Spec.Proposition26EnergyAlgebra": 3,
+    "ZhangLS.Spec.Proposition26EnergyObjects": 7,
+    "ZhangLS.Spec.Proposition26GaussianEnergy": 6,
+    "ZhangLS.Spec.Proposition26GaussianPolynomialBridge": 19,
+    "ZhangLS.Spec.Proposition26GaussianProfiles": 19,
+    "ZhangLS.Spec.Proposition26H2Energy": 6,
+    "ZhangLS.Spec.Proposition26OriginalObjects": 13,
+    "ZhangLS.Spec.Proposition26OriginalTransfer": 6,
+    "ZhangLS.Spec.Proposition26OuterWeight": 6,
+    "ZhangLS.Spec.Proposition26ParameterBudget": 7,
+    "ZhangLS.Spec.Proposition26ProfileBV": 11,
+    "ZhangLS.Spec.Proposition26RampProfiles": 14,
+    "ZhangLS.Spec.Proposition26UniformEnergy": 5
+  },
+  "counts_by_kind": {
+    "def": 44,
+    "lemma": 179,
+    "theorem": 71
+  },
+  "declarations": [
+    {
+      "module": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_outer_coefficient_norm",
+      "kind": "lemma",
+      "line": 13,
+      "source": "ZhangLS/Spec/Proposition26ArithmeticBV.lean",
+      "prefix": "",
+      "source_sha256": "bd5af86e3516d982700cc6a1cd069a5c8c6322a4223fdf5713182b1c941a9f9a"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_totient_cancellation",
+      "kind": "lemma",
+      "line": 28,
+      "source": "ZhangLS/Spec/Proposition26ArithmeticBV.lean",
+      "prefix": "",
+      "source_sha256": "bd5af86e3516d982700cc6a1cd069a5c8c6322a4223fdf5713182b1c941a9f9a"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ArithmeticBV",
+      "name": "ZhangLS.Spec.proposition26_arithmetic_bv_bound",
+      "kind": "theorem",
+      "line": 39,
+      "source": "ZhangLS/Spec/Proposition26ArithmeticBV.lean",
+      "prefix": "",
+      "source_sha256": "bd5af86e3516d982700cc6a1cd069a5c8c6322a4223fdf5713182b1c941a9f9a"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ArithmeticEnergy",
+      "name": "ZhangLS.Spec.proposition26_main_term_norm",
+      "kind": "lemma",
+      "line": 15,
+      "source": "ZhangLS/Spec/Proposition26ArithmeticEnergy.lean",
+      "prefix": "",
+      "source_sha256": "e7fd2c1d6ca6a6e5d024749b63cfc2a466505a72d2a6e9d6d7c85e9768ce0df1"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ArithmeticEnergy",
+      "name": "ZhangLS.Spec.proposition26_polynomial_energy_arithmetic",
+      "kind": "theorem",
+      "line": 45,
+      "source": "ZhangLS/Spec/Proposition26ArithmeticEnergy.lean",
+      "prefix": "",
+      "source_sha256": "e7fd2c1d6ca6a6e5d024749b63cfc2a466505a72d2a6e9d6d7c85e9768ce0df1"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ArithmeticInner",
+      "name": "ZhangLS.Spec.proposition26_strict_indices_extend",
+      "kind": "lemma",
+      "line": 12,
+      "source": "ZhangLS/Spec/Proposition26ArithmeticInner.lean",
+      "prefix": "",
+      "source_sha256": "90870970d4a627eb6383f6d3240b87cd39678722f008181662092d8d810d3e6d"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ArithmeticInner",
+      "name": "ZhangLS.Spec.proposition26_actual_first_inner_norm",
+      "kind": "theorem",
+      "line": 31,
+      "source": "ZhangLS/Spec/Proposition26ArithmeticInner.lean",
+      "prefix": "",
+      "source_sha256": "90870970d4a627eb6383f6d3240b87cd39678722f008181662092d8d810d3e6d"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ArithmeticInner",
+      "name": "ZhangLS.Spec.proposition26_twisted_convolution_inner",
+      "kind": "theorem",
+      "line": 51,
+      "source": "ZhangLS/Spec/Proposition26ArithmeticInner.lean",
+      "prefix": "",
+      "source_sha256": "90870970d4a627eb6383f6d3240b87cd39678722f008181662092d8d810d3e6d"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ArithmeticInner",
+      "name": "ZhangLS.Spec.proposition26_actual_second_inner_norm",
+      "kind": "theorem",
+      "line": 79,
+      "source": "ZhangLS/Spec/Proposition26ArithmeticInner.lean",
+      "prefix": "",
+      "source_sha256": "90870970d4a627eb6383f6d3240b87cd39678722f008181662092d8d810d3e6d"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ChiHarmonic",
+      "name": "ZhangLS.Spec.proposition26_chi_harmonic_uniform",
+      "kind": "theorem",
+      "line": 18,
+      "source": "ZhangLS/Spec/Proposition26ChiHarmonic.lean",
+      "prefix": "",
+      "source_sha256": "21f410cb6be2498b260fa91453e400472064c59a919565399ba192688b0efce7"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ChiHarmonic",
+      "name": "ZhangLS.Spec.proposition26_complex_variation_bound",
+      "kind": "theorem",
+      "line": 59,
+      "source": "ZhangLS/Spec/Proposition26ChiHarmonic.lean",
+      "prefix": "",
+      "source_sha256": "21f410cb6be2498b260fa91453e400472064c59a919565399ba192688b0efce7"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ChiHarmonic",
+      "name": "ZhangLS.Spec.proposition26_chi_harmonic_range",
+      "kind": "theorem",
+      "line": 82,
+      "source": "ZhangLS/Spec/Proposition26ChiHarmonic.lean",
+      "prefix": "",
+      "source_sha256": "21f410cb6be2498b260fa91453e400472064c59a919565399ba192688b0efce7"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ChiHarmonic",
+      "name": "ZhangLS.Spec.proposition26_chi_harmonic_variation",
+      "kind": "theorem",
+      "line": 103,
+      "source": "ZhangLS/Spec/Proposition26ChiHarmonic.lean",
+      "prefix": "",
+      "source_sha256": "21f410cb6be2498b260fa91453e400472064c59a919565399ba192688b0efce7"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_real_profile_series_conjugate",
+      "kind": "lemma",
+      "line": 11,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_conj_critical",
+      "kind": "lemma",
+      "line": 31,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_J2_critical_reflection",
+      "kind": "lemma",
+      "line": 34,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_Jtilde2_critical_reflection",
+      "kind": "lemma",
+      "line": 42,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_smoothed_defect_critical",
+      "kind": "lemma",
+      "line": 52,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_twist_Z_critical_norm",
+      "kind": "lemma",
+      "line": 63,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_actual_three_defects",
+      "kind": "theorem",
+      "line": 75,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_two_square_bound",
+      "kind": "lemma",
+      "line": 110,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_energy_add",
+      "kind": "lemma",
+      "line": 115,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_energy_pointwise_constant",
+      "kind": "lemma",
+      "line": 131,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_energy_congr_on_zeros",
+      "kind": "lemma",
+      "line": 146,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_actual_defect_energy_split",
+      "kind": "theorem",
+      "line": 161,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Conjugation",
+      "name": "ZhangLS.Spec.proposition26_original_Xi3_complex_identity",
+      "kind": "theorem",
+      "line": 189,
+      "source": "ZhangLS/Spec/Proposition26Conjugation.lean",
+      "prefix": "",
+      "source_sha256": "47ba32abe62c29754724c942315d3087d81c37b3505946dc7360bc5c2682df1e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ConvolutionBV",
+      "name": "ZhangLS.Spec.proposition26_finite_product_reindex",
+      "kind": "lemma",
+      "line": 12,
+      "source": "ZhangLS/Spec/Proposition26ConvolutionBV.lean",
+      "prefix": "",
+      "source_sha256": "19d9a8615a7c4967a00cd8ab05eef180108089f9801b9212d0facfb2574b8b50"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ConvolutionBV",
+      "name": "ZhangLS.Spec.proposition26_character_cpow_mul",
+      "kind": "lemma",
+      "line": 53,
+      "source": "ZhangLS/Spec/Proposition26ConvolutionBV.lean",
+      "prefix": "",
+      "source_sha256": "19d9a8615a7c4967a00cd8ab05eef180108089f9801b9212d0facfb2574b8b50"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ConvolutionBV",
+      "name": "ZhangLS.Spec.proposition26_convolution_profile_identity",
+      "kind": "theorem",
+      "line": 63,
+      "source": "ZhangLS/Spec/Proposition26ConvolutionBV.lean",
+      "prefix": "",
+      "source_sha256": "19d9a8615a7c4967a00cd8ab05eef180108089f9801b9212d0facfb2574b8b50"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ConvolutionBV",
+      "name": "ZhangLS.Spec.proposition26_convolution_profile_norm",
+      "kind": "theorem",
+      "line": 91,
+      "source": "ZhangLS/Spec/Proposition26ConvolutionBV.lean",
+      "prefix": "",
+      "source_sha256": "19d9a8615a7c4967a00cd8ab05eef180108089f9801b9212d0facfb2574b8b50"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26ErrorGaussian",
+      "kind": "def",
+      "line": 14,
+      "source": "ZhangLS/Spec/Proposition26E2Energy.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "236e9f271b0581527d8f14525402ca50e9c7a45a21f98017ce31ae16e20deee4"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_error_gaussian_continuous",
+      "kind": "lemma",
+      "line": 17,
+      "source": "ZhangLS/Spec/Proposition26E2Energy.lean",
+      "prefix": "",
+      "source_sha256": "236e9f271b0581527d8f14525402ca50e9c7a45a21f98017ce31ae16e20deee4"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_error_gaussian_integrable",
+      "kind": "lemma",
+      "line": 22,
+      "source": "ZhangLS/Spec/Proposition26E2Energy.lean",
+      "prefix": "",
+      "source_sha256": "236e9f271b0581527d8f14525402ca50e9c7a45a21f98017ce31ae16e20deee4"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_error_gaussian_mass",
+      "kind": "lemma",
+      "line": 30,
+      "source": "ZhangLS/Spec/Proposition26E2Energy.lean",
+      "prefix": "",
+      "source_sha256": "236e9f271b0581527d8f14525402ca50e9c7a45a21f98017ce31ae16e20deee4"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_error_finite_gaussian_mass",
+      "kind": "lemma",
+      "line": 46,
+      "source": "ZhangLS/Spec/Proposition26E2Energy.lean",
+      "prefix": "",
+      "source_sha256": "236e9f271b0581527d8f14525402ca50e9c7a45a21f98017ce31ae16e20deee4"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_actual_E2_square",
+      "kind": "theorem",
+      "line": 56,
+      "source": "ZhangLS/Spec/Proposition26E2Energy.lean",
+      "prefix": "",
+      "source_sha256": "236e9f271b0581527d8f14525402ca50e9c7a45a21f98017ce31ae16e20deee4"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_short_energy_integral",
+      "kind": "theorem",
+      "line": 106,
+      "source": "ZhangLS/Spec/Proposition26E2Energy.lean",
+      "prefix": "",
+      "source_sha256": "236e9f271b0581527d8f14525402ca50e9c7a45a21f98017ce31ae16e20deee4"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_actual_E2_energy",
+      "kind": "theorem",
+      "line": 140,
+      "source": "ZhangLS/Spec/Proposition26E2Energy.lean",
+      "prefix": "",
+      "source_sha256": "236e9f271b0581527d8f14525402ca50e9c7a45a21f98017ce31ae16e20deee4"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26SmoothedDefect",
+      "kind": "def",
+      "line": 163,
+      "source": "ZhangLS/Spec/Proposition26E2Energy.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "236e9f271b0581527d8f14525402ca50e9c7a45a21f98017ce31ae16e20deee4"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26E2Energy",
+      "name": "ZhangLS.Spec.proposition26_smoothed_energy_transfer",
+      "kind": "theorem",
+      "line": 172,
+      "source": "ZhangLS/Spec/Proposition26E2Energy.lean",
+      "prefix": "",
+      "source_sha256": "236e9f271b0581527d8f14525402ca50e9c7a45a21f98017ce31ae16e20deee4"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26EnergyAlgebra",
+      "name": "ZhangLS.Spec.proposition26_energy_homogeneity",
+      "kind": "theorem",
+      "line": 11,
+      "source": "ZhangLS/Spec/Proposition26EnergyAlgebra.lean",
+      "prefix": "",
+      "source_sha256": "fa0ade7916e325958c738ee8396fb18313821a60a9b35248186a6ba4e44884d5"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26EnergyAlgebra",
+      "name": "ZhangLS.Spec.proposition26_polynomial_scalar",
+      "kind": "theorem",
+      "line": 26,
+      "source": "ZhangLS/Spec/Proposition26EnergyAlgebra.lean",
+      "prefix": "",
+      "source_sha256": "fa0ade7916e325958c738ee8396fb18313821a60a9b35248186a6ba4e44884d5"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26EnergyAlgebra",
+      "name": "ZhangLS.Spec.proposition26_three_square_bound",
+      "kind": "lemma",
+      "line": 36,
+      "source": "ZhangLS/Spec/Proposition26EnergyAlgebra.lean",
+      "prefix": "",
+      "source_sha256": "fa0ade7916e325958c738ee8396fb18313821a60a9b35248186a6ba4e44884d5"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26RealOmega",
+      "kind": "def",
+      "line": 14,
+      "source": "ZhangLS/Spec/Proposition26EnergyObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "6b3d1980fc5508c72f360008a03d3940dbc1417520099c867a443789c3019be5"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26_omega_critical",
+      "kind": "lemma",
+      "line": 19,
+      "source": "ZhangLS/Spec/Proposition26EnergyObjects.lean",
+      "prefix": "",
+      "source_sha256": "6b3d1980fc5508c72f360008a03d3940dbc1417520099c867a443789c3019be5"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26_real_omega_nonneg",
+      "kind": "lemma",
+      "line": 33,
+      "source": "ZhangLS/Spec/Proposition26EnergyObjects.lean",
+      "prefix": "",
+      "source_sha256": "6b3d1980fc5508c72f360008a03d3940dbc1417520099c867a443789c3019be5"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26Weight",
+      "kind": "def",
+      "line": 38,
+      "source": "ZhangLS/Spec/Proposition26EnergyObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "6b3d1980fc5508c72f360008a03d3940dbc1417520099c867a443789c3019be5"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26Energy",
+      "kind": "def",
+      "line": 43,
+      "source": "ZhangLS/Spec/Proposition26EnergyObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "6b3d1980fc5508c72f360008a03d3940dbc1417520099c867a443789c3019be5"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26_actual_weight_data",
+      "kind": "theorem",
+      "line": 51,
+      "source": "ZhangLS/Spec/Proposition26EnergyObjects.lean",
+      "prefix": "",
+      "source_sha256": "6b3d1980fc5508c72f360008a03d3940dbc1417520099c867a443789c3019be5"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26EnergyObjects",
+      "name": "ZhangLS.Spec.proposition26_polynomial_energy_eq",
+      "kind": "theorem",
+      "line": 82,
+      "source": "ZhangLS/Spec/Proposition26EnergyObjects.lean",
+      "prefix": "",
+      "source_sha256": "6b3d1980fc5508c72f360008a03d3940dbc1417520099c867a443789c3019be5"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_short_energy_continuous",
+      "kind": "lemma",
+      "line": 12,
+      "source": "ZhangLS/Spec/Proposition26GaussianEnergy.lean",
+      "prefix": "",
+      "source_sha256": "f0ec7bca6bd2273e6c1992e2df0cdac2d64179ba9801a32556af025dbcf68ba9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_short_cutoff_le",
+      "kind": "lemma",
+      "line": 24,
+      "source": "ZhangLS/Spec/Proposition26GaussianEnergy.lean",
+      "prefix": "",
+      "source_sha256": "f0ec7bca6bd2273e6c1992e2df0cdac2d64179ba9801a32556af025dbcf68ba9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_smoothed_energy_of_bv",
+      "kind": "theorem",
+      "line": 34,
+      "source": "ZhangLS/Spec/Proposition26GaussianEnergy.lean",
+      "prefix": "",
+      "source_sha256": "f0ec7bca6bd2273e6c1992e2df0cdac2d64179ba9801a32556af025dbcf68ba9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_gaussian_tail_decay",
+      "kind": "lemma",
+      "line": 96,
+      "source": "ZhangLS/Spec/Proposition26GaussianEnergy.lean",
+      "prefix": "",
+      "source_sha256": "f0ec7bca6bd2273e6c1992e2df0cdac2d64179ba9801a32556af025dbcf68ba9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_normalized_tail_energy",
+      "kind": "lemma",
+      "line": 106,
+      "source": "ZhangLS/Spec/Proposition26GaussianEnergy.lean",
+      "prefix": "",
+      "source_sha256": "f0ec7bca6bd2273e6c1992e2df0cdac2d64179ba9801a32556af025dbcf68ba9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianEnergy",
+      "name": "ZhangLS.Spec.proposition26_unsmoothing_energy_of_bv",
+      "kind": "theorem",
+      "line": 142,
+      "source": "ZhangLS/Spec/Proposition26GaussianEnergy.lean",
+      "prefix": "",
+      "source_sha256": "f0ec7bca6bd2273e6c1992e2df0cdac2d64179ba9801a32556af025dbcf68ba9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_smoothing_frequency_bound",
+      "kind": "lemma",
+      "line": 14,
+      "source": "ZhangLS/Spec/Proposition26H2Energy.lean",
+      "prefix": "",
+      "source_sha256": "483cbd6f466c539b0bfe802ade06b14c3eef36738a1f5ceffe9bfbafe66620ee"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_iota_three_norm",
+      "kind": "lemma",
+      "line": 25,
+      "source": "ZhangLS/Spec/Proposition26H2Energy.lean",
+      "prefix": "",
+      "source_sha256": "483cbd6f466c539b0bfe802ade06b14c3eef36738a1f5ceffe9bfbafe66620ee"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_iota_four_norm",
+      "kind": "lemma",
+      "line": 29,
+      "source": "ZhangLS/Spec/Proposition26H2Energy.lean",
+      "prefix": "",
+      "source_sha256": "483cbd6f466c539b0bfe802ade06b14c3eef36738a1f5ceffe9bfbafe66620ee"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_H2_energy_of_bv",
+      "kind": "theorem",
+      "line": 35,
+      "source": "ZhangLS/Spec/Proposition26H2Energy.lean",
+      "prefix": "",
+      "source_sha256": "483cbd6f466c539b0bfe802ade06b14c3eef36738a1f5ceffe9bfbafe66620ee"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_unit_profile_support",
+      "kind": "lemma",
+      "line": 122,
+      "source": "ZhangLS/Spec/Proposition26H2Energy.lean",
+      "prefix": "",
+      "source_sha256": "483cbd6f466c539b0bfe802ade06b14c3eef36738a1f5ceffe9bfbafe66620ee"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26H2Energy",
+      "name": "ZhangLS.Spec.proposition26_unit_polynomial",
+      "kind": "lemma",
+      "line": 130,
+      "source": "ZhangLS/Spec/Proposition26H2Energy.lean",
+      "prefix": "",
+      "source_sha256": "483cbd6f466c539b0bfe802ade06b14c3eef36738a1f5ceffe9bfbafe66620ee"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26PaperP2",
+      "kind": "def",
+      "line": 14,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26PaperP3",
+      "kind": "def",
+      "line": 16,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26IotaThree",
+      "kind": "def",
+      "line": 18,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26IotaFour",
+      "kind": "def",
+      "line": 19,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26HComponent",
+      "kind": "def",
+      "line": 21,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26H2",
+      "kind": "def",
+      "line": 29,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26TildeAlpha",
+      "kind": "def",
+      "line": 34,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26J1",
+      "kind": "def",
+      "line": 38,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26J2",
+      "kind": "def",
+      "line": 42,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26JDefect",
+      "kind": "def",
+      "line": 48,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26XiThreeStar",
+      "kind": "def",
+      "line": 54,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.Proposition26Target",
+      "kind": "def",
+      "line": 63,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalObjects",
+      "name": "ZhangLS.Spec.proposition26_original_cauchy",
+      "kind": "theorem",
+      "line": 76,
+      "source": "ZhangLS/Spec/Proposition26OriginalObjects.lean",
+      "prefix": "",
+      "source_sha256": "07c224bd45ea1ce9c5121e952d62a858279bfb373af81ac49fd5e977dabd6215"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_energy_nonneg",
+      "kind": "lemma",
+      "line": 12,
+      "source": "ZhangLS/Spec/Proposition26OriginalTransfer.lean",
+      "prefix": "",
+      "source_sha256": "72202b48a0627a66063eb460c08274df4b109b0a92f19b483c141423565edf1c"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_defect_energy_of_bv",
+      "kind": "theorem",
+      "line": 18,
+      "source": "ZhangLS/Spec/Proposition26OriginalTransfer.lean",
+      "prefix": "",
+      "source_sha256": "72202b48a0627a66063eb460c08274df4b109b0a92f19b483c141423565edf1c"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_defect_energy",
+      "kind": "theorem",
+      "line": 55,
+      "source": "ZhangLS/Spec/Proposition26OriginalTransfer.lean",
+      "prefix": "",
+      "source_sha256": "72202b48a0627a66063eb460c08274df4b109b0a92f19b483c141423565edf1c"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_transfer_of_bv",
+      "kind": "theorem",
+      "line": 66,
+      "source": "ZhangLS/Spec/Proposition26OriginalTransfer.lean",
+      "prefix": "",
+      "source_sha256": "72202b48a0627a66063eb460c08274df4b109b0a92f19b483c141423565edf1c"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_original_quantitative",
+      "kind": "theorem",
+      "line": 112,
+      "source": "ZhangLS/Spec/Proposition26OriginalTransfer.lean",
+      "prefix": "",
+      "source_sha256": "72202b48a0627a66063eb460c08274df4b109b0a92f19b483c141423565edf1c"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OriginalTransfer",
+      "name": "ZhangLS.Spec.proposition26_proved",
+      "kind": "theorem",
+      "line": 125,
+      "source": "ZhangLS/Spec/Proposition26OriginalTransfer.lean",
+      "prefix": "",
+      "source_sha256": "72202b48a0627a66063eb460c08274df4b109b0a92f19b483c141423565edf1c"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26_tau_four_quadratic_summable",
+      "kind": "lemma",
+      "line": 14,
+      "source": "ZhangLS/Spec/Proposition26OuterWeight.lean",
+      "prefix": "",
+      "source_sha256": "f0bb368b0dbaa179a7caeb6e2e9f96ff8106ebcd0cf286e2ee64d4bfd6e2c8de"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26_reciprocal_totient_square",
+      "kind": "lemma",
+      "line": 23,
+      "source": "ZhangLS/Spec/Proposition26OuterWeight.lean",
+      "prefix": "",
+      "source_sha256": "f0bb368b0dbaa179a7caeb6e2e9f96ff8106ebcd0cf286e2ee64d4bfd6e2c8de"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26_reciprocal_totient_square_summable",
+      "kind": "lemma",
+      "line": 33,
+      "source": "ZhangLS/Spec/Proposition26OuterWeight.lean",
+      "prefix": "",
+      "source_sha256": "f0bb368b0dbaa179a7caeb6e2e9f96ff8106ebcd0cf286e2ee64d4bfd6e2c8de"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26TotientSquareMass",
+      "kind": "def",
+      "line": 38,
+      "source": "ZhangLS/Spec/Proposition26OuterWeight.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "f0bb368b0dbaa179a7caeb6e2e9f96ff8106ebcd0cf286e2ee64d4bfd6e2c8de"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26_totient_square_mass_pos",
+      "kind": "lemma",
+      "line": 41,
+      "source": "ZhangLS/Spec/Proposition26OuterWeight.lean",
+      "prefix": "",
+      "source_sha256": "f0bb368b0dbaa179a7caeb6e2e9f96ff8106ebcd0cf286e2ee64d4bfd6e2c8de"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26OuterWeight",
+      "name": "ZhangLS.Spec.proposition26_outer_totient_sum",
+      "kind": "theorem",
+      "line": 50,
+      "source": "ZhangLS/Spec/Proposition26OuterWeight.lean",
+      "prefix": "",
+      "source_sha256": "f0bb368b0dbaa179a7caeb6e2e9f96ff8106ebcd0cf286e2ee64d4bfd6e2c8de"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_alpha_log_identity",
+      "kind": "lemma",
+      "line": 14,
+      "source": "ZhangLS/Spec/Proposition26ParameterBudget.lean",
+      "prefix": "",
+      "source_sha256": "bef8b9a6e71aaf3db188182198f030b277cfc17648348acf9fe960080191aca9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_small_shift_log_budget",
+      "kind": "lemma",
+      "line": 19,
+      "source": "ZhangLS/Spec/Proposition26ParameterBudget.lean",
+      "prefix": "",
+      "source_sha256": "bef8b9a6e71aaf3db188182198f030b277cfc17648348acf9fe960080191aca9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26LambdaConstant",
+      "kind": "def",
+      "line": 33,
+      "source": "ZhangLS/Spec/Proposition26ParameterBudget.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "bef8b9a6e71aaf3db188182198f030b277cfc17648348acf9fe960080191aca9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_lambda_constant_pos",
+      "kind": "lemma",
+      "line": 36,
+      "source": "ZhangLS/Spec/Proposition26ParameterBudget.lean",
+      "prefix": "",
+      "source_sha256": "bef8b9a6e71aaf3db188182198f030b277cfc17648348acf9fe960080191aca9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_actual_lambda_uniform",
+      "kind": "theorem",
+      "line": 40,
+      "source": "ZhangLS/Spec/Proposition26ParameterBudget.lean",
+      "prefix": "",
+      "source_sha256": "bef8b9a6e71aaf3db188182198f030b277cfc17648348acf9fe960080191aca9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_frequency_point_budget",
+      "kind": "lemma",
+      "line": 72,
+      "source": "ZhangLS/Spec/Proposition26ParameterBudget.lean",
+      "prefix": "",
+      "source_sha256": "bef8b9a6e71aaf3db188182198f030b277cfc17648348acf9fe960080191aca9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ParameterBudget",
+      "name": "ZhangLS.Spec.proposition26_frequency_size",
+      "kind": "lemma",
+      "line": 94,
+      "source": "ZhangLS/Spec/Proposition26ParameterBudget.lean",
+      "prefix": "",
+      "source_sha256": "bef8b9a6e71aaf3db188182198f030b277cfc17648348acf9fe960080191aca9"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.Proposition26VariationBound",
+      "kind": "def",
+      "line": 13,
+      "source": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "prefix": "",
+      "source_sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_variation_norm_bound",
+      "kind": "lemma",
+      "line": 18,
+      "source": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "prefix": "",
+      "source_sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_conjugate_variation",
+      "kind": "lemma",
+      "line": 22,
+      "source": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "prefix": "",
+      "source_sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26TwistedCoefficient",
+      "kind": "def",
+      "line": 29,
+      "source": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_twisted_coefficient_norm",
+      "kind": "lemma",
+      "line": 33,
+      "source": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "prefix": "",
+      "source_sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_twisted_coefficient_admissible",
+      "kind": "lemma",
+      "line": 47,
+      "source": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "prefix": "",
+      "source_sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_twisted_coefficient_conjugate",
+      "kind": "lemma",
+      "line": 56,
+      "source": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "prefix": "",
+      "source_sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_sum_Icc_eq_range",
+      "kind": "lemma",
+      "line": 74,
+      "source": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "prefix": "",
+      "source_sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_profile_harmonic",
+      "kind": "theorem",
+      "line": 83,
+      "source": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "prefix": "",
+      "source_sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_twisted_first_term",
+      "kind": "lemma",
+      "line": 95,
+      "source": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "prefix": "",
+      "source_sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26ProfileBV",
+      "name": "ZhangLS.Spec.proposition26_twisted_first_inner",
+      "kind": "theorem",
+      "line": 117,
+      "source": "ZhangLS/Spec/Proposition26ProfileBV.lean",
+      "prefix": "",
+      "source_sha256": "ad21817de7a455348e0a2fc2593b3a7e9e5af463e6ab6e839c139a0b62a9d939"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26Ramp",
+      "kind": "def",
+      "line": 13,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_nonneg",
+      "kind": "lemma",
+      "line": 16,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_le_one",
+      "kind": "lemma",
+      "line": 18,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_antitone_positive",
+      "kind": "lemma",
+      "line": 26,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_zero",
+      "kind": "lemma",
+      "line": 34,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_original",
+      "kind": "lemma",
+      "line": 41,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_positive_antitone_variation",
+      "kind": "theorem",
+      "line": 51,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_variation",
+      "kind": "theorem",
+      "line": 80,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26Indicator",
+      "kind": "def",
+      "line": 87,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_indicator_variation",
+      "kind": "lemma",
+      "line": 90,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_ramp_support",
+      "kind": "lemma",
+      "line": 104,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_smoothing_beta_eq_imag",
+      "kind": "lemma",
+      "line": 110,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_HComponent_polynomial",
+      "kind": "theorem",
+      "line": 116,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26RampProfiles",
+      "name": "ZhangLS.Spec.proposition26_HComponent_phase_norm",
+      "kind": "lemma",
+      "line": 153,
+      "source": "ZhangLS/Spec/Proposition26RampProfiles.lean",
+      "prefix": "",
+      "source_sha256": "dce617f5e1b6c49881d2b6796ec2f83dc900a9e3df13fe17808ebf376f50e57e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26ArithmeticBVConstant",
+      "kind": "def",
+      "line": 14,
+      "source": "ZhangLS/Spec/Proposition26UniformEnergy.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "b0f4afd7821de70bd01521b4a25df9deb3dc0aaff5002272803bd7a6aaa9bd3b"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_arithmetic_bv_constant_pos",
+      "kind": "lemma",
+      "line": 18,
+      "source": "ZhangLS/Spec/Proposition26UniformEnergy.lean",
+      "prefix": "",
+      "source_sha256": "b0f4afd7821de70bd01521b4a25df9deb3dc0aaff5002272803bd7a6aaa9bd3b"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_actual_arithmetic_bv",
+      "kind": "theorem",
+      "line": 25,
+      "source": "ZhangLS/Spec/Proposition26UniformEnergy.lean",
+      "prefix": "",
+      "source_sha256": "b0f4afd7821de70bd01521b4a25df9deb3dc0aaff5002272803bd7a6aaa9bd3b"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.Proposition26BVNormAt",
+      "kind": "def",
+      "line": 82,
+      "source": "ZhangLS/Spec/Proposition26UniformEnergy.lean",
+      "prefix": "",
+      "source_sha256": "b0f4afd7821de70bd01521b4a25df9deb3dc0aaff5002272803bd7a6aaa9bd3b"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26UniformEnergy",
+      "name": "ZhangLS.Spec.proposition26_uniform_bv_energy",
+      "kind": "theorem",
+      "line": 97,
+      "source": "ZhangLS/Spec/Proposition26UniformEnergy.lean",
+      "prefix": "",
+      "source_sha256": "b0f4afd7821de70bd01521b4a25df9deb3dc0aaff5002272803bd7a6aaa9bd3b"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111PrimitiveError",
+      "kind": "def",
+      "line": 11,
+      "source": "ZhangLS/Spec/Lemma111PrimitiveVariation.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "81df74d66d2bacbbb5db28e9b1f86306d1d4fab1bbbba975a91ea77ed8f03724"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111_primitive_monotone",
+      "kind": "lemma",
+      "line": 14,
+      "source": "ZhangLS/Spec/Lemma111PrimitiveVariation.lean",
+      "prefix": "",
+      "source_sha256": "81df74d66d2bacbbb5db28e9b1f86306d1d4fab1bbbba975a91ea77ed8f03724"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111_primitive_sub_id_antitone",
+      "kind": "lemma",
+      "line": 19,
+      "source": "ZhangLS/Spec/Lemma111PrimitiveVariation.lean",
+      "prefix": "",
+      "source_sha256": "81df74d66d2bacbbb5db28e9b1f86306d1d4fab1bbbba975a91ea77ed8f03724"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111_primitive_zero_le",
+      "kind": "lemma",
+      "line": 26,
+      "source": "ZhangLS/Spec/Lemma111PrimitiveVariation.lean",
+      "prefix": "",
+      "source_sha256": "81df74d66d2bacbbb5db28e9b1f86306d1d4fab1bbbba975a91ea77ed8f03724"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111_primitive_error_split",
+      "kind": "lemma",
+      "line": 35,
+      "source": "ZhangLS/Spec/Lemma111PrimitiveVariation.lean",
+      "prefix": "",
+      "source_sha256": "81df74d66d2bacbbb5db28e9b1f86306d1d4fab1bbbba975a91ea77ed8f03724"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111PrimitiveVariation",
+      "name": "ZhangLS.Spec.lemma111_primitive_error_variation",
+      "kind": "lemma",
+      "line": 44,
+      "source": "ZhangLS/Spec/Lemma111PrimitiveVariation.lean",
+      "prefix": "",
+      "source_sha256": "81df74d66d2bacbbb5db28e9b1f86306d1d4fab1bbbba975a91ea77ed8f03724"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111SequenceVariation",
+      "kind": "def",
+      "line": 10,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_neg",
+      "kind": "lemma",
+      "line": 13,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_add",
+      "kind": "lemma",
+      "line": 22,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_mul",
+      "kind": "lemma",
+      "line": 34,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111TentErrorProfile",
+      "kind": "def",
+      "line": 39,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_profile_variation",
+      "kind": "lemma",
+      "line": 43,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111TentErrorOne",
+      "kind": "def",
+      "line": 74,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_one_eq",
+      "kind": "lemma",
+      "line": 77,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_log_coordinate_monotone",
+      "kind": "lemma",
+      "line": 86,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_one_variation",
+      "kind": "lemma",
+      "line": 96,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111ShiftScale",
+      "kind": "def",
+      "line": 109,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_shift_scale_pos",
+      "kind": "lemma",
+      "line": 111,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111TentErrorTwo",
+      "kind": "def",
+      "line": 117,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_smoothed_two_second_difference",
+      "kind": "lemma",
+      "line": 121,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_eq",
+      "kind": "lemma",
+      "line": 138,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_variation",
+      "kind": "lemma",
+      "line": 151,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_original_coordinate",
+      "kind": "lemma",
+      "line": 166,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_div_scale_eq_log_zpow",
+      "kind": "lemma",
+      "line": 178,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_smoothed_one_zero",
+      "kind": "lemma",
+      "line": 183,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "@[simp]",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_smoothed_two_zero",
+      "kind": "lemma",
+      "line": 186,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "@[simp]",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_one_zero",
+      "kind": "lemma",
+      "line": 189,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "@[simp]",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111TentVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_zero",
+      "kind": "lemma",
+      "line": 192,
+      "source": "ZhangLS/Spec/Lemma111TentVariation.lean",
+      "prefix": "@[simp]",
+      "source_sha256": "bcca7de3cad9b2ead4c5fa83aac7517bbc6d8a3a2841451f95cefe01023f80f2"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_congr",
+      "kind": "lemma",
+      "line": 10,
+      "source": "ZhangLS/Spec/Lemma111StrictVariation.lean",
+      "prefix": "",
+      "source_sha256": "69bb5023eea39eeb45a1ff73b6b6228b34c56eb55175568524777f92d3c84234"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_variation_cutoff",
+      "kind": "lemma",
+      "line": 23,
+      "source": "ZhangLS/Spec/Lemma111StrictVariation.lean",
+      "prefix": "",
+      "source_sha256": "69bb5023eea39eeb45a1ff73b6b6228b34c56eb55175568524777f92d3c84234"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_one_strict_variation",
+      "kind": "lemma",
+      "line": 51,
+      "source": "ZhangLS/Spec/Lemma111StrictVariation.lean",
+      "prefix": "",
+      "source_sha256": "69bb5023eea39eeb45a1ff73b6b6228b34c56eb55175568524777f92d3c84234"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_strict_variation",
+      "kind": "lemma",
+      "line": 59,
+      "source": "ZhangLS/Spec/Lemma111StrictVariation.lean",
+      "prefix": "",
+      "source_sha256": "69bb5023eea39eeb45a1ff73b6b6228b34c56eb55175568524777f92d3c84234"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_initial_le",
+      "kind": "lemma",
+      "line": 67,
+      "source": "ZhangLS/Spec/Lemma111StrictVariation.lean",
+      "prefix": "",
+      "source_sha256": "69bb5023eea39eeb45a1ff73b6b6228b34c56eb55175568524777f92d3c84234"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_first_endpoint_le",
+      "kind": "lemma",
+      "line": 79,
+      "source": "ZhangLS/Spec/Lemma111StrictVariation.lean",
+      "prefix": "",
+      "source_sha256": "69bb5023eea39eeb45a1ff73b6b6228b34c56eb55175568524777f92d3c84234"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_sequence_first_Ico_le",
+      "kind": "lemma",
+      "line": 86,
+      "source": "ZhangLS/Spec/Lemma111StrictVariation.lean",
+      "prefix": "",
+      "source_sha256": "69bb5023eea39eeb45a1ff73b6b6228b34c56eb55175568524777f92d3c84234"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_positive_index_variation",
+      "kind": "lemma",
+      "line": 93,
+      "source": "ZhangLS/Spec/Lemma111StrictVariation.lean",
+      "prefix": "",
+      "source_sha256": "69bb5023eea39eeb45a1ff73b6b6228b34c56eb55175568524777f92d3c84234"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_one_first_Ico",
+      "kind": "lemma",
+      "line": 115,
+      "source": "ZhangLS/Spec/Lemma111StrictVariation.lean",
+      "prefix": "",
+      "source_sha256": "69bb5023eea39eeb45a1ff73b6b6228b34c56eb55175568524777f92d3c84234"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111StrictVariation",
+      "name": "ZhangLS.Spec.lemma111_tent_error_two_first_Ico",
+      "kind": "lemma",
+      "line": 129,
+      "source": "ZhangLS/Spec/Lemma111StrictVariation.lean",
+      "prefix": "",
+      "source_sha256": "69bb5023eea39eeb45a1ff73b6b6228b34c56eb55175568524777f92d3c84234"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_gaussian_interval_tail",
+      "kind": "lemma",
+      "line": 13,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_one_far_bound",
+      "kind": "lemma",
+      "line": 41,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_two_far_bound",
+      "kind": "lemma",
+      "line": 65,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_series_strict_tail_reduction",
+      "kind": "lemma",
+      "line": 103,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_one_strict_tail",
+      "kind": "lemma",
+      "line": 152,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_two_strict_tail",
+      "kind": "lemma",
+      "line": 164,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_tent_zero_of_ge",
+      "kind": "lemma",
+      "line": 177,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_tent_one_zero_of_cutoff",
+      "kind": "lemma",
+      "line": 182,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_tent_two_zero_of_cutoff",
+      "kind": "lemma",
+      "line": 196,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_tent_one_series_strict_finite",
+      "kind": "lemma",
+      "line": 222,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_tent_two_series_strict_finite",
+      "kind": "lemma",
+      "line": 242,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_twice_P1_le_transfer_cutoff",
+      "kind": "lemma",
+      "line": 265,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_one_P505_tail",
+      "kind": "lemma",
+      "line": 286,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma111GaussianFarTail",
+      "name": "ZhangLS.Spec.lemma111_smoothed_two_P505_tail",
+      "kind": "lemma",
+      "line": 300,
+      "source": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "prefix": "",
+      "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26GaussianCutoff",
+      "kind": "def",
+      "line": 12,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_P505_le_polynomial_cutoff",
+      "kind": "lemma",
+      "line": 15,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26NormalizedGaussianProfile",
+      "kind": "def",
+      "line": 42,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26ErrorProfileOne",
+      "kind": "def",
+      "line": 47,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26ErrorProfileTwo",
+      "kind": "def",
+      "line": 49,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_normalized_gaussian_variation",
+      "kind": "lemma",
+      "line": 52,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_one_variation",
+      "kind": "lemma",
+      "line": 73,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_two_variation",
+      "kind": "lemma",
+      "line": 85,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_normalized_gaussian_support",
+      "kind": "lemma",
+      "line": 97,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_one_support",
+      "kind": "lemma",
+      "line": 104,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_two_support",
+      "kind": "lemma",
+      "line": 108,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_one_admissible",
+      "kind": "lemma",
+      "line": 112,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_two_admissible",
+      "kind": "lemma",
+      "line": 119,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_one_zero",
+      "kind": "lemma",
+      "line": 126,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "@[simp]",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_error_profile_two_zero",
+      "kind": "lemma",
+      "line": 129,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "@[simp]",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26CutoffIndicator",
+      "kind": "def",
+      "line": 133,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_cutoff_indicator_variation",
+      "kind": "lemma",
+      "line": 136,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_cutoff_indicator_support",
+      "kind": "lemma",
+      "line": 151,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianProfiles",
+      "name": "ZhangLS.Spec.proposition26_cutoff_indicator_admissible",
+      "kind": "lemma",
+      "line": 156,
+      "source": "ZhangLS/Spec/Proposition26GaussianProfiles.lean",
+      "prefix": "",
+      "source_sha256": "2a28d9aac6fda9710566e1cae87278a95628d6db1ea984c83e70d1a405d0d60e"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_mem_polynomial_indices",
+      "kind": "lemma",
+      "line": 10,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_strict_ceil_eq",
+      "kind": "lemma",
+      "line": 19,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_twisted_polynomial_term",
+      "kind": "lemma",
+      "line": 30,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_twisted_polynomial_strict_sum",
+      "kind": "lemma",
+      "line": 47,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_short_polynomial_strict_terms",
+      "kind": "lemma",
+      "line": 76,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_short_polynomial_eq_twisted",
+      "kind": "lemma",
+      "line": 88,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_original_tent_two_coordinate",
+      "kind": "lemma",
+      "line": 100,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_J1_eq_gaussian_cutoff",
+      "kind": "lemma",
+      "line": 109,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_J2_eq_gaussian_cutoff",
+      "kind": "lemma",
+      "line": 129,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_normalized_gaussian_polynomial",
+      "kind": "lemma",
+      "line": 152,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_error_one_finite_sum",
+      "kind": "lemma",
+      "line": 176,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_error_two_finite_sum",
+      "kind": "lemma",
+      "line": 189,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26GaussianTailOne",
+      "kind": "def",
+      "line": 206,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26GaussianTailTwo",
+      "kind": "def",
+      "line": 212,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_inverse_gaussian_scale",
+      "kind": "lemma",
+      "line": 218,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_J1_sub_Jtilde_polynomial",
+      "kind": "lemma",
+      "line": 228,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_J2_sub_Jtilde_polynomial",
+      "kind": "lemma",
+      "line": 242,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_gaussian_tail_one_bound",
+      "kind": "lemma",
+      "line": 255,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26GaussianPolynomialBridge",
+      "name": "ZhangLS.Spec.proposition26_gaussian_tail_two_bound",
+      "kind": "lemma",
+      "line": 264,
+      "source": "ZhangLS/Spec/Proposition26GaussianPolynomialBridge.lean",
+      "prefix": "",
+      "source_sha256": "e7b286c0eed441d58666d176c350114d2e05076590cbd0f528a96218d37368ef"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_triple_quotient_perturbation",
+      "kind": "lemma",
+      "line": 11,
+      "source": "ZhangLS/Spec/Lemma83FiniteShiftLambda.lean",
+      "prefix": "",
+      "source_sha256": "371b777efcd95ea49f4574ad3e74a222ccbd65c82c7f036c4ee793fec7528470"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_cpow_shift_sub_one_bound",
+      "kind": "lemma",
+      "line": 53,
+      "source": "ZhangLS/Spec/Lemma83FiniteShiftLambda.lean",
+      "prefix": "",
+      "source_sha256": "371b777efcd95ea49f4574ad3e74a222ccbd65c82c7f036c4ee793fec7528470"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_small_shift",
+      "kind": "lemma",
+      "line": 60,
+      "source": "ZhangLS/Spec/Lemma83FiniteShiftLambda.lean",
+      "prefix": "",
+      "source_sha256": "371b777efcd95ea49f4574ad3e74a222ccbd65c82c7f036c4ee793fec7528470"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_norm_small_shift",
+      "kind": "lemma",
+      "line": 111,
+      "source": "ZhangLS/Spec/Lemma83FiniteShiftLambda.lean",
+      "prefix": "",
+      "source_sha256": "371b777efcd95ea49f4574ad3e74a222ccbd65c82c7f036c4ee793fec7528470"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+      "name": "ZhangLS.Spec.lemma83_lambda_finite_shift_bound",
+      "kind": "theorem",
+      "line": 125,
+      "source": "ZhangLS/Spec/Lemma83FiniteShiftLambda.lean",
+      "prefix": "",
+      "source_sha256": "371b777efcd95ea49f4574ad3e74a222ccbd65c82c7f036c4ee793fec7528470"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83PrimeShiftMass",
+      "kind": "def",
+      "line": 10,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_norm_pow_sub_one",
+      "kind": "lemma",
+      "line": 13,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_unit_mul_sub_one",
+      "kind": "lemma",
+      "line": 27,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_local_h2_perturbation",
+      "kind": "lemma",
+      "line": 35,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_local_h3_perturbation",
+      "kind": "lemma",
+      "line": 57,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_local_kappa_perturbation",
+      "kind": "lemma",
+      "line": 94,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_kappa_prime_power_zero_shift",
+      "kind": "lemma",
+      "line": 115,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_kappa_prime_power_perturbation",
+      "kind": "theorem",
+      "line": 120,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_prime_shift_mass_nonneg",
+      "kind": "lemma",
+      "line": 130,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_prime_shift_term_le",
+      "kind": "lemma",
+      "line": 133,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_prime_shift_mass_bound",
+      "kind": "lemma",
+      "line": 139,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_r_zero_shift",
+      "kind": "lemma",
+      "line": 150,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_d_zero_shift",
+      "kind": "lemma",
+      "line": 158,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_r_perturbation",
+      "kind": "lemma",
+      "line": 169,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_prime_mobius_weight_perturbation",
+      "kind": "lemma",
+      "line": 178,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiPerturbation",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_d_perturbation",
+      "kind": "theorem",
+      "line": 190,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiPerturbation.lean",
+      "prefix": "",
+      "source_sha256": "b2d2198a5787688502cead917b115015aec2773e7fa2ac62c258c2e2885474a8"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_quartic_half_geometric_hasSum",
+      "kind": "lemma",
+      "line": 9,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiRegular.lean",
+      "prefix": "",
+      "source_sha256": "c7c4481dddf5c40970f30892040b46a564080329ba2a4a39478d7f8cf1a99a8b"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_phase_tail_power_difference",
+      "kind": "lemma",
+      "line": 20,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiRegular.lean",
+      "prefix": "",
+      "source_sha256": "c7c4481dddf5c40970f30892040b46a564080329ba2a4a39478d7f8cf1a99a8b"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_kappa_tail_summable",
+      "kind": "lemma",
+      "line": 34,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiRegular.lean",
+      "prefix": "",
+      "source_sha256": "c7c4481dddf5c40970f30892040b46a564080329ba2a4a39478d7f8cf1a99a8b"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_kappa_tail_perturbation",
+      "kind": "theorem",
+      "line": 42,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiRegular.lean",
+      "prefix": "",
+      "source_sha256": "c7c4481dddf5c40970f30892040b46a564080329ba2a4a39478d7f8cf1a99a8b"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_zero_shift_kappa_tail",
+      "kind": "lemma",
+      "line": 111,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiRegular.lean",
+      "prefix": "",
+      "source_sha256": "c7c4481dddf5c40970f30892040b46a564080329ba2a4a39478d7f8cf1a99a8b"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_zero_shift",
+      "kind": "lemma",
+      "line": 124,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiRegular.lean",
+      "prefix": "",
+      "source_sha256": "c7c4481dddf5c40970f30892040b46a564080329ba2a4a39478d7f8cf1a99a8b"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiRegular",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_regular_zero_shift",
+      "kind": "theorem",
+      "line": 132,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiRegular.lean",
+      "prefix": "",
+      "source_sha256": "c7c4481dddf5c40970f30892040b46a564080329ba2a4a39478d7f8cf1a99a8b"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_lambda_prime_phase_perturbation",
+      "kind": "lemma",
+      "line": 9,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiUniform.lean",
+      "prefix": "",
+      "source_sha256": "abb12ad65341bff5f23358a869e989997d7c7974b9a51c20419a2ad97a328629"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_product_sub_product_norm",
+      "kind": "lemma",
+      "line": 58,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiUniform.lean",
+      "prefix": "",
+      "source_sha256": "abb12ad65341bff5f23358a869e989997d7c7974b9a51c20419a2ad97a328629"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_zero_shift_kappa_tail_norm",
+      "kind": "lemma",
+      "line": 63,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiUniform.lean",
+      "prefix": "",
+      "source_sha256": "abb12ad65341bff5f23358a869e989997d7c7974b9a51c20419a2ad97a328629"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_kappa_mobius_correction_perturbation",
+      "kind": "lemma",
+      "line": 82,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiUniform.lean",
+      "prefix": "",
+      "source_sha256": "abb12ad65341bff5f23358a869e989997d7c7974b9a51c20419a2ad97a328629"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_regular_perturbation",
+      "kind": "theorem",
+      "line": 110,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiUniform.lean",
+      "prefix": "",
+      "source_sha256": "abb12ad65341bff5f23358a869e989997d7c7974b9a51c20419a2ad97a328629"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiUniform",
+      "name": "ZhangLS.Spec.lemma83_xi_prime_power_perturbation",
+      "kind": "theorem",
+      "line": 161,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiUniform.lean",
+      "prefix": "",
+      "source_sha256": "abb12ad65341bff5f23358a869e989997d7c7974b9a51c20419a2ad97a328629"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83XiMoebius",
+      "kind": "def",
+      "line": 10,
+      "source": "ZhangLS/Spec/Lemma83XiMoebiusConvolution.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "60fed4faecea4e96e393f0595b5a46611b1bb364a30c9a70a3c7bf0f7bb0520f"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_multiplicative",
+      "kind": "lemma",
+      "line": 14,
+      "source": "ZhangLS/Spec/Lemma83XiMoebiusConvolution.lean",
+      "prefix": "",
+      "source_sha256": "60fed4faecea4e96e393f0595b5a46611b1bb364a30c9a70a3c7bf0f7bb0520f"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_inversion",
+      "kind": "theorem",
+      "line": 21,
+      "source": "ZhangLS/Spec/Lemma83XiMoebiusConvolution.lean",
+      "prefix": "",
+      "source_sha256": "60fed4faecea4e96e393f0595b5a46611b1bb364a30c9a70a3c7bf0f7bb0520f"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83_xi_eq_sum_moebius",
+      "kind": "theorem",
+      "line": 26,
+      "source": "ZhangLS/Spec/Lemma83XiMoebiusConvolution.lean",
+      "prefix": "",
+      "source_sha256": "60fed4faecea4e96e393f0595b5a46611b1bb364a30c9a70a3c7bf0f7bb0520f"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_one",
+      "kind": "lemma",
+      "line": 34,
+      "source": "ZhangLS/Spec/Lemma83XiMoebiusConvolution.lean",
+      "prefix": "@[simp]",
+      "source_sha256": "60fed4faecea4e96e393f0595b5a46611b1bb364a30c9a70a3c7bf0f7bb0520f"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83XiMoebiusConvolution",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_prime_power",
+      "kind": "lemma",
+      "line": 38,
+      "source": "ZhangLS/Spec/Lemma83XiMoebiusConvolution.lean",
+      "prefix": "",
+      "source_sha256": "60fed4faecea4e96e393f0595b5a46611b1bb364a30c9a70a3c7bf0f7bb0520f"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83XiMoebiusMass",
+      "kind": "def",
+      "line": 10,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiLocalMass.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "321255190e175ad9c92477d7a4eb9e3fa27d978100e3bde8e819e9e7240c7e53"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83XiZeroLocalTail",
+      "kind": "def",
+      "line": 13,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiLocalMass.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "321255190e175ad9c92477d7a4eb9e3fa27d978100e3bde8e819e9e7240c7e53"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_shift_prime_power",
+      "kind": "lemma",
+      "line": 16,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiLocalMass.lean",
+      "prefix": "",
+      "source_sha256": "321255190e175ad9c92477d7a4eb9e3fa27d978100e3bde8e819e9e7240c7e53"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_zero_local_tail_nonneg",
+      "kind": "lemma",
+      "line": 37,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiLocalMass.lean",
+      "prefix": "",
+      "source_sha256": "321255190e175ad9c92477d7a4eb9e3fa27d978100e3bde8e819e9e7240c7e53"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_shift_prime_norm",
+      "kind": "lemma",
+      "line": 43,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiLocalMass.lean",
+      "prefix": "",
+      "source_sha256": "321255190e175ad9c92477d7a4eb9e3fa27d978100e3bde8e819e9e7240c7e53"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_zero_local_hasSum",
+      "kind": "lemma",
+      "line": 51,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiLocalMass.lean",
+      "prefix": "",
+      "source_sha256": "321255190e175ad9c92477d7a4eb9e3fa27d978100e3bde8e819e9e7240c7e53"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_prime_power_perturbation",
+      "kind": "lemma",
+      "line": 73,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiLocalMass.lean",
+      "prefix": "",
+      "source_sha256": "321255190e175ad9c92477d7a4eb9e3fa27d978100e3bde8e819e9e7240c7e53"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiLocalMass",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_local_mass",
+      "kind": "theorem",
+      "line": 93,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiLocalMass.lean",
+      "prefix": "",
+      "source_sha256": "321255190e175ad9c92477d7a4eb9e3fa27d978100e3bde8e819e9e7240c7e53"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_mass_one",
+      "kind": "lemma",
+      "line": 11,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiEuler.lean",
+      "prefix": "@[simp]",
+      "source_sha256": "fc1d55f88dca9bcb611e302a4c66b1a4a049e171d8027ae0e040968b7038bc28"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_mass_nonneg",
+      "kind": "lemma",
+      "line": 14,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiEuler.lean",
+      "prefix": "",
+      "source_sha256": "fc1d55f88dca9bcb611e302a4c66b1a4a049e171d8027ae0e040968b7038bc28"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_mass_mul",
+      "kind": "lemma",
+      "line": 17,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiEuler.lean",
+      "prefix": "",
+      "source_sha256": "fc1d55f88dca9bcb611e302a4c66b1a4a049e171d8027ae0e040968b7038bc28"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_mass_finite_euler",
+      "kind": "theorem",
+      "line": 27,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiEuler.lean",
+      "prefix": "",
+      "source_sha256": "fc1d55f88dca9bcb611e302a4c66b1a4a049e171d8027ae0e040968b7038bc28"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83XiRLocalMass",
+      "kind": "def",
+      "line": 65,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiEuler.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "fc1d55f88dca9bcb611e302a4c66b1a4a049e171d8027ae0e040968b7038bc28"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_r_local_mass_ge_one",
+      "kind": "lemma",
+      "line": 68,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiEuler.lean",
+      "prefix": "",
+      "source_sha256": "fc1d55f88dca9bcb611e302a4c66b1a4a049e171d8027ae0e040968b7038bc28"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_baseline_le",
+      "kind": "lemma",
+      "line": 77,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiEuler.lean",
+      "prefix": "",
+      "source_sha256": "fc1d55f88dca9bcb611e302a4c66b1a4a049e171d8027ae0e040968b7038bc28"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_r_mass_product_le",
+      "kind": "lemma",
+      "line": 104,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiEuler.lean",
+      "prefix": "",
+      "source_sha256": "fc1d55f88dca9bcb611e302a4c66b1a4a049e171d8027ae0e040968b7038bc28"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_finite_reciprocal_square_sum",
+      "kind": "lemma",
+      "line": 142,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiEuler.lean",
+      "prefix": "",
+      "source_sha256": "fc1d55f88dca9bcb611e302a4c66b1a4a049e171d8027ae0e040968b7038bc28"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83FiniteXiEuler",
+      "name": "ZhangLS.Spec.lemma83_xi_moebius_finite_harmonic_bound",
+      "kind": "theorem",
+      "line": 152,
+      "source": "ZhangLS/Spec/Lemma83FiniteXiEuler.lean",
+      "prefix": "",
+      "source_sha256": "fc1d55f88dca9bcb611e302a4c66b1a4a049e171d8027ae0e040968b7038bc28"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83OriginalXiMajorantConstant",
+      "kind": "def",
+      "line": 10,
+      "source": "ZhangLS/Spec/Lemma83OriginalFiniteXiMajorant.lean",
+      "prefix": "noncomputable",
+      "source_sha256": "9dcad49a79622689ff6eff225ee82145cb9bc582936197260923cb8f6e392368"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_xi_majorant_constant_pos",
+      "kind": "lemma",
+      "line": 13,
+      "source": "ZhangLS/Spec/Lemma83OriginalFiniteXiMajorant.lean",
+      "prefix": "",
+      "source_sha256": "9dcad49a79622689ff6eff225ee82145cb9bc582936197260923cb8f6e392368"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_finite_phase_exponent",
+      "kind": "lemma",
+      "line": 16,
+      "source": "ZhangLS/Spec/Lemma83OriginalFiniteXiMajorant.lean",
+      "prefix": "",
+      "source_sha256": "9dcad49a79622689ff6eff225ee82145cb9bc582936197260923cb8f6e392368"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_xi_finite_mass",
+      "kind": "theorem",
+      "line": 41,
+      "source": "ZhangLS/Spec/Lemma83OriginalFiniteXiMajorant.lean",
+      "prefix": "",
+      "source_sha256": "9dcad49a79622689ff6eff225ee82145cb9bc582936197260923cb8f6e392368"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_lambda_finite_bound",
+      "kind": "theorem",
+      "line": 68,
+      "source": "ZhangLS/Spec/Lemma83OriginalFiniteXiMajorant.lean",
+      "prefix": "",
+      "source_sha256": "9dcad49a79622689ff6eff225ee82145cb9bc582936197260923cb8f6e392368"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_xi_lambda_majorant",
+      "kind": "theorem",
+      "line": 92,
+      "source": "ZhangLS/Spec/Lemma83OriginalFiniteXiMajorant.lean",
+      "prefix": "",
+      "source_sha256": "9dcad49a79622689ff6eff225ee82145cb9bc582936197260923cb8f6e392368"
+    },
+    {
+      "module": "ZhangLS.Spec.Lemma83OriginalFiniteXiMajorant",
+      "name": "ZhangLS.Spec.lemma83_original_xi_lambda_majorant_real",
+      "kind": "theorem",
+      "line": 118,
+      "source": "ZhangLS/Spec/Lemma83OriginalFiniteXiMajorant.lean",
+      "prefix": "",
+      "source_sha256": "9dcad49a79622689ff6eff225ee82145cb9bc582936197260923cb8f6e392368"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_J2",
+      "kind": "theorem",
+      "line": 15,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_H2",
+      "kind": "theorem",
+      "line": 22,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_Xi3",
+      "kind": "theorem",
+      "line": 37,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_E2_square",
+      "kind": "theorem",
+      "line": 46,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_full_gaussian_mass",
+      "kind": "theorem",
+      "line": 59,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_source_arithmetic",
+      "kind": "theorem",
+      "line": 64,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_actual_target",
+      "kind": "theorem",
+      "line": 78,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_chi_harmonic",
+      "kind": "theorem",
+      "line": 91,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_chi_BV",
+      "kind": "theorem",
+      "line": 98,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_energy_homogeneity",
+      "kind": "theorem",
+      "line": 106,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_outer_phi",
+      "kind": "theorem",
+      "line": 119,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_proved_target",
+      "kind": "theorem",
+      "line": 127,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_literal_complex_sum",
+      "kind": "theorem",
+      "line": 144,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_uniform_BV",
+      "kind": "theorem",
+      "line": 165,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    },
+    {
+      "module": "ZhangLS.Spec.Proposition26Regressions",
+      "name": "ZhangLS.Spec.proposition26_regression_actual_defect_package",
+      "kind": "theorem",
+      "line": 182,
+      "source": "ZhangLS/Spec/Proposition26Regressions.lean",
+      "prefix": "",
+      "source_sha256": "e4f2e1802a1d9c086d8411db716be1164bf4367c47858b62fc9fc50ae81db221"
+    }
+  ],
+  "private_source_declarations_excluded": [],
+  "generated_declarations": "Covered in the complete owner logs; not mislabeled as source-declared public API"
+}

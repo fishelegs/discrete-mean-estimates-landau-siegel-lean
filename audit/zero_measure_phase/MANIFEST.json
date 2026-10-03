@@ -1,0 +1,16 @@
+{
+  "status": "SOURCE_REVIEW_ACCEPTED_SCOPED",
+  "lean_proved": false,
+  "original_candidate_sha256": "e491c91d209074e2501d1422a75af5eb70a4f6e3b896063535ba1e814b581fc7",
+  "original_independent_review_sha256": "7c58165483ee8f92e274de2bfadca09bcd6f642f55e51cc7eb19bdd5c5ef3854",
+  "curation": "Public relative links, scope clarifications explicitly applied, portable finite checkers; no third-party full text or machine paths.",
+  "files": {
+    "INDEPENDENT_RESULTS.json": "d39c1a74e3ef16f87a2dbbf342bdf933bc1724803f4004c8b2d483590315dbea",
+    "INDEPENDENT_REVIEW.md": "7e1b171d23a0e34d4251d5e92ace459060e4ec4b5c389e36bd6cb28bb86c55e2",
+    "PROOF.md": "94cbf1a8d9aca9564c6e1e083f626c3336295ffc80d5eb09daed91b30e5ada54",
+    "STATUS.md": "2097879e812a0d2d67d261d295f302fbd467c7a119993de42ced69cf7cd07b50",
+    "check_finite.py": "f9abd0227178bf8d236f6392bdaa49997221d4c40ee2208e3abbaa8eb14cca88",
+    "check_independent.py": "acc796c451bc373808eae1a3415bfe9cccd378a7cd122b10bf43d4fdc645a0a4",
+    "finite_checks.json": "a61ac802c1ee3b628ff092f390121239664ff4ee3fe6c34c6cacb767062a473f"
+  }
+}

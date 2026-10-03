@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "source_sha256": "e0f6cbe57f0e65de925a06f4477027e85606dbcce49bdaecc0efbbae0a2b1f43",
+  "baseline_candidates": 442,
+  "new_candidates": 2,
+  "current_candidates": 444,
+  "unresolved_new_candidates": 0,
+  "reviews": [
+    {
+      "path": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "line": 194,
+      "declaration": "lemma111_tent_one_zero_of_cutoff",
+      "status": "REVIEWED_LOCAL_DERIVATION",
+      "reason": "h is constructed immediately from Real.log_le_log applied to the genuine positive P1 and actual cutoff, then rewritten by log_rpow. It is not a theorem hypothesis or an assumed tail/energy target."
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma111GaussianFarTail.lean",
+      "line": 277,
+      "declaration": "lemma111_twice_P1_le_transfer_cutoff",
+      "status": "REVIEWED_LOCAL_DERIVATION",
+      "reason": "h is the proved library inequality Real.log_le_sub_one_of_pos at2, simplified to log2<=1. No intended norm or asymptotic conclusion is an input."
+    }
+  ],
+  "strict_exit_code_remains": 1
+}

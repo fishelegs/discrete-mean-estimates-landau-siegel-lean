@@ -1,6 +1,10 @@
 # 张益唐论文 Lean 形式化进度
 
-修复分支重新校准（2026-10-03）：[固定χ×smooth窄旧支持的baseline审计](audit/narrow_baseline/STATUS.md)已独立来源复核。在该明确子类，真实目标投影仍有>2.9%的相对常数缺口，仅证明L^-8新增投影下界不足。因此该小增量子分支标为`suspended_recalibration`；整个R4主目标继续，R5限定三方向范数成果保留。此来源结论依赖P2.6已私有kernel PASS、尚待中央发布的真实uniform BV输入，tent扩展及baseline本身尚非Lean；不排除泛系数、宽支持或常数级增益。39/51不变。
+完整原 Proposition2.6（2026-10-03）：[真实加权J转移](audit/CLOUD_PROPOSITION26_STATUS.md)已中央全验收。实际uniform BV范数由χ cancellation与有限μ*ξ算术重建，保留同一个compatible c、原(A)、真正零点/C*ω/J/H₂及量词；J缺陷能量O(M L^-28)、Xi3=O(M L^-4)，经已证a>1/2得到原o(aM)。33模块、294公开/437完整owner、15展开回归、5742全库及1939源守卫PASS。现 **37原陈述+3显式修订=40/51**；原主结论及完整严格gain仍未证明。
+
+新方法来源复核（2026-10-03）：[共同固定高度的corrected phase](audit/joint_phase/STATUS.md)给至少21/22−O(L^-2)未加权质量避开抵消，使用尚未Lean形式化的外部hyper-Kloosterman输入；[真实加权零点正采样](audit/zero_measure_phase/STATUS.md)则支付L104/L131损失，得到指定源对称分支O((a h0)^-1 L^-203)误差。后者要求共同系数、解析反射及真正范数下界；在这些零点corrected phase趋−1，若旧span含H，新增U*H方向常数阶退化。独立signed Z2已启动研究，尚非严格gain或原主结论。
+
+修复分支重新校准（2026-10-03）：[固定χ×smooth窄旧支持的baseline审计](audit/narrow_baseline/STATUS.md)已独立来源复核。在该明确子类，真实目标投影仍有>2.9%的相对常数缺口，仅证明L^-8新增投影下界不足。因此该小增量子分支标为`suspended_recalibration`；整个R4主目标继续，R5限定三方向范数成果保留。此来源结论依赖P2.6本次已中央核验的真实uniform BV输入，tent扩展及baseline本身尚非Lean；不排除泛系数、宽支持或常数级增益。本次仅该输入升级为中央Lean证据，baseline本身不因此算Lean完成。
 
 修复桥梁更新（2026-10-03）：[短υ有限算术及实际族均值](audit/CLOUD_SHORT_UPSILON_STATUS.md)已中央Lean核验：5模块、56公开声明、80完整owner、5展开回归、5709全库PASS；R3的实际轮廓附件仍待R2。[限定三方向实际Gram下界](audit/actual_gram_bridge/STATUS.md)及[配对主项加权附件](audit/paired_phase_attachment/STATUS.md)经第二独立来源审查。R5仅为限定作用域的来源层部分成果，目标投影、L^-8符号精度与严格gain仍未证明。编号计数保持36原+3修订=39/51。
 
@@ -8,7 +12,7 @@
 
 ## 修复关键路径（不计入原论文51个编号）
 
-更新于2026-10-03。这些节点描述当前修复方案的实际缺口，原编号计数为 **36原陈述+3显式修订=39/51**。已完成局部修复并不意味着原主结论已经恢复。后续必须在同一实际对象上取得有利主项、合法归一化，以及压过全部误差的严格裕量。
+更新于2026-10-03。这些节点描述当前修复方案的实际缺口，原编号计数为 **37原陈述+3显式修订=40/51**。已完成局部修复并不意味着原主结论已经恢复。后续必须在同一实际对象上取得有利主项、合法归一化，以及压过全部误差的严格裕量。
 
 | 节点 | 执行状态 | 当前证据 | 已有结果与下一缺口 | 依赖关系 |
 |---|---|---|---|---|
@@ -21,9 +25,9 @@
 | R7 完整比值严格增益 | 等待前置及baseline校准 | 未证明 | 当前窄smooth基准不接近阈值；完整增强比值与全部误差仍须闭合 | R4与R5与R6共同闭合 |
 | R8 原主结论回接 | 等待前置 | 未证明 | 还需采用路线的全部剩余编号前置、统一量词、修订兼容性和最终矛盾链 | R7，加剩余论文/解析义务 |
 
-执行状态于2026-10-03 14:58 UTC核对，独立于证明状态。R2完整解析接口继续Lean形式化；R3有限算术/族均值已中央核验；R4实际目标定量投影研究已启动；R5限定三方向来源证明已独立复核，14:27 UTC起已启动真实Pi/范数附件的Lean形式化。
+执行状态于2026-10-03 17:43 UTC核对，独立于证明状态。R2轮廓/系数附件和R5真实算术/剖面附件继续Lean形式化；已有私有组件尚待中央发布。R3有限桥已发布，等待R2。R4另行研究可产生常数级改善的真实相位机制；共同固定高度的新来源层结论仍不能替代实际加权各自零点结论。
 
-R1的M1/(a logP)下界L^-13与R2的表示误差L^-14属于不同对象，不能直接相减得到gain。R3只降低替换所新增的误差，总表示误差仍由R2控制。R3等研究分支可以被其他有效方法替代，并非所有可能证明都必须经过它们。
+R1的M1/(a logP)下界L^-13与R2的表示误差L^-14属于不同对象，不能直接相减得到gain。R3只降低替换所新增的误差，总表示误差仍由R2控制。R3等研究分支可以被其他有效方法替代，并非所有可能证明都必须经过它们。新的独立weighted Z2若能构成有效矛盾，也可替代旧C1/T1比值路线；当前尚未证明该分叉。
 
 [机器可读节点与依赖](audit/cloud_repair_critical_path.json) · [实际M1证据](audit/CLOUD_FIRST_LOG_MOMENT_STATUS.md) · [相位表示范围](audit/annular_covariance/STATUS.md) · [短υ归约与相位缺项](audit/CLOUD_SHORT_UPSILON_STATUS.md)
 
@@ -246,7 +250,7 @@ Step 78 最终接合已通过单文件 Lean 内核检查、模块构建及新增
 | Lemma 2.3 | §2，零点相关估计 | ✅ 完成 | [Lemma23.lean](ZhangLS/Spec/Lemma23.lean)，`lemma23_proved : Lemma23Target`：真实 Ψ₁、原始较小零点区域内实际 L 函数零点，原文三个位移与实际 M′ 分母下，证明 C* 为实且非负，并证明 M′≠0。统一误差常数同时满足严格的 Proposition 2.2 间距界；三个连续后继零点、两个无零区间、L′≠0、实际分支及系数接合均已闭合。分支存在且对每个有效分支成立，不外加位置、单根、间距或无零区间结论。四个模块、展开原始陈述回归和八项公理检查通过；Step 84 全量审计 PASS。 |
 | Proposition 2.4 | §2，主要均值下界 | ⚪ 未开始 | [旧版占位](ZhangLS/MainTerms.lean) 含关键结论作为前提；不算证明。 |
 | Proposition 2.5 | §2，后续均值估计 | ⚪ 未开始 | [旧版占位](ZhangLS/MainTerms.lean) 未证明论文命题。 |
-| Proposition 2.6 | §2，真实J与平滑J的加权误差 | 🟡 进行中 | 实际有限β ξ算术界、Gaussian/BV和原J缺陷组件已私有验证；完整加权能量及原命题正在组装，尚未中央验收或完成。 |
+| Proposition 2.6 | §2，真实J与平滑J的加权误差 | ✅ 原陈述完成 | `proposition26_proved : Proposition26Target`；真实同c的BV范数、J缺陷能量及原Xi3=o(aM)已证。[中央验证](audit/CLOUD_PROPOSITION26_STATUS.md) |
 | Lemma 3.1 | §3，实际ν平方尾和 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma31.lean) 的 `lemma31_proved : Lemma31Target` 保留原始ν、D⁴<n≤P²、实际L(1,χ)、归一化(A)及统一C/D₀量词；C=1260，阈值从指数衰减推出。平方卷积、字符调和截断、累计和、一次尾和与总和全部导出；23模块、76标准公理接口、7回归（6原文展开）及Step125全量PASS（438模块、516导入、593源码、74回归），指纹不变。 |
 | Lemma 3.2 | §3，实际ν²τ₂²加权尾和 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma32OriginalTargetClosure.lean)，`lemma32_proved : Lemma32Target`。实际统一Burgess部分和由强归纳无条件证明，结合实际Euler/Mellin/留数/移线估计，闭合原文归一化(A)下的D⁴<n≤D⁸实际加权尾和≤C(logD)^−2007，C与D₀先于所有D和χ。Step137全量PASS：628个Spec逐模块检查、Spec聚合、项目构建和86个回归文件；982源码指纹不变，514个算术接口、两个Hasse最终定理和137个专项回归通过。 |
 | Lemma 3.3 | §3，正交均值与大筛估计 | ✅ 完成 | [完整可信证明](ZhangLS/Spec/Lemma33.lean) 的 `lemma33_proved : Lemma33Target` 保留原始Ψ、严格素数区间、实际Dirichlet和、原文𝒫、两条原始长度／能量及统一量词次序。第一条常数1；第二条由真实采样／Fourier／分数分离／Gauss转换闭合。共同C=32+π²，D₀=ceil(exp3)，无需(A)。8模块、44标准公理接口、3原文展开回归通过；Step123全量PASS（402模块、480导入、555源码、72回归，指纹不变）。 |

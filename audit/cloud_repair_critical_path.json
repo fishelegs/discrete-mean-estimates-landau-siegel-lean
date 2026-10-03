@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-03T14:58:30.522627+00:00",
-  "base_commit": "55364eaa0f7e8e39105959ea4c28fd391007597f",
+  "updated_utc": "2026-10-03T17:43:18.302855+00:00",
+  "base_commit": "6762dd9d1965823a31af9c0cf8e2578974686a91",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
-    "original_complete": 36,
+    "original_complete": 37,
     "repaired_complete": 3,
-    "complete": 39
+    "complete": 40
   },
   "scope": "这八个研究节点描述当前修复路线，不增加原论文编号分母。可替代分支不是所有可能证明的逻辑必要条件。",
   "status_legend": {
@@ -18,7 +18,7 @@
     "partial_lean_proved": "部分明确接口已中央Lean核验，节点其余附件尚未完成",
     "source_reviewed_partial": "限定作用域的来源层结论已独立复核，尚非整个节点或Lean完成"
   },
-  "central_decision": "尚不能确认弥补最终欠缺；须得到实际有利主项、合法归一化和压过全部误差的严格裕量。",
+  "central_decision": "原主结论尚未恢复。新的正误差采样可接到真实零点，但corrected phase在该测度下趋−1；仍须独立算术符号估计、实际正范数及完整严格裕量。",
   "nodes": [
     {
       "id": "R1",
@@ -35,7 +35,7 @@
       "published_commit": "8bdae40152843c289650c1483d86c73b7a8aaf28",
       "execution_status": "done",
       "execution_note": "已经发布并验证；未把该标量下界当作实际Gram下界。",
-      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
       "proof_status": "lean_proved"
     },
     {
@@ -52,8 +52,8 @@
         "audit/structured_covariance/STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "实际零点轮廓、精确分支与四类变换的Lean模块已私有验证；完整固定窗口精度接口继续形式化，尚未中央发布。",
-      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "execution_note": "Lean形式化继续；实际分离矩形/四类变换及部分系数附件已有私有检查，完整L^-14接口和中央发布尚待完成。",
+      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
       "proof_status": "source_reviewed"
     },
     {
@@ -76,7 +76,7 @@
       ],
       "execution_status": "waiting_R2_attachment",
       "execution_note": "本批5模块、56公开/80owned、5709全库中央核验完成；有限桥已完成，解析轮廓附件等待R2。",
-      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
       "proof_status": "partial_lean_proved",
       "published_commit": "975114abbb14f77426af3cff767b1f37e6c67d04"
     },
@@ -97,13 +97,35 @@
       "evidence": [
         "audit/CLOUD_SHORT_UPSILON_STATUS.md",
         "audit/paired_phase_attachment/STATUS.md",
-        "audit/narrow_baseline/STATUS.md"
+        "audit/narrow_baseline/STATUS.md",
+        "audit/joint_phase/STATUS.md",
+        "audit/zero_measure_phase/STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "重新校准候选baseline及完整增益；固定smooth窄支持的小L^-8增量子分支已暂停，整个主算术符号目标继续。",
-      "checked_utc": "2026-10-03T14:58:30.522627+00:00",
+      "execution_note": "独立评价真实weighted signed Z2；共同高度21/22来源桥与真实零点正采样已复核，后者只给source对称分支，corrected trial仍退化。κ结构化Poisson的long-pure子范围已独立来源复核，middleη及全矩阵仍未闭合。",
+      "checked_utc": "2026-10-03T17:43:18.302855+00:00",
       "proof_status": "open",
-      "branch_status": "suspended_recalibration_for_fixed_smooth_narrow_small_gain_only"
+      "branch_status": "suspended_recalibration_for_fixed_smooth_narrow_small_gain_only",
+      "alternative_routes": [
+        {
+          "route": "existing_C1_T1_contour",
+          "requires": [
+            "R2",
+            "direct_arithmetic_or_R3"
+          ],
+          "status": "open"
+        },
+        {
+          "route": "independent_weighted_Z2",
+          "requires": [
+            "actual_positive_sampling_attachment",
+            "actual_trial_norm_lower_bound",
+            "independent_signed_correlation"
+          ],
+          "status": "open",
+          "note": "Not logically required to use the old C1/T1 representation; an independent valid contradiction could replace the original ratio route."
+        }
+      ]
     },
     {
       "id": "R5",
@@ -125,8 +147,8 @@
         "audit/actual_gram_bridge/INDEPENDENT_REVIEW.md"
       ],
       "execution_status": "active",
-      "execution_note": "14:27 UTC起已启动Lean形式化，先证真实Pi卷积消去，再接实际平滑主范数和限定三方向Gram；来源层结论不自动算Lean完成。",
-      "checked_utc": "2026-10-03T14:58:30.522627+00:00",
+      "execution_note": "真实Pi卷积/算术附件、exp-ramp/闭权重边界模块已有私有PASS；继续连续剖面、密度与真实外和，完整范数附件尚待中央验收。",
+      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
       "proof_status": "source_reviewed_partial"
     },
     {
@@ -149,7 +171,7 @@
       "evidence": [],
       "execution_status": "blocked_by_R4_R5",
       "execution_note": "限定R5来源下界有进展；仍等待实际有利目标及适合该增益的完整归一化误差预算。",
-      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
       "proof_status": "open"
     },
     {
@@ -168,7 +190,7 @@
       "evidence": [],
       "execution_status": "waiting_dependencies",
       "execution_note": "等待R4、R5、R6共同闭合；当前无严格gain。",
-      "checked_utc": "2026-10-03T14:58:30.522627+00:00",
+      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
       "proof_status": "open"
     },
     {
@@ -187,7 +209,7 @@
       "original_exponents_preserved": true,
       "execution_status": "waiting_dependencies",
       "execution_note": "等待R7及采用路线的其余论文/解析义务，原主结论未恢复。",
-      "checked_utc": "2026-10-03T14:23:57.561783+00:00",
+      "checked_utc": "2026-10-03T17:43:18.186862+00:00",
       "proof_status": "open"
     }
   ],
@@ -269,7 +291,7 @@
     "来源复核、局部Lean证明和完整原主定理证明必须分开。",
     "固定smooth窄旧span的常数级baseline缺口只排除把小L^-8下界直接当修复充分条件；不排除所有支持/系数/方法。"
   ],
-  "numbered_progress_note": "Repaired pointwise Lemma15.1 is verified; this does not complete any repair critical-path node or establish strict gain.",
+  "numbered_progress_note": "Original Proposition2.6 is verified, including actual same-c BV/J-defect energy. This does not complete any open repair node or establish strict gain.",
   "execution_status_semantics": "实际执行状态独立于证明状态；来源复核完成不自动表示Lean形式化正在运行。",
   "branch_assessments": [
     {
@@ -278,7 +300,7 @@
       "scope": "固定χ乘smooth旧A[.502,.504]、旧B[.499,.500]，函数先于D和χ固定；不含任意bounded系数或不受控D依赖profile。",
       "evidence_status": "source_reviewed",
       "result": "实际同aM归一目标残差最终≥250/π；目标范数趋8000/π+44π/375，相对缺口>2.9%。仅L^-8新增投影下界不足恢复完整比值。",
-      "dependency_note": "使用P2.6已私有kernel PASS的uniform BV实际范数；该输入中央验收/发布尚待完成。tent附件和baseline本身尚非Lean。",
+      "dependency_note": "P2.6的真实uniform BV输入已中央Lean验证；tent扩展和baseline本身仍为独立复核的来源层结论。",
       "not_excluded": [
         "constant-size actual phase gain",
         "arbitrary bounded narrow-window coefficients with new valid estimates",
@@ -286,7 +308,37 @@
         "changed frequencies or other methods"
       ],
       "report": "audit/narrow_baseline/STATUS.md",
-      "checked_utc": "2026-10-03T14:58:30.522627+00:00"
+      "checked_utc": "2026-10-03T17:43:18.186862+00:00"
+    },
+    {
+      "id": "corrected_joint_phase_common_height",
+      "status": "source_reviewed",
+      "evidence_status": "source_reviewed_not_Lean",
+      "scope": "每个共同确定高度、每个固定p的primitive even族；未加权。",
+      "result": "corrected phase rM/conj(M) 至少21/22−O(L^-2)质量离开2/L抵消区；依赖外部hyper-Kloosterman深定理，非almost-all。",
+      "gap": "不等于原各自零点上的带权相位结论或完整高t BPZ误差。",
+      "report": "audit/joint_phase/STATUS.md",
+      "checked_utc": "2026-10-03T17:43:18.302855+00:00"
+    },
+    {
+      "id": "actual_zero_positive_sampling",
+      "status": "source_reviewed_scoped",
+      "evidence_status": "source_reviewed_not_Lean",
+      "scope": "共同跨(p,ψ)系数、有限解析H/H†、支持≤P^.504，真正m_H≥h0；原c*ω/(aM)实际零点。",
+      "result": "residue正采样损失L104/L131；指定源分支S_src=F+e/2的Z1误差O((a h0)^-1 L^-203)。实际corrected phase趋−1，旧span含H时新增U*H方向常数阶退化。",
+      "gap": "原BPZ Mellin分支、独立signed Z2与strictgain尚未证明。",
+      "report": "audit/zero_measure_phase/STATUS.md",
+      "checked_utc": "2026-10-03T17:43:18.302855+00:00"
+    },
+    {
+      "id": "actual_weighted_signed_phase_correlation",
+      "status": "active_research",
+      "evidence_status": "open",
+      "scope": "新的独立算术估计；在同一真实加权零点及实际正范数试验上获得足够常数级符号分离。",
+      "result": "已明确Z2作为与相位趋−1来源结论相比较的独立义务；正在评价合法轮廓/算术表示。",
+      "gap": "共同高度矩和正采样不能提供所需signed cancellation；不能把同一AFE重写当新增证据。",
+      "report": "audit/zero_measure_phase/PROOF.md",
+      "checked_utc": "2026-10-03T17:43:18.302855+00:00"
     }
   ]
 }

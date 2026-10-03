@@ -1,0 +1,18 @@
+{
+  "status": "PASS_FINITE_ONLY",
+  "coefficient_cases": 24445,
+  "ramified_deletion_cases": 4844,
+  "exact_complex_phase_cases": 405,
+  "toy_exact_sampling_cases": 902,
+  "budgets": {
+    "base_loss": 104,
+    "trial_loss": 131,
+    "base_inverse_error": "-1707/2",
+    "trial_inverse_error": "-1077/2",
+    "base_AFE_error": -246,
+    "trial_AFE_error": -203,
+    "H_cubed_P_exponent": "189/125",
+    "invalid_H_fourth_P_exponent": "252/125"
+  },
+  "scope": "Finite algebra and exponent arithmetic only; no analytic proof, Lean certificate, Z2, or final contradiction."
+}
