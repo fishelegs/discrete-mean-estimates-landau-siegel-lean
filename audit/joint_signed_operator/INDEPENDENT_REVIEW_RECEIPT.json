@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "source_review_decision": "ACCEPT",
+  "created_utc": "2026-10-03T22:12:44.083209+00:00",
+  "manifest_sha256": "a7147004fe9afedf54d296970c05eb2cec5c6d4655952a1ae7b896f69317d571",
+  "matching_manifest_entries": 34,
+  "frozen_candidate_entries": 22,
+  "independent_rational_and_finite_status": "PASS: exact rational budgets and finite regressions; read REVIEW.md for universal proofs and limits",
+  "independent_algebra_assertions": 130123,
+  "maximum_normalized_algebra_error": 6.706054930464686e-14,
+  "boundary": "Source-level acceptance relative to identified accepted inputs; no strict-half gain, Psi2 payment, final theorem, or Lean certification."
+}

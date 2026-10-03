@@ -1,0 +1,116 @@
+{
+  "status": "source_only_independently_reviewed",
+  "files": [
+    {
+      "path": "AUTHOR_ORIGINAL.json",
+      "sha256": "e90d951cdee07ab77e50a65f3c2d3f956ee786330246a74ded7817cb3c7a369f",
+      "bytes": 3844
+    },
+    {
+      "path": "AUTHOR_RERUN.json",
+      "sha256": "e90d951cdee07ab77e50a65f3c2d3f956ee786330246a74ded7817cb3c7a369f",
+      "bytes": 3844
+    },
+    {
+      "path": "AUTHOR_SOURCE_MANIFEST.json",
+      "sha256": "693e58e1094259ab0d31e6c70e368a8840351863bdb71a63b753843bd01bca63",
+      "bytes": 3648
+    },
+    {
+      "path": "COMPARISON.json",
+      "sha256": "412754c37c4c18f0581de43743a47e40fc1e8a4ef1888680068dcc3583907a5a",
+      "bytes": 1435
+    },
+    {
+      "path": "DEPENDENCIES.md",
+      "sha256": "0a874413e49b3c26b85dedc8b28c01b5321b61464c74728cdb3b17e93f6e3f80",
+      "bytes": 3301
+    },
+    {
+      "path": "INDEPENDENT_ORIGINAL.json",
+      "sha256": "7fb79b920484f4fe08f6b64333fd17c7b45c224052e3bad6990a2a08dd20b5f5",
+      "bytes": 2329
+    },
+    {
+      "path": "INDEPENDENT_RERUN.json",
+      "sha256": "908e7ee18892dfc52d861332890aea29f3d2e93f0c86c0d4b71518a325da9139",
+      "bytes": 2134
+    },
+    {
+      "path": "INDEPENDENT_REVIEW.md",
+      "sha256": "f7935e0299d0fd13ea5badc358702d82633771d95a37471afbd42815d90e4d07",
+      "bytes": 22553
+    },
+    {
+      "path": "INDEPENDENT_REVIEW_RECEIPT.json",
+      "sha256": "4556819630762591af8c31869022e3d4d186562241b9907423cfa4e027f4a116",
+      "bytes": 678
+    },
+    {
+      "path": "INDEPENDENT_SOURCE_MANIFEST.json",
+      "sha256": "ce09fdc1a8ca5c2d2756dbefe68a87774702fa613d8070da042bfbdfbf51054e",
+      "bytes": 7110
+    },
+    {
+      "path": "PROOF.md",
+      "sha256": "aa6763424c2842285ab31927f2a623497f9e8a18e56cd585d9ed237a30b607aa",
+      "bytes": 25106
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "bb799d287cbb70cbc93e34e682efb1ff324d49b5103dd71ddc8c4673c8dbc029",
+      "bytes": 2909
+    },
+    {
+      "path": "REPRODUCE.md",
+      "sha256": "aa48ef20d3720311c36560e52968317662d7b1d50dc9a7deb510b9a2fc7ac5b6",
+      "bytes": 2778
+    },
+    {
+      "path": "SOURCE_HASHES.json",
+      "sha256": "ce69eb636a88d06e2bcc0dcfb8d0ef3a654b27cc699007068924e7ee1c0f2826",
+      "bytes": 5850
+    },
+    {
+      "path": "SOURCE_HISTORY.json",
+      "sha256": "83fef385059cc070510bbfb4dfe63573e9619cb9860f114728737621110cecb3",
+      "bytes": 14445
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "9afa2a788a2893f5ab258cd24a1686363ab114d9619ff6401909e350cf3ac29b",
+      "bytes": 1613
+    },
+    {
+      "path": "algebra/ORIGINAL.json",
+      "sha256": "bb458d931f4b835cfc796b7c672432604b81ff62a8c658dc2ff273b93f81abe0",
+      "bytes": 70557
+    },
+    {
+      "path": "algebra/RERUN.json",
+      "sha256": "0371fd47b2761a90ecca83647a74e3b7a2acfb1ef51ae047fac23e39e6ee2f35",
+      "bytes": 70369
+    },
+    {
+      "path": "algebra/check_algebra.py",
+      "sha256": "602fb2f91b8eeada6512886d96f6829accb193a43757f0ffedcb409a099747e7",
+      "bytes": 14759
+    },
+    {
+      "path": "check_author.py",
+      "sha256": "0967480a06f8026f5a176a64d2cfcf537ada03e29193b935940c93d04151b3b5",
+      "bytes": 8524
+    },
+    {
+      "path": "check_independent.py",
+      "sha256": "8f3a81c40596fd6653c0243e4c035f548e5b5071be2729d080b6ef73f3350e12",
+      "bytes": 6869
+    },
+    {
+      "path": "verify_bundle.py",
+      "sha256": "f1d6679344c36f758186ae166884163e08ac4959f0ad6221f6540b460b609110",
+      "bytes": 11116
+    }
+  ],
+  "scope": "Portable public mathematical evidence. The manifest hashes curated bytes; SOURCE_HISTORY.json records distinct historical original hashes. No Lean or strict-gain certificate."
+}

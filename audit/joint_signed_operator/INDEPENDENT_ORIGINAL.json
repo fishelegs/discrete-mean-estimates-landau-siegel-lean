@@ -1,0 +1,99 @@
+{
+  "frozen_inputs": {
+    "manifest_sha256": "e4efb27e6e3e1beab6930d46c45db63b28d35aaa5b375f11e4ef19491d11a17d",
+    "matching_files": 22
+  },
+  "support": {
+    "profile_width": "1/2000",
+    "C_raw_paid": "40069/40000",
+    "Y_raw_paid": "6003/2000",
+    "C_envelope": "501/500",
+    "Y_envelope": "1501/500",
+    "C_slack": "11/40000",
+    "Y_slack": "1/2000",
+    "principal_power_before_absorption": "-1/2",
+    "fourier_tail_power": "-20",
+    "mask_tail_power": "-20"
+  },
+  "energy": [
+    {
+      "smooth_completions": 3,
+      "q": 3,
+      "convolution_order": 54,
+      "rho_low": "-1853/2",
+      "rho_high": "-1907/1",
+      "E_C": "324/1",
+      "E_D": "-1745/2",
+      "total_log": "-501/4"
+    },
+    {
+      "smooth_completions": 2,
+      "q": 4,
+      "convolution_order": 90,
+      "rho_low": "-1741/2",
+      "rho_high": "-1835/1",
+      "E_C": "225/1",
+      "E_D": "-1525/2",
+      "total_log": "-479/4"
+    },
+    {
+      "smooth_completions": 1,
+      "q": 5,
+      "convolution_order": 135,
+      "rho_low": "-1597/2",
+      "rho_high": "-1745/1",
+      "E_C": "144/1",
+      "E_D": "-1237/2",
+      "total_log": "-353/4"
+    },
+    {
+      "smooth_completions": 0,
+      "q": 6,
+      "convolution_order": 189,
+      "rho_low": "-1421/2",
+      "rho_high": "-1637/1",
+      "E_C": "81/1",
+      "E_D": "-881/2",
+      "total_log": "-123/4"
+    }
+  ],
+  "finite_divisor_regressions": {
+    "cases": 4112,
+    "exponents": 257,
+    "q": [
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "principal_log_before_absorption": "1131/4",
+  "envelope": {
+    "breakpoints": [
+      "0/1",
+      "1989/2000",
+      "4287/2800",
+      "56/25",
+      "359/160",
+      "301/100"
+    ],
+    "method": "Exact affine comparisons at all slope and crossing breakpoints",
+    "zero_loss_endpoint": "1989/2000"
+  },
+  "finite_principal_and_rho": {
+    "conductors": [
+      3,
+      4,
+      5,
+      8,
+      12
+    ],
+    "grouping_cases": 30,
+    "rho_cases": 2235,
+    "Abel_cases": 15,
+    "maximum_grouping_error": 3.647047254756147e-17,
+    "scope": "Algebraic regressions; sample profiles do not establish actual asymptotic cancellation."
+  },
+  "status": "PASS: exact rational budgets and finite regressions; read REVIEW.md for universal proofs and limits",
+  "created_utc": "2026-10-03T22:05:57.082690+00:00"
+}

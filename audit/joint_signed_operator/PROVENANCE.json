@@ -1,0 +1,29 @@
+{
+  "evidence_kind": "Independently accepted source-level mathematical reductions and exact budgets",
+  "historical_author_report_sha256": "8d495c79023e6964231def713aaaaf435d947c5d5e4b58d5576b8802bd96ba0d",
+  "historical_independent_review_sha256": "451af50b3db4166a5337587d0b7e3bb4a5df49dcf2482bd344c2ce07e69f99b5",
+  "historical_author_manifest_sha256": "e4efb27e6e3e1beab6930d46c45db63b28d35aaa5b375f11e4ef19491d11a17d",
+  "historical_independent_manifest_sha256": "a7147004fe9afedf54d296970c05eb2cec5c6d4655952a1ae7b896f69317d571",
+  "historical_source_files_verified": 36,
+  "public_proof_sha256": "aa6763424c2842285ab31927f2a623497f9e8a18e56cd585d9ed237a30b607aa",
+  "public_independent_review_sha256": "f7935e0299d0fd13ea5badc358702d82633771d95a37471afbd42815d90e4d07",
+  "curation": [
+    "Preserved the complete mathematical arguments, source hypotheses 2022 and target 2024, exact indices, masks, deletion, parity, actual families, lengths and logarithmic costs.",
+    "Replaced original locations and operational front matter with public mathematical links and neutral historical source identifiers; original raw source hashes remain distinct from curated byte hashes.",
+    "All original manifest entries were checked against their source bytes before curation. Historical context without mathematical content is retained only as an opaque fingerprint.",
+    "Portable standard-library checkers retain all mathematical assertions and print complete JSON without writing files. Historical location and identity checks now belong to the bundle verifier.",
+    "Original and rerun mathematical receipts compare exhaustively; only named raw numerical errors vary within their original strict tolerances. Historical input counts and hashes are checked separately. Only named timestamp/path/checker-hash identities may differ.",
+    "The public proof records the already completed independent source review. Historical receipt status text remains literally preserved and does not override STATUS.md.",
+    "Applied the review clarification that sufficiently small actual norm terms can yield a gain; a defect lower bound is not necessary in every proof.",
+    "Expanded the principal budget to D^11 L^(1131/4)P^-1/2, including original height L^519. Explicitly located joint-mask xi on v,z,w and symbol theta on dual h; neither enters Ahat.",
+    "Recorded the exact existing-envelope zero-loss endpoint K<=P^.9945, retaining the author conservative P^.994 example and the global P^.501 loss."
+  ],
+  "source_exponent": 2022,
+  "final_target_exponent": 2024,
+  "lean_certification": false,
+  "strict_gain_proved": false,
+  "final_exponent_2024_proved": false,
+  "public_dependency_baseline": "d2d15aa83a6717fe491afa6d3319d811bc0853f9",
+  "historical_author_repository_head": "652d854f8e691d3b7c590751c909dd551def0fc6",
+  "historical_review_repository_head": "d2d15aa83a6717fe491afa6d3319d811bc0853f9"
+}

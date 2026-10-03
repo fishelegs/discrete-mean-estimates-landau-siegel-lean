@@ -1,0 +1,77 @@
+{
+  "repository_dependencies": [
+    {
+      "path": "ZhangLS/Spec/Proposition71OriginalFamilyExtension.lean",
+      "sha256": "3c91089668ba6a921670113157b1696ed24350512f712871c1f63f93d6225611"
+    },
+    {
+      "path": "audit/half_norm_constant/INDEPENDENT_REVIEW.md",
+      "sha256": "9aa0dfd944b3f3a2c86791cf48e077ef0a56f9bf846f3681297f27115d51e186"
+    },
+    {
+      "path": "audit/half_norm_constant/PROOF.md",
+      "sha256": "0a77d306a53b6cefc46b074c2696287e12387e1d42c1a209d41b364d9130d1e0"
+    },
+    {
+      "path": "audit/half_norm_constant/PROVENANCE.json",
+      "sha256": "58cd6ba53e98bc7febeb9aa14d5c11a84987e8265c677ad429bdf3cb112ba3eb"
+    },
+    {
+      "path": "audit/half_norm_constant/STATUS.md",
+      "sha256": "87a3cf0c28968fb645b339a09f573cb2d4c91139d8f8c53265630c937e76b7a9"
+    },
+    {
+      "path": "audit/high_rho_split/INDEPENDENT_REVIEW.md",
+      "sha256": "d457d8bd6d0d076ea7d8b54b2389128e58c4046fd0f5ed11d51b650824796e3f"
+    },
+    {
+      "path": "audit/high_rho_split/PROOF.md",
+      "sha256": "36a976448d6de3a81cca661def36e8e6aaac9d8ccec6303f3776f89ec0ebfb2f"
+    },
+    {
+      "path": "audit/high_rho_split/PROVENANCE.json",
+      "sha256": "43062b86155e9e4648f9c30a2e0a5718ee0f9c554cb48850ca79171412afa6c8"
+    },
+    {
+      "path": "audit/high_rho_split/STATUS.md",
+      "sha256": "4368dc9e77af51a81fcb98866d487a750ae76b301d78ef25b3a07f5823ae7941"
+    },
+    {
+      "path": "audit/sparse_long_reduction/INDEPENDENT_REVIEW.md",
+      "sha256": "915f149a858fa7685967e781a7241ac2bf4bdb91fd9e57a369e5339d299ff684"
+    },
+    {
+      "path": "audit/sparse_long_reduction/PROOF.md",
+      "sha256": "ff2a7d6ea35281a9ab83f91b7b0b3715f7876053a7753be77d67a3537f9cb98b"
+    },
+    {
+      "path": "audit/sparse_long_reduction/PROVENANCE.json",
+      "sha256": "b86ceaad7e36c4f71c9e5bd79214d7f53a6907d9ebbda5a105dfec372d863c84"
+    },
+    {
+      "path": "audit/sparse_long_reduction/STATUS.md",
+      "sha256": "aefe3158270c2be1c6478d29fc24904f98c2823ee8b0923825ec204a5dd4c6af"
+    },
+    {
+      "path": "audit/squarefree_core/AUTHOR_SOURCE_MANIFEST.json",
+      "sha256": "e375d07c836e149cdcc23da97a85d5c2a44e8bffe0a4ceb42394e048e5ede34c"
+    },
+    {
+      "path": "audit/squarefree_core/INDEPENDENT_REVIEW.md",
+      "sha256": "609739b2e56ef2801dc569d8dcf394b3c0bca4c227950693df66e5ce0b4237f2"
+    },
+    {
+      "path": "audit/squarefree_core/PROOF.md",
+      "sha256": "d8c16272b7b4900d6e81ce6a4aac589e3290382bdfcbc3fa3ae25cd53cedb630"
+    },
+    {
+      "path": "audit/squarefree_core/PROVENANCE.json",
+      "sha256": "59fb65b0c7df7452be4467e516199f0de88abae2b2880ec9f476e365f47133fe"
+    },
+    {
+      "path": "audit/squarefree_core/STATUS.md",
+      "sha256": "b31890e4fed4e4046843c367ed218b82975dac4634f00b5ec0a5fd7563740586"
+    }
+  ],
+  "scope": "Exact public mathematical dependencies and provenance carriers. Original hashes are distinct in SOURCE_HISTORY.json. No transitive Lean certification is implied."
+}

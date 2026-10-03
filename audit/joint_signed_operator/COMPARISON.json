@@ -1,0 +1,42 @@
+{
+  "rules": "Compare all mathematical fields recursively. Only named raw floating error fields may vary, with each historical, saved and fresh value finite, nonnegative and strictly below the original tolerance. Counts, inventories, exact rationals, tolerance values, status and scope compare literally. Historical integrity fields are verified separately, not discarded. Named timestamps and checker location/hash identities are the only ignored identities.",
+  "runs": [
+    {
+      "script": "check_author.py",
+      "original": "AUTHOR_ORIGINAL.json",
+      "rerun": "AUTHOR_RERUN.json",
+      "float_errors": {
+        "gauss_operator_regressions/max_floating_error": 1e-08
+      }
+    },
+    {
+      "script": "check_independent.py",
+      "original": "INDEPENDENT_ORIGINAL.json",
+      "rerun": "INDEPENDENT_RERUN.json",
+      "float_errors": {
+        "finite_principal_and_rho/maximum_grouping_error": 1e-11
+      },
+      "identity_fields": [
+        "created_utc"
+      ],
+      "integrity_fields": {
+        "frozen_inputs": {
+          "operation": "author_identity"
+        }
+      }
+    },
+    {
+      "script": "algebra/check_algebra.py",
+      "original": "algebra/ORIGINAL.json",
+      "rerun": "algebra/RERUN.json",
+      "float_error_maps": {
+        "maximum_normalized_errors": 5e-09
+      },
+      "identity_fields": [
+        "created_utc",
+        "checker_path",
+        "checker_sha256"
+      ]
+    }
+  ]
+}

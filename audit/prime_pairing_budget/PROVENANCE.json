@@ -1,0 +1,25 @@
+{
+  "evidence_kind": "Independently accepted source-level mathematical reductions and exact budgets",
+  "historical_author_report_sha256": "3cf78b90d64bece449a21465eb46123c983791b46d43aab01c78ff59f85d24f5",
+  "historical_independent_review_sha256": "a38e071076a7eab34a3f907833c7e261b470b1db8b3d3db06d30f5d9385e3dc9",
+  "historical_author_manifest_sha256": "8bee2f77ab0763882391bd6c1a98adfabd260420e6339ba9f3e74e0b6ca0d64e",
+  "historical_independent_manifest_sha256": "e6fd218a2e54113f58f55742171f39132ac6a0857254218372eadff1a481d336",
+  "historical_source_files_verified": 18,
+  "public_proof_sha256": "98c8b5cfba0459da479701725f76ff2ae511d546bb74ae47bf78c51979d9f9c4",
+  "public_independent_review_sha256": "6b0e25740ab39e920000c1338e6ecf66b5aef8d22883f55191fa1b5dceae8643",
+  "curation": [
+    "Preserved the complete mathematical arguments, source hypotheses 2022 and target 2024, exact indices, masks, deletion, parity, actual families, lengths and logarithmic costs.",
+    "Replaced original locations and operational front matter with public mathematical links and neutral historical source identifiers; original raw source hashes remain distinct from curated byte hashes.",
+    "All original manifest entries were checked against their source bytes before curation. Historical context without mathematical content is retained only as an opaque fingerprint.",
+    "Portable standard-library checkers retain all mathematical assertions and print complete JSON without writing files. Historical location and identity checks now belong to the bundle verifier.",
+    "Original and rerun mathematical receipts compare exhaustively; only named raw numerical errors vary within their original strict tolerances. Historical input counts and hashes are checked separately. Only named timestamp/path/checker-hash identities may differ.",
+    "The public proof records the already completed independent source review. Historical receipt status text remains literally preserved and does not override STATUS.md.",
+    "Retained the distinction between direct uniform-interval pointwise prime estimates and Fourier twists on arbitrary separate bilinear coefficients. No pointwise frequency transfer is asserted."
+  ],
+  "source_exponent": 2022,
+  "final_target_exponent": 2024,
+  "lean_certification": false,
+  "strict_gain_proved": false,
+  "final_exponent_2024_proved": false,
+  "public_dependency_baseline": "d2d15aa83a6717fe491afa6d3319d811bc0853f9"
+}

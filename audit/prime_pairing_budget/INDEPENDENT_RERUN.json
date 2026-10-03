@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "arithmetic_cases": 13336,
+  "balanced_factorization_cases": 196440,
+  "gauss_kernel_cases": 2046,
+  "gauss_max_error": 1.6962671017803266e-13,
+  "completion_root_cases": 300,
+  "crt_max_error": 2.683361049135568e-13,
+  "prime_conductor_reduction_cases": 2688,
+  "order_mask_cases": 1360,
+  "order_mask_max_error": 1.4488835837920474e-15,
+  "BG_example": "1/1960",
+  "completion_budgets": {
+    "2": {
+      "square_root_completion_power": "9/40000",
+      "slack_to_coarse_0.001": "31/40000"
+    },
+    "3": {
+      "square_root_completion_power": "27/80000",
+      "slack_to_coarse_0.001": "53/80000"
+    },
+    "4": {
+      "square_root_completion_power": "9/20000",
+      "slack_to_coarse_0.001": "11/20000"
+    }
+  },
+  "scope": "Finite algebra/numerical Gauss checks and exact rational budgets; no analytic or Lean verification"
+}

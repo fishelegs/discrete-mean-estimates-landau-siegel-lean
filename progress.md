@@ -1,5 +1,7 @@
 # 张益唐论文 Lean 形式化进度
 
+实际signed缺口的新精确表示（2026-10-03）：[原chi profile单完成与独审](audit/joint_signed_operator/STATUS.md)把余项写成Kl₂ ratio核减实际Psi₂，principal负号项已付O(a^-1P^-.49)，保留全部原mask、删除与相位。整长C≤P^1.002、Y≤P^3.002；现有界仍有 **P^.501** 损耗，尚无严格半范数gain。另附[逐prime/双线性方法完整预算](audit/prime_pairing_budget/STATUS.md)，不把点态saving误当整项saving。这些是source-only已独审数学附件，编号仍37原+3修订=40/51。
+
 实际相位branch/strict尾（2026-10-03）：[两组件中央验收](audit/CLOUD_PHASE_BRANCH_TAIL_STATUS.md)完成，新增3定义/10结果、32完整owner，5762全库及1963守卫PASS。原branch及其逆包络与safe半平面真正κ尾界已证；四integrand、support gap、finite contour和族附件仍缺，完整L^-14及strictgain未完成，40/51不变。
 
 剩余signed项的结构范围（2026-10-03）：[squarefree-kernel削减的完整source证明与独审](audit/squarefree_core/STATUS.md)确认s(v)≤P^.15部分为O(a^-1P^-1/100)，支付quadratic +P及所有P²+Y损失。未解余项的奇次split-prime乘积>P^.149；仍须独立证明其真实归一化signed贡献严格小于m_H/2。此为source-only削减，非Lean或strictgain，不增加原编号计数。
@@ -39,15 +41,17 @@ high-rho的实际结构削减（2026-10-03）：[小rare部分的完整source证
 | R1 实际M1曲率桥 | 已完成 | Lean已核验并发布 | 实际对数矩、曲率和正标量质量；尚非实际Gram下界或带符号增益 | 曲率方案的可选输入 |
 | R2 真实相位精度接口 | Lean继续推进 | 对象/系数、safe-series/gamma、branch/strict尾已中央核验 | 原branch及逆包络与safe尾已证；完整L^-14及四integrand/support/finite contour/族附件仍缺 | 当前相位路线的基础 |
 | R3 短υ替换 | 有限桥已完成，等R2附件 | 部分Lean已中央核验 | S_N²≤1260·3^80 L^-1291及真实族误差O(P²L^-302)已证；归一化轮廓L^-225仍为来源层 | R2、已证3.1/3.3/8.1；可选算术归约 |
-| R4 主算术矩阵与目标残差符号 | 整体dual及joint signed估计在研究 | 半范数及squarefree-kernel削减已独立source证明 | 剩余奇次split乘积>P^.149的真实signed项须严格小于m_H/2；无strictgain | 原P7/L8.1、合法有限M与mixed moments；新signed估计 |
-| R5 实际Gram/残差下界 | profile积分/外和继续推进 | 十个真实算术/叠加/scaling/点态误差模块已中央核验 | 原main/闭边界与共同阈值已证；完整加权profile误差及实际Gram非退化仍缺 | 原P7/L8算术及合法支持；与R4新signed分叉分开评价 |
-| R6 归一化全部误差 | 等待严格high-rho界；旧Gram路线等R4/R5 | 新signed路线现有组合误差o(1) | L^-11/2主导已付组合；须用同一实际m_H/aM让总误差小于真实严格余量 | 新signed分叉或旧R2/R4/R5的各自合法附件 |
-| R7 完整比值严格增益 | 等待前置及baseline校准 | 未证明 | 当前窄smooth基准不接近阈值；完整增强比值与全部误差仍须闭合 | R4与R5与R6共同闭合 |
+| R4 主算术矩阵与目标残差符号 | 有限Möbius/多线性Kl₂研究中 | 半范数、结构削减和joint表示已独立source证明 | principal已付；真实Kl₂−Psi₂的signed半阈值仍缺，现有界留P^.501 | 原比值走R2；独立Z2走真实轮廓/正采样与single_norm |
+| R5 实际Gram/残差下界 | 通用附件后优先single_norm | 已发布十组件；六积分/支撑/残差增量待中央验收 | 先证原F0的m_H=lambda+o(1)、lambda>0；完整三方向Gram另行继续 | 新Z2只需限定单范数；旧比值仍需完整Gram/Schur |
+| R6 归一化全部误差 | 等signed界及路线对应范数 | 新signed路线已付误差o(1) | P^.501尚未支付；取得固定signed余量后才能吸收全部误差 | 原路线R2/R4/R5；Z2路线R4+R5.single_norm及真实附件 |
+| R7 完整比值或替代Z2严格增益 | 等待前置 | 未证明 | 两条路线均未闭合；不要求所有探索支路都完成 | 原路线R4/R5/R6；独立Z2只需其限定范数和附件 |
 | R8 原主结论回接 | 等待前置 | 未证明 | 还需采用路线的全部剩余编号前置、统一量词、修订兼容性和最终矛盾链 | R7，加剩余论文/解析义务 |
 
-执行状态于2026-10-03 21:52 UTC核对。R2 branch/尾新两组件中央PASS随本提交发布，继续完整解析附件；R5继续profile积分与完整P7外和；R4转向剩余大奇split乘积的整体dual/joint signed估计，半阈值仍未证明。
+执行状态于2026-10-03 22:41 UTC核对。R2继续实际核/衰减附件；R5六个积分/支撑/残差增量已私有PASS，待独审和中央验收，然后优先固定H的单范数；R4继续研究真实joint算术估计。上述新joint/点态预算已source独审，尚非Lean。
 
 R1的M1/(a logP)下界L^-13与R2的表示误差L^-14属于不同对象，不能直接相减得到gain。R3只降低替换所新增的误差，总表示误差仍由R2控制。R3等研究分支可以被其他有效方法替代，并非所有可能证明都必须经过它们。新的独立weighted Z2若能构成有效矛盾，也可替代旧C1/T1比值路线；当前尚未证明该分叉。
+
+限定单范数子目标 **R5.single_norm** 使用原 `F0=beta'''/sup|beta'''|` 与 `[251/500,201/400]` 窗口，同一 compatible c、aM 和实际 c*omega 零点测度；目标是 `m_H=lambda+o(1)`、`lambda>0`。来源定义在 [fixed_profile](audit/signed_phase_refinements/INTERFACE.json)。通用积分附件正在推进，实际coprime/Abel外和及这个最终单范数组装仍未Lean完成。新Z2路线需要此限定下界和真实轮廓/正采样附件，不逻辑要求完整三方向Gram先完成；旧矩阵比值路线保留原AND依赖。完整独立Z2附件本身也仍待Lean形式化。
 
 [机器可读节点与依赖](audit/cloud_repair_critical_path.json) · [实际M1证据](audit/CLOUD_FIRST_LOG_MOMENT_STATUS.md) · [相位表示范围](audit/annular_covariance/STATUS.md) · [短υ归约与相位缺项](audit/CLOUD_SHORT_UPSILON_STATUS.md)
 

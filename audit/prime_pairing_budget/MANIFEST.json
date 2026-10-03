@@ -1,0 +1,121 @@
+{
+  "status": "source_only_independently_reviewed",
+  "files": [
+    {
+      "path": "AUTHOR_ORIGINAL.json",
+      "sha256": "6a16abcd1b8d59a2329e7a4a52fffeccd0b313fb80fa73490ebd7a8da657f204",
+      "bytes": 215
+    },
+    {
+      "path": "AUTHOR_RERUN.json",
+      "sha256": "6a16abcd1b8d59a2329e7a4a52fffeccd0b313fb80fa73490ebd7a8da657f204",
+      "bytes": 215
+    },
+    {
+      "path": "AUTHOR_SOURCE_MANIFEST.json",
+      "sha256": "98d948d35d7263ecc11ff5f79b2a7c17d50d14c80b12609041e7461058a44d29",
+      "bytes": 1842
+    },
+    {
+      "path": "COMPARISON.json",
+      "sha256": "6a3f74db8292f3c8aae90355bbff3fbdc3067f4b6b67c921cf40c6537978f97c",
+      "bytes": 1506
+    },
+    {
+      "path": "DEPENDENCIES.md",
+      "sha256": "b328b8cf55e49833597c86809c006801f1847cdfa7e92e7ae134fbca948038b7",
+      "bytes": 1724
+    },
+    {
+      "path": "INDEPENDENT_ORIGINAL.json",
+      "sha256": "112fdc43b13af99bb45a605cd7d8699b4dc962ccfa04408d3880a08aad57c156",
+      "bytes": 906
+    },
+    {
+      "path": "INDEPENDENT_RERUN.json",
+      "sha256": "828800df02342869f2fa7b964a9248f3288ecbc2b77e7ff1c7e9ca6222261628",
+      "bytes": 861
+    },
+    {
+      "path": "INDEPENDENT_REVIEW.md",
+      "sha256": "6b0e25740ab39e920000c1338e6ecf66b5aef8d22883f55191fa1b5dceae8643",
+      "bytes": 19815
+    },
+    {
+      "path": "INDEPENDENT_SOURCE_MANIFEST.json",
+      "sha256": "005696a1603790e3871cc30047486f92fd3f713927764cb032a595b10155b258",
+      "bytes": 3001
+    },
+    {
+      "path": "LITERATURE.md",
+      "sha256": "d81528c1e2d812119a682764e1fba393564c32260041126a444e644c03297d5b",
+      "bytes": 9027
+    },
+    {
+      "path": "PROOF.md",
+      "sha256": "98c8b5cfba0459da479701725f76ff2ae511d546bb74ae47bf78c51979d9f9c4",
+      "bytes": 25649
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "5013e98254739e57ee36d816219a303b27578bd60bc0cf2099c63c4a0b2214e9",
+      "bytes": 2449
+    },
+    {
+      "path": "REPRODUCE.md",
+      "sha256": "4cbcfef285f09e80e0cd51853a22a96d9070baaa66e58adfb0dfceab328da2d6",
+      "bytes": 2777
+    },
+    {
+      "path": "SOURCES.md",
+      "sha256": "b4b563b16e356776c1643fc23de1aeaa948a2727b4c1ce49420e713f72a7cece",
+      "bytes": 5458
+    },
+    {
+      "path": "SOURCE_HASHES.json",
+      "sha256": "142146d6e88f9b72c975d1937ab84598bc2d1560e14ee5893fe21ac73f19b71d",
+      "bytes": 2965
+    },
+    {
+      "path": "SOURCE_HISTORY.json",
+      "sha256": "0c407ceacf6db39525a14a2313f0e81be643a5c7ab75c87cc70eabcc3d591687",
+      "bytes": 8003
+    },
+    {
+      "path": "SQUAREFREE_ORIGINAL.json",
+      "sha256": "8a5cd0c9077e97e58445da3c7720e3b50c99c7db0346c61090b724e36aa1fe86",
+      "bytes": 636
+    },
+    {
+      "path": "SQUAREFREE_RERUN.json",
+      "sha256": "40eaf1703a1ccbdfad57302d0965a7b540cea627d6b528e1cfaec10b5b89265f",
+      "bytes": 251
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "51d0fec2aae242dbae2b6d3aa42ddf97383cfe755e7e9d59d762a34fd95c738a",
+      "bytes": 1425
+    },
+    {
+      "path": "check_author.py",
+      "sha256": "4e1ecb1d88181779862db9b423c33d667b061b7fe1408f01048b29ff69b220fc",
+      "bytes": 2402
+    },
+    {
+      "path": "check_independent.py",
+      "sha256": "20282a06f17ec9339c2026867bd6b7fe365633d4d3ac0d0323191f9f3b69b329",
+      "bytes": 7642
+    },
+    {
+      "path": "check_squarefree_input.py",
+      "sha256": "4a24bf59b4a1433b56edb2dd79ca8eee3a2be726b1875cf7e76d38e0b9840287",
+      "bytes": 3989
+    },
+    {
+      "path": "verify_bundle.py",
+      "sha256": "f1d6679344c36f758186ae166884163e08ac4959f0ad6221f6540b460b609110",
+      "bytes": 11116
+    }
+  ],
+  "scope": "Portable public mathematical evidence. The manifest hashes curated bytes; SOURCE_HISTORY.json records distinct historical original hashes. No Lean or strict-gain certificate."
+}

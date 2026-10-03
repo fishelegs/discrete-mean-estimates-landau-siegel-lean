@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-03T21:52:30.042791+00:00",
-  "base_commit": "652d854f8e691d3b7c590751c909dd551def0fc6",
+  "updated_utc": "2026-10-03T22:41:58.812676+00:00",
+  "base_commit": "d2d15aa83a6717fe491afa6d3319d811bc0853f9",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
@@ -18,7 +18,7 @@
     "partial_lean_proved": "部分明确接口已中央Lean核验，节点其余附件尚未完成",
     "source_reviewed_partial": "限定作用域的来源层结论已独立复核，尚非整个节点或Lean完成"
   },
-  "central_decision": "原主结论尚未恢复。右侧真实常数已独立来源证明为m_H/2，复数nonprincipal项为o(1)。当前独立符号门槛明确为Re Delta_rho,high≤(1/2−epsilon)m_H+o(1)。仍未得到该严格余量；来源归约尚非Lean，编号40/51保持。",
+  "central_decision": "原主结论仍未恢复。真实右侧为m_H/2；原chi profile单完成把余项明确写成Kl2 ratio核减实际Psi2，principal项已付O(a^-1P^-.49)。自然长度界仍有P^.501损耗，尚未取得严格signed半范数界。新Z2路线需要限定原H的单范数及正下界，不逻辑要求完整三方向Gram先完成。",
   "nodes": [
     {
       "id": "R1",
@@ -55,8 +55,8 @@
         "audit/CLOUD_PHASE_BRANCH_TAIL_STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "原branch/尾两组件中央PASS随本提交发布；继续四integrand附件、support gap、finite contour与族附件。另polynomial/Gaussian组件私有验证完成待独立及中央验收；完整L^-14未完成。",
-      "checked_utc": "2026-10-03T21:52:30.042791+00:00",
+      "execution_note": "已发布真实branch/尾组件；后续多项式/Gaussian和四finite/tail kernel组件已私有核验、独审/中央集成准备中。继续support gap与四integrand衰减附件，完整L^-14仍缺。",
+      "checked_utc": "2026-10-03T22:41:58.812676+00:00",
       "proof_status": "partial_lean_proved"
     },
     {
@@ -87,10 +87,10 @@
       "id": "R4",
       "name": "主算术矩阵与目标残差的符号",
       "status": "open",
-      "verification": "右侧半范数常数及复数nonprincipal=o(1)已第二独立来源复核；high-rho严格界未证",
-      "result": "通过真实有限M/D删除误差及原P7 complex桥，Re J_right∞=Im R_pr=m_H/2+o(1)，且R_np=o(1)。这不是从实部等式推复数，也未用AFE赋予常数。 high-rho中b_chi(v)≤P^.01的精确部分已独立来源界为O(a^-1P^-1/200)，二次字符的principal-image项保留。 更强squarefree-kernel s(v)≤P^.15部分已独立source证明为O(a^-1P^-.01)。",
-      "gap": "仍需Re Delta_squarefree-large≤(1/2−epsilon)m_H+o(1)，epsilon固定正。精确余项保留原Long/高标签/finite M与全部mask，其奇次split-prime乘积最终>P^.149；未证该严格signed界。",
-      "dependency_mode": "R2 AND (direct_arithmetic OR R3_structured_reduction OR another_valid_attachment)",
+      "verification": "精确Kl2 joint表示及principal支付已独立source复核；实际signed半范数界未证",
+      "result": "通过真实有限M/D删除误差及原P7 complex桥，Re J_right∞=Im R_pr=m_H/2+o(1)，且R_np=o(1)。这不是从实部等式推复数，也未用AFE赋予常数。 high-rho中b_chi(v)≤P^.01的精确部分已独立来源界为O(a^-1P^-1/200)，二次字符的principal-image项保留。 更强squarefree-kernel s(v)≤P^.15部分已独立source证明为O(a^-1P^-.01)。 原chi profile单完成后C≤P^1.002、Y≤P^3.002，精确Kl2 ratio核保留负principal及Psi2；principal为O(a^-1P^-.49)。",
+      "gap": "仍须Re(T_Kl−T_bad)≤(1/2−epsilon)m_H+o(1)。现有整族界为a^-1L^(-353/4)P^.501，不能视为o(1)。更强的真实joint估计P²L^A√(E_C E_D)，A<353/4，是充分但未证的替代目标。",
+      "dependency_mode": "route_specific; original_ratio uses R2; independent_weighted_Z2 uses its own valid contour/sampling attachment and R5.single_norm",
       "dependencies": [
         "R2"
       ],
@@ -110,11 +110,13 @@
         "audit/sparse_long_reduction/STATUS.md",
         "audit/half_norm_constant/STATUS.md",
         "audit/high_rho_split/STATUS.md",
-        "audit/squarefree_core/STATUS.md"
+        "audit/squarefree_core/STATUS.md",
+        "audit/prime_pairing_budget/STATUS.md",
+        "audit/joint_signed_operator/STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "整体dual/加权signed算子与joint average在研究；逐素数/双线性点态budget已完成独审，完整证据另待整理发布，未得到signed gain。",
-      "checked_utc": "2026-10-03T21:52:30.042791+00:00",
+      "execution_note": "正研究实际移位卷积的有限Möbius/多线性Kloosterman路线；点态素数预算及单完成表示已source独审，均未证明严格gain。",
+      "checked_utc": "2026-10-03T22:41:58.812676+00:00",
       "proof_status": "open",
       "branch_status": "suspended_recalibration_for_fixed_smooth_narrow_small_gain_only",
       "alternative_routes": [
@@ -136,7 +138,27 @@
           "status": "open",
           "note": "Not logically required to use the old C1/T1 representation; an independent valid contradiction could replace the original ratio route."
         }
-      ]
+      ],
+      "route_dependencies": {
+        "original_ratio": {
+          "nodes": [
+            "R2"
+          ],
+          "optional_nodes": [
+            "R3"
+          ]
+        },
+        "independent_weighted_Z2": {
+          "subgoals": [
+            "R5.single_norm"
+          ],
+          "attachments": [
+            "actual_weighted_Z2_contour_and_positive_sampling"
+          ],
+          "attachment_lean_status": "open; source reviewed",
+          "full_Gram_required": false
+        }
+      }
     },
     {
       "id": "R5",
@@ -160,18 +182,61 @@
         "audit/CLOUD_GRAM_SMOOTHING_STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "十组件已发布；继续真实profile误差积分、P7活动支撑与外和。原一般L^-6未因此完成，第二interior用repaired3L^-5。",
-      "checked_utc": "2026-10-03T21:52:30.042791+00:00",
-      "proof_status": "partial_lean_proved"
+      "execution_note": "通用profile积分、C∞支撑和原P7全盒残差六增量已私有核验，冻结/独审/中央验收待完成；之后优先原固定H的单范数，完整三方向Gram继续保留。",
+      "checked_utc": "2026-10-03T22:41:58.812676+00:00",
+      "proof_status": "partial_lean_proved",
+      "subgoals": [
+        {
+          "id": "single_norm",
+          "name": "原固定H的实际单范数与正下界",
+          "proof_status": "source_reviewed_not_Lean",
+          "execution_status": "active",
+          "stage": "generic_integral_and_outer_sum_attachments",
+          "goal": "m_H=lambda+o(1), lambda>0, with the same original H, compatible c and a*M normalizer",
+          "profile_reference": "audit/signed_phase_refinements/INTERFACE.json#fixed_profile",
+          "F0": "beta triple derivative divided by sup norm of beta triple derivative",
+          "support": [
+            "251/500",
+            "201/400"
+          ],
+          "lambda": "(16000/pi)*integral_0^1 |F0 prime|^2 + (11*pi/250)*integral_0^1 |F0|^2",
+          "execution_note": "当前通用积分/活动支撑附件已私有PASS；真实coprime/Abel外和及固定F0的最终组装仍未证明。已明确优先该子目标。",
+          "needed_by_routes": [
+            "independent_weighted_Z2"
+          ],
+          "evidence": [
+            "audit/half_norm_constant/STATUS.md",
+            "audit/signed_phase_refinements/INTERFACE.json"
+          ],
+          "checked_utc": "2026-10-03T22:41:58.812676+00:00",
+          "optional_for_routes": [
+            "original_ratio_if_this_fixed_profile_is_selected"
+          ]
+        },
+        {
+          "id": "full_gram_schur",
+          "name": "限定三方向Gram及目标Schur残差",
+          "proof_status": "source_reviewed_partial_not_Lean",
+          "execution_status": "queued_after_single_norm",
+          "execution_note": "通用附件可以复用；完整实际矩阵与目标投影仍未Lean闭合，先完成single_norm。",
+          "needed_by_routes": [
+            "original_ratio"
+          ],
+          "not_required_as_a_whole_by": [
+            "independent_weighted_Z2"
+          ],
+          "checked_utc": "2026-10-03T22:41:58.812676+00:00"
+        }
+      ]
     },
     {
       "id": "R6",
       "name": "归一化后的全部误差传递",
       "status": "open",
       "verification": "当前signed分叉的已付误差是o(1)；高rho有利主项和严格余量仍缺",
-      "result": "右侧branch误差O(a^-1L^-11/2)主导已发布组合；有限M/D删除、有限边界和低rho误差均更小或单列power-small。实际a>1/2与固定m_H下界不能省略。 新小b_chi项的P^-1/200误差比已付L^-11/2更小；仍按同一aM/m_H核算。 新squarefree-kernel O(a^-1P^-1/100)仍比已付L^-11/2小，未改变总误差主导项。",
+      "result": "右侧branch误差O(a^-1L^-11/2)主导已发布组合；有限M/D删除、有限边界和低rho误差均更小或单列power-small。实际a>1/2与固定m_H下界不能省略。 新小b_chi项的P^-1/200误差比已付L^-11/2更小；仍按同一aM/m_H核算。 新squarefree-kernel O(a^-1P^-1/100)仍比已付L^-11/2小，未改变总误差主导项。 新principal P^-.49已付；P^.501是未解主算术界的损失，不是已经消失的误差。",
       "gap": "先取得高rho相对m_H的固定严格余量，随后用同一归一化让全部o(1)小于该余量；不能把更小单项误差当总精度，也不能把半范数等式当严格gain。若只得趋零gain，必须另证更强相对精度与非退化。",
-      "dependency_mode": "AND",
+      "dependency_mode": "route_specific AND",
       "dependencies": [
         "R2",
         "R4",
@@ -183,12 +248,34 @@
       ],
       "evidence": [
         "audit/half_norm_constant/STATUS.md",
-        "audit/squarefree_core/STATUS.md"
+        "audit/squarefree_core/STATUS.md",
+        "audit/joint_signed_operator/STATUS.md"
       ],
-      "execution_status": "blocked_by_R4_R5",
-      "execution_note": "旧Gram/Schur路线仍须R4/R5；独立weighted Z2分叉可使用明确的实际m_H下界，但其high-rho严格常数仍缺。",
-      "checked_utc": "2026-10-03T21:52:30.042791+00:00",
-      "proof_status": "open"
+      "execution_status": "blocked_by_signed_gap_and_route_specific_norm",
+      "execution_note": "原比值路线仍等完整R4/R5；独立Z2路线只需限定single_norm及其真实轮廓/正采样附件，再把全部o(1)压到固定signed余量以下。",
+      "checked_utc": "2026-10-03T22:41:58.812676+00:00",
+      "proof_status": "open",
+      "route_dependencies": {
+        "original_ratio": {
+          "nodes": [
+            "R2",
+            "R4",
+            "R5"
+          ]
+        },
+        "independent_weighted_Z2": {
+          "nodes": [
+            "R4"
+          ],
+          "subgoals": [
+            "R5.single_norm"
+          ],
+          "attachments": [
+            "actual_weighted_Z2_contour_and_positive_sampling"
+          ],
+          "full_Gram_required": false
+        }
+      }
     },
     {
       "id": "R7",
@@ -197,7 +284,7 @@
       "verification": "尚未证明；当前没有修复成功结论",
       "result": "当前路线的共同门槛是完整合法比值超过所需阈值，且仍有覆盖全部误差的严格裕量。",
       "gap": "旧完整比值路线仍须R4/R5/R6；可替代的实际weighted Z2路线现须high-rho严格低于m_H/2且覆盖全部已付误差。当前两路线均无strictgain。",
-      "dependency_mode": "AND",
+      "dependency_mode": "alternative_routes; see route_dependencies",
       "dependencies": [
         "R4",
         "R5",
@@ -205,9 +292,28 @@
       ],
       "evidence": [],
       "execution_status": "waiting_dependencies",
-      "execution_note": "等待R4、R5、R6共同闭合；当前无严格gain。",
-      "checked_utc": "2026-10-03T20:31:42.323580+00:00",
-      "proof_status": "open"
+      "execution_note": "两条合法路线任选闭合；新Z2不要求完整三方向Gram，但signed半阈值、单范数及全部误差仍未共同闭合。",
+      "checked_utc": "2026-10-03T22:41:58.812676+00:00",
+      "proof_status": "open",
+      "route_dependencies": {
+        "original_ratio": {
+          "nodes": [
+            "R4",
+            "R5",
+            "R6"
+          ]
+        },
+        "independent_weighted_Z2": {
+          "nodes": [
+            "R4",
+            "R6"
+          ],
+          "subgoals": [
+            "R5.single_norm"
+          ],
+          "full_Gram_required": false
+        }
+      }
     },
     {
       "id": "R8",
@@ -238,7 +344,9 @@
     {
       "from": "R2",
       "to": "R4",
-      "kind": "current_route_required"
+      "kind": "current_route_required",
+      "route": "original_ratio",
+      "scope_note": "Entire node required here only for the original ratio route; see alternative route subgoals."
     },
     {
       "from": "R3",
@@ -268,7 +376,9 @@
     {
       "from": "R2",
       "to": "R6",
-      "kind": "and"
+      "kind": "and",
+      "route": "original_ratio",
+      "scope_note": "Entire node required here only for the original ratio route; see alternative route subgoals."
     },
     {
       "from": "R4",
@@ -278,7 +388,9 @@
     {
       "from": "R5",
       "to": "R6",
-      "kind": "and"
+      "kind": "and",
+      "route": "original_ratio",
+      "scope_note": "Entire node required here only for the original ratio route; see alternative route subgoals."
     },
     {
       "from": "R4",
@@ -288,7 +400,9 @@
     {
       "from": "R5",
       "to": "R7",
-      "kind": "and"
+      "kind": "and",
+      "route": "original_ratio",
+      "scope_note": "Entire node required here only for the original ratio route; see alternative route subgoals."
     },
     {
       "from": "R6",
@@ -425,6 +539,93 @@
       "gap": "只是absolute-error削减，未证明剩余signed项的半范数严格界或主结论。",
       "report": "audit/squarefree_core/STATUS.md",
       "checked_utc": "2026-10-03T21:52:30.042791+00:00"
+    },
+    {
+      "id": "prime_bilinear_full_budget",
+      "status": "source_reviewed_conditional_budget_only",
+      "evidence_status": "source_reviewed_not_Lean",
+      "result": "Exact additive/reciprocal kernels and separated masks verified; two/four completion savings must exceed y−1+.000225 and y+.000450, with all other costs retained.",
+      "gap": "The checked pointwise methods do not pay the stated full high-length budgets; this is not a lower bound on the real sum or a global impossibility.",
+      "report": "audit/prime_pairing_budget/STATUS.md",
+      "checked_utc": "2026-10-03T22:41:58.812676+00:00"
+    },
+    {
+      "id": "original_profile_single_completion_Kl2",
+      "status": "source_representation_complete_signed_gap_open",
+      "evidence_status": "source_reviewed_not_Lean",
+      "scope": "Same original chi profile, all masks/deletion, original Psi1; C≤P^1.002,Y≤P^3.002.",
+      "result": "Exact Kl2 ratio kernel minus actual Psi2; negative principal correction O(a^-1P^-.49), including original t derivative cost.",
+      "gap": "Whole bound still has P^.501; actual signed half-norm estimate remains open. Unitary/positivity identity alone gives no strict gap.",
+      "report": "audit/joint_signed_operator/STATUS.md",
+      "checked_utc": "2026-10-03T22:41:58.812676+00:00"
+    }
+  ],
+  "routes": [
+    {
+      "id": "original_ratio",
+      "name": "原矩阵与完整比值路线",
+      "status": "open",
+      "required_nodes": [
+        "R2",
+        "R4",
+        "R5",
+        "R6",
+        "R7"
+      ],
+      "full_Gram_required": true
+    },
+    {
+      "id": "independent_weighted_Z2",
+      "name": "独立真实weighted Z2路线",
+      "status": "open",
+      "required_nodes": [
+        "R4",
+        "R6",
+        "R7"
+      ],
+      "required_subgoals": [
+        "R5.single_norm"
+      ],
+      "required_attachments": [
+        {
+          "id": "actual_weighted_Z2_contour_and_positive_sampling",
+          "proof_status": "source_reviewed_not_Lean",
+          "lean_status": "open",
+          "evidence": [
+            "audit/zero_measure_phase/STATUS.md",
+            "audit/weighted_signed_phase/STATUS.md"
+          ]
+        }
+      ],
+      "full_R2_Lminus14_required": false,
+      "full_Gram_required": false,
+      "note": "This is a valid alternative research route, not an established contradiction. The actual independent attachment still needs Lean formalization."
+    }
+  ],
+  "route_edges": [
+    {
+      "route": "independent_weighted_Z2",
+      "from": "R5.single_norm",
+      "to": "R6",
+      "kind": "required_actual_normalization"
+    },
+    {
+      "route": "independent_weighted_Z2",
+      "from": "R4",
+      "to": "R6",
+      "kind": "required_signed_gap"
+    },
+    {
+      "route": "independent_weighted_Z2",
+      "from": "actual_weighted_Z2_contour_and_positive_sampling",
+      "to": "R6",
+      "kind": "required_attachment"
+    },
+    {
+      "route": "independent_weighted_Z2",
+      "from": "R6",
+      "to": "R7",
+      "kind": "strict_margin_after_all_errors"
     }
   ]
 }

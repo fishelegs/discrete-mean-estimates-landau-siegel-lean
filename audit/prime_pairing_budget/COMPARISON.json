@@ -1,0 +1,43 @@
+{
+  "rules": "Compare all mathematical fields recursively. Only named raw floating error fields may vary, with each historical, saved and fresh value finite, nonnegative and strictly below the original tolerance. Counts, inventories, exact rationals, tolerance values, status and scope compare literally. Historical integrity fields are verified separately, not discarded. Named timestamps and checker location/hash identities are the only ignored identities.",
+  "runs": [
+    {
+      "script": "check_author.py",
+      "original": "AUTHOR_ORIGINAL.json",
+      "rerun": "AUTHOR_RERUN.json",
+      "float_errors": {
+        "order_mask_fourier_max_error": 1e-11
+      }
+    },
+    {
+      "script": "check_independent.py",
+      "original": "INDEPENDENT_ORIGINAL.json",
+      "rerun": "INDEPENDENT_RERUN.json",
+      "float_errors": {
+        "gauss_max_error": 2e-11,
+        "crt_max_error": 2e-11,
+        "order_mask_max_error": 2e-11
+      },
+      "integrity_fields": {
+        "candidate_manifest_entries_verified": {
+          "manifest": "AUTHOR_SOURCE_MANIFEST.json",
+          "list": "files",
+          "operation": "length"
+        }
+      }
+    },
+    {
+      "script": "check_squarefree_input.py",
+      "original": "SQUAREFREE_ORIGINAL.json",
+      "rerun": "SQUAREFREE_RERUN.json",
+      "float_errors": {
+        "largest_gauss_identity_error": 1e-10
+      },
+      "integrity_fields": {
+        "source_hashes": {
+          "operation": "history_hash_map"
+        }
+      }
+    }
+  ]
+}

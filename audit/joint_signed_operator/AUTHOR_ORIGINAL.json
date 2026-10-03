@@ -1,0 +1,157 @@
+{
+  "profile_and_one_completion": {
+    "profile_width": "1/2000",
+    "C_paid_exponent": "40069/40000",
+    "C_envelope_exponent": "501/500",
+    "C_margin": "11/40000",
+    "Y_paid_exponent": "6003/2000",
+    "Y_envelope_exponent": "1501/500",
+    "Y_margin": "1/2000",
+    "natural_sieve_loss": "501/1000",
+    "principal_preabsorption_exponent": "-1/2",
+    "principal_claimed_exponent": "-49/100"
+  },
+  "energy_budgets": [
+    {
+      "completed": 0,
+      "q": 6,
+      "nu_convolution_order": 189,
+      "rho_low_exponent": "-1421/2",
+      "rho_high_exponent": "-1637",
+      "D_energy_exponent": "-881/2",
+      "C_energy_exponent": "81",
+      "normalized_log_exponent": "-123/4"
+    },
+    {
+      "completed": 1,
+      "q": 5,
+      "nu_convolution_order": 135,
+      "rho_low_exponent": "-1597/2",
+      "rho_high_exponent": "-1745",
+      "D_energy_exponent": "-1237/2",
+      "C_energy_exponent": "144",
+      "normalized_log_exponent": "-353/4"
+    },
+    {
+      "completed": 2,
+      "q": 4,
+      "nu_convolution_order": 90,
+      "rho_low_exponent": "-1741/2",
+      "rho_high_exponent": "-1835",
+      "D_energy_exponent": "-1525/2",
+      "C_energy_exponent": "225",
+      "normalized_log_exponent": "-479/4"
+    },
+    {
+      "completed": 3,
+      "q": 3,
+      "nu_convolution_order": 54,
+      "rho_low_exponent": "-1853/2",
+      "rho_high_exponent": "-1907",
+      "D_energy_exponent": "-1745/2",
+      "C_energy_exponent": "324",
+      "normalized_log_exponent": "-501/4"
+    }
+  ],
+  "local_inequality_regressions": {
+    "q_values": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "exponents_in_each_case": 501,
+    "passed": true
+  },
+  "piecewise_minimum": {
+    "breakpoints": [
+      "99/100",
+      "1989/2000",
+      "4287/2800",
+      "56/25",
+      "359/160",
+      "301/100"
+    ],
+    "checked_rational_points": 505,
+    "worst_loss": "501/1000",
+    "paid_subrange_K_exponent": "497/500",
+    "paid_subrange_length_exponent": "5999/3000"
+  },
+  "gauss_operator_regressions": {
+    "primes": [
+      {
+        "p": 5,
+        "primitive_root": 2,
+        "quadratic_character_index": 2,
+        "quadratic_parity": 0
+      },
+      {
+        "p": 7,
+        "primitive_root": 3,
+        "quadratic_character_index": 3,
+        "quadratic_parity": 1
+      },
+      {
+        "p": 11,
+        "primitive_root": 2,
+        "quadratic_character_index": 5,
+        "quadratic_parity": 1
+      },
+      {
+        "p": 13,
+        "primitive_root": 2,
+        "quadratic_character_index": 6,
+        "quadratic_parity": 0
+      },
+      {
+        "p": 17,
+        "primitive_root": 3,
+        "quadratic_character_index": 8,
+        "quadratic_parity": 0
+      },
+      {
+        "p": 19,
+        "primitive_root": 2,
+        "quadratic_character_index": 9,
+        "quadratic_parity": 1
+      },
+      {
+        "p": 23,
+        "primitive_root": 5,
+        "quadratic_character_index": 11,
+        "quadratic_parity": 1
+      },
+      {
+        "p": 29,
+        "primitive_root": 2,
+        "quadratic_character_index": 14,
+        "quadratic_parity": 0
+      },
+      {
+        "p": 31,
+        "primitive_root": 3,
+        "quadratic_character_index": 15,
+        "quadratic_parity": 1
+      }
+    ],
+    "kernel_cases": 6088,
+    "good_bad_partition_cases": 6088,
+    "projection_entries": 6088,
+    "saturation_cases": 18,
+    "max_floating_error": 1.4294486068050224e-13,
+    "tolerance": 1e-08,
+    "principal_correction": "-1_even/p",
+    "scope": "Finite character identities only; good masks are test masks, not exceptional families."
+  },
+  "periodic_principal_profile_regressions": {
+    "conductors": [
+      4,
+      5,
+      8,
+      12
+    ],
+    "abel_cases": 12,
+    "passed": true
+  },
+  "status": "PASS: finite/rational regressions only; source proof still requires independent review"
+}
