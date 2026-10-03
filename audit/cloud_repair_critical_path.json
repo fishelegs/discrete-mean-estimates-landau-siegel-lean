@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-10-03T12:33:31.248529+00:00",
+  "base_commit": "8bdae40152843c289650c1483d86c73b7a8aaf28",
+  "title": "修复关键路径（独立于原论文51个编号）",
+  "numbered_ledger": {
+    "total": 51,
+    "original_complete": 36,
+    "repaired_complete": 2,
+    "complete": 38
+  },
+  "scope": "这八个研究节点描述当前修复路线，不增加原论文编号分母。可替代分支不是所有可能证明的逻辑必要条件。",
+  "status_legend": {
+    "lean_proved": "Lean中央核验且已发布",
+    "source_reviewed": "数学来源分析经独立复核，尚非完整Lean接口",
+    "source_reviewed_lean_in_progress": "来源分析已复核，Lean形式化在做",
+    "open": "要求已明确，尚未证明"
+  },
+  "central_decision": "尚不能确认弥补最终欠缺；须得到实际有利主项、合法归一化和压过全部误差的严格裕量。",
+  "nodes": [
+    {
+      "id": "R1",
+      "name": "实际 M1 算术曲率桥",
+      "status": "lean_proved",
+      "verification": "Lean 中央核验并已发布",
+      "result": "实际严格 ν² 对数短和、L″/L′曲率恒等式和正标量质量下界；M1/(a logP)≥c L^-13。",
+      "gap": "这是算术标量信息；未推出所选相位试验的 Gram 或 Schur 残差下界，也没有带符号均值增益。",
+      "dependency_mode": "optional_input_to_curvature_route",
+      "dependencies": [],
+      "evidence": [
+        "audit/CLOUD_FIRST_LOG_MOMENT_STATUS.md"
+      ],
+      "published_commit": "8bdae40152843c289650c1483d86c73b7a8aaf28"
+    },
+    {
+      "id": "R2",
+      "name": "真实相位均值的精度接口",
+      "status": "source_reviewed",
+      "verification": "独立来源分析复核；完整接口尚非 Lean",
+      "result": "明确固定支撑类内实际有限窗口 C1/T1=R−L 的表示，误差 O(a^-1 L^-14)，保留 exact gamma、字符、共轭和截断。",
+      "gap": "表示中的主算术和未求值；该误差不能直接与 R1 的不同对象下界相减。",
+      "dependency_mode": "required_for_current_phase_route",
+      "dependencies": [],
+      "evidence": [
+        "audit/annular_covariance/STATUS.md",
+        "audit/structured_covariance/STATUS.md"
+      ]
+    },
+    {
+      "id": "R3",
+      "name": "短 υ 的实际 κ 替换",
+      "status": "source_reviewed_lean_in_progress",
+      "verification": "双独立来源复核；Lean 证明在做",
+      "result": "μ=υ*χ、|υ|≤ν；以 d≤D⁴ 截断 υ，系数能量误差 O(L^-645.5)，四个实际有限算子新增误差 O(a^-1 L^-225)。",
+      "gap": "余下 χ 与三纯幂的乘积约束主和未求值；总表示误差仍受 R2 的 L^-14 控制。",
+      "dependency_mode": "optional_reduction_for_R4",
+      "dependencies": [
+        "R2",
+        "L3.1",
+        "L3.3",
+        "L8.1"
+      ],
+      "evidence": [
+        "audit/CLOUD_SHORT_UPSILON_STATUS.md"
+      ]
+    },
+    {
+      "id": "R4",
+      "name": "主算术矩阵与目标残差的符号",
+      "status": "open",
+      "verification": "已核对有限算子和相位；所需主项未证明",
+      "result": "保留四类同余/Kl2/逆加性/Kl3算子；配对变换含 H=(Zψ Zχψ)G−Gdual，不能自动抵消。",
+      "gap": "须对实际 Gram 和目标向量同时求值，并证明能提供增益的实际 Schur 目标残差或下一阶带符号主项。浮点或旧 leading 模型不够。",
+      "dependency_mode": "R2 AND (direct_arithmetic OR R3_structured_reduction OR another_valid_attachment)",
+      "dependencies": [
+        "R2"
+      ],
+      "optional_dependencies": [
+        "R3"
+      ],
+      "evidence": [
+        "audit/CLOUD_SHORT_UPSILON_STATUS.md"
+      ]
+    },
+    {
+      "id": "R5",
+      "name": "实际 Gram 与 Schur 残差下界",
+      "status": "open",
+      "verification": "尚未证明",
+      "result": "归一化义务已明确：实际零点测度下的试验向量残差必须有可用的正下界。",
+      "gap": "固定支撑宽度、普通系数质量、旧模型正性或 M1 标量正性均不能代替此界；若残差随 D 趋零，须保留其真实量级。",
+      "dependency_mode": "actual_Gram_attachment_plus_nondegeneracy; may_proceed_with_R4_in_parallel",
+      "dependencies": [
+        "R2"
+      ],
+      "optional_dependencies": [
+        "R4",
+        "R1"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "R6",
+      "name": "归一化后的全部误差传递",
+      "status": "open",
+      "verification": "局部精度已知；完整相对误差预算未证明",
+      "result": "每个矩阵/目标项误差需要经过同一个实际归一化、逆矩阵和 Schur 运算。",
+      "gap": "须证明传播后的总误差严格小于候选增益，控制可能趋零的残差、条件数、参数依赖及所有同阶项。",
+      "dependency_mode": "AND",
+      "dependencies": [
+        "R2",
+        "R4",
+        "R5"
+      ],
+      "optional_dependencies": [
+        "R1",
+        "R3"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "R7",
+      "name": "完整尺度不变比值的严格增益",
+      "status": "open",
+      "verification": "尚未证明；当前没有修复成功结论",
+      "result": "当前路线的共同门槛是完整合法比值超过所需阈值，且仍有覆盖全部误差的严格裕量。",
+      "gap": "需要 R4 的真实有利主项、R5 的合法分母/残差下界与 R6 的完整误差界共同成立；单独改善误差不产生增益。",
+      "dependency_mode": "AND",
+      "dependencies": [
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "R8",
+      "name": "接回原论文主结论",
+      "status": "open",
+      "verification": "尚未证明",
+      "result": "保留用户目标的原主结论范围、log 幂指数和统一量词；数值系数可按授权重新推导。",
+      "gap": "除 R7 外，还须完成采用路线的其余原编号前置、正确性接口和最终矛盾链，并复核所有修订对主项/范围的影响。",
+      "dependency_mode": "AND",
+      "dependencies": [
+        "R7",
+        "remaining_numbered_and_analytic_obligations"
+      ],
+      "evidence": [],
+      "original_exponents_preserved": true
+    }
+  ],
+  "edges": [
+    {
+      "from": "R2",
+      "to": "R3",
+      "kind": "attachment_for_operator_error"
+    },
+    {
+      "from": "R2",
+      "to": "R4",
+      "kind": "current_route_required"
+    },
+    {
+      "from": "R3",
+      "to": "R4",
+      "kind": "optional_reduction"
+    },
+    {
+      "from": "R2",
+      "to": "R5",
+      "kind": "current_route_required"
+    },
+    {
+      "from": "R4",
+      "to": "R5",
+      "kind": "possible_shared_matrix_input"
+    },
+    {
+      "from": "R1",
+      "to": "R4",
+      "kind": "optional_curvature_input"
+    },
+    {
+      "from": "R1",
+      "to": "R5",
+      "kind": "optional_only_if_actual_bridge_is_proved"
+    },
+    {
+      "from": "R2",
+      "to": "R6",
+      "kind": "and"
+    },
+    {
+      "from": "R4",
+      "to": "R6",
+      "kind": "and"
+    },
+    {
+      "from": "R5",
+      "to": "R6",
+      "kind": "and"
+    },
+    {
+      "from": "R4",
+      "to": "R7",
+      "kind": "and"
+    },
+    {
+      "from": "R5",
+      "to": "R7",
+      "kind": "and"
+    },
+    {
+      "from": "R6",
+      "to": "R7",
+      "kind": "and"
+    },
+    {
+      "from": "R7",
+      "to": "R8",
+      "kind": "necessary_not_sufficient_for_current_route"
+    }
+  ],
+  "warnings": [
+    "R1的L^-13标量下界与R2的L^-14表示误差不是同一对象，不能直接比较得出严格gain。",
+    "R3比R2更小的新增误差不会把总误差自动提升到L^-225。",
+    "来源复核、局部Lean证明和完整原主定理证明必须分开。"
+  ]
+}
