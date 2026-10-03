@@ -2654,7 +2654,7 @@
         "proof_section": "Appendix B"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "actual_arithmetic_local_residue_components_verified",
+      "working_status": "actual_full_rough_kernels_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 176,
@@ -2664,7 +2664,8 @@
         "component_report": "audit/CLOUD_LEMMA151_ARITHMETIC_STATUS.md",
         "original_target_proved": false,
         "actual_B_component_report": "audit/CLOUD_ACTUAL_B_STATUS.md",
-        "rough_collision_component_report": "audit/CLOUD_ROUGH_COLLISION_STATUS.md"
+        "rough_collision_component_report": "audit/CLOUD_ROUGH_COLLISION_STATUS.md",
+        "kernel_component_report": "audit/CLOUD_ACTUAL_KERNEL_RESIDUE_STATUS.md"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
@@ -2672,7 +2673,9 @@
         "L3.2"
       ],
       "missing_mathematics": [
-        "Mobius/nu tail replacement, small-prime exclusion, coprime factorization, zeta-ratio residues"
+        "Strict sqrt(P) complement and actual terminal constant",
+        "Divisor-weighted nu error and complete product reindexing/collision attachment",
+        "Downstream weighted N(Q) sums and actual Section15 mean"
       ],
       "missing_specification_or_engineering": [
         "Actual b/rho*_j/N(Q), e_j; uniform n1"
@@ -2689,16 +2692,15 @@
       "queue_priority": null,
       "actual_prerequisites": {
         "numbered_results": [
-          "L3.1",
-          "L3.2"
+          "L3.1"
         ],
         "mathematical_and_library_inputs": [
           "Mobius/nu tail replacement, small-prime exclusion, coprime factorization, zeta-ratio residues",
           "Actual b/rho*_j/N(Q), e_j; uniform n1"
         ]
       },
-      "scheduling_phase": "actual_single_kernel_contour_and_full_rough_sum_attachments",
-      "active_work": "Central actual rough collision o(alpha), smooth/rough B split and finite chi(n1)*tau2(n1) divisor budget verified. Full zeta-kernel Perron/circle comparison is active; rho-star replacement, full-sum reindex and external n1 weights remain open."
+      "scheduling_phase": "strict_sqrtP_tail_and_weighted_convolution_assembly",
+      "active_work": "Actual full rough rho-star P2/P3/P1 kernels now have common-threshold explicit error tending to zero. Strict H14 complement, divisor-weighted nu replacement, full product reindexing and downstream N(Q) means remain open. Actual psi coefficient basis and printed terminal phase discrepancy are retained."
     },
     {
       "id": "L15.2",
@@ -2881,7 +2883,7 @@
         "proof_section": "Appendix A"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "corrected_V_and_quantitative_conditional_old_center_verified",
+      "working_status": "corrected_two_pole_local_residues_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 180,
@@ -2891,15 +2893,16 @@
         "component_report": "audit/CLOUD_LEMMA162_STAGE2_STATUS.md",
         "original_target_proved": false,
         "quantitative_corrected_component_report": "audit/CLOUD_LEMMA162_CENTER_STATUS.md",
-        "scalar_component_report": "audit/CLOUD_SECTION16_SCALAR_STATUS.md"
+        "scalar_component_report": "audit/CLOUD_SECTION16_SCALAR_STATUS.md",
+        "mellin_component_report": "audit/CLOUD_ACTUAL_KERNEL_RESIDUE_STATUS.md"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
         "L16.1"
       ],
       "missing_mathematics": [
-        "Actual shifted two-pole Mellin and residue cancellation",
-        "Finite cutoff/unsmoothing and final Section16 error budgets"
+        "Global actual Mellin inversion and contour/unsmoothing",
+        "Actual exterior factors and complete Section16 mean budget"
       ],
       "missing_specification_or_engineering": [
         "Keep old quotient distinct from corrected V and preserve finite-D shifts"
@@ -2922,7 +2925,7 @@
         ]
       },
       "scheduling_phase": "actual_shifted_mellin_residue_and_unsmoothing_budget",
-      "active_work": "Actual corrected V and uniform Cauchy bounds, genuine main-scale positivity and quantitative old-center mismatch are centrally verified. Shifted two-pole local residues have separate checks; global Mellin/unsmoothing and actual final error budgets remain open. Source(A)-existence is not asserted."
+      "active_work": "Corrected actual V, both local Mellin residues and linear-L comparison are centrally verified. The prefactor bound in the local error estimate is explicit rather than assumed absolute. Global inversion, contour/unsmoothing and exterior arithmetic attachments remain open."
     },
     {
       "id": "L17.1",
@@ -3929,11 +3932,11 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-03T05:58:02.276869+00:00",
+    "verified_at_utc": "2026-10-03T08:16:01.693058+00:00",
     "completed": 37,
     "in_progress": 2,
     "unstarted": 7,
-    "note": "37/51 unchanged:35 original and2 repaired. New18-declaration scalar component is centrally verified. Separate analytical limiting-profile PSD result has two independent reviews and26 exact checks; not Lean/actual means. No finite-D repair established.",
+    "note": "37/51 unchanged:35 original and2 repaired. Actual Appendix B rough kernels and corrected local Mellin residues centrally verified as27 components; full15.1/16.2 and actual main means remain open. Separate smooth-profile analytical precision target reviewed, not Lean or a signed repair.",
     "original_completed": 35,
     "repaired_completed": 2,
     "partial": 5,
@@ -4248,11 +4251,21 @@
       "public_declaration_checks": 18,
       "regressions": 18,
       "full_project_jobs": 5565
+    },
+    {
+      "id": "actual_rough_kernels_corrected_mellin",
+      "status": "verified",
+      "report": "audit/CLOUD_ACTUAL_KERNEL_RESIDUE_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 27,
+      "public_declaration_checks": 202,
+      "expanded_mellin_regressions": 12,
+      "full_project_jobs": 5592
     }
   ],
   "repair_discipline": {
     "authorized": "Evidence-based source repairs allowed; retain original and repaired statement distinctions.",
-    "original_completed": 34,
+    "original_completed": 35,
     "repaired_completed": 2,
     "unresolved_alpha_one": "audit/CLOUD_ERROR_SCALE_RECONSTRUCTION.md",
     "no_axiom_or_sorry": true,

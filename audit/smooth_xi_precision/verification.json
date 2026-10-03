@@ -1,0 +1,13 @@
+{
+  "status": "ANALYTICAL_DERIVATION_INDEPENDENTLY_REVIEWED",
+  "lean_checked": false,
+  "actual_projected_mean_proved": false,
+  "strict_gain_proved": false,
+  "exact_checks": 6,
+  "exact_check_result_sha256": "c0765976cc86a8decca275352e3d841552f3180b530d2ebbf6498548c12f5c5d",
+  "profile": "fixed C32 degree65 smoothstep, weighted negative-axis extension",
+  "raw_error_target": "C a (1+9 log L)^62 L^-18",
+  "normalized_error_target": "O((1+9 log L)^62 L^-9)=o(L^-8)",
+  "first_log_moment_bridge": "separately in progress; not included in this release",
+  "source": "arXiv:2211.02515v1"
+}

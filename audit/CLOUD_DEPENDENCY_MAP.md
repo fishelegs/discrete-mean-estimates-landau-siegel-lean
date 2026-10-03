@@ -173,3 +173,7 @@ Original14.1 now proves the full mean. Its genuine exceptional-set chain reaches
 ## Current precision and source-center audit
 
 The centrally verified scalar package supplies actual a>1/2 under(A) and the quantitative conditional old16.2 center comparison; this does not complete the numbered16.2 node. The independently proved limiting-profile PSD bound is a mathematical audit, not a Lean/actual-mean edge. The selected finite-D repair route now requires a source-specific tau4 prefix rate and a new weighted/projected xi boundary bound. Scheduling remains separate from numbered proof status. See CLOUD_SECTION16_SCALAR_STATUS.md and CLOUD_PROFILE_BARRIER_STATUS.md.
+
+## Actual kernels and corrected local residues
+
+The27-module component release supplies actual rough rho-star P2/P3/full-P1 asymptotics and both corrected Section16 local Mellin residues. It leaves the full15.1/16.2 nodes open: strict sqrt(P) complement, weighted arithmetic, global contour/unsmoothing and actual mean attachments remain. B.1 now uses the genuine Lemma3.1 range through P²; its historical Lemma3.2 citation is kept as a source issue rather than a required mathematical input. The fixed smooth-profile right-line replacement has an independently reviewed analytical o(L^-8) precision target, but no compiled theorem or signed full-matrix repair. See CLOUD_ACTUAL_KERNEL_RESIDUE_STATUS.md and smooth_xi_precision/DERIVATION.md.

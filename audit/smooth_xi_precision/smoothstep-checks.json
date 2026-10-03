@@ -1,0 +1,14 @@
+{
+  "arithmetic": "exact rational, no floating-point tolerances",
+  "m": 32,
+  "normalization_C": "119120569161268384710",
+  "checks": {
+    "normalization_integral": true,
+    "left_join_constant_identity": true,
+    "reflection_partition_identity": true,
+    "simple_pole_residue_one": true,
+    "higher_poles_cancel_exactly": true,
+    "C_integer": true
+  },
+  "all_pass": true
+}

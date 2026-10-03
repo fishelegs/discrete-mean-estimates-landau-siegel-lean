@@ -1,0 +1,172 @@
+{
+  "status": "PASS_COMPONENTS_ONLY",
+  "verified_at_utc": "2026-10-03T08:16:01.693058+00:00",
+  "base_commit": "6a824048d05c065243c5a15083d3d69a287386cc",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "production_modules": 27,
+  "public_declarations": 202,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "mellin_expanded_regressions": 12,
+  "appendix_b_named_source_endpoint_checks": 31,
+  "full_project_jobs": 5592,
+  "source_guards": 1778,
+  "spec_imports": 1338,
+  "full_imports": 1603,
+  "strict_candidates": 430,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 1,
+  "new_strict_candidate_review": {
+    "path": "ZhangLS/Spec/AppendixBKernelStripBoundary.lean:94",
+    "verdict": "false positive: hn is derived from Complex.abs_re_le_norm, then rewritten using the proved left contour geometry; this is not a supplied desired bound"
+  },
+  "unreviewed_new_strict_candidates": 0,
+  "numbered_completed": 37,
+  "original_completed": 35,
+  "repaired_completed": 2,
+  "complete_L15_1": false,
+  "complete_L16_2": false,
+  "whole_paper_proved": false,
+  "new_axioms_or_sorry": false,
+  "source_relocation": "26 frozen modules preserve proof bodies except import/file qualification; one new central actual rough-kernel assembly",
+  "independent_appendix_b_review": "ACCEPT 20 components; source/inventory/hash review with separate central compilation",
+  "mellin_central_dependency_normalization_pairs": 68,
+  "logs": {
+    "AppendixBActualKernelAsymptotics.log": {
+      "bytes": 73103,
+      "sha256": "a36f795db2615c2447ec598797cb5d03215c3b8d219d2bc9af9a93a9092f9a2a"
+    },
+    "AppendixBKernelBoundaryIntegrals.log": {
+      "bytes": 67855,
+      "sha256": "c4f17e37c616fbf48394ff84edfc48a139f231710b89252edcfea45c594d417e"
+    },
+    "AppendixBKernelContour.log": {
+      "bytes": 66775,
+      "sha256": "632bf6e06f131de8f977d61890b620e9154dd16a56d8e5f2ce9bb1b68eee0317"
+    },
+    "AppendixBKernelErrorDecay.log": {
+      "bytes": 70723,
+      "sha256": "074167b5e64a87dd6f64c337a6026683b8d8d4fde83540f72f90aa2b9c5cb33a"
+    },
+    "AppendixBKernelFullComparison.log": {
+      "bytes": 68329,
+      "sha256": "49c586b817fbdf6a79d2ba232c81342ffb923fed741855567c38ad0f6fa79b56"
+    },
+    "AppendixBKernelModelCircle.log": {
+      "bytes": 30722,
+      "sha256": "bc333b848f25018d8798d84726857c418068590cfd8d89d6362b9890f614b355"
+    },
+    "AppendixBKernelOriginalPhases.log": {
+      "bytes": 70663,
+      "sha256": "2152d16fed11dfdad5d8a5dc1cd6cc977dbd5a2cdd9b242a676c6c813ee14656"
+    },
+    "AppendixBKernelOriginalUniform.log": {
+      "bytes": 69420,
+      "sha256": "ea2511c0b3b0351f8e1d6177a3bfa6a3f33b60fae96a16290458f06578e68c79"
+    },
+    "AppendixBKernelPerronBridge.log": {
+      "bytes": 30456,
+      "sha256": "2361586c7c9bcdb70753bc36017db7539664dee558983f6e0f02d0497af7cb36"
+    },
+    "AppendixBKernelPhaseComparison.log": {
+      "bytes": 70044,
+      "sha256": "0e21cbd30ec5f4ffac0687bcc7737de0efcc0e44e2163e68b76eb9b1e9059aa8"
+    },
+    "AppendixBKernelRegressions.log": {
+      "bytes": 71294,
+      "sha256": "18888d4e3bf4902a615e80a7be9db8b93d4ebe759ebf64a440c748c56323fb7d"
+    },
+    "AppendixBKernelRightLine.log": {
+      "bytes": 65374,
+      "sha256": "3f112b07e7dfc909c9adfa27016a36dba16562bea716ff1c0285dcf5b330f98a"
+    },
+    "AppendixBKernelStripBoundary.log": {
+      "bytes": 66787,
+      "sha256": "d366dcbf0e4a89e73e2063faf25a6fd50322b34033fce63578b7e443aaae920b"
+    },
+    "AppendixBKernelZetaCircle.log": {
+      "bytes": 65376,
+      "sha256": "5489212036dc05cec0e13026c5856c7dfb9ae41e1e2a67c35cf797e0a243a2b6"
+    },
+    "AppendixBRoughKernelReplacement.log": {
+      "bytes": 30112,
+      "sha256": "a16ac4125f66575f0d9ee356bc5d211f0f7999c9a0383b3cc761855c24fec9ce"
+    },
+    "AppendixBRoughPrimeLog.log": {
+      "bytes": 457,
+      "sha256": "d02a3719e8beec5abf4126709bd0678d6ef2701240dc3cec76ee9d8605b9041c"
+    },
+    "AppendixBRoughReplacementB1.log": {
+      "bytes": 18491,
+      "sha256": "7380c0c7a7ecad30f3d8ab153b39fd4a6d343cc1049b3f9a0c03c34e856317c0"
+    },
+    "AppendixBRoughReplacementB2.log": {
+      "bytes": 30038,
+      "sha256": "0fcf1d6793f718bd5986c5635f723bd2ece59b832189559d4fca36779fdc72bf"
+    },
+    "AppendixBRoughReplacementRegressions.log": {
+      "bytes": 30296,
+      "sha256": "ea687d93e5fbe3f9dcf91b307a6e969cc64478242621d9440001511adcab8bc9"
+    },
+    "AppendixBRoughRhoEuler.log": {
+      "bytes": 19035,
+      "sha256": "f80e0510d2061ec9d3f1b8061f896697a838f28311d0368f374c9e5fc222a4b2"
+    },
+    "AppendixBRoughWeightedReplacement.log": {
+      "bytes": 30116,
+      "sha256": "6dba95d7e61b1b6810baa178f8cb468d84e85e73e81d89e6e86869d90f92dad5"
+    },
+    "CloudActualKernelResidueAxioms.log": {
+      "bytes": 21294,
+      "sha256": "54b01761799ea583d812fcf05ab39a4b387183b4fc83dbe534a694b2052b165a"
+    },
+    "CloudCorrectedMellinRegression.log": {
+      "bytes": 198,
+      "sha256": "cd52dc7d4acdf7228508ccb3bf6cf5a8737a2737a2e1e95c2bc45bb37367ecb3"
+    },
+    "Lemma162ActualMellinResidues.log": {
+      "bytes": 55167,
+      "sha256": "480e39944e5dbe121517c5b5f000ccb6760442c9e2954d55c33b37949f9c21b8"
+    },
+    "Lemma162CauchyCancellation.log": {
+      "bytes": 306,
+      "sha256": "9c46170f8ddd154643530bcdaa8daa076716fdc130208a38a0ccbfd3e6332cf7"
+    },
+    "Lemma162MellinBudget.log": {
+      "bytes": 55151,
+      "sha256": "2b00812a4411309bf7547447a1492288b5399408ea72b8fbc4c3b8f0286cd437"
+    },
+    "Lemma162MellinLinearModel.log": {
+      "bytes": 55161,
+      "sha256": "dfa83cf703bd0716b5c27177cc74ccf78b1ff29ddaaf85ede5d61d7160899770"
+    },
+    "Lemma162MellinNumerator.log": {
+      "bytes": 55157,
+      "sha256": "feeab7a6e787e19f0d4140f51deea77ce0d5407a82e29fcc710805fd81c52211"
+    },
+    "Lemma162TwoPoleCircle.log": {
+      "bytes": 296,
+      "sha256": "782d32b99b909b0d87edf94953242ab44b5b142a913a1775cd2142d05d6bb9a6"
+    },
+    "full-project.log": {
+      "bytes": 264460,
+      "sha256": "3cc0f8317dc67272bdfb9c147ab92209755dd5d9da569f8a2e04e552514dd4ca"
+    },
+    "placeholders.log": {
+      "bytes": 65,
+      "sha256": "882c48624b676007851f3444f335b92e9389ef0413c21fa350995b5ae6e0576c"
+    },
+    "strict-audit.log": {
+      "bytes": 43539,
+      "sha256": "080ce9311803e4fec677c53028c842d889ad6643b2772c317bbcf0d95a844e03"
+    },
+    "structure.log": {
+      "bytes": 46,
+      "sha256": "9d42bc2bc4b56c4b8b971acc9f431220600710edbabe88c4f862157aca42bae9"
+    }
+  }
+}
