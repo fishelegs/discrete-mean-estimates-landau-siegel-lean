@@ -1,5 +1,7 @@
 # Discrete mean estimates and the Landau–Siegel zero — Lean 形式化
 
+完整修订 Lemma15.1（2026-10-03）：[实际点态算术式及严格sqrtP补尾](audit/CLOUD_LEMMA151_STATUS.md)已中央全验收。原(A)、实际ψ基b=χb₀、Q-smooth n₁<T及统一量词保留，真正terminal residue替代印刷尾常数，误差明确O_c(L^-79/10)|χ(n₁)|τ₂(n₁)；另证实际有限加权替换O_c(L^-7/2)。46新模块、412公共声明、686完整owner及3生成补充声明、46展开回归、5704全库PASS。现36原+3显式修订=39/51；原literal、完整(15.22)、实际均值与最终数值链仍未证明，修订对最终结论的整体影响仍待评估。
+
 实际一阶对数矩桥梁（2026-10-03）：[实际ν²短和、L″/L′与正质量下界](audit/CLOUD_FIRST_LOG_MOMENT_STATUS.md)已中央核验；23模块、159公共声明及310完整owner审计、7展开回归、5658全库PASS。原(A)与统一量词保留；这是算术曲率桥，尚无带符号均值增益。另附[两条修复路线的独立解析审计](audit/repair_routes/STATUS.md)，区分leading模型正性、根数核与未完成实际均值；[exact-gamma协方差表示](audit/structured_covariance/STATUS.md)经独立来源审查，仍未评价主算术和或证明严格gain。编号仍36原+2修订=38/51。
 
 新相位接口审计（2026-10-03）：[高支撑C₁/T₁及固定log窗口扩展](audit/annular_covariance/STATUS.md)经独立来源分析核验，实际有限窗口R−L表示误差O(a⁻¹L⁻14)，C₁右项为O(a⁻¹L⁻200)。仅适用于记录中的系数支撑类；主算术矩阵、实际Gram归一化和严格gain仍待证明。这些解析审计尚非Lean定理。

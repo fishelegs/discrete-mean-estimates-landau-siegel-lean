@@ -1,0 +1,34 @@
+{
+  "audit_drivers": [
+    {
+      "fresh_elaboration_required": true,
+      "packet_path": "audit/CloudLemma151CentralPublicAxioms.lean",
+      "repo_relative_destination": "audit/CloudLemma151CentralPublicAxioms.lean",
+      "sha256": "f8f35db1cb013b1567b5e8a4a6d136266623f04b54df5ba3874cefd902c577c0"
+    },
+    {
+      "fresh_elaboration_required": true,
+      "packet_path": "audit/CloudLemma151CentralOwnedAxioms.lean",
+      "repo_relative_destination": "audit/CloudLemma151CentralOwnedAxioms.lean",
+      "sha256": "938dbe89335d9ff524d99357f4be0e2c600ef09f4c4ec424242e3c96537bdf05"
+    }
+  ],
+  "counts": {
+    "existing_owned": 262,
+    "existing_owners": 19,
+    "existing_public": 134,
+    "new_owned": 427,
+    "new_owners": 46,
+    "new_public": 278,
+    "owned": 689,
+    "owners": 65,
+    "public": 412,
+    "scoped_owned": 686,
+    "scoped_existing_owned": 259,
+    "generated_equation_supplements": 3,
+    "actual_declaration_owners": 67,
+    "owned_inventory_includes_generated_supplements": true
+  },
+  "status": "FRESH_CENTRAL_AUDITS_PASSED",
+  "literal_target_sha256": "442d273d792d1fde9b80b6e94ee8bd1a28252342c0373acdd35ca2315db668e7"
+}

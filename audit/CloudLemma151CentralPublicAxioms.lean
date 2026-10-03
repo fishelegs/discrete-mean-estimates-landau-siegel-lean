@@ -1,0 +1,1430 @@
+/- Generated central audit; staged only, not elaborated. -/
+import ZhangLS.Spec.AppendixBRoughReplacementB1
+import ZhangLS.Spec.AppendixBDivisorNuTail
+import ZhangLS.Spec.AppendixBDivisorReplacementB1
+import ZhangLS.Spec.AppendixBDivisorCoefficientB1
+import ZhangLS.Spec.AppendixBDivisorB1Regressions
+import ZhangLS.Spec.AppendixBKernelPerronBridge
+import ZhangLS.Spec.AppendixBKernelModelCircle
+import ZhangLS.Spec.AppendixBKernelZetaCircle
+import ZhangLS.Spec.AppendixBKernelContour
+import ZhangLS.Spec.AppendixBKernelRightLine
+import ZhangLS.Spec.AppendixBKernelStripBoundary
+import ZhangLS.Spec.AppendixBKernelBoundaryIntegrals
+import ZhangLS.Spec.AppendixBKernelFullComparison
+import ZhangLS.Spec.AppendixBKernelOriginalUniform
+import ZhangLS.Spec.AppendixBKernelPhaseComparison
+import ZhangLS.Spec.AppendixBKernelOriginalPhases
+import ZhangLS.Spec.AppendixBKernelErrorDecay
+import ZhangLS.Spec.AppendixBKernelRegressions
+import ZhangLS.Spec.AppendixBRoughPrimeLog
+import ZhangLS.Spec.AppendixBRoughRhoEuler
+import ZhangLS.Spec.AppendixBRoughReplacementB2
+import ZhangLS.Spec.AppendixBRoughWeightedReplacement
+import ZhangLS.Spec.AppendixBRoughKernelReplacement
+import ZhangLS.Spec.AppendixBTailSupport
+import ZhangLS.Spec.AppendixBTailRamp
+import ZhangLS.Spec.AppendixBTailGaussianMellin
+import ZhangLS.Spec.AppendixBTailMultiplier
+import ZhangLS.Spec.AppendixBTailRightBoundary
+import ZhangLS.Spec.AppendixBTailOriginalRange
+import ZhangLS.Spec.AppendixBTailLeftBoundary
+import ZhangLS.Spec.AppendixBTailHorizontalBoundary
+import ZhangLS.Spec.AppendixBTailContour
+import ZhangLS.Spec.AppendixBTailGlobalContour
+import ZhangLS.Spec.AppendixBTailBudgetDecay
+import ZhangLS.Spec.AppendixBTailGaussianComparison
+import ZhangLS.Spec.AppendixBTailUnsmoothing
+import ZhangLS.Spec.AppendixBTailBoundaryMass
+import ZhangLS.Spec.AppendixBTailFarBoundary
+import ZhangLS.Spec.AppendixBTailRhoBounds
+import ZhangLS.Spec.AppendixBTailSharpIntegral
+import ZhangLS.Spec.AppendixBTailSharpKernel
+import ZhangLS.Spec.AppendixBTailSharpFiniteIntegral
+import ZhangLS.Spec.AppendixBTailFiniteUnsmoothing
+import ZhangLS.Spec.AppendixBTailGaussianSplit
+import ZhangLS.Spec.AppendixBTailFloorGeometry
+import ZhangLS.Spec.AppendixBTailSourceUnsmoothing
+import ZhangLS.Spec.AppendixBTailResidueRate
+import ZhangLS.Spec.AppendixBTailTerminalResidue
+import ZhangLS.Spec.AppendixBTailArithmeticComparison
+import ZhangLS.Spec.AppendixBTailUnsmoothingDecay
+import ZhangLS.Spec.AppendixBTailFinalAsymptotic
+import ZhangLS.Spec.AppendixBTailRegressions
+import ZhangLS.Spec.AppendixBTailH14Assembly
+import ZhangLS.Spec.Lemma151ActualFiniteSupport
+import ZhangLS.Spec.Lemma151ActualKernelFactors
+import ZhangLS.Spec.Lemma151ActualPointwiseBudget
+import ZhangLS.Spec.Lemma151ActualRoughRectangle
+import ZhangLS.Spec.Lemma151ActualPointwiseAssembly
+import ZhangLS.Spec.Lemma151ActualPointwiseDecay
+import ZhangLS.Spec.Lemma151ActualPointwiseRegressions
+import ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget
+import ZhangLS.Spec.Lemma151ActualWeightedEulerBudget
+import ZhangLS.Spec.Lemma151ActualWeightedPrefix
+import ZhangLS.Spec.Lemma151ActualWeightedSourceBudget
+import ZhangLS.Spec.Lemma151ActualWeightedApplication
+
+set_option maxHeartbeats 12000000
+
+#check ZhangLS.Spec.appendixB_divisor_regression_Q
+#print axioms ZhangLS.Spec.appendixB_divisor_regression_Q
+#check ZhangLS.Spec.appendixB_divisor_regression_actual_b
+#print axioms ZhangLS.Spec.appendixB_divisor_regression_actual_b
+#check ZhangLS.Spec.appendixB_divisor_regression_actual_bpsi
+#print axioms ZhangLS.Spec.appendixB_divisor_regression_actual_bpsi
+#check ZhangLS.Spec.appendixB_divisor_regression_beta_shifts
+#print axioms ZhangLS.Spec.appendixB_divisor_regression_beta_shifts
+#check ZhangLS.Spec.appendixB_divisor_regression_fourth_endpoint
+#print axioms ZhangLS.Spec.appendixB_divisor_regression_fourth_endpoint
+#check ZhangLS.Spec.appendixB_divisor_regression_original_A
+#print axioms ZhangLS.Spec.appendixB_divisor_regression_original_A
+#check ZhangLS.Spec.appendixB_divisor_regression_ramified_n1
+#print axioms ZhangLS.Spec.appendixB_divisor_regression_ramified_n1
+#check ZhangLS.Spec.appendixB_divisor_regression_square_source
+#print axioms ZhangLS.Spec.appendixB_divisor_regression_square_source
+#check ZhangLS.Spec.appendixB_divisor_regression_strict_source
+#print axioms ZhangLS.Spec.appendixB_divisor_regression_strict_source
+#check ZhangLS.Spec.appendixB_divisor_regression_zero_n1
+#print axioms ZhangLS.Spec.appendixB_divisor_regression_zero_n1
+#check ZhangLS.Spec.appendixB_actual_b_B1_uniform
+#print axioms ZhangLS.Spec.appendixB_actual_b_B1_uniform
+#check ZhangLS.Spec.appendixB_actual_b_arithmetic_errors
+#print axioms ZhangLS.Spec.appendixB_actual_b_arithmetic_errors
+#check ZhangLS.Spec.appendixB_actual_b_factor_majorants
+#print axioms ZhangLS.Spec.appendixB_actual_b_factor_majorants
+#check ZhangLS.Spec.appendixB_optional_character_norm
+#print axioms ZhangLS.Spec.appendixB_optional_character_norm
+#check ZhangLS.Spec.appendixB_shifted_coefficient_factor_majorant
+#print axioms ZhangLS.Spec.appendixB_shifted_coefficient_factor_majorant
+#check ZhangLS.Spec.appendixB_shifted_coefficient_majorant
+#print axioms ZhangLS.Spec.appendixB_shifted_coefficient_majorant
+#check ZhangLS.Spec.appendixB_actual_divisor_nu_tail
+#print axioms ZhangLS.Spec.appendixB_actual_divisor_nu_tail
+#check ZhangLS.Spec.appendixB_finite_weighted_cauchy
+#print axioms ZhangLS.Spec.appendixB_finite_weighted_cauchy
+#check ZhangLS.Spec.appendixB_tau_two_harmonic_energy
+#print axioms ZhangLS.Spec.appendixB_tau_two_harmonic_energy
+#check ZhangLS.Spec.appendixB_tau_two_paper_energy
+#print axioms ZhangLS.Spec.appendixB_tau_two_paper_energy
+#check ZhangLS.Spec.appendixB_divisor_arithmetic_error_explicit
+#print axioms ZhangLS.Spec.appendixB_divisor_arithmetic_error_explicit
+#check ZhangLS.Spec.appendixB_divisor_arithmetic_error_finite
+#print axioms ZhangLS.Spec.appendixB_divisor_arithmetic_error_finite
+#check ZhangLS.Spec.appendixB_divisor_weighted_B1_explicit
+#print axioms ZhangLS.Spec.appendixB_divisor_weighted_B1_explicit
+#check ZhangLS.Spec.appendixB_divisor_weighted_B1_uniform
+#print axioms ZhangLS.Spec.appendixB_divisor_weighted_B1_uniform
+#check ZhangLS.Spec.appendixB_horizontal_bound
+#print axioms ZhangLS.Spec.appendixB_horizontal_bound
+#check ZhangLS.Spec.appendixB_left_boundary_bound
+#print axioms ZhangLS.Spec.appendixB_left_boundary_bound
+#check ZhangLS.Spec.appendixBRegularIntegrand
+#print axioms ZhangLS.Spec.appendixBRegularIntegrand
+#check ZhangLS.Spec.appendixBRegularNumerator
+#print axioms ZhangLS.Spec.appendixBRegularNumerator
+#check ZhangLS.Spec.appendixB_actual_rectangle_circle
+#print axioms ZhangLS.Spec.appendixB_actual_rectangle_circle
+#check ZhangLS.Spec.appendixB_regular_integrand_agrees
+#print axioms ZhangLS.Spec.appendixB_regular_integrand_agrees
+#check ZhangLS.Spec.appendixB_regular_numerator_differentiableOn
+#print axioms ZhangLS.Spec.appendixB_regular_numerator_differentiableOn
+#check ZhangLS.Spec.appendixB_regular_rectangle_circle
+#print axioms ZhangLS.Spec.appendixB_regular_rectangle_circle
+#check ZhangLS.Spec.appendixBContourPolynomialConstant
+#print axioms ZhangLS.Spec.appendixBContourPolynomialConstant
+#check ZhangLS.Spec.appendixB_contour_budget_eventually
+#print axioms ZhangLS.Spec.appendixB_contour_budget_eventually
+#check ZhangLS.Spec.appendixB_contour_budget_nonneg
+#print axioms ZhangLS.Spec.appendixB_contour_budget_nonneg
+#check ZhangLS.Spec.appendixB_contour_budget_polynomial
+#print axioms ZhangLS.Spec.appendixB_contour_budget_polynomial
+#check ZhangLS.Spec.appendixB_original_error_eventual_bound
+#print axioms ZhangLS.Spec.appendixB_original_error_eventual_bound
+#check ZhangLS.Spec.appendixB_original_error_tendsto_zero
+#print axioms ZhangLS.Spec.appendixB_original_error_tendsto_zero
+#check ZhangLS.Spec.appendixBContourBudget
+#print axioms ZhangLS.Spec.appendixBContourBudget
+#check ZhangLS.Spec.appendixB_full_kernel_quantitative
+#print axioms ZhangLS.Spec.appendixB_full_kernel_quantitative
+#check ZhangLS.Spec.appendixBModelLeading
+#print axioms ZhangLS.Spec.appendixBModelLeading
+#check ZhangLS.Spec.appendixB_model_circle_eq_leading
+#print axioms ZhangLS.Spec.appendixB_model_circle_eq_leading
+#check ZhangLS.Spec.appendixB_model_circle_integral
+#print axioms ZhangLS.Spec.appendixB_model_circle_integral
+#check ZhangLS.Spec.appendixB_model_partial_fractions
+#print axioms ZhangLS.Spec.appendixB_model_partial_fractions
+#check ZhangLS.Spec.appendixBOriginalError
+#print axioms ZhangLS.Spec.appendixBOriginalError
+#check ZhangLS.Spec.appendixB_alpha_logP
+#print axioms ZhangLS.Spec.appendixB_alpha_logP
+#check ZhangLS.Spec.appendixB_log_model_at_printed
+#print axioms ZhangLS.Spec.appendixB_log_model_at_printed
+#check ZhangLS.Spec.appendixB_original_beta_perturbation
+#print axioms ZhangLS.Spec.appendixB_original_beta_perturbation
+#check ZhangLS.Spec.appendixB_original_frequency_bounds
+#print axioms ZhangLS.Spec.appendixB_original_frequency_bounds
+#check ZhangLS.Spec.appendixB_original_gamma_eq
+#print axioms ZhangLS.Spec.appendixB_original_gamma_eq
+#check ZhangLS.Spec.appendixB_original_gamma_lower
+#print axioms ZhangLS.Spec.appendixB_original_gamma_lower
+#check ZhangLS.Spec.appendixB_original_phase_budget
+#print axioms ZhangLS.Spec.appendixB_original_phase_budget
+#check ZhangLS.Spec.appendixB_original_printed_constants_uniform
+#print axioms ZhangLS.Spec.appendixB_original_printed_constants_uniform
+#check ZhangLS.Spec.appendixBOriginalCutoff
+#print axioms ZhangLS.Spec.appendixBOriginalCutoff
+#check ZhangLS.Spec.appendixBOriginalExponent
+#print axioms ZhangLS.Spec.appendixBOriginalExponent
+#check ZhangLS.Spec.appendixBOriginalFrequency
+#print axioms ZhangLS.Spec.appendixBOriginalFrequency
+#check ZhangLS.Spec.appendixBOriginalGamma
+#print axioms ZhangLS.Spec.appendixBOriginalGamma
+#check ZhangLS.Spec.appendixBOriginalTCost
+#print axioms ZhangLS.Spec.appendixBOriginalTCost
+#check ZhangLS.Spec.appendixB_original_cutoff_log
+#print axioms ZhangLS.Spec.appendixB_original_cutoff_log
+#check ZhangLS.Spec.appendixB_original_cutoff_pos
+#print axioms ZhangLS.Spec.appendixB_original_cutoff_pos
+#check ZhangLS.Spec.appendixB_original_cutoffs_eventually
+#print axioms ZhangLS.Spec.appendixB_original_cutoffs_eventually
+#check ZhangLS.Spec.appendixB_original_full_kernels_uniform
+#print axioms ZhangLS.Spec.appendixB_original_full_kernels_uniform
+#check ZhangLS.Spec.appendixB_original_gamma
+#print axioms ZhangLS.Spec.appendixB_original_gamma
+#check ZhangLS.Spec.appendixB_original_log_l1
+#print axioms ZhangLS.Spec.appendixB_original_log_l1
+#check ZhangLS.Spec.appendixBFullKernelSum
+#print axioms ZhangLS.Spec.appendixBFullKernelSum
+#check ZhangLS.Spec.appendixB_full_kernel_perron
+#print axioms ZhangLS.Spec.appendixB_full_kernel_perron
+#check ZhangLS.Spec.appendixB_kernel_perron_term
+#print axioms ZhangLS.Spec.appendixB_kernel_perron_term
+#check ZhangLS.Spec.appendixB_rho_dirichlet_series
+#print axioms ZhangLS.Spec.appendixB_rho_dirichlet_series
+#check ZhangLS.Spec.appendixB_twist_LSeries
+#print axioms ZhangLS.Spec.appendixB_twist_LSeries
+#check ZhangLS.Spec.appendixB_twist_summable
+#print axioms ZhangLS.Spec.appendixB_twist_summable
+#check ZhangLS.Spec.appendixB_twist_term
+#print axioms ZhangLS.Spec.appendixB_twist_term
+#check ZhangLS.Spec.appendixBLogModel
+#print axioms ZhangLS.Spec.appendixBLogModel
+#check ZhangLS.Spec.appendixBPhaseBudget
+#print axioms ZhangLS.Spec.appendixBPhaseBudget
+#check ZhangLS.Spec.appendixB_imaginary_exp_lipschitz
+#print axioms ZhangLS.Spec.appendixB_imaginary_exp_lipschitz
+#check ZhangLS.Spec.appendixB_imaginary_exp_norm
+#print axioms ZhangLS.Spec.appendixB_imaginary_exp_norm
+#check ZhangLS.Spec.appendixB_log_model_stability
+#print axioms ZhangLS.Spec.appendixB_log_model_stability
+#check ZhangLS.Spec.appendixB_model_as_log_model
+#print axioms ZhangLS.Spec.appendixB_model_as_log_model
+#check ZhangLS.Spec.appendixB_H14_complement_pointwise
+#print axioms ZhangLS.Spec.appendixB_H14_complement_pointwise
+#check ZhangLS.Spec.appendixB_H14_endpoint_separate
+#print axioms ZhangLS.Spec.appendixB_H14_endpoint_separate
+#check ZhangLS.Spec.appendixB_P2_source_expanded
+#print axioms ZhangLS.Spec.appendixB_P2_source_expanded
+#check ZhangLS.Spec.appendixB_beta_one_source
+#print axioms ZhangLS.Spec.appendixB_beta_one_source
+#check ZhangLS.Spec.appendixB_beta_three_source
+#print axioms ZhangLS.Spec.appendixB_beta_three_source
+#check ZhangLS.Spec.appendixB_beta_two_source
+#print axioms ZhangLS.Spec.appendixB_beta_two_source
+#check ZhangLS.Spec.appendixB_full_kernel_finite_sum
+#print axioms ZhangLS.Spec.appendixB_full_kernel_finite_sum
+#check ZhangLS.Spec.appendixB_full_kernel_strict_product_endpoint
+#print axioms ZhangLS.Spec.appendixB_full_kernel_strict_product_endpoint
+#check ZhangLS.Spec.appendixB_kernel_strict_endpoint
+#print axioms ZhangLS.Spec.appendixB_kernel_strict_endpoint
+#check ZhangLS.Spec.appendixB_kernel_zero_index
+#print axioms ZhangLS.Spec.appendixB_kernel_zero_index
+#check ZhangLS.Spec.appendixB_literal_B3_tail_zero
+#print axioms ZhangLS.Spec.appendixB_literal_B3_tail_zero
+#check ZhangLS.Spec.appendixB_original_P1
+#print axioms ZhangLS.Spec.appendixB_original_P1
+#check ZhangLS.Spec.appendixB_original_P2
+#print axioms ZhangLS.Spec.appendixB_original_P2
+#check ZhangLS.Spec.appendixB_original_P3
+#print axioms ZhangLS.Spec.appendixB_original_P3
+#check ZhangLS.Spec.appendixB_original_gamma_P1
+#print axioms ZhangLS.Spec.appendixB_original_gamma_P1
+#check ZhangLS.Spec.appendixB_original_gamma_P2
+#print axioms ZhangLS.Spec.appendixB_original_gamma_P2
+#check ZhangLS.Spec.appendixB_original_gamma_P3
+#print axioms ZhangLS.Spec.appendixB_original_gamma_P3
+#check ZhangLS.Spec.appendixB_printed_e1_prime
+#print axioms ZhangLS.Spec.appendixB_printed_e1_prime
+#check ZhangLS.Spec.appendixB_printed_e2
+#print axioms ZhangLS.Spec.appendixB_printed_e2
+#check ZhangLS.Spec.appendixB_printed_e3
+#print axioms ZhangLS.Spec.appendixB_printed_e3
+#check ZhangLS.Spec.appendixB_source_full_kernel_asymptotics
+#print axioms ZhangLS.Spec.appendixB_source_full_kernel_asymptotics
+#check ZhangLS.Spec.appendixB_integrand_eq_log_kernel
+#print axioms ZhangLS.Spec.appendixB_integrand_eq_log_kernel
+#check ZhangLS.Spec.appendixB_right_line_integrable
+#print axioms ZhangLS.Spec.appendixB_right_line_integrable
+#check ZhangLS.Spec.appendixB_right_ratio_bound
+#print axioms ZhangLS.Spec.appendixB_right_ratio_bound
+#check ZhangLS.Spec.appendixB_right_tails
+#print axioms ZhangLS.Spec.appendixB_right_tails
+#check ZhangLS.Spec.AppendixBContourPoint
+#print axioms ZhangLS.Spec.AppendixBContourPoint
+#check ZhangLS.Spec.appendixBContourHeight
+#print axioms ZhangLS.Spec.appendixBContourHeight
+#check ZhangLS.Spec.appendixBContourMajorant
+#print axioms ZhangLS.Spec.appendixBContourMajorant
+#check ZhangLS.Spec.appendixB_actual_contour_ratio_bound
+#print axioms ZhangLS.Spec.appendixB_actual_contour_ratio_bound
+#check ZhangLS.Spec.appendixB_extended_strip_bounds
+#print axioms ZhangLS.Spec.appendixB_extended_strip_bounds
+#check ZhangLS.Spec.appendixBZetaCircle
+#print axioms ZhangLS.Spec.appendixBZetaCircle
+#check ZhangLS.Spec.appendixBZetaIntegrand
+#print axioms ZhangLS.Spec.appendixBZetaIntegrand
+#check ZhangLS.Spec.appendixB_actual_circle_leading_error
+#print axioms ZhangLS.Spec.appendixB_actual_circle_leading_error
+#check ZhangLS.Spec.appendixB_zeta_ratio_circle_error
+#print axioms ZhangLS.Spec.appendixB_zeta_ratio_circle_error
+#check ZhangLS.Spec.appendixB_zeta_ratio_regularized
+#print axioms ZhangLS.Spec.appendixB_zeta_ratio_regularized
+#check ZhangLS.Spec.appendixB_actual_kernel_rhostar_to_full_uniform
+#print axioms ZhangLS.Spec.appendixB_actual_kernel_rhostar_to_full_uniform
+#check ZhangLS.Spec.appendixB_kernel_tsum_finite
+#print axioms ZhangLS.Spec.appendixB_kernel_tsum_finite
+#check ZhangLS.Spec.appendixB_prime_log_mass
+#print axioms ZhangLS.Spec.appendixB_prime_log_mass
+#check ZhangLS.Spec.appendixB_prime_log_mass_strict
+#print axioms ZhangLS.Spec.appendixB_prime_log_mass_strict
+#check ZhangLS.Spec.appendixB_weighted_prefix_bound
+#print axioms ZhangLS.Spec.appendixB_weighted_prefix_bound
+#check ZhangLS.Spec.appendixB_actual_nu_tail
+#print axioms ZhangLS.Spec.appendixB_actual_nu_tail
+#check ZhangLS.Spec.appendixB_rough_arithmetic_error_finite
+#print axioms ZhangLS.Spec.appendixB_rough_arithmetic_error_finite
+#check ZhangLS.Spec.appendixB_rough_gt_fourth
+#print axioms ZhangLS.Spec.appendixB_rough_gt_fourth
+#check ZhangLS.Spec.appendixB_weighted_B1_explicit
+#print axioms ZhangLS.Spec.appendixB_weighted_B1_explicit
+#check ZhangLS.Spec.appendixB_weighted_B1_uniform
+#print axioms ZhangLS.Spec.appendixB_weighted_B1_uniform
+#check ZhangLS.Spec.appendixBRhoGlobalConstant
+#print axioms ZhangLS.Spec.appendixBRhoGlobalConstant
+#check ZhangLS.Spec.appendixBRoughRemovalConstant
+#print axioms ZhangLS.Spec.appendixBRoughRemovalConstant
+#check ZhangLS.Spec.appendixB_nonrough_mass_exp_bound
+#print axioms ZhangLS.Spec.appendixB_nonrough_mass_exp_bound
+#check ZhangLS.Spec.appendixB_nonrough_mass_finite
+#print axioms ZhangLS.Spec.appendixB_nonrough_mass_finite
+#check ZhangLS.Spec.appendixB_nonrough_small_prime
+#print axioms ZhangLS.Spec.appendixB_nonrough_small_prime
+#check ZhangLS.Spec.appendixB_original_B2_explicit
+#print axioms ZhangLS.Spec.appendixB_original_B2_explicit
+#check ZhangLS.Spec.appendixB_original_B2_uniform
+#print axioms ZhangLS.Spec.appendixB_original_B2_uniform
+#check ZhangLS.Spec.appendixB_original_mass_exponent
+#print axioms ZhangLS.Spec.appendixB_original_mass_exponent
+#check ZhangLS.Spec.appendixB_original_rho_mass
+#print axioms ZhangLS.Spec.appendixB_original_rho_mass
+#check ZhangLS.Spec.appendixB_original_rho_norm
+#print axioms ZhangLS.Spec.appendixB_original_rho_norm
+#check ZhangLS.Spec.appendixB_prime_multiple_mass
+#print axioms ZhangLS.Spec.appendixB_prime_multiple_mass
+#check ZhangLS.Spec.appendixB_replacement_alpha_scale
+#print axioms ZhangLS.Spec.appendixB_replacement_alpha_scale
+#check ZhangLS.Spec.appendixB_rho_global_constant_pos
+#print axioms ZhangLS.Spec.appendixB_rho_global_constant_pos
+#check ZhangLS.Spec.appendixB_rough_removal_constant_pos
+#print axioms ZhangLS.Spec.appendixB_rough_removal_constant_pos
+#check ZhangLS.Spec.appendixBRhoMass
+#print axioms ZhangLS.Spec.appendixBRhoMass
+#check ZhangLS.Spec.appendixB_prime_factor_log_sum
+#print axioms ZhangLS.Spec.appendixB_prime_factor_log_sum
+#check ZhangLS.Spec.appendixB_rho_local_excess
+#print axioms ZhangLS.Spec.appendixB_rho_local_excess
+#check ZhangLS.Spec.appendixB_rho_local_series
+#print axioms ZhangLS.Spec.appendixB_rho_local_series
+#check ZhangLS.Spec.appendixB_rho_local_tail
+#print axioms ZhangLS.Spec.appendixB_rho_local_tail
+#check ZhangLS.Spec.appendixB_rho_mass_euler
+#print axioms ZhangLS.Spec.appendixB_rho_mass_euler
+#check ZhangLS.Spec.appendixB_rho_mass_exp_bound
+#print axioms ZhangLS.Spec.appendixB_rho_mass_exp_bound
+#check ZhangLS.Spec.appendixB_rho_mass_mul
+#print axioms ZhangLS.Spec.appendixB_rho_mass_mul
+#check ZhangLS.Spec.appendixB_rho_mass_nonneg
+#print axioms ZhangLS.Spec.appendixB_rho_mass_nonneg
+#check ZhangLS.Spec.appendixB_rho_mass_one
+#print axioms ZhangLS.Spec.appendixB_rho_mass_one
+#check ZhangLS.Spec.appendixB_rho_mass_zero
+#print axioms ZhangLS.Spec.appendixB_rho_mass_zero
+#check ZhangLS.Spec.appendixB_rho_norm_exp_log
+#print axioms ZhangLS.Spec.appendixB_rho_norm_exp_log
+#check ZhangLS.Spec.appendixB_rho_norm_le_index
+#print axioms ZhangLS.Spec.appendixB_rho_norm_le_index
+#check ZhangLS.Spec.appendixB_rho_prime_factorization
+#print axioms ZhangLS.Spec.appendixB_rho_prime_factorization
+#check ZhangLS.Spec.appendixB_rho_prime_norm
+#print axioms ZhangLS.Spec.appendixB_rho_prime_norm
+#check ZhangLS.Spec.appendixB_rho_prime_power
+#print axioms ZhangLS.Spec.appendixB_rho_prime_power
+#check ZhangLS.Spec.appendixBReplacementConstant
+#print axioms ZhangLS.Spec.appendixBReplacementConstant
+#check ZhangLS.Spec.appendixB_kernel_replacement_uniform
+#print axioms ZhangLS.Spec.appendixB_kernel_replacement_uniform
+#check ZhangLS.Spec.appendixB_replacement_constant_pos
+#print axioms ZhangLS.Spec.appendixB_replacement_constant_pos
+#check ZhangLS.Spec.appendixB_weighted_replacement_explicit
+#print axioms ZhangLS.Spec.appendixB_weighted_replacement_explicit
+#check ZhangLS.Spec.appendixB_weighted_replacement_uniform
+#print axioms ZhangLS.Spec.appendixB_weighted_replacement_uniform
+#check ZhangLS.Spec.appendixB_weighted_rough_removal
+#print axioms ZhangLS.Spec.appendixB_weighted_rough_removal
+#check ZhangLS.Spec.appendixBSharpTailError
+#print axioms ZhangLS.Spec.appendixBSharpTailError
+#check ZhangLS.Spec.appendixB_actual_sharp_tail_quantitative
+#print axioms ZhangLS.Spec.appendixB_actual_sharp_tail_quantitative
+#check ZhangLS.Spec.appendixB_actual_tail_to_exact_residue_uniform
+#print axioms ZhangLS.Spec.appendixB_actual_tail_to_exact_residue_uniform
+#check ZhangLS.Spec.appendixB_interval_card_bound
+#print axioms ZhangLS.Spec.appendixB_interval_card_bound
+#check ZhangLS.Spec.appendixB_interval_harmonic_mass
+#print axioms ZhangLS.Spec.appendixB_interval_harmonic_mass
+#check ZhangLS.Spec.appendixB_logarithmic_boundary_mass
+#print axioms ZhangLS.Spec.appendixB_logarithmic_boundary_mass
+#check ZhangLS.Spec.appendixBTailContourBudget
+#print axioms ZhangLS.Spec.appendixBTailContourBudget
+#check ZhangLS.Spec.appendixB_tail_contour_budget_eventual_power
+#print axioms ZhangLS.Spec.appendixB_tail_contour_budget_eventual_power
+#check ZhangLS.Spec.appendixB_tail_contour_budget_polynomial
+#print axioms ZhangLS.Spec.appendixB_tail_contour_budget_polynomial
+#check ZhangLS.Spec.appendixBTailContinuedIntegrand
+#print axioms ZhangLS.Spec.appendixBTailContinuedIntegrand
+#check ZhangLS.Spec.appendixBTailHolomorphicNumerator
+#print axioms ZhangLS.Spec.appendixBTailHolomorphicNumerator
+#check ZhangLS.Spec.appendixB_tail_actual_circle_residue
+#print axioms ZhangLS.Spec.appendixB_tail_actual_circle_residue
+#check ZhangLS.Spec.appendixB_tail_circle_residue
+#print axioms ZhangLS.Spec.appendixB_tail_circle_residue
+#check ZhangLS.Spec.appendixB_tail_continued_agrees
+#print axioms ZhangLS.Spec.appendixB_tail_continued_agrees
+#check ZhangLS.Spec.appendixB_tail_holomorphic_at_zero
+#print axioms ZhangLS.Spec.appendixB_tail_holomorphic_at_zero
+#check ZhangLS.Spec.appendixB_tail_numerator_differentiableOn
+#print axioms ZhangLS.Spec.appendixB_tail_numerator_differentiableOn
+#check ZhangLS.Spec.appendixB_tail_rectangle_circle
+#print axioms ZhangLS.Spec.appendixB_tail_rectangle_circle
+#check ZhangLS.Spec.appendixB_tail_single_pole_decomposition
+#print axioms ZhangLS.Spec.appendixB_tail_single_pole_decomposition
+#check ZhangLS.Spec.appendixB_far_gaussian_summable_bound
+#print axioms ZhangLS.Spec.appendixB_far_gaussian_summable_bound
+#check ZhangLS.Spec.appendixB_far_gaussian_term_bound
+#print axioms ZhangLS.Spec.appendixB_far_gaussian_term_bound
+#check ZhangLS.Spec.appendixBExactTailErrorConstant
+#print axioms ZhangLS.Spec.appendixBExactTailErrorConstant
+#check ZhangLS.Spec.appendixBTerminalTailErrorConstant
+#print axioms ZhangLS.Spec.appendixBTerminalTailErrorConstant
+#check ZhangLS.Spec.appendixB_actual_tail_exact_residue_power
+#print axioms ZhangLS.Spec.appendixB_actual_tail_exact_residue_power
+#check ZhangLS.Spec.appendixB_actual_tail_terminal_detailed
+#print axioms ZhangLS.Spec.appendixB_actual_tail_terminal_detailed
+#check ZhangLS.Spec.appendixB_actual_tail_terminal_power
+#print axioms ZhangLS.Spec.appendixB_actual_tail_terminal_power
+#check ZhangLS.Spec.appendixB_actual_tail_terminal_uniform
+#print axioms ZhangLS.Spec.appendixB_actual_tail_terminal_uniform
+#check ZhangLS.Spec.appendixB_exact_tail_budget_eventual_power
+#print axioms ZhangLS.Spec.appendixB_exact_tail_budget_eventual_power
+#check ZhangLS.Spec.appendixB_sharp_tail_error_eventual_detailed
+#print axioms ZhangLS.Spec.appendixB_sharp_tail_error_eventual_detailed
+#check ZhangLS.Spec.appendixB_sharp_tail_error_eventual_power
+#print axioms ZhangLS.Spec.appendixB_sharp_tail_error_eventual_power
+#check ZhangLS.Spec.appendixBCutoffUnsmoothingBudget
+#print axioms ZhangLS.Spec.appendixBCutoffUnsmoothingBudget
+#check ZhangLS.Spec.appendixB_actual_rho_finite_error
+#print axioms ZhangLS.Spec.appendixB_actual_rho_finite_error
+#check ZhangLS.Spec.appendixB_cutoff_budget_antitone
+#print axioms ZhangLS.Spec.appendixB_cutoff_budget_antitone
+#check ZhangLS.Spec.appendixB_harmonic_paper_floor
+#print axioms ZhangLS.Spec.appendixB_harmonic_paper_floor
+#check ZhangLS.Spec.appendixB_source_cutoff_le_p1
+#print axioms ZhangLS.Spec.appendixB_source_cutoff_le_p1
+#check ZhangLS.Spec.appendixB_source_floor_geometry
+#print axioms ZhangLS.Spec.appendixB_source_floor_geometry
+#check ZhangLS.Spec.appendixB_two_p1_le_floor_p
+#print axioms ZhangLS.Spec.appendixB_two_p1_le_floor_p
+#check ZhangLS.Spec.appendixB_source_gaussian_slice_quantitative
+#print axioms ZhangLS.Spec.appendixB_source_gaussian_slice_quantitative
+#check ZhangLS.Spec.appendixBRhoGaussianIntegrand
+#print axioms ZhangLS.Spec.appendixBRhoGaussianIntegrand
+#check ZhangLS.Spec.appendixBRhoGaussianSeries
+#print axioms ZhangLS.Spec.appendixBRhoGaussianSeries
+#check ZhangLS.Spec.appendixBSourceGaussianSlice
+#print axioms ZhangLS.Spec.appendixBSourceGaussianSlice
+#check ZhangLS.Spec.appendixB_monomial_LSeries_term
+#print axioms ZhangLS.Spec.appendixB_monomial_LSeries_term
+#check ZhangLS.Spec.appendixB_rho_gaussian_integrand_tsum
+#print axioms ZhangLS.Spec.appendixB_rho_gaussian_integrand_tsum
+#check ZhangLS.Spec.appendixB_rho_gaussian_mellin
+#print axioms ZhangLS.Spec.appendixB_rho_gaussian_mellin
+#check ZhangLS.Spec.appendixB_source_gaussian_integrand
+#print axioms ZhangLS.Spec.appendixB_source_gaussian_integrand
+#check ZhangLS.Spec.appendixB_source_gaussian_numerator
+#print axioms ZhangLS.Spec.appendixB_source_gaussian_numerator
+#check ZhangLS.Spec.appendixB_source_gaussian_slice_eq_sum
+#print axioms ZhangLS.Spec.appendixB_source_gaussian_slice_eq_sum
+#check ZhangLS.Spec.appendixB_source_gaussian_slice_mellin
+#print axioms ZhangLS.Spec.appendixB_source_gaussian_slice_mellin
+#check ZhangLS.Spec.appendixBFiniteGaussianSourceSlice
+#print axioms ZhangLS.Spec.appendixBFiniteGaussianSourceSlice
+#check ZhangLS.Spec.appendixB_rho_gaussian_finite_split
+#print axioms ZhangLS.Spec.appendixB_rho_gaussian_finite_split
+#check ZhangLS.Spec.appendixB_source_gaussian_eq_rho_series
+#print axioms ZhangLS.Spec.appendixB_source_gaussian_eq_rho_series
+#check ZhangLS.Spec.appendixB_source_gaussian_finite_error
+#print axioms ZhangLS.Spec.appendixB_source_gaussian_finite_error
+#check ZhangLS.Spec.appendixB_tail_actual_rectangle_circle
+#print axioms ZhangLS.Spec.appendixB_tail_actual_rectangle_circle
+#check ZhangLS.Spec.appendixBH14TerminalConstant
+#print axioms ZhangLS.Spec.appendixBH14TerminalConstant
+#check ZhangLS.Spec.appendixB_actual_h14_exact_residue_power
+#print axioms ZhangLS.Spec.appendixB_actual_h14_exact_residue_power
+#check ZhangLS.Spec.appendixB_actual_h14_terminal_quantitative
+#print axioms ZhangLS.Spec.appendixB_actual_h14_terminal_quantitative
+#check ZhangLS.Spec.appendixB_actual_h14_terminal_uniform
+#print axioms ZhangLS.Spec.appendixB_actual_h14_terminal_uniform
+#check ZhangLS.Spec.appendixB_tail_residue_exact_shift_independence
+#print axioms ZhangLS.Spec.appendixB_tail_residue_exact_shift_independence
+#check ZhangLS.Spec.appendixB_tail_horizontal_bound
+#print axioms ZhangLS.Spec.appendixB_tail_horizontal_bound
+#check ZhangLS.Spec.appendixB_actual_tail_left_uniform
+#print axioms ZhangLS.Spec.appendixB_actual_tail_left_uniform
+#check ZhangLS.Spec.appendixB_log_kernel_mono_negative
+#print axioms ZhangLS.Spec.appendixB_log_kernel_mono_negative
+#check ZhangLS.Spec.appendixB_tail_left_boundary_bound
+#print axioms ZhangLS.Spec.appendixB_tail_left_boundary_bound
+#check ZhangLS.Spec.appendixB_gaussian_multiplier_bound
+#print axioms ZhangLS.Spec.appendixB_gaussian_multiplier_bound
+#check ZhangLS.Spec.appendixB_linear_gaussian_bound
+#print axioms ZhangLS.Spec.appendixB_linear_gaussian_bound
+#check ZhangLS.Spec.appendixB_source_power_bracket
+#print axioms ZhangLS.Spec.appendixB_source_power_bracket
+#check ZhangLS.Spec.appendixB_tail_integrand_full_kernel_factorization
+#print axioms ZhangLS.Spec.appendixB_tail_integrand_full_kernel_factorization
+#check ZhangLS.Spec.appendixB_tail_integrand_norm_transfer
+#print axioms ZhangLS.Spec.appendixB_tail_integrand_norm_transfer
+#check ZhangLS.Spec.appendixB_source_scale_log
+#print axioms ZhangLS.Spec.appendixB_source_scale_log
+#check ZhangLS.Spec.appendixB_source_scales_uniform
+#print axioms ZhangLS.Spec.appendixB_source_scales_uniform
+#check ZhangLS.Spec.appendixBStrictMonomial
+#print axioms ZhangLS.Spec.appendixBStrictMonomial
+#check ZhangLS.Spec.appendixB_complement_ramp_identity
+#print axioms ZhangLS.Spec.appendixB_complement_ramp_identity
+#check ZhangLS.Spec.appendixB_monomial_excludes_equality
+#print axioms ZhangLS.Spec.appendixB_monomial_excludes_equality
+#check ZhangLS.Spec.appendixB_positive_cpow_split
+#print axioms ZhangLS.Spec.appendixB_positive_cpow_split
+#check ZhangLS.Spec.appendixB_truncated_ramp_identity
+#print axioms ZhangLS.Spec.appendixB_truncated_ramp_identity
+#check ZhangLS.Spec.appendixB_actual_complement_endpoint
+#print axioms ZhangLS.Spec.appendixB_actual_complement_endpoint
+#check ZhangLS.Spec.appendixB_printed_tail_literal
+#print axioms ZhangLS.Spec.appendixB_printed_tail_literal
+#check ZhangLS.Spec.appendixB_terminal_tail_literal
+#print axioms ZhangLS.Spec.appendixB_terminal_tail_literal
+#check ZhangLS.Spec.appendixB_terminal_tail_sign
+#print axioms ZhangLS.Spec.appendixB_terminal_tail_sign
+#check ZhangLS.Spec.appendixB_actual_tail_beta_rate
+#print axioms ZhangLS.Spec.appendixB_actual_tail_beta_rate
+#check ZhangLS.Spec.appendixB_tail_model_beta_error
+#print axioms ZhangLS.Spec.appendixB_tail_model_beta_error
+#check ZhangLS.Spec.appendixB_tail_residue_local_error
+#print axioms ZhangLS.Spec.appendixB_tail_residue_local_error
+#check ZhangLS.Spec.appendixB_tail_zero_numerator_norm
+#print axioms ZhangLS.Spec.appendixB_tail_zero_numerator_norm
+#check ZhangLS.Spec.appendixBRhoMonomialCoefficient
+#print axioms ZhangLS.Spec.appendixBRhoMonomialCoefficient
+#check ZhangLS.Spec.appendixB_actual_rho_far_gaussian
+#print axioms ZhangLS.Spec.appendixB_actual_rho_far_gaussian
+#check ZhangLS.Spec.appendixB_actual_rho_finite_unsmoothing
+#print axioms ZhangLS.Spec.appendixB_actual_rho_finite_unsmoothing
+#check ZhangLS.Spec.appendixB_global_rho_monomial_bound
+#print axioms ZhangLS.Spec.appendixB_global_rho_monomial_bound
+#check ZhangLS.Spec.appendixB_log_ratio_step
+#print axioms ZhangLS.Spec.appendixB_log_ratio_step
+#check ZhangLS.Spec.appendixB_original_rho_monomial_bound
+#print axioms ZhangLS.Spec.appendixB_original_rho_monomial_bound
+#check ZhangLS.Spec.appendixB_rho_monomial_norm
+#print axioms ZhangLS.Spec.appendixB_rho_monomial_norm
+#check ZhangLS.Spec.appendixB_log_kernel_mono_positive
+#print axioms ZhangLS.Spec.appendixB_log_kernel_mono_positive
+#check ZhangLS.Spec.appendixB_source_standard_line_mellin
+#print axioms ZhangLS.Spec.appendixB_source_standard_line_mellin
+#check ZhangLS.Spec.appendixB_tail_right_tails
+#print axioms ZhangLS.Spec.appendixB_tail_right_tails
+#check ZhangLS.Spec.appendixBSharpSourceSlice
+#print axioms ZhangLS.Spec.appendixBSharpSourceSlice
+#check ZhangLS.Spec.appendixBSharpSourceTerm
+#print axioms ZhangLS.Spec.appendixBSharpSourceTerm
+#check ZhangLS.Spec.appendixB_actual_complement_finite_integral
+#print axioms ZhangLS.Spec.appendixB_actual_complement_finite_integral
+#check ZhangLS.Spec.appendixB_affine_log_step_intervalIntegrable
+#print axioms ZhangLS.Spec.appendixB_affine_log_step_intervalIntegrable
+#check ZhangLS.Spec.appendixB_sharp_source_slice_intervalIntegrable
+#print axioms ZhangLS.Spec.appendixB_sharp_source_slice_intervalIntegrable
+#check ZhangLS.Spec.appendixB_sharp_source_term_eq_log
+#print axioms ZhangLS.Spec.appendixB_sharp_source_term_eq_log
+#check ZhangLS.Spec.appendixB_sharp_source_term_integral
+#print axioms ZhangLS.Spec.appendixB_sharp_source_term_integral
+#check ZhangLS.Spec.appendixB_sharp_source_term_intervalIntegrable
+#print axioms ZhangLS.Spec.appendixB_sharp_source_term_intervalIntegrable
+#check ZhangLS.Spec.appendixB_scaled_log_step
+#print axioms ZhangLS.Spec.appendixB_scaled_log_step
+#check ZhangLS.Spec.appendixB_scaled_step_difference_integral
+#print axioms ZhangLS.Spec.appendixB_scaled_step_difference_integral
+#check ZhangLS.Spec.appendixB_strict_step_difference_integral
+#print axioms ZhangLS.Spec.appendixB_strict_step_difference_integral
+#check ZhangLS.Spec.appendixB_strict_step_interval
+#print axioms ZhangLS.Spec.appendixB_strict_step_interval
+#check ZhangLS.Spec.appendixB_strict_step_intervalIntegrable
+#print axioms ZhangLS.Spec.appendixB_strict_step_intervalIntegrable
+#check ZhangLS.Spec.appendixB_actual_complement_step_integral
+#print axioms ZhangLS.Spec.appendixB_actual_complement_step_integral
+#check ZhangLS.Spec.appendixB_complement_finite_sum
+#print axioms ZhangLS.Spec.appendixB_complement_finite_sum
+#check ZhangLS.Spec.appendixB_exponential_complement_integral
+#print axioms ZhangLS.Spec.appendixB_exponential_complement_integral
+#check ZhangLS.Spec.appendixB_exponential_complement_ramp
+#print axioms ZhangLS.Spec.appendixB_exponential_complement_ramp
+#check ZhangLS.Spec.appendixB_integer_log_cutoff
+#print axioms ZhangLS.Spec.appendixB_integer_log_cutoff
+#check ZhangLS.Spec.appendixB_log_step_difference_integral
+#print axioms ZhangLS.Spec.appendixB_log_step_difference_integral
+#check ZhangLS.Spec.appendixB_paper_power_exp
+#print axioms ZhangLS.Spec.appendixB_paper_power_exp
+#check ZhangLS.Spec.appendixBSingleUnsmoothingBudget
+#print axioms ZhangLS.Spec.appendixBSingleUnsmoothingBudget
+#check ZhangLS.Spec.appendixB_finite_gaussian_sharp_error
+#print axioms ZhangLS.Spec.appendixB_finite_gaussian_sharp_error
+#check ZhangLS.Spec.appendixB_source_unsmoothing_uniform
+#print axioms ZhangLS.Spec.appendixB_source_unsmoothing_uniform
+#check ZhangLS.Spec.appendixBComplementKernel
+#print axioms ZhangLS.Spec.appendixBComplementKernel
+#check ZhangLS.Spec.appendixBComplementKernelSum
+#print axioms ZhangLS.Spec.appendixBComplementKernelSum
+#check ZhangLS.Spec.appendixBTruncatedKernel
+#print axioms ZhangLS.Spec.appendixBTruncatedKernel
+#check ZhangLS.Spec.appendixBTruncatedKernelSum
+#print axioms ZhangLS.Spec.appendixBTruncatedKernelSum
+#check ZhangLS.Spec.appendixB_actual_h14_sum
+#print axioms ZhangLS.Spec.appendixB_actual_h14_sum
+#check ZhangLS.Spec.appendixB_complement_terms_summable
+#print axioms ZhangLS.Spec.appendixB_complement_terms_summable
+#check ZhangLS.Spec.appendixB_complement_zero_at_or_above
+#print axioms ZhangLS.Spec.appendixB_complement_zero_at_or_above
+#check ZhangLS.Spec.appendixB_complement_zero_below
+#print axioms ZhangLS.Spec.appendixB_complement_zero_below
+#check ZhangLS.Spec.appendixB_full_eq_h14_add_complement
+#print axioms ZhangLS.Spec.appendixB_full_eq_h14_add_complement
+#check ZhangLS.Spec.appendixB_h14_is_actual_truncation
+#print axioms ZhangLS.Spec.appendixB_h14_is_actual_truncation
+#check ZhangLS.Spec.appendixB_kernel_exact_partition
+#print axioms ZhangLS.Spec.appendixB_kernel_exact_partition
+#check ZhangLS.Spec.appendixB_shifted_kernel_summable
+#print axioms ZhangLS.Spec.appendixB_shifted_kernel_summable
+#check ZhangLS.Spec.appendixB_shifted_kernel_support
+#print axioms ZhangLS.Spec.appendixB_shifted_kernel_support
+#check ZhangLS.Spec.appendixB_tail_includes_equality
+#print axioms ZhangLS.Spec.appendixB_tail_includes_equality
+#check ZhangLS.Spec.appendixB_truncated_terms_summable
+#print axioms ZhangLS.Spec.appendixB_truncated_terms_summable
+#check ZhangLS.Spec.appendixBIntegratedExactTailResidue
+#print axioms ZhangLS.Spec.appendixBIntegratedExactTailResidue
+#check ZhangLS.Spec.appendixB_actual_beta_ne_zero
+#print axioms ZhangLS.Spec.appendixB_actual_beta_ne_zero
+#check ZhangLS.Spec.appendixB_integrated_exact_tail_rate
+#print axioms ZhangLS.Spec.appendixB_integrated_exact_tail_rate
+#check ZhangLS.Spec.appendixB_integrated_original_leading_tail
+#print axioms ZhangLS.Spec.appendixB_integrated_original_leading_tail
+#check ZhangLS.Spec.appendixB_integrated_tail_bstar_rate
+#print axioms ZhangLS.Spec.appendixB_integrated_tail_bstar_rate
+#check ZhangLS.Spec.appendixB_original_tail_leading_phase
+#print axioms ZhangLS.Spec.appendixB_original_tail_leading_phase
+#check ZhangLS.Spec.appendixBGaussianBoundaryBand
+#print axioms ZhangLS.Spec.appendixBGaussianBoundaryBand
+#check ZhangLS.Spec.appendixBGaussianStepError
+#print axioms ZhangLS.Spec.appendixBGaussianStepError
+#check ZhangLS.Spec.appendixBStrictLogStep
+#print axioms ZhangLS.Spec.appendixBStrictLogStep
+#check ZhangLS.Spec.appendixB_gaussian_finite_unsmoothing
+#print axioms ZhangLS.Spec.appendixB_gaussian_finite_unsmoothing
+#check ZhangLS.Spec.appendixB_gaussian_step_endpoint
+#print axioms ZhangLS.Spec.appendixB_gaussian_step_endpoint
+#check ZhangLS.Spec.appendixB_gaussian_step_error_le_one
+#print axioms ZhangLS.Spec.appendixB_gaussian_step_error_le_one
+#check ZhangLS.Spec.appendixB_gaussian_step_error_off_boundary
+#print axioms ZhangLS.Spec.appendixB_gaussian_step_error_off_boundary
+#check ZhangLS.Spec.appendixB_gaussian_weight_unit_interval
+#print axioms ZhangLS.Spec.appendixB_gaussian_weight_unit_interval
+#check ZhangLS.Spec.appendixBUnsmoothingDecayConstant
+#print axioms ZhangLS.Spec.appendixBUnsmoothingDecayConstant
+#check ZhangLS.Spec.appendixB_unsmoothing_budget_eventual_power
+#print axioms ZhangLS.Spec.appendixB_unsmoothing_budget_eventual_power
+#check ZhangLS.Spec.appendixB_unsmoothing_budget_polynomial
+#print axioms ZhangLS.Spec.appendixB_unsmoothing_budget_polynomial
+#check ZhangLS.Spec.appendixB_unsmoothing_decay_constant_pos
+#print axioms ZhangLS.Spec.appendixB_unsmoothing_decay_constant_pos
+#check ZhangLS.Spec.actual151_b_first_cutoff_le_P
+#print axioms ZhangLS.Spec.actual151_b_first_cutoff_le_P
+#check ZhangLS.Spec.actual151_b_product_cutoff_le_P
+#print axioms ZhangLS.Spec.actual151_b_product_cutoff_le_P
+#check ZhangLS.Spec.actual151_b_second_cutoff_le_P
+#print axioms ZhangLS.Spec.actual151_b_second_cutoff_le_P
+#check ZhangLS.Spec.actual151_divisor_coordinates
+#print axioms ZhangLS.Spec.actual151_divisor_coordinates
+#check ZhangLS.Spec.actual151_kernel_pair_product_le_floor
+#print axioms ZhangLS.Spec.actual151_kernel_pair_product_le_floor
+#check ZhangLS.Spec.actual151_psi_arithmetic_sum_finite
+#print axioms ZhangLS.Spec.actual151_psi_arithmetic_sum_finite
+#check ZhangLS.Spec.actual151_weight_tsum_finite
+#print axioms ZhangLS.Spec.actual151_weight_tsum_finite
+#check ZhangLS.Spec.actual151FirstConstant
+#print axioms ZhangLS.Spec.actual151FirstConstant
+#check ZhangLS.Spec.actual151FirstError
+#print axioms ZhangLS.Spec.actual151FirstError
+#check ZhangLS.Spec.actual151FullFactor
+#print axioms ZhangLS.Spec.actual151FullFactor
+#check ZhangLS.Spec.actual151KernelError
+#print axioms ZhangLS.Spec.actual151KernelError
+#check ZhangLS.Spec.actual151MainConstant
+#print axioms ZhangLS.Spec.actual151MainConstant
+#check ZhangLS.Spec.actual151RoughFactor
+#print axioms ZhangLS.Spec.actual151RoughFactor
+#check ZhangLS.Spec.actual151SecondConstant
+#print axioms ZhangLS.Spec.actual151SecondConstant
+#check ZhangLS.Spec.actual151SecondError
+#print axioms ZhangLS.Spec.actual151SecondError
+#check ZhangLS.Spec.actual151_bounded_rough_removal_uniform
+#print axioms ZhangLS.Spec.actual151_bounded_rough_removal_uniform
+#check ZhangLS.Spec.actual151_full_factor_linear
+#print axioms ZhangLS.Spec.actual151_full_factor_linear
+#check ZhangLS.Spec.actual151_full_factors_uniform
+#print axioms ZhangLS.Spec.actual151_full_factors_uniform
+#check ZhangLS.Spec.actual151_linear_error
+#print axioms ZhangLS.Spec.actual151_linear_error
+#check ZhangLS.Spec.actual151_rough_factors_uniform
+#print axioms ZhangLS.Spec.actual151_rough_factors_uniform
+#check ZhangLS.Spec.Lemma151RepairedQuantitativeTarget
+#print axioms ZhangLS.Spec.Lemma151RepairedQuantitativeTarget
+#check ZhangLS.Spec.actual151_main_constant_residue
+#print axioms ZhangLS.Spec.actual151_main_constant_residue
+#check ZhangLS.Spec.actual151_repaired_quantitative
+#print axioms ZhangLS.Spec.actual151_repaired_quantitative
+#check ZhangLS.Spec.actual151_repaired_quantitative_character
+#print axioms ZhangLS.Spec.actual151_repaired_quantitative_character
+#check ZhangLS.Spec.actual151_rho_convolution_collision
+#print axioms ZhangLS.Spec.actual151_rho_convolution_collision
+#check ZhangLS.Spec.actual151FirstConstantBound
+#print axioms ZhangLS.Spec.actual151FirstConstantBound
+#check ZhangLS.Spec.actual151NuError
+#print axioms ZhangLS.Spec.actual151NuError
+#check ZhangLS.Spec.actual151PointwiseError
+#print axioms ZhangLS.Spec.actual151PointwiseError
+#check ZhangLS.Spec.actual151ProductError
+#print axioms ZhangLS.Spec.actual151ProductError
+#check ZhangLS.Spec.actual151SecondConstantBound
+#print axioms ZhangLS.Spec.actual151SecondConstantBound
+#check ZhangLS.Spec.actual151_divisor_products_uniform
+#print axioms ZhangLS.Spec.actual151_divisor_products_uniform
+#check ZhangLS.Spec.actual151_first_constant_le
+#print axioms ZhangLS.Spec.actual151_first_constant_le
+#check ZhangLS.Spec.actual151_product_error
+#print axioms ZhangLS.Spec.actual151_product_error
+#check ZhangLS.Spec.actual151_rhostar_to_rho_uniform
+#print axioms ZhangLS.Spec.actual151_rhostar_to_rho_uniform
+#check ZhangLS.Spec.actual151_second_constant_le
+#print axioms ZhangLS.Spec.actual151_second_constant_le
+#check ZhangLS.Spec.actual151FirstErrorConstant
+#print axioms ZhangLS.Spec.actual151FirstErrorConstant
+#check ZhangLS.Spec.actual151FullErrorConstant
+#print axioms ZhangLS.Spec.actual151FullErrorConstant
+#check ZhangLS.Spec.actual151PointwiseConstant
+#print axioms ZhangLS.Spec.actual151PointwiseConstant
+#check ZhangLS.Spec.actual151Rate
+#print axioms ZhangLS.Spec.actual151Rate
+#check ZhangLS.Spec.actual151SecondErrorConstant
+#print axioms ZhangLS.Spec.actual151SecondErrorConstant
+#check ZhangLS.Spec.actual151_collision_le_rate
+#print axioms ZhangLS.Spec.actual151_collision_le_rate
+#check ZhangLS.Spec.actual151_factor_error_rates
+#print axioms ZhangLS.Spec.actual151_factor_error_rates
+#check ZhangLS.Spec.actual151_outer_four_log_scale
+#print axioms ZhangLS.Spec.actual151_outer_four_log_scale
+#check ZhangLS.Spec.actual151_pointwise_error_rate
+#print axioms ZhangLS.Spec.actual151_pointwise_error_rate
+#check ZhangLS.Spec.actual151_pointwise_error_tendsto_zero
+#print axioms ZhangLS.Spec.actual151_pointwise_error_tendsto_zero
+#check ZhangLS.Spec.actual151_rate_le_one
+#print axioms ZhangLS.Spec.actual151_rate_le_one
+#check ZhangLS.Spec.actual151_rate_nonneg
+#print axioms ZhangLS.Spec.actual151_rate_nonneg
+#check ZhangLS.Spec.actual151_repaired_power_uniform
+#print axioms ZhangLS.Spec.actual151_repaired_power_uniform
+#check ZhangLS.Spec.actual151_zpow_le_rate
+#print axioms ZhangLS.Spec.actual151_zpow_le_rate
+#check ZhangLS.Spec.actual151_regression_P2
+#print axioms ZhangLS.Spec.actual151_regression_P2
+#check ZhangLS.Spec.actual151_regression_actual_beta
+#print axioms ZhangLS.Spec.actual151_regression_actual_beta
+#check ZhangLS.Spec.actual151_regression_common_threshold
+#print axioms ZhangLS.Spec.actual151_regression_common_threshold
+#check ZhangLS.Spec.actual151_regression_floor_endpoint
+#print axioms ZhangLS.Spec.actual151_regression_floor_endpoint
+#check ZhangLS.Spec.actual151_regression_literal_target
+#print axioms ZhangLS.Spec.actual151_regression_literal_target
+#check ZhangLS.Spec.actual151_regression_product_cutoff
+#print axioms ZhangLS.Spec.actual151_regression_product_cutoff
+#check ZhangLS.Spec.actual151_regression_ramified_sum
+#print axioms ZhangLS.Spec.actual151_regression_ramified_sum
+#check ZhangLS.Spec.actual151_regression_rate
+#print axioms ZhangLS.Spec.actual151_regression_rate
+#check ZhangLS.Spec.actual151_regression_source_basis
+#print axioms ZhangLS.Spec.actual151_regression_source_basis
+#check ZhangLS.Spec.actual151_regression_strict_h14
+#print axioms ZhangLS.Spec.actual151_regression_strict_h14
+#check ZhangLS.Spec.actual151_regression_tail_constant
+#print axioms ZhangLS.Spec.actual151_regression_tail_constant
+#check ZhangLS.Spec.actual151_b_weight_rough_rectangle
+#print axioms ZhangLS.Spec.actual151_b_weight_rough_rectangle
+#check ZhangLS.Spec.actual151_psi_arithmetic_sum_rectangle
+#print axioms ZhangLS.Spec.actual151_psi_arithmetic_sum_rectangle
+#check ZhangLS.Spec.actual151_rho_rough_rectangle
+#print axioms ZhangLS.Spec.actual151_rho_rough_rectangle
+#check ZhangLS.Spec.actual151_rough_domain_factor_closed
+#print axioms ZhangLS.Spec.actual151_rough_domain_factor_closed
+#check ZhangLS.Spec.actual151_rough_domain_positive
+#print axioms ZhangLS.Spec.actual151_rough_domain_positive
+#check ZhangLS.Spec.actual151PaperVarpi
+#print axioms ZhangLS.Spec.actual151PaperVarpi
+#check ZhangLS.Spec.actual151_actual_M_weighted_substitution_uniform
+#print axioms ZhangLS.Spec.actual151_actual_M_weighted_substitution_uniform
+#check ZhangLS.Spec.actual151_actual_weighted_substitution_uniform
+#print axioms ZhangLS.Spec.actual151_actual_weighted_substitution_uniform
+#check ZhangLS.Spec.actual151_pointwise_constant_nonneg
+#print axioms ZhangLS.Spec.actual151_pointwise_constant_nonneg
+#check ZhangLS.Spec.actual151WeightedEulerConstant
+#print axioms ZhangLS.Spec.actual151WeightedEulerConstant
+#check ZhangLS.Spec.actual151WeightedEulerPrimeConstant
+#print axioms ZhangLS.Spec.actual151WeightedEulerPrimeConstant
+#check ZhangLS.Spec.actual151_norm_term_real
+#print axioms ZhangLS.Spec.actual151_norm_term_real
+#check ZhangLS.Spec.actual151_one_add_four_le_inv_four
+#print axioms ZhangLS.Spec.actual151_one_add_four_le_inv_four
+#check ZhangLS.Spec.actual151_prime_monomial_real
+#print axioms ZhangLS.Spec.actual151_prime_monomial_real
+#check ZhangLS.Spec.actual151_weighted_abs_euler_bound
+#print axioms ZhangLS.Spec.actual151_weighted_abs_euler_bound
+#check ZhangLS.Spec.actual151_weighted_abs_real_series_bound
+#print axioms ZhangLS.Spec.actual151_weighted_abs_real_series_bound
+#check ZhangLS.Spec.actual151_weighted_euler_constant_pos
+#print axioms ZhangLS.Spec.actual151_weighted_euler_constant_pos
+#check ZhangLS.Spec.actual151_weighted_euler_majorant_summable
+#print axioms ZhangLS.Spec.actual151_weighted_euler_majorant_summable
+#check ZhangLS.Spec.actual151_weighted_euler_prime_constant_nonneg
+#print axioms ZhangLS.Spec.actual151_weighted_euler_prime_constant_nonneg
+#check ZhangLS.Spec.actual151_weighted_finite_correction_bound
+#print axioms ZhangLS.Spec.actual151_weighted_finite_correction_bound
+#check ZhangLS.Spec.actual151_weighted_local_euler_bound
+#print axioms ZhangLS.Spec.actual151_weighted_local_euler_bound
+#check ZhangLS.Spec.actual151_Icc_prefix_rankin
+#print axioms ZhangLS.Spec.actual151_Icc_prefix_rankin
+#check ZhangLS.Spec.actual151_abs_real_series_summable
+#print axioms ZhangLS.Spec.actual151_abs_real_series_summable
+#check ZhangLS.Spec.actual151_finite_prefix_L_22_5_of_zeta
+#print axioms ZhangLS.Spec.actual151_finite_prefix_L_22_5_of_zeta
+#check ZhangLS.Spec.actual151_finite_prefix_log_fourth_of_zeta
+#print axioms ZhangLS.Spec.actual151_finite_prefix_log_fourth_of_zeta
+#check ZhangLS.Spec.actual151_finite_prefix_rankin
+#print axioms ZhangLS.Spec.actual151_finite_prefix_rankin
+#check ZhangLS.Spec.actual151_norm_lseries_term_real
+#print axioms ZhangLS.Spec.actual151_norm_lseries_term_real
+#check ZhangLS.Spec.actual151_norm_riemannZeta_real_le
+#print axioms ZhangLS.Spec.actual151_norm_riemannZeta_real_le
+#check ZhangLS.Spec.actual151_rankin_sigma_gt_one
+#print axioms ZhangLS.Spec.actual151_rankin_sigma_gt_one
+#check ZhangLS.Spec.actual151_rankin_term_le
+#print axioms ZhangLS.Spec.actual151_rankin_term_le
+#check ZhangLS.Spec.actual151_real_zeta_div_series_le
+#print axioms ZhangLS.Spec.actual151_real_zeta_div_series_le
+#check ZhangLS.Spec.actual151_real_zeta_series_le
+#print axioms ZhangLS.Spec.actual151_real_zeta_series_le
+#check ZhangLS.Spec.actual151_strict_prefix_rankin
+#print axioms ZhangLS.Spec.actual151_strict_prefix_rankin
+#check ZhangLS.Spec.actual151WeightedPrimeTailConstant
+#print axioms ZhangLS.Spec.actual151WeightedPrimeTailConstant
+#check ZhangLS.Spec.actual151_local_chi_varpi_at_prime
+#print axioms ZhangLS.Spec.actual151_local_chi_varpi_at_prime
+#check ZhangLS.Spec.actual151_local_weighted_prime_norm
+#print axioms ZhangLS.Spec.actual151_local_weighted_prime_norm
+#check ZhangLS.Spec.actual151_weighted_local_norm_series
+#print axioms ZhangLS.Spec.actual151_weighted_local_norm_series
+#check ZhangLS.Spec.actual151_weighted_prime_norm
+#print axioms ZhangLS.Spec.actual151_weighted_prime_norm
+#check ZhangLS.Spec.actual151_weighted_prime_power_tail
+#print axioms ZhangLS.Spec.actual151_weighted_prime_power_tail
+#check ZhangLS.Spec.actual151_weighted_prime_tail_constant_nonneg
+#print axioms ZhangLS.Spec.actual151_weighted_prime_tail_constant_nonneg
+#check ZhangLS.Spec.actual151_weighted_prime_tail_majorant_summable
+#print axioms ZhangLS.Spec.actual151_weighted_prime_tail_majorant_summable
+#check ZhangLS.Spec.actual151WeightedPrefixConstant
+#print axioms ZhangLS.Spec.actual151WeightedPrefixConstant
+#check ZhangLS.Spec.actual151_actual_coefficient_prefix_bound
+#print axioms ZhangLS.Spec.actual151_actual_coefficient_prefix_bound
+#check ZhangLS.Spec.actual151_actual_paper_varpi_prefix
+#print axioms ZhangLS.Spec.actual151_actual_paper_varpi_prefix
+#check ZhangLS.Spec.actual151_actual_varpi_weight_prefix_bound
+#print axioms ZhangLS.Spec.actual151_actual_varpi_weight_prefix_bound
+#check ZhangLS.Spec.actual151_weighted_prefix_constant_pos
+#print axioms ZhangLS.Spec.actual151_weighted_prefix_constant_pos
+#check ZhangLS.Spec.actual151_weighted_prefix_error_scale
+#print axioms ZhangLS.Spec.actual151_weighted_prefix_error_scale
+
+open Lean Elab Command in
+run_cmd do
+  let env ← getEnv
+  let expected : Array (Name × Name) := #[
+    (`ZhangLS.Spec.AppendixBDivisorB1Regressions, `ZhangLS.Spec.appendixB_divisor_regression_Q),
+    (`ZhangLS.Spec.AppendixBDivisorB1Regressions, `ZhangLS.Spec.appendixB_divisor_regression_actual_b),
+    (`ZhangLS.Spec.AppendixBDivisorB1Regressions, `ZhangLS.Spec.appendixB_divisor_regression_actual_bpsi),
+    (`ZhangLS.Spec.AppendixBDivisorB1Regressions, `ZhangLS.Spec.appendixB_divisor_regression_beta_shifts),
+    (`ZhangLS.Spec.AppendixBDivisorB1Regressions, `ZhangLS.Spec.appendixB_divisor_regression_fourth_endpoint),
+    (`ZhangLS.Spec.AppendixBDivisorB1Regressions, `ZhangLS.Spec.appendixB_divisor_regression_original_A),
+    (`ZhangLS.Spec.AppendixBDivisorB1Regressions, `ZhangLS.Spec.appendixB_divisor_regression_ramified_n1),
+    (`ZhangLS.Spec.AppendixBDivisorB1Regressions, `ZhangLS.Spec.appendixB_divisor_regression_square_source),
+    (`ZhangLS.Spec.AppendixBDivisorB1Regressions, `ZhangLS.Spec.appendixB_divisor_regression_strict_source),
+    (`ZhangLS.Spec.AppendixBDivisorB1Regressions, `ZhangLS.Spec.appendixB_divisor_regression_zero_n1),
+    (`ZhangLS.Spec.AppendixBDivisorCoefficientB1, `ZhangLS.Spec.appendixB_actual_b_B1_uniform),
+    (`ZhangLS.Spec.AppendixBDivisorCoefficientB1, `ZhangLS.Spec.appendixB_actual_b_arithmetic_errors),
+    (`ZhangLS.Spec.AppendixBDivisorCoefficientB1, `ZhangLS.Spec.appendixB_actual_b_factor_majorants),
+    (`ZhangLS.Spec.AppendixBDivisorCoefficientB1, `ZhangLS.Spec.appendixB_optional_character_norm),
+    (`ZhangLS.Spec.AppendixBDivisorCoefficientB1, `ZhangLS.Spec.appendixB_shifted_coefficient_factor_majorant),
+    (`ZhangLS.Spec.AppendixBDivisorCoefficientB1, `ZhangLS.Spec.appendixB_shifted_coefficient_majorant),
+    (`ZhangLS.Spec.AppendixBDivisorNuTail, `ZhangLS.Spec.appendixB_actual_divisor_nu_tail),
+    (`ZhangLS.Spec.AppendixBDivisorNuTail, `ZhangLS.Spec.appendixB_finite_weighted_cauchy),
+    (`ZhangLS.Spec.AppendixBDivisorNuTail, `ZhangLS.Spec.appendixB_tau_two_harmonic_energy),
+    (`ZhangLS.Spec.AppendixBDivisorNuTail, `ZhangLS.Spec.appendixB_tau_two_paper_energy),
+    (`ZhangLS.Spec.AppendixBDivisorReplacementB1, `ZhangLS.Spec.appendixB_divisor_arithmetic_error_explicit),
+    (`ZhangLS.Spec.AppendixBDivisorReplacementB1, `ZhangLS.Spec.appendixB_divisor_arithmetic_error_finite),
+    (`ZhangLS.Spec.AppendixBDivisorReplacementB1, `ZhangLS.Spec.appendixB_divisor_weighted_B1_explicit),
+    (`ZhangLS.Spec.AppendixBDivisorReplacementB1, `ZhangLS.Spec.appendixB_divisor_weighted_B1_uniform),
+    (`ZhangLS.Spec.AppendixBKernelBoundaryIntegrals, `ZhangLS.Spec.appendixB_horizontal_bound),
+    (`ZhangLS.Spec.AppendixBKernelBoundaryIntegrals, `ZhangLS.Spec.appendixB_left_boundary_bound),
+    (`ZhangLS.Spec.AppendixBKernelContour, `ZhangLS.Spec.appendixBRegularIntegrand),
+    (`ZhangLS.Spec.AppendixBKernelContour, `ZhangLS.Spec.appendixBRegularNumerator),
+    (`ZhangLS.Spec.AppendixBKernelContour, `ZhangLS.Spec.appendixB_actual_rectangle_circle),
+    (`ZhangLS.Spec.AppendixBKernelContour, `ZhangLS.Spec.appendixB_regular_integrand_agrees),
+    (`ZhangLS.Spec.AppendixBKernelContour, `ZhangLS.Spec.appendixB_regular_numerator_differentiableOn),
+    (`ZhangLS.Spec.AppendixBKernelContour, `ZhangLS.Spec.appendixB_regular_rectangle_circle),
+    (`ZhangLS.Spec.AppendixBKernelErrorDecay, `ZhangLS.Spec.appendixBContourPolynomialConstant),
+    (`ZhangLS.Spec.AppendixBKernelErrorDecay, `ZhangLS.Spec.appendixB_contour_budget_eventually),
+    (`ZhangLS.Spec.AppendixBKernelErrorDecay, `ZhangLS.Spec.appendixB_contour_budget_nonneg),
+    (`ZhangLS.Spec.AppendixBKernelErrorDecay, `ZhangLS.Spec.appendixB_contour_budget_polynomial),
+    (`ZhangLS.Spec.AppendixBKernelErrorDecay, `ZhangLS.Spec.appendixB_original_error_eventual_bound),
+    (`ZhangLS.Spec.AppendixBKernelErrorDecay, `ZhangLS.Spec.appendixB_original_error_tendsto_zero),
+    (`ZhangLS.Spec.AppendixBKernelFullComparison, `ZhangLS.Spec.appendixBContourBudget),
+    (`ZhangLS.Spec.AppendixBKernelFullComparison, `ZhangLS.Spec.appendixB_full_kernel_quantitative),
+    (`ZhangLS.Spec.AppendixBKernelModelCircle, `ZhangLS.Spec.appendixBModelLeading),
+    (`ZhangLS.Spec.AppendixBKernelModelCircle, `ZhangLS.Spec.appendixB_model_circle_eq_leading),
+    (`ZhangLS.Spec.AppendixBKernelModelCircle, `ZhangLS.Spec.appendixB_model_circle_integral),
+    (`ZhangLS.Spec.AppendixBKernelModelCircle, `ZhangLS.Spec.appendixB_model_partial_fractions),
+    (`ZhangLS.Spec.AppendixBKernelOriginalPhases, `ZhangLS.Spec.appendixBOriginalError),
+    (`ZhangLS.Spec.AppendixBKernelOriginalPhases, `ZhangLS.Spec.appendixB_alpha_logP),
+    (`ZhangLS.Spec.AppendixBKernelOriginalPhases, `ZhangLS.Spec.appendixB_log_model_at_printed),
+    (`ZhangLS.Spec.AppendixBKernelOriginalPhases, `ZhangLS.Spec.appendixB_original_beta_perturbation),
+    (`ZhangLS.Spec.AppendixBKernelOriginalPhases, `ZhangLS.Spec.appendixB_original_frequency_bounds),
+    (`ZhangLS.Spec.AppendixBKernelOriginalPhases, `ZhangLS.Spec.appendixB_original_gamma_eq),
+    (`ZhangLS.Spec.AppendixBKernelOriginalPhases, `ZhangLS.Spec.appendixB_original_gamma_lower),
+    (`ZhangLS.Spec.AppendixBKernelOriginalPhases, `ZhangLS.Spec.appendixB_original_phase_budget),
+    (`ZhangLS.Spec.AppendixBKernelOriginalPhases, `ZhangLS.Spec.appendixB_original_printed_constants_uniform),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, `ZhangLS.Spec.appendixBOriginalCutoff),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, `ZhangLS.Spec.appendixBOriginalExponent),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, `ZhangLS.Spec.appendixBOriginalFrequency),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, `ZhangLS.Spec.appendixBOriginalGamma),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, `ZhangLS.Spec.appendixBOriginalTCost),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, `ZhangLS.Spec.appendixB_original_cutoff_log),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, `ZhangLS.Spec.appendixB_original_cutoff_pos),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, `ZhangLS.Spec.appendixB_original_cutoffs_eventually),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, `ZhangLS.Spec.appendixB_original_full_kernels_uniform),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, `ZhangLS.Spec.appendixB_original_gamma),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, `ZhangLS.Spec.appendixB_original_log_l1),
+    (`ZhangLS.Spec.AppendixBKernelPerronBridge, `ZhangLS.Spec.appendixBFullKernelSum),
+    (`ZhangLS.Spec.AppendixBKernelPerronBridge, `ZhangLS.Spec.appendixB_full_kernel_perron),
+    (`ZhangLS.Spec.AppendixBKernelPerronBridge, `ZhangLS.Spec.appendixB_kernel_perron_term),
+    (`ZhangLS.Spec.AppendixBKernelPerronBridge, `ZhangLS.Spec.appendixB_rho_dirichlet_series),
+    (`ZhangLS.Spec.AppendixBKernelPerronBridge, `ZhangLS.Spec.appendixB_twist_LSeries),
+    (`ZhangLS.Spec.AppendixBKernelPerronBridge, `ZhangLS.Spec.appendixB_twist_summable),
+    (`ZhangLS.Spec.AppendixBKernelPerronBridge, `ZhangLS.Spec.appendixB_twist_term),
+    (`ZhangLS.Spec.AppendixBKernelPhaseComparison, `ZhangLS.Spec.appendixBLogModel),
+    (`ZhangLS.Spec.AppendixBKernelPhaseComparison, `ZhangLS.Spec.appendixBPhaseBudget),
+    (`ZhangLS.Spec.AppendixBKernelPhaseComparison, `ZhangLS.Spec.appendixB_imaginary_exp_lipschitz),
+    (`ZhangLS.Spec.AppendixBKernelPhaseComparison, `ZhangLS.Spec.appendixB_imaginary_exp_norm),
+    (`ZhangLS.Spec.AppendixBKernelPhaseComparison, `ZhangLS.Spec.appendixB_log_model_stability),
+    (`ZhangLS.Spec.AppendixBKernelPhaseComparison, `ZhangLS.Spec.appendixB_model_as_log_model),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_H14_complement_pointwise),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_H14_endpoint_separate),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_P2_source_expanded),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_beta_one_source),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_beta_three_source),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_beta_two_source),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_full_kernel_finite_sum),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_full_kernel_strict_product_endpoint),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_kernel_strict_endpoint),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_kernel_zero_index),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_literal_B3_tail_zero),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_original_P1),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_original_P2),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_original_P3),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_original_gamma_P1),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_original_gamma_P2),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_original_gamma_P3),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_printed_e1_prime),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_printed_e2),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_printed_e3),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, `ZhangLS.Spec.appendixB_source_full_kernel_asymptotics),
+    (`ZhangLS.Spec.AppendixBKernelRightLine, `ZhangLS.Spec.appendixB_integrand_eq_log_kernel),
+    (`ZhangLS.Spec.AppendixBKernelRightLine, `ZhangLS.Spec.appendixB_right_line_integrable),
+    (`ZhangLS.Spec.AppendixBKernelRightLine, `ZhangLS.Spec.appendixB_right_ratio_bound),
+    (`ZhangLS.Spec.AppendixBKernelRightLine, `ZhangLS.Spec.appendixB_right_tails),
+    (`ZhangLS.Spec.AppendixBKernelStripBoundary, `ZhangLS.Spec.AppendixBContourPoint),
+    (`ZhangLS.Spec.AppendixBKernelStripBoundary, `ZhangLS.Spec.appendixBContourHeight),
+    (`ZhangLS.Spec.AppendixBKernelStripBoundary, `ZhangLS.Spec.appendixBContourMajorant),
+    (`ZhangLS.Spec.AppendixBKernelStripBoundary, `ZhangLS.Spec.appendixB_actual_contour_ratio_bound),
+    (`ZhangLS.Spec.AppendixBKernelStripBoundary, `ZhangLS.Spec.appendixB_extended_strip_bounds),
+    (`ZhangLS.Spec.AppendixBKernelZetaCircle, `ZhangLS.Spec.appendixBZetaCircle),
+    (`ZhangLS.Spec.AppendixBKernelZetaCircle, `ZhangLS.Spec.appendixBZetaIntegrand),
+    (`ZhangLS.Spec.AppendixBKernelZetaCircle, `ZhangLS.Spec.appendixB_actual_circle_leading_error),
+    (`ZhangLS.Spec.AppendixBKernelZetaCircle, `ZhangLS.Spec.appendixB_zeta_ratio_circle_error),
+    (`ZhangLS.Spec.AppendixBKernelZetaCircle, `ZhangLS.Spec.appendixB_zeta_ratio_regularized),
+    (`ZhangLS.Spec.AppendixBRoughKernelReplacement, `ZhangLS.Spec.appendixB_actual_kernel_rhostar_to_full_uniform),
+    (`ZhangLS.Spec.AppendixBRoughKernelReplacement, `ZhangLS.Spec.appendixB_kernel_tsum_finite),
+    (`ZhangLS.Spec.AppendixBRoughPrimeLog, `ZhangLS.Spec.appendixB_prime_log_mass),
+    (`ZhangLS.Spec.AppendixBRoughPrimeLog, `ZhangLS.Spec.appendixB_prime_log_mass_strict),
+    (`ZhangLS.Spec.AppendixBRoughPrimeLog, `ZhangLS.Spec.appendixB_weighted_prefix_bound),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB1, `ZhangLS.Spec.appendixB_actual_nu_tail),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB1, `ZhangLS.Spec.appendixB_rough_arithmetic_error_finite),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB1, `ZhangLS.Spec.appendixB_rough_gt_fourth),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB1, `ZhangLS.Spec.appendixB_weighted_B1_explicit),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB1, `ZhangLS.Spec.appendixB_weighted_B1_uniform),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixBRhoGlobalConstant),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixBRoughRemovalConstant),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_nonrough_mass_exp_bound),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_nonrough_mass_finite),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_nonrough_small_prime),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_original_B2_explicit),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_original_B2_uniform),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_original_mass_exponent),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_original_rho_mass),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_original_rho_norm),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_prime_multiple_mass),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_replacement_alpha_scale),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_rho_global_constant_pos),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, `ZhangLS.Spec.appendixB_rough_removal_constant_pos),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixBRhoMass),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_prime_factor_log_sum),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_local_excess),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_local_series),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_local_tail),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_mass_euler),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_mass_exp_bound),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_mass_mul),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_mass_nonneg),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_mass_one),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_mass_zero),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_norm_exp_log),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_norm_le_index),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_prime_factorization),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_prime_norm),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, `ZhangLS.Spec.appendixB_rho_prime_power),
+    (`ZhangLS.Spec.AppendixBRoughWeightedReplacement, `ZhangLS.Spec.appendixBReplacementConstant),
+    (`ZhangLS.Spec.AppendixBRoughWeightedReplacement, `ZhangLS.Spec.appendixB_kernel_replacement_uniform),
+    (`ZhangLS.Spec.AppendixBRoughWeightedReplacement, `ZhangLS.Spec.appendixB_replacement_constant_pos),
+    (`ZhangLS.Spec.AppendixBRoughWeightedReplacement, `ZhangLS.Spec.appendixB_weighted_replacement_explicit),
+    (`ZhangLS.Spec.AppendixBRoughWeightedReplacement, `ZhangLS.Spec.appendixB_weighted_replacement_uniform),
+    (`ZhangLS.Spec.AppendixBRoughWeightedReplacement, `ZhangLS.Spec.appendixB_weighted_rough_removal),
+    (`ZhangLS.Spec.AppendixBTailArithmeticComparison, `ZhangLS.Spec.appendixBSharpTailError),
+    (`ZhangLS.Spec.AppendixBTailArithmeticComparison, `ZhangLS.Spec.appendixB_actual_sharp_tail_quantitative),
+    (`ZhangLS.Spec.AppendixBTailArithmeticComparison, `ZhangLS.Spec.appendixB_actual_tail_to_exact_residue_uniform),
+    (`ZhangLS.Spec.AppendixBTailBoundaryMass, `ZhangLS.Spec.appendixB_interval_card_bound),
+    (`ZhangLS.Spec.AppendixBTailBoundaryMass, `ZhangLS.Spec.appendixB_interval_harmonic_mass),
+    (`ZhangLS.Spec.AppendixBTailBoundaryMass, `ZhangLS.Spec.appendixB_logarithmic_boundary_mass),
+    (`ZhangLS.Spec.AppendixBTailBudgetDecay, `ZhangLS.Spec.appendixBTailContourBudget),
+    (`ZhangLS.Spec.AppendixBTailBudgetDecay, `ZhangLS.Spec.appendixB_tail_contour_budget_eventual_power),
+    (`ZhangLS.Spec.AppendixBTailBudgetDecay, `ZhangLS.Spec.appendixB_tail_contour_budget_polynomial),
+    (`ZhangLS.Spec.AppendixBTailContour, `ZhangLS.Spec.appendixBTailContinuedIntegrand),
+    (`ZhangLS.Spec.AppendixBTailContour, `ZhangLS.Spec.appendixBTailHolomorphicNumerator),
+    (`ZhangLS.Spec.AppendixBTailContour, `ZhangLS.Spec.appendixB_tail_actual_circle_residue),
+    (`ZhangLS.Spec.AppendixBTailContour, `ZhangLS.Spec.appendixB_tail_circle_residue),
+    (`ZhangLS.Spec.AppendixBTailContour, `ZhangLS.Spec.appendixB_tail_continued_agrees),
+    (`ZhangLS.Spec.AppendixBTailContour, `ZhangLS.Spec.appendixB_tail_holomorphic_at_zero),
+    (`ZhangLS.Spec.AppendixBTailContour, `ZhangLS.Spec.appendixB_tail_numerator_differentiableOn),
+    (`ZhangLS.Spec.AppendixBTailContour, `ZhangLS.Spec.appendixB_tail_rectangle_circle),
+    (`ZhangLS.Spec.AppendixBTailContour, `ZhangLS.Spec.appendixB_tail_single_pole_decomposition),
+    (`ZhangLS.Spec.AppendixBTailFarBoundary, `ZhangLS.Spec.appendixB_far_gaussian_summable_bound),
+    (`ZhangLS.Spec.AppendixBTailFarBoundary, `ZhangLS.Spec.appendixB_far_gaussian_term_bound),
+    (`ZhangLS.Spec.AppendixBTailFinalAsymptotic, `ZhangLS.Spec.appendixBExactTailErrorConstant),
+    (`ZhangLS.Spec.AppendixBTailFinalAsymptotic, `ZhangLS.Spec.appendixBTerminalTailErrorConstant),
+    (`ZhangLS.Spec.AppendixBTailFinalAsymptotic, `ZhangLS.Spec.appendixB_actual_tail_exact_residue_power),
+    (`ZhangLS.Spec.AppendixBTailFinalAsymptotic, `ZhangLS.Spec.appendixB_actual_tail_terminal_detailed),
+    (`ZhangLS.Spec.AppendixBTailFinalAsymptotic, `ZhangLS.Spec.appendixB_actual_tail_terminal_power),
+    (`ZhangLS.Spec.AppendixBTailFinalAsymptotic, `ZhangLS.Spec.appendixB_actual_tail_terminal_uniform),
+    (`ZhangLS.Spec.AppendixBTailFinalAsymptotic, `ZhangLS.Spec.appendixB_exact_tail_budget_eventual_power),
+    (`ZhangLS.Spec.AppendixBTailFinalAsymptotic, `ZhangLS.Spec.appendixB_sharp_tail_error_eventual_detailed),
+    (`ZhangLS.Spec.AppendixBTailFinalAsymptotic, `ZhangLS.Spec.appendixB_sharp_tail_error_eventual_power),
+    (`ZhangLS.Spec.AppendixBTailFiniteUnsmoothing, `ZhangLS.Spec.appendixBCutoffUnsmoothingBudget),
+    (`ZhangLS.Spec.AppendixBTailFiniteUnsmoothing, `ZhangLS.Spec.appendixB_actual_rho_finite_error),
+    (`ZhangLS.Spec.AppendixBTailFiniteUnsmoothing, `ZhangLS.Spec.appendixB_cutoff_budget_antitone),
+    (`ZhangLS.Spec.AppendixBTailFiniteUnsmoothing, `ZhangLS.Spec.appendixB_harmonic_paper_floor),
+    (`ZhangLS.Spec.AppendixBTailFloorGeometry, `ZhangLS.Spec.appendixB_source_cutoff_le_p1),
+    (`ZhangLS.Spec.AppendixBTailFloorGeometry, `ZhangLS.Spec.appendixB_source_floor_geometry),
+    (`ZhangLS.Spec.AppendixBTailFloorGeometry, `ZhangLS.Spec.appendixB_two_p1_le_floor_p),
+    (`ZhangLS.Spec.AppendixBTailGaussianComparison, `ZhangLS.Spec.appendixB_source_gaussian_slice_quantitative),
+    (`ZhangLS.Spec.AppendixBTailGaussianMellin, `ZhangLS.Spec.appendixBRhoGaussianIntegrand),
+    (`ZhangLS.Spec.AppendixBTailGaussianMellin, `ZhangLS.Spec.appendixBRhoGaussianSeries),
+    (`ZhangLS.Spec.AppendixBTailGaussianMellin, `ZhangLS.Spec.appendixBSourceGaussianSlice),
+    (`ZhangLS.Spec.AppendixBTailGaussianMellin, `ZhangLS.Spec.appendixB_monomial_LSeries_term),
+    (`ZhangLS.Spec.AppendixBTailGaussianMellin, `ZhangLS.Spec.appendixB_rho_gaussian_integrand_tsum),
+    (`ZhangLS.Spec.AppendixBTailGaussianMellin, `ZhangLS.Spec.appendixB_rho_gaussian_mellin),
+    (`ZhangLS.Spec.AppendixBTailGaussianMellin, `ZhangLS.Spec.appendixB_source_gaussian_integrand),
+    (`ZhangLS.Spec.AppendixBTailGaussianMellin, `ZhangLS.Spec.appendixB_source_gaussian_numerator),
+    (`ZhangLS.Spec.AppendixBTailGaussianMellin, `ZhangLS.Spec.appendixB_source_gaussian_slice_eq_sum),
+    (`ZhangLS.Spec.AppendixBTailGaussianMellin, `ZhangLS.Spec.appendixB_source_gaussian_slice_mellin),
+    (`ZhangLS.Spec.AppendixBTailGaussianSplit, `ZhangLS.Spec.appendixBFiniteGaussianSourceSlice),
+    (`ZhangLS.Spec.AppendixBTailGaussianSplit, `ZhangLS.Spec.appendixB_rho_gaussian_finite_split),
+    (`ZhangLS.Spec.AppendixBTailGaussianSplit, `ZhangLS.Spec.appendixB_source_gaussian_eq_rho_series),
+    (`ZhangLS.Spec.AppendixBTailGaussianSplit, `ZhangLS.Spec.appendixB_source_gaussian_finite_error),
+    (`ZhangLS.Spec.AppendixBTailGlobalContour, `ZhangLS.Spec.appendixB_tail_actual_rectangle_circle),
+    (`ZhangLS.Spec.AppendixBTailH14Assembly, `ZhangLS.Spec.appendixBH14TerminalConstant),
+    (`ZhangLS.Spec.AppendixBTailH14Assembly, `ZhangLS.Spec.appendixB_actual_h14_exact_residue_power),
+    (`ZhangLS.Spec.AppendixBTailH14Assembly, `ZhangLS.Spec.appendixB_actual_h14_terminal_quantitative),
+    (`ZhangLS.Spec.AppendixBTailH14Assembly, `ZhangLS.Spec.appendixB_actual_h14_terminal_uniform),
+    (`ZhangLS.Spec.AppendixBTailH14Assembly, `ZhangLS.Spec.appendixB_tail_residue_exact_shift_independence),
+    (`ZhangLS.Spec.AppendixBTailHorizontalBoundary, `ZhangLS.Spec.appendixB_tail_horizontal_bound),
+    (`ZhangLS.Spec.AppendixBTailLeftBoundary, `ZhangLS.Spec.appendixB_actual_tail_left_uniform),
+    (`ZhangLS.Spec.AppendixBTailLeftBoundary, `ZhangLS.Spec.appendixB_log_kernel_mono_negative),
+    (`ZhangLS.Spec.AppendixBTailLeftBoundary, `ZhangLS.Spec.appendixB_tail_left_boundary_bound),
+    (`ZhangLS.Spec.AppendixBTailMultiplier, `ZhangLS.Spec.appendixB_gaussian_multiplier_bound),
+    (`ZhangLS.Spec.AppendixBTailMultiplier, `ZhangLS.Spec.appendixB_linear_gaussian_bound),
+    (`ZhangLS.Spec.AppendixBTailMultiplier, `ZhangLS.Spec.appendixB_source_power_bracket),
+    (`ZhangLS.Spec.AppendixBTailMultiplier, `ZhangLS.Spec.appendixB_tail_integrand_full_kernel_factorization),
+    (`ZhangLS.Spec.AppendixBTailMultiplier, `ZhangLS.Spec.appendixB_tail_integrand_norm_transfer),
+    (`ZhangLS.Spec.AppendixBTailOriginalRange, `ZhangLS.Spec.appendixB_source_scale_log),
+    (`ZhangLS.Spec.AppendixBTailOriginalRange, `ZhangLS.Spec.appendixB_source_scales_uniform),
+    (`ZhangLS.Spec.AppendixBTailRamp, `ZhangLS.Spec.appendixBStrictMonomial),
+    (`ZhangLS.Spec.AppendixBTailRamp, `ZhangLS.Spec.appendixB_complement_ramp_identity),
+    (`ZhangLS.Spec.AppendixBTailRamp, `ZhangLS.Spec.appendixB_monomial_excludes_equality),
+    (`ZhangLS.Spec.AppendixBTailRamp, `ZhangLS.Spec.appendixB_positive_cpow_split),
+    (`ZhangLS.Spec.AppendixBTailRamp, `ZhangLS.Spec.appendixB_truncated_ramp_identity),
+    (`ZhangLS.Spec.AppendixBTailRegressions, `ZhangLS.Spec.appendixB_actual_complement_endpoint),
+    (`ZhangLS.Spec.AppendixBTailRegressions, `ZhangLS.Spec.appendixB_printed_tail_literal),
+    (`ZhangLS.Spec.AppendixBTailRegressions, `ZhangLS.Spec.appendixB_terminal_tail_literal),
+    (`ZhangLS.Spec.AppendixBTailRegressions, `ZhangLS.Spec.appendixB_terminal_tail_sign),
+    (`ZhangLS.Spec.AppendixBTailResidueRate, `ZhangLS.Spec.appendixB_actual_tail_beta_rate),
+    (`ZhangLS.Spec.AppendixBTailResidueRate, `ZhangLS.Spec.appendixB_tail_model_beta_error),
+    (`ZhangLS.Spec.AppendixBTailResidueRate, `ZhangLS.Spec.appendixB_tail_residue_local_error),
+    (`ZhangLS.Spec.AppendixBTailResidueRate, `ZhangLS.Spec.appendixB_tail_zero_numerator_norm),
+    (`ZhangLS.Spec.AppendixBTailRhoBounds, `ZhangLS.Spec.appendixBRhoMonomialCoefficient),
+    (`ZhangLS.Spec.AppendixBTailRhoBounds, `ZhangLS.Spec.appendixB_actual_rho_far_gaussian),
+    (`ZhangLS.Spec.AppendixBTailRhoBounds, `ZhangLS.Spec.appendixB_actual_rho_finite_unsmoothing),
+    (`ZhangLS.Spec.AppendixBTailRhoBounds, `ZhangLS.Spec.appendixB_global_rho_monomial_bound),
+    (`ZhangLS.Spec.AppendixBTailRhoBounds, `ZhangLS.Spec.appendixB_log_ratio_step),
+    (`ZhangLS.Spec.AppendixBTailRhoBounds, `ZhangLS.Spec.appendixB_original_rho_monomial_bound),
+    (`ZhangLS.Spec.AppendixBTailRhoBounds, `ZhangLS.Spec.appendixB_rho_monomial_norm),
+    (`ZhangLS.Spec.AppendixBTailRightBoundary, `ZhangLS.Spec.appendixB_log_kernel_mono_positive),
+    (`ZhangLS.Spec.AppendixBTailRightBoundary, `ZhangLS.Spec.appendixB_source_standard_line_mellin),
+    (`ZhangLS.Spec.AppendixBTailRightBoundary, `ZhangLS.Spec.appendixB_tail_right_tails),
+    (`ZhangLS.Spec.AppendixBTailSharpFiniteIntegral, `ZhangLS.Spec.appendixBSharpSourceSlice),
+    (`ZhangLS.Spec.AppendixBTailSharpFiniteIntegral, `ZhangLS.Spec.appendixBSharpSourceTerm),
+    (`ZhangLS.Spec.AppendixBTailSharpFiniteIntegral, `ZhangLS.Spec.appendixB_actual_complement_finite_integral),
+    (`ZhangLS.Spec.AppendixBTailSharpFiniteIntegral, `ZhangLS.Spec.appendixB_affine_log_step_intervalIntegrable),
+    (`ZhangLS.Spec.AppendixBTailSharpFiniteIntegral, `ZhangLS.Spec.appendixB_sharp_source_slice_intervalIntegrable),
+    (`ZhangLS.Spec.AppendixBTailSharpFiniteIntegral, `ZhangLS.Spec.appendixB_sharp_source_term_eq_log),
+    (`ZhangLS.Spec.AppendixBTailSharpFiniteIntegral, `ZhangLS.Spec.appendixB_sharp_source_term_integral),
+    (`ZhangLS.Spec.AppendixBTailSharpFiniteIntegral, `ZhangLS.Spec.appendixB_sharp_source_term_intervalIntegrable),
+    (`ZhangLS.Spec.AppendixBTailSharpIntegral, `ZhangLS.Spec.appendixB_scaled_log_step),
+    (`ZhangLS.Spec.AppendixBTailSharpIntegral, `ZhangLS.Spec.appendixB_scaled_step_difference_integral),
+    (`ZhangLS.Spec.AppendixBTailSharpIntegral, `ZhangLS.Spec.appendixB_strict_step_difference_integral),
+    (`ZhangLS.Spec.AppendixBTailSharpIntegral, `ZhangLS.Spec.appendixB_strict_step_interval),
+    (`ZhangLS.Spec.AppendixBTailSharpIntegral, `ZhangLS.Spec.appendixB_strict_step_intervalIntegrable),
+    (`ZhangLS.Spec.AppendixBTailSharpKernel, `ZhangLS.Spec.appendixB_actual_complement_step_integral),
+    (`ZhangLS.Spec.AppendixBTailSharpKernel, `ZhangLS.Spec.appendixB_complement_finite_sum),
+    (`ZhangLS.Spec.AppendixBTailSharpKernel, `ZhangLS.Spec.appendixB_exponential_complement_integral),
+    (`ZhangLS.Spec.AppendixBTailSharpKernel, `ZhangLS.Spec.appendixB_exponential_complement_ramp),
+    (`ZhangLS.Spec.AppendixBTailSharpKernel, `ZhangLS.Spec.appendixB_integer_log_cutoff),
+    (`ZhangLS.Spec.AppendixBTailSharpKernel, `ZhangLS.Spec.appendixB_log_step_difference_integral),
+    (`ZhangLS.Spec.AppendixBTailSharpKernel, `ZhangLS.Spec.appendixB_paper_power_exp),
+    (`ZhangLS.Spec.AppendixBTailSourceUnsmoothing, `ZhangLS.Spec.appendixBSingleUnsmoothingBudget),
+    (`ZhangLS.Spec.AppendixBTailSourceUnsmoothing, `ZhangLS.Spec.appendixB_finite_gaussian_sharp_error),
+    (`ZhangLS.Spec.AppendixBTailSourceUnsmoothing, `ZhangLS.Spec.appendixB_source_unsmoothing_uniform),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixBComplementKernel),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixBComplementKernelSum),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixBTruncatedKernel),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixBTruncatedKernelSum),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixB_actual_h14_sum),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixB_complement_terms_summable),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixB_complement_zero_at_or_above),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixB_complement_zero_below),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixB_full_eq_h14_add_complement),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixB_h14_is_actual_truncation),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixB_kernel_exact_partition),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixB_shifted_kernel_summable),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixB_shifted_kernel_support),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixB_tail_includes_equality),
+    (`ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.appendixB_truncated_terms_summable),
+    (`ZhangLS.Spec.AppendixBTailTerminalResidue, `ZhangLS.Spec.appendixBIntegratedExactTailResidue),
+    (`ZhangLS.Spec.AppendixBTailTerminalResidue, `ZhangLS.Spec.appendixB_actual_beta_ne_zero),
+    (`ZhangLS.Spec.AppendixBTailTerminalResidue, `ZhangLS.Spec.appendixB_integrated_exact_tail_rate),
+    (`ZhangLS.Spec.AppendixBTailTerminalResidue, `ZhangLS.Spec.appendixB_integrated_original_leading_tail),
+    (`ZhangLS.Spec.AppendixBTailTerminalResidue, `ZhangLS.Spec.appendixB_integrated_tail_bstar_rate),
+    (`ZhangLS.Spec.AppendixBTailTerminalResidue, `ZhangLS.Spec.appendixB_original_tail_leading_phase),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothing, `ZhangLS.Spec.appendixBGaussianBoundaryBand),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothing, `ZhangLS.Spec.appendixBGaussianStepError),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothing, `ZhangLS.Spec.appendixBStrictLogStep),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothing, `ZhangLS.Spec.appendixB_gaussian_finite_unsmoothing),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothing, `ZhangLS.Spec.appendixB_gaussian_step_endpoint),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothing, `ZhangLS.Spec.appendixB_gaussian_step_error_le_one),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothing, `ZhangLS.Spec.appendixB_gaussian_step_error_off_boundary),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothing, `ZhangLS.Spec.appendixB_gaussian_weight_unit_interval),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothingDecay, `ZhangLS.Spec.appendixBUnsmoothingDecayConstant),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothingDecay, `ZhangLS.Spec.appendixB_unsmoothing_budget_eventual_power),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothingDecay, `ZhangLS.Spec.appendixB_unsmoothing_budget_polynomial),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothingDecay, `ZhangLS.Spec.appendixB_unsmoothing_decay_constant_pos),
+    (`ZhangLS.Spec.Lemma151ActualFiniteSupport, `ZhangLS.Spec.actual151_b_first_cutoff_le_P),
+    (`ZhangLS.Spec.Lemma151ActualFiniteSupport, `ZhangLS.Spec.actual151_b_product_cutoff_le_P),
+    (`ZhangLS.Spec.Lemma151ActualFiniteSupport, `ZhangLS.Spec.actual151_b_second_cutoff_le_P),
+    (`ZhangLS.Spec.Lemma151ActualFiniteSupport, `ZhangLS.Spec.actual151_divisor_coordinates),
+    (`ZhangLS.Spec.Lemma151ActualFiniteSupport, `ZhangLS.Spec.actual151_kernel_pair_product_le_floor),
+    (`ZhangLS.Spec.Lemma151ActualFiniteSupport, `ZhangLS.Spec.actual151_psi_arithmetic_sum_finite),
+    (`ZhangLS.Spec.Lemma151ActualFiniteSupport, `ZhangLS.Spec.actual151_weight_tsum_finite),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151FirstConstant),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151FirstError),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151FullFactor),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151KernelError),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151MainConstant),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151RoughFactor),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151SecondConstant),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151SecondError),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151_bounded_rough_removal_uniform),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151_full_factor_linear),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151_full_factors_uniform),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151_linear_error),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.actual151_rough_factors_uniform),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseAssembly, `ZhangLS.Spec.Lemma151RepairedQuantitativeTarget),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseAssembly, `ZhangLS.Spec.actual151_main_constant_residue),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseAssembly, `ZhangLS.Spec.actual151_repaired_quantitative),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseAssembly, `ZhangLS.Spec.actual151_repaired_quantitative_character),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseAssembly, `ZhangLS.Spec.actual151_rho_convolution_collision),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseBudget, `ZhangLS.Spec.actual151FirstConstantBound),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseBudget, `ZhangLS.Spec.actual151NuError),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseBudget, `ZhangLS.Spec.actual151PointwiseError),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseBudget, `ZhangLS.Spec.actual151ProductError),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseBudget, `ZhangLS.Spec.actual151SecondConstantBound),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseBudget, `ZhangLS.Spec.actual151_divisor_products_uniform),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseBudget, `ZhangLS.Spec.actual151_first_constant_le),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseBudget, `ZhangLS.Spec.actual151_product_error),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseBudget, `ZhangLS.Spec.actual151_rhostar_to_rho_uniform),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseBudget, `ZhangLS.Spec.actual151_second_constant_le),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151FirstErrorConstant),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151FullErrorConstant),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151PointwiseConstant),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151Rate),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151SecondErrorConstant),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151_collision_le_rate),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151_factor_error_rates),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151_outer_four_log_scale),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151_pointwise_error_rate),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151_pointwise_error_tendsto_zero),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151_rate_le_one),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151_rate_nonneg),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151_repaired_power_uniform),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.actual151_zpow_le_rate),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.actual151_regression_P2),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.actual151_regression_actual_beta),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.actual151_regression_common_threshold),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.actual151_regression_floor_endpoint),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.actual151_regression_literal_target),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.actual151_regression_product_cutoff),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.actual151_regression_ramified_sum),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.actual151_regression_rate),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.actual151_regression_source_basis),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.actual151_regression_strict_h14),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.actual151_regression_tail_constant),
+    (`ZhangLS.Spec.Lemma151ActualRoughRectangle, `ZhangLS.Spec.actual151_b_weight_rough_rectangle),
+    (`ZhangLS.Spec.Lemma151ActualRoughRectangle, `ZhangLS.Spec.actual151_psi_arithmetic_sum_rectangle),
+    (`ZhangLS.Spec.Lemma151ActualRoughRectangle, `ZhangLS.Spec.actual151_rho_rough_rectangle),
+    (`ZhangLS.Spec.Lemma151ActualRoughRectangle, `ZhangLS.Spec.actual151_rough_domain_factor_closed),
+    (`ZhangLS.Spec.Lemma151ActualRoughRectangle, `ZhangLS.Spec.actual151_rough_domain_positive),
+    (`ZhangLS.Spec.Lemma151ActualWeightedApplication, `ZhangLS.Spec.actual151PaperVarpi),
+    (`ZhangLS.Spec.Lemma151ActualWeightedApplication, `ZhangLS.Spec.actual151_actual_M_weighted_substitution_uniform),
+    (`ZhangLS.Spec.Lemma151ActualWeightedApplication, `ZhangLS.Spec.actual151_actual_weighted_substitution_uniform),
+    (`ZhangLS.Spec.Lemma151ActualWeightedApplication, `ZhangLS.Spec.actual151_pointwise_constant_nonneg),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151WeightedEulerConstant),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151WeightedEulerPrimeConstant),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151_norm_term_real),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151_one_add_four_le_inv_four),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151_prime_monomial_real),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151_weighted_abs_euler_bound),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151_weighted_abs_real_series_bound),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151_weighted_euler_constant_pos),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151_weighted_euler_majorant_summable),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151_weighted_euler_prime_constant_nonneg),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151_weighted_finite_correction_bound),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.actual151_weighted_local_euler_bound),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_Icc_prefix_rankin),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_abs_real_series_summable),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_finite_prefix_L_22_5_of_zeta),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_finite_prefix_log_fourth_of_zeta),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_finite_prefix_rankin),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_norm_lseries_term_real),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_norm_riemannZeta_real_le),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_rankin_sigma_gt_one),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_rankin_term_le),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_real_zeta_div_series_le),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_real_zeta_series_le),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.actual151_strict_prefix_rankin),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget, `ZhangLS.Spec.actual151WeightedPrimeTailConstant),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget, `ZhangLS.Spec.actual151_local_chi_varpi_at_prime),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget, `ZhangLS.Spec.actual151_local_weighted_prime_norm),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget, `ZhangLS.Spec.actual151_weighted_local_norm_series),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget, `ZhangLS.Spec.actual151_weighted_prime_norm),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget, `ZhangLS.Spec.actual151_weighted_prime_power_tail),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget, `ZhangLS.Spec.actual151_weighted_prime_tail_constant_nonneg),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget, `ZhangLS.Spec.actual151_weighted_prime_tail_majorant_summable),
+    (`ZhangLS.Spec.Lemma151ActualWeightedSourceBudget, `ZhangLS.Spec.actual151WeightedPrefixConstant),
+    (`ZhangLS.Spec.Lemma151ActualWeightedSourceBudget, `ZhangLS.Spec.actual151_actual_coefficient_prefix_bound),
+    (`ZhangLS.Spec.Lemma151ActualWeightedSourceBudget, `ZhangLS.Spec.actual151_actual_paper_varpi_prefix),
+    (`ZhangLS.Spec.Lemma151ActualWeightedSourceBudget, `ZhangLS.Spec.actual151_actual_varpi_weight_prefix_bound),
+    (`ZhangLS.Spec.Lemma151ActualWeightedSourceBudget, `ZhangLS.Spec.actual151_weighted_prefix_constant_pos),
+    (`ZhangLS.Spec.Lemma151ActualWeightedSourceBudget, `ZhangLS.Spec.actual151_weighted_prefix_error_scale)
+  ]
+  let expectedOwners : Array (Name × Nat) := #[
+    (`ZhangLS.Spec.AppendixBDivisorB1Regressions, 10),
+    (`ZhangLS.Spec.AppendixBDivisorCoefficientB1, 6),
+    (`ZhangLS.Spec.AppendixBDivisorNuTail, 4),
+    (`ZhangLS.Spec.AppendixBDivisorReplacementB1, 4),
+    (`ZhangLS.Spec.AppendixBKernelBoundaryIntegrals, 2),
+    (`ZhangLS.Spec.AppendixBKernelContour, 6),
+    (`ZhangLS.Spec.AppendixBKernelErrorDecay, 6),
+    (`ZhangLS.Spec.AppendixBKernelFullComparison, 2),
+    (`ZhangLS.Spec.AppendixBKernelModelCircle, 4),
+    (`ZhangLS.Spec.AppendixBKernelOriginalPhases, 9),
+    (`ZhangLS.Spec.AppendixBKernelOriginalUniform, 11),
+    (`ZhangLS.Spec.AppendixBKernelPerronBridge, 7),
+    (`ZhangLS.Spec.AppendixBKernelPhaseComparison, 6),
+    (`ZhangLS.Spec.AppendixBKernelRegressions, 21),
+    (`ZhangLS.Spec.AppendixBKernelRightLine, 4),
+    (`ZhangLS.Spec.AppendixBKernelStripBoundary, 5),
+    (`ZhangLS.Spec.AppendixBKernelZetaCircle, 5),
+    (`ZhangLS.Spec.AppendixBRoughKernelReplacement, 2),
+    (`ZhangLS.Spec.AppendixBRoughPrimeLog, 3),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB1, 5),
+    (`ZhangLS.Spec.AppendixBRoughReplacementB2, 14),
+    (`ZhangLS.Spec.AppendixBRoughRhoEuler, 16),
+    (`ZhangLS.Spec.AppendixBRoughWeightedReplacement, 6),
+    (`ZhangLS.Spec.AppendixBTailArithmeticComparison, 3),
+    (`ZhangLS.Spec.AppendixBTailBoundaryMass, 3),
+    (`ZhangLS.Spec.AppendixBTailBudgetDecay, 3),
+    (`ZhangLS.Spec.AppendixBTailContour, 9),
+    (`ZhangLS.Spec.AppendixBTailFarBoundary, 2),
+    (`ZhangLS.Spec.AppendixBTailFinalAsymptotic, 9),
+    (`ZhangLS.Spec.AppendixBTailFiniteUnsmoothing, 4),
+    (`ZhangLS.Spec.AppendixBTailFloorGeometry, 3),
+    (`ZhangLS.Spec.AppendixBTailGaussianComparison, 1),
+    (`ZhangLS.Spec.AppendixBTailGaussianMellin, 10),
+    (`ZhangLS.Spec.AppendixBTailGaussianSplit, 4),
+    (`ZhangLS.Spec.AppendixBTailGlobalContour, 1),
+    (`ZhangLS.Spec.AppendixBTailH14Assembly, 5),
+    (`ZhangLS.Spec.AppendixBTailHorizontalBoundary, 1),
+    (`ZhangLS.Spec.AppendixBTailLeftBoundary, 3),
+    (`ZhangLS.Spec.AppendixBTailMultiplier, 5),
+    (`ZhangLS.Spec.AppendixBTailOriginalRange, 2),
+    (`ZhangLS.Spec.AppendixBTailRamp, 5),
+    (`ZhangLS.Spec.AppendixBTailRegressions, 4),
+    (`ZhangLS.Spec.AppendixBTailResidueRate, 4),
+    (`ZhangLS.Spec.AppendixBTailRhoBounds, 7),
+    (`ZhangLS.Spec.AppendixBTailRightBoundary, 3),
+    (`ZhangLS.Spec.AppendixBTailSharpFiniteIntegral, 8),
+    (`ZhangLS.Spec.AppendixBTailSharpIntegral, 5),
+    (`ZhangLS.Spec.AppendixBTailSharpKernel, 7),
+    (`ZhangLS.Spec.AppendixBTailSourceUnsmoothing, 3),
+    (`ZhangLS.Spec.AppendixBTailSupport, 15),
+    (`ZhangLS.Spec.AppendixBTailTerminalResidue, 6),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothing, 8),
+    (`ZhangLS.Spec.AppendixBTailUnsmoothingDecay, 4),
+    (`ZhangLS.Spec.Lemma151ActualFiniteSupport, 7),
+    (`ZhangLS.Spec.Lemma151ActualKernelFactors, 13),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseAssembly, 5),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseBudget, 10),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseDecay, 14),
+    (`ZhangLS.Spec.Lemma151ActualPointwiseRegressions, 11),
+    (`ZhangLS.Spec.Lemma151ActualRoughRectangle, 5),
+    (`ZhangLS.Spec.Lemma151ActualWeightedApplication, 4),
+    (`ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, 12),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrefix, 12),
+    (`ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget, 8),
+    (`ZhangLS.Spec.Lemma151ActualWeightedSourceBudget, 6)
+  ]
+  let newOwners : Array Name := #[`ZhangLS.Spec.AppendixBDivisorB1Regressions, `ZhangLS.Spec.AppendixBDivisorCoefficientB1, `ZhangLS.Spec.AppendixBDivisorNuTail, `ZhangLS.Spec.AppendixBDivisorReplacementB1, `ZhangLS.Spec.AppendixBTailArithmeticComparison, `ZhangLS.Spec.AppendixBTailBoundaryMass, `ZhangLS.Spec.AppendixBTailBudgetDecay, `ZhangLS.Spec.AppendixBTailContour, `ZhangLS.Spec.AppendixBTailFarBoundary, `ZhangLS.Spec.AppendixBTailFinalAsymptotic, `ZhangLS.Spec.AppendixBTailFiniteUnsmoothing, `ZhangLS.Spec.AppendixBTailFloorGeometry, `ZhangLS.Spec.AppendixBTailGaussianComparison, `ZhangLS.Spec.AppendixBTailGaussianMellin, `ZhangLS.Spec.AppendixBTailGaussianSplit, `ZhangLS.Spec.AppendixBTailGlobalContour, `ZhangLS.Spec.AppendixBTailH14Assembly, `ZhangLS.Spec.AppendixBTailHorizontalBoundary, `ZhangLS.Spec.AppendixBTailLeftBoundary, `ZhangLS.Spec.AppendixBTailMultiplier, `ZhangLS.Spec.AppendixBTailOriginalRange, `ZhangLS.Spec.AppendixBTailRamp, `ZhangLS.Spec.AppendixBTailRegressions, `ZhangLS.Spec.AppendixBTailResidueRate, `ZhangLS.Spec.AppendixBTailRhoBounds, `ZhangLS.Spec.AppendixBTailRightBoundary, `ZhangLS.Spec.AppendixBTailSharpFiniteIntegral, `ZhangLS.Spec.AppendixBTailSharpIntegral, `ZhangLS.Spec.AppendixBTailSharpKernel, `ZhangLS.Spec.AppendixBTailSourceUnsmoothing, `ZhangLS.Spec.AppendixBTailSupport, `ZhangLS.Spec.AppendixBTailTerminalResidue, `ZhangLS.Spec.AppendixBTailUnsmoothing, `ZhangLS.Spec.AppendixBTailUnsmoothingDecay, `ZhangLS.Spec.Lemma151ActualFiniteSupport, `ZhangLS.Spec.Lemma151ActualKernelFactors, `ZhangLS.Spec.Lemma151ActualPointwiseAssembly, `ZhangLS.Spec.Lemma151ActualPointwiseBudget, `ZhangLS.Spec.Lemma151ActualPointwiseDecay, `ZhangLS.Spec.Lemma151ActualPointwiseRegressions, `ZhangLS.Spec.Lemma151ActualRoughRectangle, `ZhangLS.Spec.Lemma151ActualWeightedApplication, `ZhangLS.Spec.Lemma151ActualWeightedEulerBudget, `ZhangLS.Spec.Lemma151ActualWeightedPrefix, `ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget, `ZhangLS.Spec.Lemma151ActualWeightedSourceBudget]
+  let forbiddenFlatModules : Array Name := #[`ActualFiniteSupport, `ActualKernelFactors, `ActualPointwiseAssembly, `ActualPointwiseBudget, `ActualPointwiseDecay, `ActualPointwiseRegressions, `ActualRoughRectangle, `ActualWeightedApplication, `ActualWeightedEulerBudget, `ActualWeightedPrefix, `ActualWeightedPrimeBudget, `ActualWeightedSourceBudget, `DivisorB1Regressions, `DivisorCoefficientB1, `DivisorNuTail, `DivisorReplacementB1, `KernelBoundaryIntegrals, `KernelContour, `KernelErrorDecay, `KernelFullComparison, `KernelModelCircle, `KernelOriginalPhases, `KernelOriginalUniform, `KernelPerronBridge, `KernelPhaseComparison, `KernelRegressions, `KernelRightLine, `KernelStripBoundary, `KernelZetaCircle, `RoughKernelReplacement, `RoughPrimeLog, `RoughReplacementB1, `RoughReplacementB2, `RoughRhoEuler, `RoughWeightedReplacement, `TailArithmeticComparison, `TailBoundaryMass, `TailBudgetDecay, `TailContour, `TailFarBoundary, `TailFinalAsymptotic, `TailFiniteUnsmoothing, `TailFloorGeometry, `TailGaussianComparison, `TailGaussianMellin, `TailGaussianSplit, `TailGlobalContour, `TailH14Assembly, `TailHorizontalBoundary, `TailLeftBoundary, `TailMultiplier, `TailOriginalRange, `TailRamp, `TailRegressions, `TailResidueRate, `TailRhoBounds, `TailRightBoundary, `TailSharpFiniteIntegral, `TailSharpIntegral, `TailSharpKernel, `TailSourceUnsmoothing, `TailSupport, `TailTerminalResidue, `TailUnsmoothing, `TailUnsmoothingDecay]
+  let allowed : Array Name := #[`propext, `Classical.choice, `Quot.sound]
+  let expectedNames := expected.map (fun p => p.2)
+  let ownedModules := expectedOwners.map (fun p => p.1)
+  unless expectedNames.toList.eraseDups.length == expected.size do
+    throwError "Duplicate expected declaration name"
+  unless ownedModules.toList.eraseDups.length == expectedOwners.size do
+    throwError "Duplicate expected owner"
+  for old in forbiddenFlatModules do
+    if env.header.moduleNames.contains old then
+      throwError "Flat module loaded alongside central owners: {old}"
+  for pair in expectedOwners do
+    unless pair.2 > 0 do
+      throwError "Vacuous intended owner {pair.1}"
+    unless env.header.moduleNames.contains pair.1 do
+      throwError "Expected owner not loaded: {pair.1}"
+  for pair in expected do
+    let mod := pair.1
+    let name := pair.2
+    unless ownedModules.contains mod do
+      throwError "Expected declaration has unlisted owner: {mod} {name}"
+    unless env.contains name do
+      throwError "Missing expected declaration: {name}"
+    let some idx := env.getModuleIdxFor? name
+      | throwError "Missing imported owner for {name}"
+    unless env.header.moduleNames[idx]! == mod do
+      throwError "Ownership changed for {name}: expected {mod}, got {env.header.moduleNames[idx]!}"
+  unless expected.size == 412 && expectedOwners.size == 65 do
+    throwError "Public audit scope is not the accepted 412 names / 65 owners"
+  let mut count : Nat := 0
+  let mut newCount : Nat := 0
+  let mut existingCount : Nat := 0
+  for pair in expected do
+    let axs ← collectAxioms pair.2
+    unless axs.all (fun a => allowed.contains a) do
+      throwError "Unexpected public axiom in {pair.2}: {axs}"
+    logInfo m!"PUBLIC_DECL {pair.1} {pair.2} {axs}"
+    count := count + 1
+    if newOwners.contains pair.1 then
+      newCount := newCount + 1
+    else
+      existingCount := existingCount + 1
+  for pair in expectedOwners do
+    let n := (expected.filter (fun p => p.1 == pair.1)).size
+    unless n == pair.2 && n > 0 do
+      throwError "Public owner inventory mismatch: {pair.1} {n} expected {pair.2}"
+    logInfo m!"PUBLIC_OWNER_COUNT {pair.1} {n}"
+  unless count == 412 && newCount == 278 && existingCount == 134 do
+    throwError "Public scope drift: total={count}, new={newCount}, existing={existingCount}"
+  logInfo m!"PUBLIC_TOTAL {count} NEW {newCount} EXISTING {existingCount} OWNERS {expectedOwners.size}"
+  logInfo "CENTRAL_PUBLIC_AUDIT_PASS"

@@ -1,0 +1,20 @@
+{
+  "status": "PASS_FRESH_CENTRAL_AUDITS",
+  "public": 412,
+  "owned": 689,
+  "owners": 65,
+  "scoped_owned": 686,
+  "generated_supplements": 3,
+  "declaration_owners": 67,
+  "new_public": 278,
+  "existing_public": 134,
+  "new_owned": 427,
+  "existing_owned": 262,
+  "loaded_modules": 6573,
+  "source_chains": 17,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

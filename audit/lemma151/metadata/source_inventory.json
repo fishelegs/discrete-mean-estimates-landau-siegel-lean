@@ -1,0 +1,1610 @@
+[
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.BSourceRegressions",
+      "ZhangLS.Spec.RoughCollisionSmoothSplit"
+    ],
+    "central_source_sha256": "aabee221bece7c91c8faaedfd6d6d6258a716965491df93e95efae02c48abc7c",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "8acdf50bac4b877bf3820fa6caf0a9de32d7a7c8fceb8ee8d049d2f053b1faf9",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "aabee221bece7c91c8faaedfd6d6d6258a716965491df93e95efae02c48abc7c",
+    "module": "ZhangLS.Spec.Lemma151ActualFiniteSupport",
+    "old_imports": [
+      "ZhangLS.Spec.BSourceRegressions",
+      "ZhangLS.Spec.RoughCollisionSmoothSplit"
+    ],
+    "old_module": "ActualFiniteSupport",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "f916e0232cb8badfaa759f6d2f153c64f17930a6b99e07fb87bedba2fc3aa900",
+    "public_count": 7,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualFiniteSupport.lean",
+    "frozen_owned_count": 7,
+    "central_scoped_owned_count": 7
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailH14Assembly",
+      "ZhangLS.Spec.AppendixBRoughKernelReplacement",
+      "ZhangLS.Spec.Lemma151ActualFiniteSupport"
+    ],
+    "central_source_sha256": "2a76936aa05d3e45f88796ab13483a4bec3b92a9878f721ac5021d586a5518ab",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "ba12aacc2ef466b1e13639d412c490c25e7be057217ac19496edf7d74eb8347f",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "4891af519046669fe4d81749df66b2b2da0bf0a449b8921406e7d1c1ec9d562d",
+    "module": "ZhangLS.Spec.Lemma151ActualKernelFactors",
+    "old_imports": [
+      "TailH14Assembly",
+      "RoughKernelReplacement",
+      "ActualFiniteSupport"
+    ],
+    "old_module": "ActualKernelFactors",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "927571be5796fa44fc9b904570d3e60c50b655d749d33300987001057b91cf4d",
+    "public_count": 13,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualKernelFactors.lean",
+    "frozen_owned_count": 20,
+    "central_scoped_owned_count": 20
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma151ActualPointwiseBudget",
+      "ZhangLS.Spec.Lemma151ActualRoughRectangle"
+    ],
+    "central_source_sha256": "4f8f94b941652f8c253459cabc100688c40d91c2b43d9d4265a24c0e541f3144",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "427a6bdf9b0bfb8bc19e7f00f4cb757c66a677b59f0a28bfed00128cb44b5209",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "c1e4d2b52878ede00c213f72806fbabe440d974875896e75f51f3b02aac32448",
+    "module": "ZhangLS.Spec.Lemma151ActualPointwiseAssembly",
+    "old_imports": [
+      "ActualPointwiseBudget",
+      "ActualRoughRectangle"
+    ],
+    "old_module": "ActualPointwiseAssembly",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "2aa6b12feb02e921a6514ea69eec39ed0f923388a430ce30aa2b88d65fbe7015",
+    "public_count": 5,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseAssembly.lean",
+    "frozen_owned_count": 8,
+    "central_scoped_owned_count": 8
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma151ActualKernelFactors",
+      "ZhangLS.Spec.AppendixBDivisorCoefficientB1"
+    ],
+    "central_source_sha256": "733294370646c9f47ec4a4f9331c4c8470190f739f942a1f40cb3254c22e744e",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "273ce28b1de3b57c9ed59bb14f11dcdb5541460bd99a157a058616d8d17ab745",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "bd30819e96d62d471ca9020fd015bcaa732520f066b2467e0e1aeb1a023fc41a",
+    "module": "ZhangLS.Spec.Lemma151ActualPointwiseBudget",
+    "old_imports": [
+      "ActualKernelFactors",
+      "DivisorCoefficientB1"
+    ],
+    "old_module": "ActualPointwiseBudget",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "454409c3a0e4faa06fa35cd1bb401ea02976eadb01c11abab7bfd8e01c963325",
+    "public_count": 10,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseBudget.lean",
+    "frozen_owned_count": 11,
+    "central_scoped_owned_count": 11
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma151ActualPointwiseAssembly"
+    ],
+    "central_source_sha256": "51cc20b4ae30f3d9787fb480671c850e9c89570498a95681a3608b43daefd81c",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "944049a93f62246d7228ae9802ed420e955dee9c7b869ee17848628d121009b5",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "b6788b8e9a1c5a0aaba2c73437443600e773ab4f0ebc98ed95803f3a0192a039",
+    "module": "ZhangLS.Spec.Lemma151ActualPointwiseDecay",
+    "old_imports": [
+      "ActualPointwiseAssembly"
+    ],
+    "old_module": "ActualPointwiseDecay",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "880908c44ddd6dd1f53608308463e068c05937e5438fa3bde4c80041452c3d9d",
+    "public_count": 14,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseDecay.lean",
+    "frozen_owned_count": 25,
+    "central_scoped_owned_count": 25
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma151ActualPointwiseDecay",
+      "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+      "ZhangLS.Spec.PaperErrorScaleBudget"
+    ],
+    "central_source_sha256": "8bb2d6f7db7697a3acb6c88dd3f818fadde46be130d3642aec5cc39d6bacd70c",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "b35003947fba4bf3b573bf01c83fa9785652e7143968af55b6e40882cad06fbb",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "f253e93137f2763623f2018646551e2d994dca0b11c7433384706a506692b0ed",
+    "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+    "old_imports": [
+      "ActualPointwiseDecay",
+      "DivisorB1Regressions",
+      "ZhangLS.Spec.PaperErrorScaleBudget"
+    ],
+    "old_module": "ActualPointwiseRegressions",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "406e2a6588d43e16b61b2f37bff6d019760ce46bd3fc305843af037e46dd98e5",
+    "public_count": 11,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+    "frozen_owned_count": 11,
+    "central_scoped_owned_count": 11
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma151ActualFiniteSupport",
+      "ZhangLS.Spec.FiniteDivisorProductReindex"
+    ],
+    "central_source_sha256": "750f3401a63ab0f9ac7c84592939e4f46f7b5fcb41d0e8916cb2615fe27394e9",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "9b82605099d85769fae95133c15d005f417befd2f0c810b73bbf73154abaa16c",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "575c083bde0eecacf9bd153032169d77f33e0a40943125a82f3c9a1ca9ce1cab",
+    "module": "ZhangLS.Spec.Lemma151ActualRoughRectangle",
+    "old_imports": [
+      "ActualFiniteSupport",
+      "ZhangLS.Spec.FiniteDivisorProductReindex"
+    ],
+    "old_module": "ActualRoughRectangle",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "9a067c4a3c6db794d7457e8559a3d742524c9c217fe52e769d7624631d24ebf8",
+    "public_count": 5,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualRoughRectangle.lean",
+    "frozen_owned_count": 5,
+    "central_scoped_owned_count": 5
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma151ActualPointwiseDecay",
+      "ZhangLS.Spec.Lemma151ActualWeightedSourceBudget",
+      "ZhangLS.Spec.Lemma153DownstreamNormalization"
+    ],
+    "central_source_sha256": "7c6f32ce6185157b42148e5e078022db5b133b739cd1575864bcfd7c853e21e9",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "ecc64f95d7092c8761625bb8f4388a184684709522406d1cc6a1378b04f1fa0d",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "38fc0eeba833aec3ff5e2f807e25140c4304688a044e7d1d9ebf1a15e2a1890c",
+    "module": "ZhangLS.Spec.Lemma151ActualWeightedApplication",
+    "old_imports": [
+      "ActualPointwiseDecay",
+      "ActualWeightedSourceBudget",
+      "ZhangLS.Spec.Lemma153DownstreamNormalization"
+    ],
+    "old_module": "ActualWeightedApplication",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "b25b5dfb853ded30183683b0feb15f89030432ea0aac72965bb9587a9c68fe5b",
+    "public_count": 4,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualWeightedApplication.lean",
+    "frozen_owned_count": 5,
+    "central_scoped_owned_count": 5
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget",
+      "ZhangLS.Spec.Lemma32ActualSeriesIdentity"
+    ],
+    "central_source_sha256": "c213b0d74326ad6f386c4125eaad358454b5cc410e422cc5eb917f7d36822072",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "fd5e70fe9c1d2cb5e912ddbf37042526689090d523147074926043b83420ca7c",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "c3785ab69b6dc38c1620e86c9b6588ba1b94c637af461c4946eb55f6e22cb766",
+    "module": "ZhangLS.Spec.Lemma151ActualWeightedEulerBudget",
+    "old_imports": [
+      "ActualWeightedPrimeBudget",
+      "ZhangLS.Spec.Lemma32ActualSeriesIdentity"
+    ],
+    "old_module": "ActualWeightedEulerBudget",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "2f87e4f4b41ac2bf9b49c6e9020c6bd35018345a2eefc97a424c25c38cd323f3",
+    "public_count": 12,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualWeightedEulerBudget.lean",
+    "frozen_owned_count": 14,
+    "central_scoped_owned_count": 14
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma83FinitePrimeBounds",
+      "Mathlib.NumberTheory.LSeries.Basic",
+      "Mathlib.NumberTheory.LSeries.RiemannZeta",
+      "Mathlib.Tactic"
+    ],
+    "central_source_sha256": "28eafc89a455581ce099b9b391aefab661cf05e0c524cc8af7329465ddc3935b",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "bd6687ac03363fd5f07af3711932c2fad602503f877d9b05b91c6ac5460a7e8f",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "28eafc89a455581ce099b9b391aefab661cf05e0c524cc8af7329465ddc3935b",
+    "module": "ZhangLS.Spec.Lemma151ActualWeightedPrefix",
+    "old_imports": [
+      "ZhangLS.Spec.Lemma83FinitePrimeBounds",
+      "Mathlib.NumberTheory.LSeries.Basic",
+      "Mathlib.NumberTheory.LSeries.RiemannZeta",
+      "Mathlib.Tactic"
+    ],
+    "old_module": "ActualWeightedPrefix",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "ef34b0e76df01d90f83e7f519a563a3b429f07f61c30671540ef64e7f5982423",
+    "public_count": 12,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualWeightedPrefix.lean",
+    "frozen_owned_count": 19,
+    "central_scoped_owned_count": 19
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma153ActualDirichletSeries"
+    ],
+    "central_source_sha256": "c94048d4a5322bce06cefdd8a50aeb1850251ea3a4cae32ef314d0fe0df2fd5b",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "059ac950174784bf705d8dfe9ae047ec8fc19533294a3f584f40c518f4249835",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "c94048d4a5322bce06cefdd8a50aeb1850251ea3a4cae32ef314d0fe0df2fd5b",
+    "module": "ZhangLS.Spec.Lemma151ActualWeightedPrimeBudget",
+    "old_imports": [
+      "ZhangLS.Spec.Lemma153ActualDirichletSeries"
+    ],
+    "old_module": "ActualWeightedPrimeBudget",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "1de7269601449b607f45321edaec9959704b9cbd4d78736d2554194b61f41aef",
+    "public_count": 8,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualWeightedPrimeBudget.lean",
+    "frozen_owned_count": 12,
+    "central_scoped_owned_count": 12
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma151ActualWeightedEulerBudget",
+      "ZhangLS.Spec.Lemma151ActualWeightedPrefix",
+      "ZhangLS.Spec.Lemma153PaperParameters",
+      "ZhangLS.Spec.Lemma34TupleConvolution"
+    ],
+    "central_source_sha256": "4524e736b16ade07a2a54b308de178fae4ecefdd0913055de9284840f0e87340",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "a1bd29b70991f0484fe4785ba1482d461bc0077aaf831922cfb8b7d6ec78c33d",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "e6efc2796c324dc4471ff3bd6d2885bac9e8a961d325e23fd8a9b66ab30a4959",
+    "module": "ZhangLS.Spec.Lemma151ActualWeightedSourceBudget",
+    "old_imports": [
+      "ActualWeightedEulerBudget",
+      "ActualWeightedPrefix",
+      "ZhangLS.Spec.Lemma153PaperParameters",
+      "ZhangLS.Spec.Lemma34TupleConvolution"
+    ],
+    "old_module": "ActualWeightedSourceBudget",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "0aabee7827a2d91b988b3fc6b4ee508a379fa461dd976ed18bdd2b5e8bbe0a64",
+    "public_count": 6,
+    "repo_relative_source": "ZhangLS/Spec/Lemma151ActualWeightedSourceBudget.lean",
+    "frozen_owned_count": 8,
+    "central_scoped_owned_count": 8
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBDivisorCoefficientB1"
+    ],
+    "central_source_sha256": "f9b0e3a83707b63d5965a3e9809f4246f1948b4aee35d3dd3a4b7e560e23f174",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "57691dc7f148ca06dcaf218dd96b2956625bd3e0a33a20c5eabb03a62fc79c3e",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "9d55ba2b800448c016aaa94787392354413640190c17487afa12df3d6c47a8ad",
+    "module": "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+    "old_imports": [
+      "DivisorCoefficientB1"
+    ],
+    "old_module": "DivisorB1Regressions",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "85aaaf2079119ce48680ebe545ad14f5ca670fc5499411edab18b8db2064c6cc",
+    "public_count": 10,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+    "frozen_owned_count": 13,
+    "central_scoped_owned_count": 13
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBDivisorReplacementB1"
+    ],
+    "central_source_sha256": "06541eecf4e69634ac8cb09e5b4009b5b1e6b491b2202ffd4f9ac9ddeb91a3b4",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "ba9a713ad9ef3331d93f0e83282905b15b5e8d1e5767dab3d5f2615fed95e93d",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "97e939a9e86c849b2af761860e533524354335b633105aceaf698f1f31573437",
+    "module": "ZhangLS.Spec.AppendixBDivisorCoefficientB1",
+    "old_imports": [
+      "DivisorReplacementB1"
+    ],
+    "old_module": "DivisorCoefficientB1",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "5761cb6b1316fdd14d31fd8568d9678e1472b8476f9a508fa6eff15062351055",
+    "public_count": 6,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorCoefficientB1.lean",
+    "frozen_owned_count": 6,
+    "central_scoped_owned_count": 6
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBRoughReplacementB1",
+      "ZhangLS.Spec.Lemma34TauProduct",
+      "ZhangLS.Spec.Proposition71DivisorWeights",
+      "ZhangLS.Spec.BCoefficientBounds"
+    ],
+    "central_source_sha256": "b7c35b1882637caf16d5012307d98f5dba762540b2e3951ae6ed5ee6b5e8ad3f",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "3ca6e01fe80f58583fb49112b4ec4f9636abd9deadfac885c2df6c463b62f9d4",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "29d6d88b3d8d709f5ad7ed22283cf2cc4637931349852f91e4ce2d95868dd902",
+    "module": "ZhangLS.Spec.AppendixBDivisorNuTail",
+    "old_imports": [
+      "RoughReplacementB1",
+      "ZhangLS.Spec.Lemma34TauProduct",
+      "ZhangLS.Spec.Proposition71DivisorWeights",
+      "ZhangLS.Spec.BCoefficientBounds"
+    ],
+    "old_module": "DivisorNuTail",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "418b74bce54948f5c6cc028b6b86f5db88e92ee7534d29601b1ab56f4ae80b14",
+    "public_count": 4,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorNuTail.lean",
+    "frozen_owned_count": 7,
+    "central_scoped_owned_count": 7
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBDivisorNuTail"
+    ],
+    "central_source_sha256": "3f5155e23f5fda42a48cf76d9a33cf5a4fe6b3ffcd07e7e13f79ab592d2ed198",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "f775b1b6515f38a8376f1bb66234481021fee06c80115bc7b6f01232c04d78f8",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "34e3fa2a3e5eb66218ece12d67aac6fc51a0047ec90b64ee292a0013db3c4059",
+    "module": "ZhangLS.Spec.AppendixBDivisorReplacementB1",
+    "old_imports": [
+      "DivisorNuTail"
+    ],
+    "old_module": "DivisorReplacementB1",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "5f8398cdc5cbc555737aec65091129498fba7f2db61c518df16c71246aeec068",
+    "public_count": 4,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorReplacementB1.lean",
+    "frozen_owned_count": 5,
+    "central_scoped_owned_count": 5
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelStripBoundary",
+      "ZhangLS.Spec.Lemma84BoundaryIntegralBounds"
+    ],
+    "central_source_sha256": "4dcda2faa8b8bd5ba25c5209576ebfdb840893d5186c425927689ce2ececec6b",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "61ab549fe573d5b136281aa81165e3cfdc0a2ad2988942cc2b47919111baa879",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "dd1eff1b5ee4ce369b2bfc0080bd641bed6c688fa184b92515e3cae1a464fdf5",
+    "module": "ZhangLS.Spec.AppendixBKernelBoundaryIntegrals",
+    "old_imports": [
+      "KernelStripBoundary",
+      "ZhangLS.Spec.Lemma84BoundaryIntegralBounds"
+    ],
+    "old_module": "KernelBoundaryIntegrals",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "ebf3f99dba218500235aa4d963ffb0bb11c0e2b5573582ab1bd8e8c171322a04",
+    "public_count": 2,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelBoundaryIntegrals.lean",
+    "frozen_owned_count": 9,
+    "central_scoped_owned_count": 9
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelZetaCircle",
+      "ZhangLS.Spec.Lemma84TwoPoleRemoval",
+      "ZhangLS.Spec.Lemma84ContourBridge",
+      "ZhangLS.Spec.Lemma84ContourGeometry"
+    ],
+    "central_source_sha256": "1d454077b11ff0fedfc9a1b29997170b158aeaa95b4a737a93af7ab87c387c3a",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "7e373a67cf04f77eead47881670abef233c8e419a28434dda2db8d6af7de0e14",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "6f0dbd857ac924d9adeb60c68c2b071fcfc7ae55cd69e5b0aaca76138e598aeb",
+    "module": "ZhangLS.Spec.AppendixBKernelContour",
+    "old_imports": [
+      "KernelZetaCircle",
+      "ZhangLS.Spec.Lemma84TwoPoleRemoval",
+      "ZhangLS.Spec.Lemma84ContourBridge",
+      "ZhangLS.Spec.Lemma84ContourGeometry"
+    ],
+    "old_module": "KernelContour",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "6c997b4c10d80b0dd37ed6a18ab7750e9bd0228dfc88188506ec9ad779ccb8a4",
+    "public_count": 6,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelContour.lean",
+    "frozen_owned_count": 8,
+    "central_scoped_owned_count": 8
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelOriginalPhases"
+    ],
+    "central_source_sha256": "14535603b18894469e2b1f9d86c2cf9f6d64da26edce8bd62eafbb595df80ee5",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "4c52869ab00af99660b43650e9a56106ab67d4a031ebd61466b9efd6a0b5c080",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "9e510f28ccdf52280c925124e4350daa954d008e063509952b2b88007171aa3c",
+    "module": "ZhangLS.Spec.AppendixBKernelErrorDecay",
+    "old_imports": [
+      "KernelOriginalPhases"
+    ],
+    "old_module": "KernelErrorDecay",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "06223d881fee2127e3af4774e0f3e6df5584f98c4b8dc9f9e857d0912451b88a",
+    "public_count": 6,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelErrorDecay.lean",
+    "frozen_owned_count": 11,
+    "central_scoped_owned_count": 11
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelBoundaryIntegrals",
+      "ZhangLS.Spec.Lemma84InfiniteContourAlgebra",
+      "ZhangLS.Spec.Lemma84ContourErrorBudget",
+      "ZhangLS.Spec.Lemma84ActualBoundaryBounds"
+    ],
+    "central_source_sha256": "d2b56abe75e1d07760108396905b91477893576c976c24cb27f003a43d7fa7ce",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "7fd7a90d16c5664b9dc62a9a040fac307c8314b75e4087f42b7c305dc9cdd59c",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "3f6f3748f5f024dfe1ce7ebf31b0943021e5396b0b2113b42604bba3b0975464",
+    "module": "ZhangLS.Spec.AppendixBKernelFullComparison",
+    "old_imports": [
+      "KernelBoundaryIntegrals",
+      "ZhangLS.Spec.Lemma84InfiniteContourAlgebra",
+      "ZhangLS.Spec.Lemma84ContourErrorBudget",
+      "ZhangLS.Spec.Lemma84ActualBoundaryBounds"
+    ],
+    "old_module": "KernelFullComparison",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "9a0ff401da556c9d84203f8ec1b5424aaa5457cf3aac65eaf43177b29fbe112e",
+    "public_count": 2,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelFullComparison.lean",
+    "frozen_owned_count": 14,
+    "central_scoped_owned_count": 14
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelPerronBridge",
+      "ZhangLS.Spec.Lemma84Residue"
+    ],
+    "central_source_sha256": "656b456af3fe0416499a97074d69ef8189a9603de1000f3b3a5a7c23f66acfd4",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "3d2c33b26a37d0b1215a63e069cfae1bb0834299c2e458a08ce358fc6a097055",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "143a89f2b32cf48526e90ba17b9f914ef4387e9f2d8846296f48630124aaf8e5",
+    "module": "ZhangLS.Spec.AppendixBKernelModelCircle",
+    "old_imports": [
+      "KernelPerronBridge",
+      "ZhangLS.Spec.Lemma84Residue"
+    ],
+    "old_module": "KernelModelCircle",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "8402ab3613687a83d12bce893f6236d50023340f7d73cd4ad53ce9f27e76ddbe",
+    "public_count": 4,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelModelCircle.lean",
+    "frozen_owned_count": 12,
+    "central_scoped_owned_count": 12
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelPhaseComparison"
+    ],
+    "central_source_sha256": "e248d305ebd1fff0e52eb374c6d7f83a30bf0fa4720be858551aaa9954474693",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "4d244ebc52d3538c767df3f377b218cdd913580b0a5c26a2bb798c909640ac98",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "744139c0710132a11c92a3f24e94487b175b09a7cf58806163bb913d71dd5fae",
+    "module": "ZhangLS.Spec.AppendixBKernelOriginalPhases",
+    "old_imports": [
+      "KernelPhaseComparison"
+    ],
+    "old_module": "KernelOriginalPhases",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "e28fa6ec6a88aa99cfc722e10d8bef57937f2521ce73209cee6b2ed01793577c",
+    "public_count": 9,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelOriginalPhases.lean",
+    "frozen_owned_count": 32,
+    "central_scoped_owned_count": 30
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelFullComparison",
+      "ZhangLS.Spec.Lemma84Section8Cutoffs",
+      "ZhangLS.Spec.Lemma83"
+    ],
+    "central_source_sha256": "ce349c20af7d6735b4ed8794cb42f8f0764d0ff9442407f96204c0460cea5bb5",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "d1af37949f86e1c283fe204ae855d2a04ba9708052ed6a455098392b2539e2cf",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "3a0fe491602394cdd9d715183b94e1631dbb261295791d16a5e92161ecf0b6d3",
+    "module": "ZhangLS.Spec.AppendixBKernelOriginalUniform",
+    "old_imports": [
+      "KernelFullComparison",
+      "ZhangLS.Spec.Lemma84Section8Cutoffs",
+      "ZhangLS.Spec.Lemma83"
+    ],
+    "old_module": "KernelOriginalUniform",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "a5a2d38211aba6f0abfadcf502a55e00765b485351484eaea6cdf9a3e7451b95",
+    "public_count": 11,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelOriginalUniform.lean",
+    "frozen_owned_count": 20,
+    "central_scoped_owned_count": 20
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma151Definitions",
+      "ZhangLS.Spec.Lemma84LogPerronSeries",
+      "Mathlib.NumberTheory.LSeries.Dirichlet"
+    ],
+    "central_source_sha256": "1ae767ecb30702754b13f66d227a4a4246dd15fa8bf9596790a876639a94b8de",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "050c4b79872809b9ef4c1ea1a787d7327323481a4e2626e912d0da2c386f883c",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "1ae767ecb30702754b13f66d227a4a4246dd15fa8bf9596790a876639a94b8de",
+    "module": "ZhangLS.Spec.AppendixBKernelPerronBridge",
+    "old_imports": [
+      "ZhangLS.Spec.Lemma151Definitions",
+      "ZhangLS.Spec.Lemma84LogPerronSeries",
+      "Mathlib.NumberTheory.LSeries.Dirichlet"
+    ],
+    "old_module": "KernelPerronBridge",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "338f6bc4de627e697a0c561bf56e31d9b0360aaeb125a51699b88c272ba3617e",
+    "public_count": 7,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelPerronBridge.lean",
+    "frozen_owned_count": 16,
+    "central_scoped_owned_count": 15
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelOriginalUniform",
+      "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds"
+    ],
+    "central_source_sha256": "a6511f06916b14fe920f61f3149907ee4d6ae2634e8f832da6fc515f14a94d61",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "4534f77614eee67bc2541ec8bdd67ef2476991eae62fbb6eecbcc231ef3b667f",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "3798d9c874859f0c1a9fc99452cf19c4670d93060e6af7cd54db9700b3cbf5db",
+    "module": "ZhangLS.Spec.AppendixBKernelPhaseComparison",
+    "old_imports": [
+      "KernelOriginalUniform",
+      "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds"
+    ],
+    "old_module": "KernelPhaseComparison",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "b9cf0eea20e30b2e951f7a6596c028042b909dc6032eabf2597f23dcab92d981",
+    "public_count": 6,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelPhaseComparison.lean",
+    "frozen_owned_count": 18,
+    "central_scoped_owned_count": 18
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelErrorDecay",
+      "ZhangLS.Spec.BSourceRegressions"
+    ],
+    "central_source_sha256": "ccc0e3f2356885a5eccf30a6c1d810b8c383167c7047c4550027a0b74b96c5ca",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "136dac0928c34d0037f47a4f74ac2c181616e899ffb9e645c1bae15928b20551",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "cbac2fae6bff152c94f4440cec26e434ddd35d230433bddc800c57a928af4f91",
+    "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+    "old_imports": [
+      "KernelErrorDecay",
+      "ZhangLS.Spec.BSourceRegressions"
+    ],
+    "old_module": "KernelRegressions",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "370198db1639e39007dde62ef34e25de3f54a5caf9583fafcef8df14f36d6547",
+    "public_count": 21,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+    "frozen_owned_count": 21,
+    "central_scoped_owned_count": 21
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelZetaCircle",
+      "ZhangLS.Spec.Lemma84ContourKernelBounds",
+      "ZhangLS.Spec.Proposition71ZetaRightAnchor"
+    ],
+    "central_source_sha256": "9d2c59e68bbf80df9536b3937bf669311d52ddd5e40d9009287087c0b72ac718",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "44e2c9e200ebd2ee18983a2f5753dc177beffc5e0bb355eded341b88be8006f9",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "016882e6e41440af1f65cd6a16fdf9aae6d087751bbf86f2b9f3fc2fbff7f8c8",
+    "module": "ZhangLS.Spec.AppendixBKernelRightLine",
+    "old_imports": [
+      "KernelZetaCircle",
+      "ZhangLS.Spec.Lemma84ContourKernelBounds",
+      "ZhangLS.Spec.Proposition71ZetaRightAnchor"
+    ],
+    "old_module": "KernelRightLine",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "184d8e83008e64c222069f785733bac9b038a5f71aae1c3b5407819e1c64ac64",
+    "public_count": 4,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRightLine.lean",
+    "frozen_owned_count": 4,
+    "central_scoped_owned_count": 4
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelContour",
+      "ZhangLS.Spec.AppendixBKernelRightLine"
+    ],
+    "central_source_sha256": "99ed1e2a759ee2c16299530a089dedddfee669e664f227d4a5549d4749fd879f",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "360191cde351f14c2f6b7308e60a6d2ad428f20953c8c3310d3d52b1f133380c",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "8e3c02c2aa9b14d5851a0598f75951b41deefee7bfc3ed9a133fab79d55575ed",
+    "module": "ZhangLS.Spec.AppendixBKernelStripBoundary",
+    "old_imports": [
+      "KernelContour",
+      "KernelRightLine"
+    ],
+    "old_module": "KernelStripBoundary",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "d8e6f820582cd94567b2aa5fcb6513342d36db425a65e108ac853d20f176c7f2",
+    "public_count": 5,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelStripBoundary.lean",
+    "frozen_owned_count": 9,
+    "central_scoped_owned_count": 9
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelModelCircle",
+      "ZhangLS.Spec.Section15AnalyticFactorBounds",
+      "ZhangLS.Spec.Proposition71ZetaRegularizedReciprocal"
+    ],
+    "central_source_sha256": "dad78f1c6495b723b2b39a9de862e1a5109127c22a71b0258a06a7f09890d8e0",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "11e24c32145cff8c93cb13e53a81fe879cab395c21b3cf2764d3562fc5044e7a",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "4a6cfa74c7a7b99be808573382e0c4117b684dd1f4cac786f3a2ec05295abac0",
+    "module": "ZhangLS.Spec.AppendixBKernelZetaCircle",
+    "old_imports": [
+      "KernelModelCircle",
+      "ZhangLS.Spec.Section15AnalyticFactorBounds",
+      "ZhangLS.Spec.Proposition71ZetaRegularizedReciprocal"
+    ],
+    "old_module": "KernelZetaCircle",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "cf9990e0a5a912cc3a5ab32d8ccce14007f538316f3d041229851bcd62f73e22",
+    "public_count": 5,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBKernelZetaCircle.lean",
+    "frozen_owned_count": 13,
+    "central_scoped_owned_count": 13
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBRoughWeightedReplacement"
+    ],
+    "central_source_sha256": "9cf4a15dc82011cdd13d047dcb7a55ca29b45e466c9b5b94f3820431a687e2f0",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "f2108fde59d5a9f8e1b45a72d786fdafb4e0f4a46d8b2d16783f322c5f0263a0",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "5c9155aa4a3de6315cd83803764fe800a4b1b466da12d86779897ae4dbd3e4bf",
+    "module": "ZhangLS.Spec.AppendixBRoughKernelReplacement",
+    "old_imports": [
+      "RoughWeightedReplacement"
+    ],
+    "old_module": "RoughKernelReplacement",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "fb700c0d1c15399c4ddf77ad9026270fe30412df1f8a02b191fdf4131c297f54",
+    "public_count": 2,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBRoughKernelReplacement.lean",
+    "frozen_owned_count": 3,
+    "central_scoped_owned_count": 3
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "Mathlib.NumberTheory.Chebyshev",
+      "Mathlib.NumberTheory.Harmonic.Bounds",
+      "Mathlib.Algebra.BigOperators.Module",
+      "Mathlib.Analysis.SpecialFunctions.Exp"
+    ],
+    "central_source_sha256": "c3d86340da91c15f9dfb8b723b8dc8597de46ffe54c5086555356e34fd71fce0",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "01aab8d56bc1e928a53696a76dfb09431b215713fac42156599bcefb4eb3fb84",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "c3d86340da91c15f9dfb8b723b8dc8597de46ffe54c5086555356e34fd71fce0",
+    "module": "ZhangLS.Spec.AppendixBRoughPrimeLog",
+    "old_imports": [
+      "Mathlib.NumberTheory.Chebyshev",
+      "Mathlib.NumberTheory.Harmonic.Bounds",
+      "Mathlib.Algebra.BigOperators.Module",
+      "Mathlib.Analysis.SpecialFunctions.Exp"
+    ],
+    "old_module": "RoughPrimeLog",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "072811bfe692966b8190d527572fc242aee192a41c9c5e6c1bcba01a5337a051",
+    "public_count": 3,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBRoughPrimeLog.lean",
+    "frozen_owned_count": 10,
+    "central_scoped_owned_count": 10
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma151WeightedError",
+      "ZhangLS.Spec.RoughCollisionArithmetic",
+      "ZhangLS.Spec.Lemma31"
+    ],
+    "central_source_sha256": "3ab8686b43e0e72a20fc139498b536aa7c2d4dcf71166eb5e1b6ad63625276ff",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "fee48dff892a8815428fc3e2556ac5a0c5f5f6f38526898c6ff4f306c15230c3",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "3ab8686b43e0e72a20fc139498b536aa7c2d4dcf71166eb5e1b6ad63625276ff",
+    "module": "ZhangLS.Spec.AppendixBRoughReplacementB1",
+    "old_imports": [
+      "ZhangLS.Spec.Lemma151WeightedError",
+      "ZhangLS.Spec.RoughCollisionArithmetic",
+      "ZhangLS.Spec.Lemma31"
+    ],
+    "old_module": "RoughReplacementB1",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "f78c8bc3ade694ca72bb0e1f42e089f170a0a02f34ed6982670b8f5fbc2dd423",
+    "public_count": 5,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBRoughReplacementB1.lean",
+    "frozen_owned_count": 10,
+    "central_scoped_owned_count": 10
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBRoughRhoEuler",
+      "ZhangLS.Spec.AppendixBRoughReplacementB1",
+      "ZhangLS.Spec.Lemma83"
+    ],
+    "central_source_sha256": "ead6d372d3421b2ea361f10fe8cf22bae1ce2d4ce1eda488e1a8219b5c0bc88d",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "a328d138bef2f0b2c3cc185aee599dcb32d07a59accf549e19353bbc398dfaef",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "f55c7aaf373bafdf62161794d10155b3e5351777587e2effa1a8638bc11c97ff",
+    "module": "ZhangLS.Spec.AppendixBRoughReplacementB2",
+    "old_imports": [
+      "RoughRhoEuler",
+      "RoughReplacementB1",
+      "ZhangLS.Spec.Lemma83"
+    ],
+    "old_module": "RoughReplacementB2",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "c85dabc546632234d9678d4ecae934229fc1eaf1ec3537f8af65f4728592a135",
+    "public_count": 14,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBRoughReplacementB2.lean",
+    "frozen_owned_count": 18,
+    "central_scoped_owned_count": 18
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBRoughPrimeLog",
+      "ZhangLS.Spec.RoughCollisionRegressions",
+      "Mathlib.NumberTheory.EulerProduct.Basic",
+      "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds"
+    ],
+    "central_source_sha256": "f826ece430dc9ca67ce20e386ca3e349f516d1a0c40a5d5a4dbced30b74b0d1e",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "5961ef6d30f9f058c1d210243fec5aa864b0875acfe33a1c2e9417bc18c20ad7",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "7592572d3370f6f80d2efef4d8ce6d17fdea5545954cd980e3a5e3bb861607a2",
+    "module": "ZhangLS.Spec.AppendixBRoughRhoEuler",
+    "old_imports": [
+      "RoughPrimeLog",
+      "ZhangLS.Spec.RoughCollisionRegressions",
+      "Mathlib.NumberTheory.EulerProduct.Basic",
+      "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds"
+    ],
+    "old_module": "RoughRhoEuler",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "93d2b93f578ad1098176c30ac150f3bb3c7eca390caf40a85546d21d03b34dc5",
+    "public_count": 16,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBRoughRhoEuler.lean",
+    "frozen_owned_count": 27,
+    "central_scoped_owned_count": 27
+  },
+  {
+    "action": "reuse_existing",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBRoughReplacementB2"
+    ],
+    "central_source_sha256": "659780c910668f3cf57f380e09e68ccfa5ef1381dbb0fa9b5f852305f88d1b82",
+    "fresh_central_elaboration_required": false,
+    "frozen_flat_olean_sha256": "c3ed32b472df32928788ad87075506f97023bcc785e6c3052e97867377773b3c",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "317a4a1e8a60b9d2903b8fcad8b02fd33511721916aceff52ca5f595f22e0ef3",
+    "module": "ZhangLS.Spec.AppendixBRoughWeightedReplacement",
+    "old_imports": [
+      "RoughReplacementB2"
+    ],
+    "old_module": "RoughWeightedReplacement",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "1343c5fc6d17bc729192b3b6582e1970d2ef5dc36676bc664335eafe956b1fa2",
+    "public_count": 6,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBRoughWeightedReplacement.lean",
+    "frozen_owned_count": 7,
+    "central_scoped_owned_count": 7
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailGaussianComparison",
+      "ZhangLS.Spec.AppendixBTailSourceUnsmoothing",
+      "ZhangLS.Spec.AppendixBTailTerminalResidue"
+    ],
+    "central_source_sha256": "10de650e137fb5d4153e38e28b791f46bf5a449f93ce06b0a44ee4b9ac607918",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "8e7796fcc72a45944727ee48860c3a6f4a98c6f6d8a44346a0ecc7a93858cda0",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "31036eb4e86af0d5f7f8bc1e02ed536b300cbe908def665ff3c481ee3b709f8b",
+    "module": "ZhangLS.Spec.AppendixBTailArithmeticComparison",
+    "old_imports": [
+      "TailGaussianComparison",
+      "TailSourceUnsmoothing",
+      "TailTerminalResidue"
+    ],
+    "old_module": "TailArithmeticComparison",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "f0099d15f0510d1b946effc916b31aaf748621af87b24164dd87562b3a847774",
+    "public_count": 3,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailArithmeticComparison.lean",
+    "frozen_owned_count": 7,
+    "central_scoped_owned_count": 7
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailUnsmoothing"
+    ],
+    "central_source_sha256": "29c140ceab577dde8e96ed72d9cfaf473d0842ba2cc22d378f1c9ae882c1570f",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "26b78fb323de469d08e5b8004286de222f703d42e52ffeacec536e8a47431ce4",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "45b048016ac083157c8853352c70d711562f5aa243855cd68461878b1804c57c",
+    "module": "ZhangLS.Spec.AppendixBTailBoundaryMass",
+    "old_imports": [
+      "TailUnsmoothing"
+    ],
+    "old_module": "TailBoundaryMass",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "b4f15bdb9bca79c4edac659967d08af0b398e6fe362ccc34a52ee93ca60ce8d0",
+    "public_count": 3,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailBoundaryMass.lean",
+    "frozen_owned_count": 11,
+    "central_scoped_owned_count": 11
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailMultiplier",
+      "ZhangLS.Spec.AppendixBKernelErrorDecay"
+    ],
+    "central_source_sha256": "e2c01629a90b7b721c46451604747a67a16e9a0e2af4dab18dd04b438dc13422",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "2845bf4476e22ba5f7b8cb05901b39c0d6d4e0de16c700ef199259f221cf18e2",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "d7ed6b74b41280e935a4a04a6957a0b3577ffefdd152f71819cf32f37c4e9490",
+    "module": "ZhangLS.Spec.AppendixBTailBudgetDecay",
+    "old_imports": [
+      "TailMultiplier",
+      "KernelErrorDecay"
+    ],
+    "old_module": "TailBudgetDecay",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "fa54dedd0097ab65dd0f9e51fb13747920608c1ce0cd62e7796145f449adcfff",
+    "public_count": 3,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailBudgetDecay.lean",
+    "frozen_owned_count": 4,
+    "central_scoped_owned_count": 4
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailGaussianMellin",
+      "ZhangLS.Spec.AppendixBKernelContour"
+    ],
+    "central_source_sha256": "24eab7e918b2cc9b0f2ad0a629940874fd0b7e31877a2662eaf100ea1eb3b7ce",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "84e017f9829791a23c2350ee351eb5be1b847e90b0835206be3d724ea9a3fad6",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "7d3fbf2d492100f2af37b46c270c90c23f068154677904ef4586b68743e4664d",
+    "module": "ZhangLS.Spec.AppendixBTailContour",
+    "old_imports": [
+      "TailGaussianMellin",
+      "KernelContour"
+    ],
+    "old_module": "TailContour",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "7f68e8f718d3897b10f826ddd889ee464094eeb2937d54dddca2cf5f31ce3c11",
+    "public_count": 9,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailContour.lean",
+    "frozen_owned_count": 11,
+    "central_scoped_owned_count": 11
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailGaussianMellin",
+      "ZhangLS.Spec.Lemma61GaussianCutoff"
+    ],
+    "central_source_sha256": "c709132eb925ec0da8ff28dd4e1f052c75b25298126e137063470f6209099df6",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "eb8123e85e816efd074c41c7fc65af1e03e5e0272a87409d6aece10dcede7220",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "2cf47115691b3cef16aeffbf9cb33f4c1cf03a5dd1667bc69b40849f3dca4dc9",
+    "module": "ZhangLS.Spec.AppendixBTailFarBoundary",
+    "old_imports": [
+      "TailGaussianMellin",
+      "ZhangLS.Spec.Lemma61GaussianCutoff"
+    ],
+    "old_module": "TailFarBoundary",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "ede0b2eee0a3a72039d05693b08bbd6f92f7eed3cadc9a351277dabdd6a551b5",
+    "public_count": 2,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailFarBoundary.lean",
+    "frozen_owned_count": 2,
+    "central_scoped_owned_count": 2
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailArithmeticComparison",
+      "ZhangLS.Spec.AppendixBTailUnsmoothingDecay"
+    ],
+    "central_source_sha256": "92dd5e7b27b55d6aad218e28985c8f569eb275ba0b1ba97e3e9f72877dcb0c82",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "673c91de8af42c730074719075157a752bc61fe6bb33c656f36ed587614ca5c0",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "1cfdfdd40c7ea03d197f64063d39075e4ed33d16add4fc54cd4b74703a82d9fd",
+    "module": "ZhangLS.Spec.AppendixBTailFinalAsymptotic",
+    "old_imports": [
+      "TailArithmeticComparison",
+      "TailUnsmoothingDecay"
+    ],
+    "old_module": "TailFinalAsymptotic",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "41f48589178fa886b1dcff784a918a91405c0ff2591ac6e1c23c24a5306012fa",
+    "public_count": 9,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailFinalAsymptotic.lean",
+    "frozen_owned_count": 14,
+    "central_scoped_owned_count": 14
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailRhoBounds",
+      "Mathlib.NumberTheory.Harmonic.Bounds"
+    ],
+    "central_source_sha256": "186b340d706cdc3f85d64fe06757d81761c05e0638c425e1be20bef05a5e7bbb",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "ded1ef8d9595881c5f66ccbe19e75885bb6d9778c27799009d62d9c634dbcdc8",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "63809e43a850fa2aab5d0cabf08888b96993945d4d9632b47f11a4f244612d02",
+    "module": "ZhangLS.Spec.AppendixBTailFiniteUnsmoothing",
+    "old_imports": [
+      "TailRhoBounds",
+      "Mathlib.NumberTheory.Harmonic.Bounds"
+    ],
+    "old_module": "TailFiniteUnsmoothing",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "f11e87c00c1b5841c294f10b6ea2e00ffbbe6088ac45050f569edc8ac0dbec31",
+    "public_count": 4,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailFiniteUnsmoothing.lean",
+    "frozen_owned_count": 6,
+    "central_scoped_owned_count": 6
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailSharpKernel"
+    ],
+    "central_source_sha256": "38774c0967e805696ddf99fa9b53ae09cc05bc91b4b54d6cb024fda794eb2f63",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "a14c7420e58c63021e70ee5bd496a817e33722160106d037853d044b3b8f9a2a",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "664440e321de14a5b7747f3b0b37e89df4478054b9375c415839a8740eddf5b0",
+    "module": "ZhangLS.Spec.AppendixBTailFloorGeometry",
+    "old_imports": [
+      "TailSharpKernel"
+    ],
+    "old_module": "TailFloorGeometry",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "4fca7ee9ff71ed981a119d754a87302636b39514d9b5649b943078846252988b",
+    "public_count": 3,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailFloorGeometry.lean",
+    "frozen_owned_count": 3,
+    "central_scoped_owned_count": 3
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailRightBoundary",
+      "ZhangLS.Spec.AppendixBTailHorizontalBoundary",
+      "ZhangLS.Spec.AppendixBTailGlobalContour",
+      "ZhangLS.Spec.AppendixBTailBudgetDecay"
+    ],
+    "central_source_sha256": "22bdc6ea2581c2ca3872b221f3a3e1432b95d1a49e2581dfdf7844d6e45bd608",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "facc0d27f731d4d6474aa15f9f5c377d218d82455209280aaabc59f505e147bc",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "3a2adf147cce601a0ba9e3c6d7e38e040ab509f61e75b58106c43eda3bfa9a24",
+    "module": "ZhangLS.Spec.AppendixBTailGaussianComparison",
+    "old_imports": [
+      "TailRightBoundary",
+      "TailHorizontalBoundary",
+      "TailGlobalContour",
+      "TailBudgetDecay"
+    ],
+    "old_module": "TailGaussianComparison",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "c6d65628870c6573111be45b156b36f35ca710fc067523dffc1a064b7d6fea0d",
+    "public_count": 1,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailGaussianComparison.lean",
+    "frozen_owned_count": 9,
+    "central_scoped_owned_count": 9
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailRamp",
+      "ZhangLS.Spec.Lemma44ProductMellin",
+      "ZhangLS.Spec.Lemma151LocalResidue"
+    ],
+    "central_source_sha256": "7eb0c65c2137b5f3252077161f46328be378af02d3cf17d5e34d7bebaa9e20de",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "256da24ac7f3108bff523a331c56c4ccbe6c4ece0cf061d101638039e6cdbbe1",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "54eb803cf3f34364531c789c81c8b054d03f7ac38d487e82d38d204516bd00ec",
+    "module": "ZhangLS.Spec.AppendixBTailGaussianMellin",
+    "old_imports": [
+      "TailRamp",
+      "ZhangLS.Spec.Lemma44ProductMellin",
+      "ZhangLS.Spec.Lemma151LocalResidue"
+    ],
+    "old_module": "TailGaussianMellin",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "d4982d8b88cb3a294aebc55dd247db7656104d8dea513ef1ee3b5323f1865fa6",
+    "public_count": 10,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailGaussianMellin.lean",
+    "frozen_owned_count": 18,
+    "central_scoped_owned_count": 18
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailSharpFiniteIntegral",
+      "ZhangLS.Spec.AppendixBTailFiniteUnsmoothing"
+    ],
+    "central_source_sha256": "e5025c3e3590efb2390b56c66eb111400af57e1b269eea80fe275c077c98c9a7",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "d74e5356cf8fd3eb9c8dd6b3ba88689dee6afacfd5074eb3d347946a06e1fe1a",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "2034181d68033a69dcb0739adc9badd7af7a247ccc3c47ea3c087fc9867daa56",
+    "module": "ZhangLS.Spec.AppendixBTailGaussianSplit",
+    "old_imports": [
+      "TailSharpFiniteIntegral",
+      "TailFiniteUnsmoothing"
+    ],
+    "old_module": "TailGaussianSplit",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "da39904a035848814b1a26d0d6dcacfd0ceb67c56b1a5d77a21650708ed23ce4",
+    "public_count": 4,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailGaussianSplit.lean",
+    "frozen_owned_count": 5,
+    "central_scoped_owned_count": 5
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailContour"
+    ],
+    "central_source_sha256": "7ef1b4daf6b303d2a5f21350de2be6094d15af7557851c9040503671a5a9c5e8",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "2b732ed1c4de9bb84a109193556b24f9b4242e56c92ea882cef846b54d717d9f",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "0210c6f5dad1e7b81903fc2e3f73218ca39c694f947c6248a182f90f223103ad",
+    "module": "ZhangLS.Spec.AppendixBTailGlobalContour",
+    "old_imports": [
+      "TailContour"
+    ],
+    "old_module": "TailGlobalContour",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "568ccfde1df3b834c4902cee3f7c3f3bff190102b38a32ca111588dc418a332c",
+    "public_count": 1,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailGlobalContour.lean",
+    "frozen_owned_count": 2,
+    "central_scoped_owned_count": 2
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailFinalAsymptotic",
+      "ZhangLS.Spec.AppendixBTailRegressions"
+    ],
+    "central_source_sha256": "8df069dae3e66b00a19323c3702618ae2ac3906450b7a3a249a76e3c9aad4783",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "953bd1533736f6e78c231062db59722c40e013772953e5a7b24f860e5ba8cdea",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "26f96ae55f9312715e0226d5c72ab53c0532287f6022d8e65ca7da4bca668022",
+    "module": "ZhangLS.Spec.AppendixBTailH14Assembly",
+    "old_imports": [
+      "TailFinalAsymptotic",
+      "TailRegressions"
+    ],
+    "old_module": "TailH14Assembly",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "9bc27e00567ba64b40676d945e87015920f3085b279b385e6aa65f2404e1288c",
+    "public_count": 5,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailH14Assembly.lean",
+    "frozen_owned_count": 7,
+    "central_scoped_owned_count": 7
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailLeftBoundary"
+    ],
+    "central_source_sha256": "3d504a8010f598648c1eb8b8141dc89204b2cdaf4fbca9888d470b75531b40bf",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "771169498b76a943aa35ff73ed41e1008e14fb645bd2fdbff28a11a1208b7fb2",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "f8aabe38a861f9c569931f18fd524eb02939fea6135ce9e299acd1981cb07af4",
+    "module": "ZhangLS.Spec.AppendixBTailHorizontalBoundary",
+    "old_imports": [
+      "TailLeftBoundary"
+    ],
+    "old_module": "TailHorizontalBoundary",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "a50df9576d98c11f5aa84d9cca9793ecaf73c4fcffe7f9aa6dfa318fe4227747",
+    "public_count": 1,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailHorizontalBoundary.lean",
+    "frozen_owned_count": 1,
+    "central_scoped_owned_count": 1
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailMultiplier",
+      "ZhangLS.Spec.AppendixBTailOriginalRange"
+    ],
+    "central_source_sha256": "f65a54faf5f54cc34424725600b3b2806a4643fbc12ffe63bca84de9f1558b12",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "a5ddea3494980d52eada57e8479c307f1a883e06f3aae01b12848693ddfd6bf4",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "826e5aa39a156dca341e98231c93f6b05d256c10ef5916c9e0edc4a47d429326",
+    "module": "ZhangLS.Spec.AppendixBTailLeftBoundary",
+    "old_imports": [
+      "TailMultiplier",
+      "TailOriginalRange"
+    ],
+    "old_module": "TailLeftBoundary",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "6d04727e0ac305c9eac6a11446af5ccb80d00a13c9224d36e8c365ebf3ab54a8",
+    "public_count": 3,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailLeftBoundary.lean",
+    "frozen_owned_count": 10,
+    "central_scoped_owned_count": 10
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailGaussianMellin",
+      "ZhangLS.Spec.AppendixBKernelOriginalPhases",
+      "ZhangLS.Spec.AppendixBKernelBoundaryIntegrals",
+      "ZhangLS.Spec.Lemma44MiddleContour"
+    ],
+    "central_source_sha256": "fe1960ca970b3ac84f6d5dd8ace994cf84605264d189d3b94bae72f48debdbbb",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "a930000becc5d044a4220ae412701e31c3d6b23c01043b5b0941c88d6981183c",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "e9227be5c02023eff8cf878ac4f7c2bcd92eec163fc82503312279090ff24dfb",
+    "module": "ZhangLS.Spec.AppendixBTailMultiplier",
+    "old_imports": [
+      "TailGaussianMellin",
+      "KernelOriginalPhases",
+      "KernelBoundaryIntegrals",
+      "ZhangLS.Spec.Lemma44MiddleContour"
+    ],
+    "old_module": "TailMultiplier",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "503b513d3f04869fd9f32142b646a33e1b60354916f15afa359b2c1366fb66ca",
+    "public_count": 5,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailMultiplier.lean",
+    "frozen_owned_count": 19,
+    "central_scoped_owned_count": 19
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailGaussianMellin",
+      "ZhangLS.Spec.AppendixBKernelOriginalUniform"
+    ],
+    "central_source_sha256": "01b303bfaf75a5f4c6709325876d75c8b6dc01497fc750c11d2b7343025b9a0e",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "bb5fa40ab94bdaf3cf3c8b27eeceb127ebaf396222b2fccd89ccc698ef1af7e0",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "4e2008ca0c45bad1f606b58687e8969a870f8a3c15e4de38bd902572bfd98212",
+    "module": "ZhangLS.Spec.AppendixBTailOriginalRange",
+    "old_imports": [
+      "TailGaussianMellin",
+      "KernelOriginalUniform"
+    ],
+    "old_module": "TailOriginalRange",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "f5a630a044463dc8dae6bb970486bd6b29a448b6796c0e29b52506099228fd6b",
+    "public_count": 2,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailOriginalRange.lean",
+    "frozen_owned_count": 3,
+    "central_scoped_owned_count": 3
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailSupport",
+      "ZhangLS.Spec.Lemma84LogPerronKernel"
+    ],
+    "central_source_sha256": "16cfc762cfebd1720915ec41f6c5e69a17f02332dc8bed74d335b6c28a4a082e",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "c94fccfcc3fbf491c3320eef24df07d00f6665a84aed73b182bfc8687d113750",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "982d4566091941a0a7edc2f88d1cd5c14f1eb3daf8f213673d3973853f2fec55",
+    "module": "ZhangLS.Spec.AppendixBTailRamp",
+    "old_imports": [
+      "TailSupport",
+      "ZhangLS.Spec.Lemma84LogPerronKernel"
+    ],
+    "old_module": "TailRamp",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "6725b2f1bd7aada20b9937be420eecf6c2949789225d695e3339c4125595222c",
+    "public_count": 5,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailRamp.lean",
+    "frozen_owned_count": 14,
+    "central_scoped_owned_count": 14
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailContour",
+      "ZhangLS.Spec.AppendixBTailLeftBoundary",
+      "ZhangLS.Spec.AppendixBTailBudgetDecay",
+      "ZhangLS.Spec.AppendixBTailTerminalResidue",
+      "ZhangLS.Spec.AppendixBTailSharpIntegral",
+      "ZhangLS.Spec.AppendixBTailFarBoundary",
+      "ZhangLS.Spec.AppendixBTailRhoBounds",
+      "ZhangLS.Spec.AppendixBTailOriginalRange",
+      "ZhangLS.Spec.AppendixBKernelRegressions"
+    ],
+    "central_source_sha256": "f461fe270156318182d55b88f6fb43a625f0c07878bca4179e401b18ea12bf49",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "c1be1f14d6da6756236bc61ce0ca12ec2e8a8f8546eb822b2a8c83b393519232",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "c54b9d94f93652c560dc531bed7721773178bbf24feb4cb50dd9ff3282ca95cb",
+    "module": "ZhangLS.Spec.AppendixBTailRegressions",
+    "old_imports": [
+      "TailContour",
+      "TailLeftBoundary",
+      "TailBudgetDecay",
+      "TailTerminalResidue",
+      "TailSharpIntegral",
+      "TailFarBoundary",
+      "TailRhoBounds",
+      "TailOriginalRange",
+      "KernelRegressions"
+    ],
+    "old_module": "TailRegressions",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "06752d89dc0c1c16a3871c38769e60eddcf0500b84a00dd764b7d6fdd1a81e2c",
+    "public_count": 4,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailRegressions.lean",
+    "frozen_owned_count": 4,
+    "central_scoped_owned_count": 4
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailSupport",
+      "ZhangLS.Spec.Lemma151LocalResidue",
+      "ZhangLS.Spec.AppendixBKernelOriginalPhases",
+      "ZhangLS.Spec.Section15SmallFactors"
+    ],
+    "central_source_sha256": "5788b54fc1a095faf4d5a4b9ad08c9367d7a6de0cf2c1adebfdf4a607dcbb45a",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "ec68bb336234e07d4e27cd2e9ac17648e36167721818343cafae36839fc0b2ec",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "7b3138f887b2b56d6bf82ebcab5091d87eb96db95dd5fad4b26487e5838409ba",
+    "module": "ZhangLS.Spec.AppendixBTailResidueRate",
+    "old_imports": [
+      "TailSupport",
+      "ZhangLS.Spec.Lemma151LocalResidue",
+      "KernelOriginalPhases",
+      "ZhangLS.Spec.Section15SmallFactors"
+    ],
+    "old_module": "TailResidueRate",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "7aed08723a4a6608b78c7e00f8bcd6c0a40c1ba2cd5c7f8ba2c2292e95cd3e70",
+    "public_count": 4,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailResidueRate.lean",
+    "frozen_owned_count": 5,
+    "central_scoped_owned_count": 5
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailBoundaryMass",
+      "ZhangLS.Spec.AppendixBTailFarBoundary",
+      "ZhangLS.Spec.AppendixBRoughReplacementB2"
+    ],
+    "central_source_sha256": "2cc3e4d6e8e37345fe7b2a75075517c8de8c4b74e2775664c572f567b97ebced",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "6aec0f277b8f5cff85bb1fc50f8e66790bb6a3505233ceac225ccbd32a0792fc",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "7500d9ad10dd10c83b2a36198a995baece8a10e9f8ca5d78e5a07ce83a7b99a7",
+    "module": "ZhangLS.Spec.AppendixBTailRhoBounds",
+    "old_imports": [
+      "TailBoundaryMass",
+      "TailFarBoundary",
+      "RoughReplacementB2"
+    ],
+    "old_module": "TailRhoBounds",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "602faa224670a241a3ed72e55e32c50061fb4729fff364188a21c71f9283d0dd",
+    "public_count": 7,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailRhoBounds.lean",
+    "frozen_owned_count": 8,
+    "central_scoped_owned_count": 8
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailMultiplier"
+    ],
+    "central_source_sha256": "5aee818b87c437c51f9c4ca390a14ebedc2e6585de490d51d51f59fa4a575b8a",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "c8c566a8b9fcf175765881cf44f4b1eaf4beddbcd292de912a3047d111e57afb",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "3b4a3593b1dd5b4961dd837b24404ecea71123f491012f247088cc15f6369d21",
+    "module": "ZhangLS.Spec.AppendixBTailRightBoundary",
+    "old_imports": [
+      "TailMultiplier"
+    ],
+    "old_module": "TailRightBoundary",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "5c83c675316701f4a92f6c911eca6e0576fc57a67d2e61a03abc469d9f253866",
+    "public_count": 3,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailRightBoundary.lean",
+    "frozen_owned_count": 3,
+    "central_scoped_owned_count": 3
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailSharpKernel"
+    ],
+    "central_source_sha256": "116b933e6b67b05e3996c19e6c03a3acc9b469daf306e44585c7aef136d568d5",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "b41da1f9b5966f5fe1fc01a7961a353b521de7d58a0764d807ea21c3adbb4c15",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "5332a701307612ab3f11cb90b8ca584801a629810e79dca1e041f865ea4f1488",
+    "module": "ZhangLS.Spec.AppendixBTailSharpFiniteIntegral",
+    "old_imports": [
+      "TailSharpKernel"
+    ],
+    "old_module": "TailSharpFiniteIntegral",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "a81d2aec7b6469ca2139dfab0a74ba7e09bea858c600d829bd65fae070a2688c",
+    "public_count": 8,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailSharpFiniteIntegral.lean",
+    "frozen_owned_count": 9,
+    "central_scoped_owned_count": 9
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailBoundaryMass"
+    ],
+    "central_source_sha256": "e8c253f5a89658042ac70fd37c9faa1e97881907fa00feff98d9a9c763c05093",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "bf33a622b85132f0384909841640a1926131f97d66ea7210fa23527390ddcf17",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "ba01cda69f8ee8c618ba2d4a26e2f43e4b6d780a2c886878d4616e9d0dcc8ae4",
+    "module": "ZhangLS.Spec.AppendixBTailSharpIntegral",
+    "old_imports": [
+      "TailBoundaryMass"
+    ],
+    "old_module": "TailSharpIntegral",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "a465721a83fa7a366a709e13a45b477c12cd1df1150eec36452e2f425088ee67",
+    "public_count": 5,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailSharpIntegral.lean",
+    "frozen_owned_count": 8,
+    "central_scoped_owned_count": 8
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailRhoBounds",
+      "ZhangLS.Spec.AppendixBTailSharpIntegral"
+    ],
+    "central_source_sha256": "f05111284b3a1c684f3bdd57f11ec136a208694f1f3e77b78bf11e05c20e8201",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "a561857eba387c7bd17adc8a461001ade4f13ea585d2595406b2b5c97072828b",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "b251e464cd43439ffd39d1a31b6611f4e4fcdb463d561c83258dc23ed2aa5c3c",
+    "module": "ZhangLS.Spec.AppendixBTailSharpKernel",
+    "old_imports": [
+      "TailRhoBounds",
+      "TailSharpIntegral"
+    ],
+    "old_module": "TailSharpKernel",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "7d1738d9100a869031c83d0be72b4ac03b670b8ef134f8baa26df9582e6c80af",
+    "public_count": 7,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailSharpKernel.lean",
+    "frozen_owned_count": 14,
+    "central_scoped_owned_count": 14
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailGaussianSplit",
+      "ZhangLS.Spec.AppendixBTailFloorGeometry",
+      "ZhangLS.Spec.AppendixBTailOriginalRange"
+    ],
+    "central_source_sha256": "227c122a7511e35a66ccfe8b38eeed2bb87c1aee146292c538359cf7e22e46b6",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "a24d79b08b119d944c6a3128dcf1b5b3e6a17c3bcfbd512bef7ac55379f412f2",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "459c850b0db7b9bdb8638043dba256bf26b903fec9f17d641ab13357e927c585",
+    "module": "ZhangLS.Spec.AppendixBTailSourceUnsmoothing",
+    "old_imports": [
+      "TailGaussianSplit",
+      "TailFloorGeometry",
+      "TailOriginalRange"
+    ],
+    "old_module": "TailSourceUnsmoothing",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "54208d5c7c3bda282b03a668e9b495585dd7567dbc52c41ae0d527ee83e9bad4",
+    "public_count": 3,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailSourceUnsmoothing.lean",
+    "frozen_owned_count": 4,
+    "central_scoped_owned_count": 4
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBKernelPerronBridge",
+      "ZhangLS.Spec.BSourceKernels",
+      "ZhangLS.Spec.Lemma151TailIntegral"
+    ],
+    "central_source_sha256": "319d3ed2af3eeea8985d68890701e381ec5c209a903a9ece70f2020542a1b5c9",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "673d33a8d281651898f9daab596567319ab7151e15a50fbced9658ce62272b6b",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "51c7d654a82325933317ae840946d286265791a4185f607b3364eca833b9f47f",
+    "module": "ZhangLS.Spec.AppendixBTailSupport",
+    "old_imports": [
+      "KernelPerronBridge",
+      "ZhangLS.Spec.BSourceKernels",
+      "ZhangLS.Spec.Lemma151TailIntegral"
+    ],
+    "old_module": "TailSupport",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "d79965c7c9576b3023604949204e01400119d8f5ef924354615cc495b70b2417",
+    "public_count": 15,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailSupport.lean",
+    "frozen_owned_count": 17,
+    "central_scoped_owned_count": 17
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailResidueRate"
+    ],
+    "central_source_sha256": "0a817d5ce26d5a6bcb58f521abe1e5ea0877e87107cc1a140b62071a2ad9521e",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "ccba1dad9f413001e3c113116fe1c09ea2ebd85003f5c0970bbadb987679fc25",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "e2da2bb941e32ab0b6d93b843add471a52909e86f81ce146de4cfb1628a71a66",
+    "module": "ZhangLS.Spec.AppendixBTailTerminalResidue",
+    "old_imports": [
+      "TailResidueRate"
+    ],
+    "old_module": "TailTerminalResidue",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "3b9fee4f239c7a0327e38a87268439ce28d0f234b8cc78c7f763f0f38bfc4cf9",
+    "public_count": 6,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailTerminalResidue.lean",
+    "frozen_owned_count": 14,
+    "central_scoped_owned_count": 14
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.Lemma57GaussianMellinTransform",
+      "ZhangLS.Spec.Lemma23GoodSet"
+    ],
+    "central_source_sha256": "1d105a9ac6ab9d9aaf510dfcf8a79abe095567838bae5eea9e80b3957e06c86e",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "328b720d5e8cef8d4f3423b8e4bc3f6b55fc29a63cb25165e91ba7bec108dd4a",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "1d105a9ac6ab9d9aaf510dfcf8a79abe095567838bae5eea9e80b3957e06c86e",
+    "module": "ZhangLS.Spec.AppendixBTailUnsmoothing",
+    "old_imports": [
+      "ZhangLS.Spec.Lemma57GaussianMellinTransform",
+      "ZhangLS.Spec.Lemma23GoodSet"
+    ],
+    "old_module": "TailUnsmoothing",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "5f78eb062a4e038918e121905f30e95a0eedf10333c36d81878d44c97bda77ce",
+    "public_count": 8,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailUnsmoothing.lean",
+    "frozen_owned_count": 13,
+    "central_scoped_owned_count": 13
+  },
+  {
+    "action": "install_new_source",
+    "central_imports": [
+      "ZhangLS.Spec.AppendixBTailSourceUnsmoothing",
+      "ZhangLS.Spec.AppendixBTailBudgetDecay"
+    ],
+    "central_source_sha256": "4689f5eacad7bc914d2a548b1e7d2c3a5e1efcdda4ec8bc2629b64f00dbaeb22",
+    "fresh_central_elaboration_required": true,
+    "frozen_flat_olean_sha256": "8b6624323be15443aa0107de134755e46cca098dab4175bc9d019a22bc27c984",
+    "frozen_flat_olean_validates_relocation": false,
+    "frozen_source_sha256": "39a72359536cf172fe8162d48bc147374b4231e8c7407341176e6066865a5f0b",
+    "module": "ZhangLS.Spec.AppendixBTailUnsmoothingDecay",
+    "old_imports": [
+      "TailSourceUnsmoothing",
+      "TailBudgetDecay"
+    ],
+    "old_module": "TailUnsmoothingDecay",
+    "proof_body_byte_identical": true,
+    "proof_body_sha256": "918f27261d9b8c3c45a986842b571147d7c25bb17e80312de0121d7108712c6a",
+    "public_count": 4,
+    "repo_relative_source": "ZhangLS/Spec/AppendixBTailUnsmoothingDecay.lean",
+    "frozen_owned_count": 6,
+    "central_scoped_owned_count": 6
+  }
+]

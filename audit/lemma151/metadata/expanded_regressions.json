@@ -1,0 +1,426 @@
+{
+  "declarations": [
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+      "name": "ZhangLS.Spec.appendixB_divisor_regression_Q",
+      "old_module": "DivisorB1Regressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+      "source_line": 11
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+      "name": "ZhangLS.Spec.appendixB_divisor_regression_actual_b",
+      "old_module": "DivisorB1Regressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+      "source_line": 36
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+      "name": "ZhangLS.Spec.appendixB_divisor_regression_actual_bpsi",
+      "old_module": "DivisorB1Regressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+      "source_line": 40
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+      "name": "ZhangLS.Spec.appendixB_divisor_regression_beta_shifts",
+      "old_module": "DivisorB1Regressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+      "source_line": 60
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+      "name": "ZhangLS.Spec.appendixB_divisor_regression_fourth_endpoint",
+      "old_module": "DivisorB1Regressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+      "source_line": 15
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+      "name": "ZhangLS.Spec.appendixB_divisor_regression_original_A",
+      "old_module": "DivisorB1Regressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+      "source_line": 23
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+      "name": "ZhangLS.Spec.appendixB_divisor_regression_ramified_n1",
+      "old_module": "DivisorB1Regressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+      "source_line": 44
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+      "name": "ZhangLS.Spec.appendixB_divisor_regression_square_source",
+      "old_module": "DivisorB1Regressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+      "source_line": 28
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+      "name": "ZhangLS.Spec.appendixB_divisor_regression_strict_source",
+      "old_module": "DivisorB1Regressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+      "source_line": 68
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+      "name": "ZhangLS.Spec.appendixB_divisor_regression_zero_n1",
+      "old_module": "DivisorB1Regressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBDivisorB1Regressions.lean",
+      "source_line": 51
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_H14_complement_pointwise",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 67
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_H14_endpoint_separate",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 59
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_P2_source_expanded",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 19
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_beta_one_source",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 22
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_beta_three_source",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 30
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_beta_two_source",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 26
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_full_kernel_finite_sum",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 47
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_full_kernel_strict_product_endpoint",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 41
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_kernel_strict_endpoint",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 37
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_kernel_zero_index",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 34
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_literal_B3_tail_zero",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 79
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_original_P1",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 12
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_original_P2",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 13
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_original_P3",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 14
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_original_gamma_P1",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 15
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_original_gamma_P2",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 16
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_original_gamma_P3",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 17
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_printed_e1_prime",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 100
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_printed_e2",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 84
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_printed_e3",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 92
+    },
+    {
+      "installation": "existing",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBKernelRegressions",
+      "name": "ZhangLS.Spec.appendixB_source_full_kernel_asymptotics",
+      "old_module": "KernelRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBKernelRegressions.lean",
+      "source_line": 110
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBTailRegressions",
+      "name": "ZhangLS.Spec.appendixB_actual_complement_endpoint",
+      "old_module": "TailRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBTailRegressions.lean",
+      "source_line": 18
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBTailRegressions",
+      "name": "ZhangLS.Spec.appendixB_printed_tail_literal",
+      "old_module": "TailRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBTailRegressions.lean",
+      "source_line": 28
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBTailRegressions",
+      "name": "ZhangLS.Spec.appendixB_terminal_tail_literal",
+      "old_module": "TailRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBTailRegressions.lean",
+      "source_line": 35
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.AppendixBTailRegressions",
+      "name": "ZhangLS.Spec.appendixB_terminal_tail_sign",
+      "old_module": "TailRegressions",
+      "repo_relative_source": "ZhangLS/Spec/AppendixBTailRegressions.lean",
+      "source_line": 42
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+      "name": "ZhangLS.Spec.actual151_regression_P2",
+      "old_module": "ActualPointwiseRegressions",
+      "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+      "source_line": 42
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+      "name": "ZhangLS.Spec.actual151_regression_actual_beta",
+      "old_module": "ActualPointwiseRegressions",
+      "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+      "source_line": 60
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+      "name": "ZhangLS.Spec.actual151_regression_common_threshold",
+      "old_module": "ActualPointwiseRegressions",
+      "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+      "source_line": 66
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+      "name": "ZhangLS.Spec.actual151_regression_floor_endpoint",
+      "old_module": "ActualPointwiseRegressions",
+      "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+      "source_line": 51
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+      "name": "ZhangLS.Spec.actual151_regression_literal_target",
+      "old_module": "ActualPointwiseRegressions",
+      "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+      "source_line": 15
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+      "name": "ZhangLS.Spec.actual151_regression_product_cutoff",
+      "old_module": "ActualPointwiseRegressions",
+      "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+      "source_line": 46
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+      "name": "ZhangLS.Spec.actual151_regression_ramified_sum",
+      "old_module": "ActualPointwiseRegressions",
+      "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+      "source_line": 25
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+      "name": "ZhangLS.Spec.actual151_regression_rate",
+      "old_module": "ActualPointwiseRegressions",
+      "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+      "source_line": 56
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+      "name": "ZhangLS.Spec.actual151_regression_source_basis",
+      "old_module": "ActualPointwiseRegressions",
+      "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+      "source_line": 11
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+      "name": "ZhangLS.Spec.actual151_regression_strict_h14",
+      "old_module": "ActualPointwiseRegressions",
+      "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+      "source_line": 30
+    },
+    {
+      "installation": "new",
+      "kind": "theorem",
+      "module": "ZhangLS.Spec.Lemma151ActualPointwiseRegressions",
+      "name": "ZhangLS.Spec.actual151_regression_tail_constant",
+      "old_module": "ActualPointwiseRegressions",
+      "repo_relative_source": "ZhangLS/Spec/Lemma151ActualPointwiseRegressions.lean",
+      "source_line": 34
+    }
+  ],
+  "modules": [
+    "ZhangLS.Spec.AppendixBDivisorB1Regressions",
+    "ZhangLS.Spec.AppendixBKernelRegressions",
+    "ZhangLS.Spec.AppendixBTailRegressions",
+    "ZhangLS.Spec.Lemma151ActualPointwiseRegressions"
+  ],
+  "note": "Exact frozen regression proofs preserved, including coefficient basis, ramification, strict endpoints, actual shifts, source target, rate and quantifier order. All are included in both central inventories.",
+  "public_declaration_count": 46
+}

@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-03T12:33:31.248529+00:00",
-  "base_commit": "8bdae40152843c289650c1483d86c73b7a8aaf28",
+  "updated_utc": "2026-10-03T12:46:53.216003+00:00",
+  "base_commit": "19fe47df390d5e93d75a3759ba2918ee8bbeaab9",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
     "original_complete": 36,
-    "repaired_complete": 2,
-    "complete": 38
+    "repaired_complete": 3,
+    "complete": 39
   },
   "scope": "这八个研究节点描述当前修复路线，不增加原论文编号分母。可替代分支不是所有可能证明的逻辑必要条件。",
   "status_legend": {
@@ -30,7 +30,10 @@
       "evidence": [
         "audit/CLOUD_FIRST_LOG_MOMENT_STATUS.md"
       ],
-      "published_commit": "8bdae40152843c289650c1483d86c73b7a8aaf28"
+      "published_commit": "8bdae40152843c289650c1483d86c73b7a8aaf28",
+      "execution_status": "done",
+      "execution_note": "已经发布并验证；未把该标量下界当作实际Gram下界。",
+      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
     },
     {
       "id": "R2",
@@ -44,7 +47,10 @@
       "evidence": [
         "audit/annular_covariance/STATUS.md",
         "audit/structured_covariance/STATUS.md"
-      ]
+      ],
+      "execution_status": "queued",
+      "execution_note": "来源复核已完成；完整C1/T1解析接口的Lean形式化尚未启动，当前先推进R3及原P2.6共享输入。",
+      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
     },
     {
       "id": "R3",
@@ -62,7 +68,10 @@
       ],
       "evidence": [
         "audit/CLOUD_SHORT_UPSILON_STATUS.md"
-      ]
+      ],
+      "execution_status": "active",
+      "execution_note": "正在形式化实际υ/κ恒等式、全P²截断能量和真实2/4/4桥。",
+      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
     },
     {
       "id": "R4",
@@ -80,7 +89,10 @@
       ],
       "evidence": [
         "audit/CLOUD_SHORT_UPSILON_STATUS.md"
-      ]
+      ],
+      "execution_status": "active",
+      "execution_note": "实际配对主项研究已启动：核查H缺项的全族加权误差、坏族与重新接入积分条件，检验是否产生可计算目标残差。",
+      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
     },
     {
       "id": "R5",
@@ -97,7 +109,10 @@
         "R4",
         "R1"
       ],
-      "evidence": []
+      "evidence": [],
+      "execution_status": "queued",
+      "execution_note": "可以和R4并行，但尚未启动专门证明；需明确实际范数附件及残差量级。",
+      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
     },
     {
       "id": "R6",
@@ -116,7 +131,10 @@
         "R1",
         "R3"
       ],
-      "evidence": []
+      "evidence": [],
+      "execution_status": "blocked_by_R4_R5",
+      "execution_note": "等待实际候选主项与Gram/残差下界，才能闭合完整相对误差预算。",
+      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
     },
     {
       "id": "R7",
@@ -131,7 +149,10 @@
         "R5",
         "R6"
       ],
-      "evidence": []
+      "evidence": [],
+      "execution_status": "waiting_dependencies",
+      "execution_note": "等待R4、R5、R6共同闭合；当前无严格gain。",
+      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
     },
     {
       "id": "R8",
@@ -146,7 +167,10 @@
         "remaining_numbered_and_analytic_obligations"
       ],
       "evidence": [],
-      "original_exponents_preserved": true
+      "original_exponents_preserved": true,
+      "execution_status": "waiting_dependencies",
+      "execution_note": "等待R7及采用路线的其余论文/解析义务，原主结论未恢复。",
+      "checked_utc": "2026-10-03T12:46:53.216003+00:00"
     }
   ],
   "edges": [
@@ -225,5 +249,7 @@
     "R1的L^-13标量下界与R2的L^-14表示误差不是同一对象，不能直接比较得出严格gain。",
     "R3比R2更小的新增误差不会把总误差自动提升到L^-225。",
     "来源复核、局部Lean证明和完整原主定理证明必须分开。"
-  ]
+  ],
+  "numbered_progress_note": "Repaired pointwise Lemma15.1 is verified; this does not complete any repair critical-path node or establish strict gain.",
+  "execution_status_semantics": "实际执行状态独立于证明状态；来源复核完成不自动表示Lean形式化正在运行。"
 }

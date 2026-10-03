@@ -1,0 +1,270 @@
+{
+  "status": "PASS_REPAIRED_POINTWISE_LEMMA151",
+  "verified_at_utc": "2026-10-03T12:40:54.210281+00:00",
+  "base_commit": "19fe47df390d5e93d75a3759ba2918ee8bbeaab9",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "new_modules": 46,
+  "reused_published_modules": 19,
+  "public_declarations": 412,
+  "new_public": 278,
+  "all_scoped_owned_declarations": 686,
+  "generated_equation_supplements": 3,
+  "all_audited_declarations": 689,
+  "declaration_owners": 67,
+  "new_owned": 427,
+  "nonempty_owners": 65,
+  "expanded_regressions": 46,
+  "loaded_modules": 6573,
+  "source_chains_checked": 17,
+  "axiom_union": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "full_project_jobs": 5704,
+  "source_guards": 1899,
+  "spec_imports": 1450,
+  "full_imports": 1715,
+  "strict_candidates": 442,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 7,
+  "unreviewed_new_strict_candidates": 0,
+  "proof_packet_sha256": "092fa013ef54cde3d46950213a091b2f62d044fdd2fd91ff0d050dde553bb16e",
+  "source_only_migration_packet_sha256": "08c6dd31b55eec5b3f5918af58f9cc5eceb4f7bf39562fde327cac5a88ca0572",
+  "audit_driver_fix": "Explicit Nat counter annotations; three lazy equation-owner relocations reconciled as truthful generated supplements. All 689 frozen names retained, 686 scoped declarations plus three supplements. Mathematical sources unchanged; failed attempts excluded.",
+  "literal_target_sha256": "442d273d792d1fde9b80b6e94ee8bd1a28252342c0373acdd35ca2315db668e7",
+  "original_target_proved": false,
+  "repaired_pointwise_target_proved": true,
+  "downstream_finite_substitution_rate": "O_c(L^-7/2)",
+  "full_equation_15_22_proved": false,
+  "signed_mean_gain_proved": false,
+  "whole_paper_proved": false,
+  "numbered_completed": 39,
+  "original_completed": 36,
+  "repaired_completed": 3,
+  "logs": {
+    "AppendixBDivisorB1Regressions.log": {
+      "bytes": 18831,
+      "sha256": "60c66b3a0b434ffe220f3ecf81d6e0204bfcaa6c1adfa060f078c6072ec8a68e"
+    },
+    "AppendixBDivisorCoefficientB1.log": {
+      "bytes": 18831,
+      "sha256": "15f8f8187172f83ce270ed6d01f407daad8ce4588bf7ea5fa96cff705add3144"
+    },
+    "AppendixBDivisorNuTail.log": {
+      "bytes": 18488,
+      "sha256": "4a5389a2ecb98e070eb4c3e8fdf16df7a0ddc38438283a67ff03741fff1b2d49"
+    },
+    "AppendixBDivisorReplacementB1.log": {
+      "bytes": 18763,
+      "sha256": "768927e03c0ed537e9a9186cd21ba1f94d3546c2c1892e3496740e8ca1f337f9"
+    },
+    "AppendixBTailArithmeticComparison.log": {
+      "bytes": 77579,
+      "sha256": "9313be17eb8c7c421e6a30a55b4d815ad2feb497bf0aa335c0cfb99837833dba"
+    },
+    "AppendixBTailBoundaryMass.log": {
+      "bytes": 3097,
+      "sha256": "08a9163b0cf2089e3432867357d8d7d058e710dbc99ad40445bcbb518af41e33"
+    },
+    "AppendixBTailBudgetDecay.log": {
+      "bytes": 71582,
+      "sha256": "e5bccbc7646ed542fff07ac5ab7408ae1accb022ae4646bdccd5f7225b1c05df"
+    },
+    "AppendixBTailContour.log": {
+      "bytes": 67238,
+      "sha256": "9ccdb8e6629249d42ea6d297905dab2fbcfb7a84397fc7d0a6f6cd13a3e571ea"
+    },
+    "AppendixBTailFarBoundary.log": {
+      "bytes": 30979,
+      "sha256": "349d10bbecefc04cb89d80bfaeef8772ca73fe70185f2d0c7be6fe9ca595ef3f"
+    },
+    "AppendixBTailFinalAsymptotic.log": {
+      "bytes": 79223,
+      "sha256": "1804039e2f1e7c19eaaa5bcebd920cac31b0d4f30d477ad6853976466efb1f71"
+    },
+    "AppendixBTailFiniteUnsmoothing.log": {
+      "bytes": 33504,
+      "sha256": "94916de03b23fdc090d354dfbaf86c0d95edcce688ea9be419d3c973c74e5c0d"
+    },
+    "AppendixBTailFloorGeometry.log": {
+      "bytes": 34264,
+      "sha256": "6f812ad1fc681be790a6018d9f860c4f1030db9d5a79a81a7658ed5e2e04300f"
+    },
+    "AppendixBTailGaussianComparison.log": {
+      "bytes": 72850,
+      "sha256": "05887a39baf0cdbed776d3aa35c714b6da1c6bbf4feafbbcfe649b689a68b064"
+    },
+    "AppendixBTailGaussianMellin.log": {
+      "bytes": 30916,
+      "sha256": "adc4b15d8d4e149e766a61bebf1b2f69f6757afbc6142afac2922f9a408f97b4"
+    },
+    "AppendixBTailGaussianSplit.log": {
+      "bytes": 34898,
+      "sha256": "8ea19d4904f3e69698c505bc40705fb85c6fb52b0cee1a704132a919a6ed48b3"
+    },
+    "AppendixBTailGlobalContour.log": {
+      "bytes": 67244,
+      "sha256": "d860eae8d70a41a0f52591d26f5629755221d36bcf6918ac212751a31af93250"
+    },
+    "AppendixBTailH14Assembly.log": {
+      "bytes": 79286,
+      "sha256": "59255a98ca49754d4e199cc169addf33ec962b7f9357319522af69aaadf128c0"
+    },
+    "AppendixBTailHorizontalBoundary.log": {
+      "bytes": 72023,
+      "sha256": "68f280021418d81bf7581b4290fb1e0b3cafed55872cfae3013c81d440a113aa"
+    },
+    "AppendixBTailLeftBoundary.log": {
+      "bytes": 71784,
+      "sha256": "f9b6934efd22b8213176d438335c91d2e88756fc53ae51ba322943d51553a9d9"
+    },
+    "AppendixBTailMultiplier.log": {
+      "bytes": 71519,
+      "sha256": "fb68b912c095a04fae1e9bc3eb7c7972e876feb2044a08e38b02440905d122bf"
+    },
+    "AppendixBTailOriginalRange.log": {
+      "bytes": 69942,
+      "sha256": "60629e5c2c728b763d80542b9849fd0053e0c809a285d3c79dc6c6602f4fff85"
+    },
+    "AppendixBTailRamp.log": {
+      "bytes": 30508,
+      "sha256": "9fe5287c69713afc91fe635a5347e251c61771776d15e9b6d6b227bb50fa5edc"
+    },
+    "AppendixBTailRegressions.log": {
+      "bytes": 75041,
+      "sha256": "2e3176a9f1ca59b9de35d0b9d4324a4f2cc4352bbe43906613f0996e74e8f311"
+    },
+    "AppendixBTailResidueRate.log": {
+      "bytes": 70728,
+      "sha256": "009bfae29c37f5dfad8456a6ed34bae1590d31b0b18a2f048b456e6d873e12b8"
+    },
+    "AppendixBTailRhoBounds.log": {
+      "bytes": 33496,
+      "sha256": "86974173ae5bfeaa421d9a38103538c4ec63f20ccbd8272a6fc3e2831a1a6063"
+    },
+    "AppendixBTailRightBoundary.log": {
+      "bytes": 71926,
+      "sha256": "42ac3e320762175163806613255e9d0b5d108ba0a2324eda499adc1dcb3eee36"
+    },
+    "AppendixBTailSharpFiniteIntegral.log": {
+      "bytes": 34270,
+      "sha256": "d0054a7af1ad046c16b2a94fc3bef9f43f3e307dc6538395935cbc3f7bc30615"
+    },
+    "AppendixBTailSharpIntegral.log": {
+      "bytes": 3162,
+      "sha256": "5e6ac204f107309cf76b96b52d2494a3cabd09b26f9b582c99cfaa69d72618ac"
+    },
+    "AppendixBTailSharpKernel.log": {
+      "bytes": 34199,
+      "sha256": "d6d1489b14a01f0ac0fbf0763eec4a4648f857099da51698387e2ce349083741"
+    },
+    "AppendixBTailSourceUnsmoothing.log": {
+      "bytes": 73928,
+      "sha256": "ed009895310f1e02240e7b7e204fa44e15cd5057895098a995d46e8e09482e1e"
+    },
+    "AppendixBTailSupport.log": {
+      "bytes": 30318,
+      "sha256": "6e1318983850b41b4a9daf16ea7b3bb5c473bf3befcd93a1dbb5e03f93af3ae3"
+    },
+    "AppendixBTailTerminalResidue.log": {
+      "bytes": 71139,
+      "sha256": "afea291194832ff3dae378071c94284c0bff04f2da8111032c724b7a8e0ffa1c"
+    },
+    "AppendixBTailUnsmoothing.log": {
+      "bytes": 2758,
+      "sha256": "c9a89b1d0bd0574f28e84a758848602cd5c0a7ab74dd40d314bff570bf2eb686"
+    },
+    "AppendixBTailUnsmoothingDecay.log": {
+      "bytes": 75569,
+      "sha256": "d43dfa417ba98c7e0b445d97790edb0e29932246a7b455b088839a53bf038a91"
+    },
+    "CloudLemma151CentralOwnedAxioms.log": {
+      "bytes": 4956497,
+      "sha256": "188b2a76c86286978b46fa1b86bd03ab472fcde200cbcce019b7b9e5a40e8f2a"
+    },
+    "CloudLemma151CentralPublicAxioms.log": {
+      "bytes": 244100,
+      "sha256": "c5ed3e1aaeb2df0ad8b5f7986ca78ef6ed1d84d2630f586f31169369f3a43dce"
+    },
+    "Lemma151ActualFiniteSupport.log": {
+      "bytes": 18294,
+      "sha256": "ae25d399d7a4b6a3cf522111f2e4d16d6487a44a55cf6bddeef698eadbc42479"
+    },
+    "Lemma151ActualKernelFactors.log": {
+      "bytes": 79494,
+      "sha256": "2b01d26fd7a140498877ff0476ba01461f100a9b01154e9326ded66887a7f217"
+    },
+    "Lemma151ActualPointwiseAssembly.log": {
+      "bytes": 80099,
+      "sha256": "5585d5da464a331f4d48089b75defed2e9f142b59017813d2f8fba8e34257f95"
+    },
+    "Lemma151ActualPointwiseBudget.log": {
+      "bytes": 80097,
+      "sha256": "ff77a4fa05802f271219de149112885e5c4e9fb4f6a13de9948d930b34bf9f06"
+    },
+    "Lemma151ActualPointwiseDecay.log": {
+      "bytes": 80096,
+      "sha256": "27b1ac44735bdfc05483628617f51ea8c46c19bdf88af8547cfa23ba9038a8b1"
+    },
+    "Lemma151ActualPointwiseRegressions.log": {
+      "bytes": 80313,
+      "sha256": "f7f6d26535acc4a05f7ac3242247fa4f3ba4f320a5c91a1c9c6f57d2c24f552f"
+    },
+    "Lemma151ActualRoughRectangle.log": {
+      "bytes": 18295,
+      "sha256": "54522e3e6f2a3f65cd800a244913fbd86ec3f3d05b9fe682db8b05adf026f9c6"
+    },
+    "Lemma151ActualWeightedApplication.log": {
+      "bytes": 90402,
+      "sha256": "3c9cdb8d0700d44712d158cff84dc013d3a2adead62dd780cf25384410f5088a"
+    },
+    "Lemma151ActualWeightedEulerBudget.log": {
+      "bytes": 43646,
+      "sha256": "24abaa8debd25c21d71c7566255062570d6e49ce63d0fc55c54c5f74a41095df"
+    },
+    "Lemma151ActualWeightedPrefix.log": {
+      "bytes": 12380,
+      "sha256": "7a5dc35809871fef8b7fdf72ea2c3cedb96784d1d2b42be3281aa7dc1e17c00f"
+    },
+    "Lemma151ActualWeightedPrimeBudget.log": {
+      "bytes": 43574,
+      "sha256": "7e17887201582a0c4dbaa44d00b3a64145906382fa43b60b69bbc4ed9d91f680"
+    },
+    "Lemma151ActualWeightedSourceBudget.log": {
+      "bytes": 44216,
+      "sha256": "4ee8a89f93a38579a0b3eac43ed15d6335262e7adca18291d8150a5e8f6e65a8"
+    },
+    "all-imports.log": {
+      "bytes": 35,
+      "sha256": "19ea03c1bed9e6eee64e6d94b9c98d604f4787989d4b1eeceaf765043b2133ba"
+    },
+    "closed-audit-check.log": {
+      "bytes": 395,
+      "sha256": "72c63d200f47956d1d233918692844da2d2d7d8d101725c84279a2868f2137ed"
+    },
+    "full-project.log": {
+      "bytes": 282922,
+      "sha256": "84b1012bf71478d5c74e0a10a1aa68df55d4cdc81529080a2cfe8f301f0d9c64"
+    },
+    "placeholders.log": {
+      "bytes": 65,
+      "sha256": "07a72b90c493c01bcada1fb5d88cbf27bbd4e1a5eef63ea359245f88360c7946"
+    },
+    "spec-imports.log": {
+      "bytes": 40,
+      "sha256": "4fb37969c40d4d67bb4873f6060041245a551fde16d6ae2b52abe3a682bd7243"
+    },
+    "strict-audit.log": {
+      "bytes": 44634,
+      "sha256": "fcd4cc1530320ba5ec0c5e80866278ede26f5b9241c6b1b4150e1deb8382e804"
+    },
+    "structure.log": {
+      "bytes": 46,
+      "sha256": "bf87458eccce301003044b46edff602d9c15c377cf02a1e440f94ab78c9d7f94"
+    }
+  },
+  "portable_checker_negative_tests": 34,
+  "portable_checker_positive_control": "PASS"
+}

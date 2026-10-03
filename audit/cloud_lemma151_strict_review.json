@@ -1,0 +1,37 @@
+[
+  {
+    "candidate": "HIGH   ZhangLS/Spec/AppendixBTailGaussianComparison.lean:122: direct exact hypothesis: exact hPC",
+    "verdict": "reviewed_false_positive",
+    "reason": "Locally derived contour budget from proved vertical, horizontal and truncation bounds; rewritten using the proved Perron and circle-residue identities."
+  },
+  {
+    "candidate": "HIGH   ZhangLS/Spec/AppendixBTailH14Assembly.lean:45: direct exact hypothesis: exact hh",
+    "verdict": "reviewed_false_positive",
+    "reason": "Locally obtained specialization of appendixB_actual_tail_exact_residue_power after the actual strict H14 complement identity; no conclusion-shaped theorem premise."
+  },
+  {
+    "candidate": "HIGH   ZhangLS/Spec/AppendixBTailMultiplier.lean:31: direct exact hypothesis: exact hh",
+    "verdict": "reviewed_false_positive",
+    "reason": "Elementary Gaussian scalar bound derived from y exp(-y^2)<=1 and an explicit change of variables."
+  },
+  {
+    "candidate": "HIGH   ZhangLS/Spec/AppendixBTailRhoBounds.lean:81: direct exact hypothesis: exact hh",
+    "verdict": "reviewed_false_positive",
+    "reason": "Proved finite Gaussian unsmoothing theorem instantiated with the actual rho monomial bound, followed by the exact positive log-ratio identity."
+  },
+  {
+    "candidate": "HIGH   ZhangLS/Spec/AppendixBTailSharpFiniteIntegral.lean:49: direct exact hypothesis: exact hh",
+    "verdict": "reviewed_false_positive",
+    "reason": "Local specialization of the proved log-ratio strict-step identity, rewritten by an explicitly proved logarithm formula."
+  },
+  {
+    "candidate": "HIGH   ZhangLS/Spec/AppendixBTailSharpFiniteIntegral.lean:73: direct exact hypothesis: exact hm",
+    "verdict": "reviewed_false_positive",
+    "reason": "Interval integrability derived from the proved strict-step integrability and multiplication by the actual constant coefficient."
+  },
+  {
+    "candidate": "HIGH   ZhangLS/Spec/AppendixBTailUnsmoothing.lean:69: direct exact hypothesis: exact ht",
+    "verdict": "reviewed_false_positive",
+    "reason": "Negative Gaussian-tail bound proved earlier in the same proof, applied at -u using Gaussian complement symmetry."
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "base": "repository",
+    "path": "lean-toolchain",
+    "sha256": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+  },
+  {
+    "base": "repository",
+    "path": "lake-manifest.json",
+    "sha256": "da6edcc9c877d26fa2acb9807a6f3cd952d710c27b7f65de26f82e3402a9d664"
+  },
+  {
+    "base": "repository",
+    "path": "lakefile.lean",
+    "sha256": "e98fb4abec6210d8aea1b260c4016e2d1f700e21b916101845ebac441acd3914"
+  },
+  {
+    "base": "toolchain",
+    "path": "bin/lean",
+    "sha256": "3e0d0d3d801675359f2d4cf9815bfdb417b20b92fdd9d48b3b14c95bbae28bbf"
+  },
+  {
+    "base": "toolchain",
+    "path": "lib/lean/libleanshared.so",
+    "sha256": "86c5222603b164cd1c0dee1aeea9624a1ece9ce724ee2ed36e427a4259f8834b"
+  }
+]
