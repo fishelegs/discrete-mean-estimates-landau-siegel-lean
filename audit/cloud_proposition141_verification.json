@@ -1,0 +1,584 @@
+{
+  "status": "PASS_COMPLETE_ORIGINAL_PROPOSITION_14_1",
+  "verified_at_utc": "2026-10-03T04:21:23.750653+00:00",
+  "base_commit": "23eca1e1259be859b46772446ae5ed20bb3cb86b",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "capstone": "ZhangLS.Spec.proposition141_original",
+  "target": "ZhangLS.Spec.Proposition141Target",
+  "target_sha256": "02fa12fab88de5fdc2c5e12fa8aa23457d7f541040d7342b17e27aa7aa190b57",
+  "new_production_modules": 84,
+  "combined_production_inventory": 85,
+  "already_identical_modules": 1,
+  "public_declaration_checks": 443,
+  "new_public_declarations": 438,
+  "regressions": 242,
+  "standalone_audits": 16,
+  "full_project_jobs": 5562,
+  "source_files": 1742,
+  "spec_imports": 1308,
+  "full_imports": 1573,
+  "strict_candidates": 429,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 6,
+  "strict_candidate_review": {
+    "verdict": "NO_NEW_SEMANTIC_WEAKENING",
+    "new_candidates": [
+      "HIGH   ZhangLS/Spec/Proposition141ExceptionalMean.lean:93: direct exact hypothesis: exact hb",
+      "HIGH   ZhangLS/Spec/Proposition141FrontMean.lean:93: direct exact hypothesis: exact hbound",
+      "HIGH   ZhangLS/Spec/Proposition141PrimeGaussAttachment.lean:64: direct exact hypothesis: exact hs",
+      "HIGH   ZhangLS/Spec/Proposition141PrincipalAggregate.lean:156: direct exact hypothesis: exact he",
+      "HIGH   ZhangLS/Spec/Proposition71GaussRestorationMean.lean:101: direct exact hypothesis: exact hh",
+      "HIGH   ZhangLS/Spec/Proposition71GaussRestorationMean.lean:62: direct exact hypothesis: exact hb"
+    ],
+    "baseline_candidates": 423,
+    "current_candidates": 429,
+    "review": [
+      {
+        "candidate": "HIGH   ZhangLS/Spec/Proposition141ExceptionalMean.lean:93: direct exact hypothesis: exact hb",
+        "reason": "hb is instantiated from the proved exceptional-family little-o theorem, then the actual Psi1/Psi2 partition rewrites the original difference. It is not a final hypothesis."
+      },
+      {
+        "candidate": "HIGH   ZhangLS/Spec/Proposition141FrontMean.lean:93: direct exact hypothesis: exact hbound",
+        "reason": "hbound is derived from proposition71_front_actual_family_rate after proving all actual conductor, coefficient, support and weight hypotheses; heq identifies the actual mean difference."
+      },
+      {
+        "candidate": "HIGH   ZhangLS/Spec/Proposition141PrimeGaussAttachment.lean:64: direct exact hypothesis: exact hs",
+        "reason": "This is a generic summability-preserving sparse reindex theorem. Its explicit summability premise is independently proved at the actual caller (line122 via proposition141_prime_correction_summable) before use at line123."
+      },
+      {
+        "candidate": "HIGH   ZhangLS/Spec/Proposition141PrincipalAggregate.lean:156: direct exact hypothesis: exact he",
+        "reason": "he is the identity Real.sq_sqrt for positive D, used after primitive Gauss norm normalization and field_simp."
+      },
+      {
+        "candidate": "HIGH   ZhangLS/Spec/Proposition71GaussRestorationMean.lean:101: direct exact hypothesis: exact hh",
+        "reason": "hh is obtained from the proved asymptotic isLittleO_log_rpow_rpow_atTop after selecting a uniform threshold; simplification transports its concrete scalar bound."
+      },
+      {
+        "candidate": "HIGH   ZhangLS/Spec/Proposition71GaussRestorationMean.lean:62: direct exact hypothesis: exact hb",
+        "reason": "hb is the proved pointwise prime Gauss restoration estimate; the actual complex phase has norm one and the finite outer sum is then bounded."
+      }
+    ],
+    "scope": "Review of newly flagged source statements and their actual callers; historical strict-audit candidates remain unresolved as a separate semantic-audit inventory."
+  },
+  "independent_source_semantic_review": "PASS, followed by successful central mechanical gates on the reviewed sources",
+  "independent_reviewer_executed_lean": false,
+  "central_rebuilt_all_new_modules": true,
+  "source_dependency_count": 1079,
+  "source_relocation": "76 byte-identical modules;9 import-only qualification changes",
+  "packages": {
+    "p14_large": {
+      "archive_sha256": "381198ca3deeb6d8ac71fced26af94f5df31f4fbaee181125a07a93fb9459708",
+      "manifest_sha256": "77c50b0636ae3a8a4b6b36943759c0283b8a8536d9ccfc9270d8825410ccb677",
+      "modules": 8,
+      "public_declarations": 38
+    },
+    "p14_complete": {
+      "archive_sha256": "e0998b7e9e3e00f44224c67f2f38f56b56d7cf0deb36434f3567198ce9d3d1b9",
+      "manifest_sha256": "d0d26d3c5abfb83915cdc8ee1f1fb6df917adb4e1676c31d833cc1b95ba2d2bc",
+      "modules": 11,
+      "public_declarations": 31
+    },
+    "p14_front": {
+      "archive_sha256": "dcca9c5911b9bcec2895dad68f281a37551c6efcfabf09f38a64f934ef531a7a",
+      "manifest_sha256": "be0186758461a3f2a569ea5ccfa93220953d4beb35a6c2aa004d255c8f345b6c",
+      "modules": 5,
+      "public_declarations": 20
+    },
+    "p14_arithmetic": {
+      "archive_sha256": "cb035a520b80d98a7f8e81cb3ead0d801bd45980bb8d7c9780c6eef03139c310",
+      "manifest_sha256": "aef45585a7c204442f0e9cdafcff517df50ea1e5a20a8241ed6cad80bdc9d5e9",
+      "modules": 3,
+      "public_declarations": 14
+    },
+    "p14_source": {
+      "archive_sha256": "14268a50a4e22d5d132c437a1ea06e2580afc1efbf63e13d40e0a491629787be",
+      "manifest_sha256": "b8da5272ac91b9f03b56366bbf1b70dd584845ac5233c54b1cae28110b54f5a3",
+      "modules": 7,
+      "public_declarations": 37
+    },
+    "p14_corrections": {
+      "archive_sha256": "834edf48563d85e26dbd7ec31c2a222cd8369bb7d636b31caddabc0afa5c8668",
+      "manifest_sha256": "76ab14014e01047c9ad440da192381e92775846ab95b0c1c2b844194a267eedb",
+      "modules": 11,
+      "public_declarations": 70
+    },
+    "p7_gauss": {
+      "archive_sha256": "18eee492947946d50cbe1b56167e05bfda71651aa4395deea3ebbc0c1ed302f9",
+      "manifest_sha256": "ed02199bfd1821692c891bd1303670f96d6a121ed713cdf207359be37f8e0755",
+      "modules": 8,
+      "public_declarations": 35
+    },
+    "p7_pairs": {
+      "archive_sha256": "5c49759b4818c278eab9209709ad12add61d526b710fad10a4d40ab283380f72",
+      "manifest_sha256": "58aa09acc32d8fc356f425fce6121ec92139575353edd503f56d6218f620af4b",
+      "modules": 3,
+      "public_declarations": 8
+    },
+    "p7_gcd": {
+      "archive_sha256": "b6eeacabb8cdd97ae17567cf3fe541abf241302373e60ba196f7855c96215dda",
+      "manifest_sha256": "2d3ee1ae3e8ee82ae4cc5f6412350af53686adf6f51687652ee630497c50f41b",
+      "modules": 7,
+      "public_declarations": 31
+    },
+    "p7_principal": {
+      "archive_sha256": "794cf8e11ea53cab3cf43a12a29ab885edbba6a47aab9888e960d6ca33416ff6",
+      "manifest_sha256": "42276aab669dfe18d31b906163f607d95bc0f20fb0b3d48c8f9beca9ab206214",
+      "modules": 3,
+      "public_declarations": 21
+    },
+    "quotient_transport": {
+      "archive_sha256": "8cafc31f65da77625f3669cbada41e0b1f484fb693a53210d11a9c736cc89d74",
+      "manifest_sha256": "30e48b1b8ce58b7ff436ab38f3d7d0231c73109897062878b9fc14db74acf564",
+      "modules": 4,
+      "public_declarations": 42
+    },
+    "quotient_domination": {
+      "archive_sha256": "1711e60680ac0e9746903dd5c03e60eb5e403fad5cdb9500badc365d83f78f9c",
+      "manifest_sha256": "5d863bd2a3cd9fcd2830aed90f7d5869646a390f13bc948ed500e1662c369f40",
+      "modules": 4,
+      "public_declarations": 25
+    },
+    "p7_mellin": {
+      "archive_sha256": "eceb9ca7f02db6569476463dfaabb8ed8ec080d1ce5e2791b22d7a253b0db8c6",
+      "manifest_sha256": "049861df8d658c8e87c30c93a703209810fddcdf1671ed9c2c674b283f54dfa3",
+      "modules": 7,
+      "public_declarations": 49
+    },
+    "p14_residual": {
+      "archive_sha256": "61d4f65f6a02cea2c9b07f22c46d1b719695f6c7f789432647b35b18849803ce",
+      "manifest_sha256": "3fc1239b8c96be4469658e4f00346fab2758b9f5539b9bc8dedb8be2b71e6c18",
+      "modules": 1,
+      "public_declarations": 9
+    },
+    "p14_original": {
+      "archive_sha256": "b96790d928675d90e0bc464a32cfdcbb348e709a69ff97973ec861e3daf5b864",
+      "manifest_sha256": "a7b8b9d24bb54c2b1e2550fde90e337f968277cd14779730b2b86497442a0d6b",
+      "modules": 5,
+      "public_declarations": 19
+    }
+  },
+  "numbered_completed": 37,
+  "original_completed": 35,
+  "repaired_completed": 2,
+  "whole_paper_proved": false,
+  "main_numerical_route": "blocked by separately certified original c1 inconsistency",
+  "logs": {
+    "CloudMeanFinalP14ArithmeticRegression.log": {
+      "bytes": 1795,
+      "sha256": "68473b70274731e05459eead15914ae75f58786ed442256edb18e5ab4f613147"
+    },
+    "CloudMeanFinalP14CompleteRegression.log": {
+      "bytes": 3771,
+      "sha256": "ac85656a9888bb80b673fa4182c68e718d84d7cc7678074982959cb5f064381d"
+    },
+    "CloudMeanFinalP14CorrectionsRegression.log": {
+      "bytes": 8093,
+      "sha256": "4bc9c6a8f52a53a63b50c06da45355dcecf2c3cebeaf5821b144bac94a9c2e9a"
+    },
+    "CloudMeanFinalP14FrontRegression.log": {
+      "bytes": 2399,
+      "sha256": "918a418e44dc510e6dbbaec207d35ae96ee8b927d329a2bb5a5a8a144d9241ba"
+    },
+    "CloudMeanFinalP14LargeRegression.log": {
+      "bytes": 4513,
+      "sha256": "da44b55df285f4a9ba2f6b1853b60e13d86508b8550223a9e244c8b134e03788"
+    },
+    "CloudMeanFinalP14OriginalRegression.log": {
+      "bytes": 2275,
+      "sha256": "0a14ffdefa331897980bdc041035675337ebb8f3ddb31e7928f7694609aa5882"
+    },
+    "CloudMeanFinalP14ResidualRegression.log": {
+      "bytes": 1218,
+      "sha256": "596f481130b3ec882ec7a330dd3d4e1efc5a6ecd673d1b378761d450a59b3e67"
+    },
+    "CloudMeanFinalP14SourceRegression.log": {
+      "bytes": 4361,
+      "sha256": "faba29e65999e4d831a3920deece64411d4619c2c50778b018412bf55fb0ff7f"
+    },
+    "CloudMeanFinalP7GaussRegression.log": {
+      "bytes": 371516,
+      "sha256": "852210790c63ec47ab861929d948d9ee698922195c587bc9d597c74fb8f14e28"
+    },
+    "CloudMeanFinalP7GcdRegression.log": {
+      "bytes": 11618,
+      "sha256": "6f39c50b865a922e81f823f484769149dc8f3dda1a8ab75c9375c38a057e1f50"
+    },
+    "CloudMeanFinalP7MellinRegression.log": {
+      "bytes": 178,
+      "sha256": "0f1ca7318d367112e4727b8efe3bab612eefe0ca691d54cdff97e9b877ae21da"
+    },
+    "CloudMeanFinalP7PairsRegression.log": {
+      "bytes": 5056,
+      "sha256": "3b6e8f002f4af9e5d3284b45d353e585adebd9d61eaf1234759a650ddc8f994a"
+    },
+    "CloudMeanFinalP7PrincipalRegression.log": {
+      "bytes": 71486,
+      "sha256": "d2eb2e8745d25d006cdb00f29730b308b3511afe23d4163a1a0dc9715a5058fc"
+    },
+    "CloudMeanFinalPublicAxioms.log": {
+      "bytes": 49727,
+      "sha256": "6e8581942faf7a4068ae1cc389bd4f0ddf4db641a48e00e95aba7b5f3eab4e70"
+    },
+    "CloudMeanFinalQuotientDominationRegression.log": {
+      "bytes": 188,
+      "sha256": "d0045d1ad7cefd5820ce3b09019bf97330b2ef34b9d739a5797967ee4735ec10"
+    },
+    "CloudMeanFinalQuotientTransportRegression.log": {
+      "bytes": 187,
+      "sha256": "f3447cf5dec9f9a19500b8168ee0ab8b7f49ceea6be56f10e84f3dea8e4aa678"
+    },
+    "DeltaPairGcdReindex.log": {
+      "bytes": 26701,
+      "sha256": "fc9b2650d14034c3cf0f3483b5c916d339db59b7fc932d6b1bee2777dc70bb92"
+    },
+    "PositiveGcdFilteredSums.log": {
+      "bytes": 489,
+      "sha256": "321d825c97384159d812cdc29ac64144fea7ca07fd00c122481b24bd13c734ed"
+    },
+    "PositiveNatFiniteSupport.log": {
+      "bytes": 281,
+      "sha256": "93d6dc6ce6e172036dc5ecc1db22c6243697a5b00966fb2ef9d52779bc0686ce"
+    },
+    "Proposition141.log": {
+      "bytes": 168891,
+      "sha256": "bdbc69643858ffc7a53498879a4bc83e3ea4b4abb38c09cdf0bac463c09c0622"
+    },
+    "Proposition141CharacterMainSplit.log": {
+      "bytes": 31499,
+      "sha256": "c5230937b8b900d8e4d407f4cdf83e7444532bc68bca57df0febd1f7aa74a062"
+    },
+    "Proposition141CharacterRowAttachment.log": {
+      "bytes": 167182,
+      "sha256": "cfb722a83e88677acfe9def146cc3976adc82d25573d26ffb68e4f914d11edf2"
+    },
+    "Proposition141ChiMainNormalization.log": {
+      "bytes": 138560,
+      "sha256": "893c3e51b4e24e5d084e8c6f492dd6672d2e4bea2b5e66d4974fddc45ea4cc92"
+    },
+    "Proposition141CompleteConductorRate.log": {
+      "bytes": 131433,
+      "sha256": "20ad1359314da09192655e80b9441a8d0870f65d7e9b1f7ef7a6b36d730acc5b"
+    },
+    "Proposition141ExceptionalMean.log": {
+      "bytes": 161324,
+      "sha256": "15b8c712d02f198841e1e39ea7b9ab7856f646b8747605c4abb35840d2c77b07"
+    },
+    "Proposition141FixedGcdAttachment.log": {
+      "bytes": 165249,
+      "sha256": "20b66dbbf6d5b0b39fe9a810f187dbefef17280c3bd5116e521276c93ed04751"
+    },
+    "Proposition141FixedGcdFinite.log": {
+      "bytes": 9380,
+      "sha256": "139a8d47c3ed0a5d6c9d8c0debfe2058f51803d2a7871f2c610ec4c7d6cdf8d6"
+    },
+    "Proposition141FrontGeometry.log": {
+      "bytes": 124134,
+      "sha256": "ecb75928ad1cca79fc0a53addfa462b3cf04b0588ebb7df99443beb39d76db06"
+    },
+    "Proposition141FrontMean.log": {
+      "bytes": 161312,
+      "sha256": "107f68e6680a3e24df810212e70c834b92013b75c94e1ebd3b2be4a3a6d1ebe9"
+    },
+    "Proposition141FrontObjects.log": {
+      "bytes": 158780,
+      "sha256": "61648bc17aa634c0e7ae46e990c2cd0e10cbb10c8f3d822b3e05b3a4f05d1ec7"
+    },
+    "Proposition141GaussFrontArithmetic.log": {
+      "bytes": 165042,
+      "sha256": "827db112f4d6b1bb203787bed2b9a4edb25903cbd5f7de68602bc270cb0a97ff"
+    },
+    "Proposition141GcdArithmeticAttachment.log": {
+      "bytes": 165259,
+      "sha256": "9a3c280aa42c44a56016d5f9324531960660c04e3a5b169b21cbf2eaa8dac4e7"
+    },
+    "Proposition141LevelSigmaAttachment.log": {
+      "bytes": 132226,
+      "sha256": "5023656744f127a931112bb29104feaf67bf3a45229769c500ec3470738de510"
+    },
+    "Proposition141LongTailSigma.log": {
+      "bytes": 130152,
+      "sha256": "824622d1d9e472ef53fe3f1f8f1e5564cf164c531d78d467f8866736e6cdace9"
+    },
+    "Proposition141NormalizedSmallAggregate.log": {
+      "bytes": 130306,
+      "sha256": "d83d87aaaa7536ba0d90567863d01dc8cf03da80b55324e37fb4718995da1d92"
+    },
+    "Proposition141OffDiagonalCoefficientSum.log": {
+      "bytes": 128782,
+      "sha256": "8192caa770223bc7cf4b51fa6d2e960f4c8960bf93ee15b87800b3fabc21e322"
+    },
+    "Proposition141OffLocalAggregate.log": {
+      "bytes": 130939,
+      "sha256": "15c814e7d93aaeb638ed67163f72d3595dfc60252842e36176f0ff33dfa63cf1"
+    },
+    "Proposition141OffLocalBlock.log": {
+      "bytes": 130931,
+      "sha256": "d9214ab866b445f6c3c821e11441abfa885e9f8ee6dc2f99ae8130663d0bb2d4"
+    },
+    "Proposition141OffLocalGeometry.log": {
+      "bytes": 124946,
+      "sha256": "ddb283f73ef0c715c45c54f82cece0d8dad0d205fd8b5fcf8fc380de7e78052d"
+    },
+    "Proposition141OffLocalPrimeBound.log": {
+      "bytes": 130162,
+      "sha256": "66029f1d7db9d411ed0d48e5acfd953c30f8bfaaca922cf8b685efc62441b978"
+    },
+    "Proposition141OffLocalSigma.log": {
+      "bytes": 130152,
+      "sha256": "f13b327a7bac35c5c641762735f17aec1c2143349bf7dd24cd5b37121b2f12fe"
+    },
+    "Proposition141OriginalAdditiveReduction.log": {
+      "bytes": 165052,
+      "sha256": "36b550c2d32e3394160637e6902ebb5ad26c48edc6ffe1a4a24f932e3bdfb95d"
+    },
+    "Proposition141OriginalGaussReduction.log": {
+      "bytes": 161338,
+      "sha256": "9024351b0708079dffa12ffdfe5c804be188f2faeaf4c49264991aa7170882d3"
+    },
+    "Proposition141OuterCharacterAssembly.log": {
+      "bytes": 168374,
+      "sha256": "e8e33c7b6315a966c0e53c48706ca71ec1b8201f824bd7598ad545430c5e8afa"
+    },
+    "Proposition141OuterCharacterObjects.log": {
+      "bytes": 167520,
+      "sha256": "36da857e16fa6b3b0a0eb264050eb21a063b90b3b6fb256d7f3077adf7620b84"
+    },
+    "Proposition141PrimeCorrectionBounds.log": {
+      "bytes": 137900,
+      "sha256": "41b6bf83ddb2aa3bb3ae19599e36976ff46f0d6f919770c0020d601135e3dead"
+    },
+    "Proposition141PrimeCorrectionSaving.log": {
+      "bytes": 137974,
+      "sha256": "7c0a16e17dd89a52f9e00701c6cd0f835d6143b771434365673470248859084e"
+    },
+    "Proposition141PrimeCorrectionSeries.log": {
+      "bytes": 137104,
+      "sha256": "bcf86d6fe6dbf3437654a86a9dceba29522472cf8603ef712154e7620cbd3ee3"
+    },
+    "Proposition141PrimeGaussAttachment.log": {
+      "bytes": 137972,
+      "sha256": "b59931a5a44b33975780f199da534d135c7f70631425309a268f62f4dd3e44b9"
+    },
+    "Proposition141PrimeSourceMean.log": {
+      "bytes": 137962,
+      "sha256": "775266f1b2d7d1e68a055caa457c5f2441faef363a52985f501dce53b4b727d0"
+    },
+    "Proposition141PrimitiveOffDiagonalSum.log": {
+      "bytes": 128778,
+      "sha256": "5a4a22dc1b967e03316e07b0c10efdbb317a62c2926d3c8be78870cd0b0557c6"
+    },
+    "Proposition141PrincipalAggregate.log": {
+      "bytes": 131896,
+      "sha256": "d1f34c2437b5b2be44b15883df8635449cf13ad9cc30173ae8cc4501fc1de0e4"
+    },
+    "Proposition141PrincipalAttachment.log": {
+      "bytes": 131969,
+      "sha256": "673d103349c825cd4245d633bcfd99a5e8c49a85fe4af6babd2e6fb9f8ca9428"
+    },
+    "Proposition141PrincipalRows.log": {
+      "bytes": 131464,
+      "sha256": "12c8bb0068aa040b20d8f49c37979c108a4931e6c438328887d05111e14fd222"
+    },
+    "Proposition141PrincipalSaving.log": {
+      "bytes": 131961,
+      "sha256": "d22d9d144b70576f18e050e783ff735ca906a45d71ea85b0e77749d990f4c6fb"
+    },
+    "Proposition141RemainingLittleO.log": {
+      "bytes": 168923,
+      "sha256": "1249edf0bb378cc345799a1d47747119a95a226d162d8eecbd635ece1f44e064"
+    },
+    "Proposition141RemainingMeanBound.log": {
+      "bytes": 168441,
+      "sha256": "9136180e8186aab8b21df037e2ca6a44830c63fd364532a211d3db3d507ab859"
+    },
+    "Proposition141ResidualBound.log": {
+      "bytes": 133477,
+      "sha256": "f89e7a486dc7bd2efa00a254de079e776f65bd3a37bdc769314b6ac0af044d3b"
+    },
+    "Proposition141SigmaArithmeticAttachment.log": {
+      "bytes": 132158,
+      "sha256": "349fc030773125a6c8ad27505abe1dcfc13aba0b7ed443b2ef9c541ceb2333a2"
+    },
+    "Proposition141SmallLongTailAggregate.log": {
+      "bytes": 131435,
+      "sha256": "74efece77dea39f2e30523a06995c954630c534d78625caa649f7e56892069d9"
+    },
+    "Proposition141SmallScalarRate.log": {
+      "bytes": 129802,
+      "sha256": "346203ea8e2818e99f6a0a7b39436c52d7aa2f6361f6ba0789040d6a755b301a"
+    },
+    "Proposition141SourceLongTailBlock.log": {
+      "bytes": 131429,
+      "sha256": "fc6899243e03a6bf0ca5008624dd47cc0a4db3233e575c0dbe86c696cf047b7d"
+    },
+    "Proposition141SourceSmallAggregate.log": {
+      "bytes": 130298,
+      "sha256": "2e885fa9732ed7c83f7e07c5a707e8fa8e724d1eb5bcfbe2870e353221b901c9"
+    },
+    "Proposition141SourceSmallSum.log": {
+      "bytes": 130286,
+      "sha256": "2dce56a9670c52b767974a65d008770822652ac4eed83e157b493ca634794b76"
+    },
+    "Proposition141TailGeometry.log": {
+      "bytes": 127631,
+      "sha256": "7730471bd702a9e0841aa857656902108ed0a88536eb06366f099879eef4181e"
+    },
+    "Proposition141UnlocalizedLargeAggregate.log": {
+      "bytes": 130955,
+      "sha256": "be66bef3e523204d1f950e93f5e1fd0821a0d2802a0583b75c36d20ab0da26a7"
+    },
+    "Proposition141UnlocalizedSmallAggregate.log": {
+      "bytes": 131441,
+      "sha256": "8b01ba7e9cf23d275889b7153582c8e4f05680b6f0e2308647a8ac74df244cba"
+    },
+    "Proposition71CharacterFibers.log": {
+      "bytes": 28446,
+      "sha256": "6d8ef3e0f5c531ff5904a852189b52f823efa8465dc7376dd127f86fcc73793c"
+    },
+    "Proposition71CharacterSplit.log": {
+      "bytes": 28113,
+      "sha256": "d820c6a02e0c34479b27ae4ca7fa6e6bee897f3972a7f78ff240e7f798ab00a9"
+    },
+    "Proposition71CoprimeKappaSeries.log": {
+      "bytes": 124966,
+      "sha256": "2ebaf44c2c6052d7676f04e8642831ae418b577d28dfe18276259976d49252df"
+    },
+    "Proposition71DeltaDirichletMellin.log": {
+      "bytes": 22963,
+      "sha256": "899855b6147fd7d6a31c1d03d9b18066315a2f45fbf339d5e2ac348913ea70f8"
+    },
+    "Proposition71DeltaOneAbsolute.log": {
+      "bytes": 133983,
+      "sha256": "2db5e2681ae35ae0083b4f646c31438adaaf56b65044fc870cd04c65afb5daff"
+    },
+    "Proposition71DeltaPairs.log": {
+      "bytes": 26498,
+      "sha256": "011adc171f536496d4b0ae537fe4139114ca067abe24fc9fb1abcab3b297eedb"
+    },
+    "Proposition71DivisibleDeltaBranch.log": {
+      "bytes": 134059,
+      "sha256": "9de452739d322014d3e4ad87ca8e3a4d6b21c68e3177d834ac7f873018b82f2e"
+    },
+    "Proposition71FiniteShortPairs.log": {
+      "bytes": 291,
+      "sha256": "f52c7426c47756264c01efe793745209feb2438d45812148de9d8a3cbaa57a2a"
+    },
+    "Proposition71GaussDecomposition.log": {
+      "bytes": 118714,
+      "sha256": "466cc045bf8d9810ce6053d212775eea5d7d9c4ab0a4cdb2bd1942412ae8ca7f"
+    },
+    "Proposition71GaussRestorationMean.log": {
+      "bytes": 160156,
+      "sha256": "b2d262c5f7d832073fbc9bbe2ae587faea6529928526dc0c058b51303e2b6b76"
+    },
+    "Proposition71GcdAttachment.log": {
+      "bytes": 160425,
+      "sha256": "deb3d866a9a2018dae65b0bf5645c130f0c6c909cc8ffb1299c1ee0ffc1b9470"
+    },
+    "Proposition71NatMultiples.log": {
+      "bytes": 283,
+      "sha256": "53c31ca83c0d53d13c2d9723f15aeba0216edad5d54762589f88e03a0ad4ba75"
+    },
+    "Proposition71PositiveNatSeries.log": {
+      "bytes": 293,
+      "sha256": "040d2ee5f99038a319f067b4ecfcf5850f42fb68d8f04668b1511067b1739ec4"
+    },
+    "Proposition71PrimeGaussAttachment.log": {
+      "bytes": 158996,
+      "sha256": "f640cf75eb360a3dbd409740c4749775cb5c322a6b8fa5d9fff9375b46dd7426"
+    },
+    "Proposition71PrimeGaussRestoration.log": {
+      "bytes": 159233,
+      "sha256": "8d8f9ea1a0ce14a4a0e757099c3d3cc831bf9e9dae9ae6298373cde2915d0aeb"
+    },
+    "Proposition71PrincipalEulerBounds.log": {
+      "bytes": 155282,
+      "sha256": "8f488f5a11b3d9f5fcc2ad9f155d5080bdc2f34461ae542edd0b6a04f185e13e"
+    },
+    "Proposition71PrincipalFiniteAnalytic.log": {
+      "bytes": 155288,
+      "sha256": "871e91ecb52b38f6623b272603ba1d4d73eadf073a55d3f26e783f32ba770454"
+    },
+    "Proposition71PrincipalMellinSource.log": {
+      "bytes": 135529,
+      "sha256": "780b711333155c57e0e1fb0c9afbedfd754b217291a8087f40cf11d0ad5ab3a7"
+    },
+    "Proposition71PrincipalSplitAttachment.log": {
+      "bytes": 163541,
+      "sha256": "d559b217a59197b4eda1c491fb260cf711a26669dc2e35e3bb8ef9a880c90dc9"
+    },
+    "Proposition71ReciprocalPairs.log": {
+      "bytes": 159221,
+      "sha256": "59a926dd3cb7189d99d517f2f7be3559f6a79e2fea631a4480b1414b3f63a238"
+    },
+    "Proposition71ShiftedKappaSeries.log": {
+      "bytes": 124966,
+      "sha256": "4e65e17c6420892fbe6619ea6a0182e84797b3d33f1089d74e82135209813521"
+    },
+    "Proposition71SingleGaussCorrection.log": {
+      "bytes": 158189,
+      "sha256": "0b122e273a156664439934809874360183b5fe6546ab6224e2276cd90baee759"
+    },
+    "Proposition71SupportedCoprimeSplit.log": {
+      "bytes": 17776,
+      "sha256": "fb688ad97eabc43a5af5b897bea34ed40324d255fc5078c061033653e2c3f9a2"
+    },
+    "QuotientConductorArithmetic.log": {
+      "bytes": 111465,
+      "sha256": "a6d3ca0b92076b5a88db8b2ea57cf8796753bfe6a57f537560203a31a6f9133e"
+    },
+    "QuotientConductorIndex.log": {
+      "bytes": 111455,
+      "sha256": "29937804c4f9861ca64f0a3719c2cab506ebbd1a494045f15d88c03e02e8e0d5"
+    },
+    "QuotientConductorSource.log": {
+      "bytes": 131409,
+      "sha256": "42eeae5f40c9be2bfd0bd7a7e8ad8334f863899b70ab6f3adc0f9b09b848f487"
+    },
+    "QuotientConductorSums.log": {
+      "bytes": 111453,
+      "sha256": "37721b526430231053e633f5a562edf9ff83b1ce7064ca34d1fc615b6bb5f007"
+    },
+    "QuotientSourceConductorCover.log": {
+      "bytes": 131419,
+      "sha256": "2e5ae0c6e5311126ade3930e5f237a8bce538f52641c28d5f643074a97065007"
+    },
+    "QuotientSourceDomination.log": {
+      "bytes": 131411,
+      "sha256": "6645653426fa1699ec6b221a83719032b717b8b063f56321de7dfc011fefd725"
+    },
+    "QuotientSourceFiniteBox.log": {
+      "bytes": 131409,
+      "sha256": "909a787e3fc6a6690f1d84214bf933c42e49b776707888824708f0de4eabb1dd"
+    },
+    "QuotientSourceRate.log": {
+      "bytes": 132527,
+      "sha256": "1ca0d563ad55add3cde550c8ed4cfb164d9649b228cd575341050e8a64cdabc5"
+    },
+    "ReciprocalDeltaFiniteGcd.log": {
+      "bytes": 26711,
+      "sha256": "16af074aec24019892dc8f5b64fef6aecd99f650ccade43910547d8c2e76ca80"
+    },
+    "ReciprocalDeltaGcd.log": {
+      "bytes": 26699,
+      "sha256": "6d0f1acda233f932cafe01d809b1502e391d2832a42ce7e91417a4bcef7a6c33"
+    },
+    "mean-final-full-project.log": {
+      "bytes": 260569,
+      "sha256": "108e8b6679e1c3c8dac57fd1bbcddb59ad63dba01567ee02d5923d5139121f23"
+    },
+    "mean-final-placeholders.log": {
+      "bytes": 65,
+      "sha256": "119eb66844bca7a88da46f3dfd1674aaa2cfe83662136f063808b67bbc9c5364"
+    },
+    "mean-final-strict-audit.log": {
+      "bytes": 43447,
+      "sha256": "7f705d972730b2d44bb099b634ce4cf74d30339a2d2cff3658c8a1a2394d6320"
+    },
+    "mean-final-structure.log": {
+      "bytes": 46,
+      "sha256": "3a526273e4976e7bd4a3ef4d1f089812470d64953a19b219b074b17750029476"
+    }
+  }
+}

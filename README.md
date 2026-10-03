@@ -1,5 +1,9 @@
 # Discrete mean estimates and the Landau–Siegel zero — Lean 形式化
 
+完整原 Proposition14.1（2026-10-03）：[原Section14均值公式](ZhangLS/Spec/Proposition141.lean)已中央核验及独立语义审查通过。保留任意τ₅有界κ、原闭支撑n≤2P₄、全部复数|β|<5α、真实Ψ₁/Θ₂/主项和(A)，统一ε/D₀量词；实际Gauss修正、gcd/导体重排、主项与全部无限尾误差均已闭合。84新模块、443标准公理检查、242展开回归、5562全库PASS。现35原陈述+2显式修订=37/51；Section8数值主链仍阻塞，尚非主定理完成。[验证与范围](audit/CLOUD_PROPOSITION141_STATUS.md)。
+
+以下按时间保留历史里程碑；当前状态以[进度账本](progress.md)及其最新验证证据为准。
+
 云端里程碑（2026-10-02）：[完整 Proposition 2.1](ZhangLS/Spec/Proposition21.lean) 已证明并核验。真实Ψ₂被严格识别为Ψ中Ψ₁的补集，由已完成3.4、3.5、3.6的三个实际坏集并集界导出原文C𝒫L^-739，保留(A)和统一C/D₀量词。1模块及依赖、5回归、5标准公理接口、独立语义审查通过；新完整lake build PASS（4911项）。累计 **28/51完成，3项进行中（5.6、8.1、8.3），20项未开始**。详见[核验证据](audit/CLOUD_PROPOSITION21_STATUS.md)。
 
 云端里程碑（2026-10-02）：[完整 Lemma 17.1](ZhangLS/Spec/Lemma171.lean) 已证明并通过中央核验：保留原文严格 n<D⁴、实际 a=(6/π²)L′(1,χ)²∏p/(p+1)、原始(A)和统一 ε/D₀ 量词，得到绝对 a+o(1)。真实Euler乘积、Mellin交换、留数及误差、有限/无限移线、左积分和去平滑均已证明，未把它们作为最终前提。20模块、15展开回归、143标准公理接口及独立语义审查通过；新完整lake build PASS（4910项）。累计 **27/51完成，3项进行中（2.1、5.6、8.1），21项未开始**。详见[核验证据与范围](audit/CLOUD_LEMMA171_STATUS.md)。

@@ -5,13 +5,13 @@ Primary source: [Zhang, arXiv:2211.02515v1](https://arxiv.org/pdf/2211.02515v1),
 
 ## Scope and status discipline
 
-The baseline ledger has **24/51 reported complete, 1 partial (5.6), 26 unstarted**. This audit inspected statements, selected proof implementations, foundational definitions, source imports, the ledger, and all numbered-result locations/dependency references in the paper. It did **not** rebuild Lean, rerun the axiom checker, or independently revalidate all 24 old completions. “Complete” in the graph therefore means **historically reported complete**, not a fresh audit verdict. Subsequent cloud milestones completed original Lemmas11.1,3.6,17.1 and Proposition2.1: see CLOUD_LEMMA111_STATUS.md, CLOUD_LEMMA36_STATUS.md and CLOUD_LEMMA171_STATUS.md and CLOUD_PROPOSITION21_STATUS.md for fresh kernel, regression and axiom evidence. The current ledger is30/51 complete; baseline provenance remains distinguished from these new checks. A subsequent [full cloud kernel recheck](CLOUD_FULL_RECHECK_STATUS.md) re-elaborated all659 Spec sources and92 audit files at commitc3a134 with no failures; this is not a new independent semantic review of every historical claim.
+The baseline ledger has **24/51 reported complete, 1 partial (5.6), 26 unstarted**. This audit inspected statements, selected proof implementations, foundational definitions, source imports, the ledger, and all numbered-result locations/dependency references in the paper. It did **not** rebuild Lean, rerun the axiom checker, or independently revalidate all 24 old completions. “Complete” in the graph therefore means **historically reported complete**, not a fresh audit verdict. Subsequent cloud milestones completed original Lemmas11.1,3.6,17.1 and Proposition2.1: see CLOUD_LEMMA111_STATUS.md, CLOUD_LEMMA36_STATUS.md and CLOUD_LEMMA171_STATUS.md and CLOUD_PROPOSITION21_STATUS.md for fresh kernel, regression and axiom evidence. The current ledger is37/51 addressed:35 original statements and2 explicit repaired statements (15.2,15.3). Complete original Proposition14.1 is centrally rebuilt with independent source review; see CLOUD_PROPOSITION141_STATUS.md. The final numerical route remains blocked by the separately certified Section8 c1 inconsistency. Baseline provenance remains distinguished from these new checks. A subsequent [full cloud kernel recheck](CLOUD_FULL_RECHECK_STATUS.md) re-elaborated all659 Spec sources and92 audit files at commitc3a134 with no failures; this is not a new independent semantic review of every historical claim.
 
 Use evidence content rather than the largest step number. `audit/STEP137_STATUS.md` and `audit/lean_kernel_verification.txt` report a complete 3.2 and a 2026-10-02 11:01:20–11:17:46 UTC full PASS on Lean 4.30.0, arm64 macOS. Root `STEP141_STATUS.md` describes older temporary work against a frozen Step127 tree and still calls 3.2 unproved. It is not newer mathematical status and is not evidence of a current Linux build.
 
 The JSON has exactly 51 result nodes. Edges point prerequisite → consumer and distinguish accepted explicit citations from inferred mathematical/code dependencies. They are **not extracted Lean proof-term dependencies**. Bare import paths are recorded separately and do not establish a mathematical dependency. Typographical or analogy-only paper references are flagged instead of blindly converted to edges. The 103-edge planning graph and the source import graph over 894 baseline tracked local modules are acyclic. Unnumbered definitions, estimates, residues, numerical calculations and error assembly remain real work, even when every numbered prerequisite is available.
 
-## Safe parallel frontiers now
+## Initial independent frontiers (historical dispatch plan)
 
 1. **Lemma 11.1, Gaussian-smoothed tent profile** (pp63–64). Define the exact piecewise-linear profile (2.28), the actual integrated Gaussian weights and the boundary layers. Prove reflection, interior approximation and boundary-layer bounds. Existing `lemma44_gaussian_weight_inv`, `Lemma57GaussianGlobal` and `Lemma61GaussianWeights` supply reusable inputs. No 3.6, 2.1, 7.1 or 14.1 is required. This is the smallest clean later analytic branch.
 2. **Lemma 17.1, actual ν² short harmonic sum** (statement p96; proof pp108–109). Use completed 3.1, actual Gaussian Mellin infrastructure, exact ν² Euler factors and a new uniform residue/error argument. Define the actual constant a = (6/π²)L′(1,χ)²∏(q/(q+1)) over q dividing D, and preserve n < D⁴. No 3.6 or discrete-mean theorem is required. This is a substantive arithmetic/analytic branch, not a reuse of the ν²τ₂² Euler factor from 3.2.
@@ -19,7 +19,7 @@ The JSON has exactly 51 result nodes. Edges point prerequisite → consumer and 
 4. **Lemma 8.1, contour-to-discrete-zero identity** (pp42–44). Its needed numbered inputs are completed 2.2, 5.2, 5.9, 6.1 and 3.3. Θ₁ in its conclusion is an actual contour integral definition, so **8.1 does not require the arithmetic evaluation in 7.1**. New work includes genuine finite zero sums, uniform coefficient bounds, boundary choice, residues, reflection and aggregate moments. Larger scope than 11.1, but independently schedulable.
 5. **Lemma 8.2** (p45) is another independent contour/Taylor branch, provided its contour errors are proved directly and the erroneous-looking 5.6 citation is not accepted as a black box. Completed 5.8 gives the needed local L-linearization.
 
-**Proposition 2.1 is now verified** by the actual finite-union/counting assembly from3.4,3.5 and3.6, including the exact Psi2 complement bridge. The next7.1 and14.1 branches can share generic character-averaging, conductor and large-sieve infrastructure. Their statements do not need to be proved in paper order; 14.1 references the *method* of 7.1, while its actual exceptional-set prerequisite is 2.1.
+**Proposition 2.1 is now verified** by the actual finite-union/counting assembly from3.4,3.5 and3.6, including the exact Psi2 complement bridge. The7.1 and14.1 branches shared generic character-averaging, conductor and large-sieve infrastructure. Original14.1 is now complete;7.1 remains in progress. Their statements do not need to be proved in paper order; 14.1 references the *method* of 7.1, while its actual exceptional-set prerequisite is 2.1.
 
 ## Lemma 5.6: principal-character obstruction and circularity
 
@@ -51,7 +51,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 - 15.3 switches U₁ⱼ/U₂ⱼ labels. 16.1–16.2 require the explicit χ(2)=1 special Euler-factor normalization; dropping this branch can introduce division by zero. Approximation formulas, endpoint conventions, and all implied-constant uniformity need explicit targets before proof work.
 - Unnumbered §§9,13,15–18 evaluations and certified numerical estimates are essential. The 51-node count is an index, not a claim that proving 51 isolated statement wrappers finishes the paper.
 
-## Numbered-node index
+## Numbered-node index (baseline with selected milestone updates)
 
 `C` = historical completion reported, not revalidated here; `P` = partial; `U` = unstarted in baseline. `*` = active independent effort. `V` = a subsequently completed cloud milestone with its own fresh verification report. Dependencies marked `~` are inferred/corrected rather than accepted explicit paper citations. A 5.6 dependency always means its r > 1 port. Empty prerequisites do not mean no mathematical work or library input.
 
@@ -101,7 +101,7 @@ Do not require the full literal 5.6 to prove the final contradiction and then us
 | Lemma 12.1 | 68 / 68 | U | L5.8 |
 | Lemma 12.2 | 69 / 69–70 | U | L5.8, ~L8.3, ~L8.4 |
 | Lemma 12.3 | 70 / 70 | U | ~L8.3, ~L12.1 |
-| Proposition 14.1 | 76 / 76–79 | U | L5.3, L5.4, L5.6, ~P2.1 |
+| Proposition 14.1 | 76 / 76–79 | V | L5.3, L5.4, L5.6, ~P2.1 |
 | Lemma 15.1 | 86 / 106–108 | U | ~L3.1, ~L3.2 |
 | Lemma 15.2 | 87 / 103–104 | U | — |
 | Lemma 15.3 | 87 / 105 | U | — |
@@ -165,3 +165,7 @@ Original16.1 is [centrally verified](CLOUD_LEMMA161_STATUS.md), including its ex
 ## Blocking numerical risk in the current main route
 
 [Section8 displayed constants are inconsistent with their defining integrals](CLOUD_SECTION8_NUMERICAL_AUDIT.md) under independent high-precision and interval calculation. This blocks certification of the current2.5-to-main-theorem numerical argument; it is not a counterexample to the main theorem. All shifts and conjugates are retained. Count36/51 remains a local-result count, not a final-proof claim.
+
+## Current Section14 dependency verification
+
+Original14.1 now proves the full mean. Its genuine exceptional-set chain reaches proved `proposition21_proved` through `proposition71_generic_exceptional_fourth_power_budget`; shared P7 helper names do not mean the numbered Proposition7.1 was assumed. The actual product inducer satisfies the restricted Lemma5.6 nonprincipal hypotheses. Full modulus-one Lemma5.6 is still unresolved. Current per-node proof and scheduling states live in the JSON companion; the initial frontier list and baseline table preserve their historical provenance.
