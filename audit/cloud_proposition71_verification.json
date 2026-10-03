@@ -1,0 +1,248 @@
+{
+  "status": "PASS_ORIGINAL_PROPOSITION_7_1",
+  "verified_at_utc": "2026-10-03T10:06:31.614538+00:00",
+  "base_commit": "ed993b016437ed6a574e1450d5c65cdb4ddaed7c",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "theorem": "ZhangLS.Spec.proposition71_proved",
+  "original_target": "ZhangLS.Spec.Proposition71Target",
+  "target_source_sha256": "3a60a48f9e985ef91009880c61051a5a6393a26a612c5b70cf75dcf9fa1da4f3",
+  "target_unchanged": true,
+  "production_modules": 43,
+  "public_declarations": 151,
+  "axiom_union": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "expanded_regressions": 22,
+  "audit_drivers": 5,
+  "full_project_jobs": 5635,
+  "source_guards": 1826,
+  "spec_imports": 1381,
+  "full_imports": 1646,
+  "strict_candidates": 432,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 2,
+  "unreviewed_new_strict_candidates": 0,
+  "exact_archived_proof_bytes": true,
+  "source_archive_sha256": "63a9668c2568c8335bb70921c994df3889cd045e6a45fef3ad5a9575b5fdd659",
+  "independent_semantic_review": "ACCEPT; followed by fresh central elaboration",
+  "archived_project_source_olean_pairs": 1176,
+  "archived_baseline_project_sources": 1133,
+  "numbered_completed": 38,
+  "original_completed": 36,
+  "repaired_completed": 2,
+  "whole_paper_proved": false,
+  "literal_L5_6_proved": false,
+  "logs": {
+    "CloudProposition71CompleteAxioms.log": {
+      "bytes": 17537,
+      "sha256": "94033d2c4b9991dad18e7c750cabc73aba1c77266dcc2ddc611cfb868b20d734"
+    },
+    "CloudProposition71CompleteRegression.log": {
+      "bytes": 359401,
+      "sha256": "97441a4287ea350a10140d1df5422d1e35cf7721d57863374576364b63e85348"
+    },
+    "CloudProposition71ContourRegression.log": {
+      "bytes": 211,
+      "sha256": "df33ca52fd4cc1772a1de788be0dd5beb91329b02b5be468cd5793a6fb86ee03"
+    },
+    "CloudProposition71ScalesRegression.log": {
+      "bytes": 9800,
+      "sha256": "c965f1066cc0888936a924af7afe8a7f9249aa000c088f1521b64fd08d020e72"
+    },
+    "CloudProposition71SevenElevenRegression.log": {
+      "bytes": 47839,
+      "sha256": "0493f9f5853dcfbd22a572e99ba74ba64ba8209d12afa1f4745bc2869f22dddd"
+    },
+    "DivisorConductorSum.log": {
+      "bytes": 101,
+      "sha256": "0e65d95f42d16a3b7544314c6b06c8b8818cfac6e4b0b8e01c1acbd3bec80b5e"
+    },
+    "FiniteDivisorProductReindex.log": {
+      "bytes": 16993,
+      "sha256": "998fc2fa17761a33d933318a72e451756d369580b9505340cee077ab832d95b4"
+    },
+    "FiniteFourSumBound.log": {
+      "bytes": 100,
+      "sha256": "8ffe3c88bc24927f5d8ecd7b944fd74bef825c9ed775d34ea9b38e703f96b014"
+    },
+    "FiniteFourSumNorm.log": {
+      "bytes": 102,
+      "sha256": "52b9baacf39c92fdd0f4c0214c71328e1a065af6b53d72c6ceceae83d79475b9"
+    },
+    "NatProductFiberSums.log": {
+      "bytes": 104,
+      "sha256": "7cc2904bd9ee69635fae53950decca22c25bf6df839b8d7fc0504f22b3207b54"
+    },
+    "PositivePairNatExtension.log": {
+      "bytes": 109,
+      "sha256": "02367b2faaea560ff97435d26859c209fcf04ddb8e036253647f630c02e60f17"
+    },
+    "PrimitiveConductorNonprincipalSum.log": {
+      "bytes": 1075,
+      "sha256": "3d25394ae44c30b3158f5fa06dded89e52ca966b4ebf177b581f61d73f527fe2"
+    },
+    "Proposition71CharacterPrimeSource.log": {
+      "bytes": 169834,
+      "sha256": "e08c155e5d95248265d2bc041d5572e73c1aa48dc6ff062373e57e166503fc2d"
+    },
+    "Proposition71DeltaGeneralMellin.log": {
+      "bytes": 22780,
+      "sha256": "3ea6e55d21c41808e78940a205c13cd8eb8685f67e0d286c4ee1f93648b5fbf9"
+    },
+    "Proposition71DivisorAggregateAttachment.log": {
+      "bytes": 169912,
+      "sha256": "3a461758dcb11afe009d6f046c2a3dbca3f095a70a7410385f77bf4b040858da"
+    },
+    "Proposition71EulerEnvelopeTau.log": {
+      "bytes": 155262,
+      "sha256": "ab6bbc410a47e0307dccca02aadf6fc2308d735a58f4a39b8641f55ee37759a9"
+    },
+    "Proposition71FinalAssembly.log": {
+      "bytes": 198583,
+      "sha256": "6d3b595d43aa2360cedf909eeb8962f29c8b9b039084b01172f283329cb064ad"
+    },
+    "Proposition71NonprincipalDivisorBound.log": {
+      "bytes": 169910,
+      "sha256": "84d297ad3b504ec7b0fa603b401914abe1ef0c2616bcf6bdc5273871250a4acf"
+    },
+    "Proposition71OriginalSevenEleven.log": {
+      "bytes": 170115,
+      "sha256": "952ef51310a72c2a9e7c0865869a6b8f6e7683c966734e46759307e0b65d6d8a"
+    },
+    "Proposition71PrincipalBoundaryPointwise.log": {
+      "bytes": 156085,
+      "sha256": "1b7e84872ee89446a1d6fbdeb50adf15125c5cf1a798224367c7fb3f948910c9"
+    },
+    "Proposition71PrincipalBudgetAbsorption.log": {
+      "bytes": 21800,
+      "sha256": "88c5c54364715ff51efdd2b228e08f3988502f95f5a3ec07d50c26eef187876d"
+    },
+    "Proposition71PrincipalContourErrorIdentity.log": {
+      "bytes": 161429,
+      "sha256": "a5f679429d2e69e930eddb8db72a11a025f5aa4abbbdeb02bc19b5c3ea2dcd33"
+    },
+    "Proposition71PrincipalContourNumerator.log": {
+      "bytes": 156006,
+      "sha256": "7e233e6fc35a335c7f22fc72e825682e321ec0df7c8390862775111d12e34a28"
+    },
+    "Proposition71PrincipalContourResidues.log": {
+      "bytes": 156083,
+      "sha256": "2bd70a8b13dc18afc33edf91569b2b8f87f01eb8160f6e0d63ec7313ccec314b"
+    },
+    "Proposition71PrincipalContourWeights.log": {
+      "bytes": 191475,
+      "sha256": "064f21413102b3422b0e0e9e7592c2bf6a191a84823f880ea68e16fc094663c2"
+    },
+    "Proposition71PrincipalConvolutionAttachment.log": {
+      "bytes": 167583,
+      "sha256": "33c307ece5cc8b89f2bbacb18ce269f1403ae1528f30e66d6651f21d695fda78"
+    },
+    "Proposition71PrincipalEdgeGeometry.log": {
+      "bytes": 156080,
+      "sha256": "555f3bf8405cf4a86c0a8d183c49f1e513a4e77200a418339b546219ebbafa4f"
+    },
+    "Proposition71PrincipalEnvelopeMonotone.log": {
+      "bytes": 155107,
+      "sha256": "d2c7d1e89caf13cdedfd798e4d0464e3ef9854c301162a19a1a519e9cf17401b"
+    },
+    "Proposition71PrincipalEnvelopeWeights.log": {
+      "bytes": 155338,
+      "sha256": "8e7f74e12385f241479041de8b7709b344bfa0f1874692f4a421315e1cf0d54e"
+    },
+    "Proposition71PrincipalFiniteEdges.log": {
+      "bytes": 156079,
+      "sha256": "ea20b2cfd1ed2a5560d91426cdf56941aabf92ee58ed90be17b195c256ff9c6e"
+    },
+    "Proposition71PrincipalFiniteError.log": {
+      "bytes": 191472,
+      "sha256": "20a46b571cdfc179cab37f2f421999694f93f3f77083fe2265c9b0e5075d53e8"
+    },
+    "Proposition71PrincipalFiniteFactors.log": {
+      "bytes": 167885,
+      "sha256": "068f7190ef3440772f508736df6e10f3c67e716b5146888e5964e57a651b1757"
+    },
+    "Proposition71PrincipalLocalScales.log": {
+      "bytes": 160259,
+      "sha256": "5b75486e484256018d4693a368efe9d2fd23b5bd13a4bacd761d887c5da631ae"
+    },
+    "Proposition71PrincipalOuterDecay.log": {
+      "bytes": 178594,
+      "sha256": "7f2a98fe10cd791f96513e9c7aa83aeef3ca1ee4672f359a1f122186227b4ff9"
+    },
+    "Proposition71PrincipalPairSeries.log": {
+      "bytes": 165777,
+      "sha256": "458d2a6461fa2284982f76f1a0cc5197a5d92eedc18ade3c05e9f72b3e2f99f3"
+    },
+    "Proposition71PrincipalPointwise.log": {
+      "bytes": 184389,
+      "sha256": "78ca245624fd65d795ea7300d8c275be48b9fe487b8782a11b7b70f1c79e9050"
+    },
+    "Proposition71PrincipalPrimeError.log": {
+      "bytes": 198309,
+      "sha256": "7c4cea1cfacae9feb5323eeddbbffdb14abf4212bd354502abdf21e6a1a8228a"
+    },
+    "Proposition71PrincipalQuadruple.log": {
+      "bytes": 169331,
+      "sha256": "383fcc0183f67d1fe09614b4657970ffa88c31d3afaa0de74899624c05c7fb7e"
+    },
+    "Proposition71PrincipalResidueRearrangement.log": {
+      "bytes": 184476,
+      "sha256": "eb92d04ad43480d4260b28c7a24a928fb49de47e423a04cc3439305255c27281"
+    },
+    "Proposition71PrincipalRightMellin.log": {
+      "bytes": 135346,
+      "sha256": "b4b260fb8ea1be6ed0b8035021332bf2882d90f07ee8fe4913a00d01c3a6d260"
+    },
+    "Proposition71PrincipalRightTails.log": {
+      "bytes": 156449,
+      "sha256": "b09feb0631c933fb4d7b173b3f9dba05d5dbefd4dac8f12f9c3168cca3973ee2"
+    },
+    "Proposition71PrincipalScaleBudget.log": {
+      "bytes": 21795,
+      "sha256": "8110d37410570af56f6eaf13018882c89e66ea37307879a0baf06659b858b5c3"
+    },
+    "Proposition71PrincipalShortGeometry.log": {
+      "bytes": 156080,
+      "sha256": "84f088a754db0836ce0a472d390a0a7ef88b6bfeb8a315db11e5aca74345c56f"
+    },
+    "Proposition71PrincipalShortRectangle.log": {
+      "bytes": 156081,
+      "sha256": "942d0df1948911ab1c0d359c98e5bc998de058cde0731fd27077772f7044e8f4"
+    },
+    "Proposition71PrincipalUniformError.log": {
+      "bytes": 198591,
+      "sha256": "d1d5b1ad6c1df0bff56f07c785cd61fc95b2c5509bf526b0de1456e349cf5312"
+    },
+    "Proposition71PrincipalZetaBounds.log": {
+      "bytes": 156077,
+      "sha256": "50ef7d85e215d1adcb8b8c657d6c4b1b0018a1537384be512e6dacba0242a068"
+    },
+    "Proposition71ResidueMeanAttachment.log": {
+      "bytes": 171857,
+      "sha256": "44e652c97f1dd8af05e89b39a9207863e4395dcd8cf6651ec931ca027b002479"
+    },
+    "Proposition71SigmaSourceAttachment.log": {
+      "bytes": 169432,
+      "sha256": "521adb6282a4f0a49b5e02110cb01286a5fceeb2a04319defd94793967b2d04d"
+    },
+    "full-project.log": {
+      "bytes": 270119,
+      "sha256": "589ec1bb0428aa338400bcdc079fcbff361bc97b347225ee1f9e073231eac1e2"
+    },
+    "placeholders.log": {
+      "bytes": 65,
+      "sha256": "0c22eef241e7fff9002f78b765012597bfe90841da3f86834de7aa4e3bec2a15"
+    },
+    "strict-audit.log": {
+      "bytes": 43744,
+      "sha256": "518ee0846289270aab0ffe3449c90f859e714d87c398ad2e5d27d417966f151d"
+    },
+    "structure.log": {
+      "bytes": 46,
+      "sha256": "5db58c2f0fd709ee573373c7593f283eddd988c3509ccfbbc1639853d6d01c87"
+    }
+  }
+}

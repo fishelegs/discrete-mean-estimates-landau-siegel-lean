@@ -1,5 +1,7 @@
 # Discrete mean estimates and the Landau–Siegel zero — Lean 形式化
 
+完整原 Proposition7.1（2026-10-03）：[原Section7均值公式](ZhangLS/Spec/Proposition71FinalAssembly.lean)已中央核验并通过独立语义审查。保留原固定正系数界、C先于ε、实际χ/(A)、任意复序列和严格P T^-2支撑、真实Θ1/Sj、(1/2,2,3/2)/α及原E；主/非主分支、全部留数与四重外权已接通。43新模块、151标准公理检查、22展开回归、5635全库PASS。现36原+2显式修订=38/51；原主定理与数值修复仍未完成。[验证范围](audit/CLOUD_PROPOSITION71_STATUS.md)。
+
 实际核与留数桥梁（2026-10-03）：[Appendix B 粗糙 rho-star 核和修订 Section16 双极点局部留数](audit/CLOUD_ACTUAL_KERNEL_RESIDUE_STATUS.md)已中央核验：27模块、202标准公理检查、12展开Mellin回归及全库构建通过。原P2/P3/完整P1的真实有限D位移与统一n1范围保留；严格H14尾、完整15.1/16.2及实际均值仍待接合。[固定光滑剖面的精度研究](audit/smooth_xi_precision/DERIVATION.md)经独立解析复核和6项精确有理检查，尚非Lean定理或严格增益。编号仍35原+2修订=37/51。
 
 主尺度与修复精度审计（2026-10-03）：[实际a下界/旧16.2中心定量界](audit/CLOUD_SECTION16_SCALAR_STATUS.md)已中央验证，18声明、18展开回归、5565全库PASS；原旧商中心与所印O(L^-4)条件性不相容已量化，但不提供(A)字符存在或主定理反例。[独立双重复核的剖面研究](audit/CLOUD_PROFILE_BARRIER_STATUS.md)证明所选极限模型完整比值≤1（解析证明，尚非Lean/实际均值）；26项独立精确检查已重放。当前L^-8修复所需误差精度仍未接通，具体τ4前缀改进与ξ边界缺口已列明。编号仍35原+2修订=37/51。

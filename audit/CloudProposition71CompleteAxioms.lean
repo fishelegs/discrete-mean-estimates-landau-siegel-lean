@@ -1,0 +1,194 @@
+import ZhangLS.Spec.DivisorConductorSum
+import ZhangLS.Spec.FiniteDivisorProductReindex
+import ZhangLS.Spec.FiniteFourSumBound
+import ZhangLS.Spec.FiniteFourSumNorm
+import ZhangLS.Spec.NatProductFiberSums
+import ZhangLS.Spec.PositivePairNatExtension
+import ZhangLS.Spec.PrimitiveConductorNonprincipalSum
+import ZhangLS.Spec.Proposition71SigmaSourceAttachment
+import ZhangLS.Spec.Proposition71CharacterPrimeSource
+import ZhangLS.Spec.Proposition71DeltaGeneralMellin
+import ZhangLS.Spec.Proposition71NonprincipalDivisorBound
+import ZhangLS.Spec.Proposition71DivisorAggregateAttachment
+import ZhangLS.Spec.Proposition71EulerEnvelopeTau
+import ZhangLS.Spec.Proposition71PrincipalContourNumerator
+import ZhangLS.Spec.Proposition71PrincipalContourResidues
+import ZhangLS.Spec.Proposition71PrincipalShortGeometry
+import ZhangLS.Spec.Proposition71PrincipalShortRectangle
+import ZhangLS.Spec.Proposition71PrincipalRightMellin
+import ZhangLS.Spec.Proposition71PrincipalContourErrorIdentity
+import ZhangLS.Spec.Proposition71PrincipalZetaBounds
+import ZhangLS.Spec.Proposition71PrincipalEnvelopeMonotone
+import ZhangLS.Spec.Proposition71PrincipalEdgeGeometry
+import ZhangLS.Spec.Proposition71PrincipalBoundaryPointwise
+import ZhangLS.Spec.Proposition71PrincipalFiniteEdges
+import ZhangLS.Spec.Proposition71PrincipalRightTails
+import ZhangLS.Spec.Proposition71PrincipalScaleBudget
+import ZhangLS.Spec.Proposition71PrincipalBudgetAbsorption
+import ZhangLS.Spec.Proposition71PrincipalLocalScales
+import ZhangLS.Spec.Proposition71PrincipalPointwise
+import ZhangLS.Spec.Proposition71PrincipalPairSeries
+import ZhangLS.Spec.Proposition71PrincipalConvolutionAttachment
+import ZhangLS.Spec.Proposition71PrincipalFiniteFactors
+import ZhangLS.Spec.Proposition71PrincipalQuadruple
+import ZhangLS.Spec.Proposition71ResidueMeanAttachment
+import ZhangLS.Spec.Proposition71PrincipalResidueRearrangement
+import ZhangLS.Spec.Proposition71PrincipalEnvelopeWeights
+import ZhangLS.Spec.Proposition71PrincipalContourWeights
+import ZhangLS.Spec.Proposition71PrincipalFiniteError
+import ZhangLS.Spec.Proposition71PrincipalOuterDecay
+import ZhangLS.Spec.Proposition71PrincipalPrimeError
+import ZhangLS.Spec.Proposition71OriginalSevenEleven
+import ZhangLS.Spec.Proposition71PrincipalUniformError
+import ZhangLS.Spec.Proposition71FinalAssembly
+#print axioms ZhangLS.Spec.divisorConductor_sum_le
+#print axioms ZhangLS.Spec.finiteDivisorProduct_reindex
+#print axioms ZhangLS.Spec.finiteFourSum_le_of_subset
+#print axioms ZhangLS.Spec.finiteFourSum_norm_sub_le
+#print axioms ZhangLS.Spec.natProduct_fiber_eq_divisorsAntidiagonal
+#print axioms ZhangLS.Spec.natProduct_summable_divisorsAntidiagonal
+#print axioms ZhangLS.Spec.positivePairNatCoe
+#print axioms ZhangLS.Spec.positivePairNatCoe_injective
+#print axioms ZhangLS.Spec.positivePairNatCoe_zero_off_range
+#print axioms ZhangLS.Spec.positivePairNatCoe_summable
+#print axioms ZhangLS.Spec.positivePairNatCoe_tsum
+#print axioms ZhangLS.Spec.primitiveConductor_nonprincipal_sum
+#print axioms ZhangLS.Spec.primitiveConductor_gt_one_divisor_sum
+#print axioms ZhangLS.Spec.proposition71PrimitivePrimeDeltaTerm
+#print axioms ZhangLS.Spec.proposition71_primitive_prime_delta_summable
+#print axioms ZhangLS.Spec.proposition71_original_sigma_prime_exchange
+#print axioms ZhangLS.Spec.proposition71_induced_negative_nat
+#print axioms ZhangLS.Spec.proposition71_induced_character_fiber
+#print axioms ZhangLS.Spec.proposition71_induced_source_sigma
+#print axioms ZhangLS.Spec.proposition71_induced_gauss_source_bound
+#print axioms ZhangLS.Spec.proposition71CharacterPrimeSource
+#print axioms ZhangLS.Spec.proposition71NonprincipalSourceBlock
+#print axioms ZhangLS.Spec.proposition71_weighted_nonprincipal_source_exchange
+#print axioms ZhangLS.Spec.proposition71_induced_dvd_source_bound
+#print axioms ZhangLS.Spec.proposition71_primitive_family_source_bound
+#print axioms ZhangLS.Spec.proposition71GeneralDeltaMellinKernel
+#print axioms ZhangLS.Spec.proposition71GeneralDeltaDirichletTerm
+#print axioms ZhangLS.Spec.proposition71_general_delta_dirichlet_series_term_norm
+#print axioms ZhangLS.Spec.proposition71_general_delta_dirichlet_series_term_kernel
+#print axioms ZhangLS.Spec.proposition71_general_delta_dirichlet_series_term_integrable
+#print axioms ZhangLS.Spec.proposition71_general_delta_dirichlet_series_integral_norm_summable
+#print axioms ZhangLS.Spec.proposition71_general_delta_dirichlet_series_tsum_integrable
+#print axioms ZhangLS.Spec.proposition71_general_delta_dirichlet_integral
+#print axioms ZhangLS.Spec.proposition71_general_delta_dirichlet_series_term_integral
+#print axioms ZhangLS.Spec.proposition71_actual_general_delta_dirichlet_series
+#print axioms ZhangLS.Spec.proposition71_nonprincipal_gauss_source_sum_bound
+#print axioms ZhangLS.Spec.proposition71DivisorConductorBlock
+#print axioms ZhangLS.Spec.proposition71_divisor_conductor_block_nonneg
+#print axioms ZhangLS.Spec.proposition71_divisor_conductor_weight
+#print axioms ZhangLS.Spec.proposition71_nonprincipal_source_block_bound
+#print axioms ZhangLS.Spec.proposition71_indices_subset_prime_floor
+#print axioms ZhangLS.Spec.proposition71_divisor_aggregate_le_original
+#print axioms ZhangLS.Spec.proposition71_original_seven_thirteen
+#print axioms ZhangLS.Spec.proposition71_multichoose_degree_mono
+#print axioms ZhangLS.Spec.proposition71_prime_factor_constant_le_tau
+#print axioms ZhangLS.Spec.proposition71_prime_inverse_rpow_le_three_quarters
+#print axioms ZhangLS.Spec.proposition71_kappa_envelope_factor_le
+#print axioms ZhangLS.Spec.proposition71_lambda_envelope_factor_le
+#print axioms ZhangLS.Spec.proposition71_kappa_euler_envelope_le_tau
+#print axioms ZhangLS.Spec.proposition71_lambda_euler_envelope_le_tau
+#print axioms ZhangLS.Spec.proposition71_kappa_half_strip_envelope_nonneg
+#print axioms ZhangLS.Spec.proposition71_lambda_half_strip_envelope_nonneg
+#print axioms ZhangLS.Spec.proposition71PrincipalPoleSet
+#print axioms ZhangLS.Spec.proposition71PrincipalPolePolynomial
+#print axioms ZhangLS.Spec.proposition71PrincipalContourNumerator
+#print axioms ZhangLS.Spec.proposition71_principal_polynomial_zeros
+#print axioms ZhangLS.Spec.proposition71_principal_polynomial_analytic
+#print axioms ZhangLS.Spec.proposition71_principal_polynomial_deriv
+#print axioms ZhangLS.Spec.proposition71_principal_polynomial_simple
+#print axioms ZhangLS.Spec.proposition71_principal_numerator_analytic
+#print axioms ZhangLS.Spec.proposition71_removed_shift_quotient
+#print axioms ZhangLS.Spec.proposition71_principal_numerator_quotient
+#print axioms ZhangLS.Spec.proposition71_principal_numerator_at_one
+#print axioms ZhangLS.Spec.proposition71_principal_quotient_eventually
+#print axioms ZhangLS.Spec.proposition71_principal_numerator_residue
+#print axioms ZhangLS.Spec.proposition71_short_height_beta_margin
+#print axioms ZhangLS.Spec.proposition71_short_rectangle_pole_inside
+#print axioms ZhangLS.Spec.proposition71_short_rectangle_shift_margin
+#print axioms ZhangLS.Spec.proposition71_principal_short_rectangle_at_threshold
+#print axioms ZhangLS.Spec.proposition71_actual_principal_short_rectangle
+#print axioms ZhangLS.Spec.proposition71_actual_general_principal_mellin_source
+#print axioms ZhangLS.Spec.proposition71PrincipalDeltaSum
+#print axioms ZhangLS.Spec.proposition71PrincipalResidueSum
+#print axioms ZhangLS.Spec.proposition71_principal_five_edge_error
+#print axioms ZhangLS.Spec.proposition71_principal_zeta_right_bound
+#print axioms ZhangLS.Spec.proposition71_principal_delta_cauchy_bound
+#print axioms ZhangLS.Spec.proposition71_principal_zeta_short_rectangle_bound
+#print axioms ZhangLS.Spec.proposition71_prime_negative_rpow_lt_one
+#print axioms ZhangLS.Spec.proposition71_kappa_euler_envelope_nonneg
+#print axioms ZhangLS.Spec.proposition71_lambda_euler_envelope_nonneg
+#print axioms ZhangLS.Spec.proposition71_kappa_euler_envelope_antitone
+#print axioms ZhangLS.Spec.proposition71_lambda_euler_envelope_antitone
+#print axioms ZhangLS.Spec.proposition71_principal_integrand_norm_uniform_euler
+#print axioms ZhangLS.Spec.proposition71_short_rectangle_real_bounds
+#print axioms ZhangLS.Spec.proposition71_short_rectangle_width
+#print axioms ZhangLS.Spec.proposition71_principal_left_pole_separation
+#print axioms ZhangLS.Spec.proposition71_principal_horizontal_pole_separation
+#print axioms ZhangLS.Spec.proposition71PrincipalArithmeticBound
+#print axioms ZhangLS.Spec.proposition71_principal_arithmetic_bound_nonneg
+#print axioms ZhangLS.Spec.proposition71_principal_right_pointwise
+#print axioms ZhangLS.Spec.proposition71_principal_separated_pointwise
+#print axioms ZhangLS.Spec.proposition71_principal_finite_edges
+#print axioms ZhangLS.Spec.proposition71_integrable_cauchy_tails
+#print axioms ZhangLS.Spec.proposition71_principal_right_tails
+#print axioms ZhangLS.Spec.proposition71_principal_scale_right
+#print axioms ZhangLS.Spec.proposition71_principal_scale_left
+#print axioms ZhangLS.Spec.proposition71_principal_height_inverse
+#print axioms ZhangLS.Spec.proposition71_principal_height_inverse_square
+#print axioms ZhangLS.Spec.proposition71_principal_left_budget
+#print axioms ZhangLS.Spec.proposition71_principal_horizontal_budget
+#print axioms ZhangLS.Spec.proposition71_principal_tail_budget
+#print axioms ZhangLS.Spec.proposition71_principal_local_scales
+#print axioms ZhangLS.Spec.proposition71PrincipalContourConstant
+#print axioms ZhangLS.Spec.proposition71_principal_contour_constant_pos
+#print axioms ZhangLS.Spec.proposition71_principal_pointwise_at_threshold
+#print axioms ZhangLS.Spec.proposition71_actual_principal_pointwise
+#print axioms ZhangLS.Spec.proposition71_original_principal_contour
+#print axioms ZhangLS.Spec.proposition71PrincipalPairTerm
+#print axioms ZhangLS.Spec.proposition71_principal_pair_zero_product
+#print axioms ZhangLS.Spec.proposition71_short_coefficient_zero_off_factors
+#print axioms ZhangLS.Spec.proposition71_principal_long_fiber_summable
+#print axioms ZhangLS.Spec.proposition71_principal_pair_summable
+#print axioms ZhangLS.Spec.proposition71_principal_convolution_pointwise
+#print axioms ZhangLS.Spec.proposition71_principal_delta_convolution_split
+#print axioms ZhangLS.Spec.proposition71_principal_pair_tsum_finite
+#print axioms ZhangLS.Spec.proposition71_principal_delta_finite_factorization
+#print axioms ZhangLS.Spec.proposition71PrincipalQuadTerm
+#print axioms ZhangLS.Spec.proposition71PrincipalQuadMean
+#print axioms ZhangLS.Spec.proposition71_principal_block_quad_split
+#print axioms ZhangLS.Spec.proposition71_prime_principal_eq_quad
+#print axioms ZhangLS.Spec.proposition71ResidueArithmeticMean
+#print axioms ZhangLS.Spec.proposition71_residue_weighted_sum
+#print axioms ZhangLS.Spec.proposition71_main_term_prime_sum
+#print axioms ZhangLS.Spec.proposition71_actual_residue_mean_error
+#print axioms ZhangLS.Spec.proposition71_principal_residue_power
+#print axioms ZhangLS.Spec.proposition71PrincipalQuadResidue
+#print axioms ZhangLS.Spec.proposition71_principal_residue_star_term
+#print axioms ZhangLS.Spec.proposition71_principal_quad_residue_expanded
+#print axioms ZhangLS.Spec.proposition71_principal_quad_residue_sum
+#print axioms ZhangLS.Spec.proposition71_principal_euler_weight_le_tau
+#print axioms ZhangLS.Spec.proposition71_principal_envelope_weight_majorant
+#print axioms ZhangLS.Spec.proposition71_principal_envelope_outer_sum
+#print axioms ZhangLS.Spec.proposition71PrincipalExteriorWeight
+#print axioms ZhangLS.Spec.proposition71_principal_left_re_lower
+#print axioms ZhangLS.Spec.proposition71_principal_exterior_weight_nonneg
+#print axioms ZhangLS.Spec.proposition71_principal_quad_contour_bound
+#print axioms ZhangLS.Spec.proposition71_principal_prime_finite_error
+#print axioms ZhangLS.Spec.proposition71_stretched_exponential_decay
+#print axioms ZhangLS.Spec.proposition71_principal_outer_decay
+#print axioms ZhangLS.Spec.proposition71_principal_outer_rate
+#print axioms ZhangLS.Spec.proposition71_principal_rate_reassociate
+#print axioms ZhangLS.Spec.proposition71_principal_floor_log_budget
+#print axioms ZhangLS.Spec.proposition71_principal_prime_residue_error
+#print axioms ZhangLS.Spec.proposition71_nonprincipal_phase_factor
+#print axioms ZhangLS.Spec.proposition71_nonprincipal_phase_norm
+#print axioms ZhangLS.Spec.proposition71_original_seven_eleven
+#print axioms ZhangLS.Spec.proposition71_original_nonprincipal_little_o
+#print axioms ZhangLS.Spec.proposition71_original_principal_reduction
+#print axioms ZhangLS.Spec.proposition71_principal_residue_little_o
+#print axioms ZhangLS.Spec.proposition71_at_every_positive_constant
+#print axioms ZhangLS.Spec.proposition71_proved

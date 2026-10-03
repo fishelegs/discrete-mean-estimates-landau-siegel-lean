@@ -1,0 +1,12 @@
+[
+  {
+    "candidate": "HIGH   ZhangLS/Spec/Proposition71PrincipalConvolutionAttachment.lean:35: direct exact hypothesis: exact hc",
+    "verdict": "reviewed_false_positive",
+    "reason": "hc is the local by_cases branch l.Coprime k, introduced at line 20. The subgoal is the pair of coprimality facts for a divisor-antidiagonal mn. Rewriting with Nat.coprime_mul_iff_left and the proved mn.1*mn.2=l identity reduces that local subgoal to hc. Neither the full convolution identity nor an arithmetic estimate is a premise."
+  },
+  {
+    "candidate": "HIGH   ZhangLS/Spec/Proposition71PrincipalEdgeGeometry.lean:40: direct exact hypothesis: exact he",
+    "verdict": "reviewed_false_positive",
+    "reason": "he is derived locally at line 38 by Complex.abs_re_le_norm. The proved real-part identity and positive reciprocal rewrite it into the needed pole-separation bound. It is not an assumed desired estimate; the theorem assumes only actual left-edge geometry and the lower bound on log D."
+  }
+]
