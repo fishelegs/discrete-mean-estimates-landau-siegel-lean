@@ -1,0 +1,93 @@
+[
+  {
+    "source_label": "zhang-2211.02515-source.tex",
+    "original_sha256": "5dc202bdc414fb743004ae32e8dec0dd284636f7197b1cab78a46336e0cde30b",
+    "external_input": true,
+    "official_source_url": "https://arxiv.org/src/2211.02515v1",
+    "required_for": "Optional external source-file SHA256 identity check only"
+  },
+  {
+    "source_label": "annular-phase-completion/REPORT.md",
+    "original_sha256": "1839df7636ee4adcdacae99228c5ecf4b089556815fcc6c17d5b0888e3a91ea2",
+    "public_path": "reports/DYADIC_REPORT.md",
+    "public_sha256": "f1dc2dfa62e0eb7310eb557f14e1dc2ff1eb99681d9acd4f147b2f9139d54635",
+    "editorial_changes": true
+  },
+  {
+    "source_label": "annular-covariance-independent-review/REVIEW.md",
+    "original_sha256": "d30a11ab40462aa22965a6f6f479a6490faddaa6e47abe19e0f423833cc25cef",
+    "public_path": "reviews/DYADIC_REVIEW.md",
+    "public_sha256": "9a8d0cac453806419d3024f162f0864142f7ff6fd4c92c2fb6dab365a754a4db",
+    "editorial_changes": true
+  },
+  {
+    "source_label": "annular-phase-completion/check_annular.py",
+    "original_sha256": "4b06c4d10f8182873987fd2abadb3c4ecd020a2fed4780646efdd468da3de8b6",
+    "public_path": "scripts/check_annular.py",
+    "public_sha256": "4b06c4d10f8182873987fd2abadb3c4ecd020a2fed4780646efdd468da3de8b6",
+    "editorial_changes": false
+  },
+  {
+    "source_label": "annular-covariance-independent-review/check_independent.py",
+    "original_sha256": "c0d0237499683e2f9be8d0b3954f225da8f099df693f282e406f05ad2451e7d2",
+    "public_path": "scripts/check_independent.py",
+    "public_sha256": "b7cc4d3bbd2b244ec97dfe952625a96d76ac56625342681013f9fa6970b55200",
+    "editorial_changes": true
+  },
+  {
+    "source_label": "annular-phase-completion/CHECKS.txt",
+    "original_sha256": "252a017626021db36da4a5006223c8c8b133043fcd0aac1f11c421f9c4ca01fb",
+    "public_path": "results/AUTHOR_ORIGINAL.txt",
+    "public_sha256": "252a017626021db36da4a5006223c8c8b133043fcd0aac1f11c421f9c4ca01fb",
+    "editorial_changes": false
+  },
+  {
+    "source_label": "annular-covariance-independent-review/CHECKS.txt",
+    "original_sha256": "e4de014123d9d7b3117baf911693d4d1986bdf5c9c4d0070d04de91825a91049",
+    "public_path": "results/INDEPENDENT_ORIGINAL.txt",
+    "public_sha256": "e4de014123d9d7b3117baf911693d4d1986bdf5c9c4d0070d04de91825a91049",
+    "editorial_changes": false
+  },
+  {
+    "source_label": "annular-phase-completion/ADDENDUM_FIXED_LOG_WINDOWS.md",
+    "original_sha256": "c457ac0dfb91b14a9bd45dee4615fa489cb98c2a90c0569d00a8ca3e0873c52e",
+    "public_path": "reports/FIXED_LOG_ADDENDUM.md",
+    "public_sha256": "dfb99acaa5aa58c5f4bdc10630fff9b12919c976a240d83a04d8ffeb8de0a62a",
+    "editorial_changes": true
+  },
+  {
+    "source_label": "annular-covariance-independent-review/ADDENDUM_REVIEW.md",
+    "original_sha256": "9e94741392cb94abdf0cb0bccc23e3f9b023b920e45b47be4f7f92658d11edc1",
+    "public_path": "reviews/FIXED_LOG_REVIEW.md",
+    "public_sha256": "ead44c0858e4d22ca83c2ec12241bdddc10a69cf80d65256130f861bd3a26f45",
+    "editorial_changes": true
+  },
+  {
+    "source_label": "annular-phase-completion/check_fixed_log_windows.py",
+    "original_sha256": "98df312b3acaaa5cb1bbc26b1a87298376d53d80d536840f585ac8cf70d390e0",
+    "public_path": "scripts/check_fixed_log_author.py",
+    "public_sha256": "98df312b3acaaa5cb1bbc26b1a87298376d53d80d536840f585ac8cf70d390e0",
+    "editorial_changes": false
+  },
+  {
+    "source_label": "annular-phase-completion/CHECKS_FIXED_LOG_WINDOWS.txt",
+    "original_sha256": "4eded3bf5451abb285af250139e91527b385fcb853e1462288721977e4a51710",
+    "public_path": "results/FIXED_LOG_AUTHOR_ORIGINAL.txt",
+    "public_sha256": "4eded3bf5451abb285af250139e91527b385fcb853e1462288721977e4a51710",
+    "editorial_changes": false
+  },
+  {
+    "source_label": "annular-covariance-independent-review/check_fixed_log_windows.py",
+    "original_sha256": "ae05853a5f14555d40dea8e93ac3edd4baa639b8304d80225a6086917522634f",
+    "public_path": "scripts/check_fixed_log_windows.py",
+    "public_sha256": "5d715370d9603ed84caca43b2d35f36b4ae8f51a88b5c777c68b6068db5a33d9",
+    "editorial_changes": true
+  },
+  {
+    "source_label": "annular-covariance-independent-review/FIXED_LOG_CHECKS.txt",
+    "original_sha256": "5b88e62c030ce66505419ff1b73a70bc50cf452dab04bb0001dcd32214fb88be",
+    "public_path": "results/FIXED_LOG_INDEPENDENT_ORIGINAL.txt",
+    "public_sha256": "5b88e62c030ce66505419ff1b73a70bc50cf452dab04bb0001dcd32214fb88be",
+    "editorial_changes": false
+  }
+]

@@ -1,0 +1,6 @@
+Fixed logarithmic widths: {'A': Fraction(1, 500), 'B': Fraction(1, 1000), 'J': Fraction(1, 250)}
+Positive power gaps before D/t0 factors: {'C1 right': Fraction(1, 2000), 'C1 left': Fraction(1, 1000), 'T1 right': Fraction(3, 1000), 'T1 left': Fraction(1, 1000), 'C0[J,B] right': Fraction(1, 250), 'C0[J,B] left': Fraction(1, 1000)}
+Large-sieve input length exponents, all below 2: {'right kappa square': Fraction(1999, 1000), 'left/target kappa': Fraction(201, 200), 'A cube': Fraction(189, 125), 'B cube': Fraction(3, 2), 'J cube': Fraction(189, 125)}
+Exact unchanged Holder budgets: -200 -14
+36 finite normalized endpoint bounds passed
+ALL CHECKS PASSED. No arithmetic main term or signed gain is established by these checks.

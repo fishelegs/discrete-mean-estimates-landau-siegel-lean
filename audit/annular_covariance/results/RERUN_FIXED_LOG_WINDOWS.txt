@@ -1,0 +1,8 @@
+Exact positive endpoint gaps: {'C1 right, cutoff+product_min-2': '1/2000', 'C1 left, cutoff-product_max': '1/1000', 'T1 right, cutoff+A_min-1-J_max': '3/1000', 'T1 left, cutoff+J_min-1-A_max': '1/1000', 'C0[J,B] right': '1/250', 'C0[J,B] left': '1/1000'}
+Exact large-sieve support exponents (<2): {'right_kappa_square': '1999/1000', 'left_and_target_kappa': '201/200', 'A_cube': '189/125', 'B_cube': '3/2', 'J_cube': '189/125'}
+Unchanged Holder budgets: {'C1_right': '-200', 'C1_left_and_T1_both': '-14'}
+A support is contained in the unchanged original J class
+Fixed bounded triangular profile L2 norms: {'A': '1/1500', 'B': '1/3000', 'J': '1/750'}
+Chi-square periodic density is phi(D)/D; it must not be omitted
+Frozen base report hash remains unchanged
+ALL CHECKS PASSED; endpoint tail bounds and norm distinctions require the written review

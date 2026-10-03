@@ -1,0 +1,9 @@
+Exact Holder budgets: -200 -14
+Exact power gaps, before D/t0 factors: {'C1 right': Fraction(-1, 1000), 'C1 left': Fraction(1, 1000), 'T1 right': Fraction(-1, 250), 'T1 left': Fraction(1, 500)}
+Exact Laurent identity |kappa(q)|^2=4+4 sin(theta1)sin(theta2) passed; bound 8 is sharp
+546 prime-power and positive convolution majorant checks passed
+1600 truncated-square coefficient checks against |kappa|*|kappa| passed
+Direct CRT and primitive parity kernel checks: {'CRT': 168, 'C1 right': 360, 'C1 left': 360, 'T1 right': 360, 'T1 left': 360}
+Both parities: central gamma moduli, exact Echi modulus, and inherited branch identity passed
+Exact finite-window Mellin rectangle orientation/regression passed
+ALL CHECKS PASSED. These checks do not prove the uniform analytic estimates or a favorable gain.

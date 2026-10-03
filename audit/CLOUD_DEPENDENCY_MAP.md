@@ -181,3 +181,9 @@ The27-module component release supplies actual rough rho-star P2/P3/full-P1 asym
 ## Complete original Proposition7.1
 
 Original Proposition7.1 is now complete with its unchanged source target, actual uniform coefficients/support, weights and E. All43 migration modules and151 public declarations pass the central kernel/axiom checks,22 expanded regressions and5635-job build, following independent semantic review. Its use of the nonprincipal5.6 port does not complete the problematic literal full5.6 statement; the principal branch is proved separately. The whole-paper main theorem and numerical repair remain open. See CLOUD_PROPOSITION71_STATUS.md.
+
+## Actual first logarithmic moment bridge
+
+The actual strict nu-squared logarithmic moment, actual second-jet/first-jet curvature, and positive scalar mass bounds are centrally verified. All 159 public and 310 owned declarations, seven regressions and the 5658-job project pass. This is an auxiliary arithmetic bridge, so the ledger stays 38/51 (36 original, two repaired). No signed correction or main theorem is inferred. See CLOUD_FIRST_LOG_MOMENT_STATUS.md.
+
+The separate repair_routes/STATUS.md records independently reviewed leading-model positivity and the distinct C0/C1/T1 kernels. Those source-level mathematical audits are not Lean proofs or completed actual means. The separate structured_covariance/STATUS.md adds an independently reviewed exact-gamma H(GA,FB) representation with O(a^-1 L^-45) exceptional-family error; its main arithmetic sums and signed gain remain unproved. The further annular_covariance/STATUS.md establishes source-level C1/T1 finite-window representations in explicit dyadic/fixed-log support classes with O(a^-1 L^-14) error. The actual Gram normalization and signed arithmetic main terms remain open; no Lean claim is made for these research reports.

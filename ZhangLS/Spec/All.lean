@@ -4,6 +4,7 @@
   Do not edit by hand.
 -/
 
+import ZhangLS.Spec.ActualCurvatureConstraint
 import ZhangLS.Spec.AdditiveReciprocity
 import ZhangLS.Spec.AllModuliFractions
 import ZhangLS.Spec.AllModuliGaussParseval
@@ -50,6 +51,8 @@ import ZhangLS.Spec.ConductorTotientWeight
 import ZhangLS.Spec.CoprimeGaussPrimeAverage
 import ZhangLS.Spec.CoprimeGaussRealTwist
 import ZhangLS.Spec.CoprimeGaussResidues
+import ZhangLS.Spec.CorrectionLogReality
+import ZhangLS.Spec.CorrectionZetaFormula
 import ZhangLS.Spec.DeltaPairGcdReindex
 import ZhangLS.Spec.DirichletLSeries
 import ZhangLS.Spec.DivisorCharacterSum
@@ -60,12 +63,18 @@ import ZhangLS.Spec.DivisorSmallPowerBudget
 import ZhangLS.Spec.FiniteDivisorProductReindex
 import ZhangLS.Spec.FiniteFourSumBound
 import ZhangLS.Spec.FiniteFourSumNorm
+import ZhangLS.Spec.FirstLogMoment
+import ZhangLS.Spec.FirstLogMomentLower
+import ZhangLS.Spec.FirstLogRegressions
 import ZhangLS.Spec.FixedModulusGcdAttachment
 import ZhangLS.Spec.FixedModulusGcdBridge
 import ZhangLS.Spec.FixedModulusGcdOriginalPhase
 import ZhangLS.Spec.FixedModulusGcdRegression
 import ZhangLS.Spec.FixedModulusGcdSourceIndex
 import ZhangLS.Spec.FixedModulusGcdSums
+import ZhangLS.Spec.FourthContourFinite
+import ZhangLS.Spec.FourthResidue
+import ZhangLS.Spec.GaussianVerticalNumerator
 import ZhangLS.Spec.InducedGaussConductor
 import ZhangLS.Spec.InducedGaussFiniteSums
 import ZhangLS.Spec.InducedGaussFormula
@@ -305,6 +314,7 @@ import ZhangLS.Spec.Lemma171GaussianUnsmoothing
 import ZhangLS.Spec.Lemma171LeftAbsorption
 import ZhangLS.Spec.Lemma171LeftIntegral
 import ZhangLS.Spec.Lemma171LeftMajorant
+import ZhangLS.Spec.Lemma171LogDerivative
 import ZhangLS.Spec.Lemma171MainLowerBound
 import ZhangLS.Spec.Lemma171Residue
 import ZhangLS.Spec.Lemma171ResidueBound
@@ -1066,6 +1076,18 @@ import ZhangLS.Spec.Lemma84TwoPoleRemoval
 import ZhangLS.Spec.Lemma84UContourBound
 import ZhangLS.Spec.Lemma84WeightedArithmetic
 import ZhangLS.Spec.Lemma84WeightedMass
+import ZhangLS.Spec.LogContourBounds
+import ZhangLS.Spec.LogContourInfinite
+import ZhangLS.Spec.LogGaussianComparison
+import ZhangLS.Spec.LogGaussianInverse
+import ZhangLS.Spec.LogGaussianMellin
+import ZhangLS.Spec.LogGaussianTail
+import ZhangLS.Spec.LogGaussianUnsmoothing
+import ZhangLS.Spec.LogGaussianWeight
+import ZhangLS.Spec.LogMomentQuantitative
+import ZhangLS.Spec.LogMomentUniform
+import ZhangLS.Spec.LogResidueBudget
+import ZhangLS.Spec.LogResidueMain
 import ZhangLS.Spec.NatProductFiberSums
 import ZhangLS.Spec.PaperErrorScaleBudget
 import ZhangLS.Spec.PaperTheorems
@@ -1344,6 +1366,7 @@ import ZhangLS.Spec.QuotientSourceRate
 import ZhangLS.Spec.RealAxisAtOne
 import ZhangLS.Spec.RealAxisContinuation
 import ZhangLS.Spec.RealAxisDerivativeAtOne
+import ZhangLS.Spec.RealAxisHigherDerivatives
 import ZhangLS.Spec.RealAxisLFunction
 import ZhangLS.Spec.RealAxisSeries
 import ZhangLS.Spec.RealDirichletCharacter

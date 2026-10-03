@@ -1,0 +1,5 @@
+Bundle hashes, inventory, local links, and portable references verified
+Required mpmath and SymPy versions verified
+PASS check_algebra.py: output exactly matches results/algebra.txt
+PASS check_independent.py: output exactly matches results/independent.txt
+ALL CHECKS PASSED. Finite checks are not an analytic or Lean proof.

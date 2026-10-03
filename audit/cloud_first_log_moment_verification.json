@@ -1,0 +1,161 @@
+{
+  "status": "PASS_ACTUAL_FIRST_LOG_MOMENT",
+  "verified_at_utc": "2026-10-03T11:01:30.039915+00:00",
+  "base_commit": "6e6660ea1091047b38531d7c660261a0c0ed0e3b",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "production_and_regression_modules": 23,
+  "public_declarations": 159,
+  "all_owned_declarations": 310,
+  "nonempty_owners": 23,
+  "expanded_regressions": 7,
+  "axiom_union": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "owner_audit_nonempty_and_exact_counts_enforced": true,
+  "full_project_jobs": 5658,
+  "source_guards": 1851,
+  "spec_imports": 1404,
+  "full_imports": 1669,
+  "strict_candidates": 435,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 3,
+  "unreviewed_new_strict_candidates": 0,
+  "source_archive_sha256": "c50a4038e99c0bbca5d98ec7fb55b7959f5e2fa9e9c2dab45e60cee07bc38d19",
+  "relocation_changed_only_import_identifiers": true,
+  "independent_semantic_review": "ACCEPT followed by fresh central elaboration",
+  "numbered_completed": 38,
+  "original_completed": 36,
+  "repaired_completed": 2,
+  "new_numbered_result": false,
+  "signed_mean_gain_proved": false,
+  "whole_paper_proved": false,
+  "logs": {
+    "ActualCurvatureConstraint.log": {
+      "bytes": 22451,
+      "sha256": "eb1e047e062ac09e18a4e4a03328610fa43eb85b46c3d950b3577dd3fd778f3c"
+    },
+    "CloudFirstLogMomentAxioms.log": {
+      "bytes": 17980,
+      "sha256": "ea14b6571d300698e7865be9c75af0f341040422fb19a4cda0042559e3a58f85"
+    },
+    "CloudFirstLogMomentOwners.log": {
+      "bytes": 38949,
+      "sha256": "02c828f639c6d22dba2bcc20585bc8ba3d0daa36b69111932e956e0c3134a1e8"
+    },
+    "CorrectionLogReality.log": {
+      "bytes": 13361,
+      "sha256": "27409ed8bd3e1c4e9fe64d5075fe0aa048b0ada6216c9399bd396b7997c0859f"
+    },
+    "CorrectionZetaFormula.log": {
+      "bytes": 13302,
+      "sha256": "5bcdb521c1fb2f8b49ff0b31d3c1a11aedbea1b02527d550e714b8b364496e6f"
+    },
+    "FirstLogMoment.log": {
+      "bytes": 5788,
+      "sha256": "9c2ff37fcef165a2bf58b1d4d362b0f3393baef4138bce94a46808a5418426f9"
+    },
+    "FirstLogMomentLower.log": {
+      "bytes": 17838,
+      "sha256": "244543c3eda78b506023b8a7691fe9e0d9baab24aec6fdbb0ec6f8134b754dc3"
+    },
+    "FirstLogRegressions.log": {
+      "bytes": 23227,
+      "sha256": "9337549349335a700f52ed8915d3b9c51b192ab2d7f896d827793a0dd1534442"
+    },
+    "FourthContourFinite.log": {
+      "bytes": 13950,
+      "sha256": "f90bc092b260e68a0c358281cc37eacb69d8d8c4138658a0c2822e5a7968523f"
+    },
+    "FourthResidue.log": {
+      "bytes": 11654,
+      "sha256": "ddb83fa4eb77ab6a22bd3dbbe281ac99143e2c29f1866c71eda56f1d0133507b"
+    },
+    "GaussianVerticalNumerator.log": {
+      "bytes": 10081,
+      "sha256": "dbd3f7da0373ab93cea36ab4609f0f1030b04503f0c23b25fe0e10f0fbd7b7b5"
+    },
+    "Lemma171LogDerivative.log": {
+      "bytes": 12714,
+      "sha256": "c1a4cb1c5269e600a0499d58756bc8b9f52fc189382a53b9fed14b2752be26d5"
+    },
+    "LogContourBounds.log": {
+      "bytes": 19161,
+      "sha256": "0f5b598ab630417bb4d9fc6f2fe5a7fe3caa23b0a255841dd53b3c65706599a7"
+    },
+    "LogContourInfinite.log": {
+      "bytes": 19483,
+      "sha256": "3703d45d842e607913f43b3fb573a65305d418968b50ffad9e034ac85c373d04"
+    },
+    "LogGaussianComparison.log": {
+      "bytes": 19932,
+      "sha256": "2deec92480aadc1b94863350bab14e4677941368255e922319532bf39fdb489a"
+    },
+    "LogGaussianInverse.log": {
+      "bytes": 10904,
+      "sha256": "59f71bf1ff1e8e8d40322b98bf065274d21e17d7a5dbe9c8cea5c1251493f392"
+    },
+    "LogGaussianMellin.log": {
+      "bytes": 19928,
+      "sha256": "b409bd171256ee3a9178499378a3ef4820c54169a36deacd1caafea13ea833b2"
+    },
+    "LogGaussianTail.log": {
+      "bytes": 9932,
+      "sha256": "f77de9a7a422da4cd162e38642056c796385382bee8132fc62cda54ae45d21f6"
+    },
+    "LogGaussianUnsmoothing.log": {
+      "bytes": 19933,
+      "sha256": "4a7e4936645e034836454872379e3587503873474b557173c57cc4e26d595bf9"
+    },
+    "LogGaussianWeight.log": {
+      "bytes": 3461,
+      "sha256": "d611b3d66ec25928bc9d085873d2ea09d1a9842155a1b9c75d06180762a9b30f"
+    },
+    "LogMomentQuantitative.log": {
+      "bytes": 21904,
+      "sha256": "5662c036e70090b1b14da6d67b3a0e5663b241eaaa921c21da70ced28823c76f"
+    },
+    "LogMomentUniform.log": {
+      "bytes": 21899,
+      "sha256": "8f0732c791daa9fc5dbb0392288336cb0d99c8db4695bc346f17437a2ea5991e"
+    },
+    "LogResidueBudget.log": {
+      "bytes": 11657,
+      "sha256": "77dcb9e721d75daea10641ff3154ef9cd9f45b4feb3f8e1b0aa195dfaaa81255"
+    },
+    "LogResidueMain.log": {
+      "bytes": 14538,
+      "sha256": "07e325b372057db9614dc3b62364545c7a4901d51e0328ba0c170d24d6860d1a"
+    },
+    "RealAxisHigherDerivatives.log": {
+      "bytes": 1038,
+      "sha256": "a4243f09149e4c022a7cc103f2da09966b47808c85b158449bdd744e24d47867"
+    },
+    "all-imports.log": {
+      "bytes": 35,
+      "sha256": "2d0e2dd5d9ec7130e537459efd7fe0753ed5aeba73bbbdfd35c8c11d4b9c4c4e"
+    },
+    "full-project.log": {
+      "bytes": 274712,
+      "sha256": "87c117c4f632efd8f3427da75fb9d2f7935422d556dd79a01907f5da72ee517c"
+    },
+    "placeholders.log": {
+      "bytes": 65,
+      "sha256": "25189630b661cc9730c02d65731bb50e5ed3f11c366a75ca75ddf2fd1bea4a10"
+    },
+    "spec-imports.log": {
+      "bytes": 40,
+      "sha256": "1fc5a20b2f58a73f002a0d25cbd61a285956cb9bb245a39e5e980fda81bd25f2"
+    },
+    "strict-audit.log": {
+      "bytes": 43996,
+      "sha256": "0f77c1b523beed853d0dca1e6080ff0a09d667f23ee2904fddca1e1ca6ef6ead"
+    },
+    "structure.log": {
+      "bytes": 46,
+      "sha256": "428343603fe6d002335afaf748140f1a6a3e421658a43754b48b61523a1f20a3"
+    }
+  }
+}

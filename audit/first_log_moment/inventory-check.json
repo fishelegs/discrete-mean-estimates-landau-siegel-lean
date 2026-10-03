@@ -1,0 +1,245 @@
+{
+  "archive_sha256": "c50a4038e99c0bbca5d98ec7fb55b7959f5e2fa9e9c2dab45e60cee07bc38d19",
+  "archive_entries": 475,
+  "archive_top_paths": [
+    "actual-first-log-moment",
+    "actual-first-log-moment/ActualCurvatureConstraint.lean",
+    "actual-first-log-moment/CorrectionLogReality.lean",
+    "actual-first-log-moment/CorrectionZetaFormula.lean",
+    "actual-first-log-moment/FirstLogMoment.lean",
+    "actual-first-log-moment/FirstLogMomentLower.lean",
+    "actual-first-log-moment/FirstLogRegressions.lean",
+    "actual-first-log-moment/FourthContourFinite.lean"
+  ],
+  "archive_regular_files": 419,
+  "archive_release_byte_differences": [],
+  "dependency_hashes.json": {
+    "entries": 324,
+    "kinds": {
+      "component": 19,
+      "parent": 4,
+      "external": 88,
+      "project": 213
+    },
+    "missing": [],
+    "differences": []
+  },
+  "all_import_hashes.json": {
+    "entries": 6035,
+    "kinds": {
+      "component": 23,
+      "package": 3658,
+      "toolchain": 2141,
+      "project": 213
+    },
+    "missing": [],
+    "differences": []
+  },
+  "proof_modules": 23,
+  "owned_source_records": {
+    "entries": 24,
+    "differences": []
+  },
+  "audit": {
+    "log_entries": 310,
+    "manifest_entries": 310,
+    "unique_names": 310,
+    "owner_counts": {
+      "ActualCurvatureConstraint": 17,
+      "CorrectionLogReality": 4,
+      "CorrectionZetaFormula": 9,
+      "FirstLogMoment": 6,
+      "FirstLogMomentLower": 25,
+      "FirstLogRegressions": 4,
+      "FourthContourFinite": 14,
+      "FourthResidue": 33,
+      "GaussianVerticalNumerator": 39,
+      "Lemma171LogDerivative": 22,
+      "LogContourBounds": 9,
+      "LogContourInfinite": 7,
+      "LogGaussianComparison": 5,
+      "LogGaussianInverse": 17,
+      "LogGaussianMellin": 24,
+      "LogGaussianTail": 7,
+      "LogGaussianUnsmoothing": 7,
+      "LogGaussianWeight": 17,
+      "LogMomentQuantitative": 10,
+      "LogMomentUniform": 7,
+      "LogResidueBudget": 10,
+      "LogResidueMain": 10,
+      "RealAxisHigherDerivatives": 7
+    },
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "public": 159,
+    "private": 2,
+    "public_missing": [],
+    "private_inventory": [
+      {
+        "module": "RealAxisHigherDerivatives",
+        "kind": "theorem",
+        "name": "ZhangLS.Spec.hasDerivAt_im_of_complex_higher",
+        "private": true
+      },
+      {
+        "module": "FourthContourFinite",
+        "kind": "lemma",
+        "name": "ZhangLS.Spec.lemma171_log_principal_part_eq_laurent_sum",
+        "private": true
+      }
+    ],
+    "log_manifest_same": true,
+    "independent_public_declarations": 159,
+    "independent_private_declarations": 2,
+    "public_manifest_matches_independent": true,
+    "private_coverage": {
+      "ZhangLS.Spec.hasDerivAt_im_of_complex_higher": [
+        "_private.RealAxisHigherDerivatives.0.ZhangLS.Spec.hasDerivAt_im_of_complex_higher"
+      ],
+      "ZhangLS.Spec.lemma171_log_principal_part_eq_laurent_sum": [
+        "_private.FourthContourFinite.0.ZhangLS.Spec.lemma171_log_principal_part_eq_laurent_sum"
+      ]
+    },
+    "anonymous_examples": 7,
+    "prohibited_source_tokens": []
+  },
+  "imports_log_count": 6035,
+  "compile_records": {
+    "count": 17,
+    "failures": []
+  },
+  "central_head_at_check": "ed993b016437ed6a574e1450d5c65cdb4ddaed7c",
+  "project_base_match": {
+    "count": 213,
+    "differences": []
+  },
+  "pins_diff": "",
+  "source_named_declarations": 161,
+  "archive_full_release_comparison": {
+    "files_checked": 419,
+    "missing": [],
+    "different": []
+  },
+  "owned_import_order": {
+    "edges": [
+      [
+        "CorrectionZetaFormula",
+        "Lemma171LogDerivative"
+      ],
+      [
+        "CorrectionLogReality",
+        "CorrectionZetaFormula"
+      ],
+      [
+        "LogGaussianInverse",
+        "GaussianVerticalNumerator"
+      ],
+      [
+        "LogGaussianInverse",
+        "LogGaussianWeight"
+      ],
+      [
+        "FourthContourFinite",
+        "FourthResidue"
+      ],
+      [
+        "LogResidueBudget",
+        "FourthResidue"
+      ],
+      [
+        "LogResidueMain",
+        "LogResidueBudget"
+      ],
+      [
+        "LogResidueMain",
+        "RealAxisHigherDerivatives"
+      ],
+      [
+        "LogResidueMain",
+        "CorrectionLogReality"
+      ],
+      [
+        "LogContourBounds",
+        "FourthResidue"
+      ],
+      [
+        "LogContourBounds",
+        "GaussianVerticalNumerator"
+      ],
+      [
+        "LogContourInfinite",
+        "FourthContourFinite"
+      ],
+      [
+        "LogContourInfinite",
+        "LogContourBounds"
+      ],
+      [
+        "LogGaussianTail",
+        "LogGaussianWeight"
+      ],
+      [
+        "LogGaussianMellin",
+        "LogContourBounds"
+      ],
+      [
+        "LogGaussianMellin",
+        "LogGaussianInverse"
+      ],
+      [
+        "LogGaussianComparison",
+        "LogGaussianMellin"
+      ],
+      [
+        "LogGaussianComparison",
+        "LogGaussianTail"
+      ],
+      [
+        "LogGaussianComparison",
+        "FirstLogMoment"
+      ],
+      [
+        "LogGaussianUnsmoothing",
+        "LogGaussianComparison"
+      ],
+      [
+        "LogMomentQuantitative",
+        "LogGaussianUnsmoothing"
+      ],
+      [
+        "LogMomentQuantitative",
+        "LogContourInfinite"
+      ],
+      [
+        "LogMomentQuantitative",
+        "LogResidueMain"
+      ],
+      [
+        "LogMomentUniform",
+        "LogMomentQuantitative"
+      ],
+      [
+        "ActualCurvatureConstraint",
+        "LogMomentUniform"
+      ],
+      [
+        "FirstLogMomentLower",
+        "FirstLogMoment"
+      ],
+      [
+        "FirstLogRegressions",
+        "ActualCurvatureConstraint"
+      ],
+      [
+        "FirstLogRegressions",
+        "FirstLogMomentLower"
+      ]
+    ],
+    "violations": []
+  },
+  "existing_central_module_filename_collisions": [],
+  "central_public_short_name_declaration_collisions": []
+}

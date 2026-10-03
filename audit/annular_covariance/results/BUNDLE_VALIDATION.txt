@@ -1,0 +1,12 @@
+Validation date: 2026-10-03
+Python: 3.12.14; sympy: 1.14.0; mpmath: 1.3.0
+PASS: original dyadic report and independently accepted addendum/review hashes remain unchanged
+PASS: full third-party paper excluded from the revised public bundle and archive
+PASS: all four finite algebra suites rerun successfully without any source-file input
+SKIPPED in default mode: external source-file SHA256 identity check; no claim that this ran without its input
+PASS in explicit-input mode: retained external source TeX verified at SHA256 5dc202bdc414fb743004ae32e8dec0dd284636f7197b1cab78a46336e0cde30b
+PASS: explicit-input independent output reproduces the original output byte for byte
+PASS: both default and explicit-input check-runner modes verified after relocation from an unrelated working directory
+PASS: complete file manifest, public path hygiene, and relative Markdown file links
+PASS: no Lean execution, repository edits, shared-cache edits, or publication used in packaging
+Boundary: finite checks do not establish uniform analytic proofs, arithmetic main terms, signed gain, actual mu-normalization, or Lean theorems

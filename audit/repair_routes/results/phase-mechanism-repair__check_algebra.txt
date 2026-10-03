@@ -1,0 +1,45 @@
+{
+  "tau_square_le_d4": true,
+  "d8_squarefree_local_ratio_le_8": true,
+  "ramified_log_exponent": 48,
+  "bare_support_exponent": "1/1000",
+  "kms_bracket_exponent": "-2/125",
+  "kms_root_pair_total_exponent": "-3/200",
+  "mqw_allmod_middle_exponent": "-539/50000",
+  "central_A_L2_exponent": -1797,
+  "central_other_L2_exponent": -9,
+  "central_other_L1_exponent": "-9/2",
+  "source_prime_plus_count_loss": -1934,
+  "prime_plus_square_target_requires_K_less_than": 1918,
+  "parity_factors": [
+    {
+      "chi_parity": 0,
+      "psi_parity": 0,
+      "factor_real": 1.0,
+      "factor_imag": 0.0,
+      "gamma_ratio": "1"
+    },
+    {
+      "chi_parity": 0,
+      "psi_parity": 1,
+      "factor_real": 1.0,
+      "factor_imag": 0.0,
+      "gamma_ratio": "1"
+    },
+    {
+      "chi_parity": 1,
+      "psi_parity": 0,
+      "factor_real": -0.0,
+      "factor_imag": -1.0,
+      "gamma_ratio": "tan"
+    },
+    {
+      "chi_parity": 1,
+      "psi_parity": 1,
+      "factor_real": 0.0,
+      "factor_imag": 1.0,
+      "gamma_ratio": "cot"
+    }
+  ],
+  "dilation_norm_exponent": -1
+}

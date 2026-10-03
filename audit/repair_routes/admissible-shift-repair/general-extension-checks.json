@@ -1,0 +1,43 @@
+{
+  "exact_rational_phase_identity": "PASS",
+  "entries_checked": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "determinant_over_C": "x*y*(x - y)/(u*v)",
+  "scope": "Algebraic extension identity only; periodic PSD is proved in DERIVATION.md, actual mean attachments are not established"
+}

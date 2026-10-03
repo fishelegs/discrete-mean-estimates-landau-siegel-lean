@@ -1,0 +1,45 @@
+{
+  "L2": {
+    "finite_differences": [
+      "61/64",
+      "0",
+      "9/64"
+    ],
+    "positive_tail": "r**4 + 21*r**3/2 + 2467*r**2/64 + 1833*r/32 + 227/8",
+    "negative_tail": "r**4 + 19*r**3/2 + 1987*r**2/64 + 651*r/16 + 1161/64"
+  },
+  "H1": {
+    "finite_differences": [
+      "155/144",
+      "41/144",
+      "0"
+    ],
+    "positive_tail": "283*r**4/288 + 92*r**3/9 + 1777*r**2/48 + 15541*r/288 + 1885/72",
+    "negative_tail": "283*r**4/288 + 679*r**3/72 + 373*r**2/12 + 11779*r/288 + 1315/72"
+  },
+  "interior_C": "4*(2*sqrt(2) + 77)/(63*pi)",
+  "interior_L2_bound": "pi*(2*sqrt(2) + 77)/112",
+  "boundary_derivative_divided_by_C0": [
+    "-2*pi**2*k*v1*(k - 1)",
+    "2*pi**2*v2*(k - 1)/k",
+    "-2*pi**2*k*(v1 + v2)/(k + 1)"
+  ],
+  "boundary_3": {
+    "C0": "16/(3*pi)",
+    "target_norm": "8*(19*pi**2 + 750000)/(1125*pi)",
+    "beta_Lminus8_coefficients_divided_by_c_pi2": [
+      "448",
+      "64/3",
+      "32"
+    ]
+  },
+  "boundary_4": {
+    "C0": "16/(3*pi)",
+    "target_norm": "8*(29*pi**2 + 750000)/(1125*pi)",
+    "beta_Lminus8_coefficients_divided_by_c_pi2": [
+      "1152",
+      "32",
+      "128/3"
+    ]
+  }
+}

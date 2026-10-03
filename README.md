@@ -1,5 +1,9 @@
 # Discrete mean estimates and the Landau–Siegel zero — Lean 形式化
 
+实际一阶对数矩桥梁（2026-10-03）：[实际ν²短和、L″/L′与正质量下界](audit/CLOUD_FIRST_LOG_MOMENT_STATUS.md)已中央核验；23模块、159公共声明及310完整owner审计、7展开回归、5658全库PASS。原(A)与统一量词保留；这是算术曲率桥，尚无带符号均值增益。另附[两条修复路线的独立解析审计](audit/repair_routes/STATUS.md)，区分leading模型正性、根数核与未完成实际均值；[exact-gamma协方差表示](audit/structured_covariance/STATUS.md)经独立来源审查，仍未评价主算术和或证明严格gain。编号仍36原+2修订=38/51。
+
+新相位接口审计（2026-10-03）：[高支撑C₁/T₁及固定log窗口扩展](audit/annular_covariance/STATUS.md)经独立来源分析核验，实际有限窗口R−L表示误差O(a⁻¹L⁻14)，C₁右项为O(a⁻¹L⁻200)。仅适用于记录中的系数支撑类；主算术矩阵、实际Gram归一化和严格gain仍待证明。这些解析审计尚非Lean定理。
+
 完整原 Proposition7.1（2026-10-03）：[原Section7均值公式](ZhangLS/Spec/Proposition71FinalAssembly.lean)已中央核验并通过独立语义审查。保留原固定正系数界、C先于ε、实际χ/(A)、任意复序列和严格P T^-2支撑、真实Θ1/Sj、(1/2,2,3/2)/α及原E；主/非主分支、全部留数与四重外权已接通。43新模块、151标准公理检查、22展开回归、5635全库PASS。现36原+2显式修订=38/51；原主定理与数值修复仍未完成。[验证范围](audit/CLOUD_PROPOSITION71_STATUS.md)。
 
 实际核与留数桥梁（2026-10-03）：[Appendix B 粗糙 rho-star 核和修订 Section16 双极点局部留数](audit/CLOUD_ACTUAL_KERNEL_RESIDUE_STATUS.md)已中央核验：27模块、202标准公理检查、12展开Mellin回归及全库构建通过。原P2/P3/完整P1的真实有限D位移与统一n1范围保留；严格H14尾、完整15.1/16.2及实际均值仍待接合。[固定光滑剖面的精度研究](audit/smooth_xi_precision/DERIVATION.md)经独立解析复核和6项精确有理检查，尚非Lean定理或严格增益。编号仍35原+2修订=37/51。

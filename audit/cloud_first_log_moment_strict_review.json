@@ -1,0 +1,17 @@
+[
+  {
+    "candidate": "HIGH   ZhangLS/Spec/FourthContourFinite.lean:82: direct exact hypothesis: exact hs",
+    "verdict": "reviewed_false_positive",
+    "reason": "hs is derived locally by finite summation of the proved continuous Laurent kernels, then transported by the exact principal-part expansion. Continuity/integrability is not a hypothesis of the terminal contour result."
+  },
+  {
+    "candidate": "HIGH   ZhangLS/Spec/GaussianVerticalNumerator.lean:35: direct exact hypothesis: exact hh",
+    "verdict": "reviewed_false_positive",
+    "reason": "hh is constructed from the previously proved Gaussian-Laplace integrability theorem and multiplication by the displayed constant. The exact exponential splitting identity identifies the actual numerator with that integrable function; no desired transform or integrability is assumed."
+  },
+  {
+    "candidate": "HIGH   ZhangLS/Spec/LogContourBounds.lean:55: direct exact hypothesis: exact hh",
+    "verdict": "reviewed_false_positive",
+    "reason": "hh is obtained locally from Complex.abs_re_le_norm at the explicit line Re(w)=-1/4. norm_num rewrites the real part into 1/4. This supplies the reciprocal-factor bound used with the already proved actual Mellin envelope, not a terminal estimate premise."
+  }
+]

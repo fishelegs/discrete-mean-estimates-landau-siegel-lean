@@ -1,0 +1,21 @@
+{
+  "meaning": "SHA-256 of reviewed pre-packaging input bytes. Keys are logical document identifiers, not locations or hashes of the edited public editions. Public-edition hashes are in MANIFEST.json and SHA256SUMS.",
+  "inputs": {
+    "admissible-shift-repair/DERIVATION.md": "1bfbb8f4c9c4be8b6e58e84f8d532cf346bbb047b9c8e5997615173d0d16245f",
+    "admissible-shift-repair/check_extension.py": "fdcc4b01d5a8ec74a1103f846c73896c8f6cb989895fa64136fee9b33fb159b8",
+    "admissible-shift-repair/check_general_extension.py": "73ace0f770d16679eb7025cfab3aa5db0ab9f2c599b574d3f2fdc0596e324bfc",
+    "admissible-shift-repair/check_spectral_bounds.py": "76fbd341b8522eff55536103fd7a0884ff843fef670ed3b317d81dcd594adc60",
+    "admissible-shift-independent-review/REVIEW.md": "cdd1f8c37835baeb92d2b08e7d74e1ff7eab3867d77f35b82957d181b8e211cd",
+    "admissible-shift-independent-review/SOURCE_REVIEW.md": "27a59aa83897148bbdbe76ce7b3786ddcd34d0f9c2a8a48f2e54496e5bc92327",
+    "admissible-shift-independent-review/derive_cross_flux.py": "75c57be58d2ca904117df937799bc588d996f8462f8f315b7d9f8395c349f990",
+    "admissible-shift-independent-review/check_direct_extension.py": "4c36aaede252daef173210fc7a8d92f03145ebbb982af1e69f7dc831c433f4dd",
+    "admissible-shift-independent-review/check_spectral_and_target.py": "5648477314bba1aa82199b5c509d1cdeef1f356f49012fd36163d1a85ce894b5",
+    "phase-mechanism-repair/DERIVATION.md": "3475717dd86ca4377795db9048ab58be763eecdc5e77e99cdf055ca591d088c6",
+    "phase-mechanism-repair/PRIME_SIGN_AND_BILINEAR.md": "feb9ea724b92568444c0e326aa4cba814bf0c101a9402a9298cf89f3d1c8ac35",
+    "phase-mechanism-repair/check_algebra.py": "494c5228d9107042729124c3bdd67939c88e217d5b8cd2b7e9b97c92bb06267c",
+    "phase-mechanism-repair/check_gauss_identities.py": "a1223af6976bf8668a271b50f7429e7f2c4404affe22cc1bac7cd1157d3e5406",
+    "phase-arithmetic-independent-review/REVIEW.md": "84af1a8983ec0a9a19ee393f2a981823515b1cac72e2c649ed30b80a65377ab8",
+    "phase-arithmetic-independent-review/ERRATA.md": "dc767a6c192f5cbd2ad330c7ee51bda8c9269782a8ad78a3766fb49acc3b79a7",
+    "phase-arithmetic-independent-review/exact_checks.py": "a15325c961d9276e800cb2b61a01ef9fabd6f4844040d0203822c148a489f18b"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "scope": "Symbolic certificates and finite regressions; no Lean or actual arithmetic mean proof.",
+  "checks": [
+    {
+      "script": "admissible-shift-repair/check_extension.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "results/admissible-shift-repair__check_extension.txt"
+    },
+    {
+      "script": "admissible-shift-repair/check_general_extension.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "results/admissible-shift-repair__check_general_extension.txt"
+    },
+    {
+      "script": "admissible-shift-repair/check_spectral_bounds.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "results/admissible-shift-repair__check_spectral_bounds.txt"
+    },
+    {
+      "script": "admissible-shift-independent-review/derive_cross_flux.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "results/admissible-shift-independent-review__derive_cross_flux.txt"
+    },
+    {
+      "script": "admissible-shift-independent-review/check_direct_extension.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "results/admissible-shift-independent-review__check_direct_extension.txt"
+    },
+    {
+      "script": "admissible-shift-independent-review/check_spectral_and_target.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "results/admissible-shift-independent-review__check_spectral_and_target.txt"
+    },
+    {
+      "script": "phase-mechanism-repair/check_algebra.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "results/phase-mechanism-repair__check_algebra.txt"
+    },
+    {
+      "script": "phase-mechanism-repair/check_gauss_identities.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "results/phase-mechanism-repair__check_gauss_identities.txt"
+    },
+    {
+      "script": "phase-arithmetic-independent-review/exact_checks.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "results/phase-arithmetic-independent-review__exact_checks.txt"
+    }
+  ],
+  "all_passed": true
+}
