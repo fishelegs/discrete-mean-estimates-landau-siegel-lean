@@ -1,0 +1,31 @@
+{
+  "scope": "Exact symbolic algebra; not Lean or actual arithmetic means",
+  "checks": {
+    "same_side_source_Q": "exact zero",
+    "cross_gluing_with_tail": "exact zero",
+    "reflected_Q": "exact zero",
+    "joined_gauge": "exact zero",
+    "mixed_orientation": "exact zero",
+    "target_R": "exact zero",
+    "overlap_kernel": "exact zero",
+    "overlap_mixed": "exact zero",
+    "k1_ode": "exact zero",
+    "k1_endpoint": "exact zero",
+    "k1_right_natural": "exact zero",
+    "k1_left_natural_1": "exact zero",
+    "k1_left_natural_2": "exact zero",
+    "k2_ode": "exact zero",
+    "k2_endpoint": "exact zero",
+    "k2_right_natural": "exact zero",
+    "k2_left_natural_1": "exact zero",
+    "k2_left_natural_2": "exact zero",
+    "k3_ode": "exact zero",
+    "k3_endpoint": "exact zero",
+    "k3_right_natural": "exact zero",
+    "k3_left_natural_1": "exact zero",
+    "k3_left_natural_2": "exact zero",
+    "periodic_covariance": "exact zero",
+    "kernel_square_integral": "exact zero",
+    "sqrt720_gt_5pi2_over2_via_pi_lt_22_over7": "264620/2401"
+  }
+}

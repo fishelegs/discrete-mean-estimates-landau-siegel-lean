@@ -1,0 +1,17 @@
+import ZhangLS.Spec.Lemma162OldMainLower
+import ZhangLS.Spec.Lemma162OldCenterIncompatibility
+
+#print axioms ZhangLS.Spec.lemma162_old_main_restricted_upper
+#print axioms ZhangLS.Spec.lemma162_old_main_denominator_upper
+#print axioms ZhangLS.Spec.lemma162_old_ramified_product_lower
+#print axioms ZhangLS.Spec.lemma162_old_totient_lower
+#print axioms ZhangLS.Spec.lemma162OldMainLowerConstant
+#print axioms ZhangLS.Spec.lemma162_old_main_lower_constant_pos
+#print axioms ZhangLS.Spec.lemma162_old_main_norm_eq
+#print axioms ZhangLS.Spec.lemma162_old_main_lower
+#print axioms ZhangLS.Spec.lemma162_old_main_eventually_large
+#print axioms ZhangLS.Spec.lemma162_paper_old_center_strict_error
+#print axioms ZhangLS.Spec.lemma162_source_A_old_center_incompatibility
+#print axioms ZhangLS.Spec.lemma162_source_A_old_continuation_incompatibility
+#print axioms ZhangLS.Spec.lemma162_paper_old_actual_extension_strict_error
+#print axioms ZhangLS.Spec.lemma162_old_center_shared_constant

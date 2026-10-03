@@ -503,6 +503,8 @@ import ZhangLS.Spec.Lemma162OddCoefficientNorm
 import ZhangLS.Spec.Lemma162OddLocalRatio
 import ZhangLS.Spec.Lemma162OddM
 import ZhangLS.Spec.Lemma162OddVarpi
+import ZhangLS.Spec.Lemma162OldCenterIncompatibility
+import ZhangLS.Spec.Lemma162OldMainLower
 import ZhangLS.Spec.Lemma162OriginalValueWitness
 import ZhangLS.Spec.Lemma162PaperArithmeticBridge
 import ZhangLS.Spec.Lemma162PrimeSupportedConvolution
@@ -528,6 +530,7 @@ import ZhangLS.Spec.Lemma171GaussianUnsmoothing
 import ZhangLS.Spec.Lemma171LeftAbsorption
 import ZhangLS.Spec.Lemma171LeftIntegral
 import ZhangLS.Spec.Lemma171LeftMajorant
+import ZhangLS.Spec.Lemma171MainLowerBound
 import ZhangLS.Spec.Lemma171Residue
 import ZhangLS.Spec.Lemma171ResidueBound
 import ZhangLS.Spec.Lemma171Target

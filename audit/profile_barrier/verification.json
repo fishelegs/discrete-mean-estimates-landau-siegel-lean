@@ -1,0 +1,22 @@
+{
+  "base_commit": "d199d72a51149930ad06e3ddae8dfedf590b8ba7",
+  "source_arxiv": "2211.02515v1",
+  "source_tex_sha256": "5dc202bdc414fb743004ae32e8dec0dd284636f7197b1cab78a46336e0cde30b",
+  "original_report_sha256": {
+    "REPORT.md": "b7986118293d0ba960a7ce278629105790e8eeb4528730537e85ae271f938bf5",
+    "ERROR_BUDGET.md": "4a9b55b02fefee2defc9b85606a68df89604814728f4b2f9d2f98c70bbf27476",
+    "PREFIX_TAU4_BRIDGE.md": "3ae6711482d884863935884b01c56f2b1ad7f7c644818750b21b4c2986929092"
+  },
+  "primary_original_report_sha256": "97b904ed45f134f684ed3ace751eddf65c1250747f42e6e039b38cfffea368a2",
+  "archive_edits": "Path portability, precise H1 qualification, removal of non-self-contained diagnostic instructions, and explicit subsequent verification status; mathematical proof unchanged",
+  "exact_checker_sha256": "49c9a2ab2a4de5e35967223513c1e1b5d170e0bb254f61ca48250eb17147f819",
+  "exact_result_sha256": "5e24809cae0b503be5eaccaa7b4e34f864e1bd46d5af371170c5e52288647124",
+  "central_replay_sha256": "7712e7694e35bde63c03d424b8d30f8acdfd513b86a8caa07d2d35456db1e163",
+  "exact_checks": 26,
+  "primary_functional_review": "ACCEPT_WITH_EXPLICIT_LIMITING_MODEL_SCOPE",
+  "second_independent_review": "ACCEPT",
+  "is_Lean_proof": false,
+  "actual_character_mean_proved": false,
+  "finite_D_repair_proved": false,
+  "main_theorem_disproved": false
+}

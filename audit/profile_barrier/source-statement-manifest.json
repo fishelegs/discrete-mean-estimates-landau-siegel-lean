@@ -1,0 +1,168 @@
+{
+  "scope": "Read-only statement-location and source-content inventory; not recompilation",
+  "claims": {
+    "b_psi_norm_le_tau_two": [
+      "ZhangLS/Spec/BCoefficientBounds.lean"
+    ],
+    "b_source_product_eq_psi_series": [
+      "ZhangLS/Spec/BProductBridge.lean"
+    ],
+    "b_source_ratio_convolution": [
+      "ZhangLS/Spec/BRatioConvolution.lean"
+    ],
+    "lemma151Rho": [
+      "ZhangLS/Spec/Lemma151Arithmetic.lean"
+    ],
+    "lemma153_actual_geometric_weight_bound": [
+      "ZhangLS/Spec/Lemma153GeometricWeightBudget.lean"
+    ],
+    "lemma153_actual_residue_decomposition": [
+      "ZhangLS/Spec/Lemma153DownstreamResidue.lean"
+    ],
+    "lemma153_actual_shifted_residue_rate": [
+      "ZhangLS/Spec/Lemma153DownstreamRate.lean"
+    ],
+    "lemma153_paper_actual_residue_estimate": [
+      "ZhangLS/Spec/Lemma153DownstreamPaper.lean"
+    ],
+    "lemma153_paper_normalized_actual_residue": [
+      "ZhangLS/Spec/Lemma153DownstreamMainTerm.lean"
+    ],
+    "lemma162_cauchy_log_budget": [
+      "unintegrated-corrected-residue-component/Lemma162MellinBudget.lean"
+    ],
+    "lemma162_corrected_quantitative_proved": [
+      "ZhangLS/Spec/Lemma162CorrectedQuantitative.lean"
+    ],
+    "lemma162_paper_corrected_center_four": [
+      "ZhangLS/Spec/Lemma162CorrectedQuantitative.lean"
+    ],
+    "lemma162_paper_mellin_budget": [
+      "unintegrated-corrected-residue-component/Lemma162MellinBudget.lean"
+    ],
+    "lemma162_third_divided_difference_cubic_error": [
+      "unintegrated-corrected-residue-component/Lemma162CauchyCancellation.lean"
+    ],
+    "lemma171_actual_main_gt_half": [
+      "ZhangLS/Spec/Lemma171MainLowerBound.lean"
+    ],
+    "lemma171_actual_residue_error_bound": [
+      "ZhangLS/Spec/Lemma171ResidueBound.lean"
+    ],
+    "lemma171_left_majorant_polynomial_bound": [
+      "ZhangLS/Spec/Lemma171LeftAbsorption.lean"
+    ],
+    "lemma171_unsmoothing_bound": [
+      "ZhangLS/Spec/Lemma171GaussianUnsmoothing.lean"
+    ],
+    "lemma54_uniform_constants": [
+      "ZhangLS/Spec/Lemma54.lean"
+    ],
+    "lemma58_actual_full_disk_linear_error": [
+      "ZhangLS/Spec/Lemma58.lean"
+    ],
+    "lemma61_gaussian_star_norm_le_one": [
+      "ZhangLS/Spec/Lemma61GaussianWeights.lean"
+    ],
+    "lemma84_boundary_total_quantitative": [
+      "ZhangLS/Spec/Lemma84BoundaryTotalBound.lean"
+    ],
+    "lemma84_reciprocal_totient_uniform": [
+      "ZhangLS/Spec/Lemma84WeightedArithmetic.lean"
+    ],
+    "lemma84_section8_boundary_little_o": [
+      "ZhangLS/Spec/Lemma84BoundaryLittleO.lean"
+    ],
+    "lemma84_section8_full_xi_replacement_little_o": [
+      "ZhangLS/Spec/Lemma84BoundaryLittleO.lean"
+    ],
+    "lemma84_section8_interior_quantitative": [
+      "ZhangLS/Spec/Lemma84Section8WeightedInterior.lean"
+    ],
+    "lemma84_section8_raw_source_exact": [
+      "ZhangLS/Spec/Lemma84Section8SmoothingBridge.lean"
+    ],
+    "paper_alpha_logT": [
+      "ZhangLS/Spec/PaperErrorScaleBudget.lean"
+    ],
+    "proposition141_complete_conductor_rate": [
+      "ZhangLS/Spec/Proposition141CompleteConductorRate.lean"
+    ],
+    "proposition141_prime_front_total_bound": [
+      "ZhangLS/Spec/Proposition141PrimeCorrectionSaving.lean"
+    ],
+    "proposition141_principal_total_quarter_bound": [
+      "ZhangLS/Spec/Proposition141PrincipalSaving.lean"
+    ],
+    "proposition71_actual_residue_normalization_bound": [
+      "ZhangLS/Spec/Proposition71ResidueNormalization.lean"
+    ],
+    "proposition71_finite_front_boundary_envelope": [
+      "ZhangLS/Spec/Proposition71FiniteContourShift.lean"
+    ],
+    "proposition71_front_actual_family_rate": [
+      "ZhangLS/Spec/Proposition71FrontFamilyRate.lean"
+    ],
+    "proposition71_generic_exceptional_fourth_power_budget": [
+      "ZhangLS/Spec/Proposition71GenericExceptionalSaving.lean"
+    ],
+    "section15_actual_L_relative_error": [
+      "ZhangLS/Spec/Section15AnalyticFactorBounds.lean"
+    ],
+    "section15_actual_r_product_leading_error": [
+      "ZhangLS/Spec/Section15LeadingResidueBudget.lean"
+    ],
+    "section15_actual_weighted_leading_residue_budget": [
+      "ZhangLS/Spec/Section15LeadingResidueBudget.lean"
+    ],
+    "section15_exact_residue_product": [
+      "ZhangLS/Spec/Section15ResidueProduct.lean"
+    ],
+    "section15_omega_small_error": [
+      "ZhangLS/Spec/Section15SmallFactors.lean"
+    ],
+    "section15_zeta_regular_error": [
+      "ZhangLS/Spec/Section15AnalyticFactorBounds.lean"
+    ]
+  },
+  "sha256": {
+    "unintegrated-corrected-residue-component/Lemma162CauchyCancellation.lean": "1d9aac5f3fe6e1b27b80f10029e3d81b1835445c8639f6501a739284dee1632e",
+    "unintegrated-corrected-residue-component/Lemma162MellinBudget.lean": "93a4f7fe28d352fe2885ae1c290c0a70b31f6379d845203d5e8270a74280e65d",
+    "ZhangLS/Spec/BCoefficientBounds.lean": "37e3596e87c0ffd38cb307ebb5da3cb8510d0091309fb1f40afb00cd0030a7a2",
+    "ZhangLS/Spec/BProductBridge.lean": "6410df06ec10a644fd74ba39bdd62921adcac61bb7f7522a4c9d78a84d9e6e16",
+    "ZhangLS/Spec/BRatioConvolution.lean": "9e640200d6d505515079cc31dc5c32b218df37fcfaffa3837b7e21516ea36ad6",
+    "ZhangLS/Spec/Lemma151Arithmetic.lean": "96840b136bc8a3cbf35c08b2ec8854b106d11d70b320a273a41e275eefdbcdff",
+    "ZhangLS/Spec/Lemma153DownstreamMainTerm.lean": "c8b98a9135b0d81b1c1db6a9923d89ea6a96ed238c7716bef872a37516d108e6",
+    "ZhangLS/Spec/Lemma153DownstreamPaper.lean": "6dc75e5ae4f29965c51c1e7a5891d3eca0c62ff02453140d76404fa094f4d3a6",
+    "ZhangLS/Spec/Lemma153DownstreamRate.lean": "fe4aae0dd9974e90dbf6467eca8df30370f3add7b3120bf014bc2642569ac0db",
+    "ZhangLS/Spec/Lemma153DownstreamResidue.lean": "de1188b16bf452fee82e86d182190f259c60384be8cbbc9088a2da9bee88f138",
+    "ZhangLS/Spec/Lemma153GeometricWeightBudget.lean": "613361a056831f5374c97997d9930bc2cd5c508824ec67b630e0c1a05f25c095",
+    "ZhangLS/Spec/Lemma162CorrectedQuantitative.lean": "c6ae4d35696ebdc87446bfa61721401d32b4448cde2a86687b60521e665f4eb7",
+    "ZhangLS/Spec/Lemma171GaussianUnsmoothing.lean": "8bf9b2bf4cceec8782bd1d34487e965737f6290b987437c4a37903dfa7407efb",
+    "ZhangLS/Spec/Lemma171LeftAbsorption.lean": "38b2ac1d159340c45c6e74bd48a198b83283c58165106f109c6432c5b78ca227",
+    "ZhangLS/Spec/Lemma171MainLowerBound.lean": "42a17229c95adbfa61ce075f9b05d17a69d72fb9822698645322c8010e81fb47",
+    "ZhangLS/Spec/Lemma171ResidueBound.lean": "7edb7aecca04fc03233a8c36e4075bfec05f1ceb839f82aa87cdf00c8b46e4f8",
+    "ZhangLS/Spec/Lemma54.lean": "2c3b173c308948c2673c996bcf6809dabc7e9e750f5120e04b7bfad13c18259c",
+    "ZhangLS/Spec/Lemma58.lean": "50a3657cd5eceb267637065d35f0c175964e3c00105d4b6bd43cb0e4362d3beb",
+    "ZhangLS/Spec/Lemma61GaussianWeights.lean": "e33169718d2677b0bd1d412388c4e6a6124afe5c5f791b4b704530ab73c11b50",
+    "ZhangLS/Spec/Lemma84BoundaryLittleO.lean": "b6c8fccece5ac1b28ca31e086711b3427a0c51573e7e416b2359121718395b8e",
+    "ZhangLS/Spec/Lemma84BoundaryTotalBound.lean": "c0da9351b138569bb5fa47058f5886d9f44086033df5114642e3dacedbd6ff97",
+    "ZhangLS/Spec/Lemma84Section8SmoothingBridge.lean": "8551f4dec6484dff14d376226a40147995c7074a8d9d66cc2732b49e90f703be",
+    "ZhangLS/Spec/Lemma84Section8WeightedInterior.lean": "e8933285e3e87ba8dea9ccf144de9467c5b2d49a79d4123ba71002c2571df1a1",
+    "ZhangLS/Spec/Lemma84WeightedArithmetic.lean": "ade42ce10b3fec69c2975b5a8443cfaabd738d732470fe860f5914e6f97ea37e",
+    "ZhangLS/Spec/PaperErrorScaleBudget.lean": "dd00d7b563c2e028a5f42d0a37c26bc2b3986e14ca52510ae3fd7b3845e8bf2c",
+    "ZhangLS/Spec/Proposition141CompleteConductorRate.lean": "71f7f4881a57f36d74127e8002870731bff2b602951e62349ac4e0e00630c375",
+    "ZhangLS/Spec/Proposition141PrimeCorrectionSaving.lean": "76c1f9c53d22ba1177337803c0b89de4b5eec43d467740f2a80703bf57917d7a",
+    "ZhangLS/Spec/Proposition141PrincipalSaving.lean": "4589b0871e979058f44907886608ccad024529633774c096983c6fd0ae62bf47",
+    "ZhangLS/Spec/Proposition71FiniteContourShift.lean": "d4b78a185cc1ba38f1dcc5052efda2c28d0d178e5a4cd3b3f100da30a9b3b82a",
+    "ZhangLS/Spec/Proposition71FrontFamilyRate.lean": "f3d0bdb1d682505a8c20b571980a5e31537d27194e99ca4921f8e296332a1252",
+    "ZhangLS/Spec/Proposition71GenericExceptionalSaving.lean": "9d84a89cfcab1d59b049ec65f88d27314c21c8bed5b6a10d1f7bf980241bf408",
+    "ZhangLS/Spec/Proposition71ResidueNormalization.lean": "8c5f4a355d653830189fbde5a29120ab9cf3f3e78febbc2467e9374cfbca8ca6",
+    "ZhangLS/Spec/Section15AnalyticFactorBounds.lean": "60159284d56b6a32d62a6f927e02c0508966044ba8a13af6bbb71e23c67caddd",
+    "ZhangLS/Spec/Section15LeadingResidueBudget.lean": "75ed99f757a8f54a79becbee2fdc480197a24216e0fe9f065111aa2b5fcec39d",
+    "ZhangLS/Spec/Section15ResidueProduct.lean": "206754382186edb88c4f1358dfe91de3cbf8eec3fd69640275c348a42eb46023",
+    "ZhangLS/Spec/Section15SmallFactors.lean": "977943d86b2467aefd5b75fc867159110a2a2eb16e875d7bcc9999c854b0b2cd",
+    "arXiv:2211.02515v1 TeX source": "5dc202bdc414fb743004ae32e8dec0dd284636f7197b1cab78a46336e0cde30b"
+  },
+  "publication_note": "Unintegrated corrected-residue labels identify separately inspected sources, not files included or centrally verified in this release."
+}

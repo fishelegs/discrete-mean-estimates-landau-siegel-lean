@@ -1,0 +1,5 @@
+import ZhangLS.Spec.Lemma171MainLowerBound
+#print axioms ZhangLS.Spec.lemma171_actual_short_sum_ge_one
+#print axioms ZhangLS.Spec.lemma171_actual_main_lower_uniform
+#print axioms ZhangLS.Spec.lemma171_actual_main_gt_half
+#print axioms ZhangLS.Spec.lemma171_actual_relative_error_uniform

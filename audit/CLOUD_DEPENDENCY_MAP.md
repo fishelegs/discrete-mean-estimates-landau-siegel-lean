@@ -169,3 +169,7 @@ Original16.1 is [centrally verified](CLOUD_LEMMA161_STATUS.md), including its ex
 ## Current Section14 dependency verification
 
 Original14.1 now proves the full mean. Its genuine exceptional-set chain reaches proved `proposition21_proved` through `proposition71_generic_exceptional_fourth_power_budget`; shared P7 helper names do not mean the numbered Proposition7.1 was assumed. The actual product inducer satisfies the restricted Lemma5.6 nonprincipal hypotheses. Full modulus-one Lemma5.6 is still unresolved. Current per-node proof and scheduling states live in the JSON companion; the initial frontier list and baseline table preserve their historical provenance.
+
+## Current precision and source-center audit
+
+The centrally verified scalar package supplies actual a>1/2 under(A) and the quantitative conditional old16.2 center comparison; this does not complete the numbered16.2 node. The independently proved limiting-profile PSD bound is a mathematical audit, not a Lean/actual-mean edge. The selected finite-D repair route now requires a source-specific tau4 prefix rate and a new weighted/projected xi boundary bound. Scheduling remains separate from numbered proof status. See CLOUD_SECTION16_SCALAR_STATUS.md and CLOUD_PROFILE_BARRIER_STATUS.md.

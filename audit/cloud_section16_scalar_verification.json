@@ -1,0 +1,77 @@
+{
+  "status": "PASS_COMPONENTS_ONLY",
+  "verified_at_utc": "2026-10-03T05:58:02.276869+00:00",
+  "base_commit": "d199d72a51149930ad06e3ddae8dfedf590b8ba7",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "production_modules": 3,
+  "public_declarations": 18,
+  "expanded_regressions": 18,
+  "audit_drivers": 4,
+  "full_project_jobs": 5565,
+  "source_guards": 1749,
+  "spec_imports": 1311,
+  "full_imports": 1576,
+  "strict_candidates": 429,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 0,
+  "source_relocation": "Import qualification only; all frozen proof bodies unchanged",
+  "central_source_review": "PASS: actual n=1 positivity, original center including q=2 and ramified factors, uniform C/c-before-D quantifiers, conditional source scope",
+  "producer_ownership_coverage": "PASS for all 18 public and attributed declarations",
+  "old_center_dependency_pairs_deduplicated": 73,
+  "main_lower_actual_L17_1_dependency": true,
+  "numbered_completed": 37,
+  "original_completed": 35,
+  "repaired_completed": 2,
+  "original_L16_2_proved": false,
+  "source_A_character_existence_asserted": false,
+  "main_theorem_disproved": false,
+  "functional_review_is_Lean": false,
+  "whole_paper_proved": false,
+  "logs": {
+    "CloudMainScaleLowerAxioms.log": {
+      "bytes": 615,
+      "sha256": "66f350b5373347a1ba68de2cb756925d4a80a5f58ef757491e2054beb0a0798f"
+    },
+    "CloudMainScaleLowerRegression.log": {
+      "bytes": 187,
+      "sha256": "adffec1fcdae5959bd25be2b758542403be22ca256f5d9c0e9b3591ef6a6ddea"
+    },
+    "CloudSection16OldCenterAxioms.log": {
+      "bytes": 1732,
+      "sha256": "3b960b50017ec7340829e51d231ee8ebf9bd42fb40aad334829d2a298fda9aaf"
+    },
+    "CloudSection16OldCenterRegression.log": {
+      "bytes": 191,
+      "sha256": "0447148b0b1275ec8993864fca2f8f40c4063e34aba526b48a769f88a2e6f775"
+    },
+    "Lemma162OldCenterIncompatibility.log": {
+      "bytes": 55165,
+      "sha256": "a3b3f1c57c981c72a959f43935494c67ab3f1e16068a10999f6efda778a41270"
+    },
+    "Lemma162OldMainLower.log": {
+      "bytes": 55141,
+      "sha256": "a334ad5bdcdea63b126be36b3a47a63815180140b9d25c63248af2bae074a1bc"
+    },
+    "Lemma171MainLowerBound.log": {
+      "bytes": 17363,
+      "sha256": "3b654ce0bc15f6ff2a4e0221e2f4bb2480dacdc1e9b3e3771461a2ba26b0ff42"
+    },
+    "full-project.log": {
+      "bytes": 260572,
+      "sha256": "07726ae9972bc1cef74753bbe1f3161166087237705fa859b5028765e559bf80"
+    },
+    "placeholders.log": {
+      "bytes": 65,
+      "sha256": "905a80ee3a8a2dd641004f9a7bc586660a66364a943fcdb0dddcc114ba5cba4d"
+    },
+    "strict-audit.log": {
+      "bytes": 43447,
+      "sha256": "7f705d972730b2d44bb099b634ce4cf74d30339a2d2cff3658c8a1a2394d6320"
+    },
+    "structure.log": {
+      "bytes": 46,
+      "sha256": "fc8d776289e5b4aa80ce920a3ed63635776ced126567d9447e14304bac354573"
+    }
+  }
+}

@@ -2881,7 +2881,7 @@
         "proof_section": "Appendix A"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "corrected_actual_V_center_and_uniform_Cauchy_bounds_verified",
+      "working_status": "corrected_V_and_quantitative_conditional_old_center_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 180,
@@ -2890,7 +2890,8 @@
         "trusted_capstone_found": false,
         "component_report": "audit/CLOUD_LEMMA162_STAGE2_STATUS.md",
         "original_target_proved": false,
-        "quantitative_corrected_component_report": "audit/CLOUD_LEMMA162_CENTER_STATUS.md"
+        "quantitative_corrected_component_report": "audit/CLOUD_LEMMA162_CENTER_STATUS.md",
+        "scalar_component_report": "audit/CLOUD_SECTION16_SCALAR_STATUS.md"
       },
       "known_numbered_dependencies": [],
       "inferred_numbered_dependencies": [
@@ -2898,8 +2899,7 @@
       ],
       "missing_mathematics": [
         "Actual shifted two-pole Mellin and residue cancellation",
-        "Finite cutoff/unsmoothing and final Section16 error budgets",
-        "Quantitative comparison with printed old-quotient center asymptotic"
+        "Finite cutoff/unsmoothing and final Section16 error budgets"
       ],
       "missing_specification_or_engineering": [
         "Keep old quotient distinct from corrected V and preserve finite-D shifts"
@@ -2922,7 +2922,7 @@
         ]
       },
       "scheduling_phase": "actual_shifted_mellin_residue_and_unsmoothing_budget",
-      "active_work": "Actual corrected V center matches printed Euler main to explicit O(log^-9 D), with absolute disk/all-order Cauchy bounds; central and independent ACCEPT. Actual two-pole Section16 Mellin residue and final error budget remain active. Old quotient remains distinct with center0."
+      "active_work": "Actual corrected V and uniform Cauchy bounds, genuine main-scale positivity and quantitative old-center mismatch are centrally verified. Shifted two-pole local residues have separate checks; global Mellin/unsmoothing and actual final error budgets remain open. Source(A)-existence is not asserted."
     },
     {
       "id": "L17.1",
@@ -3929,15 +3929,15 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-03T04:21:23.750653+00:00",
+    "verified_at_utc": "2026-10-03T05:58:02.276869+00:00",
     "completed": 37,
     "in_progress": 2,
     "unstarted": 7,
-    "note": "37 indexed nodes addressed, including35 original and2 explicit repaired results. Full original P14.1 is complete. This is not final proof completion; the current P2.5 numerical route remains blocked by the certified Section8 c1 mismatch.",
+    "note": "37/51 unchanged:35 original and2 repaired. New18-declaration scalar component is centrally verified. Separate analytical limiting-profile PSD result has two independent reviews and26 exact checks; not Lean/actual means. No finite-D repair established.",
     "original_completed": 35,
     "repaired_completed": 2,
     "partial": 5,
-    "main_chain_status": "blocked_numerical_inconsistency"
+    "main_chain_status": "blocked_source_numeric_and_required_precision"
   },
   "scheduling_semantics": {
     "proof_status": "Mathematical completion state; complete must be read together with completion_kind (original_statement or source_repaired). Dispatch and verification phase are separate.",
@@ -4238,6 +4238,16 @@
       "public_declaration_checks": 443,
       "regressions": 242,
       "full_project_jobs": 5562
+    },
+    {
+      "id": "actual_a_and_old16_2_center_lower",
+      "status": "verified",
+      "report": "audit/CLOUD_SECTION16_SCALAR_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 3,
+      "public_declaration_checks": 18,
+      "regressions": 18,
+      "full_project_jobs": 5565
     }
   ],
   "repair_discipline": {
@@ -4322,6 +4332,24 @@
       "main_theorem_disproved": false,
       "changed_beta_constructions_excluded": false,
       "changed_actual_B_matrix_excluded": false
+    },
+    {
+      "id": "supported_profile_limiting_form_PSD",
+      "status": "analytically_proved_with_two_independent_reviews",
+      "report": "audit/CLOUD_PROFILE_BARRIER_STATUS.md",
+      "model": ".5:exact_model:upstream_tail",
+      "profile_class": "H1 supports[0,.504] and[0,.5]",
+      "full_ratio_upper_bound": "1",
+      "independent_exact_checks": 26,
+      "lean_certificate": false,
+      "actual_character_mean_identification_proved": false,
+      "finite_D_repairs_excluded": false,
+      "main_theorem_disproved": false,
+      "precision_gaps": [
+        "Section8 weighted/projected xi boundary",
+        "Actual finite-D source identification and retained residue corrections"
+      ],
+      "active_precision_bridge": "Source-specific tau4 finite prefix, target exceptional rate L^-46; global tau5 tails retained"
     }
   ]
 }
