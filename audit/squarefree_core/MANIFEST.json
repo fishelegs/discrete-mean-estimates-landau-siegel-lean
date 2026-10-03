@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "source_only_independently_reviewed",
+  "lean_certification": false,
+  "strict_gain_proved": false,
+  "paid_selector": "s(v)<=P^(3/20)",
+  "paid_error": "O(a^-1 P^-1/100)",
+  "remaining_target": "Re Delta_squarefree-large <= (1/2-epsilon)m_H+o(1)",
+  "files": [
+    {
+      "path": "AUTHOR_ORIGINAL.json",
+      "sha256": "21d20670a98ca922cc10fca19cdf66169a442e0caea342a5350cfb328e4052af",
+      "bytes": 800
+    },
+    {
+      "path": "AUTHOR_RERUN.json",
+      "sha256": "40eaf1703a1ccbdfad57302d0965a7b540cea627d6b528e1cfaec10b5b89265f",
+      "bytes": 251
+    },
+    {
+      "path": "AUTHOR_SOURCE_MANIFEST.json",
+      "sha256": "e375d07c836e149cdcc23da97a85d5c2a44e8bffe0a4ceb42394e048e5ede34c",
+      "bytes": 894
+    },
+    {
+      "path": "INDEPENDENT_ORIGINAL.json",
+      "sha256": "ef086d794bdd65e3f3a091f1f26077a7f2f4e5d2a7e6948d6ea23d7bd91543a3",
+      "bytes": 1792
+    },
+    {
+      "path": "INDEPENDENT_RERUN.json",
+      "sha256": "cd3dffbf1212366ee848722d318a1ae5b859cb4c92c13cbda5e732a79f23c3b9",
+      "bytes": 1701
+    },
+    {
+      "path": "INDEPENDENT_REVIEW.md",
+      "sha256": "609739b2e56ef2801dc569d8dcf394b3c0bca4c227950693df66e5ce0b4237f2",
+      "bytes": 18976
+    },
+    {
+      "path": "INDEPENDENT_SOURCE_MANIFEST.json",
+      "sha256": "f19f8cbd81a1ca9e3fa63906166977e0f52be5fafaf1455df349c88522dd4472",
+      "bytes": 3831
+    },
+    {
+      "path": "PROOF.md",
+      "sha256": "d8c16272b7b4900d6e81ce6a4aac589e3290382bdfcbc3fa3ae25cd53cedb630",
+      "bytes": 8089
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "59fb65b0c7df7452be4467e516199f0de88abae2b2880ec9f476e365f47133fe",
+      "bytes": 1608
+    },
+    {
+      "path": "REPRODUCE.md",
+      "sha256": "ab59611563339ac46d9054307427a891c318b3457f4be810de75e88b25d26e29",
+      "bytes": 794
+    },
+    {
+      "path": "SOURCE_HASHES.json",
+      "sha256": "37857c741aa3c0f7f6b13f1daa62558f31bbf35fa0696f161fb40766ea9af4ba",
+      "bytes": 2591
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "b31890e4fed4e4046843c367ed218b82975dac4634f00b5ec0a5fd7563740586",
+      "bytes": 1811
+    },
+    {
+      "path": "check_author.py",
+      "sha256": "f52a6a0f52ab0915c3d1dd48befc4dda43e6032ec472ab9d41b7023fedbeed7f",
+      "bytes": 3971
+    },
+    {
+      "path": "check_independent.py",
+      "sha256": "699146158b1087d7872e9c4f2c3149d49eb034700bf8e523b2913be70320881d",
+      "bytes": 8337
+    },
+    {
+      "path": "verify_bundle.py",
+      "sha256": "6f03c987a24320c18486671580581bf227cf579d5ed16104e2f1595e9d27b4b4",
+      "bytes": 1125
+    }
+  ]
+}

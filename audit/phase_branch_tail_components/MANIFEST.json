@@ -1,0 +1,110 @@
+{
+  "checked_utc": "2026-10-03T21:52:30.042791+00:00",
+  "files": [
+    {
+      "path": "ZhangLS/All.lean",
+      "sha256": "c19b603b4db00c734814642bd090f4661261e5ec4d567f53f4b8efdd2c599248",
+      "bytes": 84683
+    },
+    {
+      "path": "ZhangLS/Spec/ActualPhaseBranchBounds.lean",
+      "sha256": "d5304384b94b7e7f76867fa7c491cac8b6d61d7558cc0e4b4bcc162780243f11",
+      "bytes": 8715
+    },
+    {
+      "path": "ZhangLS/Spec/ActualPhaseKappaTailBounds.lean",
+      "sha256": "df6f85a1b03192e39a959415dfae9f6d8461fc856f2c2e4d8d90379d5be0222e",
+      "bytes": 6325
+    },
+    {
+      "path": "ZhangLS/Spec/All.lean",
+      "sha256": "752150a3315828715d9fec380d6f70c727c18dae0096c68aa7dbd80d321e4c69",
+      "bytes": 69167
+    },
+    {
+      "path": "audit/CLOUD_PHASE_BRANCH_TAIL_STATUS.md",
+      "sha256": "bfb78301f0cbd404473e965c8bbf16568cae862b83269b05cb0a1a5f20849765",
+      "bytes": 2405
+    },
+    {
+      "path": "audit/CloudPhaseBranchTailAxioms.lean",
+      "sha256": "a96efd799ccfada5c1f9badf93ae76ec25cb828e12d267da7b26ae35dbd7e496",
+      "bytes": 7674
+    },
+    {
+      "path": "audit/cloud_phase_branch_tail_verification.json",
+      "sha256": "25f291281c3c1e025120541eecd41d44580b0637487237573aa583560f41b08d",
+      "bytes": 1815
+    },
+    {
+      "path": "audit/phase_branch_tail_components/CENTRAL_GATES.json",
+      "sha256": "82323ca6634fcdb924b2db31462eda4c10257e4c62aa336d5b6e9b93984bc9f2",
+      "bytes": 1801
+    },
+    {
+      "path": "audit/phase_branch_tail_components/EXACT_INVENTORY_CHECK.json",
+      "sha256": "2585f85287ea6ad5fbc445e4bdc41d3110c0c6891f79fb1d78c2845161e5fbec",
+      "bytes": 353
+    },
+    {
+      "path": "audit/phase_branch_tail_components/INDEPENDENT_CHECK_SUMMARY.json",
+      "sha256": "1c872f474001e23203b3e5f4dcf1235bee8eb18e67a64441c4cafd66bae1b2fe",
+      "bytes": 1328
+    },
+    {
+      "path": "audit/phase_branch_tail_components/INDEPENDENT_REVIEW.md",
+      "sha256": "a8b049189920259a2b8fc15597faf06a33d2fb6aa13c573ba9fd3269ef3c222b",
+      "bytes": 20665
+    },
+    {
+      "path": "audit/phase_branch_tail_components/LOG_HASHES.json",
+      "sha256": "9d9116d38c58b4950a3a54e8fb0b20b6dd0c318e4f297e6ebe747aa659719ad9",
+      "bytes": 1439
+    },
+    {
+      "path": "audit/phase_branch_tail_components/MODULE_MAPPING.json",
+      "sha256": "7c5cc7fe0c854eea94e79d41ef7dbab62a47da7354a285c9cf7772ecbd59aa89",
+      "bytes": 925
+    },
+    {
+      "path": "audit/phase_branch_tail_components/OWNED_DECLARATIONS.json",
+      "sha256": "800196e94498c4dd320a5ca6c871b1058d09f04d64f24e99422ef7fc14d7815d",
+      "bytes": 7012
+    },
+    {
+      "path": "audit/phase_branch_tail_components/PROVENANCE.json",
+      "sha256": "9373ae048e62316b3b2d2899fdd7dcc2a2bc04ac45432adac6c273b046ccd2f8",
+      "bytes": 580
+    },
+    {
+      "path": "audit/phase_branch_tail_components/PUBLIC_DECLARATIONS.json",
+      "sha256": "5bb3c3b9b4a7155e788571f11e48987766a0f636882901aa2637ca9e1d1c398c",
+      "bytes": 1919
+    },
+    {
+      "path": "audit/phase_branch_tail_components/REPRODUCE.md",
+      "sha256": "1d31503441d653265b24b6739f48ae6265bd7ecd32d345570b62688340d91519",
+      "bytes": 951
+    },
+    {
+      "path": "audit/phase_branch_tail_components/SOURCE_HASHES.json",
+      "sha256": "8e90cf774de498f7dfc2f3bdc16711a54310d5fccc599ca2d21020f843daa6f8",
+      "bytes": 922
+    },
+    {
+      "path": "audit/phase_branch_tail_components/STRICT_AUDIT_REVIEW.json",
+      "sha256": "a2909d6907259498ade01f7819d442526978bb9502e7989f2fc476fd314654c6",
+      "bytes": 188
+    },
+    {
+      "path": "audit/phase_branch_tail_components/check_audit.py",
+      "sha256": "ec69c662127ea4d9142483611a7020fa544fb698984d84ab15cf2505afcd8963",
+      "bytes": 1250
+    },
+    {
+      "path": "audit/phase_branch_tail_components/verify_package.py",
+      "sha256": "f5eb9e93c6d34e9e3871e1efcba3c5bee5c7f5e0b009baad2da3a7f00a665c5f",
+      "bytes": 349
+    }
+  ]
+}

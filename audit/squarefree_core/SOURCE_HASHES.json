@@ -1,0 +1,69 @@
+{
+  "repository_dependencies": [
+    {
+      "path": "ZhangLS/Spec/Lemma31LinearTail.lean",
+      "sha256": "82956684414d2c5aee2035b54d91739e93faddae467d6f660c5bf0766501b835"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33.lean",
+      "sha256": "c7ab0f6de943ebbbb90b7bd3abfe5efc978cdbf672bab195854941ae88ff320a"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33ActualSamples.lean",
+      "sha256": "968ae1613ddef523fd71562d269ecf0a01d142a658a04ae22b29e7394c3a1018"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33AdditiveLargeSieve.lean",
+      "sha256": "d36c833b9f50cb70015236572ba3a40d7404c942407d607a1b9ccd8ab2422035"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma36CoefficientMajorant.lean",
+      "sha256": "b6d020c846a76550c7b8cdaa3c5dfaf4785373db6ea836615cfd86d42dce42fa"
+    },
+    {
+      "path": "audit/half_norm_constant/INDEPENDENT_REVIEW.md",
+      "sha256": "9aa0dfd944b3f3a2c86791cf48e077ef0a56f9bf846f3681297f27115d51e186"
+    },
+    {
+      "path": "audit/half_norm_constant/PROOF.md",
+      "sha256": "0a77d306a53b6cefc46b074c2696287e12387e1d42c1a209d41b364d9130d1e0"
+    },
+    {
+      "path": "audit/half_norm_constant/STATUS.md",
+      "sha256": "87a3cf0c28968fb645b339a09f573cb2d4c91139d8f8c53265630c937e76b7a9"
+    },
+    {
+      "path": "audit/signed_phase_refinements/INTERFACE.json",
+      "sha256": "3cba7904b89c904326406849fefb6f102a6f96625a7d7230b7dba9ccf8e4a530"
+    },
+    {
+      "path": "audit/sparse_long_reduction/INDEPENDENT_REVIEW.md",
+      "sha256": "915f149a858fa7685967e781a7241ac2bf4bdb91fd9e57a369e5339d299ff684"
+    },
+    {
+      "path": "audit/sparse_long_reduction/PROOF.md",
+      "sha256": "ff2a7d6ea35281a9ab83f91b7b0b3715f7876053a7753be77d67a3537f9cb98b"
+    },
+    {
+      "path": "audit/sparse_long_reduction/SOURCE_HASHES.json",
+      "sha256": "0c09d792a9f8b9908f7721259af432b8cdab427d443de2eea9501aafdb7ecf8d"
+    },
+    {
+      "path": "audit/high_rho_split/PROOF.md",
+      "sha256": "36a976448d6de3a81cca661def36e8e6aaac9d8ccec6303f3776f89ec0ebfb2f"
+    },
+    {
+      "path": "audit/high_rho_split/INDEPENDENT_REVIEW.md",
+      "sha256": "d457d8bd6d0d076ea7d8b54b2389128e58c4046fd0f5ed11d51b650824796e3f"
+    },
+    {
+      "path": "audit/high_rho_split/STATUS.md",
+      "sha256": "4368dc9e77af51a81fcb98866d487a750ae76b301d78ef25b3a07f5823ae7941"
+    },
+    {
+      "path": "audit/high_rho_split/PROVENANCE.json",
+      "sha256": "43062b86155e9e4648f9c30a2e0a5718ee0f9c554cb48850ca79171412afa6c8"
+    }
+  ],
+  "scope": "Exact inspected source bytes and accepted public dependency packages; no transitive Lean certification."
+}

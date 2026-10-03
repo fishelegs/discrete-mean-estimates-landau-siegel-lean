@@ -1,0 +1,268 @@
+{
+  "count": 32,
+  "generated": 19,
+  "declarations": [
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_point_real",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_norm_envelope._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.ActualPhaseShiftGeometry._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_norm_envelope._simp_1_6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_norm_envelope._simp_1_4",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_tail_norm_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseTauFourThreeHalvesMass._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseShiftPoints",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_dual_kappa_tail_norm_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.ActualPhaseShiftGeometry",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_norm_envelope",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseDualKappaTail.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_norm_envelope._simp_1_8",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.ActualPhaseShiftGeometry._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_source_branch_envelope",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_norm_envelope._simp_1_7",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_norm_envelope._simp_1_5",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_point_real._simp_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_imaginary_kappa_tail_term_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_imaginary_kappa_tail_norm_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_source_shift_geometry._simp_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseTauFourThreeHalvesMass.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_source_shift_geometry",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseTauFourThreeHalvesMass._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.ActualPhaseShiftGeometry._proof_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseShiftPoints.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_norm_envelope._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_tau_four_three_halves_mass_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_point_real._simp_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_tau_four_three_halves_summable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseTauFourThreeHalvesMass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_source_shift_geometry._simp_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

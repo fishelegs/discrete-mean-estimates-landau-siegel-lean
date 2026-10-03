@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "base_commit": "652d854f8e691d3b7c590751c909dd551def0fc6",
+  "checked_utc": "2026-10-03T21:52:30.042791+00:00",
+  "lean_version": "4.30.0",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "scope": "Actual inherited branch and reciprocal envelopes and strict genuine kappa tails only. Full R2 L^-14 and strict gain remain open.",
+  "proof_modules": [
+    "ZhangLS.Spec.ActualPhaseBranchBounds",
+    "ZhangLS.Spec.ActualPhaseKappaTailBounds"
+  ],
+  "public_declarations": 13,
+  "public_definitions": 3,
+  "public_proved_results": 10,
+  "all_owned_declarations": 32,
+  "generated_declarations": 19,
+  "owner_counts": {
+    "ZhangLS.Spec.ActualPhaseBranchBounds": 21,
+    "ZhangLS.Spec.ActualPhaseKappaTailBounds": 11
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "full_project_jobs": 5762,
+  "source_guards": 1963,
+  "spec_imports": 1508,
+  "all_imports": 1773,
+  "strict_audit": {
+    "baseline_candidates": 447,
+    "new_candidates": 0,
+    "current_candidates": 447,
+    "unresolved_new_candidates": 0,
+    "exit_code": 1,
+    "nonzero_exit_preserved": true,
+    "reviews": []
+  },
+  "dependency_pins": {
+    "imported_modules": 6879,
+    "imported_module_names_sha256": "d9fb51a3f7c54a2d19ebb84ef31912283767ecb6e25757b36e3be5e320e92b4a",
+    "imported_source_manifest_sha256": "e76ffeeaa463b596b510cbc6ff0377caf134aa4f52bd9207e13bcd9b5d5db7c3",
+    "all_imported_sources_rehashed_before_and_after": true,
+    "unique_frozen_source_object_component_files_rehashed": 38938
+  },
+  "numbered_ledger": {
+    "original": 37,
+    "repaired": 3,
+    "complete": 40,
+    "total": 51
+  },
+  "full_R2_precision_proved": false,
+  "strict_gain_proved": false,
+  "hosted_ci": "Local central checks passed; hosted CI is tracked separately."
+}

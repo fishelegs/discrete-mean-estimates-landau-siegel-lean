@@ -1,0 +1,59 @@
+{
+  "count": 13,
+  "definitions": 3,
+  "proved_results": 10,
+  "declarations": [
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseShiftPoints"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.ActualPhaseShiftGeometry"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_shift_point_real"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_branch_norm_envelope"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_source_shift_geometry"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseBranchBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_source_branch_envelope"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhaseTauFourThreeHalvesMass"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_tau_four_three_halves_summable"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_tau_four_three_halves_mass_pos"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_imaginary_kappa_tail_term_bound"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_imaginary_kappa_tail_norm_bound"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_kappa_tail_norm_bound"
+    },
+    {
+      "owner": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+      "declaration": "ZhangLS.Spec.actualPhase_dual_kappa_tail_norm_bound"
+    }
+  ]
+}

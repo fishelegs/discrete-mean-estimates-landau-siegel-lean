@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "archive_sha256": "bb6fd7c23d330f977d8977582d64e06514a701f720c369c131e984f6075d6ea6",
+  "checks": {
+    "assertions": 197691,
+    "package_files": 27,
+    "bytes_hashed": 5827174564,
+    "archive_files": 28,
+    "previous_archives": 3,
+    "import_pin_occurrences": 13758,
+    "component_pin_occurrences": 32052,
+    "compiler_pin_occurrences": 2,
+    "source_input_pins": 8,
+    "configuration_pins": 5,
+    "receipt_pins": 18
+  },
+  "unique_actual_files_hashed": 38983,
+  "extension_inventory": {
+    ".olean": 6879,
+    ".olean.private": 6100,
+    ".olean.server": 6100,
+    ".ir": 6100,
+    ".ilean": 6873
+  },
+  "public_declarations": 13,
+  "owned_declarations": 32,
+  "generated_declarations": 19,
+  "owned_by_module": {
+    "ActualPhaseBranchBounds": 21,
+    "ActualPhaseKappaTailBounds": 11
+  },
+  "import_modules": 6879,
+  "proof_recompiled": false,
+  "kernel_replay_performed": false,
+  "repo_or_package_modified": false,
+  "limitations": [
+    "Receipt/log/object consistency is checked without independently replaying the Lean kernel.",
+    "Structural type hashes are checked against logs, not recomputed from a fresh environment.",
+    "Central candidate ownership is a checked mapping and audit program, not a successful central build."
+  ],
+  "failures": [],
+  "elapsed_seconds": 21.72
+}

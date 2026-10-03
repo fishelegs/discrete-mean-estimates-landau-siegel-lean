@@ -1,0 +1,65 @@
+[
+  {
+    "target": "ZhangLS.Spec.ActualPhaseBranchBounds",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T21:35:29.462409+00:00",
+    "finished_utc": "2026-10-03T21:37:21.567644+00:00"
+  },
+  {
+    "target": "ZhangLS.Spec.ActualPhaseKappaTailBounds",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T21:37:21.568850+00:00",
+    "finished_utc": "2026-10-03T21:39:48.817749+00:00"
+  },
+  {
+    "target": "CloudPhaseBranchTailAxioms",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T21:39:48.818525+00:00",
+    "finished_utc": "2026-10-03T21:43:54.516452+00:00"
+  },
+  {
+    "target": "full-project",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T21:43:55.537176+00:00",
+    "finished_utc": "2026-10-03T21:52:01.862389+00:00"
+  },
+  {
+    "target": "spec-imports",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T21:52:01.862607+00:00",
+    "finished_utc": "2026-10-03T21:52:01.937517+00:00"
+  },
+  {
+    "target": "all-imports",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T21:52:01.937753+00:00",
+    "finished_utc": "2026-10-03T21:52:02.024686+00:00"
+  },
+  {
+    "target": "placeholders",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T21:52:02.024949+00:00",
+    "finished_utc": "2026-10-03T21:52:06.470288+00:00"
+  },
+  {
+    "target": "structure",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "started_utc": "2026-10-03T21:52:06.470554+00:00",
+    "finished_utc": "2026-10-03T21:52:10.181024+00:00"
+  },
+  {
+    "target": "strict-audit",
+    "exit_code": 1,
+    "expected_exit": 1,
+    "started_utc": "2026-10-03T21:52:10.181308+00:00",
+    "finished_utc": "2026-10-03T21:52:13.212059+00:00"
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "result": "PASS",
+  "scope": "Finite identities, local regressions, exact length/power/log budgets, source integrity. Analytic acceptance is in REVIEW.md; no Lean/compiler, no candidate code execution.",
+  "candidate_sha256": "fba0302928603367ffdeb95ac1af1a364101e70923c02ca2296a548b55b03f31",
+  "discriminants": [
+    -3,
+    -4,
+    5,
+    8,
+    12,
+    13,
+    17,
+    24
+  ],
+  "integers_per_case": 2048,
+  "strict_cutoffs": [
+    1,
+    2,
+    5,
+    17,
+    64
+  ],
+  "counts": {
+    "integer_cutoff_cases": 81920,
+    "negative_rho": 5089,
+    "nonzero_ramified": 2712,
+    "nonzero_t_b_common_factor": 565,
+    "strict_cutoff_differences": 5044,
+    "newly_included_examples": 1275,
+    "restricted_rearrangements": 120,
+    "proper_deletion_distinctions": 15973
+  },
+  "local_valuations_through": 1000,
+  "scale_orderings_checked": 120,
+  "character_square_fiber_checks": 13,
+  "high_partition_points": [
+    "7/5",
+    "1103/600",
+    "56/25",
+    "301/100"
+  ],
+  "high_partition_values": [
+    "-87/2000",
+    "-7/40",
+    "-7/40",
+    "-21/1000"
+  ],
+  "low_partition_points": [
+    "99/100",
+    "1989/2000",
+    "7/5"
+  ],
+  "low_partition_values": [
+    "-21/100",
+    "-1689/8000",
+    "-253/6000"
+  ],
+  "high_log_cost": "2215/2",
+  "low_log_cost": "2741",
+  "length_absorption_slacks": {
+    "two_B": "1/2000",
+    "two_C": "21/20000",
+    "three": "13/40000"
+  },
+  "maximum_natural_length_exponents": {
+    "two_C": "577/250",
+    "two_B_squared": "1263/500",
+    "A_squared": "301/100",
+    "three_C_and_D": "6811/3000"
+  },
+  "final_power_slacks": {
+    "two": "11/1000",
+    "three": "193/6000"
+  },
+  "fourier_tail_power": "-20",
+  "auxiliary_mellin_tail_power": "-20"
+}

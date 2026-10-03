@@ -1,0 +1,19 @@
+{
+  "modules": {
+    "ActualPhaseObjects": "ZhangLS.Spec.ActualPhaseObjects",
+    "ActualPhaseRectangle": "ZhangLS.Spec.ActualPhaseRectangle",
+    "ActualPhaseTransforms": "ZhangLS.Spec.ActualPhaseTransforms",
+    "ActualPhaseSourceRegressions": "ZhangLS.Spec.ActualPhaseSourceRegressions",
+    "ActualPhaseSupport": "ZhangLS.Spec.ActualPhaseSupport",
+    "ActualPhaseKappaMajorant": "ZhangLS.Spec.ActualPhaseKappaMajorant",
+    "ActualPhaseSafeSeries": "ZhangLS.Spec.ActualPhaseSafeSeries",
+    "ActualPhaseArchBounds": "ZhangLS.Spec.ActualPhaseArchBounds",
+    "ActualPhaseBranchBounds": "ZhangLS.Spec.ActualPhaseBranchBounds",
+    "ActualPhaseKappaTailBounds": "ZhangLS.Spec.ActualPhaseKappaTailBounds"
+  },
+  "declaration_names": "identity for all actual owned names; only imports/owners change",
+  "owner_counts": {
+    "ZhangLS.Spec.ActualPhaseBranchBounds": 21,
+    "ZhangLS.Spec.ActualPhaseKappaTailBounds": 11
+  }
+}
