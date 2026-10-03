@@ -1,0 +1,100 @@
+{
+  "status": "PASS_ACTUAL_SHIFTED_ANALYTIC_BRIDGE_AND_OLD_QUOTIENT_CENTER",
+  "verified_at_utc": "2026-10-03T01:28:24.699689+00:00",
+  "base_commit": "89f992a4a7228dffe524def65caea94816fde29c",
+  "new_production_modules": 12,
+  "inherited_unchanged_production_modules": 23,
+  "new_public_declarations": 94,
+  "total_public_declaration_checks": 268,
+  "source_and_endpoint_regressions": 19,
+  "new_regressions": 12,
+  "standalone_audits_executed": 3,
+  "source_relocation": "imports only",
+  "full_project_jobs": 5471,
+  "source_files": 1633,
+  "spec_imports": 1217,
+  "full_imports": 1482,
+  "strict_candidates": 423,
+  "strict_exit_code": 1,
+  "new_strict_candidates": 1,
+  "new_strict_candidate_review": "Lemma162ActualUnramifiedBound: exact hcoeff returns a previously derived actual coefficient identity, not an assumed target bound.",
+  "independent_semantic_review": "ACCEPT; separate source/metadata review, followed by coordinator Lean rebuild",
+  "actual_corrected_factorization": true,
+  "actual_corrected_analytic_product": true,
+  "old_quotient_continuous_extension_center_zero": true,
+  "quantified_incompatibility_with_printed_asymptotic": false,
+  "full_original_lemma162_proved": false,
+  "full_repaired_lemma162_proved": false,
+  "numbered_completion_count_change": 0,
+  "archive_sha256": "962efb22e0cd1c4fe4e86d49465026c006f5c24674d9a6f0e8e91d4b4c7b15c7",
+  "logs": {
+    "lemma162-stage2-full-project.log": {
+      "bytes": 253521,
+      "sha256": "4fa1915e848a21441b4a6db98f09c5c2d0ca026b633cb54c88170abb95d98ced"
+    },
+    "lemma162-stage2-strict-audit.log": {
+      "bytes": 42873,
+      "sha256": "cfa1276fd9fd2dfed61ed1c4343c439c1c9202556e3a78c38257b66db6e6f13b"
+    },
+    "CloudLemma162StageOneRegression.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "CloudLemma162StageTwoAxioms.log": {
+      "bytes": 28068,
+      "sha256": "7180dee5690bc404b52affafa40056b125aec2f3115df0d7d0d842b9d52b17da"
+    },
+    "CloudLemma162StageTwoRegression.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Lemma162ActualLocalBridge.log": {
+      "bytes": 52035,
+      "sha256": "e2872a889f6f54fb9f2ed68d6e3585a96c6f20449ab34fb60002204e983d80cd"
+    },
+    "Lemma162ActualOldValueWitness.log": {
+      "bytes": 54070,
+      "sha256": "e6c10173bfa8b5843b0c9dde5c6a0913563c4c876ad70649ab4c5c8c1a3b0fb3"
+    },
+    "Lemma162ActualRawExtraction.log": {
+      "bytes": 52037,
+      "sha256": "a8307f363a42b9558db98542176ba21629e4c3016c8ebc70c34ea5b89be6565b"
+    },
+    "Lemma162ActualShiftedIdentity.log": {
+      "bytes": 52039,
+      "sha256": "7118cfff2ceab04cd4a808b31338295bda4d2e54fca914a4cf4b0e93be4067b6"
+    },
+    "Lemma162ActualUnramifiedBound.log": {
+      "bytes": 52039,
+      "sha256": "def98227b6d40edaac968b96a069812b4ff4c05d5f19b6325431ea24fe175682"
+    },
+    "Lemma162CorrectedAnalytic.log": {
+      "bytes": 52035,
+      "sha256": "48b12c87e832ce97a5eef8c3d3becf8cb52d4c570f399742aadb15ee11b0da43"
+    },
+    "Lemma162FirstRemainderNorm.log": {
+      "bytes": 47016,
+      "sha256": "6077a365c7b432c6421666ebef14718a1e2b6e95ef830a46f0f4cc470a496a5f"
+    },
+    "Lemma162LocalDataRational.log": {
+      "bytes": 52035,
+      "sha256": "fa6dfd738569374bb6a630c627085fa58c189440df723d1d529e2af5813c536b"
+    },
+    "Lemma162LocalKernel.log": {
+      "bytes": 47009,
+      "sha256": "964b9963fb11d741d964d4c3325a0ed24e71354311e2cae8c048491ff68dd20f"
+    },
+    "Lemma162RawLocalSeries.log": {
+      "bytes": 47012,
+      "sha256": "2f319e78de8aa778224a3a77e245187c862607bc6f2d86984fc7af43fc2c0abe"
+    },
+    "Lemma162RawMajorant.log": {
+      "bytes": 52029,
+      "sha256": "b8740f1094e9f9f69ead6fb5b6285e78e52e123d959c1cfeff7e918e819cc916"
+    },
+    "Lemma162RawPolynomialTail.log": {
+      "bytes": 47015,
+      "sha256": "baac8cd0f0d563d6e7596385b89a1332466974fdf9900ddba7a214f0214d86bc"
+    }
+  }
+}

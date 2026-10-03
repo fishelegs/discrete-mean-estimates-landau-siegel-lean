@@ -2876,14 +2876,14 @@
         "proof_section": "Appendix A"
       },
       "baseline_ledger_status": "unstarted",
-      "working_status": "actual_arithmetic_euler_stage1_verified",
+      "working_status": "actual_shifted_analytic_bridge_and_old_center_verified",
       "status_evidence": {
         "ledger_path": "progress.md",
         "ledger_line": 180,
         "fresh_kernel_check": false,
         "old_completion_revalidated": false,
         "trusted_capstone_found": false,
-        "component_report": "audit/CLOUD_LEMMA162_STAGE1_STATUS.md",
+        "component_report": "audit/CLOUD_LEMMA162_STAGE2_STATUS.md",
         "original_target_proved": false
       },
       "known_numbered_dependencies": [],
@@ -2891,10 +2891,12 @@
         "L16.1"
       ],
       "missing_mathematics": [
-        "Normalized local factors, global Euler convergence and evaluation at one"
+        "Quantitative comparison with printed old-quotient center asymptotic",
+        "Corrected uniform bounds/center: separate packet pending central verification",
+        "Actual Mellin/residue and downstream error budgets"
       ],
       "missing_specification_or_engineering": [
-        "Actual varpi2j; avoid division by vanishing ordinary p=2 factor"
+        "Keep old quotient distinct from corrected V and preserve finite-D shifts"
       ],
       "semantic_issue_ids": [
         "chi_two_equals_one_euler_factor_exception",
@@ -2913,8 +2915,8 @@
           "Actual varpi2j; avoid division by vanishing ordinary p=2 factor"
         ]
       },
-      "scheduling_phase": "corrected_actual_analytic_product_and_downstream_budget",
-      "active_work": "Central and independent-ACCEPT actual M2/varpi Euler bridge preserves exceptional q=2 and original shifts. Corrected analytic product, uniform bounds, old-center witness discharge and downstream budgets remain under proof."
+      "scheduling_phase": "corrected_center_uniform_bounds_and_mellin_budget",
+      "active_work": "Actual corrected Euler factorization, analytic product and genuine old-quotient continuous center0 centrally verified. Quantitative corrected-V center and Cauchy bounds await central review; downstream Mellin/residue budgets remain open. No quantified contradiction to printed asymptotic is claimed."
     },
     {
       "id": "L17.1",
@@ -3908,7 +3910,7 @@
     "stale_source": "Root STEP141_STATUS.md is temporary work on frozen Step127, not later completion status."
   },
   "current_status_update": {
-    "verified_at_utc": "2026-10-03T00:43:34.372727+00:00",
+    "verified_at_utc": "2026-10-03T01:28:24.699689+00:00",
     "completed": 36,
     "in_progress": 3,
     "unstarted": 7,
@@ -4183,6 +4185,18 @@
       "named_regressions": 12,
       "collision_little_o_alpha": true,
       "external_n1_weight_sum_proved": false
+    },
+    {
+      "id": "L16.2_actual_shifted_analytic_bridge_and_old_center",
+      "status": "verified",
+      "report": "audit/CLOUD_LEMMA162_STAGE2_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_modules": 12,
+      "public_declaration_checks": 268,
+      "new_public_declarations": 94,
+      "regressions": 19,
+      "actual_old_continuous_center_zero": true,
+      "printed_asymptotic_incompatibility_quantified": false
     }
   ],
   "repair_discipline": {
