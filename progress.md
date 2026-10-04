@@ -1,5 +1,16 @@
 # 张益唐论文 Lean 形式化进度
 
+## 根数候选的已付转移与实际范数精度（2026-10-04 12:59 UTC）
+
+**40/51 保持不变；严格 signed 上界与原主结论仍未证明。** 新进展及适用范围见 [研究路线记录](GAP_RESEARCH_ROUTES.md)。
+
+- 根数单独加权的新方向通过有界来源独审。同一 c 下两个实际转移误差均为 `O(a^-1L^-4)=o(1)`；完整 J1 的 Poisson 核保留全部奇偶、单位、principal 与折点条件。真正剩余目标是共同评价 `C1[H1,H2]` 和 `C1[H1,J2]` 的 signed 主项及完整比值，目前没有已证有利常数：[ROUTE-11](GAP_RESEARCH_ROUTES.md#route-11)
+- 原 principal 行的实际范数精度已完成 MC6 局部 Lean 组装：`|N−Π_H−conj(Π_H)|≤CM L^(-79/2)`，包含真实 P7 坏族、薄轮廓位移和原其余误差；新源码尚未中央集成或公开。这是无符号上界：[ROUTE-06](GAP_RESEARCH_ROUTES.md#route-06)
+- 实际环带残数采样已局部 Lean 完成，AFE 的真实四/六/十二矩代入正在进行。共同 Mellin 鞍点的定量复 Stirling 与 Sobolev/Fourier L1 组件也已局部审计，完整密度附件仍缺：[ROUTE-07](GAP_RESEARCH_ROUTES.md#route-07)、[ROUTE-10](GAP_RESEARCH_ROUTES.md#route-10)
+
+此前文档提交 [0744593](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/commit/07445931ab2d8a3872786499beb5d8befc2d53bb) 的 [hosted CI](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/actions/runs/37197999338) 于 12:36 UTC 成功。bd659a6 的 CI 在 12:53 UTC 核查时仍运行；这不代替上述未公开源码的中央复验。以下保留历史记录。
+
+
 ## 较长支撑与下一估计机制（2026-10-04 12:01 UTC）
 
 **40/51 不变；严格 signed 上界与原主结论仍未证明。** 详细记录见 [路线总表](GAP_RESEARCH_ROUTES.md)。
