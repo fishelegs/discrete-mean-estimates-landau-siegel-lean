@@ -1,5 +1,18 @@
 # 张益唐论文 Lean 形式化进度
 
+## 新根数路线的三项归约（2026-10-04 14:25 UTC）
+
+**原编号仍为40/51；严格 signed 上界和原主结论尚未证明。** [研究路线记录](GAP_RESEARCH_ROUTES.md)已按下面的新证据更新。
+
+- 原 good-family 上的反向 L 分母替换已通过独立来源审查。将短 G 并入 H1 的混合四矩后，原 AFE 精度足够；高阶项由合法有限轮廓移动付清。对每个 `Q=H2,J2`，留下 `R0−R1−L0` 三个明确四 L 均值及三个字面 Ψ2 修正，误差为 `O(L^-6)`，另一组固定参数可取 `O(L^-12)`。这些 signed 均值和坏族修正仍未估计：[ROUTE-11](GAP_RESEARCH_ROUTES.md#route-11)
+- 同一路线的连续共同 Fourier 方法也已独审：分离成本会抵消表面鞍点幅度优势。这个限定障碍不排除联合算术估计或其他方法，不能作为原结论不成立的证据
+- 实际 AFE 加权误差 `q_e≤C a^-1L^-203`、原 H1 两项 transfer 与原 C1/T1 接口新增了完整 MC6 局部 Lean 验证，尚未中央集成或公开源码。RF/RX 的十二矩已完成、能量组装继续；原 D4 G×H1 的四矩正独立 Lean 化。它们不增加原51条计数，也不证明有利符号
+
+上述归约属于新根数试验；原 H1/H2/J1 的真实 Gram 和目标均值仍需自己的附件，不能直接用 G2 的另一固定辅助 H 单范数代替。
+
+文档提交 [bd659a6](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/commit/bd659a6e1a1b4ac939cf8fc9982498bf5247e94f) 的 [hosted CI](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/actions/runs/37201138782)于13:36 UTC完整成功。89bc1b8的CI在14:24 UTC核查时仍运行；它不覆盖上述未集成源码。以下保留历史记录。
+
+
 ## 根数候选的已付转移与实际范数精度（2026-10-04 12:59 UTC）
 
 **40/51 保持不变；严格 signed 上界与原主结论仍未证明。** 新进展及适用范围见 [研究路线记录](GAP_RESEARCH_ROUTES.md)。
