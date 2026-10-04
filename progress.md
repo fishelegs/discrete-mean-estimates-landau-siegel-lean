@@ -1,5 +1,17 @@
 # 张益唐论文 Lean 形式化进度
 
+## 联合缺口的最新边界（2026-10-04 11:02 UTC）
+
+**40/51 不变；原主结论与严格 signed 上界仍未证明。** [详细路线记录](GAP_RESEARCH_ROUTES.md)继续使用稳定编号。
+
+- 实际单范数 `actualEnergy/(aM)→fixedLambda>0` 已局部 Lean 完整验证，主项误差在内部推导，尚未中央集成；它不证明严格 signed 上界，也不是 `L⁻³⁹⋅⁵` 精度：[ROUTE-01](GAP_RESEARCH_ROUTES.md#route-01)
+- 新的联合精度账本已来源层独审：原低 E 有符号总和为 `O(a⁻¹L⁻⁷⁵⁄⁴)=o(M1/(a log P))`。这是使用同一 AFE 的一致性结果，不能作为独立严格增益：[ROUTE-02](GAP_RESEARCH_ROUTES.md#route-02)
+- 实际移动 Gamma 与任意原始字符子族的恢复头部配对已来源层独审。孤立坏族项不能单独提供增益；原 Long 仍留下 `H_B`，须与有限 mollifier 差、低 E 和其余恢复项共同比较：[ROUTE-10](GAP_RESEARCH_ROUTES.md#route-10)
+- 原剖面的统一对偶尾、实际逐素数四矩、真实 C-tilde/C 核替换及八-mask C_AB 逐标签界新增了局部 Lean 验证。尚未全部中央集成，也不替代原完整解析附件：[ROUTE-06](GAP_RESEARCH_ROUTES.md#route-06)、[ROUTE-07](GAP_RESEARCH_ROUTES.md#route-07)
+
+此前两项粗比较损耗已在来源层付清。当前重点是完整联合差的有利符号；原零点 AFE 的 `L⁻²⁰³` 精度也必须纳入任何缩小余量预算。下方按时间保留先前记录。
+
+
 ## 修复路线记录（2026-10-04 09:33 UTC）
 
 详细方向、已核验结果、失败原因和下一门槛集中在 [缺口研究路线与验证记录](GAP_RESEARCH_ROUTES.md)。各路线使用稳定编号，便于网页索引；此处只保留近期摘要。
