@@ -1,5 +1,16 @@
 # 张益唐论文 Lean 形式化进度
 
+## 较长支撑与下一估计机制（2026-10-04 12:01 UTC）
+
+**40/51 不变；严格 signed 上界与原主结论仍未证明。** 详细记录见 [路线总表](GAP_RESEARCH_ROUTES.md)。
+
+- `.9` 较长支撑的真实有限指标、κ尾、六标签和 Long 补项已重新核验并通过独立来源审查。长度几何改善，但重建配对仍为 `mσ+o(1)`，算术半边仍是 `λ/2`；这次平移没有提供常数级增益：[ROUTE-04](GAP_RESEARCH_ROUTES.md#route-04)
+- 完整恢复差的来源账本已独审。真实相位平方非负，但仍缺足够大的独立正下界；旧 AFE 的误差预算必须保留：[ROUTE-10](GAP_RESEARCH_ROUTES.md#route-10)
+- 实际零点相位/能量账本、零点能量至精确 C 行的定量衔接、真实六标签计数与非单位删除新增了局部 Lean 验证。它们尚未中央集成，未计成完整 gap 或新增论文编号；圆环采样、P7 坏族精度与共同 Mellin 鞍点桥继续
+- 下一不同机制的有界预检是根数单独加权的新方向，必须同时评价其完整 Gram 与原 J1 目标配对。当前只是研究候选，没有已算出的有利常数：[ROUTE-11](GAP_RESEARCH_ROUTES.md#route-11)
+
+此前两文件文档提交 [25ed843](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/commit/25ed843a340dd799dc46fc7d300879c1a7337f23) 的 [hosted CI](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/actions/runs/37192865481)于 11:06 UTC 成功。后续文档提交0744593的CI仍运行；这不替代未集成源码的中央验证。下方保留历史记录。
+
 ## 联合缺口的最新边界（2026-10-04 11:02 UTC）
 
 **40/51 不变；原主结论与严格 signed 上界仍未证明。** [详细路线记录](GAP_RESEARCH_ROUTES.md)继续使用稳定编号。
