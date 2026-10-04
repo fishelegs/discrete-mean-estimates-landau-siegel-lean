@@ -1,0 +1,210 @@
+{
+  "count": 23,
+  "public": 19,
+  "declarations": [
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.truncated_mul_zeta_eq_one",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.eval._proof_1",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.finite_moebius_identity",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.moebius_mul_defect_pow_eq_zero",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.truncated_intCast",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.defect_pow_eq_zero",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.mul_eq_zero_of_right",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.truncated_apply_of_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.defect",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.truncated",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.truncated_apply",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.pow_eq_zero_of_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.mul_eq_zero_of_le",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.eval._proof_2",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.defect_eq_zero",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.finite_moebius_identity_one",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.eval",
+      "axioms": [
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.truncated._proof_1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.binomial_inverse_identity",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.finite_moebius_identity_endpoint",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.finite_moebius_identity_four",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.defect.eq_1",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.FiniteMobius",
+      "declaration": "ZhangLS.Spec.FiniteMobius.truncated_apply_of_lt",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ]
+}

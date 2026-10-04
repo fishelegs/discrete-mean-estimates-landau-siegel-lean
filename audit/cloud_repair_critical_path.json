@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-04T00:07:08.960722+00:00",
+  "updated_utc": "2026-10-04T00:51:43.837996+00:00",
   "base_commit": "d2d15aa83a6717fe491afa6d3319d811bc0853f9",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
@@ -88,7 +88,7 @@
       "name": "主算术矩阵与目标残差的符号",
       "status": "open",
       "verification": "精确joint表示、principal支付及选定HB j=2两完成组件已独立source复核；完整signed半范数界未证",
-      "result": "通过真实有限M/D删除误差及原P7 complex桥，Re J_right∞=Im R_pr=m_H/2+o(1)，且R_np=o(1)。这不是从实部等式推复数，也未用AFE赋予常数。 high-rho中b_chi(v)≤P^.01的精确部分已独立来源界为O(a^-1P^-1/200)，二次字符的principal-image项保留。 更强squarefree-kernel s(v)≤P^.15部分已独立source证明为O(a^-1P^-.01)。 原chi profile单完成后C≤P^1.002、Y≤P^3.002，精确Kl2 ratio核保留负principal及Psi2；principal为O(a^-1P^-.49)。 有限J=4 Möbius展开后，j=2的两smooth完成独立source审查通过：EC′≤O(L^324)、ED′≤O(L^-1551/2)，所选组件界为O(a^-1L^-127/4 max(1,P^1.003/(BR)))+O(a^-1P^-10)。BR≥P^5/6时组件损耗降为P^.17；BR≥P^1.01时该整个组件为o(1)。",
+      "result": "通过真实有限M/D删除误差及原P7 complex桥，Re J_right∞=Im R_pr=m_H/2+o(1)，且R_np=o(1)。这不是从实部等式推复数，也未用AFE赋予常数。 high-rho中b_chi(v)≤P^.01的精确部分已独立来源界为O(a^-1P^-1/200)，二次字符的principal-image项保留。 更强squarefree-kernel s(v)≤P^.15部分已独立source证明为O(a^-1P^-.01)。 原chi profile单完成后C≤P^1.002、Y≤P^3.002，精确Kl2 ratio核保留负principal及Psi2；principal为O(a^-1P^-.49)。 有限J=4 Möbius展开后，j=2的两smooth完成独立source审查通过：EC′≤O(L^324)、ED′≤O(L^-1551/2)，所选组件界为O(a^-1L^-127/4 max(1,P^1.003/(BR)))+O(a^-1P^-10)。BR≥P^5/6时组件损耗降为P^.17；BR≥P^1.01时该整个组件为o(1)。 有限Möbius/HB恒等式已独立中央Lean核验：任意正J、literal cutoff、weak endpoint和(4,-6,4,-1)，19公开/23完整owner标准公理。它不含解析完成或signed界。",
       "gap": "仍须Re(T_Kl−T_bad)≤(1/2−epsilon)m_H+o(1)。现有整族界为a^-1L^(-353/4)P^.501，不能视为o(1)。更强的真实joint估计P²L^A√(E_C E_D)，A<353/4，是充分但未证的替代目标。 新HB方案仍缺j=1,3,4与j=2补集，以及完整binomial重组的signed半阈值；该局部o(1)不证明全余项小。",
       "dependency_mode": "route_specific; original_ratio uses R2; independent_weighted_Z2 uses its own valid contour/sampling attachment and R5.single_norm",
       "dependencies": [
@@ -113,11 +113,12 @@
         "audit/squarefree_core/STATUS.md",
         "audit/prime_pairing_budget/STATUS.md",
         "audit/joint_signed_operator/STATUS.md",
-        "audit/multilinear_completion/STATUS.md"
+        "audit/multilinear_completion/STATUS.md",
+        "audit/finite_mobius/STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "已接受j=2组件整理发布；继续共同分解与剩余尺度区研究。local inverse/Gevrey新路线另行审查，不能把P^epsilon当可被对数小量吸收。",
-      "checked_utc": "2026-10-04T00:07:08.960722+00:00",
+      "execution_note": "有限HB桥scoped中央PASS；优先并行Lean化新平方因子加权ν尾（实际线性输入/prime majorant/正卷积与平方尾），另继续真实弱pair整体协方差研究。全库仍恢复复验。",
+      "checked_utc": "2026-10-04T00:51:43.837996+00:00",
       "proof_status": "open",
       "branch_status": "suspended_recalibration_for_fixed_smooth_narrow_small_gain_only",
       "alternative_routes": [
@@ -159,7 +160,32 @@
           "attachment_lean_status": "open; source reviewed",
           "full_Gram_required": false
         }
-      }
+      },
+      "subgoals": [
+        {
+          "id": "finite_mobius_identity",
+          "proof_status": "lean_proved_scoped_central",
+          "execution_status": "done",
+          "evidence": [
+            "audit/finite_mobius/STATUS.md"
+          ],
+          "scope": "finite arithmetic identity only; full project fresh recovery separate"
+        },
+        {
+          "id": "square_factor_weighted_tail",
+          "proof_status": "source_reviewed_lean_in_progress",
+          "execution_status": "active",
+          "target": "sum_(D^20<e<=P^4) nu(e)^2 tau_q(e)/e = O_q(L^(4q-2015)), q<=9",
+          "execution_note": "actual linear input privately compiled; square-majorant and convolution-tail assembly actively formalizing; central capstone pending"
+        },
+        {
+          "id": "weak_pair_signed_covariance",
+          "proof_status": "open",
+          "execution_status": "active_source_research",
+          "target": "original actual recombined signed remainder below strict half-norm threshold",
+          "execution_note": "Strong-pair component control does not close this target."
+        }
+      ]
     },
     {
       "id": "R5",

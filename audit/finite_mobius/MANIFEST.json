@@ -1,0 +1,70 @@
+{
+  "scope": "focused finite arithmetic kernel proof; full project separately revalidating",
+  "files": [
+    {
+      "path": "ZhangLS/Spec/FiniteMobius.lean",
+      "bytes": 9291,
+      "sha256": "ff93fbc3c0597bacc89f92bbc842c3fdfbd40762ca70d65053622ac2ffd01db4"
+    },
+    {
+      "path": "audit/CloudFiniteMobiusAxioms.lean",
+      "bytes": 4832,
+      "sha256": "bb3508aa9f7898c7ba8cc6fd8f68a4c78b0b76975d9843e1afe57ec1b5883649"
+    },
+    {
+      "path": "audit/CloudFiniteMobiusChecks.lean",
+      "bytes": 1567,
+      "sha256": "858ed486c6309b7f86441611d499a07cf9634c8739e7969b2180476757359470"
+    },
+    {
+      "path": "audit/finite_mobius/CENTRAL_RECEIPT.json",
+      "bytes": 661,
+      "sha256": "13e4da80cd5b2de2039bbb1034c06350a75e7f614f14afdc87589152454bb364"
+    },
+    {
+      "path": "audit/finite_mobius/IMPORTED_MODULES.txt",
+      "bytes": 95350,
+      "sha256": "1163fe153acb4419a8e318d50a83d8fd05fa7879a3aed06fa0c3c363c2fe3152"
+    },
+    {
+      "path": "audit/finite_mobius/OWNED_DECLARATIONS.json",
+      "bytes": 5044,
+      "sha256": "97e3816d45f748e051f4ebd5d49fd89ca34af7f9a39d3f1910d95f2ce84c4670"
+    },
+    {
+      "path": "audit/finite_mobius/SEMANTIC_REVIEW.md",
+      "bytes": 1570,
+      "sha256": "dc0ee7be227d997c37e3abc7be5c167aafd43e58f4748eb913c03680ca85f1c0"
+    },
+    {
+      "path": "audit/finite_mobius/STATUS.md",
+      "bytes": 1889,
+      "sha256": "eb4ebad9d627f8b10d1d56452b9ab80346603d7a23a02855409d84dd3752adac"
+    },
+    {
+      "path": "audit/finite_mobius/VERIFICATION.json",
+      "bytes": 1444,
+      "sha256": "6255814e98b9f65de7f3c71d4ab2673d6aea020f1088ba3a2fe080f100b57fa5"
+    },
+    {
+      "path": "audit/finite_mobius/check_audit.py",
+      "bytes": 877,
+      "sha256": "0900d57362632a49acfe3ab7144dfe3423f6c92de0c9952346d67aea895df949"
+    },
+    {
+      "path": "audit/finite_mobius/check_exact_semantics.py",
+      "bytes": 4446,
+      "sha256": "369d565d171c48ec4512e27738620663b7168dce27d0e39f38711c5fbece6666"
+    },
+    {
+      "path": "audit/finite_mobius/exact_semantics.json",
+      "bytes": 639,
+      "sha256": "5ec3ba2b8655876c7ad6c50d75845dec44500fdc177b43aa7b25bdfe3b2fed89"
+    },
+    {
+      "path": "audit/finite_mobius/verify_package.py",
+      "bytes": 1026,
+      "sha256": "bcd98b698f16d5f693a231d77359a5b2f962f4b2f4e4e3fc709c8e63dac2ccca"
+    }
+  ]
+}

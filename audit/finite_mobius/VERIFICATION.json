@@ -1,0 +1,37 @@
+{
+  "status": "PASS_SCOPED_CENTRAL_KERNEL_VERIFICATION",
+  "checked_utc": "2026-10-04T00:46:00Z",
+  "lean_version": "4.30.0",
+  "lean_commit": "d024af099ca4bf2c86f649261ebf59565dc8c622",
+  "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "source_baseline": "cbcfbcbc7ceafaafcf3e711b7216d2f059da192d",
+  "source": "ZhangLS/Spec/FiniteMobius.lean",
+  "source_sha256": "ff93fbc3c0597bacc89f92bbc842c3fdfbd40762ca70d65053622ac2ffd01db4",
+  "public_count": 19,
+  "all_owned_count": 23,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "loaded_modules": 3293,
+  "loaded_module_names_sha256": "1163fe153acb4419a8e318d50a83d8fd05fa7879a3aed06fa0c3c363c2fe3152",
+  "gates": {
+    "main_fresh_compile": true,
+    "complex_and_endpoint_regressions": true,
+    "all_owned_axiom_audit": true,
+    "exact_inventory_recheck": true,
+    "publication_layout_source_guards": true,
+    "official_aggregate_generators_on_publication_inventory": true
+  },
+  "fresh_full_project_pass": false,
+  "full_project_status": "controlled baseline revalidation is still running after environment replacement; scoped PASS does not assert a fresh whole-project PASS",
+  "numbered_ledger": {
+    "total": 51,
+    "original": 37,
+    "repaired": 3,
+    "complete": 40
+  },
+  "strict_gain_proved": false,
+  "scope": "Unnumbered exact finite arithmetic identity only; three direct Mathlib imports and no other ZhangLS imports."
+}

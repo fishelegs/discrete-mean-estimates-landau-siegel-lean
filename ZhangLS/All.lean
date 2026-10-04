@@ -373,6 +373,7 @@ import ZhangLS.Spec.DivisorSmallPowerBudget
 import ZhangLS.Spec.FiniteDivisorProductReindex
 import ZhangLS.Spec.FiniteFourSumBound
 import ZhangLS.Spec.FiniteFourSumNorm
+import ZhangLS.Spec.FiniteMobius
 import ZhangLS.Spec.FirstLogMoment
 import ZhangLS.Spec.FirstLogMomentLower
 import ZhangLS.Spec.FirstLogRegressions

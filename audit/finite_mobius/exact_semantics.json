@@ -1,0 +1,40 @@
+{
+  "kind": "exact integer semantic regressions, not Lean certification",
+  "cases": 32,
+  "full_and_support_checks": 40563,
+  "literal_variable_checks": 1331,
+  "inclusive_endpoint_checks": 32,
+  "n_one_checks": 32,
+  "J4_coefficients": [
+    4,
+    -6,
+    4,
+    -1
+  ],
+  "nonzero_defect_outside_asserted_range": [
+    {
+      "U": 1,
+      "J": 1,
+      "n": 2,
+      "mu_minus_HB": -1
+    },
+    {
+      "U": 1,
+      "J": 2,
+      "n": 4,
+      "mu_minus_HB": 1
+    },
+    {
+      "U": 1,
+      "J": 3,
+      "n": 8,
+      "mu_minus_HB": -1
+    },
+    {
+      "U": 1,
+      "J": 4,
+      "n": 16,
+      "mu_minus_HB": 1
+    }
+  ]
+}

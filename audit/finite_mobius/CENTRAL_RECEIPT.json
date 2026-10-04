@@ -1,0 +1,15 @@
+{
+  "main_fresh_compile": {
+    "exit_code": 0,
+    "source_sha256": "ff93fbc3c0597bacc89f92bbc842c3fdfbd40762ca70d65053622ac2ffd01db4",
+    "seconds": 2.6882000449995758
+  },
+  "exact_all_owned_audit": {
+    "exit_code": 0,
+    "seconds": 18.04955898099979,
+    "audit_source_sha256": "bb3508aa9f7898c7ba8cc6fd8f68a4c78b0b76975d9843e1afe57ec1b5883649",
+    "log_sha256": "79a7a32a088776a8fd1d547e9d3f9abfd3fb0d7d050ae6e5e4aa0ceff2c426ee"
+  },
+  "commands": "Pinned lean4.30 direct fresh compilation, then complex endpoint regressions and complete ownership audit; scoped equivalent reproduction commands are in STATUS.md",
+  "full_project_fresh_pass": false
+}

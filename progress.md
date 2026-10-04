@@ -1,5 +1,7 @@
 # 张益唐论文 Lean 形式化进度
 
+有限Möbius/HB恒等式（2026-10-04）：[独立算术模块的中央Lean核验](audit/finite_mobius/STATUS.md)完成。任意正J、literal sharp cutoff及n≤U^J包含端点，J=4系数(4,-6,4,-1)均保留；19公开/23完整owner及复数/端点回归PASS，仅标准公理。该模块只依赖Mathlib，是有限分解的已证桥。全项目仍在环境恢复后的fresh复验中，不能把此项scoped PASS称为全库新PASS；ν²τq新尾桥、弱pair协方差及strictgain仍未完整Lean闭合，40/51不变。
+
 有限多线性修复进展（2026-10-04）：[完整HB来源证明及独审](audit/multilinear_completion/STATUS.md)保留真实Ψ1、原mask/shift和严格ν尾。j=2两smooth完成给O(a^-1L^-127/4 max(1,P^1.003/(BR)))+O(a^-1P^-10)：BR≥P^5/6时该组件的P损耗由.501降至.17，BR≥P^1.01时整个选中组件为o(1)。其余j=1,3,4、j=2补集和全局signed半阈值仍缺。这是独立来源验收，53354有限检查与22输入指纹通过，尚非Lean，40/51不变。
 
 本地恢复状态（2026-10-03 23:58 UTC）：执行环境在23:17左右被替换，旧中央编译结果中断且未确认。已从GitHub b5c2f7b恢复全部已发布源码，固定Lean4.30.0与8459项官方mathlib缓存恢复成功，实际项目最小探针ActualGramRamp通过。正在串行重建依赖并复验未发布增量；尚无新环境全项目PASS。六项R5源码及四项R2源码按旧hash逐字恢复，另三项R2源码为待重验重建稿。40/51与已发布数学范围不变。
