@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "source_commit": "b5c2f7ba2a352acf6f9cfadd54a32dec829e3953",
+  "derived_public_editions": [
+    {
+      "path": "PROOF.md",
+      "original_source": {
+        "bytes": 30817,
+        "sha256": "0d9a3aaf84c4df6402edbe361a3f0238774f471cb8d2e0fb217157ab8c8146a6"
+      },
+      "derived_public": {
+        "bytes": 32887,
+        "sha256": "d0c181c1e5dbe47ca16d32bc0aef98814ed302aa17c0c056473ea0b34ce7524d"
+      },
+      "transformations": [
+        "Replace historical introduction and obsolete local source links with commit-pinned public references",
+        "Identify independent proof of selector restoration",
+        "Replace obsolete author-checker instructions with portable independent verification",
+        "Preserve all mathematical sections, claims, hypotheses, and open problems"
+      ]
+    },
+    {
+      "path": "REVIEW.md",
+      "original_source": {
+        "bytes": 29322,
+        "sha256": "f91b915ddf42055a6c36ec6114b124a0cb81bdc0bb17d46512a21cafea4c38b6"
+      },
+      "derived_public": {
+        "bytes": 29256,
+        "sha256": "3c31ef866d4a6609b277bd9c8d7c86551e9925ccab4e8f68dfeb4cf54fc65248"
+      },
+      "transformations": [
+        "Replace recovery workflow narrative and locations with source hashes and availability status",
+        "Link Lean source references to exact public commit",
+        "Use portable verification instructions",
+        "Preserve mathematical review Sections 1 through 9 and independent check scope"
+      ]
+    }
+  ],
+  "retained_independent_files": [
+    {
+      "path": "check_independent.py",
+      "original_source": {
+        "bytes": 13579,
+        "sha256": "8e1493abd3eb72b2d9c8f47fc1d7ae1730e13bcb4361883604b1d4f558977d27"
+      },
+      "distributed_file": {
+        "bytes": 13579,
+        "sha256": "8e1493abd3eb72b2d9c8f47fc1d7ae1730e13bcb4361883604b1d4f558977d27"
+      },
+      "relationship": "byte-identical independent review artifact"
+    },
+    {
+      "path": "CHECKS.json",
+      "original_source": {
+        "bytes": 1909,
+        "sha256": "a01aa1ef19442a4db129cbcc76b3a8d3afb343c1438b7470d3429adbd3ddb203"
+      },
+      "distributed_file": {
+        "bytes": 1909,
+        "sha256": "a01aa1ef19442a4db129cbcc76b3a8d3afb343c1438b7470d3429adbd3ddb203"
+      },
+      "relationship": "byte-identical independent review artifact"
+    }
+  ],
+  "original_support_records": [
+    {
+      "id": "independent_review_MANIFEST.json",
+      "original_source": {
+        "bytes": 1084,
+        "sha256": "b0dd514c37b3737e9fb13b6afdc5ac2da79ce4c33be8aa4671afd6552ae74c24"
+      },
+      "distributed": false,
+      "role": "Source provenance record; portable public equivalent is provided separately"
+    },
+    {
+      "id": "independent_review_INPUTS.json",
+      "original_source": {
+        "bytes": 10802,
+        "sha256": "c0085740d1127a01e3431ae35e0170e489b4fe00ab722e724016ca9dc55a08dc"
+      },
+      "distributed": false,
+      "role": "Source provenance record; portable public equivalent is provided separately"
+    },
+    {
+      "id": "independent_review_HISTORICAL_MANIFEST_DECLARATIONS.json",
+      "original_source": {
+        "bytes": 2824,
+        "sha256": "4edd372786f2d881111d46cf2d3f0a0b360c03a933bb360c9dc7fc553f3f7d9c"
+      },
+      "distributed": false,
+      "role": "Source provenance record; portable public equivalent is provided separately"
+    },
+    {
+      "id": "independent_review_RECEIPT.json",
+      "original_source": {
+        "bytes": 1736,
+        "sha256": "d3f6a9ff89bcf153734236386d6611ce7fa3283d126cbd2277f0040bdc8541e8"
+      },
+      "distributed": false,
+      "role": "Source provenance record; portable public equivalent is provided separately"
+    },
+    {
+      "id": "independent_review_verify_bundle.py",
+      "original_source": {
+        "bytes": 3342,
+        "sha256": "603cfd65f7e3af6826aa91516e03a7ec4b5d4e6edf16dc09b139a6b8f820d9a3"
+      },
+      "distributed": false,
+      "role": "Source provenance record; portable public equivalent is provided separately"
+    }
+  ],
+  "historical_provenance_complete": false,
+  "privacy_transform": "Remove obsolete filesystem locations and recovery workflow history; preserve complete mathematical sections and transparent archival availability."
+}

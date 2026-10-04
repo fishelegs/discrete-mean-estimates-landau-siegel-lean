@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "originals": [
+    {
+      "id": "author_report",
+      "bytes": 30817,
+      "sha256": "0d9a3aaf84c4df6402edbe361a3f0238774f471cb8d2e0fb217157ab8c8146a6",
+      "status": "recovered_byte_exact_not_distributed",
+      "evidence_kind": "Original byte-exact recovery checked against historical declaration",
+      "public_mathematics": [
+        "PROOF.md",
+        "REVIEW.md"
+      ]
+    },
+    {
+      "id": "author_checker",
+      "bytes": 7460,
+      "sha256": "bbcba22378a4c75a831297af22fba22d6a7531330a8e716acf625f06fc165eb5",
+      "status": "original_bytes_unavailable",
+      "evidence_kind": "Historical hash declaration only; not freshly verified",
+      "public_mathematics": []
+    },
+    {
+      "id": "author_checks_receipt",
+      "bytes": 632,
+      "sha256": "7b312c18141715bedf95b9f6c7c8c79c1a35eb32131ce2816107da949ea2d774",
+      "status": "original_bytes_unavailable",
+      "evidence_kind": "Historical hash declaration only; not freshly verified",
+      "public_mathematics": []
+    },
+    {
+      "id": "author_input_pins",
+      "bytes": 867,
+      "sha256": "db6d0747558fa59f387837e5d2e190e7e66811312aab3f20617222bbea826217",
+      "status": "original_bytes_unavailable",
+      "evidence_kind": "Historical hash declaration only; not freshly verified",
+      "public_mathematics": []
+    },
+    {
+      "id": "author_bundle_verifier",
+      "bytes": 541,
+      "sha256": "7f5b070d79018eed3f4f1cf6eda9074a95b249e442de95c8a35afff25bd0d3a6",
+      "status": "original_bytes_unavailable",
+      "evidence_kind": "Historical hash declaration only; not freshly verified",
+      "public_mathematics": []
+    },
+    {
+      "id": "joint_signed_original_proof",
+      "bytes": 23856,
+      "sha256": "8d495c79023e6964231def713aaaaf435d947c5d5e4b58d5576b8802bd96ba0d",
+      "status": "original_bytes_unavailable",
+      "evidence_kind": "Historical hash declaration only; not freshly verified",
+      "public_mathematics": []
+    },
+    {
+      "id": "joint_signed_original_review",
+      "bytes": 22185,
+      "sha256": "451af50b3db4166a5337587d0b7e3bb4a5df49dcf2482bd344c2ce07e69f99b5",
+      "status": "original_bytes_unavailable",
+      "evidence_kind": "Historical hash declaration only; not freshly verified",
+      "public_mathematics": []
+    },
+    {
+      "id": "selector_restoration_original_report",
+      "bytes": 24682,
+      "sha256": "0e292b10cc1df29d8c520cf0858209ef7a1f70eb44bf087888793a075480a1ae",
+      "status": "original_bytes_unavailable",
+      "evidence_kind": "Historical hash declaration only; not freshly verified",
+      "public_mathematics": [
+        "REVIEW.md#1-inherited-scope-and-legal-selector-restoration"
+      ]
+    },
+    {
+      "id": "sparse_long_original_report",
+      "bytes": 21030,
+      "sha256": "a6930f429486bf50e8966f1c5e377e37b4a49a182d8866c78399fa2be675323e",
+      "status": "original_bytes_unavailable",
+      "evidence_kind": "Historical hash declaration only; not freshly verified",
+      "public_mathematics": []
+    }
+  ],
+  "missing_original_count": 8,
+  "author_checker_rerun": false,
+  "all_original_archival_bytes_restored": false,
+  "note": "Missing originals are recorded for provenance only; no missing original is needed to run this public package. The original author manifest byte stream itself is also unavailable; its nine declarations were retained."
+}

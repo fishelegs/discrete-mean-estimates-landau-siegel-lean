@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "scope": "Derived public audit files; self-manifest excluded",
+  "files": [
+    {
+      "path": "ARCHIVAL_PROVENANCE.json",
+      "bytes": 3370,
+      "sha256": "c0f93b2b01573773284aa4f9559d4812c5e8af42fcd4b82381e59f1bfcd87eb6"
+    },
+    {
+      "path": "CHECKS.json",
+      "bytes": 1909,
+      "sha256": "a01aa1ef19442a4db129cbcc76b3a8d3afb343c1438b7470d3429adbd3ddb203"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 9166,
+      "sha256": "6e4f6c382050b5bb78cde2da35187845b9158261e2d3edd7a82985a55f8ca1ad"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 32887,
+      "sha256": "d0c181c1e5dbe47ca16d32bc0aef98814ed302aa17c0c056473ea0b34ce7524d"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "bytes": 4255,
+      "sha256": "1962b75adc15348a75f44447d2ea94fbe54f14a3ccf9917e6a9b644203e61e50"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 29256,
+      "sha256": "3c31ef866d4a6609b277bd9c8d7c86551e9925ccab4e8f68dfeb4cf54fc65248"
+    },
+    {
+      "path": "SCOPE.json",
+      "bytes": 1761,
+      "sha256": "f4d700f1a438af0ecdd01220302ae42a159e6171e9012479dc2d76939b3ae988"
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 1829,
+      "sha256": "8d869947d5167e3b376e5bf37833d9c79bf11b918de9b9246215185b9a24157a"
+    },
+    {
+      "path": "check_independent.py",
+      "bytes": 13579,
+      "sha256": "8e1493abd3eb72b2d9c8f47fc1d7ae1730e13bcb4361883604b1d4f558977d27"
+    },
+    {
+      "path": "verify_bundle.py",
+      "bytes": 7218,
+      "sha256": "beb3a912f4170de999537b32aa250cc2b855f764d7d273da6f0a2b7f7e7d0d01"
+    }
+  ]
+}

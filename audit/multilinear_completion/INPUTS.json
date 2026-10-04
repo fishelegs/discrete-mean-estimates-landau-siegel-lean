@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "repository_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean",
+  "source_commit": "b5c2f7ba2a352acf6f9cfadd54a32dec829e3953",
+  "repository_inputs": [
+    {
+      "path": "audit/joint_signed_operator/PROOF.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/joint_signed_operator/PROOF.md",
+      "bytes": 25106,
+      "sha256": "aa6763424c2842285ab31927f2a623497f9e8a18e56cd585d9ed237a30b607aa"
+    },
+    {
+      "path": "audit/joint_signed_operator/INDEPENDENT_REVIEW.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/joint_signed_operator/INDEPENDENT_REVIEW.md",
+      "bytes": 22553,
+      "sha256": "f7935e0299d0fd13ea5badc358702d82633771d95a37471afbd42815d90e4d07"
+    },
+    {
+      "path": "audit/joint_signed_operator/PROVENANCE.json",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/joint_signed_operator/PROVENANCE.json",
+      "bytes": 2909,
+      "sha256": "bb799d287cbb70cbc93e34e682efb1ff324d49b5103dd71ddc8c4673c8dbc029"
+    },
+    {
+      "path": "audit/joint_signed_operator/SOURCE_HISTORY.json",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/joint_signed_operator/SOURCE_HISTORY.json",
+      "bytes": 14445,
+      "sha256": "83fef385059cc070510bbfb4dfe63573e9619cb9860f114728737621110cecb3"
+    },
+    {
+      "path": "audit/sparse_long_reduction/PROOF.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/sparse_long_reduction/PROOF.md",
+      "bytes": 21436,
+      "sha256": "ff2a7d6ea35281a9ab83f91b7b0b3715f7876053a7753be77d67a3537f9cb98b"
+    },
+    {
+      "path": "audit/sparse_long_reduction/INDEPENDENT_REVIEW.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/sparse_long_reduction/INDEPENDENT_REVIEW.md",
+      "bytes": 22602,
+      "sha256": "915f149a858fa7685967e781a7241ac2bf4bdb91fd9e57a369e5339d299ff684"
+    },
+    {
+      "path": "audit/sparse_long_reduction/PROVENANCE.json",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/sparse_long_reduction/PROVENANCE.json",
+      "bytes": 4026,
+      "sha256": "b86ceaad7e36c4f71c9e5bd79214d7f53a6907d9ebbda5a105dfec372d863c84"
+    },
+    {
+      "path": "audit/squarefree_core/PROOF.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/squarefree_core/PROOF.md",
+      "bytes": 8089,
+      "sha256": "d8c16272b7b4900d6e81ce6a4aac589e3290382bdfcbc3fa3ae25cd53cedb630"
+    },
+    {
+      "path": "audit/squarefree_core/INDEPENDENT_REVIEW.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/squarefree_core/INDEPENDENT_REVIEW.md",
+      "bytes": 18976,
+      "sha256": "609739b2e56ef2801dc569d8dcf394b3c0bca4c227950693df66e5ce0b4237f2"
+    },
+    {
+      "path": "audit/squarefree_core/PROVENANCE.json",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/squarefree_core/PROVENANCE.json",
+      "bytes": 1608,
+      "sha256": "59fb65b0c7df7452be4467e516199f0de88abae2b2880ec9f476e365f47133fe"
+    },
+    {
+      "path": "audit/long_eta_finite_bridge/PROOF.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/long_eta_finite_bridge/PROOF.md",
+      "bytes": 32517,
+      "sha256": "95d46cd2a3628cbb01fe389be71a46825820ade92c4f5d319c34e4cfbea2dfdc"
+    },
+    {
+      "path": "audit/long_eta_finite_bridge/INDEPENDENT_REVIEW.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/long_eta_finite_bridge/INDEPENDENT_REVIEW.md",
+      "bytes": 27962,
+      "sha256": "bd3ba71330312827b79e99fd04d8ddc323977e799cc94fa167d1cb6a5012c315"
+    },
+    {
+      "path": "audit/prime_pairing_budget/PROOF.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/prime_pairing_budget/PROOF.md",
+      "bytes": 25649,
+      "sha256": "98c8b5cfba0459da479701725f76ff2ae511d546bb74ae47bf78c51979d9f9c4"
+    },
+    {
+      "path": "audit/prime_pairing_budget/INDEPENDENT_REVIEW.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/prime_pairing_budget/INDEPENDENT_REVIEW.md",
+      "bytes": 19815,
+      "sha256": "6b0e25740ab39e920000c1338e6ecf66b5aef8d22883f55191fa1b5dceae8643"
+    },
+    {
+      "path": "audit/prime_pairing_budget/PROVENANCE.json",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/prime_pairing_budget/PROVENANCE.json",
+      "bytes": 2449,
+      "sha256": "5013e98254739e57ee36d816219a303b27578bd60bc0cf2099c63c4a0b2214e9"
+    },
+    {
+      "path": "audit/signed_phase_refinements/INTERFACE.json",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/audit/signed_phase_refinements/INTERFACE.json",
+      "bytes": 4128,
+      "sha256": "3cba7904b89c904326406849fefb6f102a6f96625a7d7230b7dba9ccf8e4a530"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31LinearTail.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/ZhangLS/Spec/Lemma31LinearTail.lean",
+      "bytes": 3531,
+      "sha256": "82956684414d2c5aee2035b54d91739e93faddae467d6f660c5bf0766501b835"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31TotalWeight.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/ZhangLS/Spec/Lemma31TotalWeight.lean",
+      "bytes": 2971,
+      "sha256": "3678924c2b115b1beff5973ee63608178a89aade8177dedacd77c2b33136fba0"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/ZhangLS/Spec/Lemma33.lean",
+      "bytes": 5469,
+      "sha256": "c7ab0f6de943ebbbb90b7bd3abfe5efc978cdbf672bab195854941ae88ff320a"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33ActualSamples.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/ZhangLS/Spec/Lemma33ActualSamples.lean",
+      "bytes": 3641,
+      "sha256": "968ae1613ddef523fd71562d269ecf0a01d142a658a04ae22b29e7394c3a1018"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma33AdditiveLargeSieve.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/ZhangLS/Spec/Lemma33AdditiveLargeSieve.lean",
+      "bytes": 2456,
+      "sha256": "d36c833b9f50cb70015236572ba3a40d7404c942407d607a1b9ccd8ab2422035"
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma36CoefficientMajorant.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/b5c2f7ba2a352acf6f9cfadd54a32dec829e3953/ZhangLS/Spec/Lemma36CoefficientMajorant.lean",
+      "bytes": 12553,
+      "sha256": "b6d020c846a76550c7b8cdaa3c5dfaf4785373db6ea836615cfd86d42dce42fa"
+    }
+  ],
+  "public_ancestry_mappings": [
+    {
+      "history_path": "audit/joint_signed_operator/SOURCE_HISTORY.json",
+      "original_sha256": "8d495c79023e6964231def713aaaaf435d947c5d5e4b58d5576b8802bd96ba0d",
+      "public_path": "audit/joint_signed_operator/PROOF.md",
+      "public_sha256": "aa6763424c2842285ab31927f2a623497f9e8a18e56cd585d9ed237a30b607aa",
+      "relationship": "Published curated mathematical equivalent; historical original bytes remain unavailable"
+    },
+    {
+      "history_path": "audit/joint_signed_operator/SOURCE_HISTORY.json",
+      "original_sha256": "451af50b3db4166a5337587d0b7e3bb4a5df49dcf2482bd344c2ce07e69f99b5",
+      "public_path": "audit/joint_signed_operator/INDEPENDENT_REVIEW.md",
+      "public_sha256": "f7935e0299d0fd13ea5badc358702d82633771d95a37471afbd42815d90e4d07",
+      "relationship": "Published curated mathematical equivalent; historical original bytes remain unavailable"
+    }
+  ],
+  "scope": "Public source inputs directly hashed; original archival declarations are separate and are not verifier dependencies."
+}

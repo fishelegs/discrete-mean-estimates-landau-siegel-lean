@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-03T22:41:58.812676+00:00",
+  "generated_utc": "2026-10-04T00:07:08.960722+00:00",
   "baseline_commit": "58a9273c38961411a5f06ab2db4bdf565ef30794",
   "paper": {
     "arxiv": "2211.02515v1",
@@ -4552,9 +4552,23 @@
     "separate_from_numbered_51": true,
     "node_count": 8,
     "strict_gain_proved": false,
-    "updated_utc": "2026-10-03T22:41:58.812676+00:00",
+    "updated_utc": "2026-10-04T00:07:08.960722+00:00",
     "branch_status_updated_utc": "2026-10-03T14:58:30.522627+00:00",
     "fixed_smooth_narrow_small_gain_branch": "suspended_recalibration",
     "route_specific_dependencies": "See cloud_repair_critical_path.json routes and R5.single_norm; original numbered ledger unchanged."
+  },
+  "multilinear_completion_bridge": {
+    "report": "audit/multilinear_completion/STATUS.md",
+    "source_level_review": "ACCEPT selected finite HB j=2 component",
+    "lean_proof": false,
+    "strict_gain_proved": false,
+    "component_bound": "O(a^-1 L^(-127/4) max(1,P^1.003/(BR))) + O(a^-1 P^-10)",
+    "paid_region": "BR >= P^1.01",
+    "open": [
+      "j=1,3,4",
+      "j=2 complement",
+      "global signed half threshold"
+    ],
+    "numbered_count_change": 0
   }
 }

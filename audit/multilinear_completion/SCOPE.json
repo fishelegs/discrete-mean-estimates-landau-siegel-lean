@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "verdict": "ACCEPT_SOURCE_LEVEL_SELECTED_HB_J2_COMPONENT",
+  "lean_certification": false,
+  "global_signed_half_threshold_proved": false,
+  "source_hypothesis_exponent": 2022,
+  "target_exponent": 2024,
+  "finite_identity": {
+    "levels": 4,
+    "weights": [
+      4,
+      -6,
+      4,
+      -1
+    ],
+    "cutoff": "ceil(P^(1501/2000))",
+    "inclusive_validity": "n <= U^4"
+  },
+  "family": "actual Psi1; Cauchy before enlargement of nonnegative moments",
+  "bounds": {
+    "whole_supports": "C_prime,Y_prime <= P^(3003/1000)/(B R)",
+    "C_prime_energy_log_exponent": "324",
+    "D_prime_energy_log_exponent": "-1551/2",
+    "selected_component": "O(a_norm^-1 L^(-127/4) max(1,P^(1003/1000)/(B R))) + O(a_norm^-1 P^-10)",
+    "collection_convention": "The maximum factor is replaced by its supremum over the selected blocks",
+    "broad_condition": "B R >= P^(5/6)",
+    "old_component_power_loss": "501/1000",
+    "new_component_power_loss": "17/100",
+    "paid_condition": "B R >= P^(101/100)",
+    "paid_whole_support_power": "1993/1000",
+    "paid_component": "o(1) for the entire selected j=2 component"
+  },
+  "open": [
+    "j=1,3,4 components",
+    "j=2 complementary region",
+    "global signed strict half-norm threshold",
+    "exponent-2024 theorem",
+    "MSV-2",
+    "MJ-2",
+    "MSV-HB"
+  ],
+  "verification": {
+    "independent_assertions": 53354,
+    "category_count": 32,
+    "public_input_pins": 22,
+    "historical_to_public_mappings": 2,
+    "unavailable_archival_originals": 8,
+    "author_checker_rerun": false,
+    "independent_checker_rerun": true,
+    "compiler_invoked": false,
+    "scope": "Finite algebra and exact rational regressions; analytic universal arguments are in PROOF.md and REVIEW.md"
+  }
+}
