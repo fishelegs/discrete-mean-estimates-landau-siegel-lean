@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-04T03:13:55.148713+00:00",
-  "base_commit": "adf4049a56dd8368026d698de53ef7440c65a8f1",
+  "updated_utc": "2026-10-04T03:55:42.955034+00:00",
+  "base_commit": "b03654dac82d22924f59db61da7a4ad4d33d3e2c",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
@@ -197,7 +197,7 @@
       "name": "实际 Gram 与 Schur 残差下界",
       "status": "partial_lean_proved",
       "verification": "十六个真实算术、点态与积分残差组件已中央专项Lean核验；完整实际单范数与Gram下界仍未完成",
-      "result": "真实Pi除子消去、P7 profile算术、exp-ramp/闭权重层及原K1/K2有限叠加已证。限定三方向Gram和旧二维span残差下界另有来源复核，尚未Lean。 新增原scaled shifts、true product endpoint单侧积分、literal main与任意real-x点态small/interior误差已中央Lean核验。 六项积分/支撑/精确box与加权残差组件已fresh核验：新增29公开/44owned，合计92公开/154owned。四项scalar norm/error输入仍需共同阈值代入。 实际coprime求和与实值Abel、原固定剖面正lambda/支撑、原有限D精确对角三桥已中央验收：14模块138公开242owned37回归。 真正P7减精确ramified主项的统一o(alpha)桥已中央验收，四个scalar arithmetic输入全部内部推得：6模块38公开133owned。",
+      "result": "真实Pi除子消去、P7 profile算术、exp-ramp/闭权重层及原K1/K2有限叠加已证。限定三方向Gram和旧二维span残差下界另有来源复核，尚未Lean。 新增原scaled shifts、true product endpoint单侧积分、literal main与任意real-x点态small/interior误差已中央Lean核验。 六项积分/支撑/精确box与加权残差组件已fresh核验：新增29公开/44owned，合计92公开/154owned。四项scalar norm/error输入仍需共同阈值代入。 实际coprime求和与实值Abel、原固定剖面正lambda/支撑、原有限D精确对角三桥已中央验收：14模块138公开242owned37回归。 真正P7减精确ramified主项的统一o(alpha)桥已中央验收，四个scalar arithmetic输入全部内部推得：6模块38公开133owned。 原复杂Lambda相对乘积及实际外和替换已中央验收：3proof、68完整owner含两回归；真实scalar误差CL4(1+logB)^2/B2，无(A)或近似前提。",
       "gap": "限定三方向真实范数的来源层结论保留；它不保证旧span接近最优、目标投影非零或strict gain。固定smooth窄旧span有独立常数缺口；原宽H1/H2、任意旧rA和L^-8符号精度仍未完成。",
       "dependency_mode": "actual_Gram_attachment_plus_nondegeneracy; may_proceed_with_R4_in_parallel",
       "dependencies": [
@@ -214,11 +214,12 @@
         "audit/CLOUD_GRAM_SMOOTHING_STATUS.md",
         "audit/CLOUD_GRAM_PROFILE_STATUS.md",
         "audit/CLOUD_THREE_BRIDGES_STATUS.md",
-        "audit/CLOUD_GRAM_UNIFORM_STATUS.md"
+        "audit/CLOUD_GRAM_UNIFORM_STATUS.md",
+        "audit/CLOUD_LAMBDA_REPLACEMENT_STATUS.md"
       ],
       "execution_status": "active_single_norm_integration",
-      "execution_note": "统一四误差o(alpha)已完成；复杂Lambda替换、复主项外和与同compatible c零点→P7桥继续集成，实际m_H尚未证明。",
-      "checked_utc": "2026-10-04T03:13:55.148713+00:00",
+      "execution_note": "统一o(alpha)与复杂Lambda替换已完成；实际复数Abel主项和有限D归一化继续。同c零点桥本地已验但尚未发布，完整m_H仍未完成。",
+      "checked_utc": "2026-10-04T03:55:42.955034+00:00",
       "proof_status": "partial_lean_proved",
       "subgoals": [
         {
@@ -226,7 +227,7 @@
           "name": "原固定H的实际单范数与正下界",
           "proof_status": "source_reviewed_not_Lean",
           "execution_status": "active_component_integration",
-          "stage": "lambda_replacement_main_sum_zero_mean_normalization",
+          "stage": "complex_abel_main_sum_zero_mean_normalization",
           "goal": "m_H=lambda+o(1), lambda>0, with the same original H, compatible c and a*M normalizer",
           "profile_reference": "audit/signed_phase_refinements/INTERFACE.json#fixed_profile",
           "F0": "beta triple derivative divided by sup norm of beta triple derivative",
@@ -235,7 +236,7 @@
             "201/400"
           ],
           "lambda": "(16000/pi)*integral_0^1 |F0 prime|^2 + (11*pi/250)*integral_0^1 |F0|^2",
-          "execution_note": "统一四误差o(alpha)已完成；复杂Lambda替换、复主项外和与同compatible c零点→P7桥继续集成，实际m_H尚未证明。",
+          "execution_note": "统一o(alpha)与复杂Lambda替换已完成；实际复数Abel主项和有限D归一化继续。同c零点桥本地已验但尚未发布，完整m_H仍未完成。",
           "needed_by_routes": [
             "independent_weighted_Z2"
           ],
@@ -244,9 +245,10 @@
             "audit/signed_phase_refinements/INTERFACE.json",
             "audit/CLOUD_GRAM_PROFILE_STATUS.md",
             "audit/CLOUD_THREE_BRIDGES_STATUS.md",
-            "audit/CLOUD_GRAM_UNIFORM_STATUS.md"
+            "audit/CLOUD_GRAM_UNIFORM_STATUS.md",
+            "audit/CLOUD_LAMBDA_REPLACEMENT_STATUS.md"
           ],
-          "checked_utc": "2026-10-04T03:13:55.148713+00:00",
+          "checked_utc": "2026-10-04T03:55:42.955034+00:00",
           "optional_for_routes": [
             "original_ratio_if_this_fixed_profile_is_selected"
           ]

@@ -1,0 +1,93 @@
+[
+  {
+    "kind": "prerequisite",
+    "source": "ZhangLS/Spec/AppendixBRoughPrimeLog.lean",
+    "source_sha256": "c3d86340da91c15f9dfb8b723b8dc8597de46ffe54c5086555356e34fd71fce0",
+    "exit_code": 0,
+    "seconds": 2.800064712000676,
+    "peak_rss_kib": 3361772,
+    "started_utc": "2026-10-04T03:10:49.472753+00:00",
+    "ended_utc": "2026-10-04T03:10:52.272805+00:00",
+    "threads": 1,
+    "memory_mib": 4096,
+    "log_sha256": "e0ac3a6068f6f26fe2839b37539a934dab3ecaadd2ba48542e23fe94d1aaa539"
+  },
+  {
+    "kind": "prerequisite",
+    "source": "ZhangLS/Spec/Lemma83FiniteShiftLambda.lean",
+    "source_sha256": "371b777efcd95ea49f4574ad3e74a222ccbd65c82c7f036c4ee793fec7528470",
+    "exit_code": 0,
+    "seconds": 5.232498626999586,
+    "peak_rss_kib": 4103208,
+    "started_utc": "2026-10-04T03:10:52.302455+00:00",
+    "ended_utc": "2026-10-04T03:10:57.534941+00:00",
+    "threads": 1,
+    "memory_mib": 4096,
+    "log_sha256": "d88283048301db90fbed4d2b7e8ee15dcee839c96e9c39c9f00a50f614ea4906"
+  },
+  {
+    "kind": "proof",
+    "source": "ZhangLS/Spec/FixedHLambdaReplacementLocal.lean",
+    "source_sha256": "565b4cf6d0380f8369756287d7c6c65a0aa27153da6a2792d47872c045e34ab1",
+    "exit_code": 0,
+    "seconds": 3.2626145190006355,
+    "peak_rss_kib": 4092108,
+    "started_utc": "2026-10-04T03:10:57.563627+00:00",
+    "ended_utc": "2026-10-04T03:11:00.826227+00:00",
+    "threads": 1,
+    "memory_mib": 4096,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "kind": "proof",
+    "source": "ZhangLS/Spec/FixedHLambdaReplacement.lean",
+    "source_sha256": "a8e52daf8f67eaa02e7731061cc0961b4e1c9264f885675e255cb37e5878061e",
+    "exit_code": 0,
+    "seconds": 3.693156032999468,
+    "peak_rss_kib": 4095440,
+    "started_utc": "2026-10-04T03:11:00.858977+00:00",
+    "ended_utc": "2026-10-04T03:11:04.552122+00:00",
+    "threads": 1,
+    "memory_mib": 4096,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "kind": "regression",
+    "source": "audit/FixedHLambdaReplacementRegression.lean",
+    "source_sha256": "d310a1c8e952dead7c70beec036d61e3c8d3696780b94af1a63c8f014386fe51",
+    "exit_code": 0,
+    "seconds": 82.95957938500032,
+    "peak_rss_kib": 4091916,
+    "started_utc": "2026-10-04T03:11:04.581249+00:00",
+    "ended_utc": "2026-10-04T03:12:27.540818+00:00",
+    "threads": 1,
+    "memory_mib": 4096,
+    "log_sha256": "5e9db4e3362c14ac4a77125b57f8bdaa49402402ca83253b2764203a8fc4e0d7"
+  },
+  {
+    "kind": "proof",
+    "source": "ZhangLS/Spec/FixedHLambdaReplacementOuter.lean",
+    "source_sha256": "31ec0c96fd5005d2aac2ba4b049365b8ca0aa2761192a99bd6ed688b1dcc7c39",
+    "exit_code": 0,
+    "seconds": 4.432224362000852,
+    "peak_rss_kib": 4106464,
+    "started_utc": "2026-10-04T03:18:32.223946+00:00",
+    "ended_utc": "2026-10-04T03:18:36.656157+00:00",
+    "threads": 1,
+    "memory_mib": 4096,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "kind": "regression",
+    "source": "audit/FixedHLambdaReplacementOuterRegression.lean",
+    "source_sha256": "c4befc44ec9b6ec67a783f6e95f5798a823e3a396b34bc55ea8ed40ece2c2648",
+    "exit_code": 0,
+    "seconds": 85.27217664099953,
+    "peak_rss_kib": 4092344,
+    "started_utc": "2026-10-04T03:18:36.685725+00:00",
+    "ended_utc": "2026-10-04T03:20:01.957888+00:00",
+    "threads": 1,
+    "memory_mib": 4096,
+    "log_sha256": "ed67f844dea3cd438c6ab9c0e4d04b054386b234e692791e8f112c5d250c672e"
+  }
+]

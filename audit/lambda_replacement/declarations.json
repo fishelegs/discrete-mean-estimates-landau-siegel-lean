@@ -1,0 +1,970 @@
+[
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.exp_error_linear",
+    "source_public": true,
+    "type_pretty_sha256": "015e6b714fc02d85c0e7377193d33c10af1da611f643d7e389c77b2b5b86ca4e",
+    "type_raw_expression_sha256": "5463f81f5f03b41bddb3ec1a0617366531f26fbbaf11cb54137c42ea2af74a13",
+    "type_pretty_lean_hash64": "7050130510082566029",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "2d0b519bc2c5c79fc8e22678d4a08ea29f0ef3d4887d6a5ea0e62bc62badcf7c"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.paper_absolute_error_uniform",
+    "source_public": true,
+    "type_pretty_sha256": "3c9e1fbadca48edb8c192897ece1e3c3e63263538ac20cb5c75f42da5f6e8ebf",
+    "type_raw_expression_sha256": "5e4672a8a54613c572144f212073275195f0bc9bcfcfc7b2dcaa7fc79d992700",
+    "type_pretty_lean_hash64": "5283271891632584369",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "1126e5314ada84b2be451048a4652a7da4c26c942c2d650f410c46f7f9d6fd43"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.paper_relative_error",
+    "source_public": true,
+    "type_pretty_sha256": "5045d96501cd7e1ea87c71b49c41fbdce0dbbd09ff44c2b30642491c617de7eb",
+    "type_raw_expression_sha256": "218c7f0e89ac5550e80502b13afcc5057264c3a6cff0e8d1c8a0fbe53d1a060a",
+    "type_pretty_lean_hash64": "1390818518197302447",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "50fdd9002036ccd50b5fadd22a000b8230408d84a97e142ed91c8373236392b4"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.paper_relative_error_uniform",
+    "source_public": true,
+    "type_pretty_sha256": "caef858255b8fc2deff73ebb1f3dcf2161bda62e558f112ccca72bfac7039ec8",
+    "type_raw_expression_sha256": "43752e50a02406fefb85703f3523559e52553ee886a2a99e345a61402719d2a9",
+    "type_pretty_lean_hash64": "15097743755722262120",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "730472b4a14321f09450ad73cc34397314365e3ae7d072899e0db815def82bc1"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.relative_to_absolute",
+    "source_public": true,
+    "type_pretty_sha256": "8c40b1144882f5cc30646dd5fa0eb4f4ad6b50f7b6311560a0ceed83ce65c86c",
+    "type_raw_expression_sha256": "dd0aec786bbd617829903523e5fc8dbd577cac62d58fcc2f50db3df0e6f3b4df",
+    "type_pretty_lean_hash64": "5558933696164542093",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "d50103459742db5da39c2c2c1963ef80e596dcf2a955b50f44ed6d5a74e3c844"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.relative_to_absolute._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "624c86cde9b2df5aa0522e4124f62ed1a373ee00e56a0ffd82086dc6cd6a8ef2"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.relative_to_absolute._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "261190ee1492f3124100e5394403cddeff0b631b1aaea478d708a6f0a4927f03"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.relative_to_absolute._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "bb5f950a32f6b15fd36c1567d74ccb620c8251a4408af08433dfc3102d43b363"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.relative_to_absolute._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "e2f4fcab183b58b236cd28e8588b6f842679b20797fe4a6a830b4aea94b332a1"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.relative_to_absolute._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "1bcf3bcad1fb35a1ca1c25698eeab322e0294d337f09e71c9a9086e489380616"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.relative_to_absolute._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "c77a32a9e0cd651c4d7b7dfe6a674b71b2188a62ade651cf9db38730134c11e2"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.relative_to_absolute._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "cdc564e41281867917304503aedb82281f119cd1d7d81eac9fc18852a9a155d7"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.normalizedFactor",
+    "source_public": true,
+    "type_pretty_sha256": "7e17bd0b9825f387ca0819bbdc56355d2ea5f7674d9debba5ffd534167a20431",
+    "type_raw_expression_sha256": "aba2110dcd30561e5775d22e1d260ae6dc8dace852df4ef97562f7f4883498d5",
+    "type_pretty_lean_hash64": "12492396891122923587",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "641cacfb9378486082c65c4f058daaf9048aca8d35eeaa1f5af8d4e1b8c43ce0"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.normalizedFactor_error",
+    "source_public": true,
+    "type_pretty_sha256": "acecfb7723298498753cf157959aabfd257f9304c478f609fa67db5ed29eff22",
+    "type_raw_expression_sha256": "b335eaae0d8d179877ec3357b5e8afd10b1b2f77c948e75395c605b3177804c3",
+    "type_pretty_lean_hash64": "10523572856249488094",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "dc6e40a3dd980426d6b2ed14a9c45f5f47dba54189d582b42ec7041e4dfb9516"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.normalized_product",
+    "source_public": true,
+    "type_pretty_sha256": "8fc9b916d57cddc9b15fae2bc8c2697c62f5fc1dc5bb5de5b079e340b49b83a5",
+    "type_raw_expression_sha256": "e7ce2d69aaee3e025aabb153f62243c4ec9a2a0d20d7bc0a0e1c8e916ed1d6f5",
+    "type_pretty_lean_hash64": "11236780218527028875",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "097062228b1144991c7a9e8186fadc95c63a30b80f7a705bd273bb42264572ef"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.prime_baseline_ne_zero",
+    "source_public": true,
+    "type_pretty_sha256": "d6c2092b0952ba319f60693f0604d141f96db4292785a9617b6aaa523313bf9d",
+    "type_raw_expression_sha256": "f7350c95374b9dc68f6b0b27fc77754fedc161ae35c058466d804a9c8ffc629d",
+    "type_pretty_lean_hash64": "8483941286143457791",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "b090c94ec4c16f055075a17493315904b23b7c3fa6bcbadc2e805e85b8c1e8b7"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.prime_baseline_pos",
+    "source_public": true,
+    "type_pretty_sha256": "eb491ef886822dd372226c5bbccfbb7697e33c4a057f28e2ec9cb507ffc8ba47",
+    "type_raw_expression_sha256": "0152ce74a1c7eea50a4718b960fa9ff9906d277002795538f00e3cd58e8c4958",
+    "type_pretty_lean_hash64": "3625950410434302711",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "9c2904a5ca1cde2f9ef725158233e9faf99626f7c6c95a2eb80bdce095148e76"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.relative_error_exp",
+    "source_public": true,
+    "type_pretty_sha256": "24f83bee0ca31d50af3d803fafea3c1d8a85dc05c2f7696759ed1ac57fb582fc",
+    "type_raw_expression_sha256": "f869886f09f0a7087fa8d7ae348f0cd9626e60296e6bf00ed8a08eb489135643",
+    "type_pretty_lean_hash64": "7065069747542549613",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "46d8ddb586aaafad5dedf414491dbc6896a7159de94c75264ad20d6d8f09132c"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.totient_baseline_ne_zero",
+    "source_public": true,
+    "type_pretty_sha256": "b956a4ca4bfd02e2148d7e1c143caea382443faf9f84e7cde6f209b3b402315b",
+    "type_raw_expression_sha256": "973b7ac9c92d86c1e29e1383b0a1cd2eb410006234bdd0f6bd1c7c8aedceae07",
+    "type_pretty_lean_hash64": "7386873316938677840",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "8164f3317411ea7ea61ef82dc18f450cc60f213fd53a6236501b36d3612f01df"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.totient_baseline_product",
+    "source_public": true,
+    "type_pretty_sha256": "3823d1d6d091171d61f882a2f1738ee367b90b9995d36bf02cff56110d942894",
+    "type_raw_expression_sha256": "a81267036ddd7de468287566d6eb2c716e51ef72b741fe183e68c3cf359fc690",
+    "type_pretty_lean_hash64": "2527572391818235200",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "ae310824772a38a5e17c0e4bf05b064ac0d616f460c846cf659485c1185221b2"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.totient_baseline_product._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "624c86cde9b2df5aa0522e4124f62ed1a373ee00e56a0ffd82086dc6cd6a8ef2"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.totient_baseline_product._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "261190ee1492f3124100e5394403cddeff0b631b1aaea478d708a6f0a4927f03"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.totient_baseline_product._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "bb5f950a32f6b15fd36c1567d74ccb620c8251a4408af08433dfc3102d43b363"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.totient_baseline_product._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "e2f4fcab183b58b236cd28e8588b6f842679b20797fe4a6a830b4aea94b332a1"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.totient_baseline_product._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "1bcf3bcad1fb35a1ca1c25698eeab322e0294d337f09e71c9a9086e489380616"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.totient_baseline_product._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "c77a32a9e0cd651c4d7b7dfe6a674b71b2188a62ade651cf9db38730134c11e2"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.totient_baseline_product._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "cdc564e41281867917304503aedb82281f119cd1d7d81eac9fc18852a9a155d7"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.baselineOuterSum",
+    "source_public": true,
+    "type_pretty_sha256": "7f132f033375cc0f54c0e7130353ea5717c686021b1106ef84ae8eb0f1058fa6",
+    "type_raw_expression_sha256": "2963ec7cc6b36263d4ee000fe0cf0d8dd7856cbc350a80f7fb395e7dbbd6b9bd",
+    "type_pretty_lean_hash64": "2696389773245719619",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "759172169542864f788f7f8c634b32f33ad0ec0028d342341a7692f0c89354fb"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.compact_norm_bound",
+    "source_public": true,
+    "type_pretty_sha256": "b772c753ca024b84ec7bb8399c2f98333add3b321094c1aaac76ffbf764ebbe8",
+    "type_raw_expression_sha256": "f8148576fa82bb2ea5c135086a7243bd3ba6f3e0e30bdbf4faecf225dda68655",
+    "type_pretty_lean_hash64": "951801835533173426",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "ece787316bbdcb29b9df61e3ca4181b15535cfe9043adfbda7592725d9594405"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.cutoff_harmonic",
+    "source_public": true,
+    "type_pretty_sha256": "93c5065729f1a4c2ebba9e68ba021315788ee8c1b05e890efa0a41ed4fcceded",
+    "type_raw_expression_sha256": "297a9e1f934faaf8f16efffee8fde5af49d5eaef191454f0a4768b5ed5c34819",
+    "type_pretty_lean_hash64": "6626527819680878619",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "32e048c6012eb2d956b2b3775b1a892f668b69dbca28b3280e724cfdec90e78b"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.cutoff_log",
+    "source_public": true,
+    "type_pretty_sha256": "9671603ddf688e9f9c72421e13b28ceae4001222ce1fbd8e1b10ec39e9f3b8e9",
+    "type_raw_expression_sha256": "f9dd5e35cabd40987217017fdb8304f688df8fbc6bf0b31e63b945797aede80a",
+    "type_pretty_lean_hash64": "3388770308504834535",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "7730f077e1485e2661cc146076627e5f359a25b440bc027bba1c491a11db6257"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.finite_weighted_error",
+    "source_public": true,
+    "type_pretty_sha256": "6f51b83789274f6e9560cae54a69b4110ceeae4489d5d43b5a36b273364cee0a",
+    "type_raw_expression_sha256": "0fd8f772ebbd1ed2c305776deff7610ee0cfdcab2d59e0587496ff28d079343d",
+    "type_pretty_lean_hash64": "11938492019345824790",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "6d9c90d342abee6d6b406038b1149df6c82fb7fb8b0a85980fe52d358d176bd5"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outerSum",
+    "source_public": true,
+    "type_pretty_sha256": "94f40a57b3c105ad1cbbd6e5ffdaf56cff2e3c2abb173a7914a197ae64dc621c",
+    "type_raw_expression_sha256": "ac19685f44331b6e593ebcc6b560a2b111748a7fb62ffdf945c47352c32ab5a0",
+    "type_pretty_lean_hash64": "10223136960935775",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "d8fb03c68ba37e6553ced32be88843798994e72e1e8ea8d5e0631bdbd4033f2d"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outerSum._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "9865af21ec7181985a728322ce564e6a296f672e7e98e34f426c836d2ca27dac",
+    "type_raw_expression_sha256": "51bfce82f370da2d562832083306fdb93b2db98671143253b5cf1dce76482326",
+    "type_pretty_lean_hash64": "13939071296269336568",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "d574b19b6ac98e679e43738e3298e483132bcf908c37a429770e2e3725042dcb"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outerSum._proof_2",
+    "source_public": false,
+    "type_pretty_sha256": "10f73849bbc7f669ba72673395d153210a95fabcf1434ab21c5891a111950110",
+    "type_raw_expression_sha256": "ec177475a3438a697da64d3f7b2e03795fa102c1d760a871a98b366d6df76f34",
+    "type_pretty_lean_hash64": "13161352971066462142",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "d574b19b6ac98e679e43738e3298e483132bcf908c37a429770e2e3725042dcb"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_error_uniform",
+    "source_public": true,
+    "type_pretty_sha256": "c681335bc8ba6507f55fa2a6481c6d460087c6502cff6d6934d831ee9e97fa2c",
+    "type_raw_expression_sha256": "7cff49f8b4e5ed42c17068b327ae13622c4cfaf37840be8182ae1a2e24b665ee",
+    "type_pretty_lean_hash64": "15172635717273548372",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "107d7f8e96b3f9425391fee0432e6c4388eb0905af32e96bfdff6ba06493db61"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_error_uniform._proof_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "544fa034dde432ed523021b6ad2c219c50d3a9330ad5212f8a29bcc71173d689",
+    "type_raw_expression_sha256": "353a5034f7a6a8ab1abb7796fbc9c598be6b16fd5acb8db687be725588f787e2",
+    "type_pretty_lean_hash64": "14563404226154616004",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "89511e34d325f6676ce7b7ffeaa6f4f1593b7d0e6b17f2c59f1d0571691b24f4"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_error_uniform._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "624c86cde9b2df5aa0522e4124f62ed1a373ee00e56a0ffd82086dc6cd6a8ef2"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_error_uniform._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "261190ee1492f3124100e5394403cddeff0b631b1aaea478d708a6f0a4927f03"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_error_uniform._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "bb5f950a32f6b15fd36c1567d74ccb620c8251a4408af08433dfc3102d43b363"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_error_uniform._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "e2f4fcab183b58b236cd28e8588b6f842679b20797fe4a6a830b4aea94b332a1"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_error_uniform._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "1bcf3bcad1fb35a1ca1c25698eeab322e0294d337f09e71c9a9086e489380616"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_error_uniform._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "c77a32a9e0cd651c4d7b7dfe6a674b71b2188a62ade651cf9db38730134c11e2"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_error_uniform._simp_1_8",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "cdc564e41281867917304503aedb82281f119cd1d7d81eac9fc18852a9a155d7"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.scalar_bound",
+    "source_public": true,
+    "type_pretty_sha256": "5ed5967edfd2d130b6db6c73936a6614b148281dc3c4993bb9b431aaae3b5a29",
+    "type_raw_expression_sha256": "ebf5411683b303cbb8cda32ae5381ad68dd557a1e08a4aba906a35ef194d9053",
+    "type_pretty_lean_hash64": "7475237315585688848",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "e56c3f3bc8739381565c4656b4668ec4c273bad13fa9c24b0c284fa8d213df71"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.weighted_factor_error",
+    "source_public": true,
+    "type_pretty_sha256": "eafd3d5f46e3f5770ade6cc95d3cdf0322ab1b208bc699926253f4744ac0bfee",
+    "type_raw_expression_sha256": "3f01773fc3a99e5211c4dd06497248c7a83b3bea5e6fdc428b39251e1be479e2",
+    "type_pretty_lean_hash64": "6664195579694570045",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "4c9904eb884b6422e4fab07bb84e0fdd1d8b8378d40f0ff8d4a5a0bf2d4a0249"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.weighted_factor_error._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "624c86cde9b2df5aa0522e4124f62ed1a373ee00e56a0ffd82086dc6cd6a8ef2"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.weighted_factor_error._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "261190ee1492f3124100e5394403cddeff0b631b1aaea478d708a6f0a4927f03"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.weighted_factor_error._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "bb5f950a32f6b15fd36c1567d74ccb620c8251a4408af08433dfc3102d43b363"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.weighted_factor_error._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "e2f4fcab183b58b236cd28e8588b6f842679b20797fe4a6a830b4aea94b332a1"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.weighted_factor_error._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "1bcf3bcad1fb35a1ca1c25698eeab322e0294d337f09e71c9a9086e489380616"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.weighted_factor_error._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "c77a32a9e0cd651c4d7b7dfe6a674b71b2188a62ade651cf9db38730134c11e2"
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.weighted_factor_error._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "used_constants_sha256": "cdc564e41281867917304503aedb82281f119cd1d7d81eac9fc18852a9a155d7"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementOuterRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.baselineOuterSum.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "5d1910d2ba883cb83377543148e5c2f23cd65e0ee1f2d3ff6ab40e0c7558e431",
+    "type_raw_expression_sha256": "d0198a72282bb861085a99bd4e93ea44562d9d427530860760ec933399dcc807",
+    "type_pretty_lean_hash64": "16104095950138588451",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "ef24c1b17274c2c8d930ed8bb3554ea9941c4d54aa6200847b205c8b90b4d415"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementOuterRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outerSum.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "aefb0160db611b6775b2844d4afd3ccf3fb92c157e0f143d88995cef6165d911",
+    "type_raw_expression_sha256": "0c101b9157c8676a1a61d8e2086ab9ad80787e86d74466f21899fe952724b804",
+    "type_pretty_lean_hash64": "13341168463637488612",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "7ba4481cdf250d599b2975db9d26188a4e6c82d4289f3ed61b47bc98a4bcdb78"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementOuterRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_regression_actual_uniform",
+    "source_public": true,
+    "type_pretty_sha256": "c681335bc8ba6507f55fa2a6481c6d460087c6502cff6d6934d831ee9e97fa2c",
+    "type_raw_expression_sha256": "7cff49f8b4e5ed42c17068b327ae13622c4cfaf37840be8182ae1a2e24b665ee",
+    "type_pretty_lean_hash64": "15172635717273548372",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "0adb979ddddc19f6545782fc27510bcb952c510b89b0a372bd33d2359be2e63b"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementOuterRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_regression_harmonic",
+    "source_public": true,
+    "type_pretty_sha256": "93c5065729f1a4c2ebba9e68ba021315788ee8c1b05e890efa0a41ed4fcceded",
+    "type_raw_expression_sha256": "297a9e1f934faaf8f16efffee8fde5af49d5eaef191454f0a4768b5ed5c34819",
+    "type_pretty_lean_hash64": "6626527819680878619",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "375a87779738fdf1f77aadc1478da0393d5108f427f966c5b1d001694b77fe58"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementOuterRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_regression_n_one",
+    "source_public": true,
+    "type_pretty_sha256": "1d3cce689cb4fc2d1041aa34795de79d4621f5e1fd52e0fb6544edd9343fcd2b",
+    "type_raw_expression_sha256": "f155a09f1d4cd26c22b696f410446bba624592ad85c84db37bb75d3f117dbb6c",
+    "type_pretty_lean_hash64": "15250457565563154819",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "dc801026e085cda09ed981c5e7886aa2d0ed5cc904647a17bd6193447c4d52dd"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementOuterRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_regression_scalar",
+    "source_public": true,
+    "type_pretty_sha256": "5ed5967edfd2d130b6db6c73936a6614b148281dc3c4993bb9b431aaae3b5a29",
+    "type_raw_expression_sha256": "ebf5411683b303cbb8cda32ae5381ad68dd557a1e08a4aba906a35ef194d9053",
+    "type_pretty_lean_hash64": "7475237315585688848",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "afec74a6ca15d3bb8048bc66e10a3d334be0c986fd96ec426bfb29be49a12c45"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementOuterRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.outer_regression_zero_profile",
+    "source_public": true,
+    "type_pretty_sha256": "75690ed4b35074acedc56a8625d3692eef685cd0d5ae13eb1fda2b3738af48bc",
+    "type_raw_expression_sha256": "ae401ae140d1ce5f76361cfc15d56599e5b28e7f5c1a5b19d6e815358fd32ef3",
+    "type_pretty_lean_hash64": "6949361644048481769",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "be860d5a2e6472fd1ee906c58537c0b85d28f4846740e5b6f64d8ca7311f11d1"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.normalizedFactor.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "93cbeea8516c844515af2e6e460ac75f3fcf8730ce4f7e7405e591cc4151dbe0",
+    "type_raw_expression_sha256": "9bbcdf2c51ed969bd0530e68c28847aaae968bc3a952028fd66aaaa98ac1e107",
+    "type_pretty_lean_hash64": "6642453743604083527",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "c2733f3ff2943266635457139ccaccb65335264361efebc4a9106e21575e1ece"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.regression_exact_product",
+    "source_public": true,
+    "type_pretty_sha256": "8fc9b916d57cddc9b15fae2bc8c2697c62f5fc1dc5bb5de5b079e340b49b83a5",
+    "type_raw_expression_sha256": "e7ce2d69aaee3e025aabb153f62243c4ec9a2a0d20d7bc0a0e1c8e916ed1d6f5",
+    "type_pretty_lean_hash64": "11236780218527028875",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "b7dbcd8add7fbd2047e71604de282d72ae8238ed3f576c68a8f861af52c1ffb7"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.regression_one",
+    "source_public": true,
+    "type_pretty_sha256": "97937e8fbfe23ced0561ae1805345a3f7763685c8bc369184706b47eff63bf5c",
+    "type_raw_expression_sha256": "2355e5ea223c1fec1aec7390c6d6b2a33154c409e306ccd389b459b1a46f0144",
+    "type_pretty_lean_hash64": "7083781848874614551",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "3a718f4ed1595d55dcb4005d11fa5ce2c3dc6e11e8fac695cdda92656a725195"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.regression_prime_two",
+    "source_public": true,
+    "type_pretty_sha256": "16ca9b5bb098cb2eb11da06b4e9b71e0d282c5da9f66eb024c89c06faeef1734",
+    "type_raw_expression_sha256": "dde39954cec67efd2698eb65e18ba2bf0955584a67f9d6b381f455c9dbb4def5",
+    "type_pretty_lean_hash64": "2594906992412556009",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "3115d71aec854a26dd1059ce787cabab6702dd7a72c4d434be0f8ff33004d985"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.regression_three_shifts",
+    "source_public": true,
+    "type_pretty_sha256": "02d3d2d873d9a2f5d3c1d715fa6735cd16562aab51fbf619263a5ffdc1af127a",
+    "type_raw_expression_sha256": "ec21eb532cfd2c6339f341321b3234f35554a20f3a9b5562460e1fc6c03c520d",
+    "type_pretty_lean_hash64": "18169577438003922552",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "60894885dc44485926590a5ff13ed722ddb582949152a2fd480a4dd8355f13c2"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.regression_two_factor",
+    "source_public": true,
+    "type_pretty_sha256": "c827c64233c50e896c26df45636ef9ee90c0f973e3fcdfbfc36ebe085d83502b",
+    "type_raw_expression_sha256": "0af8261d7826f1d240edfd085e3cc1ff850389da1f00fad0b5f8b1b8a32509dc",
+    "type_pretty_lean_hash64": "16297206738810453453",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "b6940469fe4213a13448854d54c366187595e439745d746b98b7c2199ec9abaa"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.regression_uniform_actual",
+    "source_public": true,
+    "type_pretty_sha256": "caef858255b8fc2deff73ebb1f3dcf2161bda62e558f112ccca72bfac7039ec8",
+    "type_raw_expression_sha256": "43752e50a02406fefb85703f3523559e52553ee886a2a99e345a61402719d2a9",
+    "type_pretty_lean_hash64": "15097743755722262120",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "4bb0c2432cbae20b177d1c5012764d522cb0f3c2f359dc1545c643d616b7c3ac"
+  },
+  {
+    "owner": "audit.FixedHLambdaReplacementRegression",
+    "name": "ZhangLS.Spec.FixedHLambdaReplacement.regression_window",
+    "source_public": true,
+    "type_pretty_sha256": "57f0791f413e1290c12bf16334f1364ab3599bf62697fb9607a0ad1c9d7089a3",
+    "type_raw_expression_sha256": "1925b2ba262786f2108e02d09298ff98daad4dfe29ae246e5b22dafa7c2e1763",
+    "type_pretty_lean_hash64": "2626426576796535537",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "used_constants_sha256": "0f7e1718d77b7a076b53efe3559e9e41023fa8aa2a81c1db5d0f933f46832d34"
+  }
+]

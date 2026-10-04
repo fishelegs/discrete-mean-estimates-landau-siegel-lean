@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "source_commit_from_export": "c70847bc90d838b0ce10d0e86f6dcf0c1d0600a7",
+  "product_commit_from_export": "ee25d49b114f629de3d53438a1f9cdf1481ac4b3",
+  "source_base_from_export": "3203236c046a128ecaedbefffb41ab1fce539f6d",
+  "review_checkout_head": "12035d10c535c038c76e82b1cefc11bc837cb0a8",
+  "lean_version": "4.30.0",
+  "inventory_source_sha256": "427a6706146eedb550d40d30ce03fae5bd26389bcebe36e39c4342b42d497771",
+  "private_full_inventory_log_sha256": "840f6ae54a7818c7f057e06e59937acab139c8757abd93e2b58c7717ae5eb7e1",
+  "private_full_inventory_log_bytes": 1363264,
+  "proof_owned": 53,
+  "proof_explicit": 22,
+  "proof_generated": 31,
+  "regression_lemmas": 12,
+  "regression_owned": 15,
+  "all_owned": 68,
+  "all_explicit": 34,
+  "all_generated": 34,
+  "owners": {
+    "ZhangLS.Spec.FixedHLambdaReplacement": 12,
+    "ZhangLS.Spec.FixedHLambdaReplacementLocal": 15,
+    "ZhangLS.Spec.FixedHLambdaReplacementOuter": 26,
+    "audit.FixedHLambdaReplacementOuterRegression": 7,
+    "audit.FixedHLambdaReplacementRegression": 8
+  },
+  "loaded_module_count": 6053,
+  "loaded_module_list_sha256": "5a6c958be2d707d26d3aa25689dfeb3cbd969f599701924f8deff9c2a6a4b371",
+  "repository_loaded_module_count": 286,
+  "baseline_source_matched_count": 281,
+  "fresh_prerequisite_count": 2,
+  "axiom_allowlist": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "inventory_build": {
+    "started_utc": "2026-10-04T03:22:27.590941+00:00",
+    "ended_utc": "2026-10-04T03:22:33.586043+00:00",
+    "seconds": 5.995117403001132,
+    "exit_code": 0,
+    "peak_rss_kib": 4082152
+  },
+  "max_public_file_bytes": 150000
+}

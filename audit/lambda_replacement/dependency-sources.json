@@ -1,0 +1,2004 @@
+[
+  {
+    "module": "ZhangLS.Spec.RealDirichletCharacter",
+    "source": "ZhangLS/Spec/RealDirichletCharacter.lean",
+    "bytes": 2530,
+    "sha256": "d0db8e1cd0358f35e0d7f11c7796fe169b93b3a57b520d41ea52c96640ba34b6",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23FiniteDirichletApproximation",
+    "source": "ZhangLS/Spec/Lemma23FiniteDirichletApproximation.lean",
+    "bytes": 13768,
+    "sha256": "7fae409d7289bd62f8d43c2855fdb9bfb0c1cdd48d8acd7e5ad18d5a632fb030",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23ArithmeticCoefficients",
+    "source": "ZhangLS/Spec/Lemma23ArithmeticCoefficients.lean",
+    "bytes": 9993,
+    "sha256": "eeed57bd806270c51670188e6935cb4230b2f05fe805a26b3fcc901e7c9921e7",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23CoefficientBounds",
+    "source": "ZhangLS/Spec/Lemma23CoefficientBounds.lean",
+    "bytes": 28129,
+    "sha256": "d5b8ffd309f9fa8d8e672baa57c2d41a52d724e93e4dfe509021af9e3af38e63",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23Nu20Bounds",
+    "source": "ZhangLS/Spec/Lemma23Nu20Bounds.lean",
+    "bytes": 8423,
+    "sha256": "ac697a80e60daeeecc658bba40c3b4aa22b19393890f4890681f300915dede4e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.DivisorCharacterSum",
+    "source": "ZhangLS/Spec/DivisorCharacterSum.lean",
+    "bytes": 2931,
+    "sha256": "24e1933d8f17c318b812bbc735ae13b7880728e598b0e4e9ded7dd4c1604ae51",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.DirichletLSeries",
+    "source": "ZhangLS/Spec/DirichletLSeries.lean",
+    "bytes": 3174,
+    "sha256": "923a2496b1f5488712b19333fe27cd577dd7927590780c94fa8c49de907560a9",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.RealAxisLFunction",
+    "source": "ZhangLS/Spec/RealAxisLFunction.lean",
+    "bytes": 2780,
+    "sha256": "43933c4a303eca6375ea8bff84fa5c5860a81a671bb87bd01d15c0c45e41e6dd",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.RealAxisSeries",
+    "source": "ZhangLS/Spec/RealAxisSeries.lean",
+    "bytes": 2652,
+    "sha256": "5bad4ff66a1bf859142cf3bd89fcd9622728a60deeae30379e2c0a00078dba5e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.RealAxisAtOne",
+    "source": "ZhangLS/Spec/RealAxisAtOne.lean",
+    "bytes": 2796,
+    "sha256": "c4d3727093f6dabc9f85b7add67af3a087941ec0b824b0eeebac74b4e4741622",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.RealAxisDerivativeAtOne",
+    "source": "ZhangLS/Spec/RealAxisDerivativeAtOne.lean",
+    "bytes": 4044,
+    "sha256": "a29567c31c6b941b298097c89d69416fd5b7aa3c492f6b61a6877308b2370587",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57",
+    "source": "ZhangLS/Spec/Lemma57.lean",
+    "bytes": 4942,
+    "sha256": "31ec862541a3373e1b88bd30bb793ff291321b6908202aa5a4030f9db2fa5937",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57Arithmetic",
+    "source": "ZhangLS/Spec/Lemma57Arithmetic.lean",
+    "bytes": 5304,
+    "sha256": "1fb6a160e7286caea37a09ea04a18ebd04e3e1516b8b1e7b1e6edce7f4ae6d3c",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.ReciprocalDivisorBound",
+    "source": "ZhangLS/Spec/ReciprocalDivisorBound.lean",
+    "bytes": 4270,
+    "sha256": "e413ba365b847a5d2e5abf3c315b13c3eb2cfc6b5954bfe2ddd77bfd4fc85701",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.ReciprocalDivisorEulerLoss",
+    "source": "ZhangLS/Spec/ReciprocalDivisorEulerLoss.lean",
+    "bytes": 6299,
+    "sha256": "6136d930678db0fd1b58918f7b0878bfc34eab304b8954351e6dba5d5cae579d",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.ReciprocalDivisorEulerFactorization",
+    "source": "ZhangLS/Spec/ReciprocalDivisorEulerFactorization.lean",
+    "bytes": 7628,
+    "sha256": "efa9bfeb05323cb3f6103a4ee8fd2b5c08bfff306a1f421c2194f234399d30f8",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57GaussianWeight",
+    "source": "ZhangLS/Spec/Lemma57GaussianWeight.lean",
+    "bytes": 4827,
+    "sha256": "3299a17a2865e4384424413b2dc5700ee94a69138390da04d1185c884a5510d6",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57SmoothedSum",
+    "source": "ZhangLS/Spec/Lemma57SmoothedSum.lean",
+    "bytes": 5921,
+    "sha256": "3f0a28f984449846707feb0587c46865cd011dfda9b1cf74622d35ae74150405",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.DivisorCharacterSumNonnegative",
+    "source": "ZhangLS/Spec/DivisorCharacterSumNonnegative.lean",
+    "bytes": 2908,
+    "sha256": "f748230ac6f4960e2a4deb041b566a11aa25c9f22c1f64a3ff393f0c478ebb99",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31OrderedArithmetic",
+    "source": "ZhangLS/Spec/Lemma31OrderedArithmetic.lean",
+    "bytes": 2486,
+    "sha256": "03918df9ea74ebb4f40dfd1dc7e952722e2bd850b6cbcf777381eb022cb9c99f",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31PrimeSquare",
+    "source": "ZhangLS/Spec/Lemma31PrimeSquare.lean",
+    "bytes": 3302,
+    "sha256": "08af325f02952a9707f771272b4d394fb43ab112577ef8daaa277d44553412fb",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31SquareMajorant",
+    "source": "ZhangLS/Spec/Lemma31SquareMajorant.lean",
+    "bytes": 1538,
+    "sha256": "a0e8c90ead5d9b0ded78f5626a2cc6222948dd40c7fa54a1d8af3f55c5837923",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31RealCoefficients",
+    "source": "ZhangLS/Spec/Lemma31RealCoefficients.lean",
+    "bytes": 1906,
+    "sha256": "37339fb97216f9b5e525a91920a80d2012320e6ffbdf48b8f9ae505f225b342e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31WeightedTail",
+    "source": "ZhangLS/Spec/Lemma31WeightedTail.lean",
+    "bytes": 7040,
+    "sha256": "42d9553e45a62003ec1efdef220bd1363ef939287a7aa457da8c5e8a0c38c769",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.CharacterPeriodSum",
+    "source": "ZhangLS/Spec/CharacterPeriodSum.lean",
+    "bytes": 3678,
+    "sha256": "977e95c570c0a163959beb2216f03224be094fd9779daa96b6fe4b3a8918013b",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.CharacterLSeriesAbel",
+    "source": "ZhangLS/Spec/CharacterLSeriesAbel.lean",
+    "bytes": 2788,
+    "sha256": "9d210be1f7a5926b0e4084652211717bfd53daffa161e6f7c1ebe4d75371516d",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.CharacterAbelIntegralBound",
+    "source": "ZhangLS/Spec/CharacterAbelIntegralBound.lean",
+    "bytes": 4500,
+    "sha256": "d32ed898f58b415bf840b8ce4ccd9b83413b774de631ade12c31e44bba47d5ed",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.CharacterAbelAnalyticContinuation",
+    "source": "ZhangLS/Spec/CharacterAbelAnalyticContinuation.lean",
+    "bytes": 9172,
+    "sha256": "3bf99501231f4ee9b8814be7f058f25bf8fea4bfdf555458da8a4678668d7e17",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31CharacterAbel",
+    "source": "ZhangLS/Spec/Lemma31CharacterAbel.lean",
+    "bytes": 3235,
+    "sha256": "303ed3ff55c8eb69403045727908739f1803f9b227879eacee643c8b2142749c",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31CharacterKernel",
+    "source": "ZhangLS/Spec/Lemma31CharacterKernel.lean",
+    "bytes": 3135,
+    "sha256": "356184ae8c11d99aef71eebaa0e63e61183da577f947b59dc2728d5be6197a9d",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31HarmonicTruncation",
+    "source": "ZhangLS/Spec/Lemma31HarmonicTruncation.lean",
+    "bytes": 3055,
+    "sha256": "6ba796642dc0f77f756856eca3d651f3be95b80cff398132fbc049943aa8d0ac",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31DiscreteAbel",
+    "source": "ZhangLS/Spec/Lemma31DiscreteAbel.lean",
+    "bytes": 2137,
+    "sha256": "ae010bc488c5a7214d52c08a778fe251e68f0db24f71a8b96fb85bbb3a428862",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31HyperbolaInputs",
+    "source": "ZhangLS/Spec/Lemma31HyperbolaInputs.lean",
+    "bytes": 2713,
+    "sha256": "97c34d5bb8a069d7b52f3bb53f62e612f63098f2aa74cac9879b1da4913f8a72",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31FloorError",
+    "source": "ZhangLS/Spec/Lemma31FloorError.lean",
+    "bytes": 2284,
+    "sha256": "3b1b6d06cf036619269522395619f593d6b29a2ce3dd09d2f5f19ead1e72f5df",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31HyperbolaError",
+    "source": "ZhangLS/Spec/Lemma31HyperbolaError.lean",
+    "bytes": 2729,
+    "sha256": "340f08b72cf2e2dad08c2203a304f3683cb232aaacad1e1c5b9c4c94f9ee2eac",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31CumulativeBound",
+    "source": "ZhangLS/Spec/Lemma31CumulativeBound.lean",
+    "bytes": 3224,
+    "sha256": "21c8b0b3aaac0a53ab42dc868015727c9628784f80b3bc2f448a19b45e37722c",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57FullSmoothedSeries",
+    "source": "ZhangLS/Spec/Lemma57FullSmoothedSeries.lean",
+    "bytes": 6212,
+    "sha256": "1ba00d7880fe3f6ecdb748cd6396933ec8de05c6e37eb1626b8f5a6de2e1c210",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57GaussianGlobal",
+    "source": "ZhangLS/Spec/Lemma57GaussianGlobal.lean",
+    "bytes": 14094,
+    "sha256": "eab5e11464afeb09d930edcf89f2e8028a868938b8f182f4048f95c64795032b",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57SmoothedSummability",
+    "source": "ZhangLS/Spec/Lemma57SmoothedSummability.lean",
+    "bytes": 7963,
+    "sha256": "f5aff15bf21cc288fa1cf34f47dc9248f1ba7d970ddd9cbf79fc4e71c4ab5ae8",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57MellinContour",
+    "source": "ZhangLS/Spec/Lemma57MellinContour.lean",
+    "bytes": 15183,
+    "sha256": "9bd94fa185fac9f9337e77f351bfe122d9aea689dfe9db32d7078d9e1f9757b8",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57ContourAnalyticity",
+    "source": "ZhangLS/Spec/Lemma57ContourAnalyticity.lean",
+    "bytes": 5988,
+    "sha256": "5bb5a2b1479c6077b2a840ebc65b9f3df14f23836a9a47a2c79f1403941c034d",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57GaussianMellinKernel",
+    "source": "ZhangLS/Spec/Lemma57GaussianMellinKernel.lean",
+    "bytes": 10385,
+    "sha256": "763c522a0ef6b2490657bffe34c6cfe619e519a06ce1ebe8bcd843a2d2a54d7a",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57GaussianMellinTransform",
+    "source": "ZhangLS/Spec/Lemma57GaussianMellinTransform.lean",
+    "bytes": 18801,
+    "sha256": "c3fe2882c86b772546cdac9718c65265c27d45bd009f79512a6695a555d275b2",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57MellinIdentity",
+    "source": "ZhangLS/Spec/Lemma57MellinIdentity.lean",
+    "bytes": 14095,
+    "sha256": "f5325323cb2dd6c6899802588d14a443a545aed3c11e7d865eff37c042746935",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57ContourShiftLimit",
+    "source": "ZhangLS/Spec/Lemma57ContourShiftLimit.lean",
+    "bytes": 4861,
+    "sha256": "7e2b34a89adb6f306401d3f0c273f75c554217060a14787fc556b3ec2bc49c29",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57RectangleWinding",
+    "source": "ZhangLS/Spec/Lemma57RectangleWinding.lean",
+    "bytes": 9655,
+    "sha256": "c9cb8f9bd31e97377d9c835a0eb0cdf25c2dcff86f89a7f55b1af7c4d887fbe2",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57PrincipalPart",
+    "source": "ZhangLS/Spec/Lemma57PrincipalPart.lean",
+    "bytes": 17145,
+    "sha256": "c7025cda045ce591cc8382c03aa2630c100587436d0b3ae57258940e1276b259",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57ContourGrowth",
+    "source": "ZhangLS/Spec/Lemma57ContourGrowth.lean",
+    "bytes": 15642,
+    "sha256": "e742aacb12cb538f9502aa10bd23d9f683d4d6b8ed21fa7d4570685bbd358a96",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.RiemannZetaCriticalLineBound",
+    "source": "ZhangLS/Spec/RiemannZetaCriticalLineBound.lean",
+    "bytes": 23550,
+    "sha256": "dbcdf2de2b57252eb3f16a8c668d223fd1e94a3f989c2fa7736ea0aefb372775",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57CriticalStripGrowth",
+    "source": "ZhangLS/Spec/Lemma57CriticalStripGrowth.lean",
+    "bytes": 18204,
+    "sha256": "2cf7af38eb2337d533189cc2f5e27e6d33e8ab532647193b85fd87a76c567a0c",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57CompletedStripBounds",
+    "source": "ZhangLS/Spec/Lemma57CompletedStripBounds.lean",
+    "bytes": 5945,
+    "sha256": "9d929ef370bcc0d8aed65a3619660e0f3658f35eca7d89e2ca04e4f846568b2e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57GammaFactorGrowth",
+    "source": "ZhangLS/Spec/Lemma57GammaFactorGrowth.lean",
+    "bytes": 9239,
+    "sha256": "96f21f1cae9999dc2a50a5cfe3f31f7f3007937cf2d219ded3c65b47e69d3794",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57CompletedDirichletStripBounds",
+    "source": "ZhangLS/Spec/Lemma57CompletedDirichletStripBounds.lean",
+    "bytes": 11321,
+    "sha256": "0c37e099a6e5c3d1f289bc490938a064a7591fdea1d01aa0c38b58ee6f2e156f",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57ShiftedGammaGrowth",
+    "source": "ZhangLS/Spec/Lemma57ShiftedGammaGrowth.lean",
+    "bytes": 11910,
+    "sha256": "228bf634c8ee7e76c302b5e0c2e40a9c37f03c4a23ff8e46cc8b91d5aff56004",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57ShiftedIntegralEnvelope",
+    "source": "ZhangLS/Spec/Lemma57ShiftedIntegralEnvelope.lean",
+    "bytes": 7058,
+    "sha256": "c6fffcb968a6d271efd9ede75cd6c6d6d3bb57ef89fdc53a9dbf167739a6840f",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57LAtOnePositivity",
+    "source": "ZhangLS/Spec/Lemma57LAtOnePositivity.lean",
+    "bytes": 5918,
+    "sha256": "b4eaa0e475855647a02d9c235ee05ba0550826a6ab7a3bcfdbbdebcfd31ea38e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31NuAbel",
+    "source": "ZhangLS/Spec/Lemma31NuAbel.lean",
+    "bytes": 4051,
+    "sha256": "9b7c5619ff0f4a14ed73e2599bfedc9aaa5ddd8dc0d0e1ce25aba64afbf32170",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31PowerIntegrals",
+    "source": "ZhangLS/Spec/Lemma31PowerIntegrals.lean",
+    "bytes": 1945,
+    "sha256": "59b1c8e870c8e6dfe60f211a0491288700fca4b9b2c9946850932a2631e4d71e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31WeightedKernel",
+    "source": "ZhangLS/Spec/Lemma31WeightedKernel.lean",
+    "bytes": 1837,
+    "sha256": "83d3a257568acf872eb98b780e959925dc7c7b48216d40cf3ff693c3553092b0",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31NuIntegralBound",
+    "source": "ZhangLS/Spec/Lemma31NuIntegralBound.lean",
+    "bytes": 2504,
+    "sha256": "3c4ff8e123a29c34b937e4819c9f70872a60b3643998decc88b31d14098eecb7",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31LinearTail",
+    "source": "ZhangLS/Spec/Lemma31LinearTail.lean",
+    "bytes": 3531,
+    "sha256": "82956684414d2c5aee2035b54d91739e93faddae467d6f660c5bf0766501b835",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23CharacterOrthogonality",
+    "source": "ZhangLS/Spec/Lemma23CharacterOrthogonality.lean",
+    "bytes": 7976,
+    "sha256": "6e7157baa3e89e4f5cab89fce367482ed88a5639a1917f56542513103ff674ea",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23X1Expansion",
+    "source": "ZhangLS/Spec/Lemma23X1Expansion.lean",
+    "bytes": 21103,
+    "sha256": "910a8409c2f1a353356f54837523af0951eefce81484f26953a1b259e9a1a227",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23GoodSet",
+    "source": "ZhangLS/Spec/Lemma23GoodSet.lean",
+    "bytes": 11374,
+    "sha256": "ae75451e0cff47b7fd66e0c479608074431bdb5f300b8280f5a3fbccb3cd3045",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31PaperScale",
+    "source": "ZhangLS/Spec/Lemma31PaperScale.lean",
+    "bytes": 1874,
+    "sha256": "874fc2182ef585a08b1550255ad30b5d6dee5267085c25c91dcc0e003c887999",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31Absorption",
+    "source": "ZhangLS/Spec/Lemma31Absorption.lean",
+    "bytes": 1930,
+    "sha256": "d3d76c740d817480d9ee82a08d8c0ea91832063550965b349ab96233eda917c6",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31NormalizedTail",
+    "source": "ZhangLS/Spec/Lemma31NormalizedTail.lean",
+    "bytes": 2175,
+    "sha256": "b5b691b75f963791be145603c5993e3c126be2164ec46ee47f1d753b29cdd93b",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31TotalWeight",
+    "source": "ZhangLS/Spec/Lemma31TotalWeight.lean",
+    "bytes": 2971,
+    "sha256": "3678924c2b115b1beff5973ee63608178a89aade8177dedacd77c2b33136fba0",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma31",
+    "source": "ZhangLS/Spec/Lemma31.lean",
+    "bytes": 3480,
+    "sha256": "245b1d462d8fcb956aa418f18462ff52d7c917b2eb0c5a56a000e2437a7f60b1",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma171Target",
+    "source": "ZhangLS/Spec/Lemma171Target.lean",
+    "bytes": 5248,
+    "sha256": "4eaa511241d60c5b75fce7eabba89800728dc07d59001e7ad578da045b4470bc",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma34DivisorFunction",
+    "source": "ZhangLS/Spec/Lemma34DivisorFunction.lean",
+    "bytes": 1246,
+    "sha256": "c08b990c9faffd76df5b828f0185368dff1e4836e10bba2edde14d1833cded85",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32PrimeCoefficients",
+    "source": "ZhangLS/Spec/Lemma32PrimeCoefficients.lean",
+    "bytes": 2284,
+    "sha256": "b46bf86958806ab54512c5bae837a3e13bab71bc8a4affeb0546b4f2b94bf67b",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32Geometric",
+    "source": "ZhangLS/Spec/Lemma32Geometric.lean",
+    "bytes": 2331,
+    "sha256": "c05b1cbe8b1d60c4f10e073388ea0cfccef27334034f73bd72816c5b250ffb17",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32LocalSeries",
+    "source": "ZhangLS/Spec/Lemma32LocalSeries.lean",
+    "bytes": 3261,
+    "sha256": "da333b0a78522d9aad794a0b8eed94f6d22358eb16aa6e2c475f35f37972f98d",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma171EulerFactors",
+    "source": "ZhangLS/Spec/Lemma171EulerFactors.lean",
+    "bytes": 6020,
+    "sha256": "1524045bf245c7b7bde4743e9fedf6348297eb7ee5cd913c2d23d16327aa0fa8",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma34Multichoose",
+    "source": "ZhangLS/Spec/Lemma34Multichoose.lean",
+    "bytes": 1490,
+    "sha256": "259d75cd39a94e50d8de078ca1f0daa9e61cf0f84c8bbc25661ac60469e4d058",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma34DivisorSquare",
+    "source": "ZhangLS/Spec/Lemma34DivisorSquare.lean",
+    "bytes": 956,
+    "sha256": "90c88615f956f894ca59330a0c16ac5d7f4958e9c75e53176a94116a90a3507c",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32CoefficientMajorant",
+    "source": "ZhangLS/Spec/Lemma32CoefficientMajorant.lean",
+    "bytes": 4580,
+    "sha256": "4346fcab323c4b5067f125ae7f10b8d8a115d4ed4f7486ddd8f3c81b01adec35",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32SeriesConvergence",
+    "source": "ZhangLS/Spec/Lemma32SeriesConvergence.lean",
+    "bytes": 2106,
+    "sha256": "d8af10a6a28c82949b09a7d7ed4fec48c9d0ca9f5e3206c2b0c6d07821cd06b3",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32WeightedEuler",
+    "source": "ZhangLS/Spec/Lemma32WeightedEuler.lean",
+    "bytes": 2025,
+    "sha256": "b53463c6b4218b40b50eb0775c861938b84d6114438aa0eaacebb2a0cbf2a21a",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32EulerFactors",
+    "source": "ZhangLS/Spec/Lemma32EulerFactors.lean",
+    "bytes": 2708,
+    "sha256": "45fdc0e61bafd5ecef18fd0345063bc0d9dd3c7c9664cc9fc33bdc76076bd5a1",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32LocalBounds",
+    "source": "ZhangLS/Spec/Lemma32LocalBounds.lean",
+    "bytes": 3041,
+    "sha256": "db6ab8b23cacdabe076244bd00768b8f585c3cdd5a3ce36c661b387818f8f009",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32ModulusFactors",
+    "source": "ZhangLS/Spec/Lemma32ModulusFactors.lean",
+    "bytes": 2247,
+    "sha256": "f83ad24889fb27f6e217d1722ff159676c8bd6c208924b36859dbd616a62ac6c",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32RegularFactors",
+    "source": "ZhangLS/Spec/Lemma32RegularFactors.lean",
+    "bytes": 2467,
+    "sha256": "3d374ea39ddd3496d2735a2a8afd8ae264350783ec58b0bf95d393a575308e1e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32ProductConvergence",
+    "source": "ZhangLS/Spec/Lemma32ProductConvergence.lean",
+    "bytes": 2737,
+    "sha256": "9e17ef6f9ad34ae883cab8ea3c379094c247ec58e358608304947256072597c4",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32ProductBounds",
+    "source": "ZhangLS/Spec/Lemma32ProductBounds.lean",
+    "bytes": 3150,
+    "sha256": "1730b36f10a218743ae6054722391d6ae7cc936dd230971a18e74b3bcbb11cac",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32ProductDifference",
+    "source": "ZhangLS/Spec/Lemma32ProductDifference.lean",
+    "bytes": 1644,
+    "sha256": "55ca62328b9325a3700e9d7abe0076180ba3fcc740d6653e808939e16b614e0d",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32UniformProduct",
+    "source": "ZhangLS/Spec/Lemma32UniformProduct.lean",
+    "bytes": 2843,
+    "sha256": "7f91eba0564e9e53dc5e07be76ce1ec157fced6cdc8405e2d2525ff4f12ee930",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32ProductAnalytic",
+    "source": "ZhangLS/Spec/Lemma32ProductAnalytic.lean",
+    "bytes": 2546,
+    "sha256": "fead82b999299b0d1fc3217a33e79c462da0c492c1337af654ab53cac40015fb",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32RamificationNorm",
+    "source": "ZhangLS/Spec/Lemma32RamificationNorm.lean",
+    "bytes": 1779,
+    "sha256": "5abfcef8bbb7fd4d1f4ed9d75e6a0deb5aca9d4e1b1370df4de7b40eb30ac746",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32AnalyticCorrection",
+    "source": "ZhangLS/Spec/Lemma32AnalyticCorrection.lean",
+    "bytes": 2885,
+    "sha256": "3f897603c5bd089740d910594ed0a2b05a277fc3ccf9b6f70ec4d7db5b767d06",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32EulerLocalIdentity",
+    "source": "ZhangLS/Spec/Lemma32EulerLocalIdentity.lean",
+    "bytes": 1648,
+    "sha256": "891eb5b23be58824ce1d24ee03af81dbf84f8dcc666a51beafb99e93fed89e50",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32CorrectionProduct",
+    "source": "ZhangLS/Spec/Lemma32CorrectionProduct.lean",
+    "bytes": 2354,
+    "sha256": "0b6d3d62e9ccdfca27aa4db9cc306316233af58a1c71c2d106ebcbe10deb1064",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32ActualSeriesIdentity",
+    "source": "ZhangLS/Spec/Lemma32ActualSeriesIdentity.lean",
+    "bytes": 3242,
+    "sha256": "86130e8f093797086d51fe439e203d310c9b96bd594303b8b16b26fe15a29418",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma171DirichletSeries",
+    "source": "ZhangLS/Spec/Lemma171DirichletSeries.lean",
+    "bytes": 9288,
+    "sha256": "5550cc8bacae696c4d0dd3607bb3b9d12211e4d2328b0ff15d7d110a82b0d3c1",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23AnalyticLogBranch",
+    "source": "ZhangLS/Spec/Lemma23AnalyticLogBranch.lean",
+    "bytes": 5178,
+    "sha256": "62bed9cff1bb4ad4eebceff0779ab207ec2a93b2102347c2fd7ac2ba0337dc28",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23BorelCaratheodory",
+    "source": "ZhangLS/Spec/Lemma23BorelCaratheodory.lean",
+    "bytes": 10173,
+    "sha256": "eba1fb6ee2b77c81356444decf2cbb3f2f6808f5f51797f8bbee9fe287804775",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44GammaLogDerivative",
+    "source": "ZhangLS/Spec/Lemma44GammaLogDerivative.lean",
+    "bytes": 12055,
+    "sha256": "df293a0dc82299c203ed9be3bf83007e32bf2443ad3e976cb2d7d4a7878c90ac",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23RealSign",
+    "source": "ZhangLS/Spec/Lemma23RealSign.lean",
+    "bytes": 33210,
+    "sha256": "c9672ac3ca5cb0f44714e04d25523835d8f6f86625e0b833f5f1a7952eaeacaa",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23DirichletConjugation",
+    "source": "ZhangLS/Spec/Lemma23DirichletConjugation.lean",
+    "bytes": 6364,
+    "sha256": "197aa3ce513bba326bcdc3ba93e1a16a4b40b322ffa82b2ab29e51af61582dec",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23DirichletFunctionalEquation",
+    "source": "ZhangLS/Spec/Lemma23DirichletFunctionalEquation.lean",
+    "bytes": 3777,
+    "sha256": "70bf5f8d3b6f9bf633e8c3d77af5757fdd1c9da7f1fc5b8cf5e12bc2706a56ca",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23PrimitiveGaussSum",
+    "source": "ZhangLS/Spec/Lemma23PrimitiveGaussSum.lean",
+    "bytes": 6002,
+    "sha256": "63e9c5276612f305afee7d56ce75381a8a33ebdc8d1bf8caf2c078fbb8926015",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23DirichletUnitModulus",
+    "source": "ZhangLS/Spec/Lemma23DirichletUnitModulus.lean",
+    "bytes": 9268,
+    "sha256": "a6d867d924b3336372112804c2c29228a8b253aeb56cef309f39109a49e129ee",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23DirichletBranch",
+    "source": "ZhangLS/Spec/Lemma23DirichletBranch.lean",
+    "bytes": 19455,
+    "sha256": "b7cf1edb2d2d7f746b9bf59c06f7ff6bbeae33e6a6028bd0dab39f6db4914ea0",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44DirichletFactorEstimates",
+    "source": "ZhangLS/Spec/Lemma44DirichletFactorEstimates.lean",
+    "bytes": 11932,
+    "sha256": "087f56a7e1d7a08d0a6b9eebb3b0fe8eadd2c12ca833d496771fc0e93d42a8cc",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma51GammaEuler",
+    "source": "ZhangLS/Spec/Lemma51GammaEuler.lean",
+    "bytes": 12146,
+    "sha256": "c13357deb0bf9098fc833ec3bcc826a8d6efe2c1d05892f455e466662b0cfdb7",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma51GammaAsymptotic",
+    "source": "ZhangLS/Spec/Lemma51GammaAsymptotic.lean",
+    "bytes": 9609,
+    "sha256": "3aba06c621c6082267595c573b859218384b018a65ee2da43bc433950c1ae651",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44CharacterProduct",
+    "source": "ZhangLS/Spec/Lemma44CharacterProduct.lean",
+    "bytes": 4553,
+    "sha256": "26470d0c225373ae47bd674e3186445ed0168b9946d787a2c5128a6237b5c401",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44SectionFourGamma",
+    "source": "ZhangLS/Spec/Lemma44SectionFourGamma.lean",
+    "bytes": 10135,
+    "sha256": "8eed931965c11e47bf8e0d72eca7a5f6f828615c6b43f71202d71adf6a2111b7",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23ProductApproximation",
+    "source": "ZhangLS/Spec/Lemma23ProductApproximation.lean",
+    "bytes": 15593,
+    "sha256": "7eee95ce43d22d6123d7a4e158a384d0ccca1b2404cb1492f617619c1be20e68",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44LongSum",
+    "source": "ZhangLS/Spec/Lemma44LongSum.lean",
+    "bytes": 14046,
+    "sha256": "52396a21caecbcc1a5813e2897c9170ac6dc9cc50ac78ae0155dd8a1c62ab87b",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23SectionFourLogDerivative",
+    "source": "ZhangLS/Spec/Lemma23SectionFourLogDerivative.lean",
+    "bytes": 9946,
+    "sha256": "6ebc5209aba1f5b90de8f8799fd17619bd97e482488f3c25b47aceabce0aede3",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ModulusControl",
+    "source": "ZhangLS/Spec/Lemma44ModulusControl.lean",
+    "bytes": 19096,
+    "sha256": "0c16442882df95f0f56082bf823832e40f37473e7d0d58e0e0741498c91860ea",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma51GammaFactors",
+    "source": "ZhangLS/Spec/Lemma51GammaFactors.lean",
+    "bytes": 7742,
+    "sha256": "acf154078af78b7be85f7a49a81cb54c4cf5df7fd9e013b8e8b52b929e15fd5e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma51Parameters",
+    "source": "ZhangLS/Spec/Lemma51Parameters.lean",
+    "bytes": 7926,
+    "sha256": "8c964bfab269ae348399ebae48318878ddfcd5e46c5806d16068f5e2a47e3e3c",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma51Modulus",
+    "source": "ZhangLS/Spec/Lemma51Modulus.lean",
+    "bytes": 4827,
+    "sha256": "d7a8fce50e12d04a9c73d6aba7be4d2a65e7f7cc2bddbb8ce5ecf972a91381d2",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma51VerticalTransport",
+    "source": "ZhangLS/Spec/Lemma51VerticalTransport.lean",
+    "bytes": 3197,
+    "sha256": "cbb6313e5813f0a5c1eb0aabe270013ed1f53dd84564fe030eb287c598c59507",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma51ShiftEstimates",
+    "source": "ZhangLS/Spec/Lemma51ShiftEstimates.lean",
+    "bytes": 3785,
+    "sha256": "06d13d67705d2ebfc6f3df2b5485e6b417858b6277a46355c67c606e016827cd",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ProductDirichletSeries",
+    "source": "ZhangLS/Spec/Lemma44ProductDirichletSeries.lean",
+    "bytes": 5519,
+    "sha256": "4c261bd682d11af7119492474adb719b393fa41242017ab77624a7f2a5e5c314",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44GaussianLongSum",
+    "source": "ZhangLS/Spec/Lemma44GaussianLongSum.lean",
+    "bytes": 15855,
+    "sha256": "b0346bea5e6e4137c5e660c1a78014936d88f5468667ba435a230981dff29ee2",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44FiniteGaussianMellin",
+    "source": "ZhangLS/Spec/Lemma44FiniteGaussianMellin.lean",
+    "bytes": 6087,
+    "sha256": "c2b18017aed9ef2fc20d3cfa6cd9907bbe9aec23dfb24a90d144ccac152f4b96",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ProductMellin",
+    "source": "ZhangLS/Spec/Lemma44ProductMellin.lean",
+    "bytes": 11736,
+    "sha256": "f4bece15f2687eb32516f1cdb9c8f25d54ab3d68bdcb0c5496a710b27bde3cd5",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ProductResidue",
+    "source": "ZhangLS/Spec/Lemma44ProductResidue.lean",
+    "bytes": 5628,
+    "sha256": "7fc79a872e39c213c7b3f6c81426315a50b7378ef4ea52e06056e91b1a1b6daf",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44SmoothedTruncation",
+    "source": "ZhangLS/Spec/Lemma44SmoothedTruncation.lean",
+    "bytes": 9233,
+    "sha256": "fc68ae4be08fbecae26f536a1b05b34b88d346df7c71490946dd772107c71d69",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44SmoothedTail",
+    "source": "ZhangLS/Spec/Lemma44SmoothedTail.lean",
+    "bytes": 7302,
+    "sha256": "38ea491630180d41cdee7e77f03315e48bba21fb66162069e2ec53cf968c54df",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44RightMellinApproximation",
+    "source": "ZhangLS/Spec/Lemma44RightMellinApproximation.lean",
+    "bytes": 7589,
+    "sha256": "d61cd279ca99213c06309cbb5b36638cb29c32fbdf2bb1956daf13b448b147de",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44FiniteProductShift",
+    "source": "ZhangLS/Spec/Lemma44FiniteProductShift.lean",
+    "bytes": 9130,
+    "sha256": "bc5c5658f35b4b8c0a13e28bc5dbd5bf587977259ff9b7339a6b74f5011b0cd8",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ReflectedLongSum",
+    "source": "ZhangLS/Spec/Lemma44ReflectedLongSum.lean",
+    "bytes": 9416,
+    "sha256": "c7bea68581a22c440c465b100e7f5c86dba7198e2a5d0a7e1fde03453512d0f8",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44MiddleContour",
+    "source": "ZhangLS/Spec/Lemma44MiddleContour.lean",
+    "bytes": 15575,
+    "sha256": "8babdd5e864096defff13bbf3498e585429a2a21955e652bbdb657ab58d7b6bb",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ReflectedTail",
+    "source": "ZhangLS/Spec/Lemma44ReflectedTail.lean",
+    "bytes": 5283,
+    "sha256": "65e7c794f7322d60b0a86e1bf96ebf87ca4514f740dde3cbb7dd027e3672a6fa",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44InitialLeftEstimates",
+    "source": "ZhangLS/Spec/Lemma44InitialLeftEstimates.lean",
+    "bytes": 6504,
+    "sha256": "49c89a58ef6c129d7809074ab57c8c39b7ea8341270562a3a05cca5a49b77335",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ReflectedTailContour",
+    "source": "ZhangLS/Spec/Lemma44ReflectedTailContour.lean",
+    "bytes": 9079,
+    "sha256": "84fa185a1cdde6ce3f7e7441d97b18c70b691e28acecd337b94149113437ecdf",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ReflectedSeriesSplit",
+    "source": "ZhangLS/Spec/Lemma44ReflectedSeriesSplit.lean",
+    "bytes": 3175,
+    "sha256": "e048f6dced511bae9b82823e2758d0f17f56b370f117bc345b2714dfb7a6611e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ComplexCharacterAbel",
+    "source": "ZhangLS/Spec/Lemma44ComplexCharacterAbel.lean",
+    "bytes": 22784,
+    "sha256": "332d738b5405539a4244c20dcfffd0213174249833c6473b7d913b4fd3d0c126",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44HorizontalGrowth",
+    "source": "ZhangLS/Spec/Lemma44HorizontalGrowth.lean",
+    "bytes": 10001,
+    "sha256": "739bd7f35fc6d10e83729cf0ee11a89bf1fbb7a5d53258bd04daf1ba0e296d20",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44PolynomialGrowth",
+    "source": "ZhangLS/Spec/Lemma44PolynomialGrowth.lean",
+    "bytes": 5223,
+    "sha256": "86435b574b84b0e3a66c448d0b2d8d6b2572911771b41ef27dabee9a86c4a188",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44GaussianVerticalTail",
+    "source": "ZhangLS/Spec/Lemma44GaussianVerticalTail.lean",
+    "bytes": 7628,
+    "sha256": "e175f9d111dbd8709a089c0d4cb3053b04880bd854f78300cd0fc928c9307430",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44LocalRectangle",
+    "source": "ZhangLS/Spec/Lemma44LocalRectangle.lean",
+    "bytes": 6861,
+    "sha256": "9c6de980bf1c8ce68d5cd1731a33fe90026df392c251f480f430400d9d5d82c7",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44HorizontalKernel",
+    "source": "ZhangLS/Spec/Lemma44HorizontalKernel.lean",
+    "bytes": 6821,
+    "sha256": "b020e87106514af88cee9831d3bcac5de2c5aec3a2983684502e549809f4d0a9",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44RightVerticalTruncation",
+    "source": "ZhangLS/Spec/Lemma44RightVerticalTruncation.lean",
+    "bytes": 4581,
+    "sha256": "643358d472cdff221a800ea4e7d53cbb8a6805753595940827a45b9920d94135",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44HorizontalIntegrals",
+    "source": "ZhangLS/Spec/Lemma44HorizontalIntegrals.lean",
+    "bytes": 3737,
+    "sha256": "763179a5376b3a0a5d4c838fbd2ab7bbc50b77b2ef8755c2aa38b860a5420830",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ReflectedPolynomialContours",
+    "source": "ZhangLS/Spec/Lemma44ReflectedPolynomialContours.lean",
+    "bytes": 8001,
+    "sha256": "a85d966c8722f322141d550fafb4c8f4cde4434a1b9d1649b4f5432bc91acf27",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44LeftContourSplit",
+    "source": "ZhangLS/Spec/Lemma44LeftContourSplit.lean",
+    "bytes": 5415,
+    "sha256": "dbb705c44be7ac8f724ecc444cd9e1ae7f917a78b5d1bd1e0ed62d0ec8ed69ac",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ReflectedPolynomialBounds",
+    "source": "ZhangLS/Spec/Lemma44ReflectedPolynomialBounds.lean",
+    "bytes": 15615,
+    "sha256": "35321c4f6ca7b4dd50aca30f941794ea6ba4524927b0b7f3961aa15d73798d10",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma44ApproximateFunctionalEquation",
+    "source": "ZhangLS/Spec/Lemma44ApproximateFunctionalEquation.lean",
+    "bytes": 8076,
+    "sha256": "8dd9770207e3f702bd4ba427e6630e6a8089be4b4bd3d4eeaddbce91b3eb1046",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma45Normalization",
+    "source": "ZhangLS/Spec/Lemma45Normalization.lean",
+    "bytes": 5080,
+    "sha256": "6d56955707c8a821dc0ef94dfd256fe6968c9e385156ca500ede6db67ca682ad",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma45HorizontalQuotient",
+    "source": "ZhangLS/Spec/Lemma45HorizontalQuotient.lean",
+    "bytes": 5688,
+    "sha256": "9d6e1f61e74ef608a4d8542cafbc031b253de55f1c23f7fca2aac404a723fdab",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma45ErrorBudget",
+    "source": "ZhangLS/Spec/Lemma45ErrorBudget.lean",
+    "bytes": 4540,
+    "sha256": "504b8e63cfef03b848fb699900fe0dc28defb3d5afab07698730a8bf6c3a5d9b",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma45ZeroFree",
+    "source": "ZhangLS/Spec/Lemma45ZeroFree.lean",
+    "bytes": 10526,
+    "sha256": "b9c775d544201c8f583209a5e3882315359ce6fd9e3a60cb610af677e8f59517",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma46LogDerivative",
+    "source": "ZhangLS/Spec/Lemma46LogDerivative.lean",
+    "bytes": 6732,
+    "sha256": "d154e6e0932d2c82147b1161ebf36c1fa3ea370a936a87a498220f5fd9d5a7e3",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma46ExponentialTransport",
+    "source": "ZhangLS/Spec/Lemma46ExponentialTransport.lean",
+    "bytes": 1850,
+    "sha256": "648d46cd08af7e8a0770a7cf756a1a8fbbe95850bdc45918f96041f4f6b8d570",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma46LocalGeometry",
+    "source": "ZhangLS/Spec/Lemma46LocalGeometry.lean",
+    "bytes": 3739,
+    "sha256": "afefad90a2b42b8be2d503c87ebe7d6d5e07cb37b9c275c58c4b437091e874c9",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23ModelZeros",
+    "source": "ZhangLS/Spec/Lemma23ModelZeros.lean",
+    "bytes": 6879,
+    "sha256": "f61c58dfc36b1e24e82600b6104c11bf355102bfd0b477bcd94d12efca0dc2cc",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma46ModelApproximation",
+    "source": "ZhangLS/Spec/Lemma46ModelApproximation.lean",
+    "bytes": 8576,
+    "sha256": "ec0a28a4280f7f92bca36250cfb902d124659aab036e1954b0cec61d87c345af",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23ArgumentPrinciple",
+    "source": "ZhangLS/Spec/Lemma23ArgumentPrinciple.lean",
+    "bytes": 12478,
+    "sha256": "828939a20d400fe30d42403463013156bbffa5b0d62f12aa175a73d5e02aa2a9",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23RoucheIntegral",
+    "source": "ZhangLS/Spec/Lemma23RoucheIntegral.lean",
+    "bytes": 6067,
+    "sha256": "14015fb8db8e9676f0afd83f1db0fa7751954b2d9e72d022066a549e27ae5f22",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23GeneralArgumentPrinciple",
+    "source": "ZhangLS/Spec/Lemma23GeneralArgumentPrinciple.lean",
+    "bytes": 11154,
+    "sha256": "7f7b70b3f1b895ca048ffb32c18353130427d8a20d4a72121da78cdc6400671a",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23ModelRouche",
+    "source": "ZhangLS/Spec/Lemma23ModelRouche.lean",
+    "bytes": 15182,
+    "sha256": "745e8c785aae68984048768489b16855522ec318a4c675fb4828b240e5431154",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma46ModelBoundary",
+    "source": "ZhangLS/Spec/Lemma46ModelBoundary.lean",
+    "bytes": 5441,
+    "sha256": "d6ddfe11577c2d91f903d661ed6e2d5d48a663bb6b26a705744401eed76eae7d",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma46AnalyticSymmetry",
+    "source": "ZhangLS/Spec/Lemma46AnalyticSymmetry.lean",
+    "bytes": 4914,
+    "sha256": "23ba18d705ba64576b8f428f0088ef1dc9c9108dbf6bb663ec76266e71d51524",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma46SingleZero",
+    "source": "ZhangLS/Spec/Lemma46SingleZero.lean",
+    "bytes": 3804,
+    "sha256": "940c536d5a15def3aa0b9704107d2cef8bf03e11990287125afd812c27459d36",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma46RoucheLocal",
+    "source": "ZhangLS/Spec/Lemma46RoucheLocal.lean",
+    "bytes": 5604,
+    "sha256": "ec88aa7c92ffc62fbaa5015496d4ee562d7112da9348a1d910979fa4c84daabe",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma46ZeroAnalysis",
+    "source": "ZhangLS/Spec/Lemma46ZeroAnalysis.lean",
+    "bytes": 10504,
+    "sha256": "10021360bbcc4681d079be77a00514692ff562845819af3279b728f3e04eb5f1",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma47Reflection",
+    "source": "ZhangLS/Spec/Lemma47Reflection.lean",
+    "bytes": 6715,
+    "sha256": "9fc005d20656fbcaf5d6d1be400857de7a59ac3df79bf04f86c31b3bfaa4697c",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma48ZeroRegion",
+    "source": "ZhangLS/Spec/Lemma48ZeroRegion.lean",
+    "bytes": 7670,
+    "sha256": "a026972ab1c275b78d5e0e5cb1e2e44d25a2093be6c6151000ebe2abda615a0d",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Proposition22Zeros",
+    "source": "ZhangLS/Spec/Proposition22Zeros.lean",
+    "bytes": 4267,
+    "sha256": "9a59580a760411490e1332c0a384e98c5d80c94fbcee904ba050072797406841",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma47OuterGeometry",
+    "source": "ZhangLS/Spec/Lemma47OuterGeometry.lean",
+    "bytes": 3526,
+    "sha256": "7749f3ad4f1499061082d83c09bb34c0c895941afef427144b37b16514f5c7d1",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma47ModelApproximation",
+    "source": "ZhangLS/Spec/Lemma47ModelApproximation.lean",
+    "bytes": 7451,
+    "sha256": "103db5868ad385c8519771ca398f89de2e0d594b9c97b530c39d328bf954b1a2",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Proposition22ModelNearZero",
+    "source": "ZhangLS/Spec/Proposition22ModelNearZero.lean",
+    "bytes": 3060,
+    "sha256": "1c3b61ad4918ead244b9c79244733b549456b1b5e97af98d74e2ecd45a83a8ef",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Proposition22Neighbor",
+    "source": "ZhangLS/Spec/Proposition22Neighbor.lean",
+    "bytes": 5526,
+    "sha256": "879dddc77c06f0278d09d97f2dd383fa19bccbc9bf9d52c95e64583db3ed491e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Proposition22",
+    "source": "ZhangLS/Spec/Proposition22.lean",
+    "bytes": 8226,
+    "sha256": "6d733e3a41db8bde330b206feeb47f0fe8ebc1bdfaa327719422e57525a959de",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23SuccessiveZeros",
+    "source": "ZhangLS/Spec/Lemma23SuccessiveZeros.lean",
+    "bytes": 7580,
+    "sha256": "c9ca7f9768f3faaf3098cabddb6fb5a3c40e0902697b900f4bde80a83355e020",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23ZeroGapArithmetic",
+    "source": "ZhangLS/Spec/Lemma23ZeroGapArithmetic.lean",
+    "bytes": 3967,
+    "sha256": "96160e0801e44f962f17c8b6be483255d6beb6371eda0e093061f941da7b5cbd",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23ZeroIntervals",
+    "source": "ZhangLS/Spec/Lemma23ZeroIntervals.lean",
+    "bytes": 3741,
+    "sha256": "bf52f98a32928a9e9e98df33cd5aaeaba86c57eb19a8d1eb1c61ad087282adaa",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23ZeroData",
+    "source": "ZhangLS/Spec/Lemma23ZeroData.lean",
+    "bytes": 7938,
+    "sha256": "78d6b63ce0ce0e3c3391ff93a8a9afaf28bb201c31a92cfe770513f6ccd4bc79",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma23",
+    "source": "ZhangLS/Spec/Lemma23.lean",
+    "bytes": 4806,
+    "sha256": "330a5b5995311ff8e9a742e4454da147031d5ab3cc771ddf6e267c20628c984a",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma52BranchTransport",
+    "source": "ZhangLS/Spec/Lemma52BranchTransport.lean",
+    "bytes": 4388,
+    "sha256": "b8c3fd82083dce9884a4fed69db17146fe4ce1f572c0ef33728e17e33fc52a46",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma52Offsets",
+    "source": "ZhangLS/Spec/Lemma52Offsets.lean",
+    "bytes": 3813,
+    "sha256": "a7174d4e8b4c34a3b326ebc9b1e268a347a82aac038f44bf1ad3333c10f3df20",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma52ShiftEstimates",
+    "source": "ZhangLS/Spec/Lemma52ShiftEstimates.lean",
+    "bytes": 2839,
+    "sha256": "ce228f3e50a4b3b4bbb8471ccf34c7d5b2a3fe79fa367e097bf80050dc983398",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma52Product",
+    "source": "ZhangLS/Spec/Lemma52Product.lean",
+    "bytes": 6339,
+    "sha256": "cf49ae2069b65c4c7273e47696dc8d73603a2e370ae886a05ee6177ffe2fbb34",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55FejerKernel",
+    "source": "ZhangLS/Spec/Lemma55FejerKernel.lean",
+    "bytes": 4142,
+    "sha256": "840821eb5609c3f2a41dae60d184e468b3f33f44e5f02fb74c33e08a72193f61",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55FejerDetection",
+    "source": "ZhangLS/Spec/Lemma55FejerDetection.lean",
+    "bytes": 5750,
+    "sha256": "f4596c4c8cae390a06863fbaf79f2984d4c16415a4afb2d49405ad0f097a9c85",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55NearTwoBound",
+    "source": "ZhangLS/Spec/Lemma55NearTwoBound.lean",
+    "bytes": 4886,
+    "sha256": "564af401021b04092a4cc46e50d77e0eddd26e10be0b954697d628e66500b031",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55HighHeightDisk",
+    "source": "ZhangLS/Spec/Lemma55HighHeightDisk.lean",
+    "bytes": 3429,
+    "sha256": "13f440cec85b9c200b22a09e7f2bd8032e6d6aa9df79c5a1eba2981d2c748d74",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55JensenZeroCount",
+    "source": "ZhangLS/Spec/Lemma55JensenZeroCount.lean",
+    "bytes": 3470,
+    "sha256": "581a0344d9c05cbaf189eb22678399d0771cf99b0656e20200600d742ce1aabd",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ActualLocalZeros",
+    "source": "ZhangLS/Spec/Lemma55ActualLocalZeros.lean",
+    "bytes": 5723,
+    "sha256": "ff77733528a5344a535477643ab1482e60093017b3934084670f246d8253f38c",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZeroFactorization",
+    "source": "ZhangLS/Spec/Lemma55ZeroFactorization.lean",
+    "bytes": 5919,
+    "sha256": "4900e2f3ffcd4d0d4717a77c993318ffd4bdcfad88ff845a62815ea653b00647",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZeroFactorBounds",
+    "source": "ZhangLS/Spec/Lemma55ZeroFactorBounds.lean",
+    "bytes": 4368,
+    "sha256": "85b495114954cb34c6386cf368fe1c7929cf5f470cb0f2ffa9a173148a9039b3",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZeroRemovedBounds",
+    "source": "ZhangLS/Spec/Lemma55ZeroRemovedBounds.lean",
+    "bytes": 6059,
+    "sha256": "63f0aafbd6f8a617a42ce82110ec939fd08ecb6450d8edd957e4c6c312068844",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZeroRemovedLog",
+    "source": "ZhangLS/Spec/Lemma55ZeroRemovedLog.lean",
+    "bytes": 6864,
+    "sha256": "13228d5042013b009b2a31c6854f1e2220097027eedd00d482c9d9d6db8e0d67",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55LocalLogDerivative",
+    "source": "ZhangLS/Spec/Lemma55LocalLogDerivative.lean",
+    "bytes": 4298,
+    "sha256": "e2ca038fc9e92a0a125a216eb700e1933784779a7ce0fc8cdb23081a226bb56a",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55HigherLogDerivative",
+    "source": "ZhangLS/Spec/Lemma55HigherLogDerivative.lean",
+    "bytes": 7099,
+    "sha256": "668ef339aa0205ff3d2c3017433497407ea75be92748434f5a47c43580eae6f7",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZeroPowerDerivatives",
+    "source": "ZhangLS/Spec/Lemma55ZeroPowerDerivatives.lean",
+    "bytes": 5332,
+    "sha256": "c5dad5ed9f2bfb5db87e0d29aeff45e67c8837e513ffad6251e58b1dda1f6ec2",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55NearOneBound",
+    "source": "ZhangLS/Spec/Lemma55NearOneBound.lean",
+    "bytes": 7866,
+    "sha256": "2fea641593d80aa04bd732b98b6e428a16678b4f649d72293a9acf66abb30039",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55LocalDerivatives",
+    "source": "ZhangLS/Spec/Lemma55LocalDerivatives.lean",
+    "bytes": 5491,
+    "sha256": "5ac31d2dd912a13df52c0b6bb410b7325afdf85d9b2999a3d9d1d6380163d967",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.RealAxisContinuation",
+    "source": "ZhangLS/Spec/RealAxisContinuation.lean",
+    "bytes": 2350,
+    "sha256": "c5344f18e7c6f8d0ea12656220ec4755e0913f1e438b9b95a25ee47ac0424235",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57ResidueBudget",
+    "source": "ZhangLS/Spec/Lemma57ResidueBudget.lean",
+    "bytes": 5255,
+    "sha256": "5b9fed74e4bc8762788ee7e1eca1136f306fa539a325430152d1b6fa90d179c4",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57GaussianQuadraticMoment",
+    "source": "ZhangLS/Spec/Lemma57GaussianQuadraticMoment.lean",
+    "bytes": 7318,
+    "sha256": "da46fa66b756361ff88e0d17428519c733e3e5ebcf8f02bd435076f9fa456338",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57QuadraticConductorThreshold",
+    "source": "ZhangLS/Spec/Lemma57QuadraticConductorThreshold.lean",
+    "bytes": 14821,
+    "sha256": "2f0e45688c992087967a29544211a47d4b3d10b5987b7751cff4de6a5a7b1fbe",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma57LeftQuadraticGrowth",
+    "source": "ZhangLS/Spec/Lemma57LeftQuadraticGrowth.lean",
+    "bytes": 5435,
+    "sha256": "9683eccbee0b881f34aba6adac8ad290db1a56eddf6a1d0a4199784ec824e528",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55SimpleRealZero",
+    "source": "ZhangLS/Spec/Lemma55SimpleRealZero.lean",
+    "bytes": 6544,
+    "sha256": "9fd7426dfe0631e71d14d197bd6944c2e9ba90de3809bd393238cebe805c13b4",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55LocalUniqueness",
+    "source": "ZhangLS/Spec/Lemma55LocalUniqueness.lean",
+    "bytes": 3615,
+    "sha256": "f7ed05da2346c67607e91e251401ffb0cb8f0223127153bef3cbc261ca351b4a",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55",
+    "source": "ZhangLS/Spec/Lemma55.lean",
+    "bytes": 1202,
+    "sha256": "a511adc680b4f8cf73d24c8dba28290312eaa325b7c150caee7c61f76188dd7d",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55OriginalRegionCover",
+    "source": "ZhangLS/Spec/Lemma55OriginalRegionCover.lean",
+    "bytes": 3735,
+    "sha256": "0d0f21509f0aa5dab86a0c1cfaf0fe0264e4268176bdbec36ecccaeba24cc1f5",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55OriginalRegionZeros",
+    "source": "ZhangLS/Spec/Lemma55OriginalRegionZeros.lean",
+    "bytes": 7486,
+    "sha256": "44a02f88bec81764d69b732cf9ff39e752b988fb27a9609df3f2abe5a980fdfc",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ActualZeroDetection",
+    "source": "ZhangLS/Spec/Lemma55ActualZeroDetection.lean",
+    "bytes": 7236,
+    "sha256": "a2f6abc696d6eaa7ef3076b7e238309266d76c14cd883aae1aa459a84bd1d822",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZeroNormalization",
+    "source": "ZhangLS/Spec/Lemma55ZeroNormalization.lean",
+    "bytes": 4785,
+    "sha256": "0edd86e53d3a68cd43247f710278f0af218a88959949d0b8ffdf6ee60e4c4245",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55WeightedPowerError",
+    "source": "ZhangLS/Spec/Lemma55WeightedPowerError.lean",
+    "bytes": 11144,
+    "sha256": "faae8c6688e1ef143462ed6c7b6ec11b1a694554a5d50034ac50592b44113e59",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ExceptionalPoleComparison",
+    "source": "ZhangLS/Spec/Lemma55ExceptionalPoleComparison.lean",
+    "bytes": 6228,
+    "sha256": "b329ddcac77b71ed6b4f898e740c9c4e961977bf6d10fb5fe86f32da0539a5f0",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ExceptionalZeroRemoval",
+    "source": "ZhangLS/Spec/Lemma55ExceptionalZeroRemoval.lean",
+    "bytes": 9055,
+    "sha256": "6c7a2e3956491f2b1ed9cc53852cc3ffc59f7d302e71bd27cc02d367347cefb2",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZetaLocalData",
+    "source": "ZhangLS/Spec/Lemma55ZetaLocalData.lean",
+    "bytes": 11221,
+    "sha256": "12f66edce1e5787490f156101c493b89c1fb3412324eedb5674a42ec43fb083c",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZetaLocalZeros",
+    "source": "ZhangLS/Spec/Lemma55ZetaLocalZeros.lean",
+    "bytes": 6717,
+    "sha256": "c0dcf83492d808a889d12e63b8b4d448025280d719c47d5e1e4b75c6b84996c0",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZetaZeroFactorization",
+    "source": "ZhangLS/Spec/Lemma55ZetaZeroFactorization.lean",
+    "bytes": 5646,
+    "sha256": "19a95381145a63cf44f94b9e4a5a55894333de3169cb9b11e556fff00bee855f",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZetaZeroFactorBounds",
+    "source": "ZhangLS/Spec/Lemma55ZetaZeroFactorBounds.lean",
+    "bytes": 3256,
+    "sha256": "e8885cef0120b59613ede56f0b3c22ffe21708e31ee539096d3f361e34306089",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZetaZeroRemovedBounds",
+    "source": "ZhangLS/Spec/Lemma55ZetaZeroRemovedBounds.lean",
+    "bytes": 6291,
+    "sha256": "620170c5dca8f919384d65762b37fc081485ba73b9ae240e916c3e7293b097ab",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZetaZeroRemovedLog",
+    "source": "ZhangLS/Spec/Lemma55ZetaZeroRemovedLog.lean",
+    "bytes": 6772,
+    "sha256": "75a71701a1d4ffd1ee1cd4ba36504aa3c31f042f410dc3f8443aabb3862cadff",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZetaLocalLogDerivative",
+    "source": "ZhangLS/Spec/Lemma55ZetaLocalLogDerivative.lean",
+    "bytes": 5413,
+    "sha256": "d646cb2f0e2a71fcc16224262bb9fffa9fcea3a4a21b5756cbe7794c8821e73e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZetaHigherLogDerivative",
+    "source": "ZhangLS/Spec/Lemma55ZetaHigherLogDerivative.lean",
+    "bytes": 7154,
+    "sha256": "e96beed8588f38a7afe8ff2762eaeec68966e7c14d180586e6694bf1841affd3",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZetaZeroPowerDerivatives",
+    "source": "ZhangLS/Spec/Lemma55ZetaZeroPowerDerivatives.lean",
+    "bytes": 6254,
+    "sha256": "3b6aaaaf9260bae0d8de9852381624baf50aa5ddc0e0936ad723897cc0ef98cd",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55ZetaWeightedPowerError",
+    "source": "ZhangLS/Spec/Lemma55ZetaWeightedPowerError.lean",
+    "bytes": 5821,
+    "sha256": "f0ca49bad3c1436a644001e5ba28abf0d5e9e2eee93f5148e34af1be74ad8a63",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma55MangoldtPositivity",
+    "source": "ZhangLS/Spec/Lemma55MangoldtPositivity.lean",
+    "bytes": 10199,
+    "sha256": "ef45c22b678bb24aa8d5123cdbb7efcaf9ac4cf48a880872c24941a479259a6a",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma56MangoldtPositivity",
+    "source": "ZhangLS/Spec/Lemma56MangoldtPositivity.lean",
+    "bytes": 10447,
+    "sha256": "72a0a1312d2839f27d518219d6ecaa80f116bcb497befecf1df166146267b885",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma56PrincipalBoundary",
+    "source": "ZhangLS/Spec/Lemma56PrincipalBoundary.lean",
+    "bytes": 2388,
+    "sha256": "f83a6765bd23af6724d562f1248be7a7f9179f6e6400dc043fae967cfbc5699b",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma56",
+    "source": "ZhangLS/Spec/Lemma56.lean",
+    "bytes": 3242,
+    "sha256": "89a8f2e22dfd66018b18dee7995229da6fe11294619241adaf4c418b56d63902",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83Definitions",
+    "source": "ZhangLS/Spec/Lemma83Definitions.lean",
+    "bytes": 6593,
+    "sha256": "9b12c978aae18664b30918a52f3471ee54a7ad7542ece45adb40d8d1b99b46be",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83LocalCorrection",
+    "source": "ZhangLS/Spec/Lemma83LocalCorrection.lean",
+    "bytes": 4142,
+    "sha256": "a37b79f8cccb87eb6ef6b9bddf7fa0108873515a84c0d8b4bbe3e7a32b0e17a5",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83RegularProduct",
+    "source": "ZhangLS/Spec/Lemma83RegularProduct.lean",
+    "bytes": 14935,
+    "sha256": "7b595bbd0c0f4adc58657abe04946e41d1430bf0f15727e267c525b2be15f9d3",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83ExceptionalProduct",
+    "source": "ZhangLS/Spec/Lemma83ExceptionalProduct.lean",
+    "bytes": 10004,
+    "sha256": "2ccfab94756d0e59fc7ca6e4a84872f9a77d53ac1683d68d33edb1821bb631a6",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83ZeroShift",
+    "source": "ZhangLS/Spec/Lemma83ZeroShift.lean",
+    "bytes": 3065,
+    "sha256": "660555b3d67ee2f67ef5e015bd5637746141a4b26350e1edc1639dad79002862",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32ResidueCircle",
+    "source": "ZhangLS/Spec/Lemma32ResidueCircle.lean",
+    "bytes": 2390,
+    "sha256": "438f4d0690822adad19af9dc469b6ce6307096869f58efecc1ae0577cb5e46f0",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32LocalL",
+    "source": "ZhangLS/Spec/Lemma32LocalL.lean",
+    "bytes": 5277,
+    "sha256": "90e375929f898b8fee7b616a11b62d67821c60fc9ed9aab8f06c3320a2fe910a",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32ZetaCircle",
+    "source": "ZhangLS/Spec/Lemma32ZetaCircle.lean",
+    "bytes": 2856,
+    "sha256": "09b1d5273fb5e1ebe55358e480bc71087f01788e401df68ef2ee6b1feccf4de8",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32GammaLocal",
+    "source": "ZhangLS/Spec/Lemma32GammaLocal.lean",
+    "bytes": 1985,
+    "sha256": "3bf0af07d6ebf098e2fd10ec894a710a5c0c3283cf39805b4d2d7d42a5c9b9da",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32SmoothingCircle",
+    "source": "ZhangLS/Spec/Lemma32SmoothingCircle.lean",
+    "bytes": 2671,
+    "sha256": "eb62fe04b7c4b2732f80137f953a2a7e81f73921ca4ad24a731442f6c4dcdbd0",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32CircleIntegrand",
+    "source": "ZhangLS/Spec/Lemma32CircleIntegrand.lean",
+    "bytes": 2357,
+    "sha256": "628c2905df1a61d5c8b34bcb2ac25cd924404beb97f37042c02eabdf9b4078db",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32CircleIntegral",
+    "source": "ZhangLS/Spec/Lemma32CircleIntegral.lean",
+    "bytes": 1399,
+    "sha256": "59d29a2bb6ec362e05d38f81de1cbe2b6253ffdc83a3ace7954b4c1643804fab",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32OriginalCircle",
+    "source": "ZhangLS/Spec/Lemma32OriginalCircle.lean",
+    "bytes": 1953,
+    "sha256": "2b23186d1360ce747abd8740c6f25ebd040569b23a7f4abb42cfb7d0b0b69ea3",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32CircleRegularity",
+    "source": "ZhangLS/Spec/Lemma32CircleRegularity.lean",
+    "bytes": 2494,
+    "sha256": "11ca5618c407236002d6c8261b8e06a1e79cdbddafd28b4358937996b5d9e49e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32RegularNumerator",
+    "source": "ZhangLS/Spec/Lemma32RegularNumerator.lean",
+    "bytes": 4256,
+    "sha256": "f06d32ff8a147d90fd5e8b505a4ac8464ed0df07f0a42a94e070c05182e31168",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32ActualResidue",
+    "source": "ZhangLS/Spec/Lemma32ActualResidue.lean",
+    "bytes": 3078,
+    "sha256": "46782997a689eedf53879af24ac861eb8251918b101fbb3a79f1daef5b4ea395",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32PrincipalParts",
+    "source": "ZhangLS/Spec/Lemma32PrincipalParts.lean",
+    "bytes": 3645,
+    "sha256": "a1af93fea469334d5e99959bb183b35375bebf2914d046e4a4da5c00555ceac7",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32LaurentCoefficients",
+    "source": "ZhangLS/Spec/Lemma32LaurentCoefficients.lean",
+    "bytes": 1982,
+    "sha256": "7a2d12ea26499126c4733586e0917195703bd850ae939ccc6e51561cfabb00a4",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32RectanglePowers",
+    "source": "ZhangLS/Spec/Lemma32RectanglePowers.lean",
+    "bytes": 3294,
+    "sha256": "82ab871c806dbbe914718f1529bfb61bf0290fa577da1125d27507ac80d80e58",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32RectangleWinding",
+    "source": "ZhangLS/Spec/Lemma32RectangleWinding.lean",
+    "bytes": 2426,
+    "sha256": "6d20df700f0ace160b0854f56d92827cbbb7f8d6d67e8c30ca295860484653fe",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32BoundaryLinearity",
+    "source": "ZhangLS/Spec/Lemma32BoundaryLinearity.lean",
+    "bytes": 3370,
+    "sha256": "062556b623df29cf43913b97fad054239befe4c17bf32f473652fbaa705c2944",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32PrincipalBoundary",
+    "source": "ZhangLS/Spec/Lemma32PrincipalBoundary.lean",
+    "bytes": 2708,
+    "sha256": "693df18e47b37305f3c773f1f868a88de57a26baa4c93a21b8718361755abeba",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32FiniteShift",
+    "source": "ZhangLS/Spec/Lemma32FiniteShift.lean",
+    "bytes": 4124,
+    "sha256": "a05a83f037690d9214e8ffcd0cdb40dc41237d66bc7e36f4df56b2c1a7976127",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32NormalizedFiniteShift",
+    "source": "ZhangLS/Spec/Lemma32NormalizedFiniteShift.lean",
+    "bytes": 1889,
+    "sha256": "0b8742f2e36d3cdb939f07b94cf69161b6c73f08fff1a49f5ede9756a534b8ac",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32GammaStripDecay",
+    "source": "ZhangLS/Spec/Lemma32GammaStripDecay.lean",
+    "bytes": 2078,
+    "sha256": "47b226ae3c9a579dcd10fdfd62219a3edb4b63595f58a6acc284ea9e6da306c1",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32GlobalCorrectionGrowth",
+    "source": "ZhangLS/Spec/Lemma32GlobalCorrectionGrowth.lean",
+    "bytes": 1966,
+    "sha256": "c0b6cfdf9cc1652e0bede98e5ac16dfa356a1efd0fb18159d833d2d8d129fae6",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32RamificationPrimeSaving",
+    "source": "ZhangLS/Spec/Lemma32RamificationPrimeSaving.lean",
+    "bytes": 2185,
+    "sha256": "0d7a0a5f692d218cf339a4a6d730045f52fed6967dc6f2a694be60647675cbd6",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma32RamificationPowerSaving",
+    "source": "ZhangLS/Spec/Lemma32RamificationPowerSaving.lean",
+    "bytes": 4873,
+    "sha256": "edaad3edb69dcd157e9a9d5438f86548c5f7c3c9b8a7510035d45321d0c6a695",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83FinitePrimeBounds",
+    "source": "ZhangLS/Spec/Lemma83FinitePrimeBounds.lean",
+    "bytes": 17515,
+    "sha256": "7a1b0bc99574daccbd6c601da3cf416176f45c94f9a54ef4dae6039eab950b9a",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83ProductPerturbation",
+    "source": "ZhangLS/Spec/Lemma83ProductPerturbation.lean",
+    "bytes": 3569,
+    "sha256": "1674da747fdc297da6812b63e86de20a6db6859dbb57d594aa44b56737faab1b",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83Supported",
+    "source": "ZhangLS/Spec/Lemma83Supported.lean",
+    "bytes": 2203,
+    "sha256": "eac7c78506d1d5bf14503be5eb983b9ce934b143b2f09731ea66dd33410d15aa",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83SupportedPrimePower",
+    "source": "ZhangLS/Spec/Lemma83SupportedPrimePower.lean",
+    "bytes": 2308,
+    "sha256": "ddab6c0e365bed944ce0949932273dc5f7fcc1184bed088bcd4cc068ab887ee0",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83KappaLocal",
+    "source": "ZhangLS/Spec/Lemma83KappaLocal.lean",
+    "bytes": 5783,
+    "sha256": "d2d4f046e0ceb0804ab34e8b90c3956060eda8917e988f2d3af996531c706da3",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83KappaPrimePower",
+    "source": "ZhangLS/Spec/Lemma83KappaPrimePower.lean",
+    "bytes": 3595,
+    "sha256": "e0339ceb17c67407cf8e56100bbefa304a7f55526009e1213f4eeab4b6f6aadf",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83XiPrimePower",
+    "source": "ZhangLS/Spec/Lemma83XiPrimePower.lean",
+    "bytes": 4841,
+    "sha256": "4beffec8dd9bf53d209c79165094ea5df207b4017439516158b8df513ba213f9",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83ShiftedTail",
+    "source": "ZhangLS/Spec/Lemma83ShiftedTail.lean",
+    "bytes": 6905,
+    "sha256": "199e798ee8a8bbf4aa354ea205c8802b98d03f20c268349083025ca9ba858677",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83XiSeries",
+    "source": "ZhangLS/Spec/Lemma83XiSeries.lean",
+    "bytes": 4857,
+    "sha256": "9a648a988d28ac8493e948018029210a0d976d4cf5b56c7ab78cb52de409c568",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83LocalAgreement",
+    "source": "ZhangLS/Spec/Lemma83LocalAgreement.lean",
+    "bytes": 6504,
+    "sha256": "853f30f5b1cdaf25792810c6e1b35e12c3d42c3833e432b83d39a76f38e855cf",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83KappaBounds",
+    "source": "ZhangLS/Spec/Lemma83KappaBounds.lean",
+    "bytes": 3391,
+    "sha256": "7ffb7fc092a9934fd0e8b50c4bcd8337f1dd64920a537999aa3e99bd72ce6264",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83FiniteSupportedSeries",
+    "source": "ZhangLS/Spec/Lemma83FiniteSupportedSeries.lean",
+    "bytes": 3672,
+    "sha256": "f7f0353f643f101a030078ef0c59e34cfc889eacc0dee1a16589888ce72aacd2",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83SupportedFactored",
+    "source": "ZhangLS/Spec/Lemma83SupportedFactored.lean",
+    "bytes": 1792,
+    "sha256": "7bb9a9455931511b7f8cfcdb296dd2710b68000fee4069ad65f204870679e706",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83ShiftedFactorization",
+    "source": "ZhangLS/Spec/Lemma83ShiftedFactorization.lean",
+    "bytes": 2253,
+    "sha256": "6caa705296e5c41a27f0136ded135be67537a9e9bf9aa83737bf53a282a24558",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83ModifiedEulerProduct",
+    "source": "ZhangLS/Spec/Lemma83ModifiedEulerProduct.lean",
+    "bytes": 3927,
+    "sha256": "388dea5824d04f6c6cdb98d3410e8fb73f9d82196d0406156c2f11a7b87ed4dc",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83ModifiedKappaProduct",
+    "source": "ZhangLS/Spec/Lemma83ModifiedKappaProduct.lean",
+    "bytes": 2815,
+    "sha256": "d688eaffe519d94c2f7af9bc571d0954d3b8e2c96b7fdd66d92f47a7d2c66d42",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83ModifiedKappaMultiplicative",
+    "source": "ZhangLS/Spec/Lemma83ModifiedKappaMultiplicative.lean",
+    "bytes": 2513,
+    "sha256": "048a489ee7cc425606d0a306c4b9e2f317e28bc0290a160064bec6172ae75dc9",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma152DivisorKernel",
+    "source": "ZhangLS/Spec/Lemma152DivisorKernel.lean",
+    "bytes": 3594,
+    "sha256": "10df806738e0e826ea2cf2fbe081ae291eb5b271542c30e651feec1952790878",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83XiMultiplicative",
+    "source": "ZhangLS/Spec/Lemma83XiMultiplicative.lean",
+    "bytes": 4556,
+    "sha256": "7f32b53ffabf2a1c6a3f7269ea9ca97873ec51eb2061802c050222bbd7e289f5",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83XiBounds",
+    "source": "ZhangLS/Spec/Lemma83XiBounds.lean",
+    "bytes": 5733,
+    "sha256": "08db21a5d0e1e4835f858b396fb8ecbec1fb550e500b66a250e2f1841f650366",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83RegularPerturbation",
+    "source": "ZhangLS/Spec/Lemma83RegularPerturbation.lean",
+    "bytes": 7834,
+    "sha256": "00d8cb96543a38fdd181221ae53cf8cebe7ae868043b4cee881d73a28ef2ee14",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83XiLocalAbsolute",
+    "source": "ZhangLS/Spec/Lemma83XiLocalAbsolute.lean",
+    "bytes": 2123,
+    "sha256": "77fe32179e09bcf5b224ef1288c58739d173c826d7fad50fd64ca4e31b0c98cf",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83ConverseEuler",
+    "source": "ZhangLS/Spec/Lemma83ConverseEuler.lean",
+    "bytes": 6145,
+    "sha256": "6b2faef42199effb9b06ca9a3e3da568d87c652c1395c0cd76d2e3e55a176071",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83DirichletConvergence",
+    "source": "ZhangLS/Spec/Lemma83DirichletConvergence.lean",
+    "bytes": 5217,
+    "sha256": "38d85408d46ec8a0a75d3f20a17c330324219e69ad27bb2e4bf49c1dec4bab8b",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83ContinuationAgreement",
+    "source": "ZhangLS/Spec/Lemma83ContinuationAgreement.lean",
+    "bytes": 8260,
+    "sha256": "25aef13384fed736d4e8543a40208dbd3607b86b64fded3ee6b7f77dce039307",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83ExceptionalPerturbation",
+    "source": "ZhangLS/Spec/Lemma83ExceptionalPerturbation.lean",
+    "bytes": 13084,
+    "sha256": "05c5a449bb0a7863be9954b9d335e1cd7febab695e49be1e85b0416b60fd933f",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83SmallShift",
+    "source": "ZhangLS/Spec/Lemma83SmallShift.lean",
+    "bytes": 5298,
+    "sha256": "6aa02d5fe1876e329af6d765f321d6ad6f215b11330e194a1f1e77d53aa586e5",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83",
+    "source": "ZhangLS/Spec/Lemma83.lean",
+    "bytes": 7483,
+    "sha256": "a08aeb8b18018a6067ab36a3f4c5da9602fffebbea001429cdf4dc5ba513e656",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.AppendixBRoughPrimeLog",
+    "source": "ZhangLS/Spec/AppendixBRoughPrimeLog.lean",
+    "bytes": 5086,
+    "sha256": "c3d86340da91c15f9dfb8b723b8dc8597de46ffe54c5086555356e34fd71fce0",
+    "validation": "private fresh"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma83FiniteShiftLambda",
+    "source": "ZhangLS/Spec/Lemma83FiniteShiftLambda.lean",
+    "bytes": 7934,
+    "sha256": "371b777efcd95ea49f4574ad3e74a222ccbd65c82c7f036c4ee793fec7528470",
+    "validation": "private fresh"
+  },
+  {
+    "module": "ZhangLS.Spec.Lemma84WeightedArithmetic",
+    "source": "ZhangLS/Spec/Lemma84WeightedArithmetic.lean",
+    "bytes": 5076,
+    "sha256": "ade42ce10b3fec69c2975b5a8443cfaabd738d732470fe860f5914e6f97ea37e",
+    "validation": "readonly baseline source matched"
+  },
+  {
+    "module": "ZhangLS.Spec.FixedHLambdaReplacementLocal",
+    "source": "ZhangLS/Spec/FixedHLambdaReplacementLocal.lean",
+    "bytes": 4541,
+    "sha256": "565b4cf6d0380f8369756287d7c6c65a0aa27153da6a2792d47872c045e34ab1",
+    "validation": "private fresh"
+  },
+  {
+    "module": "ZhangLS.Spec.FixedHLambdaReplacement",
+    "source": "ZhangLS/Spec/FixedHLambdaReplacement.lean",
+    "bytes": 5861,
+    "sha256": "a8e52daf8f67eaa02e7731061cc0961b4e1c9264f885675e255cb37e5878061e",
+    "validation": "private fresh"
+  },
+  {
+    "module": "ZhangLS.Spec.FixedHLambdaReplacementOuter",
+    "source": "ZhangLS/Spec/FixedHLambdaReplacementOuter.lean",
+    "bytes": 8436,
+    "sha256": "31ec0c96fd5005d2aac2ba4b049365b8ca0aa2761192a99bd6ed688b1dcc7c39",
+    "validation": "private fresh"
+  }
+]

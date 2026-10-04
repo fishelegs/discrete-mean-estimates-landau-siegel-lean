@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "scope": "portable focused reproduction, not full repository",
+  "completed_utc": "2026-10-04T03:41:10.339096+00:00",
+  "toolchain": "Lean 4.30.0",
+  "compiler_jobs": 1,
+  "allocation_mib": 4096,
+  "runs": [
+    {
+      "label": "build-01",
+      "exit_code": 0,
+      "seconds": 3.0838325439999608,
+      "source_sha256": "c3d86340da91c15f9dfb8b723b8dc8597de46ffe54c5086555356e34fd71fce0"
+    },
+    {
+      "label": "build-02",
+      "exit_code": 0,
+      "seconds": 5.188428904999455,
+      "source_sha256": "371b777efcd95ea49f4574ad3e74a222ccbd65c82c7f036c4ee793fec7528470"
+    },
+    {
+      "label": "build-03",
+      "exit_code": 0,
+      "seconds": 3.471046825998201,
+      "source_sha256": "565b4cf6d0380f8369756287d7c6c65a0aa27153da6a2792d47872c045e34ab1"
+    },
+    {
+      "label": "build-04",
+      "exit_code": 0,
+      "seconds": 3.6944068720003997,
+      "source_sha256": "a8e52daf8f67eaa02e7731061cc0961b4e1c9264f885675e255cb37e5878061e"
+    },
+    {
+      "label": "build-05",
+      "exit_code": 0,
+      "seconds": 84.81560798899955,
+      "source_sha256": "d310a1c8e952dead7c70beec036d61e3c8d3696780b94af1a63c8f014386fe51"
+    },
+    {
+      "label": "build-06",
+      "exit_code": 0,
+      "seconds": 4.182272009000371,
+      "source_sha256": "31ec0c96fd5005d2aac2ba4b049365b8ca0aa2761192a99bd6ed688b1dcc7c39"
+    },
+    {
+      "label": "build-07",
+      "exit_code": 0,
+      "seconds": 85.40610041900072,
+      "source_sha256": "c4befc44ec9b6ec67a783f6e95f5798a823e3a396b34bc55ea8ed40ece2c2648"
+    },
+    {
+      "label": "inventory",
+      "exit_code": 0,
+      "seconds": 5.785143949000485,
+      "source_sha256": "427a6706146eedb550d40d30ce03fae5bd26389bcebe36e39c4342b42d497771"
+    }
+  ]
+}

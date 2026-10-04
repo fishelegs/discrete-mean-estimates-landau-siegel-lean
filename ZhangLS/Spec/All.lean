@@ -142,6 +142,9 @@ import ZhangLS.Spec.FirstLogRegressions
 import ZhangLS.Spec.FixedHDiagonal
 import ZhangLS.Spec.FixedHDiagonalAlgebra
 import ZhangLS.Spec.FixedHDiagonalIBP
+import ZhangLS.Spec.FixedHLambdaReplacement
+import ZhangLS.Spec.FixedHLambdaReplacementLocal
+import ZhangLS.Spec.FixedHLambdaReplacementOuter
 import ZhangLS.Spec.FixedHProfileAdmissible
 import ZhangLS.Spec.FixedHProfileBump
 import ZhangLS.Spec.FixedHProfileNormalization

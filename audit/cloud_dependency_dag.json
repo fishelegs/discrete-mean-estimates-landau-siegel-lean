@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-04T03:13:55.148713+00:00",
+  "generated_utc": "2026-10-04T03:55:42.955034+00:00",
   "baseline_commit": "58a9273c38961411a5f06ab2db4bdf565ef30794",
   "paper": {
     "arxiv": "2211.02515v1",
@@ -4452,6 +4452,20 @@
       "ramified_main_evaluated": false,
       "actual_single_norm_proved": false,
       "full_repository_fresh_pass": false
+    },
+    {
+      "id": "actual_lambda_product_outer_replacement",
+      "status": "verified_scoped_central",
+      "report": "audit/CLOUD_LAMBDA_REPLACEMENT_STATUS.md",
+      "original_numbered_result_completed": false,
+      "new_proof_modules": 3,
+      "all_owned_including_regressions": 68,
+      "proof_owned": 53,
+      "named_regressions": 12,
+      "assumption_A_required": false,
+      "actual_complex_main_evaluated": false,
+      "actual_single_norm_proved": false,
+      "full_repository_fresh_pass": false
     }
   ],
   "repair_discipline": {
@@ -4592,7 +4606,7 @@
     "separate_from_numbered_51": true,
     "node_count": 8,
     "strict_gain_proved": false,
-    "updated_utc": "2026-10-04T03:13:55.148713+00:00",
+    "updated_utc": "2026-10-04T03:55:42.955034+00:00",
     "branch_status_updated_utc": "2026-10-03T14:58:30.522627+00:00",
     "fixed_smooth_narrow_small_gain_branch": "suspended_recalibration",
     "route_specific_dependencies": "See cloud_repair_critical_path.json routes and R5.single_norm; original numbered ledger unchanged."
