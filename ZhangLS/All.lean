@@ -1761,6 +1761,11 @@ import ZhangLS.Spec.QuotientSourceConductorCover
 import ZhangLS.Spec.QuotientSourceDomination
 import ZhangLS.Spec.QuotientSourceFiniteBox
 import ZhangLS.Spec.QuotientSourceRate
+import ZhangLS.Spec.RamifiedHeadHarmonicBound
+import ZhangLS.Spec.RamifiedHeadHarmonicCharacter
+import ZhangLS.Spec.RamifiedHeadHarmonicMajorants
+import ZhangLS.Spec.RamifiedHeadHarmonicReindex
+import ZhangLS.Spec.RamifiedHeadHarmonicTau
 import ZhangLS.Spec.RealAxisAtOne
 import ZhangLS.Spec.RealAxisContinuation
 import ZhangLS.Spec.RealAxisDerivativeAtOne
