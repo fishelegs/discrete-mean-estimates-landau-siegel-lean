@@ -1,6 +1,20 @@
 # 张益唐论文 Lean 形式化进度
 
-## 最新缺口与验证状态（2026-10-04 07:33 UTC）
+## 修复路线记录（2026-10-04 09:33 UTC）
+
+详细方向、已核验结果、失败原因和下一门槛集中在 [缺口研究路线与验证记录](GAP_RESEARCH_ROUTES.md)。各路线使用稳定编号，便于网页索引；此处只保留近期摘要。
+
+**原编号仍为 37 条原陈述 + 3 条显式修订 = 40/51。严格 signed 上界与原主结论尚未证明。**
+
+- 算术主项已在来源层独审后匹配原 P7 反射行；完整有限参数修正没有产生下降量。实际范数差满足 `|m_H−2Re Π_H|≪a⁻¹L⁻⁷⁹⁄²`，小于此前第一矩余量尺度，但没有有利符号：[ROUTE-05](GAP_RESEARCH_ROUTES.md#route-05)、[ROUTE-06](GAP_RESEARCH_ROUTES.md#route-06)
+- 保留共同相位的新右侧比较已来源层独审，去掉旧 `L⁻¹¹⁄²` 比较损耗；将内部分区阈值改为 `L^2000` 的中间误差改进也已来源层独审，得到 `L⁻¹⁰⁸`：[ROUTE-08](GAP_RESEARCH_ROUTES.md#route-08)、[ROUTE-09](GAP_RESEARCH_ROUTES.md#route-09)
+- 非主特征差异项的小/大导体接口、原剖面 Poisson 与正确 Gamma 完成已有局部 Lean 验证。它们尚待中央集成和原完整算子附件，不能写作整个 gap 已 Lean 闭合：[ROUTE-07](GAP_RESEARCH_ROUTES.md#route-07)
+- 均衡区域的新正矩、较长辅助剖面和真实较小余量路线分别标明未证、未安排或正在审查；不把候选当成果：[路线总表](GAP_RESEARCH_ROUTES.md#先看结论)
+
+CI 已核对至 2026-10-04 09:32 UTC：[三文件审计编译修复](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/commit/2d7ff5b3895c97a694c8254ea81dd9b64a722c65)的 [完整运行](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/actions/runs/37184851852)于 09:19:40 UTC 完成。已下载并核对报告：逐 Spec 模块、Spec 聚合、全项目 lake build、全部审计回归均 PASS；Gaussian 检查也通过。它验证该公开提交，不覆盖尚未集成的局部源码。下方历史快照保持原文，当前方向以上述路线记录为准。
+
+
+## 历史快照：缺口与验证状态（2026-10-04 07:33 UTC）
 
 原论文编号仍为 **37 条原陈述 + 3 条显式修订 = 40/51**。这些计数没有增加，也不是整体证明完成度。下面的 G 节点是独立的修复路线，不加入 51 的分母。原假设指数 2022 和拟证明结论指数 2024 保持不变；当前严格 signed 上界与原主结论尚未证明。
 
