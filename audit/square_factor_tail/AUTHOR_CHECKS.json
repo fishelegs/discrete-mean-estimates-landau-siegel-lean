@@ -1,0 +1,39 @@
+{
+  "status": "PASS_FINITE_CHECKS_SOURCE_ONLY",
+  "checks": 6072,
+  "rows": [
+    {
+      "j": 1,
+      "q": 3,
+      "tail": -2003,
+      "d": -1949,
+      "labels": 99,
+      "log": "-1273/2"
+    },
+    {
+      "j": 2,
+      "q": 5,
+      "tail": -1995,
+      "d": -1815,
+      "labels": 117,
+      "log": "-1103/2"
+    },
+    {
+      "j": 3,
+      "q": 7,
+      "tail": -1987,
+      "d": -1609,
+      "labels": 135,
+      "log": "-861/2"
+    },
+    {
+      "j": 4,
+      "q": 9,
+      "tail": -1979,
+      "d": -1331,
+      "labels": 153,
+      "log": "-547/2"
+    }
+  ],
+  "scope": "Finite regressions only; universal proofs are PROOF.md and REVIEW.md. No compiler was run."
+}

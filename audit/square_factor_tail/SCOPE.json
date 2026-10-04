@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "status": "SOURCE_ONLY",
+  "verdict": "ACCEPT_SOURCE_MATHEMATICS",
+  "date": "2026-10-04",
+  "source_hypothesis_exponent": 2022,
+  "target_exponent": 2024,
+  "lean_certification": false,
+  "compiler_invoked": false,
+  "transitive_axiom_audit_claimed": false,
+  "spec_count_change": 0,
+  "recorded_spec_status": "51/51 unchanged by this package",
+  "future_formalization_cross_reference": null,
+  "arithmetic_majorant": {
+    "q_range": "every integer q >= 1",
+    "formula": "nu(n)^2 tau_q(n) <= (nu^{*2q} * SqLift(tau_K))(n)",
+    "sharp_K": "max(0,q(q-3)/2)",
+    "larger_K": "max(0,q^2-2q)",
+    "ramified_primes_retained": true,
+    "tau_zero": "delta_1"
+  },
+  "weighted_tail": {
+    "q_min": 1,
+    "q_max": 9,
+    "strict_lower": "D^20 < n",
+    "upper": "n <= Y <= P^4",
+    "preferred_bound": "O_q(L^(4q-2015) + D^(-1/40)L^(4q-2) + D^(-1/4)L^(4q))",
+    "eventual_bound": "O_q(L^(4q-2015))",
+    "linear_cutoff": "D^(21/20)",
+    "square_cutoff": "D^(1/2)",
+    "convolution_cutoff": "D^19",
+    "uniform_absorption_sufficient": "log D >= 2000000",
+    "PV_required": false
+  },
+  "completion": {
+    "HB_levels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "HB_coefficients": [
+      4,
+      -6,
+      4,
+      -1
+    ],
+    "rows": [
+      {
+        "j": 1,
+        "q": 3,
+        "sharp_K": 0,
+        "larger_K": 3,
+        "tail": -2003,
+        "energy": -1949,
+        "labels": 99,
+        "paired_log": "-1273/2"
+      },
+      {
+        "j": 2,
+        "q": 5,
+        "sharp_K": 5,
+        "larger_K": 15,
+        "tail": -1995,
+        "energy": -1815,
+        "labels": 117,
+        "paired_log": "-1103/2"
+      },
+      {
+        "j": 3,
+        "q": 7,
+        "sharp_K": 14,
+        "larger_K": 35,
+        "tail": -1987,
+        "energy": -1609,
+        "labels": 135,
+        "paired_log": "-861/2"
+      },
+      {
+        "j": 4,
+        "q": 9,
+        "sharp_K": 27,
+        "larger_K": 63,
+        "tail": -1979,
+        "energy": -1331,
+        "labels": 153,
+        "paired_log": "-547/2"
+      }
+    ],
+    "strong_pair_condition": "Q_j >= P^(1003/1000)",
+    "whole_support": "C_prime,Y_prime <= P^(3003/1000)/Q_j",
+    "whole_length_factor": "max(1,P^(1003/1000)/Q_j)",
+    "family": "actual Psi1; Cauchy before enlargement of nonnegative moments",
+    "normalization": "a_norm > 1/2 and Mcal >= P^2/(4L^77)"
+  },
+  "global_signed_half_threshold_proved": false,
+  "exponent_2024_theorem_proved": false,
+  "open": [
+    "positive-width weak-pair sectors",
+    "global centered variance with all required cross terms",
+    "full signed-family half-norm gain",
+    "exponent-2024 theorem"
+  ],
+  "verification": {
+    "public_input_pins": 11,
+    "author_mathematical_assertions": 6072,
+    "independent_assertions": 307346,
+    "scope_assertions": 10661,
+    "total_finite_assertions": 324079,
+    "compiler_invoked": false,
+    "scope": "Exact finite checks supplement the universal source proofs; they do not prove asymptotics."
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "scope": "actual arithmetic tail through q=9; full project and analytic signed claims separate",
+  "files": [
+    {
+      "path": "ZhangLS/Spec/SquareNuTailLinear.lean",
+      "bytes": 9966,
+      "sha256": "b05262e16916afc906bca4dc3194b1ac45c1c9a91642d4dd40bf3d995e9f01f4"
+    },
+    {
+      "path": "ZhangLS/Spec/SquareNuTailMajorantDefs.lean",
+      "bytes": 4583,
+      "sha256": "0c00869f8c4abc7c51995a2065eb796614f53a0ab3110af056f5a67fa5984641"
+    },
+    {
+      "path": "ZhangLS/Spec/SquareNuTailMajorantLift.lean",
+      "bytes": 4741,
+      "sha256": "57697cbbe1e10cad156cf817eecaeafe3479a89e0fc6d0091c6ec98c42742a89"
+    },
+    {
+      "path": "ZhangLS/Spec/SquareNuTailMajorantLocal.lean",
+      "bytes": 5117,
+      "sha256": "1c28bd0af458ee7a4b535bc3fe8d361e3a29a02cce18926a350d23efc4317cbf"
+    },
+    {
+      "path": "ZhangLS/Spec/SquareNuTailMajorant.lean",
+      "bytes": 4867,
+      "sha256": "42816f4b9d7ff19ae41dc44003260c007286d8da9a0a9b917c4eb3a29a1a229e"
+    },
+    {
+      "path": "ZhangLS/Spec/SquareNuTailConvolution.lean",
+      "bytes": 10453,
+      "sha256": "a6af6d5f7ef04c0afdd28a16b6a598278a3b9b2b424042623d3e2c36eb7ef59a"
+    },
+    {
+      "path": "ZhangLS/Spec/SquareNuTailConvolutionSquare.lean",
+      "bytes": 6214,
+      "sha256": "c6ce14a929560c13c3518d3de89207b1dd203d83cf6ef806c36a1c3ff0ac8257"
+    },
+    {
+      "path": "ZhangLS/Spec/SquareNuTailConvolutionActual.lean",
+      "bytes": 7028,
+      "sha256": "6fbbb85c3d84f64cf3e3befd63664af52c79dde7dd0dabad76c31bbb5d873a92"
+    },
+    {
+      "path": "ZhangLS/Spec/SquareNuTailConvolutionCapstone.lean",
+      "bytes": 4233,
+      "sha256": "112a9ea073f9fbf25ccafb40e7322970c76483c2abc9d09c98f2ca352af85350"
+    },
+    {
+      "path": "audit/CloudSquareNuTailCentralAudit.lean",
+      "bytes": 40285,
+      "sha256": "76965f7bfb42be19462375bde764c573beb5c364f91e990b169ca2c7bab617b8"
+    },
+    {
+      "path": "audit/CLOUD_SQUARE_NU_TAIL_STATUS.md",
+      "bytes": 1746,
+      "sha256": "2418ac1d99e633a13c4551e3c56d32f82d90b9c03ebba6c923598872b2af7be3"
+    },
+    {
+      "path": "audit/square_nu_tail/IMPORTED_MODULES_1.txt",
+      "bytes": 93771,
+      "sha256": "6d5cf8a7251e6fae1ec5dd37a7ee66cac88a2344dbd0f33cb9ef4e52c036bf59"
+    },
+    {
+      "path": "audit/square_nu_tail/IMPORTED_MODULES_2.txt",
+      "bytes": 106688,
+      "sha256": "8c4a54d7d639309b98b5175607a9c65f4a887b148e1dc20e4beefe5e243b5615"
+    },
+    {
+      "path": "audit/square_nu_tail/INDEPENDENT_REVIEW.md",
+      "bytes": 14072,
+      "sha256": "dd7fb0f3f88593f61b27aca7a7bc7fff3fcaa581667d4e712ffc28d31ea6f054"
+    },
+    {
+      "path": "audit/square_nu_tail/OWNED_DECLARATIONS.json",
+      "bytes": 41152,
+      "sha256": "24c798617c8f7e8fc6a167b0f89b2833e0a80d6b6d460d5e96224bbf8de6abdd"
+    },
+    {
+      "path": "audit/square_nu_tail/PROJECT_SOURCE_PINS.json",
+      "bytes": 72483,
+      "sha256": "7337e2303826c833f3d487cde31222e099e07bd8af4ac3428b872545a42d42ca"
+    },
+    {
+      "path": "audit/square_nu_tail/PROVENANCE.json",
+      "bytes": 3174,
+      "sha256": "1c2554c816b68f02ed93485ddb89cef8813888bd88e218ed811a4b691ff91c83"
+    },
+    {
+      "path": "audit/square_nu_tail/PUBLICATION_LAYOUT_CHECKS.json",
+      "bytes": 725,
+      "sha256": "43d46cbac782f7cfa8f374e2e3b6a46bd8fc443f192dd8eed776d8ca3088166f"
+    },
+    {
+      "path": "audit/square_nu_tail/REPRODUCE.md",
+      "bytes": 1089,
+      "sha256": "c7912a9d553cabf0c1cfc5415a3514c2398c2d79a188fa8bd355d40dbaed1290"
+    },
+    {
+      "path": "audit/square_nu_tail/VERIFICATION.json",
+      "bytes": 2200,
+      "sha256": "e97e0e5cdb7f95019a50908a4c6ac2570a725cb8079545cb3a710dc7fca0c3fb"
+    },
+    {
+      "path": "audit/square_nu_tail/check_audit.py",
+      "bytes": 1027,
+      "sha256": "9d3687c3261f4c19863a9b3d91f6a01bb1fc42b42e275b4a1e06b0058cd3e8e3"
+    },
+    {
+      "path": "audit/square_nu_tail/verify_package.py",
+      "bytes": 750,
+      "sha256": "e39e236b40229211c4c24a86c8045e06feb271c2b7341d9359adafc1e5bfbf3f"
+    }
+  ]
+}

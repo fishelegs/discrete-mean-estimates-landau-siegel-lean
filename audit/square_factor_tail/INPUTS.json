@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "repository_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean",
+  "source_commit": "cbcfbcbc7ceafaafcf3e711b7216d2f059da192d",
+  "repository_inputs": [
+    {
+      "path": "audit/multilinear_completion/PROOF.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/cbcfbcbc7ceafaafcf3e711b7216d2f059da192d/audit/multilinear_completion/PROOF.md",
+      "sha256": "d0c181c1e5dbe47ca16d32bc0aef98814ed302aa17c0c056473ea0b34ce7524d",
+      "bytes": 32887
+    },
+    {
+      "path": "audit/multilinear_completion/REVIEW.md",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/cbcfbcbc7ceafaafcf3e711b7216d2f059da192d/audit/multilinear_completion/REVIEW.md",
+      "sha256": "3c31ef866d4a6609b277bd9c8d7c86551e9925ccab4e8f68dfeb4cf54fc65248",
+      "bytes": 29256
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31HyperbolaInputs.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/cbcfbcbc7ceafaafcf3e711b7216d2f059da192d/ZhangLS/Spec/Lemma31HyperbolaInputs.lean",
+      "sha256": "97c34d5bb8a069d7b52f3bb53f62e612f63098f2aa74cac9879b1da4913f8a72",
+      "bytes": 2713
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31HyperbolaError.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/cbcfbcbc7ceafaafcf3e711b7216d2f059da192d/ZhangLS/Spec/Lemma31HyperbolaError.lean",
+      "sha256": "340f08b72cf2e2dad08c2203a304f3683cb232aaacad1e1c5b9c4c94f9ee2eac",
+      "bytes": 2729
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31CumulativeBound.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/cbcfbcbc7ceafaafcf3e711b7216d2f059da192d/ZhangLS/Spec/Lemma31CumulativeBound.lean",
+      "sha256": "21c8b0b3aaac0a53ab42dc868015727c9628784f80b3bc2f448a19b45e37722c",
+      "bytes": 3224
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31NuIntegralBound.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/cbcfbcbc7ceafaafcf3e711b7216d2f059da192d/ZhangLS/Spec/Lemma31NuIntegralBound.lean",
+      "sha256": "3c4ff8e123a29c34b937e4819c9f70872a60b3643998decc88b31d14098eecb7",
+      "bytes": 2504
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31LinearTail.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/cbcfbcbc7ceafaafcf3e711b7216d2f059da192d/ZhangLS/Spec/Lemma31LinearTail.lean",
+      "sha256": "82956684414d2c5aee2035b54d91739e93faddae467d6f660c5bf0766501b835",
+      "bytes": 3531
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma31TotalWeight.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/cbcfbcbc7ceafaafcf3e711b7216d2f059da192d/ZhangLS/Spec/Lemma31TotalWeight.lean",
+      "sha256": "3678924c2b115b1beff5973ee63608178a89aade8177dedacd77c2b33136fba0",
+      "bytes": 2971
+    },
+    {
+      "path": "ZhangLS/Spec/Proposition71DivisorWeights.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/cbcfbcbc7ceafaafcf3e711b7216d2f059da192d/ZhangLS/Spec/Proposition71DivisorWeights.lean",
+      "sha256": "585ced3d9f25331f68ea3fdf3f16d39f060c83a6cdbc5282506c0b9fe495e33b",
+      "bytes": 4455
+    },
+    {
+      "path": "ZhangLS/Spec/DivisorSmallPowerBudget.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/cbcfbcbc7ceafaafcf3e711b7216d2f059da192d/ZhangLS/Spec/DivisorSmallPowerBudget.lean",
+      "sha256": "06631f7d7b5c53f0a14622452aa9049415bb8b00fdd71698a63fde0abf9eeb14",
+      "bytes": 4354
+    },
+    {
+      "path": "ZhangLS/Spec/Lemma34TauProduct.lean",
+      "source_url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/cbcfbcbc7ceafaafcf3e711b7216d2f059da192d/ZhangLS/Spec/Lemma34TauProduct.lean",
+      "sha256": "0846ec1df237276de3b7112a1c86801b01c86aec6915fcc89a8298c1e26f6147",
+      "bytes": 8005
+    }
+  ],
+  "scope": "Public source byte pins; current HEAD may differ if every listed file is byte-identical. No historical archive is required."
+}

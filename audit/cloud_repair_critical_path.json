@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-04T00:51:43.837996+00:00",
+  "updated_utc": "2026-10-04T01:47:15.113359+00:00",
   "base_commit": "d2d15aa83a6717fe491afa6d3319d811bc0853f9",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
@@ -87,8 +87,8 @@
       "id": "R4",
       "name": "主算术矩阵与目标残差的符号",
       "status": "open",
-      "verification": "精确joint表示、principal支付及选定HB j=2两完成组件已独立source复核；完整signed半范数界未证",
-      "result": "通过真实有限M/D删除误差及原P7 complex桥，Re J_right∞=Im R_pr=m_H/2+o(1)，且R_np=o(1)。这不是从实部等式推复数，也未用AFE赋予常数。 high-rho中b_chi(v)≤P^.01的精确部分已独立来源界为O(a^-1P^-1/200)，二次字符的principal-image项保留。 更强squarefree-kernel s(v)≤P^.15部分已独立source证明为O(a^-1P^-.01)。 原chi profile单完成后C≤P^1.002、Y≤P^3.002，精确Kl2 ratio核保留负principal及Psi2；principal为O(a^-1P^-.49)。 有限J=4 Möbius展开后，j=2的两smooth完成独立source审查通过：EC′≤O(L^324)、ED′≤O(L^-1551/2)，所选组件界为O(a^-1L^-127/4 max(1,P^1.003/(BR)))+O(a^-1P^-10)。BR≥P^5/6时组件损耗降为P^.17；BR≥P^1.01时该整个组件为o(1)。 有限Möbius/HB恒等式已独立中央Lean核验：任意正J、literal cutoff、weak endpoint和(4,-6,4,-1)，19公开/23完整owner标准公理。它不含解析完成或signed界。",
+      "verification": "有限HB和实际ν²τq尾已scoped中央Lean核验；完整解析完成与signed半阈值仍未证",
+      "result": "通过真实有限M/D删除误差及原P7 complex桥，Re J_right∞=Im R_pr=m_H/2+o(1)，且R_np=o(1)。这不是从实部等式推复数，也未用AFE赋予常数。 high-rho中b_chi(v)≤P^.01的精确部分已独立来源界为O(a^-1P^-1/200)，二次字符的principal-image项保留。 更强squarefree-kernel s(v)≤P^.15部分已独立source证明为O(a^-1P^-.01)。 原chi profile单完成后C≤P^1.002、Y≤P^3.002，精确Kl2 ratio核保留负principal及Psi2；principal为O(a^-1P^-.49)。 有限J=4 Möbius展开后，j=2的两smooth完成独立source审查通过：EC′≤O(L^324)、ED′≤O(L^-1551/2)，所选组件界为O(a^-1L^-127/4 max(1,P^1.003/(BR)))+O(a^-1P^-10)。BR≥P^5/6时组件损耗降为P^.17；BR≥P^1.01时该整个组件为o(1)。 有限Möbius/HB恒等式已独立中央Lean核验：任意正J、literal cutoff、weak endpoint和(4,-6,4,-1)，19公开/23完整owner标准公理。它不含解析完成或signed界。 实际平方因子加权ν尾已中央Lean核验：原(A)、1≤q≤9、严格D20<n≤Z≤P4，Cq·L^(4q−2015)，统一阈值无尾界前提。采用K=q²−2q，仅改变固定常数。",
       "gap": "仍须Re(T_Kl−T_bad)≤(1/2−epsilon)m_H+o(1)。现有整族界为a^-1L^(-353/4)P^.501，不能视为o(1)。更强的真实joint估计P²L^A√(E_C E_D)，A<353/4，是充分但未证的替代目标。 新HB方案仍缺j=1,3,4与j=2补集，以及完整binomial重组的signed半阈值；该局部o(1)不证明全余项小。",
       "dependency_mode": "route_specific; original_ratio uses R2; independent_weighted_Z2 uses its own valid contour/sampling attachment and R5.single_norm",
       "dependencies": [
@@ -114,11 +114,13 @@
         "audit/prime_pairing_budget/STATUS.md",
         "audit/joint_signed_operator/STATUS.md",
         "audit/multilinear_completion/STATUS.md",
-        "audit/finite_mobius/STATUS.md"
+        "audit/finite_mobius/STATUS.md",
+        "audit/CLOUD_SQUARE_NU_TAIL_STATUS.md",
+        "audit/square_factor_tail/STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "有限HB桥scoped中央PASS；优先并行Lean化新平方因子加权ν尾（实际线性输入/prime majorant/正卷积与平方尾），另继续真实弱pair整体协方差研究。全库仍恢复复验。",
-      "checked_utc": "2026-10-04T00:51:43.837996+00:00",
+      "execution_note": "ν尾完整算术桥验收并集成；弱pair完整算术报告待进一步审查，新零点间距/相位机制继续来源研究。",
+      "checked_utc": "2026-10-04T01:47:15.113359+00:00",
       "proof_status": "open",
       "branch_status": "suspended_recalibration_for_fixed_smooth_narrow_small_gain_only",
       "alternative_routes": [
@@ -173,17 +175,20 @@
         },
         {
           "id": "square_factor_weighted_tail",
-          "proof_status": "source_reviewed_lean_in_progress",
-          "execution_status": "active",
+          "proof_status": "lean_proved_scoped_central",
+          "execution_status": "done",
           "target": "sum_(D^20<e<=P^4) nu(e)^2 tau_q(e)/e = O_q(L^(4q-2015)), q<=9",
-          "execution_note": "actual linear input privately compiled; square-majorant and convolution-tail assembly actively formalizing; central capstone pending"
+          "execution_note": "9new+7support fresh builds;155proof+27test owners standard axioms; analytic applications separate",
+          "evidence": [
+            "audit/CLOUD_SQUARE_NU_TAIL_STATUS.md"
+          ]
         },
         {
           "id": "weak_pair_signed_covariance",
           "proof_status": "open",
-          "execution_status": "active_source_research",
+          "execution_status": "source_review_pending",
           "target": "original actual recombined signed remainder below strict half-norm threshold",
-          "execution_note": "Strong-pair component control does not close this target."
+          "execution_note": "Full weak-pair report prepared; independent arithmetic upper bound and strict sign remain open."
         }
       ]
     },
@@ -209,8 +214,8 @@
         "audit/CLOUD_GRAM_SMOOTHING_STATUS.md"
       ],
       "execution_status": "active_revalidation",
-      "execution_note": "固定Lean4.30.0与官方mathlib缓存已恢复，实际最小项目探针PASS；正串行重建依赖并重新验证恢复源。旧中断不算PASS，尚无新环境全项目通过。",
-      "checked_utc": "2026-10-03T23:58:41.346187+00:00",
+      "execution_note": "885依赖复验完成，云端六积分增量待验收；coprime/Abel外和在独立环境已有局部证明交付待中央复核，固定剖面与对角主项分工继续。",
+      "checked_utc": "2026-10-04T01:47:15.113359+00:00",
       "proof_status": "partial_lean_proved",
       "subgoals": [
         {
@@ -261,8 +266,8 @@
       "name": "归一化后的全部误差传递",
       "status": "open",
       "verification": "当前signed分叉的已付误差是o(1)；高rho有利主项和严格余量仍缺",
-      "result": "右侧branch误差O(a^-1L^-11/2)主导已发布组合；有限M/D删除、有限边界和低rho误差均更小或单列power-small。实际a>1/2与固定m_H下界不能省略。 新小b_chi项的P^-1/200误差比已付L^-11/2更小；仍按同一aM/m_H核算。 新squarefree-kernel O(a^-1P^-1/100)仍比已付L^-11/2小，未改变总误差主导项。 新principal P^-.49已付；P^.501是未解主算术界的损失，不是已经消失的误差。 有限HB j=2选中BR≥P^1.01部分已在来源层支付；原总误差精度不提升。",
-      "gap": "先取得高rho相对m_H的固定严格余量，随后用同一归一化让全部o(1)小于该余量；不能把更小单项误差当总精度，也不能把半范数等式当严格gain。若只得趋零gain，必须另证更强相对精度与非退化。 其余HB分量与补集仍需真实整体signed控制。",
+      "result": "右侧branch误差O(a^-1L^-11/2)主导已发布组合；有限M/D删除、有限边界和低rho误差均更小或单列power-small。实际a>1/2与固定m_H下界不能省略。 新小b_chi项的P^-1/200误差比已付L^-11/2更小；仍按同一aM/m_H核算。 新squarefree-kernel O(a^-1P^-1/100)仍比已付L^-11/2小，未改变总误差主导项。 新principal P^-.49已付；P^.501是未解主算术界的损失，不是已经消失的误差。 有限HB j=2选中BR≥P^1.01部分已在来源层支付；原总误差精度不提升。 新加权ν尾已Lean化；来源层据此支付全部强pair区，原总误差精度不因此提升。",
+      "gap": "正宽度弱pair的真实归一化signed贡献仍需独立算术上界；原总表示/积分误差与路线对应范数仍必须保留，不能把强pair覆盖当整个余项。",
       "dependency_mode": "route_specific AND",
       "dependencies": [
         "R2",
@@ -277,11 +282,12 @@
         "audit/half_norm_constant/STATUS.md",
         "audit/squarefree_core/STATUS.md",
         "audit/joint_signed_operator/STATUS.md",
-        "audit/multilinear_completion/STATUS.md"
+        "audit/multilinear_completion/STATUS.md",
+        "audit/CLOUD_SQUARE_NU_TAIL_STATUS.md"
       ],
       "execution_status": "blocked_by_signed_gap_and_route_specific_norm",
       "execution_note": "原比值路线仍等完整R4/R5；独立Z2路线只需限定single_norm及其真实轮廓/正采样附件，再把全部o(1)压到固定signed余量以下。",
-      "checked_utc": "2026-10-04T00:07:08.960722+00:00",
+      "checked_utc": "2026-10-04T01:47:15.113359+00:00",
       "proof_status": "open",
       "route_dependencies": {
         "original_ratio": {
@@ -670,7 +676,8 @@
       "exit_code": 0,
       "jobs": 2623
     },
-    "baseline_revalidation": "in progress; 885 targeted dependency modules, sequential",
-    "fresh_full_project_pass": false
+    "baseline_revalidation": "885/885 targeted dependency modules passed",
+    "fresh_full_project_pass": false,
+    "baseline_finished_utc": "2026-10-04T01:20:15.754862+00:00"
   }
 }

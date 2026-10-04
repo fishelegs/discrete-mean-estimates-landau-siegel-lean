@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-10-04T00:51:43.837996+00:00",
+  "generated_utc": "2026-10-04T01:47:15.113359+00:00",
   "baseline_commit": "58a9273c38961411a5f06ab2db4bdf565ef30794",
   "paper": {
     "arxiv": "2211.02515v1",
@@ -4552,7 +4552,7 @@
     "separate_from_numbered_51": true,
     "node_count": 8,
     "strict_gain_proved": false,
-    "updated_utc": "2026-10-04T00:51:43.837996+00:00",
+    "updated_utc": "2026-10-04T01:47:15.113359+00:00",
     "branch_status_updated_utc": "2026-10-03T14:58:30.522627+00:00",
     "fixed_smooth_narrow_small_gain_branch": "suspended_recalibration",
     "route_specific_dependencies": "See cloud_repair_critical_path.json routes and R5.single_norm; original numbered ledger unchanged."
@@ -4577,6 +4577,21 @@
     "public_count": 19,
     "all_owned_count": 23,
     "verification_scope": "fresh scoped module/dependencies/axioms/regressions; full repo recovery still running",
+    "strict_gain_proved": false,
+    "numbered_count_change": 0
+  },
+  "square_factor_tail_bridge": {
+    "report": "audit/CLOUD_SQUARE_NU_TAIL_STATUS.md",
+    "lean_proof": true,
+    "hypothesis": "original NormalizedAssumptionA",
+    "orders": "1<=q<=9",
+    "tail": "strict D20<n<=Z<=P4",
+    "bound": "Cq L^(4q-2015)",
+    "new_modules": 9,
+    "proof_owned": 155,
+    "regression_fixture_owned": 27,
+    "full_project_fresh_pass": false,
+    "analytic_application_source_report": "audit/square_factor_tail/STATUS.md",
     "strict_gain_proved": false,
     "numbered_count_change": 0
   }

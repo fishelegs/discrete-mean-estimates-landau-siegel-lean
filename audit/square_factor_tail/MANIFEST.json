@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "status": "SOURCE_ONLY",
+  "date": "2026-10-04",
+  "files": [
+    {
+      "path": "AUTHOR_CHECKS.json",
+      "bytes": 681,
+      "sha256": "dd73409d10fbd0498b51c64cad1aee9c6e4606c98faf24b8bdd95f8aa6bfc7f2"
+    },
+    {
+      "path": "CHECKS.json",
+      "bytes": 1379,
+      "sha256": "a2f053c0281b29ffc1571638f7b190ccf35123bce57df7f3c75cd3224d62a76a"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 4252,
+      "sha256": "eb6bb6a428076a1cde2c15c3c4f4f13d929d3912dc9f6fc2c1227053c7d7ecab"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 23547,
+      "sha256": "549d239125cd2a51552a2e2ffb5b84caa89396fe1e2790bc5768e2bff1e01998"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "bytes": 7692,
+      "sha256": "5d6e13ee7784155e917226fa5a4505c5b80cf5990f39d911265c7fa13d5fc7fe"
+    },
+    {
+      "path": "REPRODUCE.md",
+      "bytes": 2685,
+      "sha256": "ec535134b41a91cbc2e2f9418fcb9bf2b1d98257a48694d8978499cd58bc5b94"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 16342,
+      "sha256": "94755747b01eb9024f80f49bd8e4cea0a0eb2477852d251a9817b3ddfe341fdf"
+    },
+    {
+      "path": "SCOPE.json",
+      "bytes": 3007,
+      "sha256": "e6aea462ba31c7a320f993fd60f4c996ca542bfc17680bae218d1bcac69ba0ba"
+    },
+    {
+      "path": "SCOPE_CHECKS.json",
+      "bytes": 1883,
+      "sha256": "8b27fbd8aeb85a46703412348c2882e139026841a101a54ce9ebae30ad18e425"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 3291,
+      "sha256": "20399d440afe893f1071489d6f5f66e05564fc575f6a46894763c4674b42430c"
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 1911,
+      "sha256": "cd44febca09832e97379e2a7d1ca6425b17efcf81de531daa03969a639de3971"
+    },
+    {
+      "path": "check_author.py",
+      "bytes": 2533,
+      "sha256": "3d1472e042d1018daab4d067ac1a256573e4bb34f796103025410737ce567c29"
+    },
+    {
+      "path": "check_independent.py",
+      "bytes": 7231,
+      "sha256": "360b3a9cd6cb28e71c48aeea4621abf3d5b7bc6d07368bef3812b4dbe5613c6a"
+    },
+    {
+      "path": "check_scope.py",
+      "bytes": 3366,
+      "sha256": "ad3685ef83833ea45108605e16431d89a91eb0a4bbf247487653a922097431e3"
+    },
+    {
+      "path": "verify_bundle.py",
+      "bytes": 8988,
+      "sha256": "7ebf717a533dd412e51ac8a9ab53148832f89f9b1d74a486230dc80fe372cbaf"
+    }
+  ]
+}

@@ -1,0 +1,1599 @@
+{
+  "proof_owned": 155,
+  "source_explicit_public": 100,
+  "generated_proof_owned": 55,
+  "regression_fixture_owned": 27,
+  "total_owned": 182,
+  "owner_counts": {
+    "ZhangLS.Spec.SquareNuTailConvolutionActual": 24,
+    "ZhangLS.Spec.SquareNuTailConvolutionCapstone": 11,
+    "ZhangLS.Spec.SquareNuTailLinear": 18,
+    "ZhangLS.Spec.SquareNuTailConvolution": 19,
+    "ZhangLS.Spec.SquareNuTailConvolutionSquare": 14,
+    "ZhangLS.Spec.SquareNuTailMajorantDefs": 27,
+    "ZhangLS.Spec.SquareNuTailMajorantLocal": 18,
+    "ZhangLS.Spec.SquareNuTailMajorant": 10,
+    "ZhangLS.Spec.SquareNuTailMajorantLift": 14,
+    "audit.CloudSquareNuTailCentralAudit": 27
+  },
+  "declarations": [
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_tail_eq_floor._simp_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "declaration": "ZhangLS.Spec.squareNu_weighted_tail_uniform",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNuTailConstant._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_sqrt_ratio",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_convolution_sum_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTau_harmonic_le_moment",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareTau_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareTau_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareTau_multiplicative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.square_tau_mono",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_mass_pow_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNuHarmonicTail.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareTau_sq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_tail_eq_floor",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorant",
+      "declaration": "ZhangLS.Spec.squareNu_majorant_prime_ramified",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorant",
+      "declaration": "ZhangLS.Spec.squareNu_majorant_prime_inert._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift_multiplicative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_convolution_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_tail_pow_succ_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_convolution_uniform._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.square_function_pow_multiplicative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.squareTau_eq_pow",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_convolution_explicit._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_sqrt_ratio._proof_1_3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_main_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_main_scale",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareTau",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.squareLift_pow",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_tail_eq_floor._simp_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_tail_antitone",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorant",
+      "declaration": "ZhangLS.Spec.squareNu_majorant_prime",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_convolution_uniform._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.squareTau_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "declaration": "ZhangLS.Spec.squareNu_strict_nat_filter",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_tail_pow_succ_le._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareDivisor_pow",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_mass_le._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareNu_multiplicative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "declaration": "ZhangLS.Spec.squareNu_strict_nat_filter._simp_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorant",
+      "declaration": "ZhangLS.Spec.squareNu_majorant_prime_ramified._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_actual_le._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareNu_pow_prime_of_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTau_strict_tail_le_moment",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_D_le_floor",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift_multiplicative._simp_1_2",
+      "axioms": []
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift_multiplicative._simp_1_3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareNu_prime_of_neg_one._simp_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.squareTau_one_prime",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_log_factor",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_square_scale",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTauMomentConstant._proof_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_tail_mul_le._simp_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_convolution_explicit._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.squareTau_one_prime._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "declaration": "ZhangLS.Spec.squareNu_real_endpoint_mem",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNuHarmonicTail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareNu_pow_prime_of_neg_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareTau_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_tail_eq_floor._simp_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_mass_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_actual_le._proof_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.squareLift_mul._simp_1_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorant",
+      "declaration": "ZhangLS.Spec.squareNu_majorant_prime_split",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareNu._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareNu_prime_of_neg_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_convolution_uniform",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNuTailConstant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareNu_pow_prime_of_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_main_scale._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareDivisor.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTauMoment_summable_of_square_support",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareDivisor_multiplicative",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_sqrt_ratio._proof_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.square_prime_mul_apply._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.square_tau_mono._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorant",
+      "declaration": "ZhangLS.Spec.squareNu_majorant_prime_inert._proof_1_2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorant",
+      "declaration": "ZhangLS.Spec.squareNu_majorant_prime_inert",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_convolution_explicit",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_square_assembly_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.square_prime_mul_congr",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "declaration": "ZhangLS.Spec.squareNu_weighted_tail_le_convolution",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.square_prime_isSquare_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorant",
+      "declaration": "ZhangLS.Spec.squareNu_majorant_all",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.squareLift_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNuHarmonicMass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNuHarmonicMass.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareNu.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTauMoment_rpow_square",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_uniform_inputs",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.square_prime_isSquare_iff._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "declaration": "ZhangLS.Spec.squareNu_weighted_real_tail_uniform",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTauMomentConstant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.square_isSquare_mul_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareNu_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareNu_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.square_prime_pow_congr",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorant",
+      "declaration": "ZhangLS.Spec.squareNu_majorant_prime_split._proof_1_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTauMoment_summable_of_quarter_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_mass_mul_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_tail_pow_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "declaration": "ZhangLS.Spec.squareNu_strict_nat_filter._simp_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareNu",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_square_exponential_absorption_threshold",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "declaration": "ZhangLS.Spec.squareNuTailConstant_pos",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNuTailConstant_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift_sq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "declaration": "ZhangLS.Spec.squareNu_strict_nat_filter._simp_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_convolution_uniform._proof_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareNu_prime_of_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift_one._simp_1_2",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_sqrt_ratio._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_tail_mul_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTau_exists_harmonic_tail_constant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareDivisor_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_actual_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_exponential_absorption_threshold",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_threshold_power_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_tail_eq_floor._proof_1_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_tail_pow_le._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTauMoment_tail_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_exponential_absorption_threshold._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_tail_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTau_moment_summable._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareTau_zero_order",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorant",
+      "declaration": "ZhangLS.Spec.squareNu_majorant",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTauMoment_harmonic_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_actual_convolution_uniform._proof_1_4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_mass_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.square_prime_mul_apply",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "declaration": "ZhangLS.Spec.squareNu_strict_nat_filter._proof_1_4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTauMomentConstant_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareNu_squareTau_prime_of_neg_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "declaration": "ZhangLS.Spec.squareLift_ne_zero_isSquare",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareDivisor",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "declaration": "ZhangLS.Spec.squareLift_one._simp_1_1",
+      "axioms": []
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.square_function_pow_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTauMomentConstant._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_strict_floor",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_square_exponential_absorption_threshold._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNu_square_exponential_absorption_threshold._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "declaration": "ZhangLS.Spec.squareNu_weighted_tail_explicit",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "declaration": "ZhangLS.Spec.squareNuTailConstant._proof_1",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareNu_pow_le_mul_squareTau",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_mass_le._proof_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "declaration": "ZhangLS.Spec.squareTau_moment_summable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailLinear",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_exponential_absorption_threshold._proof_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailConvolution",
+      "declaration": "ZhangLS.Spec.squareNu_pow_nonneg",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "declaration": "ZhangLS.Spec.squareNu_prime_of_one",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_lower_endpoint_excluded",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_threshold_margin",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuRegressionAF._proof_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuRegressionAF",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_square_order_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_two_cross_terms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_fractional_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_fractional_endpoint_included",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_strict_tail_cross_terms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_square_factor_survives",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_filter_eq_Ioc._simp_1_3",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_integer_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_q10_threshold_failure",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_first_term",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_strict_endpoint",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_filter_eq_Ioc._simp_1_1",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_endpoint_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_filter_eq_Ioc._proof_1_4",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_q9_exponent",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuRegressionAF.eq_1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_fractional_endpoint_excluded",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_filter_eq_Ioc._simp_1_2",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_q1_exponent",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_filter_eq_Ioc",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_q7_exponent",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNuTailLinear_real_endpoint_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "owner": "audit.CloudSquareNuTailCentralAudit",
+      "declaration": "ZhangLS.Spec.squareNu_regression_actual_q9",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

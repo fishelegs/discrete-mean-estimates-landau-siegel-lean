@@ -1,10 +1,12 @@
 # 张益唐论文 Lean 形式化进度
 
+实际ν²τq尾桥（2026-10-04）：[完整中央Lean核验与独立审查](audit/CLOUD_SQUARE_NU_TAIL_STATUS.md)通过。原(A)、1≤q≤9及严格D²⁰<n≤Z≤P⁴下得到Cq·L^(4q−2015)，统一D₀先于q/χ/实端点，Cq>0且无尾界前提。9新模块+7支持模块fresh通过；100显式公开+55生成proof声明、27回归/fixture声明，全部182owner与全类型、公理闭包通过。原假设指数未加强，K=q²−2q只增固定常数。全部strong-pair区域的解析支付仍是来源层推论；weak-pair整体协方差、strictgain和主结论未证，40/51不变。全库fresh核验与此完整算术桥的scoped验收分开。
+
 有限Möbius/HB恒等式（2026-10-04）：[独立算术模块的中央Lean核验](audit/finite_mobius/STATUS.md)完成。任意正J、literal sharp cutoff及n≤U^J包含端点，J=4系数(4,-6,4,-1)均保留；19公开/23完整owner及复数/端点回归PASS，仅标准公理。该模块只依赖Mathlib，是有限分解的已证桥。全项目仍在环境恢复后的fresh复验中，不能把此项scoped PASS称为全库新PASS；ν²τq新尾桥、弱pair协方差及strictgain仍未完整Lean闭合，40/51不变。
 
 有限多线性修复进展（2026-10-04）：[完整HB来源证明及独审](audit/multilinear_completion/STATUS.md)保留真实Ψ1、原mask/shift和严格ν尾。j=2两smooth完成给O(a^-1L^-127/4 max(1,P^1.003/(BR)))+O(a^-1P^-10)：BR≥P^5/6时该组件的P损耗由.501降至.17，BR≥P^1.01时整个选中组件为o(1)。其余j=1,3,4、j=2补集和全局signed半阈值仍缺。这是独立来源验收，53354有限检查与22输入指纹通过，尚非Lean，40/51不变。
 
-本地恢复状态（2026-10-03 23:58 UTC）：执行环境在23:17左右被替换，旧中央编译结果中断且未确认。已从GitHub b5c2f7b恢复全部已发布源码，固定Lean4.30.0与8459项官方mathlib缓存恢复成功，实际项目最小探针ActualGramRamp通过。正在串行重建依赖并复验未发布增量；尚无新环境全项目PASS。六项R5源码及四项R2源码按旧hash逐字恢复，另三项R2源码为待重验重建稿。40/51与已发布数学范围不变。
+本地恢复状态（2026-10-03 23:58 UTC）：执行环境在23:17左右被替换，旧中央编译结果中断且未确认。已从GitHub b5c2f7b恢复全部已发布源码，固定Lean4.30.0与8459项官方mathlib缓存恢复成功，实际项目最小探针ActualGramRamp通过。885个指定依赖模块已逐个PASS，正在复验其余增量；尚无新环境全项目PASS。六项R5源码及四项R2源码按旧hash逐字恢复，另三项R2源码为待重验重建稿。40/51与已发布数学范围不变。
 
 实际signed缺口的新精确表示（2026-10-03）：[原chi profile单完成与独审](audit/joint_signed_operator/STATUS.md)把余项写成Kl₂ ratio核减实际Psi₂，principal负号项已付O(a^-1P^-.49)，保留全部原mask、删除与相位。整长C≤P^1.002、Y≤P^3.002；现有界仍有 **P^.501** 损耗，尚无严格半范数gain。另附[逐prime/双线性方法完整预算](audit/prime_pairing_budget/STATUS.md)，不把点态saving误当整项saving。这些是source-only已独审数学附件，编号仍37原+3修订=40/51。
 

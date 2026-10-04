@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "status": "SOURCE_ONLY",
+  "source_commit": "cbcfbcbc7ceafaafcf3e711b7216d2f059da192d",
+  "originals": [
+    {
+      "id": "author/SQUARE_FACTOR_TAIL_CANDIDATE.md",
+      "bytes": 17036,
+      "sha256": "f8fb761c54a90812614c48d563f20ea6a3e8eadd580766afd51a7a391cf4daa2",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": false,
+      "required_for_portable_verifier": false
+    },
+    {
+      "id": "author/check_square_factor_candidate.py",
+      "bytes": 3381,
+      "sha256": "693058f7ce804711a7cb3957ec5e6f743e4a35fb1363309c56222ba81d8eda09",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": false,
+      "required_for_portable_verifier": false
+    },
+    {
+      "id": "author/SQUARE_FACTOR_CHECKS.json",
+      "bytes": 1959,
+      "sha256": "45b663a7bcb357289f064673cd3fff2231658eaf94bd8a24c31cd1aef8571230",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": false,
+      "required_for_portable_verifier": false
+    },
+    {
+      "id": "author/SQUARE_FACTOR_MANIFEST.json",
+      "bytes": 573,
+      "sha256": "767d936546448f00d64408f74ab2340b4c6508355d769e8babf8d363185e047a",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": false,
+      "required_for_portable_verifier": false
+    },
+    {
+      "id": "author/REPORT.md",
+      "bytes": 19947,
+      "sha256": "39715eae43b679af7c8afc934055c7ba6f9dd4944608bf63c2a321d256785f01",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": false,
+      "required_for_portable_verifier": false
+    },
+    {
+      "id": "author/check_budgets.py",
+      "bytes": 3859,
+      "sha256": "65d394326023d752e5492cbe3814c72e54d98dc8e41be7d9f88d0267d8cf284b",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": false,
+      "required_for_portable_verifier": false
+    },
+    {
+      "id": "author/CHECKS.json",
+      "bytes": 2522,
+      "sha256": "460807107dee1c51d4790f9bfc5e974274a6c0ee0207f63e01ff2c8e5a0a3032",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": false,
+      "required_for_portable_verifier": false
+    },
+    {
+      "id": "author/MANIFEST.json",
+      "bytes": 484,
+      "sha256": "de56219b6590d0d71c45cb4bff4cdba316450348d3de8b72301b5eacb79b8704",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": false,
+      "required_for_portable_verifier": false
+    },
+    {
+      "id": "independent/REVIEW.md",
+      "bytes": 15827,
+      "sha256": "dddf1af9c1f4367fa69c4e5bf2b0881c30bfc15f7e13c0bddb627f7ffd045e79",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": false,
+      "required_for_portable_verifier": false
+    },
+    {
+      "id": "independent/check_independent.py",
+      "bytes": 7231,
+      "sha256": "360b3a9cd6cb28e71c48aeea4621abf3d5b7bc6d07368bef3812b4dbe5613c6a",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": true,
+      "required_for_portable_verifier": false
+    },
+    {
+      "id": "independent/CHECKS.json",
+      "bytes": 1379,
+      "sha256": "a2f053c0281b29ffc1571638f7b190ccf35123bce57df7f3c75cd3224d62a76a",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": true,
+      "required_for_portable_verifier": false
+    },
+    {
+      "id": "independent/MANIFEST.json",
+      "bytes": 3125,
+      "sha256": "a2f6ced060e3b51d05aff3d49010f2393d9a01326e5778e4f67acf38ed1a81f7",
+      "preserved_byte_exact_at_preparation": true,
+      "distributed": false,
+      "required_for_portable_verifier": false
+    }
+  ],
+  "public_editions": [
+    {
+      "path": "PROOF.md",
+      "source_ids": [
+        "author/SQUARE_FACTOR_TAIL_CANDIDATE.md",
+        "independent/REVIEW.md",
+        "author/REPORT.md"
+      ],
+      "relationship": "derived_public_mathematical_edition",
+      "public_file": {
+        "bytes": 23547,
+        "sha256": "549d239125cd2a51552a2e2ffb5b84caa89396fe1e2790bc5768e2bff1e01998"
+      },
+      "changes": [
+        "Updated source status from candidate to independently accepted, while retaining SOURCE ONLY and all global exclusions.",
+        "Preserved the full Fourier/PV alternative and inserted the independently accepted self-contained asymmetric-hyperbola proof as the preferred analytic route.",
+        "Expanded the universal matrix and degree-composition arguments, stated local sharpness at inert valuation two, and included the accepted larger-K variant with a universal injection proof.",
+        "Replaced transient location references with pinned public mathematical repository paths; added the complete weak-pair scale examples and exact Long exponents.",
+        "Updated reproducibility references and original-to-public provenance; no change to assumption exponent 2022, target exponent 2024, strict endpoints, q scope or accepted completion exponents."
+      ]
+    },
+    {
+      "path": "REVIEW.md",
+      "source_ids": [
+        "independent/REVIEW.md"
+      ],
+      "relationship": "derived_public_mathematical_edition",
+      "public_file": {
+        "bytes": 16342,
+        "sha256": "94755747b01eb9024f80f49bd8e4cea0a0eb2477852d251a9817b3ddfe341fdf"
+      },
+      "changes": [
+        "Retained the complete independent universal proof and ACCEPT source-mathematics verdict.",
+        "Replaced transient location and snapshot references with public repository paths and hash provenance.",
+        "Explicitly separated source acceptance, finite regressions and Lean certification; preserved all scope exclusions."
+      ]
+    },
+    {
+      "path": "check_author.py",
+      "source_ids": [
+        "author/check_square_factor_candidate.py"
+      ],
+      "relationship": "derived_portable_checker",
+      "public_file": {
+        "bytes": 2533,
+        "sha256": "3d1472e042d1018daab4d067ac1a256573e4bb34f796103025410737ce567c29"
+      },
+      "changes": [
+        "Retained all 6072 mathematical assertions and arithmetic code.",
+        "Removed the fixed repository location and original snapshot-dependent byte checks; source and package pins are now checked by verify_bundle.py.",
+        "Changed only the descriptive docstring and result receipt plumbing beyond those portability changes; the original total 6078 contained six archival integrity assertions."
+      ]
+    },
+    {
+      "path": "check_independent.py",
+      "source_ids": [
+        "independent/check_independent.py"
+      ],
+      "relationship": "byte_identical",
+      "public_file": {
+        "bytes": 7231,
+        "sha256": "360b3a9cd6cb28e71c48aeea4621abf3d5b7bc6d07368bef3812b4dbe5613c6a"
+      },
+      "changes": []
+    },
+    {
+      "path": "CHECKS.json",
+      "source_ids": [
+        "independent/CHECKS.json"
+      ],
+      "relationship": "byte_identical",
+      "public_file": {
+        "bytes": 1379,
+        "sha256": "a2f053c0281b29ffc1571638f7b190ccf35123bce57df7f3c75cd3224d62a76a"
+      },
+      "changes": []
+    }
+  ],
+  "original_integrity_at_preparation": {
+    "author_supplement_manifest_verified": true,
+    "independent_review_manifest_verified": true,
+    "prior_region_snapshot_manifest_verified": true,
+    "all_original_files_preserved_byte_exact": true
+  },
+  "portable_contract": "Original hashes are provenance declarations. Portable verification reads the public bundle and only the eleven repository input files in INPUTS.json; it does not require or re-read historical originals.",
+  "new_public_artifacts": [
+    "check_scope.py",
+    "SCOPE_CHECKS.json",
+    "AUTHOR_CHECKS.json",
+    "INPUTS.json",
+    "SCOPE.json",
+    "STATUS.md",
+    "SOURCES.md",
+    "REPRODUCE.md",
+    "verify_bundle.py",
+    "MANIFEST.json",
+    "MANIFEST.sha256"
+  ]
+}

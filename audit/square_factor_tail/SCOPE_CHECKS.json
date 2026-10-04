@@ -1,0 +1,86 @@
+{
+  "status": "PASS_FINITE_SCOPE_CHECKS_SOURCE_ONLY",
+  "assertions": 10661,
+  "counts": {
+    "integer_sharp_order": 64,
+    "sharp_order_sufficient_at_two": 64,
+    "larger_order_dominates": 64,
+    "sharp_inert_comparison": 5184,
+    "larger_inert_comparison": 5184,
+    "sharp_order_necessary_at_two": 61,
+    "strict_convolution_cutoff": 9,
+    "q_ten_cutoff_fails": 1,
+    "strict_threshold_margin": 1,
+    "small_square_exact_exponent": 1,
+    "large_square_rankin_exponent": 1,
+    "linear_error_exact_exponent": 1,
+    "all_e_budget": 4,
+    "strong_pair_negative_log": 4,
+    "weak_geometry_factor_count": 3,
+    "weak_geometry_total": 3,
+    "weak_geometry_mu_cutoff": 3,
+    "weak_geometry_pair": 3,
+    "weak_geometry_original_Long": 3,
+    "weak_geometry_positive_e": 3
+  },
+  "HB_rows": [
+    {
+      "j": 1,
+      "q": 3,
+      "sharp_K": 0,
+      "larger_K": 3,
+      "tail": -2003,
+      "energy": -1949,
+      "labels": 99,
+      "paired_log": "-1273/2"
+    },
+    {
+      "j": 2,
+      "q": 5,
+      "sharp_K": 5,
+      "larger_K": 15,
+      "tail": -1995,
+      "energy": -1815,
+      "labels": 117,
+      "paired_log": "-1103/2"
+    },
+    {
+      "j": 3,
+      "q": 7,
+      "sharp_K": 14,
+      "larger_K": 35,
+      "tail": -1987,
+      "energy": -1609,
+      "labels": 135,
+      "paired_log": "-861/2"
+    },
+    {
+      "j": 4,
+      "q": 9,
+      "sharp_K": 27,
+      "larger_K": 63,
+      "tail": -1979,
+      "energy": -1331,
+      "labels": 153,
+      "paired_log": "-547/2"
+    }
+  ],
+  "weak_pair_examples": [
+    {
+      "j": 2,
+      "pair": "5/6",
+      "original_Long": "7/3"
+    },
+    {
+      "j": 3,
+      "pair": "2/5",
+      "original_Long": "13/5"
+    },
+    {
+      "j": 4,
+      "pair": "3/10",
+      "original_Long": "27/10"
+    }
+  ],
+  "scope": "Exact finite regressions only. No compiler, asymptotic certification or signed gain."
+}

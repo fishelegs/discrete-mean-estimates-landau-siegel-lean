@@ -1765,6 +1765,15 @@ import ZhangLS.Spec.ShortUpsilonEnergy
 import ZhangLS.Spec.ShortUpsilonFamilyError
 import ZhangLS.Spec.ShortUpsilonPaperEnergy
 import ZhangLS.Spec.ShortUpsilonRegressions
+import ZhangLS.Spec.SquareNuTailConvolution
+import ZhangLS.Spec.SquareNuTailConvolutionActual
+import ZhangLS.Spec.SquareNuTailConvolutionCapstone
+import ZhangLS.Spec.SquareNuTailConvolutionSquare
+import ZhangLS.Spec.SquareNuTailLinear
+import ZhangLS.Spec.SquareNuTailMajorant
+import ZhangLS.Spec.SquareNuTailMajorantDefs
+import ZhangLS.Spec.SquareNuTailMajorantLift
+import ZhangLS.Spec.SquareNuTailMajorantLocal
 import ZhangLS.Spec.TauDirichletValues
 import ZhangLS.Spec.TauWeightedDeltaCoefficients
 import ZhangLS.Spec.TauWeightedDeltaGeometry

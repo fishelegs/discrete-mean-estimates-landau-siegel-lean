@@ -1,0 +1,36 @@
+[
+  {
+    "command": [
+      "python3",
+      "tools/generate_spec_all_imports.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output": "Spec/All.lean coverage OK: 1518 modules"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/generate_all_imports.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output": "All.lean coverage OK: 1783 modules"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/check_no_placeholders.py"
+    ],
+    "exit_code": 0,
+    "output": "placeholder check OK: 1976 Lean files, no code-level sorry/admit"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/check_lean_structure.py"
+    ],
+    "exit_code": 0,
+    "output": "Lean source structure: 1976 files; failures=0"
+  }
+]

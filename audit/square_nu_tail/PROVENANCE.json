@@ -1,0 +1,61 @@
+{
+  "original_independent_review_sha256": "9391ce89b879d521dd1f616ca02c811484024d112393fbecdeb3e9fecb9bc064",
+  "public_review_sha256": "dd7fb0f3f88593f61b27aca7a7bc7fff3fcaa581667d4e712ffc28d31ea6f054",
+  "transformation": "retain complete mathematical interface review and final accepted evidence; omit superseded administrative verification history",
+  "source_map": [
+    {
+      "module": "ZhangLS.Spec.SquareNuTailLinear",
+      "original_sha256": "b05262e16916afc906bca4dc3194b1ac45c1c9a91642d4dd40bf3d995e9f01f4",
+      "central_sha256": "b05262e16916afc906bca4dc3194b1ac45c1c9a91642d4dd40bf3d995e9f01f4",
+      "change": "own-module import qualification only"
+    },
+    {
+      "module": "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "original_sha256": "0c00869f8c4abc7c51995a2065eb796614f53a0ab3110af056f5a67fa5984641",
+      "central_sha256": "0c00869f8c4abc7c51995a2065eb796614f53a0ab3110af056f5a67fa5984641",
+      "change": "own-module import qualification only"
+    },
+    {
+      "module": "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "original_sha256": "d0668f9c3a571cde2fde10243e48f1d92e3f919d9436a68e8a893071bdfcc24f",
+      "central_sha256": "57697cbbe1e10cad156cf817eecaeafe3479a89e0fc6d0091c6ec98c42742a89",
+      "change": "own-module import qualification only"
+    },
+    {
+      "module": "ZhangLS.Spec.SquareNuTailMajorantLocal",
+      "original_sha256": "b9616e4f3bc78b88600cf5f425a0a35864caa4d440e37d1cdf786e808542f3e1",
+      "central_sha256": "1c28bd0af458ee7a4b535bc3fe8d361e3a29a02cce18926a350d23efc4317cbf",
+      "change": "own-module import qualification only"
+    },
+    {
+      "module": "ZhangLS.Spec.SquareNuTailMajorant",
+      "original_sha256": "352fd635555473d57ff1a581fcbcb9a7fa186baad01e4f07f53808dfcf47d1b2",
+      "central_sha256": "42816f4b9d7ff19ae41dc44003260c007286d8da9a0a9b917c4eb3a29a1a229e",
+      "change": "own-module import qualification only"
+    },
+    {
+      "module": "ZhangLS.Spec.SquareNuTailConvolution",
+      "original_sha256": "a6af6d5f7ef04c0afdd28a16b6a598278a3b9b2b424042623d3e2c36eb7ef59a",
+      "central_sha256": "a6af6d5f7ef04c0afdd28a16b6a598278a3b9b2b424042623d3e2c36eb7ef59a",
+      "change": "own-module import qualification only"
+    },
+    {
+      "module": "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "original_sha256": "8a95ce527462d8b38960b953f922c5482cd45ddbb6712a7775a29fed6209a2fc",
+      "central_sha256": "c6ce14a929560c13c3518d3de89207b1dd203d83cf6ef806c36a1c3ff0ac8257",
+      "change": "own-module import qualification only"
+    },
+    {
+      "module": "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "original_sha256": "d30694553f6d7585e5070a6bfd0e432ba257ee991cad10bbabea7ce39297838e",
+      "central_sha256": "6fbbb85c3d84f64cf3e3befd63664af52c79dde7dd0dabad76c31bbb5d873a92",
+      "change": "own-module import qualification only"
+    },
+    {
+      "module": "ZhangLS.Spec.SquareNuTailConvolutionCapstone",
+      "original_sha256": "9435651dde0ac8fb45c61705dd444504091bca25d2bc8d36130a7e8975d43818",
+      "central_sha256": "112a9ea073f9fbf25ccafb40e7322970c76483c2abc9d09c98f2ca352af85350",
+      "change": "own-module import qualification only"
+    }
+  ]
+}

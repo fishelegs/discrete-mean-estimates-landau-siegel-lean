@@ -1,0 +1,1927 @@
+{
+  "ZhangLS.Spec.SquareNuTailLinear": {
+    "path": "ZhangLS/Spec/SquareNuTailLinear.lean",
+    "sha256": "b05262e16916afc906bca4dc3194b1ac45c1c9a91642d4dd40bf3d995e9f01f4",
+    "imports": [
+      "ZhangLS.Spec.Lemma31TotalWeight"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31TotalWeight": {
+    "path": "ZhangLS/Spec/Lemma31TotalWeight.lean",
+    "sha256": "3678924c2b115b1beff5973ee63608178a89aade8177dedacd77c2b33136fba0",
+    "imports": [
+      "ZhangLS.Spec.Lemma31NormalizedTail"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31NormalizedTail": {
+    "path": "ZhangLS/Spec/Lemma31NormalizedTail.lean",
+    "sha256": "b5b691b75f963791be145603c5993e3c126be2164ec46ee47f1d753b29cdd93b",
+    "imports": [
+      "ZhangLS.Spec.Lemma31PaperScale",
+      "ZhangLS.Spec.Lemma31Absorption"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31PaperScale": {
+    "path": "ZhangLS/Spec/Lemma31PaperScale.lean",
+    "sha256": "874fc2182ef585a08b1550255ad30b5d6dee5267085c25c91dcc0e003c887999",
+    "imports": [
+      "ZhangLS.Spec.Lemma31LinearTail",
+      "ZhangLS.Spec.Lemma23GoodSet"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31LinearTail": {
+    "path": "ZhangLS/Spec/Lemma31LinearTail.lean",
+    "sha256": "82956684414d2c5aee2035b54d91739e93faddae467d6f660c5bf0766501b835",
+    "imports": [
+      "ZhangLS.Spec.Lemma31NuIntegralBound"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31NuIntegralBound": {
+    "path": "ZhangLS/Spec/Lemma31NuIntegralBound.lean",
+    "sha256": "3c4ff8e123a29c34b937e4819c9f70872a60b3643998decc88b31d14098eecb7",
+    "imports": [
+      "ZhangLS.Spec.Lemma31WeightedKernel"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31WeightedKernel": {
+    "path": "ZhangLS/Spec/Lemma31WeightedKernel.lean",
+    "sha256": "83d3a257568acf872eb98b780e959925dc7c7b48216d40cf3ff693c3553092b0",
+    "imports": [
+      "ZhangLS.Spec.Lemma31PowerIntegrals"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31PowerIntegrals": {
+    "path": "ZhangLS/Spec/Lemma31PowerIntegrals.lean",
+    "sha256": "59b1c8e870c8e6dfe60f211a0491288700fca4b9b2c9946850932a2631e4d71e",
+    "imports": [
+      "ZhangLS.Spec.Lemma31NuAbel"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31NuAbel": {
+    "path": "ZhangLS/Spec/Lemma31NuAbel.lean",
+    "sha256": "9b7c5619ff0f4a14ed73e2599bfedc9aaa5ddd8dc0d0e1ce25aba64afbf32170",
+    "imports": [
+      "ZhangLS.Spec.Lemma31CumulativeBound",
+      "ZhangLS.Spec.Lemma57LAtOnePositivity"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31CumulativeBound": {
+    "path": "ZhangLS/Spec/Lemma31CumulativeBound.lean",
+    "sha256": "21c8b0b3aaac0a53ab42dc868015727c9628784f80b3bc2f448a19b45e37722c",
+    "imports": [
+      "ZhangLS.Spec.Lemma31HyperbolaError"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31HyperbolaError": {
+    "path": "ZhangLS/Spec/Lemma31HyperbolaError.lean",
+    "sha256": "340f08b72cf2e2dad08c2203a304f3683cb232aaacad1e1c5b9c4c94f9ee2eac",
+    "imports": [
+      "ZhangLS.Spec.Lemma31FloorError"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31FloorError": {
+    "path": "ZhangLS/Spec/Lemma31FloorError.lean",
+    "sha256": "3b1b6d06cf036619269522395619f593d6b29a2ce3dd09d2f5f19ead1e72f5df",
+    "imports": [
+      "ZhangLS.Spec.Lemma31HyperbolaInputs"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31HyperbolaInputs": {
+    "path": "ZhangLS/Spec/Lemma31HyperbolaInputs.lean",
+    "sha256": "97c34d5bb8a069d7b52f3bb53f62e612f63098f2aa74cac9879b1da4913f8a72",
+    "imports": [
+      "ZhangLS.Spec.Lemma31DiscreteAbel",
+      "Mathlib.NumberTheory.ArithmeticFunction.Misc"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31DiscreteAbel": {
+    "path": "ZhangLS/Spec/Lemma31DiscreteAbel.lean",
+    "sha256": "ae010bc488c5a7214d52c08a778fe251e68f0db24f71a8b96fb85bbb3a428862",
+    "imports": [
+      "ZhangLS.Spec.Lemma31HarmonicTruncation",
+      "Mathlib.Algebra.BigOperators.Module"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31HarmonicTruncation": {
+    "path": "ZhangLS/Spec/Lemma31HarmonicTruncation.lean",
+    "sha256": "6ba796642dc0f77f756856eca3d651f3be95b80cff398132fbc049943aa8d0ac",
+    "imports": [
+      "ZhangLS.Spec.Lemma31CharacterKernel"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31CharacterKernel": {
+    "path": "ZhangLS/Spec/Lemma31CharacterKernel.lean",
+    "sha256": "356184ae8c11d99aef71eebaa0e63e61183da577f947b59dc2728d5be6197a9d",
+    "imports": [
+      "ZhangLS.Spec.Lemma31CharacterAbel"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31CharacterAbel": {
+    "path": "ZhangLS/Spec/Lemma31CharacterAbel.lean",
+    "sha256": "303ed3ff55c8eb69403045727908739f1803f9b227879eacee643c8b2142749c",
+    "imports": [
+      "ZhangLS.Spec.Lemma31WeightedTail",
+      "ZhangLS.Spec.CharacterAbelAnalyticContinuation"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31WeightedTail": {
+    "path": "ZhangLS/Spec/Lemma31WeightedTail.lean",
+    "sha256": "42d9553e45a62003ec1efdef220bd1363ef939287a7aa457da8c5e8a0c38c769",
+    "imports": [
+      "ZhangLS.Spec.Lemma31RealCoefficients"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31RealCoefficients": {
+    "path": "ZhangLS/Spec/Lemma31RealCoefficients.lean",
+    "sha256": "37339fb97216f9b5e525a91920a80d2012320e6ffbdf48b8f9ae505f225b342e",
+    "imports": [
+      "ZhangLS.Spec.Lemma31SquareMajorant"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31SquareMajorant": {
+    "path": "ZhangLS/Spec/Lemma31SquareMajorant.lean",
+    "sha256": "a0e8c90ead5d9b0ded78f5626a2cc6222948dd40c7fa54a1d8af3f55c5837923",
+    "imports": [
+      "ZhangLS.Spec.Lemma31PrimeSquare"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31PrimeSquare": {
+    "path": "ZhangLS/Spec/Lemma31PrimeSquare.lean",
+    "sha256": "08af325f02952a9707f771272b4d394fb43ab112577ef8daaa277d44553412fb",
+    "imports": [
+      "ZhangLS.Spec.Lemma31OrderedArithmetic"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31OrderedArithmetic": {
+    "path": "ZhangLS/Spec/Lemma31OrderedArithmetic.lean",
+    "sha256": "03918df9ea74ebb4f40dfd1dc7e952722e2bd850b6cbcf777381eb022cb9c99f",
+    "imports": [
+      "ZhangLS.Spec.Lemma23Nu20Bounds",
+      "ZhangLS.Spec.DivisorCharacterSumNonnegative"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23Nu20Bounds": {
+    "path": "ZhangLS/Spec/Lemma23Nu20Bounds.lean",
+    "sha256": "ac697a80e60daeeecc658bba40c3b4aa22b19393890f4890681f300915dede4e",
+    "imports": [
+      "ZhangLS.Spec.Lemma23CoefficientBounds"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23CoefficientBounds": {
+    "path": "ZhangLS/Spec/Lemma23CoefficientBounds.lean",
+    "sha256": "d5b8ffd309f9fa8d8e672baa57c2d41a52d724e93e4dfe509021af9e3af38e63",
+    "imports": [
+      "ZhangLS.Spec.Lemma23ArithmeticCoefficients",
+      "Mathlib.NumberTheory.Harmonic.Bounds",
+      "Mathlib.NumberTheory.Divisors",
+      "Mathlib.NumberTheory.AbelSummation",
+      "Mathlib.Analysis.SpecialFunctions.Log.Deriv"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23ArithmeticCoefficients": {
+    "path": "ZhangLS/Spec/Lemma23ArithmeticCoefficients.lean",
+    "sha256": "eeed57bd806270c51670188e6935cb4230b2f05fe805a26b3fcc901e7c9921e7",
+    "imports": [
+      "ZhangLS.Spec.RealDirichletCharacter",
+      "ZhangLS.Spec.Lemma23FiniteDirichletApproximation",
+      "Mathlib.NumberTheory.LSeries.Dirichlet",
+      "Mathlib.NumberTheory.ArithmeticFunction.Moebius",
+      "Mathlib.NumberTheory.ArithmeticFunction.Zeta"
+    ]
+  },
+  "ZhangLS.Spec.RealDirichletCharacter": {
+    "path": "ZhangLS/Spec/RealDirichletCharacter.lean",
+    "sha256": "d0db8e1cd0358f35e0d7f11c7796fe169b93b3a57b520d41ea52c96640ba34b6",
+    "imports": [
+      "Mathlib.NumberTheory.DirichletCharacter.Basic",
+      "Mathlib.Data.Complex.Basic"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23FiniteDirichletApproximation": {
+    "path": "ZhangLS/Spec/Lemma23FiniteDirichletApproximation.lean",
+    "sha256": "7fae409d7289bd62f8d43c2855fdb9bfb0c1cdd48d8acd7e5ad18d5a632fb030",
+    "imports": [
+      "Mathlib.Analysis.Calculus.LogDeriv",
+      "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+      "Mathlib.Algebra.BigOperators.Ring.Finset"
+    ]
+  },
+  "ZhangLS.Spec.DivisorCharacterSumNonnegative": {
+    "path": "ZhangLS/Spec/DivisorCharacterSumNonnegative.lean",
+    "sha256": "f748230ac6f4960e2a4deb041b566a11aa25c9f22c1f64a3ff393f0c478ebb99",
+    "imports": [
+      "ZhangLS.Spec.Lemma57SmoothedSum",
+      "Mathlib.NumberTheory.LSeries.Nonvanishing"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57SmoothedSum": {
+    "path": "ZhangLS/Spec/Lemma57SmoothedSum.lean",
+    "sha256": "3f0a28f984449846707feb0587c46865cd011dfda9b1cf74622d35ae74150405",
+    "imports": [
+      "ZhangLS.Spec.Lemma57GaussianWeight"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57GaussianWeight": {
+    "path": "ZhangLS/Spec/Lemma57GaussianWeight.lean",
+    "sha256": "3299a17a2865e4384424413b2dc5700ee94a69138390da04d1185c884a5510d6",
+    "imports": [
+      "ZhangLS.Spec.Lemma57Arithmetic",
+      "ZhangLS.Spec.ReciprocalDivisorEulerFactorization",
+      "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+      "Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57Arithmetic": {
+    "path": "ZhangLS/Spec/Lemma57Arithmetic.lean",
+    "sha256": "1fb6a160e7286caea37a09ea04a18ebd04e3e1516b8b1e7b1e6edce7f4ae6d3c",
+    "imports": [
+      "ZhangLS.Spec.DivisorCharacterSum",
+      "ZhangLS.Spec.Lemma57"
+    ]
+  },
+  "ZhangLS.Spec.DivisorCharacterSum": {
+    "path": "ZhangLS/Spec/DivisorCharacterSum.lean",
+    "sha256": "24e1933d8f17c318b812bbc735ae13b7880728e598b0e4e9ded7dd4c1604ae51",
+    "imports": [
+      "ZhangLS.Spec.RealDirichletCharacter",
+      "Mathlib.Data.Nat.Totient"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57": {
+    "path": "ZhangLS/Spec/Lemma57.lean",
+    "sha256": "31ec862541a3373e1b88bd30bb793ff291321b6908202aa5a4030f9db2fa5937",
+    "imports": [
+      "ZhangLS.Spec.RealAxisDerivativeAtOne",
+      "ZhangLS.Spec.RealAxisLFunction"
+    ]
+  },
+  "ZhangLS.Spec.RealAxisDerivativeAtOne": {
+    "path": "ZhangLS/Spec/RealAxisDerivativeAtOne.lean",
+    "sha256": "a29567c31c6b941b298097c89d69416fd5b7aa3c492f6b61a6877308b2370587",
+    "imports": [
+      "ZhangLS.Spec.RealAxisAtOne",
+      "Mathlib.Analysis.Complex.RealDeriv"
+    ]
+  },
+  "ZhangLS.Spec.RealAxisAtOne": {
+    "path": "ZhangLS/Spec/RealAxisAtOne.lean",
+    "sha256": "c4d3727093f6dabc9f85b7add67af3a087941ec0b824b0eeebac74b4e4741622",
+    "imports": [
+      "ZhangLS.Spec.RealAxisSeries"
+    ]
+  },
+  "ZhangLS.Spec.RealAxisSeries": {
+    "path": "ZhangLS/Spec/RealAxisSeries.lean",
+    "sha256": "5bad4ff66a1bf859142cf3bd89fcd9622728a60deeae30379e2c0a00078dba5e",
+    "imports": [
+      "ZhangLS.Spec.RealAxisLFunction"
+    ]
+  },
+  "ZhangLS.Spec.RealAxisLFunction": {
+    "path": "ZhangLS/Spec/RealAxisLFunction.lean",
+    "sha256": "43933c4a303eca6375ea8bff84fa5c5860a81a671bb87bd01d15c0c45e41e6dd",
+    "imports": [
+      "ZhangLS.Spec.DirichletLSeries"
+    ]
+  },
+  "ZhangLS.Spec.DirichletLSeries": {
+    "path": "ZhangLS/Spec/DirichletLSeries.lean",
+    "sha256": "923a2496b1f5488712b19333fe27cd577dd7927590780c94fa8c49de907560a9",
+    "imports": [
+      "ZhangLS.Spec.RealDirichletCharacter",
+      "Mathlib.NumberTheory.LSeries.Dirichlet",
+      "Mathlib.NumberTheory.LSeries.DirichletContinuation"
+    ]
+  },
+  "ZhangLS.Spec.ReciprocalDivisorEulerFactorization": {
+    "path": "ZhangLS/Spec/ReciprocalDivisorEulerFactorization.lean",
+    "sha256": "efa9bfeb05323cb3f6103a4ee8fd2b5c08bfff306a1f421c2194f234399d30f8",
+    "imports": [
+      "ZhangLS.Spec.ReciprocalDivisorEulerLoss",
+      "Mathlib.Algebra.Field.GeomSum",
+      "Mathlib.NumberTheory.ArithmeticFunction.Misc"
+    ]
+  },
+  "ZhangLS.Spec.ReciprocalDivisorEulerLoss": {
+    "path": "ZhangLS/Spec/ReciprocalDivisorEulerLoss.lean",
+    "sha256": "6136d930678db0fd1b58918f7b0878bfc34eab304b8954351e6dba5d5cae579d",
+    "imports": [
+      "ZhangLS.Spec.ReciprocalDivisorBound",
+      "Mathlib.Analysis.PSeries",
+      "Mathlib.Data.Nat.Factorization.Basic"
+    ]
+  },
+  "ZhangLS.Spec.ReciprocalDivisorBound": {
+    "path": "ZhangLS/Spec/ReciprocalDivisorBound.lean",
+    "sha256": "e413ba365b847a5d2e5abf3c315b13c3eb2cfc6b5954bfe2ddd77bfd4fc85701",
+    "imports": [
+      "ZhangLS.Spec.Lemma57Arithmetic"
+    ]
+  },
+  "ZhangLS.Spec.CharacterAbelAnalyticContinuation": {
+    "path": "ZhangLS/Spec/CharacterAbelAnalyticContinuation.lean",
+    "sha256": "3bf99501231f4ee9b8814be7f058f25bf8fea4bfdf555458da8a4678668d7e17",
+    "imports": [
+      "ZhangLS.Spec.CharacterAbelIntegralBound",
+      "Mathlib.Analysis.MellinTransform"
+    ]
+  },
+  "ZhangLS.Spec.CharacterAbelIntegralBound": {
+    "path": "ZhangLS/Spec/CharacterAbelIntegralBound.lean",
+    "sha256": "d32ed898f58b415bf840b8ce4ccd9b83413b774de631ade12c31e44bba47d5ed",
+    "imports": [
+      "ZhangLS.Spec.CharacterLSeriesAbel"
+    ]
+  },
+  "ZhangLS.Spec.CharacterLSeriesAbel": {
+    "path": "ZhangLS/Spec/CharacterLSeriesAbel.lean",
+    "sha256": "9d210be1f7a5926b0e4084652211717bfd53daffa161e6f7c1ebe4d75371516d",
+    "imports": [
+      "ZhangLS.Spec.CharacterPeriodSum",
+      "Mathlib.NumberTheory.LSeries.SumCoeff"
+    ]
+  },
+  "ZhangLS.Spec.CharacterPeriodSum": {
+    "path": "ZhangLS/Spec/CharacterPeriodSum.lean",
+    "sha256": "977e95c570c0a163959beb2216f03224be094fd9779daa96b6fe4b3a8918013b",
+    "imports": [
+      "ZhangLS.Spec.DirichletLSeries",
+      "Mathlib.NumberTheory.DirichletCharacter.Bounds"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57LAtOnePositivity": {
+    "path": "ZhangLS/Spec/Lemma57LAtOnePositivity.lean",
+    "sha256": "b4eaa0e475855647a02d9c235ee05ba0550826a6ab7a3bcfdbbdebcfd31ea38e",
+    "imports": [
+      "ZhangLS.Spec.Lemma57ShiftedIntegralEnvelope",
+      "Mathlib.NumberTheory.LSeries.Injectivity",
+      "Mathlib.NumberTheory.LSeries.Nonvanishing"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57ShiftedIntegralEnvelope": {
+    "path": "ZhangLS/Spec/Lemma57ShiftedIntegralEnvelope.lean",
+    "sha256": "c6fffcb968a6d271efd9ede75cd6c6d6d3bb57ef89fdc53a9dbf167739a6840f",
+    "imports": [
+      "ZhangLS.Spec.Lemma57ShiftedGammaGrowth"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57ShiftedGammaGrowth": {
+    "path": "ZhangLS/Spec/Lemma57ShiftedGammaGrowth.lean",
+    "sha256": "228bf634c8ee7e76c302b5e0c2e40a9c37f03c4a23ff8e46cc8b91d5aff56004",
+    "imports": [
+      "ZhangLS.Spec.Lemma57CompletedDirichletStripBounds"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57CompletedDirichletStripBounds": {
+    "path": "ZhangLS/Spec/Lemma57CompletedDirichletStripBounds.lean",
+    "sha256": "0c37e099a6e5c3d1f289bc490938a064a7591fdea1d01aa0c38b58ee6f2e156f",
+    "imports": [
+      "ZhangLS.Spec.Lemma57GammaFactorGrowth"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57GammaFactorGrowth": {
+    "path": "ZhangLS/Spec/Lemma57GammaFactorGrowth.lean",
+    "sha256": "96f21f1cae9999dc2a50a5cfe3f31f7f3007937cf2d219ded3c65b47e69d3794",
+    "imports": [
+      "ZhangLS.Spec.Lemma57CompletedStripBounds"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57CompletedStripBounds": {
+    "path": "ZhangLS/Spec/Lemma57CompletedStripBounds.lean",
+    "sha256": "9d929ef370bcc0d8aed65a3619660e0f3658f35eca7d89e2ca04e4f846568b2e",
+    "imports": [
+      "ZhangLS.Spec.Lemma57CriticalStripGrowth"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57CriticalStripGrowth": {
+    "path": "ZhangLS/Spec/Lemma57CriticalStripGrowth.lean",
+    "sha256": "2cf7af38eb2337d533189cc2f5e27e6d33e8ab532647193b85fd87a76c567a0c",
+    "imports": [
+      "ZhangLS.Spec.Lemma57ContourGrowth",
+      "ZhangLS.Spec.RiemannZetaCriticalLineBound"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57ContourGrowth": {
+    "path": "ZhangLS/Spec/Lemma57ContourGrowth.lean",
+    "sha256": "e742aacb12cb538f9502aa10bd23d9f683d4d6b8ed21fa7d4570685bbd358a96",
+    "imports": [
+      "ZhangLS.Spec.Lemma57PrincipalPart",
+      "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57PrincipalPart": {
+    "path": "ZhangLS/Spec/Lemma57PrincipalPart.lean",
+    "sha256": "c7025cda045ce591cc8382c03aa2630c100587436d0b3ae57258940e1276b259",
+    "imports": [
+      "ZhangLS.Spec.Lemma57RectangleWinding"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57RectangleWinding": {
+    "path": "ZhangLS/Spec/Lemma57RectangleWinding.lean",
+    "sha256": "c9cb8f9bd31e97377d9c835a0eb0cdf25c2dcff86f89a7f55b1af7c4d887fbe2",
+    "imports": [
+      "ZhangLS.Spec.Lemma57ContourAnalyticity",
+      "ZhangLS.Spec.Lemma57ContourShiftLimit",
+      "Mathlib.Analysis.SpecialFunctions.Integrals.Basic"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57ContourAnalyticity": {
+    "path": "ZhangLS/Spec/Lemma57ContourAnalyticity.lean",
+    "sha256": "5bb5a2b1479c6077b2a840ebc65b9f3df14f23836a9a47a2c79f1403941c034d",
+    "imports": [
+      "ZhangLS.Spec.Lemma57MellinContour"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57MellinContour": {
+    "path": "ZhangLS/Spec/Lemma57MellinContour.lean",
+    "sha256": "9bd94fa185fac9f9337e77f351bfe122d9aea689dfe9db32d7078d9e1f9757b8",
+    "imports": [
+      "ZhangLS.Spec.Lemma57SmoothedSummability",
+      "Mathlib.NumberTheory.Harmonic.ZetaAsymp"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57SmoothedSummability": {
+    "path": "ZhangLS/Spec/Lemma57SmoothedSummability.lean",
+    "sha256": "f5aff15bf21cc288fa1cf34f47dc9248f1ba7d970ddd9cbf79fc4e71c4ab5ae8",
+    "imports": [
+      "ZhangLS.Spec.Lemma57GaussianGlobal",
+      "Mathlib.Analysis.PSeries"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57GaussianGlobal": {
+    "path": "ZhangLS/Spec/Lemma57GaussianGlobal.lean",
+    "sha256": "eab5e11464afeb09d930edcf89f2e8028a868938b8f182f4048f95c64795032b",
+    "imports": [
+      "ZhangLS.Spec.Lemma57FullSmoothedSeries",
+      "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+      "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57FullSmoothedSeries": {
+    "path": "ZhangLS/Spec/Lemma57FullSmoothedSeries.lean",
+    "sha256": "1ba00d7880fe3f6ecdb748cd6396933ec8de05c6e37eb1626b8f5a6de2e1c210",
+    "imports": [
+      "ZhangLS.Spec.DivisorCharacterSumNonnegative"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57ContourShiftLimit": {
+    "path": "ZhangLS/Spec/Lemma57ContourShiftLimit.lean",
+    "sha256": "7e2b34a89adb6f306401d3f0c273f75c554217060a14787fc556b3ec2bc49c29",
+    "imports": [
+      "ZhangLS.Spec.Lemma57MellinIdentity",
+      "Mathlib.MeasureTheory.Integral.IntegralEqImproper"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57MellinIdentity": {
+    "path": "ZhangLS/Spec/Lemma57MellinIdentity.lean",
+    "sha256": "f5325323cb2dd6c6899802588d14a443a545aed3c11e7d865eff37c042746935",
+    "imports": [
+      "ZhangLS.Spec.Lemma57GaussianMellinTransform"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57GaussianMellinTransform": {
+    "path": "ZhangLS/Spec/Lemma57GaussianMellinTransform.lean",
+    "sha256": "c3fe2882c86b772546cdac9718c65265c27d45bd009f79512a6695a555d275b2",
+    "imports": [
+      "ZhangLS.Spec.Lemma57GaussianMellinKernel"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57GaussianMellinKernel": {
+    "path": "ZhangLS/Spec/Lemma57GaussianMellinKernel.lean",
+    "sha256": "763c522a0ef6b2490657bffe34c6cfe619e519a06ce1ebe8bcd843a2d2a54d7a",
+    "imports": [
+      "ZhangLS.Spec.Lemma57MellinContour",
+      "Mathlib.Analysis.MellinInversion",
+      "Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform"
+    ]
+  },
+  "ZhangLS.Spec.RiemannZetaCriticalLineBound": {
+    "path": "ZhangLS/Spec/RiemannZetaCriticalLineBound.lean",
+    "sha256": "dbcdf2de2b57252eb3f16a8c668d223fd1e94a3f989c2fa7736ea0aefb372775",
+    "imports": [
+      "ZhangLS.Spec.CharacterAbelAnalyticContinuation",
+      "Mathlib.NumberTheory.LSeries.RiemannZeta"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23GoodSet": {
+    "path": "ZhangLS/Spec/Lemma23GoodSet.lean",
+    "sha256": "ae75451e0cff47b7fd66e0c479608074431bdb5f300b8280f5a3fbccb3cd3045",
+    "imports": [
+      "ZhangLS.Spec.Lemma23X1Expansion"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23X1Expansion": {
+    "path": "ZhangLS/Spec/Lemma23X1Expansion.lean",
+    "sha256": "910a8409c2f1a353356f54837523af0951eefce81484f26953a1b259e9a1a227",
+    "imports": [
+      "ZhangLS.Spec.Lemma23CoefficientBounds",
+      "ZhangLS.Spec.Lemma23Nu20Bounds",
+      "ZhangLS.Spec.Lemma23CharacterOrthogonality"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23CharacterOrthogonality": {
+    "path": "ZhangLS/Spec/Lemma23CharacterOrthogonality.lean",
+    "sha256": "6e7157baa3e89e4f5cab89fce367482ed88a5639a1917f56542513103ff674ea",
+    "imports": [
+      "Mathlib.NumberTheory.DirichletCharacter.Orthogonality",
+      "Mathlib.NumberTheory.MulChar.Lemmas",
+      "Mathlib.Analysis.Complex.Norm",
+      "Mathlib.Analysis.Complex.Polynomial.Basic",
+      "Mathlib.Algebra.Star.BigOperators",
+      "Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31Absorption": {
+    "path": "ZhangLS/Spec/Lemma31Absorption.lean",
+    "sha256": "d3d76c740d817480d9ee82a08d8c0ea91832063550965b349ab96233eda917c6",
+    "imports": [
+      "ZhangLS.Spec.Lemma31LinearTail",
+      "ZhangLS.Spec.Lemma23GoodSet"
+    ]
+  },
+  "ZhangLS.Spec.SquareNuTailMajorantDefs": {
+    "path": "ZhangLS/Spec/SquareNuTailMajorantDefs.lean",
+    "sha256": "0c00869f8c4abc7c51995a2065eb796614f53a0ab3110af056f5a67fa5984641",
+    "imports": [
+      "ZhangLS.Spec.Lemma31RealCoefficients",
+      "ZhangLS.Spec.Lemma34DivisorFunction",
+      "Mathlib.Algebra.GCDMonoid.Nat"
+    ]
+  },
+  "ZhangLS.Spec.Lemma34DivisorFunction": {
+    "path": "ZhangLS/Spec/Lemma34DivisorFunction.lean",
+    "sha256": "c08b990c9faffd76df5b828f0185368dff1e4836e10bba2edde14d1833cded85",
+    "imports": [
+      "Mathlib.Data.Nat.Choose.Sum",
+      "ZhangLS.Spec.Lemma23Nu20Bounds",
+      "Mathlib.NumberTheory.ArithmeticFunction.Zeta"
+    ]
+  },
+  "ZhangLS.Spec.SquareNuTailMajorantLift": {
+    "path": "ZhangLS/Spec/SquareNuTailMajorantLift.lean",
+    "sha256": "57697cbbe1e10cad156cf817eecaeafe3479a89e0fc6d0091c6ec98c42742a89",
+    "imports": [
+      "ZhangLS.Spec.SquareNuTailMajorantDefs"
+    ]
+  },
+  "ZhangLS.Spec.SquareNuTailMajorantLocal": {
+    "path": "ZhangLS/Spec/SquareNuTailMajorantLocal.lean",
+    "sha256": "1c28bd0af458ee7a4b535bc3fe8d361e3a29a02cce18926a350d23efc4317cbf",
+    "imports": [
+      "ZhangLS.Spec.SquareNuTailMajorantLift",
+      "ZhangLS.Spec.Lemma34TauProduct",
+      "ZhangLS.Spec.Proposition71DivisorWeights"
+    ]
+  },
+  "ZhangLS.Spec.Lemma34TauProduct": {
+    "path": "ZhangLS/Spec/Lemma34TauProduct.lean",
+    "sha256": "0846ec1df237276de3b7112a1c86801b01c86aec6915fcc89a8298c1e26f6147",
+    "imports": [
+      "ZhangLS.Spec.Lemma34DivisorFunction",
+      "ZhangLS.Spec.Lemma34Multichoose",
+      "ZhangLS.Spec.Lemma34WeightedConvolution"
+    ]
+  },
+  "ZhangLS.Spec.Lemma34Multichoose": {
+    "path": "ZhangLS/Spec/Lemma34Multichoose.lean",
+    "sha256": "259d75cd39a94e50d8de078ca1f0daa9e61cf0f84c8bbc25661ac60469e4d058",
+    "imports": [
+      "Mathlib.Data.Nat.Choose.Basic",
+      "ZhangLS.Spec.Lemma23Nu20Bounds"
+    ]
+  },
+  "ZhangLS.Spec.Lemma34WeightedConvolution": {
+    "path": "ZhangLS/Spec/Lemma34WeightedConvolution.lean",
+    "sha256": "ff570dcf07fec5fc9c1beca36382324db9913d1cfbe8c116f54a5a54938c1ab5",
+    "imports": [
+      "ZhangLS.Spec.Lemma34DivisorFunction"
+    ]
+  },
+  "ZhangLS.Spec.Proposition71DivisorWeights": {
+    "path": "ZhangLS/Spec/Proposition71DivisorWeights.lean",
+    "sha256": "585ced3d9f25331f68ea3fdf3f16d39f060c83a6cdbc5282506c0b9fe495e33b",
+    "imports": [
+      "ZhangLS.Spec.Proposition71ConvolutionSplit",
+      "ZhangLS.Spec.Lemma34CoefficientEnergy"
+    ]
+  },
+  "ZhangLS.Spec.Proposition71ConvolutionSplit": {
+    "path": "ZhangLS/Spec/Proposition71ConvolutionSplit.lean",
+    "sha256": "18b9efefb800fa6e9b53d11d1cb7b9dcbc649c4887b41fabb2ddabcbfc66d894",
+    "imports": [
+      "ZhangLS.Spec.Lemma83Definitions"
+    ]
+  },
+  "ZhangLS.Spec.Lemma83Definitions": {
+    "path": "ZhangLS/Spec/Lemma83Definitions.lean",
+    "sha256": "9b12c978aae18664b30918a52f3471ee54a7ad7542ece45adb40d8d1b99b46be",
+    "imports": [
+      "ZhangLS.Spec.Lemma171DirichletSeries",
+      "ZhangLS.Spec.Lemma52Product",
+      "ZhangLS.Spec.Lemma56"
+    ]
+  },
+  "ZhangLS.Spec.Lemma171DirichletSeries": {
+    "path": "ZhangLS/Spec/Lemma171DirichletSeries.lean",
+    "sha256": "5550cc8bacae696c4d0dd3607bb3b9d12211e4d2328b0ff15d7d110a82b0d3c1",
+    "imports": [
+      "ZhangLS.Spec.Lemma171EulerFactors",
+      "ZhangLS.Spec.Lemma32ActualSeriesIdentity"
+    ]
+  },
+  "ZhangLS.Spec.Lemma171EulerFactors": {
+    "path": "ZhangLS/Spec/Lemma171EulerFactors.lean",
+    "sha256": "1524045bf245c7b7bde4743e9fedf6348297eb7ee5cd913c2d23d16327aa0fa8",
+    "imports": [
+      "ZhangLS.Spec.Lemma171Target",
+      "ZhangLS.Spec.Lemma32LocalSeries"
+    ]
+  },
+  "ZhangLS.Spec.Lemma171Target": {
+    "path": "ZhangLS/Spec/Lemma171Target.lean",
+    "sha256": "4eaa511241d60c5b75fce7eabba89800728dc07d59001e7ad578da045b4470bc",
+    "imports": [
+      "ZhangLS.Spec.Lemma31",
+      "ZhangLS.Spec.RealAxisLFunction"
+    ]
+  },
+  "ZhangLS.Spec.Lemma31": {
+    "path": "ZhangLS/Spec/Lemma31.lean",
+    "sha256": "245b1d462d8fcb956aa418f18462ff52d7c917b2eb0c5a56a000e2437a7f60b1",
+    "imports": [
+      "ZhangLS.Spec.Lemma31TotalWeight"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32LocalSeries": {
+    "path": "ZhangLS/Spec/Lemma32LocalSeries.lean",
+    "sha256": "da333b0a78522d9aad794a0b8eed94f6d22358eb16aa6e2c475f35f37972f98d",
+    "imports": [
+      "ZhangLS.Spec.Lemma32Geometric"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32Geometric": {
+    "path": "ZhangLS/Spec/Lemma32Geometric.lean",
+    "sha256": "c05b1cbe8b1d60c4f10e073388ea0cfccef27334034f73bd72816c5b250ffb17",
+    "imports": [
+      "ZhangLS.Spec.Lemma32PrimeCoefficients",
+      "Mathlib.Analysis.SpecificLimits.Normed"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32PrimeCoefficients": {
+    "path": "ZhangLS/Spec/Lemma32PrimeCoefficients.lean",
+    "sha256": "b46bf86958806ab54512c5bae837a3e13bab71bc8a4affeb0546b4f2b94bf67b",
+    "imports": [
+      "ZhangLS.Spec.Lemma31",
+      "ZhangLS.Spec.Lemma34DivisorFunction"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32ActualSeriesIdentity": {
+    "path": "ZhangLS/Spec/Lemma32ActualSeriesIdentity.lean",
+    "sha256": "86130e8f093797086d51fe439e203d310c9b96bd594303b8b16b26fe15a29418",
+    "imports": [
+      "ZhangLS.Spec.Lemma32CorrectionProduct",
+      "Mathlib.NumberTheory.EulerProduct.DirichletLSeries"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32CorrectionProduct": {
+    "path": "ZhangLS/Spec/Lemma32CorrectionProduct.lean",
+    "sha256": "0b6d3d62e9ccdfca27aa4db9cc306316233af58a1c71c2d106ebcbe10deb1064",
+    "imports": [
+      "ZhangLS.Spec.Lemma32EulerLocalIdentity"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32EulerLocalIdentity": {
+    "path": "ZhangLS/Spec/Lemma32EulerLocalIdentity.lean",
+    "sha256": "891eb5b23be58824ce1d24ee03af81dbf84f8dcc666a51beafb99e93fed89e50",
+    "imports": [
+      "ZhangLS.Spec.Lemma32WeightedEuler",
+      "ZhangLS.Spec.Lemma32AnalyticCorrection"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32WeightedEuler": {
+    "path": "ZhangLS/Spec/Lemma32WeightedEuler.lean",
+    "sha256": "b53463c6b4218b40b50eb0775c861938b84d6114438aa0eaacebb2a0cbf2a21a",
+    "imports": [
+      "ZhangLS.Spec.Lemma32SeriesConvergence",
+      "ZhangLS.Spec.Lemma32LocalSeries",
+      "Mathlib.NumberTheory.EulerProduct.Basic"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32SeriesConvergence": {
+    "path": "ZhangLS/Spec/Lemma32SeriesConvergence.lean",
+    "sha256": "d8af10a6a28c82949b09a7d7ed4fec48c9d0ca9f5e3206c2b0c6d07821cd06b3",
+    "imports": [
+      "ZhangLS.Spec.Lemma32CoefficientMajorant",
+      "Mathlib.NumberTheory.LSeries.Convolution",
+      "Mathlib.NumberTheory.LSeries.Dirichlet"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32CoefficientMajorant": {
+    "path": "ZhangLS/Spec/Lemma32CoefficientMajorant.lean",
+    "sha256": "4346fcab323c4b5067f125ae7f10b8d8a115d4ed4f7486ddd8f3c81b01adec35",
+    "imports": [
+      "ZhangLS.Spec.Lemma32PrimeCoefficients",
+      "ZhangLS.Spec.Lemma34DivisorSquare"
+    ]
+  },
+  "ZhangLS.Spec.Lemma34DivisorSquare": {
+    "path": "ZhangLS/Spec/Lemma34DivisorSquare.lean",
+    "sha256": "90c88615f956f894ca59330a0c16ac5d7f4958e9c75e53176a94116a90a3507c",
+    "imports": [
+      "ZhangLS.Spec.Lemma34Multichoose",
+      "ZhangLS.Spec.Lemma34DivisorFunction"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32AnalyticCorrection": {
+    "path": "ZhangLS/Spec/Lemma32AnalyticCorrection.lean",
+    "sha256": "3f897603c5bd089740d910594ed0a2b05a277fc3ccf9b6f70ec4d7db5b767d06",
+    "imports": [
+      "ZhangLS.Spec.Lemma32RamificationNorm"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32RamificationNorm": {
+    "path": "ZhangLS/Spec/Lemma32RamificationNorm.lean",
+    "sha256": "5abfcef8bbb7fd4d1f4ed9d75e6a0deb5aca9d4e1b1370df4de7b40eb30ac746",
+    "imports": [
+      "ZhangLS.Spec.Lemma32ProductAnalytic",
+      "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32ProductAnalytic": {
+    "path": "ZhangLS/Spec/Lemma32ProductAnalytic.lean",
+    "sha256": "fead82b999299b0d1fc3217a33e79c462da0c492c1337af654ab53cac40015fb",
+    "imports": [
+      "ZhangLS.Spec.Lemma32UniformProduct",
+      "Mathlib.Analysis.Complex.LocallyUniformLimit"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32UniformProduct": {
+    "path": "ZhangLS/Spec/Lemma32UniformProduct.lean",
+    "sha256": "7f91eba0564e9e53dc5e07be76ce1ec157fced6cdc8405e2d2525ff4f12ee930",
+    "imports": [
+      "ZhangLS.Spec.Lemma32ProductDifference",
+      "Mathlib.Topology.MetricSpace.Cauchy"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32ProductDifference": {
+    "path": "ZhangLS/Spec/Lemma32ProductDifference.lean",
+    "sha256": "55ca62328b9325a3700e9d7abe0076180ba3fcc740d6653e808939e16b614e0d",
+    "imports": [
+      "ZhangLS.Spec.Lemma32ProductBounds"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32ProductBounds": {
+    "path": "ZhangLS/Spec/Lemma32ProductBounds.lean",
+    "sha256": "1730b36f10a218743ae6054722391d6ae7cc936dd230971a18e74b3bcbb11cac",
+    "imports": [
+      "ZhangLS.Spec.Lemma32ProductConvergence"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32ProductConvergence": {
+    "path": "ZhangLS/Spec/Lemma32ProductConvergence.lean",
+    "sha256": "9e17ef6f9ad34ae883cab8ea3c379094c247ec58e358608304947256072597c4",
+    "imports": [
+      "ZhangLS.Spec.Lemma32RegularFactors",
+      "Mathlib.Analysis.PSeries",
+      "Mathlib.Analysis.SpecialFunctions.Log.Summable"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32RegularFactors": {
+    "path": "ZhangLS/Spec/Lemma32RegularFactors.lean",
+    "sha256": "3d374ea39ddd3496d2735a2a8afd8ae264350783ec58b0bf95d393a575308e1e",
+    "imports": [
+      "ZhangLS.Spec.Lemma32ModulusFactors"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32ModulusFactors": {
+    "path": "ZhangLS/Spec/Lemma32ModulusFactors.lean",
+    "sha256": "f83ad24889fb27f6e217d1722ff159676c8bd6c208924b36859dbd616a62ac6c",
+    "imports": [
+      "ZhangLS.Spec.Lemma32LocalBounds"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32LocalBounds": {
+    "path": "ZhangLS/Spec/Lemma32LocalBounds.lean",
+    "sha256": "db6ab8b23cacdabe076244bd00768b8f585c3cdd5a3ce36c661b387818f8f009",
+    "imports": [
+      "ZhangLS.Spec.Lemma32EulerFactors"
+    ]
+  },
+  "ZhangLS.Spec.Lemma32EulerFactors": {
+    "path": "ZhangLS/Spec/Lemma32EulerFactors.lean",
+    "sha256": "45fdc0e61bafd5ecef18fd0345063bc0d9dd3c7c9664cc9fc33bdc76076bd5a1",
+    "imports": [
+      "ZhangLS.Spec.Lemma32LocalSeries"
+    ]
+  },
+  "ZhangLS.Spec.Lemma52Product": {
+    "path": "ZhangLS/Spec/Lemma52Product.lean",
+    "sha256": "cf49ae2069b65c4c7273e47696dc8d73603a2e370ae886a05ee6177ffe2fbb34",
+    "imports": [
+      "ZhangLS.Spec.Lemma52ShiftEstimates"
+    ]
+  },
+  "ZhangLS.Spec.Lemma52ShiftEstimates": {
+    "path": "ZhangLS/Spec/Lemma52ShiftEstimates.lean",
+    "sha256": "ce228f3e50a4b3b4bbb8471ccf34c7d5b2a3fe79fa367e097bf80050dc983398",
+    "imports": [
+      "ZhangLS.Spec.Lemma52BranchTransport",
+      "ZhangLS.Spec.Lemma52Offsets"
+    ]
+  },
+  "ZhangLS.Spec.Lemma52BranchTransport": {
+    "path": "ZhangLS/Spec/Lemma52BranchTransport.lean",
+    "sha256": "b8c3fd82083dce9884a4fed69db17146fe4ce1f572c0ef33728e17e33fc52a46",
+    "imports": [
+      "ZhangLS.Spec.Lemma51ShiftEstimates",
+      "ZhangLS.Spec.Lemma23"
+    ]
+  },
+  "ZhangLS.Spec.Lemma51ShiftEstimates": {
+    "path": "ZhangLS/Spec/Lemma51ShiftEstimates.lean",
+    "sha256": "06d13d67705d2ebfc6f3df2b5485e6b417858b6277a46355c67c606e016827cd",
+    "imports": [
+      "ZhangLS.Spec.Lemma51VerticalTransport"
+    ]
+  },
+  "ZhangLS.Spec.Lemma51VerticalTransport": {
+    "path": "ZhangLS/Spec/Lemma51VerticalTransport.lean",
+    "sha256": "cbb6313e5813f0a5c1eb0aabe270013ed1f53dd84564fe030eb287c598c59507",
+    "imports": [
+      "ZhangLS.Spec.Lemma51Modulus"
+    ]
+  },
+  "ZhangLS.Spec.Lemma51Modulus": {
+    "path": "ZhangLS/Spec/Lemma51Modulus.lean",
+    "sha256": "d7a8fce50e12d04a9c73d6aba7be4d2a65e7f7cc2bddbb8ce5ecf972a91381d2",
+    "imports": [
+      "ZhangLS.Spec.Lemma51Parameters"
+    ]
+  },
+  "ZhangLS.Spec.Lemma51Parameters": {
+    "path": "ZhangLS/Spec/Lemma51Parameters.lean",
+    "sha256": "8c964bfab269ae348399ebae48318878ddfcd5e46c5806d16068f5e2a47e3e3c",
+    "imports": [
+      "ZhangLS.Spec.Lemma51GammaFactors"
+    ]
+  },
+  "ZhangLS.Spec.Lemma51GammaFactors": {
+    "path": "ZhangLS/Spec/Lemma51GammaFactors.lean",
+    "sha256": "acf154078af78b7be85f7a49a81cb54c4cf5df7fd9e013b8e8b52b929e15fd5e",
+    "imports": [
+      "ZhangLS.Spec.Lemma51GammaAsymptotic",
+      "ZhangLS.Spec.Lemma44ModulusControl"
+    ]
+  },
+  "ZhangLS.Spec.Lemma51GammaAsymptotic": {
+    "path": "ZhangLS/Spec/Lemma51GammaAsymptotic.lean",
+    "sha256": "3aba06c621c6082267595c573b859218384b018a65ee2da43bc433950c1ae651",
+    "imports": [
+      "ZhangLS.Spec.Lemma51GammaEuler",
+      "Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus"
+    ]
+  },
+  "ZhangLS.Spec.Lemma51GammaEuler": {
+    "path": "ZhangLS/Spec/Lemma51GammaEuler.lean",
+    "sha256": "c13357deb0bf9098fc833ec3bcc826a8d6efe2c1d05892f455e466662b0cfdb7",
+    "imports": [
+      "ZhangLS.Spec.Lemma44DirichletFactorEstimates",
+      "Mathlib.Analysis.Calculus.UniformLimitsDeriv",
+      "Mathlib.Analysis.Normed.Group.FunctionSeries",
+      "Mathlib.Analysis.SpecialFunctions.Gamma.Digamma",
+      "Mathlib.Analysis.PSeries"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44DirichletFactorEstimates": {
+    "path": "ZhangLS/Spec/Lemma44DirichletFactorEstimates.lean",
+    "sha256": "087f56a7e1d7a08d0a6b9eebb3b0fe8eadd2c12ca833d496771fc0e93d42a8cc",
+    "imports": [
+      "ZhangLS.Spec.Lemma44GammaLogDerivative",
+      "ZhangLS.Spec.Lemma23DirichletBranch"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44GammaLogDerivative": {
+    "path": "ZhangLS/Spec/Lemma44GammaLogDerivative.lean",
+    "sha256": "df293a0dc82299c203ed9be3bf83007e32bf2443ad3e976cb2d7d4a7878c90ac",
+    "imports": [
+      "ZhangLS.Spec.Lemma23BorelCaratheodory",
+      "ZhangLS.Spec.Lemma57GammaFactorGrowth"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23BorelCaratheodory": {
+    "path": "ZhangLS/Spec/Lemma23BorelCaratheodory.lean",
+    "sha256": "eba1fb6ee2b77c81356444decf2cbb3f2f6808f5f51797f8bbee9fe287804775",
+    "imports": [
+      "ZhangLS.Spec.Lemma23AnalyticLogBranch",
+      "ZhangLS.Spec.Lemma23ArithmeticCoefficients",
+      "Mathlib.Analysis.Complex.BorelCaratheodory",
+      "Mathlib.Analysis.Complex.Liouville",
+      "Mathlib.Analysis.Convex.Contractible",
+      "Mathlib.Topology.MetricSpace.Pseudo.Lemmas"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23AnalyticLogBranch": {
+    "path": "ZhangLS/Spec/Lemma23AnalyticLogBranch.lean",
+    "sha256": "62bed9cff1bb4ad4eebceff0779ab207ec2a93b2102347c2fd7ac2ba0337dc28",
+    "imports": [
+      "Mathlib.Analysis.SpecialFunctions.Complex.LogDeriv",
+      "Mathlib.Analysis.Complex.BranchLogRoot"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23DirichletBranch": {
+    "path": "ZhangLS/Spec/Lemma23DirichletBranch.lean",
+    "sha256": "b7cf1edb2d2d7f746b9bf59c06f7ff6bbeae33e6a6028bd0dab39f6db4914ea0",
+    "imports": [
+      "ZhangLS.Spec.Lemma23DirichletUnitModulus",
+      "Mathlib.Analysis.Complex.UpperHalfPlane.Topology"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23DirichletUnitModulus": {
+    "path": "ZhangLS/Spec/Lemma23DirichletUnitModulus.lean",
+    "sha256": "a6d867d924b3336372112804c2c29228a8b253aeb56cef309f39109a49e129ee",
+    "imports": [
+      "ZhangLS.Spec.Lemma23PrimitiveGaussSum"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23PrimitiveGaussSum": {
+    "path": "ZhangLS/Spec/Lemma23PrimitiveGaussSum.lean",
+    "sha256": "63e9c5276612f305afee7d56ce75381a8a33ebdc8d1bf8caf2c078fbb8926015",
+    "imports": [
+      "ZhangLS.Spec.Lemma23DirichletFunctionalEquation"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23DirichletFunctionalEquation": {
+    "path": "ZhangLS/Spec/Lemma23DirichletFunctionalEquation.lean",
+    "sha256": "70bf5f8d3b6f9bf633e8c3d77af5757fdd1c9da7f1fc5b8cf5e12bc2706a56ca",
+    "imports": [
+      "ZhangLS.Spec.Lemma23DirichletConjugation"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23DirichletConjugation": {
+    "path": "ZhangLS/Spec/Lemma23DirichletConjugation.lean",
+    "sha256": "197aa3ce513bba326bcdc3ba93e1a16a4b40b322ffa82b2ab29e51af61582dec",
+    "imports": [
+      "ZhangLS.Spec.DirichletLSeries",
+      "ZhangLS.Spec.Lemma23RealSign",
+      "Mathlib.Analysis.Analytic.Uniqueness",
+      "Mathlib.Analysis.Calculus.Deriv.Star"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23RealSign": {
+    "path": "ZhangLS/Spec/Lemma23RealSign.lean",
+    "sha256": "c9672ac3ca5cb0f44714e04d25523835d8f6f86625e0b833f5f1a7952eaeacaa",
+    "imports": [
+      "Mathlib.Analysis.Calculus.Deriv.Slope",
+      "Mathlib.Analysis.Calculus.Deriv.Mul",
+      "Mathlib.Analysis.Complex.Basic",
+      "Mathlib.Analysis.Complex.BranchLogRoot",
+      "Mathlib.Analysis.Complex.RealDeriv",
+      "Mathlib.Topology.Order.IntermediateValue",
+      "Mathlib.Tactic.FieldSimp"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ModulusControl": {
+    "path": "ZhangLS/Spec/Lemma44ModulusControl.lean",
+    "sha256": "0c16442882df95f0f56082bf823832e40f37473e7d0d58e0e0741498c91860ea",
+    "imports": [
+      "ZhangLS.Spec.Lemma44SectionFourGamma",
+      "ZhangLS.Spec.Lemma44LongSum",
+      "ZhangLS.Spec.Lemma23SectionFourLogDerivative",
+      "Mathlib.Analysis.Complex.RealDeriv",
+      "Mathlib.Analysis.Calculus.Deriv.MeanValue"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44SectionFourGamma": {
+    "path": "ZhangLS/Spec/Lemma44SectionFourGamma.lean",
+    "sha256": "8eed931965c11e47bf8e0d72eca7a5f6f828615c6b43f71202d71adf6a2111b7",
+    "imports": [
+      "ZhangLS.Spec.Lemma44CharacterProduct",
+      "ZhangLS.Spec.Lemma44DirichletFactorEstimates",
+      "ZhangLS.Spec.Lemma23GoodSet"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44CharacterProduct": {
+    "path": "ZhangLS/Spec/Lemma44CharacterProduct.lean",
+    "sha256": "26470d0c225373ae47bd674e3186445ed0168b9946d787a2c5128a6237b5c401",
+    "imports": [
+      "ZhangLS.Spec.RealDirichletCharacter"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44LongSum": {
+    "path": "ZhangLS/Spec/Lemma44LongSum.lean",
+    "sha256": "52396a21caecbcc1a5813e2897c9170ac6dc9cc50ac78ae0155dd8a1c62ab87b",
+    "imports": [
+      "ZhangLS.Spec.Lemma23ProductApproximation"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23ProductApproximation": {
+    "path": "ZhangLS/Spec/Lemma23ProductApproximation.lean",
+    "sha256": "7eee95ce43d22d6123d7a4e158a384d0ccca1b2404cb1492f617619c1be20e68",
+    "imports": [
+      "ZhangLS.Spec.Lemma23GoodSet"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23SectionFourLogDerivative": {
+    "path": "ZhangLS/Spec/Lemma23SectionFourLogDerivative.lean",
+    "sha256": "6ebc5209aba1f5b90de8f8799fd17619bd97e482488f3c25b47aceabce0aede3",
+    "imports": [
+      "ZhangLS.Spec.Lemma23ProductApproximation",
+      "ZhangLS.Spec.Lemma23BorelCaratheodory",
+      "Mathlib.Analysis.Complex.ExponentialBounds"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23": {
+    "path": "ZhangLS/Spec/Lemma23.lean",
+    "sha256": "330a5b5995311ff8e9a742e4454da147031d5ab3cc771ddf6e267c20628c984a",
+    "imports": [
+      "ZhangLS.Spec.Lemma23ZeroData",
+      "ZhangLS.Spec.Lemma23DirichletBranch"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23ZeroData": {
+    "path": "ZhangLS/Spec/Lemma23ZeroData.lean",
+    "sha256": "78d6b63ce0ce0e3c3391ff93a8a9afaf28bb201c31a92cfe770513f6ccd4bc79",
+    "imports": [
+      "ZhangLS.Spec.Lemma23ZeroIntervals"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23ZeroIntervals": {
+    "path": "ZhangLS/Spec/Lemma23ZeroIntervals.lean",
+    "sha256": "bf52f98a32928a9e9e98df33cd5aaeaba86c57eb19a8d1eb1c61ad087282adaa",
+    "imports": [
+      "ZhangLS.Spec.Lemma23SuccessiveZeros",
+      "ZhangLS.Spec.Lemma23ZeroGapArithmetic"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23SuccessiveZeros": {
+    "path": "ZhangLS/Spec/Lemma23SuccessiveZeros.lean",
+    "sha256": "c9ca7f9768f3faaf3098cabddb6fb5a3c40e0902697b900f4bde80a83355e020",
+    "imports": [
+      "ZhangLS.Spec.Proposition22"
+    ]
+  },
+  "ZhangLS.Spec.Proposition22": {
+    "path": "ZhangLS/Spec/Proposition22.lean",
+    "sha256": "6d733e3a41db8bde330b206feeb47f0fe8ebc1bdfaa327719422e57525a959de",
+    "imports": [
+      "ZhangLS.Spec.Proposition22Zeros",
+      "ZhangLS.Spec.Proposition22Neighbor"
+    ]
+  },
+  "ZhangLS.Spec.Proposition22Zeros": {
+    "path": "ZhangLS/Spec/Proposition22Zeros.lean",
+    "sha256": "9a59580a760411490e1332c0a384e98c5d80c94fbcee904ba050072797406841",
+    "imports": [
+      "ZhangLS.Spec.Lemma48ZeroRegion"
+    ]
+  },
+  "ZhangLS.Spec.Lemma48ZeroRegion": {
+    "path": "ZhangLS/Spec/Lemma48ZeroRegion.lean",
+    "sha256": "a026972ab1c275b78d5e0e5cb1e2e44d25a2093be6c6151000ebe2abda615a0d",
+    "imports": [
+      "ZhangLS.Spec.Lemma47Reflection"
+    ]
+  },
+  "ZhangLS.Spec.Lemma47Reflection": {
+    "path": "ZhangLS/Spec/Lemma47Reflection.lean",
+    "sha256": "9fc005d20656fbcaf5d6d1be400857de7a59ac3df79bf04f86c31b3bfaa4697c",
+    "imports": [
+      "ZhangLS.Spec.Lemma46ZeroAnalysis"
+    ]
+  },
+  "ZhangLS.Spec.Lemma46ZeroAnalysis": {
+    "path": "ZhangLS/Spec/Lemma46ZeroAnalysis.lean",
+    "sha256": "10021360bbcc4681d079be77a00514692ff562845819af3279b728f3e04eb5f1",
+    "imports": [
+      "ZhangLS.Spec.Lemma46RoucheLocal",
+      "Mathlib.Analysis.Calculus.Deriv.Shift"
+    ]
+  },
+  "ZhangLS.Spec.Lemma46RoucheLocal": {
+    "path": "ZhangLS/Spec/Lemma46RoucheLocal.lean",
+    "sha256": "ec88aa7c92ffc62fbaa5015496d4ee562d7112da9348a1d910979fa4c84daabe",
+    "imports": [
+      "ZhangLS.Spec.Lemma46ModelApproximation",
+      "ZhangLS.Spec.Lemma46ModelBoundary",
+      "ZhangLS.Spec.Lemma46AnalyticSymmetry",
+      "ZhangLS.Spec.Lemma46SingleZero"
+    ]
+  },
+  "ZhangLS.Spec.Lemma46ModelApproximation": {
+    "path": "ZhangLS/Spec/Lemma46ModelApproximation.lean",
+    "sha256": "ec0a28a4280f7f92bca36250cfb902d124659aab036e1954b0cec61d87c345af",
+    "imports": [
+      "ZhangLS.Spec.Lemma46LocalGeometry",
+      "ZhangLS.Spec.Lemma23ModelZeros"
+    ]
+  },
+  "ZhangLS.Spec.Lemma46LocalGeometry": {
+    "path": "ZhangLS/Spec/Lemma46LocalGeometry.lean",
+    "sha256": "afefad90a2b42b8be2d503c87ebe7d6d5e07cb37b9c275c58c4b437091e874c9",
+    "imports": [
+      "ZhangLS.Spec.Lemma46ExponentialTransport"
+    ]
+  },
+  "ZhangLS.Spec.Lemma46ExponentialTransport": {
+    "path": "ZhangLS/Spec/Lemma46ExponentialTransport.lean",
+    "sha256": "648d46cd08af7e8a0770a7cf756a1a8fbbe95850bdc45918f96041f4f6b8d570",
+    "imports": [
+      "ZhangLS.Spec.Lemma46LogDerivative"
+    ]
+  },
+  "ZhangLS.Spec.Lemma46LogDerivative": {
+    "path": "ZhangLS/Spec/Lemma46LogDerivative.lean",
+    "sha256": "d154e6e0932d2c82147b1161ebf36c1fa3ea370a936a87a498220f5fd9d5a7e3",
+    "imports": [
+      "ZhangLS.Spec.Lemma45ZeroFree",
+      "Mathlib.Analysis.Calculus.Deriv.Star"
+    ]
+  },
+  "ZhangLS.Spec.Lemma45ZeroFree": {
+    "path": "ZhangLS/Spec/Lemma45ZeroFree.lean",
+    "sha256": "b9c775d544201c8f583209a5e3882315359ce6fd9e3a60cb610af677e8f59517",
+    "imports": [
+      "ZhangLS.Spec.Lemma45HorizontalQuotient",
+      "ZhangLS.Spec.Lemma45ErrorBudget"
+    ]
+  },
+  "ZhangLS.Spec.Lemma45HorizontalQuotient": {
+    "path": "ZhangLS/Spec/Lemma45HorizontalQuotient.lean",
+    "sha256": "9d6e1f61e74ef608a4d8542cafbc031b253de55f1c23f7fca2aac404a723fdab",
+    "imports": [
+      "ZhangLS.Spec.Lemma45Normalization"
+    ]
+  },
+  "ZhangLS.Spec.Lemma45Normalization": {
+    "path": "ZhangLS/Spec/Lemma45Normalization.lean",
+    "sha256": "6d56955707c8a821dc0ef94dfd256fe6968c9e385156ca500ede6db67ca682ad",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ApproximateFunctionalEquation"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ApproximateFunctionalEquation": {
+    "path": "ZhangLS/Spec/Lemma44ApproximateFunctionalEquation.lean",
+    "sha256": "8dd9770207e3f702bd4ba427e6630e6a8089be4b4bd3d4eeaddbce91b3eb1046",
+    "imports": [
+      "ZhangLS.Spec.Lemma44LeftContourSplit",
+      "ZhangLS.Spec.Lemma44ReflectedPolynomialBounds"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44LeftContourSplit": {
+    "path": "ZhangLS/Spec/Lemma44LeftContourSplit.lean",
+    "sha256": "dbb705c44be7ac8f724ecc444cd9e1ae7f917a78b5d1bd1e0ed62d0ec8ed69ac",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ReflectedSeriesSplit",
+      "ZhangLS.Spec.Lemma44ReflectedPolynomialContours"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ReflectedSeriesSplit": {
+    "path": "ZhangLS/Spec/Lemma44ReflectedSeriesSplit.lean",
+    "sha256": "e048f6dced511bae9b82823e2758d0f17f56b370f117bc345b2714dfb7a6611e",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ReflectedTailContour"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ReflectedTailContour": {
+    "path": "ZhangLS/Spec/Lemma44ReflectedTailContour.lean",
+    "sha256": "84fa185a1cdde6ce3f7e7441d97b18c70b691e28acecd337b94149113437ecdf",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ReflectedTail",
+      "ZhangLS.Spec.Lemma44InitialLeftEstimates"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ReflectedTail": {
+    "path": "ZhangLS/Spec/Lemma44ReflectedTail.lean",
+    "sha256": "65e7c794f7322d60b0a86e1bf96ebf87ca4514f740dde3cbb7dd027e3672a6fa",
+    "imports": [
+      "ZhangLS.Spec.Lemma44FiniteProductShift",
+      "ZhangLS.Spec.Lemma44MiddleContour"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44FiniteProductShift": {
+    "path": "ZhangLS/Spec/Lemma44FiniteProductShift.lean",
+    "sha256": "bc5c5658f35b4b8c0a13e28bc5dbd5bf587977259ff9b7339a6b74f5011b0cd8",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ProductResidue",
+      "ZhangLS.Spec.Lemma44RightMellinApproximation",
+      "ZhangLS.Spec.Lemma44ModulusControl"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ProductResidue": {
+    "path": "ZhangLS/Spec/Lemma44ProductResidue.lean",
+    "sha256": "7fc79a872e39c213c7b3f6c81426315a50b7378ef4ea52e06056e91b1a1b6daf",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ProductMellin",
+      "ZhangLS.Spec.Lemma57PrincipalPart"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ProductMellin": {
+    "path": "ZhangLS/Spec/Lemma44ProductMellin.lean",
+    "sha256": "f4bece15f2687eb32516f1cdb9c8f25d54ab3d68bdcb0c5496a710b27bde3cd5",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ProductDirichletSeries",
+      "ZhangLS.Spec.Lemma44FiniteGaussianMellin"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ProductDirichletSeries": {
+    "path": "ZhangLS/Spec/Lemma44ProductDirichletSeries.lean",
+    "sha256": "4c261bd682d11af7119492474adb719b393fa41242017ab77624a7f2a5e5c314",
+    "imports": [
+      "ZhangLS.Spec.Lemma44SectionFourGamma",
+      "ZhangLS.Spec.Lemma23ArithmeticCoefficients"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44FiniteGaussianMellin": {
+    "path": "ZhangLS/Spec/Lemma44FiniteGaussianMellin.lean",
+    "sha256": "c2b18017aed9ef2fc20d3cfa6cd9907bbe9aec23dfb24a90d144ccac152f4b96",
+    "imports": [
+      "ZhangLS.Spec.Lemma44GaussianLongSum"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44GaussianLongSum": {
+    "path": "ZhangLS/Spec/Lemma44GaussianLongSum.lean",
+    "sha256": "b0346bea5e6e4137c5e660c1a78014936d88f5468667ba435a230981dff29ee2",
+    "imports": [
+      "ZhangLS.Spec.Lemma44LongSum",
+      "ZhangLS.Spec.Lemma57GaussianMellinTransform"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44RightMellinApproximation": {
+    "path": "ZhangLS/Spec/Lemma44RightMellinApproximation.lean",
+    "sha256": "d61cd279ca99213c06309cbb5b36638cb29c32fbdf2bb1956daf13b448b147de",
+    "imports": [
+      "ZhangLS.Spec.Lemma44SmoothedTail"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44SmoothedTail": {
+    "path": "ZhangLS/Spec/Lemma44SmoothedTail.lean",
+    "sha256": "38ea491630180d41cdee7e77f03315e48bba21fb66162069e2ec53cf968c54df",
+    "imports": [
+      "ZhangLS.Spec.Lemma44SmoothedTruncation"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44SmoothedTruncation": {
+    "path": "ZhangLS/Spec/Lemma44SmoothedTruncation.lean",
+    "sha256": "fc68ae4be08fbecae26f536a1b05b34b88d346df7c71490946dd772107c71d69",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ProductMellin"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44MiddleContour": {
+    "path": "ZhangLS/Spec/Lemma44MiddleContour.lean",
+    "sha256": "8babdd5e864096defff13bbf3498e585429a2a21955e652bbdb657ab58d7b6bb",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ReflectedLongSum",
+      "ZhangLS.Spec.Lemma44GaussianLongSum",
+      "Mathlib.Analysis.SpecialFunctions.Integrals.Basic"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ReflectedLongSum": {
+    "path": "ZhangLS/Spec/Lemma44ReflectedLongSum.lean",
+    "sha256": "c7bea68581a22c440c465b100e7f5c86dba7198e2a5d0a7e1fde03453512d0f8",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ModulusControl"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44InitialLeftEstimates": {
+    "path": "ZhangLS/Spec/Lemma44InitialLeftEstimates.lean",
+    "sha256": "49c89a58ef6c129d7809074ab57c8c39b7ea8341270562a3a05cca5a49b77335",
+    "imports": [
+      "ZhangLS.Spec.Lemma44FiniteProductShift",
+      "ZhangLS.Spec.Lemma44MiddleContour"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ReflectedPolynomialContours": {
+    "path": "ZhangLS/Spec/Lemma44ReflectedPolynomialContours.lean",
+    "sha256": "a85d966c8722f322141d550fafb4c8f4cde4434a1b9d1649b4f5432bc91acf27",
+    "imports": [
+      "ZhangLS.Spec.Lemma44PolynomialGrowth",
+      "ZhangLS.Spec.Lemma44HorizontalIntegrals"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44PolynomialGrowth": {
+    "path": "ZhangLS/Spec/Lemma44PolynomialGrowth.lean",
+    "sha256": "86435b574b84b0e3a66c448d0b2d8d6b2572911771b41ef27dabee9a86c4a188",
+    "imports": [
+      "ZhangLS.Spec.Lemma44HorizontalGrowth"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44HorizontalGrowth": {
+    "path": "ZhangLS/Spec/Lemma44HorizontalGrowth.lean",
+    "sha256": "739bd7f35fc6d10e83729cf0ee11a89bf1fbb7a5d53258bd04daf1ba0e296d20",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ComplexCharacterAbel",
+      "ZhangLS.Spec.Lemma44InitialLeftEstimates"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ComplexCharacterAbel": {
+    "path": "ZhangLS/Spec/Lemma44ComplexCharacterAbel.lean",
+    "sha256": "332d738b5405539a4244c20dcfffd0213174249833c6473b7d913b4fd3d0c126",
+    "imports": [
+      "ZhangLS.Spec.CharacterAbelAnalyticContinuation"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44HorizontalIntegrals": {
+    "path": "ZhangLS/Spec/Lemma44HorizontalIntegrals.lean",
+    "sha256": "763179a5376b3a0a5d4c838fbd2ab7bbc50b77b2ef8755c2aa38b860a5420830",
+    "imports": [
+      "ZhangLS.Spec.Lemma44HorizontalKernel",
+      "ZhangLS.Spec.Lemma44RightVerticalTruncation"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44HorizontalKernel": {
+    "path": "ZhangLS/Spec/Lemma44HorizontalKernel.lean",
+    "sha256": "b020e87106514af88cee9831d3bcac5de2c5aec3a2983684502e549809f4d0a9",
+    "imports": [
+      "ZhangLS.Spec.Lemma44GaussianVerticalTail",
+      "ZhangLS.Spec.Lemma44LocalRectangle"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44GaussianVerticalTail": {
+    "path": "ZhangLS/Spec/Lemma44GaussianVerticalTail.lean",
+    "sha256": "e175f9d111dbd8709a089c0d4cb3053b04880bd854f78300cd0fc928c9307430",
+    "imports": [
+      "ZhangLS.Spec.Lemma44HorizontalGrowth",
+      "ZhangLS.Spec.Lemma44ReflectedTail",
+      "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44LocalRectangle": {
+    "path": "ZhangLS/Spec/Lemma44LocalRectangle.lean",
+    "sha256": "9c6de980bf1c8ce68d5cd1731a33fe90026df392c251f480f430400d9d5d82c7",
+    "imports": [
+      "ZhangLS.Spec.Lemma44FiniteProductShift"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44RightVerticalTruncation": {
+    "path": "ZhangLS/Spec/Lemma44RightVerticalTruncation.lean",
+    "sha256": "643358d472cdff221a800ea4e7d53cbb8a6805753595940827a45b9920d94135",
+    "imports": [
+      "ZhangLS.Spec.Lemma44GaussianVerticalTail"
+    ]
+  },
+  "ZhangLS.Spec.Lemma44ReflectedPolynomialBounds": {
+    "path": "ZhangLS/Spec/Lemma44ReflectedPolynomialBounds.lean",
+    "sha256": "35321c4f6ca7b4dd50aca30f941794ea6ba4524927b0b7f3961aa15d73798d10",
+    "imports": [
+      "ZhangLS.Spec.Lemma44ReflectedPolynomialContours"
+    ]
+  },
+  "ZhangLS.Spec.Lemma45ErrorBudget": {
+    "path": "ZhangLS/Spec/Lemma45ErrorBudget.lean",
+    "sha256": "504b8e63cfef03b848fb699900fe0dc28defb3d5afab07698730a8bf6c3a5d9b",
+    "imports": [
+      "ZhangLS.Spec.Lemma45Normalization",
+      "ZhangLS.Spec.RiemannZetaCriticalLineBound"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23ModelZeros": {
+    "path": "ZhangLS/Spec/Lemma23ModelZeros.lean",
+    "sha256": "f61c58dfc36b1e24e82600b6104c11bf355102bfd0b477bcd94d12efca0dc2cc",
+    "imports": [
+      "Mathlib.Analysis.SpecialFunctions.Complex.Log",
+      "Mathlib.Analysis.Calculus.Deriv.Mul",
+      "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+      "Mathlib.Analysis.Analytic.Order",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Ring"
+    ]
+  },
+  "ZhangLS.Spec.Lemma46ModelBoundary": {
+    "path": "ZhangLS/Spec/Lemma46ModelBoundary.lean",
+    "sha256": "d6ddfe11577c2d91f903d661ed6e2d5d48a663bb6b26a705744401eed76eae7d",
+    "imports": [
+      "ZhangLS.Spec.Lemma23ModelRouche",
+      "Mathlib.Analysis.Complex.RemovableSingularity",
+      "Mathlib.Topology.Order.Compact"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23ModelRouche": {
+    "path": "ZhangLS/Spec/Lemma23ModelRouche.lean",
+    "sha256": "745e8c785aae68984048768489b16855522ec318a4c675fb4828b240e5431154",
+    "imports": [
+      "Mathlib.Analysis.Meromorphic.FactorizedRational",
+      "ZhangLS.Spec.Lemma23GeneralArgumentPrinciple",
+      "ZhangLS.Spec.Lemma23ModelZeros"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23GeneralArgumentPrinciple": {
+    "path": "ZhangLS/Spec/Lemma23GeneralArgumentPrinciple.lean",
+    "sha256": "7f7b70b3f1b895ca048ffb32c18353130427d8a20d4a72121da78cdc6400671a",
+    "imports": [
+      "Mathlib.Analysis.Meromorphic.FactorizedRational",
+      "ZhangLS.Spec.Lemma23ArgumentPrinciple",
+      "ZhangLS.Spec.Lemma23RoucheIntegral"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23ArgumentPrinciple": {
+    "path": "ZhangLS/Spec/Lemma23ArgumentPrinciple.lean",
+    "sha256": "828939a20d400fe30d42403463013156bbffa5b0d62f12aa175a73d5e02aa2a9",
+    "imports": [
+      "Mathlib.Analysis.Calculus.LogDeriv",
+      "Mathlib.Analysis.Complex.CauchyIntegral",
+      "Mathlib.Analysis.Analytic.Order",
+      "Mathlib.Tactic.Ring"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23RoucheIntegral": {
+    "path": "ZhangLS/Spec/Lemma23RoucheIntegral.lean",
+    "sha256": "14015fb8db8e9676f0afd83f1db0fa7751954b2d9e72d022066a549e27ae5f22",
+    "imports": [
+      "ZhangLS.Spec.Lemma23ArgumentPrinciple",
+      "Mathlib.Analysis.SpecialFunctions.Complex.LogDeriv",
+      "Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus"
+    ]
+  },
+  "ZhangLS.Spec.Lemma46AnalyticSymmetry": {
+    "path": "ZhangLS/Spec/Lemma46AnalyticSymmetry.lean",
+    "sha256": "23ba18d705ba64576b8f428f0088ef1dc9c9108dbf6bb663ec76266e71d51524",
+    "imports": [
+      "ZhangLS.Spec.Lemma46LocalGeometry",
+      "ZhangLS.Spec.Lemma23DirichletConjugation"
+    ]
+  },
+  "ZhangLS.Spec.Lemma46SingleZero": {
+    "path": "ZhangLS/Spec/Lemma46SingleZero.lean",
+    "sha256": "940c536d5a15def3aa0b9704107d2cef8bf03e11990287125afd812c27459d36",
+    "imports": [
+      "ZhangLS.Spec.Lemma23ModelRouche"
+    ]
+  },
+  "ZhangLS.Spec.Proposition22Neighbor": {
+    "path": "ZhangLS/Spec/Proposition22Neighbor.lean",
+    "sha256": "879dddc77c06f0278d09d97f2dd383fa19bccbc9bf9d52c95e64583db3ed491e",
+    "imports": [
+      "ZhangLS.Spec.Proposition22ModelNearZero"
+    ]
+  },
+  "ZhangLS.Spec.Proposition22ModelNearZero": {
+    "path": "ZhangLS/Spec/Proposition22ModelNearZero.lean",
+    "sha256": "1c3b61ad4918ead244b9c79244733b549456b1b5e97af98d74e2ecd45a83a8ef",
+    "imports": [
+      "ZhangLS.Spec.Lemma47ModelApproximation",
+      "Mathlib.Analysis.Complex.RemovableSingularity",
+      "Mathlib.Topology.Order.Compact"
+    ]
+  },
+  "ZhangLS.Spec.Lemma47ModelApproximation": {
+    "path": "ZhangLS/Spec/Lemma47ModelApproximation.lean",
+    "sha256": "103db5868ad385c8519771ca398f89de2e0d594b9c97b530c39d328bf954b1a2",
+    "imports": [
+      "ZhangLS.Spec.Lemma47OuterGeometry"
+    ]
+  },
+  "ZhangLS.Spec.Lemma47OuterGeometry": {
+    "path": "ZhangLS/Spec/Lemma47OuterGeometry.lean",
+    "sha256": "7749f3ad4f1499061082d83c09bb34c0c895941afef427144b37b16514f5c7d1",
+    "imports": [
+      "ZhangLS.Spec.Lemma47Reflection"
+    ]
+  },
+  "ZhangLS.Spec.Lemma23ZeroGapArithmetic": {
+    "path": "ZhangLS/Spec/Lemma23ZeroGapArithmetic.lean",
+    "sha256": "96160e0801e44f962f17c8b6be483255d6beb6371eda0e093061f941da7b5cbd",
+    "imports": [
+      "Mathlib.Data.Complex.Basic",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Ring"
+    ]
+  },
+  "ZhangLS.Spec.Lemma52Offsets": {
+    "path": "ZhangLS/Spec/Lemma52Offsets.lean",
+    "sha256": "a7174d4e8b4c34a3b326ebc9b1e268a347a82aac038f44bf1ad3333c10f3df20",
+    "imports": [
+      "ZhangLS.Spec.Lemma51Parameters",
+      "ZhangLS.Spec.Lemma23ZeroData"
+    ]
+  },
+  "ZhangLS.Spec.Lemma56": {
+    "path": "ZhangLS/Spec/Lemma56.lean",
+    "sha256": "89a8f2e22dfd66018b18dee7995229da6fe11294619241adaf4c418b56d63902",
+    "imports": [
+      "ZhangLS.Spec.Lemma56MangoldtPositivity",
+      "ZhangLS.Spec.Lemma56PrincipalBoundary"
+    ]
+  },
+  "ZhangLS.Spec.Lemma56MangoldtPositivity": {
+    "path": "ZhangLS/Spec/Lemma56MangoldtPositivity.lean",
+    "sha256": "72a0a1312d2839f27d518219d6ecaa80f116bcb497befecf1df166146267b885",
+    "imports": [
+      "ZhangLS.Spec.Lemma55MangoldtPositivity",
+      "ZhangLS.Spec.Lemma44ProductDirichletSeries"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55MangoldtPositivity": {
+    "path": "ZhangLS/Spec/Lemma55MangoldtPositivity.lean",
+    "sha256": "ef45c22b678bb24aa8d5123cdbb7efcaf9ac4cf48a880872c24941a479259a6a",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZetaWeightedPowerError",
+      "Mathlib.NumberTheory.LSeries.Positivity"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZetaWeightedPowerError": {
+    "path": "ZhangLS/Spec/Lemma55ZetaWeightedPowerError.lean",
+    "sha256": "f0ca49bad3c1436a644001e5ba28abf0d5e9e2eee93f5148e34af1be74ad8a63",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZetaZeroPowerDerivatives"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZetaZeroPowerDerivatives": {
+    "path": "ZhangLS/Spec/Lemma55ZetaZeroPowerDerivatives.lean",
+    "sha256": "3b6aaaaf9260bae0d8de9852381624baf50aa5ddc0e0936ad723897cc0ef98cd",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZetaHigherLogDerivative"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZetaHigherLogDerivative": {
+    "path": "ZhangLS/Spec/Lemma55ZetaHigherLogDerivative.lean",
+    "sha256": "e96beed8588f38a7afe8ff2762eaeec68966e7c14d180586e6694bf1841affd3",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZetaLocalLogDerivative",
+      "Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas",
+      "Mathlib.Analysis.SpecificLimits.Normed"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZetaLocalLogDerivative": {
+    "path": "ZhangLS/Spec/Lemma55ZetaLocalLogDerivative.lean",
+    "sha256": "d646cb2f0e2a71fcc16224262bb9fffa9fcea3a4a21b5756cbe7794c8821e73e",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZetaZeroRemovedLog"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZetaZeroRemovedLog": {
+    "path": "ZhangLS/Spec/Lemma55ZetaZeroRemovedLog.lean",
+    "sha256": "75a71701a1d4ffd1ee1cd4ba36504aa3c31f042f410dc3f8443aabb3862cadff",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZetaZeroRemovedBounds",
+      "ZhangLS.Spec.Lemma23BorelCaratheodory"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZetaZeroRemovedBounds": {
+    "path": "ZhangLS/Spec/Lemma55ZetaZeroRemovedBounds.lean",
+    "sha256": "620170c5dca8f919384d65762b37fc081485ba73b9ae240e916c3e7293b097ab",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZetaZeroFactorBounds",
+      "Mathlib.Analysis.Complex.AbsMax"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZetaZeroFactorBounds": {
+    "path": "ZhangLS/Spec/Lemma55ZetaZeroFactorBounds.lean",
+    "sha256": "e8885cef0120b59613ede56f0b3c22ffe21708e31ee539096d3f361e34306089",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZetaZeroFactorization"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZetaZeroFactorization": {
+    "path": "ZhangLS/Spec/Lemma55ZetaZeroFactorization.lean",
+    "sha256": "19a95381145a63cf44f94b9e4a5a55894333de3169cb9b11e556fff00bee855f",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZetaLocalZeros"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZetaLocalZeros": {
+    "path": "ZhangLS/Spec/Lemma55ZetaLocalZeros.lean",
+    "sha256": "c0dcf83492d808a889d12e63b8b4d448025280d719c47d5e1e4b75c6b84996c0",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZetaLocalData"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZetaLocalData": {
+    "path": "ZhangLS/Spec/Lemma55ZetaLocalData.lean",
+    "sha256": "12f66edce1e5787490f156101c493b89c1fb3412324eedb5674a42ec43fb083c",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ExceptionalZeroRemoval",
+      "ZhangLS.Spec.RiemannZetaCriticalLineBound"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ExceptionalZeroRemoval": {
+    "path": "ZhangLS/Spec/Lemma55ExceptionalZeroRemoval.lean",
+    "sha256": "6c7a2e3956491f2b1ed9cc53852cc3ffc59f7d302e71bd27cc02d367347cefb2",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ExceptionalPoleComparison"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ExceptionalPoleComparison": {
+    "path": "ZhangLS/Spec/Lemma55ExceptionalPoleComparison.lean",
+    "sha256": "b329ddcac77b71ed6b4f898e740c9c4e961977bf6d10fb5fe86f32da0539a5f0",
+    "imports": [
+      "ZhangLS.Spec.Lemma55WeightedPowerError"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55WeightedPowerError": {
+    "path": "ZhangLS/Spec/Lemma55WeightedPowerError.lean",
+    "sha256": "faae8c6688e1ef143462ed6c7b6ec11b1a694554a5d50034ac50592b44113e59",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZeroNormalization"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZeroNormalization": {
+    "path": "ZhangLS/Spec/Lemma55ZeroNormalization.lean",
+    "sha256": "0edd86e53d3a68cd43247f710278f0af218a88959949d0b8ffdf6ee60e4c4245",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ActualZeroDetection"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ActualZeroDetection": {
+    "path": "ZhangLS/Spec/Lemma55ActualZeroDetection.lean",
+    "sha256": "a2f6abc696d6eaa7ef3076b7e238309266d76c14cd883aae1aa459a84bd1d822",
+    "imports": [
+      "ZhangLS.Spec.Lemma55FejerDetection",
+      "ZhangLS.Spec.Lemma55ZeroPowerDerivatives",
+      "ZhangLS.Spec.Lemma55OriginalRegionZeros",
+      "Mathlib.Data.Finset.Max"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55FejerDetection": {
+    "path": "ZhangLS/Spec/Lemma55FejerDetection.lean",
+    "sha256": "f4596c4c8cae390a06863fbaf79f2984d4c16415a4afb2d49405ad0f097a9c85",
+    "imports": [
+      "ZhangLS.Spec.Lemma55FejerKernel",
+      "Mathlib.Data.Complex.BigOperators"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55FejerKernel": {
+    "path": "ZhangLS/Spec/Lemma55FejerKernel.lean",
+    "sha256": "840821eb5609c3f2a41dae60d184e468b3f33f44e5f02fb74c33e08a72193f61",
+    "imports": [
+      "Mathlib.Analysis.Complex.Basic",
+      "Mathlib.Algebra.BigOperators.Field"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZeroPowerDerivatives": {
+    "path": "ZhangLS/Spec/Lemma55ZeroPowerDerivatives.lean",
+    "sha256": "c5dad5ed9f2bfb5db87e0d29aeff45e67c8837e513ffad6251e58b1dda1f6ec2",
+    "imports": [
+      "ZhangLS.Spec.Lemma55HigherLogDerivative",
+      "Mathlib.Analysis.Calculus.IteratedDeriv.WithinZpow"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55HigherLogDerivative": {
+    "path": "ZhangLS/Spec/Lemma55HigherLogDerivative.lean",
+    "sha256": "668ef339aa0205ff3d2c3017433497407ea75be92748434f5a47c43580eae6f7",
+    "imports": [
+      "ZhangLS.Spec.Lemma55LocalLogDerivative",
+      "Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas",
+      "Mathlib.Analysis.SpecificLimits.Normed"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55LocalLogDerivative": {
+    "path": "ZhangLS/Spec/Lemma55LocalLogDerivative.lean",
+    "sha256": "e2ca038fc9e92a0a125a216eb700e1933784779a7ce0fc8cdb23081a226bb56a",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZeroRemovedLog"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZeroRemovedLog": {
+    "path": "ZhangLS/Spec/Lemma55ZeroRemovedLog.lean",
+    "sha256": "13228d5042013b009b2a31c6854f1e2220097027eedd00d482c9d9d6db8e0d67",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZeroRemovedBounds",
+      "ZhangLS.Spec.Lemma23BorelCaratheodory"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZeroRemovedBounds": {
+    "path": "ZhangLS/Spec/Lemma55ZeroRemovedBounds.lean",
+    "sha256": "63f0aafbd6f8a617a42ce82110ec939fd08ecb6450d8edd957e4c6c312068844",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZeroFactorBounds",
+      "Mathlib.Analysis.Complex.AbsMax"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZeroFactorBounds": {
+    "path": "ZhangLS/Spec/Lemma55ZeroFactorBounds.lean",
+    "sha256": "85b495114954cb34c6386cf368fe1c7929cf5f470cb0f2ffa9a173148a9039b3",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ZeroFactorization"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ZeroFactorization": {
+    "path": "ZhangLS/Spec/Lemma55ZeroFactorization.lean",
+    "sha256": "4900e2f3ffcd4d0d4717a77c993318ffd4bdcfad88ff845a62815ea653b00647",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ActualLocalZeros"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55ActualLocalZeros": {
+    "path": "ZhangLS/Spec/Lemma55ActualLocalZeros.lean",
+    "sha256": "ff77733528a5344a535477643ab1482e60093017b3934084670f246d8253f38c",
+    "imports": [
+      "ZhangLS.Spec.Lemma55JensenZeroCount"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55JensenZeroCount": {
+    "path": "ZhangLS/Spec/Lemma55JensenZeroCount.lean",
+    "sha256": "581a0344d9c05cbaf189eb22678399d0771cf99b0656e20200600d742ce1aabd",
+    "imports": [
+      "ZhangLS.Spec.Lemma55HighHeightDisk"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55HighHeightDisk": {
+    "path": "ZhangLS/Spec/Lemma55HighHeightDisk.lean",
+    "sha256": "13f440cec85b9c200b22a09e7f2bd8032e6d6aa9df79c5a1eba2981d2c748d74",
+    "imports": [
+      "ZhangLS.Spec.Lemma55NearTwoBound",
+      "Mathlib.Analysis.Complex.JensenFormula"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55NearTwoBound": {
+    "path": "ZhangLS/Spec/Lemma55NearTwoBound.lean",
+    "sha256": "564af401021b04092a4cc46e50d77e0eddd26e10be0b954697d628e66500b031",
+    "imports": [
+      "ZhangLS.Spec.CharacterAbelAnalyticContinuation",
+      "Mathlib.Topology.Algebra.InfiniteSum.ENNReal",
+      "Mathlib.Analysis.SpecialFunctions.Integrals.Basic"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55OriginalRegionZeros": {
+    "path": "ZhangLS/Spec/Lemma55OriginalRegionZeros.lean",
+    "sha256": "44a02f88bec81764d69b732cf9ff39e752b988fb27a9609df3f2abe5a980fdfc",
+    "imports": [
+      "ZhangLS.Spec.Lemma55OriginalRegionCover",
+      "Mathlib.NumberTheory.LSeries.Nonvanishing"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55OriginalRegionCover": {
+    "path": "ZhangLS/Spec/Lemma55OriginalRegionCover.lean",
+    "sha256": "0d0f21509f0aa5dab86a0c1cfaf0fe0264e4268176bdbec36ecccaeba24cc1f5",
+    "imports": [
+      "ZhangLS.Spec.Lemma55ActualLocalZeros",
+      "ZhangLS.Spec.Lemma55"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55": {
+    "path": "ZhangLS/Spec/Lemma55.lean",
+    "sha256": "a511adc680b4f8cf73d24c8dba28290312eaa325b7c150caee7c61f76188dd7d",
+    "imports": [
+      "ZhangLS.Spec.Lemma55LocalUniqueness"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55LocalUniqueness": {
+    "path": "ZhangLS/Spec/Lemma55LocalUniqueness.lean",
+    "sha256": "f7ed05da2346c67607e91e251401ffb0cb8f0223127153bef3cbc261ca351b4a",
+    "imports": [
+      "ZhangLS.Spec.Lemma55SimpleRealZero"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55SimpleRealZero": {
+    "path": "ZhangLS/Spec/Lemma55SimpleRealZero.lean",
+    "sha256": "9fd7426dfe0631e71d14d197bd6944c2e9ba90de3809bd393238cebe805c13b4",
+    "imports": [
+      "ZhangLS.Spec.Lemma55LocalDerivatives",
+      "ZhangLS.Spec.RealAxisContinuation",
+      "ZhangLS.Spec.Lemma57LeftQuadraticGrowth",
+      "Mathlib.Analysis.Calculus.Deriv.MeanValue"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55LocalDerivatives": {
+    "path": "ZhangLS/Spec/Lemma55LocalDerivatives.lean",
+    "sha256": "5ac31d2dd912a13df52c0b6bb410b7325afdf85d9b2999a3d9d1d6380163d967",
+    "imports": [
+      "ZhangLS.Spec.Lemma55NearOneBound",
+      "Mathlib.Analysis.Complex.Liouville",
+      "Mathlib.Analysis.Calculus.MeanValue"
+    ]
+  },
+  "ZhangLS.Spec.Lemma55NearOneBound": {
+    "path": "ZhangLS/Spec/Lemma55NearOneBound.lean",
+    "sha256": "2fea641593d80aa04bd732b98b6e428a16678b4f649d72293a9acf66abb30039",
+    "imports": [
+      "ZhangLS.Spec.CharacterAbelAnalyticContinuation",
+      "Mathlib.Analysis.SpecialFunctions.Integrals.Basic"
+    ]
+  },
+  "ZhangLS.Spec.RealAxisContinuation": {
+    "path": "ZhangLS/Spec/RealAxisContinuation.lean",
+    "sha256": "c5344f18e7c6f8d0ea12656220ec4755e0913f1e438b9b95a25ee47ac0424235",
+    "imports": [
+      "ZhangLS.Spec.Lemma23DirichletConjugation",
+      "ZhangLS.Spec.RealAxisDerivativeAtOne"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57LeftQuadraticGrowth": {
+    "path": "ZhangLS/Spec/Lemma57LeftQuadraticGrowth.lean",
+    "sha256": "9683eccbee0b881f34aba6adac8ad290db1a56eddf6a1d0a4199784ec824e528",
+    "imports": [
+      "ZhangLS.Spec.Lemma57CriticalStripGrowth",
+      "ZhangLS.Spec.Lemma57QuadraticConductorThreshold"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57QuadraticConductorThreshold": {
+    "path": "ZhangLS/Spec/Lemma57QuadraticConductorThreshold.lean",
+    "sha256": "2f0e45688c992087967a29544211a47d4b3d10b5987b7751cff4de6a5a7b1fbe",
+    "imports": [
+      "ZhangLS.Spec.Lemma57GaussianQuadraticMoment",
+      "Mathlib.Analysis.SpecialFunctions.Log.Monotone"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57GaussianQuadraticMoment": {
+    "path": "ZhangLS/Spec/Lemma57GaussianQuadraticMoment.lean",
+    "sha256": "da46fa66b756361ff88e0d17428519c733e3e5ebcf8f02bd435076f9fa456338",
+    "imports": [
+      "ZhangLS.Spec.Lemma57ResidueBudget"
+    ]
+  },
+  "ZhangLS.Spec.Lemma57ResidueBudget": {
+    "path": "ZhangLS/Spec/Lemma57ResidueBudget.lean",
+    "sha256": "5b9fed74e4bc8762788ee7e1eca1136f306fa539a325430152d1b6fa90d179c4",
+    "imports": [
+      "ZhangLS.Spec.Lemma57LAtOnePositivity",
+      "Mathlib.NumberTheory.Harmonic.EulerMascheroni"
+    ]
+  },
+  "ZhangLS.Spec.Lemma56PrincipalBoundary": {
+    "path": "ZhangLS/Spec/Lemma56PrincipalBoundary.lean",
+    "sha256": "f83a6765bd23af6724d562f1248be7a7f9179f6e6400dc043fae967cfbc5699b",
+    "imports": [
+      "ZhangLS.Spec.Lemma55MangoldtPositivity"
+    ]
+  },
+  "ZhangLS.Spec.Lemma34CoefficientEnergy": {
+    "path": "ZhangLS/Spec/Lemma34CoefficientEnergy.lean",
+    "sha256": "28e2ee5046a0baf868cdfd3c55b856fbc9bdaea0c0267db4fd2139163cb26ebf",
+    "imports": [
+      "ZhangLS.Spec.Lemma34DivisorSquare",
+      "ZhangLS.Spec.Lemma34WeightedConvolution",
+      "ZhangLS.Spec.Lemma34TupleConvolution"
+    ]
+  },
+  "ZhangLS.Spec.Lemma34TupleConvolution": {
+    "path": "ZhangLS/Spec/Lemma34TupleConvolution.lean",
+    "sha256": "ce9d061c7d0240721b68878ea6e4e47bec30625c4aa1d442b7de173b75c28251",
+    "imports": [
+      "ZhangLS.Spec.Lemma34DivisorFunction"
+    ]
+  },
+  "ZhangLS.Spec.SquareNuTailMajorant": {
+    "path": "ZhangLS/Spec/SquareNuTailMajorant.lean",
+    "sha256": "42816f4b9d7ff19ae41dc44003260c007286d8da9a0a9b917c4eb3a29a1a229e",
+    "imports": [
+      "ZhangLS.Spec.SquareNuTailMajorantLocal"
+    ]
+  },
+  "ZhangLS.Spec.SquareNuTailConvolution": {
+    "path": "ZhangLS/Spec/SquareNuTailConvolution.lean",
+    "sha256": "a6af6d5f7ef04c0afdd28a16b6a598278a3b9b2b424042623d3e2c36eb7ef59a",
+    "imports": [
+      "ZhangLS.Spec.Lemma34WeightedConvolution"
+    ]
+  },
+  "ZhangLS.Spec.SquareNuTailConvolutionSquare": {
+    "path": "ZhangLS/Spec/SquareNuTailConvolutionSquare.lean",
+    "sha256": "c6ce14a929560c13c3518d3de89207b1dd203d83cf6ef806c36a1c3ff0ac8257",
+    "imports": [
+      "Mathlib.Analysis.PSeries",
+      "ZhangLS.Spec.SquareNuTailMajorantDefs",
+      "ZhangLS.Spec.DivisorSmallPowerBudget"
+    ]
+  },
+  "ZhangLS.Spec.DivisorSmallPowerBudget": {
+    "path": "ZhangLS/Spec/DivisorSmallPowerBudget.lean",
+    "sha256": "06631f7d7b5c53f0a14622452aa9049415bb8b00fdd71698a63fde0abf9eeb14",
+    "imports": [
+      "ZhangLS.Spec.DivisorPowerBudget"
+    ]
+  },
+  "ZhangLS.Spec.DivisorPowerBudget": {
+    "path": "ZhangLS/Spec/DivisorPowerBudget.lean",
+    "sha256": "d5be59e6c7124f96f6231a549ad7f7e69d48ec6469a3f6e8b11631c7298687e8",
+    "imports": [
+      "ZhangLS.Spec.Proposition141DivisorBudget"
+    ]
+  },
+  "ZhangLS.Spec.Proposition141DivisorBudget": {
+    "path": "ZhangLS/Spec/Proposition141DivisorBudget.lean",
+    "sha256": "b076c18d8911f134b7e8ff267e591239017bbc30c1f2be7ca3082c0500815c32",
+    "imports": [
+      "ZhangLS.Spec.Proposition141DivisorBounds",
+      "Mathlib.Data.Nat.Choose.Bounds"
+    ]
+  },
+  "ZhangLS.Spec.Proposition141DivisorBounds": {
+    "path": "ZhangLS/Spec/Proposition141DivisorBounds.lean",
+    "sha256": "0ac4b70189d5f06b27ed5ff186b2d733f31bd7859aed19f60a79f047b1d14157",
+    "imports": [
+      "ZhangLS.Spec.Lemma34CoefficientEnergy",
+      "ZhangLS.Spec.Lemma34DivisorFunction",
+      "ZhangLS.Spec.Lemma34Multichoose"
+    ]
+  },
+  "ZhangLS.Spec.SquareNuTailConvolutionActual": {
+    "path": "ZhangLS/Spec/SquareNuTailConvolutionActual.lean",
+    "sha256": "6fbbb85c3d84f64cf3e3befd63664af52c79dde7dd0dabad76c31bbb5d873a92",
+    "imports": [
+      "ZhangLS.Spec.SquareNuTailConvolution",
+      "ZhangLS.Spec.SquareNuTailConvolutionSquare",
+      "ZhangLS.Spec.SquareNuTailLinear"
+    ]
+  },
+  "ZhangLS.Spec.SquareNuTailConvolutionCapstone": {
+    "path": "ZhangLS/Spec/SquareNuTailConvolutionCapstone.lean",
+    "sha256": "112a9ea073f9fbf25ccafb40e7322970c76483c2abc9d09c98f2ca352af85350",
+    "imports": [
+      "ZhangLS.Spec.SquareNuTailConvolutionActual",
+      "ZhangLS.Spec.SquareNuTailMajorant"
+    ]
+  }
+}
