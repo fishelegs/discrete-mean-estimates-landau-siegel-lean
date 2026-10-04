@@ -1,0 +1,225 @@
+[
+  {
+    "module": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "source": "ZhangLS/Spec/ActualGramArithmeticAttachment.lean",
+    "source_sha256": "de2e1556cfcb5b412b886f6619cf19d295186974783899887604c517cea4eb38",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramPiCollapse",
+      "ZhangLS.Spec.Proposition71Objects",
+      "ZhangLS.Spec.Lemma84WeightedMass"
+    ],
+    "owned": 21,
+    "source_public": 9,
+    "restored_module": false
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramBoxAttachment",
+    "source": "ZhangLS/Spec/ActualGramBoxAttachment.lean",
+    "source_sha256": "0ff9952316289b629b2d13e07c653d492aeff262b0837fee86d58e868c2131ff",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramArithmeticAttachment"
+    ],
+    "owned": 6,
+    "source_public": 2,
+    "restored_module": true,
+    "pre_import_remap_sha256": "14b6be04fb37323340405b72057a1fe01f70a6a5d9e35e89bb3a3e0e7e1ce318",
+    "verified_cached_object_sha256": "2acace83974a1a3833474f8d8e1927217d90b3126a1ae62d6a29a2c180af3a53",
+    "verified_build_trace_sha256": "a3790937ec8a41757b543484bddd6ff28741284b9fe996960634c0e5293371da",
+    "review_source_match": true
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+    "source": "ZhangLS/Spec/ActualGramClosedWeightLayer.lean",
+    "source_sha256": "9b37cb9931b0765680422c5643464f6bf764b83c2b1caf7aa3192c55b111027a",
+    "direct_imports": [
+      "ZhangLS.Spec.Lemma84BoundaryHarmonic"
+    ],
+    "owned": 2,
+    "source_public": 2,
+    "restored_module": false
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "source": "ZhangLS/Spec/ActualGramFiniteSuperposition.lean",
+    "source_sha256": "8cd21fdb220f304bcbad5e809f23342da4995897cbced5381a1e6de34b0cb75a",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramRamp",
+      "Mathlib.Tactic.FunProp"
+    ],
+    "owned": 8,
+    "source_public": 7,
+    "restored_module": false
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramFirstProfileError",
+    "source": "ZhangLS/Spec/ActualGramFirstProfileError.lean",
+    "source_sha256": "b2b246c9ad97ffea3bcb487678b8aab8adefaf2ebc9feee3d5440fea110a214d",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramMainKernelBridge",
+      "ZhangLS.Spec.ActualGramMovingErrorIntegral",
+      "ZhangLS.Spec.Proposition71Support"
+    ],
+    "owned": 4,
+    "source_public": 2,
+    "restored_module": true,
+    "pre_import_remap_sha256": "3214cc9163ca17df1cc9f9a288493b096c0a0fafe734872c9db4a1de1592b4e5",
+    "verified_cached_object_sha256": "4820316368085683ecd79962929985e4f46d5352c80d63cddb1ac727dc8f1526",
+    "verified_build_trace_sha256": "2ce96750e790cf09e7c875c6127e349c5c0fc81d6cc22f21830c9de7daa27f44",
+    "review_source_match": true
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "source": "ZhangLS/Spec/ActualGramLogKernelBridge.lean",
+    "source_sha256": "130663e333e2e401cf8c579cf5f7ab796294ebeb183248b41789d043ed12394e",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramFiniteSuperposition",
+      "ZhangLS.Spec.ActualGramArithmeticAttachment",
+      "ZhangLS.Spec.Lemma82Definitions",
+      "ZhangLS.Spec.Lemma84Definitions"
+    ],
+    "owned": 17,
+    "source_public": 9,
+    "restored_module": false
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "source": "ZhangLS/Spec/ActualGramMainKernelBridge.lean",
+    "source_sha256": "90aba936dc12e99eac0f96fa0def4892fcbf509c02387a7fe13e85b135f555d7",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramOriginalScaling",
+      "ZhangLS.Spec.ActualGramOneSidedSuperposition"
+    ],
+    "owned": 15,
+    "source_public": 8,
+    "restored_module": false
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramMovingErrorIntegral",
+    "source": "ZhangLS/Spec/ActualGramMovingErrorIntegral.lean",
+    "source_sha256": "4871d53b3d480d28c7d68d01d8e85fc45d22a2e6848bb6555cd6bac00f74dae7",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramOriginalScaling",
+      "ZhangLS.Spec.ActualGramSmoothingBounds"
+    ],
+    "owned": 4,
+    "source_public": 3,
+    "restored_module": true,
+    "pre_import_remap_sha256": "de3cabec9391b756589de11d1569c6481166d4e142043fc47badf3152e957974",
+    "verified_cached_object_sha256": "ad0ace27cd33e901f252e0385ad676ac12b45717d3b2156d19316bb3b8c922c1",
+    "verified_build_trace_sha256": "a8116e69e49eece34b79d91542bf0bbc00d1dcd565d99caad01aa1cd2cea55b4",
+    "review_source_match": true
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramOneSidedSuperposition",
+    "source": "ZhangLS/Spec/ActualGramOneSidedSuperposition.lean",
+    "source_sha256": "43c8de586b511893125cfa327fd7be2b410188fb008b87c86ebb468ea73411cd",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramLogKernelBridge"
+    ],
+    "owned": 2,
+    "source_public": 2,
+    "restored_module": false
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "source": "ZhangLS/Spec/ActualGramOriginalScaling.lean",
+    "source_sha256": "46b2cbee9f54260c5381254bda952400a76ecd30a5bd7cf914a48a506699b093",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramLogKernelBridge"
+    ],
+    "owned": 15,
+    "source_public": 7,
+    "restored_module": false
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramPiCollapse",
+    "source": "ZhangLS/Spec/ActualGramPiCollapse.lean",
+    "source_sha256": "73f95306f63588ed48988932fc6ca63dacedddbbc31ac9c55248763044e92603",
+    "direct_imports": [
+      "ZhangLS.Spec.Lemma83ZeroShift",
+      "Mathlib.NumberTheory.ArithmeticFunction.Moebius"
+    ],
+    "owned": 9,
+    "source_public": 6,
+    "restored_module": false
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramRamp",
+    "source": "ZhangLS/Spec/ActualGramRamp.lean",
+    "source_sha256": "aa06fd6166dafa3abf7d5b6cd5a10fdc1b472bfe9e4f26d01c48e1bbf252bcba",
+    "direct_imports": [
+      "Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus",
+      "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+      "Mathlib.Analysis.Complex.RealDeriv",
+      "Mathlib.Tactic.LinearCombination",
+      "Mathlib.Tactic.FieldSimp",
+      "Mathlib.Tactic.Ring"
+    ],
+    "owned": 10,
+    "source_public": 8,
+    "restored_module": false
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramSecondProfileError",
+    "source": "ZhangLS/Spec/ActualGramSecondProfileError.lean",
+    "source_sha256": "5f62abcdde4987d4de54d652276b8d474cd00585d40aae1cbc3bdec64e2f7a50",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramFirstProfileError"
+    ],
+    "owned": 3,
+    "source_public": 2,
+    "restored_module": true,
+    "pre_import_remap_sha256": "8249e2d8f03e8a49f8c05a24efc3247edda786e574d347925d00361431082d88",
+    "verified_cached_object_sha256": "6ba4d5a5bf4a6a51390afbd58b1edae11a9c8081331f2cd61cc20ce384d2f0b0",
+    "verified_build_trace_sha256": "5dd33c7c14a6e63e4ca270aadbfb17e71707dfc98ec299389b7cbb0473be4625",
+    "review_source_match": true
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramSmoothProfileBinding",
+    "source": "ZhangLS/Spec/ActualGramSmoothProfileBinding.lean",
+    "source_sha256": "729bc41ea2f9b659324c37585655a6feff7958bcfc41439c22ad20cdf4179404",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramRamp",
+      "Mathlib.Analysis.Calculus.ContDiff.Deriv",
+      "Mathlib.Analysis.Calculus.Deriv.Support",
+      "Mathlib.Topology.Order.Compact",
+      "Mathlib.Topology.Order.DenselyOrdered"
+    ],
+    "owned": 8,
+    "source_public": 5,
+    "restored_module": true,
+    "pre_import_remap_sha256": "af8c395d6709b9bee33346131f87c0fbccb2838554a946366add10d5e8027e66",
+    "verified_cached_object_sha256": "fac4bb0c4845b1fe87db1d1dca3fe93049b446182bafbdb5d56a2adcae236566",
+    "verified_build_trace_sha256": "330351b5a27ba25089b58ac1b4ed7892a361f85fc54f6c838bdf4aed6057c6ab",
+    "review_source_match": true
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "source": "ZhangLS/Spec/ActualGramSmoothingBounds.lean",
+    "source_sha256": "056cfb6353550f332b4ae1124641193f0a73e5e045f53a0730f00aa76a175c0b",
+    "direct_imports": [
+      "ZhangLS.Spec.Lemma84CompanionBounds",
+      "ZhangLS.Spec.Lemma84BoundaryMainBound",
+      "ZhangLS.Spec.Lemma84Repaired"
+    ],
+    "owned": 11,
+    "source_public": 5,
+    "restored_module": false
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "source": "ZhangLS/Spec/ActualGramWeightedProfileAssembly.lean",
+    "source_sha256": "a38cdb8576f28ced717598b2cc2ca37081ddced12ffca685e5c9e83baad2ea2b",
+    "direct_imports": [
+      "ZhangLS.Spec.ActualGramBoxAttachment",
+      "Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic"
+    ],
+    "owned": 19,
+    "source_public": 15,
+    "restored_module": true,
+    "pre_import_remap_sha256": "10d4119f6ed0fc66d42f3591c5de3068f01c9ae7e8afb1a0164245ead057053b",
+    "verified_cached_object_sha256": "80c399131b8ed836a872f0ebece150b0a97efd32f673b209c1c36ac260b2bd80",
+    "verified_build_trace_sha256": "8d415e0e3be177f6444bc9d865d78c35b4ae7865960e10fd22ffc4121081e7fe",
+    "review_source_match": true
+  }
+]

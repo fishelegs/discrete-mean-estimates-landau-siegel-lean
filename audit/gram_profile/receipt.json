@@ -1,0 +1,106 @@
+{
+  "result": "PASS",
+  "toolchain": "leanprover/lean4:v4.30.0",
+  "baseline_commit": "3203236c046a128ecaedbefffb41ab1fce539f6d",
+  "audit": "audit/CloudGramProfileInventory.lean",
+  "audit_source_sha256": "4f375c60573435a7d72a3298ec39d5121446d1d3413d86a5fb6c448ebbb86717",
+  "reproduce_from_repository_root": "lake env lean -j1 -M6144 audit/CloudGramProfileInventory.lean",
+  "compiler_mode": "One serialized Lean process; existing compiled dependencies read only; no Lake build in this final audit step.",
+  "started_utc": "2026-10-04T02:25:20.371511+00:00",
+  "ended_utc": "2026-10-04T02:25:29.432578+00:00",
+  "exit_code": 0,
+  "counts": {
+    "owner_modules": 16,
+    "owned": 154,
+    "source_public": 92,
+    "restored_modules": 6,
+    "restored_owned": 44,
+    "restored_source_public": 29,
+    "restored_generated_helpers": 15,
+    "existing_owned": 110,
+    "existing_source_public": 63,
+    "loaded_modules": 6964,
+    "repository_loaded_modules": 862
+  },
+  "allowed_transitive_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "type_validation": {
+    "all_exact_owner_name_pairs": true,
+    "all_universe_parameter_lists_exact": true,
+    "all_complete_type_renderings_printed": true,
+    "all_complete_raw_type_expressions_printed": true,
+    "compact_audit_type_pin": "Lean deterministic 64-bit String hash of pp.all output; collision risk, not full-string equality.",
+    "per_declaration_evidence": "SHA256 of each complete type rendering and each raw expression-tree representation, recomputed from this successful final run.",
+    "retained_full_log_sha256": "db7ea1c53a474fe40f9126c6b87b29c3faa0fe669a55aaad180c4d218e54fb14",
+    "omitted_full_log": "Complete logs omitted to keep the evidence compact; reproduce with the audit command."
+  },
+  "additional_exact_full_string_audit": {
+    "result": "PASS",
+    "started_utc": "2026-10-04T02:23:57.302542+00:00",
+    "ended_utc": "2026-10-04T02:24:06.618205+00:00",
+    "audit_source_sha256": "839b2a83b5b867889106d5c3bd5100c4fbfd2aeeb5c42245143069c2b5a7b3ab",
+    "log_sha256": "0010e42a34fde3df485e5fe787c99a89625cc1cc2a4fc8f09860cf47676f40e5",
+    "scope": "All 154 complete type renderings compared by exact string equality and all universe-parameter lists compared exactly in a separate fresh run; full source and log retained separately."
+  },
+  "source_validation": "All six current source SHA256s, import-only remaps, cached object SHA256s and build trace SHA256s match the independent accepted review. All sixteen inventoried current source SHA256s are listed.",
+  "dependency_validation": {
+    "loaded_module_list": [
+      "loaded-modules-01.txt",
+      "loaded-modules-02.txt"
+    ],
+    "repository_module_list": "repository-loaded-modules.txt",
+    "repository_list_sha256": "65dad20b7cbb640606b8aa8c78ec19cb42a921bbb4d9861e2db46e72b237be3c",
+    "direct_source_imports": "sources.json",
+    "scope": "The 6,964 module names match the fresh imported environment and earlier accepted inventory exactly. This records the imported module union; it is not an independent source/object certification or semantic review of every dependency.",
+    "concatenated_sha256": "0a528baf9709307fda9ab7f6c679eae70fefdf462d0da0e434d49bf98a13d383"
+  },
+  "supplied_six_module_build_evidence": {
+    "started_utc": "2026-10-04T01:53:06.436162+00:00",
+    "ended_utc": "2026-10-04T01:53:46.746437+00:00",
+    "result": "6/6 PASS",
+    "logs": [
+      {
+        "module": "ZhangLS.Spec.ActualGramMovingErrorIntegral",
+        "exit_code": 0,
+        "supplied_log_sha256": "a0bc7aa2645105aae047e2e0c5bbbb5e8ab52008bb3b04908a4c1fdc8d30ce21"
+      },
+      {
+        "module": "ZhangLS.Spec.ActualGramFirstProfileError",
+        "exit_code": 0,
+        "supplied_log_sha256": "1935e5b913b520f34db229a259251dd8f9b132811a5f4fa93cf4288b0cdb3142"
+      },
+      {
+        "module": "ZhangLS.Spec.ActualGramSecondProfileError",
+        "exit_code": 0,
+        "supplied_log_sha256": "15e4399392864bb07ed0c4a9f63c31551d006dfcdf91c789cdc088bfecd220d1"
+      },
+      {
+        "module": "ZhangLS.Spec.ActualGramBoxAttachment",
+        "exit_code": 0,
+        "supplied_log_sha256": "5df6c0c931d83cf3110d3c04aedd7a7a74f63b4009b4190ab5a495e823cc56e0"
+      },
+      {
+        "module": "ZhangLS.Spec.ActualGramSmoothProfileBinding",
+        "exit_code": 0,
+        "supplied_log_sha256": "b44e8c9143dbf76e45a7510304bfa81b3f3419d573ca0258d1e887a0e427aa86"
+      },
+      {
+        "module": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+        "exit_code": 0,
+        "supplied_log_sha256": "43f9265e4b8691a61958d09c4ea454704da044c6b046f700b3bb5ae747577fc7"
+      }
+    ],
+    "scope": "Previously supplied fresh six-module build receipts, verified against accepted review; not claimed as a new six-module rebuild in this packaging step."
+  },
+  "independent_review": {
+    "decision": "ACCEPT",
+    "verified_utc": "2026-10-04T02:11:04.338490+00:00",
+    "checks_passed": 148,
+    "checks_total": 148,
+    "review_text_sha256": "38e237f9223cf1ad8de43136103b296bee2c0ce34789088e68e7ccecce088b31"
+  },
+  "scope": "Weighted assembly retains four explicit scalar norm/error premises: actual first norm, actual first error, actual second error, and second main norm. No common uniform substitution, actual fixed-H norm, actual/model Gram identity, Gram nondegeneracy, or strict gain is claimed."
+}

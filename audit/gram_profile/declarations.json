@@ -1,0 +1,2235 @@
+[
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGramFirst",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "03b9ba31e95da8d21b3fd0ef5a2ae31f879a260c8a89282d27f69208eb9bf493",
+    "type_raw_expression_sha256": "3e0b752e704dddfd44a6c89deeda9e87ac708e4b1d60df3b822362fc84ebc3cf",
+    "type_pretty_lean_hash64": "15021856891931998856",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGramFirst.eq_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "bb340f42dba7dd3b0de92416dff972cad5d81aed11685d4671d33bcc4ffc8586",
+    "type_raw_expression_sha256": "ea54e62af8080fa13975517a66241ba871ddca65758fc2f4897312e0bc22fcb9",
+    "type_pretty_lean_hash64": "11873596469471815654",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGramProfileSequence",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "7a71c2dbc57488cecf6ad440d816b1891946de31972f218370f9054eb047cf4b",
+    "type_raw_expression_sha256": "23691e73d768b702d8f0fa797495adbb952f3049fc8c661bfa7f112b351e120c",
+    "type_pretty_lean_hash64": "12731836572808338987",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGramProfileSequence.eq_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "8a7ec0694d246e21a30ac1ac2366167660777203ee70d0449aeb218da49dfae1",
+    "type_raw_expression_sha256": "756291aeb45d99440ebec200c5209e5f3071562fe5d0810f0447dd9408b0c076",
+    "type_pretty_lean_hash64": "8786050005601842596",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGramSecond",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "3887a7245a06871010f72df8808e7a3f7d7c25aa7b5f818904726f01b4d19f3c",
+    "type_raw_expression_sha256": "62a40f21bdfdd5c0a8a3bce8db0693906585f5b2e0261137238b9b5cd1c1c535",
+    "type_pretty_lean_hash64": "11170374606741078242",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGramSecond.eq_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "d2ba5d3233226b618d47abdcd9913e86b7656d8d7669d90b513fa6147e278487",
+    "type_raw_expression_sha256": "2349bb10b5a958969cbed66446efacb9d891974d7a63fc4a4dae994f2cf1444b",
+    "type_pretty_lean_hash64": "8354613568782133273",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_P7_profile_factorization",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "80275c5228bda5e7dc0b40d7d3bf9d16b110146716ab5339a728722f9f4e11d2",
+    "type_raw_expression_sha256": "ddeea6d9a264d98f36ed9d108bd069edb63e9981c62cb8bd8cd64db3ba695157",
+    "type_pretty_lean_hash64": "16194579307783063697",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_P7_profile_factorization._simp_1_4",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "cd428dd9142db1fd7f23a971c893520c210addd9d1071ff9d6b54e2adbb03426",
+    "type_raw_expression_sha256": "c5ba88ac5df1be0286d0b8225ce679ab04ab45246ac456c5e9c6bd031cf68911",
+    "type_pretty_lean_hash64": "2608467155204133230",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_character_mul",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "717560b253b6dea2540d29761b95799cacccdd68adedaf5aa16cc6f3e7948987",
+    "type_raw_expression_sha256": "cf3354a7cc30cb1dcef1afd0d990eb909c11c679f7e3428434a8329035a84ae9",
+    "type_pretty_lean_hash64": "18382711194044312343",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_character_square",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "5021212014929e240db3dad2850a5b0038af91ec4e7e5dd35fc867b27df12a61",
+    "type_raw_expression_sha256": "c94c179530eb1c625ab164adadf5d4c3651bf93d3fb85b03b4132cd495d2b039",
+    "type_pretty_lean_hash64": "3739313607841462726",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_finite_main_attachment",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "91cf3ec14fffb34b932448f56b1ea27fd6f60a4f277a13f90469b1dae48a4fdf",
+    "type_raw_expression_sha256": "d8fc028cdde82bd45d96f8e0938f87c0dab857ced4a87cf280f1d00ec010a51e",
+    "type_pretty_lean_hash64": "3515201462810351846",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_profile_conjugate",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "86c9a200bd7e93ac92e70cffcdac9c9e7c628d48ea36a15f56386c59a5ffdf48",
+    "type_raw_expression_sha256": "0396caa78edff71c10014c87a4e2af3383e512cf3a9d91acdbbc2276f37a1139",
+    "type_pretty_lean_hash64": "7947713663825397572",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_weight_pi_collapse",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "be8d9622724c9eb3476ddf9e9130c176b9a040a084082c0fa383d245ce7431ba",
+    "type_raw_expression_sha256": "9a6af8239aacbb0e447ce58e5f864a1d83c45c06d46c31e4a10365b6d5ec5fca",
+    "type_pretty_lean_hash64": "16150378564257930082",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "cd428dd9142db1fd7f23a971c893520c210addd9d1071ff9d6b54e2adbb03426",
+    "type_raw_expression_sha256": "c5ba88ac5df1be0286d0b8225ce679ab04ab45246ac456c5e9c6bd031cf68911",
+    "type_pretty_lean_hash64": "2608467155204133230",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_2",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_3",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_4",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_5",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_6",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_7",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramArithmeticAttachment",
+    "name": "ZhangLS.Spec.actualGram_weight_pi_collapse._simp_1_8",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramBoxAttachment",
+    "name": "ZhangLS.Spec.actualGram_P7_box_main_attachment",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "c8bdfa87db9d80ccbf047f11536194da48f25ec077e1e51bc83a4d56398f915c",
+    "type_raw_expression_sha256": "e5b8b4d189831b0345324265b670ba7d09ee71bfc144601285df2b4a6e3d5035",
+    "type_pretty_lean_hash64": "11120844591872955552",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramBoxAttachment",
+    "name": "ZhangLS.Spec.actualGram_original_box_fiber",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "caa02e2cac68cc1dceaceb6a85d8b0c39fba841d36c5ddf7c618d1c5eba9e674",
+    "type_raw_expression_sha256": "ac58388ed79479a7989415f6f5ad0bd777a813af10c5705cf9425101d6e80757",
+    "type_pretty_lean_hash64": "4158593083152525925",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramBoxAttachment",
+    "name": "ZhangLS.Spec.actualGram_original_box_fiber._proof_1_4",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "17b561d173ccfb2b46dd1daeb6821723d87f98241ae494c84f7a812d66ff18d2",
+    "type_raw_expression_sha256": "21790a32a78f4027319972c011bde69fd4d7fc1fa9b787963b620990c3c20934",
+    "type_pretty_lean_hash64": "12106918212266575667",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramBoxAttachment",
+    "name": "ZhangLS.Spec.actualGram_original_box_fiber._simp_1_1",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "68624debf114774d349f53d4c3484d719053117ac3dbc28483ebc62e20498db6",
+    "type_raw_expression_sha256": "b8d1042be3241fc8658d25e85bb1061d326e98597de73bce53825a9cd9cd5bb9",
+    "type_pretty_lean_hash64": "1988649516832762782",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramBoxAttachment",
+    "name": "ZhangLS.Spec.actualGram_original_box_fiber._simp_1_2",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "d73a82b7e1d0c0119a06f1fb4c63764136b13695544af5507931bd3d977e06fe",
+    "type_raw_expression_sha256": "53452943652dcc82370fc9ae3d287a18ba08c4b5281070413c8a681c91109ab0",
+    "type_pretty_lean_hash64": "13318128363268500191",
+    "universe_parameters_repr": "[`u_1, `u_2]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramBoxAttachment",
+    "name": "ZhangLS.Spec.actualGram_original_box_fiber._simp_1_3",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "51da4d57bc17a7aae2a9c50277ec9cd18f3f5bf8115fb117237c8fcba422842f",
+    "type_raw_expression_sha256": "d94f642f5f930f71af398df31b157db75a36233d5fdfeeeb08623d8436208e80",
+    "type_pretty_lean_hash64": "2821273606286481332",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+    "name": "ZhangLS.Spec.actualGram_actual_weight_closed_layer",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "dc919dae3e53a956b41a7b10adddab2a4ea08af0d3830978521e75efa44521bb",
+    "type_raw_expression_sha256": "2529fc1f57b03076ce3dd21bac6d8b6a18a4fafee1a23b14b316be890e4f0f90",
+    "type_pretty_lean_hash64": "4553221081616544320",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramClosedWeightLayer",
+    "name": "ZhangLS.Spec.actualGram_weight_product_endpoint",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "56fcd7667e339177b9f950f9c78133809d8d61710d0680012ab9e690eadfeb79",
+    "type_raw_expression_sha256": "5232ac6e69650c8d4d83f4dc67e37fa72c0853e293f9c813d0323d9a9fc666dd",
+    "type_pretty_lean_hash64": "2763220643751271938",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "name": "ZhangLS.Spec.actualGramClippedRamp",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "c28507b56b80e0de48e4c6a31e40bc6ac924aaf64e679ae658763216ee0b4949",
+    "type_raw_expression_sha256": "0a3ea6639d473c54ab4c0f2fc351aafc37b56663ddba9551d1243f8ed333f90f",
+    "type_pretty_lean_hash64": "12620217478735857625",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "name": "ZhangLS.Spec.actualGramClippedRamp.eq_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "80a717f792d32d665bfcafa061680b89db5315ad8f68f9cef60f89a3720cbaa4",
+    "type_raw_expression_sha256": "491aefe8d73038002ae7219a29c75ece7f448995595e500301a586c91ee94003",
+    "type_pretty_lean_hash64": "3869110794234743245",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "name": "ZhangLS.Spec.actualGram_clipped_ramp_continuous",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "b960a6fcbc060bebf0d3dcabc2581eebbbf3d4447d3717dcf3ffca3ad7456065",
+    "type_raw_expression_sha256": "dc69ddcacc96f83bac0784410e24fccffe39355ed3caca8a62b8f1c05add2437",
+    "type_pretty_lean_hash64": "7489626713884929446",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "name": "ZhangLS.Spec.actualGram_clipped_ramp_of_ge",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "62b684c7b69bd9c5843786cb7fa996e5fde8d0884d9a6f3d4e461a688bea9229",
+    "type_raw_expression_sha256": "f0135e89857d9cc3a15cb4dc407af7901f0ed7c58a219641b7a6179b708f4449",
+    "type_pretty_lean_hash64": "1917942177523970360",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "name": "ZhangLS.Spec.actualGram_clipped_ramp_of_le",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "e67f18b2ed73a45919c138929c2ad50fc796631c04fe262f23b2c6e687cc71a8",
+    "type_raw_expression_sha256": "ec1e3d2f098b33466cbd569576d8701915a37540915c950b9f50a186fce3e078",
+    "type_pretty_lean_hash64": "780585936363713155",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "name": "ZhangLS.Spec.actualGram_finite_ramp_superposition",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "396c93e47ace1e8b440f19eb1c9005b7983ce58f9309d58e1c4ff02b42a053b0",
+    "type_raw_expression_sha256": "98de8ae65cc4985734f0eb2fc36d79818d1718596e2e0330b0e042b5fa17233d",
+    "type_pretty_lean_hash64": "1548862692948365895",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "name": "ZhangLS.Spec.actualGram_fixed_interval_ramp",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "3eece3c8915b149d36114bca41ab25a046bf99b2b23b74ec4a1add4ad59baecf",
+    "type_raw_expression_sha256": "f6e7634f345b70cb94dfa9888e1196101395fd87605986b5b5f107f41863841e",
+    "type_pretty_lean_hash64": "17634487069465321324",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFiniteSuperposition",
+    "name": "ZhangLS.Spec.actualGram_ramp_density_continuous",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "347e182b5cbc4671406f633607103a4321b1264595f0199bce19a2e1a95b6043",
+    "type_raw_expression_sha256": "683c31d6b1151278db7f35979b069c68d58039c0f8ce312b3d09c47aea84aa65",
+    "type_pretty_lean_hash64": "7750173957417014840",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFirstProfileError",
+    "name": "ZhangLS.Spec.actualGram_first_profile_error_uniform",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "1bcc43a72cc7c9a1fe65bdb1e9f40e3fe1718303cf3386b5f32dc8a284a428a4",
+    "type_raw_expression_sha256": "8ee217d886d538aa6f2907d49ceb134b0099255a8d2529a2ddedaa21a8041d4d",
+    "type_pretty_lean_hash64": "10513283733326208573",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFirstProfileError",
+    "name": "ZhangLS.Spec.actualGram_first_profile_error_uniform._proof_1_1",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "e12d802a7626ac7cca1a892c1ad38304294d9d8a22c163bdefec3751740cb9c2",
+    "type_raw_expression_sha256": "de69c9a964d3a43d30b4556f7603abe386aa1e474a579a3c9b17185d58aa7e42",
+    "type_pretty_lean_hash64": "7175321828073770338",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFirstProfileError",
+    "name": "ZhangLS.Spec.actualGram_first_profile_norm_uniform",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "28c921e0e017be8f2f6d74d1891af953288ef4a7e1d254b8c0b046e8df0ecb71",
+    "type_raw_expression_sha256": "635e595c672c187a342d1abb942de3057b44ff8b100314a884825f7e72ebf6cb",
+    "type_pretty_lean_hash64": "2627870339855472296",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramFirstProfileError",
+    "name": "ZhangLS.Spec.actualGram_first_profile_norm_uniform._proof_1_1",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "9c62642678955450244c4268f79c87da52f96ca624583a904c8babfcc63d2819",
+    "type_raw_expression_sha256": "9e797679a8bb2f713d548354a922590fba19283aa34090bd6f2e3363c8525851",
+    "type_pretty_lean_hash64": "14169154628881598620",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGramLogSmoothedSum",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "2aa69f195299497be107f4ac7e274ae2026e2c11b200aad30467b0e4daa09372",
+    "type_raw_expression_sha256": "4031821b80afce5dda057e69225b352e1011885085e05f4cee0baeeabbb1ceed",
+    "type_pretty_lean_hash64": "16218191610518668346",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_clipped_sum_eq_smoothed",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "f8557aae5ea6646d33bc1902f2a272946d32fdfba447ccd0c0d0e39f545ddfad",
+    "type_raw_expression_sha256": "568bad77c3c83e97b66a19c33d99543761336f190cf22edfab8364b5ed5b2172",
+    "type_pretty_lean_hash64": "600462789141497722",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_clipped_sum_eq_smoothed._simp_1_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "38811fc0d78f78cf601ba09af88d864dbf11359ecbfd4c9d5184213aaaa36e7c",
+    "type_raw_expression_sha256": "d5f085d4b80d39c4b3441c4b2e0817d9764e3f7e720b79665bd439c57a0ee3f6",
+    "type_pretty_lean_hash64": "4425616438191903068",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": []
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_first_smoothed_superposition",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "ed2105a05ee686eb5ee93488aacfa23e1807ce9e2a2418aba6cd7a0b92ae2ca4",
+    "type_raw_expression_sha256": "fac549be1c5d5df15576b285c8c30c3c5d949ccd6372a79398ae10597e8ef37a",
+    "type_pretty_lean_hash64": "17715099055340174446",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_kernel_first",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "20a74066cd898462adfc87dd4379d926061976e9eaa4387a2e82664dba16fcc1",
+    "type_raw_expression_sha256": "8d06b9092ca3379d4c930fba41b835b015cfe291609d11d745fb2408b6570439",
+    "type_pretty_lean_hash64": "1923845462482203329",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_kernel_second",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "292c069c8bebc37329c7f4d036dbf6ae2d81409adc875bc21c6defb94d20ea3e",
+    "type_raw_expression_sha256": "234413d1a6d6508008ca545161f7f676db68e79f8521ae0b59360c8926f93162",
+    "type_pretty_lean_hash64": "5520853467409920105",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_smoothed_superposition",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "6d9e4ccdff3e4cbf4f1c956bbd59a6ae5ab6628e10d49eba2fa30785fa3f6c3f",
+    "type_raw_expression_sha256": "7e93a85a6d0ce62f1a923d4fa611749bb209abbf8ddaf0c2a0dc6b3fbc66d59b",
+    "type_pretty_lean_hash64": "15186730668128894320",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_smoothing_term",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "bf0f61760c1114bc6dac93c71e628b1e7e1b9c2e47d2e85261b3d1f3133a42f1",
+    "type_raw_expression_sha256": "2815ef406f69e411588a892c3e01c172a2bd350c5cbd623b6ab587dadb1d56a9",
+    "type_pretty_lean_hash64": "18179273793410439863",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_2",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_3",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_4",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_5",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_6",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_smoothing_term._simp_1_7",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_second_smoothed_superposition",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "7ba936459018728a6675d85b0371695574bb47fb7c9d54c23cc7cf5b77d2ad77",
+    "type_raw_expression_sha256": "a984eb198c8979a90fa73f717f938f0de891dcb907779435c12f6f3593dea737",
+    "type_pretty_lean_hash64": "9770632627601664746",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramLogKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_smoothing_cutoff_inside_original",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "2ac120fc3a9e9ed6268f2510ee833559974eaf72e67f73cba49e8adb633922ac",
+    "type_raw_expression_sha256": "0cc7919650005750efddef12c0887eabd09c0f22c825bb670da8ca19caae52f8",
+    "type_pretty_lean_hash64": "15686239964626361127",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_first_main_kernel",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "15860b78f744abbdcbd918ae47b374fae29d4ded15a8a94ddf4c62e9a2a3c928",
+    "type_raw_expression_sha256": "2b7cd65972cb899b7a391c52d8371fc0efb67f64d77d7112226461f4a906c7a5",
+    "type_pretty_lean_hash64": "5115587870073370831",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_first_main_superposition",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "a48e96d83dc4b3f3da208837eef955b0d575dbc92837ce85ef8e0ea4590d9125",
+    "type_raw_expression_sha256": "fbe0b0409a854a82b722c0400ab2dffc96e15c92a98049ac656eebdbd6f2bef4",
+    "type_pretty_lean_hash64": "4516510028963630661",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_ratio_scale",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "dadabd1ab96fce4c854a9af996813c2e3a6f7fc86840c9e0ab6e9209eb9f5df5",
+    "type_raw_expression_sha256": "100102b78a379d0b38f144566905096ae5158021657b28852002e8400aa1ba89",
+    "type_pretty_lean_hash64": "9834988961350812107",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_2",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_3",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_4",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_5",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_6",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_log_ratio_scale._simp_1_7",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_mu6_nonzero",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "b258ae56911471c3787b7d450ca4ac6772f976f0750f0194330995f89b8f66f8",
+    "type_raw_expression_sha256": "fab6548f46cb8b75b142725df4ea7e4a8fd905d7c5f258dcb07af4877de8dd67",
+    "type_pretty_lean_hash64": "14288216535891912326",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_positive_cutoff_cpow",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "fa1c98c8c7769de13666727f83b2b82ed727510333e235a12c4be2605c699bf1",
+    "type_raw_expression_sha256": "ecd2d0bf150cfb28774208de313d720aef2e59abbf9c0b2f52e56a39d7646a35",
+    "type_pretty_lean_hash64": "14203548057679516773",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_second_main_kernel",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "34afe1cfa56c493e111a61e07535fb32c88312a2eae172399ba108baa6ee5d34",
+    "type_raw_expression_sha256": "95c1a62ad8901e90ce99787894ea9a7ea6db9e1cfd18ca906ddb71529c11670f",
+    "type_pretty_lean_hash64": "13345793555895348057",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_second_main_superposition",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "aa1565ca35f6f71af2ed4452b47ea51db9cee6594f0f97351b9e57c8dc8751d5",
+    "type_raw_expression_sha256": "841c23bb71e5d02033cb13740d220baa2f81b7f0e7380a0da8f405c1a27c95b8",
+    "type_pretty_lean_hash64": "3425664375003530301",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMainKernelBridge",
+    "name": "ZhangLS.Spec.actualGram_volterra_terminal_extension",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "c93c333557d4f41fdd8b267d225db98f62708c292585958ea635aa1e2b5e5f2e",
+    "type_raw_expression_sha256": "e4636987f33f4bce7427df22bedd8bcc1cca7a444d2898775d35814a7db4139e",
+    "type_pretty_lean_hash64": "7114889615665709299",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMovingErrorIntegral",
+    "name": "ZhangLS.Spec.actualGram_log_smoothed_continuousOn",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "0a291391721fda94083398d33d18cfe73009402f3e00f150d06159837382acf9",
+    "type_raw_expression_sha256": "7d8dfe0df36b6b53c7df479cff26bb6d033c22380c6cc51ca9463e3a59f05f1d",
+    "type_pretty_lean_hash64": "14704925810942748494",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMovingErrorIntegral",
+    "name": "ZhangLS.Spec.actualGram_log_smoothed_continuousOn._simp_1_1",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "38811fc0d78f78cf601ba09af88d864dbf11359ecbfd4c9d5184213aaaa36e7c",
+    "type_raw_expression_sha256": "d5f085d4b80d39c4b3441c4b2e0817d9764e3f7e720b79665bd439c57a0ee3f6",
+    "type_pretty_lean_hash64": "4425616438191903068",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": []
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMovingErrorIntegral",
+    "name": "ZhangLS.Spec.actualGram_moving_layer_integral_bound",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "c7c6a5ad7f3b1af4122f1048dadf9bc16c62d1369f94efb798d81f76b10e1a03",
+    "type_raw_expression_sha256": "54321ace3d683c43c3164d393538bae7f87b8e1f756781797c68ae50734b398d",
+    "type_pretty_lean_hash64": "1066364894812907507",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramMovingErrorIntegral",
+    "name": "ZhangLS.Spec.actualGram_scaled_moving_layer_bound",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "17dde7c6870b14749da7675c0e820438f5c26b0e32be790b8b5dbff5445eb367",
+    "type_raw_expression_sha256": "9839a6a78d9dfe67c06a672a2b361da2d0a86e33a73cdb3e7343d4038aa684e5",
+    "type_pretty_lean_hash64": "14874368406601696801",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOneSidedSuperposition",
+    "name": "ZhangLS.Spec.actualGram_log_superposition_from_product",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "70c10157b8f7492ecbe9509c7b449a415ec90cb4cfe9194fb99ce8e477821861",
+    "type_raw_expression_sha256": "bc1539e23d43d7098138b795961b5e9696882ff02fdb4fb32b24f4451a683f01",
+    "type_pretty_lean_hash64": "2142355595458813003",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOneSidedSuperposition",
+    "name": "ZhangLS.Spec.actualGram_ramp_above_left_endpoint",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "470e5ef80fcd9cca9d2ef3d94526a634fc20ee072b45bddb95c16bd01f45c6f1",
+    "type_raw_expression_sha256": "2a603ee0bdaed943dcf72c1142129316a67dfec773b2a2c9617cfef326595a4e",
+    "type_pretty_lean_hash64": "14949962037448831170",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_log_moving_band",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "06381c194bf8531bccfbedca8c738f20e71a69c1988ecfe6fd3544dab076d2a9",
+    "type_raw_expression_sha256": "2b8ab0fea4149f63624ef469be90b79e86d8e54449513da3ac55cedb65a11486",
+    "type_pretty_lean_hash64": "1736777494827091120",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_exp_power",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "64def088fe37e3fe3e435d90cc8e31f7482729463d14d95d6b7cec412b90f0fc",
+    "type_raw_expression_sha256": "94fc74338b0f5e468a52217f4dec243e910232ab152c1720288d1f972f2e1d8b",
+    "type_pretty_lean_hash64": "6602736626200119886",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_log_scale",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "d9c8173442976ee07a5237ccd932ec7980ba347f707eed140ab5b39c8c526f57",
+    "type_raw_expression_sha256": "ca2668045530a0ac16a92fbf92ccfb8b2e464ac085068efc1bc2b195004efb4b",
+    "type_pretty_lean_hash64": "11370915016529772675",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_log_scale_pos",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "811a59005a978d81a18709a1e893c331a2e7fb26328e4d9ffc4a1e7879beee66",
+    "type_raw_expression_sha256": "0056a53c9775c94bb70a1ba0977e66c43c22887e0f57d4c02a876a7c81767958",
+    "type_pretty_lean_hash64": "1778252500268084488",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_moving_T_band",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "23ccba3705e6a12c985ddb03d84ef8f2c7393e60a0de87a54bf363e567cd8e46",
+    "type_raw_expression_sha256": "17e428df7d91810d9d2c979cb3c81743f6fa7a1c528ed75dde89fc6ed22ac9b6",
+    "type_pretty_lean_hash64": "4102268060112114566",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_mu6_negative_scaled",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "fee219951fd4f9fd96c5079852dfc4c11018cbd2a5b7533d00fdea834c858651",
+    "type_raw_expression_sha256": "cbc8206e8cf194ae2bec091e90da2eea53cc2f100d9f5430202e66a6203d5f31",
+    "type_pretty_lean_hash64": "5183327280967719783",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_mu6_scaled",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "f8754394ff91817267d4b27210c336c55e1e430d9e8bfc500bc51d8dcb409c46",
+    "type_raw_expression_sha256": "979ed92042f08e369af0c51d687c8e267a4d2bb7d6996616d3479f1996f04c6c",
+    "type_pretty_lean_hash64": "4642322575033151510",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_2",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_3",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_4",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_5",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_6",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_7",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.actualGram_original_mu6_scaled._simp_1_8",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramOriginalScaling",
+    "name": "ZhangLS.Spec.lemma82SmoothingBeta.eq_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "42e340c5d4fed4277980a620f8cd5a236edf52f8088371eb6a61dafe9f9a1770",
+    "type_raw_expression_sha256": "c387db7c1495a419be28d4a36a7bfa0d82e7459bc30e9dedcd42eba6919521b5",
+    "type_pretty_lean_hash64": "8302112211297439384",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+    "name": "ZhangLS.Spec.actualGram_character_prime_denominator",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "e6a93e401fe0d97e78ec79f6190df26e157a43a71f44b3997c83f8e1a2e5e681",
+    "type_raw_expression_sha256": "f544645a3c171c6f10a796180f45b111d9970456f3e3084231a61a3af0976b84",
+    "type_pretty_lean_hash64": "8173147098384764212",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+    "name": "ZhangLS.Spec.actualGram_local_pi_collapse",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "b17fdacfff678929788d9c42e75843bfdbdd6d39ee0dbb09ec1d95728283ac6a",
+    "type_raw_expression_sha256": "25da9c90b487e98654c3a7c5495988c60a9d8f37e8a28a0311b6906834d2e6ff",
+    "type_pretty_lean_hash64": "5826276064369110550",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+    "name": "ZhangLS.Spec.actualGram_pi_divisor_collapse",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "8d6d194c18fd081ffac04c762e23a07b310c8eb46dfdff85fae4cf2c017848b8",
+    "type_raw_expression_sha256": "969458e87e484dd284daf59b8d7f01455a871b9e5cc90fab3c00440801fd8ff7",
+    "type_pretty_lean_hash64": "8049371927946344455",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+    "name": "ZhangLS.Spec.actualGram_squarefree_divisor_expansion",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "47957fdc383a86cf3a875c06bb09491f93e5238b0888b5555c72c1e8232cb3e9",
+    "type_raw_expression_sha256": "0473f17ced40b14b9facfbe68fd98ea861313f0021c19e598d243f09969ad523",
+    "type_pretty_lean_hash64": "10868199973104203631",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+    "name": "ZhangLS.Spec.actualGram_squarefree_divisor_expansion._simp_1_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "68624debf114774d349f53d4c3484d719053117ac3dbc28483ebc62e20498db6",
+    "type_raw_expression_sha256": "b8d1042be3241fc8658d25e85bb1061d326e98597de73bce53825a9cd9cd5bb9",
+    "type_pretty_lean_hash64": "1988649516832762782",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+    "name": "ZhangLS.Spec.actualGram_squarefree_divisor_expansion._simp_1_2",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "05205283b5da2f833d7bbfa07c2b85d5b98fcfaffaf8e2a3c93266a92039a19a",
+    "type_raw_expression_sha256": "751739bc5b3129eefe1b1671b8cd2d7063948006c627eaa403ea5aedca2226b9",
+    "type_pretty_lean_hash64": "8438004994277470691",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+    "name": "ZhangLS.Spec.actualGram_totient_prime_product",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "9809b687a777868a66fd0e61718a81a4fcd7bb8427fee0761cec64b24a2bd881",
+    "type_raw_expression_sha256": "ca122b1606bfe644b4f4cd2979a1c32018302b176b5a6dd279d2641ffe7ea478",
+    "type_pretty_lean_hash64": "8040018395585021134",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+    "name": "ZhangLS.Spec.actualGram_totient_ratio_product",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "26f73fc7267691ed0a8e41e16cae616a212543fa870c0f1857c471bcac8036f3",
+    "type_raw_expression_sha256": "3c79c01bec828196fe637927bd2fcdebe9dfe01b8cf25a9943e40740f45d7cad",
+    "type_pretty_lean_hash64": "5248149694665703920",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramPiCollapse",
+    "name": "ZhangLS.Spec.lemma83Pi.eq_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "b6c3d346abb8b3458a6ac8c43c3602bc222398db805eb0bf494138f65f6513da",
+    "type_raw_expression_sha256": "b5b8d65340ca37e1e23947d9ccb5eb1968ffd8c2b7964002681117e8ce397e56",
+    "type_pretty_lean_hash64": "16778953811242269646",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramRamp",
+    "name": "ZhangLS.Spec.actualGramRampDensity",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "b8abf639878fa708a36aca61870ba1a61cfeee72102f3f0ccca908ddb59431f6",
+    "type_raw_expression_sha256": "42000a86475faa190ff176dd369cf50da6991bdddd0b02cd6260be56150cd28e",
+    "type_pretty_lean_hash64": "13225431690422163216",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramRamp",
+    "name": "ZhangLS.Spec.actualGramRampDensity._proof_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "f7ef675bd70d6462f5bd1488b84e4f393e4ae47283f2ceb6342e22524f633ded",
+    "type_raw_expression_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+    "type_pretty_lean_hash64": "14647379146910394343",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramRamp",
+    "name": "ZhangLS.Spec.actualGramRampDensity.eq_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "9f39edacb78c87b6d8c0e86fca224d7e47cbafc503dc4a093bb22bdc14587b1e",
+    "type_raw_expression_sha256": "9ffa74c1b1a32fc641f4c7065e88f1d5317ed5fc5175bfdc185b7cc31a816a86",
+    "type_pretty_lean_hash64": "4796173668995771263",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramRamp",
+    "name": "ZhangLS.Spec.actualGram_density_integral",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "512d1c3995f7818059ea0bff86507829080694fa37f08d7d886c75926231bdec",
+    "type_raw_expression_sha256": "cecd9f59cf494c6d819f6404fd788d48ea0671bbf374a34ee6dba4336bff63b6",
+    "type_pretty_lean_hash64": "8592868610267505595",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramRamp",
+    "name": "ZhangLS.Spec.actualGram_exponential_antiderivative",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "4bf680d782471bedfe981694a972706ed9356b9b26b63879ff272682a9c57b74",
+    "type_raw_expression_sha256": "7a9ff462efc6c1bcf748a4c8cbffd929782bbc8d7cd0cfb72c43e807ae8fe294",
+    "type_pretty_lean_hash64": "9467482351168398187",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramRamp",
+    "name": "ZhangLS.Spec.actualGram_exponential_identity",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "790330f5f05ed7f2586c55590bc5fbc7ec3b2c1ac60eb21f62da02fc40f1ed76",
+    "type_raw_expression_sha256": "81d31fbcd2770e70b7abb5dd8d5b28216f54ab90bf7e99433fd3c7049ffdd8c5",
+    "type_pretty_lean_hash64": "2776453464957822031",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramRamp",
+    "name": "ZhangLS.Spec.actualGram_first_main_identity",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "b2b559d5b27ce1289f30d8db255e33c971f5754632e8d327786973eeddf62878",
+    "type_raw_expression_sha256": "236afdd373d75190c53d24a58e36c26dd2baaaaf9a1befeeb0619b3577133e2b",
+    "type_pretty_lean_hash64": "4756705168326353959",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramRamp",
+    "name": "ZhangLS.Spec.actualGram_ramp_antiderivative",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "f334a3e182352780bc8b5e02c982898f4b4542cb8a9286f45dce4e38f732879e",
+    "type_raw_expression_sha256": "94bd9e63b15fac4c92a0c866bcb0d874402a9e37a86c59095ada82d4d2f047aa",
+    "type_pretty_lean_hash64": "5563459967041892073",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramRamp",
+    "name": "ZhangLS.Spec.actualGram_ramp_identity",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "eaaf759ed60cfca843d36a8d180045f4b940590c8de5fd6de30862f6ff25974b",
+    "type_raw_expression_sha256": "87e014142d40e4011293157f5e34e0d5daf4458ff16e9ad40ed7cc0b08dfcbf1",
+    "type_pretty_lean_hash64": "13439656056271712450",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramRamp",
+    "name": "ZhangLS.Spec.actualGram_second_main_identity",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "6affcd934a4a792319f037b67accd450876adb1b0eaddeaa98110adfab9991b3",
+    "type_raw_expression_sha256": "a88e0b16caa7cd261a1cb4e956c06761e3e197947d437134859e55a56c84265a",
+    "type_pretty_lean_hash64": "12218864587130543994",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSecondProfileError",
+    "name": "ZhangLS.Spec.actualGram_second_profile_error_uniform",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "6b431eede10272be09158d3784a5725b3d53c8ab5d3a5e35993a5bba7aeffaa8",
+    "type_raw_expression_sha256": "7acf9eca4143ab4bf7d9de54bb0f9e61378cadef30121b98a40940ab2c5607cf",
+    "type_pretty_lean_hash64": "2123093942681103854",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSecondProfileError",
+    "name": "ZhangLS.Spec.actualGram_second_profile_error_uniform._proof_1_1",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "c9690ace5251ef01006baf948c52204cc5d0ba6dccca1a243b30ecaa28792d4f",
+    "type_raw_expression_sha256": "af38dcd872b0599c4ef440dc758c0bb4652b1ae2e3d89669a45384e6df2c84d2",
+    "type_pretty_lean_hash64": "8805387222783395551",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSecondProfileError",
+    "name": "ZhangLS.Spec.actualGram_second_profile_main_norm",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "a938b20d76d00aef8d7c81b6e73cf75153eef9458ba3939b646ac1df2af81f99",
+    "type_raw_expression_sha256": "9c8bb200d7f91735cdf052db956bccc2e5d586fe9b5e5fbe2b1ab220ac4ba4fd",
+    "type_pretty_lean_hash64": "1798956792887464665",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothProfileBinding",
+    "name": "ZhangLS.Spec.actualGram_smooth_profile_density_bound",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "912c22ce73b5262e9d39dde4a7072555a882c74553ae07bc961a694af485b841",
+    "type_raw_expression_sha256": "8dde7a8a5077e5e18c7954cb41d41e8fbad926ddf3ce4852d1832e618b09195a",
+    "type_pretty_lean_hash64": "8421635488125174059",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothProfileBinding",
+    "name": "ZhangLS.Spec.actualGram_smooth_profile_derivatives",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "226eba161c5709e7d022463cf5bf74fe0ce746ae0bc5c418ffcf48c2d1c03296",
+    "type_raw_expression_sha256": "ad51947ebadc3b69d21e2db931cdfd63a1366f0f3913d6655bf5f935abdc1da1",
+    "type_pretty_lean_hash64": "11673764970736701777",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothProfileBinding",
+    "name": "ZhangLS.Spec.actualGram_smooth_profile_global_bound",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "c71f5d13cac218870fa526918280bda4babd011aa084817ba2129ebdf1391417",
+    "type_raw_expression_sha256": "4ba1722f05cc3c6b27750a7614f294e6794dff4efa3bf454bef5584fabe94cee",
+    "type_pretty_lean_hash64": "2227627087012137250",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothProfileBinding",
+    "name": "ZhangLS.Spec.actualGram_smooth_profile_global_bound._simp_1_1",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "006c28ce9f0640c3897f5c8aa4fa82467fa44c173a4541456509ddffe12c7885",
+    "type_raw_expression_sha256": "5e6fbb2d45db22c0427614821742a214e1153b6d2457418fccacb6948509f150",
+    "type_pretty_lean_hash64": "12275696166154983271",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothProfileBinding",
+    "name": "ZhangLS.Spec.actualGram_smooth_profile_global_bound._simp_1_2",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "be91c08c38f22a9980f533623e169ca553bf78cd454b6af658fbdd222a78ee3a",
+    "type_raw_expression_sha256": "9682c74e3918e96adeb16ca2a409adea265969dce5bdb6ef8bda001d7b15f883",
+    "type_pretty_lean_hash64": "9896501609172849848",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothProfileBinding",
+    "name": "ZhangLS.Spec.actualGram_smooth_profile_global_bound._simp_1_3",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "d7a81e702843530468f48d9160c0f62a6ad0abff0780fe18e82b7a05fa11ccc7",
+    "type_raw_expression_sha256": "3ffa1d7cd7be9cf074a24d63cd7f44f3ae87e2e494565f1c94359087701d6778",
+    "type_pretty_lean_hash64": "3038822788580438809",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothProfileBinding",
+    "name": "ZhangLS.Spec.actualGram_smooth_profile_traces",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "a45510c04c26af0b60cc318697dec22029bd4921f102acc98ee5d598f604470a",
+    "type_raw_expression_sha256": "0442fd9f3579671a538316c27e4179ff2e68b397121ec7110fa7e5e148be0ada",
+    "type_pretty_lean_hash64": "1532285372023456899",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothProfileBinding",
+    "name": "ZhangLS.Spec.actualGram_zero_on_closed_exterior",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "fd47e3258e85b3879c2c44aa3f8408c97c42f15b5759c0fc87864f6772d426c5",
+    "type_raw_expression_sha256": "f6c1d396e31f7fd2ddfb03492eda19b595eda0f614b41b174cd0c53b421c08e2",
+    "type_pretty_lean_hash64": "10084562443993060883",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "name": "ZhangLS.Spec.actualGramFirstBoundaryBudget",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "1260043cba9ceb4bf1cb9fc92b449d36f560f9ec8fb362413e8665c5235ac664",
+    "type_raw_expression_sha256": "e334d55ca2012e60f3c1dab669368e7d667404a63738b80f73f07a995f6786bd",
+    "type_pretty_lean_hash64": "12957806670630576245",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "name": "ZhangLS.Spec.actualGramFirstBoundaryBudget._proof_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "5d6cf1b9d722688b5c862521f9d42e593046d0ec553068e9d474b8c849847682",
+    "type_raw_expression_sha256": "7ffe96a7f593c77791d15d16516f9eb377120d60ed53795e871ced6b733441e9",
+    "type_pretty_lean_hash64": "5185406405428909789",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "name": "ZhangLS.Spec.actualGramFirstBoundaryBudget._proof_2",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "d909fd142751a8a6f93c0d72f282de10b8b022b586d0628e4508af77cf0cf9f0",
+    "type_raw_expression_sha256": "67e29669fc82936442864a5ccf6df15eb56a511d6f91e87eb59433bd6bb991fe",
+    "type_pretty_lean_hash64": "6075289956554004985",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "name": "ZhangLS.Spec.actualGramSecondBoundaryBudget",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "e524a33b523eeb6232af020df4f13f66d86748c7f921cfb0bf5ae6f714bfdd5e",
+    "type_raw_expression_sha256": "d038365cf6e082ca9f7d24d04505ecc787c07857b8ad615d5a34853b5589db6a",
+    "type_pretty_lean_hash64": "15075462274320329686",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "name": "ZhangLS.Spec.actualGramSecondBoundaryBudget._proof_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "6541e8319b5ba50852776d53115c28749f64a7b93fd903ac93fcdfe69a6ae45b",
+    "type_raw_expression_sha256": "6b965e43b73cf03fbd8fd4f9f7859cf10dfeff4a8e4835568ed12e03a0122d1b",
+    "type_pretty_lean_hash64": "2354442838308598510",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "name": "ZhangLS.Spec.actualGramSecondBoundaryBudget._proof_2",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "383c04ac98952fbd3aaded7a009984c167d796b56dbf6c208443965295ca6769",
+    "type_raw_expression_sha256": "adc6ecb2ba40f4651a35028433aff6f4b30237de48f36496ef3f0f49d50a9417",
+    "type_pretty_lean_hash64": "3457767388364009917",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "name": "ZhangLS.Spec.actualGramSecondBoundaryBudget._proof_3",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "161fa72dfa480f728c1c2bbb6cd3ab1a1cea38862a5f889f29deae07eab02604",
+    "type_raw_expression_sha256": "4c7f800b5dc2017168ef57716aacd4299d3c5563c298735c2c0732537a9da9b3",
+    "type_pretty_lean_hash64": "420410228022065358",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "name": "ZhangLS.Spec.actualGram_first_small_error",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "8c952c3c9226b494c7d490c63cc92405304f2c5d5ac383985c16b9107a9f3209",
+    "type_raw_expression_sha256": "a742285f52ceca1aa68e37c3c018ab63d468684e959e3d814dbeb1349b3f0fde",
+    "type_pretty_lean_hash64": "10414857863939149620",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "name": "ZhangLS.Spec.actualGram_second_small_error",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "290781858e7f880bbb740264413ad3cbe363cb46437939677bb3938a3c359fe1",
+    "type_raw_expression_sha256": "19b340a9ac0dc65f99cd78b1a995be6b448767ecaedfc5537edbc6c6b0c1314d",
+    "type_pretty_lean_hash64": "9422562012746797839",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "name": "ZhangLS.Spec.actualGram_smoothing_errors_uniform",
+    "source_public": true,
+    "restored_module": false,
+    "type_pretty_sha256": "916a2d0204806c765484a4c40763b8a6f4654643d264758a1eb2cd20b8bf1b4e",
+    "type_raw_expression_sha256": "ae4d73326e2d135c11dece03161a2f17256faf2b198f36a9d9bd3910183d652a",
+    "type_pretty_lean_hash64": "10487894123758581809",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramSmoothingBounds",
+    "name": "ZhangLS.Spec.actualGram_smoothing_errors_uniform._proof_1_1",
+    "source_public": false,
+    "restored_module": false,
+    "type_pretty_sha256": "485aae2e255ea9cec34f3788d0b4f120049dbd8794d15ebdac45077ee3a203f2",
+    "type_raw_expression_sha256": "4751b41e8048f9ba3df8bab55e83bb916faab8131cea76249a627ca06df384e1",
+    "type_pretty_lean_hash64": "16673201377485100598",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGramDifferentialFirst",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "f8dc10d7f9233d5c6f8a14735c93d02f021a02dbdda7192b8d54abe34ce9e00d",
+    "type_raw_expression_sha256": "35ddd59a8aee4f577538f83501d095a4b71f6d6da355f32124a69fc8a4d73be3",
+    "type_pretty_lean_hash64": "5623605483578776590",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGramDifferentialFirst.eq_1",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "b2c5cdbb225b2faaf67fda367d489917ad5c4397088f983981f860dc899945d5",
+    "type_raw_expression_sha256": "7611943b58b9471aed38522c3c50bc53d815f480ad4f14d3dee1a1f75b0a3e87",
+    "type_pretty_lean_hash64": "12952566684432170765",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGramDifferentialSecond",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "b0bc2a8f4a30eec774c97d3dc58405aef33b9a5a75262ec11ca9a33d7f9396f2",
+    "type_raw_expression_sha256": "0ff6286fbe043f01e4ab18a84b995ecff24845a02d28fb8c82b6d65268a5debe",
+    "type_pretty_lean_hash64": "13687049883206256124",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGramDifferentialSecond._proof_1",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "6cd0bb96b44cfc539ef4b75f17827403d3d8ee2d8a1bdd5ec7028be9c564f628",
+    "type_raw_expression_sha256": "0b7e3f2e3b3c25eb2e13e4730d5abb63a49c09a9874f482ad95bedeaafcab313",
+    "type_pretty_lean_hash64": "14568674335733737352",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGramFiniteProfileKernel",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "54432b36eb06a122222dad83daa88db046c12ed832e0a703360b5fd4f32db7d6",
+    "type_raw_expression_sha256": "149a45320eae281e040589405da6cee369e35a8aecc8f5ef86c02394e33b17e0",
+    "type_pretty_lean_hash64": "15783365939472505673",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGramFiniteProfileKernel.eq_1",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "aba0cab627f4938dd0b41614977245e9e751bfa6a4eaf00d379c2bebac93226a",
+    "type_raw_expression_sha256": "fc6a4d28bb0ac2172016f8fc996ea159dbedb528734f495abfbf4c29e85a6510",
+    "type_pretty_lean_hash64": "10542566999244213276",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGramFirstProfileMain",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "2c3e82cf92edc6b5e34e9da2487b49e8580981a8c07dc578060e04e9482b8543",
+    "type_raw_expression_sha256": "8df30448a7ef10e412ed513f7f3a32702e54b866a6306a3f2e9b080aef20d4b7",
+    "type_pretty_lean_hash64": "12779824625919468686",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGramFirstProfileMain.eq_1",
+    "source_public": false,
+    "restored_module": true,
+    "type_pretty_sha256": "f0a2b5b11e2d9a25435f904fd1192d28d2040c63199acd971629eaeb11aad576",
+    "type_raw_expression_sha256": "66de7ea9ac2066fa1f50e7d9364a1edf22e27462bd13da0e07ab66c26f2140c7",
+    "type_pretty_lean_hash64": "10158424297647718348",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGramProfileProductResidual",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "987e9ddb23434246a4251e41cae9b7cbcb5b6ff13894d0bd1967ec59251fa572",
+    "type_raw_expression_sha256": "7acfb2e3953b16cdc6cc8b2933543c2d2976616966d313ed7cf0a5c63fa7061f",
+    "type_pretty_lean_hash64": "6987422880751958751",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGramSecondProfileMain",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "58331eddb092314c9e3418ec55a93383f163be59783ef5d6962d42f7ce277ad3",
+    "type_raw_expression_sha256": "6333e55f83d1505f636f40011230289f69717983de28fd0ea958ba4e722d4c2f",
+    "type_pretty_lean_hash64": "7452512050455456478",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGram_P7_main_error_identity",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "81b23a472b682cc765e0d2d7e5871b67203414e714f2822662f27bef9776ec09",
+    "type_raw_expression_sha256": "ff4566a36e84285f222343828b3cf10b3770c9b6a77134403c9e04804447b05e",
+    "type_pretty_lean_hash64": "17626138159764103248",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGram_P7_main_error_supported",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "15df894ada266c333f50dfd193cda080e5dd879a096c3414356ce336f06040ec",
+    "type_raw_expression_sha256": "a916f551b02e2767c18a5d7f83f4c1171137f954f9b039907e6b78dbbc5dafa8",
+    "type_pretty_lean_hash64": "14733852598353193884",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGram_finite_profile_kernel_strict_support",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "3476a93779cb072d02ab77bfd65455185a3368c99c2e5eb96103d16244fb0a75",
+    "type_raw_expression_sha256": "7f1c5a959da733f745b5fac16a0377d576c5fb5cec8820598b00149931bb1795",
+    "type_pretty_lean_hash64": "5258550081627119990",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGram_first_profile_main_zero_past",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "ac3beaadc9c70261d5c8b105b148d58e24ce86ed6edef65234faa2a615562560",
+    "type_raw_expression_sha256": "281ed02bd14d33d5f0b09716b877ae12b5b02b52a07da5198ba21977927f1b73",
+    "type_pretty_lean_hash64": "12798041060576179895",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGram_first_zero_past_profile",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "9dde0b5742a86980db4c780fa498a0d6dacd737769f7e7da4e3bb8882e6e9a26",
+    "type_raw_expression_sha256": "37b7c21eb947740dbda6b3e4f3ca84ca03d2edbdd0d445d71b7380e9a575aa3b",
+    "type_pretty_lean_hash64": "7907358006910536602",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGram_profile_inner_cutoffs",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "37a7634d55d22d76d3f02fac230317d3880a95fc23c7e79911e38cecb95af10c",
+    "type_raw_expression_sha256": "b3612e066817eae7ef47bb551455f6ea8fb289af4f6b0aa74a018686d6513111",
+    "type_pretty_lean_hash64": "13594674900885537106",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGram_profile_product_residual_zero",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "7958f5a7892bcc8135e60c5f4b78dfd4946a57a54634e8da345683a6f387ec3f",
+    "type_raw_expression_sha256": "df3230198c60fb098e50c0523f7cf40baad4d59450f255cb2e2ddc8db1e9c3de",
+    "type_pretty_lean_hash64": "14397165803102091679",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGram_profile_residual_restrict",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "a69ef8035c06067170d640bb3815dfe9805a997fb39f173ccb8731e65c3e9a9b",
+    "type_raw_expression_sha256": "a7cfa8939462ffc188cb4ac782500a3067b4d5b265861cd509795665d0595daa",
+    "type_pretty_lean_hash64": "480589444185082195",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramWeightedProfileAssembly",
+    "name": "ZhangLS.Spec.actualGram_weighted_profile_error_bound",
+    "source_public": true,
+    "restored_module": true,
+    "type_pretty_sha256": "50fbcedc0bd73c07e5d323f913b2e7a12680a74939142188824503c0cef562ef",
+    "type_raw_expression_sha256": "3939cb17fe9ba26448e754d89e9847c7801b25c25f5a6620f1da6017ecf03684",
+    "type_pretty_lean_hash64": "8697371120009258137",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  }
+]
