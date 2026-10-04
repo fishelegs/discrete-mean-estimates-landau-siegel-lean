@@ -1,0 +1,954 @@
+[
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniformExponent",
+    "source_public": true,
+    "type_pretty_sha256": "3d1917aa425fd7059394e1413a9cf36a1304374e10ea4b88200fd2d34ce749d4",
+    "type_raw_expression_sha256": "6ae12e5ef6e1af0bef4803bd311e986ce997f77beed3198cba4ded901a7554e2",
+    "type_pretty_lean_hash64": "7337748955408223552",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 6,
+    "direct_references_sha256": "b3252586725f85605fb42d39de880d9e4c9723ee861a664645820bae14e423cf"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniformFirstBoundaryConstant",
+    "source_public": true,
+    "type_pretty_sha256": "e55fe37737b783cc821bb77a370950bb6a51dcf386ab6ee70d31808409ba412e",
+    "type_raw_expression_sha256": "6d911f09835182653774830143fd8a4a6359e6b86c758307666bd46acf67b496",
+    "type_pretty_lean_hash64": "9035701922190319447",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 17,
+    "direct_references_sha256": "5a4f508dc63475b7b9f1a8268978bb967158f5ccaac2f13076853a83498fa4f4"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniformFirstBoundaryConstant._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "f7ef675bd70d6462f5bd1488b84e4f393e4ae47283f2ceb6342e22524f633ded",
+    "type_raw_expression_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+    "type_pretty_lean_hash64": "14647379146910394343",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 9,
+    "direct_references_sha256": "d574b19b6ac98e679e43738e3298e483132bcf908c37a429770e2e3725042dcb"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniformFirstBoundaryConstant._proof_2",
+    "source_public": false,
+    "type_pretty_sha256": "d909fd142751a8a6f93c0d72f282de10b8b022b586d0628e4508af77cf0cf9f0",
+    "type_raw_expression_sha256": "67e29669fc82936442864a5ccf6df15eb56a511d6f91e87eb59433bd6bb991fe",
+    "type_pretty_lean_hash64": "6075289956554004985",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 9,
+    "direct_references_sha256": "d574b19b6ac98e679e43738e3298e483132bcf908c37a429770e2e3725042dcb"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniformMainConstant",
+    "source_public": true,
+    "type_pretty_sha256": "e55fe37737b783cc821bb77a370950bb6a51dcf386ab6ee70d31808409ba412e",
+    "type_raw_expression_sha256": "6d911f09835182653774830143fd8a4a6359e6b86c758307666bd46acf67b496",
+    "type_pretty_lean_hash64": "9035701922190319447",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 23,
+    "direct_references_sha256": "8ec72bb481dc3be9010cdecd6483d9499040b20948f55434ab6f42939e773a98"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniformMainConstant._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "7755298712e9bfbd6d5d537ba7421f21ac2a065f011eafed8cf68bb45ea47998",
+    "type_raw_expression_sha256": "020df39f03de6d50641c7e1d1181265a84466fdcceb038190f9ddabd0ea70515",
+    "type_pretty_lean_hash64": "772565646570335038",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 9,
+    "direct_references_sha256": "d574b19b6ac98e679e43738e3298e483132bcf908c37a429770e2e3725042dcb"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniformSecondBoundaryConstant",
+    "source_public": true,
+    "type_pretty_sha256": "e55fe37737b783cc821bb77a370950bb6a51dcf386ab6ee70d31808409ba412e",
+    "type_raw_expression_sha256": "6d911f09835182653774830143fd8a4a6359e6b86c758307666bd46acf67b496",
+    "type_pretty_lean_hash64": "9035701922190319447",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 20,
+    "direct_references_sha256": "36df77d9daed50c536053d64cc8587f7ed06de14fbddde3675a8f1249396156a"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniformSecondBoundaryConstant._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "f1199440cf82d00b965e0eec1f0b56f8dec834119d083b9472145049e56be9f2",
+    "type_raw_expression_sha256": "7a87f934f2653791953a95de38dd709d9470b197b5020708e0322552ac384179",
+    "type_pretty_lean_hash64": "8609675347731722958",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 9,
+    "direct_references_sha256": "d574b19b6ac98e679e43738e3298e483132bcf908c37a429770e2e3725042dcb"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniformSecondBoundaryConstant._proof_2",
+    "source_public": false,
+    "type_pretty_sha256": "5d6cf1b9d722688b5c862521f9d42e593046d0ec553068e9d474b8c849847682",
+    "type_raw_expression_sha256": "7ffe96a7f593c77791d15d16516f9eb377120d60ed53795e871ced6b733441e9",
+    "type_pretty_lean_hash64": "5185406405428909789",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 9,
+    "direct_references_sha256": "d574b19b6ac98e679e43738e3298e483132bcf908c37a429770e2e3725042dcb"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniformSecondBoundaryConstant._proof_3",
+    "source_public": false,
+    "type_pretty_sha256": "383c04ac98952fbd3aaded7a009984c167d796b56dbf6c208443965295ca6769",
+    "type_raw_expression_sha256": "adc6ecb2ba40f4651a35028433aff6f4b30237de48f36496ef3f0f49d50a9417",
+    "type_pretty_lean_hash64": "3457767388364009917",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 9,
+    "direct_references_sha256": "d574b19b6ac98e679e43738e3298e483132bcf908c37a429770e2e3725042dcb"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniformSecondBoundaryConstant._proof_4",
+    "source_public": false,
+    "type_pretty_sha256": "161fa72dfa480f728c1c2bbb6cd3ab1a1cea38862a5f889f29deae07eab02604",
+    "type_raw_expression_sha256": "4c7f800b5dc2017168ef57716aacd4299d3c5563c298735c2c0732537a9da9b3",
+    "type_pretty_lean_hash64": "420410228022065358",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 9,
+    "direct_references_sha256": "d574b19b6ac98e679e43738e3298e483132bcf908c37a429770e2e3725042dcb"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniform_first_boundary_bound",
+    "source_public": true,
+    "type_pretty_sha256": "b3dd67507ad2d19601799cb13ea87b610028313b7b5d118dec8f8b70b13f9510",
+    "type_raw_expression_sha256": "bc5937faa53af85eaffc598a0a072157b2186558d606689bf092782f46f14203",
+    "type_pretty_lean_hash64": "13181653615863950299",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 205,
+    "direct_references_sha256": "864384669a44f73f1fe2b875d73bba31819c2e36c37fbd2c8d892b18c6f8513e"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniform_first_boundary_constant_pos",
+    "source_public": true,
+    "type_pretty_sha256": "a29f83d002aa087a5c3a3913df84076c0664fb18206e886934155678b5c4d090",
+    "type_raw_expression_sha256": "7d47354e7a03e762b5512742d0c57772d67875079df0f784a85d69a76569d232",
+    "type_pretty_lean_hash64": "16061783107593327913",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 54,
+    "direct_references_sha256": "9807e4edf9b0eb92bae49aaeef8c25485de042fa78d48c1e0dc263a00f3b70c7"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniform_main_constant_pos",
+    "source_public": true,
+    "type_pretty_sha256": "ac4119134cbd6f70f89862c78b61e501fdcd74efe29c5c9a502a535793dacf7f",
+    "type_raw_expression_sha256": "8ce73ccfbae259cfc322d49640c0011adda0c1b94935ced26ece96dd2ab430cf",
+    "type_pretty_lean_hash64": "2626490382861778039",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 68,
+    "direct_references_sha256": "2170781bb7db5e27fa19779625dea2d20c7ce7a444fcbd7eec78af3428324fa6"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniform_pi_bound",
+    "source_public": true,
+    "type_pretty_sha256": "5cdcb8278d07cc37c6cd9e81ef2d56a04ac0075533917334d6f0efffc7e5996b",
+    "type_raw_expression_sha256": "0bbc1a1cc0a81adc23c4db249c2b0f99cb1bf07faf424b31f684e59869cd44de",
+    "type_pretty_lean_hash64": "16948116467217167050",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 182,
+    "direct_references_sha256": "02b7bc0fe74f539d3794065ff0fdfe62347788d0d818d2f9bcfd34ac231fc4b7"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniform_scale_bounds",
+    "source_public": true,
+    "type_pretty_sha256": "bf13d716b631a0017a52a78963302976c25a0df7086ae046fbfe39f295cb08b3",
+    "type_raw_expression_sha256": "786e9bf5fc090fd34f6db5f7671d929cf401945c4e759f9147724de47447e3a5",
+    "type_pretty_lean_hash64": "7479488920376706253",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 170,
+    "direct_references_sha256": "2c4dab9084282fed9cbe823ecd367fc33115bb5daf19de2fc002c63cc15d1b9f"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniform_second_boundary_bound",
+    "source_public": true,
+    "type_pretty_sha256": "316de749d01ec6b019076eb01d9da89a40d7fcc4e3572a36117d8aaac8539b10",
+    "type_raw_expression_sha256": "f73841717c2cf60e6d8eeed35011644eb5bd895b572d0d318b02e9017cdc1a58",
+    "type_pretty_lean_hash64": "13442277156251150726",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 241,
+    "direct_references_sha256": "3d129f15679ad3e8c7ded3b0ae857f8d04015af6d86bae18b9a260fb87c05b82"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniform_second_boundary_bound._proof_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "07f4874acfb2f1b4d59c6381fe8bc8122681f71118cffd104fa26c5ba3d14332",
+    "type_raw_expression_sha256": "a21098702f86bad89f3d16af9eae1b03b9471b724dcf9c068281c7a154675c4c",
+    "type_pretty_lean_hash64": "5708421964259984632",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 45,
+    "direct_references_sha256": "6ed4dfa6ea0e484f7aff3595ccac476c0961ea5021504b30257a8b3cb5b5adc2"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "name": "ZhangLS.Spec.actualGramUniform_second_boundary_constant_pos",
+    "source_public": true,
+    "type_pretty_sha256": "bd5254136b7d77844d232bff7f9d00863dfe327ebf7d455d2428c1881bdd4b4f",
+    "type_raw_expression_sha256": "cdef1dee25ca377bbec0101335e92c7da9e4a48f61b4df71fddf0db722a42d74",
+    "type_pretty_lean_hash64": "1287710894087170572",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 64,
+    "direct_references_sha256": "aae1bb04177900af3c7d4c5511d13b639a62f7c52bcb98833fc0c1ae47c4149a"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformGeometry",
+    "name": "ZhangLS.Spec.actualGramUniformPairs",
+    "source_public": true,
+    "type_pretty_sha256": "5cff09f2a8fee2af99d216e794e8b07be0616f56edc6584dc75227571b2b342e",
+    "type_raw_expression_sha256": "15a10592afab67601552c12e8a61aeea294bb452ae5c16e546db7cf39e35cbd6",
+    "type_pretty_lean_hash64": "6195479031539198252",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 23,
+    "direct_references_sha256": "81965f4ece34a080df8613c62c9190dd4c3c7a15df65d5dab5584bd099e5b613"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformGeometry",
+    "name": "ZhangLS.Spec.actualGramUniform_harmonic_bound",
+    "source_public": true,
+    "type_pretty_sha256": "53e2a99219014d7bb8305a7138f569ac0d064c37034a345fd5ecc8978a648f71",
+    "type_raw_expression_sha256": "72f767e20e499ef8e885e63f45070d35e6963283790d0d34a5191821edce97f8",
+    "type_pretty_lean_hash64": "12853684739883111525",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 195,
+    "direct_references_sha256": "86383a40ff1cb7a016d47082ff58ed140c3fe31b69cb6f47173eddad1e1169b6"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformGeometry",
+    "name": "ZhangLS.Spec.actualGramUniform_harmonic_bound._proof_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "927509e474b62759eb0c433c41778680f11158b2fc920dad09292513c37d38a2",
+    "type_raw_expression_sha256": "a2a411b289d6cfed88ec5b95c5791b8613fed419046bced08b8d184740003217",
+    "type_pretty_lean_hash64": "1193932418806536131",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 65,
+    "direct_references_sha256": "08fe0677aa986436132124673e76c4fb66b16255bb85c44189376b8b5798f523"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformGeometry",
+    "name": "ZhangLS.Spec.actualGramUniform_pair_geometry",
+    "source_public": true,
+    "type_pretty_sha256": "31d208d72a1e409f55f85c8295007e8651f7a0f9fe5690e6b6fba087ba766ac9",
+    "type_raw_expression_sha256": "aa28303e2b32d1d3387081e978d983a3ea6d68c13712e1f63f4175fb5919861b",
+    "type_pretty_lean_hash64": "3410851082898285739",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 114,
+    "direct_references_sha256": "6d4ec9938c5ef33ea540759ab72a575cc30a20f13941de7a000483edea504bca"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformGeometry",
+    "name": "ZhangLS.Spec.actualGramUniform_pairs_subset",
+    "source_public": true,
+    "type_pretty_sha256": "25742b5c597cebfdc4b1852469da5160afc0e2db617aaa7a1b597f824fc685b2",
+    "type_raw_expression_sha256": "c132c0e25fb15aeae1fd7b1bea8edc5074a2fcb187b18d02c947b7bc2bfd478d",
+    "type_pretty_lean_hash64": "1491687726342824254",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 73,
+    "direct_references_sha256": "bc080033cc53129adde4ebb8852e32249301b9ddd5ab78d55a0f95ec61f0cf89"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformGeometry",
+    "name": "ZhangLS.Spec.actualGramUniform_support_ceiling",
+    "source_public": true,
+    "type_pretty_sha256": "98287d243e692ecfd4e88ae6dc5087a724ab6cf4e47dadcd673b4a433e7b2c63",
+    "type_raw_expression_sha256": "c576c875cb7a3e3842a2864f638590f28dc29edda1da98ce50704afcc75c5294",
+    "type_pretty_lean_hash64": "8662086794420307296",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 269,
+    "direct_references_sha256": "346056d9facf9119b5118dd28cd9f28e7597d5ecb47711ab7916b793b269bb33"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniformArithmeticResidual.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "823ddb953952ec506e554b3382ef6c1b9cecf5036a507fcdee2c084da5723756",
+    "type_raw_expression_sha256": "5052103fd5dd854cd920e81149e5e015e6002e60f15c452f4660c6f4aa29266b",
+    "type_pretty_lean_hash64": "10130740128908295363",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 60,
+    "direct_references_sha256": "e713051c7a7e21cfdb6f60a9662f04a079ba21649299fa91d664c5c774be5b46"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_budget_square",
+    "source_public": true,
+    "type_pretty_sha256": "e6c429d502ec743c30307e3e430e6eb4230fd2dbfdf1fa74c0594b49833372ee",
+    "type_raw_expression_sha256": "370c7574a92610f42a6bc62fc85b784ddb8cc28ff697edd50d8ab44d4dfdbe2f",
+    "type_pretty_lean_hash64": "7134915610981516112",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 151,
+    "direct_references_sha256": "67ec7d11e23f55a5d6808b0db77c6c9e1b6031b934ecbff16eebbb1435ecc72d"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_budget_square._proof_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "ccdfd1af8ec6f7e41bbb75d64b6ac8f7dafe85f3adf97b9ffa19ace773e0e5fc",
+    "type_raw_expression_sha256": "63b7723d569dd1439fa2a41bf0985a3ec69a7ef384a618accf2bb956da28c478",
+    "type_pretty_lean_hash64": "5749348782584039092",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 71,
+    "direct_references_sha256": "cbc582e97a1f5df40e9f7bb57fc0436bf22350600f94db58be7baaf04876449c"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_budget_square._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 11,
+    "direct_references_sha256": "624c86cde9b2df5aa0522e4124f62ed1a373ee00e56a0ffd82086dc6cd6a8ef2"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_budget_square._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 11,
+    "direct_references_sha256": "261190ee1492f3124100e5394403cddeff0b631b1aaea478d708a6f0a4927f03"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_budget_square._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 11,
+    "direct_references_sha256": "bb5f950a32f6b15fd36c1567d74ccb620c8251a4408af08433dfc3102d43b363"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_budget_square._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 12,
+    "direct_references_sha256": "e2f4fcab183b58b236cd28e8588b6f842679b20797fe4a6a830b4aea94b332a1"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_budget_square._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 17,
+    "direct_references_sha256": "1bcf3bcad1fb35a1ca1c25698eeab322e0294d337f09e71c9a9086e489380616"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_budget_square._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 17,
+    "direct_references_sha256": "c77a32a9e0cd651c4d7b7dfe6a674b71b2188a62ade651cf9db38730134c11e2"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_budget_square._simp_1_8",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 21,
+    "direct_references_sha256": "cdc564e41281867917304503aedb82281f119cd1d7d81eac9fc18852a9a155d7"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_logT_tenth",
+    "source_public": true,
+    "type_pretty_sha256": "ff3b8a531fd0a01ec128eb4258a5a042e42872de0b600c4296209f6a29fdedb7",
+    "type_raw_expression_sha256": "5f7cc49a70d9eb2a44d2f51ef71fdc36f14a277d321f5d33768c7f44d548e161",
+    "type_pretty_lean_hash64": "8169741476031059802",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 75,
+    "direct_references_sha256": "ca58ca57fdc2bfad9115bdac730c0c803933ecef9d0e2b90d86f9e0d10e907d7"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_residual_little_o",
+    "source_public": true,
+    "type_pretty_sha256": "60960085ba20221fe0120440aedad8dc17f3cf546b47481853bc516d4a76664d",
+    "type_raw_expression_sha256": "15f4b9617da6081e1a7b20ebd957f4523027b97c72a059385c0730a5f4231e7d",
+    "type_pretty_lean_hash64": "16340923419980295111",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 212,
+    "direct_references_sha256": "d0cb62741c44e4883f9d85bd482c8c06dfc8da9978f2fecc0dae5ff18c0d6137"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_scalar_little_o",
+    "source_public": true,
+    "type_pretty_sha256": "a40c6dff36aae0f4a2651cb8cd7b9882d61e560a36f7e02ad9935ad13591dd34",
+    "type_raw_expression_sha256": "0b43e97509f357838579c5041a7915ceda6d738df5e7d8edb609cc4799e78461",
+    "type_pretty_lean_hash64": "235048669582874094",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 322,
+    "direct_references_sha256": "7aa88822906c86c5224987e63a76f7de83353b9a146de0708d99cc516e802937"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_scalar_little_o._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 11,
+    "direct_references_sha256": "624c86cde9b2df5aa0522e4124f62ed1a373ee00e56a0ffd82086dc6cd6a8ef2"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_scalar_little_o._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 11,
+    "direct_references_sha256": "261190ee1492f3124100e5394403cddeff0b631b1aaea478d708a6f0a4927f03"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_scalar_little_o._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 11,
+    "direct_references_sha256": "bb5f950a32f6b15fd36c1567d74ccb620c8251a4408af08433dfc3102d43b363"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_scalar_little_o._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 12,
+    "direct_references_sha256": "e2f4fcab183b58b236cd28e8588b6f842679b20797fe4a6a830b4aea94b332a1"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_scalar_little_o._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 17,
+    "direct_references_sha256": "1bcf3bcad1fb35a1ca1c25698eeab322e0294d337f09e71c9a9086e489380616"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_scalar_little_o._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 17,
+    "direct_references_sha256": "c77a32a9e0cd651c4d7b7dfe6a674b71b2188a62ade651cf9db38730134c11e2"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_scalar_little_o._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 21,
+    "direct_references_sha256": "cdc564e41281867917304503aedb82281f119cd1d7d81eac9fc18852a9a155d7"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "name": "ZhangLS.Spec.actualGramUniform_smooth_residual_little_o",
+    "source_public": true,
+    "type_pretty_sha256": "a7a418849a0df53be171684a1b92f2cbbd1d9947628a362d763f3cecb38dea26",
+    "type_raw_expression_sha256": "b2e82edbda4b7b3bfea7a77c132805d9a5440ca553bedbcd74996d85440e376a",
+    "type_pretty_lean_hash64": "9141077160206003489",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 127,
+    "direct_references_sha256": "f9d6228868d2c417c0a40a6f4dc7b8bafa48555d758802eda822d40fb552dc6d"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniformFirstError",
+    "source_public": true,
+    "type_pretty_sha256": "de9c0e408c67815be8df2679e0573816a1e3fff0115ca5e7ecf267e75d8e4daa",
+    "type_raw_expression_sha256": "b1f521ab284ad0d03dd242bcdecf6178130d8425e06738c23c280d571b77a79e",
+    "type_pretty_lean_hash64": "12566617123724634169",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 29,
+    "direct_references_sha256": "c1ac79925f930c64fb13eaa2f75b4c9054b7e2f1398a6efe1bbd8b417065135b"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniformFirstNorm",
+    "source_public": true,
+    "type_pretty_sha256": "de9c0e408c67815be8df2679e0573816a1e3fff0115ca5e7ecf267e75d8e4daa",
+    "type_raw_expression_sha256": "b1f521ab284ad0d03dd242bcdecf6178130d8425e06738c23c280d571b77a79e",
+    "type_pretty_lean_hash64": "12566617123724634169",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 19,
+    "direct_references_sha256": "6e46a31ca5870fd6e69b7daecd81b4efdd008db762477353642b95ca809316ef"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniformSecondError",
+    "source_public": true,
+    "type_pretty_sha256": "de9c0e408c67815be8df2679e0573816a1e3fff0115ca5e7ecf267e75d8e4daa",
+    "type_raw_expression_sha256": "b1f521ab284ad0d03dd242bcdecf6178130d8425e06738c23c280d571b77a79e",
+    "type_pretty_lean_hash64": "12566617123724634169",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 35,
+    "direct_references_sha256": "ab95c62fb54aad1a7220a474668441f0425bfd120ef494561ed0c63cf9ee1441"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniformSecondError._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "6541e8319b5ba50852776d53115c28749f64a7b93fd903ac93fcdfe69a6ae45b",
+    "type_raw_expression_sha256": "6b965e43b73cf03fbd8fd4f9f7859cf10dfeff4a8e4835568ed12e03a0122d1b",
+    "type_pretty_lean_hash64": "2354442838308598510",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 9,
+    "direct_references_sha256": "d574b19b6ac98e679e43738e3298e483132bcf908c37a429770e2e3725042dcb"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniformSecondError._proof_2",
+    "source_public": false,
+    "type_pretty_sha256": "38e47fd977d962535e0324130b486ea0737fda15be07a2942dcbd0b084a8e882",
+    "type_raw_expression_sha256": "c559d5005f7375aca0acc76ff1684a6b702c935f2346e1f58b4e4c68531f2934",
+    "type_pretty_lean_hash64": "11184229512403634637",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 9,
+    "direct_references_sha256": "d574b19b6ac98e679e43738e3298e483132bcf908c37a429770e2e3725042dcb"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniformSecondMain",
+    "source_public": true,
+    "type_pretty_sha256": "de9c0e408c67815be8df2679e0573816a1e3fff0115ca5e7ecf267e75d8e4daa",
+    "type_raw_expression_sha256": "b1f521ab284ad0d03dd242bcdecf6178130d8425e06738c23c280d571b77a79e",
+    "type_pretty_lean_hash64": "12566617123724634169",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 28,
+    "direct_references_sha256": "a94a83d4a144a76b572d0b04698f68307c2228d9383b2c9dc3e05aca78f4ffc7"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniform_envelopes_nonneg",
+    "source_public": true,
+    "type_pretty_sha256": "23cc20eac0fbcc43326f0c589498210633fe1dcd1c7cd71b9dbb42f2004b6286",
+    "type_raw_expression_sha256": "17f12124680ac673cac4e22846981f455343d320c9962680554d198dd593bb5f",
+    "type_pretty_lean_hash64": "15765234635088237674",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 130,
+    "direct_references_sha256": "cab779a92efed859d53c382a0d37f0b7d52b83d1c080dc72f230e0ed028144b0"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniform_four_bounds",
+    "source_public": true,
+    "type_pretty_sha256": "3a4c1f2951f1779e06c722924ef2de7ab758138b0444a94281ecbe2ed2550888",
+    "type_raw_expression_sha256": "ebb4dae222b413c1a8183c1197c32335b1784dbf00c42ab7d98f8b6260f894fc",
+    "type_pretty_lean_hash64": "6264244343488783369",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 438,
+    "direct_references_sha256": "feb63b5eb2764fa2516257c7813da2f667de59dc98370f684aff64b6412ffab0"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniform_four_bounds._proof_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "99ecf0060b5de064eaf081db89fca59a20aa89e989c80119a456b37dcbaba31c",
+    "type_raw_expression_sha256": "585a36c3751636be9a7706288865b9037b21b34937b3f1c14d23f4924ca80610",
+    "type_pretty_lean_hash64": "12354092655306101117",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 80,
+    "direct_references_sha256": "b26b8e25939184aba90a791ffc917527f2d7407f6ac3403aea728af98bb6957b"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniform_four_bounds._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 11,
+    "direct_references_sha256": "624c86cde9b2df5aa0522e4124f62ed1a373ee00e56a0ffd82086dc6cd6a8ef2"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniform_four_bounds._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 11,
+    "direct_references_sha256": "261190ee1492f3124100e5394403cddeff0b631b1aaea478d708a6f0a4927f03"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniform_four_bounds._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 11,
+    "direct_references_sha256": "bb5f950a32f6b15fd36c1567d74ccb620c8251a4408af08433dfc3102d43b363"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniform_four_bounds._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 12,
+    "direct_references_sha256": "e2f4fcab183b58b236cd28e8588b6f842679b20797fe4a6a830b4aea94b332a1"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniform_four_bounds._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 17,
+    "direct_references_sha256": "1bcf3bcad1fb35a1ca1c25698eeab322e0294d337f09e71c9a9086e489380616"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniform_four_bounds._simp_1_8",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 17,
+    "direct_references_sha256": "c77a32a9e0cd651c4d7b7dfe6a674b71b2188a62ade651cf9db38730134c11e2"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.actualGramUniform_four_bounds._simp_1_9",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ],
+    "direct_reference_count": 21,
+    "direct_references_sha256": "cdc564e41281867917304503aedb82281f119cd1d7d81eac9fc18852a9a155d7"
+  },
+  {
+    "owner": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "name": "ZhangLS.Spec.lemma81Cutoff.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "bad22830a745f8a01ecd7a1e1658f7f4f61820cd1711989d67f752986d1349cd",
+    "type_raw_expression_sha256": "77de17b63ed072198d7aa86b26fc3148845986b556c39425079613fec47c16ba",
+    "type_pretty_lean_hash64": "17243639675844595419",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "direct_reference_count": 19,
+    "direct_references_sha256": "eb34533f275bb28ccebfe7d74228601063ae0dca5d66b1667b6c97fabcae25c6"
+  }
+]

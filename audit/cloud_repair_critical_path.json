@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-04T02:55:37.773815+00:00",
-  "base_commit": "12035d10c535c038c76e82b1cefc11bc837cb0a8",
+  "updated_utc": "2026-10-04T03:13:55.148713+00:00",
+  "base_commit": "adf4049a56dd8368026d698de53ef7440c65a8f1",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
@@ -197,7 +197,7 @@
       "name": "实际 Gram 与 Schur 残差下界",
       "status": "partial_lean_proved",
       "verification": "十六个真实算术、点态与积分残差组件已中央专项Lean核验；完整实际单范数与Gram下界仍未完成",
-      "result": "真实Pi除子消去、P7 profile算术、exp-ramp/闭权重层及原K1/K2有限叠加已证。限定三方向Gram和旧二维span残差下界另有来源复核，尚未Lean。 新增原scaled shifts、true product endpoint单侧积分、literal main与任意real-x点态small/interior误差已中央Lean核验。 六项积分/支撑/精确box与加权残差组件已fresh核验：新增29公开/44owned，合计92公开/154owned。四项scalar norm/error输入仍需共同阈值代入。 实际coprime求和与实值Abel、原固定剖面正lambda/支撑、原有限D精确对角三桥已中央验收：14模块138公开242owned37回归。",
+      "result": "真实Pi除子消去、P7 profile算术、exp-ramp/闭权重层及原K1/K2有限叠加已证。限定三方向Gram和旧二维span残差下界另有来源复核，尚未Lean。 新增原scaled shifts、true product endpoint单侧积分、literal main与任意real-x点态small/interior误差已中央Lean核验。 六项积分/支撑/精确box与加权残差组件已fresh核验：新增29公开/44owned，合计92公开/154owned。四项scalar norm/error输入仍需共同阈值代入。 实际coprime求和与实值Abel、原固定剖面正lambda/支撑、原有限D精确对角三桥已中央验收：14模块138公开242owned37回归。 真正P7减精确ramified主项的统一o(alpha)桥已中央验收，四个scalar arithmetic输入全部内部推得：6模块38公开133owned。",
       "gap": "限定三方向真实范数的来源层结论保留；它不保证旧span接近最优、目标投影非零或strict gain。固定smooth窄旧span有独立常数缺口；原宽H1/H2、任意旧rA和L^-8符号精度仍未完成。",
       "dependency_mode": "actual_Gram_attachment_plus_nondegeneracy; may_proceed_with_R4_in_parallel",
       "dependencies": [
@@ -213,11 +213,12 @@
         "audit/CLOUD_PHASE_GRAM_COMPONENTS_STATUS.md",
         "audit/CLOUD_GRAM_SMOOTHING_STATUS.md",
         "audit/CLOUD_GRAM_PROFILE_STATUS.md",
-        "audit/CLOUD_THREE_BRIDGES_STATUS.md"
+        "audit/CLOUD_THREE_BRIDGES_STATUS.md",
+        "audit/CLOUD_GRAM_UNIFORM_STATUS.md"
       ],
       "execution_status": "active_single_norm_integration",
-      "execution_note": "三桥已验收；复杂Lambda权重替换与同compatible c零点→P7桥独立证明中，cloud统一算术误差桥私有完成待中央终审，最终m_H仍未完成。",
-      "checked_utc": "2026-10-04T02:55:37.773815+00:00",
+      "execution_note": "统一四误差o(alpha)已完成；复杂Lambda替换、复主项外和与同compatible c零点→P7桥继续集成，实际m_H尚未证明。",
+      "checked_utc": "2026-10-04T03:13:55.148713+00:00",
       "proof_status": "partial_lean_proved",
       "subgoals": [
         {
@@ -225,7 +226,7 @@
           "name": "原固定H的实际单范数与正下界",
           "proof_status": "source_reviewed_not_Lean",
           "execution_status": "active_component_integration",
-          "stage": "lambda_replacement_uniform_error_zero_mean",
+          "stage": "lambda_replacement_main_sum_zero_mean_normalization",
           "goal": "m_H=lambda+o(1), lambda>0, with the same original H, compatible c and a*M normalizer",
           "profile_reference": "audit/signed_phase_refinements/INTERFACE.json#fixed_profile",
           "F0": "beta triple derivative divided by sup norm of beta triple derivative",
@@ -234,7 +235,7 @@
             "201/400"
           ],
           "lambda": "(16000/pi)*integral_0^1 |F0 prime|^2 + (11*pi/250)*integral_0^1 |F0|^2",
-          "execution_note": "三桥已验收；复杂Lambda权重替换与同compatible c零点→P7桥独立证明中，cloud统一算术误差桥私有完成待中央终审，最终m_H仍未完成。",
+          "execution_note": "统一四误差o(alpha)已完成；复杂Lambda替换、复主项外和与同compatible c零点→P7桥继续集成，实际m_H尚未证明。",
           "needed_by_routes": [
             "independent_weighted_Z2"
           ],
@@ -242,9 +243,10 @@
             "audit/half_norm_constant/STATUS.md",
             "audit/signed_phase_refinements/INTERFACE.json",
             "audit/CLOUD_GRAM_PROFILE_STATUS.md",
-            "audit/CLOUD_THREE_BRIDGES_STATUS.md"
+            "audit/CLOUD_THREE_BRIDGES_STATUS.md",
+            "audit/CLOUD_GRAM_UNIFORM_STATUS.md"
           ],
-          "checked_utc": "2026-10-04T02:55:37.773815+00:00",
+          "checked_utc": "2026-10-04T03:13:55.148713+00:00",
           "optional_for_routes": [
             "original_ratio_if_this_fixed_profile_is_selected"
           ]
@@ -270,7 +272,7 @@
       "name": "归一化后的全部误差传递",
       "status": "open",
       "verification": "当前signed分叉的已付误差是o(1)；高rho有利主项和严格余量仍缺",
-      "result": "右侧branch误差O(a^-1L^-11/2)主导已发布组合；有限M/D删除、有限边界和低rho误差均更小或单列power-small。实际a>1/2与固定m_H下界不能省略。 新小b_chi项的P^-1/200误差比已付L^-11/2更小；仍按同一aM/m_H核算。 新squarefree-kernel O(a^-1P^-1/100)仍比已付L^-11/2小，未改变总误差主导项。 新principal P^-.49已付；P^.501是未解主算术界的损失，不是已经消失的误差。 有限HB j=2选中BR≥P^1.01部分已在来源层支付；原总误差精度不提升。 新加权ν尾已Lean化；来源层据此支付全部强pair区，原总误差精度不因此提升。",
+      "result": "右侧branch误差O(a^-1L^-11/2)主导已发布组合；有限M/D删除、有限边界和低rho误差均更小或单列power-small。实际a>1/2与固定m_H下界不能省略。 新小b_chi项的P^-1/200误差比已付L^-11/2更小；仍按同一aM/m_H核算。 新squarefree-kernel O(a^-1P^-1/100)仍比已付L^-11/2小，未改变总误差主导项。 新principal P^-.49已付；P^.501是未解主算术界的损失，不是已经消失的误差。 有限HB j=2选中BR≥P^1.01部分已在来源层支付；原总误差精度不提升。 新加权ν尾已Lean化；来源层据此支付全部强pair区，原总误差精度不因此提升。 固定H算术附件的四误差已统一证明o(alpha)；这未消除主signed余项或替代实际范数归一化。",
       "gap": "正宽度弱pair的真实归一化signed贡献仍需独立算术上界；原总表示/积分误差与路线对应范数仍必须保留，不能把强pair覆盖当整个余项。",
       "dependency_mode": "route_specific AND",
       "dependencies": [
@@ -287,11 +289,12 @@
         "audit/squarefree_core/STATUS.md",
         "audit/joint_signed_operator/STATUS.md",
         "audit/multilinear_completion/STATUS.md",
-        "audit/CLOUD_SQUARE_NU_TAIL_STATUS.md"
+        "audit/CLOUD_SQUARE_NU_TAIL_STATUS.md",
+        "audit/CLOUD_GRAM_UNIFORM_STATUS.md"
       ],
       "execution_status": "blocked_by_signed_gap_and_route_specific_norm",
       "execution_note": "原比值路线仍等完整R4/R5；独立Z2路线只需限定single_norm及其真实轮廓/正采样附件，再把全部o(1)压到固定signed余量以下。",
-      "checked_utc": "2026-10-04T01:47:15.113359+00:00",
+      "checked_utc": "2026-10-04T03:13:55.148713+00:00",
       "proof_status": "open",
       "route_dependencies": {
         "original_ratio": {

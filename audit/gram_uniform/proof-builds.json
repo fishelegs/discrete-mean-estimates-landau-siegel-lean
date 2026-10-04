@@ -1,0 +1,104 @@
+[
+  {
+    "module": "ZhangLS.Spec.ActualGramUniformGeometry",
+    "source": "ZhangLS/Spec/ActualGramUniformGeometry.lean",
+    "source_sha256": "52f04bc2026c92dda4e09d2aadc5986e985b018c7932ed6918228b83ba79e53b",
+    "exit_code": 0,
+    "started_utc": "2026-10-04T02:53:06.288068+00:00",
+    "ended_utc": "2026-10-04T02:53:09.994842+00:00",
+    "seconds": 3.706788786999823,
+    "peak_rss_kib": 4531128,
+    "lean_flags": [
+      "-j1",
+      "-M6144"
+    ],
+    "object_sha256": "ef0609218a3b73f731156bf043d8742ebad7ae678321287f669e24ce3f765c18",
+    "log_sha256": "f04ea65899c1f30e0fdad88056d2cb3e6f983566989bf07f28fd1ec9cbb388ce",
+    "private_receipt_sha256": "97cce49543ce4851aebeb4e898849b460fb262074be6266236e012a7e83a4511"
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramUniformEnvelopes",
+    "source": "ZhangLS/Spec/ActualGramUniformEnvelopes.lean",
+    "source_sha256": "82cc18a8713fd199c19baf5b9227c53b33fe229dd92ccbf836397d59d7a05396",
+    "exit_code": 0,
+    "started_utc": "2026-10-04T02:53:10.027423+00:00",
+    "ended_utc": "2026-10-04T02:53:13.699788+00:00",
+    "seconds": 3.672380811000039,
+    "peak_rss_kib": 4544644,
+    "lean_flags": [
+      "-j1",
+      "-M6144"
+    ],
+    "object_sha256": "1a0eaaa1c4a69849dd00b627c1506e1a9ea8a8c419689157c1afb17548205f0c",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "private_receipt_sha256": "9082e39776e46a5074fcd5d4b5ab985ecc43255182938c0cb8e872564298ef17"
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramUniformSubstitution",
+    "source": "ZhangLS/Spec/ActualGramUniformSubstitution.lean",
+    "source_sha256": "a67e126cda1e2708d987a6ef76999fd0804df83c057a0d77c3a0c54426b79572",
+    "exit_code": 0,
+    "started_utc": "2026-10-04T02:53:13.731221+00:00",
+    "ended_utc": "2026-10-04T02:53:19.356664+00:00",
+    "seconds": 5.62545445700016,
+    "peak_rss_kib": 4562028,
+    "lean_flags": [
+      "-j1",
+      "-M6144"
+    ],
+    "object_sha256": "364fdf76b30bcaa1c1a5976708a52fba1803735f5d6e96fd6843204b0857000a",
+    "log_sha256": "d60e3c24628ccd4bc78aea3da1715f7895987438928ef256c7f2d013f93c0638",
+    "private_receipt_sha256": "1c311fc51f0c225ddb7e58c8f2cf532e07d3f3afe34fdc5908beb5ebfb06f1d1"
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramUniformAssembly",
+    "source": "ZhangLS/Spec/ActualGramUniformAssembly.lean",
+    "source_sha256": "ee104b6a78b5799008b3ea18042f338f64fb79658fcb5ce1aad83ec9adfc6bd3",
+    "exit_code": 0,
+    "started_utc": "2026-10-04T02:53:19.386911+00:00",
+    "ended_utc": "2026-10-04T02:53:23.321640+00:00",
+    "seconds": 3.934743451000031,
+    "peak_rss_kib": 4561412,
+    "lean_flags": [
+      "-j1",
+      "-M6144"
+    ],
+    "object_sha256": "25d578a4a88b5b76261955823bb76282b683c1e17ed389f382b101bdc41ab066",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "private_receipt_sha256": "825e38b3e8daf4eb27eb778311a452a2490c1d78c9ed9454c0aa8d6361a0bbbd"
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramUniformBudget",
+    "source": "ZhangLS/Spec/ActualGramUniformBudget.lean",
+    "source_sha256": "32d1668c3b53f778a93fc8adc5e2cd83265bfe2b9c19a6f9f5c09eb256d79eda",
+    "exit_code": 0,
+    "started_utc": "2026-10-04T02:53:23.350811+00:00",
+    "ended_utc": "2026-10-04T02:53:28.156411+00:00",
+    "seconds": 4.805696931000057,
+    "peak_rss_kib": 4629800,
+    "lean_flags": [
+      "-j1",
+      "-M6144"
+    ],
+    "object_sha256": "4beaacadc94a00d957ace444b62bd7ed1cbdca44ff23d2f9d28e928321495a72",
+    "log_sha256": "79a9563cb11d373056edd563d5cd40e610532879e1fe3626fc39ccf8b1e9848d",
+    "private_receipt_sha256": "9f2ec7ef9ae530da0814efdba19dfe473546fce8c7976e197066ad3a73c2b808"
+  },
+  {
+    "module": "ZhangLS.Spec.ActualGramUniformLittleO",
+    "source": "ZhangLS/Spec/ActualGramUniformLittleO.lean",
+    "source_sha256": "d1b6cf7b6d7e254fe392f9aacc2f41ef8c3a9e4f2b2522c51fbe43c5ab3e9962",
+    "exit_code": 0,
+    "started_utc": "2026-10-04T02:53:28.186143+00:00",
+    "ended_utc": "2026-10-04T02:53:32.066867+00:00",
+    "seconds": 3.880733475998568,
+    "peak_rss_kib": 4551088,
+    "lean_flags": [
+      "-j1",
+      "-M6144"
+    ],
+    "object_sha256": "3fc6d28f24ba41d8b76dd3e0067311894eabbd0caaf8e41d155de96c6b291490",
+    "log_sha256": "d5240607640ce706b8b1f1ccbbbc87c5e859a6d098ff32bef21c7fa4e04cbc72",
+    "private_receipt_sha256": "7a228da63e3be75a53613f8679f576988d5a55d4a1a8b324193695f0d4eeb18a"
+  }
+]

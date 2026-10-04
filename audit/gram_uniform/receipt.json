@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "scope": "Six ActualGramUniform modules, exact central ownership and full type/axiom audit; not a full-project compilation.",
+  "baseline_commit": "12035d10c535c038c76e82b1cefc11bc837cb0a8",
+  "lean_version": "4.30.0",
+  "owned_declarations": 133,
+  "source_public_declarations": 38,
+  "generated_declarations": 95,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "declaration_files": [
+    "declarations-01.json",
+    "declarations-02.json"
+  ],
+  "inventory_source": "audit/ActualGramUniformInventory.lean",
+  "inventory_source_sha256": "91a74e826b44d47f8db50eb6c25269e7bdab39efbd135eef708183c6a82e7157",
+  "inventory_run": {
+    "started_utc": "2026-10-04T02:59:59.328791+00:00",
+    "ended_utc": "2026-10-04T03:00:07.104385+00:00",
+    "exit_code": 0,
+    "seconds": 7.775608743999328,
+    "peak_rss_kib": 4577344
+  },
+  "private_full_log_sha256": "617349bef7cf0aa136fdbaf1fd5ee49ba347d358b535d40218ea84dd89263859",
+  "private_receipt_sha256": "9d02bedb3abab3928e3298d4c5e3b60ae621d84cde3f81bb87f36ebe9a9eb989",
+  "dependency_validation": {
+    "ordered_loaded_module_count": 6969,
+    "ordered_loaded_modules_sha256": "d3c1d1aed1aed1ae942fa9262008d0d0fb9bc58a0b6cf040f47f9a3dbac2b2b4",
+    "repository_module_count": 867,
+    "ordered_repository_modules_sha256": "c0af3c2e9ceb5e712ffab18e3af60371c342b04374ddebb6166257fca58b5595",
+    "policy": "Reused available dependency objects read only; each of the six target modules was freshly compiled centrally. This inventory imports that exact central overlay. Complete module lists and full types remain in the private audit log."
+  },
+  "type_encoding": "UTF-8 SHA256 of exact complete pp.all pretty type and exact reprStr raw Expr; Lean UInt64 hash pins the pretty string in the executable audit; universe parameters pinned verbatim.",
+  "reference_encoding": "SHA256 of UTF-8 JSON for the lexicographically sorted unique direct-used-constant string array, ensure_ascii=False, separators=(comma,colon), no trailing newline.",
+  "source_mapping": "The only permitted source change qualifies each bare import ActualGramUniform* to import ZhangLS.Spec.ActualGramUniform*. Reverse those lines and verify the frozen original SHA256. All six files were byte-compared under that transform.",
+  "regressions": "The exact 133 full elaborated type and universe pins are the scope regression checks; no duplicate theorem aliases or additional endpoint examples are claimed.",
+  "headline_theorem": "ZhangLS.Spec.actualGramUniform_smooth_residual_little_o"
+}

@@ -1,0 +1,22 @@
+{
+  "owners": {
+    "ZhangLS.Spec.ActualGramUniformAssembly": 49,
+    "ZhangLS.Spec.ActualGramUniformBudget": 21,
+    "ZhangLS.Spec.ActualGramUniformEnvelopes": 19,
+    "ZhangLS.Spec.ActualGramUniformGeometry": 6,
+    "ZhangLS.Spec.ActualGramUniformLittleO": 21,
+    "ZhangLS.Spec.ActualGramUniformSubstitution": 17
+  },
+  "explicit_by_owner": {
+    "ZhangLS.Spec.ActualGramUniformAssembly": 4,
+    "ZhangLS.Spec.ActualGramUniformBudget": 7,
+    "ZhangLS.Spec.ActualGramUniformEnvelopes": 11,
+    "ZhangLS.Spec.ActualGramUniformGeometry": 5,
+    "ZhangLS.Spec.ActualGramUniformLittleO": 5,
+    "ZhangLS.Spec.ActualGramUniformSubstitution": 6
+  },
+  "owned": 133,
+  "explicit": 38,
+  "generated": 95,
+  "classification": "Explicit named source declarations versus all other defining-module-owned generated declarations; generated includes structure constructors, projections, recursors, helpers and equations."
+}
