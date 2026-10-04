@@ -113,6 +113,10 @@ import ZhangLS.Spec.ChiReciprocalContour
 import ZhangLS.Spec.ChiReciprocalRegression
 import ZhangLS.Spec.ChiReciprocalStrip
 import ZhangLS.Spec.ChiUniformLBound
+import ZhangLS.Spec.CompositeRamanujanCenterArithmetic
+import ZhangLS.Spec.CompositeRamanujanCenterExpansion
+import ZhangLS.Spec.CompositeRamanujanCenterPrimePowers
+import ZhangLS.Spec.CompositeRamanujanCenterReduction
 import ZhangLS.Spec.ConductorTotientWeight
 import ZhangLS.Spec.CoprimeGaussPrimeAverage
 import ZhangLS.Spec.CoprimeGaussRealTwist
@@ -129,7 +133,16 @@ import ZhangLS.Spec.DeltaPairGcdReindex
 import ZhangLS.Spec.DirichletLSeries
 import ZhangLS.Spec.DivisorCharacterSum
 import ZhangLS.Spec.DivisorCharacterSumNonnegative
+import ZhangLS.Spec.DivisorConductorBlockMomentsCauchy
+import ZhangLS.Spec.DivisorConductorBlockMomentsDefinitions
+import ZhangLS.Spec.DivisorConductorBlockMomentsEnergy
+import ZhangLS.Spec.DivisorConductorBlockMomentsLong
+import ZhangLS.Spec.DivisorConductorBlockMomentsPrime
 import ZhangLS.Spec.DivisorConductorSum
+import ZhangLS.Spec.DivisorHyperbolicBudgetBound
+import ZhangLS.Spec.DivisorHyperbolicBudgetGeometry
+import ZhangLS.Spec.DivisorHyperbolicBudgetSmallPower
+import ZhangLS.Spec.DivisorHyperbolicBudgetWeights
 import ZhangLS.Spec.DivisorPowerBudget
 import ZhangLS.Spec.DivisorSmallPowerBudget
 import ZhangLS.Spec.FiniteDivisorProductReindex
