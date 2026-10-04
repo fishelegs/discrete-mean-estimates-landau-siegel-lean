@@ -1,5 +1,18 @@
 # 张益唐论文 Lean 形式化进度
 
+## 两批已验证 Lean 源码已合入 master（2026-10-04）
+
+**原论文编号保持 40/51：37 项原陈述、3 项明确修订。严格 signed 上界和原主结论仍未证明。**
+
+- 云端有限调和界已通过 [PR #1](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/pull/1) 合入，合并提交为 [22842f0](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/commit/22842f0af0cd993a3a507a88b11bf3fc76ef6d2c)。五个证明模块与三个 Lean 审计证明真实 ν、υ 系数在 `D | d*m` 条件下的有限双和界，常数为 1；允许非平方自由 D 和重叠 ramified 因子，不使用假设 (A)。完整范围见[有限调和界说明](audit/CLOUD_RAMIFIED_HARMONIC_STATUS.md)
+- MC6 的三组有限算术已通过 [PR #2](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/pull/2) 合入，合并提交为 [0c5c7d1](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/commit/0c5c7d13badcf977336566f8db51ab0d0ab5515d)。十三个证明模块与六个 Lean 审计覆盖真实合数 Ramanujan 扣除及非主特征展开、导子分块二次矩、τ₅ 小幂界与双曲权重预算；主特征、导子 1、零指标和实数截断端点均有明确处理
+
+两批合计 330 个定义归属及完整类型/公理审计条目，均只允许 Lean 标准公理。独立语义检查和生成入口检查已通过。第一批精确 head 的 [PR CI](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/actions/runs/37219946173) 与 [push CI](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/actions/runs/37219878331)，以及两批联合 head 的 [PR CI](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/actions/runs/37223453780) 与 [push CI](https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/actions/runs/37223451142) 均完整成功，包含全项目内核检查及 Gaussian closure 检查。最终合并树与已经测试的联合树逐字一致。
+
+这些结果完成的是有限算术组件。原解析算子附件、完整 G7b、剩余算术估计以及最终严格增益仍有未完成部分。本段只记录本次源码集成与验证；下方保留此前各时间点的研究记录。
+
+### 以下为提交前的历史记录
+
 ## 新 Lean 源码草稿 PR：ramified 有限调和界（2026-10-04）
 
 本批新增五个已验证证明模块和三个 Lean 审计，证明真实 ν、υ 系数在
