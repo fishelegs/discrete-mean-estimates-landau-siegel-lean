@@ -100,13 +100,11 @@ else
 fi
 
 echo '== Stage 3/3: audit regression modules =='
-while IFS= read -r regression; do
-  if ! lake env lean "$regression"; then
-    AUDIT_STATUS="FAIL"
-    REASON="audit regression failed: $regression"
-    exit 1
-  fi
-done < <(find audit -maxdepth 1 -type f -name '*.lean' | sort)
+if ! lake env python3 tools/verify_audit_modules.py; then
+  AUDIT_STATUS="FAIL"
+  REASON="audit regression dependency check or kernel check failed"
+  exit 1
+fi
 AUDIT_STATUS="PASS"
 
 STATUS="PASS"
