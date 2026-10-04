@@ -1,0 +1,2839 @@
+[
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coefficient",
+    "source_public": true,
+    "type_pretty_sha256": "0fdd25c23674e9b4e23583f36daa26666f8c40af5fb05f1dbb339e829a23a29a",
+    "type_raw_expression_sha256": "5851edeb28059e60c4414d015c0cbc136a6df1f64f2373ec20c47642e56d3d55",
+    "type_pretty_lean_hash64": "16903234750592840327",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 14
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coefficient.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "af07c32b980f7fb21c5f7fdf439f928eb5ea9ea35c809149008fd229af88b5cc",
+    "type_raw_expression_sha256": "2c8819db1ef0c66117cab03eace5f144dc7a7c1c0e4d9c0b614385e624f8c8a7",
+    "type_pretty_lean_hash64": "8671670039519751175",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coefficient_le_one",
+    "source_public": true,
+    "type_pretty_sha256": "959800d7e4e3da5285280c429e20cd71b4abac8b71eddd9586755967729c8e28",
+    "type_raw_expression_sha256": "72f48f9324bc5d5c7dcad777330efd6d6088d334cc128f2800714eb78ad0acff",
+    "type_pretty_lean_hash64": "3145667977242228122",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 31
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coefficient_nonneg",
+    "source_public": true,
+    "type_pretty_sha256": "e9c35d16cc8f04acd69e05d5e23b6930301f20eb251bdae06c2095009133a427",
+    "type_raw_expression_sha256": "9b54b3760f6785764c1c2bfc95f7c2528e5b838af75654ecb3997e8e19f36a3a",
+    "type_pretty_lean_hash64": "13071308477373728562",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 27
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coefficient_zero",
+    "source_public": true,
+    "type_pretty_sha256": "22d9f7017294811714b4a49d586c2742bfe4f127e474b5b0374147d61be2aca0",
+    "type_raw_expression_sha256": "0dcfef437d99e9a06102e6df2189bc19a51b06c66873190f933c9a8ca6d4c580",
+    "type_pretty_lean_hash64": "2518413174746423619",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 25
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coprime_indicator",
+    "source_public": true,
+    "type_pretty_sha256": "1cabad275399acd0f7cf8c1be970edeaae1bcd5a1077bb6bb33caf42d2ce6d65",
+    "type_raw_expression_sha256": "800acc30d36ce2874ba47124ed8bd6cfd591cf666a36c1c38450149b6fed9b78",
+    "type_pretty_lean_hash64": "15595701281617438785",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 52
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coprime_indicator._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "5c6c464fa043870b41d9ad36bfff661026598b0177cd903223eeba4725447242",
+    "type_raw_expression_sha256": "1b5451a792588f40746c7ded866c684020d8cb29dc2190efa70866c60635a0a3",
+    "type_pretty_lean_hash64": "7944629515112915904",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coprime_indicator._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "f69186a198d648b25d83593a9730b89f5ad7942dc7d4f4021624fe1320a3343d",
+    "type_raw_expression_sha256": "8a99af5691d33f83ce634b6328c792d7ad6cbfa77f22d8715a81b93154b9ba37",
+    "type_pretty_lean_hash64": "7073196793349487485",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coprime_indicator._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "3c1291fbc0ded3a86a38dab7fb600b53c73c8b5fb2997510da945ad6779dc425",
+    "type_raw_expression_sha256": "d9144b04b17b315f073ddd7882b76b993d7e469767356cf4abd202900415d7e8",
+    "type_pretty_lean_hash64": "10021167310781535760",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density",
+    "source_public": true,
+    "type_pretty_sha256": "1260043cba9ceb4bf1cb9fc92b449d36f560f9ec8fb362413e8665c5235ac664",
+    "type_raw_expression_sha256": "e334d55ca2012e60f3c1dab669368e7d667404a63738b80f73f07a995f6786bd",
+    "type_pretty_lean_hash64": "12957806670630576245",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 20
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobiusWeight",
+    "source_public": true,
+    "type_pretty_sha256": "c3c8625cb111a097bc62c3a7800cd182f7edf1159961bcf127ef4647f658d723",
+    "type_raw_expression_sha256": "99d2a1b9078b4aca18feb53394d32e8c4c874500f0823e425007b233b953cb49",
+    "type_pretty_lean_hash64": "1169406107900591935",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 133
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobiusWeight._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "2ec80b794f749506ebe6fcca4a2e5c9db12667533c2e8f4a2e799e3117b39646",
+    "type_raw_expression_sha256": "6ff7c44e80f3b43e3aaa9ffa817f5e99e5a165d1f1f1aacbfea1145ef8920167",
+    "type_pretty_lean_hash64": "7140515191383809158",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobiusWeight.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "fb4d19c2691726f2457e4691dc9d1b617e5318e359b3bdf77554dc1fbb2490bf",
+    "type_raw_expression_sha256": "4c4f10213f5654f9e682ce28119a7407cade38eb675baf7082a9cd4276e95431",
+    "type_pretty_lean_hash64": "6304965696793054051",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobius_density",
+    "source_public": true,
+    "type_pretty_sha256": "1118f55c9899926b193954533c62c80f4b9a8888e0ef08bac1744092fa55524d",
+    "type_raw_expression_sha256": "caa62b26dcb40f268321b6b8fc927ba209cd51927c4bb3a9fd05bf9ce84bdf95",
+    "type_pretty_lean_hash64": "10038783001576076539",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 93
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobius_divisor_sum",
+    "source_public": true,
+    "type_pretty_sha256": "edda7eb173242bc02984ce722dcf355a0f45116648849e1a4647f920e5c759bd",
+    "type_raw_expression_sha256": "8ea4b4114171e9235e1f5a85aed9419801f78e2f22c31f7efb948acb9c14df94",
+    "type_pretty_lean_hash64": "13460955927305712577",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 43
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.nat_division_error",
+    "source_public": true,
+    "type_pretty_sha256": "b6b63da55c303e49750d3abce186a9f1ad1d3ee4df5bc623c00cf60a18672b3c",
+    "type_raw_expression_sha256": "8875952e9c119cde1232dbc1b29925e5947ec0343967ab82966f82049c7083e4",
+    "type_pretty_lean_hash64": "6658452504640027568",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 97
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory",
+    "source_public": true,
+    "type_pretty_sha256": "671103e624312efeadb3608ac134f50eba458136ac95fdc9f25acbcfea43dc20",
+    "type_raw_expression_sha256": "7f9185b4e88592966560ed2af3d2508f0e9ac69e15ec401d62d333f136ae2d6b",
+    "type_pretty_lean_hash64": "6370292862807857508",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 17
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "ca8ec5157d6d8b0b4934b6bc4d4eb77a87b219daa460ece14f079536bd38f505",
+    "type_raw_expression_sha256": "c50c558fe3f70fd8b0170c76ed4f1cad8f627046c3f0b53ed22c28f541a91240",
+    "type_pretty_lean_hash64": "17430681676125385740",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_mobius",
+    "source_public": true,
+    "type_pretty_sha256": "297ef8c941ec8e40443c051c77e984c9a7b48c651bb9833b02d8b898eb04745e",
+    "type_raw_expression_sha256": "9326b68b33be6d0ec970b2922a754a99cc233ed65377a4c3111327a3f1b39d3a",
+    "type_pretty_lean_hash64": "5074571827895296961",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 189
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_mobius._proof_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "fce6848aee0a08565af4b490f2c863e7222c752138602d273eaf58bd8819e8c9",
+    "type_raw_expression_sha256": "9fcacb1528bc1663ba50cb37ae9b1b50a25860469be881777fc6685004463e80",
+    "type_pretty_lean_hash64": "11478445982872789890",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_mobius._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "c8ce3ca33f7722d558391bacd22d1de6553b504071820e406d9dc489d1ad716d",
+    "type_raw_expression_sha256": "69b742423299a26e48bd284a490b69ab7bb56d9db4953232efc08f1f982fe9de",
+    "type_pretty_lean_hash64": "11547570301497195731",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_mobius._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "f609657970b7be11d708982f2a9460984c1deacdada8786aa621ddbaf1a3ab95",
+    "type_raw_expression_sha256": "dde2ac20cc5200f6c85d109602678459d696b43cf78c63a3155c51055a56ebab",
+    "type_pretty_lean_hash64": "10178972178374386679",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_one",
+    "source_public": true,
+    "type_pretty_sha256": "8876b1ea0b3d9aeef5f0e90ce40e9313eb70da48f2cba4736157de9cf922fc1a",
+    "type_raw_expression_sha256": "5f4d3b618cbfdaaaeee481bcfc77d891a76222c2c2cc8f389684d7eaa3660c2c",
+    "type_pretty_lean_hash64": "15624319899284795547",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 40
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_convolution",
+    "source_public": true,
+    "type_pretty_sha256": "0a62bad0f5dce5ab5b3a5c418cac72372cb484d24c9bcc72c59e2ada0b5b8e84",
+    "type_raw_expression_sha256": "e4994db9367729a904d0155d6a4cece35a08e0e98d138a81f718f36be1a72ab4",
+    "type_pretty_lean_hash64": "1182187568885373381",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 144
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_mobius",
+    "source_public": true,
+    "type_pretty_sha256": "f885e2f3bd6caee39c4e5a1c349a1374e6811ae3900a8fe89f0cf5f1b10cc7b9",
+    "type_raw_expression_sha256": "e909680293664e43dc6d51771b5254df4733ed5e7c0ff76028b7f812d4411a43",
+    "type_pretty_lean_hash64": "7790098313563821530",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 74
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_ratio_mobius",
+    "source_public": true,
+    "type_pretty_sha256": "e227ebe08914c63a422ad291edde9de705858dc4386dbdd2c8f9bfe452912afb",
+    "type_raw_expression_sha256": "8092a106cfc3990d26fcfd9856e606e9201fa0b84e87574c15911ad1daafa162",
+    "type_pretty_lean_hash64": "13355610104252164186",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 83
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_ratio_mobius._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_ratio_mobius._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_ratio_mobius._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_ratio_mobius._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_ratio_mobius._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_ratio_mobius._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_ratio_mobius._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitCount",
+    "source_public": true,
+    "type_pretty_sha256": "aa173f56cf3d49872f29a5a8e54454551492862dc1a1c1b802643428e9a628ea",
+    "type_raw_expression_sha256": "c003edb5536abb65020e2288b9614a142879f8e8ca1aedf425e6f97c52672fc0",
+    "type_pretty_lean_hash64": "4673533967483203845",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 22
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitCount_error",
+    "source_public": true,
+    "type_pretty_sha256": "b2079e681baa1835afd7804601738d6b574289d9fdafae00a9e497888afdcffc",
+    "type_raw_expression_sha256": "65102a1b42d431062e6808cae19a2e788585e4dc0354e8c0c72ffdd9a5558cd5",
+    "type_pretty_lean_hash64": "3444044107423149491",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 108
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitCount_mobius",
+    "source_public": true,
+    "type_pretty_sha256": "489187d68dd3b3734443f2647b52ca3fd54d3e8320890c0c3d6d54e3c0cc940b",
+    "type_raw_expression_sha256": "8feffbb5e805e2a02450855bcc5d216f549defe124cbbdec17e4aac92b10e254",
+    "type_pretty_lean_hash64": "2447582806773486555",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 62
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitWeight",
+    "source_public": true,
+    "type_pretty_sha256": "c3c8625cb111a097bc62c3a7800cd182f7edf1159961bcf127ef4647f658d723",
+    "type_raw_expression_sha256": "99d2a1b9078b4aca18feb53394d32e8c4c874500f0823e425007b233b953cb49",
+    "type_pretty_lean_hash64": "1169406107900591935",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 137
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitWeight._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "a00c6b674aa2574656e507787f50135eb2a5cdbe09180e7ba79f653fa52c7f1e",
+    "type_raw_expression_sha256": "d320483c325ee03f7e0679732632cc35bce8c5d7ab1ebaee237c6fb0274a295e",
+    "type_pretty_lean_hash64": "12747824946911599052",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitWeight.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "da8e266a079a9f4da75b243afd8cb65381853023cbfa4ad646d3876fb7651690",
+    "type_raw_expression_sha256": "3e868381f3006afe40fb296d7e2b49583142698139b4bc9063faa2d0986f0408",
+    "type_pretty_lean_hash64": "8746183935801691802",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitWeight_positive",
+    "source_public": true,
+    "type_pretty_sha256": "7f085d8f53a3a8420de7fcb6c9238000defdd3b2ec23670f73f4abc2247a19e7",
+    "type_raw_expression_sha256": "77dfb4ec2a277999f8fad32d06b300f603b17a2b236adcdbc41e5e7e6344380b",
+    "type_pretty_lean_hash64": "10480570375026696168",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_line": 140
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius",
+    "source_public": true,
+    "type_pretty_sha256": "aa173f56cf3d49872f29a5a8e54454551492862dc1a1c1b802643428e9a628ea",
+    "type_raw_expression_sha256": "c003edb5536abb65020e2288b9614a142879f8e8ca1aedf425e6f97c52672fc0",
+    "type_pretty_lean_hash64": "4673533967483203845",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_line": 36
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "4df9631b76a0dbc919ef0a513b41c323fd5bc85baeaefe5bbfd64cb794e51fb9",
+    "type_raw_expression_sha256": "e5315866f72a8ec08d17dd913def5e2934cb874bdf5f78632cf5fea5e2397919",
+    "type_pretty_lean_hash64": "8311735259127935670",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_difference",
+    "source_public": true,
+    "type_pretty_sha256": "578531e87aaf1dcf701308c8d0dcf48f38386851301c1cd499b428bd3f698fa7",
+    "type_raw_expression_sha256": "98a119d7440bcc32036c2522f0631949dca7bed9649ffa0b3aade24cc4196b5b",
+    "type_pretty_lean_hash64": "4964925915708768760",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_line": 52
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_difference._proof_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "a2a4c97cbb22c91b180dd54de119d3be368bf566bd545468490887e2fae24aee",
+    "type_raw_expression_sha256": "0aa5477e36836eeb45d8b89130665eea6f03b6374596141d022ddd3af795495a",
+    "type_pretty_lean_hash64": "2512981855791478163",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_difference._proof_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "ce4dbe962398df7e820859fac5fa12b7c6aec35cf95f17d91ca0dfab50c30532",
+    "type_raw_expression_sha256": "8169be10f4483decff11314f2b5e75889b756de440970e028292306b39eccc50",
+    "type_pretty_lean_hash64": "5047310409405867395",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_difference._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "c8ce3ca33f7722d558391bacd22d1de6553b504071820e406d9dc489d1ad716d",
+    "type_raw_expression_sha256": "69b742423299a26e48bd284a490b69ab7bb56d9db4953232efc08f1f982fe9de",
+    "type_pretty_lean_hash64": "11547570301497195731",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_difference._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "d02d5f401eca79178c90fd97ae0f5664ee54c1eb1604880414095c01bc5aa1f1",
+    "type_raw_expression_sha256": "f05ad90cb9007e5f9fd0b15bb75324e0878f337f6bc8ae8cbe193bf7414b32db",
+    "type_pretty_lean_hash64": "8156274923563715324",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_tail",
+    "source_public": true,
+    "type_pretty_sha256": "fb4b903aa53aaf11cef1a22d60ccc2a41dbdb0ca02264e1f38c1a490224513a1",
+    "type_raw_expression_sha256": "be05dddfa3d3131c22a72c24141b7fb2053d859be9f1bbc63f029f0fafb1febe",
+    "type_pretty_lean_hash64": "4198432561383223499",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_line": 78
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_tendsto",
+    "source_public": true,
+    "type_pretty_sha256": "9e085cf395d75b93caa2d66528850696c2acec6445670d3dcbe999cd4a4157ed",
+    "type_raw_expression_sha256": "e7bbc3990af7d55b3c1a51c73947da9a27b4a3e4cf21df64f2965833ebe2229d",
+    "type_pretty_lean_hash64": "10222769678829625067",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_line": 39
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_tendsto._proof_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "739958ac7fae61000ee2206595e7bc821103e513e3a275b22cc22c7a3cc2fc3c",
+    "type_raw_expression_sha256": "9c3876ba19d54668ca6c609f146ab6422da822d00c9617678acf868e71642beb",
+    "type_pretty_lean_hash64": "14723149539010500520",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_tendsto._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "53338eac5517b44a1058baef4f3ce44ee470d613d284d8216ff5e7d28b238863",
+    "type_raw_expression_sha256": "c8e705df5ae608fb929eaefc80d21bb1bce95993811971334316de851da89a6d",
+    "type_pretty_lean_hash64": "1602490517834037662",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_tendsto._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "96c4554ca625e08babd87f9b1f6464b394e7a0ab6a417f3bf40d04f444c5eb64",
+    "type_raw_expression_sha256": "bcba2ad3c292b41ecc6470a80a27f63a10cdf37151c363000cf7124375bd8f8e",
+    "type_pretty_lean_hash64": "16280161512472886946",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_tendsto._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "c8ce3ca33f7722d558391bacd22d1de6553b504071820e406d9dc489d1ad716d",
+    "type_raw_expression_sha256": "69b742423299a26e48bd284a490b69ab7bb56d9db4953232efc08f1f982fe9de",
+    "type_pretty_lean_hash64": "11547570301497195731",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_le_one",
+    "source_public": true,
+    "type_pretty_sha256": "84db858a5e32a71bc6f7f64979c00e9dcf096fdd949454d650dea7eaee0ab299",
+    "type_raw_expression_sha256": "513a44d1d6ecaf76e67d3d745f6008ea3e06ef1ee52d897b4322ff21667e5179",
+    "type_pretty_lean_hash64": "13063692457290401335",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_line": 9
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_nonneg",
+    "source_public": true,
+    "type_pretty_sha256": "dd548817e1dc6d4d22883809bc58197a1d407d62a85bb3c75ed7ce36f8426b0f",
+    "type_raw_expression_sha256": "80e3defa06741c62b5b72dada89daa9597a6c5031d32209a90ebf00d1d704105",
+    "type_pretty_lean_hash64": "13805969943688418131",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_line": 8
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mainConstant_le_one",
+    "source_public": true,
+    "type_pretty_sha256": "69eaf4c7aadbe42a2bc42a9a7a4e1201e58d80ddc9f68ebcff4dc50eac1c370a",
+    "type_raw_expression_sha256": "f997df64a414443a07d59d034278b6d45f5385ccdef2d9cc04461b1a7cbd8441",
+    "type_pretty_lean_hash64": "12598877767828666136",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_line": 20
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mainConstant_pos",
+    "source_public": true,
+    "type_pretty_sha256": "b7da74e0c6168e043635ec1fa6ebbf72388805c7884a67125669983311a6eb99",
+    "type_raw_expression_sha256": "0e65d3723624d67c76c84228bd3771aa71f6eaf56f7dde68b8483e2bf5a36c33",
+    "type_pretty_lean_hash64": "15464811286513592488",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_line": 13
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.requested_summatory_error",
+    "source_public": true,
+    "type_pretty_sha256": "2f095f8aed51c59f99a00b1105b1a40fe01f16032b35e8bb19daa1847587dbaa",
+    "type_raw_expression_sha256": "96a094b62e1a2d31214683e74c63da2c953de2e25c9cb2b2cf24fcea9c44c35c",
+    "type_pretty_lean_hash64": "15644567686160769767",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_line": 134
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_error",
+    "source_public": true,
+    "type_pretty_sha256": "3f533a242790d3cdf4409dc8a4cdd3776d10379226d2abb55b970562ffa2666c",
+    "type_raw_expression_sha256": "77f29f9678c389c82eba980355a06abe242bb24aaba58b692cd19fbdb161d0cf",
+    "type_pretty_lean_hash64": "1027313547768535030",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_line": 109
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_error",
+    "source_public": true,
+    "type_pretty_sha256": "8d3fe27627b55157e00880883e94a77aa6fd8a124a6ceecd430f858de7badf9e",
+    "type_raw_expression_sha256": "423873c6c65050728b357686bd3f3379753eeb68d8bf25a5fd2d6cb5abd0d41b",
+    "type_pretty_lean_hash64": "12844812538868071590",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_line": 84
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_error._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_error._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_error._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_error._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_error._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_error._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_error._simp_1_8",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coprime_mobius_LSeries_two",
+    "source_public": true,
+    "type_pretty_sha256": "b9722e42b53c68bdba93ed8fd74636272c6f1628c982e863b7662580812a06c4",
+    "type_raw_expression_sha256": "d4f634aa0a7e97a83e275adb9337c9c4badb28f43f9f93d563a858d7e807325f",
+    "type_pretty_lean_hash64": "5104029486603844404",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "source_line": 43
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_euler_factorization",
+    "source_public": true,
+    "type_pretty_sha256": "e5b29f7ab9850b4aabc20e08961d31ffa908cb907f5dfae122434c45432f90bc",
+    "type_raw_expression_sha256": "a8d337404f38ca575d8db1cfb8ca4259b722d03b461cf5cffcf72c0750137000",
+    "type_pretty_lean_hash64": "17879351052851707645",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "source_line": 89
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_prime_product",
+    "source_public": true,
+    "type_pretty_sha256": "722cc4f90b462fc6a164ad3a54574ec402b075a832a9c943c05ed81a7a67bb88",
+    "type_raw_expression_sha256": "38f49114f10aef877087cffe56197c0d0964d80eb8ebb08cbd11eea1a22f1a64",
+    "type_pretty_lean_hash64": "17896527456629556806",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "source_line": 80
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_prime_product._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_prime_product._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_prime_product._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_prime_product._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_prime_product._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_prime_product._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_prime_product._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mainConstant.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "56a2bb9f8ce164b771f0b8356fe4bd44c48439b8e205f968af29f656fb52a73a",
+    "type_raw_expression_sha256": "ef3c7b654d88f92ee199e875fe077c0cff2c7846630664678fe20eea23df5e4c",
+    "type_pretty_lean_hash64": "11898700283311083169",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobius_square_summable",
+    "source_public": true,
+    "type_pretty_sha256": "82843598c0f7d8aa0f7344c85472d819c89bc938a3f452c89ddfd5868fcc7041",
+    "type_raw_expression_sha256": "167263085f0440474ecc626d4e4a3ebf837f8b8eb4c26e15c17b9c14480a136a",
+    "type_pretty_lean_hash64": "17981526879527422025",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "source_line": 31
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobius_square_value_equation",
+    "source_public": true,
+    "type_pretty_sha256": "0a748bceda7ae14aaf329c171db2e9bcd034d41a730514c6e392fab52c8d5adc",
+    "type_raw_expression_sha256": "0f97ccf150e48e17e739c420c5986f9073b89637fce4ae374b7cee2668b78d1a",
+    "type_pretty_lean_hash64": "1633067385094325661",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "source_line": 65
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.principal_LSeries",
+    "source_public": true,
+    "type_pretty_sha256": "fde67b551b9438bb1f41530f0664f183598f97dcd4a91e854a9caef171ff4fd9",
+    "type_raw_expression_sha256": "ae245a7183e33762f5478688b48b8328e42d11dbaee3fc244024e7387126a581",
+    "type_pretty_lean_hash64": "14204634346347863909",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "source_line": 18
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.principal_character_nat",
+    "source_public": true,
+    "type_pretty_sha256": "ee796c8cdee046b66159416022b950702cd190c0f59fc9fd3ebc00bc13a932d3",
+    "type_raw_expression_sha256": "05cb6e11cfe7faf5e0eddde1d09b744f66618dcccc03a4ba90e28035cc17cae5",
+    "type_pretty_lean_hash64": "14872158747959424510",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "source_line": 10
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.principal_character_nat._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "9e27341e90d5f105305f103119b3348e2590a139dc88a02cea218b72323cf45a",
+    "type_raw_expression_sha256": "ba3b5ecd72474e1ccf03273dae6cbe90a379373403401499a337a41526756e3f",
+    "type_pretty_lean_hash64": "14099781613356095600",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.total_density_eq_main",
+    "source_public": true,
+    "type_pretty_sha256": "ff5c19f0dff50145d19e84f5280644cd10fc7050719a753cf8c2c89c45695f85",
+    "type_raw_expression_sha256": "90afa509ea8330b830efb492f73fc517d374c0db63fc07c22d7fefc3225c51dc",
+    "type_pretty_lean_hash64": "2948161669182760747",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "source_line": 101
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelFormula",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.abel_remainder_bound",
+    "source_public": true,
+    "type_pretty_sha256": "a0dc96d0acf8f24e33c040f906a9237110bf8a542dbdd135a1629c3d7e372efb",
+    "type_raw_expression_sha256": "f5863c382f6258ddfb146c450033b26a87bd3f73b9932b3b95fff154f183fa34",
+    "type_pretty_lean_hash64": "14965663447221694344",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "source_line": 76
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelFormula",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.abel_remainder_identity",
+    "source_public": true,
+    "type_pretty_sha256": "38833e4ecf516900a93830488582f16bdc5c6fe9e180396b025c3a2688e7347d",
+    "type_raw_expression_sha256": "73b47d86a41d283c5e1a5b983b379b6ff91882b50fc625d8244ed94af28deed4",
+    "type_pretty_lean_hash64": "11182681433632418581",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "source_line": 45
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelFormula",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.finite_abel",
+    "source_public": true,
+    "type_pretty_sha256": "cb3c959efea687d5b4d5f9265fb6edc147d3b84014d5b99d4e7a6c2f245f18b9",
+    "type_raw_expression_sha256": "69d55b0c95d8bdb05335bbef3254c99aad29622593cf0576596fb785b7f520d7",
+    "type_pretty_lean_hash64": "6493009074793043210",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "source_line": 18
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelFormula",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_product_integrable",
+    "source_public": true,
+    "type_pretty_sha256": "04883cc269333154d9445950c03939952e16685c7d46a2f39bc0ae7f112adb41",
+    "type_raw_expression_sha256": "d20d299ff870d7baa267745b1052a61b2eeb3d15ad055ec330cfebb1ba7c4303",
+    "type_pretty_lean_hash64": "13957827783205931240",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "source_line": 37
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelFormula",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_zero_start",
+    "source_public": true,
+    "type_pretty_sha256": "3a1f61f1fd771e34e6db9811e68c716bf8998b4cde488a988b49790211de2b88",
+    "type_raw_expression_sha256": "f0bd99bb6b1a08af4bfeec8975b85c523c2c25cd3d510496faf4b3ea025256b4",
+    "type_pretty_lean_hash64": "15914377245292312440",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "source_line": 11
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.continuous_supported_endpoints",
+    "source_public": true,
+    "type_pretty_sha256": "a95ba9af3457913be04d2c7cb2f8c0943b43439a84d91136320d7fc5649e24e8",
+    "type_raw_expression_sha256": "5c6955775de2d6e1c1adc9f27d2ade99075e10ee1ed236e4b498394c492294fa",
+    "type_pretty_lean_hash64": "5113403718894520211",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 19
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.logarithmic_window",
+    "source_public": true,
+    "type_pretty_sha256": "bc2e585c588b83c82147fe88f274eab6efce898d8f9643121fab2933dbeec1f8",
+    "type_raw_expression_sha256": "dcf06c12152609ff533ecc9497d62a2ec2d9f9843efc8531a78b0a5813fcd32c",
+    "type_pretty_lean_hash64": "6799994378312395010",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 152
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.original_window_abel_error",
+    "source_public": true,
+    "type_pretty_sha256": "4bc27db627aa08a9fdd154f1221d8daf2679ed900148fc71e66df12a2a37ae07",
+    "type_raw_expression_sha256": "3a55b2cbb2f9a87b12933beade30416d9bc1c7febd3b9cf5d71d1f84526f5c59",
+    "type_pretty_lean_hash64": "5906954704830321910",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 232
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight",
+    "source_public": true,
+    "type_pretty_sha256": "56eb3cd4d35f06ece742de61ccb8a993c960f63f95f1f3ec0255f6d94bda0899",
+    "type_raw_expression_sha256": "10cdadb5014831293d96843e9897c96bbb57c29d5d61109cc4566aa12d897722",
+    "type_pretty_lean_hash64": "6415094061868075564",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 11
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "66aa2ffbaa2050a8482f9898ec370e281ce9dde06d5b31c44b6a4d9c5d3ecba4",
+    "type_raw_expression_sha256": "e9b463492f7c55fd2b0fe79b28020afade2aaec2742f2a8f5c5fde2d9ee7af28",
+    "type_pretty_lean_hash64": "6198682352457645872",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeightDeriv",
+    "source_public": true,
+    "type_pretty_sha256": "e8aaf76cb38987127493d68c94087aa06aaccadb1c513528fb530d27acf6fc24",
+    "type_raw_expression_sha256": "e2382619e2e31e5af6e0870ac185261d3654c887fee9768bbeaf827789139bf4",
+    "type_pretty_lean_hash64": "2224792839631818499",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 12
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeightDeriv_bound",
+    "source_public": true,
+    "type_pretty_sha256": "14aa6139acddc49e0c12ac7dee05d4b4e4a7d95072f0db2174872e536404cd75",
+    "type_raw_expression_sha256": "bcb633350d2f160bb1dc1236b9689efbc3570adcea7a10036586097918e3a0df",
+    "type_pretty_lean_hash64": "17787800118667020771",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 59
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeightDeriv_continuousOn",
+    "source_public": true,
+    "type_pretty_sha256": "37a9f2bbab6a71a4ac19e2da9c420ad01a2e91c590e3ed887182cb8509f2fa39",
+    "type_raw_expression_sha256": "f560606888e04b2f331292541a745d3197df8a6c68ac6ef45a94881ee226ad12",
+    "type_pretty_lean_hash64": "13370581722048762990",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 46
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_hasDerivAt",
+    "source_public": true,
+    "type_pretty_sha256": "09eb139db99f1e9a2056e0953d5661983386cec54fb9907b1d1f084a677df8e7",
+    "type_raw_expression_sha256": "0f97ffc908aa554e541424cba6912fbda4e157fdffa0f5b792246407dacb1a84",
+    "type_pretty_lean_hash64": "9480842127459349214",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 36
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_hasDerivAt._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_hasDerivAt._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_hasDerivAt._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_hasDerivAt._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_hasDerivAt._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_hasDerivAt._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_hasDerivAt._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_integral",
+    "source_public": true,
+    "type_pretty_sha256": "e9dfa8b878f48250cdc74878a43637c3f173fc1fb76be2af0570260a74f53f88",
+    "type_raw_expression_sha256": "75450d2319c3a6c43bb40e7e8ec4391fc60ff624c8ce310766649dd3d9d94ea2",
+    "type_pretty_lean_hash64": "4484373662206230040",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 75
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_integral._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_integral._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_integral._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_integral._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_integral._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_integral._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_integral._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weightedProfileSum",
+    "source_public": true,
+    "type_pretty_sha256": "d8074142af16b46b4d815e6374bf204676ce3dd62684cc4ab3ded9361bd1260e",
+    "type_raw_expression_sha256": "7cb491e581849d2ec6e206f16b018f9d9f74a8ea3efecfc89700187ffe3e5b49",
+    "type_pretty_lean_hash64": "3716402505726530536",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 15
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weightedProfileSum_eq_interval",
+    "source_public": true,
+    "type_pretty_sha256": "910ccebb3d7f895836d0b05380f4e04d2b2b7e091677276ba601f798d754782f",
+    "type_raw_expression_sha256": "2f360536db6f4800cff03c7960f5ef3bb5e7447c58c9fb667352c4a4aa99056e",
+    "type_pretty_lean_hash64": "12811835181207585002",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 122
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weightedProfileSum_eq_interval._proof_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "b4866582d9a7b1af5205bf2e6c739c2c1b1d05273dc4d51bd1bd5c92a3d7aaed",
+    "type_raw_expression_sha256": "26d1caf778ef549cff6b06c0f1019eeff741ac214b1276f16d97cb40837cdd33",
+    "type_pretty_lean_hash64": "17150237184315498175",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weightedProfileSum_eq_interval._proof_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "b0e21f361a03682acdb39efa95ba70a266bbfad92456b48b34333e44422a100b",
+    "type_raw_expression_sha256": "dbae8ebcdd5fab5136ebe62ac57a6fbcc2950f7a4b98a79a74f10518845ff05c",
+    "type_pretty_lean_hash64": "2039958699467066210",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weighted_abel_error",
+    "source_public": true,
+    "type_pretty_sha256": "4c5711ccfd163a8657188ef88d8d796cac43e73749914138d2a9e24aa499c9b0",
+    "type_raw_expression_sha256": "23f6daa647fae4bade7a7692b32db26df14bd34892670dfbddaef211aefa6606",
+    "type_pretty_lean_hash64": "15611796212162096476",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 194
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weighted_abel_identity",
+    "source_public": true,
+    "type_pretty_sha256": "56fe0c176f0f965b90eb6dddc3d1f88b50d48a265dc307fdb9e6202d1d1eae21",
+    "type_raw_expression_sha256": "e89b7892bbd568becbf7312111956f2abfaa8d9d53721a74d9ca817c09a73689",
+    "type_pretty_lean_hash64": "6876542733605849115",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 165
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weighted_term_eq",
+    "source_public": true,
+    "type_pretty_sha256": "f9c7c5226b18aa24c8b34700c036c71c9eac88ff334bcd90d76d6dfeb5c1f9ca",
+    "type_raw_expression_sha256": "4355ae334b13107cb76d0cefff4df564f633c68fea9cdfcb37b480f568ed28c9",
+    "type_pretty_lean_hash64": "3784537592069314661",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_line": 112
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.finite_density_error",
+    "source_public": true,
+    "type_pretty_sha256": "0dc6520910ce2dc1c281fcccef348993df0963b13f95ee218e5f0924817f7571",
+    "type_raw_expression_sha256": "32b389109a89ca9bdfe8ac298dee16bc1a1891d77333c48179b84f0fce7f359b",
+    "type_pretty_lean_hash64": "10367557416856360262",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "source_line": 57
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.finite_density_error._proof_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "5f2481081069a3f6940265c1b29f25e711a0d36018d9a220235a3ec4c6868377",
+    "type_raw_expression_sha256": "606109d37e4671cd5be8a1257fe7e29e06c7475b9d9c3fcfeed1d034202d2a67",
+    "type_pretty_lean_hash64": "10866729406952596944",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.finite_density_error._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "c8ce3ca33f7722d558391bacd22d1de6553b504071820e406d9dc489d1ad716d",
+    "type_raw_expression_sha256": "69b742423299a26e48bd284a490b69ab7bb56d9db4953232efc08f1f982fe9de",
+    "type_pretty_lean_hash64": "11547570301497195731",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.finite_density_error._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "f609657970b7be11d708982f2a9460984c1deacdada8786aa621ddbaf1a3ab95",
+    "type_raw_expression_sha256": "dde2ac20cc5200f6c85d109602678459d696b43cf78c63a3155c51055a56ebab",
+    "type_pretty_lean_hash64": "10178972178374386679",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mainConstant",
+    "source_public": true,
+    "type_pretty_sha256": "1260043cba9ceb4bf1cb9fc92b449d36f560f9ec8fb362413e8665c5235ac664",
+    "type_raw_expression_sha256": "e334d55ca2012e60f3c1dab669368e7d667404a63738b80f73f07a995f6786bd",
+    "type_pretty_lean_hash64": "12957806670630576245",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "source_line": 11
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mainConstant._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "4989e75238bad13d991fca58597bcddac5206b797963938f201c50ca9f11e91a",
+    "type_raw_expression_sha256": "91778f2670987a13e138805fa469ac197db9ac7aeec98fd0abab2aa86a7acd83",
+    "type_pretty_lean_hash64": "883099696403560685",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobiusWeight_abs_le",
+    "source_public": true,
+    "type_pretty_sha256": "40851694992dc3ececd5701d64904685eaaa35414debe9f2f1dcf6c7b9227651",
+    "type_raw_expression_sha256": "dbe807482eec13c32adb475a568f198e8266989b15e2bf68f72887e58313e848",
+    "type_pretty_lean_hash64": "16562009006793663760",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "source_line": 17
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.truncatedDensity",
+    "source_public": true,
+    "type_pretty_sha256": "aa173f56cf3d49872f29a5a8e54454551492862dc1a1c1b802643428e9a628ea",
+    "type_raw_expression_sha256": "c003edb5536abb65020e2288b9614a142879f8e8ca1aedf425e6f97c52672fc0",
+    "type_pretty_lean_hash64": "4673533967483203845",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "source_line": 14
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.truncatedDensity.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "55d69cc7d8ca22f06f627a3ae53ec924ad22970890f345f4b146a2cc496341a1",
+    "type_raw_expression_sha256": "646b235bf57339186fd2fe2141cec86be54f0dcc2e06112cb40cdec67559ff67",
+    "type_pretty_lean_hash64": "17068391052303452147",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitCount_scaled_error",
+    "source_public": true,
+    "type_pretty_sha256": "d889fadc23cf9dce5fa68fef5eeb4148bfff5eb8a0c4cd041d2b990686d78205",
+    "type_raw_expression_sha256": "a6fb4a8e3cb04662132cd19a8da4f7f13d0844eb3addfa7de09a795e1dffdaf8",
+    "type_pretty_lean_hash64": "14051492238267460079",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "source_line": 26
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.B",
+    "source_public": true,
+    "type_pretty_sha256": "1260043cba9ceb4bf1cb9fc92b449d36f560f9ec8fb362413e8665c5235ac664",
+    "type_raw_expression_sha256": "e334d55ca2012e60f3c1dab669368e7d667404a63738b80f73f07a995f6786bd",
+    "type_pretty_lean_hash64": "12957806670630576245",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "source_line": 9
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.B.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "90717b7867bfbe76251b3d56df3451f2edecfaaf3d1bd2d5a181de19dafc490f",
+    "type_raw_expression_sha256": "6530d5b66c3ad26a5c0cacfb2d47a37ec40d2125417bdad8ba7898769d7cc7d0",
+    "type_pretty_lean_hash64": "12723854418906526747",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.B_mul_alpha",
+    "source_public": true,
+    "type_pretty_sha256": "a150772f569d6ca06d4953dd1441b90f1231ed0cdf9b1daf7cf67f0acd0b1e43",
+    "type_raw_expression_sha256": "42fd753e3218dddd8d494bf8ede8dd2719a53ba5b73f7da7fb6f520cf9ae7bd8",
+    "type_pretty_lean_hash64": "18048495795940200582",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "source_line": 19
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.B_pos",
+    "source_public": true,
+    "type_pretty_sha256": "5a13d26bbc8b194386d9d209f916c1c2126901ba417ecc7a09dd4b3c5d7d73b0",
+    "type_raw_expression_sha256": "b2f82fc90ec182f216379c8395474a8c2443cda3a6ea2b9c30f42c48ca4d604f",
+    "type_pretty_lean_hash64": "11755343472204168409",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "source_line": 13
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.B_pos._proof_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "7e3f3b57b5a7301ca10a1a700c77eef365c7cc4219d1197cf7e352aa85ba1e0a",
+    "type_raw_expression_sha256": "af491ac11800a0db85682ff437de1801d2593110a044591aa3e6f94bbfcf9e2c",
+    "type_pretty_lean_hash64": "8134426730283137314",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.F",
+    "source_public": true,
+    "type_pretty_sha256": "10b0bab06f1972583de94617adf1665a51383be5cff0b3b4ecd687f66e432e7d",
+    "type_raw_expression_sha256": "1024f9df71623ab61dc285f411e47cfce9eda67057bb94c2cd88e1fea1e13db4",
+    "type_pretty_lean_hash64": "1195629802309565012",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "source_line": 55
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.F.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "2cdb97aad710daa3bcb0993ce9e0505bb771c8ded81a9accb3d52bcd973b25a7",
+    "type_raw_expression_sha256": "73d566242e8e49b1ee626fe60d828e82ea7e895ab6d53de7885bb20f7844d55a",
+    "type_pretty_lean_hash64": "17903292239378017245",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.G",
+    "source_public": true,
+    "type_pretty_sha256": "7e77ef74f708549f766c568a1053dd7eb5c2e41c406e635c8d36d60c900af1fc",
+    "type_raw_expression_sha256": "6b60f411eafa2d263c587029f54762e34154abc8d8b9f528fae2457d4474d734",
+    "type_pretty_lean_hash64": "6827810028779021445",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "source_line": 58
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.G._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "6cd0bb96b44cfc539ef4b75f17827403d3d8ee2d8a1bdd5ec7028be9c564f628",
+    "type_raw_expression_sha256": "0b7e3f2e3b3c25eb2e13e4730d5abb63a49c09a9874f482ad95bedeaafcab313",
+    "type_pretty_lean_hash64": "14568674335733737352",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.G.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "da405afbf96a9a5b95306dc3b2031ae5bffe8b836df8669a39ab86f1ce5bb80c",
+    "type_raw_expression_sha256": "377bf6f23cc8aadffdafe1b82eacf461dfd81b7ffaab9fa11817b15639bd6fb8",
+    "type_pretty_lean_hash64": "13020163750177679114",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta",
+    "source_public": true,
+    "type_pretty_sha256": "a9bdfdd2df38cd4df501d43ac39e1ce81466910d33317c8d67fc8369135356b5",
+    "type_raw_expression_sha256": "816bc72072059d5362f81fe1735d64b649ed931268580124114fb6a23aa3ab2f",
+    "type_pretty_lean_hash64": "300697104076658338",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "source_line": 10
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "656ac0642d7089afbe1a7c6190c7dafbb0e75735932cbb1183458931e7c3d59e",
+    "type_raw_expression_sha256": "0f75b2a57adbdb0a292c8954eab097b549505a9b1b29321822eca9ed0ab9201a",
+    "type_pretty_lean_hash64": "8435510596683245281",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta_eq",
+    "source_public": true,
+    "type_pretty_sha256": "e43f5b28640e9e4829d5b6057235bb4bd1cd31a3541e7346de5f8122b2540b93",
+    "type_raw_expression_sha256": "4a3595da20a2c4d4288b654f05fac3c71fa1ce507c28b4c805e7cedb891216d2",
+    "type_pretty_lean_hash64": "4481902922594201668",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "source_line": 23
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta_eq._proof_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "7e3f3b57b5a7301ca10a1a700c77eef365c7cc4219d1197cf7e352aa85ba1e0a",
+    "type_raw_expression_sha256": "fece5fba892d147f13bf4260c3c9ebea6ac17a5163a2aa86d62f3703837d6361",
+    "type_pretty_lean_hash64": "8134426730283137314",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta_eq._simp_1_3",
+    "source_public": false,
+    "type_pretty_sha256": "75e4ecd33de4f3241c4d89639f51f7bd4cd39294eb84b7e3b8489468b1a4fd1c",
+    "type_raw_expression_sha256": "bbfadeda3aeae10cd69de92607c951b81d0c3eaa6f3820668de8439d9038a5a2",
+    "type_pretty_lean_hash64": "6033590925971773593",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta_eq._simp_1_4",
+    "source_public": false,
+    "type_pretty_sha256": "de9d78b8a15c9b3fd95ded624db29ca4095a24b2b7f3bd7b06e6f845e8c7373a",
+    "type_raw_expression_sha256": "db3deae8dcb7c1cc263f6c3049fc68c36289eccc971aa18c8062412c4037615e",
+    "type_pretty_lean_hash64": "13972439555833037651",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta_eq._simp_1_5",
+    "source_public": false,
+    "type_pretty_sha256": "f095a7325a3487c1a874180e0f2dd15d89789c9f251b3693e5871bd1e8ec9dd9",
+    "type_raw_expression_sha256": "bac6412dbe4dc1a4e3254198c13aecaf5290521fcdab068bb29fea05a5b86e8c",
+    "type_pretty_lean_hash64": "16412815542536123252",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta_eq._simp_1_6",
+    "source_public": false,
+    "type_pretty_sha256": "0ddfa05159363e0bf5c0fbdef8a0e8ac202c85861144722454da7da3bb81f471",
+    "type_raw_expression_sha256": "2f3af9d08dff941bc369a4d1e656d9a27356ba531d6b70ca3466ecde2391c1b3",
+    "type_pretty_lean_hash64": "2173808416608830180",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta_eq._simp_1_7",
+    "source_public": false,
+    "type_pretty_sha256": "94bb82c12f95a91b3efcccba95ff8ce00eee7d6c7120949e5782bbdb5bcdf70d",
+    "type_raw_expression_sha256": "a6e666eabca1adffb68cd445ced9f144227a368731b3e17d4cadeae83bd8868e",
+    "type_pretty_lean_hash64": "7579211897750796183",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta_eq._simp_1_8",
+    "source_public": false,
+    "type_pretty_sha256": "de47dbfc7fc8e0f1c8624cdaeb7e3dcbb936c229f37c08151bd47f4719f5a229",
+    "type_raw_expression_sha256": "0192100a5f48c4bc7bbfade99963a591af7c7c799ffc6e870bada3e55d6dde82",
+    "type_pretty_lean_hash64": "5885927816594865294",
+    "universe_parameters_repr": "[`u_3]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta_eq._simp_1_9",
+    "source_public": false,
+    "type_pretty_sha256": "d621791fa0d8f14cdf40988da1aa7d392b068ea0ff99595ae6676e9e2391dc51",
+    "type_raw_expression_sha256": "78bf07b0b5c0f9cccbca8123c13c8e560266d013fc8083bbd5a62ad78a2c7a42",
+    "type_pretty_lean_hash64": "9303903170692057158",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.paper_diagonal",
+    "source_public": true,
+    "type_pretty_sha256": "5482d2dd87dd8047db012ae45f784ecd1248ba972c53d860f504f278495c2d7b",
+    "type_raw_expression_sha256": "1a4d4c0d8e3b07ee4f17e20055288b2e259d4f44df9423a32162b9f066dbe0b7",
+    "type_pretty_lean_hash64": "1889903890627038117",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "source_line": 67
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.paper_diagonal_c2",
+    "source_public": true,
+    "type_pretty_sha256": "bf552c0e3ceb04a2f8e20a130b369ee2f5c3e03ec48189e0a2f87e600c891c80",
+    "type_raw_expression_sha256": "ade131e37f5d9076e152003106bc5e3f1496ffb679b1fd4e658ef68919a26853",
+    "type_pretty_lean_hash64": "11681138210937248475",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "source_line": 77
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.paper_scaled_shift",
+    "source_public": true,
+    "type_pretty_sha256": "57d734b5e80e83bd24de94823399226be18bb21ac4d7b79f7acdcea1577f6e7e",
+    "type_raw_expression_sha256": "056747ee29e1606d2481cb3bcaa6733446d078f2a0f674137be027a5aa4a85d3",
+    "type_pretty_lean_hash64": "17909448478084612030",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "source_line": 33
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.paper_scaled_shift._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "f8016395537cf128d3e0c3f8e3e5d3483125f9344aa10a5833391c6006638b6e",
+    "type_raw_expression_sha256": "835f742381cb45491e887f4b420903af76c88b81bf720ee1cf3394f765dabc31",
+    "type_pretty_lean_hash64": "8761793513768935246",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.lemma83PaperBeta.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "a295c8b2b1cd04519f1c1d34e5e254b9a0a1c053f31c9c11de345228310ed625",
+    "type_raw_expression_sha256": "7790788f74493a596d8cb8a98f97ee82d39af51eeea37f4ee864e27728e55c5c",
+    "type_pretty_lean_hash64": "1443403368267293299",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.cyclic_coefficient",
+    "source_public": true,
+    "type_pretty_sha256": "d599ec62a9a7015951279ad57b7714efe63d73cf4064c9d78f450acbb4d7f694",
+    "type_raw_expression_sha256": "7bc3f0e72485fc52e1a720cd2aee47427749a11ed3cf5110847cafa526eed560",
+    "type_pretty_lean_hash64": "12152508240622280967",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "source_line": 31
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.cyclic_coefficient._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "f8016395537cf128d3e0c3f8e3e5d3483125f9344aa10a5833391c6006638b6e",
+    "type_raw_expression_sha256": "835f742381cb45491e887f4b420903af76c88b81bf720ee1cf3394f765dabc31",
+    "type_pretty_lean_hash64": "8761793513768935246",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.firstKernel",
+    "source_public": true,
+    "type_pretty_sha256": "a037ea325559c84d5f0795471b5ad3ded0f6b8ead9f1203bb874169d1f01c7fa",
+    "type_raw_expression_sha256": "77476b45ce33422a22789215a1154a209908d11fc5548fc213fdce3fca8a1f9d",
+    "type_pretty_lean_hash64": "9107763408899960357",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "source_line": 13
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.firstKernel.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "31066284d30852ef0aab106cd334a48cfa2b63ef15c05325b5b32424d0b2ec62",
+    "type_raw_expression_sha256": "a88a855d9a291adc760a881e70711c5b96339d2bbe9f3ac9211f25d85ccae2dd",
+    "type_pretty_lean_hash64": "18319700009308772241",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.pure_imaginary_product",
+    "source_public": true,
+    "type_pretty_sha256": "3e952c877ce02331382abea6a4cdfe827edcd4b0ff3d7471779d280471f76945",
+    "type_raw_expression_sha256": "1aab7d91d76dff4d8f367dd6ccff01ce05061140336590046fb0e2546298ab8f",
+    "type_pretty_lean_hash64": "14114046501980321877",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "source_line": 22
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.scaledShift",
+    "source_public": true,
+    "type_pretty_sha256": "d50776b6c1fa94dc9528b23db2b36c3b4f18390e4d5929fbccbebac96ed4346e",
+    "type_raw_expression_sha256": "fa81f733438df0342b350c6927fed391f7aae6fa12aa84ceef99c9f6062bd64a",
+    "type_pretty_lean_hash64": "1709274547312145803",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "source_line": 9
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.scaledShift._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "6cd0bb96b44cfc539ef4b75f17827403d3d8ee2d8a1bdd5ec7028be9c564f628",
+    "type_raw_expression_sha256": "0b7e3f2e3b3c25eb2e13e4730d5abb63a49c09a9874f482ad95bedeaafcab313",
+    "type_pretty_lean_hash64": "14568674335733737352",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.scaledShift._proof_2",
+    "source_public": false,
+    "type_pretty_sha256": "6cb9f8656d6435b8db12454c66372760e43c54f254b5329dafbd9d0180c0467d",
+    "type_raw_expression_sha256": "5d3100a2228434f7f4c16930c1f3a096e88fc0298d48cd99c47342784e4bb25f",
+    "type_pretty_lean_hash64": "14591836391070541801",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.scaledShift._proof_3",
+    "source_public": false,
+    "type_pretty_sha256": "f7ef675bd70d6462f5bd1488b84e4f393e4ae47283f2ceb6342e22524f633ded",
+    "type_raw_expression_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+    "type_pretty_lean_hash64": "14647379146910394343",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.scaledShift._proof_4",
+    "source_public": false,
+    "type_pretty_sha256": "38e47fd977d962535e0324130b486ea0737fda15be07a2942dcbd0b084a8e882",
+    "type_raw_expression_sha256": "c559d5005f7375aca0acc76ff1684a6b702c935f2346e1f58b4e4c68531f2934",
+    "type_pretty_lean_hash64": "11184229512403634637",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.scaledShift.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "04cb513e84044c4d50894faf6977704c3a71fb778895068c48c2d2b1a2264b16",
+    "type_raw_expression_sha256": "241e1b4e928e86f418196aa9711c56c593b3cc7caba6dbc8bc96bed0a7952c86",
+    "type_pretty_lean_hash64": "10985457501836878364",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.scaled_diagonal",
+    "source_public": true,
+    "type_pretty_sha256": "318470c6104b7847a15ce30b632131bc15c12191394652cf03f088aaf0cfa34e",
+    "type_raw_expression_sha256": "20a0bf65f4ecf386837577f91f2b2a26bf2a638ce805e46af3338e2117bf34e4",
+    "type_pretty_lean_hash64": "5507056268830349389",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "source_line": 38
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.secondKernel",
+    "source_public": true,
+    "type_pretty_sha256": "4611cf53c0735cdc9a730b456efee0ac4b2df7edb1b08d10f5bdb32ec191640e",
+    "type_raw_expression_sha256": "9d8efc6208a55f8a3fde9d6b68ad4f7905dc21dd93b2742418574d0d6d6b3322",
+    "type_pretty_lean_hash64": "2151808005328389746",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "source_line": 17
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.secondKernel.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "db4cf9952de0e6dcc1b5ed3b499c5c91a097afd9d3bee5261f9a360fabb2dae7",
+    "type_raw_expression_sha256": "5b3c5189e6f5637cb4f0442b4585950961f5fd76f477a30d08dfce57bbddda11",
+    "type_pretty_lean_hash64": "5972707434505235478",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.integral_deriv_tail",
+    "source_public": true,
+    "type_pretty_sha256": "34a1279030e526458d5ada9f58d10d7d0539d3f83dc416f8d3522cee8baa32cd",
+    "type_raw_expression_sha256": "c56f2e218b395498c611831b80fe725411c551dbebc3df8e77cc8aaf79d13f72",
+    "type_pretty_lean_hash64": "3813597731881437160",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "source_line": 25
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.integral_deriv_tail._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "871ce5b83c10098252030ddbc0c0bd720c55891923611d7891df4bc9345b54b3",
+    "type_raw_expression_sha256": "4e0599372a3d730049952aad1d04893fd885934787f320293187e216f68d466b",
+    "type_pretty_lean_hash64": "18215517620106685895",
+    "universe_parameters_repr": "[`u_2]",
+    "axioms": []
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.integral_deriv_tail_c2",
+    "source_public": true,
+    "type_pretty_sha256": "856f2ec3a171b14cd7f4bf6bd31b710bae2f0b638f161c67790fad756a5ca183",
+    "type_raw_expression_sha256": "72284314ba06eb56808b515794e2d2b40930ecdf7f06632ba321393dee770711",
+    "type_pretty_lean_hash64": "198549266045072950",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "source_line": 41
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.tail",
+    "source_public": true,
+    "type_pretty_sha256": "2187c7f805600eacd009da9f2bbc77c5afe4953a712df1f0e7cc730e02cece82",
+    "type_raw_expression_sha256": "95fee40aca712a6a59b39047e83eb37a3b4921882d6d66c7a75309a4c53731f9",
+    "type_pretty_lean_hash64": "9309642140688906305",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "source_line": 11
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.tail.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "f27f75d45c7dbfa3782f082527743688984e9fd7a81c180d524aa856e839f4c4",
+    "type_raw_expression_sha256": "96157c1fe3b0127feb9137a22f8a388523460192d74e68676b3d0ca4a994f1db",
+    "type_pretty_lean_hash64": "10434430519181518868",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.tail_continuous",
+    "source_public": true,
+    "type_pretty_sha256": "68034d71063d78b4d3227219e5c085d476d3e773fbae749e88ebd4b97102206c",
+    "type_raw_expression_sha256": "27d27474e81850dd2521b91057c25d24ed43855bdc544e73363ef8bda4a45cf5",
+    "type_pretty_lean_hash64": "13107322374281489097",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "source_line": 18
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.tail_hasDerivAt",
+    "source_public": true,
+    "type_pretty_sha256": "dbb3ff196591e814a34d4c3788f137b12cd9a124f651cf0e23b0c052a29fc76a",
+    "type_raw_expression_sha256": "3a85331e8d065cf3abe24e4cedc3de84c37f83510009b2b4858fe27a8aa749a1",
+    "type_pretty_lean_hash64": "2641730963167347545",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "source_line": 13
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileAdmissible",
+    "name": "ZhangLS.Spec.FixedHProfile.h_paper_admissible",
+    "source_public": true,
+    "type_pretty_sha256": "268e3097091bde4ad3ccf64e3e92b38a0e6ced82b0b903484cdd6bac0146cf7e",
+    "type_raw_expression_sha256": "8a152619658943098f17d637304e822845e1a235aae951817415e38088bd8413",
+    "type_pretty_lean_hash64": "1845118262908685956",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileAdmissible.lean",
+    "source_line": 44
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileAdmissible",
+    "name": "ZhangLS.Spec.FixedHProfile.h_paper_admissible_eventually",
+    "source_public": true,
+    "type_pretty_sha256": "8102feec12bcdd26aaf1470d3ceb60022a9b4726eebd1760bb4ad0a1082d4762",
+    "type_raw_expression_sha256": "4521fd59426085a1d94e7b4d3c644cc0e31598e1b0bfc3c7a4dcd0e809bd279a",
+    "type_pretty_lean_hash64": "13291537429818921620",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileAdmissible.lean",
+    "source_line": 53
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileAdmissible",
+    "name": "ZhangLS.Spec.FixedHProfile.paperP_gt_one",
+    "source_public": true,
+    "type_pretty_sha256": "84c6a98d6eaaed92e8cd1045eefb9cb96fa041ccc6614823cbe54c2065a693b2",
+    "type_raw_expression_sha256": "ba0bf6f8a444834ada62671f2bae441ef35efc9eb8162653c95b3138f9f80bd8",
+    "type_pretty_lean_hash64": "9452163801978641942",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileAdmissible.lean",
+    "source_line": 11
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileAdmissible",
+    "name": "ZhangLS.Spec.FixedHProfile.upper_window_le_paper_cutoff",
+    "source_public": true,
+    "type_pretty_sha256": "05373dd3f2986339dc064a31a506ee6d27444502a242e978aaf1c7f811e4a01c",
+    "type_raw_expression_sha256": "6dfd7a500f51328b079a76debd41011014df4c067606c45530c182cb57163d18",
+    "type_pretty_lean_hash64": "17364793170502196190",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileAdmissible.lean",
+    "source_line": 14
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta",
+    "source_public": true,
+    "type_pretty_sha256": "5a88f7f02aa62b9938dcb17496f96d4095cc05605996e4f7fa1f3ae1e1400d9a",
+    "type_raw_expression_sha256": "dc85726c361671d2145bbbf17202922151245921bf243a33aef732eda5d37d6a",
+    "type_pretty_lean_hash64": "6981336687108325974",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 14
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "e2ab6da2f6b4b73278478581d0d80240166466209dd2398fb2ecc6b59b675e94",
+    "type_raw_expression_sha256": "f969eb20cfa75c3494d6d642b874309a33e44fdb55c26e45328832f79249378c",
+    "type_pretty_lean_hash64": "17257263199183948575",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_contDiff",
+    "source_public": true,
+    "type_pretty_sha256": "31c88488a0f1ba967f1681d309709f923eaf99a0e3ebdfdc32365b772550a8a3",
+    "type_raw_expression_sha256": "c9c3e7af25e78735b5cf6fdcfb2ab2631299aafb5139072badd188ae8d4cc2a9",
+    "type_pretty_lean_hash64": "8625012773849653212",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 28
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_derivative_at_minus_one",
+    "source_public": true,
+    "type_pretty_sha256": "ca5920ef16aadefc2f3ad2c6cdfd71218779696f5fa2e4ff9eb411145c5f54af",
+    "type_raw_expression_sha256": "0c7b72bbb595ac790ff53e940630a51a474612197cb4187192e5ded1588c3ce0",
+    "type_pretty_lean_hash64": "10802742620571844118",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 64
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_derivative_contDiff",
+    "source_public": true,
+    "type_pretty_sha256": "bf2cbe0882dc94bd87912d18294345f79f9590ca60a62f2e6016ee0d4e0ef15e",
+    "type_raw_expression_sha256": "f1514e82594ad690c8fa88a4b948dfa871014d86b7434d9af02be49c4517d35e",
+    "type_pretty_lean_hash64": "18444520530692834595",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 50
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_derivative_hasCompactSupport",
+    "source_public": true,
+    "type_pretty_sha256": "dcff30a3e2c571c28d8f24a3350fd4d04e5233527fa264754fb918782fdb3d4a",
+    "type_raw_expression_sha256": "df74450e5911d3a665838b47a1bb336b608fbf4a770e2999bfdd83eb12acd015",
+    "type_pretty_lean_hash64": "348086927847381849",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 61
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_derivative_tsupport",
+    "source_public": true,
+    "type_pretty_sha256": "068b03f0f321458d5caaad2138fa36040d1222efb197475b8f4904e48cd92c6e",
+    "type_raw_expression_sha256": "209a8d5a1fade28cc548d804161e5b87f49fc8c030a97a2b7bdc2a041ed7e336",
+    "type_pretty_lean_hash64": "9974543143526699496",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 54
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_eq_glue",
+    "source_public": true,
+    "type_pretty_sha256": "dace147f12b80ec89e7762eb9faf494f144b2247ac0632387d36f247c1fc5c7a",
+    "type_raw_expression_sha256": "d242d13c7eed58e3a7b4557da17ffa60233428b601d5923f38e5fdb409a96c06",
+    "type_pretty_lean_hash64": "12445418588207127248",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 17
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_hasCompactSupport",
+    "source_public": true,
+    "type_pretty_sha256": "7a3cc0d4fd478069966795b0c133881422245c4492a2949a0e5ab49fd5784c59",
+    "type_raw_expression_sha256": "64f4b36d98b0aba9e352123f9623090602928de713eb434b3c064aa9884181b8",
+    "type_pretty_lean_hash64": "825989101378255851",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 43
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_midpoint",
+    "source_public": true,
+    "type_pretty_sha256": "a4831052f7481540651b174099f56207418abe27349dd3053a7db887121b7a04",
+    "type_raw_expression_sha256": "acfbc333db8c9b003a0df0980dd877fb6967ab8854d6ef04af2beb78b25ff377",
+    "type_pretty_lean_hash64": "9200054493812774196",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 47
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_midpoint_pos",
+    "source_public": true,
+    "type_pretty_sha256": "e092a8870abde8fffa32f68d76b4120e0d05efe50f6b2cca76e5f236033b501a",
+    "type_raw_expression_sha256": "9f45ea6e5644fc07ae7df38b6a4fd87cbe4e06eed23d2bbfef19abd8cbff70a0",
+    "type_pretty_lean_hash64": "8751117442213507162",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 48
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_support",
+    "source_public": true,
+    "type_pretty_sha256": "927ebea209f5e462a711c5c1553162e23186f888691e45fb3a54e0bce0bde88a",
+    "type_raw_expression_sha256": "db2329fc1b4206f9fce39ff3e4c767738492b53cf1739a62f98496f9aeb91ea1",
+    "type_pretty_lean_hash64": "6082808958334082349",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 33
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_support._simp_1_1",
+    "source_public": false,
+    "type_pretty_sha256": "c631ab1155fbb5dc7c3faea4b2451216480ae6e12c70881de913872d5055d89b",
+    "type_raw_expression_sha256": "9e7fa5239d64a6c934ed8507234b5fd8427ef893e4b410b7fa94c8430118bc73",
+    "type_pretty_lean_hash64": "4396321093038226294",
+    "universe_parameters_repr": "[`u_1, `u_3]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_support._simp_1_2",
+    "source_public": false,
+    "type_pretty_sha256": "33ba0abc49b59435523c3d70f7d7c44c9e725dd5c510b420e1beefef0c2f77ed",
+    "type_raw_expression_sha256": "163241808012e43da90f035108444aac9860eb4686d5697a41790a963808b9a7",
+    "type_pretty_lean_hash64": "5058837530523902529",
+    "universe_parameters_repr": "[`u_1]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_third_derivative_not_zero",
+    "source_public": true,
+    "type_pretty_sha256": "9e8aac1f623272f70d4377cdea59755a7432c6f0abcbeb449bedddfed8e160f4",
+    "type_raw_expression_sha256": "0ae79b788ee2e08aca40f1bf41baf48db7c8353cf40c9a4a95580d9e835278fe",
+    "type_pretty_lean_hash64": "14949754906134645865",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 72
+  }
+]

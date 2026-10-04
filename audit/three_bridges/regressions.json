@@ -1,0 +1,72 @@
+[
+  {
+    "source": "audit/CoprimeProfileAbelArithmeticRegression.lean",
+    "source_sha256": "71c276c1f375afdab5f8f8104373c736310b8d5f83958cb30924c3817d616c51",
+    "examples": 8,
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:37:10.838552+00:00",
+    "ended_utc": "2026-10-04T02:37:22.222620+00:00",
+    "seconds": 11.384081823998713,
+    "peak_rss_kib": 3615160
+  },
+  {
+    "source": "audit/CoprimeProfileAbelProfileRegression.lean",
+    "source_sha256": "db6e352dd02860dd93253b71b25414b46bf47f41b9ea8450ba460043fefb8b41",
+    "examples": 8,
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:37:22.259248+00:00",
+    "ended_utc": "2026-10-04T02:37:33.611023+00:00",
+    "seconds": 11.351819712999713,
+    "peak_rss_kib": 3617860
+  },
+  {
+    "source": "audit/FixedHDiagonalAxioms.lean",
+    "source_sha256": "932b07bc97e24a8ce07cbf2e5eb95890c8d1362987d935a25c28cacc7245ee50",
+    "examples": 0,
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:37:33.643493+00:00",
+    "ended_utc": "2026-10-04T02:37:38.712915+00:00",
+    "seconds": 5.069435588000488,
+    "peak_rss_kib": 4158704
+  },
+  {
+    "source": "audit/FixedHDiagonalRegressions.lean",
+    "source_sha256": "0831b6727396fb300bfb55872c64e4978230b732dc6e0162f88af517a360ded1",
+    "examples": 6,
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:37:38.742511+00:00",
+    "ended_utc": "2026-10-04T02:37:41.751103+00:00",
+    "seconds": 3.0086050720001367,
+    "peak_rss_kib": 4157860
+  },
+  {
+    "source": "audit/FixedHProfileRegression.lean",
+    "source_sha256": "d32b52ded462c70cff7950fddb799c4dc426983d2408b0d3e1dc14e76003f4ed",
+    "examples": 15,
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:37:41.783999+00:00",
+    "ended_utc": "2026-10-04T02:37:56.243118+00:00",
+    "seconds": 14.459131543000694,
+    "peak_rss_kib": 4055240
+  }
+]

@@ -1,0 +1,1106 @@
+[
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coefficient",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 14,
+    "source_signature": "noncomputable def coefficient (D n : ℕ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 17,
+    "source_signature": "noncomputable def summatory (D : ℕ) (x : ℝ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 20,
+    "source_signature": "noncomputable def density (D : ℕ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitCount",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 22,
+    "source_signature": "noncomputable def unitCount (D N : ℕ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coefficient_zero",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 25,
+    "source_signature": "lemma coefficient_zero (D : ℕ) : coefficient D 0 = 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coefficient_nonneg",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 27,
+    "source_signature": "lemma coefficient_nonneg (D n : ℕ) : 0 ≤ coefficient D n"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coefficient_le_one",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 31,
+    "source_signature": "lemma coefficient_le_one (D n : ℕ) : coefficient D n ≤ 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_one",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 40,
+    "source_signature": "lemma summatory_one (D : ℕ) : summatory D 1 = 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobius_divisor_sum",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 43,
+    "source_signature": "lemma mobius_divisor_sum (n : ℕ) :\n    (∑ d ∈ n.divisors, (ArithmeticFunction.moebius d : ℝ)) =\n      if n = 1 then 1 else 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coprime_indicator",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 52,
+    "source_signature": "lemma coprime_indicator {D : ℕ} (hD : 0 < D) (n : ℕ) :\n    (if n.Coprime D then (1 : ℝ) else 0) =\n      ∑ d ∈ D.divisors, if d ∣ n then (ArithmeticFunction.moebius d : ℝ) else 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitCount_mobius",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 62,
+    "source_signature": "lemma unitCount_mobius {D : ℕ} (hD : 0 < D) (N : ℕ) :\n    unitCount D N =\n      ∑ d ∈ D.divisors, (ArithmeticFunction.moebius d : ℝ) * (N / d : ℕ)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_mobius",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 74,
+    "source_signature": "lemma totient_mobius (n : ℕ) (hn : 0 < n) :\n    (n.totient : ℝ) =\n      ∑ d ∈ n.divisors, (ArithmeticFunction.moebius d : ℝ) * (n / d : ℕ)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_ratio_mobius",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 83,
+    "source_signature": "lemma totient_ratio_mobius {n : ℕ} (hn : 0 < n) :\n    (n.totient : ℝ) / (n : ℝ) =\n      ∑ d ∈ n.divisors, (ArithmeticFunction.moebius d : ℝ) / (d : ℝ)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobius_density",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 93,
+    "source_signature": "lemma mobius_density {D : ℕ} (hD : 0 < D) :\n    (∑ d ∈ D.divisors, (ArithmeticFunction.moebius d : ℝ) / (d : ℝ)) = density D"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.nat_division_error",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 97,
+    "source_signature": "lemma nat_division_error (N : ℕ) {d : ℕ} (hd : 0 < d) :\n    |(N / d : ℕ) - (N : ℝ) / (d : ℝ)| ≤ 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitCount_error",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 108,
+    "source_signature": "lemma unitCount_error {D : ℕ} (hD : 0 < D) (N : ℕ) :\n    |unitCount D N - (N : ℝ) * density D| ≤ (D.divisors.card : ℝ)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobiusWeight",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 133,
+    "source_signature": "noncomputable def mobiusWeight (D : ℕ) : ArithmeticFunction ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitWeight",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 137,
+    "source_signature": "noncomputable def unitWeight (D : ℕ) : ArithmeticFunction ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitWeight_positive",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 140,
+    "source_signature": "lemma unitWeight_positive (D : ℕ) {n : ℕ} (hn : 0 < n) :\n    unitWeight D n = if n.Coprime D then 1 else 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.totient_convolution",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 144,
+    "source_signature": "lemma totient_convolution (D n : ℕ) :\n    (mobiusWeight D * unitWeight D) n = coefficient D n"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_mobius",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "line": 189,
+    "source_signature": "lemma summatory_integer_mobius (D N : ℕ) :\n    summatory D (N : ℝ) =\n      ∑ d ∈ Ioc 0 N, mobiusWeight D d * unitCount D (N / d)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_nonneg",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "line": 8,
+    "source_signature": "lemma density_nonneg (D : ℕ) : 0 ≤ density D"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_le_one",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "line": 9,
+    "source_signature": "lemma density_le_one {D : ℕ} (hD : 0 < D) : density D ≤ 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mainConstant_pos",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "line": 13,
+    "source_signature": "lemma mainConstant_pos (D : ℕ) : 0 < mainConstant D"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mainConstant_le_one",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "line": 20,
+    "source_signature": "lemma mainConstant_le_one (D : ℕ) : mainConstant D ≤ 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "line": 36,
+    "source_signature": "noncomputable def cumulativeMobius (D N : ℕ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_tendsto",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "line": 39,
+    "source_signature": "lemma cumulativeMobius_tendsto (D : ℕ) :\n    Tendsto (cumulativeMobius D) atTop (nhds (∑' n : ℕ, mobiusWeight D n / (n : ℝ)))"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_difference",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "line": 52,
+    "source_signature": "lemma cumulativeMobius_difference (D : ℕ) {N M : ℕ} (hN : 0 < N) (hNM : N ≤ M) :\n    |cumulativeMobius D M - cumulativeMobius D N| ≤ (N : ℝ)⁻¹"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.cumulativeMobius_tail",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "line": 78,
+    "source_signature": "lemma cumulativeMobius_tail (D : ℕ) {N : ℕ} (hN : 0 < N) :\n    |(∑' n : ℕ, mobiusWeight D n / (n : ℝ)) - cumulativeMobius D N| ≤ (N : ℝ)⁻¹"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_integer_error",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "line": 84,
+    "source_signature": "lemma summatory_integer_error {D N : ℕ} (hD : 0 < D) (hN : 0 < N) :\n    |summatory D (N : ℝ) - mainConstant D * (N : ℝ)| ≤\n      (D.divisors.card : ℝ) * (harmonic N : ℝ) + 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_error",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "line": 109,
+    "source_signature": "theorem summatory_error {D : ℕ} (hD : 0 < D) {x : ℝ} (hx : 1 ≤ x) :\n    |summatory D x - mainConstant D * x| ≤\n      (D.divisors.card : ℝ) * (1 + Real.log x) + 2"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.requested_summatory_error",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "line": 134,
+    "source_signature": "theorem requested_summatory_error {D : ℕ} (hD : 0 < D) {x : ℝ} (hx : 1 ≤ x) :\n    |summatory D x - mainConstant D * x| ≤\n      ((D.divisors.card : ℝ) + 1) * (1 + Real.log x) + 2"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.principal_character_nat",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "line": 10,
+    "source_signature": "lemma principal_character_nat (D n : ℕ) :\n    (1 : DirichletCharacter ℂ D) (n : ZMod D) = if n.Coprime D then 1 else 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.principal_LSeries",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "line": 18,
+    "source_signature": "lemma principal_LSeries {D : ℕ} (hD : D ≠ 0) {s : ℂ} (hs : 1 < s.re) :\n    LSeries (fun n : ℕ => (1 : DirichletCharacter ℂ D) (n : ZMod D)) s =\n      riemannZeta s * ∏ p ∈ D.primeFactors, (1 - (p : ℂ) ^ (-s))"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobius_square_summable",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "line": 31,
+    "source_signature": "lemma mobius_square_summable (D : ℕ) :\n    Summable (fun n : ℕ => mobiusWeight D n / (n : ℝ))"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.coprime_mobius_LSeries_two",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "line": 43,
+    "source_signature": "lemma coprime_mobius_LSeries_two (D : ℕ) :\n    LSeries (fun n : ℕ => (1 : DirichletCharacter ℂ D) (n : ZMod D) *\n      (ArithmeticFunction.moebius n : ℂ)) 2 =\n      ((∑' n : ℕ, mobiusWeight D n / (n : ℝ) : ℝ) : ℂ)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobius_square_value_equation",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "line": 65,
+    "source_signature": "lemma mobius_square_value_equation {D : ℕ} (hD : 0 < D) :\n    ((Real.pi ^ 2 / 6) * ∏ p ∈ D.primeFactors, (1 - ((p : ℝ) ^ 2)⁻¹)) *\n      (∑' n : ℕ, mobiusWeight D n / (n : ℝ)) = 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_prime_product",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "line": 80,
+    "source_signature": "lemma density_prime_product {D : ℕ} (hD : 0 < D) :\n    density D = ∏ p ∈ D.primeFactors, (1 - (p : ℝ)⁻¹)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.density_euler_factorization",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "line": 89,
+    "source_signature": "lemma density_euler_factorization {D : ℕ} (hD : 0 < D) :\n    density D = (∏ p ∈ D.primeFactors, (1 - ((p : ℝ) ^ 2)⁻¹)) *\n      (∏ p ∈ D.primeFactors, (p : ℝ) / ((p : ℝ) + 1))"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.total_density_eq_main",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "line": 101,
+    "source_signature": "lemma total_density_eq_main {D : ℕ} (hD : 0 < D) :\n    density D * (∑' n : ℕ, mobiusWeight D n / (n : ℝ)) = mainConstant D"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelFormula",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_zero_start",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "line": 11,
+    "source_signature": "lemma summatory_zero_start (D : ℕ) (x : ℝ) :\n    (∑ n ∈ Finset.Icc 0 ⌊x⌋₊, coefficient D n) = summatory D x"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelFormula",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.finite_abel",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "line": 18,
+    "source_signature": "theorem finite_abel (D : ℕ) {L R : ℝ} (hL : 0 ≤ L) (hLR : L ≤ R)\n    (f f' : ℝ → ℝ) (hf : ∀ t ∈ Set.Icc L R, HasDerivAt f (f' t) t)\n    (hf' : ContinuousOn f' (Set.Icc L R)) :\n    (∑ n ∈ Finset.Ioc ⌊L⌋₊ ⌊R⌋₊, f n * coefficient D n) =\n      f R * summatory D R - f L * summatory D L -\n        ∫ t in L..R, f' t * summatory D t"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelFormula",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.summatory_product_integrable",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "line": 37,
+    "source_signature": "lemma summatory_product_integrable (D : ℕ) {L R : ℝ} (hL : 0 ≤ L) (hLR : L ≤ R)\n    {g : ℝ → ℝ} (hg : ContinuousOn g (Set.Icc L R)) :\n    IntervalIntegrable (fun t => g t * summatory D t) volume L R"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelFormula",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.abel_remainder_identity",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "line": 45,
+    "source_signature": "theorem abel_remainder_identity (D : ℕ) {L R : ℝ} (hL : 0 ≤ L) (hLR : L ≤ R)\n    (f f' : ℝ → ℝ) (hf : ∀ t ∈ Set.Icc L R, HasDerivAt f (f' t) t)\n    (hf' : ContinuousOn f' (Set.Icc L R)) (hfL : f L = 0) (hfR : f R = 0) :\n    (∑ n ∈ Finset.Ioc ⌊L⌋₊ ⌊R⌋₊, f n * coefficient D n) -\n      mainConstant D * (∫ t in L..R, f t) =\n      -(∫ t in L..R, f' t * (summatory D t - mainConstant D * t))"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelFormula",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.abel_remainder_bound",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "line": 76,
+    "source_signature": "theorem abel_remainder_bound {D : ℕ} (hD : 0 < D) {L R W : ℝ}\n    (hL : 1 ≤ L) (hLR : L ≤ R) (hW : 0 ≤ W)\n    (f f' : ℝ → ℝ) (hf : ∀ t ∈ Set.Icc L R, HasDerivAt f (f' t) t)\n    (hf' : ContinuousOn f' (Set.Icc L R)) (hfL : f L = 0) (hfR : f R = 0)\n    (hbound : ∀ t ∈ Set.Icc L R, |f' t| ≤ W / t ^ 2) :\n    |(∑ n ∈ Finset.Ioc ⌊L⌋₊ ⌊R⌋₊, f n * coefficient D n) -\n      mainConstant D * (∫ t in L..R, f t)| ≤\n      ((D.divisors.card : ℝ) * (1 + Real.log R) + 2) * W / L"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 11,
+    "source_signature": "noncomputable def profileWeight (K : ℝ → ℝ) (B t : ℝ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeightDeriv",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 12,
+    "source_signature": "noncomputable def profileWeightDeriv (K K' : ℝ → ℝ) (B t : ℝ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weightedProfileSum",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 15,
+    "source_signature": "noncomputable def weightedProfileSum (D : ℕ) (K : ℝ → ℝ) (B b : ℝ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.continuous_supported_endpoints",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 19,
+    "source_signature": "lemma continuous_supported_endpoints {K : ℝ → ℝ} {a b : ℝ}\n    (hK : Continuous K) (hsupport : Function.support K ⊆ Set.Icc a b) : K a = 0 ∧ K b = 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_hasDerivAt",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 36,
+    "source_signature": "lemma profileWeight_hasDerivAt (K K' : ℝ → ℝ) (hK : ∀ u, HasDerivAt K (K' u) u)\n    {B t : ℝ} (hB : 0 < B) (ht : 0 < t) :\n    HasDerivAt (profileWeight K B) (profileWeightDeriv K K' B t) t"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeightDeriv_continuousOn",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 46,
+    "source_signature": "lemma profileWeightDeriv_continuousOn (K K' : ℝ → ℝ)\n    (hK : Continuous K) (hK' : Continuous K') {B L R : ℝ} (hL : 0 < L) :\n    ContinuousOn (profileWeightDeriv K K' B) (Set.Icc L R)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeightDeriv_bound",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 59,
+    "source_signature": "lemma profileWeightDeriv_bound (K K' : ℝ → ℝ) {B M0 M1 t : ℝ} (hB : 0 < B)\n    (hK : |K (Real.log t / B)| ≤ M0) (hK' : |K' (Real.log t / B)| ≤ M1) :\n    |profileWeightDeriv K K' B t| ≤ (M0 + M1 / B) / t ^ 2"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.profileWeight_integral",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 75,
+    "source_signature": "lemma profileWeight_integral (K K' : ℝ → ℝ) (hK : ∀ u, HasDerivAt K (K' u) u)\n    {a b B : ℝ} (hB : 0 < B) (hab : a ≤ b) :\n    (∫ t in Real.exp (a * B)..Real.exp (b * B), profileWeight K B t) =\n      B * (∫ u in a..b, K u)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weighted_term_eq",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 112,
+    "source_signature": "lemma weighted_term_eq (D n : ℕ) (K : ℝ → ℝ) (B : ℝ) :\n    (if n.Coprime D then (n.totient : ℝ) / (n : ℝ) ^ 2 else 0) * K (Real.log n / B) =\n      profileWeight K B n * coefficient D n"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weightedProfileSum_eq_interval",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 122,
+    "source_signature": "lemma weightedProfileSum_eq_interval (D : ℕ) (K : ℝ → ℝ) {a b B : ℝ}\n    (hB : 0 < B) (hsupport : Function.support K ⊆ Set.Icc a b) (hKa : K a = 0) :\n    weightedProfileSum D K B b =\n      ∑ n ∈ Finset.Ioc ⌊Real.exp (a * B)⌋₊ ⌊Real.exp (b * B)⌋₊,\n        profileWeight K B n * coefficient D n"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.logarithmic_window",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 152,
+    "source_signature": "lemma logarithmic_window {a b B t : ℝ} (hB : 0 < B)\n    (ht : t ∈ Set.Icc (Real.exp (a * B)) (Real.exp (b * B))) :\n    Real.log t / B ∈ Set.Icc a b"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weighted_abel_identity",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 165,
+    "source_signature": "theorem weighted_abel_identity {D : ℕ} (K K' : ℝ → ℝ) {a b B : ℝ}\n    (hB : 0 < B) (hab : a ≤ b)\n    (hK : ∀ u, HasDerivAt K (K' u) u) (hK' : Continuous K')\n    (hsupport : Function.support K ⊆ Set.Icc a b) :\n    weightedProfileSum D K B b - mainConstant D * B * (∫ u in a..b, K u) =\n      -(∫ t in Real.exp (a * B)..Real.exp (b * B),\n        profileWeightDeriv K K' B t * (summatory D t - mainConstant D * t))"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.weighted_abel_error",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 194,
+    "source_signature": "theorem weighted_abel_error {D : ℕ} (hD : 0 < D) (K K' : ℝ → ℝ)\n    {a b B M0 M1 : ℝ} (ha : 0 ≤ a) (hab : a ≤ b) (hB : 0 < B)\n    (hM0 : 0 ≤ M0) (hM1 : 0 ≤ M1)\n    (hK : ∀ u, HasDerivAt K (K' u) u) (hK' : Continuous K')\n    (hsupport : Function.support K ⊆ Set.Icc a b)\n    (hbound0 : ∀ u ∈ Set.Icc a b, |K u| ≤ M0)\n    (hbound1 : ∀ u ∈ Set.Icc a b, |K' u| ≤ M1) :\n    |weightedProfileSum D K B b - mainConstant D * B * (∫ u in a..b, K u)| ≤\n      ((D.divisors.card : ℝ) * (1 + b * B) + 2) *\n        (M0 + M1 / B) / Real.exp (a * B)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.original_window_abel_error",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "line": 232,
+    "source_signature": "theorem original_window_abel_error {D : ℕ} (hD : 0 < D) (K K' : ℝ → ℝ)\n    {P M0 M1 : ℝ} (hP : 1 < P) (hM0 : 0 ≤ M0) (hM1 : 0 ≤ M1)\n    (hK : ∀ u, HasDerivAt K (K' u) u) (hK' : Continuous K')\n    (hsupport : Function.support K ⊆ Set.Icc (251 / 500 : ℝ) (201 / 400))\n    (hbound0 : ∀ u ∈ Set.Icc (251 / 500 : ℝ) (201 / 400), |K u| ≤ M0)\n    (hbound1 : ∀ u ∈ Set.Icc (251 / 500 : ℝ) (201 / 400), |K' u| ≤ M1) :\n    |weightedProfileSum D K (Real.log P) (201 / 400) -\n      mainConstant D * Real.log P * (∫ u in (251 / 500 : ℝ)..(201 / 400), K u)| ≤\n      ((D.divisors.card : ℝ) * (1 + (201 / 400) * Real.log P) + 2) *\n        (M0 + M1 / Real.log P) / Real.exp ((251 / 500) * Real.log P)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mainConstant",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "line": 11,
+    "source_signature": "noncomputable def mainConstant (D : ℕ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.truncatedDensity",
+    "kind": "def",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "line": 14,
+    "source_signature": "noncomputable def truncatedDensity (D N : ℕ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.mobiusWeight_abs_le",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "line": 17,
+    "source_signature": "lemma mobiusWeight_abs_le (D n : ℕ) : |mobiusWeight D n| ≤ (n : ℝ)⁻¹"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.unitCount_scaled_error",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "line": 26,
+    "source_signature": "lemma unitCount_scaled_error {D : ℕ} (hD : 0 < D) (N : ℕ) {d : ℕ} (hd : 0 < d) :\n    |unitCount D (N / d) - ((N : ℝ) / (d : ℝ)) * density D| ≤ (D.divisors.card : ℝ)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "name": "ZhangLS.Spec.CoprimeProfileAbel.finite_density_error",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "line": 57,
+    "source_signature": "lemma finite_density_error {D : ℕ} (hD : 0 < D) (N : ℕ) :\n    |summatory D (N : ℝ) - (N : ℝ) * truncatedDensity D N| ≤\n      (D.divisors.card : ℝ) * (harmonic N : ℝ)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.B",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "line": 9,
+    "source_signature": "noncomputable def B (D : ℕ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "line": 10,
+    "source_signature": "noncomputable def delta (D : ℕ) (c : ℝ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.B_pos",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "line": 13,
+    "source_signature": "lemma B_pos {D : ℕ} (hD : 2 ≤ D) : 0 < B D"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.B_mul_alpha",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "line": 19,
+    "source_signature": "lemma B_mul_alpha {D : ℕ} (hD : 2 ≤ D) : B D * lemma44PaperAlpha D = Real.pi"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.delta_eq",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "line": 23,
+    "source_signature": "lemma delta_eq {D : ℕ} (hD : 2 ≤ D) (c : ℝ) :\n    delta D c = c * Real.pi * lemma23PaperL D ^ (-8 : ℤ)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.paper_scaled_shift",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "line": 33,
+    "source_signature": "theorem paper_scaled_shift {D : ℕ} (hD : 2 ≤ D) (c : ℝ) (j : Fin 3) :\n    (B D : ℂ) * lemma83PaperBeta D c j = scaledShift (delta D c) j"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.F",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "line": 55,
+    "source_signature": "noncomputable def F (D : ℕ) (c : ℝ) (j : Fin 3) (f f' : ℝ → ℝ) (x : ℝ) : ℂ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.G",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "line": 58,
+    "source_signature": "noncomputable def G (D : ℕ) (c : ℝ) (j : Fin 3) (f f' : ℝ → ℝ)\n    (b x : ℝ) : ℂ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.paper_diagonal",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "line": 67,
+    "source_signature": "theorem paper_diagonal {D : ℕ} (hD : 2 ≤ D) (c : ℝ) (j : Fin 3)\n    {f f' : ℝ → ℝ} {a b : ℝ} (hf : Continuous f) (hf' : Continuous f')\n    (hd : ∀ x, HasDerivAt f (f' x) x) (ha : f a = 0) :\n    (∫ x in a..b, (F D c j f f' x * G D c j f f' b x).re) =\n      (∫ x in a..b, (f' x)^2) +\n      Real.pi^2 * (11-26*delta D c-(delta D c)^2) * (∫ x in a..b, (f x)^2)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonal",
+    "name": "ZhangLS.Spec.FixedHDiagonal.paper_diagonal_c2",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "line": 77,
+    "source_signature": "theorem paper_diagonal_c2 {D : ℕ} (hD : 2 ≤ D) (c : ℝ) (j : Fin 3)\n    {f : ℝ → ℝ} {a b : ℝ} (hf : ContDiff ℝ 2 f)\n    (_hs : HasCompactSupport f) (ha : f a = 0) (_hb : f b = 0) :\n    (∫ x in a..b, (F D c j f (deriv f) x * G D c j f (deriv f) b x).re) =\n      (∫ x in a..b, (deriv f x)^2) +\n      Real.pi^2 * (11-26*delta D c-(delta D c)^2) * (∫ x in a..b, (f x)^2)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.scaledShift",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "line": 9,
+    "source_signature": "noncomputable def scaledShift (δ : ℝ) (j : Fin 3) : ℂ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.firstKernel",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "line": 13,
+    "source_signature": "noncomputable def firstKernel (β : Fin 3 → ℂ) (j : Fin 3)\n    (f f' : ℝ → ℝ) (x : ℝ) : ℂ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.secondKernel",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "line": 17,
+    "source_signature": "noncomputable def secondKernel (β : Fin 3 → ℂ) (j : Fin 3)\n    (f f' : ℝ → ℝ) (b x : ℝ) : ℂ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.pure_imaginary_product",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "line": 22,
+    "source_signature": "lemma pure_imaginary_product (u v w p t h : ℝ) :\n    ((-(p : ℂ) - (I * (u : ℂ)) * (t : ℂ)) *\n      (-(p : ℂ) + (I*(v : ℂ) + I*(w : ℂ)) * (t : ℂ) +\n        ((I*(v : ℂ))*(I*(w : ℂ))) * (h : ℂ))).re =\n      p^2 + u*(v+w)*t^2 + v*w*p*h"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.cyclic_coefficient",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "line": 31,
+    "source_signature": "lemma cyclic_coefficient (δ : ℝ) (j : Fin 3) :\n    let q : Fin 3 → ℝ := fun k => if k = 0 then 1-5*δ else\n      if k = 1 then 2*(1+δ) else 3*(1-δ)\n    q j * (q (j+1) + q (j+2)) + q (j+1) * q (j+2) = 11-26*δ-δ^2"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "name": "ZhangLS.Spec.FixedHDiagonal.scaled_diagonal",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "line": 38,
+    "source_signature": "theorem scaled_diagonal {f f' : ℝ → ℝ} {a b : ℝ}\n    (hf : Continuous f) (hf' : Continuous f')\n    (hd : ∀ x, HasDerivAt f (f' x) x) (ha : f a = 0)\n    (δ : ℝ) (j : Fin 3) :\n    (∫ x in a..b, (firstKernel (scaledShift δ) j f f' x *\n      secondKernel (scaledShift δ) j f f' b x).re) =\n      (∫ x in a..b, (f' x)^2) +\n      Real.pi^2 * (11-26*δ-δ^2) * (∫ x in a..b, (f x)^2)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.tail",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "line": 11,
+    "source_signature": "noncomputable def tail (f : ℝ → ℝ) (b x : ℝ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.tail_hasDerivAt",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "line": 13,
+    "source_signature": "lemma tail_hasDerivAt {f : ℝ → ℝ} (hf : Continuous f) (b x : ℝ) :\n    HasDerivAt (tail f b) (-f x) x"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.tail_continuous",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "line": 18,
+    "source_signature": "lemma tail_continuous {f : ℝ → ℝ} (hf : Continuous f) (b : ℝ) :\n    Continuous (tail f b)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.integral_deriv_tail",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "line": 25,
+    "source_signature": "theorem integral_deriv_tail {f f' : ℝ → ℝ} {a b : ℝ}\n    (hf : Continuous f) (hf' : Continuous f')\n    (hd : ∀ x, HasDerivAt f (f' x) x) (ha : f a = 0) :\n    (∫ x in a..b, f' x * tail f b x) = ∫ x in a..b, (f x)^2"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "name": "ZhangLS.Spec.FixedHDiagonal.integral_deriv_tail_c2",
+    "kind": "theorem",
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "line": 41,
+    "source_signature": "theorem integral_deriv_tail_c2 {f : ℝ → ℝ} {a b : ℝ}\n    (hf : ContDiff ℝ 2 f) (ha : f a = 0) :\n    (∫ x in a..b, deriv f x * tail f b x) = ∫ x in a..b, (f x)^2"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileAdmissible",
+    "name": "ZhangLS.Spec.FixedHProfile.paperP_gt_one",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileAdmissible.lean",
+    "line": 11,
+    "source_signature": "lemma paperP_gt_one {D : ℕ} (hL : 3 ≤ lemma23PaperL D) : 1 < lemma23PaperP D"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileAdmissible",
+    "name": "ZhangLS.Spec.FixedHProfile.upper_window_le_paper_cutoff",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileAdmissible.lean",
+    "line": 14,
+    "source_signature": "lemma upper_window_le_paper_cutoff {D : ℕ} (hL : 3 ≤ lemma23PaperL D) :\n    Real.exp ((201 / 400) * Real.log (lemma23PaperP D)) ≤ lemma81Cutoff D"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileAdmissible",
+    "name": "ZhangLS.Spec.FixedHProfile.h_paper_admissible",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileAdmissible.lean",
+    "line": 44,
+    "source_signature": "lemma h_paper_admissible {D : ℕ} (χ : RealPrimitiveCharacter D)\n    (hL : 3 ≤ lemma23PaperL D) :\n    Lemma81AdmissibleSequence D 1 (h χ (lemma23PaperP D))"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileAdmissible",
+    "name": "ZhangLS.Spec.FixedHProfile.h_paper_admissible_eventually",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileAdmissible.lean",
+    "line": 53,
+    "source_signature": "lemma h_paper_admissible_eventually : ∃ D₀ : ℕ, 2 ≤ D₀ ∧\n    ∀ D : ℕ, D₀ ≤ D → ∀ χ : RealPrimitiveCharacter D,\n      Lemma81AdmissibleSequence D 1 (h χ (lemma23PaperP D))"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 14,
+    "source_signature": "noncomputable def beta (v : ℝ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_eq_glue",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 17,
+    "source_signature": "lemma beta_eq_glue (v : ℝ) : beta v = expNegInvGlue (v * (1 - v))"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_contDiff",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 28,
+    "source_signature": "lemma beta_contDiff : ContDiff ℝ ∞ beta"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_support",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 33,
+    "source_signature": "lemma beta_support : Function.support beta = Set.Ioo (0 : ℝ) 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_tsupport",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 40,
+    "source_signature": "lemma beta_tsupport : tsupport beta = Set.Icc (0 : ℝ) 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_hasCompactSupport",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 43,
+    "source_signature": "lemma beta_hasCompactSupport : HasCompactSupport beta"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_midpoint",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 47,
+    "source_signature": "lemma beta_midpoint : beta (1 / 2) = Real.exp (-4)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_midpoint_pos",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 48,
+    "source_signature": "lemma beta_midpoint_pos : 0 < beta (1 / 2)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_derivative_contDiff",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 50,
+    "source_signature": "lemma beta_derivative_contDiff (n : ℕ) : ContDiff ℝ ∞ (iteratedDeriv n beta)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_derivative_tsupport",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 54,
+    "source_signature": "lemma beta_derivative_tsupport (n : ℕ) : tsupport (iteratedDeriv n beta) ⊆ Set.Icc (0 : ℝ) 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_derivative_hasCompactSupport",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 61,
+    "source_signature": "lemma beta_derivative_hasCompactSupport (n : ℕ) : HasCompactSupport (iteratedDeriv n beta)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_derivative_at_minus_one",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 64,
+    "source_signature": "lemma beta_derivative_at_minus_one (n : ℕ) : iteratedDeriv n beta (-1) = 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_third_derivative_not_zero",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "line": 72,
+    "source_signature": "lemma beta_third_derivative_not_zero : ∃ v : ℝ, iteratedDeriv 3 beta v ≠ 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.normalization",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 13,
+    "source_signature": "noncomputable def normalization : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 14,
+    "source_signature": "noncomputable def F0 (v : ℝ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_third_abs_bddAbove",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 16,
+    "source_signature": "lemma beta_third_abs_bddAbove : BddAbove (Set.range (fun v => |iteratedDeriv 3 beta v|))"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_third_abs_le_normalization",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 29,
+    "source_signature": "lemma beta_third_abs_le_normalization (v : ℝ) : |iteratedDeriv 3 beta v| ≤ normalization"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.normalization_pos",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 32,
+    "source_signature": "lemma normalization_pos : 0 < normalization"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_contDiff",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 36,
+    "source_signature": "lemma F0_contDiff : ContDiff ℝ ∞ F0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_abs_le_one",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 39,
+    "source_signature": "lemma F0_abs_le_one (v : ℝ) : |F0 v| ≤ 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_tsupport",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 43,
+    "source_signature": "lemma F0_tsupport : tsupport F0 ⊆ Set.Icc (0 : ℝ) 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_hasCompactSupport",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 51,
+    "source_signature": "lemma F0_hasCompactSupport : HasCompactSupport F0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_not_zero",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 54,
+    "source_signature": "lemma F0_not_zero : ∃ v : ℝ, F0 v ≠ 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_square_integral_pos",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 58,
+    "source_signature": "lemma F0_square_integral_pos : 0 < ∫ v in (0 : ℝ)..1, |F0 v| ^ 2"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_square_intervalIntegrable",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 65,
+    "source_signature": "lemma F0_square_intervalIntegrable :\n    IntervalIntegrable (fun v => |F0 v| ^ 2) MeasureTheory.volume 0 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_deriv_square_intervalIntegrable",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 69,
+    "source_signature": "lemma F0_deriv_square_intervalIntegrable :\n    IntervalIntegrable (fun v => |deriv F0 v| ^ 2) MeasureTheory.volume 0 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.fixedLambda",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 73,
+    "source_signature": "noncomputable def fixedLambda : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.fixedLambda_pos",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "line": 77,
+    "source_signature": "lemma fixedLambda_pos : 0 < fixedLambda"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "line": 12,
+    "source_signature": "noncomputable def h {D : ℕ} (χ : RealPrimitiveCharacter D) (P : ℝ) (n : ℕ) : ℂ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_zero",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "line": 15,
+    "source_signature": "lemma h_zero {D : ℕ} (χ : RealPrimitiveCharacter D) (P : ℝ) : h χ P 0 = 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_eq_of_pos",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "line": 18,
+    "source_signature": "lemma h_eq_of_pos {D n : ℕ} (χ : RealPrimitiveCharacter D) (P : ℝ) (hn : 0 < n) :\n    h χ P n = χ.evalNat n * (f (Real.log n / Real.log P) : ℂ)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_norm_le_one",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "line": 22,
+    "source_signature": "lemma h_norm_le_one {D : ℕ} (χ : RealPrimitiveCharacter D) (P : ℝ) (n : ℕ) :\n    ‖h χ P n‖ ≤ 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_support_window",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "line": 30,
+    "source_signature": "lemma h_support_window {D n : ℕ} (χ : RealPrimitiveCharacter D) {P : ℝ} (hP : 1 < P)\n    (hn : h χ P n ≠ 0) :\n    0 < n ∧ Real.exp ((251 / 500) * Real.log P) < (n : ℝ) ∧\n      (n : ℝ) < Real.exp ((201 / 400) * Real.log P)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_eq_zero_of_below",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "line": 48,
+    "source_signature": "lemma h_eq_zero_of_below {D n : ℕ} (χ : RealPrimitiveCharacter D) {P : ℝ} (hP : 1 < P)\n    (hn : (n : ℝ) ≤ Real.exp ((251 / 500) * Real.log P)) : h χ P n = 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_support_rpow",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "line": 53,
+    "source_signature": "lemma h_support_rpow {D n : ℕ} (χ : RealPrimitiveCharacter D) {P : ℝ} (hP : 1 < P)\n    (hn : h χ P n ≠ 0) :\n    P ^ (251 / 500 : ℝ) < (n : ℝ) ∧ (n : ℝ) < P ^ (201 / 400 : ℝ)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_eq_zero_of_above",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "line": 59,
+    "source_signature": "lemma h_eq_zero_of_above {D n : ℕ} (χ : RealPrimitiveCharacter D) {P : ℝ} (hP : 1 < P)\n    (hn : Real.exp ((201 / 400) * Real.log P) ≤ (n : ℝ)) : h χ P n = 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_support_finite",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "line": 64,
+    "source_signature": "lemma h_support_finite {D : ℕ} (χ : RealPrimitiveCharacter D) {P : ℝ} (hP : 1 < P) :\n    (Function.support (h χ P)).Finite"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f",
+    "kind": "def",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 10,
+    "source_signature": "noncomputable def f (x : ℝ) : ℝ"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_contDiff",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 12,
+    "source_signature": "lemma f_contDiff : ContDiff ℝ ∞ f"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_abs_le_one",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 15,
+    "source_signature": "lemma f_abs_le_one (x : ℝ) : |f x| ≤ 1"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_tsupport",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 17,
+    "source_signature": "lemma f_tsupport : tsupport f ⊆ Set.Icc (251 / 500 : ℝ) (201 / 400)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_hasCompactSupport",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 24,
+    "source_signature": "lemma f_hasCompactSupport : HasCompactSupport f"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.supported_endpoints",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 27,
+    "source_signature": "lemma supported_endpoints {K : ℝ → ℝ} {a b : ℝ}\n    (hK : Continuous K) (hs : Function.support K ⊆ Set.Icc a b) : K a = 0 ∧ K b = 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_endpoints",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 42,
+    "source_signature": "lemma F0_endpoints : F0 0 = 0 ∧ F0 1 = 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_endpoints",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 45,
+    "source_signature": "lemma f_endpoints : f (251 / 500) = 0 ∧ f (201 / 400) = 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_support",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 48,
+    "source_signature": "lemma f_support : Function.support f ⊆ Set.Ioo (251 / 500 : ℝ) (201 / 400)"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_not_zero",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 59,
+    "source_signature": "lemma f_not_zero : ∃ x : ℝ, f x ≠ 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_eq_zero_of_le",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 65,
+    "source_signature": "lemma f_eq_zero_of_le {x : ℝ} (hx : x ≤ 251 / 500) : f x = 0"
+  },
+  {
+    "owner_source_module": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_eq_zero_of_ge",
+    "kind": "lemma",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "line": 69,
+    "source_signature": "lemma f_eq_zero_of_ge {x : ℝ} (hx : 201 / 400 ≤ x) : f x = 0"
+  }
+]

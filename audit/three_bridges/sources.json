@@ -1,0 +1,116 @@
+[
+  {
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "bytes": 8365,
+    "sha256": "792c2cb93d5334f7efed1097e250d229ce782c786872376ad15f291e97fccedf",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "bytes": 6243,
+    "sha256": "9af932aa5381b34442c7309e69c101c91525dd6766d75b0163e6eb9004128a99",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "bytes": 5321,
+    "sha256": "7240cc4e4b44d4bed24715abb918a49c4534821867837ff66f938e427c08e98a",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "bytes": 7000,
+    "sha256": "536e03b06543edb56df2bf68a7314ac1a860c081784879299f5e0c4b8880f02e",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "bytes": 11997,
+    "sha256": "0bcc17fb7dfcc59f9853cbc9710d10c48198a69d5a98ae8f5597bfb14a7d30e2",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "bytes": 4107,
+    "sha256": "e906bfbbe29cbb14cea397aea7a1147545513a320ed90028a1b09925ef622518",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "bytes": 4193,
+    "sha256": "7398db7cbb659b8cff67ea5a5a1e5eb9e04cbc068f969c02c42835a6d268d0d7",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "bytes": 3535,
+    "sha256": "31ce4982faeae5215ca400fb89740bd77c0552a8adba755d70a3612d4f74141f",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "bytes": 2293,
+    "sha256": "16663b9bbc2ee9493c0786a9bb0ce379d36875d134eb27381fe74692df79f24e",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/FixedHProfileAdmissible.lean",
+    "bytes": 2773,
+    "sha256": "373d46f9e8ebbe0d84db78b2bcc538205d91fc5f2e6832e4adba4c13ac7a30e6",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "bytes": 3858,
+    "sha256": "a3ed2bae606c9cff2de3bdc7495a2e176dbfa2bdfd14f6e0d31e911dd6557dd8",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "bytes": 3762,
+    "sha256": "97770edadc96a6c33cbf1047336cf76f5b53f3b1abf28999cd6bb2807f2028bf",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "bytes": 3173,
+    "sha256": "38ec08701d53c49e78b4b1271031b145e9aba77e28d59ba22da36a2e6bf22766",
+    "kind": "proof_module"
+  },
+  {
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "bytes": 2702,
+    "sha256": "17733c662970f9bc0dc2cd01ea533a6f39f747671bbf376b5d47c20c3c8372ec",
+    "kind": "proof_module"
+  },
+  {
+    "source": "audit/CoprimeProfileAbelArithmeticRegression.lean",
+    "bytes": 1472,
+    "sha256": "71c276c1f375afdab5f8f8104373c736310b8d5f83958cb30924c3817d616c51",
+    "kind": "regression_or_axiom_audit"
+  },
+  {
+    "source": "audit/CoprimeProfileAbelProfileRegression.lean",
+    "bytes": 3112,
+    "sha256": "db6e352dd02860dd93253b71b25414b46bf47f41b9ea8450ba460043fefb8b41",
+    "kind": "regression_or_axiom_audit"
+  },
+  {
+    "source": "audit/FixedHDiagonalAxioms.lean",
+    "bytes": 8332,
+    "sha256": "932b07bc97e24a8ce07cbf2e5eb95890c8d1362987d935a25c28cacc7245ee50",
+    "kind": "regression_or_axiom_audit"
+  },
+  {
+    "source": "audit/FixedHDiagonalRegressions.lean",
+    "bytes": 2666,
+    "sha256": "0831b6727396fb300bfb55872c64e4978230b732dc6e0162f88af517a360ded1",
+    "kind": "regression_or_axiom_audit"
+  },
+  {
+    "source": "audit/FixedHProfileRegression.lean",
+    "bytes": 2809,
+    "sha256": "d32b52ded462c70cff7950fddb799c4dc426983d2408b0d3e1dc14e76003f4ed",
+    "kind": "regression_or_axiom_audit"
+  }
+]

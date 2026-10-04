@@ -1,0 +1,708 @@
+[
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileBump",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_tsupport",
+    "source_public": true,
+    "type_pretty_sha256": "4f8de65c9565e752eb959e78bb0d8f4a5d92747d62efd3652a844577481b7d2d",
+    "type_raw_expression_sha256": "7358223535d04f05f7461c439868f0fdb853278cc73d9bf3d9147d90bef5bced",
+    "type_pretty_lean_hash64": "2789658730468528932",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_line": 40
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0",
+    "source_public": true,
+    "type_pretty_sha256": "5a88f7f02aa62b9938dcb17496f96d4095cc05605996e4f7fa1f3ae1e1400d9a",
+    "type_raw_expression_sha256": "dc85726c361671d2145bbbf17202922151245921bf243a33aef732eda5d37d6a",
+    "type_pretty_lean_hash64": "6981336687108325974",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 14
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "ef1d0665e90d50ea9a7491984571bd40febf0c0f8dc5bc2da534c7468736a610",
+    "type_raw_expression_sha256": "f3acb47fa49bc1cd831244b5d9b965edf8b9c786cbc0bf64a3c8efeb7941a1df",
+    "type_pretty_lean_hash64": "4598485268448961802",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_abs_le_one",
+    "source_public": true,
+    "type_pretty_sha256": "06c86ff7323123fd5b4c254357a0c0fb36be0ba00663e6885250000a16799e48",
+    "type_raw_expression_sha256": "1a7ee02b4052755340e16d2dc98187c1785361f40bab7c540ed8b918cc4c4e27",
+    "type_pretty_lean_hash64": "15402179771685154864",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 39
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_contDiff",
+    "source_public": true,
+    "type_pretty_sha256": "68c08c7da05f9deda4e7b3fe6ffe3cc0c4d6bdafb05f5db5f72f1a49278b8078",
+    "type_raw_expression_sha256": "632db8067ade68489249957c823ef0c93b09e97d04615240d4b4f63f455af0b8",
+    "type_pretty_lean_hash64": "16969664431674478400",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 36
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_deriv_square_intervalIntegrable",
+    "source_public": true,
+    "type_pretty_sha256": "579a5a6b2be02979581367a848e99a363b0f3ad302c5eec4882b8915862cd2f1",
+    "type_raw_expression_sha256": "1d6f6dcaa56bc44fc5bb8fac5d992e6b05c1333b2f3e9c4e3078f7dfee0d6416",
+    "type_pretty_lean_hash64": "2772433783555561105",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 69
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_hasCompactSupport",
+    "source_public": true,
+    "type_pretty_sha256": "26197d9b7ac6e09fa9eb5c6a998f63e6846f774867ecc949388d2dddaa32bbb8",
+    "type_raw_expression_sha256": "7cbe93f067023b945a056a95008a34a8623eb8314ff1719d21619a5c08c0aea9",
+    "type_pretty_lean_hash64": "14952291094235246692",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 51
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_not_zero",
+    "source_public": true,
+    "type_pretty_sha256": "c3eb9b8d34a637b006063be381d97540dff7f2c63acc30bf743f8885f9dd702d",
+    "type_raw_expression_sha256": "9e2ef05d562f8fff71d5e96fa0c44976e1cdfe59d150df2e4881fec9e295ca18",
+    "type_pretty_lean_hash64": "5944910672228229863",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 54
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_square_integral_pos",
+    "source_public": true,
+    "type_pretty_sha256": "4e3b31407b66f8863c23050522cf26d051705b90e3e4b6acd3cd7db9421e4422",
+    "type_raw_expression_sha256": "595977b44e9382b7be406be888cf412e7f876cbb61990a10cc8e5db4cfd43686",
+    "type_pretty_lean_hash64": "18437417545654914453",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 58
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_square_intervalIntegrable",
+    "source_public": true,
+    "type_pretty_sha256": "3bef3ab00ce53784beb99dff68810925bf1fa2d26cec9cbd24868c22deb48391",
+    "type_raw_expression_sha256": "8e26218f73ac51a1ea216aff59862d73e7f9404b4428846b241f0c3e80f1a323",
+    "type_pretty_lean_hash64": "17372088340863449313",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 65
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_tsupport",
+    "source_public": true,
+    "type_pretty_sha256": "0edee4564b83ecfe9ef63cd79afff9ace04cbaa63f872e7f5cfc5356c5d094d4",
+    "type_raw_expression_sha256": "1e12375e7a784e1ac91fe56bea74f3b2d68f481ae3d68e2911b91c4bf285b035",
+    "type_pretty_lean_hash64": "10314933020349070300",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 43
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_third_abs_bddAbove",
+    "source_public": true,
+    "type_pretty_sha256": "b879bee39e5fbbbd573cebd13bb7fbcaf84d08d2fb9b2350e1853473a4af9de6",
+    "type_raw_expression_sha256": "d2aa5153c88e86b005862214838ba4300dd6a32d6f53823bde7cbd52de0a5159",
+    "type_pretty_lean_hash64": "1163891165436395591",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 16
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.beta_third_abs_le_normalization",
+    "source_public": true,
+    "type_pretty_sha256": "f93aeb9baa3060d66106069700a76eeb11c87ed96a9fd3f4109a220381ecfbd1",
+    "type_raw_expression_sha256": "4adb5e690d0e76425b37a1fef5693bdeb1161ae0a4666239da36ad1f07608e45",
+    "type_pretty_lean_hash64": "1407449199093389009",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 29
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.fixedLambda",
+    "source_public": true,
+    "type_pretty_sha256": "e55fe37737b783cc821bb77a370950bb6a51dcf386ab6ee70d31808409ba412e",
+    "type_raw_expression_sha256": "6d911f09835182653774830143fd8a4a6359e6b86c758307666bd46acf67b496",
+    "type_pretty_lean_hash64": "9035701922190319447",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 73
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.fixedLambda._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "c58bf4baa3d3d11b7bd625ec3e9083dbfb0529292e9b3a11864257c7065905e0",
+    "type_raw_expression_sha256": "90a1e3ac2c41a11f6c608e3665a2ae921163a453d2c4f6b88991202410a841b5",
+    "type_pretty_lean_hash64": "11956982661739715595",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.fixedLambda._proof_2",
+    "source_public": false,
+    "type_pretty_sha256": "d3d9fb0d78a48cf8b1b043f00725d065095b90e1a88f2eedbc5df9481b35b6fb",
+    "type_raw_expression_sha256": "9be7e7d0795ff14f74c528fdd2d9381e24edd1bab56576a33db4bae7e2f19907",
+    "type_pretty_lean_hash64": "2824371355270681610",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.fixedLambda._proof_3",
+    "source_public": false,
+    "type_pretty_sha256": "36751ec28da7039e6070209e3219b39c2b28b0f76048ee51f7afbe8d5d9d066a",
+    "type_raw_expression_sha256": "269db1cfed42dd961c821c6c38b75886d663eabb0ee928d1466e4be3e813611d",
+    "type_pretty_lean_hash64": "5665107791717739717",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.fixedLambda_pos",
+    "source_public": true,
+    "type_pretty_sha256": "ba6e491009836144671fe0c58442336587d740a3cddbf2a69e5198adfcc040fb",
+    "type_raw_expression_sha256": "d3a3d253fe271647d6340f8339c3dd2bcddcf6f5c42267a4c8220c33ab32962f",
+    "type_pretty_lean_hash64": "18313033010323722018",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 77
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.normalization",
+    "source_public": true,
+    "type_pretty_sha256": "e55fe37737b783cc821bb77a370950bb6a51dcf386ab6ee70d31808409ba412e",
+    "type_raw_expression_sha256": "6d911f09835182653774830143fd8a4a6359e6b86c758307666bd46acf67b496",
+    "type_pretty_lean_hash64": "9035701922190319447",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 13
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileNormalization",
+    "name": "ZhangLS.Spec.FixedHProfile.normalization_pos",
+    "source_public": true,
+    "type_pretty_sha256": "8b14b2ebbc904cc8921d1e6ae059ecec00e57c7eefaff3fc2a0bc40116d9cc79",
+    "type_raw_expression_sha256": "47697502b8fb0e10b5d2621655b99f3d40366b5976acbbed541760995199b475",
+    "type_pretty_lean_hash64": "8521303507354140742",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_line": 32
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h",
+    "source_public": true,
+    "type_pretty_sha256": "ade1400d02c6d784993fbb1b79a819569bb4a53fcf1b520b8b4a1f20b5814263",
+    "type_raw_expression_sha256": "f298d78b12311c3d2b8ab30d9cf57ce9802e44ea8e280f87bdd6cdddfda103e4",
+    "type_pretty_lean_hash64": "5291744586398708114",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "source_line": 12
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "d0e70a7d756c5f6dcfc3d44dca3899476156a446a4da5910a7eff26a8997b841",
+    "type_raw_expression_sha256": "502acf3d2b8571b72fcb7dcb0d29045dd53a7f6bb07672a51a7499e52a6ea8c7",
+    "type_pretty_lean_hash64": "7999805332397181160",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_eq_of_pos",
+    "source_public": true,
+    "type_pretty_sha256": "d4842b66c133d59379780762736d603452e68c1b8b3a449d96b90904ca381dd2",
+    "type_raw_expression_sha256": "ff50ca58630134f8b9ebf04777ee3f40dce93acd553e92fa761b225639acaf97",
+    "type_pretty_lean_hash64": "7815740173784304722",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "source_line": 18
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_eq_zero_of_above",
+    "source_public": true,
+    "type_pretty_sha256": "1315c90423590b06c46f3e2843ee0fa6b0cd215633822318ad6accaa03240206",
+    "type_raw_expression_sha256": "0ca832d1ec0a8139079fab3e8625c249f1af96a322e8c28a0e2561b11991e3ea",
+    "type_pretty_lean_hash64": "16820351110511086952",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "source_line": 59
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_eq_zero_of_below",
+    "source_public": true,
+    "type_pretty_sha256": "ce14d680f44fc63e16b34ee143ae8525f01cd775999ab1748893df7be4ff5cc3",
+    "type_raw_expression_sha256": "2830a4cbcac3fbf9c32824d147c392d518daa5b19d88ca8031fdea734f5311c2",
+    "type_pretty_lean_hash64": "16859831598181861181",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "source_line": 48
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_norm_le_one",
+    "source_public": true,
+    "type_pretty_sha256": "2e5990500daa83ddede815ab1da91f50d9cce53d2208a48bbdaa2874b1e45122",
+    "type_raw_expression_sha256": "a10755799753710666aefd789af2f1b1d260e0446f4b28289cdc02c076406d69",
+    "type_pretty_lean_hash64": "9463219946562133076",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "source_line": 22
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_support_finite",
+    "source_public": true,
+    "type_pretty_sha256": "07fef77926347e49e6fa6554e0d2773a2991a89d20a9a69a9beadcadc9214026",
+    "type_raw_expression_sha256": "19e5ab674818140c1f6556700ecdfcc6aff1769012e493d20c6132406f831923",
+    "type_pretty_lean_hash64": "11445894635329217070",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "source_line": 64
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_support_rpow",
+    "source_public": true,
+    "type_pretty_sha256": "61a8a79a8923d8dece2f0bb44c47df2f0ef56f03980455a2866210346bbac929",
+    "type_raw_expression_sha256": "8c106148e0cee3394b271edefb4648d3f5ff6bc115b618a5f3577913673276a6",
+    "type_pretty_lean_hash64": "13759894356772092717",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "source_line": 53
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_support_window",
+    "source_public": true,
+    "type_pretty_sha256": "0686ae03fb247c8512556227eea33f4737fb2f3f2da165652882408b0e74c7ce",
+    "type_raw_expression_sha256": "8db7a3e93be7f4fb24a3aee4cecf07ddf18be93f3d8ccad7a532ae6b99a80bdc",
+    "type_pretty_lean_hash64": "4828942136204478423",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "source_line": 30
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileSequence",
+    "name": "ZhangLS.Spec.FixedHProfile.h_zero",
+    "source_public": true,
+    "type_pretty_sha256": "59a5f0886bd2a2aeb6887cda347505bef54f0c158c797bdcdafacf103ec78209",
+    "type_raw_expression_sha256": "3bed6ee96beabb248f808bd2c942d7a552bef969586128eb9113290801a92b52",
+    "type_pretty_lean_hash64": "9892633904024739797",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "source_line": 15
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.F0_endpoints",
+    "source_public": true,
+    "type_pretty_sha256": "d0dcbab30b5bff9edb6f358adabe8b097c14e98f2442e3303c08f9cce971b567",
+    "type_raw_expression_sha256": "6613d8f78cc9c1ef98b0b8e04a41ea8c4d7337382b6e59b4eecbe7884c46f1cf",
+    "type_pretty_lean_hash64": "157788684165184404",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 42
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f",
+    "source_public": true,
+    "type_pretty_sha256": "9c6af635ba46c7c3dd38dadf8d296cc135748bf7aa560615f29638333b146690",
+    "type_raw_expression_sha256": "a6adfd25b32ecf563e5bf88dd46ba821a69a6a0cf8264a2a38872986e47b098f",
+    "type_pretty_lean_hash64": "2732931413018661285",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 10
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f._proof_1",
+    "source_public": false,
+    "type_pretty_sha256": "6ee69843efd684635ae77f316e392da109c649f7a7092152eb1cd28d8ec32fc0",
+    "type_raw_expression_sha256": "e4eeb2e6ccec72cc881868e08407be1a20141259afb1528f3b7e9567f2997f98",
+    "type_pretty_lean_hash64": "15548198765314755609",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f._proof_2",
+    "source_public": false,
+    "type_pretty_sha256": "0f5dabc776d93b1c9575a0d242dc41debefb6b695644177e4d0f7781b176e7be",
+    "type_raw_expression_sha256": "07afa343c9b8d98759c69a4b1cd6af3f36f79ca34b424936358916d16cd77404",
+    "type_pretty_lean_hash64": "12495542951265472791",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f._proof_3",
+    "source_public": false,
+    "type_pretty_sha256": "50450ab14f10175fb58661677fcf773034eb59dd0500e9c2af0e4d02984b784f",
+    "type_raw_expression_sha256": "4942487529144e83157c1b8d43e6aa91f6e0571f91349a658cfb435fa0792ec4",
+    "type_pretty_lean_hash64": "13775836928741719872",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f.eq_1",
+    "source_public": false,
+    "type_pretty_sha256": "51f407f3dc1a041e0f3171fde1839292f236c9dba9d7345a0cee9815b2584438",
+    "type_raw_expression_sha256": "6df77d5438d0e064a3b63cbc41c3ce8251d7c0012fbbc45739cf5709e30d765c",
+    "type_pretty_lean_hash64": "9749697540696854088",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_abs_le_one",
+    "source_public": true,
+    "type_pretty_sha256": "2cb8e5d4c47fc115ec374fd33b02a2ec2e4971562fb49ade4e3c788ee8a578a7",
+    "type_raw_expression_sha256": "b275289f09a9b37cea64739ead089adfb7bae9a4e2f7e37fb397c3eba53e187b",
+    "type_pretty_lean_hash64": "9879787733433939104",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 15
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_contDiff",
+    "source_public": true,
+    "type_pretty_sha256": "379bb2fe454ea6fdeba576e58378891846b3a1485bf99860dfd5d459b1113691",
+    "type_raw_expression_sha256": "3ab934c0ea56be344befb163ed8611b4474e626f3850b1bf518fb02d3a7c7c48",
+    "type_pretty_lean_hash64": "17585805453840544585",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 12
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_endpoints",
+    "source_public": true,
+    "type_pretty_sha256": "b87f4fbc9eff28851b384d9f4409ce1435fff21797e5c3a754f8d1a7c13e9c1e",
+    "type_raw_expression_sha256": "609072056c122d46f7158af1534580f48f1c0592386ca10c357b09df11a68a19",
+    "type_pretty_lean_hash64": "15814379062368324771",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 45
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_eq_zero_of_ge",
+    "source_public": true,
+    "type_pretty_sha256": "b9afdc8afdaa0a21dc9d10c9acfe5e6e9652a0bab2cc6b882eec16c2fa7c8a9f",
+    "type_raw_expression_sha256": "35b861d276a49a7bdf6e422c7d3c5acbf989ca182e77d1a7d79341deadbf7d7e",
+    "type_pretty_lean_hash64": "6624788014291177930",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 69
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_eq_zero_of_le",
+    "source_public": true,
+    "type_pretty_sha256": "6c3078a5d442fa0291498c2dba9b7d7bca3bad6034e95bb79e0214d201c095a5",
+    "type_raw_expression_sha256": "1d7113ddea20ee625eda6e5defd7f54e6bedf855b47909dd0de42a57bcf28d98",
+    "type_pretty_lean_hash64": "4198934287043982999",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 65
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_hasCompactSupport",
+    "source_public": true,
+    "type_pretty_sha256": "307c40da5ba1f867369a621ba0e6b1b1713d231acd4bf676e3e8cd2d56faf047",
+    "type_raw_expression_sha256": "9cf16aec163351dbe3215727f3497d521b0900758af0fec695bab2a26d63a058",
+    "type_pretty_lean_hash64": "8883249439404867708",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 24
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_not_zero",
+    "source_public": true,
+    "type_pretty_sha256": "230eb8a641785d8ee74c68252046b78b420e5092f566f7b65feb2ed97b9f7fd1",
+    "type_raw_expression_sha256": "53553e2242976ddc7cb42e5e164904fa7609774178e18119fa0a7da271afa977",
+    "type_pretty_lean_hash64": "14231092843291864691",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 59
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_support",
+    "source_public": true,
+    "type_pretty_sha256": "059c8815d2f4d3e48ed1195f7c2c880ecd1385acb10386d390bc57b4f88f858a",
+    "type_raw_expression_sha256": "45a42ff081c0fcd2e9d51ee254db822fab12eef33b5f236915fdf3030467ad39",
+    "type_pretty_lean_hash64": "9395603507095711917",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 48
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.f_tsupport",
+    "source_public": true,
+    "type_pretty_sha256": "f5b5c180ddd1cca5ce418235ce039ad74a443a6eaae215713e9d831f624c0023",
+    "type_raw_expression_sha256": "9921f0f81cf9646c7a8ebe6a8ee3c98a70db8839fa8a96194a8ac0575331179f",
+    "type_pretty_lean_hash64": "1949341983276134239",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 17
+  },
+  {
+    "owner": "ZhangLS.Spec.FixedHProfileWindow",
+    "name": "ZhangLS.Spec.FixedHProfile.supported_endpoints",
+    "source_public": true,
+    "type_pretty_sha256": "dad92cf273d105e5f7cb77b7fbf579fea275a8dc285e15e21cf266fec0ae6852",
+    "type_raw_expression_sha256": "ab44af1abe9445e906e76e88a167f2ec703192f4e4ac23f019d475b83865fdd5",
+    "type_pretty_lean_hash64": "9188854518130635349",
+    "universe_parameters_repr": "[]",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_line": 27
+  }
+]

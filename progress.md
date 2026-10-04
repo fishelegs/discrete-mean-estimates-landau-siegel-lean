@@ -1,5 +1,7 @@
 # 张益唐论文 Lean 形式化进度
 
+实际单范数的三条衔接桥（2026-10-04）：[coprime/Abel、固定剖面与精确对角主项](audit/CLOUD_THREE_BRIDGES_STATUS.md)已中央验收，并保留独立分支的原证明字节。14模块、138公开/242完整owner、37回归均通过；实值C¹剖面Abel界、literal beta第三导数归一化及lambda>0、原有限D系数11−26δ−δ²均已证。复杂Λ权重替换、完整复数控制、统一算术误差与同c最终m_H衔接仍缺，不能据剖面积分lambda>0直接宣称实际范数为正。另附[原ν尾的跨环境独立复验](audit/mc6_square_nu_tail/README.md)，两个完整182-owner日志与原中央SHA完全一致。40/51不变，均为专项核验。
+
 实际profile积分与残差组装（2026-10-04）：[六新组件中央Lean核验](audit/CLOUD_GRAM_PROFILE_STATUS.md)通过，保留原shift、plus Volterra、真实Pi、原有限product box及全部端点。新增29公开/44完整owner；整个16模块92公开/154owner均仅标准公理。第二interior继续采用明确修订3L^-5。四项实际norm/error界的统一代入、同c零点均值、coprime/Abel外和与最终m_H仍待衔接；不计为完整single_norm或strictgain，40/51不变。此为fresh专项验收，全库fresh复验另行进行。
 
 实际ν²τq尾桥（2026-10-04）：[完整中央Lean核验与独立审查](audit/CLOUD_SQUARE_NU_TAIL_STATUS.md)通过。原(A)、1≤q≤9及严格D²⁰<n≤Z≤P⁴下得到Cq·L^(4q−2015)，统一D₀先于q/χ/实端点，Cq>0且无尾界前提。9新模块+7支持模块fresh通过；100显式公开+55生成proof声明、27回归/fixture声明，全部182owner与全类型、公理闭包通过。原假设指数未加强，K=q²−2q只增固定常数。全部strong-pair区域的解析支付仍是来源层推论；weak-pair整体协方差、strictgain和主结论未证，40/51不变。全库fresh核验与此完整算术桥的scoped验收分开。
@@ -52,16 +54,16 @@ high-rho的实际结构削减（2026-10-03）：[小rare部分的完整source证
 | R2 真实相位精度接口 | 待当前集成后继续复验 | 对象/系数、safe-series/gamma、branch/strict尾已中央核验 | 原branch及逆包络与safe尾已证；完整L^-14及四integrand/support/finite contour/族附件仍缺 | 当前相位路线的基础 |
 | R3 短υ替换 | 有限桥已完成，等R2附件 | 部分Lean已中央核验 | S_N²≤1260·3^80 L^-1291及真实族误差O(P²L^-302)已证；归一化轮廓L^-225仍为来源层 | R2、已证3.1/3.3/8.1；可选算术归约 |
 | R4 主算术矩阵与目标残差符号 | weak-pair及替代机制独立审查中 | 半范数、joint与全部strong-pair来源界；实际ν尾已Lean | 强pair解析区域已在来源层支付；弱pair整体signed界及半阈值仍缺 | 原比值走R2；独立Z2走真实轮廓/正采样与single_norm |
-| R5 实际Gram/残差下界 | single_norm各附件并行集成 | 十六算术/积分组件已中央验收；独立外和/剖面/对角桥集成中 | 先证原F0的m_H=lambda+o(1)、lambda>0；完整三方向Gram另行继续 | 新Z2只需限定单范数；旧比值仍需完整Gram/Schur |
+| R5 实际Gram/残差下界 | single_norm各附件并行集成 | 十六算术/积分组件与三条外和/剖面/对角桥已中央验收 | 先证原F0的m_H=lambda+o(1)、lambda>0；完整三方向Gram另行继续 | 新Z2只需限定单范数；旧比值仍需完整Gram/Schur |
 | R6 归一化全部误差 | 等signed界及路线对应范数 | 新signed路线已付误差o(1) | P^.501尚未支付；取得固定signed余量后才能吸收全部误差 | 原路线R2/R4/R5；Z2路线R4+R5.single_norm及真实附件 |
 | R7 完整比值或替代Z2严格增益 | 等待前置 | 未证明 | 两条路线均未闭合；不要求所有探索支路都完成 | 原路线R4/R5/R6；独立Z2只需其限定范数和附件 |
 | R8 原主结论回接 | 等待前置 | 未证明 | 还需采用路线的全部剩余编号前置、统一量词、修订兼容性和最终矛盾链 | R7，加剩余论文/解析义务 |
 
-执行状态于2026-10-04 02:25 UTC核对。R5六积分附件已fresh验收，实际coprime外和、固定剖面、对角主项及同一c零点均值桥并行集成；最终single_norm未完成。R2恢复增量排在当前集成之后复验；R4弱pair与零点间距替代机制正做独立来源审查。已恢复885个指定依赖，全库fresh PASS仍未完成。
+执行状态于2026-10-04 02:54 UTC核对。R5六积分附件已fresh验收，实际coprime/Abel外和、固定剖面和对角主项已验收；复杂Λ替换、统一误差及同一c零点均值继续衔接；最终single_norm未完成。R2恢复增量排在当前集成之后复验；R4弱pair与零点间距替代机制正做独立来源审查。已恢复885个指定依赖，全库fresh PASS仍未完成。
 
 R1的M1/(a logP)下界L^-13与R2的表示误差L^-14属于不同对象，不能直接相减得到gain。R3只降低替换所新增的误差，总表示误差仍由R2控制。R3等研究分支可以被其他有效方法替代，并非所有可能证明都必须经过它们。新的独立weighted Z2若能构成有效矛盾，也可替代旧C1/T1比值路线；当前尚未证明该分叉。
 
-限定单范数子目标 **R5.single_norm** 使用原 `F0=beta'''/sup|beta'''|` 与 `[251/500,201/400]` 窗口，同一 compatible c、aM 和实际 c*omega 零点测度；目标是 `m_H=lambda+o(1)`、`lambda>0`。来源定义在 [fixed_profile](audit/signed_phase_refinements/INTERFACE.json)。通用积分附件已专项验收，实际coprime/Abel外和与固定剖面/对角桥正分别集成；最终单范数组装仍未Lean完成。新Z2路线需要此限定下界和真实轮廓/正采样附件，不逻辑要求完整三方向Gram先完成；旧矩阵比值路线保留原AND依赖。完整独立Z2附件本身也仍待Lean形式化。
+限定单范数子目标 **R5.single_norm** 使用原 `F0=beta'''/sup|beta'''|` 与 `[251/500,201/400]` 窗口，同一 compatible c、aM 和实际 c*omega 零点测度；目标是 `m_H=lambda+o(1)`、`lambda>0`。来源定义在 [fixed_profile](audit/signed_phase_refinements/INTERFACE.json)。通用积分附件已专项验收，实际coprime/Abel外和与固定剖面/对角桥已分别验收；复杂Λ替换、统一误差及最终单范数组装仍未Lean完成。新Z2路线需要此限定下界和真实轮廓/正采样附件，不逻辑要求完整三方向Gram先完成；旧矩阵比值路线保留原AND依赖。完整独立Z2附件本身也仍待Lean形式化。
 
 [机器可读节点与依赖](audit/cloud_repair_critical_path.json) · [实际M1证据](audit/CLOUD_FIRST_LOG_MOMENT_STATUS.md) · [相位表示范围](audit/annular_covariance/STATUS.md) · [短υ归约与相位缺项](audit/CLOUD_SHORT_UPSILON_STATUS.md)
 

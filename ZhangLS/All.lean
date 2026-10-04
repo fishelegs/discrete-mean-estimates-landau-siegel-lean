@@ -367,6 +367,12 @@ import ZhangLS.Spec.ConductorTotientWeight
 import ZhangLS.Spec.CoprimeGaussPrimeAverage
 import ZhangLS.Spec.CoprimeGaussRealTwist
 import ZhangLS.Spec.CoprimeGaussResidues
+import ZhangLS.Spec.CoprimeProfileAbelArithmetic
+import ZhangLS.Spec.CoprimeProfileAbelBound
+import ZhangLS.Spec.CoprimeProfileAbelEuler
+import ZhangLS.Spec.CoprimeProfileAbelFormula
+import ZhangLS.Spec.CoprimeProfileAbelProfile
+import ZhangLS.Spec.CoprimeProfileAbelSummatory
 import ZhangLS.Spec.CorrectionLogReality
 import ZhangLS.Spec.CorrectionZetaFormula
 import ZhangLS.Spec.DeltaPairGcdReindex
@@ -383,6 +389,14 @@ import ZhangLS.Spec.FiniteMobius
 import ZhangLS.Spec.FirstLogMoment
 import ZhangLS.Spec.FirstLogMomentLower
 import ZhangLS.Spec.FirstLogRegressions
+import ZhangLS.Spec.FixedHDiagonal
+import ZhangLS.Spec.FixedHDiagonalAlgebra
+import ZhangLS.Spec.FixedHDiagonalIBP
+import ZhangLS.Spec.FixedHProfileAdmissible
+import ZhangLS.Spec.FixedHProfileBump
+import ZhangLS.Spec.FixedHProfileNormalization
+import ZhangLS.Spec.FixedHProfileSequence
+import ZhangLS.Spec.FixedHProfileWindow
 import ZhangLS.Spec.FixedModulusGcdAttachment
 import ZhangLS.Spec.FixedModulusGcdBridge
 import ZhangLS.Spec.FixedModulusGcdOriginalPhase

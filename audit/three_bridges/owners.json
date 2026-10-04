@@ -1,0 +1,28 @@
+{
+  "owners": {
+    "ZhangLS.Spec.CoprimeProfileAbelArithmetic": 40,
+    "ZhangLS.Spec.CoprimeProfileAbelBound": 27,
+    "ZhangLS.Spec.CoprimeProfileAbelEuler": 17,
+    "ZhangLS.Spec.CoprimeProfileAbelFormula": 5,
+    "ZhangLS.Spec.CoprimeProfileAbelProfile": 31,
+    "ZhangLS.Spec.CoprimeProfileAbelSummatory": 10,
+    "ZhangLS.Spec.FixedHDiagonal": 26,
+    "ZhangLS.Spec.FixedHDiagonalAlgebra": 14,
+    "ZhangLS.Spec.FixedHDiagonalIBP": 7,
+    "ZhangLS.Spec.FixedHProfileAdmissible": 4,
+    "ZhangLS.Spec.FixedHProfileBump": 16,
+    "ZhangLS.Spec.FixedHProfileNormalization": 19,
+    "ZhangLS.Spec.FixedHProfileSequence": 10,
+    "ZhangLS.Spec.FixedHProfileWindow": 16
+  },
+  "groups": {
+    "Abel": 130,
+    "Profile": 65,
+    "Diagonal": 47
+  },
+  "total": 242,
+  "source_public": 138,
+  "generated": 104,
+  "provenance_method": "env.getModuleIdxFor? and env.header.moduleNames; no namespace/name substring ownership filter",
+  "all_owned_axioms_rejected": true
+}

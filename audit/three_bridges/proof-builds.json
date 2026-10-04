@@ -1,0 +1,226 @@
+[
+  {
+    "module": "ZhangLS.Spec.CoprimeProfileAbelArithmetic",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelArithmetic.lean",
+    "source_sha256": "792c2cb93d5334f7efed1097e250d229ce782c786872376ad15f291e97fccedf",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:29:32.487556+00:00",
+    "ended_utc": "2026-10-04T02:29:36.051069+00:00",
+    "seconds": 3.5635243359993183,
+    "peak_rss_kib": 3349924,
+    "private_object_sha256": "59b2223e3ac0b8482301eb602ecd42802517c2273174356c94045dcc35992410",
+    "private_object_bytes": 386920
+  },
+  {
+    "module": "ZhangLS.Spec.FixedHDiagonalIBP",
+    "source": "ZhangLS/Spec/FixedHDiagonalIBP.lean",
+    "source_sha256": "16663b9bbc2ee9493c0786a9bb0ce379d36875d134eb27381fe74692df79f24e",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:29:36.082431+00:00",
+    "ended_utc": "2026-10-04T02:29:38.655926+00:00",
+    "seconds": 2.57351004299926,
+    "peak_rss_kib": 3807324,
+    "private_object_sha256": "86f352ffd52cffba80ad3cc5d03bb611c855a87d3eaf8bb298eb7efd0e617be4",
+    "private_object_bytes": 83792
+  },
+  {
+    "module": "ZhangLS.Spec.FixedHProfileBump",
+    "source": "ZhangLS/Spec/FixedHProfileBump.lean",
+    "source_sha256": "a3ed2bae606c9cff2de3bdc7495a2e176dbfa2bdfd14f6e0d31e911dd6557dd8",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:29:38.686782+00:00",
+    "ended_utc": "2026-10-04T02:29:41.030867+00:00",
+    "seconds": 2.34410007400038,
+    "peak_rss_kib": 2946568,
+    "private_object_sha256": "c9d63075c340efac9bb4cc3ce6754c4288e6f0b29635c050d70c2f12e25de002",
+    "private_object_bytes": 170952
+  },
+  {
+    "module": "ZhangLS.Spec.CoprimeProfileAbelSummatory",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelSummatory.lean",
+    "source_sha256": "e906bfbbe29cbb14cea397aea7a1147545513a320ed90028a1b09925ef622518",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:29:41.060398+00:00",
+    "ended_utc": "2026-10-04T02:29:43.669571+00:00",
+    "seconds": 2.6091872779998084,
+    "peak_rss_kib": 3599976,
+    "private_object_sha256": "1ef67b535c6cd8f61cbb5777fb1fbf607a7454de6b13b74d90e6f1a6483b0141",
+    "private_object_bytes": 218928
+  },
+  {
+    "module": "ZhangLS.Spec.FixedHDiagonalAlgebra",
+    "source": "ZhangLS/Spec/FixedHDiagonalAlgebra.lean",
+    "source_sha256": "31ce4982faeae5215ca400fb89740bd77c0552a8adba755d70a3612d4f74141f",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:29:43.699390+00:00",
+    "ended_utc": "2026-10-04T02:29:47.069958+00:00",
+    "seconds": 3.3705824379994738,
+    "peak_rss_kib": 3821844,
+    "private_object_sha256": "f4c0ff71edd85626eb2f409e8bc835b1725bf7136988b5313954adc3664bad7b",
+    "private_object_bytes": 465552
+  },
+  {
+    "module": "ZhangLS.Spec.FixedHProfileNormalization",
+    "source": "ZhangLS/Spec/FixedHProfileNormalization.lean",
+    "source_sha256": "97770edadc96a6c33cbf1047336cf76f5b53f3b1abf28999cd6bb2807f2028bf",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:29:47.101594+00:00",
+    "ended_utc": "2026-10-04T02:29:49.748598+00:00",
+    "seconds": 2.647017565999704,
+    "peak_rss_kib": 3290608,
+    "private_object_sha256": "6a2391d04bd7502741b868ee05e73161ec9d653f08f38386e3cc10fac9dc14a9",
+    "private_object_bytes": 101456
+  },
+  {
+    "module": "ZhangLS.Spec.CoprimeProfileAbelEuler",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelEuler.lean",
+    "source_sha256": "7240cc4e4b44d4bed24715abb918a49c4534821867837ff66f938e427c08e98a",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:29:49.809030+00:00",
+    "ended_utc": "2026-10-04T02:29:52.836666+00:00",
+    "seconds": 3.0276476919989364,
+    "peak_rss_kib": 3607808,
+    "private_object_sha256": "ef02f81f8d66a2734bcb60f2058166c87d90f5a4f34e634a80848dbcb05f05db",
+    "private_object_bytes": 329832
+  },
+  {
+    "module": "ZhangLS.Spec.FixedHDiagonal",
+    "source": "ZhangLS/Spec/FixedHDiagonal.lean",
+    "source_sha256": "7398db7cbb659b8cff67ea5a5a1e5eb9e04cbc068f969c02c42835a6d268d0d7",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:29:52.867344+00:00",
+    "ended_utc": "2026-10-04T02:29:56.192664+00:00",
+    "seconds": 3.325331283000196,
+    "peak_rss_kib": 4181660,
+    "private_object_sha256": "18f3fcfc779c5605633edd7033e453f8e56cdc72ac38e8ecf5ca2532b0436a78",
+    "private_object_bytes": 369008
+  },
+  {
+    "module": "ZhangLS.Spec.FixedHProfileWindow",
+    "source": "ZhangLS/Spec/FixedHProfileWindow.lean",
+    "source_sha256": "17733c662970f9bc0dc2cd01ea533a6f39f747671bbf376b5d47c20c3c8372ec",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:29:56.222360+00:00",
+    "ended_utc": "2026-10-04T02:29:58.843949+00:00",
+    "seconds": 2.6216003950012237,
+    "peak_rss_kib": 3295004,
+    "private_object_sha256": "006aada5f63450e104ac5c5e191d32a7a8695ca56048d054168eb982d6df0412",
+    "private_object_bytes": 172864
+  },
+  {
+    "module": "ZhangLS.Spec.CoprimeProfileAbelBound",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelBound.lean",
+    "source_sha256": "9af932aa5381b34442c7309e69c101c91525dd6766d75b0163e6eb9004128a99",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:29:58.875170+00:00",
+    "ended_utc": "2026-10-04T02:30:02.256194+00:00",
+    "seconds": 3.3810344690009515,
+    "peak_rss_kib": 3614908,
+    "private_object_sha256": "a7a246cf87531f1e8936c76ff569587fb8064b741f63a3c9c169e64bd585085a",
+    "private_object_bytes": 438864
+  },
+  {
+    "module": "ZhangLS.Spec.FixedHProfileSequence",
+    "source": "ZhangLS/Spec/FixedHProfileSequence.lean",
+    "source_sha256": "38ec08701d53c49e78b4b1271031b145e9aba77e28d59ba22da36a2e6bf22766",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:30:02.284663+00:00",
+    "ended_utc": "2026-10-04T02:30:04.803858+00:00",
+    "seconds": 2.5192102969995176,
+    "peak_rss_kib": 3876012,
+    "private_object_sha256": "d22a097688daea4050b35b81f8c509481e7445b4251039ce848dd7f91067647c",
+    "private_object_bytes": 113256
+  },
+  {
+    "module": "ZhangLS.Spec.CoprimeProfileAbelFormula",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelFormula.lean",
+    "source_sha256": "536e03b06543edb56df2bf68a7314ac1a860c081784879299f5e0c4b8880f02e",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:30:04.834685+00:00",
+    "ended_utc": "2026-10-04T02:30:08.408593+00:00",
+    "seconds": 3.573919824000768,
+    "peak_rss_kib": 3623536,
+    "private_object_sha256": "01a2a9aaef975d3dd9d12538a2fcd9a3f5ddd56a0492dc29fdb6111bc8482350",
+    "private_object_bytes": 316040
+  },
+  {
+    "module": "ZhangLS.Spec.FixedHProfileAdmissible",
+    "source": "ZhangLS/Spec/FixedHProfileAdmissible.lean",
+    "source_sha256": "373d46f9e8ebbe0d84db78b2bcc538205d91fc5f2e6832e4adba4c13ac7a30e6",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:30:08.441142+00:00",
+    "ended_utc": "2026-10-04T02:30:11.303635+00:00",
+    "seconds": 2.8625061429993366,
+    "peak_rss_kib": 4043132,
+    "private_object_sha256": "77ba4db6d2ce4b39fa2721701c187c8b64000ace75678062ea666c84ea2f4ebc",
+    "private_object_bytes": 255248
+  },
+  {
+    "module": "ZhangLS.Spec.CoprimeProfileAbelProfile",
+    "source": "ZhangLS/Spec/CoprimeProfileAbelProfile.lean",
+    "source_sha256": "0bcc17fb7dfcc59f9853cbc9710d10c48198a69d5a98ae8f5597bfb14a7d30e2",
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-M4096"
+    ],
+    "started_utc": "2026-10-04T02:30:11.338778+00:00",
+    "ended_utc": "2026-10-04T02:30:14.773216+00:00",
+    "seconds": 3.434452086001329,
+    "peak_rss_kib": 3621060,
+    "private_object_sha256": "35560204f2e884f8ffdfb658e73b3c12bbcb9d0c80d81b0ff8fc4b80aa3cd265",
+    "private_object_bytes": 511424
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "source_commit": "9a2f00e69b5bbb48a71b1ee8ad738c93ebc66798",
+  "source_commit_authority": "export MANIFEST.json; all 19 export files independently matched against the applied cloud checkout",
+  "verification_checkout_head": "3203236c046a128ecaedbefffb41ab1fce539f6d",
+  "lean_toolchain": "leanprover/lean4:v4.30.0",
+  "source_files_verified": 19,
+  "proof_modules_freshly_built": 14,
+  "original_audit_files_passed": 5,
+  "regression_examples_passed": 37,
+  "inventory": {
+    "source": "audit/MC6ThreeBridgesInventory.lean",
+    "source_sha256": "0ab4d9bb467d59a1d5a1f2cf29c3ed29b06998f0f5a75aae68b09db262d82124",
+    "flags": [
+      "-j1",
+      "-M6144"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-04T02:40:13.214446+00:00",
+    "ended_utc": "2026-10-04T02:40:21.855396+00:00",
+    "seconds": 8.64096136199987,
+    "peak_rss_kib": 4238008,
+    "full_type_log_sha256": "36632f9f9b4cded2c6446084e2a9be8ee9f42aa95a6cf39cfac44428bb47b6e4",
+    "full_type_log_bytes": 2913865,
+    "full_type_log_published": false,
+    "private_log_contains": "242 exact names, owner modules, full pp.all types, raw Expr types, universes, transitive axioms and direct references",
+    "discovery_then_exact_pin": true
+  },
+  "counts": {
+    "owned": 242,
+    "source_public": 138,
+    "generated": 104,
+    "Abel": 130,
+    "Profile": 65,
+    "Diagonal": 47
+  },
+  "declaration_files": [
+    "declarations-01.json",
+    "declarations-02.json"
+  ],
+  "reference_files": [
+    "direct-references-01.json",
+    "direct-references-02.json",
+    "direct-references-03.json",
+    "direct-references-04.json",
+    "direct-references-05.json"
+  ],
+  "dependency_validation": {
+    "loaded_modules": 6175,
+    "repository_modules": 248,
+    "loaded_module_list": [
+      "loaded-modules-01.txt",
+      "loaded-modules-02.txt"
+    ],
+    "selection": "exact ordered imported-module union from the final combined inventory",
+    "read_only_cached_dependencies": true,
+    "fresh_private_proof_overlay_first_on_LEAN_PATH": true
+  },
+  "axioms_allowed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "execution_policy": "one Lean process at a time, shared exclusive lock, no lake/cache writes",
+  "resource_note": "Initial combined discovery exhausted the M4096 heap before emitting declaration rows. The approved M6144 discovery and pinned audit passed; all proof and original regression builds passed at M4096.",
+  "scope_limit": "Kernel/type/ownership/regression evidence only. No claim of final norm estimate, gain theorem, final target closure, or completion of the separate semantic review.",
+  "portable_reproduction_validation": {
+    "status": "PASS",
+    "proof_modules_rebuilt": 14,
+    "original_audit_files_recompiled": 5,
+    "regression_examples": 37,
+    "pinned_inventory_recompiled": true,
+    "started_utc": "2026-10-04T02:50:58.591583+00:00",
+    "ended_utc": "2026-10-04T02:52:30.888196+00:00",
+    "all_exit_codes": 0,
+    "readonly_dependency_file_overlay": true,
+    "all_fresh_output_stems_reserved": true,
+    "repository_installation_layout_with_unrelated_files": "PASS",
+    "extra_bounded_evidence_rejection": "PASS",
+    "inventory_hash_tampering_rejection": "PASS"
+  }
+}

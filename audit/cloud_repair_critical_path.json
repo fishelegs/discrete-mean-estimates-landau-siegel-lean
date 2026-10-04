@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-04T02:26:21.594212+00:00",
-  "base_commit": "3203236c046a128ecaedbefffb41ab1fce539f6d",
+  "updated_utc": "2026-10-04T02:55:37.773815+00:00",
+  "base_commit": "12035d10c535c038c76e82b1cefc11bc837cb0a8",
   "title": "修复关键路径（独立于原论文51个编号）",
   "numbered_ledger": {
     "total": 51,
@@ -119,8 +119,8 @@
         "audit/square_factor_tail/STATUS.md"
       ],
       "execution_status": "active",
-      "execution_note": "弱pair算术报告与零点间距替代机制分别独立来源审查中；暂无新增严格signed上界。",
-      "checked_utc": "2026-10-04T02:26:21.594212+00:00",
+      "execution_note": "weak-pair条件性报告已独审，新的真正居中协方差上界与完整nu功能方程候选继续研究；尚无严格signed上界。",
+      "checked_utc": "2026-10-04T02:55:37.773815+00:00",
       "proof_status": "open",
       "branch_status": "suspended_recalibration_for_fixed_smooth_narrow_small_gain_only",
       "alternative_routes": [
@@ -197,7 +197,7 @@
       "name": "实际 Gram 与 Schur 残差下界",
       "status": "partial_lean_proved",
       "verification": "十六个真实算术、点态与积分残差组件已中央专项Lean核验；完整实际单范数与Gram下界仍未完成",
-      "result": "真实Pi除子消去、P7 profile算术、exp-ramp/闭权重层及原K1/K2有限叠加已证。限定三方向Gram和旧二维span残差下界另有来源复核，尚未Lean。 新增原scaled shifts、true product endpoint单侧积分、literal main与任意real-x点态small/interior误差已中央Lean核验。 六项积分/支撑/精确box与加权残差组件已fresh核验：新增29公开/44owned，合计92公开/154owned。四项scalar norm/error输入仍需共同阈值代入。",
+      "result": "真实Pi除子消去、P7 profile算术、exp-ramp/闭权重层及原K1/K2有限叠加已证。限定三方向Gram和旧二维span残差下界另有来源复核，尚未Lean。 新增原scaled shifts、true product endpoint单侧积分、literal main与任意real-x点态small/interior误差已中央Lean核验。 六项积分/支撑/精确box与加权残差组件已fresh核验：新增29公开/44owned，合计92公开/154owned。四项scalar norm/error输入仍需共同阈值代入。 实际coprime求和与实值Abel、原固定剖面正lambda/支撑、原有限D精确对角三桥已中央验收：14模块138公开242owned37回归。",
       "gap": "限定三方向真实范数的来源层结论保留；它不保证旧span接近最优、目标投影非零或strict gain。固定smooth窄旧span有独立常数缺口；原宽H1/H2、任意旧rA和L^-8符号精度仍未完成。",
       "dependency_mode": "actual_Gram_attachment_plus_nondegeneracy; may_proceed_with_R4_in_parallel",
       "dependencies": [
@@ -212,11 +212,12 @@
         "audit/actual_gram_bridge/INDEPENDENT_REVIEW.md",
         "audit/CLOUD_PHASE_GRAM_COMPONENTS_STATUS.md",
         "audit/CLOUD_GRAM_SMOOTHING_STATUS.md",
-        "audit/CLOUD_GRAM_PROFILE_STATUS.md"
+        "audit/CLOUD_GRAM_PROFILE_STATUS.md",
+        "audit/CLOUD_THREE_BRIDGES_STATUS.md"
       ],
       "execution_status": "active_single_norm_integration",
-      "execution_note": "六积分组件验收完成；实际coprime/Abel、固定剖面与对角桥独立集成，同一compatible c零点→P7桥正在证明。最终m_H仍未完成。",
-      "checked_utc": "2026-10-04T02:26:21.594212+00:00",
+      "execution_note": "三桥已验收；复杂Lambda权重替换与同compatible c零点→P7桥独立证明中，cloud统一算术误差桥私有完成待中央终审，最终m_H仍未完成。",
+      "checked_utc": "2026-10-04T02:55:37.773815+00:00",
       "proof_status": "partial_lean_proved",
       "subgoals": [
         {
@@ -224,7 +225,7 @@
           "name": "原固定H的实际单范数与正下界",
           "proof_status": "source_reviewed_not_Lean",
           "execution_status": "active_component_integration",
-          "stage": "uniform_errors_outer_sum_diagonal_zero_mean",
+          "stage": "lambda_replacement_uniform_error_zero_mean",
           "goal": "m_H=lambda+o(1), lambda>0, with the same original H, compatible c and a*M normalizer",
           "profile_reference": "audit/signed_phase_refinements/INTERFACE.json#fixed_profile",
           "F0": "beta triple derivative divided by sup norm of beta triple derivative",
@@ -233,16 +234,17 @@
             "201/400"
           ],
           "lambda": "(16000/pi)*integral_0^1 |F0 prime|^2 + (11*pi/250)*integral_0^1 |F0|^2",
-          "execution_note": "六积分附件已fresh验收；实际四误差统一代入、外和及同c零点均值桥仍需组装。局部桥完成不表示最终范数完成。",
+          "execution_note": "三桥已验收；复杂Lambda权重替换与同compatible c零点→P7桥独立证明中，cloud统一算术误差桥私有完成待中央终审，最终m_H仍未完成。",
           "needed_by_routes": [
             "independent_weighted_Z2"
           ],
           "evidence": [
             "audit/half_norm_constant/STATUS.md",
             "audit/signed_phase_refinements/INTERFACE.json",
-            "audit/CLOUD_GRAM_PROFILE_STATUS.md"
+            "audit/CLOUD_GRAM_PROFILE_STATUS.md",
+            "audit/CLOUD_THREE_BRIDGES_STATUS.md"
           ],
-          "checked_utc": "2026-10-04T02:26:21.594212+00:00",
+          "checked_utc": "2026-10-04T02:55:37.773815+00:00",
           "optional_for_routes": [
             "original_ratio_if_this_fixed_profile_is_selected"
           ]
