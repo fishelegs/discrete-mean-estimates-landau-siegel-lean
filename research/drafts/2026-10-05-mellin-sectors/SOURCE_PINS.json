@@ -759,6 +759,385 @@
           "bytes": 2500
         }
       ]
+    },
+    {
+      "id": "shifted_correlation_carrier_interface",
+      "publication_document": "11_shifted_correlation_carrier_interface.md",
+      "original_mathematical_source": {
+        "sha256": "ea944e132241381d560e2e53ff55ec04459eafbd602e4d209ac3225684020683",
+        "bytes": 16702
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "1fdd72f21a2bf49e9907f36b9916ed2abbd945450cb8981ee10de77da1b9764c",
+        "bytes": 1560
+      },
+      "author_result_statement_identity": {
+        "sha256": "61575ecc48b329339df0e1bf933764f0a64651c849e290054328f9eaa1acab73",
+        "bytes": 1601
+      },
+      "original_diagnostic_script": {
+        "sha256": "388183b97d591a32753318b691827fec0644c3d8ec37ed7a4fe7854a0e7054dc",
+        "bytes": 5901
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "79a5cd46ba392c8e5e233842cdfc75de841eb223c6e4d4b2b4975a83ff4b67e5",
+        "bytes": 1042
+      },
+      "independent_review_identity": {
+        "sha256": "1d0cb528c4ee7ebc5f4aca1f8c71e43f63f9a7daa66ce346f5fa7d56e7845d35",
+        "bytes": 11268
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "b890e7bb0d2cea34a76db4882825891e8dbc7f4f025f7bed9141b43cca58517b",
+        "bytes": 1215
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "6a7de9de737d5b2366c9bd5a61a35690d7ea3518de0ab480ce3cf02ef62c14ef",
+        "bytes": 2182
+      },
+      "status": "SOURCE_REVIEWED_CONDITIONAL_CARRIER_INTERFACE_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "diagnostic_replay": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
+      "publication_editing": "All numbered mathematical sections retained byte-for-byte except removal of the final operational paragraph; introductory validation scope and a public-source footer added.",
+      "claims": [
+        "Exact retained finite shifted-coefficient measures for all four actual near unequal correlations, with literal finite inverse, transported Mellin powers, p-unit masks and both congruence signs",
+        "Actual normalized finite-window carrier kernel variation O(L^119), including gamma phases and both endpoints",
+        "Conditional cancellation of a supplied fixed-degree exponential-polynomial density under the explicit aggregate coefficient budget",
+        "The exact p/Mellin-weighted cumulative remainder criterion O(P^2 L^(b-119)), fixed b<64, suffices when all density hypotheses also hold"
+      ],
+      "limitations": [
+        "Actual arithmetic density and aggregate coefficient budget UNPROVED",
+        "Actual weighted cumulative remainder bound UNPROVED",
+        "Near aggregate arithmetic upper bound UNPROVED; the preceding reduction is sufficient only",
+        "No whole balanced-energy gain, original signed half-threshold identification, final strict gap, or new Lean certificate"
+      ],
+      "selected_upstream_source_identities": [
+        {
+          "sha256": "3b54c4ff4dfc529ae34eb3aec03cf490b79c8f375f6a118023257e3468f62792",
+          "bytes": 26877
+        },
+        {
+          "sha256": "34e72e847169908f077ad954fe8ef7cb4fcb7662e1d297f33f598cd1472a5458",
+          "bytes": 2867
+        },
+        {
+          "sha256": "f2bceb43b6cb31ab9a71ca5ecd8064569b60b2c57bc899208744c7255e317d91",
+          "bytes": 26625
+        },
+        {
+          "sha256": "6cdc312cdb348f78d5fe7167fb0224644c54270cce8ec6f68a2102574d32a2a0",
+          "bytes": 23635
+        },
+        {
+          "sha256": "02409b42acea2141121823d776792ff1df00d96f6c25bd930f6636f45a1e4e55",
+          "bytes": 2975
+        },
+        {
+          "sha256": "c749a0651a5d42dfcd355a245a30853689b690590ad774398f956fe2938ba505",
+          "bytes": 18171
+        },
+        {
+          "sha256": "e551f004ce13d6bcff21cb33870008435b9227398a874e36792cc94f998e8026",
+          "bytes": 4725
+        },
+        {
+          "sha256": "79832914057edfd2ee5ec6ad492131ec54ecbe68973dc5bd09732fea16904ebb",
+          "bytes": 14181
+        },
+        {
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852
+        },
+        {
+          "sha256": "a89e788412a2712e597748840ed9b4061b38bec6260282b54c21bd98c0aa8c55",
+          "bytes": 1594
+        },
+        {
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155
+        },
+        {
+          "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+          "bytes": 25030
+        },
+        {
+          "sha256": "aed17417dba14bf20c7733d8d10ead036ed75352ccbaf328a885d730773a9a1b",
+          "bytes": 21791
+        },
+        {
+          "sha256": "8b91479aa0cdd64776e73c4be3b00b2966fe5dbb7de71d42556e8230eb2d2501",
+          "bytes": 3084
+        },
+        {
+          "sha256": "510b6d70e95dc2d6dee7776486174f667df56f364dc59f8c92ecd32c8a8ab806",
+          "bytes": 17775
+        },
+        {
+          "sha256": "c1d3d2dcfcb63d9a64d7b58964553468241589910bb95d6a49a9bae00c89ef74",
+          "bytes": 22338
+        },
+        {
+          "sha256": "6c38ba4d36b11f2d90ff33cde06348051ca287b0515f00d0dda3a95b7c4a619c",
+          "bytes": 19418
+        },
+        {
+          "sha256": "e2b6b3b6bbda7a4aa6b75b1ad3c7886ba248574a4774d8b8997fa90d2c65ad2a",
+          "bytes": 3793
+        },
+        {
+          "sha256": "3a9df5d600c48111952bc66903d9df749d78ae3595cb5e72dbe17130628f441c",
+          "bytes": 25536
+        },
+        {
+          "sha256": "d6ef27e3a740b67adc61ae5d74ffb238fbcd9091bf23cd5de82a2d2b51a26c82",
+          "bytes": 17819
+        },
+        {
+          "sha256": "4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d",
+          "bytes": 3829
+        },
+        {
+          "sha256": "8b17bcfa77016cc0e823eb7b17c4bf6c72a55db3ceb1a0d08afe5b5ce836dfeb",
+          "bytes": 16982
+        },
+        {
+          "sha256": "85b68c4b3a23ff1d4a49b0897974b206d5a46bef5612b0c1054dba63d4aa672e",
+          "bytes": 18875
+        },
+        {
+          "sha256": "3f2e0148f063b4732a13e27a103a9dcf5204a3f40748ec05a447bd384c8078e3",
+          "bytes": 3093
+        },
+        {
+          "sha256": "1ddbb8725f257a6f3059ebc7d7e5a50453722021b14595aee7f9798cf8117e6a",
+          "bytes": 2508
+        },
+        {
+          "sha256": "c9acb6bedae79ba02779f9cf456f13c9d6d55c9bed7a82255ab98c6e84f03e0b",
+          "bytes": 19485
+        },
+        {
+          "sha256": "17d87e01f0888709319e50c7985df22b22195362c0a6fe8ce104e3f0faa8f24d",
+          "bytes": 13223
+        },
+        {
+          "sha256": "6354b25cc4a6cc832fc6a1a06fa74947701ab808fc377f50ee6a0ed7f7b1b3af",
+          "bytes": 2500
+        },
+        {
+          "sha256": "f8c98ad63360965080b85d6b43f69a8d2e7a6feffc440c7099aabb82cce115c6",
+          "bytes": 17100
+        },
+        {
+          "sha256": "76a304cc8bf7d39bf9c22fd17b0b64e7e97e5d00b5767e0b8263c2746ad5dab7",
+          "bytes": 4312
+        },
+        {
+          "sha256": "c3b456d9724a066d263ce5bfb70a4f6b1a68ca402ddc9640c05ab2abc5556e61",
+          "bytes": 2088
+        }
+      ]
+    },
+    {
+      "id": "primary_shifted_attachment_audit",
+      "publication_document": "12_primary_shifted_attachment_audit.md",
+      "original_mathematical_source": {
+        "sha256": "e92b07045452d1bd4d66a45719f2b44516747bde9963f2ffd097c2922d2670ee",
+        "bytes": 15802
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "752965e1116292f3a9d7b2ab399918d16fad81a520623535fa56f33b508b46ed",
+        "bytes": 4320
+      },
+      "essential_positive_component_scope_addendum_identity": {
+        "sha256": "facda806071837a4f285c0fbcc5f935804221c5ff8f8cf0de852c53716af3a1d",
+        "bytes": 1592
+      },
+      "scope_addendum_manifest_identity": {
+        "sha256": "051a8c0fa66478f381f776575ef2b4f1c111e8e38c17903fb8daf9a59e61ad6e",
+        "bytes": 461
+      },
+      "author_result_statement_identity": {
+        "sha256": "3ce4be6d5e5af1a1bb1ef661cfa8a8e3de4c7806822baed05b7e40a0af677af6",
+        "bytes": 1576
+      },
+      "original_primary_registry_identity": {
+        "sha256": "da0a0a1137ac7584f4a653b179f113722c31903c44d0883ba8ffc74762dab9c9",
+        "bytes": 5650
+      },
+      "original_diagnostic_script": {
+        "sha256": "56aae9e591a91625df0efd853d66d78038989e61c3f97305d624ef7766a97293",
+        "bytes": 3728
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "326d45b68efbb6ae3014ea842b53890417b6fccee655217c1b1b43e70325fd0d",
+        "bytes": 1892
+      },
+      "independent_review_identity": {
+        "sha256": "bffb45eb65a664cbe664e075ca500c99b31cb0d139a274e9c971d55e925bcf3c",
+        "bytes": 8776
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "8acd52f1a441e1b9074815086550d55154edc72bea710c57dfcd7b9d8db98bfd",
+        "bytes": 1236
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "8255c16f9d8b3af15dac8d3229917aeac836c7c9b7bbc921d86f3247184aecaa",
+        "bytes": 2961
+      },
+      "status": "SOURCE_REVIEWED_FAILED_DIRECT_ATTACHMENTS_WITH_POSITIVE_COMPONENT_SCOPE_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "diagnostic_replay": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
+      "publication_editing": "Original eight numbered sections retained byte-for-byte except final operational paragraph removal; the complete mathematical scope-addendum body is inserted at the start of Section 5, with explicit overview/diagnostic scope labels and a source footer.",
+      "claims": [
+        "The six specified printed primary interfaces do not directly establish the actual finite-inverse mixed shifted-coefficient remainder",
+        "The displayed coarse moment and absolute shifted-error attachment budgets fail to imply the required bound by those routes",
+        "All Section 5 difference-shift prime-divisor and exceptional/good-error accounting is positive-component only; the reflected component requires a separate unproved interface"
+      ],
+      "limitations": [
+        "No actual arithmetic density, coefficient budget or weighted cumulative remainder estimate",
+        "No actual lower bound for exceptional or good-error contributions",
+        "No claim that the tested upper bounds are optimal or that adapted methods are impossible",
+        "No whole balanced-energy gain, final strict gap, or new Lean certificate"
+      ],
+      "selected_upstream_source_identities": [
+        {
+          "sha256": "3b54c4ff4dfc529ae34eb3aec03cf490b79c8f375f6a118023257e3468f62792",
+          "bytes": 26877
+        },
+        {
+          "sha256": "34e72e847169908f077ad954fe8ef7cb4fcb7662e1d297f33f598cd1472a5458",
+          "bytes": 2867
+        },
+        {
+          "sha256": "f2bceb43b6cb31ab9a71ca5ecd8064569b60b2c57bc899208744c7255e317d91",
+          "bytes": 26625
+        },
+        {
+          "sha256": "6cdc312cdb348f78d5fe7167fb0224644c54270cce8ec6f68a2102574d32a2a0",
+          "bytes": 23635
+        },
+        {
+          "sha256": "02409b42acea2141121823d776792ff1df00d96f6c25bd930f6636f45a1e4e55",
+          "bytes": 2975
+        },
+        {
+          "sha256": "c749a0651a5d42dfcd355a245a30853689b690590ad774398f956fe2938ba505",
+          "bytes": 18171
+        },
+        {
+          "sha256": "e551f004ce13d6bcff21cb33870008435b9227398a874e36792cc94f998e8026",
+          "bytes": 4725
+        },
+        {
+          "sha256": "79832914057edfd2ee5ec6ad492131ec54ecbe68973dc5bd09732fea16904ebb",
+          "bytes": 14181
+        },
+        {
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852
+        },
+        {
+          "sha256": "a89e788412a2712e597748840ed9b4061b38bec6260282b54c21bd98c0aa8c55",
+          "bytes": 1594
+        },
+        {
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155
+        },
+        {
+          "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+          "bytes": 25030
+        },
+        {
+          "sha256": "aed17417dba14bf20c7733d8d10ead036ed75352ccbaf328a885d730773a9a1b",
+          "bytes": 21791
+        },
+        {
+          "sha256": "8b91479aa0cdd64776e73c4be3b00b2966fe5dbb7de71d42556e8230eb2d2501",
+          "bytes": 3084
+        },
+        {
+          "sha256": "510b6d70e95dc2d6dee7776486174f667df56f364dc59f8c92ecd32c8a8ab806",
+          "bytes": 17775
+        },
+        {
+          "sha256": "c1d3d2dcfcb63d9a64d7b58964553468241589910bb95d6a49a9bae00c89ef74",
+          "bytes": 22338
+        },
+        {
+          "sha256": "6c38ba4d36b11f2d90ff33cde06348051ca287b0515f00d0dda3a95b7c4a619c",
+          "bytes": 19418
+        },
+        {
+          "sha256": "e2b6b3b6bbda7a4aa6b75b1ad3c7886ba248574a4774d8b8997fa90d2c65ad2a",
+          "bytes": 3793
+        },
+        {
+          "sha256": "3a9df5d600c48111952bc66903d9df749d78ae3595cb5e72dbe17130628f441c",
+          "bytes": 25536
+        },
+        {
+          "sha256": "d6ef27e3a740b67adc61ae5d74ffb238fbcd9091bf23cd5de82a2d2b51a26c82",
+          "bytes": 17819
+        },
+        {
+          "sha256": "4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d",
+          "bytes": 3829
+        },
+        {
+          "sha256": "8b17bcfa77016cc0e823eb7b17c4bf6c72a55db3ceb1a0d08afe5b5ce836dfeb",
+          "bytes": 16982
+        },
+        {
+          "sha256": "85b68c4b3a23ff1d4a49b0897974b206d5a46bef5612b0c1054dba63d4aa672e",
+          "bytes": 18875
+        },
+        {
+          "sha256": "3f2e0148f063b4732a13e27a103a9dcf5204a3f40748ec05a447bd384c8078e3",
+          "bytes": 3093
+        },
+        {
+          "sha256": "1ddbb8725f257a6f3059ebc7d7e5a50453722021b14595aee7f9798cf8117e6a",
+          "bytes": 2508
+        },
+        {
+          "sha256": "c9acb6bedae79ba02779f9cf456f13c9d6d55c9bed7a82255ab98c6e84f03e0b",
+          "bytes": 19485
+        },
+        {
+          "sha256": "17d87e01f0888709319e50c7985df22b22195362c0a6fe8ce104e3f0faa8f24d",
+          "bytes": 13223
+        },
+        {
+          "sha256": "6354b25cc4a6cc832fc6a1a06fa74947701ab808fc377f50ee6a0ed7f7b1b3af",
+          "bytes": 2500
+        },
+        {
+          "sha256": "f8c98ad63360965080b85d6b43f69a8d2e7a6feffc440c7099aabb82cce115c6",
+          "bytes": 17100
+        },
+        {
+          "sha256": "76a304cc8bf7d39bf9c22fd17b0b64e7e97e5d00b5767e0b8263c2746ad5dab7",
+          "bytes": 4312
+        },
+        {
+          "sha256": "c3b456d9724a066d263ce5bfb70a4f6b1a68ca402ddc9640c05ab2abc5556e61",
+          "bytes": 2088
+        },
+        {
+          "sha256": "ea944e132241381d560e2e53ff55ec04459eafbd602e4d209ac3225684020683",
+          "bytes": 16702
+        },
+        {
+          "sha256": "1d0cb528c4ee7ebc5f4aca1f8c71e43f63f9a7daa66ce346f5fa7d56e7845d35",
+          "bytes": 11268
+        },
+        {
+          "sha256": "6a7de9de737d5b2366c9bd5a61a35690d7ea3518de0ab480ce3cf02ef62c14ef",
+          "bytes": 2182
+        }
+      ]
     }
   ],
   "accepted_upstream_interfaces": [
@@ -1050,11 +1429,195 @@
     {
       "title": "DLMF trigamma lattice series, valid off the nonpositive integers",
       "url": "https://dlmf.nist.gov/5.15.E1",
+      "redistributed": false,
+      "used": "Equation 5.15.1 and its domain for the uniform off-real-axis trigamma argument",
+      "last_inspected_utc_date": "2026-10-05",
+      "raw_publisher_bytes_pinned": false
+    },
+    {
+      "authors": "Chandee, Li, Matomaki, Radziwill",
+      "title": "The eighth moment of Dirichlet L-functions II",
+      "version": "arXiv:2307.13194v1, 25 July 2023",
+      "url": "https://arxiv.org/pdf/2307.13194v1",
+      "inspected_utc_date": "2026-10-05",
+      "locators": [
+        {
+          "pdf_page": 2,
+          "locator": "Theorem 1.1"
+        },
+        {
+          "pdf_page": 5,
+          "locator": "Proposition 3.2"
+        },
+        {
+          "pdf_page": 3,
+          "locator": "Section 2 complementary-divisor proof sketch"
+        }
+      ],
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "c07bb2b4e42f975d4f06686d3abed46da1d112993b41e8ff9796ff44cd38bf1f",
+          "bytes": 342597
+        },
+        {
+          "kind": "LOCAL_TEXT_EXTRACTION",
+          "sha256": "c80c678678431237159561b16e290efa3517b6c890da06b5f2b2b3c971d39a2a",
+          "bytes": 128769
+        }
+      ],
+      "redistributed": false
+    },
+    {
+      "authors": "Matomaki, Radziwill, Tao",
+      "title": "Correlations of the von Mangoldt and higher divisor functions I",
+      "version": "arXiv:1707.01315v3, 18 February 2019",
+      "url": "https://arxiv.org/pdf/1707.01315v3",
+      "inspected_utc_date": "2026-10-05",
+      "locators": [
+        {
+          "pdf_page": 8,
+          "locator": "Theorem 1.3(ii)"
+        },
+        {
+          "pdf_page": 9,
+          "locator": "Remarks following Theorem 1.3"
+        }
+      ],
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "e93924c5a97b7813320ca84dcbf4619a958b47781e2e7ab36f6e2fd11a9493a1",
+          "bytes": 786506
+        },
+        {
+          "kind": "LOCAL_TEXT_EXTRACTION",
+          "sha256": "14578436411e7d9e14519a1875c9d5c57933ebbde1b21d3df99d52710ba8719f",
+          "bytes": 264622
+        }
+      ],
+      "redistributed": false
+    },
+    {
+      "authors": "Matomaki, Radziwill, Tao",
+      "title": "Correlations of the von Mangoldt and higher divisor functions II",
+      "version": "arXiv:1712.08840v2, 2 January 2020",
+      "url": "https://arxiv.org/pdf/1712.08840v2",
+      "inspected_utc_date": "2026-10-05",
+      "locators": [
+        {
+          "pdf_page": 2,
+          "locator": "Theorem 1.1 and subsequent error-size discussion"
+        }
+      ],
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "1c15b9162a17eaaf172daf17ec95975caa5862cc68c63a3a1921472d4ed18055",
+          "bytes": 456432
+        },
+        {
+          "kind": "LOCAL_TEXT_EXTRACTION",
+          "sha256": "6ea2be56c47549d4a181cc841290833c1efd98c593f21d33e25e220615a74633",
+          "bytes": 157001
+        }
+      ],
+      "redistributed": false
+    },
+    {
+      "authors": "Berke Topacogullari",
+      "title": "The shifted convolution of generalized divisor functions",
+      "version": "arXiv:1605.02364v1, 8 May 2016; exact downloaded PDF pinned",
+      "url": "https://arxiv.org/pdf/1605.02364v1",
+      "inspected_utc_date": "2026-10-05",
+      "locators": [
+        {
+          "pdf_page": 1,
+          "locator": "Definition of D_k plus/minus"
+        },
+        {
+          "pdf_page": 2,
+          "locator": "Theorems 1.1 and 1.2; large-shift discussion"
+        }
+      ],
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "b1d21df0b731cd9d8e8b4898cef4863626ac095978e06df1bd7f57cb61e54d08",
+          "bytes": 288069
+        },
+        {
+          "kind": "LOCAL_TEXT_EXTRACTION",
+          "sha256": "1f568e9d843309ea3bae1c857fcc1be00ae350214469c51ac047e271f6a17fe6",
+          "bytes": 109271
+        }
+      ],
+      "redistributed": false
+    },
+    {
+      "authors": "Cheuk Fung (Joshua) Lau",
+      "title": "Smoothed Shifted Convolutions of Generalised Divisor Functions",
+      "version": "arXiv:2509.07556v2, 9 July 2026",
+      "url": "https://arxiv.org/pdf/2509.07556v2",
+      "inspected_utc_date": "2026-10-05",
+      "locators": [
+        {
+          "pdf_page": 2,
+          "locator": "Theorem 1.1"
+        },
+        {
+          "pdf_page": 3,
+          "locator": "Theorem 1.2"
+        }
+      ],
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "b063cfb9e4dc0ced1e7b75743ad299dbd18209c5a43fef8382e926bf88580070",
+          "bytes": 598416
+        },
+        {
+          "kind": "LOCAL_TEXT_EXTRACTION",
+          "sha256": "2ce285ae4be4f2d745de7ac042fe551c7552102689b44b4990149a51829b5451",
+          "bytes": 161369
+        }
+      ],
+      "redistributed": false
+    },
+    {
+      "authors": "Siegfred Baluyot, Caroline L. Turnage-Butterbaugh",
+      "title": "Twisted 2kth moments of primitive Dirichlet L-functions: Beyond the diagonal",
+      "version": "Exact author manuscript retrieved 2026-10-05; no unverified publication/version inference",
+      "url": "https://sieg-baluyot.github.io/dirichlet.pdf",
+      "inspected_utc_date": "2026-10-05",
+      "locators": [
+        {
+          "pdf_page": 5,
+          "locator": "Definition 2.1 of S(h,k)"
+        },
+        {
+          "pdf_page": 6,
+          "locator": "Theorem 2.2"
+        }
+      ],
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "1bff9721d8011582cf03169cbe148fdb2b6434b5da5be13a935cfedabe705969",
+          "bytes": 1064514
+        },
+        {
+          "kind": "LOCAL_TEXT_EXTRACTION",
+          "sha256": "f3d988d114f735e35ac70672fc62e1c52bfd6de251090265b73cf0d8563bbba3",
+          "bytes": 459390
+        }
+      ],
       "redistributed": false
     }
   ],
   "identity_note": "Original-source hashes identify the reviewed inputs; publication-document hashes are separately listed in PUBLICATION_MANIFEST.json. Hash identity is not mathematical certification.",
-  "previous_checkpoint_commit": "3da60fca87a0eaf64e425f34281059966c66dc9b",
+  "previous_checkpoint_commit": "65f774642037abbf078ef401731615cb5e530923",
   "local_localization_checkpoint_commit": "b97672ee86a9ce91aeb8a3b1e5484720fb09dc24",
-  "local_four_diagonal_checkpoint_commit": "c735324c4a320e6f72c6108a12e81bf0d6460f20"
+  "local_four_diagonal_checkpoint_commit": "c735324c4a320e6f72c6108a12e81bf0d6460f20",
+  "local_carrier_checkpoint_commit": "ad3c3ada5153287b048f0902144c516d173127a4"
 }

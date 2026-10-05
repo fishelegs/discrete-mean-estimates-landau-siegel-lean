@@ -1,14 +1,14 @@
 {
-  "schema_version": 5,
+  "schema_version": 7,
   "date_utc": "2026-10-05",
   "publication_kind": "DRAFT_MATHEMATICAL_CHECKPOINT",
   "repository": "fishelegs/discrete-mean-estimates-landau-siegel-lean",
   "base_commit": "1b1bdae9503bf45acc091381e5574b86930f55ae",
-  "previous_checkpoint_commit": "3da60fca87a0eaf64e425f34281059966c66dc9b",
+  "previous_checkpoint_commit": "65f774642037abbf078ef401731615cb5e530923",
   "intended_branch": "draft/mellin-sectors-20261005",
   "repository_directory": "research/drafts/2026-10-05-mellin-sectors",
-  "scope": "Ten source-reviewed mathematical notes at explicit scopes, including actual Gaussian far localizations, four integer-ratio diagonals, and a sufficient near-aggregate reduction whose arithmetic bound remains unproved",
-  "new_note_validation_status": "SOURCE_REVIEWED_SUFFICIENT_REDUCTION_ONLY_NOT_LEAN",
+  "scope": "Twelve source-reviewed mathematical notes at explicit scopes; the latest is a bounded audit of failed direct primary theorem attachments with positive-only difference-shift accounting, not a new arithmetic estimate or impossibility claim",
+  "new_note_validation_status": "SOURCE_REVIEWED_FAILED_DIRECT_ATTACHMENTS_WITH_POSITIVE_COMPONENT_SCOPE_ONLY_NOT_LEAN",
   "formal_lean_status": "NO_NEW_LEAN_SOURCE_OR_CERTIFICATE",
   "final_gap_status": "OPEN",
   "global_frontier": {
@@ -40,54 +40,87 @@
     "gaussian_four_near_unequal_geometrical_congruences": "OPEN_BOTH_SIGNS_RETAINED",
     "near_aggregate_one_sided_upper_bound": "UNPROVED",
     "near_aggregate_positive_energy_reduction": "SOURCE_REVIEWED_SUFFICIENT_ONLY_NOT_NECESSARY",
-    "near_aggregate_identity_with_original_signed_half_threshold": "NOT_CLAIMED"
+    "near_aggregate_identity_with_original_signed_half_threshold": "NOT_CLAIMED",
+    "actual_shifted_coefficient_measures": "SOURCE_REVIEWED_EXACT_FINITE_REPRESENTATION_WITH_ALL_MASKS",
+    "actual_normalized_carrier_kernel_variation": "SOURCE_REVIEWED_O(L^119)_GAMMA_PHASES_AND_ENDPOINTS_RETAINED",
+    "conditional_density_payment": "SOURCE_REVIEWED_ONLY_UNDER_EXPLICIT_SHAPE_AND_AGGREGATE_BUDGET_HYPOTHESES",
+    "actual_shifted_arithmetic_density": "UNPROVED",
+    "actual_shifted_density_coefficient_budget": "UNPROVED",
+    "actual_weighted_cumulative_remainder_bound": "UNPROVED",
+    "weighted_cumulative_remainder_criterion": "SUFFICIENT_ONLY_O(P^2_L^(b-119))_FIXED_b<64_WITH_DENSITY_HYPOTHESES",
+    "primary_theorem_direct_attachment_audit": "SOURCE_REVIEWED_SIX_SPECIFIED_PRINTED_INTERFACES_FAIL_DIRECT_ATTACHMENT_ONLY",
+    "MRT_Section5_prime_divisor_accounting": "POSITIVE_DIFFERENCE_COMPONENT_ONLY_p_DIVIDES_ell_MINUS_k",
+    "reflected_arithmetic_interface": "UNPROVED_SEPARATE_p_DIVIDES_k_PLUS_ell",
+    "actual_exceptional_or_good_error_lower_bound": "NOT_CLAIMED",
+    "impossibility_of_adapted_primary_methods": "NOT_CLAIMED"
   },
   "verification": {
     "previous_checkpoint_verification": {
       "previous_checkpoint_verification": {
         "previous_checkpoint_verification": {
-          "previous_checkpoint_selected_source_hash_checks": 42,
-          "previous_checkpoint_unique_source_hashes": 32,
-          "new_checkpoint_source_identity_checks_including_frozen_author_manifests": 69,
-          "new_checkpoint_unique_hashes": 59,
-          "source_hash_checks": "PASS",
-          "all_four_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
-          "first_three_published_proof_documents": "BYTE_UNCHANGED_FROM_PREVIOUS_CHECKPOINT",
-          "new_proof_body_comparison": "Mathematical derivations retained; status and source-bibliography cleanup only",
+          "previous_checkpoint_verification": {
+            "previous_checkpoint_verification": {
+              "previous_checkpoint_selected_source_hash_checks": 42,
+              "previous_checkpoint_unique_source_hashes": 32,
+              "new_checkpoint_source_identity_checks_including_frozen_author_manifests": 69,
+              "new_checkpoint_unique_hashes": 59,
+              "source_hash_checks": "PASS",
+              "all_four_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
+              "first_three_published_proof_documents": "BYTE_UNCHANGED_FROM_PREVIOUS_CHECKPOINT",
+              "new_proof_body_comparison": "Mathematical derivations retained; status and source-bibliography cleanup only",
+              "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
+              "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
+              "ci_note": "Unchanged normal repository push CI validates existing repository code; it does not certify these analytic drafts"
+            },
+            "new_selected_source_hash_checks_including_frozen_author_manifest": 50,
+            "new_unique_source_hashes": 33,
+            "new_source_hash_checks": "PASS",
+            "all_five_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
+            "proof_documents_01_through_05": "BYTE_UNCHANGED_FROM_357c5c396342d4f0fde6d404e96907b42c85f98e",
+            "new_proof_body_comparison": "Sections 1 through 8 byte-identical after one operational source-provenance sentence replacement; mathematical derivations, quantifiers, errors and limitations retained",
+            "source_review_scope": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
+            "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
+            "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
+            "ci_note": "Normal repository push CI checks existing repository code; it does not certify analytic drafts"
+          },
+          "new_selected_source_hash_checks_including_frozen_author_manifest": 53,
+          "new_unique_source_hashes": 36,
+          "new_source_hash_checks": "PASS",
+          "all_six_diagnostic_replays": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
+          "proof_documents_01_through_06": "BYTE_UNCHANGED_FROM_cf430d359ef57d14fe835d68b41c33811e31c0a9",
+          "prior_checkpoint_and_backups": "UNCHANGED_HASHES_PASS",
+          "new_proof_body_comparison": "Sections 1 through 8 are byte-identical after removing one final operational-provenance sentence; mathematical derivations, quantifiers, errors and limitations retained",
+          "source_review_scope": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
           "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
-          "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
-          "ci_note": "Unchanged normal repository push CI validates existing repository code; it does not certify these analytic drafts"
+          "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS",
+          "ci_note": "Normal repository CI checks existing repository code; it does not certify these analytic drafts"
         },
-        "new_selected_source_hash_checks_including_frozen_author_manifest": 50,
-        "new_unique_source_hashes": 33,
+        "proof_documents_01_through_07": "BYTE_UNCHANGED_FROM_3da60fca87a0eaf64e425f34281059966c66dc9b",
+        "new_proof_body_comparison": "All three new notes retain full numbered mathematical sections byte-for-byte except final operational/status paragraph removals; headers clarify validation and quantifiers; separate source-reference footers added",
         "new_source_hash_checks": "PASS",
-        "all_five_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
-        "proof_documents_01_through_05": "BYTE_UNCHANGED_FROM_357c5c396342d4f0fde6d404e96907b42c85f98e",
-        "new_proof_body_comparison": "Sections 1 through 8 byte-identical after one operational source-provenance sentence replacement; mathematical derivations, quantifiers, errors and limitations retained",
-        "source_review_scope": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
+        "all_diagnostic_replays": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
         "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
-        "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
-        "ci_note": "Normal repository push CI checks existing repository code; it does not certify analytic drafts"
+        "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS",
+        "proof_documents_01_through_09": "BYTE_UNCHANGED_FROM_c735324c4a320e6f72c6108a12e81bf0d6460f20"
       },
-      "new_selected_source_hash_checks_including_frozen_author_manifest": 53,
-      "new_unique_source_hashes": 36,
+      "proof_documents_01_through_10": "BYTE_UNCHANGED_FROM_65f774642037abbf078ef401731615cb5e530923",
+      "new_selected_source_hash_checks": 53,
+      "new_unique_source_hashes": 47,
       "new_source_hash_checks": "PASS",
-      "all_six_diagnostic_replays": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
-      "proof_documents_01_through_06": "BYTE_UNCHANGED_FROM_cf430d359ef57d14fe835d68b41c33811e31c0a9",
-      "prior_checkpoint_and_backups": "UNCHANGED_HASHES_PASS",
-      "new_proof_body_comparison": "Sections 1 through 8 are byte-identical after removing one final operational-provenance sentence; mathematical derivations, quantifiers, errors and limitations retained",
-      "source_review_scope": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
+      "new_proof_body_comparison": "All seven numbered mathematical sections are byte-identical except the final operational paragraph removal; headers and source footer added separately",
+      "all_diagnostic_replays": "ALL_TEN_PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
       "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
-      "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS",
-      "ci_note": "Normal repository CI checks existing repository code; it does not certify these analytic drafts"
+      "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS"
     },
-    "proof_documents_01_through_07": "BYTE_UNCHANGED_FROM_3da60fca87a0eaf64e425f34281059966c66dc9b",
-    "new_proof_body_comparison": "All three new notes retain full numbered mathematical sections byte-for-byte except final operational/status paragraph removals; headers clarify validation and quantifiers; separate source-reference footers added",
+    "proof_documents_01_through_11": "BYTE_UNCHANGED_FROM_ad3c3ada5153287b048f0902144c516d173127a4",
+    "new_selected_source_hash_checks": 90,
+    "new_unique_source_hashes": 71,
     "new_source_hash_checks": "PASS",
-    "all_diagnostic_replays": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
+    "new_proof_body_comparison": "Eight numbered sections byte-identical except final operational paragraph removal; essential mathematical scope-addendum body inserted verbatim at Section 5; explicit overview and diagnostic labels added",
+    "all_diagnostic_replays": "ALL_ELEVEN_PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
+    "primary_sources": "SIX_LINKED_ORIGINALS_WITH_VERSION_PAGE_AND_HASH_IDENTITIES_NO_FILES_REDISTRIBUTED",
     "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
-    "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS",
-    "proof_documents_01_through_09": "BYTE_UNCHANGED_FROM_c735324c4a320e6f72c6108a12e81bf0d6460f20"
+    "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS"
   },
   "preserved_proof_document_hashes": {
     "01_reciprocal_product.md": "419b7d3fd82e38db188506a7a6cc54822fb26bf9afcd3de8f506a4c6699421f4",
@@ -98,7 +131,9 @@
     "06_smooth_balanced_diagonal.md": "29995537b84245467140e46ae31c4e65b668ba29d95de3805e84c1f252438eef",
     "07_gaussian_principal_mean.md": "be31216c80c183a27fe5c6e644a1a3c994d10eec077891a015bd4d835fb1b9f4",
     "08_swap_time_localization.md": "7ee748b652e79958cf634e184db7b0ab8ff015393c93e24433f5d90ef33f3cd2",
-    "09_four_branch_diagonals.md": "a7c63b13cafbd79bc83365da04c8d50ce8d5a92b886f16fdb56f9ce754b9cc9d"
+    "09_four_branch_diagonals.md": "a7c63b13cafbd79bc83365da04c8d50ce8d5a92b886f16fdb56f9ce754b9cc9d",
+    "10_near_parity_sufficient_gate.md": "c359b0296c9b02417788548756e2bba7e876bdb949f298d2865fbca333a61ae1",
+    "11_shifted_correlation_carrier_interface.md": "18859907bb759f260915b6f94c6fcb649beb7bc474cc93de716ca78dcf50bbc9"
   },
   "files": [
     {
@@ -162,21 +197,33 @@
       "validation": "SOURCE_REVIEWED_SUFFICIENT_REDUCTION_ONLY_NOT_LEAN"
     },
     {
+      "path": "11_shifted_correlation_carrier_interface.md",
+      "sha256": "18859907bb759f260915b6f94c6fcb649beb7bc474cc93de716ca78dcf50bbc9",
+      "bytes": 18166,
+      "validation": "SOURCE_REVIEWED_CONDITIONAL_CARRIER_INTERFACE_ONLY_NOT_LEAN"
+    },
+    {
+      "path": "12_primary_shifted_attachment_audit.md",
+      "sha256": "6f6faa139071b7876fbd21ec1e066875dfe591f665aaff5767a41afd704bae92",
+      "bytes": 18435,
+      "validation": "SOURCE_REVIEWED_FAILED_DIRECT_ATTACHMENTS_WITH_POSITIVE_COMPONENT_SCOPE_ONLY_NOT_LEAN"
+    },
+    {
       "path": "README.md",
-      "sha256": "6b840f17fba940d1514d6252d0113387e43ca1d68bebd5ee98736bbde5e8ea40",
-      "bytes": 11293,
+      "sha256": "4311d4975f29843c207b1d4d8392cc7a13de5ff406445642b36789903a762044",
+      "bytes": 13932,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "SOURCE_PINS.json",
-      "sha256": "29b7f59ce6d1f5af3d022376aec2f75748b40c1e2aa1dcbe9c436d4fdb347b8d",
-      "bytes": 46833,
+      "sha256": "60714f3fdf59cec1d577c9b87ca67390ec16c36cc8fadff10a3088925cc45f50",
+      "bytes": 67636,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/README.md",
-      "sha256": "a80e2ca2d67af8c1487a27484efed92c9624f14416957d482d37bc6dc921dda7",
-      "bytes": 5760,
+      "sha256": "cb36224cf83f6bd8e180065ec5d6d28f0a8fbc1f3172648a207cc54365767799",
+      "bytes": 7609,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
@@ -225,6 +272,30 @@
       "path": "diagnostics/near_parity_sufficient_gate/checks.py",
       "sha256": "f6aca7974c364c9feef8551f8919eec5251249aa9f5a88a955f79c4f496479ac",
       "bytes": 7154,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/primary_shifted_attachment_audit/EXPECTED_CHECKS.json",
+      "sha256": "326d45b68efbb6ae3014ea842b53890417b6fccee655217c1b1b43e70325fd0d",
+      "bytes": 1892,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/primary_shifted_attachment_audit/checks.py",
+      "sha256": "56aae9e591a91625df0efd853d66d78038989e61c3f97305d624ef7766a97293",
+      "bytes": 3728,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/shifted_correlation_carrier_interface/EXPECTED_CHECKS.json",
+      "sha256": "79a5cd46ba392c8e5e233842cdfc75de841eb223c6e4d4b2b4975a83ff4b67e5",
+      "bytes": 1042,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/shifted_correlation_carrier_interface/checks.py",
+      "sha256": "388183b97d591a32753318b691827fec0644c3d8ec37ed7a4fe7854a0e7054dc",
+      "bytes": 5901,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
@@ -289,12 +360,13 @@
     },
     {
       "path": "verify_checkpoint.py",
-      "sha256": "cea28a5dd988c4ce03e7d0ff60977daf63233e7eb3db428fca048715c0240268",
-      "bytes": 9028,
+      "sha256": "2220dbff08b8fe7cfe0d0c7c43d02981c4593a1a92d2c327de0316a3d8bdec03",
+      "bytes": 12884,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     }
   ],
   "manifest_integrity": "The manifest does not include its own hash; Git tree identity and the external incremental manifest pin this file.",
   "local_localization_checkpoint_commit": "b97672ee86a9ce91aeb8a3b1e5484720fb09dc24",
-  "local_four_diagonal_checkpoint_commit": "c735324c4a320e6f72c6108a12e81bf0d6460f20"
+  "local_four_diagonal_checkpoint_commit": "c735324c4a320e6f72c6108a12e81bf0d6460f20",
+  "local_carrier_checkpoint_commit": "ad3c3ada5153287b048f0902144c516d173127a4"
 }

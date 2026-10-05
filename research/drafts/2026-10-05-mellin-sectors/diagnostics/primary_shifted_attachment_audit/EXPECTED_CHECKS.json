@@ -1,0 +1,61 @@
+{
+  "aggregate_large_prime_divisor_accounting": {
+    "actual_contribution_lower_bound_claimed": false,
+    "exceptional_set_identities": 5,
+    "shift_cases": 6822,
+    "status": "PASS"
+  },
+  "diagnostic_only": true,
+  "exact_CLMR_MRT_and_pointwise_error_exponents": "PASS",
+  "finite_inverse_cannot_be_replaced_by_infinite_model": {
+    "A2022_claimed_for_sample": false,
+    "D": 5,
+    "X": 625,
+    "finite_inverse_nu_prime": 2,
+    "infinite_inverse_nu_prime": 0,
+    "prime": 641,
+    "status": "PASS"
+  },
+  "new_arithmetic_estimate_claimed": false,
+  "physical_shift_and_length_scale_checks": {
+    "cases": [
+      {
+        "L": 5,
+        "natural_length_excess_log": 1693.0965531065963,
+        "range_obstruction_log_ratio": 38435.655800557426
+      },
+      {
+        "L": 10,
+        "natural_length_excess_log": 2435.0833265278193,
+        "range_obstruction_log_ratio": 19999103.316796068
+      },
+      {
+        "L": 20,
+        "natural_length_excess_log": 3199.5700999490427,
+        "range_obstruction_log_ratio": 10239998833.702791
+      },
+      {
+        "L": 30,
+        "natural_length_excess_log": 3665.4428821653173,
+        "range_obstruction_log_ratio": 393659998676.1755
+      }
+    ],
+    "effective_band_is_only_favorable_subband": true,
+    "status": "PASS"
+  },
+  "selected_good_shift_count_budget": {
+    "cases": 6,
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "theorem_scope_logic": {
+    "BTB_Generalized_Lindelof_not_assumed": true,
+    "CLMR_2023_unconditional_not_earlier_GRH_paper": true,
+    "Lau_current_version_is_v2_2026": true,
+    "MRT_exceptional_budget_failure_not_actual_lower_bound": true,
+    "MRT_ordinary_divisor_coefficients_not_actual_mixed_finite_inverse": true,
+    "dk_times_d2_not_actual_four_factor_times_four_factor": true,
+    "failed_printed_attachment_not_impossibility_of_adaptation": true,
+    "status": "PASS"
+  }
+}

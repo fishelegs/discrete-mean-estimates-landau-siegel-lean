@@ -114,4 +114,45 @@ assert new['final_acceptance_record_identity']['sha256']=='c3b456d9724a066d263ce
 assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/near_parity_sufficient_gate/checks.py').read_bytes()).hexdigest()
 assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/near_parity_sufficient_gate/EXPECTED_CHECKS.json').read_bytes()).hexdigest()
 assert new['status']=='SOURCE_REVIEWED_SUFFICIENT_REDUCTION_ONLY_NOT_LEAN'
+
+# Conditional carrier interface: exact costs and frozen source identities only.
+assert 519-400==119 and 400+6-519==-113
+assert 519+405-400==524 and 2*400-395==405
+assert Fraction(1,8*16)-Fraction(1,256)==Fraction(1,256)
+for b in [Fraction(-1),Fraction(1),Fraction(63),Fraction(639,10)]:
+    assert (b-119)+119==b<64
+new=next(x for x in pins['proof_sources'] if x['id']=='shifted_correlation_carrier_interface')
+assert new['original_mathematical_source']['sha256']=='ea944e132241381d560e2e53ff55ec04459eafbd602e4d209ac3225684020683'
+assert new['frozen_author_manifest_identity']['sha256']=='1fdd72f21a2bf49e9907f36b9916ed2abbd945450cb8981ee10de77da1b9764c'
+assert new['independent_review_identity']['sha256']=='1d0cb528c4ee7ebc5f4aca1f8c71e43f63f9a7daa66ce346f5fa7d56e7845d35'
+assert new['independent_review_manifest_identity']['sha256']=='b890e7bb0d2cea34a76db4882825891e8dbc7f4f025f7bed9141b43cca58517b'
+assert new['final_acceptance_record_identity']['sha256']=='6a7de9de737d5b2366c9bd5a61a35690d7ea3518de0ab480ce3cf02ef62c14ef'
+assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/shifted_correlation_carrier_interface/checks.py').read_bytes()).hexdigest()
+assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/shifted_correlation_carrier_interface/EXPECTED_CHECKS.json').read_bytes()).hexdigest()
+assert new['status']=='SOURCE_REVIEWED_CONDITIONAL_CARRIER_INTERFACE_ONLY_NOT_LEAN'
+assert manifest['global_frontier']['actual_shifted_arithmetic_density']=='UNPROVED'
+assert manifest['global_frontier']['actual_shifted_density_coefficient_budget']=='UNPROVED'
+assert manifest['global_frontier']['actual_weighted_cumulative_remainder_bound']=='UNPROVED'
+assert manifest['global_frontier']['near_aggregate_one_sided_upper_bound']=='UNPROVED'
+
+# Bounded failed-direct-attachment audit; no actual arithmetic estimate.
+assert 2*519-400+16*9==782 and 782+2==784
+assert Fraction(2,4)+4==Fraction(9,2)
+assert 1038-400==638 and 638+519==1157 and 2*1157-1038==1276
+assert Fraction(2,3)*2+1==Fraction(7,3)
+assert Fraction(2,3)*Fraction(9,2)==3 and Fraction(2,3)*1038==692
+assert Fraction(1,2)*Fraction(9,2)==Fraction(9,4)
+new=next(x for x in pins['proof_sources'] if x['id']=='primary_shifted_attachment_audit')
+assert new['original_mathematical_source']['sha256']=='e92b07045452d1bd4d66a45719f2b44516747bde9963f2ffd097c2922d2670ee'
+assert new['frozen_author_manifest_identity']['sha256']=='752965e1116292f3a9d7b2ab399918d16fad81a520623535fa56f33b508b46ed'
+assert new['essential_positive_component_scope_addendum_identity']['sha256']=='facda806071837a4f285c0fbcc5f935804221c5ff8f8cf0de852c53716af3a1d'
+assert new['scope_addendum_manifest_identity']['sha256']=='051a8c0fa66478f381f776575ef2b4f1c111e8e38c17903fb8daf9a59e61ad6e'
+assert new['independent_review_identity']['sha256']=='bffb45eb65a664cbe664e075ca500c99b31cb0d139a274e9c971d55e925bcf3c'
+assert new['independent_review_manifest_identity']['sha256']=='8acd52f1a441e1b9074815086550d55154edc72bea710c57dfcd7b9d8db98bfd'
+assert new['final_acceptance_record_identity']['sha256']=='8255c16f9d8b3af15dac8d3229917aeac836c7c9b7bbc921d86f3247184aecaa'
+assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/primary_shifted_attachment_audit/checks.py').read_bytes()).hexdigest()
+assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/primary_shifted_attachment_audit/EXPECTED_CHECKS.json').read_bytes()).hexdigest()
+assert new['status']=='SOURCE_REVIEWED_FAILED_DIRECT_ATTACHMENTS_WITH_POSITIVE_COMPONENT_SCOPE_ONLY_NOT_LEAN'
+assert manifest['global_frontier']['MRT_Section5_prime_divisor_accounting']=='POSITIVE_DIFFERENCE_COMPONENT_ONLY_p_DIVIDES_ell_MINUS_k'
+assert manifest['global_frontier']['reflected_arithmetic_interface']=='UNPROVED_SEPARATE_p_DIVIDES_k_PLUS_ell'
 print(json.dumps({'integrity':'PASS','listed_files':len(manifest['files']),'exact_exponents':'PASS','analytic_or_Lean_certification':False},indent=2))

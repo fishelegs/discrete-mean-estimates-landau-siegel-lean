@@ -1,0 +1,41 @@
+{
+  "actual_arithmetic_expansion_constructed": false,
+  "actual_variable_saddle_kernel_and_derivative": {
+    "both_endpoints_retained": true,
+    "cases": [
+      {
+        "derivative_error": 0.0,
+        "kernel_error": 1.925929944387236e-34,
+        "theta": "-0.046875"
+      },
+      {
+        "derivative_error": 0.0,
+        "kernel_error": 0.0,
+        "theta": "0.046875"
+      }
+    ],
+    "status": "PASS"
+  },
+  "conditional_density_endpoint_antiderivatives": {
+    "cases": 10,
+    "max_error": 7.278442320382587e-35,
+    "status": "PASS"
+  },
+  "diagnostic_only": true,
+  "endpoint_inclusive_cumulative_remainder_identity": {
+    "error": 1.5407439555097887e-33,
+    "status": "PASS"
+  },
+  "exact_carrier_variation_and_rectangle_exponents": "PASS",
+  "exact_positive_negative_shift_progressions": {
+    "cases": 4226,
+    "status": "PASS"
+  },
+  "exact_transported_shifted_coefficients": {
+    "all_four_branches": true,
+    "cases": 128,
+    "max_error": 5.142235205644914e-35,
+    "status": "PASS"
+  },
+  "status": "PASS"
+}
