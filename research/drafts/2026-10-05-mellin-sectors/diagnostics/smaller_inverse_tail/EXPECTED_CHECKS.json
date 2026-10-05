@@ -1,0 +1,94 @@
+{
+  "diagnostic_only": true,
+  "exceptional_assumption_numerically_instantiated": false,
+  "exact_exponents": "PASS",
+  "primitive_PV_and_Fourier": {
+    "interval_cases": 1813,
+    "Fourier_cases": 41,
+    "max_Fourier_error": 6.404702905444336e-39,
+    "conductors": [
+      3,
+      5,
+      8,
+      12,
+      13
+    ],
+    "non_squarefree_primitive_conductors_included": true,
+    "status": "PASS"
+  },
+  "optimized_hyperbola_and_linear_tail": {
+    "hyperbola_cases": 94,
+    "linear_tail_cases": 55,
+    "status": "PASS"
+  },
+  "nu_square_and_positive_tail": {
+    "cases": 7545,
+    "status": "PASS"
+  },
+  "finite_endpoint_Cauchy": {
+    "cases": 5,
+    "status": "PASS"
+  },
+  "literal_finite_inverse_split": {
+    "cases": 2880,
+    "max_partition_error": 2.1334777765716796e-14,
+    "status": "PASS"
+  },
+  "fixed_character_resonance": [
+    {
+      "p": 7,
+      "dt": -0.1,
+      "factor_squared": 35.27772337025807,
+      "harmonic_energy": 0.5940497348830015
+    },
+    {
+      "p": 7,
+      "dt": 0,
+      "factor_squared": 35.291716125935274,
+      "harmonic_energy": 0.5940497348830015
+    },
+    {
+      "p": 7,
+      "dt": 0.1,
+      "factor_squared": 35.27772337025808,
+      "harmonic_energy": 0.5940497348830015
+    },
+    {
+      "p": 11,
+      "dt": -0.1,
+      "factor_squared": 62.36168382469043,
+      "harmonic_energy": 0.6300822182344408
+    },
+    {
+      "p": 11,
+      "dt": 0,
+      "factor_squared": 62.386451819127025,
+      "harmonic_energy": 0.6300822182344408
+    },
+    {
+      "p": 11,
+      "dt": 0.1,
+      "factor_squared": 62.36168382469043,
+      "harmonic_energy": 0.6300822182344408
+    },
+    {
+      "p": 13,
+      "dt": -0.1,
+      "factor_squared": 75.98599292287089,
+      "harmonic_energy": 0.63978384774395
+    },
+    {
+      "p": 13,
+      "dt": 0,
+      "factor_squared": 76.01618270542524,
+      "harmonic_energy": 0.63978384774395
+    },
+    {
+      "p": 13,
+      "dt": 0.1,
+      "factor_squared": 75.98599292287089,
+      "harmonic_energy": 0.63978384774395
+    }
+  ],
+  "status": "PASS"
+}

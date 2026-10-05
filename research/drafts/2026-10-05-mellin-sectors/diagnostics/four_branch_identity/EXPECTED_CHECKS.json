@@ -1,0 +1,196 @@
+{
+  "diagnostic_only": true,
+  "actual_energy_lower_bound_claimed": false,
+  "exact_CRT_root_identity": {
+    "cases": 176,
+    "max_error": 1.0844117007197162e-49,
+    "inert_prime_examples": [
+      {
+        "disc": -3,
+        "p": 11,
+        "character_index": 1,
+        "kappa_real": 0.30901699437494745,
+        "kappa_imag": -0.9510565162951535
+      },
+      {
+        "disc": -3,
+        "p": 11,
+        "character_index": 2,
+        "kappa_real": 0.8090169943749475,
+        "kappa_imag": 0.5877852522924731
+      },
+      {
+        "disc": -3,
+        "p": 11,
+        "character_index": 3,
+        "kappa_real": -0.8090169943749475,
+        "kappa_imag": 0.5877852522924731
+      },
+      {
+        "disc": -3,
+        "p": 11,
+        "character_index": 4,
+        "kappa_real": -0.30901699437494745,
+        "kappa_imag": -0.9510565162951535
+      },
+      {
+        "disc": -3,
+        "p": 11,
+        "character_index": 5,
+        "kappa_real": 1.0,
+        "kappa_imag": 6.92822483164627e-51
+      },
+      {
+        "disc": -3,
+        "p": 11,
+        "character_index": 6,
+        "kappa_real": -0.30901699437494745,
+        "kappa_imag": 0.9510565162951535
+      },
+      {
+        "disc": -3,
+        "p": 11,
+        "character_index": 7,
+        "kappa_real": -0.8090169943749475,
+        "kappa_imag": -0.5877852522924731
+      },
+      {
+        "disc": -3,
+        "p": 11,
+        "character_index": 8,
+        "kappa_real": 0.8090169943749475,
+        "kappa_imag": -0.5877852522924731
+      },
+      {
+        "disc": -3,
+        "p": 11,
+        "character_index": 9,
+        "kappa_real": 0.30901699437494745,
+        "kappa_imag": 0.9510565162951535
+      },
+      {
+        "disc": -3,
+        "p": 17,
+        "character_index": 1,
+        "kappa_real": 0.9238795325112867,
+        "kappa_imag": 0.3826834323650898
+      }
+    ],
+    "status": "PASS"
+  },
+  "ordinary_and_Gauss_weighted_kernels": {
+    "checks": 3972,
+    "max_error": 1.177832236610782e-13,
+    "even_principal_correction": "Included as -p^(-h) for h>0",
+    "status": "PASS"
+  },
+  "all_six_signed_cross_orientations": {
+    "cases": 72,
+    "max_error": 2.85748200468581e-14,
+    "individual_duals_conjugated": false,
+    "weights": "Common finite complex weights including actual nu/d23 orientations; algebra diagnostic only",
+    "status": "PASS"
+  },
+  "literal_integer_cell_masks": {
+    "checks": 2268,
+    "Mellin_power_checks": 64,
+    "status": "PASS"
+  },
+  "four_adjacent_geometric_exponents": {
+    "exact_divisibility_cases": 333036,
+    "near_root_value_magnitude": 1e-35,
+    "uniform_positive_lower_bound_claimed": false,
+    "status": "PASS"
+  },
+  "actual_shift_arithmetic_row_witness": [
+    {
+      "D": 5,
+      "ell": 2,
+      "j": 103,
+      "log_n_over_log_P": 0.9853593418318497,
+      "arithmetic_factor_nonzero": true
+    },
+    {
+      "D": 8,
+      "ell": 3,
+      "j": 661,
+      "log_n_over_log_P": 0.9989079514099093,
+      "arithmetic_factor_nonzero": true
+    },
+    {
+      "D": 12,
+      "ell": 13,
+      "j": 1408,
+      "log_n_over_log_P": 0.9997484628189479,
+      "arithmetic_factor_nonzero": true
+    },
+    {
+      "D": 13,
+      "ell": 2,
+      "j": 6931,
+      "log_n_over_log_P": 0.9997978690345375,
+      "arithmetic_factor_nonzero": true
+    }
+  ],
+  "literal_shift_relation_arithmetic_phase": {
+    "checks": 8,
+    "beta3_equals_beta1_plus_beta2": true,
+    "status": "PASS"
+  },
+  "exact_extracted_conductor_Dirichlet_phase": {
+    "checks": 12,
+    "remaining_gamma_weight_oscillation_not_estimated": true,
+    "status": "PASS"
+  },
+  "nonconstant_scalar_ratio": [
+    {
+      "D": 3,
+      "a": 0,
+      "T": 100,
+      "T_times_gamma_derivative_difference": 0.03899416089061209
+    },
+    {
+      "D": 3,
+      "a": 0,
+      "T": 1000,
+      "T_times_gamma_derivative_difference": 0.03899938676018184
+    },
+    {
+      "D": 3,
+      "a": 1,
+      "T": 100,
+      "T_times_gamma_derivative_difference": 0.03899416089061209
+    },
+    {
+      "D": 3,
+      "a": 1,
+      "T": 1000,
+      "T_times_gamma_derivative_difference": 0.03899938676018184
+    },
+    {
+      "D": 5,
+      "a": 0,
+      "T": 100,
+      "T_times_gamma_derivative_difference": 0.03899416089061209
+    },
+    {
+      "D": 5,
+      "a": 0,
+      "T": 1000,
+      "T_times_gamma_derivative_difference": 0.03899938676018184
+    },
+    {
+      "D": 5,
+      "a": 1,
+      "T": 100,
+      "T_times_gamma_derivative_difference": 0.03899416089061209
+    },
+    {
+      "D": 5,
+      "a": 1,
+      "T": 1000,
+      "T_times_gamma_derivative_difference": 0.03899938676018184
+    }
+  ],
+  "status": "PASS"
+}

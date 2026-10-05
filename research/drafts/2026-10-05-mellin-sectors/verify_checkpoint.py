@@ -19,4 +19,9 @@ assert Fraction(958,15)+Fraction(1,15)==Fraction(959,15)<64
 assert Fraction(32,5)+2==Fraction(42,5)
 assert Fraction(32,5)+4==Fraction(52,5)
 assert 5+14==19 and 5+8==13
+assert -2022+2+9==-2011 and -2022+2+1==-2019
+assert -Fraction(2019,2)+8+288==-Fraction(1427,2)
+assert (52-Fraction(1427,2))/2==-Fraction(1323,4)
+assert 730-400-Fraction(1323,4)==-Fraction(3,4)
+assert 1113-400-Fraction(1427,2)==-Fraction(1,2)
 print(json.dumps({'integrity':'PASS','listed_files':len(manifest['files']),'exact_exponents':'PASS','analytic_or_Lean_certification':False},indent=2))

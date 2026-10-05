@@ -1,23 +1,33 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "date_utc": "2026-10-05",
   "publication_kind": "DRAFT_MATHEMATICAL_CHECKPOINT",
   "repository": "fishelegs/discrete-mean-estimates-landau-siegel-lean",
   "base_commit": "1b1bdae9503bf45acc091381e5574b86930f55ae",
+  "previous_checkpoint_commit": "376da6af82a2fa9800ed352b672557ace61bc5e1",
   "intended_branch": "draft/mellin-sectors-20261005",
   "repository_directory": "research/drafts/2026-10-05-mellin-sectors",
-  "scope": "Three completed source-reviewed mathematical arguments and supporting finite diagnostics",
+  "scope": "Five source-reviewed mathematical notes at their explicit estimate, attachment-limit or identity-only scopes, plus supporting finite diagnostics",
   "formal_lean_status": "NO_NEW_LEAN_SOURCE_OR_CERTIFICATE",
   "final_gap_status": "OPEN",
+  "global_frontier": {
+    "original_remote_output_complement": "ALREADY_PAID_BY_EARLIER_ACCEPTED_SOURCE",
+    "entire_core_remote_cross": "ALREADY_PAID_BY_EARLIER_ACCEPTED_SOURCE",
+    "balanced_core_energy_and_joint_cross": "OPEN",
+    "final_theorem_assembly": "OPEN"
+  },
   "verification": {
-    "selected_source_hash_checks": 42,
-    "unique_source_hashes": 32,
+    "previous_checkpoint_selected_source_hash_checks": 42,
+    "previous_checkpoint_unique_source_hashes": 32,
+    "new_checkpoint_source_identity_checks_including_frozen_author_manifests": 69,
+    "new_checkpoint_unique_hashes": 59,
     "source_hash_checks": "PASS",
-    "both_sector_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
-    "sanitized_proof_body_comparison": "Only status, bibliography and operational-context editing; mathematical derivation sections retained",
+    "all_four_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
+    "first_three_published_proof_documents": "BYTE_UNCHANGED_FROM_PREVIOUS_CHECKPOINT",
+    "new_proof_body_comparison": "Mathematical derivations retained; status and source-bibliography cleanup only",
     "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
     "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
-    "ci_note": "Normal repository push CI may run; it checks existing repository code and does not certify these analytic drafts"
+    "ci_note": "Unchanged normal repository push CI validates existing repository code; it does not certify these analytic drafts"
   },
   "files": [
     {
@@ -39,21 +49,45 @@
       "validation": "SOURCE_REVIEWED_NOT_LEAN"
     },
     {
+      "path": "04_smaller_inverse_tail.md",
+      "sha256": "28123b40330f98f5ddacb894c73dee03e9b0f0110a092d5eebe9a4dd68a9b5a9",
+      "bytes": 19707,
+      "validation": "SOURCE_REVIEWED_WITH_ATTACHMENT_LIMITS_NOT_LEAN"
+    },
+    {
+      "path": "05_balanced_four_branch_identity.md",
+      "sha256": "93081462a7d65baa21ba3d74247b58ef00346dbfcb1880753b4a85e0b3aad737",
+      "bytes": 25146,
+      "validation": "SOURCE_REVIEWED_EXACT_IDENTITY_ONLY_NOT_LEAN"
+    },
+    {
       "path": "README.md",
-      "sha256": "17645360c8da7a7e9537e95644f3ef2c6cd548e634c873c59365a5469a6941a4",
-      "bytes": 3820,
+      "sha256": "5f01967096e3741a6e5ac0d9f92648265d87309206553a2413bfd7b3923b68b7",
+      "bytes": 5872,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "SOURCE_PINS.json",
-      "sha256": "23ce0ff0f7634d5988a2052ee9c4b340c22c8ea8f0d606495433c5d8f45d96f4",
-      "bytes": 7362,
+      "sha256": "d6bc50720a9851fcdf8ff78894f9ad37e0764ae31c0063a69edff06f0c3316d8",
+      "bytes": 19409,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/README.md",
-      "sha256": "fb4fd25883e84c1dce848ac3e4ff5ccb269fd85209d080f1dc75a9d02e06cc57",
-      "bytes": 1489,
+      "sha256": "5ed207c0992e534ea5478cebbc747a24ab26c6b2042b354c7e43c46085a3f71b",
+      "bytes": 2040,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/four_branch_identity/EXPECTED_CHECKS.json",
+      "sha256": "f344a0a8372ec287a89d557bccffe22c989f5153e50204c2a3dcfe08b4ede348",
+      "bytes": 4630,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/four_branch_identity/checks.py",
+      "sha256": "717ac847f0be8020f4c042876f447b3eede4f3b1e9212ef27859a498a62b6806",
+      "bytes": 9605,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
@@ -81,9 +115,21 @@
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
+      "path": "diagnostics/smaller_inverse_tail/EXPECTED_CHECKS.json",
+      "sha256": "6d6455dce02ab517800fb0c55c39fc91d4327e07c3dfae73965471e2c68e00fc",
+      "bytes": 2053,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/smaller_inverse_tail/checks.py",
+      "sha256": "01538464e4aa148f0d0f5c1d403da45c50ef053002f097fbe5ad64eb6633b3c6",
+      "bytes": 5919,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
       "path": "verify_checkpoint.py",
-      "sha256": "44d977e9a310743b72e502dd905c002952a13788fc2aa49c61826f829ae57f03",
-      "bytes": 1125,
+      "sha256": "563d57dfa4aa8e4b2f8d137a5a69b58ffb6a68fb1b02dfff37fb6536e8ea7707",
+      "bytes": 1367,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     }
   ],

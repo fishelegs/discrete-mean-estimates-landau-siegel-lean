@@ -70,6 +70,52 @@
       "status": "SOURCE_REVIEWED_NOT_LEAN",
       "source_identity_verified": true,
       "publication_editing": "Mathematical proof retained; operational provenance and historical pending-review language removed or updated; bibliography normalized."
+    },
+    {
+      "id": "smaller_inverse_tail",
+      "publication_document": "04_smaller_inverse_tail.md",
+      "original_mathematical_source": {
+        "sha256": "cbc3a2bc7a1f880ea960105ead46b6e006e15203420bb1e1beecb2c47e73259a",
+        "bytes": 19654
+      },
+      "independent_review_identity": {
+        "sha256": "02ecbe672daaab4f86642f0ba51f451d5d02a3245d4f619082b8cb2a232fa71f",
+        "bytes": 19348
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "afeb041b3363e0483f1ff5af53b7d1abfc0aa2b4bfd68bb935e33673f43b2a36",
+        "bytes": 4394
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "634d686a03f8548c000e01f1fa122eded17e203f8f46e94e8e0168c99057ecff",
+        "bytes": 3125
+      },
+      "status": "SOURCE_REVIEWED_WITH_ATTACHMENT_LIMITS_NOT_LEAN",
+      "source_identity_verified": true,
+      "publication_editing": "Mathematical derivations retained; operational references removed and source bibliography normalized."
+    },
+    {
+      "id": "four_branch_identity",
+      "publication_document": "05_balanced_four_branch_identity.md",
+      "original_mathematical_source": {
+        "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+        "bytes": 25030
+      },
+      "independent_review_identity": {
+        "sha256": "aed17417dba14bf20c7733d8d10ead036ed75352ccbaf328a885d730773a9a1b",
+        "bytes": 21791
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "96f32d1aa8257740c548a76e483bf8fc7cc679e0ae95fa4926f04bdd837171a2",
+        "bytes": 4381
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "8b91479aa0cdd64776e73c4be3b00b2966fe5dbb7de71d42556e8230eb2d2501",
+        "bytes": 3084
+      },
+      "status": "SOURCE_REVIEWED_EXACT_IDENTITY_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "publication_editing": "Mathematical derivations retained; operational references removed and source bibliography normalized."
     }
   ],
   "accepted_upstream_interfaces": [
@@ -137,6 +183,180 @@
       "sha256": "510b6d70e95dc2d6dee7776486174f667df56f364dc59f8c92ecd32c8a8ab806",
       "bytes": 17775,
       "selected_bytes_verified": true
+    },
+    {
+      "title": "Lemma32PrimitivePolyaVinogradov",
+      "repository_path": "ZhangLS/Spec/Lemma32PrimitivePolyaVinogradov.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma32PrimitivePolyaVinogradov.lean",
+      "sha256": "43d2ed2abd9891463aae0a060731ef189c206b8a8771b6985ead58e0f0372d7b",
+      "bytes": 1260,
+      "selected_bytes_verified": true,
+      "role": "Actual uniform primitive PV theorem; no fresh compiler certificate"
+    },
+    {
+      "title": "Lemma32IntervalFourierCompletion",
+      "repository_path": "ZhangLS/Spec/Lemma32IntervalFourierCompletion.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma32IntervalFourierCompletion.lean",
+      "sha256": "f120336d6a217a0763b2407c2a39956f6d2c24150d3ed34ba1b7920dac2634b1",
+      "bytes": 2673,
+      "selected_bytes_verified": true,
+      "role": "Exact primitive quadratic finite Fourier interval formula"
+    },
+    {
+      "title": "Lemma32QuadraticGaussNorm",
+      "repository_path": "ZhangLS/Spec/Lemma32QuadraticGaussNorm.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma32QuadraticGaussNorm.lean",
+      "sha256": "e88e2fe53df6cb7c1cf9f0bb9a5df56e22bffff27ac60b7056ec69fcdbbab720",
+      "bytes": 2053,
+      "selected_bytes_verified": true,
+      "role": "Actual primitive Gauss modulus and both-parity phase"
+    },
+    {
+      "title": "Lemma32FourierKernelSummatory",
+      "repository_path": "ZhangLS/Spec/Lemma32FourierKernelSummatory.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma32FourierKernelSummatory.lean",
+      "sha256": "26edfb93f0e8b1df215b1c9d32718f29ec81d0c3514f8bc5d8986f9b36d5ba6c",
+      "bytes": 3613,
+      "selected_bytes_verified": true,
+      "role": "Geometric-kernel harmonic summation"
+    },
+    {
+      "title": "Lemma32FourierKernelReciprocal",
+      "repository_path": "ZhangLS/Spec/Lemma32FourierKernelReciprocal.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma32FourierKernelReciprocal.lean",
+      "sha256": "69c7431a6d18c57a5b5ed00a716e44e37795585dc15e1cdea68126bf19fc2899",
+      "bytes": 1811,
+      "selected_bytes_verified": true,
+      "role": "Reciprocal chord estimate"
+    },
+    {
+      "title": "Lemma31HyperbolaInputs",
+      "repository_path": "ZhangLS/Spec/Lemma31HyperbolaInputs.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma31HyperbolaInputs.lean",
+      "sha256": "97c34d5bb8a069d7b52f3bb53f62e612f63098f2aa74cac9879b1da4913f8a72",
+      "bytes": 2713,
+      "selected_bytes_verified": true,
+      "role": "Original finite nu hyperbola identity"
+    },
+    {
+      "title": "Lemma31HyperbolaError",
+      "repository_path": "ZhangLS/Spec/Lemma31HyperbolaError.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma31HyperbolaError.lean",
+      "sha256": "340f08b72cf2e2dad08c2203a304f3683cb232aaacad1e1c5b9c4c94f9ee2eac",
+      "bytes": 2729,
+      "selected_bytes_verified": true,
+      "role": "Original general cutoff hyperbola decomposition"
+    },
+    {
+      "title": "Lemma31CumulativeBound",
+      "repository_path": "ZhangLS/Spec/Lemma31CumulativeBound.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma31CumulativeBound.lean",
+      "sha256": "21c8b0b3aaac0a53ab42dc868015727c9628784f80b3bc2f448a19b45e37722c",
+      "bytes": 3224,
+      "selected_bytes_verified": true,
+      "role": "Original trivial-character cutoff for comparison"
+    },
+    {
+      "title": "Lemma31LinearTail",
+      "repository_path": "ZhangLS/Spec/Lemma31LinearTail.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma31LinearTail.lean",
+      "sha256": "82956684414d2c5aee2035b54d91739e93faddae467d6f660c5bf0766501b835",
+      "bytes": 3531,
+      "selected_bytes_verified": true,
+      "role": "Exact original harmonic Abel-tail interface"
+    },
+    {
+      "title": "Lemma31SquareMajorant",
+      "repository_path": "ZhangLS/Spec/Lemma31SquareMajorant.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma31SquareMajorant.lean",
+      "sha256": "a0e8c90ead5d9b0ded78f5626a2cc6222948dd40c7fa54a1d8af3f55c5837923",
+      "bytes": 1538,
+      "selected_bytes_verified": true,
+      "role": "Actual nu-square convolution majorant"
+    },
+    {
+      "title": "Lemma31WeightedTail",
+      "repository_path": "ZhangLS/Spec/Lemma31WeightedTail.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma31WeightedTail.lean",
+      "sha256": "42d9553e45a62003ec1efdef220bd1363ef939287a7aa457da8c5e8a0c38c769",
+      "bytes": 7040,
+      "selected_bytes_verified": true,
+      "role": "Positive convolution-tail comparison"
+    },
+    {
+      "title": "Lemma31TotalWeight",
+      "repository_path": "ZhangLS/Spec/Lemma31TotalWeight.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma31TotalWeight.lean",
+      "sha256": "3678924c2b115b1beff5973ee63608178a89aade8177dedacd77c2b33136fba0",
+      "bytes": 2971,
+      "selected_bytes_verified": true,
+      "role": "Original total harmonic nu mechanism"
+    },
+    {
+      "title": "Lemma52Product",
+      "repository_path": "ZhangLS/Spec/Lemma52Product.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma52Product.lean",
+      "sha256": "cf49ae2069b65c4c7273e47696dc8d73603a2e370ae886a05ee6177ffe2fbb34",
+      "bytes": 6339,
+      "selected_bytes_verified": true,
+      "role": "Literal beta definitions and exact beta_sum identity"
+    },
+    {
+      "title": "Lemma23ZeroData",
+      "repository_path": "ZhangLS/Spec/Lemma23ZeroData.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma23ZeroData.lean",
+      "sha256": "78d6b63ce0ce0e3c3391ff93a8a9afaf28bb201c31a92cfe770513f6ccd4bc79",
+      "bytes": 7938,
+      "selected_bytes_verified": true,
+      "role": "Literal three offsets, retaining their exact fixed shift relation"
+    },
+    {
+      "title": "Lemma44LongSum",
+      "repository_path": "ZhangLS/Spec/Lemma44LongSum.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma44LongSum.lean",
+      "sha256": "52396a21caecbcc1a5813e2897c9170ac6dc9cc50ac78ae0155dd8a1c62ab87b",
+      "bytes": 14046,
+      "selected_bytes_verified": true,
+      "role": "Diagnostic provenance: literal spacing pi/log P"
+    },
+    {
+      "title": "Lemma23GoodSet",
+      "repository_path": "ZhangLS/Spec/Lemma23GoodSet.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma23GoodSet.lean",
+      "sha256": "ae75451e0cff47b7fd66e0c479608074431bdb5f300b8280f5a3fbccb3cd3045",
+      "bytes": 11374,
+      "selected_bytes_verified": true,
+      "role": "Diagnostic provenance: P=exp((log D)^9)"
+    },
+    {
+      "title": "Hybrid Gaussian primitive large sieve and full low-output L52 theorem",
+      "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+      "bytes": 21852,
+      "independent_review_identity": {
+        "sha256": "79832914057edfd2ee5ec6ad492131ec54ecbe68973dc5bd09732fea16904ebb",
+        "bytes": 14181
+      },
+      "acceptance_record_identity": {
+        "sha256": "a89e788412a2712e597748840ed9b4061b38bec6260282b54c21bd98c0aa8c55",
+        "bytes": 1594
+      },
+      "selected_bytes_verified": true,
+      "role": "Accepted interface (P^2+M/W) and full low-output L52 bound; no fresh recursive Lean audit",
+      "redistributed": false
+    },
+    {
+      "title": "Original remote output tail and its entire core cross",
+      "sha256": "c749a0651a5d42dfcd355a245a30853689b690590ad774398f956fe2938ba505",
+      "bytes": 18171,
+      "acceptance_record_identity": {
+        "sha256": "e551f004ce13d6bcff21cb33870008435b9227398a874e36792cc94f998e8026",
+        "bytes": 4725
+      },
+      "selected_bytes_verified": true,
+      "status": "SOURCE_REVIEWED_NOT_LEAN",
+      "accepted_result": "For M0=P^2D^5, through Y=D^4P^3: B_remote << P^2D^-7 L^24836; entire core/remote cross << P^2D^-1 L^12244 log L=o(P^2); B_full=B_core+o(P^2).",
+      "role": "Scope reconciliation only; globally paid output complement is not reopened",
+      "redistributed": false
     }
   ],
   "public_primary_references": [
@@ -164,6 +384,24 @@
     {
       "title": "DLMF Dirichlet L-functions",
       "url": "https://dlmf.nist.gov/25.15",
+      "redistributed": false
+    },
+    {
+      "authors": "J. B. Conrey, H. Iwaniec, K. Soundararajan",
+      "title": "Asymptotic Large Sieve",
+      "version": "arXiv:1105.1176v1",
+      "url": "https://aimath.org/~kaur/publications/u14.pdf",
+      "used": "Equation (1.6), through the accepted hybrid-Gaussian interface",
+      "redistributed": false
+    },
+    {
+      "title": "DLMF primitive Dirichlet functional equation",
+      "url": "https://dlmf.nist.gov/25.15.E5",
+      "redistributed": false
+    },
+    {
+      "title": "DLMF digamma asymptotics",
+      "url": "https://dlmf.nist.gov/5.11.E2",
       "redistributed": false
     }
   ],
