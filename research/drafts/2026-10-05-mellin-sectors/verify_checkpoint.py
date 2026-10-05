@@ -64,4 +64,54 @@ assert new['independent_review_identity']['sha256']=='d6ef27e3a740b67adc61ae5d74
 assert new['review_acceptance_record_identity']['sha256']=='7898c245f842db53392f6f30d6353d1f1d45e3dbe1ca85fd98887af27b91b216'
 assert new['independent_review_manifest_identity']['sha256']=='d084548d4555388f7e0266db5292d982d55acd2e9bfe26d66775056871ed67a9'
 assert new['final_acceptance_record_identity']['sha256']=='4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d'
+
+# Actual Gaussian far-swap localization.
+assert 405-395==10 and 2*405-2*400==10
+assert 405+6-519==-108
+assert Fraction(1,8)-Fraction(1,256)==Fraction(31,256)>Fraction(1,16)
+assert Fraction(1,4)-Fraction(1,256)==Fraction(63,256)>Fraction(1,16)
+assert 4-2*Fraction(23,2)==-19
+assert 6+Fraction(1,2)*Fraction(23,2)==Fraction(47,4)<12
+assert 1200+519*Fraction(23,2)==Fraction(14337,2)<7200
+assert 38+4152+90+5==4285<5000
+new=next(x for x in pins['proof_sources'] if x['id']=='swap_time_localization')
+assert new['original_mathematical_source']['sha256']=='c9acb6bedae79ba02779f9cf456f13c9d6d55c9bed7a82255ab98c6e84f03e0b'
+assert new['frozen_author_manifest_identity']['sha256']=='9568531f4f2272127f0c3cc5b1dc2271d22255711b45f6cc32bcce2fde4fbe30'
+assert new['independent_review_identity']['sha256']=='17d87e01f0888709319e50c7985df22b22195362c0a6fe8ce104e3f0faa8f24d'
+assert new['review_acceptance_record_identity']['sha256']=='046502ca617322abea5f7ec8266d70cc9e022a75770ee31e5ff0a881af02196a'
+assert new['independent_review_manifest_identity']['sha256']=='e22428cf864d31a8893caf590c9b67b79fa689a97a7141d1f11e75752e1a711b'
+assert new['final_acceptance_record_identity']['sha256']=='6354b25cc4a6cc832fc6a1a06fa74947701ab808fc377f50ee6a0ed7f7b1b3af'
+assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/swap_time_localization/checks.py').read_bytes()).hexdigest()
+assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/swap_time_localization/EXPECTED_CHECKS.json').read_bytes()).hexdigest()
+assert new['status']=='SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN'
+
+# Actual Gaussian four integer-ratio diagonals.
+assert 4*9+2*16==68 and 68-68==0
+assert 4+Fraction(1,2)==Fraction(9,2)
+assert 2*519==1038 and Fraction(959,15)<64
+new=next(x for x in pins['proof_sources'] if x['id']=='four_branch_diagonals')
+assert new['original_mathematical_source']['sha256']=='8b17bcfa77016cc0e823eb7b17c4bf6c72a55db3ceb1a0d08afe5b5ce836dfeb'
+assert new['frozen_author_manifest_identity']['sha256']=='bacd93b3986f73dd08d260580a23013ec06ed605c6ccd6d978ccc4ea3364f435'
+assert new['independent_review_identity']['sha256']=='85b68c4b3a23ff1d4a49b0897974b206d5a46bef5612b0c1054dba63d4aa672e'
+assert new['review_acceptance_record_identity']['sha256']=='3f2e0148f063b4732a13e27a103a9dcf5204a3f40748ec05a447bd384c8078e3'
+assert new['independent_review_manifest_identity']['sha256']=='70f5d473696c4578849925f238846e176053c7c3437a2cb3db18f3df5eb84eb8'
+assert new['final_acceptance_record_identity']['sha256']=='1ddbb8725f257a6f3059ebc7d7e5a50453722021b14595aee7f9798cf8117e6a'
+assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/four_branch_diagonals/checks.py').read_bytes()).hexdigest()
+assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/four_branch_diagonals/EXPECTED_CHECKS.json').read_bytes()).hexdigest()
+assert new['status']=='SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN'
+
+# Same-branch localization and conditional sufficient exponent transfer.
+assert 1038-395==643
+assert 1<Fraction(959,15)<64
+for b in [Fraction(-1),Fraction(1),Fraction(63),Fraction(639,10)]:
+    assert max(b,Fraction(1),Fraction(959,15))<64
+new=next(x for x in pins['proof_sources'] if x['id']=='near_parity_sufficient_gate')
+assert new['original_mathematical_source']['sha256']=='f8c98ad63360965080b85d6b43f69a8d2e7a6feffc440c7099aabb82cce115c6'
+assert new['frozen_author_manifest_identity']['sha256']=='b105aee60c54cb730e8f43d805588f47e0ec8bd7db58edb3d22d4bdfcab589c4'
+assert new['independent_review_identity']['sha256']=='76a304cc8bf7d39bf9c22fd17b0b64e7e97e5d00b5767e0b8263c2746ad5dab7'
+assert new['review_acceptance_record_identity']['sha256']=='d5c2ebe6591e4846dc0af1989fc5011580e835fe13cb46782b75406bddcdb121'
+assert new['final_acceptance_record_identity']['sha256']=='c3b456d9724a066d263ce5bfb70a4f6b1a68ca402ddc9640c05ab2abc5556e61'
+assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/near_parity_sufficient_gate/checks.py').read_bytes()).hexdigest()
+assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/near_parity_sufficient_gate/EXPECTED_CHECKS.json').read_bytes()).hexdigest()
+assert new['status']=='SOURCE_REVIEWED_SUFFICIENT_REDUCTION_ONLY_NOT_LEAN'
 print(json.dumps({'integrity':'PASS','listed_files':len(manifest['files']),'exact_exponents':'PASS','analytic_or_Lean_certification':False},indent=2))

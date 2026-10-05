@@ -1,0 +1,40 @@
+{
+  "all_coordinate_same_branch_ratio_phase": {
+    "cases": 8,
+    "max_error": 8.65597852607583e-33,
+    "status": "PASS"
+  },
+  "all_four_branch_tail_and_rectangle_exponents": "PASS",
+  "all_four_finite_rectangles_and_vertical_endpoints": {
+    "cases": 8,
+    "max_error": 1.2037062152420224e-35,
+    "status": "PASS"
+  },
+  "all_four_real_axis_FE_moduli": {
+    "cases": 32,
+    "max_error": 1.5407439555097887e-33,
+    "status": "PASS"
+  },
+  "diagnostic_only": true,
+  "exact_character_full_kernel_near_partition": {
+    "max_character_covariance_error": 1.8189894035458565e-12,
+    "near_rows_real": true,
+    "status": "PASS",
+    "tuple_cases": 11664
+  },
+  "joint_complex_height_log_derivatives": {
+    "cases": 48,
+    "max_height_scaled_derivative": 1.1603163256944615,
+    "status": "PASS"
+  },
+  "same_pair_conductor_and_gamma_cancellation": {
+    "cases": 48,
+    "max_relative_error": 2.0565097720986808e-30,
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "uniform_label_dependent_unit_root_inequality": {
+    "actual_labels": 8,
+    "status": "PASS"
+  }
+}

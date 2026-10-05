@@ -1,0 +1,48 @@
+{
+  "all_coordinate_extracted_Dirichlet_phase": {
+    "cases": 3,
+    "max_error": 1.476420904632793e-35,
+    "status": "PASS"
+  },
+  "diagnostic_only": true,
+  "exact_joint_FE_conductor_and_gamma_pairing": {
+    "cases": 16,
+    "max_relative_error": 2.122539361991589e-33,
+    "status": "PASS"
+  },
+  "exact_tail_rectangle_and_logarithmic_exponents": "PASS",
+  "finite_gaussian_rectangle_with_endpoints": {
+    "cases": [
+      {
+        "bottom_modulus": 0.005967711087049344,
+        "endpoint_modulus_sum": 0.006386346196281552,
+        "rectangle_identity_error": 5.877471754111438e-39,
+        "shifted_modulus": 0.0007826251964201262,
+        "theta": -3
+      },
+      {
+        "bottom_modulus": 0.006584078694631613,
+        "endpoint_modulus_sum": 0.006431619103752473,
+        "rectangle_identity_error": 5.877471754111438e-39,
+        "shifted_modulus": 0.0007931425321736721,
+        "theta": 3
+      }
+    ],
+    "status": "PASS"
+  },
+  "joint_residual_log_derivative": {
+    "cases": 16,
+    "max_height_scaled_derivative": 1.256525445027115,
+    "status": "PASS"
+  },
+  "near_far_full_kernel_principal_equality_partition": {
+    "status": "PASS",
+    "tuple_cases": 1944
+  },
+  "status": "PASS",
+  "uniform_trigamma_off_real_axis": {
+    "cases": 36,
+    "largest_bound_ratio": 0.31629496355096715,
+    "status": "PASS"
+  }
+}

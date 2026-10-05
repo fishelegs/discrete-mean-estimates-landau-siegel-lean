@@ -311,6 +311,454 @@
       ],
       "final_acceptance_checked_utc": "2026-10-05T12:54:48.379619+00:00",
       "acceptance_scope": "Gaussian-log balanced sub-64 norm reduction with paid input/output extensions; directly reproved Gaussian-target full-kernel integer-equality row; all finite correctly reduced even-principal corrections, including the complementary swapped principal mean. No full balanced energy, joint cross or final gap."
+    },
+    {
+      "id": "swap_time_localization",
+      "publication_document": "08_swap_time_localization.md",
+      "original_mathematical_source": {
+        "sha256": "c9acb6bedae79ba02779f9cf456f13c9d6d55c9bed7a82255ab98c6e84f03e0b",
+        "bytes": 19485
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "9568531f4f2272127f0c3cc5b1dc2271d22255711b45f6cc32bcce2fde4fbe30",
+        "bytes": 1553
+      },
+      "author_result_statement_identity": {
+        "sha256": "e4e29f1328f176892f4f858ac08976c0ff806734354ded9b6405019a120b3bcf",
+        "bytes": 1464
+      },
+      "original_diagnostic_script": {
+        "sha256": "660cd1bb0a44242bb8deee7efd3fdf2c9818b00f836ba2d39e29649d783ec615",
+        "bytes": 5874
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "fef134fcb9ad4b06238753bbb72efe042471195a17638d70acdb591ac4c0c2df",
+        "bytes": 1344
+      },
+      "independent_review_identity": {
+        "sha256": "17d87e01f0888709319e50c7985df22b22195362c0a6fe8ce104e3f0faa8f24d",
+        "bytes": 13223
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "046502ca617322abea5f7ec8266d70cc9e022a75770ee31e5ff0a881af02196a",
+        "bytes": 1272
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "e22428cf864d31a8893caf590c9b67b79fa689a97a7141d1f11e75752e1a711b",
+        "bytes": 3210
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "6354b25cc4a6cc832fc6a1a06fa74947701ab808fc377f50ee6a0ed7f7b1b3af",
+        "bytes": 2500
+      },
+      "status": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
+      "source_identity_verified": true,
+      "diagnostic_replay": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
+      "publication_editing": "Full numbered mathematical sections retained byte-for-byte except removal of the final operational/status paragraph; introductory status and a source-reference footer are supplied separately.",
+      "claims": [
+        "Actual Gaussian swapped cross restricted to |log(e m mprime/(D d n nprime))|>L^-395 is O_K(P^-18)",
+        "Every prescribed fixed O_(A,K)(P^-A) by a sufficiently large fixed AFE decay order",
+        "Exact near unequal geometrical residual after total-minus-far-minus-equality principal bookkeeping"
+      ],
+      "limitations": [
+        "Unequal near positive and negative congruences remain unbounded",
+        "Other five branch crosses and full positive branch norms remain open",
+        "No compact/Gaussian row identification or o(P^2) hard-core moment identity",
+        "No full balanced energy, final strict gap or new Lean theorem"
+      ],
+      "selected_upstream_source_identities": [
+        {
+          "sha256": "3b54c4ff4dfc529ae34eb3aec03cf490b79c8f375f6a118023257e3468f62792",
+          "bytes": 26877
+        },
+        {
+          "sha256": "34e72e847169908f077ad954fe8ef7cb4fcb7662e1d297f33f598cd1472a5458",
+          "bytes": 2867
+        },
+        {
+          "sha256": "f2bceb43b6cb31ab9a71ca5ecd8064569b60b2c57bc899208744c7255e317d91",
+          "bytes": 26625
+        },
+        {
+          "sha256": "6cdc312cdb348f78d5fe7167fb0224644c54270cce8ec6f68a2102574d32a2a0",
+          "bytes": 23635
+        },
+        {
+          "sha256": "02409b42acea2141121823d776792ff1df00d96f6c25bd930f6636f45a1e4e55",
+          "bytes": 2975
+        },
+        {
+          "sha256": "c749a0651a5d42dfcd355a245a30853689b690590ad774398f956fe2938ba505",
+          "bytes": 18171
+        },
+        {
+          "sha256": "e551f004ce13d6bcff21cb33870008435b9227398a874e36792cc94f998e8026",
+          "bytes": 4725
+        },
+        {
+          "sha256": "79832914057edfd2ee5ec6ad492131ec54ecbe68973dc5bd09732fea16904ebb",
+          "bytes": 14181
+        },
+        {
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852
+        },
+        {
+          "sha256": "a89e788412a2712e597748840ed9b4061b38bec6260282b54c21bd98c0aa8c55",
+          "bytes": 1594
+        },
+        {
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155
+        },
+        {
+          "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+          "bytes": 25030
+        },
+        {
+          "sha256": "aed17417dba14bf20c7733d8d10ead036ed75352ccbaf328a885d730773a9a1b",
+          "bytes": 21791
+        },
+        {
+          "sha256": "8b91479aa0cdd64776e73c4be3b00b2966fe5dbb7de71d42556e8230eb2d2501",
+          "bytes": 3084
+        },
+        {
+          "sha256": "510b6d70e95dc2d6dee7776486174f667df56f364dc59f8c92ecd32c8a8ab806",
+          "bytes": 17775
+        },
+        {
+          "sha256": "c1d3d2dcfcb63d9a64d7b58964553468241589910bb95d6a49a9bae00c89ef74",
+          "bytes": 22338
+        },
+        {
+          "sha256": "6c38ba4d36b11f2d90ff33cde06348051ca287b0515f00d0dda3a95b7c4a619c",
+          "bytes": 19418
+        },
+        {
+          "sha256": "e2b6b3b6bbda7a4aa6b75b1ad3c7886ba248574a4774d8b8997fa90d2c65ad2a",
+          "bytes": 3793
+        },
+        {
+          "sha256": "3a9df5d600c48111952bc66903d9df749d78ae3595cb5e72dbe17130628f441c",
+          "bytes": 25536
+        },
+        {
+          "sha256": "d6ef27e3a740b67adc61ae5d74ffb238fbcd9091bf23cd5de82a2d2b51a26c82",
+          "bytes": 17819
+        },
+        {
+          "sha256": "4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d",
+          "bytes": 3829
+        }
+      ]
+    },
+    {
+      "id": "four_branch_diagonals",
+      "publication_document": "09_four_branch_diagonals.md",
+      "original_mathematical_source": {
+        "sha256": "8b17bcfa77016cc0e823eb7b17c4bf6c72a55db3ceb1a0d08afe5b5ce836dfeb",
+        "bytes": 16982
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "bacd93b3986f73dd08d260580a23013ec06ed605c6ccd6d978ccc4ea3364f435",
+        "bytes": 1397
+      },
+      "author_result_statement_identity": {
+        "sha256": "4060334ac892ef5f94780a94f853d7041c7a764bd83fd549ad6a24626e82b632",
+        "bytes": 1419
+      },
+      "original_diagnostic_script": {
+        "sha256": "cb51eb0d7cedd0b71fb091e7d220bf7a9f820f6ee5e7ed0d02d53e036edd03bd",
+        "bytes": 5112
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "24506ea19115c1c9a2834fd878593ce13d8a20c97c95223f5d015ee52aede42f",
+        "bytes": 961
+      },
+      "independent_review_identity": {
+        "sha256": "85b68c4b3a23ff1d4a49b0897974b206d5a46bef5612b0c1054dba63d4aa672e",
+        "bytes": 18875
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "3f2e0148f063b4732a13e27a103a9dcf5204a3f40748ec05a447bd384c8078e3",
+        "bytes": 3093
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "70f5d473696c4578849925f238846e176053c7c3437a2cb3db18f3df5eb84eb8",
+        "bytes": 3403
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "1ddbb8725f257a6f3059ebc7d7e5a50453722021b14595aee7f9798cf8117e6a",
+        "bytes": 2508
+      },
+      "status": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
+      "source_identity_verified": true,
+      "diagnostic_replay": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
+      "publication_editing": "Full numbered mathematical sections retained byte-for-byte except removal of the final operational/status paragraph; introductory status and a source-reference footer are supplied separately.",
+      "claims": [
+        "Each actual Gaussian full-K integer-ratio diagonal satisfies 0<=D_ij<<P^2(log L)^6; their sum satisfies the same bound",
+        "Actual shifted positive convolution Euler series is O_K(L^68), including ramification and all prime powers",
+        "All-height attachment uses one global Rankin factor before the literal prime-window L^-68 cancellation",
+        "Restricted even-principal row O(P(log L)^6), complementary mean paid by total minus equality"
+      ],
+      "limitations": [
+        "Unequal positive and negative ordinary congruence rows remain unbounded",
+        "Full positive branch norms and balanced energy remain open",
+        "The four transformed rows are not the original same-output diagonal",
+        "No o(P^2) hard-core moment identity, final strict gap or new Lean theorem"
+      ],
+      "selected_upstream_source_identities": [
+        {
+          "sha256": "3b54c4ff4dfc529ae34eb3aec03cf490b79c8f375f6a118023257e3468f62792",
+          "bytes": 26877
+        },
+        {
+          "sha256": "34e72e847169908f077ad954fe8ef7cb4fcb7662e1d297f33f598cd1472a5458",
+          "bytes": 2867
+        },
+        {
+          "sha256": "f2bceb43b6cb31ab9a71ca5ecd8064569b60b2c57bc899208744c7255e317d91",
+          "bytes": 26625
+        },
+        {
+          "sha256": "6cdc312cdb348f78d5fe7167fb0224644c54270cce8ec6f68a2102574d32a2a0",
+          "bytes": 23635
+        },
+        {
+          "sha256": "02409b42acea2141121823d776792ff1df00d96f6c25bd930f6636f45a1e4e55",
+          "bytes": 2975
+        },
+        {
+          "sha256": "c749a0651a5d42dfcd355a245a30853689b690590ad774398f956fe2938ba505",
+          "bytes": 18171
+        },
+        {
+          "sha256": "e551f004ce13d6bcff21cb33870008435b9227398a874e36792cc94f998e8026",
+          "bytes": 4725
+        },
+        {
+          "sha256": "79832914057edfd2ee5ec6ad492131ec54ecbe68973dc5bd09732fea16904ebb",
+          "bytes": 14181
+        },
+        {
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852
+        },
+        {
+          "sha256": "a89e788412a2712e597748840ed9b4061b38bec6260282b54c21bd98c0aa8c55",
+          "bytes": 1594
+        },
+        {
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155
+        },
+        {
+          "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+          "bytes": 25030
+        },
+        {
+          "sha256": "aed17417dba14bf20c7733d8d10ead036ed75352ccbaf328a885d730773a9a1b",
+          "bytes": 21791
+        },
+        {
+          "sha256": "8b91479aa0cdd64776e73c4be3b00b2966fe5dbb7de71d42556e8230eb2d2501",
+          "bytes": 3084
+        },
+        {
+          "sha256": "510b6d70e95dc2d6dee7776486174f667df56f364dc59f8c92ecd32c8a8ab806",
+          "bytes": 17775
+        },
+        {
+          "sha256": "c1d3d2dcfcb63d9a64d7b58964553468241589910bb95d6a49a9bae00c89ef74",
+          "bytes": 22338
+        },
+        {
+          "sha256": "6c38ba4d36b11f2d90ff33cde06348051ca287b0515f00d0dda3a95b7c4a619c",
+          "bytes": 19418
+        },
+        {
+          "sha256": "e2b6b3b6bbda7a4aa6b75b1ad3c7886ba248574a4774d8b8997fa90d2c65ad2a",
+          "bytes": 3793
+        },
+        {
+          "sha256": "3a9df5d600c48111952bc66903d9df749d78ae3595cb5e72dbe17130628f441c",
+          "bytes": 25536
+        },
+        {
+          "sha256": "d6ef27e3a740b67adc61ae5d74ffb238fbcd9091bf23cd5de82a2d2b51a26c82",
+          "bytes": 17819
+        },
+        {
+          "sha256": "4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d",
+          "bytes": 3829
+        }
+      ]
+    },
+    {
+      "id": "near_parity_sufficient_gate",
+      "publication_document": "10_near_parity_sufficient_gate.md",
+      "original_mathematical_source": {
+        "sha256": "f8c98ad63360965080b85d6b43f69a8d2e7a6feffc440c7099aabb82cce115c6",
+        "bytes": 17100
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "b105aee60c54cb730e8f43d805588f47e0ec8bd7db58edb3d22d4bdfcab589c4",
+        "bytes": 1557
+      },
+      "author_result_statement_identity": {
+        "sha256": "f53186444e44fc9bd480e4bd238c7aeca5470346bfe6c198d60b6ee5cadcf40e",
+        "bytes": 1457
+      },
+      "original_diagnostic_script": {
+        "sha256": "f6aca7974c364c9feef8551f8919eec5251249aa9f5a88a955f79c4f496479ac",
+        "bytes": 7154
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "46b590cf44bdc97d08ccd05e0cc37cd3378c72b6cd4418428ae340e90ee5b936",
+        "bytes": 1075
+      },
+      "independent_review_identity": {
+        "sha256": "76a304cc8bf7d39bf9c22fd17b0b64e7e97e5d00b5767e0b8263c2746ad5dab7",
+        "bytes": 4312
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "d5c2ebe6591e4846dc0af1989fc5011580e835fe13cb46782b75406bddcdb121",
+        "bytes": 1468
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "c3b456d9724a066d263ce5bfb70a4f6b1a68ca402ddc9640c05ab2abc5556e61",
+        "bytes": 2088
+      },
+      "status": "SOURCE_REVIEWED_SUFFICIENT_REDUCTION_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "diagnostic_replay": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
+      "publication_editing": "Full numbered mathematical sections retained byte-for-byte except removal of the final operational paragraph; introductory status and a source-reference footer are supplied separately.",
+      "claims": [
+        "For every actual Gaussian branch, the full-K part |log(Y_ij/X_ij)|>L^-395 is O(P^-18), with every prescribed fixed negative P power available",
+        "Sum of the four branch norms equals Re sum N_ij + O(P^2(log L)^6), with N_ij retaining both geometrical parity congruences on unequal near tuples",
+        "A one-sided Re sum N_ij <= C_b P^2 L^b for some fixed b<64 suffices for a sub-64 positive-energy bound after the accepted norm transfers"
+      ],
+      "limitations": [
+        "The required near aggregate arithmetic upper bound is UNPROVED",
+        "This positive-energy condition is sufficient, not necessary, and is not identified with the original signed half-threshold",
+        "No Gaussian diagonal dominance or whole balanced-energy estimate is established",
+        "No final strict gap or new Lean certificate"
+      ],
+      "selected_upstream_source_identities": [
+        {
+          "sha256": "3b54c4ff4dfc529ae34eb3aec03cf490b79c8f375f6a118023257e3468f62792",
+          "bytes": 26877
+        },
+        {
+          "sha256": "34e72e847169908f077ad954fe8ef7cb4fcb7662e1d297f33f598cd1472a5458",
+          "bytes": 2867
+        },
+        {
+          "sha256": "f2bceb43b6cb31ab9a71ca5ecd8064569b60b2c57bc899208744c7255e317d91",
+          "bytes": 26625
+        },
+        {
+          "sha256": "6cdc312cdb348f78d5fe7167fb0224644c54270cce8ec6f68a2102574d32a2a0",
+          "bytes": 23635
+        },
+        {
+          "sha256": "02409b42acea2141121823d776792ff1df00d96f6c25bd930f6636f45a1e4e55",
+          "bytes": 2975
+        },
+        {
+          "sha256": "c749a0651a5d42dfcd355a245a30853689b690590ad774398f956fe2938ba505",
+          "bytes": 18171
+        },
+        {
+          "sha256": "e551f004ce13d6bcff21cb33870008435b9227398a874e36792cc94f998e8026",
+          "bytes": 4725
+        },
+        {
+          "sha256": "79832914057edfd2ee5ec6ad492131ec54ecbe68973dc5bd09732fea16904ebb",
+          "bytes": 14181
+        },
+        {
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852
+        },
+        {
+          "sha256": "a89e788412a2712e597748840ed9b4061b38bec6260282b54c21bd98c0aa8c55",
+          "bytes": 1594
+        },
+        {
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155
+        },
+        {
+          "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+          "bytes": 25030
+        },
+        {
+          "sha256": "aed17417dba14bf20c7733d8d10ead036ed75352ccbaf328a885d730773a9a1b",
+          "bytes": 21791
+        },
+        {
+          "sha256": "8b91479aa0cdd64776e73c4be3b00b2966fe5dbb7de71d42556e8230eb2d2501",
+          "bytes": 3084
+        },
+        {
+          "sha256": "510b6d70e95dc2d6dee7776486174f667df56f364dc59f8c92ecd32c8a8ab806",
+          "bytes": 17775
+        },
+        {
+          "sha256": "c1d3d2dcfcb63d9a64d7b58964553468241589910bb95d6a49a9bae00c89ef74",
+          "bytes": 22338
+        },
+        {
+          "sha256": "6c38ba4d36b11f2d90ff33cde06348051ca287b0515f00d0dda3a95b7c4a619c",
+          "bytes": 19418
+        },
+        {
+          "sha256": "e2b6b3b6bbda7a4aa6b75b1ad3c7886ba248574a4774d8b8997fa90d2c65ad2a",
+          "bytes": 3793
+        },
+        {
+          "sha256": "3a9df5d600c48111952bc66903d9df749d78ae3595cb5e72dbe17130628f441c",
+          "bytes": 25536
+        },
+        {
+          "sha256": "d6ef27e3a740b67adc61ae5d74ffb238fbcd9091bf23cd5de82a2d2b51a26c82",
+          "bytes": 17819
+        },
+        {
+          "sha256": "4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d",
+          "bytes": 3829
+        },
+        {
+          "sha256": "8b17bcfa77016cc0e823eb7b17c4bf6c72a55db3ceb1a0d08afe5b5ce836dfeb",
+          "bytes": 16982
+        },
+        {
+          "sha256": "85b68c4b3a23ff1d4a49b0897974b206d5a46bef5612b0c1054dba63d4aa672e",
+          "bytes": 18875
+        },
+        {
+          "sha256": "3f2e0148f063b4732a13e27a103a9dcf5204a3f40748ec05a447bd384c8078e3",
+          "bytes": 3093
+        },
+        {
+          "sha256": "1ddbb8725f257a6f3059ebc7d7e5a50453722021b14595aee7f9798cf8117e6a",
+          "bytes": 2508
+        },
+        {
+          "sha256": "c9acb6bedae79ba02779f9cf456f13c9d6d55c9bed7a82255ab98c6e84f03e0b",
+          "bytes": 19485
+        },
+        {
+          "sha256": "17d87e01f0888709319e50c7985df22b22195362c0a6fe8ce104e3f0faa8f24d",
+          "bytes": 13223
+        },
+        {
+          "sha256": "6354b25cc4a6cc832fc6a1a06fa74947701ab808fc377f50ee6a0ed7f7b1b3af",
+          "bytes": 2500
+        }
+      ]
     }
   ],
   "accepted_upstream_interfaces": [
@@ -598,9 +1046,15 @@
       "title": "DLMF digamma asymptotics",
       "url": "https://dlmf.nist.gov/5.11.E2",
       "redistributed": false
+    },
+    {
+      "title": "DLMF trigamma lattice series, valid off the nonpositive integers",
+      "url": "https://dlmf.nist.gov/5.15.E1",
+      "redistributed": false
     }
   ],
   "identity_note": "Original-source hashes identify the reviewed inputs; publication-document hashes are separately listed in PUBLICATION_MANIFEST.json. Hash identity is not mathematical certification.",
-  "previous_checkpoint_commit": "357c5c396342d4f0fde6d404e96907b42c85f98e",
-  "local_preparation_checkpoint_commit": "cf430d359ef57d14fe835d68b41c33811e31c0a9"
+  "previous_checkpoint_commit": "3da60fca87a0eaf64e425f34281059966c66dc9b",
+  "local_localization_checkpoint_commit": "b97672ee86a9ce91aeb8a3b1e5484720fb09dc24",
+  "local_four_diagonal_checkpoint_commit": "c735324c4a320e6f72c6108a12e81bf0d6460f20"
 }

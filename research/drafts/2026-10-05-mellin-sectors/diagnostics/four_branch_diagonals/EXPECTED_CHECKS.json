@@ -1,0 +1,40 @@
+{
+  "actual_local_coefficients_higher_powers_and_ramification": {
+    "cases": 351,
+    "prime_perturbation_cases": 27,
+    "status": "PASS"
+  },
+  "diagnostic_only": true,
+  "dual_coefficient_conjugacy_and_multiplicativity": {
+    "conjugacy_cases": 480,
+    "multiplicativity_cases": 252,
+    "status": "PASS"
+  },
+  "exact_arithmetic_and_prime_width_exponents": "PASS",
+  "four_equality_swaps_and_symmetric_decay": {
+    "cases": 9216,
+    "status": "PASS"
+  },
+  "full_kernel_positive_rational_fibers": {
+    "cases": 24,
+    "status": "PASS"
+  },
+  "global_actual_scale_Rankin_factor": {
+    "log_factors": [
+      2.0588793173871585,
+      2.0008694572040193,
+      2.000002440145375,
+      2.000000006259047
+    ],
+    "status": "PASS"
+  },
+  "literal_open_interval_width_and_endpoint": {
+    "cases": 16,
+    "status": "PASS"
+  },
+  "single_Rankin_weight_and_full_arithmetic_majorant": {
+    "cases": 480,
+    "status": "PASS"
+  },
+  "status": "PASS"
+}
