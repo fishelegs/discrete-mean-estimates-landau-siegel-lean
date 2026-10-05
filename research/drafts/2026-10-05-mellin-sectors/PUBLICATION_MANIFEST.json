@@ -1,14 +1,17 @@
 {
-  "schema_version": 12,
+  "schema_version": 17,
   "date_utc": "2026-10-05",
   "publication_kind": "DRAFT_MATHEMATICAL_CHECKPOINT",
   "repository": "fishelegs/discrete-mean-estimates-landau-siegel-lean",
   "base_commit": "1b1bdae9503bf45acc091381e5574b86930f55ae",
-  "previous_checkpoint_commit": "810afa73c759bef2c3be0d7f59525057ab507d0b",
+  "previous_checkpoint_commit": "c381e7784f531c14b9c767dcf9db14bbc55dbc63",
   "intended_branch": "draft/mellin-sectors-20261005",
   "repository_directory": "research/drafts/2026-10-05-mellin-sectors",
-  "scope": "Eighteen source-reviewed notes; exact finite prime-Hecke correlation and valid common-weight averaged attachment on explicit generic cells; absolute outer-error ledger retains P^3 and the bounded-middle arithmetic estimate remains unproved",
-  "new_note_validation_status": "SOURCE_REVIEWED_FINITE_PRIME_HECKE_AND_ACTUAL_AVERAGED_ATTACHMENT_WITH_UNPAID_OUTER_SUM_NOT_LEAN",
+  "scope": "24 bounded source-reviewed notes; new joint untilted scalar Fourier-L1/Sobolev, Mellin, fixed-gap localization and named divisor-sampling interfaces, plus a conditional symbolic exceptional-gate ledger. Unchanged-input raw threshold remains 64; conditional 473/6 requires a new mask and complete transfer. Original parameters and target unchanged; actual middle estimate and final gap remain open.",
+  "new_note_validation_status": {
+    "note23": "SOURCE_REVIEWED_JOINT_UNTILTED_SCALAR_AND_NAMED_CONSUMER_INTERFACES_ONLY_NOT_LEAN",
+    "note24": "SOURCE_REVIEWED_CONDITIONAL_SYMBOLIC_EXCEPTIONAL_GATE_ONLY_NOT_LEAN"
+  },
   "formal_lean_status": "NO_NEW_LEAN_SOURCE_OR_CERTIFICATE",
   "final_gap_status": "OPEN",
   "global_frontier": {
@@ -80,26 +83,96 @@
     "averaged_absolute_outer_error": "P^3_SCALE_UPPER_BOUND_LEDGER_DOES_NOT_IMPLY_MIDDLE_ESTIMATE",
     "averaged_actual_lower_bound": "NOT_CLAIMED",
     "impossibility_of_collective_averaged_improvement": "NOT_CLAIMED",
-    "averaged_excluded_sectors_and_original_restricted_principal": "UNPAID_AND_RETAINED"
+    "averaged_excluded_sectors_and_original_restricted_principal": "UNPAID_AND_RETAINED",
+    "common_level_linear_orbit_mean": "EXACTLY_ZERO_FOR_SPECIFIED_FINITE_PRIME_SUBFAMILY",
+    "common_level_orbit_variance": "EXACT_CRT_IDENTITY_ARBITRARY_COMPLEX_COEFFICIENTS",
+    "common_level_correlation_scope": "EXPLICIT_GM_10_2_EXPRESSION_ONLY_Z_SLACK_RETAINED",
+    "common_level_GM7_1_kernel_or_total_error_lower_bound": "NOT_CLAIMED",
+    "common_level_actual_energy_lower_bound": "NOT_CLAIMED",
+    "common_level_complete_collective_application": "UNPROVED",
+    "common_level_universal_impossibility": "NOT_CLAIMED",
+    "common_level_group_terminology": "COARSER_LEVEL_IS_LARGER_INVARIANCE_GROUP_INTERSECTION_SUBGROUP_PRESERVES_DIVISIBILITIES",
+    "original_time_parameters": "UNCHANGED_t0_L519_W_L400",
+    "original_assumption_and_target": "UNCHANGED_A2022_TARGET_2024",
+    "time_parameter_local_lemmas": "SOURCE_REVIEWED_AT_STATED_HYPOTHESES_ONLY",
+    "time_parameter_Gaussian_consumer": "CONDITIONAL_ON_FRESH_RATIO_AND_STATED_MOMENTS",
+    "time_parameter_fresh_positive_moments": "SOURCE_REVIEWED_CONSERVATIVE_RANGE_ONLY",
+    "new_time_good_family_ratio_bound": "UNPROVED",
+    "new_time_good_character_zero_gap_family": "UNPROVED",
+    "new_time_phase_tilted_mean_values": "UNPROVED",
+    "new_time_discrete_weighted_and_other_phase_consumers": "UNPROVED",
+    "new_time_signed_main_terms": "UNPROVED",
+    "altered_parameter_global_theorem": "UNPROVED",
+    "separate_scalar_Fourier_L1_result": "NOT_INCLUDED",
+    "collective_induced_cover": "SOURCE_REVIEWED_EXACT_REPRESENTATION_AND_ISOMETRY",
+    "collective_direct_sum_Cauchy": "OPTIMUM_RETURNS_COMPONENT_L1_CERTIFICATE",
+    "collective_singleton_level_average": "SOURCE_REVIEWED_HOMOGENEOUS_COMPARISON_ONLY",
+    "collective_defined_R_beta_floor": "EXACT_INDIVIDUAL_L1_NORMS_RETAINED_H_SCALE_CONDITIONAL",
+    "collective_hypothetical_13c": "NOT_CLAIMED_AS_GENERAL_BETA_THEOREM",
+    "collective_actual_error_or_energy_lower_bound": "NOT_CLAIMED",
+    "common_product_additional_h_sectors": "UNPAID_GCD_h_p_q1_D_RETAINED",
+    "actual_masked_profile_l1_lower_bound": "NOT_ESTABLISHED",
+    "reciprocal_prime_representation": "SOURCE_REVIEWED_EXACT_SMOOTH_CELL_WITH_CARRIER_AND_FINITE_INVERSE",
+    "reciprocal_principal_centering_and_aliases": "EXACT_ZERO_RESIDUAL_EQUALITY_AND_P_DIVISIBLE_ALIAS_RETAINED",
+    "reciprocal_smooth_cell_weight_separation": "SOURCE_REVIEWED_FIXED_LOGARITHMIC_COST_ONLY",
+    "reciprocal_direct_BC_dominant_exponent": "27/8_PLUS_EPSILON_AND_SUBPOWERS_WEAK_CERTIFICATE",
+    "reciprocal_current_benchmark": "SMALL_RECTANGLE_PLUS_HIGH_TAIL_P2_WITH_D5_CONDUCTOR_LOSS",
+    "reciprocal_Wright_attachment": "BOUNDED_NO_GAIN_LEDGER_FOR_TWO_TESTED_INTERFACES_ONLY",
+    "reciprocal_actual_lower_bound_or_impossibility": "NOT_CLAIMED",
+    "averaged_saddle_scope": "JOINT_UNTILTED_SCALAR_AND_NAMED_CONSUMERS_ONLY",
+    "averaged_saddle_fixed_gap_primary_upper_edge": "SUPPLIED_BY_MANDATORY_FIXED_GAP_EXTENSION",
+    "averaged_saddle_arbitrary_tilted_kernels": "UNPROVED",
+    "averaged_saddle_relative_positivity": "NOT_CLAIMED",
+    "averaged_saddle_illustrative_integer_pairs": "LOCAL_CONDITIONAL_LEDGERS_ONLY_NOT_GLOBAL_FEASIBILITY",
+    "averaged_saddle_new_good_family": "UNPROVED",
+    "symbolic_original_raw_gate": 64,
+    "symbolic_integrated_joint_gate": "662_DIFFERENT_OBSERVABLE",
+    "symbolic_473_over_6_scope": "CONDITIONAL_NEW_MASK_AND_COMPLETE_TRANSFER_ONLY",
+    "symbolic_changed_time_count_or_genuine_moment": "UNPROVED",
+    "symbolic_width_and_raw_moment_exponents": "DISTINCT_w_AND_beta"
   },
   "verification": {
-    "new_source_identity_checks": 86,
-    "new_unique_hashes": 47,
-    "new_frozen_author_and_review_manifest_payloads": "PASS",
+    "new_source_identity_checks": 77,
+    "new_unique_hashes": 44,
+    "new_frozen_author_and_review_manifest_payloads": "SELECTED_ACCEPTED_MATHEMATICAL_PAYLOADS_VERIFIED",
     "proofs_01_to_16": "BYTE_UNCHANGED_FROM_PREVIOUS_PUBLISHED_CHECKPOINT",
-    "new_proof_preservation": "Note 17 retained byte-for-byte from the first local checkpoint; note 18 complete accepted mathematical body retained with sanitized status and primary links",
+    "new_proof_preservation": "Full note23 mathematics and mandatory fixed-gap clarification retained; full note24 conditional ledger retained with normalized R premise and width/moment distinction",
     "sanitization_and_relative_links": "PASS",
     "new_Lean_certificate": false,
-    "full_repository_build": "NOT_RUN_FOR_THIS_DOCUMENTATION_ONLY_INCREMENT",
-    "previous_publication_manifest_sha256": "cb8a53da3d03ae940e9416f30644423faa50ccf56ddee8c56fdb197fd44695c2",
+    "full_repository_build": "NOT_RUN_DOCUMENTATION_ONLY; NO_COMPILER_OR_LAKE_OPERATIONS",
+    "previous_publication_manifest_sha256": "3cba5a0dd2db4996f6f4686874359732d3c367c9162fae26c16a2df648df8372",
     "CI_scope": "Repository Lean checks do not certify these source-level analytic notes",
-    "all_diagnostic_replays": "ALL_17_AUTHOR_SUITES_BYTE_EQUAL_PASS",
+    "all_diagnostic_replays": "ALL_23_AUTHOR_SUITES_BYTE_EQUAL_PASS",
     "diagnostic_replay_details": [
       {
         "suite": "averaged_determinant_attachment",
         "status": "BYTE_EQUAL_PASS",
         "script_sha256": "c2e9e9456797dea4bbe3496dfb19229b8abc6e659110ca6c78b638d79af5d9d0",
         "result_sha256": "afe4060b2ea1c67c2f48a7b5001893c0c724c47c1c059643ca41ac75a34a3334"
+      },
+      {
+        "suite": "averaged_scalar_saddle",
+        "status": "BYTE_EQUAL_PASS",
+        "script_sha256": "06da4f42ed6bd60da0b6349a050a2d0f433352bd7ea3f23acd33d3814bb2ac6c",
+        "result_sha256": "7794db3c40fd5e65117de135eeddedfe29d81da3f3ec75a0607c2965792f31c7"
+      },
+      {
+        "suite": "averaged_scalar_saddle_fixed_gap",
+        "status": "BYTE_EQUAL_PASS",
+        "script_sha256": "e85376e06b994481dff61424ed162d3420ebf077212c6649c017d513813c1e9b",
+        "result_sha256": "d6ec3536a9110982db09cd653c7a4afdbc9814a212854fdcbb4e00aafc1d12dc"
+      },
+      {
+        "suite": "collective_cover_spectral_test",
+        "status": "BYTE_EQUAL_PASS",
+        "script_sha256": "dc465bbaa6f6652343c17fc05788b49cdcbe1ef6d1742e75826f313e87e8caf0",
+        "result_sha256": "17a04b3555439b3db4d719a52800da5b953791bace2f85b28383e55dbb85f1fa"
+      },
+      {
+        "suite": "common_level_outer_variance",
+        "status": "BYTE_EQUAL_PASS",
+        "script_sha256": "d83b604efeaab1a90d34076fdc7538d82eadb2758d4fe342002b8df1e7f6e505",
+        "result_sha256": "c9a4806278d0260e01f6dd709e1ea54d679af03dea6251e742803b231c868faa"
       },
       {
         "suite": "four_branch_diagonals",
@@ -150,6 +223,12 @@
         "result_sha256": "b089dd6d3153a861fdedf6ebfd80b27a5859104e929e0a08c26b8abd3e5a09a3"
       },
       {
+        "suite": "reciprocal_prime_attachment_audit",
+        "status": "BYTE_EQUAL_PASS",
+        "script_sha256": "0a6ebb74b59d2bf46ffebd6b087c8240546a1e63bef57eb903fb7ce2082d48b6",
+        "result_sha256": "bb1550fe84991cce92a541f145688ef6267998f9569a2115977dd4752a5fcdf8"
+      },
+      {
         "suite": "shifted_correlation_carrier_interface",
         "status": "BYTE_EQUAL_PASS",
         "script_sha256": "388183b97d591a32753318b691827fec0644c3d8ec37ed7a4fe7854a0e7054dc",
@@ -192,13 +271,34 @@
         "result_sha256": "fef134fcb9ad4b06238753bbb72efe042471195a17638d70acdb591ac4c0c2df"
       },
       {
+        "suite": "time_parameter_audit",
+        "status": "BYTE_EQUAL_PASS",
+        "script_sha256": "df542d162a62295b003537ce5bdc3625ed19ea8b73ffc647d09012590aa768cc",
+        "result_sha256": "903bd96945da4449a24fbecf66542a3c3582734ac6dba2080ee49d880d1ea3c3"
+      },
+      {
         "suite": "transformed_high_tail",
         "status": "BYTE_EQUAL_PASS",
         "script_sha256": "29bf49107b4196518b7474b570b576dfd078f2885ae8d66d1a9d8258ec147544",
         "result_sha256": "555bb313715e4be8fb6c30828631b5639dcbe866ae0a267bf82e865e5821207b"
       }
     ],
-    "portable_independent_mathematical_replays": "BYTE_EQUAL_PASS"
+    "portable_independent_mathematical_replays": "ALL_SIX_BYTE_EQUAL_PASS",
+    "proofs_01_to_18": "BYTE_UNCHANGED_FROM_PUBLISHED_BASE_c381e778",
+    "new_common_level_diagnostics": "AUTHOR_BYTE_EQUAL_PASS; TWO_PORTABLE_INDEPENDENT_BYTE_EQUAL_PASSES; PINNED_MATHEMATICAL_FIELDS_EQUAL",
+    "proofs_01_to_19": "BYTE_UNCHANGED_FROM_LOCAL_VARIANCE_CHECKPOINT_32c7f24",
+    "time_parameter_independent_review_count": 1,
+    "time_parameter_diagnostic_derivation": "Author script/output byte-exact. Portable independent arithmetic enumeration reconstructs the pinned result on 1<=a,b<=600 from the two displayed constraints; no unpublished independent script is claimed.",
+    "time_parameter_author_diagnostic_replay": "BYTE_EQUAL_PASS_IN_FRESH_OWNED_COPY",
+    "preserved_previous_notes": "NOTES_01_TO_21_BYTE_UNCHANGED_FROM_PREVIOUS_LOCAL_CHECKPOINT",
+    "new_note_independent_source_review_count": 1,
+    "time_parameter_finished_snapshot": "EXACT_IDENTITY_VERIFIED",
+    "new_diagnostic_script_preservation": "BYTE_EXACT_FILENAME_STANDARDIZED_ONLY",
+    "new_author_diagnostic_replay": "BOTH_NOTE23_AUTHOR_SUITES_BYTE_EQUAL_PASS_IN_FRESH_OWNED_COPIES",
+    "proofs_01_to_22": "BYTE_UNCHANGED_FROM_PREVIOUS_HELD_LOCAL_CHECKPOINT",
+    "new_unique_review_count": 2,
+    "new_source_proof_scopes": "One unique review of joint note23 package; one unique review of conditional note24 ledger",
+    "note24_author_diagnostic": "SOURCE_RESULT_RECORD_ONLY_NO_SEPARATE_SCRIPT_OR_AUTHOR_REPLAY_CLAIMED"
   },
   "preserved_proof_document_hashes": {
     "01_reciprocal_product.md": "419b7d3fd82e38db188506a7a6cc54822fb26bf9afcd3de8f506a4c6699421f4",
@@ -216,7 +316,13 @@
     "13_small_transformed_rectangle.md": "f14ae67ae9a25c44e08a8c548504015f3441cd3598b3da9248f6eaef6b864daf",
     "14_periodic_determinant_mapping.md": "0efc54b7016af1a8a86967439285500149c16b29adeabc0ef39462d36795c90b",
     "15_mixed_transformed_boundary.md": "b3dbbd73a6a21b15b0639cb74e3f2f35c8bad3254b5551a235cd8d07fde4dea6",
-    "16_transformed_high_tail.md": "88838b10ef0f1a00e117dc974f9d47405a4953a65c6e92434f52666b26e5a9bd"
+    "16_transformed_high_tail.md": "88838b10ef0f1a00e117dc974f9d47405a4953a65c6e92434f52666b26e5a9bd",
+    "17_prime_hecke_correlation.md": "7e0ef53ee759bf47335107da7d344c067144660492fcdca97c652f92ea140d8b",
+    "18_averaged_determinant_attachment.md": "9d4d4bedbc07dde454e8ead7a776c37e8c79e596a8cd5dcf0504858561c34784",
+    "19_common_level_outer_variance.md": "25caf157345307e50b64e9e31b5540fb12d5da721306b1f5ed1e34c2f630cb1d",
+    "20_time_parameter_audit.md": "797b9016650a0c004b41596ad2e49e40a3250bb97ba37a3476fce484e83a5cc2",
+    "21_collective_cover_spectral_test.md": "498804b6a20c61cc6b84f48a74ff554a04092169ff5caab4d0aca17d477a3e65",
+    "22_reciprocal_prime_attachment_audit.md": "ee697ea0649aeea0347e582ed1f6fa91bb8de2d7f36fabeec8bd67cc15529196"
   },
   "files": [
     {
@@ -328,21 +434,57 @@
       "validation": "SOURCE_REVIEWED_ACTUAL_AVERAGED_ATTACHMENT_WITH_UNPAID_OUTER_SUM_NOT_LEAN"
     },
     {
+      "path": "19_common_level_outer_variance.md",
+      "sha256": "25caf157345307e50b64e9e31b5540fb12d5da721306b1f5ed1e34c2f630cb1d",
+      "bytes": 10938,
+      "validation": "SOURCE_REVIEWED_BOUNDED_COMMON_LEVEL_VARIANCE_TEST_ONLY_NOT_LEAN"
+    },
+    {
+      "path": "20_time_parameter_audit.md",
+      "sha256": "797b9016650a0c004b41596ad2e49e40a3250bb97ba37a3476fce484e83a5cc2",
+      "bytes": 24730,
+      "validation": "SOURCE_REVIEWED_BOUNDED_LOCAL_PARAMETER_AND_CONDITIONAL_CONSUMER_AUDIT_ONLY_NOT_LEAN"
+    },
+    {
+      "path": "21_collective_cover_spectral_test.md",
+      "sha256": "498804b6a20c61cc6b84f48a74ff554a04092169ff5caab4d0aca17d477a3e65",
+      "bytes": 19664,
+      "validation": "SOURCE_REVIEWED_BOUNDED_COLLECTIVE_COVER_AND_PROFILE_FLOOR_TEST_ONLY_NOT_LEAN"
+    },
+    {
+      "path": "22_reciprocal_prime_attachment_audit.md",
+      "sha256": "ee697ea0649aeea0347e582ed1f6fa91bb8de2d7f36fabeec8bd67cc15529196",
+      "bytes": 17184,
+      "validation": "SOURCE_REVIEWED_SMOOTH_RECIPROCAL_REPRESENTATION_AND_WEAK_BC_WRIGHT_LEDGER_ONLY_NOT_LEAN"
+    },
+    {
+      "path": "23_averaged_scalar_saddle.md",
+      "sha256": "47005330df4d0711556cdd81b35baf46d9e6294f6020caba36c505d8ea1d9261",
+      "bytes": 19236,
+      "validation": "SOURCE_REVIEWED_JOINT_UNTILTED_SCALAR_AND_NAMED_CONSUMER_INTERFACES_ONLY_NOT_LEAN"
+    },
+    {
+      "path": "24_symbolic_exceptional_gate.md",
+      "sha256": "5d63a2b50f918458ef9a9c3b99d1512a6f1583fe414b5b67f8e4ed3bec3010a7",
+      "bytes": 8087,
+      "validation": "SOURCE_REVIEWED_CONDITIONAL_SYMBOLIC_EXCEPTIONAL_GATE_ONLY_NOT_LEAN"
+    },
+    {
       "path": "README.md",
-      "sha256": "daa09279fa98cee15d1cfd36e041526004d451dd814331d0468c9b2af017359b",
-      "bytes": 19811,
+      "sha256": "978523a69fdb559b6a32fc05721056438a582c52883444f15fb18c2591a2498a",
+      "bytes": 26866,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "SOURCE_PINS.json",
-      "sha256": "e376aae76e5c38e2a2b3fe1b4c5752b8f8abba01af3df37591325192b8e0a361",
-      "bytes": 108274,
+      "sha256": "59fc30d125344a83ab226adeaa466f07c7435f33c14427456ecad6b34a33d3de",
+      "bytes": 144421,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/README.md",
-      "sha256": "7e1a93a3b608a933897f18b20a4530b87c4337ae428e60645af713ec9f9e7ddd",
-      "bytes": 11334,
+      "sha256": "a8cfcc5e6821d91b2b5baf7313347399542a1045bf770356c46a8c5642941611",
+      "bytes": 17461,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
@@ -368,6 +510,78 @@
       "sha256": "7e9690d3a78c8c807751de92cbdbec15be291c27f55132be85085b900081b3ee",
       "bytes": 1580,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/averaged_scalar_saddle/EXPECTED_CHECKS.json",
+      "sha256": "7794db3c40fd5e65117de135eeddedfe29d81da3f3ec75a0607c2965792f31c7",
+      "bytes": 4508,
+      "validation": "FINITE_DIAGNOSTIC_ONLY_NOT_ANALYTIC_OR_LEAN_CERTIFICATION"
+    },
+    {
+      "path": "diagnostics/averaged_scalar_saddle/EXPECTED_INDEPENDENT_CHECKS.json",
+      "sha256": "75d4592235aba4df24853e519a897ab5795efceff0c6595561ad63511c888778",
+      "bytes": 2526,
+      "validation": "FINITE_DIAGNOSTIC_ONLY_NOT_ANALYTIC_OR_LEAN_CERTIFICATION"
+    },
+    {
+      "path": "diagnostics/averaged_scalar_saddle/checks.py",
+      "sha256": "06da4f42ed6bd60da0b6349a050a2d0f433352bd7ea3f23acd33d3814bb2ac6c",
+      "bytes": 4007,
+      "validation": "FINITE_DIAGNOSTIC_ONLY_NOT_ANALYTIC_OR_LEAN_CERTIFICATION"
+    },
+    {
+      "path": "diagnostics/averaged_scalar_saddle/independent_checks.py",
+      "sha256": "c893197f9cbe55b5a287f8aa30f3b0ac5226680f0dd0cf9c2bc46c74636414be",
+      "bytes": 1734,
+      "validation": "FINITE_DIAGNOSTIC_ONLY_NOT_ANALYTIC_OR_LEAN_CERTIFICATION"
+    },
+    {
+      "path": "diagnostics/averaged_scalar_saddle_fixed_gap/EXPECTED_CHECKS.json",
+      "sha256": "d6ec3536a9110982db09cd653c7a4afdbc9814a212854fdcbb4e00aafc1d12dc",
+      "bytes": 159,
+      "validation": "FINITE_DIAGNOSTIC_ONLY_NOT_ANALYTIC_OR_LEAN_CERTIFICATION"
+    },
+    {
+      "path": "diagnostics/averaged_scalar_saddle_fixed_gap/checks.py",
+      "sha256": "e85376e06b994481dff61424ed162d3420ebf077212c6649c017d513813c1e9b",
+      "bytes": 1023,
+      "validation": "FINITE_DIAGNOSTIC_ONLY_NOT_ANALYTIC_OR_LEAN_CERTIFICATION"
+    },
+    {
+      "path": "diagnostics/collective_cover_spectral_test/EXPECTED_CHECKS.json",
+      "sha256": "17a04b3555439b3db4d719a52800da5b953791bace2f85b28383e55dbb85f1fa",
+      "bytes": 674,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
+    },
+    {
+      "path": "diagnostics/collective_cover_spectral_test/checks.py",
+      "sha256": "dc465bbaa6f6652343c17fc05788b49cdcbe1ef6d1742e75826f313e87e8caf0",
+      "bytes": 3312,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
+    },
+    {
+      "path": "diagnostics/common_level_outer_variance/EXPECTED_CHECKS.json",
+      "sha256": "c9a4806278d0260e01f6dd709e1ea54d679af03dea6251e742803b231c868faa",
+      "bytes": 211,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
+    },
+    {
+      "path": "diagnostics/common_level_outer_variance/EXPECTED_INDEPENDENT_CHECKS.json",
+      "sha256": "b36d268aa3a91373cc130b37491f884e47006f9b07a8af39d8887bc79e84cc56",
+      "bytes": 244,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
+    },
+    {
+      "path": "diagnostics/common_level_outer_variance/checks.py",
+      "sha256": "d83b604efeaab1a90d34076fdc7538d82eadb2758d4fe342002b8df1e7f6e505",
+      "bytes": 1878,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
+    },
+    {
+      "path": "diagnostics/common_level_outer_variance/independent_checks.py",
+      "sha256": "6ebc51f835c438a9973a312cb3b76186b4c2b65972c079216ee9aa084306670d",
+      "bytes": 1717,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
     },
     {
       "path": "diagnostics/four_branch_diagonals/EXPECTED_CHECKS.json",
@@ -478,6 +692,18 @@
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
+      "path": "diagnostics/reciprocal_prime_attachment_audit/EXPECTED_CHECKS.json",
+      "sha256": "bb1550fe84991cce92a541f145688ef6267998f9569a2115977dd4752a5fcdf8",
+      "bytes": 872,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
+    },
+    {
+      "path": "diagnostics/reciprocal_prime_attachment_audit/checks.py",
+      "sha256": "0a6ebb74b59d2bf46ffebd6b087c8240546a1e63bef57eb903fb7ce2082d48b6",
+      "bytes": 3644,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
+    },
+    {
       "path": "diagnostics/shifted_correlation_carrier_interface/EXPECTED_CHECKS.json",
       "sha256": "79a5cd46ba392c8e5e233842cdfc75de841eb223c6e4d4b2b4975a83ff4b67e5",
       "bytes": 1042,
@@ -562,6 +788,42 @@
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
+      "path": "diagnostics/symbolic_exceptional_gate/EXPECTED_INDEPENDENT_CHECKS.json",
+      "sha256": "2a349c31bbb8a5ea9712aced05db507d8e1b44249f34499a3086e720c9f97d1b",
+      "bytes": 314,
+      "validation": "FINITE_EXACT_RATIONAL_DIAGNOSTIC_ONLY_NOT_ANALYTIC_OR_LEAN_CERTIFICATION"
+    },
+    {
+      "path": "diagnostics/symbolic_exceptional_gate/independent_checks.py",
+      "sha256": "9b1660348bdc70fde50fa88c31f071afe126be9025afa29dc17b9d0fb165c3d0",
+      "bytes": 1317,
+      "validation": "FINITE_EXACT_RATIONAL_DIAGNOSTIC_ONLY_NOT_ANALYTIC_OR_LEAN_CERTIFICATION"
+    },
+    {
+      "path": "diagnostics/time_parameter_audit/EXPECTED_CHECKS.json",
+      "sha256": "903bd96945da4449a24fbecf66542a3c3582734ac6dba2080ee49d880d1ea3c3",
+      "bytes": 2688,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
+    },
+    {
+      "path": "diagnostics/time_parameter_audit/EXPECTED_INDEPENDENT_CHECKS.json",
+      "sha256": "11683890b5acd5f3e398782e174e655bc10e1c87afd2b0f0f358a35de8681a6d",
+      "bytes": 344,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
+    },
+    {
+      "path": "diagnostics/time_parameter_audit/checks.py",
+      "sha256": "df542d162a62295b003537ce5bdc3625ed19ea8b73ffc647d09012590aa768cc",
+      "bytes": 4724,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
+    },
+    {
+      "path": "diagnostics/time_parameter_audit/independent_checks.py",
+      "sha256": "0ea481857c758fd11ed7ef0fd272430fa3bb085d6cc492b7298e196cb1646e96",
+      "bytes": 580,
+      "validation": "SUPPORTING_FINITE_DIAGNOSTIC_NOT_LEAN"
+    },
+    {
       "path": "diagnostics/transformed_high_tail/EXPECTED_CHECKS.json",
       "sha256": "555bb313715e4be8fb6c30828631b5639dcbe866ae0a267bf82e865e5821207b",
       "bytes": 1063,
@@ -575,8 +837,8 @@
     },
     {
       "path": "verify_checkpoint.py",
-      "sha256": "8b2cd041578e69875f916b7d3d91284424b33a5e5fa21b6f65f1ec0db28142c5",
-      "bytes": 19677,
+      "sha256": "59a83167982d8c35d776c1dcf6fc590d719cff56305a9093ff3fc61b2dd54f1b",
+      "bytes": 32304,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     }
   ],
@@ -584,5 +846,6 @@
   "local_localization_checkpoint_commit": "b97672ee86a9ce91aeb8a3b1e5484720fb09dc24",
   "local_four_diagonal_checkpoint_commit": "c735324c4a320e6f72c6108a12e81bf0d6460f20",
   "local_carrier_checkpoint_commit": "ad3c3ada5153287b048f0902144c516d173127a4",
-  "local_finite_hecke_checkpoint_commit": "ecbcb14f880637f6e198ec784d9f77e1da9c6217"
+  "local_finite_hecke_checkpoint_commit": "ecbcb14f880637f6e198ec784d9f77e1da9c6217",
+  "previous_local_checkpoint_commit": "33c0f9a19e0ada842f14817fe5352256c3010b11"
 }

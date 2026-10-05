@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "Finite cover identities, sharp norm bookkeeping and exact exponent checks; no actual collective energy bound",
+  "counts": {
+    "cover_index": 5,
+    "counting_fibre_isometry": 5,
+    "right_coset_permutation": 50,
+    "optimal_direct_sum_Cauchy": 160,
+    "arbitrary_weight_cannot_improve": 160,
+    "actual_scale_equalities": 4,
+    "nonnegative_spectral_floor": 6
+  },
+  "total_checks": 390,
+  "maximum_absolute_errors": {
+    "cover_index": 0,
+    "counting_fibre_isometry": 0,
+    "right_coset_permutation": 0,
+    "optimal_direct_sum_Cauchy": 1.4210854715202004e-14,
+    "nonnegative_spectral_floor": 0
+  },
+  "strict_gap": "OPEN"
+}

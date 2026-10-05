@@ -1,0 +1,168 @@
+{
+  "FFT_values_are_not_rigorous_error_certificates": true,
+  "Jacobian_and_carrier_normalization": {
+    "cases": 45,
+    "status": "PASS"
+  },
+  "divisor_sampling_hyperbola_input": {
+    "cases": 27,
+    "status": "PASS"
+  },
+  "finite_diagnostics_only": true,
+  "local_interface_integer_pairs": {
+    "conditional_refined_phase_gap": [
+      237,
+      123
+    ],
+    "not_global_parameter_theorems": true,
+    "status": "PASS",
+    "unchanged_phase_gap": [
+      247,
+      128
+    ]
+  },
+  "one_sided_exponential_contour_signs": {
+    "cases": 56,
+    "status": "PASS"
+  },
+  "principal_scalar_log_budget": "p L^2 B^11 = p L^101",
+  "rescaled_Fourier_and_H1_samples": {
+    "cases": 16,
+    "rows": [
+      {
+        "Fourier_L1_over_epsilon": 0.4600439485729158,
+        "H1_over_epsilon": 0.9625292807130785,
+        "T": 0.0,
+        "W": 2.0,
+        "spectral_real_H1_difference": 1.1102230246251565e-16,
+        "tau": 0.0
+      },
+      {
+        "Fourier_L1_over_epsilon": 0.4539534724807775,
+        "H1_over_epsilon": 0.9737989686306416,
+        "T": 0.4,
+        "W": 2.0,
+        "spectral_real_H1_difference": 0.0,
+        "tau": 0.1
+      },
+      {
+        "Fourier_L1_over_epsilon": 0.8589949732977906,
+        "H1_over_epsilon": 1.8521437079791936,
+        "T": 2.0,
+        "W": 2.0,
+        "spectral_real_H1_difference": 0.0,
+        "tau": 0.5
+      },
+      {
+        "Fourier_L1_over_epsilon": 1.0484883361282356,
+        "H1_over_epsilon": 2.520009687577868,
+        "T": 4.0,
+        "W": 2.0,
+        "spectral_real_H1_difference": 4.440892098500626e-16,
+        "tau": 1.0
+      },
+      {
+        "Fourier_L1_over_epsilon": 0.42674279342964994,
+        "H1_over_epsilon": 0.9057935710656213,
+        "T": 0.0,
+        "W": 4.0,
+        "spectral_real_H1_difference": 2.7755575615628914e-17,
+        "tau": 0.0
+      },
+      {
+        "Fourier_L1_over_epsilon": 0.5090500214004031,
+        "H1_over_epsilon": 1.0666152441991372,
+        "T": 1.6,
+        "W": 4.0,
+        "spectral_real_H1_difference": 5.551115123125783e-17,
+        "tau": 0.1
+      },
+      {
+        "Fourier_L1_over_epsilon": 1.1074602210758027,
+        "H1_over_epsilon": 2.275992198750268,
+        "T": 8.0,
+        "W": 4.0,
+        "spectral_real_H1_difference": 0.0,
+        "tau": 0.5
+      },
+      {
+        "Fourier_L1_over_epsilon": 1.240052992029206,
+        "H1_over_epsilon": 2.8864101941384996,
+        "T": 16.0,
+        "W": 4.0,
+        "spectral_real_H1_difference": 4.440892098500626e-16,
+        "tau": 1.0
+      },
+      {
+        "Fourier_L1_over_epsilon": 0.4178351998942448,
+        "H1_over_epsilon": 0.8903424326169661,
+        "T": 0.0,
+        "W": 8.0,
+        "spectral_real_H1_difference": 0.0,
+        "tau": 0.0
+      },
+      {
+        "Fourier_L1_over_epsilon": 0.7053407500875758,
+        "H1_over_epsilon": 1.3646207694909647,
+        "T": 6.4,
+        "W": 8.0,
+        "spectral_real_H1_difference": 0.0,
+        "tau": 0.1
+      },
+      {
+        "Fourier_L1_over_epsilon": 1.3180542027943383,
+        "H1_over_epsilon": 2.6726580448651314,
+        "T": 32.0,
+        "W": 8.0,
+        "spectral_real_H1_difference": 2.220446049250313e-16,
+        "tau": 0.5
+      },
+      {
+        "Fourier_L1_over_epsilon": 1.372854355447828,
+        "H1_over_epsilon": 3.1696670732639576,
+        "T": 64.0,
+        "W": 8.0,
+        "spectral_real_H1_difference": 4.440892098500626e-16,
+        "tau": 1.0
+      },
+      {
+        "Fourier_L1_over_epsilon": 0.41576263222880616,
+        "H1_over_epsilon": 0.8863831688014825,
+        "T": 0.0,
+        "W": 16.0,
+        "spectral_real_H1_difference": 6.938893903907228e-18,
+        "tau": 0.0
+      },
+      {
+        "Fourier_L1_over_epsilon": 0.9564049307380643,
+        "H1_over_epsilon": 1.7765786458840587,
+        "T": 25.6,
+        "W": 16.0,
+        "spectral_real_H1_difference": 1.1102230246251565e-16,
+        "tau": 0.1
+      },
+      {
+        "Fourier_L1_over_epsilon": 1.461500542054649,
+        "H1_over_epsilon": 2.9533140680479986,
+        "T": 128.0,
+        "W": 16.0,
+        "spectral_real_H1_difference": 0.0,
+        "tau": 0.5
+      },
+      {
+        "Fourier_L1_over_epsilon": 1.4522952279101655,
+        "H1_over_epsilon": 3.346252944662509,
+        "T": 256.0,
+        "W": 16.0,
+        "spectral_real_H1_difference": 0.0,
+        "tau": 1.0
+      }
+    ],
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "v_minus_one_derivative_tail_envelopes": {
+    "cases": 36,
+    "status": "PASS"
+  }
+}

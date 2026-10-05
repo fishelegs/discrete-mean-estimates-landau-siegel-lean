@@ -1,0 +1,105 @@
+{
+  "FFT_is_not_a_rigorous_certificate": true,
+  "altered_global_theorem": false,
+  "fixed_gap_contour_cases": 60,
+  "frequency_grid_cases": [
+    {
+      "W": 2.5,
+      "l1_over_epsilon": 0.444907095884562,
+      "tau": 0.0,
+      "weighted_l1_over_epsilon": 0.6202495619585888
+    },
+    {
+      "W": 2.5,
+      "l1_over_epsilon": 0.4249337138563805,
+      "tau": 0.03,
+      "weighted_l1_over_epsilon": 0.5903534179813484
+    },
+    {
+      "W": 2.5,
+      "l1_over_epsilon": 0.7402906811055394,
+      "tau": 0.3,
+      "weighted_l1_over_epsilon": 1.021542579583146
+    },
+    {
+      "W": 2.5,
+      "l1_over_epsilon": 1.102601552144375,
+      "tau": 0.9,
+      "weighted_l1_over_epsilon": 1.8142773775259347
+    },
+    {
+      "W": 6.0,
+      "l1_over_epsilon": 0.42008406082049027,
+      "tau": 0.0,
+      "weighted_l1_over_epsilon": 0.568465797187697
+    },
+    {
+      "W": 6.0,
+      "l1_over_epsilon": 0.40796615854637974,
+      "tau": 0.03,
+      "weighted_l1_over_epsilon": 0.5408475700570922
+    },
+    {
+      "W": 6.0,
+      "l1_over_epsilon": 1.0511683151712288,
+      "tau": 0.3,
+      "weighted_l1_over_epsilon": 1.3986569297176967
+    },
+    {
+      "W": 6.0,
+      "l1_over_epsilon": 1.3291552020383937,
+      "tau": 0.9,
+      "weighted_l1_over_epsilon": 2.1219490199917486
+    },
+    {
+      "W": 12.0,
+      "l1_over_epsilon": 0.4162987927008677,
+      "tau": 0.0,
+      "weighted_l1_over_epsilon": 0.5610525488918443
+    },
+    {
+      "W": 12.0,
+      "l1_over_epsilon": 0.4699257812882602,
+      "tau": 0.03,
+      "weighted_l1_over_epsilon": 0.6029423097364571
+    },
+    {
+      "W": 12.0,
+      "l1_over_epsilon": 1.2675211475443044,
+      "tau": 0.3,
+      "weighted_l1_over_epsilon": 1.6762418820645724
+    },
+    {
+      "W": 12.0,
+      "l1_over_epsilon": 1.439313842248975,
+      "tau": 0.9,
+      "weighted_l1_over_epsilon": 2.2870733940091403
+    },
+    {
+      "W": 24.0,
+      "l1_over_epsilon": 0.4153901948488244,
+      "tau": 0.0,
+      "weighted_l1_over_epsilon": 0.55931419484521
+    },
+    {
+      "W": 24.0,
+      "l1_over_epsilon": 0.6545976611312824,
+      "tau": 0.03,
+      "weighted_l1_over_epsilon": 0.8280235082276853
+    },
+    {
+      "W": 24.0,
+      "l1_over_epsilon": 1.418680288642907,
+      "tau": 0.3,
+      "weighted_l1_over_epsilon": 1.8732524830178428
+    },
+    {
+      "W": 24.0,
+      "l1_over_epsilon": 1.5023533485777574,
+      "tau": 0.9,
+      "weighted_l1_over_epsilon": 2.384456729596022
+    }
+  ],
+  "status": "PASS",
+  "tilted_kernel_proved": false
+}

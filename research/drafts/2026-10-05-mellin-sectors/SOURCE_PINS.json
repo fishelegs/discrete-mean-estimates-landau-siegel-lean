@@ -2127,6 +2127,692 @@
           "bytes": 2452
         }
       ]
+    },
+    {
+      "id": "common_level_outer_variance",
+      "publication_document": "19_common_level_outer_variance.md",
+      "original_mathematical_source": {
+        "sha256": "30256480e5125286eff769114786eabc0eedd0e27f2ec26efc2249b10e41a659",
+        "bytes": 7805
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "d7bb392656bd271eb9503ca38a38b8e1388e38cb6cf12e0468af6f0dadf86f46",
+        "bytes": 822
+      },
+      "mandatory_scope_addendum_identity": {
+        "sha256": "9085e2495c97464356b0c50d56d8e184aabe76ddcebe216bdc24381ffb730e29",
+        "bytes": 1249
+      },
+      "scope_addendum_manifest_identity": {
+        "sha256": "bfa15441e530c19d0d1a8454a27276ce6a0e0a5ac1cfb7cc54a227eeecd96713",
+        "bytes": 186
+      },
+      "independent_review_identity": {
+        "sha256": "542aafec1f63c1c6134f431f5ef2868fc84ae0fa2dff8f7c4f441c5230fc016a",
+        "bytes": 7742
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "29f63a5c6fd7c8865ef47c8d6cd2b789c5b3c09d4054bd8c6780a4d23bf9c373",
+        "bytes": 866
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "73b8a4a777098ddc50ad369f43fa3faf395e40d1c496a626afdfa1803c1aded5",
+        "bytes": 834
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "7e7f9788978cb2e40e5450f5629408bf9e5add756c74ec71c882e873bf18e124",
+        "bytes": 2670
+      },
+      "original_diagnostic_script": {
+        "sha256": "d83b604efeaab1a90d34076fdc7538d82eadb2758d4fe342002b8df1e7f6e505",
+        "bytes": 1878
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "c9a4806278d0260e01f6dd709e1ea54d679af03dea6251e742803b231c868faa",
+        "bytes": 211
+      },
+      "independent_diagnostic_source_identity": {
+        "sha256": "6e828985e815542f23486a52b330e5967a847e1bc00a4ccf8dba85d8c8c293b1",
+        "bytes": 2853
+      },
+      "independent_diagnostic_result_identity": {
+        "sha256": "aa6223e2213bf8cda1fec44298799e8443b02008167233c34756f378545a7013",
+        "bytes": 3012
+      },
+      "publication_independent_diagnostic_script": {
+        "sha256": "6ebc51f835c438a9973a312cb3b76186b4c2b65972c079216ee9aa084306670d",
+        "bytes": 1717
+      },
+      "publication_independent_diagnostic_expected_result": {
+        "sha256": "b36d268aa3a91373cc130b37491f884e47006f9b07a8af39d8887bc79e84cc56",
+        "bytes": 244
+      },
+      "status": "SOURCE_REVIEWED_BOUNDED_COMMON_LEVEL_VARIANCE_TEST_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "publication_editing": "Full original mathematical sections retained with mandatory GM (10.2)-only scope, Z slack and group terminology integrated at affected claims and overview; status and references sanitized; positive finite-set size and common-multiple terminology made explicit",
+      "diagnostic_derivation": "Author script and expected output byte-exact. Independent mathematical block byte-exact; source paths, source-check plumbing and raw operational metadata excluded from portable diagnostic.",
+      "diagnostic_replay": "AUTHOR_BYTE_EQUAL_AND_PORTABLE_INDEPENDENT_BYTE_EQUAL_WITH_PINNED_MATHEMATICAL_FIELDS",
+      "claims": [
+        "Exact CRT linear mean zero and complex orbit-variance identity for the specified intersection subgroup",
+        "Equal-prime plus/minus identity terms lower-bound explicit GM (10.2) correlation expression",
+        "Conditional finite balanced-prime-set orbit mass at least constant times phi(D)T^(n-1)"
+      ],
+      "limitations": [
+        "Any inferred K_+ bound retains Z^O(eta) slack",
+        "No lower bound for general GM Theorem 7.1 kernel-weighted K_alpha, total-error budget, covariance or actual middle energy",
+        "Compensating R_beta estimates and different collective representations remain possible",
+        "Coarser level means larger invariance group; intersection subgroup preserves divisibilities",
+        "No complete common-smooth-weight collective application, middle estimate, universal impossibility theorem or new Lean certificate"
+      ],
+      "selected_upstream_identities": [
+        {
+          "role": "Versioned primary GM paper; not redistributed",
+          "sha256": "47c8a8c41f4c0eb7039769179db89a179781b8ae3dc589d24c0749b6c4cd41e4",
+          "bytes": 635541
+        },
+        {
+          "role": "Accepted finite prime-Hecke interface",
+          "sha256": "5d34d9880ee28db8413bfc925c98bb8538e04eaafde86e1d39e279a5790a24c3",
+          "bytes": 749
+        }
+      ],
+      "author_source_pins_identity": {
+        "sha256": "074f13f08a2d4099301f02319ca2fe8baae91c028050a37f2141b9b5e5f26f49",
+        "bytes": 448
+      },
+      "author_result_statement_identity": {
+        "sha256": "cd7fcf92746070f7d4b2d947311e9b57ea4608edba9bed81712d8bed62a3268c",
+        "bytes": 377
+      }
+    },
+    {
+      "id": "time_parameter_audit",
+      "publication_document": "20_time_parameter_audit.md",
+      "original_mathematical_source": {
+        "sha256": "590e0befd1fd605285acd39dd2257cf31846136ba2ac46968e70e21fb35e84f8",
+        "bytes": 22327
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "97235fcb86306fc88fd87b79abb8843370224fd3eac1cfc075dbb71bd5097650",
+        "bytes": 2709
+      },
+      "author_result_statement_identity": {
+        "sha256": "013154cddf883a1867be19768d467c76e6ad94b0966982b4433587c9dc6df834",
+        "bytes": 1547
+      },
+      "author_source_pins_identity": {
+        "sha256": "13048e9d5d2c3ddaa5dc2106aa8daa4037969c0b80dca2f9a37c7ee84fd26db7",
+        "bytes": 4647
+      },
+      "primary_source_index_identity": {
+        "sha256": "984c2471b5ad2f0c091786dc409d41d81b2bf54f884725cba3817003871ace41",
+        "bytes": 1975
+      },
+      "independent_review_identity": {
+        "sha256": "793aefc52a71877a1022591bb7bc55fe2f97e39f7d0e71caa34c1ed1ecd8ae39",
+        "bytes": 5596
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "ade03ad4c2cb7c88e335fc36ef00ebec5513eb2ab0d02ba651f9c2df3026575f",
+        "bytes": 1060
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "bbb848ccada1a83f19028bff44c01c0625dd88a82db0ab40ee1f223f8794413d",
+        "bytes": 591
+      },
+      "review_source_pins_identity": {
+        "sha256": "97531aaada44a0d4d665732e42488e3734488c5b08e2afd646ebf28cbd07d7d2",
+        "bytes": 1143
+      },
+      "original_diagnostic_script": {
+        "sha256": "df542d162a62295b003537ce5bdc3625ed19ea8b73ffc647d09012590aa768cc",
+        "bytes": 4724
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "903bd96945da4449a24fbecf66542a3c3582734ac6dba2080ee49d880d1ea3c3",
+        "bytes": 2688
+      },
+      "independent_finite_result_identity": {
+        "sha256": "11683890b5acd5f3e398782e174e655bc10e1c87afd2b0f0f358a35de8681a6d",
+        "bytes": 344
+      },
+      "publication_independent_diagnostic_script": {
+        "sha256": "0ea481857c758fd11ed7ef0fd272430fa3bb085d6cc492b7298e196cb1646e96",
+        "bytes": 580
+      },
+      "publication_independent_diagnostic_expected_result": {
+        "sha256": "11683890b5acd5f3e398782e174e655bc10e1c87afd2b0f0f358a35de8681a6d",
+        "bytes": 344
+      },
+      "status": "SOURCE_REVIEWED_BOUNDED_LOCAL_PARAMETER_AND_CONDITIONAL_CONSUMER_AUDIT_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "independent_source_review_count": 1,
+      "publication_editing": "Full numbered mathematical sections retained; status and provenance sentences sanitized; primary links and narrow verification boundary added. No alternative exponents are applied to old theorems.",
+      "diagnostic_derivation": "Author script/output byte-exact. Portable independent arithmetic enumeration reconstructs the pinned result on 1<=a,b<=600 from the two displayed constraints; no unpublished independent script is claimed.",
+      "claims": [
+        "Local vertical FE freeze with displacement retained and sufficient common-Pt0 gate a>=max(b+73,88)",
+        "Hard-window residue-consumer exponent 118+b-a and conditional Gaussian exponent 113+b-a; fresh positive moments in conservative range, new good-family ratio still required",
+        "Full untilted scalar-saddle constraint ledger and local Mellin normalization",
+        "Integrated matched same-branch gamma growth and exact parity-only q and second-difference r identities",
+        "Prospective parameter budgets and two-constraint minima, not globally admissible replacements"
+      ],
+      "limitations": [
+        "Original parameters, A2022 and target exponent 2024 remain unchanged",
+        "No new good-character/zero-gap theorem or new-family ratio bound",
+        "No phase-tilted mean formulas or positivity of a changed complex kernel",
+        "Section-13 discrete weighted errors and Section-15/17 consumers remain unpaid",
+        "No unmatched chirped-cross estimate, signed main term, lower-height global theorem or original strict-gap conclusion",
+        "No separate scalar Fourier-L1 result included; no new Lean theorem"
+      ],
+      "selected_upstream_identities": [
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "3a9df5d600c48111952bc66903d9df749d78ae3595cb5e72dbe17130628f441c",
+          "bytes": 25536
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "dc8060539d5c576f9affe3cae20fc123cf089304b744ee7ca2c78d1354d816e6",
+          "bytes": 1402
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "f8c98ad63360965080b85d6b43f69a8d2e7a6feffc440c7099aabb82cce115c6",
+          "bytes": 17100
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "b105aee60c54cb730e8f43d805588f47e0ec8bd7db58edb3d22d4bdfcab589c4",
+          "bytes": 1557
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "c4db7d805a74711e00d9e87629d77f767f6a9e151a7f0d435e6c0b35871b0626",
+          "bytes": 13967
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "655e661b26a8687a3c793af80b82dc606de5dc7ea6850472eff767893b3b40b9",
+          "bytes": 1401
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "3f58296591df9cadd06c80d3e72b2fa45a74b7e61ee5d803751037064ee75be3",
+          "bytes": 17947
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "b6deaac5d79c1e7d490dbc44fed496cb4fa4a6fdb43b46ba540b6ece3f869c88",
+          "bytes": 1609
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "79832914057edfd2ee5ec6ad492131ec54ecbe68973dc5bd09732fea16904ebb",
+          "bytes": 14181
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "a89e788412a2712e597748840ed9b4061b38bec6260282b54c21bd98c0aa8c55",
+          "bytes": 1594
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "c3b456d9724a066d263ce5bfb70a4f6b1a68ca402ddc9640c05ab2abc5556e61",
+          "bytes": 2088
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d",
+          "bytes": 3829
+        },
+        {
+          "role": "Selected accepted original-parameter interface; not redistributed",
+          "sha256": "076822db84207e7ce2103732fff1151a9e7e2552d52b9c38b7c4eedc0867e94d",
+          "bytes": 2456
+        }
+      ],
+      "finished_snapshot_manifest_identity": {
+        "sha256": "6f9678cf1235865ab7a053e47f58121d6f5e3be49ea3cf47b419af5fe48e1a31",
+        "bytes": 8204
+      }
+    },
+    {
+      "id": "collective_cover_spectral_test",
+      "publication_document": "21_collective_cover_spectral_test.md",
+      "original_mathematical_source": {
+        "sha256": "91b9c8f21f6ab446a9b63463cd0d63fca4f407cfb835a592e96a0a0f6cc300f0",
+        "bytes": 16901
+      },
+      "author_result_statement_identity": {
+        "sha256": "280e78bbba482bbb58c03bfaa21185a9a4ced8132cc987dd6b231f7128464543",
+        "bytes": 1872
+      },
+      "author_source_pins_identity": {
+        "sha256": "59c0eb55a0b4ce5e6cff59e4a7c228b4a24c79ebadf19cb86e5c7fd5f077f416",
+        "bytes": 1848
+      },
+      "independent_review_identity": {
+        "sha256": "1fe764ded462cbb2cfe6749266cfa9d2f07fa20daf29ab9771a61836f1980d78",
+        "bytes": 6268
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "9b549acaa4970877cc1ed72eefce596feccebc6b762fcbea9e46e5b8b78b3ed1",
+        "bytes": 681
+      },
+      "original_diagnostic_script": {
+        "sha256": "dc465bbaa6f6652343c17fc05788b49cdcbe1ef6d1742e75826f313e87e8caf0",
+        "bytes": 3312
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "17a04b3555439b3db4d719a52800da5b953791bace2f85b28383e55dbb85f1fa",
+        "bytes": 674
+      },
+      "status": "SOURCE_REVIEWED_BOUNDED_COLLECTIVE_COVER_AND_PROFILE_FLOOR_TEST_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "independent_source_review_count": 1,
+      "publication_editing": "Full mathematical argument retained with sanitized operational provenance and integrated acceptance-scope qualifications; primary links added; common-product coprimality and unpaid h complements are explicit, and the profile floor is conditional before its affected claim",
+      "diagnostic_derivation": "Original user-owned mathematical script and expected output byte-exact; publication script filename standardized to checks.py; independently reviewed and replayed, without claiming a second diagnostic author",
+      "claims": [
+        "Exact finite induced common-base representation and counting-fibre isometry",
+        "Optimal positive-weight direct-sum Cauchy certificate equals the component L1 sum",
+        "Homogeneous spectral comparison derived from pointwise Hecke bounds and the singleton level average",
+        "Exact R_beta floor with each actual l1 norm retained; H-scale consequence conditional on profile lower bounds"
+      ],
+      "limitations": [
+        "No scalar common-group hypothesis is inferred from the vector-valued cover",
+        "Equation (13c) is a favorable hypothetical comparison only",
+        "No uniform H-scale floor under arbitrary changed profiles or coprimality masks",
+        "No lower bound for true spectral error, actual covariance or middle energy",
+        "No new collective saving, middle estimate, universal impossibility or Lean theorem",
+        "Every common-product-level specialization retains gcd(h,p q1D)=1; extra excluded h sectors are separately UNPAID",
+        "Conditional profile l1 lower bounds are not established for the actual level-dependent masked family"
+      ],
+      "selected_upstream_identities": [
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "3f58296591df9cadd06c80d3e72b2fa45a74b7e61ee5d803751037064ee75be3",
+          "bytes": 17947
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "076822db84207e7ce2103732fff1151a9e7e2552d52b9c38b7c4eedc0867e94d",
+          "bytes": 2456
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "30256480e5125286eff769114786eabc0eedd0e27f2ec26efc2249b10e41a659",
+          "bytes": 7805
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "cd7fcf92746070f7d4b2d947311e9b57ea4608edba9bed81712d8bed62a3268c",
+          "bytes": 377
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "9085e2495c97464356b0c50d56d8e184aabe76ddcebe216bdc24381ffb730e29",
+          "bytes": 1249
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "542aafec1f63c1c6134f431f5ef2868fc84ae0fa2dff8f7c4f441c5230fc016a",
+          "bytes": 7742
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "d317ca0374e4e8ebfd3a8fcb4737bde5a3f3df0f0e3596f715d1bdbdd1f18b44",
+          "bytes": 4404
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "47c8a8c41f4c0eb7039769179db89a179781b8ae3dc589d24c0749b6c4cd41e4",
+          "bytes": 635541
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "f3f97a3bad9a28f551211c1fda0c51798311230d3b2f8295aefbed7a4cedfa87",
+          "bytes": 251531
+        }
+      ]
+    },
+    {
+      "id": "reciprocal_prime_attachment_audit",
+      "publication_document": "22_reciprocal_prime_attachment_audit.md",
+      "original_mathematical_source": {
+        "sha256": "e1b25b20c4dfee3b9b3f198d7995a55c6302ccf45d5cfb69d88a94b2d279f46a",
+        "bytes": 15513
+      },
+      "author_result_statement_identity": {
+        "sha256": "9d650735462b22ed385af66427b9cd6e8a57c888a55f17ac6835a20ec9317598",
+        "bytes": 1901
+      },
+      "author_source_pins_identity": {
+        "sha256": "0e2b5621505e5ca6f4149e0c84435e9adc64e3e678ce87911d7e879b050968ff",
+        "bytes": 1561
+      },
+      "independent_review_identity": {
+        "sha256": "855c7b86f860b458c5154129f5c7075eb32056037e46c186c28c64de12378a9f",
+        "bytes": 5719
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "2dc884f0099d1ef931f3d08c8c9908904879356ac58d558231dc8e507a4a8351",
+        "bytes": 835
+      },
+      "original_diagnostic_script": {
+        "sha256": "0a6ebb74b59d2bf46ffebd6b087c8240546a1e63bef57eb903fb7ce2082d48b6",
+        "bytes": 3644
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "bb1550fe84991cce92a541f145688ef6267998f9569a2115977dd4752a5fcdf8",
+        "bytes": 872
+      },
+      "status": "SOURCE_REVIEWED_SMOOTH_RECIPROCAL_REPRESENTATION_AND_WEAK_BC_WRIGHT_LEDGER_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "independent_source_review_count": 1,
+      "publication_editing": "Full mathematical argument retained with sanitized operational provenance and integrated acceptance-scope qualifications; primary links added",
+      "diagnostic_derivation": "Original user-owned mathematical script and expected output byte-exact; publication script filename standardized to checks.py; independently reviewed and replayed, without claiming a second diagnostic author",
+      "claims": [
+        "Exact smooth-cell finite-inverse factor opening and projected Poisson identity",
+        "Exact restricted principal zero-mode centering, equality subtraction and explicit unit-alias correction",
+        "Exact reciprocal-prime representation with actual carrier and proved smooth-cell Fourier separation",
+        "Weak direct BC bound with dominant P exponent 27/8 and bounded tests of two Wright refinements against the existing conductor-loss benchmark"
+      ],
+      "limitations": [
+        "Only the specified smooth balanced cell; surrounding cells and sharp-boundary complements retained",
+        "Zero residual is not paid below64; p-divisible alias correction is explicit and still too large",
+        "No use of a Siegel-Walfisz convolution corollary for the actual coefficients",
+        "No independent gain from artificial subinterval partition without recombination cost",
+        "No actual lower bound, universal impossibility, full middle estimate, new spectral saving or Lean theorem"
+      ],
+      "selected_upstream_identities": [
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "fae77897f099320f55aa06fc6f3bfeff23c7fdb4d5633f3373f9ba991ee3bab4",
+          "bytes": 17395
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "0938ce9d6465f5f652df0a1a59dcde7df61e665849a0b52cdf61d6aed571deaa",
+          "bytes": 2182
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "c4db7d805a74711e00d9e87629d77f767f6a9e151a7f0d435e6c0b35871b0626",
+          "bytes": 13967
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "a2c8ff57f84b57a2c3cfee2254e08a78e6c62b01902be5a597ef07069781232a",
+          "bytes": 2452
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "3f58296591df9cadd06c80d3e72b2fa45a74b7e61ee5d803751037064ee75be3",
+          "bytes": 17947
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "076822db84207e7ce2103732fff1151a9e7e2552d52b9c38b7c4eedc0867e94d",
+          "bytes": 2456
+        },
+        {
+          "role": "Selected accepted mathematical interface; not redistributed",
+          "sha256": "91b9c8f21f6ab446a9b63463cd0d63fca4f407cfb835a592e96a0a0f6cc300f0",
+          "bytes": 16901
+        }
+      ],
+      "frozen_author_manifest_identity": {
+        "sha256": "75de77cf21e052f6777a99d05b9511d5bff2fcf511329949efd95e32b36a72a5",
+        "bytes": 1994
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "9f941c0c50001c88b22920660622d38d9012fcc4d71e8efc3edbf9089121fc3e",
+        "bytes": 1057
+      },
+      "finished_snapshot_manifest_identity": {
+        "sha256": "a522de8f4f682a38d1638274e23120677ef2f41ac72dd5d6196f832baf40ad9a",
+        "bytes": 6909
+      },
+      "independent_finite_result_identity": {
+        "sha256": "4dd335c80d33b2b1957164854c42ec4256df1b50e5de7671159d5622ed62492d",
+        "bytes": 151
+      }
+    },
+    {
+      "id": "averaged_scalar_saddle",
+      "publication_document": "23_averaged_scalar_saddle.md",
+      "original_mathematical_source": {
+        "sha256": "f1734577f68fc45b50e559ed67b0398d4221d375e6a8867c249a20ae1ed7b895",
+        "bytes": 14990
+      },
+      "author_result_statement_identity": {
+        "sha256": "38a0091056dd2b2cb01e67cf8a759e1badc335eb6bc268b79fc3a4d8283d3c8a",
+        "bytes": 1002
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "e3318e12b843bec33e2f67225fe0b34779d0e7cc41d437ce9d07669345a43d38",
+        "bytes": 1592
+      },
+      "author_source_pins_identity": {
+        "sha256": "15645ef55399ad11f4d38708ea182aa3a2f76c711e7b7b3a8615dda64e346ed4",
+        "bytes": 2823
+      },
+      "mandatory_fixed_gap_addendum_identity": {
+        "sha256": "b76584a68e6673a5694472e04c7f66c4f47a50dba1860cd56ce7dec3b35b2fbe",
+        "bytes": 2326
+      },
+      "mandatory_fixed_gap_manifest_identity": {
+        "sha256": "be7830c5729371065080bdad2ea11330da148c563b68352d0718fb94feb8a455",
+        "bytes": 1158
+      },
+      "independent_review_identity": {
+        "sha256": "724180ca5c279bd59921a5cad77a06a1349ced8ded21619e19c0d988d6a434fd",
+        "bytes": 9217
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "4f9ee01a080a0004e42c08dd37efb7d36885c3eb1bb551c0db061d151b457f9e",
+        "bytes": 857
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "e8131c3135338ed719646c520ad01cb0d3e526e80b951601669bc7dd8a0859c6",
+        "bytes": 838
+      },
+      "finished_snapshot_manifest_identity": {
+        "sha256": "ed2dc8d99eae57cdffd654fd37a71687827e6db0130d55d8c227a9e882b8223a",
+        "bytes": 7827
+      },
+      "original_diagnostic_script": {
+        "sha256": "06da4f42ed6bd60da0b6349a050a2d0f433352bd7ea3f23acd33d3814bb2ac6c",
+        "bytes": 4007
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "7794db3c40fd5e65117de135eeddedfe29d81da3f3ec75a0607c2965792f31c7",
+        "bytes": 4508
+      },
+      "fixed_gap_diagnostic_script": {
+        "sha256": "e85376e06b994481dff61424ed162d3420ebf077212c6649c017d513813c1e9b",
+        "bytes": 1023
+      },
+      "fixed_gap_diagnostic_expected_result": {
+        "sha256": "d6ec3536a9110982db09cd653c7a4afdbc9814a212854fdcbb4e00aafc1d12dc",
+        "bytes": 159
+      },
+      "original_independent_diagnostic_script_identity": {
+        "sha256": "32dc1f7e638ae2e2740d672582e3dc54f898c81c96cacac99a5f4c4e81db42e7",
+        "bytes": 2938
+      },
+      "original_independent_diagnostic_expected_result_identity": {
+        "sha256": "55392aafc562fa89b1b7afe4b52d516595ca1b63dadf33a71affdcba0ea588ee",
+        "bytes": 9750
+      },
+      "publication_independent_diagnostic_script": {
+        "sha256": "c893197f9cbe55b5a287f8aa30f3b0ac5226680f0dd0cf9c2bc46c74636414be",
+        "bytes": 1734
+      },
+      "publication_independent_diagnostic_expected_result": {
+        "sha256": "75d4592235aba4df24853e519a897ab5795efceff0c6595561ad63511c888778",
+        "bytes": 2526
+      },
+      "status": "SOURCE_REVIEWED_JOINT_UNTILTED_SCALAR_AND_NAMED_CONSUMER_INTERFACES_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "independent_source_review_count": 1,
+      "publication_editing": "Full original mathematics retained; operational context sanitized, mandatory fixed-gap clarification integrated as Section 5.1 and cited at the literal primary consumer, primary links added",
+      "diagnostic_derivation": "Both original author scripts and expected outputs byte-exact; portable independent extraction retains exact mathematical block and result fields without source paths or operational labels",
+      "claims": [
+        "Exact untilted scalar Fourier normalization, Jacobian and smooth zero extension at v=-1",
+        "Uniform weighted derivative Fourier-L1 and Schwartz bounds for W>=2 and 0<=T/W^2<=1",
+        "Near-one Mellin normalization and fixed-strip decay under stated local parameter inequalities",
+        "Fixed-gap exponential localization including the literal primary I(Rh) upper edge below 2T",
+        "Separate divisor sampling and named principal/p-unit consumers at exact displayed normalizations"
+      ],
+      "limitations": [
+        "The report and mandatory fixed-gap addendum are accepted jointly only",
+        "No relative positivity, arbitrary tilted-kernel theorem, altered global parameter theorem or new good family",
+        "No omitted outer Gauss factor paid by the displayed S(1,D;p) bound",
+        "No arbitrary coefficient-weighted discrete estimate follows from continuous L1 alone",
+        "Illustrative integer pairs are local conditional ledgers only",
+        "Actual middle estimate, balanced energy and final strict gap remain open; no new Lean certificate"
+      ],
+      "selected_upstream_identities": [
+        {
+          "role": "Exact newly inspected original primary bytes; mathematical time-audit acceptance is not assumed",
+          "sha256": "4e38ecfe1a6d3a93494e2f5cc5a3336c33b9d0981e8d5ccfcd8d8dec3e5ab713",
+          "bytes": 591861
+        },
+        {
+          "role": "Exact newly inspected original primary bytes; mathematical time-audit acceptance is not assumed",
+          "sha256": "1c4da83c97adda72d91b97ace9718ae64637e0fa43d40a689679707711953508",
+          "bytes": 333087
+        },
+        {
+          "role": "Exact newly inspected original primary bytes; mathematical time-audit acceptance is not assumed",
+          "sha256": "984c2471b5ad2f0c091786dc409d41d81b2bf54f884725cba3817003871ace41",
+          "bytes": 1975
+        },
+        {
+          "role": "Whole source packet validated before selected bytes were pinned",
+          "sha256": "97235fcb86306fc88fd87b79abb8843370224fd3eac1cfc075dbb71bd5097650",
+          "bytes": 2709
+        },
+        {
+          "role": "Context only for conditional phase-gap comparisons; this packet proves its own kernel bounds",
+          "sha256": "590e0befd1fd605285acd39dd2257cf31846136ba2ac46968e70e21fb35e84f8",
+          "bytes": 22327
+        },
+        {
+          "role": "Accepted largest-factor interval method, re-proved here for general fixed r",
+          "sha256": "4018642b5616936e2ad4028f9b7aeb1a9f9159758f3513bcb67a8a6eae83ec7f",
+          "bytes": 13462
+        },
+        {
+          "role": "Whole source packet validated before selected bytes were pinned",
+          "sha256": "5029d2b1674366809ad994fb099e477f40eedba834f3649612d3d68b7e4d48d0",
+          "bytes": 1404
+        },
+        {
+          "role": "Central acceptance of that prior elementary interval interface",
+          "sha256": "3a72dda008daa17f5e8eed493d9faddd3b76b04b28768bb4ad88cd6e7a4f8ff0",
+          "bytes": 1914
+        }
+      ]
+    },
+    {
+      "id": "symbolic_exceptional_gate",
+      "publication_document": "24_symbolic_exceptional_gate.md",
+      "original_mathematical_source": {
+        "sha256": "c8c53d25f8d52ebd307a1cc3d9b627bbff5283c8e88ab76794ddb65a5ee539e9",
+        "bytes": 6432
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "c82ed4c5aa0e524251abd025eae233faf282086dcb64f7890d455fb2da14ea18",
+        "bytes": 604
+      },
+      "author_source_pins_identity": {
+        "sha256": "f85bb3d780493fe00b3fcd2247ac9e1a7c36a9624e6ac2afd7fbaea9004f1939",
+        "bytes": 910
+      },
+      "original_finite_result_identity": {
+        "sha256": "925b52e026932e4e2174dee183ee5109b16397a757166c559f054f8a2ceae733",
+        "bytes": 195
+      },
+      "independent_review_identity": {
+        "sha256": "eea705da2e3c5a6892b6e2c27927db07476d47c83bfc497dd221ac9d889c6ae3",
+        "bytes": 6726
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "e2b521ad3b454d116f10f2f54b8470b20759bd314285d82602753ef0f3444886",
+        "bytes": 850
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "8b5d142448cb3f18c779124946d35e8db3fb4be917e081324df3fa406932c5af",
+        "bytes": 541
+      },
+      "original_independent_diagnostic_script_identity": {
+        "sha256": "5253006487f352f06c121ce7fbb58eaac63816208eb3c2a330971eb6652f9600",
+        "bytes": 2098
+      },
+      "original_independent_diagnostic_expected_result_identity": {
+        "sha256": "f97473c28ee7d1ec466ee0359811ecad0996012223a1765307c9e8e58ae6aed5",
+        "bytes": 2615
+      },
+      "publication_independent_diagnostic_script": {
+        "sha256": "9b1660348bdc70fde50fa88c31f071afe126be9025afa29dc17b9d0fb165c3d0",
+        "bytes": 1317
+      },
+      "publication_independent_diagnostic_expected_result": {
+        "sha256": "2a349c31bbb8a5ea9712aced05db507d8e1b44249f34499a3086e720c9f97d1b",
+        "bytes": 314
+      },
+      "status": "SOURCE_REVIEWED_CONDITIONAL_SYMBOLIC_EXCEPTIONAL_GATE_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "independent_source_review_count": 1,
+      "publication_editing": "Full conditional ledger retained, operational provenance sanitized, width/moment notation separated and normalized multiplier-sixth-norm premise made explicit",
+      "diagnostic_derivation": "Portable extraction of exact independent mathematical block and result fields; operational source paths, owner and payload counts omitted",
+      "claims": [
+        "General conditional Holder gate at exact mass and moment normalizations",
+        "Unchanged original-family raw moment gate 64; distinct integrated-observable gate 662",
+        "Multiplier gate 3211/6 and explicit positive sixth-norm normalization",
+        "Conditional changed-mask example 473/6 with all transfer hypotheses retained"
+      ],
+      "limitations": [
+        "No changed-time good family or numerical kappa function",
+        "No genuine numerator moment, masked transfer, signed-main-term theorem or middle saving",
+        "Conditional new-mask count is not an improved bound on the unchanged exceptional set",
+        "Raw moment beta is distinct from width w and integrated observable exponent B",
+        "No new Lean certificate or final strict gap"
+      ],
+      "selected_upstream_identities": [
+        {
+          "role": "Exact accepted exceptional-budget source interface; not redistributed",
+          "sha256": "632dccea57896bdbcd6a15074015edc9859e7dbf9031aba0156b68053208ae20",
+          "bytes": 21993
+        },
+        {
+          "role": "Exact accepted exceptional-budget source interface; not redistributed",
+          "sha256": "056bb45fe38ae5d85e16f7b9b2618a283e878e07ea418a9e7dc568ef6bffcef1",
+          "bytes": 22557
+        },
+        {
+          "role": "Exact accepted exceptional-budget source interface; not redistributed",
+          "sha256": "ef6e8f5d95e246b7bab04c8e32be04c95c46d02074b8ed1c78a1d11137e53591",
+          "bytes": 21205
+        },
+        {
+          "role": "Exact accepted exceptional-budget source interface; not redistributed",
+          "sha256": "b4911596ac323c51eb8a37550111679ca94bec4cc48d4d6ab710a09c39577987",
+          "bytes": 17958
+        }
+      ]
     }
   ],
   "accepted_upstream_interfaces": [
@@ -2623,6 +3309,10 @@
         {
           "pdf_page": 47,
           "locator": "Projective-row identification (10.4)"
+        },
+        {
+          "pdf_page": 36,
+          "locator": "Theorem 7.1; kernel-weighted K_alpha and spectral R_beta continued on page 37"
         }
       ],
       "source_file_identities": [
@@ -2666,11 +3356,101 @@
         }
       ],
       "redistributed": false
+    },
+    {
+      "author": "Yitang Zhang",
+      "title": "Discrete mean estimates and the Landau-Siegel zero",
+      "version": "arXiv:2211.02515v1, 4 November 2022",
+      "url": "https://arxiv.org/pdf/2211.02515v1",
+      "abstract_url": "https://arxiv.org/abs/2211.02515v1",
+      "pages": 111,
+      "relevant_printed_pages": [
+        6,
+        8,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        43,
+        74,
+        75,
+        80,
+        97,
+        99
+      ],
+      "redistributed": false,
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "4e38ecfe1a6d3a93494e2f5cc5a3336c33b9d0981e8d5ccfcd8d8dec3e5ab713",
+          "bytes": 591861
+        },
+        {
+          "kind": "LOCAL_TEXT_EXTRACTION",
+          "sha256": "1c4da83c97adda72d91b97ace9718ae64637e0fa43d40a689679707711953508",
+          "bytes": 333087
+        }
+      ]
+    },
+    {
+      "title": "BC_1502.00769",
+      "url": "https://arxiv.org/pdf/1502.00769",
+      "locator": "Theorem1 printed p2; Remark1 p3",
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "439665281e775e8369e222c959f2cad0221aa57dc7d1338efdae1c99029d7f20",
+          "bytes": 310909
+        }
+      ],
+      "redistributed": false
+    },
+    {
+      "title": "Wright_I_2604.25177v2",
+      "url": "https://arxiv.org/pdf/2604.25177v2",
+      "locator": "Theorem2.1 printed p4",
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "c2dfe4e9c470d483e1a8fd2929a5124739e9ec97ea403f4debf5f42c1ab31229",
+          "bytes": 318895
+        }
+      ],
+      "redistributed": false
+    },
+    {
+      "title": "Wright_II_2608.27732v1",
+      "url": "https://arxiv.org/pdf/2608.27732v1",
+      "locator": "Theorem2.1 printed p2",
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "b3e36691ec1119a74e9def05dd02913a2fc56e9f0c8f25b4dfa98ec19a333545",
+          "bytes": 316873
+        }
+      ],
+      "redistributed": false
     }
   ],
   "identity_note": "Original-source hashes identify the reviewed inputs; publication-document hashes are separately listed in PUBLICATION_MANIFEST.json. Hash identity is not mathematical certification.",
-  "previous_checkpoint_commit": "810afa73c759bef2c3be0d7f59525057ab507d0b",
+  "previous_checkpoint_commit": "c381e7784f531c14b9c767dcf9db14bbc55dbc63",
   "local_localization_checkpoint_commit": "b97672ee86a9ce91aeb8a3b1e5484720fb09dc24",
   "local_four_diagonal_checkpoint_commit": "c735324c4a320e6f72c6108a12e81bf0d6460f20",
-  "local_carrier_checkpoint_commit": "ad3c3ada5153287b048f0902144c516d173127a4"
+  "local_carrier_checkpoint_commit": "ad3c3ada5153287b048f0902144c516d173127a4",
+  "previous_local_checkpoint_commit": "33c0f9a19e0ada842f14817fe5352256c3010b11"
 }

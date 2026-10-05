@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "scope": "Exact coefficient/Poisson/reciprocity/principal identities and theorem ledgers; no target estimate",
+  "counts": {
+    "projected_prime_Poisson_both_parities": 3296,
+    "exact_additive_reciprocity": 4944,
+    "alias_p_unit_equivalence": 4944,
+    "exact_zero_mode_centering": 10,
+    "excluded_alias_phase": 639,
+    "literal_finite_inverse_factor_opening": 100,
+    "BC_full_normalization_equalities": 3,
+    "Wright_fixed_factor_exponents": 6
+  },
+  "total_checks": 13942,
+  "maximum_absolute_errors": {
+    "projected_prime_Poisson_both_parities": 2.5341747547511916e-12,
+    "exact_additive_reciprocity": 5.047994402907413e-13,
+    "exact_zero_mode_centering": 5.551115123125783e-17,
+    "excluded_alias_phase": 9.611231246608108e-14,
+    "literal_finite_inverse_factor_opening": 1.0665222138308497e-14
+  },
+  "strict_gap": "OPEN"
+}

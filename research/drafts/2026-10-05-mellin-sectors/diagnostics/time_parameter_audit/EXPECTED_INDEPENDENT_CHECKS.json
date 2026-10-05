@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "exact_constraint_checks": [
+    {
+      "gap": 118,
+      "minimum": [
+        516,
+        397
+      ],
+      "valid_pairs_checked": 883
+    },
+    {
+      "gap": 113,
+      "minimum": [
+        495,
+        381
+      ],
+      "valid_pairs_checked": 1370
+    }
+  ],
+  "scope": "Finite supplementary arithmetic only"
+}

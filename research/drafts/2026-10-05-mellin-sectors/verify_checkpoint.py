@@ -224,4 +224,129 @@ assert 804+Fraction(119,2)==Fraction(1727,2)
 assert manifest['global_frontier']['averaged_actual_lower_bound']=='NOT_CLAIMED'
 assert manifest['global_frontier']['balanced_core_energy_and_joint_cross']=='OPEN'
 assert manifest['final_gap_status']=='OPEN'
+
+# Bounded common-level test: exact accepted identities and scope, not a Lean proof.
+new=next(x for x in pins['proof_sources'] if x['id']=='common_level_outer_variance')
+assert new['original_mathematical_source']['sha256']=='30256480e5125286eff769114786eabc0eedd0e27f2ec26efc2249b10e41a659'
+assert new['mandatory_scope_addendum_identity']['sha256']=='9085e2495c97464356b0c50d56d8e184aabe76ddcebe216bdc24381ffb730e29'
+assert new['independent_review_identity']['sha256']=='542aafec1f63c1c6134f431f5ef2868fc84ae0fa2dff8f7c4f441c5230fc016a'
+assert new['final_acceptance_record_identity']['sha256']=='7e7f9788978cb2e40e5450f5629408bf9e5add756c74ec71c882e873bf18e124'
+assert new['status']=='SOURCE_REVIEWED_BOUNDED_COMMON_LEVEL_VARIANCE_TEST_ONLY_NOT_LEAN'
+assert len(manifest['preserved_proof_document_hashes'])>=18
+assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/common_level_outer_variance'/'checks.py').read_bytes()).hexdigest()
+assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/common_level_outer_variance'/'EXPECTED_CHECKS.json').read_bytes()).hexdigest()
+assert new['publication_independent_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/common_level_outer_variance'/'independent_checks.py').read_bytes()).hexdigest()
+assert new['publication_independent_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/common_level_outer_variance'/'EXPECTED_INDEPENDENT_CHECKS.json').read_bytes()).hexdigest()
+independent=subprocess.check_output([sys.executable,'-B',str(root/'diagnostics/common_level_outer_variance/independent_checks.py')])
+assert independent==(root/'diagnostics/common_level_outer_variance/EXPECTED_INDEPENDENT_CHECKS.json').read_bytes()
+assert manifest['global_frontier']['common_level_correlation_scope']=='EXPLICIT_GM_10_2_EXPRESSION_ONLY_Z_SLACK_RETAINED'
+assert manifest['global_frontier']['common_level_GM7_1_kernel_or_total_error_lower_bound']=='NOT_CLAIMED'
+assert manifest['global_frontier']['common_level_complete_collective_application']=='UNPROVED'
+assert manifest['global_frontier']['bounded_middle_arithmetic_upper_bound']=='UNPROVED'
+assert manifest['final_gap_status']=='OPEN'
+
+# Local time audit: source-reviewed bounded statements and finite arithmetic only.
+new=next(x for x in pins['proof_sources'] if x['id']=='time_parameter_audit')
+assert new['original_mathematical_source']['sha256']=='590e0befd1fd605285acd39dd2257cf31846136ba2ac46968e70e21fb35e84f8'
+assert new['frozen_author_manifest_identity']['sha256']=='97235fcb86306fc88fd87b79abb8843370224fd3eac1cfc075dbb71bd5097650'
+assert new['independent_review_identity']['sha256']=='793aefc52a71877a1022591bb7bc55fe2f97e39f7d0e71caa34c1ed1ecd8ae39'
+assert new['independent_review_manifest_identity']['sha256']=='ade03ad4c2cb7c88e335fc36ef00ebec5513eb2ab0d02ba651f9c2df3026575f'
+assert new['review_acceptance_record_identity']['sha256']=='bbb848ccada1a83f19028bff44c01c0625dd88a82db0ab40ee1f223f8794413d'
+assert new['status']=='SOURCE_REVIEWED_BOUNDED_LOCAL_PARAMETER_AND_CONDITIONAL_CONSUMER_AUDIT_ONLY_NOT_LEAN'
+assert new['independent_source_review_count']==1
+assert len(manifest['preserved_proof_document_hashes'])>=19
+assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/time_parameter_audit'/'checks.py').read_bytes()).hexdigest()
+assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/time_parameter_audit'/'EXPECTED_CHECKS.json').read_bytes()).hexdigest()
+assert new['publication_independent_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/time_parameter_audit'/'independent_checks.py').read_bytes()).hexdigest()
+assert new['publication_independent_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/time_parameter_audit'/'EXPECTED_INDEPENDENT_CHECKS.json').read_bytes()).hexdigest()
+independent=subprocess.check_output([sys.executable,'-B',str(root/'diagnostics/time_parameter_audit/independent_checks.py')])
+assert independent==(root/'diagnostics/time_parameter_audit/EXPECTED_INDEPENDENT_CHECKS.json').read_bytes()
+assert Fraction(481,1)/Fraction(94,100)==Fraction(24050,47)
+assert Fraction(461,1)/Fraction(94,100)==Fraction(23050,47)
+assert -272+60+Fraction(22,5)==-Fraction(1038,5)
+assert 118+400-519==-1 and 113+381-495==-1
+assert manifest['global_frontier']['altered_parameter_global_theorem']=='UNPROVED'
+assert manifest['global_frontier']['original_time_parameters']=='UNCHANGED_t0_L519_W_L400'
+assert manifest['global_frontier']['new_time_good_family_ratio_bound']=='UNPROVED'
+assert manifest['final_gap_status']=='OPEN'
+
+# Note 21: selected accepted scope and finite diagnostics, not Lean certification.
+new=next(x for x in pins['proof_sources'] if x['id']=='collective_cover_spectral_test')
+assert new['original_mathematical_source']['sha256']=='91b9c8f21f6ab446a9b63463cd0d63fca4f407cfb835a592e96a0a0f6cc300f0'
+assert new['independent_review_identity']['sha256']=='1fe764ded462cbb2cfe6749266cfa9d2f07fa20daf29ab9771a61836f1980d78'
+assert new['review_acceptance_record_identity']['sha256']=='9b549acaa4970877cc1ed72eefce596feccebc6b762fcbea9e46e5b8b78b3ed1'
+assert new['status']=='SOURCE_REVIEWED_BOUNDED_COLLECTIVE_COVER_AND_PROFILE_FLOOR_TEST_ONLY_NOT_LEAN'
+assert new['independent_source_review_count']==1
+assert len(manifest['preserved_proof_document_hashes'])>=20
+assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics'/'collective_cover_spectral_test'/'checks.py').read_bytes()).hexdigest()
+assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics'/'collective_cover_spectral_test'/'EXPECTED_CHECKS.json').read_bytes()).hexdigest()
+assert next(x for x in pins['proof_sources'] if x['id']=='time_parameter_audit')['finished_snapshot_manifest_identity']['sha256']=='6f9678cf1235865ab7a053e47f58121d6f5e3be49ea3cf47b419af5fe48e1a31'
+assert 1038-34-200==804 and 804+Fraction(119,2)==Fraction(1727,2)
+assert manifest['global_frontier']['collective_defined_R_beta_floor']=='EXACT_INDIVIDUAL_L1_NORMS_RETAINED_H_SCALE_CONDITIONAL'
+assert manifest['global_frontier']['bounded_middle_arithmetic_upper_bound']=='UNPROVED'
+assert manifest['final_gap_status']=='OPEN'
+assert manifest['global_frontier']['common_product_additional_h_sectors']=='UNPAID_GCD_h_p_q1_D_RETAINED'
+assert manifest['global_frontier']['actual_masked_profile_l1_lower_bound']=='NOT_ESTABLISHED'
+
+# Note 22: selected accepted scope and finite diagnostics, not Lean certification.
+new=next(x for x in pins['proof_sources'] if x['id']=='reciprocal_prime_attachment_audit')
+assert new['original_mathematical_source']['sha256']=='e1b25b20c4dfee3b9b3f198d7995a55c6302ccf45d5cfb69d88a94b2d279f46a'
+assert new['independent_review_identity']['sha256']=='855c7b86f860b458c5154129f5c7075eb32056037e46c186c28c64de12378a9f'
+assert new['review_acceptance_record_identity']['sha256']=='2dc884f0099d1ef931f3d08c8c9908904879356ac58d558231dc8e507a4a8351'
+assert new['status']=='SOURCE_REVIEWED_SMOOTH_RECIPROCAL_REPRESENTATION_AND_WEAK_BC_WRIGHT_LEDGER_ONLY_NOT_LEAN'
+assert new['independent_source_review_count']==1
+assert len(manifest['preserved_proof_document_hashes'])>=21
+assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics'/'reciprocal_prime_attachment_audit'/'checks.py').read_bytes()).hexdigest()
+assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics'/'reciprocal_prime_attachment_audit'/'EXPECTED_CHECKS.json').read_bytes()).hexdigest()
+assert Fraction(5,2)-Fraction(3,2)+Fraction(17,8)==Fraction(25,8)
+assert Fraction(5,2)-Fraction(3,2)+Fraction(19,8)==Fraction(27,8)
+assert Fraction(27,8)>2 and Fraction(1,2)-Fraction(1,16)==Fraction(7,16)
+assert manifest['global_frontier']['reciprocal_actual_lower_bound_or_impossibility']=='NOT_CLAIMED'
+assert manifest['global_frontier']['bounded_middle_arithmetic_upper_bound']=='UNPROVED'
+assert manifest['final_gap_status']=='OPEN'
+# Note 23: the source proof and fixed-gap clarification form one accepted package.
+new=next(x for x in pins['proof_sources'] if x['id']=='averaged_scalar_saddle')
+assert new['original_mathematical_source']['sha256']=='f1734577f68fc45b50e559ed67b0398d4221d375e6a8867c249a20ae1ed7b895'
+assert new['mandatory_fixed_gap_addendum_identity']['sha256']=='b76584a68e6673a5694472e04c7f66c4f47a50dba1860cd56ce7dec3b35b2fbe'
+assert new['independent_review_identity']['sha256']=='724180ca5c279bd59921a5cad77a06a1349ced8ded21619e19c0d988d6a434fd'
+assert new['review_acceptance_record_identity']['sha256']=='e8131c3135338ed719646c520ad01cb0d3e526e80b951601669bc7dd8a0859c6'
+assert new['finished_snapshot_manifest_identity']['sha256']=='ed2dc8d99eae57cdffd654fd37a71687827e6db0130d55d8c227a9e882b8223a'
+assert new['status']=='SOURCE_REVIEWED_JOINT_UNTILTED_SCALAR_AND_NAMED_CONSUMER_INTERFACES_ONLY_NOT_LEAN'
+assert new['independent_source_review_count']==1
+assert len(manifest['preserved_proof_document_hashes'])==22
+for key,directory,name in [('original_diagnostic_script','averaged_scalar_saddle','checks.py'),('original_diagnostic_expected_result','averaged_scalar_saddle','EXPECTED_CHECKS.json'),('fixed_gap_diagnostic_script','averaged_scalar_saddle_fixed_gap','checks.py'),('fixed_gap_diagnostic_expected_result','averaged_scalar_saddle_fixed_gap','EXPECTED_CHECKS.json'),('publication_independent_diagnostic_script','averaged_scalar_saddle','independent_checks.py'),('publication_independent_diagnostic_expected_result','averaged_scalar_saddle','EXPECTED_INDEPENDENT_CHECKS.json')]:
+    assert new[key]['sha256']==hashlib.sha256((root/'diagnostics'/directory/name).read_bytes()).hexdigest()
+independent=subprocess.check_output([sys.executable,'-B',str(root/'diagnostics/averaged_scalar_saddle/independent_checks.py')])
+assert independent==(root/'diagnostics/averaged_scalar_saddle/EXPECTED_INDEPENDENT_CHECKS.json').read_bytes()
+assert Fraction(2)/(1+Fraction(1,4))>Fraction(3,2)
+assert 247-128==119 and 2*128-247==9
+assert 237-123==114 and 2*123-237==9
+assert 2+9*11==101
+assert manifest['global_frontier']['averaged_saddle_scope']=='JOINT_UNTILTED_SCALAR_AND_NAMED_CONSUMERS_ONLY'
+assert manifest['global_frontier']['averaged_saddle_fixed_gap_primary_upper_edge']=='SUPPLIED_BY_MANDATORY_FIXED_GAP_EXTENSION'
+assert manifest['global_frontier']['averaged_saddle_arbitrary_tilted_kernels']=='UNPROVED'
+assert manifest['global_frontier']['averaged_saddle_relative_positivity']=='NOT_CLAIMED'
+assert manifest['global_frontier']['altered_parameter_global_theorem']=='UNPROVED'
+assert manifest['global_frontier']['original_time_parameters']=='UNCHANGED_t0_L519_W_L400'
+assert manifest['global_frontier']['new_time_good_family_ratio_bound']=='UNPROVED'
+assert manifest['global_frontier']['bounded_middle_arithmetic_upper_bound']=='UNPROVED'
+assert manifest['final_gap_status']=='OPEN'
+# Note 24: unchanged-input threshold and conditional new-mask ledger only.
+new=next(x for x in pins['proof_sources'] if x['id']=='symbolic_exceptional_gate')
+assert new['original_mathematical_source']['sha256']=='c8c53d25f8d52ebd307a1cc3d9b627bbff5283c8e88ab76794ddb65a5ee539e9'
+assert new['independent_review_identity']['sha256']=='eea705da2e3c5a6892b6e2c27927db07476d47c83bfc497dd221ac9d889c6ae3'
+assert new['independent_review_manifest_identity']['sha256']=='e2b521ad3b454d116f10f2f54b8470b20759bd314285d82602753ef0f3444886'
+assert new['status']=='SOURCE_REVIEWED_CONDITIONAL_SYMBOLIC_EXCEPTIONAL_GATE_ONLY_NOT_LEAN'
+assert new['independent_source_review_count']==1
+for key,name in [('publication_independent_diagnostic_script','independent_checks.py'),('publication_independent_diagnostic_expected_result','EXPECTED_INDEPENDENT_CHECKS.json')]:
+    assert new[key]['sha256']==hashlib.sha256((root/'diagnostics/symbolic_exceptional_gate'/name).read_bytes()).hexdigest()
+independent=subprocess.check_output([sys.executable,'-B',str(root/'diagnostics/symbolic_exceptional_gate/independent_checks.py')])
+assert independent==(root/'diagnostics/symbolic_exceptional_gate/EXPECTED_INDEPENDENT_CHECKS.json').read_bytes()
+assert Fraction(739-547,3)==64 and Fraction(5*739-2219,12)==123
+assert 2*Fraction(1435,4)-Fraction(81+81+5*77,3)==Fraction(3211,6)
+assert 739-77==662 and Fraction(Fraction(1567,2)-547,3)==Fraction(473,6)
+assert manifest['global_frontier']['symbolic_original_raw_gate']==64
+assert manifest['global_frontier']['symbolic_473_over_6_scope']=='CONDITIONAL_NEW_MASK_AND_COMPLETE_TRANSFER_ONLY'
+assert manifest['global_frontier']['symbolic_changed_time_count_or_genuine_moment']=='UNPROVED'
+assert manifest['final_gap_status']=='OPEN'
 print(json.dumps({'integrity':'PASS','listed_files':len(manifest['files']),'exact_exponents':'PASS','analytic_or_Lean_certification':False},indent=2))

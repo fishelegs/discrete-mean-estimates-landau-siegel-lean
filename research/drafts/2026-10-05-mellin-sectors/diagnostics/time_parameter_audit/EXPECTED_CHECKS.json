@@ -1,0 +1,99 @@
+{
+  "GM_extra_P_is_parameter_independent": "PASS",
+  "broadened_Gaussian_weight_domination": {
+    "grid_cases": 10001,
+    "maximizer_abs_t_minus_tc_over_W": 2,
+    "maximum": 1.7155277699214138,
+    "status": "PASS"
+  },
+  "complete_local_saddle_ledger": {
+    "cases": [
+      {
+        "Gaussian_consumer_exponent": -6,
+        "a": 519,
+        "b": 400,
+        "common_Pt0_AFE_eligible": true,
+        "far_tail_exponent": "620431/5000",
+        "gap": 119,
+        "hard_consumer_exponent": -1,
+        "u_exponent": -395,
+        "v_exponent": "-13531/50",
+        "xu2_exponent": "-13031/50",
+        "xv2_exponent": "-593/50"
+      },
+      {
+        "Gaussian_consumer_exponent": -6,
+        "a": 516,
+        "b": 397,
+        "common_Pt0_AFE_eligible": true,
+        "far_tail_exponent": "155071/1250",
+        "gap": 119,
+        "hard_consumer_exponent": -1,
+        "u_exponent": -392,
+        "v_exponent": "-6692/25",
+        "xu2_exponent": "-6442/25",
+        "xv2_exponent": "-226/25"
+      },
+      {
+        "Gaussian_consumer_exponent": -1,
+        "a": 495,
+        "b": 381,
+        "common_Pt0_AFE_eligible": true,
+        "far_tail_exponent": "118851/1000",
+        "gap": 114,
+        "hard_consumer_exponent": 4,
+        "u_exponent": -376,
+        "v_exponent": "-2571/10",
+        "xu2_exponent": "-2471/10",
+        "xv2_exponent": "-93/10"
+      },
+      {
+        "Gaussian_consumer_exponent": 103,
+        "a": 53,
+        "b": 43,
+        "common_Pt0_AFE_eligible": false,
+        "far_tail_exponent": "52597/5000",
+        "gap": 10,
+        "hard_consumer_exponent": 108,
+        "u_exponent": -38,
+        "v_exponent": "-1597/50",
+        "xu2_exponent": "-1097/50",
+        "xv2_exponent": "-491/50"
+      }
+    ],
+    "status": "PASS"
+  },
+  "exact_parity_only_q_and_curvature_r": {
+    "max_critical_modulus_error": 7.52316384526264e-37,
+    "max_integral_error": 1.0206152501800553e-34,
+    "max_normalized_curvature_ratio": 0.0815135258845954,
+    "max_prime_root_q_difference": 5.445841272935716e-33,
+    "max_prime_root_r_difference": 7.703719777548943e-33,
+    "mixed_second_difference_checks": 2,
+    "parameter_cases": 36,
+    "status": "PASS"
+  },
+  "finite_diagnostics_only": true,
+  "integrated_height_completion_of_squares": {
+    "cases": 8,
+    "maximum_ratio": 0.9479812099306292,
+    "status": "PASS"
+  },
+  "local_saddle_Taylor_factor": {
+    "cases": 36,
+    "status": "PASS"
+  },
+  "minimal_integer_two_constraint_pairs": {
+    "conditional_Gaussian": [
+      495,
+      381
+    ],
+    "hard": [
+      516,
+      397
+    ],
+    "status": "PASS"
+  },
+  "no_new_good_character_or_main_term_theorem": true,
+  "status": "PASS"
+}
