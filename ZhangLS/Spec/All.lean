@@ -37,6 +37,9 @@ import ZhangLS.Spec.ActualPhaseSafeSeries
 import ZhangLS.Spec.ActualPhaseSourceRegressions
 import ZhangLS.Spec.ActualPhaseSupport
 import ZhangLS.Spec.ActualPhaseTransforms
+import ZhangLS.Spec.ActualSampleProjection
+import ZhangLS.Spec.ActualSampleProjectionArithmetic
+import ZhangLS.Spec.ActualSampleProjectionFourier
 import ZhangLS.Spec.AdditiveReciprocity
 import ZhangLS.Spec.AllModuliFractions
 import ZhangLS.Spec.AllModuliGaussParseval
