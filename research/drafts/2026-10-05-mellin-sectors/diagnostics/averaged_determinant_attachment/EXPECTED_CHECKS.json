@@ -1,0 +1,79 @@
+{
+  "actual_monomial_harmonic_homogeneity": {
+    "cases": 7668,
+    "max_error": 1.6883057536160649e-16,
+    "status": "PASS"
+  },
+  "both_congruence_signs_and_determinant_normalization": {
+    "cases": 7668,
+    "sign_pairs": [
+      [
+        -1,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "status": "PASS"
+  },
+  "coupled_gcd_bookkeeping": {
+    "cases": 300,
+    "p_condition_retained": true,
+    "status": "PASS"
+  },
+  "finite_diagnostics_only": true,
+  "log_rho_common_weight_Fourier_model": {
+    "cases": 8,
+    "max_error": 2.465190328815662e-32,
+    "not_a_substitute_for_compact_support_proof": true,
+    "status": "PASS"
+  },
+  "not_an_A2022_example": true,
+  "primary_R0_R2_and_outer_budget": {
+    "H_exponents": [
+      "1",
+      "1/2",
+      "638"
+    ],
+    "R2_arguments": [
+      [
+        "0",
+        "-1/2",
+        "519"
+      ],
+      [
+        "0",
+        "-1/2",
+        "119"
+      ]
+    ],
+    "outer_R0": [
+      "3",
+      "3/4",
+      "1727/2"
+    ],
+    "outer_R2": [
+      "3",
+      "1/2",
+      "804"
+    ],
+    "per_outer": [
+      "1",
+      "1/2",
+      "-234"
+    ],
+    "status": "PASS"
+  },
+  "same_branch_conductor_t_cancellation": {
+    "cases": 36,
+    "residual_gamma_not_frozen": true,
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

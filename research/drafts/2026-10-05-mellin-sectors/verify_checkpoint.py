@@ -191,4 +191,37 @@ assert manifest['global_frontier']['global_determinant_near_aggregate_bound']=='
 assert -395+9*35==-80 and -80+402-400==-78
 assert 2076*12-76==24836 and 5-12==-7
 assert manifest['global_frontier']['bounded_middle_restricted_principal_subtraction']=='RETAINED_INSIDE_FULL_K'
+
+# Finite prime-Hecke interface: exact source identity and bounded mathematical replay.
+new=next(x for x in pins['proof_sources'] if x['id']=='prime_hecke_correlation')
+assert new['original_mathematical_source']['sha256']=='a52eab9342a869573c1547f2110b91a05254d702633ee7dfab220100895cbcd6'
+assert new['independent_review_identity']['sha256']=='d317ca0374e4e8ebfd3a8fcb4737bde5a3f3df0f0e3596f715d1bdbdd1f18b44'
+assert new['review_acceptance_record_identity']['sha256']=='5d34d9880ee28db8413bfc925c98bb8538e04eaafde86e1d39e279a5790a24c3'
+assert new['final_acceptance_record_identity']['sha256']=='ef3f42d08cef6640735ae3718a43d75b45bf755fd2a70fc04be0bb121180e097'
+for key,name in [('original_diagnostic_script','checks.py'),('original_diagnostic_expected_result','EXPECTED_CHECKS.json'),('publication_independent_diagnostic_script','independent_checks.py'),('publication_independent_diagnostic_expected_result','EXPECTED_INDEPENDENT_CHECKS.json')]:
+    assert new[key]['sha256']==hashlib.sha256((root/'diagnostics/prime_hecke_correlation'/name).read_bytes()).hexdigest()
+assert new['status']=='SOURCE_REVIEWED_FINITE_PRIME_HECKE_LEMMA_ONLY_NOT_LEAN'
+assert manifest['global_frontier']['bounded_middle_arithmetic_upper_bound']=='UNPROVED'
+assert manifest['global_frontier']['averaged_outer_variable_saving']=='UNPROVED'
+assert len(manifest['preserved_proof_document_hashes'])>=16
+import subprocess,sys
+independent=subprocess.check_output([sys.executable,'-B',str(root/'diagnostics/prime_hecke_correlation/independent_checks.py')])
+assert independent==(root/'diagnostics/prime_hecke_correlation/EXPECTED_INDEPENDENT_CHECKS.json').read_bytes()
+
+# Actual averaged attachment: exact accepted source, common-weight scope and open middle.
+new=next(x for x in pins['proof_sources'] if x['id']=='averaged_determinant_attachment')
+assert new['original_mathematical_source']['sha256']=='3f58296591df9cadd06c80d3e72b2fa45a74b7e61ee5d803751037064ee75be3'
+assert new['independent_review_identity']['sha256']=='ff61068e8df9be97df8c61ab07c203324bab74af5a442fb85a4212f1a1af7c2b'
+assert new['review_acceptance_record_identity']['sha256']=='90d03d2a06f5e050e87b9369d92f8877b19666ab4791a3366c694839a5106aec'
+assert new['final_acceptance_record_identity']['sha256']=='076822db84207e7ce2103732fff1151a9e7e2552d52b9c38b7c4eedc0867e94d'
+assert new['status']=='SOURCE_REVIEWED_ACTUAL_AVERAGED_ATTACHMENT_WITH_UNPAID_OUTER_SUM_NOT_LEAN'
+for key,name in [('original_diagnostic_script','checks.py'),('original_diagnostic_expected_result','EXPECTED_CHECKS.json'),('publication_independent_diagnostic_script','independent_checks.py'),('publication_independent_diagnostic_expected_result','EXPECTED_INDEPENDENT_CHECKS.json')]:
+    assert new[key]['sha256']==hashlib.sha256((root/'diagnostics/averaged_determinant_attachment'/name).read_bytes()).hexdigest()
+independent=subprocess.check_output([sys.executable,'-B',str(root/'diagnostics/averaged_determinant_attachment/independent_checks.py')])
+assert independent==(root/'diagnostics/averaged_determinant_attachment/EXPECTED_INDEPENDENT_CHECKS.json').read_bytes()
+assert 1038-34-200==804 and Fraction(519-400,2)==Fraction(119,2)
+assert 804+Fraction(119,2)==Fraction(1727,2)
+assert manifest['global_frontier']['averaged_actual_lower_bound']=='NOT_CLAIMED'
+assert manifest['global_frontier']['balanced_core_energy_and_joint_cross']=='OPEN'
+assert manifest['final_gap_status']=='OPEN'
 print(json.dumps({'integrity':'PASS','listed_files':len(manifest['files']),'exact_exponents':'PASS','analytic_or_Lean_certification':False},indent=2))

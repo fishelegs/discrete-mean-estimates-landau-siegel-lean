@@ -1,14 +1,14 @@
 {
-  "schema_version": 10,
+  "schema_version": 12,
   "date_utc": "2026-10-05",
   "publication_kind": "DRAFT_MATHEMATICAL_CHECKPOINT",
   "repository": "fishelegs/discrete-mean-estimates-landau-siegel-lean",
   "base_commit": "1b1bdae9503bf45acc091381e5574b86930f55ae",
-  "previous_checkpoint_commit": "607abc750d2575fb2b79da2c6dc9ee99e7ceedb6",
+  "previous_checkpoint_commit": "810afa73c759bef2c3be0d7f59525057ab507d0b",
   "intended_branch": "draft/mellin-sectors-20261005",
   "repository_directory": "research/drafts/2026-10-05-mellin-sectors",
-  "scope": "Sixteen source-reviewed mathematical notes; actual mixed-boundary and entire transformed high-tail estimates reduce the sufficient target to an unproved bounded middle full-K near aggregate",
-  "new_note_validation_status": "SOURCE_REVIEWED_ACTUAL_MIXED_RECTANGLES_AND_TRANSFORMED_HIGH_TAIL_NOT_LEAN",
+  "scope": "Eighteen source-reviewed notes; exact finite prime-Hecke correlation and valid common-weight averaged attachment on explicit generic cells; absolute outer-error ledger retains P^3 and the bounded-middle arithmetic estimate remains unproved",
+  "new_note_validation_status": "SOURCE_REVIEWED_FINITE_PRIME_HECKE_AND_ACTUAL_AVERAGED_ATTACHMENT_WITH_UNPAID_OUTER_SUM_NOT_LEAN",
   "formal_lean_status": "NO_NEW_LEAN_SOURCE_OR_CERTIFICATE",
   "final_gap_status": "OPEN",
   "global_frontier": {
@@ -71,14 +71,36 @@
     "bounded_middle_restricted_principal_subtraction": "RETAINED_INSIDE_FULL_K",
     "bounded_middle_arithmetic_upper_bound": "UNPROVED",
     "transformed_high_tail": "SOURCE_REVIEWED_o(P^2)_INCLUDING_ALL_HIGH_LOW_INTERACTIONS_AND_INFINITE_SHELLS",
-    "actual_mixed_transformed_SL_LS": "SOURCE_REVIEWED_o(P^2)_AT_M=P^2L402"
+    "actual_mixed_transformed_SL_LS": "SOURCE_REVIEWED_o(P^2)_AT_M=P^2L402",
+    "finite_prime_hecke_correlation": "EXACTLY_(2phi(D)/P)_SUM_p_(p-1)|gamma_p|^2_UNDER_STATED_HYPOTHESES",
+    "prime_hecke_constant_terms": "EXACTLY_ZERO",
+    "actual_averaged_determinant_application": "SOURCE_REVIEWED_COMMON_WEIGHT_AND_FIXED_OUTER_ESTIMATE_ON_EXPLICIT_GENERIC_CELLS_ONLY",
+    "averaged_outer_variable_saving": "UNPROVED",
+    "averaged_common_carrier_cutoff": "SOURCE_REVIEWED_EXACT_NORMALIZATION_AND_FOURIER_SEPARATION",
+    "averaged_absolute_outer_error": "P^3_SCALE_UPPER_BOUND_LEDGER_DOES_NOT_IMPLY_MIDDLE_ESTIMATE",
+    "averaged_actual_lower_bound": "NOT_CLAIMED",
+    "impossibility_of_collective_averaged_improvement": "NOT_CLAIMED",
+    "averaged_excluded_sectors_and_original_restricted_principal": "UNPAID_AND_RETAINED"
   },
   "verification": {
-    "new_source_identity_checks": 87,
-    "new_unique_hashes": 49,
+    "new_source_identity_checks": 86,
+    "new_unique_hashes": 47,
     "new_frozen_author_and_review_manifest_payloads": "PASS",
-    "all_fifteen_diagnostic_replays": "ALL_FIFTEEN_BYTE_EQUAL_PASS",
+    "proofs_01_to_16": "BYTE_UNCHANGED_FROM_PREVIOUS_PUBLISHED_CHECKPOINT",
+    "new_proof_preservation": "Note 17 retained byte-for-byte from the first local checkpoint; note 18 complete accepted mathematical body retained with sanitized status and primary links",
+    "sanitization_and_relative_links": "PASS",
+    "new_Lean_certificate": false,
+    "full_repository_build": "NOT_RUN_FOR_THIS_DOCUMENTATION_ONLY_INCREMENT",
+    "previous_publication_manifest_sha256": "cb8a53da3d03ae940e9416f30644423faa50ccf56ddee8c56fdb197fd44695c2",
+    "CI_scope": "Repository Lean checks do not certify these source-level analytic notes",
+    "all_diagnostic_replays": "ALL_17_AUTHOR_SUITES_BYTE_EQUAL_PASS",
     "diagnostic_replay_details": [
+      {
+        "suite": "averaged_determinant_attachment",
+        "status": "BYTE_EQUAL_PASS",
+        "script_sha256": "c2e9e9456797dea4bbe3496dfb19229b8abc6e659110ca6c78b638d79af5d9d0",
+        "result_sha256": "afe4060b2ea1c67c2f48a7b5001893c0c724c47c1c059643ca41ac75a34a3334"
+      },
       {
         "suite": "four_branch_diagonals",
         "status": "BYTE_EQUAL_PASS",
@@ -120,6 +142,12 @@
         "status": "BYTE_EQUAL_PASS",
         "script_sha256": "56aae9e591a91625df0efd853d66d78038989e61c3f97305d624ef7766a97293",
         "result_sha256": "326d45b68efbb6ae3014ea842b53890417b6fccee655217c1b1b43e70325fd0d"
+      },
+      {
+        "suite": "prime_hecke_correlation",
+        "status": "BYTE_EQUAL_PASS",
+        "script_sha256": "5a6bcdbf4c243dc42e2985e9590c5a978ad3cccc737c4b7a6147f6c512570513",
+        "result_sha256": "b089dd6d3153a861fdedf6ebfd80b27a5859104e929e0a08c26b8abd3e5a09a3"
       },
       {
         "suite": "shifted_correlation_carrier_interface",
@@ -170,13 +198,7 @@
         "result_sha256": "555bb313715e4be8fb6c30828631b5639dcbe866ae0a267bf82e865e5821207b"
       }
     ],
-    "proofs_01_to_14": "BYTE_UNCHANGED_FROM_PREVIOUS_PUBLISHED_CHECKPOINT",
-    "new_proof_preservation": "Mathematical bodies retained; status/bibliography only, with high-tail combined consequence updated from the exact accepted mixed-boundary input",
-    "sanitization_and_relative_links": "PASS",
-    "new_Lean_certificate": false,
-    "full_repository_build": "NOT_RUN_FOR_THIS_DOCUMENTATION_ONLY_INCREMENT",
-    "previous_publication_manifest_sha256": "2905e1d921af910b2a32bd978701713249296ce03028c403e511bd58413ace40",
-    "CI_scope": "Normal repository push checks existing Lean code, not these analytic proofs"
+    "portable_independent_mathematical_replays": "BYTE_EQUAL_PASS"
   },
   "preserved_proof_document_hashes": {
     "01_reciprocal_product.md": "419b7d3fd82e38db188506a7a6cc54822fb26bf9afcd3de8f506a4c6699421f4",
@@ -192,7 +214,9 @@
     "11_shifted_correlation_carrier_interface.md": "18859907bb759f260915b6f94c6fcb649beb7bc474cc93de716ca78dcf50bbc9",
     "12_primary_shifted_attachment_audit.md": "6f6faa139071b7876fbd21ec1e066875dfe591f665aaff5767a41afd704bae92",
     "13_small_transformed_rectangle.md": "f14ae67ae9a25c44e08a8c548504015f3441cd3598b3da9248f6eaef6b864daf",
-    "14_periodic_determinant_mapping.md": "0efc54b7016af1a8a86967439285500149c16b29adeabc0ef39462d36795c90b"
+    "14_periodic_determinant_mapping.md": "0efc54b7016af1a8a86967439285500149c16b29adeabc0ef39462d36795c90b",
+    "15_mixed_transformed_boundary.md": "b3dbbd73a6a21b15b0639cb74e3f2f35c8bad3254b5551a235cd8d07fde4dea6",
+    "16_transformed_high_tail.md": "88838b10ef0f1a00e117dc974f9d47405a4953a65c6e92434f52666b26e5a9bd"
   },
   "files": [
     {
@@ -292,21 +316,57 @@
       "validation": "SOURCE_REVIEWED_ACTUAL_ENTIRE_TRANSFORMED_HIGH_TAIL_NOT_LEAN"
     },
     {
+      "path": "17_prime_hecke_correlation.md",
+      "sha256": "7e0ef53ee759bf47335107da7d344c067144660492fcdca97c652f92ea140d8b",
+      "bytes": 12408,
+      "validation": "SOURCE_REVIEWED_FINITE_PRIME_HECKE_LEMMA_ONLY_NOT_LEAN"
+    },
+    {
+      "path": "18_averaged_determinant_attachment.md",
+      "sha256": "9d4d4bedbc07dde454e8ead7a776c37e8c79e596a8cd5dcf0504858561c34784",
+      "bytes": 18884,
+      "validation": "SOURCE_REVIEWED_ACTUAL_AVERAGED_ATTACHMENT_WITH_UNPAID_OUTER_SUM_NOT_LEAN"
+    },
+    {
       "path": "README.md",
-      "sha256": "e61d8288abf0cd508cf94ab4f59dc17462948403b34aa8a315a995cbb5e98f62",
-      "bytes": 17685,
+      "sha256": "daa09279fa98cee15d1cfd36e041526004d451dd814331d0468c9b2af017359b",
+      "bytes": 19811,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "SOURCE_PINS.json",
-      "sha256": "3f4072d876e94eec657b63bc164da1ad2a569fd58385a97e489abec3b5cf6d23",
-      "bytes": 99138,
+      "sha256": "e376aae76e5c38e2a2b3fe1b4c5752b8f8abba01af3df37591325192b8e0a361",
+      "bytes": 108274,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/README.md",
-      "sha256": "595070913b4254901fe9dc129e098c7f90846f8c0e3b510b24c0ffec9b24a330",
-      "bytes": 9386,
+      "sha256": "7e1a93a3b608a933897f18b20a4530b87c4337ae428e60645af713ec9f9e7ddd",
+      "bytes": 11334,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/averaged_determinant_attachment/EXPECTED_CHECKS.json",
+      "sha256": "afe4060b2ea1c67c2f48a7b5001893c0c724c47c1c059643ca41ac75a34a3334",
+      "bytes": 1346,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/averaged_determinant_attachment/EXPECTED_INDEPENDENT_CHECKS.json",
+      "sha256": "0c65e3c5846339384723f2dc19613786d7254b52c2d2469b28588e5486cf1e81",
+      "bytes": 391,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/averaged_determinant_attachment/checks.py",
+      "sha256": "c2e9e9456797dea4bbe3496dfb19229b8abc6e659110ca6c78b638d79af5d9d0",
+      "bytes": 4520,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/averaged_determinant_attachment/independent_checks.py",
+      "sha256": "7e9690d3a78c8c807751de92cbdbec15be291c27f55132be85085b900081b3ee",
+      "bytes": 1580,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
@@ -391,6 +451,30 @@
       "path": "diagnostics/primary_shifted_attachment_audit/checks.py",
       "sha256": "56aae9e591a91625df0efd853d66d78038989e61c3f97305d624ef7766a97293",
       "bytes": 3728,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/prime_hecke_correlation/EXPECTED_CHECKS.json",
+      "sha256": "b089dd6d3153a861fdedf6ebfd80b27a5859104e929e0a08c26b8abd3e5a09a3",
+      "bytes": 185,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/prime_hecke_correlation/EXPECTED_INDEPENDENT_CHECKS.json",
+      "sha256": "dcd0971973c5c5e1c608c1550fa3e9d9ff13ab5859de36d3aa1d1c483673ab4c",
+      "bytes": 235,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/prime_hecke_correlation/checks.py",
+      "sha256": "5a6bcdbf4c243dc42e2985e9590c5a978ad3cccc737c4b7a6147f6c512570513",
+      "bytes": 1554,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/prime_hecke_correlation/independent_checks.py",
+      "sha256": "f6d180ca3df932e5b2226b4f84dc658b542ee6c78e13b7e3b754d7040989036e",
+      "bytes": 2141,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
@@ -491,13 +575,14 @@
     },
     {
       "path": "verify_checkpoint.py",
-      "sha256": "c661d47ff9c16a7e3354bb2353a13848be3a5bf44782b6512bf7a87fa2c1d87f",
-      "bytes": 16280,
+      "sha256": "8b2cd041578e69875f916b7d3d91284424b33a5e5fa21b6f65f1ec0db28142c5",
+      "bytes": 19677,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     }
   ],
   "manifest_integrity": "The manifest does not include its own hash; Git tree identity and the external incremental manifest pin this file.",
   "local_localization_checkpoint_commit": "b97672ee86a9ce91aeb8a3b1e5484720fb09dc24",
   "local_four_diagonal_checkpoint_commit": "c735324c4a320e6f72c6108a12e81bf0d6460f20",
-  "local_carrier_checkpoint_commit": "ad3c3ada5153287b048f0902144c516d173127a4"
+  "local_carrier_checkpoint_commit": "ad3c3ada5153287b048f0902144c516d173127a4",
+  "local_finite_hecke_checkpoint_commit": "ecbcb14f880637f6e198ec784d9f77e1da9c6217"
 }
