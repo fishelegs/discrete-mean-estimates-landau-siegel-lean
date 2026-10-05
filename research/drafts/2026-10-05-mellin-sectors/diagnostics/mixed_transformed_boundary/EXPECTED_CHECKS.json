@@ -1,0 +1,36 @@
+{
+  "closed_interval_largest_factor_hyperbola": {
+    "cases": 64,
+    "q_includes_36": true,
+    "status": "PASS"
+  },
+  "complete_rectangle_replacement": {
+    "cases": 40000,
+    "retained_far_rectangle_pairs": 34,
+    "status": "PASS"
+  },
+  "conjugate_mixed_rectangles": {
+    "cases": 16,
+    "status": "PASS"
+  },
+  "diagnostic_only": true,
+  "exact_power_ledger": "PASS",
+  "exact_remaining_LL_partition": {
+    "cases": 1600,
+    "full_K_retained": true,
+    "status": "PASS"
+  },
+  "finite_G_coefficient_caps": {
+    "all_four_branches": true,
+    "cases": 800,
+    "status": "PASS"
+  },
+  "literal_full_K_mixed_rectangle_identity": {
+    "both_parities_and_unit_masks": true,
+    "cases": 16,
+    "max_error": 1.551136925266137e-14,
+    "status": "PASS"
+  },
+  "sample_does_not_assume_A2022": true,
+  "status": "PASS"
+}

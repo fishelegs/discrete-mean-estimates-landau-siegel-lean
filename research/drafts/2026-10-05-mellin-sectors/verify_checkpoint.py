@@ -171,8 +171,8 @@ assert Fraction(32,5)+10==Fraction(82,5)
 assert -Fraction(2011,2)+72+288==-Fraction(1291,2)
 assert 12-2==10 and 12-4==8 and 10*3==30
 assert Fraction(4,16)==Fraction(1,4)<1
-assert manifest['global_frontier']['mixed_and_large_transformed_rectangles']=='UNPROVED'
-assert manifest['global_frontier']['high_mixed_near_full_kernel_aggregate']=='UNPROVED_ONE_SIDED_SUFFICIENT_TARGET_Xij_GT_M_OR_Yij_GT_M'
+assert manifest['global_frontier']['mixed_and_large_transformed_rectangles']=='MIXED_BOUNDARY_AND_HIGH_TAIL_PAID_BOUNDED_MIDDLE_OPEN'
+assert manifest['global_frontier']['high_mixed_near_full_kernel_aggregate']=='REDUCED_TO_BOUNDED_MIDDLE_FULL_K_NEAR_UNEQUAL_SQUARE_UNPROVED'
 
 # periodic_determinant_mapping: bounded source scope, exact provenance, finite diagnostics only.
 new=next(x for x in pins['proof_sources'] if x['id']=='periodic_determinant_mapping')
@@ -188,4 +188,7 @@ assert 2*Fraction(7,64)+1==Fraction(39,32)
 assert 2*(400-519)==-238
 assert manifest['global_frontier']['collective_outer_variable_and_determinant_sums']=='UNPROVED'
 assert manifest['global_frontier']['global_determinant_near_aggregate_bound']=='UNPROVED'
+assert -395+9*35==-80 and -80+402-400==-78
+assert 2076*12-76==24836 and 5-12==-7
+assert manifest['global_frontier']['bounded_middle_restricted_principal_subtraction']=='RETAINED_INSIDE_FULL_K'
 print(json.dumps({'integrity':'PASS','listed_files':len(manifest['files']),'exact_exponents':'PASS','analytic_or_Lean_certification':False},indent=2))

@@ -1,0 +1,47 @@
+{
+  "actual_full_K_fixed_J_rectangle_identity": {
+    "cases": 16,
+    "max_error": 9.99585012992364e-18,
+    "status": "PASS"
+  },
+  "bounded_middle_bookkeeping": {
+    "cases": 10000,
+    "restricted_principal_retained": true,
+    "status": "PASS"
+  },
+  "diagnostic_only": true,
+  "exact_conductor_and_final_exponents": "PASS",
+  "exact_disjoint_high_grid": {
+    "low_boundary_square_excluded": true,
+    "pairs": 102400,
+    "retained_far_pairs": 47480,
+    "status": "PASS"
+  },
+  "global_gamma_ratio_including_canceled_heights": {
+    "J_values": [
+      1,
+      2,
+      12
+    ],
+    "cases": 216,
+    "maximum_normalized_ratio": 334.146089456341,
+    "status": "PASS"
+  },
+  "infinite_shell_polynomial_majorant": {
+    "cases": 9,
+    "proof_majorant": "(1+r/B)^36 <= exp(36r/B), geometric ratio <1",
+    "status": "PASS"
+  },
+  "literal_fixed_J_coefficients": {
+    "J_values": [
+      2,
+      3,
+      12
+    ],
+    "all_four_branches": true,
+    "cases": 2400,
+    "status": "PASS"
+  },
+  "sample_does_not_assume_A2022": true,
+  "status": "PASS"
+}

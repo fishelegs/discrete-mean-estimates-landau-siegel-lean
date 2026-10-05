@@ -1622,6 +1622,300 @@
           "redistributed": false
         }
       ]
+    },
+    {
+      "id": "mixed_transformed_boundary",
+      "publication_document": "15_mixed_transformed_boundary.md",
+      "original_mathematical_source": {
+        "sha256": "4018642b5616936e2ad4028f9b7aeb1a9f9159758f3513bcb67a8a6eae83ec7f",
+        "bytes": 13462
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "5029d2b1674366809ad994fb099e477f40eedba834f3649612d3d68b7e4d48d0",
+        "bytes": 1404
+      },
+      "independent_review_identity": {
+        "sha256": "65428e5c9f27464ccd759c5e9bcd125c812f93a9789885794283946b38f68e4b",
+        "bytes": 5455
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "f1d887bb188a22faf4033f174bf2769a94d15e3f955ec803f17f450ba031a2e2",
+        "bytes": 994
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "3a72dda008daa17f5e8eed493d9faddd3b76b04b28768bb4ad88cd6e7a4f8ff0",
+        "bytes": 1914
+      },
+      "original_diagnostic_script": {
+        "sha256": "036cd220a6e718c871ca63416286c6d09f5202d61e690ab3448ac9cbe54eb025",
+        "bytes": 5251
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "19bd80dd65392cf0c3be098e255b63ef8f867d999032defd088f0a6d1e779cbe",
+        "bytes": 831
+      },
+      "status": "SOURCE_REVIEWED_ACTUAL_FULL_K_MIXED_RECTANGLES_NOT_LEAN",
+      "source_identity_verified": true,
+      "publication_editing": "Proof retained; operational provenance removed; high-tail combined consequence updated using accepted mixed-boundary input",
+      "selected_upstream_identities": [
+        {
+          "sha256": "79832914057edfd2ee5ec6ad492131ec54ecbe68973dc5bd09732fea16904ebb",
+          "bytes": 14181,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "a89e788412a2712e597748840ed9b4061b38bec6260282b54c21bd98c0aa8c55",
+          "bytes": 1594,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+          "bytes": 25030,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "8b91479aa0cdd64776e73c4be3b00b2966fe5dbb7de71d42556e8230eb2d2501",
+          "bytes": 3084,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "3a9df5d600c48111952bc66903d9df749d78ae3595cb5e72dbe17130628f441c",
+          "bytes": 25536,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "d6ef27e3a740b67adc61ae5d74ffb238fbcd9091bf23cd5de82a2d2b51a26c82",
+          "bytes": 17819,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d",
+          "bytes": 3829,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "8b17bcfa77016cc0e823eb7b17c4bf6c72a55db3ceb1a0d08afe5b5ce836dfeb",
+          "bytes": 16982,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "85b68c4b3a23ff1d4a49b0897974b206d5a46bef5612b0c1054dba63d4aa672e",
+          "bytes": 18875,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "1ddbb8725f257a6f3059ebc7d7e5a50453722021b14595aee7f9798cf8117e6a",
+          "bytes": 2508,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "f8c98ad63360965080b85d6b43f69a8d2e7a6feffc440c7099aabb82cce115c6",
+          "bytes": 17100,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "76a304cc8bf7d39bf9c22fd17b0b64e7e97e5d00b5767e0b8263c2746ad5dab7",
+          "bytes": 4312,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "c3b456d9724a066d263ce5bfb70a4f6b1a68ca402ddc9640c05ab2abc5556e61",
+          "bytes": 2088,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "fae77897f099320f55aa06fc6f3bfeff23c7fdb4d5633f3373f9ba991ee3bab4",
+          "bytes": 17395,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "1c365a521796993892770f0bccbea72162967bd690bba4cdd0e74d10fb6d2db3",
+          "bytes": 1407,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "f9470215dc38cc967c7eb7d200e4309a5bdf15c2cc1980bec0899a97c71e19fd",
+          "bytes": 9354,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "622c44ed7801ede96a262fe5e9228a4a5af5f9d7d8dd8564ebc075a118fdc87a",
+          "bytes": 1164,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "0938ce9d6465f5f652df0a1a59dcde7df61e665849a0b52cdf61d6aed571deaa",
+          "bytes": 2182,
+          "role": "Selected accepted mathematical interface"
+        }
+      ]
+    },
+    {
+      "id": "transformed_high_tail",
+      "publication_document": "16_transformed_high_tail.md",
+      "original_mathematical_source": {
+        "sha256": "c4db7d805a74711e00d9e87629d77f767f6a9e151a7f0d435e6c0b35871b0626",
+        "bytes": 13967
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "655e661b26a8687a3c793af80b82dc606de5dc7ea6850472eff767893b3b40b9",
+        "bytes": 1401
+      },
+      "independent_review_identity": {
+        "sha256": "fe155e7b11a941bebcad7619f07abb97455054ad6a896c0d9bc2e764118aa7de",
+        "bytes": 7426
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "01d7bab2247fcebe93f69a8c08bc80fac5a3b9b3e4246221731f2e3b08016f82",
+        "bytes": 1008
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "a2c8ff57f84b57a2c3cfee2254e08a78e6c62b01902be5a597ef07069781232a",
+        "bytes": 2452
+      },
+      "original_diagnostic_script": {
+        "sha256": "29bf49107b4196518b7474b570b576dfd078f2885ae8d66d1a9d8258ec147544",
+        "bytes": 6087
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "555bb313715e4be8fb6c30828631b5639dcbe866ae0a267bf82e865e5821207b",
+        "bytes": 1063
+      },
+      "status": "SOURCE_REVIEWED_ACTUAL_ENTIRE_TRANSFORMED_HIGH_TAIL_NOT_LEAN",
+      "source_identity_verified": true,
+      "publication_editing": "Proof retained; operational provenance removed; high-tail combined consequence updated using accepted mixed-boundary input",
+      "selected_upstream_identities": [
+        {
+          "sha256": "79832914057edfd2ee5ec6ad492131ec54ecbe68973dc5bd09732fea16904ebb",
+          "bytes": 14181,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "a89e788412a2712e597748840ed9b4061b38bec6260282b54c21bd98c0aa8c55",
+          "bytes": 1594,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+          "bytes": 25030,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "8b91479aa0cdd64776e73c4be3b00b2966fe5dbb7de71d42556e8230eb2d2501",
+          "bytes": 3084,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "3a9df5d600c48111952bc66903d9df749d78ae3595cb5e72dbe17130628f441c",
+          "bytes": 25536,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "d6ef27e3a740b67adc61ae5d74ffb238fbcd9091bf23cd5de82a2d2b51a26c82",
+          "bytes": 17819,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d",
+          "bytes": 3829,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "8b17bcfa77016cc0e823eb7b17c4bf6c72a55db3ceb1a0d08afe5b5ce836dfeb",
+          "bytes": 16982,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "85b68c4b3a23ff1d4a49b0897974b206d5a46bef5612b0c1054dba63d4aa672e",
+          "bytes": 18875,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "1ddbb8725f257a6f3059ebc7d7e5a50453722021b14595aee7f9798cf8117e6a",
+          "bytes": 2508,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "f8c98ad63360965080b85d6b43f69a8d2e7a6feffc440c7099aabb82cce115c6",
+          "bytes": 17100,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "76a304cc8bf7d39bf9c22fd17b0b64e7e97e5d00b5767e0b8263c2746ad5dab7",
+          "bytes": 4312,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "c3b456d9724a066d263ce5bfb70a4f6b1a68ca402ddc9640c05ab2abc5556e61",
+          "bytes": 2088,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "fae77897f099320f55aa06fc6f3bfeff23c7fdb4d5633f3373f9ba991ee3bab4",
+          "bytes": 17395,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "1c365a521796993892770f0bccbea72162967bd690bba4cdd0e74d10fb6d2db3",
+          "bytes": 1407,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "f9470215dc38cc967c7eb7d200e4309a5bdf15c2cc1980bec0899a97c71e19fd",
+          "bytes": 9354,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "622c44ed7801ede96a262fe5e9228a4a5af5f9d7d8dd8564ebc075a118fdc87a",
+          "bytes": 1164,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "0938ce9d6465f5f652df0a1a59dcde7df61e665849a0b52cdf61d6aed571deaa",
+          "bytes": 2182,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "c749a0651a5d42dfcd355a245a30853689b690590ad774398f956fe2938ba505",
+          "bytes": 18171,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "e551f004ce13d6bcff21cb33870008435b9227398a874e36792cc94f998e8026",
+          "bytes": 4725,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "4018642b5616936e2ad4028f9b7aeb1a9f9159758f3513bcb67a8a6eae83ec7f",
+          "bytes": 13462,
+          "role": "Selected accepted mathematical interface"
+        },
+        {
+          "sha256": "5029d2b1674366809ad994fb099e477f40eedba834f3649612d3d68b7e4d48d0",
+          "bytes": 1404,
+          "role": "Selected accepted mathematical interface"
+        }
+      ]
     }
   ],
   "accepted_upstream_interfaces": [
