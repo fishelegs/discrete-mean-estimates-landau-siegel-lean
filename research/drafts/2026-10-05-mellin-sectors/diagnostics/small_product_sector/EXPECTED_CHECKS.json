@@ -1,0 +1,92 @@
+{
+  "diagnostic_only": true,
+  "exact_exponents": "PASS",
+  "positive_negative_shift_prime_checks": {
+    "cases": 2700,
+    "status": "PASS"
+  },
+  "exact_head_dual_mellin_coefficient_identities": {
+    "cases": 24,
+    "max_head_error": 4.469940448714159e-15,
+    "max_dual_error": 5.661048867003676e-15,
+    "both_psi_chi_parities": true,
+    "status": "PASS"
+  },
+  "disjoint_sector_and_literal_intersection": {
+    "checks": 280,
+    "status": "PASS"
+  },
+  "actual_mixed_functional_equation_scalar": [
+    {
+      "D": 3,
+      "psi_parity": 1,
+      "chi_psi_parity": 0,
+      "error": 4.1389698788164186e-41
+    },
+    {
+      "D": 3,
+      "psi_parity": 0,
+      "chi_psi_parity": 1,
+      "error": 2.566880151958614e-41
+    },
+    {
+      "D": 5,
+      "psi_parity": 1,
+      "chi_psi_parity": 1,
+      "error": 4.178578148542343e-41
+    },
+    {
+      "D": 5,
+      "psi_parity": 0,
+      "chi_psi_parity": 0,
+      "error": 8.11718776086834e-41
+    }
+  ],
+  "gaussian_mellin_kernel_and_endpoint": [
+    {
+      "h": "0.2",
+      "x": "0.75",
+      "error": 8.593712034906681e-35,
+      "endpoint_half_weight": false
+    },
+    {
+      "h": "0.2",
+      "x": "1.0",
+      "error": 7.836486469138922e-35,
+      "endpoint_half_weight": true
+    },
+    {
+      "h": "0.2",
+      "x": "1.3",
+      "error": 6.005655596155799e-35,
+      "endpoint_half_weight": false
+    },
+    {
+      "h": "0.5",
+      "x": "0.75",
+      "error": 7.801402439747314e-35,
+      "endpoint_half_weight": false
+    },
+    {
+      "h": "0.5",
+      "x": "1.0",
+      "error": 1.1482767778400182e-34,
+      "endpoint_half_weight": true
+    },
+    {
+      "h": "0.5",
+      "x": "1.3",
+      "error": 1.0747775586252272e-34,
+      "endpoint_half_weight": false
+    }
+  ],
+  "gaussian_boundary_moment": {
+    "E_sqrt_abs_Z": 0.8221789586624586,
+    "status": "PASS"
+  },
+  "two_sided_fixed_ratio_boundary": {
+    "checks": 21,
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

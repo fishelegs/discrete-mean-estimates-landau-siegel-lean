@@ -1,0 +1,60 @@
+{
+  "diagnostic_only": true,
+  "exact_exponents": "PASS",
+  "prime_majorant": {
+    "cases": 4809,
+    "minimum_gap": -7.105427357601002e-15,
+    "ramified_included": true
+  },
+  "shifted_prime_and_power_checks": {
+    "cases": 810,
+    "orders": 8,
+    "status": "PASS"
+  },
+  "divisor_inequalities": {
+    "checks": 303,
+    "status": "PASS"
+  },
+  "finite_masks_and_original_tuple_identity": {
+    "tuple_checks": 672,
+    "tail_checks": 184,
+    "max_error": 2.75764738977458e-14,
+    "status": "PASS"
+  },
+  "both_parity_projector_and_actual_diagonal": {
+    "checks": 2912,
+    "status": "PASS"
+  },
+  "largest_factor_covering": {
+    "checks": 4145,
+    "status": "PASS"
+  },
+  "original_four_gamma_envelope_samples": {
+    "cases": 240,
+    "max_log_normalized": 8.781896571675576,
+    "note": "Finite samples only; uniform proof is REPORT section 8"
+  },
+  "actual_V4_positive_contour_shift": [
+    {
+      "psi_parity": 0,
+      "chi_parity": 0,
+      "error": 1.6669294423343937e-34
+    },
+    {
+      "psi_parity": 0,
+      "chi_parity": 1,
+      "error": 1.5953542563012423e-34
+    },
+    {
+      "psi_parity": 1,
+      "chi_parity": 0,
+      "error": 1.4009509913609335e-34
+    },
+    {
+      "psi_parity": 1,
+      "chi_parity": 1,
+      "error": 1.4605060112559578e-34
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-10-05",
+  "publication_kind": "DRAFT_MATHEMATICAL_CHECKPOINT",
+  "repository": "fishelegs/discrete-mean-estimates-landau-siegel-lean",
+  "base_commit": "1b1bdae9503bf45acc091381e5574b86930f55ae",
+  "intended_branch": "draft/mellin-sectors-20261005",
+  "repository_directory": "research/drafts/2026-10-05-mellin-sectors",
+  "scope": "Three completed source-reviewed mathematical arguments and supporting finite diagnostics",
+  "formal_lean_status": "NO_NEW_LEAN_SOURCE_OR_CERTIFICATE",
+  "final_gap_status": "OPEN",
+  "verification": {
+    "selected_source_hash_checks": 42,
+    "unique_source_hashes": 32,
+    "source_hash_checks": "PASS",
+    "both_sector_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
+    "sanitized_proof_body_comparison": "Only status, bibliography and operational-context editing; mathematical derivation sections retained",
+    "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
+    "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
+    "ci_note": "Normal repository push CI may run; it checks existing repository code and does not certify these analytic drafts"
+  },
+  "files": [
+    {
+      "path": "01_reciprocal_product.md",
+      "sha256": "419b7d3fd82e38db188506a7a6cc54822fb26bf9afcd3de8f506a4c6699421f4",
+      "bytes": 11554,
+      "validation": "SOURCE_REVIEWED_NOT_LEAN"
+    },
+    {
+      "path": "02_short_sector.md",
+      "sha256": "3c5b5961650ec53fe1e787627438b0caaba1c77aafeb61e96fb4c89813f1acf9",
+      "bytes": 26431,
+      "validation": "SOURCE_REVIEWED_NOT_LEAN"
+    },
+    {
+      "path": "03_small_product_sector.md",
+      "sha256": "0e7de20cce18c223292945fdf82fc53bc8da3c7424f0e366d3e12c27c837448e",
+      "bytes": 25574,
+      "validation": "SOURCE_REVIEWED_NOT_LEAN"
+    },
+    {
+      "path": "README.md",
+      "sha256": "17645360c8da7a7e9537e95644f3ef2c6cd548e634c873c59365a5469a6941a4",
+      "bytes": 3820,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "sha256": "23ce0ff0f7634d5988a2052ee9c4b340c22c8ea8f0d606495433c5d8f45d96f4",
+      "bytes": 7362,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/README.md",
+      "sha256": "fb4fd25883e84c1dce848ac3e4ff5ccb269fd85209d080f1dc75a9d02e06cc57",
+      "bytes": 1489,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/short_sector/EXPECTED_CHECKS.json",
+      "sha256": "ec5fd53c790dd57534832489a5763a0a5d3b058e895d0d6fc6467f5078e924cb",
+      "bytes": 1317,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/short_sector/checks.py",
+      "sha256": "dd1c2c80827fdeda9638a88a34a389e0ca485db4b78cde19edc43527aa27d533",
+      "bytes": 9119,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/small_product_sector/EXPECTED_CHECKS.json",
+      "sha256": "b60fd65a62d687f3fa80dfbdeb4203db2ac62e61e5aa57793cd36d604c254b4c",
+      "bytes": 1956,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/small_product_sector/checks.py",
+      "sha256": "c0b6c26d38d7512fea8b4449cf2520474116ffdcd8440b1b3812a57ad20206b9",
+      "bytes": 6694,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "verify_checkpoint.py",
+      "sha256": "44d977e9a310743b72e502dd905c002952a13788fc2aa49c61826f829ae57f03",
+      "bytes": 1125,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    }
+  ],
+  "manifest_integrity": "The manifest does not include its own hash; Git tree identity and the external checkpoint receipt pin this file."
+}

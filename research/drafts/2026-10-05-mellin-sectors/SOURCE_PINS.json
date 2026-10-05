@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-05",
+  "base_repository_commit": "1b1bdae9503bf45acc091381e5574b86930f55ae",
+  "proof_sources": [
+    {
+      "id": "reciprocal",
+      "publication_document": "01_reciprocal_product.md",
+      "original_mathematical_source": {
+        "sha256": "857a12b0341f4c06297514ff917859823cc05326ce6d3add94951132b8379898",
+        "bytes": 11527
+      },
+      "independent_review_identity": {
+        "sha256": "1f2b37c8b1c55ffbdbb63377d6f4032ebe45df197312dcf23e3d23ec002782b1",
+        "bytes": 12654
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "71a483b54cf908a7456d5771f41c220c1c475491a0d96acc65014fe7ebd5ed34",
+        "bytes": 2507
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "d92f56db8f9e4c3a483853d97695dd0ed11d7b90acdc0777cc56a77289907288",
+        "bytes": 1943
+      },
+      "status": "SOURCE_REVIEWED_NOT_LEAN",
+      "source_identity_verified": true,
+      "publication_editing": "Mathematical proof retained; operational provenance and historical pending-review language removed or updated; bibliography normalized."
+    },
+    {
+      "id": "short_sector",
+      "publication_document": "02_short_sector.md",
+      "original_mathematical_source": {
+        "sha256": "3b54c4ff4dfc529ae34eb3aec03cf490b79c8f375f6a118023257e3468f62792",
+        "bytes": 26877
+      },
+      "independent_review_identity": {
+        "sha256": "5cc6fb6987101285e71f401cb1d69ecbd48e3f8ed24fd513fdce2bafe42c167e",
+        "bytes": 19326
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "73bf95c2a6fdc291c6bace62a4dfa00d5f71f28a08d8c40859a4c5e33c876449",
+        "bytes": 3098
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "34e72e847169908f077ad954fe8ef7cb4fcb7662e1d297f33f598cd1472a5458",
+        "bytes": 2867
+      },
+      "status": "SOURCE_REVIEWED_NOT_LEAN",
+      "source_identity_verified": true,
+      "publication_editing": "Mathematical proof retained; operational provenance and historical pending-review language removed or updated; bibliography normalized."
+    },
+    {
+      "id": "small_product_sector",
+      "publication_document": "03_small_product_sector.md",
+      "original_mathematical_source": {
+        "sha256": "f2bceb43b6cb31ab9a71ca5ecd8064569b60b2c57bc899208744c7255e317d91",
+        "bytes": 26625
+      },
+      "independent_review_identity": {
+        "sha256": "6cdc312cdb348f78d5fe7167fb0224644c54270cce8ec6f68a2102574d32a2a0",
+        "bytes": 23635
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "5fb0a5cdaf81339b13aa326406634b0445c328554b95b8188ea530906330d18e",
+        "bytes": 3448
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "02409b42acea2141121823d776792ff1df00d96f6c25bd930f6636f45a1e4e55",
+        "bytes": 2975
+      },
+      "status": "SOURCE_REVIEWED_NOT_LEAN",
+      "source_identity_verified": true,
+      "publication_editing": "Mathematical proof retained; operational provenance and historical pending-review language removed or updated; bibliography normalized."
+    }
+  ],
+  "accepted_upstream_interfaces": [
+    {
+      "title": "Local derivative profile",
+      "role": "Accepted upstream interface; not redistributed in this checkpoint",
+      "sha256": "d5947186950da41df1b9f374b5473ee15b885e7e7c1d718335a4390d87d747ff",
+      "bytes": 11470,
+      "selected_bytes_verified": true
+    },
+    {
+      "title": "Lemma55SimpleRealZero",
+      "repository_path": "ZhangLS/Spec/Lemma55SimpleRealZero.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma55SimpleRealZero.lean",
+      "sha256": "9fd7426dfe0631e71d14d197bd6944c2e9ba90de3809bd393238cebe805c13b4",
+      "bytes": 6544,
+      "selected_bytes_verified": true
+    },
+    {
+      "title": "Lemma55LocalDerivatives",
+      "repository_path": "ZhangLS/Spec/Lemma55LocalDerivatives.lean",
+      "url": "https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/blob/1b1bdae9503bf45acc091381e5574b86930f55ae/ZhangLS/Spec/Lemma55LocalDerivatives.lean",
+      "sha256": "5ac31d2dd912a13df52c0b6bb410b7325afdf85d9b2999a3d9d1d6380163d967",
+      "bytes": 5491,
+      "selected_bytes_verified": true
+    },
+    {
+      "title": "Refined low-output and original finite V4 interfaces",
+      "role": "Accepted upstream interface; not redistributed in this checkpoint",
+      "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+      "bytes": 23155,
+      "selected_bytes_verified": true
+    },
+    {
+      "title": "Refined low-output and original finite V4 interfaces theorem statement",
+      "role": "Accepted upstream interface; not redistributed in this checkpoint",
+      "sha256": "914fab5a8c9072452063f559d04e433535cac3cd5dd520371ea80b84bda0f08c",
+      "bytes": 1976,
+      "selected_bytes_verified": true
+    },
+    {
+      "title": "Shifted static cancellation interfaces",
+      "role": "Accepted upstream interface; not redistributed in this checkpoint",
+      "sha256": "35e91a393b02e8b3d117dfbaa212a3e133dd5262bd3acc681e6f96464950d4d3",
+      "bytes": 25955,
+      "selected_bytes_verified": true
+    },
+    {
+      "title": "Shifted static cancellation interfaces theorem statement",
+      "role": "Accepted upstream interface; not redistributed in this checkpoint",
+      "sha256": "879512329eb577102625dbaedc03b6b6e1a291b034edc817e9a825d893378308",
+      "bytes": 1676,
+      "selected_bytes_verified": true
+    },
+    {
+      "title": "Averaged short-factor and primitive large-sieve interfaces",
+      "role": "Accepted upstream interface; not redistributed in this checkpoint",
+      "sha256": "df2b99e2ba126aaffd79e13b7789773b0e3b0df2ea364d6eae207b669d7a1c41",
+      "bytes": 19557,
+      "selected_bytes_verified": true
+    },
+    {
+      "title": "Near-modulus moving-cutoff interfaces",
+      "role": "Accepted upstream interface; not redistributed in this checkpoint",
+      "sha256": "510b6d70e95dc2d6dee7776486174f667df56f364dc59f8c92ecd32c8a8ab806",
+      "bytes": 17775,
+      "selected_bytes_verified": true
+    }
+  ],
+  "public_primary_references": [
+    {
+      "authors": "Kubra Benli, Shivani Goel, Henry Twiss, Asif Zaman",
+      "title": "Explicit Deuring-Heilbronn phenomenon for Dirichlet L-functions",
+      "version": "arXiv:2410.06082v3, 2026-01-08",
+      "url": "https://arxiv.org/html/2410.06082v3",
+      "used": "Corollary 1.1; same-character scope in Proposition 5.1",
+      "redistributed": false
+    },
+    {
+      "author": "Nicol Leong",
+      "title": "Explicit estimates for the logarithmic derivative and the reciprocal of the Riemann zeta function",
+      "version": "arXiv:2405.04869v4, 2025-08-27",
+      "url": "https://arxiv.org/html/2405.04869v4",
+      "used": "Corollary 4",
+      "redistributed": false
+    },
+    {
+      "title": "DLMF fixed-strip gamma asymptotics",
+      "url": "https://dlmf.nist.gov/5.11.E9",
+      "redistributed": false
+    },
+    {
+      "title": "DLMF Dirichlet L-functions",
+      "url": "https://dlmf.nist.gov/25.15",
+      "redistributed": false
+    }
+  ],
+  "identity_note": "Original-source hashes identify the reviewed inputs; publication-document hashes are separately listed in PUBLICATION_MANIFEST.json. Hash identity is not mathematical certification."
+}
