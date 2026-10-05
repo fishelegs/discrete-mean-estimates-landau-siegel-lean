@@ -116,6 +116,201 @@
       "status": "SOURCE_REVIEWED_EXACT_IDENTITY_ONLY_NOT_LEAN",
       "source_identity_verified": true,
       "publication_editing": "Mathematical derivations retained; operational references removed and source bibliography normalized."
+    },
+    {
+      "id": "smooth_balanced_diagonal",
+      "publication_document": "06_smooth_balanced_diagonal.md",
+      "original_mathematical_source": {
+        "sha256": "c1d3d2dcfcb63d9a64d7b58964553468241589910bb95d6a49a9bae00c89ef74",
+        "bytes": 22338
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "dc79ca254e3a19e6a309558c2a589d7d58f07c184ed7eeaacf09766ee937a065",
+        "bytes": 1372
+      },
+      "author_result_statement_identity": {
+        "sha256": "fe33de37fdbc795ba7d31482cfb0f79156473b11e99c466554c4323d2e6a0f05",
+        "bytes": 1909
+      },
+      "original_diagnostic_script": {
+        "sha256": "0e25368e4dd7588cb5f3a5c7116145454756fc83e41c6134b421671f661c9ada",
+        "bytes": 6177
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "bf9555a1ea7e152458dfc3ee9a57d0abf48965e6ffdd5917166a39a1e9ab92be",
+        "bytes": 1168
+      },
+      "independent_review_identity": {
+        "sha256": "6c38ba4d36b11f2d90ff33cde06348051ca287b0515f00d0dda3a95b7c4a619c",
+        "bytes": 19418
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "d3556eae84917185fb3f3448c370679c9b537b7288b5d9ba239a31a5710e6793",
+        "bytes": 4368
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "e2b6b3b6bbda7a4aa6b75b1ad3c7886ba248574a4774d8b8997fa90d2c65ad2a",
+        "bytes": 3793
+      },
+      "status": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
+      "source_identity_verified": true,
+      "diagnostic_replay": "PASS_AND_BYTE_EQUAL",
+      "publication_editing": "Full proof sections retained; operational provenance removed and source references normalized. Mathematical sections 1 through 8 match the source after one source-provenance sentence replacement.",
+      "claims": [
+        "Sub-64 squared-norm error for fixed-profile smoothing of the actual balanced core",
+        "Paid bounded-tuple-multiplier infinite output and input extensions",
+        "Actual smooth-target entire integer-equality row bound P^2 tau_6(D)D^(-1/2)L^228(log L)^6=o(P^2), including its restricted even-principal correction"
+      ],
+      "limitations": [
+        "No o(P^2) lower-transition squared-moment identity",
+        "No payment of the lower transition cross with the unknown balanced norm",
+        "No identification with the old bump-train W weights",
+        "No full balanced energy or joint cross bound",
+        "No replacement of the original same-output diagonal",
+        "No final-gap or new Lean claim"
+      ],
+      "selected_upstream_mathematical_source_identities": [
+        {
+          "sha256": "3b54c4ff4dfc529ae34eb3aec03cf490b79c8f375f6a118023257e3468f62792",
+          "bytes": 26877
+        },
+        {
+          "sha256": "f2bceb43b6cb31ab9a71ca5ecd8064569b60b2c57bc899208744c7255e317d91",
+          "bytes": 26625
+        },
+        {
+          "sha256": "c749a0651a5d42dfcd355a245a30853689b690590ad774398f956fe2938ba505",
+          "bytes": 18171
+        },
+        {
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852
+        },
+        {
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155
+        },
+        {
+          "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+          "bytes": 25030
+        },
+        {
+          "sha256": "510b6d70e95dc2d6dee7776486174f667df56f364dc59f8c92ecd32c8a8ab806",
+          "bytes": 17775
+        }
+      ],
+      "independent_review_manifest_identity": {
+        "sha256": "9531dad501111667c39b525a3c737650174b93a30c33ef75af1c44aa1bd6ad2a",
+        "bytes": 3402
+      },
+      "final_acceptance_checked_utc": "2026-10-05T12:29:36.403254+00:00",
+      "acceptance_scope": "Fixed-profile smooth-target sub-64 norm reduction, bounded-multiplier infinite-tail/input extension, and the entire actual smooth-target full-kernel integer-equality row, with all previously stated limitations."
+    },
+    {
+      "id": "gaussian_principal_mean",
+      "publication_document": "07_gaussian_principal_mean.md",
+      "original_mathematical_source": {
+        "sha256": "3a9df5d600c48111952bc66903d9df749d78ae3595cb5e72dbe17130628f441c",
+        "bytes": 25536
+      },
+      "frozen_author_manifest_identity": {
+        "sha256": "dc8060539d5c576f9affe3cae20fc123cf089304b744ee7ca2c78d1354d816e6",
+        "bytes": 1402
+      },
+      "author_result_statement_identity": {
+        "sha256": "42974666997ff70dfc2bca66855fa1564dfface6034f085888f89c96076874a8",
+        "bytes": 1694
+      },
+      "original_diagnostic_script": {
+        "sha256": "631f3d1aa3c102e121f22a89964168f0113c06537abc086107abb1b708de0395",
+        "bytes": 6147
+      },
+      "original_diagnostic_expected_result": {
+        "sha256": "781acf198facc7f630c2c7285a42acd324c841fda09c18ab5c0a06c7754ca0cf",
+        "bytes": 1328
+      },
+      "author_source_pins_identity": {
+        "sha256": "052d48e50774547cb4e9e69d485d06a43d813633395a0778627f9ce5fae168c9",
+        "bytes": 5399
+      },
+      "independent_review_identity": {
+        "sha256": "d6ef27e3a740b67adc61ae5d74ffb238fbcd9091bf23cd5de82a2d2b51a26c82",
+        "bytes": 17819
+      },
+      "review_acceptance_record_identity": {
+        "sha256": "7898c245f842db53392f6f30d6353d1f1d45e3dbe1ca85fd98887af27b91b216",
+        "bytes": 6059
+      },
+      "independent_review_manifest_identity": {
+        "sha256": "d084548d4555388f7e0266db5292d982d55acd2e9bfe26d66775056871ed67a9",
+        "bytes": 3401
+      },
+      "final_acceptance_record_identity": {
+        "sha256": "4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d",
+        "bytes": 3829
+      },
+      "status": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
+      "source_identity_verified": true,
+      "diagnostic_replay": "PASS_AND_BYTE_EQUAL",
+      "publication_editing": "Sections 1 through 8 retain every mathematical statement and proof byte; only the final operational provenance sentence is removed, the opening status is updated, and a public source/verification section is appended.",
+      "claims": [
+        "Gaussian-log target sub-64 squared-norm reduction with the original finite inverse and paid infinite input/output extensions",
+        "Every exact artificial-AFE principal-p-unit branch is O(D^6 L^6400), with all residues and outer heights paid",
+        "Every finite correctly reduced even-principal root-kernel correction is O(P D^12 L^12800)=o(P^2)",
+        "Gaussian-target full-kernel integer-equality row directly paid; restricted principal part O(P tau_6(D)D^(-1/2)L^228(log L)^6), so complementary swapped principal mean is o(P^2)"
+      ],
+      "limitations": [
+        "No primitive principal functional equation",
+        "No identification of individual Gaussian, compact-profile or bump-train weights or rows",
+        "No o(P^2) squared-moment identity from norm reduction",
+        "No nonzero congruence or remaining oscillatory-kernel estimate",
+        "No full positive branch norm, balanced energy or joint cross bound",
+        "No final-gap or new Lean claim"
+      ],
+      "selected_upstream_mathematical_source_identities": [
+        {
+          "sha256": "3b54c4ff4dfc529ae34eb3aec03cf490b79c8f375f6a118023257e3468f62792",
+          "bytes": 26877,
+          "purpose": "First actual sector and its constant-factor cutoff proof interfaces"
+        },
+        {
+          "sha256": "f2bceb43b6cb31ab9a71ca5ecd8064569b60b2c57bc899208744c7255e317d91",
+          "bytes": 26625,
+          "purpose": "Second actual sector, mixed AFE and intersection proof interfaces"
+        },
+        {
+          "sha256": "c749a0651a5d42dfcd355a245a30853689b690590ad774398f956fe2938ba505",
+          "bytes": 18171,
+          "purpose": "Already accepted unmultiplied tail; fixed positive gamma line and dyadic HLS proof"
+        },
+        {
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852,
+          "purpose": "Exact accepted hybrid proof bytes"
+        },
+        {
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155,
+          "purpose": "Original V4/core identities and gamma/projector conventions"
+        },
+        {
+          "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+          "bytes": 25030,
+          "purpose": "Exact four-branch root and signed covariance identity"
+        },
+        {
+          "sha256": "510b6d70e95dc2d6dee7776486174f667df56f364dc59f8c92ecd32c8a8ab806",
+          "bytes": 17775,
+          "purpose": "Uniform all-height plain pair AFE weight bounds"
+        },
+        {
+          "sha256": "c1d3d2dcfcb63d9a64d7b58964553468241589910bb95d6a49a9bae00c89ef74",
+          "bytes": 22338,
+          "purpose": "Accepted compact-profile bounded-multiplier/infinite-shell interface and equality contraction"
+        }
+      ],
+      "final_acceptance_checked_utc": "2026-10-05T12:54:48.379619+00:00",
+      "acceptance_scope": "Gaussian-log balanced sub-64 norm reduction with paid input/output extensions; directly reproved Gaussian-target full-kernel integer-equality row; all finite correctly reduced even-principal corrections, including the complementary swapped principal mean. No full balanced energy, joint cross or final gap."
     }
   ],
   "accepted_upstream_interfaces": [
@@ -405,5 +600,7 @@
       "redistributed": false
     }
   ],
-  "identity_note": "Original-source hashes identify the reviewed inputs; publication-document hashes are separately listed in PUBLICATION_MANIFEST.json. Hash identity is not mathematical certification."
+  "identity_note": "Original-source hashes identify the reviewed inputs; publication-document hashes are separately listed in PUBLICATION_MANIFEST.json. Hash identity is not mathematical certification.",
+  "previous_checkpoint_commit": "357c5c396342d4f0fde6d404e96907b42c85f98e",
+  "local_preparation_checkpoint_commit": "cf430d359ef57d14fe835d68b41c33811e31c0a9"
 }

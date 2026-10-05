@@ -1,8 +1,8 @@
 # Draft finite V4 estimates and balanced core identities
 
-Research checkpoint dated 2026-10-05, based on public repository commit `1b1bdae9503bf45acc091381e5574b86930f55ae`.
+Research checkpoint dated 2026-10-05, originally based on public repository commit `1b1bdae9503bf45acc091381e5574b86930f55ae`; this increment is based on draft checkpoint `357c5c396342d4f0fde6d404e96907b42c85f98e`.
 
-Status: five mathematical notes have passed independent source review at the specific scopes below. The smaller-inverse result has explicit attachment limits; the four-branch result proves exact identities only. None of these new notes has been formalized in Lean. The full original moment and final strict gap remain OPEN. No new Lean source is added by this checkpoint.
+Status: seven mathematical notes have passed independent source review at the specific scopes below. The Gaussian-target result pays its finite reduced principal corrections and directly reproves its weighted equality row. The smooth-target result pays a sub-64 norm reduction and one entire transformed equality row at its stated scope. The smaller-inverse result has explicit attachment limits; the four-branch result proves exact identities only. None of these new notes has been formalized in Lean. The full original moment and final strict gap remain OPEN. No new Lean source is added by this checkpoint.
 
 ## Mathematical results
 
@@ -15,6 +15,10 @@ Keep the original assumption `0 < L(1,chi) < (log D)^(-2022)` and the original t
 4. [Smaller arithmetic inverse tail](04_smaller_inverse_tail.md): every fixed `delta>1` gives `sum_(D^delta<n<=P^3)nu(n)^2/n = O_delta(L^-2011)`, improved to `L^-2019` when the upper endpoint is `D^4`. The actual discarded-sector and cross estimates still retain a `D^5` loss at the full core, so this does not replace the original inverse cutoff globally.
 5. [Exact balanced four-branch identity](05_balanced_four_branch_identity.md): the original integer masks, root numbers, four head/dual branches, all six signed cross kernels, shifted equality-row arithmetic, and phase identities are explicit. This supplies no new positive-energy estimate or signed gain.
 
+6. [Smooth balanced reduction and actual weighted equality row](06_smooth_balanced_diagonal.md): a fixed-profile infinite smooth target differs from the hard balanced core by squared norm `O(P^2 L^(958/15)(log L)^(52/5))`, hence `O(P^2 L^(959/15))`. The infinite output/input extensions are paid. For this new target's actual `W10*conjugate(W01)` cross, the entire integer-equality row `e*m*m'=D*d*n*n'`, including its restricted even-principal subtraction, has absolute contribution `O(P^2 tau_6(D)D^(-1/2)L^228(log L)^6)=o(P^2)`. All Mellin heights and all dual indices are included.
+
+7. [Gaussian-log reduction and principal corrections](07_gaussian_principal_mean.md): the original hard balanced core and the literal infinite Gaussian-log target differ by squared family norm `O(P^2 L^(958/15)(log L)^(52/5))`, hence `O(P^2 L^(959/15))`, with paid input/output extensions. Each of its four exact artificial-AFE principal-p-unit branches is `O(D^6 L^6400)`. Every correctly reduced finite even-principal root-kernel correction is therefore `O(P D^12 L^12800)=o(P^2)`. For the swapped cross, the equality-restricted principal part is `O(P tau_6(D)D^(-1/2)L^228(log L)^6)`, and its complementary principal mean is paid by exact subtraction. The full-kernel Gaussian-target integer-equality row is directly re-established as `O(P^2 tau_6(D)D^(-1/2)L^228(log L)^6)=o(P^2)` for the Gaussian weights.
+
 Both sector estimates imply `O(P^2 L^(959/15))`, where `959/15<64`. Original finite inverse `d<=D^4`, four-gamma `V4(m*n)`, imaginary shifts, both character parities, narrow prime window, restricted Gaussian, p-unit zeros, and exact nonprincipal projection are retained.
 
 The sectors are disjoint as finite tuple sets, but need not be orthogonal as sampled polynomials. Cauchy bounds their mutual cross; the norm triangle inequality pays their union with the same fixed exponent.
@@ -26,7 +30,7 @@ Within the retained core, the remaining exact region is
     r>P/D^8, n>P/D^14, rn<=M, d<=D^4,
     r<=P D^19, n<=P D^13.
 
-Its energy and joint cross with the paid union remain open, as does the final theorem assembly. A same-output diagonal is never substituted for the full positive quadratic form. No full finite-G moment, final numerical inequality, or Landau–Siegel contradiction follows yet.
+Its energy and joint cross with the paid union remain open, as does the final theorem assembly. The compact-profile and Gaussian-log norm reductions transfer existence of a fixed sub-64 positive norm bound by triangle; neither gives an `o(P^2)` squared-moment identity or pays a transition cross with the unknown balanced norm. Their weights and individual cross rows are not identified with each other or the earlier integer-cell bump-train weights. The Gaussian result pays its complementary swapped even-principal mean and all other correctly reduced finite principal corrections; it does not transfer that principal result termwise to the compact-profile target. For the Gaussian target, nonzero positive congruence shifts, negative congruence rows, the oscillatory parts of the other five signed crosses, and all four positive branch norms beyond their principal corrections remain open. A same-output diagonal is never substituted for the full positive quadratic form. No full finite-G moment, final numerical inequality, or Landau–Siegel contradiction follows yet.
 
 ### Scope reconciliation with the earlier remote output theorem
 
@@ -45,7 +49,7 @@ The generic resonant example in the smaller-inverse note concerns arbitrary sepa
 ## Evidence and reproduction
 
 - [Exact source pins](SOURCE_PINS.json) distinguish original source identities from these edited publication documents and link the public primary references
-- [Finite diagnostics](diagnostics/README.md) include the original mathematical scripts and expected results for both sectors, the smaller-inverse tail, and the four-branch identity, with no claim that numerical tests certify asymptotics
+- [Finite diagnostics](diagnostics/README.md) include the original mathematical scripts and expected results for both sectors, the smaller-inverse tail, the four-branch identity, the smooth balanced reduction, and the Gaussian principal calculation, with no claim that numerical tests certify asymptotics
 - [Checkpoint verifier](verify_checkpoint.py) checks all listed file bytes and exact rational exponent bookkeeping
 - [Publication manifest](PUBLICATION_MANIFEST.json) lists the complete added payload with SHA-256 values and validation labels
 

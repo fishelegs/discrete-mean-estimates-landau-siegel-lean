@@ -1,33 +1,82 @@
 {
-  "schema_version": 2,
+  "schema_version": 4,
   "date_utc": "2026-10-05",
   "publication_kind": "DRAFT_MATHEMATICAL_CHECKPOINT",
   "repository": "fishelegs/discrete-mean-estimates-landau-siegel-lean",
   "base_commit": "1b1bdae9503bf45acc091381e5574b86930f55ae",
-  "previous_checkpoint_commit": "376da6af82a2fa9800ed352b672557ace61bc5e1",
+  "previous_checkpoint_commit": "357c5c396342d4f0fde6d404e96907b42c85f98e",
+  "local_preparation_checkpoint_commit": "cf430d359ef57d14fe835d68b41c33811e31c0a9",
   "intended_branch": "draft/mellin-sectors-20261005",
   "repository_directory": "research/drafts/2026-10-05-mellin-sectors",
-  "scope": "Five source-reviewed mathematical notes at their explicit estimate, attachment-limit or identity-only scopes, plus supporting finite diagnostics",
+  "scope": "Seven source-reviewed mathematical notes at their explicit scopes, including smooth and Gaussian-log reductions, target-specific equality rows, and Gaussian-target reduced principal corrections",
+  "new_note_validation_status": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
   "formal_lean_status": "NO_NEW_LEAN_SOURCE_OR_CERTIFICATE",
   "final_gap_status": "OPEN",
   "global_frontier": {
     "original_remote_output_complement": "ALREADY_PAID_BY_EARLIER_ACCEPTED_SOURCE",
     "entire_core_remote_cross": "ALREADY_PAID_BY_EARLIER_ACCEPTED_SOURCE",
+    "smooth_balanced_norm_reduction": "SOURCE_REVIEWED",
+    "infinite_output_and_input_extensions": "SOURCE_REVIEWED",
+    "actual_smooth_target_entire_integer_equality_row": "SOURCE_REVIEWED_o(P^2)_INCLUDING_RESTRICTED_PRINCIPAL_CORRECTION",
+    "lower_transition_unknown_balanced_cross": "OPEN",
+    "complementary_signed_cross_rows_and_positive_branch_norms": "OPEN",
     "balanced_core_energy_and_joint_cross": "OPEN",
-    "final_theorem_assembly": "OPEN"
+    "final_theorem_assembly": "OPEN",
+    "gaussian_log_balanced_norm_reduction": "SOURCE_REVIEWED",
+    "gaussian_artificial_AFE_principal_p_unit_branches": "SOURCE_REVIEWED_O(D^6_L^6400)",
+    "gaussian_finite_reduced_principal_corrections": "SOURCE_REVIEWED_o(P^2)",
+    "gaussian_swapped_complementary_even_principal_mean": "SOURCE_REVIEWED_o(P^2)",
+    "actual_gaussian_target_entire_integer_equality_row": "SOURCE_REVIEWED_o(P^2)_INCLUDING_RESTRICTED_PRINCIPAL_CORRECTION",
+    "compact_profile_to_gaussian_individual_weight_or_row_identity": "NOT_CLAIMED",
+    "nonzero_positive_and_negative_congruences": "OPEN",
+    "other_oscillatory_root_kernels": "OPEN",
+    "gaussian_positive_branch_norms_beyond_principal_corrections": "OPEN"
   },
   "verification": {
-    "previous_checkpoint_selected_source_hash_checks": 42,
-    "previous_checkpoint_unique_source_hashes": 32,
-    "new_checkpoint_source_identity_checks_including_frozen_author_manifests": 69,
-    "new_checkpoint_unique_hashes": 59,
-    "source_hash_checks": "PASS",
-    "all_four_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
-    "first_three_published_proof_documents": "BYTE_UNCHANGED_FROM_PREVIOUS_CHECKPOINT",
-    "new_proof_body_comparison": "Mathematical derivations retained; status and source-bibliography cleanup only",
+    "previous_checkpoint_verification": {
+      "previous_checkpoint_verification": {
+        "previous_checkpoint_selected_source_hash_checks": 42,
+        "previous_checkpoint_unique_source_hashes": 32,
+        "new_checkpoint_source_identity_checks_including_frozen_author_manifests": 69,
+        "new_checkpoint_unique_hashes": 59,
+        "source_hash_checks": "PASS",
+        "all_four_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
+        "first_three_published_proof_documents": "BYTE_UNCHANGED_FROM_PREVIOUS_CHECKPOINT",
+        "new_proof_body_comparison": "Mathematical derivations retained; status and source-bibliography cleanup only",
+        "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
+        "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
+        "ci_note": "Unchanged normal repository push CI validates existing repository code; it does not certify these analytic drafts"
+      },
+      "new_selected_source_hash_checks_including_frozen_author_manifest": 50,
+      "new_unique_source_hashes": 33,
+      "new_source_hash_checks": "PASS",
+      "all_five_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
+      "proof_documents_01_through_05": "BYTE_UNCHANGED_FROM_357c5c396342d4f0fde6d404e96907b42c85f98e",
+      "new_proof_body_comparison": "Sections 1 through 8 byte-identical after one operational source-provenance sentence replacement; mathematical derivations, quantifiers, errors and limitations retained",
+      "source_review_scope": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
+      "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
+      "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
+      "ci_note": "Normal repository push CI checks existing repository code; it does not certify analytic drafts"
+    },
+    "new_selected_source_hash_checks_including_frozen_author_manifest": 53,
+    "new_unique_source_hashes": 36,
+    "new_source_hash_checks": "PASS",
+    "all_six_diagnostic_replays": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
+    "proof_documents_01_through_06": "BYTE_UNCHANGED_FROM_cf430d359ef57d14fe835d68b41c33811e31c0a9",
+    "prior_checkpoint_and_backups": "UNCHANGED_HASHES_PASS",
+    "new_proof_body_comparison": "Sections 1 through 8 are byte-identical after removing one final operational-provenance sentence; mathematical derivations, quantifiers, errors and limitations retained",
+    "source_review_scope": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
     "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
-    "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
-    "ci_note": "Unchanged normal repository push CI validates existing repository code; it does not certify these analytic drafts"
+    "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS",
+    "ci_note": "Normal repository CI checks existing repository code; it does not certify these analytic drafts"
+  },
+  "preserved_proof_document_hashes": {
+    "01_reciprocal_product.md": "419b7d3fd82e38db188506a7a6cc54822fb26bf9afcd3de8f506a4c6699421f4",
+    "02_short_sector.md": "3c5b5961650ec53fe1e787627438b0caaba1c77aafeb61e96fb4c89813f1acf9",
+    "03_small_product_sector.md": "0e7de20cce18c223292945fdf82fc53bc8da3c7424f0e366d3e12c27c837448e",
+    "04_smaller_inverse_tail.md": "28123b40330f98f5ddacb894c73dee03e9b0f0110a092d5eebe9a4dd68a9b5a9",
+    "05_balanced_four_branch_identity.md": "93081462a7d65baa21ba3d74247b58ef00346dbfcb1880753b4a85e0b3aad737",
+    "06_smooth_balanced_diagonal.md": "29995537b84245467140e46ae31c4e65b668ba29d95de3805e84c1f252438eef"
   },
   "files": [
     {
@@ -61,21 +110,33 @@
       "validation": "SOURCE_REVIEWED_EXACT_IDENTITY_ONLY_NOT_LEAN"
     },
     {
+      "path": "06_smooth_balanced_diagonal.md",
+      "sha256": "29995537b84245467140e46ae31c4e65b668ba29d95de3805e84c1f252438eef",
+      "bytes": 22843,
+      "validation": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN"
+    },
+    {
+      "path": "07_gaussian_principal_mean.md",
+      "sha256": "be31216c80c183a27fe5c6e644a1a3c994d10eec077891a015bd4d835fb1b9f4",
+      "bytes": 26830,
+      "validation": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN"
+    },
+    {
       "path": "README.md",
-      "sha256": "5f01967096e3741a6e5ac0d9f92648265d87309206553a2413bfd7b3923b68b7",
-      "bytes": 5872,
+      "sha256": "ecad2ea82aaa73aa0f5f1be0cb557419cbbf581d44661df7d0a5d5e79f31feac",
+      "bytes": 8472,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "SOURCE_PINS.json",
-      "sha256": "d6bc50720a9851fcdf8ff78894f9ad37e0764ae31c0063a69edff06f0c3316d8",
-      "bytes": 19409,
+      "sha256": "f0119736f52a80a1b79f0efd070e17b3e53d6f29a8e0ffb07302b31e9d005e9a",
+      "bytes": 28971,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/README.md",
-      "sha256": "5ed207c0992e534ea5478cebbc747a24ab26c6b2042b354c7e43c46085a3f71b",
-      "bytes": 2040,
+      "sha256": "b0675ada0535512962334328a6f076d06b36a40b482b4d1ddd4bc16a32ecfb64",
+      "bytes": 3789,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
@@ -88,6 +149,18 @@
       "path": "diagnostics/four_branch_identity/checks.py",
       "sha256": "717ac847f0be8020f4c042876f447b3eede4f3b1e9212ef27859a498a62b6806",
       "bytes": 9605,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/gaussian_principal_mean/EXPECTED_CHECKS.json",
+      "sha256": "781acf198facc7f630c2c7285a42acd324c841fda09c18ab5c0a06c7754ca0cf",
+      "bytes": 1328,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/gaussian_principal_mean/checks.py",
+      "sha256": "631f3d1aa3c102e121f22a89964168f0113c06537abc086107abb1b708de0395",
+      "bytes": 6147,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
@@ -127,11 +200,23 @@
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
+      "path": "diagnostics/smooth_balanced_diagonal/EXPECTED_CHECKS.json",
+      "sha256": "bf9555a1ea7e152458dfc3ee9a57d0abf48965e6ffdd5917166a39a1e9ab92be",
+      "bytes": 1168,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/smooth_balanced_diagonal/checks.py",
+      "sha256": "0e25368e4dd7588cb5f3a5c7116145454756fc83e41c6134b421671f661c9ada",
+      "bytes": 6177,
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
       "path": "verify_checkpoint.py",
-      "sha256": "563d57dfa4aa8e4b2f8d137a5a69b58ffb6a68fb1b02dfff37fb6536e8ea7707",
-      "bytes": 1367,
+      "sha256": "b658cbde271fa16460174adf0b2912ab7e7ba91fb31317f74e0361c6095e159b",
+      "bytes": 4697,
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     }
   ],
-  "manifest_integrity": "The manifest does not include its own hash; Git tree identity and the external checkpoint receipt pin this file."
+  "manifest_integrity": "The manifest does not include its own hash; Git tree identity and the external incremental manifest pin this file."
 }

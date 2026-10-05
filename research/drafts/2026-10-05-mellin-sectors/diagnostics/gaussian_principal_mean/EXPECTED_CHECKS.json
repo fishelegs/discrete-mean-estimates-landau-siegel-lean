@@ -1,0 +1,59 @@
+{
+  "artificial_principal_inner_contour_identity": {
+    "cases": [
+      {
+        "error": 7.703719777548943e-34,
+        "height": "0.0",
+        "kind": "mixed",
+        "repeated_pole": false
+      },
+      {
+        "error": 1.7226041102208997e-33,
+        "height": "2.1",
+        "kind": "mixed",
+        "repeated_pole": false
+      },
+      {
+        "error": 3.13518680453361e-33,
+        "height": "0.7",
+        "kind": "plain",
+        "repeated_pole": false
+      },
+      {
+        "error": 3.0814879110195774e-33,
+        "height": "1.2",
+        "kind": "plain",
+        "repeated_pole": true
+      }
+    ],
+    "status": "PASS"
+  },
+  "diagnostic_only": true,
+  "exact_exponents_critical_lines_and_gamma_pole_gap": "PASS",
+  "gaussian_equality_row_contraction": {
+    "cases": 144,
+    "status": "PASS"
+  },
+  "gaussian_log_mellin_inversion": {
+    "cases": 6,
+    "max_error": 1.5648180798150662e-34,
+    "status": "PASS"
+  },
+  "global_outer_gaussian_convolution": {
+    "cases": 14850,
+    "status": "PASS"
+  },
+  "principal_masks_and_complement_bookkeeping": {
+    "status": "PASS",
+    "tuple_pairs": 4374
+  },
+  "reduced_root_kernel_principal_corrections": {
+    "cases": 96,
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "two_sided_cutoff_difference": {
+    "cases": 5940,
+    "status": "PASS"
+  }
+}

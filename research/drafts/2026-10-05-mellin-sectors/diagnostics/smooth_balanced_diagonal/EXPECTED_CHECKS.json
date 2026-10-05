@@ -1,0 +1,48 @@
+{
+  "diagnostic_only": true,
+  "exact_exponents_and_critical_lines": "PASS",
+  "exact_transition_average_identity": {
+    "cases": 546,
+    "no_norm_monotonicity_used": true,
+    "status": "PASS"
+  },
+  "constant_factor_cutoff_reserves": {
+    "cases": 36,
+    "status": "PASS"
+  },
+  "infinite_remote_shell_envelope": {
+    "first_40_sum": 140.5769275534433,
+    "geometric_tail_ratio_below_half_from_index": 2,
+    "status": "PASS"
+  },
+  "exact_unit_modulus_FE_scalars": {
+    "cases": 48,
+    "max_error": 1.7516230804060213e-46,
+    "all_psi_chi_parities": true,
+    "status": "PASS"
+  },
+  "full_integer_row_divisor_contraction": {
+    "cases": 576,
+    "normalization_checks": 49014,
+    "ramified_conductors_included": true,
+    "status": "PASS"
+  },
+  "upsilon_and_divisor_majorants": {
+    "cases": 1200,
+    "status": "PASS"
+  },
+  "all_height_harmonic_envelope": {
+    "rankin_checks": 15,
+    "theta4_dominated_by_rankin_power": true,
+    "status": "PASS"
+  },
+  "restricted_even_principal_equality_row": {
+    "checks": 308,
+    "status": "PASS"
+  },
+  "common_bounded_multiplier_cap": {
+    "checks": 596,
+    "status": "PASS"
+  },
+  "status": "PASS"
+}
