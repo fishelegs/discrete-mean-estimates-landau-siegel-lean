@@ -1138,6 +1138,490 @@
           "bytes": 2182
         }
       ]
+    },
+    {
+      "id": "small_transformed_rectangle",
+      "publication_document": "13_small_transformed_rectangle.md",
+      "original_mathematical_source": {
+        "bytes": 17395,
+        "sha256": "fae77897f099320f55aa06fc6f3bfeff23c7fdb4d5633f3373f9ba991ee3bab4"
+      },
+      "frozen_author_manifest_identity": {
+        "bytes": 1407,
+        "sha256": "1c365a521796993892770f0bccbea72162967bd690bba4cdd0e74d10fb6d2db3"
+      },
+      "original_result_statement_identity": {
+        "bytes": 1508,
+        "sha256": "7608e69e7c4c76f82e1bc68e24e353f85db50e9b1a052993de143c472650962e"
+      },
+      "original_source_registry_identity": {
+        "bytes": 10894,
+        "sha256": "97bf4746925281283b66af7b15393f2c5a56df2c4e434273a82b603b95cfe1cf"
+      },
+      "original_diagnostic_script": {
+        "bytes": 7181,
+        "sha256": "6e75e73f0fa33e513be0b180bc0059684177967249ae635caf83af777de18ff0"
+      },
+      "original_diagnostic_expected_result": {
+        "bytes": 1214,
+        "sha256": "8571fbef68b76843511ca31d0cfb59ffddc875715e2c93b9220730c416edc7bc"
+      },
+      "independent_review_identity": {
+        "bytes": 9354,
+        "sha256": "f9470215dc38cc967c7eb7d200e4309a5bdf15c2cc1980bec0899a97c71e19fd"
+      },
+      "independent_review_manifest_identity": {
+        "bytes": 1164,
+        "sha256": "622c44ed7801ede96a262fe5e9228a4a5af5f9d7d8dd8564ebc075a118fdc87a"
+      },
+      "independent_review_source_registry_identity": {
+        "bytes": 11157,
+        "sha256": "7ec8da19a3e02d5010078f98c27b21e86d6b05c41d40be1d2e22ec564886b964"
+      },
+      "independent_review_diagnostic_result_identity": {
+        "bytes": 266,
+        "sha256": "33c4d501676f62df248e8c6689e046f4eeabdb24039d935605e2d7a8278293b0"
+      },
+      "final_acceptance_record_identity": {
+        "bytes": 2182,
+        "sha256": "0938ce9d6465f5f652df0a1a59dcde7df61e665849a0b52cdf61d6aed571deaa"
+      },
+      "status": "SOURCE_REVIEWED_ACTUAL_SMALL_TRANSFORMED_FULL_KERNEL_RECTANGLE_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "diagnostic_replay": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
+      "publication_editing": "All eight numbered mathematical sections retained byte-for-byte apart from the final operational/validation paragraph, replaced by a sanitized introduction and public source/scope footer.",
+      "selected_upstream_source_identities": [
+        {
+          "sha256": "3b54c4ff4dfc529ae34eb3aec03cf490b79c8f375f6a118023257e3468f62792",
+          "bytes": 26877
+        },
+        {
+          "sha256": "34e72e847169908f077ad954fe8ef7cb4fcb7662e1d297f33f598cd1472a5458",
+          "bytes": 2867
+        },
+        {
+          "sha256": "f2bceb43b6cb31ab9a71ca5ecd8064569b60b2c57bc899208744c7255e317d91",
+          "bytes": 26625
+        },
+        {
+          "sha256": "6cdc312cdb348f78d5fe7167fb0224644c54270cce8ec6f68a2102574d32a2a0",
+          "bytes": 23635
+        },
+        {
+          "sha256": "02409b42acea2141121823d776792ff1df00d96f6c25bd930f6636f45a1e4e55",
+          "bytes": 2975
+        },
+        {
+          "sha256": "c749a0651a5d42dfcd355a245a30853689b690590ad774398f956fe2938ba505",
+          "bytes": 18171
+        },
+        {
+          "sha256": "e551f004ce13d6bcff21cb33870008435b9227398a874e36792cc94f998e8026",
+          "bytes": 4725
+        },
+        {
+          "sha256": "79832914057edfd2ee5ec6ad492131ec54ecbe68973dc5bd09732fea16904ebb",
+          "bytes": 14181
+        },
+        {
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852
+        },
+        {
+          "sha256": "a89e788412a2712e597748840ed9b4061b38bec6260282b54c21bd98c0aa8c55",
+          "bytes": 1594
+        },
+        {
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155
+        },
+        {
+          "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+          "bytes": 25030
+        },
+        {
+          "sha256": "aed17417dba14bf20c7733d8d10ead036ed75352ccbaf328a885d730773a9a1b",
+          "bytes": 21791
+        },
+        {
+          "sha256": "8b91479aa0cdd64776e73c4be3b00b2966fe5dbb7de71d42556e8230eb2d2501",
+          "bytes": 3084
+        },
+        {
+          "sha256": "510b6d70e95dc2d6dee7776486174f667df56f364dc59f8c92ecd32c8a8ab806",
+          "bytes": 17775
+        },
+        {
+          "sha256": "c1d3d2dcfcb63d9a64d7b58964553468241589910bb95d6a49a9bae00c89ef74",
+          "bytes": 22338
+        },
+        {
+          "sha256": "6c38ba4d36b11f2d90ff33cde06348051ca287b0515f00d0dda3a95b7c4a619c",
+          "bytes": 19418
+        },
+        {
+          "sha256": "e2b6b3b6bbda7a4aa6b75b1ad3c7886ba248574a4774d8b8997fa90d2c65ad2a",
+          "bytes": 3793
+        },
+        {
+          "sha256": "3a9df5d600c48111952bc66903d9df749d78ae3595cb5e72dbe17130628f441c",
+          "bytes": 25536
+        },
+        {
+          "sha256": "d6ef27e3a740b67adc61ae5d74ffb238fbcd9091bf23cd5de82a2d2b51a26c82",
+          "bytes": 17819
+        },
+        {
+          "sha256": "4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d",
+          "bytes": 3829
+        },
+        {
+          "sha256": "8b17bcfa77016cc0e823eb7b17c4bf6c72a55db3ceb1a0d08afe5b5ce836dfeb",
+          "bytes": 16982
+        },
+        {
+          "sha256": "85b68c4b3a23ff1d4a49b0897974b206d5a46bef5612b0c1054dba63d4aa672e",
+          "bytes": 18875
+        },
+        {
+          "sha256": "3f2e0148f063b4732a13e27a103a9dcf5204a3f40748ec05a447bd384c8078e3",
+          "bytes": 3093
+        },
+        {
+          "sha256": "1ddbb8725f257a6f3059ebc7d7e5a50453722021b14595aee7f9798cf8117e6a",
+          "bytes": 2508
+        },
+        {
+          "sha256": "c9acb6bedae79ba02779f9cf456f13c9d6d55c9bed7a82255ab98c6e84f03e0b",
+          "bytes": 19485
+        },
+        {
+          "sha256": "17d87e01f0888709319e50c7985df22b22195362c0a6fe8ce104e3f0faa8f24d",
+          "bytes": 13223
+        },
+        {
+          "sha256": "6354b25cc4a6cc832fc6a1a06fa74947701ab808fc377f50ee6a0ed7f7b1b3af",
+          "bytes": 2500
+        },
+        {
+          "sha256": "f8c98ad63360965080b85d6b43f69a8d2e7a6feffc440c7099aabb82cce115c6",
+          "bytes": 17100
+        },
+        {
+          "sha256": "76a304cc8bf7d39bf9c22fd17b0b64e7e97e5d00b5767e0b8263c2746ad5dab7",
+          "bytes": 4312
+        },
+        {
+          "sha256": "c3b456d9724a066d263ce5bfb70a4f6b1a68ca402ddc9640c05ab2abc5556e61",
+          "bytes": 2088
+        },
+        {
+          "sha256": "ea944e132241381d560e2e53ff55ec04459eafbd602e4d209ac3225684020683",
+          "bytes": 16702
+        },
+        {
+          "sha256": "1d0cb528c4ee7ebc5f4aca1f8c71e43f63f9a7daa66ce346f5fa7d56e7845d35",
+          "bytes": 11268
+        },
+        {
+          "sha256": "6a7de9de737d5b2366c9bd5a61a35690d7ea3518de0ab480ce3cf02ef62c14ef",
+          "bytes": 2182
+        },
+        {
+          "sha256": "857a12b0341f4c06297514ff917859823cc05326ce6d3add94951132b8379898",
+          "bytes": 11527
+        },
+        {
+          "sha256": "1f2b37c8b1c55ffbdbb63377d6f4032ebe45df197312dcf23e3d23ec002782b1",
+          "bytes": 12654
+        },
+        {
+          "sha256": "d92f56db8f9e4c3a483853d97695dd0ed11d7b90acdc0777cc56a77289907288",
+          "bytes": 1943
+        }
+      ],
+      "claims": [
+        "Actual absolute full-K transformed rectangle bound for each branch and 1<=M<=P^3",
+        "Fixed sub-64 exponent 959/15 at M=P^2L^402",
+        "Exact complementary sufficient one-sided high/mixed near-aggregate gate"
+      ],
+      "limitations": [
+        "All mixed and large rectangles remain unproved",
+        "No bound for an arbitrary geometrical near subset or restricted principal mean separately",
+        "No full branch norm or original-output identification",
+        "Actual density, cumulative remainder, full near aggregate, balanced energy and final gap remain unproved",
+        "No new Lean certificate"
+      ]
+    },
+    {
+      "id": "periodic_determinant_mapping",
+      "publication_document": "14_periodic_determinant_mapping.md",
+      "original_mathematical_source": {
+        "bytes": 14601,
+        "sha256": "5e0e77ffd01a1f895d571137a6d9f75266b2b061b1d09928380b8e052ae443f3"
+      },
+      "frozen_author_manifest_identity": {
+        "bytes": 2368,
+        "sha256": "f64ebbd751dfc2fe70397b5c478168a361791380c898ecf868a670f753162655"
+      },
+      "original_result_statement_identity": {
+        "bytes": 1543,
+        "sha256": "ff3ef8343779505413edba9f7bd6cc7ccd8f24ae2461a6c31c8ec97818cf2868"
+      },
+      "original_source_registry_identity": {
+        "bytes": 9991,
+        "sha256": "2628f035612c3113aa5cac8774128ea288de7420e9a1484a02695625b605e668"
+      },
+      "original_diagnostic_script": {
+        "bytes": 3762,
+        "sha256": "918e8bcccd0559f25bd227914a1bdebec268586cd49de5cc2ffc04105dcd54e3"
+      },
+      "original_diagnostic_expected_result": {
+        "bytes": 1495,
+        "sha256": "7ae76ba2510133f42f719091ec3bf6a25eee9d0968ea29cf7140f6b3c090ec91"
+      },
+      "independent_review_identity": {
+        "bytes": 7502,
+        "sha256": "5114c2f4de304955a507f408e1b366fbb734ee0fef5257c2f149c824557a54e0"
+      },
+      "independent_review_manifest_identity": {
+        "bytes": 993,
+        "sha256": "a34875410b075378734ae601f3b24da469a0862f21c7f2dee760d601a691baa8"
+      },
+      "independent_review_source_registry_identity": {
+        "bytes": 1306,
+        "sha256": "b1f50377e39c302447d05c14c7e36e07d7cf75a7b82f4599a8eb2ca7c5ca598a"
+      },
+      "independent_review_diagnostic_result_identity": {
+        "bytes": 213,
+        "sha256": "de025c41a5f6ac6e1e4ec047afb1f4c5b0edcad96b0acdd2bb9f364f202243c9"
+      },
+      "final_acceptance_record_identity": {
+        "bytes": 2222,
+        "sha256": "183594b4ca49fb9fd50f48cab401c6bcf8c3f54d0dd5b535bfe607fd50fa8968"
+      },
+      "status": "SOURCE_REVIEWED_GENERIC_SMOOTH_DETERMINANT_CELL_ONLY_NOT_LEAN",
+      "source_identity_verified": true,
+      "diagnostic_replay": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
+      "publication_editing": "All eight numbered mathematical sections retained byte-for-byte apart from the final operational/validation paragraph, replaced by a sanitized introduction and public source/scope footer.",
+      "selected_upstream_source_identities": [
+        {
+          "sha256": "3b54c4ff4dfc529ae34eb3aec03cf490b79c8f375f6a118023257e3468f62792",
+          "bytes": 26877
+        },
+        {
+          "sha256": "34e72e847169908f077ad954fe8ef7cb4fcb7662e1d297f33f598cd1472a5458",
+          "bytes": 2867
+        },
+        {
+          "sha256": "f2bceb43b6cb31ab9a71ca5ecd8064569b60b2c57bc899208744c7255e317d91",
+          "bytes": 26625
+        },
+        {
+          "sha256": "6cdc312cdb348f78d5fe7167fb0224644c54270cce8ec6f68a2102574d32a2a0",
+          "bytes": 23635
+        },
+        {
+          "sha256": "02409b42acea2141121823d776792ff1df00d96f6c25bd930f6636f45a1e4e55",
+          "bytes": 2975
+        },
+        {
+          "sha256": "c749a0651a5d42dfcd355a245a30853689b690590ad774398f956fe2938ba505",
+          "bytes": 18171
+        },
+        {
+          "sha256": "e551f004ce13d6bcff21cb33870008435b9227398a874e36792cc94f998e8026",
+          "bytes": 4725
+        },
+        {
+          "sha256": "79832914057edfd2ee5ec6ad492131ec54ecbe68973dc5bd09732fea16904ebb",
+          "bytes": 14181
+        },
+        {
+          "sha256": "ccdd59c63735631444e9bb28333f4d1b7e57a2330379de3a4117de2b1c51ad6a",
+          "bytes": 21852
+        },
+        {
+          "sha256": "a89e788412a2712e597748840ed9b4061b38bec6260282b54c21bd98c0aa8c55",
+          "bytes": 1594
+        },
+        {
+          "sha256": "ad15fc6513d83a3128d1dd26d99e89a61cdebc755bd6dff7695f43fb77c7160c",
+          "bytes": 23155
+        },
+        {
+          "sha256": "0efdcf759024191e55134614eb2fff20627c032e1ca60a87819c8a9848ff42b0",
+          "bytes": 25030
+        },
+        {
+          "sha256": "aed17417dba14bf20c7733d8d10ead036ed75352ccbaf328a885d730773a9a1b",
+          "bytes": 21791
+        },
+        {
+          "sha256": "8b91479aa0cdd64776e73c4be3b00b2966fe5dbb7de71d42556e8230eb2d2501",
+          "bytes": 3084
+        },
+        {
+          "sha256": "510b6d70e95dc2d6dee7776486174f667df56f364dc59f8c92ecd32c8a8ab806",
+          "bytes": 17775
+        },
+        {
+          "sha256": "c1d3d2dcfcb63d9a64d7b58964553468241589910bb95d6a49a9bae00c89ef74",
+          "bytes": 22338
+        },
+        {
+          "sha256": "6c38ba4d36b11f2d90ff33cde06348051ca287b0515f00d0dda3a95b7c4a619c",
+          "bytes": 19418
+        },
+        {
+          "sha256": "e2b6b3b6bbda7a4aa6b75b1ad3c7886ba248574a4774d8b8997fa90d2c65ad2a",
+          "bytes": 3793
+        },
+        {
+          "sha256": "3a9df5d600c48111952bc66903d9df749d78ae3595cb5e72dbe17130628f441c",
+          "bytes": 25536
+        },
+        {
+          "sha256": "d6ef27e3a740b67adc61ae5d74ffb238fbcd9091bf23cd5de82a2d2b51a26c82",
+          "bytes": 17819
+        },
+        {
+          "sha256": "4a4488fc3f1ca99b0bce692eb350094cbcdb92f04fe940261bddeea809dc606d",
+          "bytes": 3829
+        },
+        {
+          "sha256": "8b17bcfa77016cc0e823eb7b17c4bf6c72a55db3ceb1a0d08afe5b5ce836dfeb",
+          "bytes": 16982
+        },
+        {
+          "sha256": "85b68c4b3a23ff1d4a49b0897974b206d5a46bef5612b0c1054dba63d4aa672e",
+          "bytes": 18875
+        },
+        {
+          "sha256": "3f2e0148f063b4732a13e27a103a9dcf5204a3f40748ec05a447bd384c8078e3",
+          "bytes": 3093
+        },
+        {
+          "sha256": "1ddbb8725f257a6f3059ebc7d7e5a50453722021b14595aee7f9798cf8117e6a",
+          "bytes": 2508
+        },
+        {
+          "sha256": "c9acb6bedae79ba02779f9cf456f13c9d6d55c9bed7a82255ab98c6e84f03e0b",
+          "bytes": 19485
+        },
+        {
+          "sha256": "17d87e01f0888709319e50c7985df22b22195362c0a6fe8ce104e3f0faa8f24d",
+          "bytes": 13223
+        },
+        {
+          "sha256": "6354b25cc4a6cc832fc6a1a06fa74947701ab808fc377f50ee6a0ed7f7b1b3af",
+          "bytes": 2500
+        },
+        {
+          "sha256": "f8c98ad63360965080b85d6b43f69a8d2e7a6feffc440c7099aabb82cce115c6",
+          "bytes": 17100
+        },
+        {
+          "sha256": "76a304cc8bf7d39bf9c22fd17b0b64e7e97e5d00b5767e0b8263c2746ad5dab7",
+          "bytes": 4312
+        },
+        {
+          "sha256": "c3b456d9724a066d263ce5bfb70a4f6b1a68ca402ddc9640c05ab2abc5556e61",
+          "bytes": 2088
+        },
+        {
+          "sha256": "ea944e132241381d560e2e53ff55ec04459eafbd602e4d209ac3225684020683",
+          "bytes": 16702
+        },
+        {
+          "sha256": "1d0cb528c4ee7ebc5f4aca1f8c71e43f63f9a7daa66ce346f5fa7d56e7845d35",
+          "bytes": 11268
+        },
+        {
+          "sha256": "6a7de9de737d5b2366c9bd5a61a35690d7ea3518de0ab480ce3cf02ef62c14ef",
+          "bytes": 2182
+        }
+      ],
+      "claims": [
+        "Exact actual generic smooth determinant mapping for both congruence signs",
+        "Strong automorphy in A(ME,D,1,1)",
+        "CRT periodic constant term zero and squared orbit sum phi(D)",
+        "Full k=1 outer absolute orbit correlation exactly 2phi(D) in the stated balanced cell",
+        "Valid fixed-outer local spectral error with x^epsilon retained"
+      ],
+      "limitations": [
+        "Non-generic gcd cells, large factors, other scales and sharp-boundary differences remain unpaid",
+        "Collective determinant and outer-variable sums remain unproved",
+        "Absolute outer summation does not establish the actual near aggregate",
+        "No actual lower bound or impossibility of an adapted averaged method",
+        "No full generic or balanced energy gain, strict gap, or new Lean certificate"
+      ],
+      "original_primary_registry_identity": {
+        "bytes": 1767,
+        "sha256": "4192a90121a8957944dbe20bfe9d6141a3695056602e535c3624de034d0a01fd"
+      },
+      "public_primary_references": [
+        {
+          "url": "https://arxiv.org/pdf/2404.08502v2",
+          "version": "arXiv:2404.08502v2, 26 April 2024",
+          "inspected_utc_date": "2026-10-05",
+          "locators": [
+            {
+              "pdf_page": 45,
+              "locator": "Definition 3 and Theorem 10.1 hypotheses and exact correlation expression (10.2)"
+            },
+            {
+              "pdf_page": 46,
+              "locator": "Theorem 10.1 conclusion/error and Remark 4"
+            },
+            {
+              "pdf_page": 47,
+              "locator": "Projective-row identification (10.4)"
+            }
+          ],
+          "source_file_identities": [
+            {
+              "kind": "PDF",
+              "sha256": "47c8a8c41f4c0eb7039769179db89a179781b8ae3dc589d24c0749b6c4cd41e4",
+              "bytes": 635541
+            },
+            {
+              "kind": "LOCAL_TEXT_EXTRACTION",
+              "sha256": "f3f97a3bad9a28f551211c1fda0c51798311230d3b2f8295aefbed7a4cedfa87",
+              "bytes": 251531
+            }
+          ],
+          "redistributed": false
+        },
+        {
+          "url": "https://arxiv.org/pdf/2509.07556v2",
+          "version": "arXiv:2509.07556v2, 9 July 2026",
+          "inspected_utc_date": "2026-10-05",
+          "locators": [
+            {
+              "pdf_page": 7,
+              "locator": "Theorem 5.2, single-determinant specialization"
+            },
+            {
+              "pdf_page": 8,
+              "locator": "Lemma 5.3 projective-row description"
+            }
+          ],
+          "source_file_identities": [
+            {
+              "kind": "PDF",
+              "sha256": "b063cfb9e4dc0ced1e7b75743ad299dbd18209c5a43fef8382e926bf88580070",
+              "bytes": 598416
+            },
+            {
+              "kind": "LOCAL_TEXT_EXTRACTION",
+              "sha256": "2ce285ae4be4f2d745de7ac042fe551c7552102689b44b4990149a51829b5451",
+              "bytes": 161369
+            }
+          ],
+          "redistributed": false
+        }
+      ]
     }
   ],
   "accepted_upstream_interfaces": [
@@ -1613,10 +2097,70 @@
         }
       ],
       "redistributed": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/2404.08502v2",
+      "version": "arXiv:2404.08502v2, 26 April 2024",
+      "inspected_utc_date": "2026-10-05",
+      "locators": [
+        {
+          "pdf_page": 45,
+          "locator": "Definition 3 and Theorem 10.1 hypotheses and exact correlation expression (10.2)"
+        },
+        {
+          "pdf_page": 46,
+          "locator": "Theorem 10.1 conclusion/error and Remark 4"
+        },
+        {
+          "pdf_page": 47,
+          "locator": "Projective-row identification (10.4)"
+        }
+      ],
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "47c8a8c41f4c0eb7039769179db89a179781b8ae3dc589d24c0749b6c4cd41e4",
+          "bytes": 635541
+        },
+        {
+          "kind": "LOCAL_TEXT_EXTRACTION",
+          "sha256": "f3f97a3bad9a28f551211c1fda0c51798311230d3b2f8295aefbed7a4cedfa87",
+          "bytes": 251531
+        }
+      ],
+      "redistributed": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/2509.07556v2",
+      "version": "arXiv:2509.07556v2, 9 July 2026",
+      "inspected_utc_date": "2026-10-05",
+      "locators": [
+        {
+          "pdf_page": 7,
+          "locator": "Theorem 5.2, single-determinant specialization"
+        },
+        {
+          "pdf_page": 8,
+          "locator": "Lemma 5.3 projective-row description"
+        }
+      ],
+      "source_file_identities": [
+        {
+          "kind": "PDF",
+          "sha256": "b063cfb9e4dc0ced1e7b75743ad299dbd18209c5a43fef8382e926bf88580070",
+          "bytes": 598416
+        },
+        {
+          "kind": "LOCAL_TEXT_EXTRACTION",
+          "sha256": "2ce285ae4be4f2d745de7ac042fe551c7552102689b44b4990149a51829b5451",
+          "bytes": 161369
+        }
+      ],
+      "redistributed": false
     }
   ],
   "identity_note": "Original-source hashes identify the reviewed inputs; publication-document hashes are separately listed in PUBLICATION_MANIFEST.json. Hash identity is not mathematical certification.",
-  "previous_checkpoint_commit": "65f774642037abbf078ef401731615cb5e530923",
+  "previous_checkpoint_commit": "ada5873c811a6b09589ee7ff073cf4aca240386a",
   "local_localization_checkpoint_commit": "b97672ee86a9ce91aeb8a3b1e5484720fb09dc24",
   "local_four_diagonal_checkpoint_commit": "c735324c4a320e6f72c6108a12e81bf0d6460f20",
   "local_carrier_checkpoint_commit": "ad3c3ada5153287b048f0902144c516d173127a4"

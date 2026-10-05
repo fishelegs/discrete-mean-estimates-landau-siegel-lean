@@ -1,0 +1,58 @@
+{
+  "CRT_orbit_zero_and_full_K_exact_value": {
+    "cases": [
+      {
+        "bottom_projective_rows": 4,
+        "discriminant": -3,
+        "full_small_matrix_correlation": 4,
+        "linear_sum": 0,
+        "squared_sum": 2
+      },
+      {
+        "bottom_projective_rows": 6,
+        "discriminant": 5,
+        "full_small_matrix_correlation": 8,
+        "linear_sum": 0,
+        "squared_sum": 4
+      },
+      {
+        "bottom_projective_rows": 12,
+        "discriminant": 8,
+        "full_small_matrix_correlation": 8,
+        "linear_sum": 0,
+        "squared_sum": 4
+      },
+      {
+        "bottom_projective_rows": 24,
+        "discriminant": 12,
+        "full_small_matrix_correlation": 8,
+        "linear_sum": 0,
+        "squared_sum": 4
+      }
+    ],
+    "small_integer_matrices_tested": 244,
+    "status": "PASS"
+  },
+  "diagnostic_only": true,
+  "exact_both_sign_determinant_and_character_mapping": {
+    "cases": 162,
+    "status": "PASS"
+  },
+  "full_integer_automorphy_not_only_SL2": {
+    "cases": 9720,
+    "status": "PASS"
+  },
+  "natural_scale_error_and_contraction_exponents": {
+    "optimistic_base_error_P_exponent": 1,
+    "original_output_transfer_claimed": false,
+    "separate_contraction_log_exponent": -238,
+    "single_shift_P_exponent_at_Delta_scale_x": "39/32",
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "top_row_not_fixed_modulo_D_caution": {
+    "actual_free_bottom_orbit_sum": 0,
+    "fixed_top_Jacobi_type_sum": -1,
+    "status": "PASS"
+  }
+}

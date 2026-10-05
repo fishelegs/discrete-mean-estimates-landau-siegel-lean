@@ -1,0 +1,44 @@
+{
+  "actual_full_kernel_small_rectangle_bilinear_identity": {
+    "cases": 16,
+    "max_error": 2.842170943040401e-14,
+    "principal_subtraction_retained": true,
+    "status": "PASS"
+  },
+  "combined_reciprocal_height_box": {
+    "corner_cases": 128,
+    "maximum_in_units_of_V0": 4,
+    "ratio_to_L5": "1/4",
+    "status": "PASS"
+  },
+  "diagnostic_only": true,
+  "exact_c_phi_grouping_all_four_branches": {
+    "cases": 800,
+    "literal_sample_cutoff": 81,
+    "max_error": 8.017792317015566e-32,
+    "status": "PASS"
+  },
+  "exact_energy_Rankin_tail_and_final_exponents": "PASS",
+  "finite_inverse_restoration_pointwise_majorant": {
+    "cases": 800,
+    "sample_does_not_assume_A2022": true,
+    "status": "PASS"
+  },
+  "full_kernel_high_mixed_near_remaining_partition": {
+    "restricted_principal_not_removed": true,
+    "status": "PASS",
+    "tuple_cases": 2916
+  },
+  "sharp_inner_gamma_Gaussian_envelope": {
+    "all_parities_and_height_signs": true,
+    "cases": 48,
+    "maximum_normalized_ratio": 4.2280634116942135,
+    "status": "PASS"
+  },
+  "shifted_prime_majorant_and_uniform_higher_powers": {
+    "higher_power_cases": 675,
+    "prime_cases": 75,
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

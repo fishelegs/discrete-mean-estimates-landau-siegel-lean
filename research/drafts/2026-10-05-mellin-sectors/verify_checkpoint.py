@@ -155,4 +155,37 @@ assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((roo
 assert new['status']=='SOURCE_REVIEWED_FAILED_DIRECT_ATTACHMENTS_WITH_POSITIVE_COMPONENT_SCOPE_ONLY_NOT_LEAN'
 assert manifest['global_frontier']['MRT_Section5_prime_divisor_accounting']=='POSITIVE_DIFFERENCE_COMPONENT_ONLY_p_DIVIDES_ell_MINUS_k'
 assert manifest['global_frontier']['reflected_arithmetic_interface']=='UNPROVED_SEPARATE_p_DIVIDES_k_PLUS_ell'
+
+# small_transformed_rectangle: bounded source scope, exact provenance, finite diagnostics only.
+new=next(x for x in pins['proof_sources'] if x['id']=='small_transformed_rectangle')
+assert new['original_mathematical_source']['sha256']=='fae77897f099320f55aa06fc6f3bfeff23c7fdb4d5633f3373f9ba991ee3bab4'
+assert new['frozen_author_manifest_identity']['sha256']=='1c365a521796993892770f0bccbea72162967bd690bba4cdd0e74d10fb6d2db3'
+assert new['independent_review_identity']['sha256']=='f9470215dc38cc967c7eb7d200e4309a5bdf15c2cc1980bec0899a97c71e19fd'
+assert new['independent_review_manifest_identity']['sha256']=='622c44ed7801ede96a262fe5e9228a4a5af5f9d7d8dd8564ebc075a118fdc87a'
+assert new['final_acceptance_record_identity']['sha256']=='0938ce9d6465f5f652df0a1a59dcde7df61e665849a0b52cdf61d6aed571deaa'
+assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/small_transformed_rectangle/checks.py').read_bytes()).hexdigest()
+assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/small_transformed_rectangle/EXPECTED_CHECKS.json').read_bytes()).hexdigest()
+assert new['status']=='SOURCE_REVIEWED_ACTUAL_SMALL_TRANSFORMED_FULL_KERNEL_RECTANGLE_ONLY_NOT_LEAN'
+assert 36+Fraction(292,15)+Fraction(32,5)==Fraction(928,15)
+assert Fraction(32,5)+10==Fraction(82,5)
+assert -Fraction(2011,2)+72+288==-Fraction(1291,2)
+assert 12-2==10 and 12-4==8 and 10*3==30
+assert Fraction(4,16)==Fraction(1,4)<1
+assert manifest['global_frontier']['mixed_and_large_transformed_rectangles']=='UNPROVED'
+assert manifest['global_frontier']['high_mixed_near_full_kernel_aggregate']=='UNPROVED_ONE_SIDED_SUFFICIENT_TARGET_Xij_GT_M_OR_Yij_GT_M'
+
+# periodic_determinant_mapping: bounded source scope, exact provenance, finite diagnostics only.
+new=next(x for x in pins['proof_sources'] if x['id']=='periodic_determinant_mapping')
+assert new['original_mathematical_source']['sha256']=='5e0e77ffd01a1f895d571137a6d9f75266b2b061b1d09928380b8e052ae443f3'
+assert new['frozen_author_manifest_identity']['sha256']=='f64ebbd751dfc2fe70397b5c478168a361791380c898ecf868a670f753162655'
+assert new['independent_review_identity']['sha256']=='5114c2f4de304955a507f408e1b366fbb734ee0fef5257c2f149c824557a54e0'
+assert new['independent_review_manifest_identity']['sha256']=='a34875410b075378734ae601f3b24da469a0862f21c7f2dee760d601a691baa8'
+assert new['final_acceptance_record_identity']['sha256']=='183594b4ca49fb9fd50f48cab401c6bcf8c3f54d0dd5b535bfe607fd50fa8968'
+assert new['original_diagnostic_script']['sha256']==hashlib.sha256((root/'diagnostics/periodic_determinant_mapping/checks.py').read_bytes()).hexdigest()
+assert new['original_diagnostic_expected_result']['sha256']==hashlib.sha256((root/'diagnostics/periodic_determinant_mapping/EXPECTED_CHECKS.json').read_bytes()).hexdigest()
+assert new['status']=='SOURCE_REVIEWED_GENERIC_SMOOTH_DETERMINANT_CELL_ONLY_NOT_LEAN'
+assert 2*Fraction(7,64)+1==Fraction(39,32)
+assert 2*(400-519)==-238
+assert manifest['global_frontier']['collective_outer_variable_and_determinant_sums']=='UNPROVED'
+assert manifest['global_frontier']['global_determinant_near_aggregate_bound']=='UNPROVED'
 print(json.dumps({'integrity':'PASS','listed_files':len(manifest['files']),'exact_exponents':'PASS','analytic_or_Lean_certification':False},indent=2))

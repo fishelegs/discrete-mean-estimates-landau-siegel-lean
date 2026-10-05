@@ -1,14 +1,14 @@
 {
-  "schema_version": 7,
+  "schema_version": 9,
   "date_utc": "2026-10-05",
   "publication_kind": "DRAFT_MATHEMATICAL_CHECKPOINT",
   "repository": "fishelegs/discrete-mean-estimates-landau-siegel-lean",
   "base_commit": "1b1bdae9503bf45acc091381e5574b86930f55ae",
-  "previous_checkpoint_commit": "65f774642037abbf078ef401731615cb5e530923",
+  "previous_checkpoint_commit": "ada5873c811a6b09589ee7ff073cf4aca240386a",
   "intended_branch": "draft/mellin-sectors-20261005",
   "repository_directory": "research/drafts/2026-10-05-mellin-sectors",
-  "scope": "Twelve source-reviewed mathematical notes at explicit scopes; the latest is a bounded audit of failed direct primary theorem attachments with positive-only difference-shift accounting, not a new arithmetic estimate or impossibility claim",
-  "new_note_validation_status": "SOURCE_REVIEWED_FAILED_DIRECT_ATTACHMENTS_WITH_POSITIVE_COMPONENT_SCOPE_ONLY_NOT_LEAN",
+  "scope": "14 independently source-reviewed notes at their stated scopes; the new results are bounded transformed rectangle and generic determinant-cell source mathematics, not a full near/energy/gap result",
+  "new_note_validation_status": "SOURCE_REVIEWED_GENERIC_SMOOTH_DETERMINANT_CELL_ONLY_NOT_LEAN",
   "formal_lean_status": "NO_NEW_LEAN_SOURCE_OR_CERTIFICATE",
   "final_gap_status": "OPEN",
   "global_frontier": {
@@ -29,7 +29,7 @@
     "compact_profile_to_gaussian_individual_weight_or_row_identity": "NOT_CLAIMED",
     "nonzero_positive_and_negative_congruences": "OPEN",
     "other_oscillatory_root_kernels": "OPEN",
-    "gaussian_positive_branch_norms_beyond_principal_corrections": "OPEN_AFTER_PAYING_INTEGER_RATIO_DIAGONALS_AND_PRINCIPAL_CORRECTIONS",
+    "gaussian_positive_branch_norms_beyond_principal_corrections": "OPEN_DESPITE_PAID_INTEGER_DIAGONALS_PRINCIPAL_CORRECTIONS_AND_SMALL_TRANSFORMED_FULL_K_RECTANGLES",
     "gaussian_swapped_far_ratio_cross": "SOURCE_REVIEWED_O_K(P^-18)_AND_EVERY_FIXED_O_(A,K)(P^-A)",
     "gaussian_swapped_unequal_near_geometrical_congruences": "OPEN_BOTH_SIGNS_RETAINED",
     "gaussian_swapped_near_unequal_principal_mean": "SOURCE_REVIEWED_o(P^2)_BY_TOTAL_MINUS_FAR_MINUS_EQUALITY",
@@ -52,7 +52,22 @@
     "MRT_Section5_prime_divisor_accounting": "POSITIVE_DIFFERENCE_COMPONENT_ONLY_p_DIVIDES_ell_MINUS_k",
     "reflected_arithmetic_interface": "UNPROVED_SEPARATE_p_DIVIDES_k_PLUS_ell",
     "actual_exceptional_or_good_error_lower_bound": "NOT_CLAIMED",
-    "impossibility_of_adapted_primary_methods": "NOT_CLAIMED"
+    "impossibility_of_adapted_primary_methods": "NOT_CLAIMED",
+    "actual_small_transformed_full_K_rectangle": "SOURCE_REVIEWED_BOUND_ONLY_Xij_Yij_LE_M_LE_P_CUBED",
+    "small_transformed_rectangle_bound": "(P^2+M/W)L^(928/15)(log L)^(82/5)",
+    "small_transformed_rectangle_sub64_choice": "M=P^2L^402; fixed exponent 959/15<64",
+    "high_mixed_near_full_kernel_aggregate": "UNPROVED_ONE_SIDED_SUFFICIENT_TARGET_Xij_GT_M_OR_Yij_GT_M",
+    "mixed_and_large_transformed_rectangles": "UNPROVED",
+    "restricted_small_rectangle_principal_mean_separate": "NOT_CLAIMED",
+    "small_rectangle_arbitrary_near_subset_bound": "NOT_CLAIMED",
+    "transformed_to_original_output_identification": "NOT_CLAIMED",
+    "generic_smooth_determinant_mapping": "SOURCE_REVIEWED_FOR_EXPLICIT_GCD_P_UNIT_SMOOTH_CELLS_BOTH_SIGNS",
+    "generic_determinant_constant_term": "EXACTLY_ZERO_ON_STATED_CELLS",
+    "generic_determinant_full_correlation": "EXACTLY_2_PHI_D_WHEN_ONLY_PLUS_MINUS_I_SURVIVE",
+    "generic_determinant_local_error": "SOURCE_REVIEWED_FIXED_OUTER_BOUND_WITH_X_EPSILON",
+    "nongeneric_large_boundary_and_other_determinant_cells": "UNPROVED",
+    "collective_outer_variable_and_determinant_sums": "UNPROVED",
+    "global_determinant_near_aggregate_bound": "UNPROVED"
   },
   "verification": {
     "previous_checkpoint_verification": {
@@ -60,67 +75,287 @@
         "previous_checkpoint_verification": {
           "previous_checkpoint_verification": {
             "previous_checkpoint_verification": {
-              "previous_checkpoint_selected_source_hash_checks": 42,
-              "previous_checkpoint_unique_source_hashes": 32,
-              "new_checkpoint_source_identity_checks_including_frozen_author_manifests": 69,
-              "new_checkpoint_unique_hashes": 59,
-              "source_hash_checks": "PASS",
-              "all_four_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
-              "first_three_published_proof_documents": "BYTE_UNCHANGED_FROM_PREVIOUS_CHECKPOINT",
-              "new_proof_body_comparison": "Mathematical derivations retained; status and source-bibliography cleanup only",
+              "previous_checkpoint_verification": {
+                "previous_checkpoint_verification": {
+                  "previous_checkpoint_selected_source_hash_checks": 42,
+                  "previous_checkpoint_unique_source_hashes": 32,
+                  "new_checkpoint_source_identity_checks_including_frozen_author_manifests": 69,
+                  "new_checkpoint_unique_hashes": 59,
+                  "source_hash_checks": "PASS",
+                  "all_four_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
+                  "first_three_published_proof_documents": "BYTE_UNCHANGED_FROM_PREVIOUS_CHECKPOINT",
+                  "new_proof_body_comparison": "Mathematical derivations retained; status and source-bibliography cleanup only",
+                  "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
+                  "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
+                  "ci_note": "Unchanged normal repository push CI validates existing repository code; it does not certify these analytic drafts"
+                },
+                "new_selected_source_hash_checks_including_frozen_author_manifest": 50,
+                "new_unique_source_hashes": 33,
+                "new_source_hash_checks": "PASS",
+                "all_five_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
+                "proof_documents_01_through_05": "BYTE_UNCHANGED_FROM_357c5c396342d4f0fde6d404e96907b42c85f98e",
+                "new_proof_body_comparison": "Sections 1 through 8 byte-identical after one operational source-provenance sentence replacement; mathematical derivations, quantifiers, errors and limitations retained",
+                "source_review_scope": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
+                "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
+                "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
+                "ci_note": "Normal repository push CI checks existing repository code; it does not certify analytic drafts"
+              },
+              "new_selected_source_hash_checks_including_frozen_author_manifest": 53,
+              "new_unique_source_hashes": 36,
+              "new_source_hash_checks": "PASS",
+              "all_six_diagnostic_replays": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
+              "proof_documents_01_through_06": "BYTE_UNCHANGED_FROM_cf430d359ef57d14fe835d68b41c33811e31c0a9",
+              "prior_checkpoint_and_backups": "UNCHANGED_HASHES_PASS",
+              "new_proof_body_comparison": "Sections 1 through 8 are byte-identical after removing one final operational-provenance sentence; mathematical derivations, quantifiers, errors and limitations retained",
+              "source_review_scope": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
               "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
-              "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
-              "ci_note": "Unchanged normal repository push CI validates existing repository code; it does not certify these analytic drafts"
+              "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS",
+              "ci_note": "Normal repository CI checks existing repository code; it does not certify these analytic drafts"
             },
-            "new_selected_source_hash_checks_including_frozen_author_manifest": 50,
-            "new_unique_source_hashes": 33,
+            "proof_documents_01_through_07": "BYTE_UNCHANGED_FROM_3da60fca87a0eaf64e425f34281059966c66dc9b",
+            "new_proof_body_comparison": "All three new notes retain full numbered mathematical sections byte-for-byte except final operational/status paragraph removals; headers clarify validation and quantifiers; separate source-reference footers added",
             "new_source_hash_checks": "PASS",
-            "all_five_diagnostic_replays": "PASS_AND_BYTE_EQUAL",
-            "proof_documents_01_through_05": "BYTE_UNCHANGED_FROM_357c5c396342d4f0fde6d404e96907b42c85f98e",
-            "new_proof_body_comparison": "Sections 1 through 8 byte-identical after one operational source-provenance sentence replacement; mathematical derivations, quantifiers, errors and limitations retained",
-            "source_review_scope": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
+            "all_diagnostic_replays": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
             "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
-            "repository_build": "NOT_RUN_FOR_DOCUMENTATION_ONLY_CHANGE",
-            "ci_note": "Normal repository push CI checks existing repository code; it does not certify analytic drafts"
+            "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS",
+            "proof_documents_01_through_09": "BYTE_UNCHANGED_FROM_c735324c4a320e6f72c6108a12e81bf0d6460f20"
           },
-          "new_selected_source_hash_checks_including_frozen_author_manifest": 53,
-          "new_unique_source_hashes": 36,
+          "proof_documents_01_through_10": "BYTE_UNCHANGED_FROM_65f774642037abbf078ef401731615cb5e530923",
+          "new_selected_source_hash_checks": 53,
+          "new_unique_source_hashes": 47,
           "new_source_hash_checks": "PASS",
-          "all_six_diagnostic_replays": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPY",
-          "proof_documents_01_through_06": "BYTE_UNCHANGED_FROM_cf430d359ef57d14fe835d68b41c33811e31c0a9",
-          "prior_checkpoint_and_backups": "UNCHANGED_HASHES_PASS",
-          "new_proof_body_comparison": "Sections 1 through 8 are byte-identical after removing one final operational-provenance sentence; mathematical derivations, quantifiers, errors and limitations retained",
-          "source_review_scope": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN",
+          "new_proof_body_comparison": "All seven numbered mathematical sections are byte-identical except the final operational paragraph removal; headers and source footer added separately",
+          "all_diagnostic_replays": "ALL_TEN_PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
           "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
-          "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS",
-          "ci_note": "Normal repository CI checks existing repository code; it does not certify these analytic drafts"
+          "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS"
         },
-        "proof_documents_01_through_07": "BYTE_UNCHANGED_FROM_3da60fca87a0eaf64e425f34281059966c66dc9b",
-        "new_proof_body_comparison": "All three new notes retain full numbered mathematical sections byte-for-byte except final operational/status paragraph removals; headers clarify validation and quantifiers; separate source-reference footers added",
+        "proof_documents_01_through_11": "BYTE_UNCHANGED_FROM_ad3c3ada5153287b048f0902144c516d173127a4",
+        "new_selected_source_hash_checks": 90,
+        "new_unique_source_hashes": 71,
         "new_source_hash_checks": "PASS",
-        "all_diagnostic_replays": "PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
+        "new_proof_body_comparison": "Eight numbered sections byte-identical except final operational paragraph removal; essential mathematical scope-addendum body inserted verbatim at Section 5; explicit overview and diagnostic labels added",
+        "all_diagnostic_replays": "ALL_ELEVEN_PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
+        "primary_sources": "SIX_LINKED_ORIGINALS_WITH_VERSION_PAGE_AND_HASH_IDENTITIES_NO_FILES_REDISTRIBUTED",
         "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
-        "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS",
-        "proof_documents_01_through_09": "BYTE_UNCHANGED_FROM_c735324c4a320e6f72c6108a12e81bf0d6460f20"
+        "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS"
       },
-      "proof_documents_01_through_10": "BYTE_UNCHANGED_FROM_65f774642037abbf078ef401731615cb5e530923",
-      "new_selected_source_hash_checks": 53,
-      "new_unique_source_hashes": 47,
+      "proof_documents_01_through_12": "BYTE_UNCHANGED_FROM_ada5873c811a6b09589ee7ff073cf4aca240386a",
       "new_source_hash_checks": "PASS",
-      "new_proof_body_comparison": "All seven numbered mathematical sections are byte-identical except the final operational paragraph removal; headers and source footer added separately",
-      "all_diagnostic_replays": "ALL_TEN_PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
-      "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
-      "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS"
+      "new_proof_body_comparison": "PASS: eight numbered mathematical sections byte-identical except final operational/validation paragraph removal",
+      "all_diagnostic_replays": "ALL_12_PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
+      "primary_sources": "PUBLIC_LINKS_AND_HASH_IDENTITIES_ONLY_NO_PRIMARY_FILES_REDISTRIBUTED",
+      "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS",
+      "diagnostic_replay_results": [
+        {
+          "diagnostic": "four_branch_diagonals",
+          "status": "PASS",
+          "expected_bytes": 961,
+          "expected_sha256": "24506ea19115c1c9a2834fd878593ce13d8a20c97c95223f5d015ee52aede42f",
+          "replay_sha256": "24506ea19115c1c9a2834fd878593ce13d8a20c97c95223f5d015ee52aede42f",
+          "byte_equal": true
+        },
+        {
+          "diagnostic": "four_branch_identity",
+          "status": "PASS",
+          "expected_bytes": 4630,
+          "expected_sha256": "f344a0a8372ec287a89d557bccffe22c989f5153e50204c2a3dcfe08b4ede348",
+          "replay_sha256": "f344a0a8372ec287a89d557bccffe22c989f5153e50204c2a3dcfe08b4ede348",
+          "byte_equal": true
+        },
+        {
+          "diagnostic": "gaussian_principal_mean",
+          "status": "PASS",
+          "expected_bytes": 1328,
+          "expected_sha256": "781acf198facc7f630c2c7285a42acd324c841fda09c18ab5c0a06c7754ca0cf",
+          "replay_sha256": "781acf198facc7f630c2c7285a42acd324c841fda09c18ab5c0a06c7754ca0cf",
+          "byte_equal": true
+        },
+        {
+          "diagnostic": "near_parity_sufficient_gate",
+          "status": "PASS",
+          "expected_bytes": 1075,
+          "expected_sha256": "46b590cf44bdc97d08ccd05e0cc37cd3378c72b6cd4418428ae340e90ee5b936",
+          "replay_sha256": "46b590cf44bdc97d08ccd05e0cc37cd3378c72b6cd4418428ae340e90ee5b936",
+          "byte_equal": true
+        },
+        {
+          "diagnostic": "primary_shifted_attachment_audit",
+          "status": "PASS",
+          "expected_bytes": 1892,
+          "expected_sha256": "326d45b68efbb6ae3014ea842b53890417b6fccee655217c1b1b43e70325fd0d",
+          "replay_sha256": "326d45b68efbb6ae3014ea842b53890417b6fccee655217c1b1b43e70325fd0d",
+          "byte_equal": true
+        },
+        {
+          "diagnostic": "shifted_correlation_carrier_interface",
+          "status": "PASS",
+          "expected_bytes": 1042,
+          "expected_sha256": "79a5cd46ba392c8e5e233842cdfc75de841eb223c6e4d4b2b4975a83ff4b67e5",
+          "replay_sha256": "79a5cd46ba392c8e5e233842cdfc75de841eb223c6e4d4b2b4975a83ff4b67e5",
+          "byte_equal": true
+        },
+        {
+          "diagnostic": "short_sector",
+          "status": "PASS",
+          "expected_bytes": 1317,
+          "expected_sha256": "ec5fd53c790dd57534832489a5763a0a5d3b058e895d0d6fc6467f5078e924cb",
+          "replay_sha256": "ec5fd53c790dd57534832489a5763a0a5d3b058e895d0d6fc6467f5078e924cb",
+          "byte_equal": true
+        },
+        {
+          "diagnostic": "small_product_sector",
+          "status": "PASS",
+          "expected_bytes": 1956,
+          "expected_sha256": "b60fd65a62d687f3fa80dfbdeb4203db2ac62e61e5aa57793cd36d604c254b4c",
+          "replay_sha256": "b60fd65a62d687f3fa80dfbdeb4203db2ac62e61e5aa57793cd36d604c254b4c",
+          "byte_equal": true
+        },
+        {
+          "diagnostic": "small_transformed_rectangle",
+          "status": "PASS",
+          "expected_bytes": 1214,
+          "expected_sha256": "8571fbef68b76843511ca31d0cfb59ffddc875715e2c93b9220730c416edc7bc",
+          "replay_sha256": "8571fbef68b76843511ca31d0cfb59ffddc875715e2c93b9220730c416edc7bc",
+          "byte_equal": true
+        },
+        {
+          "diagnostic": "smaller_inverse_tail",
+          "status": "PASS",
+          "expected_bytes": 2053,
+          "expected_sha256": "6d6455dce02ab517800fb0c55c39fc91d4327e07c3dfae73965471e2c68e00fc",
+          "replay_sha256": "6d6455dce02ab517800fb0c55c39fc91d4327e07c3dfae73965471e2c68e00fc",
+          "byte_equal": true
+        },
+        {
+          "diagnostic": "smooth_balanced_diagonal",
+          "status": "PASS",
+          "expected_bytes": 1168,
+          "expected_sha256": "bf9555a1ea7e152458dfc3ee9a57d0abf48965e6ffdd5917166a39a1e9ab92be",
+          "replay_sha256": "bf9555a1ea7e152458dfc3ee9a57d0abf48965e6ffdd5917166a39a1e9ab92be",
+          "byte_equal": true
+        },
+        {
+          "diagnostic": "swap_time_localization",
+          "status": "PASS",
+          "expected_bytes": 1344,
+          "expected_sha256": "fef134fcb9ad4b06238753bbb72efe042471195a17638d70acdb591ac4c0c2df",
+          "replay_sha256": "fef134fcb9ad4b06238753bbb72efe042471195a17638d70acdb591ac4c0c2df",
+          "byte_equal": true
+        }
+      ]
     },
-    "proof_documents_01_through_11": "BYTE_UNCHANGED_FROM_ad3c3ada5153287b048f0902144c516d173127a4",
-    "new_selected_source_hash_checks": 90,
-    "new_unique_source_hashes": 71,
+    "proof_documents_01_through_12": "BYTE_UNCHANGED_FROM_ada5873c811a6b09589ee7ff073cf4aca240386a",
     "new_source_hash_checks": "PASS",
-    "new_proof_body_comparison": "Eight numbered sections byte-identical except final operational paragraph removal; essential mathematical scope-addendum body inserted verbatim at Section 5; explicit overview and diagnostic labels added",
-    "all_diagnostic_replays": "ALL_ELEVEN_PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
-    "primary_sources": "SIX_LINKED_ORIGINALS_WITH_VERSION_PAGE_AND_HASH_IDENTITIES_NO_FILES_REDISTRIBUTED",
-    "dependency_closure": "Selected accepted interfaces only; no new recursive Lean audit",
-    "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS"
+    "new_proof_body_comparison": "PASS: eight numbered mathematical sections byte-identical except final operational/validation paragraph removal",
+    "all_diagnostic_replays": "ALL_13_PASS_AND_BYTE_EQUAL_IN_NEW_OWNED_COPIES",
+    "primary_sources": "PUBLIC_LINKS_AND_HASH_IDENTITIES_ONLY_NO_PRIMARY_FILES_REDISTRIBUTED",
+    "repository_build": "NOT_RUN_DOCUMENTATION_ONLY_NO_COMPILER_OPERATIONS",
+    "diagnostic_replay_results": [
+      {
+        "diagnostic": "four_branch_diagonals",
+        "status": "PASS",
+        "expected_bytes": 961,
+        "expected_sha256": "24506ea19115c1c9a2834fd878593ce13d8a20c97c95223f5d015ee52aede42f",
+        "replay_sha256": "24506ea19115c1c9a2834fd878593ce13d8a20c97c95223f5d015ee52aede42f",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "four_branch_identity",
+        "status": "PASS",
+        "expected_bytes": 4630,
+        "expected_sha256": "f344a0a8372ec287a89d557bccffe22c989f5153e50204c2a3dcfe08b4ede348",
+        "replay_sha256": "f344a0a8372ec287a89d557bccffe22c989f5153e50204c2a3dcfe08b4ede348",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "gaussian_principal_mean",
+        "status": "PASS",
+        "expected_bytes": 1328,
+        "expected_sha256": "781acf198facc7f630c2c7285a42acd324c841fda09c18ab5c0a06c7754ca0cf",
+        "replay_sha256": "781acf198facc7f630c2c7285a42acd324c841fda09c18ab5c0a06c7754ca0cf",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "near_parity_sufficient_gate",
+        "status": "PASS",
+        "expected_bytes": 1075,
+        "expected_sha256": "46b590cf44bdc97d08ccd05e0cc37cd3378c72b6cd4418428ae340e90ee5b936",
+        "replay_sha256": "46b590cf44bdc97d08ccd05e0cc37cd3378c72b6cd4418428ae340e90ee5b936",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "periodic_determinant_mapping",
+        "status": "PASS",
+        "expected_bytes": 1495,
+        "expected_sha256": "7ae76ba2510133f42f719091ec3bf6a25eee9d0968ea29cf7140f6b3c090ec91",
+        "replay_sha256": "7ae76ba2510133f42f719091ec3bf6a25eee9d0968ea29cf7140f6b3c090ec91",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "primary_shifted_attachment_audit",
+        "status": "PASS",
+        "expected_bytes": 1892,
+        "expected_sha256": "326d45b68efbb6ae3014ea842b53890417b6fccee655217c1b1b43e70325fd0d",
+        "replay_sha256": "326d45b68efbb6ae3014ea842b53890417b6fccee655217c1b1b43e70325fd0d",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "shifted_correlation_carrier_interface",
+        "status": "PASS",
+        "expected_bytes": 1042,
+        "expected_sha256": "79a5cd46ba392c8e5e233842cdfc75de841eb223c6e4d4b2b4975a83ff4b67e5",
+        "replay_sha256": "79a5cd46ba392c8e5e233842cdfc75de841eb223c6e4d4b2b4975a83ff4b67e5",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "short_sector",
+        "status": "PASS",
+        "expected_bytes": 1317,
+        "expected_sha256": "ec5fd53c790dd57534832489a5763a0a5d3b058e895d0d6fc6467f5078e924cb",
+        "replay_sha256": "ec5fd53c790dd57534832489a5763a0a5d3b058e895d0d6fc6467f5078e924cb",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "small_product_sector",
+        "status": "PASS",
+        "expected_bytes": 1956,
+        "expected_sha256": "b60fd65a62d687f3fa80dfbdeb4203db2ac62e61e5aa57793cd36d604c254b4c",
+        "replay_sha256": "b60fd65a62d687f3fa80dfbdeb4203db2ac62e61e5aa57793cd36d604c254b4c",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "small_transformed_rectangle",
+        "status": "PASS",
+        "expected_bytes": 1214,
+        "expected_sha256": "8571fbef68b76843511ca31d0cfb59ffddc875715e2c93b9220730c416edc7bc",
+        "replay_sha256": "8571fbef68b76843511ca31d0cfb59ffddc875715e2c93b9220730c416edc7bc",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "smaller_inverse_tail",
+        "status": "PASS",
+        "expected_bytes": 2053,
+        "expected_sha256": "6d6455dce02ab517800fb0c55c39fc91d4327e07c3dfae73965471e2c68e00fc",
+        "replay_sha256": "6d6455dce02ab517800fb0c55c39fc91d4327e07c3dfae73965471e2c68e00fc",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "smooth_balanced_diagonal",
+        "status": "PASS",
+        "expected_bytes": 1168,
+        "expected_sha256": "bf9555a1ea7e152458dfc3ee9a57d0abf48965e6ffdd5917166a39a1e9ab92be",
+        "replay_sha256": "bf9555a1ea7e152458dfc3ee9a57d0abf48965e6ffdd5917166a39a1e9ab92be",
+        "byte_equal": true
+      },
+      {
+        "diagnostic": "swap_time_localization",
+        "status": "PASS",
+        "expected_bytes": 1344,
+        "expected_sha256": "fef134fcb9ad4b06238753bbb72efe042471195a17638d70acdb591ac4c0c2df",
+        "replay_sha256": "fef134fcb9ad4b06238753bbb72efe042471195a17638d70acdb591ac4c0c2df",
+        "byte_equal": true
+      }
+    ]
   },
   "preserved_proof_document_hashes": {
     "01_reciprocal_product.md": "419b7d3fd82e38db188506a7a6cc54822fb26bf9afcd3de8f506a4c6699421f4",
@@ -133,235 +368,273 @@
     "08_swap_time_localization.md": "7ee748b652e79958cf634e184db7b0ab8ff015393c93e24433f5d90ef33f3cd2",
     "09_four_branch_diagonals.md": "a7c63b13cafbd79bc83365da04c8d50ce8d5a92b886f16fdb56f9ce754b9cc9d",
     "10_near_parity_sufficient_gate.md": "c359b0296c9b02417788548756e2bba7e876bdb949f298d2865fbca333a61ae1",
-    "11_shifted_correlation_carrier_interface.md": "18859907bb759f260915b6f94c6fcb649beb7bc474cc93de716ca78dcf50bbc9"
+    "11_shifted_correlation_carrier_interface.md": "18859907bb759f260915b6f94c6fcb649beb7bc474cc93de716ca78dcf50bbc9",
+    "12_primary_shifted_attachment_audit.md": "6f6faa139071b7876fbd21ec1e066875dfe591f665aaff5767a41afd704bae92",
+    "13_small_transformed_rectangle.md": "f14ae67ae9a25c44e08a8c548504015f3441cd3598b3da9248f6eaef6b864daf"
   },
   "files": [
     {
       "path": "01_reciprocal_product.md",
-      "sha256": "419b7d3fd82e38db188506a7a6cc54822fb26bf9afcd3de8f506a4c6699421f4",
       "bytes": 11554,
+      "sha256": "419b7d3fd82e38db188506a7a6cc54822fb26bf9afcd3de8f506a4c6699421f4",
       "validation": "SOURCE_REVIEWED_NOT_LEAN"
     },
     {
       "path": "02_short_sector.md",
-      "sha256": "3c5b5961650ec53fe1e787627438b0caaba1c77aafeb61e96fb4c89813f1acf9",
       "bytes": 26431,
+      "sha256": "3c5b5961650ec53fe1e787627438b0caaba1c77aafeb61e96fb4c89813f1acf9",
       "validation": "SOURCE_REVIEWED_NOT_LEAN"
     },
     {
       "path": "03_small_product_sector.md",
-      "sha256": "0e7de20cce18c223292945fdf82fc53bc8da3c7424f0e366d3e12c27c837448e",
       "bytes": 25574,
+      "sha256": "0e7de20cce18c223292945fdf82fc53bc8da3c7424f0e366d3e12c27c837448e",
       "validation": "SOURCE_REVIEWED_NOT_LEAN"
     },
     {
       "path": "04_smaller_inverse_tail.md",
-      "sha256": "28123b40330f98f5ddacb894c73dee03e9b0f0110a092d5eebe9a4dd68a9b5a9",
       "bytes": 19707,
+      "sha256": "28123b40330f98f5ddacb894c73dee03e9b0f0110a092d5eebe9a4dd68a9b5a9",
       "validation": "SOURCE_REVIEWED_WITH_ATTACHMENT_LIMITS_NOT_LEAN"
     },
     {
       "path": "05_balanced_four_branch_identity.md",
-      "sha256": "93081462a7d65baa21ba3d74247b58ef00346dbfcb1880753b4a85e0b3aad737",
       "bytes": 25146,
+      "sha256": "93081462a7d65baa21ba3d74247b58ef00346dbfcb1880753b4a85e0b3aad737",
       "validation": "SOURCE_REVIEWED_EXACT_IDENTITY_ONLY_NOT_LEAN"
     },
     {
       "path": "06_smooth_balanced_diagonal.md",
-      "sha256": "29995537b84245467140e46ae31c4e65b668ba29d95de3805e84c1f252438eef",
       "bytes": 22843,
+      "sha256": "29995537b84245467140e46ae31c4e65b668ba29d95de3805e84c1f252438eef",
       "validation": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN"
     },
     {
       "path": "07_gaussian_principal_mean.md",
-      "sha256": "be31216c80c183a27fe5c6e644a1a3c994d10eec077891a015bd4d835fb1b9f4",
       "bytes": 26830,
+      "sha256": "be31216c80c183a27fe5c6e644a1a3c994d10eec077891a015bd4d835fb1b9f4",
       "validation": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN"
     },
     {
       "path": "08_swap_time_localization.md",
-      "sha256": "7ee748b652e79958cf634e184db7b0ab8ff015393c93e24433f5d90ef33f3cd2",
       "bytes": 20048,
+      "sha256": "7ee748b652e79958cf634e184db7b0ab8ff015393c93e24433f5d90ef33f3cd2",
       "validation": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN"
     },
     {
       "path": "09_four_branch_diagonals.md",
-      "sha256": "a7c63b13cafbd79bc83365da04c8d50ce8d5a92b886f16fdb56f9ce754b9cc9d",
       "bytes": 17201,
+      "sha256": "a7c63b13cafbd79bc83365da04c8d50ce8d5a92b886f16fdb56f9ce754b9cc9d",
       "validation": "SOURCE_REVIEWED_WITH_SCOPE_LIMITS_NOT_LEAN"
     },
     {
       "path": "10_near_parity_sufficient_gate.md",
-      "sha256": "c359b0296c9b02417788548756e2bba7e876bdb949f298d2865fbca333a61ae1",
       "bytes": 17745,
+      "sha256": "c359b0296c9b02417788548756e2bba7e876bdb949f298d2865fbca333a61ae1",
       "validation": "SOURCE_REVIEWED_SUFFICIENT_REDUCTION_ONLY_NOT_LEAN"
     },
     {
       "path": "11_shifted_correlation_carrier_interface.md",
-      "sha256": "18859907bb759f260915b6f94c6fcb649beb7bc474cc93de716ca78dcf50bbc9",
       "bytes": 18166,
+      "sha256": "18859907bb759f260915b6f94c6fcb649beb7bc474cc93de716ca78dcf50bbc9",
       "validation": "SOURCE_REVIEWED_CONDITIONAL_CARRIER_INTERFACE_ONLY_NOT_LEAN"
     },
     {
       "path": "12_primary_shifted_attachment_audit.md",
-      "sha256": "6f6faa139071b7876fbd21ec1e066875dfe591f665aaff5767a41afd704bae92",
       "bytes": 18435,
+      "sha256": "6f6faa139071b7876fbd21ec1e066875dfe591f665aaff5767a41afd704bae92",
       "validation": "SOURCE_REVIEWED_FAILED_DIRECT_ATTACHMENTS_WITH_POSITIVE_COMPONENT_SCOPE_ONLY_NOT_LEAN"
     },
     {
+      "path": "13_small_transformed_rectangle.md",
+      "bytes": 18600,
+      "sha256": "f14ae67ae9a25c44e08a8c548504015f3441cd3598b3da9248f6eaef6b864daf",
+      "validation": "SOURCE_REVIEWED_ACTUAL_SMALL_TRANSFORMED_FULL_KERNEL_RECTANGLE_ONLY_NOT_LEAN"
+    },
+    {
+      "path": "14_periodic_determinant_mapping.md",
+      "bytes": 16022,
+      "sha256": "0efc54b7016af1a8a86967439285500149c16b29adeabc0ef39462d36795c90b",
+      "validation": "SOURCE_REVIEWED_GENERIC_SMOOTH_DETERMINANT_CELL_ONLY_NOT_LEAN"
+    },
+    {
       "path": "README.md",
-      "sha256": "4311d4975f29843c207b1d4d8392cc7a13de5ff406445642b36789903a762044",
-      "bytes": 13932,
+      "bytes": 16678,
+      "sha256": "2cc3477df97d95b4b1810dbcf0a63fb253328688af173a85b827897ed7836bbd",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "SOURCE_PINS.json",
-      "sha256": "60714f3fdf59cec1d577c9b87ca67390ec16c36cc8fadff10a3088925cc45f50",
-      "bytes": 67636,
+      "bytes": 87429,
+      "sha256": "f973d1d5e457c69263acc7c5ac7f08444cf9613f2b5296cabd132e9b96a13b92",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/README.md",
-      "sha256": "cb36224cf83f6bd8e180065ec5d6d28f0a8fbc1f3172648a207cc54365767799",
-      "bytes": 7609,
+      "bytes": 8909,
+      "sha256": "5bacb71ae5985538450ec3bc2e7d97c923750754106806b78d609d23f593fbcf",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/four_branch_diagonals/EXPECTED_CHECKS.json",
-      "sha256": "24506ea19115c1c9a2834fd878593ce13d8a20c97c95223f5d015ee52aede42f",
       "bytes": 961,
+      "sha256": "24506ea19115c1c9a2834fd878593ce13d8a20c97c95223f5d015ee52aede42f",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/four_branch_diagonals/checks.py",
-      "sha256": "cb51eb0d7cedd0b71fb091e7d220bf7a9f820f6ee5e7ed0d02d53e036edd03bd",
       "bytes": 5112,
+      "sha256": "cb51eb0d7cedd0b71fb091e7d220bf7a9f820f6ee5e7ed0d02d53e036edd03bd",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/four_branch_identity/EXPECTED_CHECKS.json",
-      "sha256": "f344a0a8372ec287a89d557bccffe22c989f5153e50204c2a3dcfe08b4ede348",
       "bytes": 4630,
+      "sha256": "f344a0a8372ec287a89d557bccffe22c989f5153e50204c2a3dcfe08b4ede348",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/four_branch_identity/checks.py",
-      "sha256": "717ac847f0be8020f4c042876f447b3eede4f3b1e9212ef27859a498a62b6806",
       "bytes": 9605,
+      "sha256": "717ac847f0be8020f4c042876f447b3eede4f3b1e9212ef27859a498a62b6806",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/gaussian_principal_mean/EXPECTED_CHECKS.json",
-      "sha256": "781acf198facc7f630c2c7285a42acd324c841fda09c18ab5c0a06c7754ca0cf",
       "bytes": 1328,
+      "sha256": "781acf198facc7f630c2c7285a42acd324c841fda09c18ab5c0a06c7754ca0cf",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/gaussian_principal_mean/checks.py",
-      "sha256": "631f3d1aa3c102e121f22a89964168f0113c06537abc086107abb1b708de0395",
       "bytes": 6147,
+      "sha256": "631f3d1aa3c102e121f22a89964168f0113c06537abc086107abb1b708de0395",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/near_parity_sufficient_gate/EXPECTED_CHECKS.json",
-      "sha256": "46b590cf44bdc97d08ccd05e0cc37cd3378c72b6cd4418428ae340e90ee5b936",
       "bytes": 1075,
+      "sha256": "46b590cf44bdc97d08ccd05e0cc37cd3378c72b6cd4418428ae340e90ee5b936",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/near_parity_sufficient_gate/checks.py",
-      "sha256": "f6aca7974c364c9feef8551f8919eec5251249aa9f5a88a955f79c4f496479ac",
       "bytes": 7154,
+      "sha256": "f6aca7974c364c9feef8551f8919eec5251249aa9f5a88a955f79c4f496479ac",
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/periodic_determinant_mapping/EXPECTED_CHECKS.json",
+      "bytes": 1495,
+      "sha256": "7ae76ba2510133f42f719091ec3bf6a25eee9d0968ea29cf7140f6b3c090ec91",
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/periodic_determinant_mapping/checks.py",
+      "bytes": 3762,
+      "sha256": "918e8bcccd0559f25bd227914a1bdebec268586cd49de5cc2ffc04105dcd54e3",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/primary_shifted_attachment_audit/EXPECTED_CHECKS.json",
-      "sha256": "326d45b68efbb6ae3014ea842b53890417b6fccee655217c1b1b43e70325fd0d",
       "bytes": 1892,
+      "sha256": "326d45b68efbb6ae3014ea842b53890417b6fccee655217c1b1b43e70325fd0d",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/primary_shifted_attachment_audit/checks.py",
-      "sha256": "56aae9e591a91625df0efd853d66d78038989e61c3f97305d624ef7766a97293",
       "bytes": 3728,
+      "sha256": "56aae9e591a91625df0efd853d66d78038989e61c3f97305d624ef7766a97293",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/shifted_correlation_carrier_interface/EXPECTED_CHECKS.json",
-      "sha256": "79a5cd46ba392c8e5e233842cdfc75de841eb223c6e4d4b2b4975a83ff4b67e5",
       "bytes": 1042,
+      "sha256": "79a5cd46ba392c8e5e233842cdfc75de841eb223c6e4d4b2b4975a83ff4b67e5",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/shifted_correlation_carrier_interface/checks.py",
-      "sha256": "388183b97d591a32753318b691827fec0644c3d8ec37ed7a4fe7854a0e7054dc",
       "bytes": 5901,
+      "sha256": "388183b97d591a32753318b691827fec0644c3d8ec37ed7a4fe7854a0e7054dc",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/short_sector/EXPECTED_CHECKS.json",
-      "sha256": "ec5fd53c790dd57534832489a5763a0a5d3b058e895d0d6fc6467f5078e924cb",
       "bytes": 1317,
+      "sha256": "ec5fd53c790dd57534832489a5763a0a5d3b058e895d0d6fc6467f5078e924cb",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/short_sector/checks.py",
-      "sha256": "dd1c2c80827fdeda9638a88a34a389e0ca485db4b78cde19edc43527aa27d533",
       "bytes": 9119,
+      "sha256": "dd1c2c80827fdeda9638a88a34a389e0ca485db4b78cde19edc43527aa27d533",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/small_product_sector/EXPECTED_CHECKS.json",
-      "sha256": "b60fd65a62d687f3fa80dfbdeb4203db2ac62e61e5aa57793cd36d604c254b4c",
       "bytes": 1956,
+      "sha256": "b60fd65a62d687f3fa80dfbdeb4203db2ac62e61e5aa57793cd36d604c254b4c",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/small_product_sector/checks.py",
-      "sha256": "c0b6c26d38d7512fea8b4449cf2520474116ffdcd8440b1b3812a57ad20206b9",
       "bytes": 6694,
+      "sha256": "c0b6c26d38d7512fea8b4449cf2520474116ffdcd8440b1b3812a57ad20206b9",
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/small_transformed_rectangle/EXPECTED_CHECKS.json",
+      "bytes": 1214,
+      "sha256": "8571fbef68b76843511ca31d0cfb59ffddc875715e2c93b9220730c416edc7bc",
+      "validation": "SUPPORTING_CHECKPOINT_FILE"
+    },
+    {
+      "path": "diagnostics/small_transformed_rectangle/checks.py",
+      "bytes": 7181,
+      "sha256": "6e75e73f0fa33e513be0b180bc0059684177967249ae635caf83af777de18ff0",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/smaller_inverse_tail/EXPECTED_CHECKS.json",
-      "sha256": "6d6455dce02ab517800fb0c55c39fc91d4327e07c3dfae73965471e2c68e00fc",
       "bytes": 2053,
+      "sha256": "6d6455dce02ab517800fb0c55c39fc91d4327e07c3dfae73965471e2c68e00fc",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/smaller_inverse_tail/checks.py",
-      "sha256": "01538464e4aa148f0d0f5c1d403da45c50ef053002f097fbe5ad64eb6633b3c6",
       "bytes": 5919,
+      "sha256": "01538464e4aa148f0d0f5c1d403da45c50ef053002f097fbe5ad64eb6633b3c6",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/smooth_balanced_diagonal/EXPECTED_CHECKS.json",
-      "sha256": "bf9555a1ea7e152458dfc3ee9a57d0abf48965e6ffdd5917166a39a1e9ab92be",
       "bytes": 1168,
+      "sha256": "bf9555a1ea7e152458dfc3ee9a57d0abf48965e6ffdd5917166a39a1e9ab92be",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/smooth_balanced_diagonal/checks.py",
-      "sha256": "0e25368e4dd7588cb5f3a5c7116145454756fc83e41c6134b421671f661c9ada",
       "bytes": 6177,
+      "sha256": "0e25368e4dd7588cb5f3a5c7116145454756fc83e41c6134b421671f661c9ada",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/swap_time_localization/EXPECTED_CHECKS.json",
-      "sha256": "fef134fcb9ad4b06238753bbb72efe042471195a17638d70acdb591ac4c0c2df",
       "bytes": 1344,
+      "sha256": "fef134fcb9ad4b06238753bbb72efe042471195a17638d70acdb591ac4c0c2df",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "diagnostics/swap_time_localization/checks.py",
-      "sha256": "660cd1bb0a44242bb8deee7efd3fdf2c9818b00f836ba2d39e29649d783ec615",
       "bytes": 5874,
+      "sha256": "660cd1bb0a44242bb8deee7efd3fdf2c9818b00f836ba2d39e29649d783ec615",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     },
     {
       "path": "verify_checkpoint.py",
-      "sha256": "2220dbff08b8fe7cfe0d0c7c43d02981c4593a1a92d2c327de0316a3d8bdec03",
-      "bytes": 12884,
+      "bytes": 16038,
+      "sha256": "6ada1b606ae161b2877ede51a46d93c8a6eec4c94cd3c1bffbd82339406665c9",
       "validation": "SUPPORTING_CHECKPOINT_FILE"
     }
   ],
