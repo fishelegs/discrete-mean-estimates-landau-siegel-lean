@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "lean_version": "Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "lean_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "dependency_manifest_sha256": "c9b8b8c6bda9302e8da060dd58139883caed83af1bb5da32b9395f7af9b4606e",
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "direct_imports": {
+    "Mathlib.Analysis.Real.Pi.Bounds": {
+      "source_sha256": "bb8dc6144292b803b2df8c31ca32d67a7ab47b50f8005b5b688d95aff1489444",
+      "olean_sha256": "208e83a938b2827cae5bb009ed7d412d015e1eddcf1b4597e4a433a5ac9b0689"
+    },
+    "Mathlib.Analysis.Complex.Norm": {
+      "source_sha256": "7f719d7b3ba3ba8b4667a8f79e7efd5d8fb4da2b82dcca011e64129113a63eba",
+      "olean_sha256": "0f14151458916c24d2e17b5d0f1824784e6eb37b5c7a73886538b4b10d20920b"
+    },
+    "Mathlib.Tactic": {
+      "source_sha256": "f45622ca1381833c77e9659a0b2ec07e5b667d0d4667cb2a28a58e9540634e85",
+      "olean_sha256": "3c0883be0b7edd978e28e331e53ee7e872b44bb3e6bce93dc97045f27779bf90"
+    }
+  },
+  "declaration_count": 14,
+  "checks": [
+    {
+      "module": "PiFamilyReversal",
+      "source_sha256": "56c52c771d50de2f7d16fe8ccb610f58278eb7b6b40d6a8c82ce3bd469461e9e",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 6.09,
+      "olean_sha256": "a96283d097c296d217b6ca6e56a4ed9eb0dd28cda65e4428fab549bd5ec5a014"
+    },
+    {
+      "module": "PiFamilyReversalAudit",
+      "source_sha256": "ba27f80373a9e7316f4deaca2d113cd6ad982594dfe6a907e1727f3b81194c32",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "3b277f897515ee4a40b1d9eaf399e8aaabea5cf8dca36ac1ff2cfc6a974c6a3d",
+      "elapsed_seconds": 2.494,
+      "olean_sha256": "7bd61130c0aa700bdf5782db7e3ac3150b81fce39b8462d8c587ff0239c1ddf7"
+    },
+    {
+      "module": "PiFamilyReversalRegression",
+      "source_sha256": "bde3046937a9b7aa24f589d36d774e55a07e139c2ebff8691fe0ef62d901f213",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 2.613,
+      "olean_sha256": "fbd702dc22e58d71185e5da96bf7ee74a908f7719caf8c560bd4f4207c030169"
+    },
+    {
+      "module": "ExpectedFailureFamilyAtTwo",
+      "source_sha256": "169a4af301c3f8ce7434ce3951fd3eedd4f2d951767335e8700b2f1b71a8db1a",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "log_sha256": "9600aa4aed52cafdc4ef2fb723ab0e074291561aea51fca574179007d583262e",
+      "elapsed_seconds": 2.483
+    }
+  ],
+  "axiom_audit": {
+    "PiFamilyReversal.numerator_dvd_three": [
+      "propext"
+    ],
+    "PiFamilyReversal.three_mul_exponent": [
+      "propext"
+    ],
+    "PiFamilyReversal.exponent_ge_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiFamilyReversal.coefficient_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiFamilyReversal.base_strict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiFamilyReversal.radial_strict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiFamilyReversal.familyPolynomial_eval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiFamilyReversal.family_norm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiFamilyReversal.actual_period_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiFamilyReversal.family_reversal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiFamilyReversal.family_norm_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiFamilyReversal.signedGain_neg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiFamilyReversal.not_positive_signedGain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiFamilyReversal.eventually_signedGain_neg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "exact_exponent_division": true,
+  "actual_pi_used": true,
+  "cutoff_N": 3,
+  "determinant_identification_formalized": false,
+  "source_separation_formalized": false,
+  "N2_gain_formalized": false,
+  "normalized_limit_formalized": false,
+  "pi_bad_approximability_formalized": false
+}
