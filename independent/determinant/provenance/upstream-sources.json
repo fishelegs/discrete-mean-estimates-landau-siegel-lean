@@ -1,0 +1,1014 @@
+{
+  "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "roots": [
+    "OAI.NumberTheory.SiegelZeros.Determinants.NormSqReal",
+    "OAI.NumberTheory.SiegelZeros.Structure.InvariantJetLinearMap",
+    "OAI.NumberTheory.SiegelZeros.Selection.GreedyPivotsWeightLowSpan"
+  ],
+  "scope": "The 69 unchanged raw source modules in the verified import closure. Mathlib and other external packages are pinned in project/lake-manifest.json.",
+  "files": [
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Determinants.NormSqReal",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Determinants/NormSqReal.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Determinants/NormSqReal.lean",
+      "sha": "aa7baff3bf79830a66568256e19aa083bcf40d65",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Determinants/NormSqReal.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Selection.RestrictWeightSortedEquiv"
+      ],
+      "sha256": "3d754c9443d1d6bdd3df228585c62d324f6b464d636cce133618f12a3bdc8430"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.InvariantJetLinearMap",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/InvariantJetLinearMap.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/InvariantJetLinearMap.lean",
+      "sha": "0eb0d8c8c97f41330d2604b7def5d02461d60a94",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/InvariantJetLinearMap.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Differentials.TorusQuotientDimensionPosCotangentFinrankThree",
+        "OAI.NumberTheory.SiegelZeros.Selection.WeightedJetIndices",
+        "OAI.NumberTheory.SiegelZeros.Structure.EvalOneInvariantJetMonomial"
+      ],
+      "sha256": "09b8bd7fa82365e69caebfad466d039d85084595376766a731945fa5c11a2bdc"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Selection.RestrictWeightSortedEquiv",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Selection/RestrictWeightSortedEquiv.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Selection/RestrictWeightSortedEquiv.lean",
+      "sha": "c71976329358b0be4f6c14c70fe98de5bc659c8c",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Selection/RestrictWeightSortedEquiv.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Characters.BiquadraticArithmeticFull",
+        "OAI.NumberTheory.SiegelZeros.Selection.WeightedJetIndices"
+      ],
+      "sha256": "298d50a3f51b412f6e55796a2e09a89a8a4507ae068e3916be40543392ec3e42"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Differentials.TorusQuotientDimensionPosCotangentFinrankThree",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Differentials/TorusQuotientDimensionPosCotangentFinrankThree.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Differentials/TorusQuotientDimensionPosCotangentFinrankThree.lean",
+      "sha": "091f9a5b0bb1d8172c7073bdfe61f0cfaffe89ed",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Differentials/TorusQuotientDimensionPosCotangentFinrankThree.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.PolynomialLaurent",
+        "OAI.NumberTheory.SiegelZeros.Structure.IdealPowLayer"
+      ],
+      "sha256": "0500c1583da06dd3b2394621dfab39be9bda67cb454dbd20a3b579d9bbb30c20"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Selection.WeightedJetIndices",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Selection/WeightedJetIndices.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Selection/WeightedJetIndices.lean",
+      "sha": "2c19ab542d3787e0d383602c185e3d64e44e3027",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Selection/WeightedJetIndices.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Selection.GreedyPivots"
+      ],
+      "sha256": "fa9a71e7d282da33cc3120595ea0aa0ff6b8f6665f6d268787e557cd9ad73011"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.EvalOneInvariantJetMonomial",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/EvalOneInvariantJetMonomial.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/EvalOneInvariantJetMonomial.lean",
+      "sha": "c312e4bf502cc80dc717498b89fae53e8e0b48f6",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/EvalOneInvariantJetMonomial.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Structure.InvariantJetMonomial"
+      ],
+      "sha256": "4b61d83ee4190d81b5316dff4112deaa46bbf0f48f541788e02488b9ac28c4cf"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Selection.GreedyPivotsWeightLowSpan",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Selection/GreedyPivotsWeightLowSpan.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Selection/GreedyPivotsWeightLowSpan.lean",
+      "sha": "e2bb05ed0c7b1b0bd89f32b756c72c0026b4ad5b",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Selection/GreedyPivotsWeightLowSpan.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Selection.RestrictWeightSortedEquiv"
+      ],
+      "sha256": "51acaf8763269fc4c0777e2ccea796b0051fd6dda130c776841c40aef4a7f91b"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.BiquadraticArithmeticFull",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Characters/BiquadraticArithmeticFull.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Characters/BiquadraticArithmeticFull.lean",
+      "sha": "18a3fce18afcfbe689164db59cbea0e3dac8f169",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Characters/BiquadraticArithmeticFull.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Characters.AuxiliarySqrtPairCharacterField",
+        "OAI.NumberTheory.SiegelZeros.Structure.SqrtTwoField"
+      ],
+      "sha256": "bfa0c73200c337ad6d3b823c8ca6ac9145ebad72aa10f910bc0e5b3b0e4227a8"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.PolynomialLaurent",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/PolynomialLaurent.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/PolynomialLaurent.lean",
+      "sha": "965496feee72fc3c56c2ff89e5938a5dc15d08c3",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/PolynomialLaurent.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Differentials.FinrankDerivationCardTranscendenceBasis",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.NormalizationPresentationLocalEquiv"
+      ],
+      "sha256": "be81f12fc781a9156fd9b4876c10145480d455d6a6b2ce0ebcc8fdf4b0824a91"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.IdealPowLayer",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/IdealPowLayer.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/IdealPowLayer.lean",
+      "sha": "b6da6b362db90efe36668858f98fa2701b0da4cd",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/IdealPowLayer.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.PolynomialLinearCoefficients",
+        "OAI.NumberTheory.SiegelZeros.Structure.InvariantJetMonomial"
+      ],
+      "sha256": "7c8e8cfa1356e9fbde2bb5d2c53784dd259a30b647c9e0252d68371a35b6ead4"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Selection.GreedyPivots",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Selection/GreedyPivots.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Selection/GreedyPivots.lean",
+      "sha": "fe7511f8b3cfb9987f0dd184105a152c3523e5a1",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Selection/GreedyPivots.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport"
+      ],
+      "sha256": "6670df0e9f22467201a856183cd40fdef01d2aa44f325af9138e23887304e714"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.InvariantJetMonomial",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/InvariantJetMonomial.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/InvariantJetMonomial.lean",
+      "sha": "d3c50871b1115011450d818604aa4b54ae3a5e78",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/InvariantJetMonomial.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Differentials.TorusDerivationOverRat",
+        "OAI.NumberTheory.SiegelZeros.Intersection.TorusRectangleJetIdealParametersProjectiveDegreeBound",
+        "OAI.NumberTheory.SiegelZeros.Structure.FinrankDegreePiecePosPrimeVariableNotMem"
+      ],
+      "sha256": "9eef96ece4cb6de8bf462588b7410aebb9feba1c3d023dd0245e16e587241cda"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.AuxiliarySqrtPairCharacterField",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Characters/AuxiliarySqrtPairCharacterField.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Characters/AuxiliarySqrtPairCharacterField.lean",
+      "sha": "9ce6d5a052fdea87b15beb6a16491995155a0bd6",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Characters/AuxiliarySqrtPairCharacterField.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Determinants.SqrtPairFrobeniusDirections",
+        "OAI.NumberTheory.SiegelZeros.Structure.SumLogDivFilterDvdTwoMul"
+      ],
+      "sha256": "146f5897f591747be12aedf055b7db3d4982411491a1aacc6466f19853a0e390"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.SqrtTwoField",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/SqrtTwoField.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/SqrtTwoField.lean",
+      "sha": "4db81ec31d937676f8dbb57ef5a130ae3845757c",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/SqrtTwoField.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Structure.QuadraticAdjoinBasis"
+      ],
+      "sha256": "cbf67d5b90413afca2ab95faed91b897b05057a16697f5cc9827f22b91b6f00d"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Differentials.FinrankDerivationCardTranscendenceBasis",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Differentials/FinrankDerivationCardTranscendenceBasis.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Differentials/FinrankDerivationCardTranscendenceBasis.lean",
+      "sha": "822adcdd4fee38d3b44ca93fe46d677fec02785a",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Differentials/FinrankDerivationCardTranscendenceBasis.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.CoordinateLocalizedPrime",
+        "OAI.NumberTheory.SiegelZeros.Structure.LinearShearHom"
+      ],
+      "sha256": "f4e30253940fe96812c805d0d13d1f4a76c08aaea8b81c5f4d410869a769245a"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.NormalizationPresentationLocalEquiv",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/NormalizationPresentationLocalEquiv.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/NormalizationPresentationLocalEquiv.lean",
+      "sha": "457335f48a2b1d36d13f051c4a80c59b1998e579",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/NormalizationPresentationLocalEquiv.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.CoordinateLocalizedPrime",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.ResidueTensorQuotientAlgEquiv"
+      ],
+      "sha256": "b54568dcdb3a2ce90cceb7d180457811953ca47c27ba4b44f24926f67c56cef6"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.PolynomialLinearCoefficients",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/PolynomialLinearCoefficients.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/PolynomialLinearCoefficients.lean",
+      "sha": "0dafe979cdcc45d1b1b4ae63b6602c0e0ea18a5e",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/PolynomialLinearCoefficients.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Differentials.DerivationJet"
+      ],
+      "sha256": "b50bc3879667d76c613549f74e5e9d022d19256d6f94194dcc0780d3cd47311d"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Differentials.TorusDerivationOverRat",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Differentials/TorusDerivationOverRat.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Differentials/TorusDerivationOverRat.lean",
+      "sha": "ab412eaa372546c1179cb6de316479900c41bf46",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Differentials/TorusDerivationOverRat.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Differentials.DerivationJet"
+      ],
+      "sha256": "038598a4f5a41c7f2df93c140d91bcb528648fea397c18e5092010071ac5de2a"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Intersection.TorusRectangleJetIdealParametersProjectiveDegreeBound",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Intersection/TorusRectangleJetIdealParametersProjectiveDegreeBound.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Intersection/TorusRectangleJetIdealParametersProjectiveDegreeBound.lean",
+      "sha": "90f736523ca485f16836ec1f067fd786f797114a",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Intersection/TorusRectangleJetIdealParametersProjectiveDegreeBound.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Intersection.LocalLengthMulProjectiveClosureDegree"
+      ],
+      "sha256": "9d3539810b0e06aac01baa4c796cba0f2d7740807f2ca02e1626461a7b1f746a"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.FinrankDegreePiecePosPrimeVariableNotMem",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/FinrankDegreePiecePosPrimeVariableNotMem.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/FinrankDegreePiecePosPrimeVariableNotMem.lean",
+      "sha": "8aa3bdf4537ee5948515b3bafc5df77ea79701c3",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/FinrankDegreePiecePosPrimeVariableNotMem.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Hilbert.HilbertSeries",
+        "OAI.NumberTheory.SiegelZeros.Structure.ConeMapEval"
+      ],
+      "sha256": "c709b53d95da055632e68f5a9bff87d51e6ec67f9c806108f5e5a1fe80c82ddb"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Determinants.SqrtPairFrobeniusDirections",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Determinants/SqrtPairFrobeniusDirections.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Determinants/SqrtPairFrobeniusDirections.lean",
+      "sha": "f499e293f70fb184461886c09e5f16165a6b69ea",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Determinants/SqrtPairFrobeniusDirections.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Characters.BiquadraticBasis"
+      ],
+      "sha256": "b7adba7f355bf99e9cf38e093bef84149b6385ba0fc99bfbbaa1ccb93c049bcb"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.SumLogDivFilterDvdTwoMul",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/SumLogDivFilterDvdTwoMul.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/SumLogDivFilterDvdTwoMul.lean",
+      "sha": "61901131ecdba45e4a7dafbb74323c2dfba7bcac",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/SumLogDivFilterDvdTwoMul.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Characters.IntegerCharacter",
+        "OAI.NumberTheory.SiegelZeros.Structure.SumLogPrimeFactors"
+      ],
+      "sha256": "726ad96cc301d9782f84011feff2dbeefcd3cdb9ceef1fe6f86e3d4c6c6981b0"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.QuadraticAdjoinBasis",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/QuadraticAdjoinBasis.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/QuadraticAdjoinBasis.lean",
+      "sha": "8c5798991f96168de1e20ff2539ca90d8dd52f3d",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/QuadraticAdjoinBasis.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Characters.IntegerCharacter",
+        "OAI.NumberTheory.SiegelZeros.Determinants.SqrtPairFrobeniusDirections"
+      ],
+      "sha256": "542ae52e9e07964a0feadc25c1a8165abd45cb840ae6183995e6c1c2c1d64275"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.CoordinateLocalizedPrime",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/CoordinateLocalizedPrime.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/CoordinateLocalizedPrime.lean",
+      "sha": "581cbc393e4c5dab16415e7ae4b3e0811aa85857",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/CoordinateLocalizedPrime.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.PolynomialBox",
+        "OAI.NumberTheory.SiegelZeros.Structure.Homogenize"
+      ],
+      "sha256": "7f884a33aec3eb29e7a7775408993874d1cd316796e142fac4222493a10b5a48"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.LinearShearHom",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/LinearShearHom.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/LinearShearHom.lean",
+      "sha": "717522530b6cfcfdeeed33cd276650cc1d9076aa",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/LinearShearHom.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport"
+      ],
+      "sha256": "1fff4319c3c6d8d4525586b249f366467e6854a252ed452b4c732da9d7e6c21f"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.ResidueTensorQuotientAlgEquiv",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/ResidueTensorQuotientAlgEquiv.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/ResidueTensorQuotientAlgEquiv.lean",
+      "sha": "80611382d7386061c5fe88b2f97d10c0320eb2d2",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/ResidueTensorQuotientAlgEquiv.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.LocalFractionAlgebra"
+      ],
+      "sha256": "a052b0f0f43bf774fa91fe41a6b78ab4dd6632193f2c8c436d9c8573784fbf6d"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Differentials.DerivationJet",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Differentials/DerivationJet.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Differentials/DerivationJet.lean",
+      "sha": "2d0000ef7c6c0d2de75cd727c76f51ab593521f9",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Differentials/DerivationJet.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Structure.RectangleThreshold"
+      ],
+      "sha256": "29eb03c7ff15db6c694ff49a18bb9a1bf112956fc65d5302dc0a41d58a7e5319"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Intersection.LocalLengthMulProjectiveClosureDegree",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Intersection/LocalLengthMulProjectiveClosureDegree.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Intersection/LocalLengthMulProjectiveClosureDegree.lean",
+      "sha": "14cc1b8cc029f6be2d693e7d8ffeaac2d47e0a69",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Intersection/LocalLengthMulProjectiveClosureDegree.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Differentials.FinrankDerivationCardTranscendenceBasis",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.GradedIdealQuotient",
+        "OAI.NumberTheory.SiegelZeros.Structure.ConeMapEval",
+        "OAI.NumberTheory.SiegelZeros.Structure.LinearVariableBasis"
+      ],
+      "sha256": "0e015a8f4e035c80fc1f793758f78d5cd8d277659346106282e44e09c7847982"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Hilbert.HilbertSeries",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Hilbert/HilbertSeries.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Hilbert/HilbertSeries.lean",
+      "sha": "0046aacb0d8601ff1e4d821623fbb32ed54aef00",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Hilbert/HilbertSeries.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Structure.DegreeMap"
+      ],
+      "sha256": "31ce16c7dc494de43f2a3616caea6869954efce147bd16cb1a0a6c1e21770082"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.ConeMapEval",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/ConeMapEval.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/ConeMapEval.lean",
+      "sha": "421c33f08441fd422d8d45a5ce0fc69b88a93009",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/ConeMapEval.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.CoeffPolynomialEvalMul"
+      ],
+      "sha256": "554bf5050f508ef1555285e8b2d3b44c27ac7ee7d289cb03d17dd5c7262fe4bc"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.BiquadraticBasis",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Characters/BiquadraticBasis.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Characters/BiquadraticBasis.lean",
+      "sha": "3d974af67ddf69edcfd9fd7a0c95ccabf9a0408a",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Characters/BiquadraticBasis.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport"
+      ],
+      "sha256": "ad8452daacf97f7eb616c7ec30d3c237d5044e0260561c8530373c38d815802e"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.IntegerCharacter",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Characters/IntegerCharacter.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Characters/IntegerCharacter.lean",
+      "sha": "411891f4fd237370af8957cc5fef1232ddc905ab",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Characters/IntegerCharacter.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport"
+      ],
+      "sha256": "2fab85f268a2a69291093ff4f4d5986542f5157aa2024c489863e75ea22badb7"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.SumLogPrimeFactors",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/SumLogPrimeFactors.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/SumLogPrimeFactors.lean",
+      "sha": "b73a51f3cad2f5036b46b1d447c4af58593d6b87",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/SumLogPrimeFactors.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Characters.RealLogDerivConductorCompletedLDivisorTsum",
+        "OAI.NumberTheory.SiegelZeros.Structure.CharacterEstimates"
+      ],
+      "sha256": "710037139bb606b55a11b8dc6b447b8b0c7d98a77f80105a326b3fa689b3496c"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.PolynomialBox",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/PolynomialBox.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/PolynomialBox.lean",
+      "sha": "5b6da648be4fe9f575390369ca7c79c66f3647fc",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/PolynomialBox.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Differentials.InvariantDerivationLemmas"
+      ],
+      "sha256": "12595278a6519516c0b1c56f5302f7dbeee3964376ca4e4dd1b43c674c80f13d"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.Homogenize",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/Homogenize.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/Homogenize.lean",
+      "sha": "d0a803afbfacbf7b65eeec96f0453a6fe3a00262",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/Homogenize.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Structure.ConeMap"
+      ],
+      "sha256": "6df04fc6e5d9619c57c82d0644ae9d199b7d95aad42e247b600d6b73c13d7857"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.LocalFractionAlgebra",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/LocalFractionAlgebra.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/LocalFractionAlgebra.lean",
+      "sha": "78fe5078a6b02aeb8ee8d9499a8a0e21e991ddbb",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/LocalFractionAlgebra.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Hilbert.HomogeneousDeformation"
+      ],
+      "sha256": "d4be6ef192d4803f62f4f5eb2cfa2b2728675d317971cbd1f6b76b2c4865b996"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.RectangleThreshold",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/RectangleThreshold.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/RectangleThreshold.lean",
+      "sha": "5d419db28078a02fca901f002046baa0ef9c10fb",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/RectangleThreshold.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Intersection.TorusEvalOne",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.NormalizationPresentationLocalEquiv"
+      ],
+      "sha256": "0d54c5824864d455218e2b43fee4b7c48ca88519a07bd2f1978bc57eaa5dee56"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.GradedIdealQuotient",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/GradedIdealQuotient.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/GradedIdealQuotient.lean",
+      "sha": "8f6ee496f8bd706f53cbfeaa2bdfcfbaf985a355",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/GradedIdealQuotient.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.CoefficientSubspaceEquiv"
+      ],
+      "sha256": "29650482cbee7b0fcfbed74bf0198b72395071e19c12ece3e46705c58e7df849"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.LinearVariableBasis",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/LinearVariableBasis.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/LinearVariableBasis.lean",
+      "sha": "ffc14d967d5a6715d69738121c5b6249131dda48",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/LinearVariableBasis.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.NormalizationPresentationLocalEquiv"
+      ],
+      "sha256": "980e94ec2c736bd368460b25af44d061f2db0ba08d73f8fbfbc8f18d89a682d7"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.DegreeMap",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/DegreeMap.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/DegreeMap.lean",
+      "sha": "0d9d006e80711bfaa0738f4f7c929d2a5835f1bf",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/DegreeMap.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Hilbert.HomogeneousDeformation"
+      ],
+      "sha256": "ffc83e3120155c5b6038746e162a5f9792b22270d0a0d2cc0c06e99dec3fb323"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.CoeffPolynomialEvalMul",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/CoeffPolynomialEvalMul.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/CoeffPolynomialEvalMul.lean",
+      "sha": "6a4ca1e35ff6e0c9a39c3f10f9ee21792779fb35",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/CoeffPolynomialEvalMul.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Structure.Homogenize"
+      ],
+      "sha256": "5a818626dc4573fb643e0602075ff4b97b299a755ae0e8ddc290275e80048a18"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.RealLogDerivConductorCompletedLDivisorTsum",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Characters/RealLogDerivConductorCompletedLDivisorTsum.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Characters/RealLogDerivConductorCompletedLDivisorTsum.lean",
+      "sha": "e79e1c337840f127c0e77064b6d65530fb4898a4",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Characters/RealLogDerivConductorCompletedLDivisorTsum.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Characters.ConductorCompletedL"
+      ],
+      "sha256": "e6ab67d3818462cbc41654e5b5d672b5ced0dfd2ec2fb6367b7d3bdef1c3a970"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.CharacterEstimates",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/CharacterEstimates.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/CharacterEstimates.lean",
+      "sha": "17457ab760428487cfbe78c25f52dc3f6672c740",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/CharacterEstimates.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport"
+      ],
+      "sha256": "3dc3138a3cba700bc05de3647a78662b33b800698b8ee719891e1f04160d1653"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Differentials.InvariantDerivationLemmas",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Differentials/InvariantDerivationLemmas.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Differentials/InvariantDerivationLemmas.lean",
+      "sha": "7d335d07cd39f71e19e9c263d4a43b05ce25111a",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Differentials/InvariantDerivationLemmas.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.LocalFractionAlgebra"
+      ],
+      "sha256": "0999ecd871119f5b5ae61c1070955001a8bb50cdf0192968b21fe22cc587bf8b"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.ConeMap",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/ConeMap.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/ConeMap.lean",
+      "sha": "17855e69b71105d469f24f2a1c76fe5a64531d48",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/ConeMap.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport"
+      ],
+      "sha256": "7a53e4c849171022e1443739ba0d825f433a1c6e749ff94c98d781e53520f9eb"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Hilbert.HomogeneousDeformation",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Hilbert/HomogeneousDeformation.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Hilbert/HomogeneousDeformation.lean",
+      "sha": "70014b7a36edc4d8aa6a4b7173217b69bfa5db71",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Hilbert/HomogeneousDeformation.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.LocalQuotientEquiv"
+      ],
+      "sha256": "0f3f61bb4ec57d87397f4ac8f0d67888ee7cecd569589d4eaf8158fbf913880a"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Intersection.TorusEvalOne",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Intersection/TorusEvalOne.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Intersection/TorusEvalOne.lean",
+      "sha": "8382db89d1e723c523cfebe5d54a4d4031118cd5",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Intersection/TorusEvalOne.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Structure.FiniteTypeFieldModelEquiv"
+      ],
+      "sha256": "156bf50dd07fdebac1d7a73cc0f71a9c4cff114b988cf9ce9561428dbd419330"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.CoefficientSubspaceEquiv",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/CoefficientSubspaceEquiv.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/CoefficientSubspaceEquiv.lean",
+      "sha": "41725d7cb17075859026f7c287a73562eebd4eb5",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/CoefficientSubspaceEquiv.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Hilbert.HilbertSeries"
+      ],
+      "sha256": "650226e1cb97a679256729e72e090bfb6a805aea6a067c2280689dce5f4c463d"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.ConductorCompletedL",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Characters/ConductorCompletedL.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Characters/ConductorCompletedL.lean",
+      "sha": "1df0c7d72e1638b9536bd710c4021d76ebe2264b",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Characters/ConductorCompletedL.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.EntireFunctions.MellinConvergentTopIndicator"
+      ],
+      "sha256": "f471cf0741fe89e3d37903aaac9742eafb033c38d98b8a2ec275fb2ca2972ebf"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.LocalQuotientEquiv",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/LocalQuotientEquiv.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/LocalQuotientEquiv.lean",
+      "sha": "31fae535363b78aa92e28a98164319ba2ea4b2a6",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/LocalQuotientEquiv.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.MonicSMulRegularQuotientMapC"
+      ],
+      "sha256": "7bfe937f8eef9466ae5ab66ffdaebeede575594a38f18172ad656af710a826d3"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.FiniteTypeFieldModelEquiv",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/FiniteTypeFieldModelEquiv.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/FiniteTypeFieldModelEquiv.lean",
+      "sha": "9bf66977cc45d8a0cc1c1329dde3ed4cb14b0805",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/FiniteTypeFieldModelEquiv.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.EntireFunctions.LogarithmicForm"
+      ],
+      "sha256": "48c051c6e6be5ddf89959626bd30e0ae6a00e32b0f01c8937c5f862aef396d2b"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.EntireFunctions.MellinConvergentTopIndicator",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/EntireFunctions/MellinConvergentTopIndicator.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/EntireFunctions/MellinConvergentTopIndicator.lean",
+      "sha": "58427452ae99d87d03ba6333622d970c70298078",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/EntireFunctions/MellinConvergentTopIndicator.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport"
+      ],
+      "sha256": "2c56b39dba2e173a7b683827394162228c5e651ffb89b86896da82e1c314ed89"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.MonicSMulRegularQuotientMapC",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/MonicSMulRegularQuotientMapC.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/MonicSMulRegularQuotientMapC.lean",
+      "sha": "3da50162081251e2e2a3c47951df887900d51964",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/MonicSMulRegularQuotientMapC.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport"
+      ],
+      "sha256": "36ccd3763e8e83a855be2e5fab3e80bf84b47f29c87a4115a8739f5917b7f696"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.EntireFunctions.LogarithmicForm",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/EntireFunctions/LogarithmicForm.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/EntireFunctions/LogarithmicForm.lean",
+      "sha": "b1f64da27b50d6c5f5918b71e5a0c8227a883cd1",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/EntireFunctions/LogarithmicForm.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Differentials.FinrankDerivationCardTranscendenceBasis",
+        "OAI.NumberTheory.SiegelZeros.LocalAlgebra.ParameterIdeal"
+      ],
+      "sha256": "3b728119f23064caa4d79b39e6960cb37c5dc62cf7f9364dcb411072d5c2302f"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.ParameterIdeal",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/ParameterIdeal.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/LocalAlgebra/ParameterIdeal.lean",
+      "sha": "d7e2989eebfdbdbafee30032eb20d5c3b68a0198",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/LocalAlgebra/ParameterIdeal.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Determinants.GenericNormalization"
+      ],
+      "sha256": "058f45726612ac301535be5d55a5f31228394f408f6ea1a9996fc6c16d916d1d"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Determinants.GenericNormalization",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Determinants/GenericNormalization.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Determinants/GenericNormalization.lean",
+      "sha": "5a35946af1fff507f6b6e1eedc3d7d29a2311f68",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Determinants/GenericNormalization.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+        "OAI.NumberTheory.SiegelZeros.Structure.DominantFunctionFieldHom"
+      ],
+      "sha256": "9ab16ce961fedce77b09606cfea1980cb5566135335484992052085423c6f528"
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.DominantFunctionFieldHom",
+      "path": "lean/OAI/NumberTheory/SiegelZeros/Structure/DominantFunctionFieldHom.lean",
+      "local": "project/OAI/NumberTheory/SiegelZeros/Structure/DominantFunctionFieldHom.lean",
+      "sha": "53aafc8387ce76ac540d2d6daab3c6d1575cbcad",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/NumberTheory/SiegelZeros/Structure/DominantFunctionFieldHom.lean",
+      "origin": "pinned openai/math",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport"
+      ],
+      "sha256": "e0b2b1101f7ce00fb6272cfdbb846a8109e9bbf78c29ed2b9a23bd2055462bff"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.CartanBounds",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/CartanBounds.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/CartanBounds.lean",
+      "sha": "f378d4be648ac6c8777d87eab5b7260dca14c98a",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.Products",
+        "PrimeNumberTheoremAnd.SiegelZeros.Counting"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix f378d4b",
+      "sha256": "914619b42f2d408d5a6dcb082a3a0bf40be7dc90664bd041335ae3cfe4ace11a"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Counting",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/Counting.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/Counting.lean",
+      "sha": "cc47f9cff888ed264b2c5208b63d48d2cad71e28",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "Mathlib"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix cc47f9c",
+      "sha256": "8a4baf358e02792fc9353abf86a99f8e2981aca45e075b2b240abce6057c038b"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.DivisorBasics",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/DivisorBasics.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/DivisorBasics.lean",
+      "sha": "e5a553a3ee5d72dc8b05558c9b475ccd6cbf91b2",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.Products"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix e5a553a",
+      "sha256": "b876999e5337224b5680fa7f7da9769e2f4e48f30f40ee5d7f2d473aa17574b9"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.DivisorLimits",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/DivisorLimits.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/DivisorLimits.lean",
+      "sha": "4325f1fb8c212e653f88778c0baa3501166816dd",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.DivisorProducts"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix 4325f1f",
+      "sha256": "1f6c1fde75de0b2ca22384db91dc0d4bd9199f81483293181191acee0b0f5a7f"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.DivisorProducts",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/DivisorProducts.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/DivisorProducts.lean",
+      "sha": "5ca9514b9bb917fa5943ee6fbe73b1b7ba45266d",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.DivisorBasics"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix 5ca9514",
+      "sha256": "c588e788d6d7218b7faffb54c0770cf33503238529802cb8cba526e0dcca6d0c"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Exponential",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/Exponential.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/Exponential.lean",
+      "sha": "082148e2964bbe15a0ade86b5be3e3619a47c7ba",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.ProductBounds"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix 082148e",
+      "sha256": "fc5275b5bb345d4a9b496e2f6f69f3bd4674893727552031584de67dddcdf9c9"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Factorization",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/Factorization.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/Factorization.lean",
+      "sha": "8fb7d8ebaefb91495cca586df2541b8a5173d516",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.DivisorLimits"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix 8fb7d8e",
+      "sha256": "e4569bce8a761f4dca00d2fee525e58083729b7fa109a59cb35ba344cf83cdf8"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Growth",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/Growth.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/Growth.lean",
+      "sha": "99df5016978326be79edb375299a34e8929a7d58",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.Summability",
+        "PrimeNumberTheoremAnd.SiegelZeros.Exponential"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix 99df501",
+      "sha256": "a5b0f5651308176e72d2166ea626ed1121c6575438582a4f3d962c69cc93a42b"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/HadamardSupport.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/HadamardSupport.lean",
+      "sha": "7ec52e35be466816c9659d77e3f79d1e09b522d0",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "PrimeNumberTheoremAnd.SiegelZeros.Growth"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix 7ec52e3",
+      "sha256": "18cc872b37afa250e674a9069c3ff21872975cba4d6235bd613edfa9919ac720"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.ProductBounds",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/ProductBounds.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/ProductBounds.lean",
+      "sha": "6a2985a09f6df44478f102ee1b9886fc15db947c",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.DivisorLimits",
+        "PrimeNumberTheoremAnd.SiegelZeros.CartanBounds"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix 6a2985a",
+      "sha256": "969770fb4bb3cfe708fcf612a6f222645696a3d4a4193e0ea251ed04aae4b735"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Products",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/Products.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/Products.lean",
+      "sha": "db0daa8a814dcb5b5746c1e471b7b25a1bdf93d3",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "Mathlib"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix db0daa8",
+      "sha256": "542f14e2a572a28b6b93ccbf6d046493b5692745ba31635728a2bd4271f0026a"
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Summability",
+      "path": "PrimeNumberTheoremAnd/SiegelZeros/Summability.lean",
+      "local": "project/PrimeNumberTheoremAnd/SiegelZeros/Summability.lean",
+      "sha": "0a11558d2ccfd82842853a5c1ff36601be5ea68f",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+      "origin": "patch-added file",
+      "imports": [
+        "Mathlib",
+        "PrimeNumberTheoremAnd.SiegelZeros.Factorization",
+        "PrimeNumberTheoremAnd.SiegelZeros.Counting"
+      ],
+      "hash_source": "Reconstructed new-file additions from pinned patch; matches patch index prefix 0a11558",
+      "sha256": "c9958f6fbf5c10738310fda29acd5716f38a69feb0d2ddaf4c9f32b724f55c30"
+    }
+  ],
+  "metadata": [
+    {
+      "sha": "66c3867331c7c607ffc0e60955cc86cccf046e12",
+      "upstream_path": "lean/lakefile.lean",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/lakefile.lean"
+    },
+    {
+      "sha": "67d01d2717d0aaff59fb8814bb53581b961f42b4",
+      "upstream_path": "lean/lake-manifest.json",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/lake-manifest.json"
+    },
+    {
+      "sha": "ba8ebf2dbaf6a668cd2a0e086186d6d569b69ff5",
+      "upstream_path": "lean/lean-toolchain",
+      "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/lean-toolchain"
+    }
+  ],
+  "patch": {
+    "sha": "924c5f6ec6fe88ba7788b420af4e3c3c7ac00abc",
+    "upstream_path": "lean/patches/PrimeNumberTheoremAnd-lean4341.patch",
+    "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch"
+  },
+  "metadata_note": "Historical upstream configuration identities; these are not bundled or executed. The independent configuration is project/lakefile.lean with its own exact manifest."
+}
