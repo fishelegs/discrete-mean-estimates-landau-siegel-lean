@@ -1,0 +1,1643 @@
+{
+  "verified_at_utc": "2026-10-07",
+  "kind": "Historical successful local compiler-receipt summary; hosted CI is separate",
+  "lean": "4.34.1",
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "raw_source_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "modules": [
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Products",
+      "source_sha256": "542f14e2a572a28b6b93ccbf6d046493b5692745ba31635728a2bd4271f0026a",
+      "olean_sha256": "e0381198e04293450b34005111a6a6013db19022049ccd8fb6e0b3e29af69914",
+      "exit_code": 0
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.DivisorBasics",
+      "source_sha256": "b876999e5337224b5680fa7f7da9769e2f4e48f30f40ee5d7f2d473aa17574b9",
+      "olean_sha256": "139b1a41dbf77cdc666c3997f04cc2b7465832e1bac62c434ed9de7bad7f24e3",
+      "exit_code": 0,
+      "seconds": 28.02,
+      "peak_process_tree_rss_bytes": 6655598592
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.DivisorProducts",
+      "source_sha256": "c588e788d6d7218b7faffb54c0770cf33503238529802cb8cba526e0dcca6d0c",
+      "olean_sha256": "d15b2ea3ac10987cf8201fae45c8605189a8ae75dea53a8f3e1cb1f2ae8f7260",
+      "exit_code": 0,
+      "seconds": 30.022,
+      "peak_process_tree_rss_bytes": 6617415680
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.DivisorLimits",
+      "source_sha256": "1f6c1fde75de0b2ca22384db91dc0d4bd9199f81483293181191acee0b0f5a7f",
+      "olean_sha256": "af49ff90d8a42e49f65cf22b0e957c01f2e843836e3e454fb0536a368f7aaa9d",
+      "exit_code": 0,
+      "seconds": 25.021,
+      "peak_process_tree_rss_bytes": 6692352000
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Factorization",
+      "source_sha256": "e4569bce8a761f4dca00d2fee525e58083729b7fa109a59cb35ba344cf83cdf8",
+      "olean_sha256": "e63a690f1b3b05592e626e18b43c2200c81bbdc2ce8c2ce1dd0df887fcbbbf56",
+      "exit_code": 0,
+      "seconds": 27.022,
+      "peak_process_tree_rss_bytes": 6625435648
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Counting",
+      "source_sha256": "8a4baf358e02792fc9353abf86a99f8e2981aca45e075b2b240abce6057c038b",
+      "olean_sha256": "744fb3875ced81140314e9f1638718877127b8f0b2b556802790a3be4d4b3d32",
+      "exit_code": 0,
+      "seconds": 30.022,
+      "peak_process_tree_rss_bytes": 6766891008
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Summability",
+      "source_sha256": "c9958f6fbf5c10738310fda29acd5716f38a69feb0d2ddaf4c9f32b724f55c30",
+      "olean_sha256": "5a788abcc27cf76bd5736252146ca4e02debb1f35da44a9b2b0dbb8f37562f57",
+      "exit_code": 0,
+      "seconds": 32.025,
+      "peak_process_tree_rss_bytes": 6715805696
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.CartanBounds",
+      "source_sha256": "914619b42f2d408d5a6dcb082a3a0bf40be7dc90664bd041335ae3cfe4ace11a",
+      "olean_sha256": "a179be9b84748d7cdc776a0be4595d86deeb84784b810e1e74ca76f38ef73e62",
+      "exit_code": 0,
+      "seconds": 36.027,
+      "peak_process_tree_rss_bytes": 6724804608
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.ProductBounds",
+      "source_sha256": "969770fb4bb3cfe708fcf612a6f222645696a3d4a4193e0ea251ed04aae4b735",
+      "olean_sha256": "8a196249cb5eac77376a8f21aa923e1d32088fbede9883b683ba5b567bd6235c",
+      "exit_code": 0,
+      "seconds": 38.03,
+      "peak_process_tree_rss_bytes": 6761107456
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Exponential",
+      "source_sha256": "fc5275b5bb345d4a9b496e2f6f69f3bd4674893727552031584de67dddcdf9c9",
+      "olean_sha256": "397d28db03bb9de2a9cbf5d4143f13799d6879054f6a3ef9267c6a5000fcefd5",
+      "exit_code": 0,
+      "seconds": 33.025,
+      "peak_process_tree_rss_bytes": 6735028224
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.Growth",
+      "source_sha256": "a5b0f5651308176e72d2166ea626ed1121c6575438582a4f3d962c69cc93a42b",
+      "olean_sha256": "1801ca1f2350ffb73293113035e05f4be6ad4a3fa132210cf39263bb24c9ff72",
+      "exit_code": 0,
+      "seconds": 32.024,
+      "peak_process_tree_rss_bytes": 6738444288
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SiegelZeros.HadamardSupport",
+      "source_sha256": "18cc872b37afa250e674a9069c3ff21872975cba4d6235bd613edfa9919ac720",
+      "olean_sha256": "77f5361c697fe81f6378d00380b66b350e60591b0186a373822cc0713d56250d",
+      "exit_code": 0,
+      "seconds": 25.021,
+      "peak_process_tree_rss_bytes": 6725382144
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.BiquadraticBasis",
+      "source_sha256": "ad8452daacf97f7eb616c7ec30d3c237d5044e0260561c8530373c38d815802e",
+      "olean_sha256": "fd80d54ccd9c68f9adbf33cb68e2c4b75e02df22ed4f503eb3603f56bab33752",
+      "exit_code": 0,
+      "seconds": 40.03,
+      "peak_process_tree_rss_bytes": 6654275584
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Determinants.SqrtPairFrobeniusDirections",
+      "source_sha256": "b7adba7f355bf99e9cf38e093bef84149b6385ba0fc99bfbbaa1ccb93c049bcb",
+      "olean_sha256": "ad9c52aceb46a1ce427fe75bc34896e89ed0fa168361245b95879f408f67e1b6",
+      "exit_code": 0,
+      "seconds": 30.023,
+      "peak_process_tree_rss_bytes": 6703267840
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.IntegerCharacter",
+      "source_sha256": "2fab85f268a2a69291093ff4f4d5986542f5157aa2024c489863e75ea22badb7",
+      "olean_sha256": "a6c8e20f858d6e22cd08c76e45ba8d6d9a4a738459501977bf6f77441dbbcef0",
+      "exit_code": 0,
+      "seconds": 30.024,
+      "peak_process_tree_rss_bytes": 6710022144
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.EntireFunctions.MellinConvergentTopIndicator",
+      "source_sha256": "2c56b39dba2e173a7b683827394162228c5e651ffb89b86896da82e1c314ed89",
+      "olean_sha256": "ab7b15a9183031172a5f2a6f787ec189db2fe7b1ff3f58806d226136868f4ea2",
+      "exit_code": 0,
+      "seconds": 33.027,
+      "peak_process_tree_rss_bytes": 6680084480
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.ConductorCompletedL",
+      "source_sha256": "f471cf0741fe89e3d37903aaac9742eafb033c38d98b8a2ec275fb2ca2972ebf",
+      "olean_sha256": "bae5dbb147ab99f1d976b579d833f2a79d1e87a6150a864791baf7a910f89b41",
+      "exit_code": 0,
+      "seconds": 30.021,
+      "peak_process_tree_rss_bytes": 6694424576
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.RealLogDerivConductorCompletedLDivisorTsum",
+      "source_sha256": "e6ab67d3818462cbc41654e5b5d672b5ced0dfd2ec2fb6367b7d3bdef1c3a970",
+      "olean_sha256": "26e8ed9b42d7398fad18875b19eadfa3ec9e8d3024030fd6b291e1a649f78f85",
+      "exit_code": 0,
+      "seconds": 29.027,
+      "peak_process_tree_rss_bytes": 6710956032
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.CharacterEstimates",
+      "source_sha256": "3dc3138a3cba700bc05de3647a78662b33b800698b8ee719891e1f04160d1653",
+      "olean_sha256": "83fa2f6c605151d2544199bc8ab07f2979fabf6225f3ee0f8ce9a68d9b77e35f",
+      "exit_code": 0,
+      "seconds": 32.027,
+      "peak_process_tree_rss_bytes": 6696312832
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.SumLogPrimeFactors",
+      "source_sha256": "710037139bb606b55a11b8dc6b447b8b0c7d98a77f80105a326b3fa689b3496c",
+      "olean_sha256": "841ada5f1549b9165dcf8365a9afa0202dfa4ce6ab4c57f95d22420ad4ccb1a8",
+      "exit_code": 0,
+      "seconds": 33.027,
+      "peak_process_tree_rss_bytes": 6741524480
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.SumLogDivFilterDvdTwoMul",
+      "source_sha256": "726ad96cc301d9782f84011feff2dbeefcd3cdb9ceef1fe6f86e3d4c6c6981b0",
+      "olean_sha256": "6f002bfae3d08e4c24fc5895dce181a2fcb0329f5f84bf413754be232b9219b7",
+      "exit_code": 0,
+      "seconds": 23.018,
+      "peak_process_tree_rss_bytes": 6655586304
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.AuxiliarySqrtPairCharacterField",
+      "source_sha256": "146f5897f591747be12aedf055b7db3d4982411491a1aacc6466f19853a0e390",
+      "olean_sha256": "cb5c73fa479b77f959bdee45aad113a80007fd07c5659b5ba62d346feb26db94",
+      "exit_code": 0,
+      "seconds": 22.018,
+      "peak_process_tree_rss_bytes": 6546345984
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.QuadraticAdjoinBasis",
+      "source_sha256": "542ae52e9e07964a0feadc25c1a8165abd45cb840ae6183995e6c1c2c1d64275",
+      "olean_sha256": "aec005ee838594375c2924db1340c7e337a0ec795f06b97e7a4a7e5526440cc3",
+      "exit_code": 0,
+      "seconds": 30.025,
+      "peak_process_tree_rss_bytes": 6626369536
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.SqrtTwoField",
+      "source_sha256": "cbf67d5b90413afca2ab95faed91b897b05057a16697f5cc9827f22b91b6f00d",
+      "olean_sha256": "460e1ffb3a6247ddcbc37ee42151642d8dbc53eecf0d5f5a7a83d1d6408a6655",
+      "exit_code": 0,
+      "seconds": 33.027,
+      "peak_process_tree_rss_bytes": 6637981696
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Characters.BiquadraticArithmeticFull",
+      "source_sha256": "bfa0c73200c337ad6d3b823c8ca6ac9145ebad72aa10f910bc0e5b3b0e4227a8",
+      "olean_sha256": "6495edc2db4e8cb42025e66ca89293cace577df36ac95617d6093b58077bc315",
+      "exit_code": 0,
+      "seconds": 32.027,
+      "peak_process_tree_rss_bytes": 6601957376
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Selection.GreedyPivots",
+      "source_sha256": "6670df0e9f22467201a856183cd40fdef01d2aa44f325af9138e23887304e714",
+      "olean_sha256": "6fd06e9c161388b55094e7ec4163b23149b46946545846332ef6b80d1ea8a191",
+      "exit_code": 0,
+      "seconds": 33.025,
+      "peak_process_tree_rss_bytes": 6582816768
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Selection.WeightedJetIndices",
+      "source_sha256": "fa9a71e7d282da33cc3120595ea0aa0ff6b8f6665f6d268787e557cd9ad73011",
+      "olean_sha256": "1c90677a628e6cb4bca5b8c3deea664edfcbfb910fadfcfa6f76dd4b548b25a3",
+      "exit_code": 0,
+      "seconds": 29.023,
+      "peak_process_tree_rss_bytes": 6611005440
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Selection.RestrictWeightSortedEquiv",
+      "source_sha256": "298d50a3f51b412f6e55796a2e09a89a8a4507ae068e3916be40543392ec3e42",
+      "olean_sha256": "e157e1ad2109d1e022f65f5e2fd9bf4b009198cc26ffe8c16afb996548459d41",
+      "exit_code": 0,
+      "seconds": 47.037,
+      "peak_process_tree_rss_bytes": 6595289088
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Determinants.NormSqReal",
+      "source_sha256": "3d754c9443d1d6bdd3df228585c62d324f6b464d636cce133618f12a3bdc8430",
+      "olean_sha256": "ab406b66cb478cc17a18680a3853e97d570dfef8b3dad9126c2215ef929e4a60",
+      "exit_code": 0,
+      "seconds": 42.037,
+      "peak_process_tree_rss_bytes": 6579974144
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.MonicSMulRegularQuotientMapC",
+      "source_sha256": "36ccd3763e8e83a855be2e5fab3e80bf84b47f29c87a4115a8739f5917b7f696",
+      "olean_sha256": "80ed02d7f5f77aae7ccfdb886ee58fb60ee89bb7855a2e06fc0286b91efb790d",
+      "exit_code": 0,
+      "seconds": 31.026,
+      "peak_process_tree_rss_bytes": 6604955648
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.LocalQuotientEquiv",
+      "source_sha256": "7bfe937f8eef9466ae5ab66ffdaebeede575594a38f18172ad656af710a826d3",
+      "olean_sha256": "68cb3348a70dfdd2bc0e377606e8faa3f5925d44a4cc1a405534305d7a5a799a",
+      "exit_code": 0,
+      "seconds": 40.034,
+      "peak_process_tree_rss_bytes": 6597144576
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Hilbert.HomogeneousDeformation",
+      "source_sha256": "0f3f61bb4ec57d87397f4ac8f0d67888ee7cecd569589d4eaf8158fbf913880a",
+      "olean_sha256": "6d5dabb510b1ae0900b0fbd50700a0f9722fd9a34422ceef33e63f45c247a930",
+      "exit_code": 0,
+      "seconds": 38.033,
+      "peak_process_tree_rss_bytes": 6595821568
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.LocalFractionAlgebra",
+      "source_sha256": "d4be6ef192d4803f62f4f5eb2cfa2b2728675d317971cbd1f6b76b2c4865b996",
+      "olean_sha256": "e4b1e3800920ee264b64893bcf8279eca12398f42504c151a16364a55a05aea9",
+      "exit_code": 0,
+      "seconds": 34.031,
+      "peak_process_tree_rss_bytes": 6589083648
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Differentials.InvariantDerivationLemmas",
+      "source_sha256": "0999ecd871119f5b5ae61c1070955001a8bb50cdf0192968b21fe22cc587bf8b",
+      "olean_sha256": "75985b083d3bb44832fb850836164a44ec1b4b1a9c072c487b1926586e7f8a7a",
+      "exit_code": 0,
+      "seconds": 30.025,
+      "peak_process_tree_rss_bytes": 6603513856
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.PolynomialBox",
+      "source_sha256": "12595278a6519516c0b1c56f5302f7dbeee3964376ca4e4dd1b43c674c80f13d",
+      "olean_sha256": "1057cdf2925f3e10e407e7730e3e4a7ff1bf593912675b15ca6a7436cf62c799",
+      "exit_code": 0,
+      "seconds": 36.029,
+      "peak_process_tree_rss_bytes": 6601793536
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.ConeMap",
+      "source_sha256": "7a53e4c849171022e1443739ba0d825f433a1c6e749ff94c98d781e53520f9eb",
+      "olean_sha256": "601d7ba4d6994cb1f8c87da880ad7aed35d0f314130ba73243cccb3ab5f93961",
+      "exit_code": 0,
+      "seconds": 38.031,
+      "peak_process_tree_rss_bytes": 6575816704
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.Homogenize",
+      "source_sha256": "6df04fc6e5d9619c57c82d0644ae9d199b7d95aad42e247b600d6b73c13d7857",
+      "olean_sha256": "dec2ab2b1e5921a29eec754ac0608892162f0816d5d2a3e01d00c04cb0f3037a",
+      "exit_code": 0,
+      "seconds": 32.026,
+      "peak_process_tree_rss_bytes": 6584496128
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.CoordinateLocalizedPrime",
+      "source_sha256": "7f884a33aec3eb29e7a7775408993874d1cd316796e142fac4222493a10b5a48",
+      "olean_sha256": "81b60f7218a732aa7efeb90e18eb1a5faddc5cce54cda41629c6491671850718",
+      "exit_code": 0,
+      "seconds": 43.035,
+      "peak_process_tree_rss_bytes": 6598565888
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.LinearShearHom",
+      "source_sha256": "1fff4319c3c6d8d4525586b249f366467e6854a252ed452b4c732da9d7e6c21f",
+      "olean_sha256": "ab5038b73faa57b705eec03aa8876488ac0c072db3b1489294b8a7fb1e65e86d",
+      "exit_code": 0,
+      "seconds": 42.03,
+      "peak_process_tree_rss_bytes": 6577045504
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Differentials.FinrankDerivationCardTranscendenceBasis",
+      "source_sha256": "f4e30253940fe96812c805d0d13d1f4a76c08aaea8b81c5f4d410869a769245a",
+      "olean_sha256": "a102230dfa692ff08c25121589678d9646d09d87258875a50a69682d33d8d008",
+      "exit_code": 0,
+      "seconds": 32.025,
+      "peak_process_tree_rss_bytes": 6582702080
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.ResidueTensorQuotientAlgEquiv",
+      "source_sha256": "a052b0f0f43bf774fa91fe41a6b78ab4dd6632193f2c8c436d9c8573784fbf6d",
+      "olean_sha256": "36aad2cb7dee0cf303ef34400d3547a2e200e014e27db7cd5ac9588b43856971",
+      "exit_code": 0,
+      "seconds": 38.031,
+      "peak_process_tree_rss_bytes": 6580989952
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.NormalizationPresentationLocalEquiv",
+      "source_sha256": "b54568dcdb3a2ce90cceb7d180457811953ca47c27ba4b44f24926f67c56cef6",
+      "olean_sha256": "8f2f68f2ded17ad17af49aa0838e8a72aa5f19d89e5ec5257a0de08f76eea098",
+      "exit_code": 0,
+      "seconds": 38.031,
+      "peak_process_tree_rss_bytes": 6599921664
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.PolynomialLaurent",
+      "source_sha256": "be81f12fc781a9156fd9b4876c10145480d455d6a6b2ce0ebcc8fdf4b0824a91",
+      "olean_sha256": "19beacb4ca107b9b96a1f7a8b83b7ca7ec0ce62b4cd63d66538f57546c1b0745",
+      "exit_code": 0,
+      "seconds": 34.028,
+      "peak_process_tree_rss_bytes": 6588743680
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.DominantFunctionFieldHom",
+      "source_sha256": "e0b2b1101f7ce00fb6272cfdbb846a8109e9bbf78c29ed2b9a23bd2055462bff",
+      "olean_sha256": "a9696f2b8328793076e02933f1adb6a213cc2d8c7ae3179df12cbb7f8e00d189",
+      "exit_code": 0,
+      "seconds": 35.03,
+      "peak_process_tree_rss_bytes": 6596100096
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Determinants.GenericNormalization",
+      "source_sha256": "9ab16ce961fedce77b09606cfea1980cb5566135335484992052085423c6f528",
+      "olean_sha256": "b178cde957b746311355b9430844ab5e65fc0da1eb903c124506956c50a2dbe3",
+      "exit_code": 0,
+      "seconds": 33.026,
+      "peak_process_tree_rss_bytes": 6590320640
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.ParameterIdeal",
+      "source_sha256": "058f45726612ac301535be5d55a5f31228394f408f6ea1a9996fc6c16d916d1d",
+      "olean_sha256": "cf1cca1230bfb9a7ee1f0da5d15c02989cf686d8881fb5b2580f8930cd8398b4",
+      "exit_code": 0,
+      "seconds": 37.028,
+      "peak_process_tree_rss_bytes": 6578241536
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.EntireFunctions.LogarithmicForm",
+      "source_sha256": "3b728119f23064caa4d79b39e6960cb37c5dc62cf7f9364dcb411072d5c2302f",
+      "olean_sha256": "c0bf377b0a58b3b7a9600b71df749b2f28de54a37bd33e37bb00ff2cfc56532f",
+      "exit_code": 0,
+      "seconds": 43.033,
+      "peak_process_tree_rss_bytes": 6556086272
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.FiniteTypeFieldModelEquiv",
+      "source_sha256": "48c051c6e6be5ddf89959626bd30e0ae6a00e32b0f01c8937c5f862aef396d2b",
+      "olean_sha256": "8ca99323d2c73b42018dc8bf54e53e7fddc278251b981753b85bd1c1ad8f852a",
+      "exit_code": 0,
+      "seconds": 37.031,
+      "peak_process_tree_rss_bytes": 6581596160
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Intersection.TorusEvalOne",
+      "source_sha256": "156bf50dd07fdebac1d7a73cc0f71a9c4cff114b988cf9ce9561428dbd419330",
+      "olean_sha256": "1200a5a7f548dfc4483b2b582b4d25a6c5551ba8c8a9e2ad04e5ec8be0fd9e50",
+      "exit_code": 0,
+      "seconds": 46.049,
+      "peak_process_tree_rss_bytes": 6493384704
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.RectangleThreshold",
+      "source_sha256": "0d54c5824864d455218e2b43fee4b7c48ca88519a07bd2f1978bc57eaa5dee56",
+      "olean_sha256": "e42bc392f1a38f6f9b59e8809c33ae4fea02be36c4812ee0cafc22b218011213",
+      "exit_code": 0,
+      "seconds": 39.033,
+      "peak_process_tree_rss_bytes": 6501511168
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Differentials.DerivationJet",
+      "source_sha256": "29eb03c7ff15db6c694ff49a18bb9a1bf112956fc65d5302dc0a41d58a7e5319",
+      "olean_sha256": "620038401e105515ee125ab78f66df468c72240ab9f17b879d27b89ac8e330a6",
+      "exit_code": 0,
+      "seconds": 32.026,
+      "peak_process_tree_rss_bytes": 6493577216
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.PolynomialLinearCoefficients",
+      "source_sha256": "b50bc3879667d76c613549f74e5e9d022d19256d6f94194dcc0780d3cd47311d",
+      "olean_sha256": "63c11f1561932d07bd7fda996c5f53e2b146ec5719d1e95dfd3a7db183fe277f",
+      "exit_code": 0,
+      "seconds": 41.032,
+      "peak_process_tree_rss_bytes": 6514782208
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Differentials.TorusDerivationOverRat",
+      "source_sha256": "038598a4f5a41c7f2df93c140d91bcb528648fea397c18e5092010071ac5de2a",
+      "olean_sha256": "0025f9edc5f079ab93c615e5c5ff253c433c9c515d081625b8bfa09b6e64fa52",
+      "exit_code": 0,
+      "seconds": 37.029,
+      "peak_process_tree_rss_bytes": 6565060608
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.DegreeMap",
+      "source_sha256": "ffc83e3120155c5b6038746e162a5f9792b22270d0a0d2cc0c06e99dec3fb323",
+      "olean_sha256": "90e4e7f99f0821625e6dbaa5d879dcd6714ba631e365914e18755bbbcafef8b0",
+      "exit_code": 0,
+      "seconds": 38.035,
+      "peak_process_tree_rss_bytes": 6558523392
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Hilbert.HilbertSeries",
+      "source_sha256": "31ce16c7dc494de43f2a3616caea6869954efce147bd16cb1a0a6c1e21770082",
+      "olean_sha256": "056da808a355006265c4923c396bea682165c16b9eeb4e3c6d1862ce73eb6323",
+      "exit_code": 0,
+      "seconds": 32.026,
+      "peak_process_tree_rss_bytes": 6508130304
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.CoefficientSubspaceEquiv",
+      "source_sha256": "650226e1cb97a679256729e72e090bfb6a805aea6a067c2280689dce5f4c463d",
+      "olean_sha256": "02975bddd01f765ec321686522523b0aa7bd3d6d1978e83f54f21e8520398077",
+      "exit_code": 0,
+      "seconds": 35.029,
+      "peak_process_tree_rss_bytes": 6577270784
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.GradedIdealQuotient",
+      "source_sha256": "29650482cbee7b0fcfbed74bf0198b72395071e19c12ece3e46705c58e7df849",
+      "olean_sha256": "49284cf99ab4b1edf74b828b62356ac3416f6f66826b48094bb2290bb0630676",
+      "exit_code": 0,
+      "seconds": 31.025,
+      "peak_process_tree_rss_bytes": 6485422080
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.LocalAlgebra.CoeffPolynomialEvalMul",
+      "source_sha256": "5a818626dc4573fb643e0602075ff4b97b299a755ae0e8ddc290275e80048a18",
+      "olean_sha256": "1a91e24197e7036d612a24611953236785da279a44a66f963b50fb4c98983e72",
+      "exit_code": 0,
+      "seconds": 28.024,
+      "peak_process_tree_rss_bytes": 6479900672
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.ConeMapEval",
+      "source_sha256": "554bf5050f508ef1555285e8b2d3b44c27ac7ee7d289cb03d17dd5c7262fe4bc",
+      "olean_sha256": "225aebcabec544f7ae9cd524fed5b615a85156eddbf883543be9f8a70f485a15",
+      "exit_code": 0,
+      "seconds": 29.027,
+      "peak_process_tree_rss_bytes": 6556684288
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.LinearVariableBasis",
+      "source_sha256": "980e94ec2c736bd368460b25af44d061f2db0ba08d73f8fbfbc8f18d89a682d7",
+      "olean_sha256": "b0f324feaf25d3f009f8b734ce9f8d4914640bf09db0ed55f1fcc84e1bdf2553",
+      "exit_code": 0,
+      "seconds": 33.03,
+      "peak_process_tree_rss_bytes": 6548221952
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Intersection.LocalLengthMulProjectiveClosureDegree",
+      "source_sha256": "0e015a8f4e035c80fc1f793758f78d5cd8d277659346106282e44e09c7847982",
+      "olean_sha256": "3cf1cc0ed45eb27d45654176bdbe8828675e3beee07d68158542fccb384578de",
+      "exit_code": 0,
+      "seconds": 29.027,
+      "peak_process_tree_rss_bytes": 6558355456
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Intersection.TorusRectangleJetIdealParametersProjectiveDegreeBound",
+      "source_sha256": "9d3539810b0e06aac01baa4c796cba0f2d7740807f2ca02e1626461a7b1f746a",
+      "olean_sha256": "f982a889334d67e52805e757035d33755892313a8fe5859007ab3f1bf819a843",
+      "exit_code": 0,
+      "seconds": 29.025,
+      "peak_process_tree_rss_bytes": 6573039616
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.FinrankDegreePiecePosPrimeVariableNotMem",
+      "source_sha256": "c709b53d95da055632e68f5a9bff87d51e6ec67f9c806108f5e5a1fe80c82ddb",
+      "olean_sha256": "52c71875a665bbac8b2ec24be93133a49e03cd525d282346240c5e93334f7b02",
+      "exit_code": 0,
+      "seconds": 29.025,
+      "peak_process_tree_rss_bytes": 6557990912
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.InvariantJetMonomial",
+      "source_sha256": "9eef96ece4cb6de8bf462588b7410aebb9feba1c3d023dd0245e16e587241cda",
+      "olean_sha256": "20e7abbe9f2c9862ffa2139268359adc3ba3713f459fb5b9148a91e8661c7c6a",
+      "exit_code": 0,
+      "seconds": 33.029,
+      "peak_process_tree_rss_bytes": 6574800896
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.IdealPowLayer",
+      "source_sha256": "7c8e8cfa1356e9fbde2bb5d2c53784dd259a30b647c9e0252d68371a35b6ead4",
+      "olean_sha256": "c8765ab80d51ca01c6f439594d5d8e6bb1b1a5006294dfcbfa898a9e9c6d24fe",
+      "exit_code": 0,
+      "seconds": 37.032,
+      "peak_process_tree_rss_bytes": 6522560512
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Differentials.TorusQuotientDimensionPosCotangentFinrankThree",
+      "source_sha256": "0500c1583da06dd3b2394621dfab39be9bda67cb454dbd20a3b579d9bbb30c20",
+      "olean_sha256": "cde9c710ff8c367860827c3c0f028499cd38cd1bebbd77870fce53bdc75c1e6d",
+      "exit_code": 0,
+      "seconds": 39.033,
+      "peak_process_tree_rss_bytes": 6553559040
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.EvalOneInvariantJetMonomial",
+      "source_sha256": "4b61d83ee4190d81b5316dff4112deaa46bbf0f48f541788e02488b9ac28c4cf",
+      "olean_sha256": "0c40aa127e8f8cc3a7e84e60ef50735025845300df027e1b8c89042afcc8ad0d",
+      "exit_code": 0,
+      "seconds": 28.025,
+      "peak_process_tree_rss_bytes": 6553518080
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Structure.InvariantJetLinearMap",
+      "source_sha256": "09b8bd7fa82365e69caebfad466d039d85084595376766a731945fa5c11a2bdc",
+      "olean_sha256": "251eb26d7b0852942df2b00b6236fd8d0bb4d7837c59ab749126a996d0f27f88",
+      "exit_code": 0,
+      "seconds": 34.029,
+      "peak_process_tree_rss_bytes": 6565679104
+    },
+    {
+      "module": "OAI.NumberTheory.SiegelZeros.Selection.GreedyPivotsWeightLowSpan",
+      "source_sha256": "51acaf8763269fc4c0777e2ccea796b0051fd6dda130c776841c40aef4a7f91b",
+      "olean_sha256": "46c078bde538cb66a74ba43b1a10ac81fc475ad6b0c4fbd9569d64afcd62ad31",
+      "exit_code": 0,
+      "seconds": 28.023,
+      "peak_process_tree_rss_bytes": 6546817024
+    },
+    {
+      "module": "EarlyDeterminantAdapter",
+      "source_sha256": "5a19712fcb57be04081a925546eb996442333f7af1c5967df299952563c5f395",
+      "olean_sha256": "03e136eab5546bab78f29c0b59e85cd48f261d88deca8b77a546740e1a18162f",
+      "exit_code": 0,
+      "seconds": 7.005,
+      "peak_process_tree_rss_bytes": 3381854208,
+      "axiom_audit": [
+        {
+          "declaration": "EarlyDeterminantAdapter.determinant_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EarlyDeterminantAdapter.determinant_upper_log",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EarlyDeterminantAdapter.prime_mass_margin",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EarlyDeterminantAdapter.strict_lower_of_margin",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EarlyDeterminantAdapter.weaker_lower_of_strong",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EarlyDeterminantAdapter.lower_bound_of_comparison",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EarlyDeterminantAdapter.lower_bound_from_same_witness",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        }
+      ]
+    },
+    {
+      "module": "EffectiveConstantSearch",
+      "source_sha256": "1e5701176328594fa90dc072a441669f6834914a9ab6139af18777a75d7a9202",
+      "olean_sha256": "11052f283372f9c5fb869035c60ed4f99e20011bba102d82c4530670e4f36f89",
+      "exit_code": 0,
+      "seconds": 8.006,
+      "peak_process_tree_rss_bytes": 7333507072,
+      "axiom_audit": [
+        {
+          "declaration": "EffectiveConstantSearch.search_terminates",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EffectiveConstantSearch.searchIndex",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EffectiveConstantSearch.constant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EffectiveConstantSearch.exists_valid_table",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EffectiveConstantSearch.constant_correct",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EffectiveConstantSearch.effective_global_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EffectiveConstantSearch.constant_correct_log",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "EffectiveConstantSearch.effective_global_log_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        }
+      ]
+    },
+    {
+      "module": "ExplicitCutoffAdapter",
+      "source_sha256": "d296662d2f38e9392a7edb0f3463e1d1b02c69bb97855a8d42162fb1d3d406c9",
+      "olean_sha256": "4ba107ce7290c43722821100dccedbd1387a935c801cc7d7150d7bc2ef4da596",
+      "exit_code": 0,
+      "seconds": 5.004,
+      "peak_process_tree_rss_bytes": 3402051584,
+      "axiom_audit": [
+        {
+          "declaration": "ExplicitCutoffAdapter.log_conductor_ge_twelve",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "ExplicitCutoffAdapter.first_error_le_power",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "ExplicitCutoffAdapter.first_error_eq_rpow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "ExplicitCutoffAdapter.numerical_cutoff_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "ExplicitCutoffAdapter.lower_bound_from_same_witness_sqrt",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "ExplicitCutoffAdapter.lower_bound_from_same_witness_rpow",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "ExplicitCutoffAdapter.lower_bound_from_same_witness_nat",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "ExplicitCutoffAdapter.explicitKappa_ge_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "ExplicitCutoffAdapter.lower_bound_at_explicit_parameters",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        }
+      ]
+    },
+    {
+      "module": "FiniteGreedyBridge",
+      "source_sha256": "7f3fb53dcbbd9127051cd2570a724845e4296c4a415eb8c7c18b19a1c66c47c1",
+      "olean_sha256": "0f1a8fb88a4b9d0c5cec9fd9a8f538409790efdd506956f7520db3105f9976be",
+      "exit_code": 0,
+      "seconds": 42.035,
+      "peak_process_tree_rss_bytes": 6540718080,
+      "axiom_audit": [
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.source_character_field_ne_sqrtTwo_of_ne_eight",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.source_character_field_ne_sqrtTwo_of_ninety_seven_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.source_character_finite_greedy_determinant_same_witness_bounds_of_ninety_seven_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.same_finite_greedy_pivot_sum_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.source_character_finite_greedy_determinant_same_witness_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        }
+      ]
+    },
+    {
+      "module": "FullRawTypeReceipt",
+      "source_sha256": "65d6ce4db15d26ef741b8f848f4686765f6bc78ec5f58d2b294ac31589faac16",
+      "olean_sha256": "d24ecc068668eb11dee746f4930f8aa67a7d1a4b6fc6270ae3b24ebd3ae29af9",
+      "exit_code": 0,
+      "seconds": 26.024,
+      "peak_process_tree_rss_bytes": 6569902080,
+      "axiom_audit": [
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.Geometry.uniform_rectangular_multiplicity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.actual_biquadratic_rectangle_span",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.source_character_fixed_greedy_determinant_divisibility_of_field_ne",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.fixed_first_greedy_rectangle_weight_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.weighted_pivot_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.pivot_ratio_le_twelfth",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.archimedean_bound_of_integral_jet_determinant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.finite_place_bounds_of_source_determinant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.Geometry.local_length_mul_projectiveClosure_degree_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.Deformation.finrank_local_quotient_le_pow_of_radical",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.Geometry.source_local_torus_rectangle_graded_length_gt",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.Geometry.logarithmicForm_ne_zero_on_torus_subvariety",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.exists_weight_sorted_enumeration",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.primitive_level_eq_eight_of_lifted_sqrt_two_field",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.real_character_isQuadratic",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.source_character_finite_greedy_determinant_same_witness_bounds_of_ninety_seven_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        }
+      ]
+    },
+    {
+      "module": "GlobalFiniteClosure",
+      "source_sha256": "d579f2b9f05a42301d47e3ecbcd8878218d9bb7192da47c8c035a26fc966a650",
+      "olean_sha256": "044821474303370a809b1d4adcafef8ba085000d78216e83ac8f47c465d04f39",
+      "exit_code": 0,
+      "seconds": 8.007,
+      "peak_process_tree_rss_bytes": 7318503424,
+      "axiom_audit": [
+        {
+          "declaration": "DirichletCharacter.LFunction_apply_one_ne_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.finite_positive_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.exists_small_conductor_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.large_conductor_power_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.exists_global_norm_lower_bound_nonprincipal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.primitive_ne_one",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.exists_global_norm_lower_bound_primitive",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.exists_global_norm_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.exists_global_rational_norm_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.norm_LFunction_one_eq_re",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.LFunction_one_re_pos",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.exists_global_real_part_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.exists_global_LOne_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "GlobalFiniteClosure.exists_global_rational_real_part_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        }
+      ]
+    },
+    {
+      "module": "LargeConductorTheorem",
+      "source_sha256": "7953d990e69b88d820e7d70a01888ff9327dd7a5de370775d0c6ca66e53bdbe0",
+      "olean_sha256": "8be025351d06bdd0d928731ceebd12cefe14532c5ffcfce5df40ada3fa61318a",
+      "exit_code": 0,
+      "seconds": 9.007,
+      "peak_process_tree_rss_bytes": 7278145536,
+      "axiom_audit": [
+        {
+          "declaration": "LargeConductorTheorem.goodPrimeMass_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "LargeConductorTheorem.real_part_lower_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "LargeConductorTheorem.norm_lower_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "LargeConductorTheorem.norm_lower_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        }
+      ]
+    },
+    {
+      "module": "RawDeterminantAudit",
+      "source_sha256": "02ee8d2dae97e815b2d23e82216cc3b7124ac9fe803b4becf4a31bbeec727d88",
+      "olean_sha256": "607b6c3dc076e079026afe54aaa4efbd4f9addeb13f6da3185c1c90ea6d236d0",
+      "exit_code": 0,
+      "seconds": 26.025,
+      "peak_process_tree_rss_bytes": 6554595328,
+      "axiom_audit": [
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.Geometry.uniform_rectangular_multiplicity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.actual_biquadratic_rectangle_span",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.source_character_fixed_greedy_determinant_divisibility_of_field_ne",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.fixed_first_greedy_rectangle_weight_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.weighted_pivot_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.pivot_ratio_le_twelfth",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.archimedean_bound_of_integral_jet_determinant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.finite_place_bounds_of_source_determinant",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.Geometry.local_length_mul_projectiveClosure_degree_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.Deformation.finrank_local_quotient_le_pow_of_radical",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.Geometry.source_local_torus_rectangle_graded_length_gt",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.Geometry.logarithmicForm_ne_zero_on_torus_subvariety",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.exists_weight_sorted_enumeration",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.primitive_level_eq_eight_of_lifted_sqrt_two_field",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "OAI.SiegelZeros.WeightedTorusJets.real_character_isQuadratic",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        }
+      ]
+    },
+    {
+      "module": "RawWitnessAdapter",
+      "source_sha256": "6943ca882cae06534d582c9313113e621c7e6e1664be48e6ff29084b3ee8c7ef",
+      "olean_sha256": "eabd446b5af1ac62cf3c4bc6164c86cfaac102f2dbdfa6c04f76933c2840ca0b",
+      "exit_code": 0,
+      "seconds": 25.022,
+      "peak_process_tree_rss_bytes": 6589829120,
+      "axiom_audit": [
+        {
+          "declaration": "RawWitnessAdapter.finite_parameter_sizes",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "RawWitnessAdapter.parameter_M",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "RawWitnessAdapter.parameter_U",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "RawWitnessAdapter.parameter_log_N",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "RawWitnessAdapter.parameter_log_M",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "RawWitnessAdapter.finiteWitnessOfRawBounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "RawWitnessAdapter.source_character_finiteWitness_nonempty",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "RawWitnessAdapter.source_character_finiteWitness",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "RawWitnessAdapter.source_character_determinant_upper",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "RawWitnessAdapter.lower_bound_of_prime_mass",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        }
+      ]
+    },
+    {
+      "module": "Splice.AnalyticAudit",
+      "source_sha256": "3695668e47742be1054cb983f90777cff6a77a2362173b374a7b06e816f86a46",
+      "olean_sha256": "0c32f878c20603f1552a31547d9d25e6c656e7ed6b5ebfaa13c70ff0f23415fc",
+      "exit_code": 0,
+      "seconds": 4.003,
+      "peak_process_tree_rss_bytes": 4068007936,
+      "axiom_audit": [
+        {
+          "declaration": "Splice.character_sum_Icc_norm_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.nu_nonneg",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.raw_LSeries_one_eq_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.LFunction_one_eq_abelIntegral",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.norm_LFunction_one_sub_characterHarmonicSum_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.tendsto_characterHarmonicSum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.LFunction_one_im_eq_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.LFunction_one_eq_ofReal_re",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.nu_summatory_error_six_sqrt",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.nu_harmonic_tail_eighteen_sqrt",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.ExplicitMertens.prime_log_div_abs_error_le_four",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.LOne_nonneg",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        },
+        {
+          "declaration": "Splice.elementary_prime_mass",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "allowed_only": true
+        }
+      ]
+    },
+    {
+      "module": "Splice.CharacterArithmetic",
+      "source_sha256": "060ce18b7b27e43596c379382bdadabc2252f6d3de5114b7d7980b7b22c5e391",
+      "olean_sha256": "4fc92b73fe7cecb7483f76d0914c1ed6cbac11817c12ae6a208ec102c75686a9",
+      "exit_code": 0,
+      "seconds": 4.003,
+      "peak_process_tree_rss_bytes": 4469559296
+    },
+    {
+      "module": "Splice.ElementaryPrimeMass",
+      "source_sha256": "483e9d72aa3f9a05f85f5e6afe25b3c2822ee9d738451a436ba3f5e904a8a402",
+      "olean_sha256": "afe8254756616e5e1969d680ceb728d2236f2d14fa14c5c6a98facaeb87e7fc8",
+      "exit_code": 0,
+      "seconds": 4.003,
+      "peak_process_tree_rss_bytes": 4488101888
+    },
+    {
+      "module": "Splice.ExplicitMertens",
+      "source_sha256": "b12dec16a12da3fe7c6c7ef4f3f21cd4f4af03f9f047a3745da77548f69d3f6a",
+      "olean_sha256": "d4d5cce955f7586677f4ada35c32b23c0725aa9494a70b140fa97fa8b9e7458c",
+      "exit_code": 0,
+      "seconds": 5.004,
+      "peak_process_tree_rss_bytes": 4304781312
+    },
+    {
+      "module": "Splice.HyperbolaAbel",
+      "source_sha256": "19e22cf1c4740ec747b8ce295f4e497e0d11f1ee2d8e656f796713aadd735895",
+      "olean_sha256": "ddbe1bf02ba6ca3eda7ade5a0bba028e5171a2b8d677bbefa75e3908032ce92f",
+      "exit_code": 0,
+      "seconds": 8.006,
+      "peak_process_tree_rss_bytes": 4549103616
+    },
+    {
+      "module": "Splice.LFunctionIdentity",
+      "source_sha256": "7c17c0b90ed62177e25977bc362cff288a82f1dc091d982b20cee8d398c2c5d7",
+      "olean_sha256": "05cfae9588b330e2a12600b45b09127b24a02a68910497fabc17b9433e498b91",
+      "exit_code": 0,
+      "seconds": 8.008,
+      "peak_process_tree_rss_bytes": 4855750656
+    },
+    {
+      "module": "Splice.LValueNonnegative",
+      "source_sha256": "150d8077ac929b5ca2ed621544e66d6b68a10fd116245626dcf19c605ba987a1",
+      "olean_sha256": "0cf621f1fa678071b2c171c7743f9e8ada1e2a0d4456d65f9fd228c31b42ee6e",
+      "exit_code": 0,
+      "seconds": 4.003,
+      "peak_process_tree_rss_bytes": 4486139904
+    },
+    {
+      "module": "Splice.MertensSupport",
+      "source_sha256": "d58074da8f93dfe1dade6825d0dad63b8583c5b13b2ccb2a70650ffcae4a3a73",
+      "olean_sha256": "0c8dd28c49d73b99a650f76f0c29ad371fa3ffe5d0523f1ffabeb49bbbcf7167",
+      "exit_code": 0,
+      "seconds": 7.009,
+      "peak_process_tree_rss_bytes": 4301152256
+    },
+    {
+      "module": "Splice.PrimeMassAssembly",
+      "source_sha256": "019ae546e7947b25f483586c2e0ff9e8f2efa553b5bc53628bf5cbd7f27efff4",
+      "olean_sha256": "caf78d6144f1d45210ea38ac7a644954fb4f32a45490c75073fdcaa4c11e6be6",
+      "exit_code": 0,
+      "seconds": 5.008,
+      "peak_process_tree_rss_bytes": 4490670080
+    }
+  ],
+  "target_constant_evaluated": false,
+  "tiny_execution_test": {
+    "expression": "EffectiveConstantSearch.searchIndex 4",
+    "result": 12
+  },
+  "mathlib_trust_boundary": "Pinned official mathlib cache, not an independent source rebuild"
+}

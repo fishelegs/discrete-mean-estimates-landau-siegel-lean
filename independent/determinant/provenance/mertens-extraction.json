@@ -1,0 +1,23 @@
+{
+  "raw_source_path": "project/OAI/NumberTheory/SiegelZeros/Structure/CharacterEstimates.lean",
+  "raw_source_sha256": "3dc3138a3cba700bc05de3647a78662b33b800698b8ee719891e1f04160d1653",
+  "extracted_ranges": [
+    {
+      "start_line_1_based": 295,
+      "end_line_1_based_inclusive": 373,
+      "text_sha256": "b7f514536dd31144296bd90b291d7a12bd302f52d87d1ea924c0fa7e5d209eed"
+    },
+    {
+      "start_line_1_based": 395,
+      "end_line_1_based_inclusive": 484,
+      "text_sha256": "9695e352f8bdb08b3699220c4103008f0548f58c7f39e5bad0c2c9b910728734"
+    }
+  ],
+  "copied_proof_text_sha256": "dbde73caa7c7628195ec6cabbac3e7fec4af319160f9db99beaa43baa83149f6",
+  "verbatim_proof_chunks_verified": true,
+  "changes": "Narrowed imports, local namespace Splice.MertensSupport, provenance/license header; proof chunks verbatim",
+  "local_source_path": "project/Splice/MertensSupport.lean",
+  "local_source_sha256": "d58074da8f93dfe1dade6825d0dad63b8583c5b13b2ccb2a70650ffcae4a3a73",
+  "upstream_attribution": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/blob/c39a751132c88b6e8080b74c74023fd95b3d8be0/PrimeNumberTheoremAnd/IEANTN/Mertens.lean",
+  "license": "Apache License 2.0"
+}

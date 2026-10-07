@@ -1,0 +1,74 @@
+name: Isolated determinant verification
+
+on:
+  push:
+    paths:
+      - 'independent/determinant/**'
+      - '.github/workflows/isolated-determinant.yml'
+  pull_request:
+    paths:
+      - 'independent/determinant/**'
+      - '.github/workflows/isolated-determinant.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: isolated-determinant-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify-isolated-determinant:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    defaults:
+      run:
+        working-directory: independent/determinant
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Check source fingerprints and runner resources
+        run: |
+          set -euo pipefail
+          sha256sum --check SOURCE_SHA256SUMS
+          python3 - <<'PY'
+          import shutil
+          from pathlib import Path
+          assert __import__('platform').machine() == 'x86_64'
+          available = next(int(line.split()[1]) * 1024 for line in Path('/proc/meminfo').read_text().splitlines() if line.startswith('MemAvailable:'))
+          assert available >= 8 * 1024**3, f'Need 8 GiB available RAM; got {available} bytes'
+          # Measured exact pinned setup footprint: 10.983 GiB including the archive,
+          # compressed cache and all local objects. Keep at least 1 GiB headroom.
+          assert shutil.disk_usage('.').free >= 12 * 1024**3, 'Need 12 GiB free disk for clean pinned setup'
+          for command in ['git', 'curl', 'tar', 'zstd']:
+              assert shutil.which(command), f'Missing prerequisite: {command}'
+          PY
+          df -h .
+
+      - name: Test process guards and private environment capture
+        run: python3 -m unittest -v test_guarded_process.py
+
+      - name: Restore exact toolchain and pinned dependency cache
+        run: |
+          python3 replay.py --setup --trim-download-cache
+          du -sh toolchain project/.lake/packages cache downloads
+          df -h .
+
+      - name: Kernel-check proof closure and standard axioms
+        run: python3 replay.py --build --memory-mb 7168
+
+      - name: Recheck source fingerprints
+        if: always()
+        run: sha256sum --check SOURCE_SHA256SUMS
+
+      - name: Preserve fresh verification receipts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: isolated-determinant-verification-${{ github.sha }}
+          path: independent/determinant/logs/
+          if-no-files-found: warn
+          retention-days: 30

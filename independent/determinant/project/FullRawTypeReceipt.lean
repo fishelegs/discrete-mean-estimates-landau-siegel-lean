@@ -1,0 +1,53 @@
+import FiniteGreedyBridge
+
+set_option pp.maxSteps 1000000
+set_option pp.universes false
+
+#check OAI.SiegelZeros.WeightedTorusJets.Geometry.uniform_rectangular_multiplicity
+#print axioms OAI.SiegelZeros.WeightedTorusJets.Geometry.uniform_rectangular_multiplicity
+
+#check OAI.SiegelZeros.WeightedTorusJets.actual_biquadratic_rectangle_span
+#print axioms OAI.SiegelZeros.WeightedTorusJets.actual_biquadratic_rectangle_span
+
+#check OAI.SiegelZeros.WeightedTorusJets.source_character_fixed_greedy_determinant_divisibility_of_field_ne
+#print axioms OAI.SiegelZeros.WeightedTorusJets.source_character_fixed_greedy_determinant_divisibility_of_field_ne
+
+#check OAI.SiegelZeros.WeightedTorusJets.fixed_first_greedy_rectangle_weight_bound
+#print axioms OAI.SiegelZeros.WeightedTorusJets.fixed_first_greedy_rectangle_weight_bound
+
+#check OAI.SiegelZeros.WeightedTorusJets.weighted_pivot_bounds
+#print axioms OAI.SiegelZeros.WeightedTorusJets.weighted_pivot_bounds
+
+#check OAI.SiegelZeros.WeightedTorusJets.pivot_ratio_le_twelfth
+#print axioms OAI.SiegelZeros.WeightedTorusJets.pivot_ratio_le_twelfth
+
+#check OAI.SiegelZeros.WeightedTorusJets.archimedean_bound_of_integral_jet_determinant
+#print axioms OAI.SiegelZeros.WeightedTorusJets.archimedean_bound_of_integral_jet_determinant
+
+#check OAI.SiegelZeros.WeightedTorusJets.finite_place_bounds_of_source_determinant
+#print axioms OAI.SiegelZeros.WeightedTorusJets.finite_place_bounds_of_source_determinant
+
+#check OAI.SiegelZeros.WeightedTorusJets.Geometry.local_length_mul_projectiveClosure_degree_le
+#print axioms OAI.SiegelZeros.WeightedTorusJets.Geometry.local_length_mul_projectiveClosure_degree_le
+
+#check OAI.SiegelZeros.WeightedTorusJets.Deformation.finrank_local_quotient_le_pow_of_radical
+#print axioms OAI.SiegelZeros.WeightedTorusJets.Deformation.finrank_local_quotient_le_pow_of_radical
+
+#check OAI.SiegelZeros.WeightedTorusJets.Geometry.source_local_torus_rectangle_graded_length_gt
+#print axioms OAI.SiegelZeros.WeightedTorusJets.Geometry.source_local_torus_rectangle_graded_length_gt
+
+#check OAI.SiegelZeros.WeightedTorusJets.Geometry.logarithmicForm_ne_zero_on_torus_subvariety
+#print axioms OAI.SiegelZeros.WeightedTorusJets.Geometry.logarithmicForm_ne_zero_on_torus_subvariety
+
+#check OAI.SiegelZeros.WeightedTorusJets.exists_weight_sorted_enumeration
+#print axioms OAI.SiegelZeros.WeightedTorusJets.exists_weight_sorted_enumeration
+
+#check OAI.SiegelZeros.WeightedTorusJets.primitive_level_eq_eight_of_lifted_sqrt_two_field
+#print axioms OAI.SiegelZeros.WeightedTorusJets.primitive_level_eq_eight_of_lifted_sqrt_two_field
+
+#check OAI.SiegelZeros.WeightedTorusJets.real_character_isQuadratic
+#print axioms OAI.SiegelZeros.WeightedTorusJets.real_character_isQuadratic
+
+#check OAI.SiegelZeros.WeightedTorusJets.source_character_finite_greedy_determinant_same_witness_bounds_of_ninety_seven_le
+#print axioms OAI.SiegelZeros.WeightedTorusJets.source_character_finite_greedy_determinant_same_witness_bounds_of_ninety_seven_le
+
