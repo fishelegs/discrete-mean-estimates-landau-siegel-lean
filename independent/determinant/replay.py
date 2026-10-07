@@ -2,6 +2,7 @@
 """Isolated Linux/x86_64 replay; all writes stay under this extracted directory."""
 from pathlib import Path
 import os,sys,argparse,subprocess,json,hashlib,re,shutil,time
+from compiler_environment import resolve_compiler_environment
 R=Path(__file__).resolve().parent; P=R/'project'
 a=argparse.ArgumentParser(description=__doc__)
 a.add_argument('--setup',action='store_true',help='Download exact official toolchain and nine pinned git packages, then restore official mathlib cache')
@@ -72,6 +73,10 @@ if args.build:
   active.remove(m);seen.add(m);order.append(m)
  for t in args.targets:visit(t)
  assert order, 'No local modules selected for verification'
+ # Finish the Lake wrapper once before any heavy proof import. The complete
+ # child environment remains private in memory; never persist it to a log.
+ env=resolve_compiler_environment(R,P,env)
+ env['DETERMINANT_LAKE_ENV_READY']='1'
  for i,m in enumerate(order,1):
   file=m.replace('.','/')+'.lean';tag='replay-'+m
   print(f'[{i}/{len(order)}] {m}',flush=True)

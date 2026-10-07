@@ -48,6 +48,9 @@ jobs:
           PY
           df -h .
 
+      - name: Test process guards and private environment capture
+        run: python3 -m unittest -v test_guarded_process.py
+
       - name: Restore exact toolchain and pinned dependency cache
         run: |
           python3 replay.py --setup --trim-download-cache

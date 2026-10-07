@@ -41,6 +41,8 @@ The optional --trim-download-cache flag, used in CI, deletes only this replay di
 
 Build is serial, with -j1 -M6656, a sampled 7.25 GiB process-tree RSS watchdog and a 1 GiB available-memory floor. This is a watchdog, not an OS-enforced cgroup limit. On a guard failure, stop rather than silently raising the cap.
 
+A guarded Lake invocation resolves the exact compiler environment once, then exits before the proof compilers run. Each proof uses the absolute pinned Lean executable directly, avoiding a resident Lake wrapper. The full environment is kept only in memory; diagnostics contain an allowlisted subset. Guard tests cover forced failure, process cleanup and private output capture. Every guard stop is a failed invocation, and cleanup checks for running owned descendants even after their leader exits.
+
 Fresh receipts, logs and axiom reports are written under logs/. The default targets are EffectiveConstantSearch and the full raw/analytic audits; their local dependencies are compiled from source. Importing the effective module only repeats the tiny searchIndex 4 test.
 
 A plain lake build is not the acceptance command: the minimal Lake configuration intentionally declares only enough libraries to resolve the replay environment. The replay helper selects and verifies the final proof closure explicitly.
