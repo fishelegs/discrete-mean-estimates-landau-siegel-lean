@@ -1,0 +1,9 @@
+ExpectedFailureMissingConstruction.lean:7:2: error: Type mismatch
+  PiEndpointObstruction.positive_quadratic_lower_bound_of_two_approximants 0 1
+    (Mathlib.Meta.NormNum.isNat_lt_true (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_zero)
+      (Mathlib.Meta.NormNum.isNat_ofNat ℝ Nat.cast_one) (Eq.refl false))
+has type
+  PiEndpointObstruction.UniformIndependentApproximants 0 1 →
+    ∃ c, 0 < c ∧ ∀ (p q : ℤ), 0 < q → c / ↑q ^ 2 ≤ |0 - ↑p / ↑q|
+but is expected to have type
+  ∃ c, 0 < c ∧ ∀ (p q : ℤ), 0 < q → c / ↑q ^ 2 ≤ |0 - ↑p / ↑q|

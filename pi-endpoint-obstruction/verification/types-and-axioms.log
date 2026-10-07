@@ -1,0 +1,107 @@
+def PiEndpointObstruction.UniformCompanions : ℝ → ℝ → Prop :=
+fun alpha B =>
+  ∀ (p q : ℤ),
+    LT.lt.{0} 0 q →
+      ∃ P Q,
+        LE.le.{0} 0 Q ∧
+          LE.le.{0} (↑Q) (HMul.hMul.{0, 0, 0} B ↑q) ∧
+            LE.le.{0} (HMul.hMul.{0, 0, 0} (↑q) (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑Q) alpha) ↑P)))
+                (1 / 2) ∧
+              Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} p Q) (HMul.hMul.{0, 0, 0} q P)) 0
+def PiEndpointObstruction.UniformIndependentApproximants : ℝ → ℝ → Prop :=
+fun alpha B =>
+  ∀ (q : ℤ),
+    LT.lt.{0} 0 q →
+      ∃ P1 Q1 P2 Q2,
+        LT.lt.{0} 0 Q1 ∧
+          LT.lt.{0} 0 Q2 ∧
+            LE.le.{0} (↑Q1) (HMul.hMul.{0, 0, 0} B ↑q) ∧
+              LE.le.{0} (↑Q2) (HMul.hMul.{0, 0, 0} B ↑q) ∧
+                LE.le.{0}
+                    (HMul.hMul.{0, 0, 0} (↑q) (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑Q1) alpha) ↑P1)))
+                    (1 / 2) ∧
+                  LE.le.{0}
+                      (HMul.hMul.{0, 0, 0} (↑q) (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑Q2) alpha) ↑P2)))
+                      (1 / 2) ∧
+                    Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} P1 Q2) (HMul.hMul.{0, 0, 0} P2 Q1)) 0
+PiEndpointObstruction.endpoint_gap_lt (A theta : ℝ) (hSquare : LT.lt.{0} (HPow.hPow.{0, 0, 0} A 2) theta) :
+  LT.lt.{0} (HMul.hMul.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} A theta)) (HSub.hSub.{0, 0, 0} 1 theta)
+'PiEndpointObstruction.endpoint_gap_lt' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiEndpointObstruction.weak_endpoint_boundary (A theta : ℝ) (hSquare : LE.le.{0} (HPow.hPow.{0, 0, 0} A 2) theta)
+  (hGap : LE.le.{0} (HSub.hSub.{0, 0, 0} 1 theta) (HMul.hMul.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} A theta))) :
+  Eq.{1} A 1 ∧ Eq.{1} theta 1
+'PiEndpointObstruction.weak_endpoint_boundary' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiEndpointObstruction.no_original_endpoint_parameters :
+  ¬∃ A theta,
+      LT.lt.{0} 0 theta ∧
+        LT.lt.{0} theta 1 ∧
+          LT.lt.{0} (HPow.hPow.{0, 0, 0} A 2) theta ∧
+            LT.lt.{0} (HSub.hSub.{0, 0, 0} 1 theta) (HMul.hMul.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} A theta))
+'PiEndpointObstruction.no_original_endpoint_parameters' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiEndpointObstruction.one_le_abs_integer_determinant (p q P Q : ℤ)
+  (hdet : Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} p Q) (HMul.hMul.{0, 0, 0} q P)) 0) :
+  LE.le.{0} 1 (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} ↑p ↑Q) (HMul.hMul.{0, 0, 0} ↑q ↑P)))
+'PiEndpointObstruction.one_le_abs_integer_determinant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiEndpointObstruction.determinant_error_bound (alpha : ℝ) (p q P Q : ℤ) (hq : LT.lt.{0} 0 q) (hQ : LE.le.{0} 0 Q) :
+  LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} ↑p ↑Q) (HMul.hMul.{0, 0, 0} ↑q ↑P)))
+    (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑Q) (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑q) alpha) ↑p)))
+      (HMul.hMul.{0, 0, 0} (↑q) (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑Q) alpha) ↑P))))
+'PiEndpointObstruction.determinant_error_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiEndpointObstruction.scaled_lower_bound_of_companion (alpha B : ℝ) (p q P Q : ℤ) (hB : LT.lt.{0} 0 B)
+  (hq : LT.lt.{0} 0 q) (hQ : LE.le.{0} 0 Q) (hsize : LE.le.{0} (↑Q) (HMul.hMul.{0, 0, 0} B ↑q))
+  (herror :
+    LE.le.{0} (HMul.hMul.{0, 0, 0} (↑q) (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑Q) alpha) ↑P))) (1 / 2))
+  (hdet : Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} p Q) (HMul.hMul.{0, 0, 0} q P)) 0) :
+  LE.le.{0} (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 B))
+    (HMul.hMul.{0, 0, 0} (↑q) (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑q) alpha) ↑p)))
+'PiEndpointObstruction.scaled_lower_bound_of_companion' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiEndpointObstruction.scaled_error_identity (alpha : ℝ) (p q : ℤ) (hq : LT.lt.{0} 0 q) :
+  Eq.{1} (HMul.hMul.{0, 0, 0} (↑q) (abs.{0} (HSub.hSub.{0, 0, 0} alpha (HDiv.hDiv.{0, 0, 0} ↑p ↑q))))
+    (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑q) alpha) ↑p))
+'PiEndpointObstruction.scaled_error_identity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiEndpointObstruction.quadratic_lower_bound_of_companion (alpha B : ℝ) (p q P Q : ℤ) (hB : LT.lt.{0} 0 B)
+  (hq : LT.lt.{0} 0 q) (hQ : LE.le.{0} 0 Q) (hsize : LE.le.{0} (↑Q) (HMul.hMul.{0, 0, 0} B ↑q))
+  (herror :
+    LE.le.{0} (HMul.hMul.{0, 0, 0} (↑q) (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑Q) alpha) ↑P))) (1 / 2))
+  (hdet : Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} p Q) (HMul.hMul.{0, 0, 0} q P)) 0) :
+  LE.le.{0} (HDiv.hDiv.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 B)) (HPow.hPow.{0, 0, 0} (↑q) 2))
+    (abs.{0} (HSub.hSub.{0, 0, 0} alpha (HDiv.hDiv.{0, 0, 0} ↑p ↑q)))
+'PiEndpointObstruction.quadratic_lower_bound_of_companion' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiEndpointObstruction.quadratic_lower_bound_of_uniform_companions (alpha B : ℝ) (hB : LT.lt.{0} 0 B)
+  (hconstruction : PiEndpointObstruction.UniformCompanions alpha B) (p q : ℤ) :
+  LT.lt.{0} 0 q →
+    LE.le.{0} (HDiv.hDiv.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 B)) (HPow.hPow.{0, 0, 0} (↑q) 2))
+      (abs.{0} (HSub.hSub.{0, 0, 0} alpha (HDiv.hDiv.{0, 0, 0} ↑p ↑q)))
+'PiEndpointObstruction.quadratic_lower_bound_of_uniform_companions' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiEndpointObstruction.one_companion_independent (p q P1 Q1 P2 Q2 : ℤ) (hq : Ne.{1} q 0)
+  (hind : Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} P1 Q2) (HMul.hMul.{0, 0, 0} P2 Q1)) 0) :
+  Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} p Q1) (HMul.hMul.{0, 0, 0} q P1)) 0 ∨
+    Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} p Q2) (HMul.hMul.{0, 0, 0} q P2)) 0
+'PiEndpointObstruction.one_companion_independent' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiEndpointObstruction.companions_of_independent_approximants (alpha B : ℝ)
+  (hconstruction : PiEndpointObstruction.UniformIndependentApproximants alpha B) :
+  PiEndpointObstruction.UniformCompanions alpha B
+'PiEndpointObstruction.companions_of_independent_approximants' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiEndpointObstruction.positive_quadratic_lower_bound_of_two_approximants (alpha B : ℝ) (hB : LT.lt.{0} 0 B)
+  (hconstruction : PiEndpointObstruction.UniformIndependentApproximants alpha B) :
+  ∃ c,
+    LT.lt.{0} 0 c ∧
+      ∀ (p q : ℤ),
+        LT.lt.{0} 0 q →
+          LE.le.{0} (HDiv.hDiv.{0, 0, 0} c (HPow.hPow.{0, 0, 0} (↑q) 2))
+            (abs.{0} (HSub.hSub.{0, 0, 0} alpha (HDiv.hDiv.{0, 0, 0} ↑p ↑q)))
+'PiEndpointObstruction.positive_quadratic_lower_bound_of_two_approximants' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

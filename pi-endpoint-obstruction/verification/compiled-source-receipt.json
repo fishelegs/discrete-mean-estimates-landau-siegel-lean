@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-07T04:08:15Z",
+  "toolchain": "leanprover/lean4:v4.34.1",
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "compiled_theorem_count": 12,
+  "compiler_options": [
+    "-j1",
+    "-M4096",
+    "-DautoImplicit=false",
+    "-DwarningAsError=true"
+  ],
+  "axiom_audit": {
+    "PiEndpointObstruction.endpoint_gap_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiEndpointObstruction.weak_endpoint_boundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiEndpointObstruction.no_original_endpoint_parameters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiEndpointObstruction.one_le_abs_integer_determinant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiEndpointObstruction.determinant_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiEndpointObstruction.scaled_lower_bound_of_companion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiEndpointObstruction.scaled_error_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiEndpointObstruction.quadratic_lower_bound_of_companion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiEndpointObstruction.quadratic_lower_bound_of_uniform_companions": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiEndpointObstruction.one_companion_independent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiEndpointObstruction.companions_of_independent_approximants": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiEndpointObstruction.positive_quadratic_lower_bound_of_two_approximants": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "checks": [
+    {
+      "module": "PiEndpointObstruction",
+      "source_sha256": "d37119fce39233a7618ccead2cf345ddf76b859eb9e438c92e40b7cc649336b5",
+      "expected_failure": false,
+      "exit_code": 0,
+      "elapsed_seconds": 3.004,
+      "peak_process_tree_rss_bytes": 1780396032,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true,
+      "olean_sha256": "36028299066579f2fafd4d2c8af385b11e448287847f0fd742812be3173483b7"
+    },
+    {
+      "module": "PiEndpointObstructionAudit",
+      "source_sha256": "9e2201b86d42a9474bddec56227083c122878f612b911c376cb350ffc7d118d2",
+      "expected_failure": false,
+      "exit_code": 0,
+      "elapsed_seconds": 1.503,
+      "peak_process_tree_rss_bytes": 1735139328,
+      "log_sha256": "5c8f88766840a04693107b0cdddd4fc026ed5d311dac17e88498994590f75a5b",
+      "passed": true,
+      "olean_sha256": "c98c20645e74c9cd7b5e0a60f490eb33500e77a73240f0fc744d77d15c56f2b7"
+    },
+    {
+      "module": "PiEndpointObstructionRegression",
+      "source_sha256": "8119407d1e3bc6f727a3e19bb66efc2111d3ba9daa3c0740b3dec021bd2870b6",
+      "expected_failure": false,
+      "exit_code": 0,
+      "elapsed_seconds": 1.502,
+      "peak_process_tree_rss_bytes": 1689477120,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true,
+      "olean_sha256": "fed713296a7bc8aa80e658c7591cb74ab7018d74b367699c35f7ad0bef1443dd"
+    },
+    {
+      "module": "ExpectedFailureMissingConstruction",
+      "source_sha256": "990698a49d6529798794cc49714de4cf33ed5cfdd4f82448e4f01ff5d4744a66",
+      "expected_failure": true,
+      "exit_code": 1,
+      "elapsed_seconds": 1.502,
+      "peak_process_tree_rss_bytes": 1700204544,
+      "log_sha256": "60ee0bb065bc26fe3dc3ad51374212aee871703adc896b7d63faca6392089f27",
+      "passed": true
+    },
+    {
+      "module": "ExpectedFailureMissingNonzeroDenominator",
+      "source_sha256": "bb04dfb44464b0f647581db8957b7a53beed660872044ee2ee0efac3a149db59",
+      "expected_failure": true,
+      "exit_code": 1,
+      "elapsed_seconds": 1.503,
+      "peak_process_tree_rss_bytes": 1671356416,
+      "log_sha256": "1b0a5e0ed3a7da961bb38d83570f5684696b0324865011307ec15defbf5f0a7f",
+      "passed": true
+    }
+  ],
+  "source_bundle_replay_status": "Not rerun after packaging; the Lean source files are byte-for-byte identical to the verified originals. The replay script passed Python syntax checks only.",
+  "dependency_trust": "Existing pinned Lean executable and precompiled mathlib package caches; no dependency rebuild was performed.",
+  "limitations": [
+    "No proof of bad approximability of pi.",
+    "No uniform companion or two-approximants construction is supplied.",
+    "No full finite-dimensional analytic endpoint no-go formalization.",
+    "Every-positive-integer-scale hypothesis; no eventual-scale or converse BA formalization.",
+    "Trusted existing pinned compiler and precompiled mathlib dependencies."
+  ]
+}
