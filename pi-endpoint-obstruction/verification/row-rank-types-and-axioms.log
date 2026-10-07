@@ -1,0 +1,115 @@
+def PiRowRank.qualityFreeMatrix : ℂ → Matrix.{0, 0, 0} (Fin 8) (Fin 8) ℂ :=
+fun x =>
+  Matrix.of.{0, 0, 0}
+    (Matrix.vecCons.{0}
+      (Matrix.vecCons.{0} 1
+        (Matrix.vecCons.{0} 1
+          (Matrix.vecCons.{0} 0
+            (Matrix.vecCons.{0} 0
+              (Matrix.vecCons.{0} 0
+                (Matrix.vecCons.{0} 0 (Matrix.vecCons.{0} 0 (Matrix.vecCons.{0} 0 Matrix.vecEmpty.{0}))))))))
+      (Matrix.vecCons.{0}
+        (Matrix.vecCons.{0} 0
+          (Matrix.vecCons.{0} 1
+            (Matrix.vecCons.{0} 1
+              (Matrix.vecCons.{0} 1
+                (Matrix.vecCons.{0} 0
+                  (Matrix.vecCons.{0} 0 (Matrix.vecCons.{0} 0 (Matrix.vecCons.{0} 0 Matrix.vecEmpty.{0}))))))))
+        (Matrix.vecCons.{0}
+          (Matrix.vecCons.{0} 0
+            (Matrix.vecCons.{0} 0
+              (Matrix.vecCons.{0} (-1 / 2)
+                (Matrix.vecCons.{0} (1 / 2)
+                  (Matrix.vecCons.{0} 1
+                    (Matrix.vecCons.{0} 1 (Matrix.vecCons.{0} 0 (Matrix.vecCons.{0} 0 Matrix.vecEmpty.{0}))))))))
+          (Matrix.vecCons.{0}
+            (Matrix.vecCons.{0} 0
+              (Matrix.vecCons.{0} 0
+                (Matrix.vecCons.{0} 1
+                  (Matrix.vecCons.{0} 1
+                    (Matrix.vecCons.{0} 0
+                      (Matrix.vecCons.{0} 0 (Matrix.vecCons.{0} 0 (Matrix.vecCons.{0} 0 Matrix.vecEmpty.{0}))))))))
+            (Matrix.vecCons.{0}
+              (Matrix.vecCons.{0} 1
+                (Matrix.vecCons.{0} 1
+                  (Matrix.vecCons.{0} x
+                    (Matrix.vecCons.{0} x
+                      (Matrix.vecCons.{0} (HPow.hPow.{0, 0, 0} x 2)
+                        (Matrix.vecCons.{0} (HPow.hPow.{0, 0, 0} x 2)
+                          (Matrix.vecCons.{0} (HPow.hPow.{0, 0, 0} x 3)
+                            (Matrix.vecCons.{0} (HPow.hPow.{0, 0, 0} x 3) Matrix.vecEmpty.{0}))))))))
+              (Matrix.vecCons.{0}
+                (Matrix.vecCons.{0} 0
+                  (Matrix.vecCons.{0} 1
+                    (Matrix.vecCons.{0} 1
+                      (Matrix.vecCons.{0} (HAdd.hAdd.{0, 0, 0} x 1)
+                        (Matrix.vecCons.{0} (HMul.hMul.{0, 0, 0} 2 x)
+                          (Matrix.vecCons.{0} (HAdd.hAdd.{0, 0, 0} (HPow.hPow.{0, 0, 0} x 2) (HMul.hMul.{0, 0, 0} 2 x))
+                            (Matrix.vecCons.{0} (HMul.hMul.{0, 0, 0} 3 (HPow.hPow.{0, 0, 0} x 2))
+                              (Matrix.vecCons.{0}
+                                (HAdd.hAdd.{0, 0, 0} (HPow.hPow.{0, 0, 0} x 3)
+                                  (HMul.hMul.{0, 0, 0} 3 (HPow.hPow.{0, 0, 0} x 2)))
+                                Matrix.vecEmpty.{0}))))))))
+                (Matrix.vecCons.{0}
+                  (Matrix.vecCons.{0} 0
+                    (Matrix.vecCons.{0} 0
+                      (Matrix.vecCons.{0} (-1 / 2)
+                        (Matrix.vecCons.{0} (1 / 2)
+                          (Matrix.vecCons.{0} (HSub.hSub.{0, 0, 0} 1 x)
+                            (Matrix.vecCons.{0} (HAdd.hAdd.{0, 0, 0} x 1)
+                              (Matrix.vecCons.{0}
+                                (HAdd.hAdd.{0, 0, 0}
+                                  (HDiv.hDiv.{0, 0, 0} (HMul.hMul.{0, 0, 0} (-3) (HPow.hPow.{0, 0, 0} x 2)) 2)
+                                  (HMul.hMul.{0, 0, 0} 3 x))
+                                (Matrix.vecCons.{0}
+                                  (HAdd.hAdd.{0, 0, 0}
+                                    (HDiv.hDiv.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 (HPow.hPow.{0, 0, 0} x 2)) 2)
+                                    (HMul.hMul.{0, 0, 0} 3 x))
+                                  Matrix.vecEmpty.{0}))))))))
+                  (Matrix.vecCons.{0}
+                    (Matrix.vecCons.{0} 0
+                      (Matrix.vecCons.{0} 0
+                        (Matrix.vecCons.{0} 1
+                          (Matrix.vecCons.{0} 1
+                            (Matrix.vecCons.{0} (HMul.hMul.{0, 0, 0} 2 x)
+                              (Matrix.vecCons.{0} (HMul.hMul.{0, 0, 0} 2 x)
+                                (Matrix.vecCons.{0} (HMul.hMul.{0, 0, 0} 3 (HPow.hPow.{0, 0, 0} x 2))
+                                  (Matrix.vecCons.{0} (HMul.hMul.{0, 0, 0} 3 (HPow.hPow.{0, 0, 0} x 2))
+                                    Matrix.vecEmpty.{0}))))))))
+                    Matrix.vecEmpty.{0}))))))))
+def PiRowRank.period : ℂ :=
+HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 ↑Real.pi) Complex.I
+PiRowRank.finite_injective_downward_eq_self.{u_1} {ι : Type u_1} [Fintype.{u_1} ι] (weight : ι → ℝ) (f : ι → ι)
+  (hdown : ∀ (i : ι), Ne.{u_1 + 1} (f i) i → LT.lt.{0} (weight (f i)) (weight i))
+  (hinj : Function.Injective.{u_1 + 1, u_1 + 1} f) (i : ι) : Eq.{u_1 + 1} (f i) i
+'PiRowRank.finite_injective_downward_eq_self' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiRowRank.downward_nonidentity_has_collision.{u_1} {ι : Type u_1} [Fintype.{u_1} ι] (weight : ι → ℝ) (f : ι → ι)
+  (hdown : ∀ (i : ι), Ne.{u_1 + 1} (f i) i → LT.lt.{0} (weight (f i)) (weight i)) (hmove : ∃ i, Ne.{u_1 + 1} (f i) i) :
+  ∃ i j, Ne.{u_1 + 1} i j ∧ Eq.{u_1 + 1} (f i) (f j)
+'PiRowRank.downward_nonidentity_has_collision' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiRowRank.det_reindexed_eq_zero_of_downward_nonidentity.{u_1, u_2} {ι : Type u_1} {R : Type u_2} [Fintype.{u_1} ι]
+  [DecidableEq.{u_1 + 1} ι] [CommRing.{u_2} R] (weight : ι → ℝ) (f : ι → ι) (A : Matrix.{u_1, u_1, u_2} ι ι R)
+  (hdown : ∀ (i : ι), Ne.{u_1 + 1} (f i) i → LT.lt.{0} (weight (f i)) (weight i)) (hmove : ∃ i, Ne.{u_1 + 1} (f i) i) :
+  Eq.{u_2 + 1} (Matrix.det.{u_2, u_1} fun i j => A (f i) j) 0
+'PiRowRank.det_reindexed_eq_zero_of_downward_nonidentity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiRowRank.det_weighted_reindexed_eq_zero_of_downward_nonidentity.{u_1, u_2} {ι : Type u_1} {R : Type u_2}
+  [Fintype.{u_1} ι] [DecidableEq.{u_1 + 1} ι] [CommRing.{u_2} R] (weight : ι → ℝ) (f : ι → ι)
+  (A : Matrix.{u_1, u_1, u_2} ι ι R) (c : ι → R)
+  (hdown : ∀ (i : ι), Ne.{u_1 + 1} (f i) i → LT.lt.{0} (weight (f i)) (weight i)) (hmove : ∃ i, Ne.{u_1 + 1} (f i) i) :
+  Eq.{u_2 + 1} (Matrix.det.{u_2, u_1} fun i j => HMul.hMul.{u_2, u_2, u_2} (c i) (A (f i) j)) 0
+'PiRowRank.det_weighted_reindexed_eq_zero_of_downward_nonidentity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiRowRank.qualityFreeMatrix_det (x : ℂ) :
+  Eq.{1} (Matrix.det.{0, 0} (PiRowRank.qualityFreeMatrix x)) (HPow.hPow.{0, 0, 0} x 8)
+'PiRowRank.qualityFreeMatrix_det' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiRowRank.qualityFreeMatrix_det_ne_zero (x : ℂ) (hx : Ne.{1} x 0) :
+  Ne.{1} (Matrix.det.{0, 0} (PiRowRank.qualityFreeMatrix x)) 0
+'PiRowRank.qualityFreeMatrix_det_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiRowRank.period_ne_zero : Ne.{1} PiRowRank.period 0
+'PiRowRank.period_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiRowRank.qualityFreeMatrix_period_det_ne_zero :
+  Ne.{1} (Matrix.det.{0, 0} (PiRowRank.qualityFreeMatrix PiRowRank.period)) 0
+'PiRowRank.qualityFreeMatrix_period_det_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

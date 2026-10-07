@@ -1,0 +1,28 @@
+{
+  "toolchain": "leanprover/lean4:v4.34.1",
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "trust_scope": "Existing pinned Lean executable and precompiled mathlib/package cache. Dependencies were not rebuilt, and the complete transitive cache was not independently re-audited.",
+  "provider_files": {
+    "toolchain/bin/lean": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "project/lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "project/lake-manifest.json": "c9b8b8c6bda9302e8da060dd58139883caed83af1bb5da32b9395f7af9b4606e"
+  },
+  "direct_imports": {
+    "Mathlib.Analysis.Analytic.Polynomial": {
+      "source_sha256": "744a9dfd3e4658eaea491b7ed997bcfa68987cb4ab0d305c22ab1841d6fb886f",
+      "olean_sha256": "40113ebac7906f8e7acef52d29fddad270230e2d206147f4f74452c26bb1ea72"
+    },
+    "Mathlib.Analysis.Complex.Norm": {
+      "source_sha256": "7f719d7b3ba3ba8b4667a8f79e7efd5d8fb4da2b82dcca011e64129113a63eba",
+      "olean_sha256": "0f14151458916c24d2e17b5d0f1824784e6eb37b5c7a73886538b4b10d20920b"
+    },
+    "Mathlib.Analysis.SpecificLimits.Basic": {
+      "source_sha256": "99612bce858ecc7b474b279ac386b7b5955d303efff374518064d05db534831d",
+      "olean_sha256": "29a76adf1420abf547ce11d57e9d157a5658c28e98d5b78c6a24111a1bab7f62"
+    },
+    "Mathlib.Tactic": {
+      "source_sha256": "f45622ca1381833c77e9659a0b2ec07e5b667d0d4667cb2a28a58e9540634e85",
+      "olean_sha256": "3c0883be0b7edd978e28e331e53ee7e872b44bb3e6bce93dc97045f27779bf90"
+    }
+  }
+}

@@ -1,0 +1,213 @@
+def PiFamilyReversal.exponent : ℕ → ℕ :=
+fun N => 2 * (N + 1) * (2 * (N + 1) ^ 2 + 1) / 3
+def PiFamilyReversal.coefficient : ℕ → ℝ :=
+fun N => 764 * (4 * ↑N ^ 2 - 1)
+def PiFamilyReversal.family : ℕ → ℂ → ℂ :=
+fun N z => (-1) ^ N * ↑N ^ 2 * z ^ PiFamilyReversal.exponent N * (289 * z ^ 2 + ↑(PiFamilyReversal.coefficient N))
+def PiFamilyReversal.familyPolynomial : ℕ → Polynomial ℂ :=
+fun N =>
+  Polynomial.C ((-1) ^ N * ↑N ^ 2) * Polynomial.X ^ PiFamilyReversal.exponent N *
+    (Polynomial.C 289 * Polynomial.X ^ 2 + Polynomial.C ↑(PiFamilyReversal.coefficient N))
+def PiFamilyReversal.signedGain : ℕ → ℝ :=
+fun N =>
+  Real.log (‖PiFamilyReversal.family N (2 * ↑Real.pi * Complex.I)‖ / ‖PiFamilyReversal.family N (44 / 7 * Complex.I)‖)
+PiFamilyReversal.numerator_dvd_three : ∀ (N : Nat),
+  @Dvd.dvd.{0} Nat Nat.instDvd (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))
+    (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) N
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+      (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) N
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+'PiFamilyReversal.numerator_dvd_three' depends on axioms: [propext]
+PiFamilyReversal.three_mul_exponent : ∀ (N : Nat),
+  @Eq.{1} Nat
+    (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+      (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) (PiFamilyReversal.exponent N))
+    (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) N
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+      (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid)))
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) N
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+'PiFamilyReversal.three_mul_exponent' depends on axioms: [propext]
+PiFamilyReversal.exponent_ge_four : ∀ (N : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) N →
+    @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) (PiFamilyReversal.exponent N)
+'PiFamilyReversal.exponent_ge_four' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiFamilyReversal.coefficient_lower : ∀ (N : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) N →
+    @LE.le.{0} Real Real.instLE
+      (@OfNat.ofNat.{0} Real (nat_lit 26740) (@instOfNatAtLeastTwo.{0} Real (nat_lit 26740) Real.instNatCast ⋯))
+      (PiFamilyReversal.coefficient N)
+'PiFamilyReversal.coefficient_lower' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PiFamilyReversal.base_strict : ∀ {A a b : Real},
+  @LE.le.{0} Real Real.instLE
+      (@OfNat.ofNat.{0} Real (nat_lit 26740) (@instOfNatAtLeastTwo.{0} Real (nat_lit 26740) Real.instNatCast ⋯)) A →
+    @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) a →
+      @LT.lt.{0} Real Real.instLT a b →
+        @LE.le.{0} Real Real.instLE b
+            (@OfNat.ofNat.{0} Real (nat_lit 49) (@instOfNatAtLeastTwo.{0} Real (nat_lit 49) Real.instNatCast ⋯)) →
+          @LT.lt.{0} Real Real.instLT
+            (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+              (@HPow.hPow.{0, 0, 0} Real Nat Real
+                (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) a
+                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub) A
+                (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+                  (@OfNat.ofNat.{0} Real (nat_lit 289) (@instOfNatAtLeastTwo.{0} Real (nat_lit 289) Real.instNatCast ⋯))
+                  a)))
+            (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+              (@HPow.hPow.{0, 0, 0} Real Nat Real
+                (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) b
+                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub) A
+                (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+                  (@OfNat.ofNat.{0} Real (nat_lit 289) (@instOfNatAtLeastTwo.{0} Real (nat_lit 289) Real.instNatCast ⋯))
+                  b)))
+'PiFamilyReversal.base_strict' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@PiFamilyReversal.radial_strict : ∀ {A u t : Real} {n : Nat},
+  @LE.le.{0} Real Real.instLE
+      (@OfNat.ofNat.{0} Real (nat_lit 26740) (@instOfNatAtLeastTwo.{0} Real (nat_lit 26740) Real.instNatCast ⋯)) A →
+    @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4))) n →
+      @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) u →
+        @LT.lt.{0} Real Real.instLT u t →
+          @LE.le.{0} Real Real.instLE t
+              (@OfNat.ofNat.{0} Real (nat_lit 7) (@instOfNatAtLeastTwo.{0} Real (nat_lit 7) Real.instNatCast ⋯)) →
+            @LT.lt.{0} Real Real.instLT
+              (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+                (@HPow.hPow.{0, 0, 0} Real Nat Real
+                  (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) u n)
+                (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub) A
+                  (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+                    (@OfNat.ofNat.{0} Real (nat_lit 289)
+                      (@instOfNatAtLeastTwo.{0} Real (nat_lit 289) Real.instNatCast ⋯))
+                    (@HPow.hPow.{0, 0, 0} Real Nat Real
+                      (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) u
+                      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))))
+              (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+                (@HPow.hPow.{0, 0, 0} Real Nat Real
+                  (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) t n)
+                (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub) A
+                  (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+                    (@OfNat.ofNat.{0} Real (nat_lit 289)
+                      (@instOfNatAtLeastTwo.{0} Real (nat_lit 289) Real.instNatCast ⋯))
+                    (@HPow.hPow.{0, 0, 0} Real Nat Real
+                      (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) t
+                      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))))
+'PiFamilyReversal.radial_strict' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiFamilyReversal.familyPolynomial_eval : ∀ (N : Nat) (z : Complex),
+  @Eq.{1} Complex (@Polynomial.eval.{0} Complex Complex.instSemiring z (PiFamilyReversal.familyPolynomial N))
+    (PiFamilyReversal.family N z)
+'PiFamilyReversal.familyPolynomial_eval' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiFamilyReversal.family_norm : ∀ (N : Nat) {t : Real},
+  @LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) t →
+    @LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+        (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub) (PiFamilyReversal.coefficient N)
+          (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+            (@OfNat.ofNat.{0} Real (nat_lit 289) (@instOfNatAtLeastTwo.{0} Real (nat_lit 289) Real.instNatCast ⋯))
+            (@HPow.hPow.{0, 0, 0} Real Nat Real
+              (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) t
+              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))) →
+      @Eq.{1} Real
+        (@norm.{0} Complex Complex.instNorm
+          (PiFamilyReversal.family N
+            (@HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul) (↑t) Complex.I)))
+        (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+          (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+            (@HPow.hPow.{0, 0, 0} Real Nat Real
+              (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+              (@Nat.cast.{0} Real Real.instNatCast N) (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+            (@HPow.hPow.{0, 0, 0} Real Nat Real
+              (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) t
+              (PiFamilyReversal.exponent N)))
+          (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub) (PiFamilyReversal.coefficient N)
+            (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+              (@OfNat.ofNat.{0} Real (nat_lit 289) (@instOfNatAtLeastTwo.{0} Real (nat_lit 289) Real.instNatCast ⋯))
+              (@HPow.hPow.{0, 0, 0} Real Nat Real
+                (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) t
+                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))))
+'PiFamilyReversal.family_norm' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiFamilyReversal.actual_period_bounds : And
+  (@LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+    (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+      (@OfNat.ofNat.{0} Real (nat_lit 2) (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast ⋯)) Real.pi))
+  (And
+    (@LT.lt.{0} Real Real.instLT
+      (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+        (@OfNat.ofNat.{0} Real (nat_lit 2) (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast ⋯)) Real.pi)
+      (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+        (@OfNat.ofNat.{0} Real (nat_lit 44) (@instOfNatAtLeastTwo.{0} Real (nat_lit 44) Real.instNatCast ⋯))
+        (@OfNat.ofNat.{0} Real (nat_lit 7) (@instOfNatAtLeastTwo.{0} Real (nat_lit 7) Real.instNatCast ⋯))))
+    (@LE.le.{0} Real Real.instLE
+      (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+        (@OfNat.ofNat.{0} Real (nat_lit 44) (@instOfNatAtLeastTwo.{0} Real (nat_lit 44) Real.instNatCast ⋯))
+        (@OfNat.ofNat.{0} Real (nat_lit 7) (@instOfNatAtLeastTwo.{0} Real (nat_lit 7) Real.instNatCast ⋯)))
+      (@OfNat.ofNat.{0} Real (nat_lit 7) (@instOfNatAtLeastTwo.{0} Real (nat_lit 7) Real.instNatCast ⋯))))
+'PiFamilyReversal.actual_period_bounds' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiFamilyReversal.family_reversal : ∀ (N : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) N →
+    @LT.lt.{0} Real Real.instLT
+      (@norm.{0} Complex Complex.instNorm
+        (PiFamilyReversal.family N
+          (@HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul)
+            (@HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul)
+              (@OfNat.ofNat.{0} Complex (nat_lit 2)
+                (@instOfNatAtLeastTwo.{0} Complex (nat_lit 2) Complex.instNatCast ⋯))
+              ↑Real.pi)
+            Complex.I)))
+      (@norm.{0} Complex Complex.instNorm
+        (PiFamilyReversal.family N
+          (@HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul)
+            (@HDiv.hDiv.{0, 0, 0} Complex Complex Complex
+              (@instHDiv.{0} Complex (@DivInvMonoid.toDiv.{0} Complex Complex.instDivInvMonoid))
+              (@OfNat.ofNat.{0} Complex (nat_lit 44)
+                (@instOfNatAtLeastTwo.{0} Complex (nat_lit 44) Complex.instNatCast ⋯))
+              (@OfNat.ofNat.{0} Complex (nat_lit 7)
+                (@instOfNatAtLeastTwo.{0} Complex (nat_lit 7) Complex.instNatCast ⋯)))
+            Complex.I)))
+'PiFamilyReversal.family_reversal' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiFamilyReversal.family_norm_pos : ∀ (N : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) N →
+    ∀ {t : Real},
+      @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) t →
+        @LE.le.{0} Real Real.instLE t
+            (@OfNat.ofNat.{0} Real (nat_lit 7) (@instOfNatAtLeastTwo.{0} Real (nat_lit 7) Real.instNatCast ⋯)) →
+          @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+            (@norm.{0} Complex Complex.instNorm
+              (PiFamilyReversal.family N
+                (@HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul) (↑t) Complex.I)))
+'PiFamilyReversal.family_norm_pos' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiFamilyReversal.signedGain_neg : ∀ (N : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) N →
+    @LT.lt.{0} Real Real.instLT (PiFamilyReversal.signedGain N)
+      (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+'PiFamilyReversal.signedGain_neg' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiFamilyReversal.not_positive_signedGain : ∀ (N : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) N →
+    Not
+      (@LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+        (PiFamilyReversal.signedGain N))
+'PiFamilyReversal.not_positive_signedGain' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiFamilyReversal.eventually_signedGain_neg : @Filter.Eventually.{0} Nat
+  (fun N =>
+    @LT.lt.{0} Real Real.instLT (PiFamilyReversal.signedGain N)
+      (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)))
+  (@Filter.atTop.{0} Nat Nat.instPreorder)
+'PiFamilyReversal.eventually_signedGain_neg' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
