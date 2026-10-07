@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "source_attachment_formalized": false,
+  "actual_period_example_formalized": true,
+  "main_theorem_count": 8,
+  "lean_version": "Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "checks": [
+    {
+      "module": "PiRowRank",
+      "source_sha256": "8f3698997c6516219de7ebdd7dd5fd623bb22d5b599fa7a8ea48614fe58ec9bf",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 1.86,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "02ac79deec4eeaa9d3413f5d3338755ef5074b380395e11e90f0e74ecc10f409"
+    },
+    {
+      "module": "PiQualityFreeExample",
+      "source_sha256": "8870a47fc58de49470e7b8f0b4d2e5ae7834b7eb87a25ee119f7a7de2d031471",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 3.619,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "7a9d8f137963267bed3c6045104ab9ec4f61556cc11e9c5aa603e11bfd9257a2"
+    },
+    {
+      "module": "PiRowRankAudit",
+      "source_sha256": "e86225fc8299a0937365c52eb4cf903713cb5d7995dcf586a7e1065da052b855",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 1.725,
+      "log_sha256": "eb011ac57d9de05c9f7c4d5b423eef06fa3f761024ce100232c82f56273431dd",
+      "olean_sha256": "d4153cfeffd027764f52a99a374b5d287bb9c5de11c8fdc83b588da5788b3aef"
+    },
+    {
+      "module": "PiRowRankRegression",
+      "source_sha256": "049f2265de7fb69f8004f71f92122da1a09f8858b4a56dd1634621ea3372268a",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 1.866,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "767600bff060f6620d98a8abb6f50360dab007951ce7e77c98e35043ec19c6a9"
+    },
+    {
+      "module": "ExpectedFailureWeakDecrease",
+      "source_sha256": "9fcc0b4e32fcc60bd0b04d25b210af7b79b1c784258e0f1f87f5ad1928beb601",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 1.622,
+      "log_sha256": "49b0c60320b274bf63e776260a57aaf4015a50c023a5922d869c0dfa971fb65d"
+    },
+    {
+      "module": "ExpectedFailureMissingMovement",
+      "source_sha256": "f0a3ec87df8eb03e84a830f985400d457ff4cc625957101d2ba9835b117de5b7",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 1.648,
+      "log_sha256": "f77dea064c19d68f2cc4013b63fffe05e50ed1b8325b4ab060ffd098c57f99b7"
+    },
+    {
+      "module": "ExpectedFailureZeroCenter",
+      "source_sha256": "e18518a1736ec643563f5ce9650f3b60927139eaa7e3890d414bc25bd1c69528",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 1.742,
+      "log_sha256": "ff3cc22433186fa3bd0119332b9ddc967219870de0e00d0b2c23b1aa3adb912f"
+    }
+  ],
+  "axiom_audit": {
+    "PiRowRank.finite_injective_downward_eq_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiRowRank.downward_nonidentity_has_collision": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiRowRank.det_reindexed_eq_zero_of_downward_nonidentity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiRowRank.det_weighted_reindexed_eq_zero_of_downward_nonidentity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiRowRank.qualityFreeMatrix_det": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiRowRank.qualityFreeMatrix_det_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiRowRank.period_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiRowRank.qualityFreeMatrix_period_det_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "matrix_transcription_check": {
+    "status": "passed",
+    "comparison": "All 64 displayed Lean entries equal exact_rank_results.json example8.log_matrix as rational polynomials",
+    "lean_source_sha256": "8870a47fc58de49470e7b8f0b4d2e5ae7834b7eb87a25ee119f7a7de2d031471",
+    "research_artifact_sha256": "d22e1fe475fb44ce1d70f3237ba6e690b02de0227641d24abc40b41a256c9534",
+    "checked_entries": 64,
+    "scope": "Transcription check only; formal Taylor/source identification is not claimed"
+  },
+  "baseline_regression_status": "passed",
+  "scope": {
+    "generic_downward_map_and_determinant_vanishing": true,
+    "displayed_matrix_det_x8": true,
+    "actual_2_pi_i_nonvanishing": true,
+    "formal_Taylor_source_attachment": false,
+    "general_m1_transcendence_theorem": false,
+    "pi_bad_approximability": false
+  }
+}

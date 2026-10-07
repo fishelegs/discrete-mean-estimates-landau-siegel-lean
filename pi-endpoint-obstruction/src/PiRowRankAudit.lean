@@ -1,0 +1,27 @@
+import PiRowRank
+import PiQualityFreeExample
+
+set_option pp.universes true
+set_option pp.fullNames true
+set_option pp.proofs false
+set_option autoImplicit false
+
+#print PiRowRank.qualityFreeMatrix
+#print PiRowRank.period
+
+#check PiRowRank.finite_injective_downward_eq_self
+#print axioms PiRowRank.finite_injective_downward_eq_self
+#check PiRowRank.downward_nonidentity_has_collision
+#print axioms PiRowRank.downward_nonidentity_has_collision
+#check PiRowRank.det_reindexed_eq_zero_of_downward_nonidentity
+#print axioms PiRowRank.det_reindexed_eq_zero_of_downward_nonidentity
+#check PiRowRank.det_weighted_reindexed_eq_zero_of_downward_nonidentity
+#print axioms PiRowRank.det_weighted_reindexed_eq_zero_of_downward_nonidentity
+#check PiRowRank.qualityFreeMatrix_det
+#print axioms PiRowRank.qualityFreeMatrix_det
+#check PiRowRank.qualityFreeMatrix_det_ne_zero
+#print axioms PiRowRank.qualityFreeMatrix_det_ne_zero
+#check PiRowRank.period_ne_zero
+#print axioms PiRowRank.period_ne_zero
+#check PiRowRank.qualityFreeMatrix_period_det_ne_zero
+#print axioms PiRowRank.qualityFreeMatrix_period_det_ne_zero

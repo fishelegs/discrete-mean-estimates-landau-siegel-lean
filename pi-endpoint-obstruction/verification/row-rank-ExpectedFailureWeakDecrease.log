@@ -1,0 +1,4 @@
+ExpectedFailureWeakDecrease.lean:6:57: error: unsolved goals
+i : Fin 2
+a✝ : (Equiv.swap 0 1) i ≠ i
+⊢ False
