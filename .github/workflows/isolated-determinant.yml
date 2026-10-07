@@ -58,7 +58,7 @@ jobs:
           df -h .
 
       - name: Kernel-check proof closure and standard axioms
-        run: python3 replay.py --build
+        run: python3 replay.py --build --memory-mb 7168
 
       - name: Recheck source fingerprints
         if: always()
