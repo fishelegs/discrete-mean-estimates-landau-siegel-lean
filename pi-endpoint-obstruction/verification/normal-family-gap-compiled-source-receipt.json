@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "lean_version": "Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "lean_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "dependency_manifest_sha256": "c9b8b8c6bda9302e8da060dd58139883caed83af1bb5da32b9395f7af9b4606e",
+  "existing_repository_dependency_pins_sha256": "01ae08ab168cbf5b92d96512052dd5fbd886b0f2b0799a2e5b1d3037b7fc3254",
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "direct_imports": {
+    "Mathlib.Analysis.Analytic.Polynomial": {
+      "source_sha256": "744a9dfd3e4658eaea491b7ed997bcfa68987cb4ab0d305c22ab1841d6fb886f",
+      "olean_sha256": "40113ebac7906f8e7acef52d29fddad270230e2d206147f4f74452c26bb1ea72"
+    },
+    "Mathlib.Analysis.Complex.Norm": {
+      "source_sha256": "7f719d7b3ba3ba8b4667a8f79e7efd5d8fb4da2b82dcca011e64129113a63eba",
+      "olean_sha256": "0f14151458916c24d2e17b5d0f1824784e6eb37b5c7a73886538b4b10d20920b"
+    },
+    "Mathlib.Analysis.SpecificLimits.Basic": {
+      "source_sha256": "99612bce858ecc7b474b279ac386b7b5955d303efff374518064d05db534831d",
+      "olean_sha256": "29a76adf1420abf547ce11d57e9d157a5658c28e98d5b78c6a24111a1bab7f62"
+    },
+    "Mathlib.Tactic": {
+      "source_sha256": "f45622ca1381833c77e9659a0b2ec07e5b667d0d4667cb2a28a58e9540634e85",
+      "olean_sha256": "3c0883be0b7edd978e28e331e53ee7e872b44bb3e6bce93dc97045f27779bf90"
+    }
+  },
+  "declaration_count": 15,
+  "checks": [
+    {
+      "module": "NormalFamilyPointwiseGap",
+      "source_sha256": "6b4f697dd7800c06329e26dea5bec0771eda172ec3e1574ce60f5aee847d5714",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 4.294,
+      "olean_sha256": "1360bcfe0d6f6cc2a510bb8dac7d32e88831b9209e4dfba55d8a67b2e1ed6c05"
+    },
+    {
+      "module": "NormalFamilyPointwiseGapAudit",
+      "source_sha256": "77330aef137e0f9bf5d9368752462d752d5a31fe3c3946f7a145482246e01dad",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "bb1b27257cbe739805c8e921074cf277d02b6500c7aef5a25ab2a6a7b78ef3b5",
+      "elapsed_seconds": 2.879,
+      "olean_sha256": "8758ab39ec399bc4b7c18e28ae498c5fbf5620c8a1a3166c8c9a5b89ca31df4d"
+    },
+    {
+      "module": "NormalFamilyPointwiseGapRegression",
+      "source_sha256": "89980b25c3ef208acd49cb5ac377fa13092ac54e5b727f88da274d7b151e60d2",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 3.11,
+      "olean_sha256": "8f978fa21e5658d4c2d048249b4e317e36e881a46268f81ec394ea7f6633a8d0"
+    },
+    {
+      "module": "ExpectedFailureUniformPointwiseBound",
+      "source_sha256": "4b6480769d809696459d246ed17e0b9d85dd8a5bdc8b67da52b49168c724b445",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "log_sha256": "102caaeff806f242faab50879ca8739455daa06b763edb981691d0f4aef7d92d",
+      "elapsed_seconds": 2.377
+    }
+  ],
+  "axiom_audit": {
+    "NormalFamilyPointwiseGap.coefficient_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.coefficient_norm_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.family_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.anchored": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.constant_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.nonconstant_coefficients": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.entire": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.fixed_disk_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.target_inside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.target_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.target_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.target_norm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.target_tendsto_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.arbitrarily_small": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NormalFamilyPointwiseGap.no_uniform_positive_lower_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "actual_complex_polynomials": true,
+  "all_nonconstant_coefficient_bounds": true,
+  "entire_analyticity": true,
+  "uniform_fixed_disk_bound": true,
+  "target": "3/4",
+  "exact_target_values": true,
+  "individual_target_nonvanishing": true,
+  "target_convergence_to_zero": true,
+  "no_uniform_positive_pointwise_bound": true,
+  "determinant_identification_formalized": false,
+  "interval_supremum_lemma_disproved": false,
+  "pi_bad_approximability_formalized": false,
+  "dependencies_rebuilt": false,
+  "complete_transitive_cache_reaudited": false
+}

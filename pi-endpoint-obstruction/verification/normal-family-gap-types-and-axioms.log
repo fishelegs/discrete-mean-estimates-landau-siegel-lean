@@ -1,0 +1,154 @@
+def NormalFamilyPointwiseGap.coefficient : ℕ → ℝ :=
+fun n => 4 / 9 - 1 / (↑n + 1)
+def NormalFamilyPointwiseGap.familyPolynomial : ℕ → Polynomial ℂ :=
+fun n => Polynomial.C (-1) + Polynomial.X + Polynomial.C ↑(NormalFamilyPointwiseGap.coefficient n) * Polynomial.X ^ 2
+def NormalFamilyPointwiseGap.family : ℕ → ℂ → ℂ :=
+fun n z => Polynomial.eval z (NormalFamilyPointwiseGap.familyPolynomial n)
+def NormalFamilyPointwiseGap.target : ℂ :=
+3 / 4
+NormalFamilyPointwiseGap.coefficient_bounds : ∀ (n : Nat),
+  And
+    (@LE.le.{0} Real Real.instLE
+      (@Neg.neg.{0} Real Real.instNeg (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))
+      (NormalFamilyPointwiseGap.coefficient n))
+    (@LE.le.{0} Real Real.instLE (NormalFamilyPointwiseGap.coefficient n)
+      (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))
+'NormalFamilyPointwiseGap.coefficient_bounds' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.coefficient_norm_le : ∀ (n : Nat),
+  @LE.le.{0} Real Real.instLE (@norm.{0} Complex Complex.instNorm ↑(NormalFamilyPointwiseGap.coefficient n))
+    (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+'NormalFamilyPointwiseGap.coefficient_norm_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.family_eq : ∀ (n : Nat) (z : Complex),
+  @Eq.{1} Complex (NormalFamilyPointwiseGap.family n z)
+    (@HAdd.hAdd.{0, 0, 0} Complex Complex Complex (@instHAdd.{0} Complex Complex.instAdd)
+      (@HAdd.hAdd.{0, 0, 0} Complex Complex Complex (@instHAdd.{0} Complex Complex.instAdd)
+        (@Neg.neg.{0} Complex Complex.instNeg
+          (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne)))
+        z)
+      (@HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul)
+        (↑(NormalFamilyPointwiseGap.coefficient n))
+        (@HPow.hPow.{0, 0, 0} Complex Nat Complex
+          (@instHPow.{0, 0} Complex Nat
+            (@NPow.toPow.{0} Complex
+              (@Monoid.toNPow.{0} Complex (@Semiring.toMonoid.{0} Complex Complex.instSemiring))))
+          z (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))))
+'NormalFamilyPointwiseGap.family_eq' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.anchored : ∀ (n : Nat),
+  @Eq.{1} Complex
+    (NormalFamilyPointwiseGap.family n
+      (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero)))
+    (@Neg.neg.{0} Complex Complex.instNeg
+      (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne)))
+'NormalFamilyPointwiseGap.anchored' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.constant_coefficient : ∀ (n : Nat),
+  @Eq.{1} Complex
+    (@DFunLike.coe.{1, 1, 1}
+      (@Finsupp.{0, 0} Nat Complex
+        (@MulZeroClass.toZero.{0} Complex (@instMulZeroClassOfSemiring.{0} Complex Complex.instSemiring)))
+      Nat (fun x => Complex)
+      (@Finsupp.instFunLike.{0, 0} Nat Complex
+        (@MulZeroClass.toZero.{0} Complex (@instMulZeroClassOfSemiring.{0} Complex Complex.instSemiring)))
+      (@Polynomial.coeff.{0} Complex Complex.instSemiring (NormalFamilyPointwiseGap.familyPolynomial n))
+      (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))))
+    (@Neg.neg.{0} Complex Complex.instNeg
+      (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne)))
+'NormalFamilyPointwiseGap.constant_coefficient' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.nonconstant_coefficients : ∀ (n k : Nat),
+  @Ne.{1} Nat k (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) →
+    @LE.le.{0} Real Real.instLE
+      (@norm.{0} Complex Complex.instNorm
+        (@DFunLike.coe.{1, 1, 1}
+          (@Finsupp.{0, 0} Nat Complex
+            (@MulZeroClass.toZero.{0} Complex (@instMulZeroClassOfSemiring.{0} Complex Complex.instSemiring)))
+          Nat (fun x => Complex)
+          (@Finsupp.instFunLike.{0, 0} Nat Complex
+            (@MulZeroClass.toZero.{0} Complex (@instMulZeroClassOfSemiring.{0} Complex Complex.instSemiring)))
+          (@Polynomial.coeff.{0} Complex Complex.instSemiring (NormalFamilyPointwiseGap.familyPolynomial n)) k))
+      (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+'NormalFamilyPointwiseGap.nonconstant_coefficients' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.entire : ∀ (n : Nat),
+  @AnalyticOnNhd.{0, 0, 0} Complex Complex Complex
+    (@DenselyNormedField.toNontriviallyNormedField.{0} Complex Complex.instDenselyNormedField)
+    Complex.instNormedAddCommGroup
+    (@InnerProductSpace.toNormedSpace.{0, 0} Complex Complex Complex.instRCLike
+      (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} Complex Complex.instNormedAddCommGroup)
+      (@RCLike.innerProductSpace.{0} Complex Complex.instRCLike))
+    Complex.instNormedAddCommGroup
+    (@InnerProductSpace.toNormedSpace.{0, 0} Complex Complex Complex.instRCLike
+      (@NormedAddCommGroup.toSeminormedAddCommGroup.{0} Complex Complex.instNormedAddCommGroup)
+      (@RCLike.innerProductSpace.{0} Complex Complex.instRCLike))
+    (NormalFamilyPointwiseGap.family n) (@Set.univ.{0} Complex)
+'NormalFamilyPointwiseGap.entire' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.fixed_disk_bound : ∀ (n : Nat) {R : Real},
+  @LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) R →
+    ∀ {z : Complex},
+      @LE.le.{0} Real Real.instLE (@norm.{0} Complex Complex.instNorm z) R →
+        @LE.le.{0} Real Real.instLE (@norm.{0} Complex Complex.instNorm (NormalFamilyPointwiseGap.family n z))
+          (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+            (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+              (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)) R)
+            (@HPow.hPow.{0, 0, 0} Real Nat Real
+              (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) R
+              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+'NormalFamilyPointwiseGap.fixed_disk_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.target_inside : And
+  (@LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+    NormalFamilyPointwiseGap.target.re)
+  (And
+    (@LT.lt.{0} Real Real.instLT NormalFamilyPointwiseGap.target.re
+      (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))
+    (And
+      (@Eq.{1} Real NormalFamilyPointwiseGap.target.im
+        (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)))
+      (@LT.lt.{0} Real Real.instLT (@norm.{0} Complex Complex.instNorm NormalFamilyPointwiseGap.target)
+        (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))))
+'NormalFamilyPointwiseGap.target_inside' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.target_value : ∀ (n : Nat),
+  @Eq.{1} Complex (NormalFamilyPointwiseGap.family n NormalFamilyPointwiseGap.target)
+    ↑(@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+        (@Neg.neg.{0} Real Real.instNeg
+          (@OfNat.ofNat.{0} Real (nat_lit 9) (@instOfNatAtLeastTwo.{0} Real (nat_lit 9) Real.instNatCast ⋯)))
+        (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+          (@OfNat.ofNat.{0} Real (nat_lit 16) (@instOfNatAtLeastTwo.{0} Real (nat_lit 16) Real.instNatCast ⋯))
+          (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd) (@Nat.cast.{0} Real Real.instNatCast n)
+            (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))))
+'NormalFamilyPointwiseGap.target_value' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.target_nonzero : ∀ (n : Nat),
+  @Ne.{1} Complex (NormalFamilyPointwiseGap.family n NormalFamilyPointwiseGap.target)
+    (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero))
+'NormalFamilyPointwiseGap.target_nonzero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.target_norm : ∀ (n : Nat),
+  @Eq.{1} Real (@norm.{0} Complex Complex.instNorm (NormalFamilyPointwiseGap.family n NormalFamilyPointwiseGap.target))
+    (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+      (@OfNat.ofNat.{0} Real (nat_lit 9) (@instOfNatAtLeastTwo.{0} Real (nat_lit 9) Real.instNatCast ⋯))
+      (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+        (@OfNat.ofNat.{0} Real (nat_lit 16) (@instOfNatAtLeastTwo.{0} Real (nat_lit 16) Real.instNatCast ⋯))
+        (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd) (@Nat.cast.{0} Real Real.instNatCast n)
+          (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))))
+'NormalFamilyPointwiseGap.target_norm' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.target_tendsto_zero : @Filter.Tendsto.{0, 0} Nat Complex
+  (fun n => NormalFamilyPointwiseGap.family n NormalFamilyPointwiseGap.target) (@Filter.atTop.{0} Nat Nat.instPreorder)
+  (@nhds.{0} Complex
+    (@UniformSpace.toTopologicalSpace.{0} Complex
+      (@PseudoMetricSpace.toUniformSpace.{0} Complex
+        (@SeminormedRing.toPseudoMetricSpace.{0} Complex
+          (@SeminormedCommRing.toSeminormedRing.{0} Complex
+            (@NormedCommRing.toSeminormedCommRing.{0} Complex
+              (@NormedField.toNormedCommRing.{0} Complex Complex.instNormedField))))))
+    (@OfNat.ofNat.{0} Complex (nat_lit 0) (@Zero.toOfNat0.{0} Complex Complex.instZero)))
+'NormalFamilyPointwiseGap.target_tendsto_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.arbitrarily_small : ∀ (c : Real),
+  @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) c →
+    ∃ n,
+      @LT.lt.{0} Real Real.instLT
+        (@norm.{0} Complex Complex.instNorm (NormalFamilyPointwiseGap.family n NormalFamilyPointwiseGap.target)) c
+'NormalFamilyPointwiseGap.arbitrarily_small' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+NormalFamilyPointwiseGap.no_uniform_positive_lower_bound : Not
+  (∃ c,
+    And (@LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) c)
+      (∀ (n : Nat),
+        @LE.le.{0} Real Real.instLE c
+          (@norm.{0} Complex Complex.instNorm (NormalFamilyPointwiseGap.family n NormalFamilyPointwiseGap.target))))
+'NormalFamilyPointwiseGap.no_uniform_positive_lower_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
