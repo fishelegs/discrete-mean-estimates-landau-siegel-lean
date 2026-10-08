@@ -1,14 +1,20 @@
 {
-  "README.md": "d2c83ccde5c1ef5c868fa7fbe3000cb9e1dccfbd05ae7f1ae02a5213dbece1b2",
+  "README.md": "b18cd34b090879b471370d037aa19f4f77f5e76f8352169463c7f608d6fba355",
+  "REMAINDER.md": "6a4c60d69e8fad29c8532d9fd476e4ce981e5cb6b85c552c5458ee092e14cda0",
   "dependency-pins.json": "743683982c13df4b60ccaad18c9bbd4deda621c60a258417c347935be6aa3f83",
   "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
-  "scripts/replay.py": "74a8035a3b1af63f59efee8945f90e0b436ed8ae209e6af21e31ee0c41dd2808",
+  "scripts/replay.py": "d1de3298b2003bda409b1c49c56335cde25d180a4f923a34237aae354e025bba",
   "src/DataIdealPresentation.lean": "61560d51501af1513ec900697bb7f6c9bac77d2365d41aad1b4121ade9c81954",
   "src/EndpointColon.lean": "8605b149ffb9f90c5c19b42f4561adb4cbb6192c281c016a1d6272f904cdc2c2",
+  "src/ExpectedFailureMissingRemainderCoupling.lean": "c9be265cc3715964c3ea48c97d47c80e787bc85e30752ad3c692d5dd018d553b",
+  "src/ExpectedFailureWeakRemainderDegree.lean": "85fe84b6d406729c79411176faccf197a70f7b4c700ad9b8f4997a46e25f15eb",
   "src/ExpectedFailureWrongWeight.lean": "14ba3e2271b82bffac6289e5b9ab953afbeb1436001b02f0279dc6103da31f9e",
   "src/ExpectedFailureZeroScale.lean": "4c20f7d6c0479349d09010213579a111a9b9d066f5ba58cf1a61244e94157d36",
+  "src/RemainderAudit.lean": "75fd545fda6ac66ef2795609d12cacaade1b35facf8a5b56a0d593c4decbc3db",
+  "src/RemainderRegression.lean": "980582dd8c615927c8aa7dd81f8eb1c2e507383f2faa5e660ef8df336984cd07",
+  "src/RemainderVanish.lean": "310f8c468022858224bd59b6f6f8acc59c2197f70eebafbd9acf1fdd7f5034b1",
   "src/WeightedColon.lean": "f699c5b592f8d3588ef5bc4c353b1bcfa6df2c17ef490e9c80d6646a76bcd996",
   "src/WeightedColonAudit.lean": "37d1221e53ce25639d91eb962bbf1050fa8b46ad2283d2838b2bac4ed19b6aca",
   "src/WeightedColonRegression.lean": "d76169f18bedf2d00adfea9173524384e40ae8550af2c7e7ef66ba4c3fbf3152",
-  "verification/dependency-attestation.json": "e883b7f16bc302fce5f8263dbc6f99e859a8eff4a3a5856efc61be64181f2c67"
+  "verification/dependency-attestation.json": "6dc7a996a78baa12f2006b603371813800013eabfe0b07abd9399af3d02b901a"
 }

@@ -17,10 +17,14 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ['WeightedColon', 'DataIdealPresentation', 'EndpointColon']
-POSITIVE = CORE + ['WeightedColonRegression', 'WeightedColonAudit']
+EXTRA_CORE = ['RemainderVanish']
+REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression']
+POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit']
 NEGATIVE = {
-    'ExpectedFailureZeroScale': '1 ≤ 0',
-    'ExpectedFailureWrongWeight': '5 = 1 ∨ 5 = 3',
+    'ExpectedFailureZeroScale': ('1 ≤ 0', 'proved that the proposition'),
+    'ExpectedFailureWrongWeight': ('5 = 1 ∨ 5 = 3', 'proved that the proposition'),
+    'ExpectedFailureMissingRemainderCoupling': ('⊢ (X + 1) ^ 3 ∣ X', 'unsolved goals'),
+    'ExpectedFailureWeakRemainderDegree': ('4 ≤ 1', 'proved that the proposition'),
 }
 ALLOWED_AXIOMS = {'propext', 'Classical.choice', 'Quot.sound'}
 
@@ -105,9 +109,8 @@ def main():
         log.write_text(run.stdout)
         expected_failure = name in NEGATIVE
         passed = (run.returncode == 0 and output.is_file()) if not expected_failure else (
-            run.returncode == 1 and 'error:' in run.stdout and
-            NEGATIVE[name] in run.stdout and not output.exists() and
-            'proved that the proposition' in run.stdout)
+            run.returncode == 1 and run.stdout.count('error:') == 1 and
+            all(fragment in run.stdout for fragment in NEGATIVE[name]) and not output.exists())
         check = {'module': name, 'command': command, 'cwd': str(ROOT / 'src'),
                  'source_sha256': sha(source), 'exit_code': run.returncode,
                  'expected_failure': expected_failure, 'passed': passed,
@@ -121,14 +124,15 @@ def main():
             return 1
 
     declarations = {}
-    for name in CORE + ['WeightedColonRegression']:
+    for name in CORE + EXTRA_CORE + REGRESSIONS:
         source = (ROOT / 'src' / (name + '.lean')).read_text()
         if re.search(r'\b(sorry|admit|native_decide|unsafe|axiom)\b', source):
             raise RuntimeError(f'Prohibited proof construct in {name}')
         namespace = 'PiWeightedColon.Regression.' if name.endswith('Regression') else 'PiWeightedColon.'
-        for kind, declaration in re.findall(r'^(theorem|def|abbrev) (\w+)\b', source, re.M):
+        for kind, declaration in re.findall(r'^(theorem|def|abbrev|instance) (\w+)\b', source, re.M):
             declarations[namespace + declaration] = kind
-    audit = (logs / 'WeightedColonAudit.log').read_text()
+    audit = '\n'.join((logs / (name + '.log')).read_text()
+                      for name in ['WeightedColonAudit', 'RemainderAudit'])
     reports = dict(re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", audit, re.S))
     reports.update({name: '' for name in re.findall(
         r"'([^']+)' does not depend on any axioms", audit)})
@@ -145,10 +149,12 @@ def main():
                'lean_executable_sha256': sha(lean), 'dependency_pins': pins,
                'direct_imports': imports, 'checks': checks,
                'declaration_kinds': declarations, 'axiom_audit': axioms,
-               'scope': 'Weighted colon lemma for the actual F2 endpoint ideals only; '
-                        'the V_N intersection theorem and determinant/analytic bridges are not proved.'}
+               'scope': 'Weighted colon lemma for the actual F2 endpoint ideals, and '
+                        'remainder vanishing from explicit degree and divisibility hypotheses; '
+                        'the quotient-ring/local-divisibility bridge, V_N intersection theorem '
+                        'and determinant/analytic bridges are not proved.'}
     (out / 'replay-receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
-    print(f'All {len(declarations)} declaration audits and seven compilation checks passed.', flush=True)
+    print(f'All {len(declarations)} declaration audits and {len(checks)} compilation checks passed.', flush=True)
     return 0
 
 

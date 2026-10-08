@@ -1,0 +1,122 @@
+theorem PiWeightedColon.f2_isPrime : Fact (Nat.Prime 2) :=
+⋯
+'PiWeightedColon.f2_isPrime' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@[reducible] def PiWeightedColon.Line : Type :=
+Polynomial.{0} PiWeightedColon.F2
+'PiWeightedColon.Line' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.u : PiWeightedColon.Line :=
+HAdd.hAdd.{0, 0, 0} Polynomial.X.{0} 1
+'PiWeightedColon.u' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.u_monic : Polynomial.Monic.{0} PiWeightedColon.u
+'PiWeightedColon.u_monic' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.u_degree : Eq.{1} (Polynomial.natDegree.{0} PiWeightedColon.u) 1
+'PiWeightedColon.u_degree' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.t_u_coprime : IsCoprime.{0} Polynomial.X.{0} PiWeightedColon.u
+'PiWeightedColon.t_u_coprime' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.t_u_power_degree (n m : Nat) :
+  Eq.{1}
+    (Polynomial.natDegree.{0}
+      (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} n) (HPow.hPow.{0, 0, 0} PiWeightedColon.u m)))
+    (HAdd.hAdd.{0, 0, 0} n m)
+'PiWeightedColon.t_u_power_degree' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.bounded_factor {p f : PiWeightedColon.Line} (hp : Polynomial.Monic.{0} p) (hpf : Dvd.dvd.{0} p f)
+  {r : Nat} (hdeg : LE.le.{0} (Polynomial.natDegree.{0} f) (HAdd.hAdd.{0, 0, 0} (Polynomial.natDegree.{0} p) r)) :
+  ∃ g, And (Eq.{1} f (HMul.hMul.{0, 0, 0} p g)) (LE.le.{0} (Polynomial.natDegree.{0} g) r)
+'PiWeightedColon.bounded_factor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.factor_from_endpoint_powers {f : PiWeightedColon.Line} (n m r : Nat)
+  (ht : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} n) f)
+  (hu : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u m) f)
+  (hdeg : LE.le.{0} (Polynomial.natDegree.{0} f) (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} n m) r)) :
+  ∃ g,
+    And
+      (Eq.{1} f
+        (HMul.hMul.{0, 0, 0}
+          (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} n) (HPow.hPow.{0, 0, 0} PiWeightedColon.u m)) g))
+      (LE.le.{0} (Polynomial.natDegree.{0} g) r)
+'PiWeightedColon.factor_from_endpoint_powers' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.cancel_endpoint_powers (n r m : Nat) (f : PiWeightedColon.Line)
+  (h :
+    Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HAdd.hAdd.{0, 0, 0} n r))
+      (HMul.hMul.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} m) (HPow.hPow.{0, 0, 0} PiWeightedColon.u n)) f)) :
+  Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u r) f
+'PiWeightedColon.cancel_endpoint_powers' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.remainder_even (N : Nat) (A B : PiWeightedColon.Line)
+  (hAdeg : LE.le.{0} (Polynomial.natDegree.{0} A) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+  (hBdeg : LE.le.{0} (Polynomial.natDegree.{0} B) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+  (hAt : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HAdd.hAdd.{0, 0, 0} N 1)) A)
+  (hBt : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} N) B)
+  (hAu : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HMul.hMul.{0, 0, 0} 3 N)) A)
+  (hBu : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HMul.hMul.{0, 0, 0} 3 N)) B)
+  (hAB :
+    Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 N) 3))
+      (HAdd.hAdd.{0, 0, 0} A (HMul.hMul.{0, 0, 0} PiWeightedColon.u B))) :
+  And (Eq.{1} A 0) (Eq.{1} B 0)
+'PiWeightedColon.remainder_even' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.remainder_odd (N : Nat) (A B : PiWeightedColon.Line)
+  (hAdeg : LE.le.{0} (Polynomial.natDegree.{0} A) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+  (hBdeg : LE.le.{0} (Polynomial.natDegree.{0} B) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+  (hAt : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HAdd.hAdd.{0, 0, 0} N 1)) A)
+  (hBt : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} N) B)
+  (hAu : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 N) 1)) A)
+  (hBu : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HMul.hMul.{0, 0, 0} 3 N)) B)
+  (hAB :
+    Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 N) 3))
+      (HAdd.hAdd.{0, 0, 0} A
+        (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 2) PiWeightedColon.u) B))) :
+  And (Eq.{1} A 0) (Eq.{1} B 0)
+'PiWeightedColon.remainder_odd' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.remainder_by_parity (N : Nat) (A B : PiWeightedColon.Line)
+  (hAdeg : LE.le.{0} (Polynomial.natDegree.{0} A) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+  (hBdeg : LE.le.{0} (Polynomial.natDegree.{0} B) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+  (hAt : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HAdd.hAdd.{0, 0, 0} N 1)) A)
+  (hBt : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} N) B)
+  (hAu :
+    ite.{1} (Even.{0} N) (Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HMul.hMul.{0, 0, 0} 3 N)) A)
+      (Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 N) 1)) A))
+  (hBu : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HMul.hMul.{0, 0, 0} 3 N)) B)
+  (hAB :
+    ite.{1} (Even.{0} N)
+      (Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 N) 3))
+        (HAdd.hAdd.{0, 0, 0} A (HMul.hMul.{0, 0, 0} PiWeightedColon.u B)))
+      (Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 N) 3))
+        (HAdd.hAdd.{0, 0, 0} A
+          (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 2) PiWeightedColon.u) B)))) :
+  And (Eq.{1} A 0) (Eq.{1} B 0)
+'PiWeightedColon.remainder_by_parity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.remainder_scale_zero (A B : PiWeightedColon.Line)
+  (hA : LE.le.{0} (Polynomial.natDegree.{0} A) 1) (hB : LE.le.{0} (Polynomial.natDegree.{0} B) 1)
+  (ht : Dvd.dvd.{0} Polynomial.X.{0} A)
+  (hc :
+    Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u 3)
+      (HAdd.hAdd.{0, 0, 0} A (HMul.hMul.{0, 0, 0} PiWeightedColon.u B))) :
+  And (Eq.{1} A 0) (Eq.{1} B 0)
+'PiWeightedColon.Regression.remainder_scale_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.missing_even_coupling_counterexample :
+  And (LE.le.{0} (Polynomial.natDegree.{0} Polynomial.X.{0}) 1)
+    (And (LE.le.{0} (Polynomial.natDegree.{0} 0) 1)
+      (And (Dvd.dvd.{0} Polynomial.X.{0} Polynomial.X.{0})
+        (And (Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u 0) Polynomial.X.{0})
+          (And (Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u 0) 0)
+            (Not (And (Eq.{1} Polynomial.X.{0} 0) (Eq.{1} 0 0)))))))
+'PiWeightedColon.Regression.missing_even_coupling_counterexample' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.missing_degree_counterexample :
+  And (Dvd.dvd.{0} Polynomial.X.{0} (HMul.hMul.{0, 0, 0} Polynomial.X.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u 3)))
+    (And
+      (Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u 3)
+        (HMul.hMul.{0, 0, 0} Polynomial.X.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u 3)))
+      (And (Ne.{1} (HMul.hMul.{0, 0, 0} Polynomial.X.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u 3)) 0)
+        (Eq.{1}
+          (Polynomial.natDegree.{0} (HMul.hMul.{0, 0, 0} Polynomial.X.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u 3)))
+          4)))
+'PiWeightedColon.Regression.missing_degree_counterexample' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.odd_A_degree_obstruction (N : Nat) (A : PiWeightedColon.Line)
+  (hdeg : LE.le.{0} (Polynomial.natDegree.{0} A) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+  (ht : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HAdd.hAdd.{0, 0, 0} N 1)) A)
+  (hu : Dvd.dvd.{0} (HPow.hPow.{0, 0, 0} PiWeightedColon.u (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 3 N) 1)) A) :
+  Eq.{1} A 0
+'PiWeightedColon.Regression.odd_A_degree_obstruction' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

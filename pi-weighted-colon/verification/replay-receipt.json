@@ -61,6 +61,10 @@
       "source_sha256": "93d24de7802b11b6179783bee42543f5131173ed0ddbddaad05a35203ec6d6c0",
       "olean_sha256": "a889ddc916247f8f88e52084b3c9204138df43a040ee33165e0c6165bd5f27c0"
     },
+    "Mathlib.Algebra.Field.ZMod": {
+      "source_sha256": "417e8776440d058896b5f05a65d534041a1b7f0b8adb90c011b75486f3e1de22",
+      "olean_sha256": "f0aa2ee93c65c598dad62e945202f4a0d4f19937aaf3e8e37736f97950e8a848"
+    },
     "Mathlib.Algebra.Polynomial.AlgebraMap": {
       "source_sha256": "fde9c29246bef3c9dc781e879bd44fe2e23b80b35556d09c888b8da3755de33b",
       "olean_sha256": "55c6221677796083c3778aa49c80953b6178828d5be5e52ef5858688becf6242"
@@ -73,9 +77,17 @@
       "source_sha256": "6cf6ab951454822af7f2e4a926dc326078ef2431ed579b8b02ac7442c82b84a3",
       "olean_sha256": "37cb8edda97ee38843ee5213428e46c3c39eff2d7cb65a059efb0f52820282e2"
     },
+    "Mathlib.Algebra.Polynomial.Div": {
+      "source_sha256": "1dc337c6a10ba3e7c1d43e325e4a6e5e967f8e6112b01545cf7458b40e6b077e",
+      "olean_sha256": "41b3f912a53a83f4e6afce5ca7e386f88cfe264f8c47f732009a07fd637e272a"
+    },
     "Mathlib.Data.ZMod.Basic": {
       "source_sha256": "6e076742a9be15cb038502a6634155ae5a402899577f85e3c2941beedc0e1abd",
       "olean_sha256": "155961f7978f57eceec594debe5cc9550a07b0c2ed061aaa9cf3a4bc90fbd175"
+    },
+    "Mathlib.RingTheory.Coprime.Lemmas": {
+      "source_sha256": "8af90c95bbb22d26c16e7d76a680d554e8eecf6676f65305edd1ea0c355bab78",
+      "olean_sha256": "f9908e6465decfb008909a8ff2ba9a89066bfa9eae1c35b730f967d54d11faa8"
     },
     "Mathlib.RingTheory.Ideal.Colon": {
       "source_sha256": "8e990dab2228bf33a9b06a6a2bf829d276221dcd3ff505ce50968b6faba838f1",
@@ -104,7 +116,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-weighted-colon-replay/build/WeightedColon.olean",
+        "/private/tmp/pi-remainder-replay/build/WeightedColon.olean",
         "WeightedColon.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -113,7 +125,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 1.736,
+      "elapsed_seconds": 1.717,
       "olean_sha256": "4010213d5a84ded17c28280c1219f440049fe31b6051393f9a100a667b6ee06e"
     },
     {
@@ -125,7 +137,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-weighted-colon-replay/build/DataIdealPresentation.olean",
+        "/private/tmp/pi-remainder-replay/build/DataIdealPresentation.olean",
         "DataIdealPresentation.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -134,7 +146,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 1.746,
+      "elapsed_seconds": 1.681,
       "olean_sha256": "1bcc3adc07ba5fceccf1393593d206dea99d5f4d37430d54f6d5fcb90ccb059d"
     },
     {
@@ -146,7 +158,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-weighted-colon-replay/build/EndpointColon.olean",
+        "/private/tmp/pi-remainder-replay/build/EndpointColon.olean",
         "EndpointColon.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -155,8 +167,29 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 2.177,
+      "elapsed_seconds": 1.79,
       "olean_sha256": "db6264b722c5ea9248fde1db837d913acac0612ce21816d7e768f7a67e8be635"
+    },
+    {
+      "module": "RemainderVanish",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-remainder-replay/build/RemainderVanish.olean",
+        "RemainderVanish.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "310f8c468022858224bd59b6f6f8acc59c2197f70eebafbd9acf1fdd7f5034b1",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 1.486,
+      "olean_sha256": "0f41f960bbbdd38992da6229b21155b651d95be7141f9db5b9db72e146495e04"
     },
     {
       "module": "WeightedColonRegression",
@@ -167,7 +200,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-weighted-colon-replay/build/WeightedColonRegression.olean",
+        "/private/tmp/pi-remainder-replay/build/WeightedColonRegression.olean",
         "WeightedColonRegression.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -176,8 +209,29 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 1.647,
+      "elapsed_seconds": 1.391,
       "olean_sha256": "a0ff04ac53cba312bde757c790d51a7b4435c9b16cb3f452d552cfc20dc22954"
+    },
+    {
+      "module": "RemainderRegression",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-remainder-replay/build/RemainderRegression.olean",
+        "RemainderRegression.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "980582dd8c615927c8aa7dd81f8eb1c2e507383f2faa5e660ef8df336984cd07",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 1.307,
+      "olean_sha256": "bfd607f75966b71b6967ab3bee9ad9eaa59cd1467d9cbd4e2fed481350d73c77"
     },
     {
       "module": "WeightedColonAudit",
@@ -188,7 +242,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-weighted-colon-replay/build/WeightedColonAudit.olean",
+        "/private/tmp/pi-remainder-replay/build/WeightedColonAudit.olean",
         "WeightedColonAudit.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -197,8 +251,29 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "c082f7f69d5faf3a24c7b049c2ba83be70ab602f71ba363541de1345e4537af8",
-      "elapsed_seconds": 1.269,
+      "elapsed_seconds": 1.231,
       "olean_sha256": "8c605b1fa9904aab2b89f0c053a874aed274ac9281d8b345496f5f1129fdbad8"
+    },
+    {
+      "module": "RemainderAudit",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-remainder-replay/build/RemainderAudit.olean",
+        "RemainderAudit.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "75fd545fda6ac66ef2795609d12cacaade1b35facf8a5b56a0d593c4decbc3db",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "7823760b6f5904a742d38445229496061eb15360377581b939d54fb14e6ec6a7",
+      "elapsed_seconds": 1.157,
+      "olean_sha256": "8a4d09c25ae12bf4e4a29d4a07bf5e590c914183054e4a9ace27e2d342498e15"
     },
     {
       "module": "ExpectedFailureZeroScale",
@@ -209,7 +284,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-weighted-colon-replay/build/ExpectedFailureZeroScale.olean",
+        "/private/tmp/pi-remainder-replay/build/ExpectedFailureZeroScale.olean",
         "ExpectedFailureZeroScale.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -218,7 +293,7 @@
       "expected_failure": true,
       "passed": true,
       "log_sha256": "41ed7c71d81052802ef202d4bcfeb5d562d06174985ed8e617343b86064bad40",
-      "elapsed_seconds": 1.202
+      "elapsed_seconds": 1.133
     },
     {
       "module": "ExpectedFailureWrongWeight",
@@ -229,7 +304,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-weighted-colon-replay/build/ExpectedFailureWrongWeight.olean",
+        "/private/tmp/pi-remainder-replay/build/ExpectedFailureWrongWeight.olean",
         "ExpectedFailureWrongWeight.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -238,7 +313,47 @@
       "expected_failure": true,
       "passed": true,
       "log_sha256": "19d357e0202da8148bd63ebacb60afb9ac41e785ee9670c5784351d3e276d6a5",
-      "elapsed_seconds": 1.196
+      "elapsed_seconds": 1.209
+    },
+    {
+      "module": "ExpectedFailureMissingRemainderCoupling",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-remainder-replay/build/ExpectedFailureMissingRemainderCoupling.olean",
+        "ExpectedFailureMissingRemainderCoupling.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "c9be265cc3715964c3ea48c97d47c80e787bc85e30752ad3c692d5dd018d553b",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "log_sha256": "4403bf980c1a672636c60340b26ca62fcdd8c185236257ae2152b4b00fd9d40d",
+      "elapsed_seconds": 1.179
+    },
+    {
+      "module": "ExpectedFailureWeakRemainderDegree",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-remainder-replay/build/ExpectedFailureWeakRemainderDegree.olean",
+        "ExpectedFailureWeakRemainderDegree.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "85fe84b6d406729c79411176faccf197a70f7b4c700ad9b8f4997a46e25f15eb",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "log_sha256": "57bfb2698361032138889544450fba55101a2c0a7fb60f1c9b5dee26a8e9164d",
+      "elapsed_seconds": 1.157
     }
   ],
   "declaration_kinds": {
@@ -294,12 +409,29 @@
     "PiWeightedColon.dataIntersection": "def",
     "PiWeightedColon.intersection_colon": "theorem",
     "PiWeightedColon.intersection_colon_pred": "theorem",
+    "PiWeightedColon.f2_isPrime": "instance",
+    "PiWeightedColon.Line": "abbrev",
+    "PiWeightedColon.u": "def",
+    "PiWeightedColon.u_monic": "theorem",
+    "PiWeightedColon.u_degree": "theorem",
+    "PiWeightedColon.t_u_coprime": "theorem",
+    "PiWeightedColon.t_u_power_degree": "theorem",
+    "PiWeightedColon.bounded_factor": "theorem",
+    "PiWeightedColon.factor_from_endpoint_powers": "theorem",
+    "PiWeightedColon.cancel_endpoint_powers": "theorem",
+    "PiWeightedColon.remainder_even": "theorem",
+    "PiWeightedColon.remainder_odd": "theorem",
+    "PiWeightedColon.remainder_by_parity": "theorem",
     "PiWeightedColon.Regression.cancellingExample": "def",
     "PiWeightedColon.Regression.input_boundary": "theorem",
     "PiWeightedColon.Regression.mixed_term_cancels": "theorem",
     "PiWeightedColon.Regression.output_boundary": "theorem",
     "PiWeightedColon.Regression.endpoint_zero_membership": "theorem",
-    "PiWeightedColon.Regression.zero_scale_colon_not_self": "theorem"
+    "PiWeightedColon.Regression.zero_scale_colon_not_self": "theorem",
+    "PiWeightedColon.Regression.remainder_scale_zero": "theorem",
+    "PiWeightedColon.Regression.missing_even_coupling_counterexample": "theorem",
+    "PiWeightedColon.Regression.missing_degree_counterexample": "theorem",
+    "PiWeightedColon.Regression.odd_A_degree_obstruction": "theorem"
   },
   "axiom_audit": {
     "PiWeightedColon.action_data": [
@@ -563,11 +695,96 @@
       "Quot.sound",
       "propext"
     ],
+    "PiWeightedColon.f2_isPrime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Line": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.u": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.u_monic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.u_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.t_u_coprime": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.t_u_power_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.bounded_factor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.factor_from_endpoint_powers": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.cancel_endpoint_powers": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.remainder_even": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.remainder_odd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.remainder_by_parity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.remainder_scale_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.missing_even_coupling_counterexample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.missing_degree_counterexample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.odd_A_degree_obstruction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "PiWeightedColon.weight": [],
     "PiWeightedColon.Data": [],
     "PiWeightedColon.action": [],
     "PiWeightedColon.F2": [],
     "PiWeightedColon.endpointD": []
   },
-  "scope": "Weighted colon lemma for the actual F2 endpoint ideals only; the V_N intersection theorem and determinant/analytic bridges are not proved."
+  "scope": "Weighted colon lemma for the actual F2 endpoint ideals, and remainder vanishing from explicit degree and divisibility hypotheses; the quotient-ring/local-divisibility bridge, V_N intersection theorem and determinant/analytic bridges are not proved."
 }

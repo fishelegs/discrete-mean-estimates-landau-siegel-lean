@@ -1,7 +1,9 @@
 # Weighted colon lemma for the π all-scale algebraic argument
 
 This checkpoint proves the weighted colon milestone for the actual
-endpoint-generated ideals. It does **not** prove the full staircase intersection
+endpoint-generated ideals, and now includes the conditional univariate
+remainder step with exact hypotheses in [REMAINDER.md](REMAINDER.md).
+It does **not** prove the full staircase intersection
 theorem, a determinant parity statement, an analytic lower bound, or that π is
 badly approximable.
 
@@ -62,15 +64,16 @@ threshold still increases by exactly two, not three. A further regression proves
 that the colon ideal at scale zero is not the original ideal. The two negative
 tests must fail on the false hypotheses `1 ≤ 0` and `5=1 ∨ 5=3`.
 
-The reproducible check compiles three proof modules, the positive regressions,
-the type/definition/axiom audit, and the two expected failures. All 58 new
+The combined reproducible check compiles four proof modules, two positive
+regression modules, two type/definition/axiom audits, and four expected failures. All 75
 declarations, including definitions and regression theorems, are audited.
 Only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` are
 permitted. The proof sources contain no `sorry`, `admit`, `native_decide`,
 custom axiom or unsafe declaration. Warnings are treated as errors.
 
-The full `V_N ∩ I_N = {0}` theorem has not been formalized here: the monic
-division, remainder restrictions, degree bounds and final induction remain.
+The full `V_N ∩ I_N = {0}` theorem has not been formalized here: monic
+division with staircase bounds, derivation of the remainder's degree and
+divisibility conditions from the quotient/local ideals, and final induction remain.
 The binary matrix equivalence and the integer determinant/residual-polynomial
 bridge also remain unformalized. None of these algebraic statements alone gives
 a uniform archimedean estimate or proves the π badly-approximable statement.

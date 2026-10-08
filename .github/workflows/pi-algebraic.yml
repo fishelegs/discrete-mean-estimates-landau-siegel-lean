@@ -1,0 +1,56 @@
+name: Pi algebraic checkpoint verification
+
+on:
+  push:
+    paths:
+      - 'pi-weighted-colon/**'
+      - '.github/workflows/pi-algebraic.yml'
+      - 'lean-toolchain'
+      - 'lake-manifest.json'
+      - 'lakefile.lean'
+  pull_request:
+    paths:
+      - 'pi-weighted-colon/**'
+      - '.github/workflows/pi-algebraic.yml'
+      - 'lean-toolchain'
+      - 'lake-manifest.json'
+      - 'lakefile.lean'
+  workflow_dispatch:
+
+jobs:
+  verify-pi-algebraic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the existing pinned Lean toolchain
+        run: |
+          curl -fsSL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Provision dependencies from the committed manifest
+        run: |
+          source "$HOME/.elan/env"
+          lean --version
+          lake --version
+          lake exe cache get
+          git diff --exit-code -- lean-toolchain lakefile.lean lake-manifest.json
+
+      - name: Replay colon and remainder proofs, regressions and axiom audits
+        run: |
+          source "$HOME/.elan/env"
+          python3 pi-weighted-colon/scripts/replay.py \
+            --lean "$(elan which lean)" \
+            --existing-mathlib-project "$GITHUB_WORKSPACE" \
+            --out "$RUNNER_TEMP/pi-algebraic-replay"
+
+      - name: Upload the exact verification receipt and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pi-algebraic-verification
+          path: |
+            ${{ runner.temp }}/pi-algebraic-replay/replay-receipt.json
+            ${{ runner.temp }}/pi-algebraic-replay/logs/
+          if-no-files-found: warn
