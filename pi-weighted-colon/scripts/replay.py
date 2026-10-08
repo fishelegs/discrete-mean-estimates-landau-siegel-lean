@@ -17,10 +17,11 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ['WeightedColon', 'DataIdealPresentation', 'EndpointColon']
-EXTRA_CORE = ['RemainderVanish']
-REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression']
-POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit']
+EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge']
+REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression']
+POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit']
 NEGATIVE = {
+    'ExpectedFailureWrongQuotientSquare': ('Tactic `assumption` failed', 'reduction'),
     'ExpectedFailureZeroScale': ('1 ≤ 0', 'proved that the proposition'),
     'ExpectedFailureWrongWeight': ('5 = 1 ∨ 5 = 3', 'proved that the proposition'),
     'ExpectedFailureMissingRemainderCoupling': ('⊢ (X + 1) ^ 3 ∣ X', 'unsolved goals'),
@@ -132,7 +133,7 @@ def main():
         for kind, declaration in re.findall(r'^(theorem|def|abbrev|instance) (\w+)\b', source, re.M):
             declarations[namespace + declaration] = kind
     audit = '\n'.join((logs / (name + '.log')).read_text()
-                      for name in ['WeightedColonAudit', 'RemainderAudit'])
+                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit'])
     reports = dict(re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", audit, re.S))
     reports.update({name: '' for name in re.findall(
         r"'([^']+)' does not depend on any axioms", audit)})
@@ -150,9 +151,11 @@ def main():
                'direct_imports': imports, 'checks': checks,
                'declaration_kinds': declarations, 'axiom_audit': axioms,
                'scope': 'Weighted colon lemma for the actual F2 endpoint ideals, and '
-                        'remainder vanishing from explicit degree and divisibility hypotheses; '
-                        'the quotient-ring/local-divisibility bridge, V_N intersection theorem '
-                        'and determinant/analytic bridges are not proved.'}
+                        'remainder vanishing with all local divisibility conditions derived '
+                        'from actual endpoint ideal membership via a quadratic quotient model. '
+                        'Remainder decomposition and degree bounds are explicit inputs; '
+                        'staircase division, V_N induction, matrix and determinant/analytic '
+                        'bridges are not proved.'}
     (out / 'replay-receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
     print(f'All {len(declarations)} declaration audits and {len(checks)} compilation checks passed.', flush=True)
     return 0

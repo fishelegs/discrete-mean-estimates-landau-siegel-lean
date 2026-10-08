@@ -1,0 +1,3 @@
+ExpectedFailureWrongQuotientSquare.lean:6:52: error: Tactic `assumption` failed
+
+⊢ reduction (endpointX false ^ 2) = quadC (X ^ 2)

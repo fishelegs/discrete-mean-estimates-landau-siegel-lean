@@ -1,5 +1,9 @@
 # Conditional remainder vanishing
 
+This records the earlier conditional milestone. The next milestone,
+[BRIDGE.md](BRIDGE.md), derives these divisibility inputs from the actual
+endpoint ideals. This file preserves the earlier theorem statements and checks.
+
 This extends the proved colon lemma with the univariate remainder argument.
 `Line = Polynomial (ZMod 2)`, `X` represents t, and `u = X+1`.
 Both branch implications are proved for **every** natural N. Their names refer
@@ -66,8 +70,8 @@ condition or the degree bound. The new negative checks fail only on the intended
 missing condition `(X+1)³ ∣ X` and the false degree comparison `4 ≤ 1`.
 The previous two negative tests and all previous axiom checks still run.
 
-No quotient ring S, local ideal image calculation, or derivation of the listed
-divisibility conditions has been added. Also remaining are monic division with
+The conditional milestone did not include a quotient model or ideal image
+calculation. These are now supplied in `BRIDGE.md`. Still remaining are monic division with
 the staircase bounds, the final V_N induction, the binary matrix equivalence,
 and the determinant/residual-polynomial bridge. This is not a proof of the
 full all-scale nonvanishing theorem or of π badly approximability.
