@@ -1,0 +1,172 @@
+def PiWeightedColon.stairWeight : Nat → Nat → Nat :=
+fun s a => HAdd.hAdd.{0, 0, 0} s (HMul.hMul.{0, 0, 0} 4 (HDiv.hDiv.{0, 0, 0} a 2))
+'PiWeightedColon.stairWeight' does not depend on any axioms
+def PiWeightedColon.StairBound : Nat → PiWeightedColon.Plane → Prop :=
+fun M f => ∀ (s a : Nat), LT.lt.{0} M (PiWeightedColon.stairWeight s a) → Eq.{1} (PiWeightedColon.coeff.{0} f s a) 0
+'PiWeightedColon.StairBound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.QuotBound : Nat → PiWeightedColon.Plane → Prop :=
+fun M h =>
+  ∀ (s a : Nat),
+    LT.lt.{0} M (HAdd.hAdd.{0, 0, 0} (PiWeightedColon.stairWeight s a) 4) → Eq.{1} (PiWeightedColon.coeff.{0} h s a) 0
+'PiWeightedColon.QuotBound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.bimono : Nat → Nat → PiWeightedColon.F2 → PiWeightedColon.Plane :=
+fun s a b => (Polynomial.monomial.{0} s) ((Polynomial.monomial.{0} a) b)
+'PiWeightedColon.bimono' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.stairBound_zero (M : Nat) : PiWeightedColon.StairBound M 0
+'PiWeightedColon.stairBound_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.quotBound_zero (M : Nat) : PiWeightedColon.QuotBound M 0
+'PiWeightedColon.quotBound_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.stairBound_add {M : Nat} {f g : PiWeightedColon.Plane} (hf : PiWeightedColon.StairBound M f)
+  (hg : PiWeightedColon.StairBound M g) : PiWeightedColon.StairBound M (HAdd.hAdd.{0, 0, 0} f g)
+'PiWeightedColon.stairBound_add' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.quotBound_add {M : Nat} {f g : PiWeightedColon.Plane} (hf : PiWeightedColon.QuotBound M f)
+  (hg : PiWeightedColon.QuotBound M g) : PiWeightedColon.QuotBound M (HAdd.hAdd.{0, 0, 0} f g)
+'PiWeightedColon.quotBound_add' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.stairBound_bimono {M s a : Nat} (b : PiWeightedColon.F2)
+  (hw : LE.le.{0} (PiWeightedColon.stairWeight s a) M) : PiWeightedColon.StairBound M (PiWeightedColon.bimono s a b)
+'PiWeightedColon.stairBound_bimono' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.quotBound_bimono {M s a : Nat} (b : PiWeightedColon.F2)
+  (hw : LE.le.{0} (HAdd.hAdd.{0, 0, 0} (PiWeightedColon.stairWeight s a) 4) M) :
+  PiWeightedColon.QuotBound M (PiWeightedColon.bimono s a b)
+'PiWeightedColon.quotBound_bimono' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.bimono_Q_identity (s a : Nat) (b : PiWeightedColon.F2) :
+  Eq.{1} (PiWeightedColon.bimono s (HAdd.hAdd.{0, 0, 0} a 2) b)
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} PiWeightedColon.globalQ (PiWeightedColon.bimono s a b))
+        (PiWeightedColon.bimono (HAdd.hAdd.{0, 0, 0} s 4) a b))
+      (PiWeightedColon.bimono (HAdd.hAdd.{0, 0, 0} s 2) a b))
+'PiWeightedColon.bimono_Q_identity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.linearRemainder_add (A B D E : PiWeightedColon.Line) :
+  Eq.{1} (PiWeightedColon.linearRemainder (HAdd.hAdd.{0, 0, 0} A D) (HAdd.hAdd.{0, 0, 0} B E))
+    (HAdd.hAdd.{0, 0, 0} (PiWeightedColon.linearRemainder A B) (PiWeightedColon.linearRemainder D E))
+'PiWeightedColon.linearRemainder_add' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.lineEmbedding_monomial (s : Nat) (b : PiWeightedColon.F2) :
+  Eq.{1} (PiWeightedColon.lineEmbedding ((Polynomial.monomial.{0} s) b)) (PiWeightedColon.bimono s 0 b)
+'PiWeightedColon.lineEmbedding_monomial' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.y_lineEmbedding_monomial (s : Nat) (b : PiWeightedColon.F2) :
+  Eq.{1}
+    (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} Polynomial.X.{0})
+      (PiWeightedColon.lineEmbedding ((Polynomial.monomial.{0} s) b)))
+    (PiWeightedColon.bimono s 1 b)
+'PiWeightedColon.y_lineEmbedding_monomial' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.DivisionBound : Nat → PiWeightedColon.Plane → Prop :=
+fun M f =>
+  ∃ h A B,
+    And
+      (Eq.{1} f
+        (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} PiWeightedColon.globalQ h) (PiWeightedColon.linearRemainder A B)))
+      (And (PiWeightedColon.QuotBound M h)
+        (And (LE.le.{0} (Polynomial.natDegree.{0} A) M) (LE.le.{0} (Polynomial.natDegree.{0} B) M)))
+'PiWeightedColon.DivisionBound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.divisionBound_zero (M : Nat) : PiWeightedColon.DivisionBound M 0
+'PiWeightedColon.divisionBound_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.divisionBound_add {M : Nat} {f g : PiWeightedColon.Plane} (hf : PiWeightedColon.DivisionBound M f)
+  (hg : PiWeightedColon.DivisionBound M g) : PiWeightedColon.DivisionBound M (HAdd.hAdd.{0, 0, 0} f g)
+'PiWeightedColon.divisionBound_add' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.divisionBound_bimono (M a s : Nat) (b : PiWeightedColon.F2) :
+  LE.le.{0} (PiWeightedColon.stairWeight s a) M → PiWeightedColon.DivisionBound M (PiWeightedColon.bimono s a b)
+'PiWeightedColon.divisionBound_bimono' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.divisionBound_sum.{u_1} {ι : Type u_1} (M : Nat) (S : Finset.{u_1} ι) (f : ι → PiWeightedColon.Plane)
+  (hf : ∀ (i : ι), Membership.mem.{u_1, u_1} S i → PiWeightedColon.DivisionBound M (f i)) :
+  PiWeightedColon.DivisionBound M (∑ i ∈ S, f i)
+'PiWeightedColon.divisionBound_sum' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.staircase_division (M : Nat) (f : PiWeightedColon.Plane) (hf : PiWeightedColon.StairBound M f) :
+  PiWeightedColon.DivisionBound M f
+'PiWeightedColon.staircase_division' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.quotBound_scale_zero (h : PiWeightedColon.Plane) (hh : PiWeightedColon.QuotBound 1 h) : Eq.{1} h 0
+'PiWeightedColon.quotBound_scale_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.quotBound_scale_succ (N : Nat) (h : PiWeightedColon.Plane)
+  (hh : PiWeightedColon.QuotBound (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 (HAdd.hAdd.{0, 0, 0} N 1)) 1) h) :
+  PiWeightedColon.StairBound (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1) h
+'PiWeightedColon.quotBound_scale_succ' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.stairBound_smul {M : Nat} (b : PiWeightedColon.F2) (f : PiWeightedColon.Plane)
+  (hf : PiWeightedColon.StairBound M f) : PiWeightedColon.StairBound M (HSMul.hSMul.{0, 0, 0} b f)
+'PiWeightedColon.stairBound_smul' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.staircaseBoundSpace : Nat → Submodule.{0, 0} PiWeightedColon.F2 PiWeightedColon.Plane :=
+fun M =>
+  Submodule.mk.{0, 0}
+    (AddSubmonoid.mk.{0} (AddSubsemigroup.mk.{0} (setOf.{0} fun f => PiWeightedColon.StairBound M f) ⋯) ⋯) ⋯
+'PiWeightedColon.staircaseBoundSpace' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.staircase_index_iff (N s a : Nat) :
+  Iff (LE.le.{0} (PiWeightedColon.stairWeight s a) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+    (And (LE.le.{0} a (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 N) 1))
+      (LE.le.{0} s (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 (HSub.hSub.{0, 0, 0} N (HDiv.hDiv.{0, 0, 0} a 2))) 1)))
+'PiWeightedColon.staircase_index_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.V_N : Nat → Submodule.{0, 0} PiWeightedColon.F2 PiWeightedColon.Plane :=
+fun N =>
+  Submodule.span.{0, 0} PiWeightedColon.F2
+    (setOf.{0} fun f =>
+      ∃ s a,
+        And (LE.le.{0} a (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 N) 1))
+          (And
+            (LE.le.{0} s
+              (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 (HSub.hSub.{0, 0, 0} N (HDiv.hDiv.{0, 0, 0} a 2))) 1))
+            (Eq.{1} f (PiWeightedColon.mono.{0} s a))))
+'PiWeightedColon.V_N' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.V_N_le_bound (N : Nat) :
+  LE.le.{0} (PiWeightedColon.V_N N)
+    (PiWeightedColon.staircaseBoundSpace (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+'PiWeightedColon.V_N_le_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.bimono_eq_smul (s a : Nat) (b : PiWeightedColon.F2) :
+  Eq.{1} (PiWeightedColon.bimono s a b) (HSMul.hSMul.{0, 0, 0} b (PiWeightedColon.mono.{0} s a))
+'PiWeightedColon.bimono_eq_smul' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.bound_le_V_N (N : Nat) :
+  LE.le.{0} (PiWeightedColon.staircaseBoundSpace (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+    (PiWeightedColon.V_N N)
+'PiWeightedColon.bound_le_V_N' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.V_N_eq_bound (N : Nat) :
+  Eq.{1} (PiWeightedColon.V_N N) (PiWeightedColon.staircaseBoundSpace (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+'PiWeightedColon.V_N_eq_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.V_N_membership (N : Nat) (f : PiWeightedColon.Plane) :
+  Iff (Membership.mem.{0, 0} (PiWeightedColon.V_N N) f)
+    (PiWeightedColon.StairBound (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1) f)
+'PiWeightedColon.V_N_membership' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.V_N_bounded_division (N : Nat) (f : PiWeightedColon.Plane)
+  (hf : Membership.mem.{0, 0} (PiWeightedColon.V_N N) f) :
+  ∃ h A B,
+    And
+      (Eq.{1} f
+        (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} PiWeightedColon.globalQ h) (PiWeightedColon.linearRemainder A B)))
+      (And (ite.{1} (Eq.{1} N 0) (Eq.{1} h 0) (Membership.mem.{0, 0} (PiWeightedColon.V_N (HSub.hSub.{0, 0, 0} N 1)) h))
+        (And (LE.le.{0} (Polynomial.natDegree.{0} A) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+          (LE.le.{0} (Polynomial.natDegree.{0} B) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))))
+'PiWeightedColon.V_N_bounded_division' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.staircase_dataIntersection_zero (N : Nat) (f : PiWeightedColon.Plane) :
+  PiWeightedColon.StairBound (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1) f →
+    Membership.mem.{0, 0} (PiWeightedColon.dataIntersection N) f → Eq.{1} f 0
+'PiWeightedColon.staircase_dataIntersection_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.V_N_dataIntersection_zero (N : Nat) (f : PiWeightedColon.Plane)
+  (hf : Membership.mem.{0, 0} (PiWeightedColon.V_N N) f)
+  (hI : Membership.mem.{0, 0} (PiWeightedColon.dataIntersection N) f) : Eq.{1} f 0
+'PiWeightedColon.V_N_dataIntersection_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.V_N_inf_dataIntersection (N : Nat) :
+  Eq.{1}
+    (PiWeightedColon.V_N N ⊓
+      Submodule.restrictScalars.{0, 0, 0} PiWeightedColon.F2 (PiWeightedColon.dataIntersection N))
+    Bot.bot.{0}
+'PiWeightedColon.V_N_inf_dataIntersection' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.upper_staircase_edge (N : Nat) :
+  And (Membership.mem.{0, 0} (PiWeightedColon.V_N N) (PiWeightedColon.mono.{0} 1 (HMul.hMul.{0, 0, 0} 2 N)))
+    (Membership.mem.{0, 0} (PiWeightedColon.V_N N)
+      (PiWeightedColon.mono.{0} 1 (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 N) 1)))
+'PiWeightedColon.Regression.upper_staircase_edge' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.y_four_division :
+  Eq.{1} (Polynomial.C.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 4))
+    (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} PiWeightedColon.globalQ PiWeightedColon.globalQ)
+      (PiWeightedColon.linearRemainder
+        (HAdd.hAdd.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 8) (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 4)) 0))
+'PiWeightedColon.Regression.y_four_division' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.y_four_quotient_bound :
+  And (PiWeightedColon.QuotBound 9 PiWeightedColon.globalQ) (Not (PiWeightedColon.StairBound 1 PiWeightedColon.globalQ))
+'PiWeightedColon.Regression.y_four_quotient_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.nonzero_intersection_outside_staircase :
+  And
+    (Membership.mem.{0, 0} (PiWeightedColon.dataIntersection 0)
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.endpointX false) (PiWeightedColon.endpointX true)))
+    (And (Ne.{1} (HMul.hMul.{0, 0, 0} (PiWeightedColon.endpointX false) (PiWeightedColon.endpointX true)) 0)
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.endpointX false) (PiWeightedColon.endpointX true) ∉ PiWeightedColon.V_N 0))
+'PiWeightedColon.Regression.nonzero_intersection_outside_staircase' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.dataIntersection_proper (N : Nat) : 1 ∉ PiWeightedColon.dataIntersection N
+'PiWeightedColon.Regression.dataIntersection_proper' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

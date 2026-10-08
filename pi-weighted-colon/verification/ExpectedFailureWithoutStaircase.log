@@ -1,0 +1,4 @@
+ExpectedFailureWithoutStaircase.lean:7:4: error: Tactic `assumption` failed
+
+case hf
+⊢ endpointX false * endpointX true ∈ V_N 0

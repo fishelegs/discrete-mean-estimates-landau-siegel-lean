@@ -1,11 +1,14 @@
-# Weighted colon lemma for the π all-scale algebraic argument
+# All-scale staircase nonvanishing for the fixed π algebraic family
 
-This checkpoint proves the weighted colon milestone for the actual
-endpoint-generated ideals, the conditional univariate remainder step in
-[REMAINDER.md](REMAINDER.md), and the concrete bridge from both actual
-endpoint ideals to those remainder divisibilities in [BRIDGE.md](BRIDGE.md).
-It does **not** prove the full staircase intersection
-theorem, a determinant parity statement, an analytic lower bound, or that π is
+This checkpoint proves the full algebraic theorem `V_N ∩ I_N = {0}` for
+all natural N in the fixed F₂ endpoint family below. It includes the weighted
+colon lemma, the actual ideal-to-remainder bridge, staircase-bounded division,
+and the final induction. [ALL_SCALE.md](ALL_SCALE.md) gives the exact final
+theorem types and remaining application bridges.
+
+The arithmetic application is the fixed weight-2 family. This does not assert
+coverage of arbitrary arithmetic weights, formalize the binomial matrix or
+rational determinant bridge, give an archimedean bound, or prove that π is
 badly approximable.
 
 ## Exact proved statement
@@ -23,7 +26,7 @@ K_ε = ((z − ε)², y^(d_ε))
 I_N = J_0 K_0^N ∩ J_1 K_1^N
 ```
 
-The main declaration is `PiWeightedColon.intersection_colon`:
+The colon declaration `PiWeightedColon.intersection_colon` remains unchanged:
 
 ```lean
 theorem intersection_colon (N : ℕ) :
@@ -36,6 +39,20 @@ are exactly the polynomials `f` for which `f*Q` belongs to the data ideal.
 
 The generators are defined explicitly, and their connection to the weighted
 coefficient model is proved, rather than supplied as a hypothesis.
+
+The final theorem is `PiWeightedColon.V_N_inf_dataIntersection`:
+
+```lean
+theorem V_N_inf_dataIntersection (N : ℕ) :
+  V_N N ⊓ (dataIntersection N).restrictScalars F2 = ⊥
+```
+
+`V_N` is the actual F₂ span of `t^s y^a` with
+`a ≤ 2*N+1` and `s ≤ 4*(N-a/2)+1`. Its equivalence to the coefficient support
+bound `s+4*(a/2) ≤ 4*N+1` is proved, not assumed. The direct pointwise form is
+`V_N_dataIntersection_zero`. No degree, division or local-divisibility
+hypotheses remain in these final declarations.
+
 
 ## Proof components
 
@@ -65,20 +82,18 @@ threshold still increases by exactly two, not three. A further regression proves
 that the colon ideal at scale zero is not the original ideal. The two negative
 tests must fail on the false hypotheses `1 ≤ 0` and `5=1 ∨ 5=3`.
 
-The combined reproducible check compiles seven proof modules, three positive
-regression modules, three type/definition/axiom audits, and five expected failures. All 155
+The combined reproducible check compiles nine proof modules, four positive
+regression modules, four type/definition/axiom audits, and seven expected failures. All 195
 declarations, including definitions and regression theorems, are audited.
 Only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` are
 permitted. The proof sources contain no `sorry`, `admit`, `native_decide`,
 custom axiom or unsafe declaration. Warnings are treated as errors.
 
-The full `V_N ∩ I_N = {0}` theorem has not been formalized here: monic
-division with staircase bounds, derivation of the remainder's degree bounds,
-and final induction remain. The local divisibility conditions are now proved
-from actual endpoint ideal membership, not assumed by the new main theorem.
-The binary matrix equivalence and the integer determinant/residual-polynomial
-bridge also remain unformalized. None of these algebraic statements alone gives
-a uniform archimedean estimate or proves the π badly-approximable statement.
+The full `V_N ∩ I_N = {0}` theorem is now formalized for this fixed family.
+The binary matrix/binomial-entry equivalence and the rational/integer
+determinant and residual-polynomial bridges remain unformalized. The theorem
+does not extend the arithmetic result to arbitrary weights. No uniform
+archimedean estimate or π badly-approximability theorem is claimed.
 
 ## Pins and replay
 
@@ -101,7 +116,7 @@ From the repository root, on KEYISHEN-MC6 the checked command is:
 python3 pi-weighted-colon/scripts/replay.py \
   --lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean \
   --existing-mathlib-project /Users/keyishen/Documents/Codex/2026-10-04/task/mc6-proof \
-  --out /tmp/pi-bridge-replay
+  --out /tmp/pi-all-scale-replay
 ```
 
 For another machine, substitute the compiler and existing project paths with

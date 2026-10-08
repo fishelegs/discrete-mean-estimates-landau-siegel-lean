@@ -1,5 +1,9 @@
 # Actual endpoint ideals to quadratic remainders
 
+This records the earlier bridge milestone. [ALL_SCALE.md](ALL_SCALE.md) now
+supplies the staircase division and final induction, while preserving every
+proof and regression source from this milestone.
+
 This milestone proves the local divisibility bridge from the existing, explicit
 ideals `endpointJ ε * endpointK ε ^ N` for both endpoints and all natural N.
 The new final theorem has no local divisibility hypotheses. It still takes an
@@ -111,9 +115,8 @@ The dedicated `.github/workflows/pi-algebraic.yml` job runs the same expanded
 script and uploads its receipt and all logs. The Lean 4.30.0 and mathlib pins,
 existing root workflow and old π checkpoints remain unchanged.
 
-This is a proved ideal-to-remainder bridge, not the full V_N∩I_N={0} theorem.
-Still required are monic division respecting the staircase, the remainder
-and quotient degree/support bounds, and the final induction. The matrix
+The bridge milestone alone did not prove V_N∩I_N={0}. The staircase-bounded
+division and final induction have since been proved in `ALL_SCALE.md`. The matrix
 invertibility equivalence, determinant parity and residual-polynomial bridge
 are also unformalized. No archimedean bound or π badly-approximability theorem
 has been proved. The older Lean 4.34.1 regression suite was not rerun.

@@ -17,10 +17,12 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ['WeightedColon', 'DataIdealPresentation', 'EndpointColon']
-EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge']
-REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression']
-POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit']
+EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing']
+REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression']
+POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit']
 NEGATIVE = {
+    'ExpectedFailureWithoutStaircase': ('Tactic `assumption` failed', 'V_N 0'),
+    'ExpectedFailureExcessQuotientLoss': ('Tactic `assumption` failed', 'StairBound 1 globalQ'),
     'ExpectedFailureWrongQuotientSquare': ('Tactic `assumption` failed', 'reduction'),
     'ExpectedFailureZeroScale': ('1 ≤ 0', 'proved that the proposition'),
     'ExpectedFailureWrongWeight': ('5 = 1 ∨ 5 = 3', 'proved that the proposition'),
@@ -133,7 +135,7 @@ def main():
         for kind, declaration in re.findall(r'^(theorem|def|abbrev|instance) (\w+)\b', source, re.M):
             declarations[namespace + declaration] = kind
     audit = '\n'.join((logs / (name + '.log')).read_text()
-                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit'])
+                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit'])
     reports = dict(re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", audit, re.S))
     reports.update({name: '' for name in re.findall(
         r"'([^']+)' does not depend on any axioms", audit)})
@@ -151,11 +153,11 @@ def main():
                'direct_imports': imports, 'checks': checks,
                'declaration_kinds': declarations, 'axiom_audit': axioms,
                'scope': 'Weighted colon lemma for the actual F2 endpoint ideals, and '
-                        'remainder vanishing with all local divisibility conditions derived '
-                        'from actual endpoint ideal membership via a quadratic quotient model. '
-                        'Remainder decomposition and degree bounds are explicit inputs; '
-                        'staircase division, V_N induction, matrix and determinant/analytic '
-                        'bridges are not proved.'}
+                        'bounded staircase division and the full V_N intersection theorem '
+                        'for the fixed F2 endpoint family d0=1, d1=3, Q=t4+t2+y2. '
+                        'The matrix/binomial-entry, rational determinant, residual-polynomial '
+                        'and analytic bridges are not proved; arbitrary arithmetic weights '
+                        'and pi badly approximability are not covered.'}
     (out / 'replay-receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
     print(f'All {len(declarations)} declaration audits and {len(checks)} compilation checks passed.', flush=True)
     return 0

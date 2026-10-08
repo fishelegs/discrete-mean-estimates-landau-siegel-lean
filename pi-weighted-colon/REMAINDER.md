@@ -71,10 +71,11 @@ missing condition `(X+1)³ ∣ X` and the false degree comparison `4 ≤ 1`.
 The previous two negative tests and all previous axiom checks still run.
 
 The conditional milestone did not include a quotient model or ideal image
-calculation. These are now supplied in `BRIDGE.md`. Still remaining are monic division with
-the staircase bounds, the final V_N induction, the binary matrix equivalence,
-and the determinant/residual-polynomial bridge. This is not a proof of the
-full all-scale nonvanishing theorem or of π badly approximability.
+calculation. These are now supplied in `BRIDGE.md`, and `ALL_SCALE.md` completes the
+staircase-bounded division and final V_N induction. The binary matrix and
+determinant/residual-polynomial bridges remain unformalized. The conditional
+remainder theorem alone does not give the full algebraic theorem, and no
+π badly-approximability statement is proved.
 
 ## Reproduce and CI
 
