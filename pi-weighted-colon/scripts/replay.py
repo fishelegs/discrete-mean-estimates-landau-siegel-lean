@@ -17,10 +17,12 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ['WeightedColon', 'DataIdealPresentation', 'EndpointColon']
-EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing']
-REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression']
-POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit']
+EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile']
+REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression']
+POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit']
 NEGATIVE = {
+    'ExpectedFailurePairZero': ('proved that the proposition', 'frequencyLength 0 1 = 1'),
+    'ExpectedFailureNewtonValue': ('proved that the proposition', '13 = 12'),
     'ExpectedFailureBinaryZeroPower': ('proved that the proposition', 'binaryEntry 0 1 false 1 0 = 0'),
     'ExpectedFailureBinaryParity': ('proved that the proposition', 'binaryEntry 4 0 true 0 2 = 1'),
     'ExpectedFailureWithoutStaircase': ('Tactic `assumption` failed', 'V_N 0'),
@@ -137,7 +139,7 @@ def main():
         for kind, declaration in re.findall(r'^(theorem|def|abbrev|instance) (\w+)\b', source, re.M):
             declarations[namespace + declaration] = kind
     audit = '\n'.join((logs / (name + '.log')).read_text()
-                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit'])
+                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit'])
     reports = dict(re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", audit, re.S))
     reports.update({name: '' for name in re.findall(
         r"'([^']+)' does not depend on any axioms", audit)})
@@ -159,7 +161,12 @@ def main():
                         'for the fixed F2 endpoint family d0=1, d1=3, Q=t4+t2+y2. '
                         'The actual binomial-entry F2 matrix has the proved finite index sets '
                         'and dimensions, zero kernel, nonzero square determinant and inverse. '
-                        'Integer collision-quotient, rational/integer determinant and '
+                        'Integral synthetic Newton coefficients reduce to the concrete binary matrix; '
+                        'their square determinant has nonzero reduction modulo two. The actual '
+                        'frequency profile has proved prefix nodes, original-column bijections '
+                        'and counts, and entrywise integral Newton expansion with nonzero diagonal '
+                        'factors. The full original evaluation determinant factorization/nonvanishing, '
+                        'integer collision-quotient, rational/integer determinant normalization and '
                         'residual-polynomial/analytic bridges are not proved; arbitrary '
                         'arithmetic weights and pi badly approximability are not covered.'}
     (out / 'replay-receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')

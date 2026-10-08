@@ -93,8 +93,9 @@ explicit. Their matrix entries remain exactly the displayed binomial formula.
 
 ## Verification and remaining bridges
 
-The cumulative replay now compiles 22 positive modules and checks nine intended
-failures, auditing all 260 declarations. All previous proof/regression/audit
+The matrix-milestone replay compiled 22 positive modules and checked nine intended
+failures, auditing all 260 declarations. The later staged integral bridge in
+[NEWTON.md](NEWTON.md) extends the cumulative replay without changing these Lean sources. All previous proof/regression/audit
 sources and all toolchain/dependency pins are unchanged. Only `propext`,
 `Classical.choice` and `Quot.sound` are permitted; proof sources contain no
 `sorry`, `admit`, `native_decide`, custom axiom or unsafe declaration.
@@ -112,7 +113,9 @@ workflow uses the same expanded replay script. Use the README command with
 This proves invertibility and nonzero determinant **over F₂** of the concrete
 matrix. It does not prove the subsequent integer collision-quotient,
 rational/integer determinant normalization or parity, or residual-polynomial
-bridge. The arithmetic application remains the fixed weight-2 family; no
+bridge. The later Newton stage proves nonzero modulo-two reduction of its
+separate integral Newton determinant; it does not yet prove the original
+evaluation determinant statement. The arithmetic application remains the fixed weight-2 family; no
 arbitrary-weight extension, archimedean bound or π badly-approximability theorem
 is claimed. Older Lean 4.34.1 checkpoints are preserved but were not rerun.
 No full containing-repository build is claimed.

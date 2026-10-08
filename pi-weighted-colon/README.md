@@ -1,4 +1,4 @@
-# Explicit binary-matrix nonvanishing for the fixed π algebraic family
+# Integral Newton helpers for the fixed π algebraic family
 
 This checkpoint proves the full algebraic theorem `V_N ∩ I_N = {0}` for
 all natural N in the fixed F₂ endpoint family below. It includes the weighted
@@ -7,10 +7,13 @@ and the final induction. It now also proves the concrete binomial-entry
 matrix bridge, both finite index sets and dimensions, and invertibility over
 F₂. [MATRIX.md](MATRIX.md) gives the exact matrix statements and the remaining
 application bridges; [ALL_SCALE.md](ALL_SCALE.md) records the polynomial core.
+[NEWTON.md](NEWTON.md) now records a staged integer bridge: integral Newton
+coefficients, their exact reduction to this binary matrix, the actual frequency
+profile and column bijection, and entrywise evaluation factorization.
 
 The arithmetic application is the fixed weight-2 family. This does not assert
-coverage of arbitrary arithmetic weights, formalize the integer collision-quotient
-or rational/integer determinant bridge, give an archimedean bound, or prove that π is
+coverage of arbitrary arithmetic weights, formalize the full original integer
+evaluation determinant or its rational normalization, give an archimedean bound, or prove that π is
 badly approximable.
 
 ## Exact proved statement
@@ -84,8 +87,8 @@ threshold still increases by exactly two, not three. A further regression proves
 that the colon ideal at scale zero is not the original ideal. The two negative
 tests must fail on the false hypotheses `1 ≤ 0` and `5=1 ∨ 5=3`.
 
-The combined reproducible check compiles twelve proof modules, five positive
-regression modules, five type/definition/axiom audits, and nine expected failures. All 260
+The combined reproducible check compiles fifteen proof modules, six positive
+regression modules, six type/definition/axiom audits, and eleven expected failures. All 329
 declarations, including definitions and regression theorems, are audited.
 Only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` are
 permitted. The proof sources contain no `sorry`, `admit`, `native_decide`,
@@ -93,8 +96,12 @@ custom axiom or unsafe declaration. Warnings are treated as errors.
 
 The full `V_N ∩ I_N = {0}` theorem is now formalized for this fixed family.
 The explicit binary matrix is now proved invertible, with nonzero determinant
-for every column reindexing. The integer collision-quotient, rational/integer
-determinant normalization and residual-polynomial bridges remain unformalized. The theorem
+for every column reindexing. The integral Newton matrix now also has nonzero
+determinant, with nonzero reduction modulo two. The exact original-frequency
+profile and entrywise integer evaluation factorization are formalized. The global
+original evaluation determinant factorization and nonvanishing, integer
+collision-quotient, rational/integer determinant normalization and residual-polynomial
+bridges remain unformalized. The theorem
 does not extend the arithmetic result to arbitrary weights. No uniform
 archimedean estimate or π badly-approximability theorem is claimed.
 
@@ -119,7 +126,7 @@ From the repository root, on KEYISHEN-MC6 the checked command is:
 python3 pi-weighted-colon/scripts/replay.py \
   --lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean \
   --existing-mathlib-project /Users/keyishen/Documents/Codex/2026-10-04/task/mc6-proof \
-  --out /tmp/pi-matrix-replay
+  --out /tmp/pi-newton-replay
 ```
 
 For another machine, substitute the compiler and existing project paths with
