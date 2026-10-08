@@ -19,14 +19,19 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ['WeightedColon', 'DataIdealPresentation', 'EndpointColon']
-EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile', 'IntegerOriginNonvanishing', 'RationalOriginNonvanishing', 'HermitePolynomialNonvanishing', 'HermiteComplexSpecialization', 'PiHermiteNonvanishing', 'ApproximationPairs', 'SqrtTwoBenchmark', 'SqrtTwoPellPairs']
-REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression', 'OriginRegression', 'RationalRegression', 'HermiteRegression', 'SpecializationRegression', 'PiSpecializationRegression', 'ApproximationPairsRegression']
+EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile', 'IntegerOriginNonvanishing', 'RationalOriginNonvanishing', 'HermitePolynomialNonvanishing', 'HermiteComplexSpecialization', 'PiHermiteNonvanishing', 'ApproximationPairs', 'SqrtTwoBenchmark', 'SqrtTwoPellPairs', 'LogPadeRecurrence', 'LogPadeCoefficients', 'LogPadeCoefficientRecurrence', 'LogPadeNormalization', 'LogPadeFiniteIdentity']
+REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression', 'OriginRegression', 'RationalRegression', 'HermiteRegression', 'SpecializationRegression', 'PiSpecializationRegression', 'ApproximationPairsRegression', 'LogPadeRegression']
 VENDOR_PREFIX = 'LeanFormalizations.NumberTheory.Transcendence.'
 VENDOR = [VENDOR_PREFIX + name for name in ['ETranscendental', 'PiLindemann', 'HermiteLindemann', 'MonicRootSums', 'SubsetSumEsymm', 'PiTranscendental']]
-AUDITS = ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit', 'SpecializationAudit', 'A7ImportedAudit', 'PiSpecializationAudit', 'ApproximationPairsAudit']
+AUDITS = ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit', 'SpecializationAudit', 'A7ImportedAudit', 'PiSpecializationAudit', 'ApproximationPairsAudit', 'LogPadeAudit']
 POSITIVE = VENDOR + CORE + EXTRA_CORE + REGRESSIONS + AUDITS
 LARGE_IMPORTS = set(VENDOR + ['PiHermiteNonvanishing', 'PiSpecializationRegression', 'A7ImportedAudit', 'PiSpecializationAudit', 'ExpectedFailurePiMatrixEntry', 'ExpectedFailurePiParameterSubstitution'])
 NEGATIVE = {
+    'ExpectedFailureLogPadeExponent': ('Type mismatch', 'X ^ 2'),
+    'ExpectedFailureLogPadeNormalizedSign': ('Type mismatch', '= -(1 / 6)'),
+    'ExpectedFailureLogPadeNormalizedFactor': ('Type mismatch', 'logPadeRationalQ 1 * logPadeRationalP 0 = 1'),
+    'ExpectedFailureLogPadeNumeratorScale': ('Type mismatch', 'logPadeLCoeff 1 1 = 1 / 2'),
+    'ExpectedFailureLogPadeMissingNormalization': ('Type mismatch', '/ (1 + Complex.I) ^ 1'),
     'ExpectedFailurePairsWithoutIndependence': ('Application type mismatch', 'PiWeightedColon.HasApproximationPairs 0 1 0'),
     'ExpectedFailureSqrtTwoZeroDenominator': ('unsolved goals', '⊢ False'),
     'ExpectedFailurePairsEtaOne': ('unsolved goals', '⊢ False'),
@@ -299,7 +304,19 @@ def main():
                         'when C>0 and 0<=eta<1. The explicit Pell recurrence constructs this '
                         'interface for sqrt(2) with C=9 and eta=1/2, giving 1/(18*q^2). '
                         'These benchmarks and the reusable criterion supply no such pair '
-                        'construction or uniform lower bound for pi.'}
+                        'construction or uniform lower bound for pi. '
+                        'The logarithmic Pade polynomials are defined by the specified finite '
+                        'binomial and harmonic-number coefficient sums over Q. Their equality '
+                        'with the three-term recurrence family is proved for every natural r; '
+                        'the exact adjacent determinant is d_r*x^(2*r+1), where '
+                        'd_r=(r!)^4/((2*r)!*(2*r+1)!) is positive. At x=1-i, the specified '
+                        'normalizations P_r/(1+i)^r and 2*i*L_r/(1+i)^r equal explicitly '
+                        'constructed rational sequences for every r. Their exact complex, '
+                        'rational and real adjacent determinant is 2*(-1)^r*d_r and is nonzero. '
+                        'No general binomial-parameter identity, formal logarithmic remainder '
+                        'order, complex integral, convergence to pi, denominator clearing, '
+                        'integer linear-error bound, Baker irrationality measure or pi BA '
+                        'statement is formalized by this Pade addition.'}
     (out / 'replay-receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
     print(f'All {len(declarations)} declaration audits and {len(checks)} compilation checks passed.', flush=True)
     return 0

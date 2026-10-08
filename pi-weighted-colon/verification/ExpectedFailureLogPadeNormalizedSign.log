@@ -1,0 +1,6 @@
+/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/ExpectedFailureLogPadeNormalizedSign.lean:7:2: error: Type mismatch
+  Regression.log_pade_second_normalized_determinant
+has type
+  logPadeRationalQ 1 * logPadeRationalP 2 - logPadeRationalQ 2 * logPadeRationalP 1 = -(1 / 6)
+but is expected to have type
+  logPadeRationalQ 1 * logPadeRationalP 2 - logPadeRationalQ 2 * logPadeRationalP 1 = 1 / 6

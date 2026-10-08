@@ -1,0 +1,6 @@
+/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/ExpectedFailureLogPadeExponent.lean:6:2: error: Type mismatch
+  logPade_adjacent_determinant 0
+has type
+  logPadeP 0 * logPadeL (0 + 1) - logPadeP (0 + 1) * logPadeL 0 = C (logPadeD 0) * X ^ (2 * 0 + 1)
+but is expected to have type
+  logPadeP 0 * logPadeL 1 - logPadeP 1 * logPadeL 0 = C (logPadeD 0) * X ^ 2

@@ -1,0 +1,6 @@
+/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/ExpectedFailureLogPadeNumeratorScale.lean:4:2: error: Type mismatch
+  PiWeightedColon.logPadeLCoeff_one 0
+has type
+  PiWeightedColon.logPadeLCoeff (0 + 1) 1 = 1
+but is expected to have type
+  PiWeightedColon.logPadeLCoeff 1 1 = 1 / 2

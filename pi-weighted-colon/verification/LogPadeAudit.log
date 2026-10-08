@@ -1,0 +1,481 @@
+PiWeightedColon.logPadeBeta (r : Nat) : Rat
+'PiWeightedColon.logPadeBeta' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeD (r : Nat) : Rat
+'PiWeightedColon.logPadeD' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRecPair : Nat → Prod.{0, 0} (Polynomial.{0} Rat) (Polynomial.{0} Rat)
+'PiWeightedColon.logPadeRecPair' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRecP (r : Nat) : Polynomial.{0} Rat
+'PiWeightedColon.logPadeRecP' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRecL (r : Nat) : Polynomial.{0} Rat
+'PiWeightedColon.logPadeRecL' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRecP_zero : Eq.{1} (PiWeightedColon.logPadeRecP 0) 1
+'PiWeightedColon.logPadeRecP_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRecL_zero : Eq.{1} (PiWeightedColon.logPadeRecL 0) 0
+'PiWeightedColon.logPadeRecL_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRecP_one :
+  Eq.{1} (PiWeightedColon.logPadeRecP 1)
+    (HSub.hSub.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (1 / 2)) Polynomial.X.{0}))
+'PiWeightedColon.logPadeRecP_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRecL_one : Eq.{1} (PiWeightedColon.logPadeRecL 1) Polynomial.X.{0}
+'PiWeightedColon.logPadeRecL_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRecP_step (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadeRecP (HAdd.hAdd.{0, 0, 0} r 2))
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (1 / 2)) Polynomial.X.{0}))
+        (PiWeightedColon.logPadeRecP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (PiWeightedColon.logPadeBeta r))
+          (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 2))
+        (PiWeightedColon.logPadeRecP r)))
+'PiWeightedColon.logPadeRecP_step' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRecL_step (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadeRecL (HAdd.hAdd.{0, 0, 0} r 2))
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (1 / 2)) Polynomial.X.{0}))
+        (PiWeightedColon.logPadeRecL (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (PiWeightedColon.logPadeBeta r))
+          (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 2))
+        (PiWeightedColon.logPadeRecL r)))
+'PiWeightedColon.logPadeRecL_step' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeBeta_pos (r : Nat) : LT.lt.{0} 0 (PiWeightedColon.logPadeBeta r)
+'PiWeightedColon.logPadeBeta_pos' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeD_pos (r : Nat) : LT.lt.{0} 0 (PiWeightedColon.logPadeD r)
+'PiWeightedColon.logPadeD_pos' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeD_zero : Eq.{1} (PiWeightedColon.logPadeD 0) 1
+'PiWeightedColon.logPadeD_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeD_step (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadeD (HAdd.hAdd.{0, 0, 0} r 1))
+    (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeBeta r) (PiWeightedColon.logPadeD r))
+'PiWeightedColon.logPadeD_step' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRec_adjacent_determinant (r : Nat) :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRecP r) (PiWeightedColon.logPadeRecL (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRecP (HAdd.hAdd.{0, 0, 0} r 1)) (PiWeightedColon.logPadeRecL r)))
+    (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (PiWeightedColon.logPadeD r))
+      (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 r) 1)))
+'PiWeightedColon.logPadeRec_adjacent_determinant' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRec_adjacent_ne_zero (r : Nat) :
+  Ne.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRecP r) (PiWeightedColon.logPadeRecL (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRecP (HAdd.hAdd.{0, 0, 0} r 1)) (PiWeightedColon.logPadeRecL r)))
+    0
+'PiWeightedColon.logPadeRec_adjacent_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadePCoeff (r j : Nat) : Rat
+'PiWeightedColon.logPadePCoeff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeLCoeff (r j : Nat) : Rat
+'PiWeightedColon.logPadeLCoeff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeP (r : Nat) : Polynomial.{0} Rat
+'PiWeightedColon.logPadeP' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeL (r : Nat) : Polynomial.{0} Rat
+'PiWeightedColon.logPadeL' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadePCoeff_above (r j : Nat) (h : LT.lt.{0} r j) : Eq.{1} (PiWeightedColon.logPadePCoeff r j) 0
+'PiWeightedColon.logPadePCoeff_above' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeLCoeff_above (r j : Nat) (h : LT.lt.{0} r j) : Eq.{1} (PiWeightedColon.logPadeLCoeff r j) 0
+'PiWeightedColon.logPadeLCoeff_above' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeP_coeff (r j : Nat) :
+  Eq.{1} (Polynomial.coeff.{0} (PiWeightedColon.logPadeP r) j) (PiWeightedColon.logPadePCoeff r j)
+'PiWeightedColon.logPadeP_coeff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeL_coeff (r j : Nat) :
+  Eq.{1} (Polynomial.coeff.{0} (PiWeightedColon.logPadeL r) j) (PiWeightedColon.logPadeLCoeff r j)
+'PiWeightedColon.logPadeL_coeff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadePCoeff_zero (r : Nat) : Eq.{1} (PiWeightedColon.logPadePCoeff r 0) 1
+'PiWeightedColon.logPadePCoeff_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeLCoeff_zero (r : Nat) : Eq.{1} (PiWeightedColon.logPadeLCoeff r 0) 0
+'PiWeightedColon.logPadeLCoeff_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadePCoeff_one (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadePCoeff (HAdd.hAdd.{0, 0, 0} r 1) 1)
+    (HDiv.hDiv.{0, 0, 0} (Neg.neg.{0} (HAdd.hAdd.{0, 0, 0} (↑r) 1)) 2)
+'PiWeightedColon.logPadePCoeff_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeLCoeff_one (r : Nat) : Eq.{1} (PiWeightedColon.logPadeLCoeff (HAdd.hAdd.{0, 0, 0} r 1) 1) 1
+'PiWeightedColon.logPadeLCoeff_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadePCoeff_factorial (r j : Nat) (hj : LE.le.{0} j r) :
+  Eq.{1} (PiWeightedColon.logPadePCoeff r j)
+    (HDiv.hDiv.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} (-1) j) (HPow.hPow.{0, 0, 0} (↑(Nat.factorial r)) 2))
+        ↑(Nat.factorial (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 r) j)))
+      (HMul.hMul.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} (↑(Nat.factorial (HSub.hSub.{0, 0, 0} r j))) 2)
+          ↑(Nat.factorial (HMul.hMul.{0, 0, 0} 2 r)))
+        ↑(Nat.factorial j)))
+'PiWeightedColon.logPadePCoeff_factorial' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadePCoeff_recurrence_interior (k m : Nat) :
+  Eq.{1}
+    (PiWeightedColon.logPadePCoeff (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k m) 1) 2)
+      (HAdd.hAdd.{0, 0, 0} k 2))
+    (HSub.hSub.{0, 0, 0}
+      (HSub.hSub.{0, 0, 0}
+        (PiWeightedColon.logPadePCoeff (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k m) 1) 1)
+          (HAdd.hAdd.{0, 0, 0} k 2))
+        (HMul.hMul.{0, 0, 0} (1 / 2)
+          (PiWeightedColon.logPadePCoeff (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k m) 1) 1)
+            (HAdd.hAdd.{0, 0, 0} k 1))))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeBeta (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k m) 1))
+        (PiWeightedColon.logPadePCoeff (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k m) 1) k)))
+'PiWeightedColon.logPadePCoeff_recurrence_interior' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeLCoeff_recurrence_interior (k m : Nat) :
+  Eq.{1}
+    (PiWeightedColon.logPadeLCoeff (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k m) 1) 2)
+      (HAdd.hAdd.{0, 0, 0} k 2))
+    (HSub.hSub.{0, 0, 0}
+      (HSub.hSub.{0, 0, 0}
+        (PiWeightedColon.logPadeLCoeff (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k m) 1) 1)
+          (HAdd.hAdd.{0, 0, 0} k 2))
+        (HMul.hMul.{0, 0, 0} (1 / 2)
+          (PiWeightedColon.logPadeLCoeff (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k m) 1) 1)
+            (HAdd.hAdd.{0, 0, 0} k 1))))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeBeta (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k m) 1))
+        (PiWeightedColon.logPadeLCoeff (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k m) 1) k)))
+'PiWeightedColon.logPadeLCoeff_recurrence_interior' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadePCoeff_top (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadePCoeff r r)
+    (HDiv.hDiv.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} (-1) r) (HPow.hPow.{0, 0, 0} (↑(Nat.factorial r)) 2))
+      ↑(Nat.factorial (HMul.hMul.{0, 0, 0} 2 r)))
+'PiWeightedColon.logPadePCoeff_top' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadePCoeff_recurrence_top (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadePCoeff (HAdd.hAdd.{0, 0, 0} r 2) (HAdd.hAdd.{0, 0, 0} r 2))
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (Neg.neg.{0} (1 / 2))
+        (PiWeightedColon.logPadePCoeff (HAdd.hAdd.{0, 0, 0} r 1) (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeBeta r) (PiWeightedColon.logPadePCoeff r r)))
+'PiWeightedColon.logPadePCoeff_recurrence_top' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeLCoeff_recurrence_top (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadeLCoeff (HAdd.hAdd.{0, 0, 0} r 2) (HAdd.hAdd.{0, 0, 0} r 2))
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (Neg.neg.{0} (1 / 2))
+        (PiWeightedColon.logPadeLCoeff (HAdd.hAdd.{0, 0, 0} r 1) (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeBeta r) (PiWeightedColon.logPadeLCoeff r r)))
+'PiWeightedColon.logPadeLCoeff_recurrence_top' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadePCoeff_recurrence (r k : Nat) :
+  Eq.{1} (PiWeightedColon.logPadePCoeff (HAdd.hAdd.{0, 0, 0} r 2) (HAdd.hAdd.{0, 0, 0} k 2))
+    (HSub.hSub.{0, 0, 0}
+      (HSub.hSub.{0, 0, 0} (PiWeightedColon.logPadePCoeff (HAdd.hAdd.{0, 0, 0} r 1) (HAdd.hAdd.{0, 0, 0} k 2))
+        (HMul.hMul.{0, 0, 0} (1 / 2)
+          (PiWeightedColon.logPadePCoeff (HAdd.hAdd.{0, 0, 0} r 1) (HAdd.hAdd.{0, 0, 0} k 1))))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeBeta r) (PiWeightedColon.logPadePCoeff r k)))
+'PiWeightedColon.logPadePCoeff_recurrence' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeLCoeff_recurrence (r k : Nat) :
+  Eq.{1} (PiWeightedColon.logPadeLCoeff (HAdd.hAdd.{0, 0, 0} r 2) (HAdd.hAdd.{0, 0, 0} k 2))
+    (HSub.hSub.{0, 0, 0}
+      (HSub.hSub.{0, 0, 0} (PiWeightedColon.logPadeLCoeff (HAdd.hAdd.{0, 0, 0} r 1) (HAdd.hAdd.{0, 0, 0} k 2))
+        (HMul.hMul.{0, 0, 0} (1 / 2)
+          (PiWeightedColon.logPadeLCoeff (HAdd.hAdd.{0, 0, 0} r 1) (HAdd.hAdd.{0, 0, 0} k 1))))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeBeta r) (PiWeightedColon.logPadeLCoeff r k)))
+'PiWeightedColon.logPadeLCoeff_recurrence' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRationalPair : Nat → Prod.{0, 0} Rat Rat
+'PiWeightedColon.logPadeRationalPair' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRationalQ (r : Nat) : Rat
+'PiWeightedColon.logPadeRationalQ' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRationalP (r : Nat) : Rat
+'PiWeightedColon.logPadeRationalP' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRationalQ_zero : Eq.{1} (PiWeightedColon.logPadeRationalQ 0) 1
+'PiWeightedColon.logPadeRationalQ_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRationalP_zero : Eq.{1} (PiWeightedColon.logPadeRationalP 0) 0
+'PiWeightedColon.logPadeRationalP_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRationalQ_one : Eq.{1} (PiWeightedColon.logPadeRationalQ 1) (1 / 2)
+'PiWeightedColon.logPadeRationalQ_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRationalP_one : Eq.{1} (PiWeightedColon.logPadeRationalP 1) 2
+'PiWeightedColon.logPadeRationalP_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRationalQ_step (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadeRationalQ (HAdd.hAdd.{0, 0, 0} r 2))
+    (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (1 / 2) (PiWeightedColon.logPadeRationalQ (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeBeta r) (PiWeightedColon.logPadeRationalQ r)))
+'PiWeightedColon.logPadeRationalQ_step' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRationalP_step (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadeRationalP (HAdd.hAdd.{0, 0, 0} r 2))
+    (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (1 / 2) (PiWeightedColon.logPadeRationalP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeBeta r) (PiWeightedColon.logPadeRationalP r)))
+'PiWeightedColon.logPadeRationalP_step' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRational_adjacent_determinant (r : Nat) :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRationalQ r)
+        (PiWeightedColon.logPadeRationalP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRationalQ (HAdd.hAdd.{0, 0, 0} r 1))
+        (PiWeightedColon.logPadeRationalP r)))
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 (HPow.hPow.{0, 0, 0} (-1) r)) (PiWeightedColon.logPadeD r))
+'PiWeightedColon.logPadeRational_adjacent_determinant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.logPadeRational_adjacent_ne_zero (r : Nat) :
+  Ne.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRationalQ r)
+        (PiWeightedColon.logPadeRationalP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRationalQ (HAdd.hAdd.{0, 0, 0} r 1))
+        (PiWeightedColon.logPadeRationalP r)))
+    0
+'PiWeightedColon.logPadeRational_adjacent_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPade_normalization_base_ne_zero : Ne.{1} (HAdd.hAdd.{0, 0, 0} 1 Complex.I) 0
+'PiWeightedColon.logPade_normalization_base_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPade_complex_step_constants :
+  And
+    (Eq.{1} (HSub.hSub.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} (1 / 2) (HSub.hSub.{0, 0, 0} 1 Complex.I)))
+      (HDiv.hDiv.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 Complex.I) 2))
+    (Eq.{1} (HPow.hPow.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 Complex.I) 2)
+      (Neg.neg.{0} (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 Complex.I) 2)))
+'PiWeightedColon.logPade_complex_step_constants' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRec_eval_P (r : Nat) :
+  Eq.{1}
+    (Polynomial.eval₂.{0, 0} (algebraMap.{0, 0} Rat Complex) (HSub.hSub.{0, 0, 0} 1 Complex.I)
+      (PiWeightedColon.logPadeRecP r))
+    (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 Complex.I) r)
+      ↑(PiWeightedColon.logPadeRationalQ r))
+'PiWeightedColon.logPadeRec_eval_P' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRec_eval_L (r : Nat) :
+  Eq.{1}
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 Complex.I)
+      (Polynomial.eval₂.{0, 0} (algebraMap.{0, 0} Rat Complex) (HSub.hSub.{0, 0, 0} 1 Complex.I)
+        (PiWeightedColon.logPadeRecL r)))
+    (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 Complex.I) r)
+      ↑(PiWeightedColon.logPadeRationalP r))
+'PiWeightedColon.logPadeRec_eval_L' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRec_normalized_P_rational (r : Nat) :
+  Eq.{1}
+    (HDiv.hDiv.{0, 0, 0}
+      (Polynomial.eval₂.{0, 0} (algebraMap.{0, 0} Rat Complex) (HSub.hSub.{0, 0, 0} 1 Complex.I)
+        (PiWeightedColon.logPadeRecP r))
+      (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 Complex.I) r))
+    ↑(PiWeightedColon.logPadeRationalQ r)
+'PiWeightedColon.logPadeRec_normalized_P_rational' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeRec_normalized_L_rational (r : Nat) :
+  Eq.{1}
+    (HDiv.hDiv.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 Complex.I)
+        (Polynomial.eval₂.{0, 0} (algebraMap.{0, 0} Rat Complex) (HSub.hSub.{0, 0, 0} 1 Complex.I)
+          (PiWeightedColon.logPadeRecL r)))
+      (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 Complex.I) r))
+    ↑(PiWeightedColon.logPadeRationalP r)
+'PiWeightedColon.logPadeRec_normalized_L_rational' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeP_zero : Eq.{1} (PiWeightedColon.logPadeP 0) 1
+'PiWeightedColon.logPadeP_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeL_zero : Eq.{1} (PiWeightedColon.logPadeL 0) 0
+'PiWeightedColon.logPadeL_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeP_one :
+  Eq.{1} (PiWeightedColon.logPadeP 1)
+    (HSub.hSub.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (1 / 2)) Polynomial.X.{0}))
+'PiWeightedColon.logPadeP_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeL_one : Eq.{1} (PiWeightedColon.logPadeL 1) Polynomial.X.{0}
+'PiWeightedColon.logPadeL_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeP_step (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadeP (HAdd.hAdd.{0, 0, 0} r 2))
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (1 / 2)) Polynomial.X.{0}))
+        (PiWeightedColon.logPadeP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (PiWeightedColon.logPadeBeta r))
+          (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 2))
+        (PiWeightedColon.logPadeP r)))
+'PiWeightedColon.logPadeP_step' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeL_step (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadeL (HAdd.hAdd.{0, 0, 0} r 2))
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (1 / 2)) Polynomial.X.{0}))
+        (PiWeightedColon.logPadeL (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (PiWeightedColon.logPadeBeta r))
+          (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 2))
+        (PiWeightedColon.logPadeL r)))
+'PiWeightedColon.logPadeL_step' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPade_finite_eq_recurrence (r : Nat) :
+  And (Eq.{1} (PiWeightedColon.logPadeP r) (PiWeightedColon.logPadeRecP r))
+    (Eq.{1} (PiWeightedColon.logPadeL r) (PiWeightedColon.logPadeRecL r))
+'PiWeightedColon.logPade_finite_eq_recurrence' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPade_adjacent_determinant (r : Nat) :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeP r) (PiWeightedColon.logPadeL (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeP (HAdd.hAdd.{0, 0, 0} r 1)) (PiWeightedColon.logPadeL r)))
+    (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (PiWeightedColon.logPadeD r))
+      (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 r) 1)))
+'PiWeightedColon.logPade_adjacent_determinant' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPade_adjacent_ne_zero (r : Nat) :
+  Ne.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeP r) (PiWeightedColon.logPadeL (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeP (HAdd.hAdd.{0, 0, 0} r 1)) (PiWeightedColon.logPadeL r)))
+    0
+'PiWeightedColon.logPade_adjacent_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPade_normalized_P_rational (r : Nat) :
+  Eq.{1}
+    (HDiv.hDiv.{0, 0, 0}
+      (Polynomial.eval₂.{0, 0} (algebraMap.{0, 0} Rat Complex) (HSub.hSub.{0, 0, 0} 1 Complex.I)
+        (PiWeightedColon.logPadeP r))
+      (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 Complex.I) r))
+    ↑(PiWeightedColon.logPadeRationalQ r)
+'PiWeightedColon.logPade_normalized_P_rational' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPade_normalized_L_rational (r : Nat) :
+  Eq.{1}
+    (HDiv.hDiv.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 Complex.I)
+        (Polynomial.eval₂.{0, 0} (algebraMap.{0, 0} Rat Complex) (HSub.hSub.{0, 0, 0} 1 Complex.I)
+          (PiWeightedColon.logPadeL r)))
+      (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 Complex.I) r))
+    ↑(PiWeightedColon.logPadeRationalP r)
+'PiWeightedColon.logPade_normalized_L_rational' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeNormalizedQ (r : Nat) : Complex
+'PiWeightedColon.logPadeNormalizedQ' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeNormalizedP (r : Nat) : Complex
+'PiWeightedColon.logPadeNormalizedP' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeNormalizedQ_eq (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadeNormalizedQ r) ↑(PiWeightedColon.logPadeRationalQ r)
+'PiWeightedColon.logPadeNormalizedQ_eq' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeNormalizedP_eq (r : Nat) :
+  Eq.{1} (PiWeightedColon.logPadeNormalizedP r) ↑(PiWeightedColon.logPadeRationalP r)
+'PiWeightedColon.logPadeNormalizedP_eq' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeNormalizedQ_rational (r : Nat) : ∃ a, Eq.{1} (PiWeightedColon.logPadeNormalizedQ r) ↑a
+'PiWeightedColon.logPadeNormalizedQ_rational' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeNormalizedP_rational (r : Nat) : ∃ a, Eq.{1} (PiWeightedColon.logPadeNormalizedP r) ↑a
+'PiWeightedColon.logPadeNormalizedP_rational' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPadeNormalized_adjacent_determinant (r : Nat) :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeNormalizedQ r)
+        (PiWeightedColon.logPadeNormalizedP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeNormalizedQ (HAdd.hAdd.{0, 0, 0} r 1))
+        (PiWeightedColon.logPadeNormalizedP r)))
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 (HPow.hPow.{0, 0, 0} (-1) r)) ↑(PiWeightedColon.logPadeD r))
+'PiWeightedColon.logPadeNormalized_adjacent_determinant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.logPadeNormalized_adjacent_ne_zero (r : Nat) :
+  Ne.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeNormalizedQ r)
+        (PiWeightedColon.logPadeNormalizedP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeNormalizedQ (HAdd.hAdd.{0, 0, 0} r 1))
+        (PiWeightedColon.logPadeNormalizedP r)))
+    0
+'PiWeightedColon.logPadeNormalized_adjacent_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPade_real_adjacent_determinant (r : Nat) :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} ↑(PiWeightedColon.logPadeRationalQ r)
+        ↑(PiWeightedColon.logPadeRationalP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} ↑(PiWeightedColon.logPadeRationalQ (HAdd.hAdd.{0, 0, 0} r 1))
+        ↑(PiWeightedColon.logPadeRationalP r)))
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 (HPow.hPow.{0, 0, 0} (-1) r)) ↑(PiWeightedColon.logPadeD r))
+'PiWeightedColon.logPade_real_adjacent_determinant' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.logPade_real_adjacent_ne_zero (r : Nat) :
+  Ne.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} ↑(PiWeightedColon.logPadeRationalQ r)
+        ↑(PiWeightedColon.logPadeRationalP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} ↑(PiWeightedColon.logPadeRationalQ (HAdd.hAdd.{0, 0, 0} r 1))
+        ↑(PiWeightedColon.logPadeRationalP r)))
+    0
+'PiWeightedColon.logPade_real_adjacent_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_finite_identity_exact_type (r : Nat) :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeP r) (PiWeightedColon.logPadeL (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeP (HAdd.hAdd.{0, 0, 0} r 1)) (PiWeightedColon.logPadeL r)))
+    (HMul.hMul.{0, 0, 0}
+      (Polynomial.C.{0}
+        (HDiv.hDiv.{0, 0, 0} (HPow.hPow.{0, 0, 0} (↑(Nat.factorial r)) 4)
+          (HMul.hMul.{0, 0, 0} ↑(Nat.factorial (HMul.hMul.{0, 0, 0} 2 r))
+            ↑(Nat.factorial (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 r) 1)))))
+      (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 r) 1)))
+'PiWeightedColon.Regression.log_pade_finite_identity_exact_type' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_finite_identification_all_orders (r : Nat) :
+  And (Eq.{1} (PiWeightedColon.logPadeP r) (PiWeightedColon.logPadeRecP r))
+    (Eq.{1} (PiWeightedColon.logPadeL r) (PiWeightedColon.logPadeRecL r))
+'PiWeightedColon.Regression.log_pade_finite_identification_all_orders' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_factorial_constant_positive (r : Nat) :
+  LT.lt.{0} 0
+    (HDiv.hDiv.{0, 0, 0} (HPow.hPow.{0, 0, 0} (↑(Nat.factorial r)) 4)
+      (HMul.hMul.{0, 0, 0} ↑(Nat.factorial (HMul.hMul.{0, 0, 0} 2 r))
+        ↑(Nat.factorial (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 r) 1))))
+'PiWeightedColon.Regression.log_pade_factorial_constant_positive' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_first_polynomials :
+  And (Eq.{1} (PiWeightedColon.logPadeP 0) 1)
+    (And (Eq.{1} (PiWeightedColon.logPadeL 0) 0)
+      (And
+        (Eq.{1} (PiWeightedColon.logPadeP 1)
+          (HSub.hSub.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (1 / 2)) Polynomial.X.{0})))
+        (Eq.{1} (PiWeightedColon.logPadeL 1) Polynomial.X.{0})))
+'PiWeightedColon.Regression.log_pade_first_polynomials' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_second_polynomials :
+  And
+    (Eq.{1} (PiWeightedColon.logPadeP 2)
+      (HAdd.hAdd.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 Polynomial.X.{0})
+        (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (1 / 6)) (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 2))))
+    (Eq.{1} (PiWeightedColon.logPadeL 2)
+      (HSub.hSub.{0, 0, 0} Polynomial.X.{0}
+        (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} (1 / 2)) (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 2))))
+'PiWeightedColon.Regression.log_pade_second_polynomials' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_first_rational_pairs :
+  And (Eq.{1} (PiWeightedColon.logPadeRationalPair 0) (Prod.mk.{0, 0} 1 0))
+    (And (Eq.{1} (PiWeightedColon.logPadeRationalPair 1) (Prod.mk.{0, 0} (1 / 2) 2))
+      (And (Eq.{1} (PiWeightedColon.logPadeRationalPair 2) (Prod.mk.{0, 0} (1 / 3) 1))
+        (Eq.{1} (PiWeightedColon.logPadeRationalPair 3) (Prod.mk.{0, 0} (1 / 5) (19 / 30)))))
+'PiWeightedColon.Regression.log_pade_first_rational_pairs' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_first_normalized_determinant :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRationalQ 0) (PiWeightedColon.logPadeRationalP 1))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRationalQ 1) (PiWeightedColon.logPadeRationalP 0)))
+    2
+'PiWeightedColon.Regression.log_pade_first_normalized_determinant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_second_normalized_determinant :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRationalQ 1) (PiWeightedColon.logPadeRationalP 2))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeRationalQ 2) (PiWeightedColon.logPadeRationalP 1)))
+    (Neg.neg.{0} (1 / 6))
+'PiWeightedColon.Regression.log_pade_second_normalized_determinant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_normalized_rational_all_orders (r : Nat) :
+  And (∃ a, Eq.{1} (PiWeightedColon.logPadeNormalizedQ r) ↑a) (∃ b, Eq.{1} (PiWeightedColon.logPadeNormalizedP r) ↑b)
+'PiWeightedColon.Regression.log_pade_normalized_rational_all_orders' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_normalized_identity_all_orders (r : Nat) :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeNormalizedQ r)
+        (PiWeightedColon.logPadeNormalizedP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeNormalizedQ (HAdd.hAdd.{0, 0, 0} r 1))
+        (PiWeightedColon.logPadeNormalizedP r)))
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 (HPow.hPow.{0, 0, 0} (-1) r)) ↑(PiWeightedColon.logPadeD r))
+'PiWeightedColon.Regression.log_pade_normalized_identity_all_orders' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_normalized_independence_all_orders (r : Nat) :
+  Ne.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeNormalizedQ r)
+        (PiWeightedColon.logPadeNormalizedP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.logPadeNormalizedQ (HAdd.hAdd.{0, 0, 0} r 1))
+        (PiWeightedColon.logPadeNormalizedP r)))
+    0
+'PiWeightedColon.Regression.log_pade_normalized_independence_all_orders' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.log_pade_real_identity_all_orders (r : Nat) :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} ↑(PiWeightedColon.logPadeRationalQ r)
+        ↑(PiWeightedColon.logPadeRationalP (HAdd.hAdd.{0, 0, 0} r 1)))
+      (HMul.hMul.{0, 0, 0} ↑(PiWeightedColon.logPadeRationalQ (HAdd.hAdd.{0, 0, 0} r 1))
+        ↑(PiWeightedColon.logPadeRationalP r)))
+    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 (HPow.hPow.{0, 0, 0} (-1) r)) ↑(PiWeightedColon.logPadeD r))
+'PiWeightedColon.Regression.log_pade_real_identity_all_orders' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

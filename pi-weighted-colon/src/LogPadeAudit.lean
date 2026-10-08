@@ -1,0 +1,265 @@
+import LogPadeRegression
+
+set_option pp.universes true
+set_option pp.proofs false
+
+#check PiWeightedColon.logPadeBeta
+#print axioms PiWeightedColon.logPadeBeta
+
+#check PiWeightedColon.logPadeD
+#print axioms PiWeightedColon.logPadeD
+
+#check PiWeightedColon.logPadeRecPair
+#print axioms PiWeightedColon.logPadeRecPair
+
+#check PiWeightedColon.logPadeRecP
+#print axioms PiWeightedColon.logPadeRecP
+
+#check PiWeightedColon.logPadeRecL
+#print axioms PiWeightedColon.logPadeRecL
+
+#check PiWeightedColon.logPadeRecP_zero
+#print axioms PiWeightedColon.logPadeRecP_zero
+
+#check PiWeightedColon.logPadeRecL_zero
+#print axioms PiWeightedColon.logPadeRecL_zero
+
+#check PiWeightedColon.logPadeRecP_one
+#print axioms PiWeightedColon.logPadeRecP_one
+
+#check PiWeightedColon.logPadeRecL_one
+#print axioms PiWeightedColon.logPadeRecL_one
+
+#check PiWeightedColon.logPadeRecP_step
+#print axioms PiWeightedColon.logPadeRecP_step
+
+#check PiWeightedColon.logPadeRecL_step
+#print axioms PiWeightedColon.logPadeRecL_step
+
+#check PiWeightedColon.logPadeBeta_pos
+#print axioms PiWeightedColon.logPadeBeta_pos
+
+#check PiWeightedColon.logPadeD_pos
+#print axioms PiWeightedColon.logPadeD_pos
+
+#check PiWeightedColon.logPadeD_zero
+#print axioms PiWeightedColon.logPadeD_zero
+
+#check PiWeightedColon.logPadeD_step
+#print axioms PiWeightedColon.logPadeD_step
+
+#check PiWeightedColon.logPadeRec_adjacent_determinant
+#print axioms PiWeightedColon.logPadeRec_adjacent_determinant
+
+#check PiWeightedColon.logPadeRec_adjacent_ne_zero
+#print axioms PiWeightedColon.logPadeRec_adjacent_ne_zero
+
+#check PiWeightedColon.logPadePCoeff
+#print axioms PiWeightedColon.logPadePCoeff
+
+#check PiWeightedColon.logPadeLCoeff
+#print axioms PiWeightedColon.logPadeLCoeff
+
+#check PiWeightedColon.logPadeP
+#print axioms PiWeightedColon.logPadeP
+
+#check PiWeightedColon.logPadeL
+#print axioms PiWeightedColon.logPadeL
+
+#check PiWeightedColon.logPadePCoeff_above
+#print axioms PiWeightedColon.logPadePCoeff_above
+
+#check PiWeightedColon.logPadeLCoeff_above
+#print axioms PiWeightedColon.logPadeLCoeff_above
+
+#check PiWeightedColon.logPadeP_coeff
+#print axioms PiWeightedColon.logPadeP_coeff
+
+#check PiWeightedColon.logPadeL_coeff
+#print axioms PiWeightedColon.logPadeL_coeff
+
+#check PiWeightedColon.logPadePCoeff_zero
+#print axioms PiWeightedColon.logPadePCoeff_zero
+
+#check PiWeightedColon.logPadeLCoeff_zero
+#print axioms PiWeightedColon.logPadeLCoeff_zero
+
+#check PiWeightedColon.logPadePCoeff_one
+#print axioms PiWeightedColon.logPadePCoeff_one
+
+#check PiWeightedColon.logPadeLCoeff_one
+#print axioms PiWeightedColon.logPadeLCoeff_one
+
+#check PiWeightedColon.logPadePCoeff_factorial
+#print axioms PiWeightedColon.logPadePCoeff_factorial
+
+#check PiWeightedColon.logPadePCoeff_recurrence_interior
+#print axioms PiWeightedColon.logPadePCoeff_recurrence_interior
+
+#check PiWeightedColon.logPadeLCoeff_recurrence_interior
+#print axioms PiWeightedColon.logPadeLCoeff_recurrence_interior
+
+#check PiWeightedColon.logPadePCoeff_top
+#print axioms PiWeightedColon.logPadePCoeff_top
+
+#check PiWeightedColon.logPadePCoeff_recurrence_top
+#print axioms PiWeightedColon.logPadePCoeff_recurrence_top
+
+#check PiWeightedColon.logPadeLCoeff_recurrence_top
+#print axioms PiWeightedColon.logPadeLCoeff_recurrence_top
+
+#check PiWeightedColon.logPadePCoeff_recurrence
+#print axioms PiWeightedColon.logPadePCoeff_recurrence
+
+#check PiWeightedColon.logPadeLCoeff_recurrence
+#print axioms PiWeightedColon.logPadeLCoeff_recurrence
+
+#check PiWeightedColon.logPadeRationalPair
+#print axioms PiWeightedColon.logPadeRationalPair
+
+#check PiWeightedColon.logPadeRationalQ
+#print axioms PiWeightedColon.logPadeRationalQ
+
+#check PiWeightedColon.logPadeRationalP
+#print axioms PiWeightedColon.logPadeRationalP
+
+#check PiWeightedColon.logPadeRationalQ_zero
+#print axioms PiWeightedColon.logPadeRationalQ_zero
+
+#check PiWeightedColon.logPadeRationalP_zero
+#print axioms PiWeightedColon.logPadeRationalP_zero
+
+#check PiWeightedColon.logPadeRationalQ_one
+#print axioms PiWeightedColon.logPadeRationalQ_one
+
+#check PiWeightedColon.logPadeRationalP_one
+#print axioms PiWeightedColon.logPadeRationalP_one
+
+#check PiWeightedColon.logPadeRationalQ_step
+#print axioms PiWeightedColon.logPadeRationalQ_step
+
+#check PiWeightedColon.logPadeRationalP_step
+#print axioms PiWeightedColon.logPadeRationalP_step
+
+#check PiWeightedColon.logPadeRational_adjacent_determinant
+#print axioms PiWeightedColon.logPadeRational_adjacent_determinant
+
+#check PiWeightedColon.logPadeRational_adjacent_ne_zero
+#print axioms PiWeightedColon.logPadeRational_adjacent_ne_zero
+
+#check PiWeightedColon.logPade_normalization_base_ne_zero
+#print axioms PiWeightedColon.logPade_normalization_base_ne_zero
+
+#check PiWeightedColon.logPade_complex_step_constants
+#print axioms PiWeightedColon.logPade_complex_step_constants
+
+#check PiWeightedColon.logPadeRec_eval_P
+#print axioms PiWeightedColon.logPadeRec_eval_P
+
+#check PiWeightedColon.logPadeRec_eval_L
+#print axioms PiWeightedColon.logPadeRec_eval_L
+
+#check PiWeightedColon.logPadeRec_normalized_P_rational
+#print axioms PiWeightedColon.logPadeRec_normalized_P_rational
+
+#check PiWeightedColon.logPadeRec_normalized_L_rational
+#print axioms PiWeightedColon.logPadeRec_normalized_L_rational
+
+#check PiWeightedColon.logPadeP_zero
+#print axioms PiWeightedColon.logPadeP_zero
+
+#check PiWeightedColon.logPadeL_zero
+#print axioms PiWeightedColon.logPadeL_zero
+
+#check PiWeightedColon.logPadeP_one
+#print axioms PiWeightedColon.logPadeP_one
+
+#check PiWeightedColon.logPadeL_one
+#print axioms PiWeightedColon.logPadeL_one
+
+#check PiWeightedColon.logPadeP_step
+#print axioms PiWeightedColon.logPadeP_step
+
+#check PiWeightedColon.logPadeL_step
+#print axioms PiWeightedColon.logPadeL_step
+
+#check PiWeightedColon.logPade_finite_eq_recurrence
+#print axioms PiWeightedColon.logPade_finite_eq_recurrence
+
+#check PiWeightedColon.logPade_adjacent_determinant
+#print axioms PiWeightedColon.logPade_adjacent_determinant
+
+#check PiWeightedColon.logPade_adjacent_ne_zero
+#print axioms PiWeightedColon.logPade_adjacent_ne_zero
+
+#check PiWeightedColon.logPade_normalized_P_rational
+#print axioms PiWeightedColon.logPade_normalized_P_rational
+
+#check PiWeightedColon.logPade_normalized_L_rational
+#print axioms PiWeightedColon.logPade_normalized_L_rational
+
+#check PiWeightedColon.logPadeNormalizedQ
+#print axioms PiWeightedColon.logPadeNormalizedQ
+
+#check PiWeightedColon.logPadeNormalizedP
+#print axioms PiWeightedColon.logPadeNormalizedP
+
+#check PiWeightedColon.logPadeNormalizedQ_eq
+#print axioms PiWeightedColon.logPadeNormalizedQ_eq
+
+#check PiWeightedColon.logPadeNormalizedP_eq
+#print axioms PiWeightedColon.logPadeNormalizedP_eq
+
+#check PiWeightedColon.logPadeNormalizedQ_rational
+#print axioms PiWeightedColon.logPadeNormalizedQ_rational
+
+#check PiWeightedColon.logPadeNormalizedP_rational
+#print axioms PiWeightedColon.logPadeNormalizedP_rational
+
+#check PiWeightedColon.logPadeNormalized_adjacent_determinant
+#print axioms PiWeightedColon.logPadeNormalized_adjacent_determinant
+
+#check PiWeightedColon.logPadeNormalized_adjacent_ne_zero
+#print axioms PiWeightedColon.logPadeNormalized_adjacent_ne_zero
+
+#check PiWeightedColon.logPade_real_adjacent_determinant
+#print axioms PiWeightedColon.logPade_real_adjacent_determinant
+
+#check PiWeightedColon.logPade_real_adjacent_ne_zero
+#print axioms PiWeightedColon.logPade_real_adjacent_ne_zero
+
+#check PiWeightedColon.Regression.log_pade_finite_identity_exact_type
+#print axioms PiWeightedColon.Regression.log_pade_finite_identity_exact_type
+
+#check PiWeightedColon.Regression.log_pade_finite_identification_all_orders
+#print axioms PiWeightedColon.Regression.log_pade_finite_identification_all_orders
+
+#check PiWeightedColon.Regression.log_pade_factorial_constant_positive
+#print axioms PiWeightedColon.Regression.log_pade_factorial_constant_positive
+
+#check PiWeightedColon.Regression.log_pade_first_polynomials
+#print axioms PiWeightedColon.Regression.log_pade_first_polynomials
+
+#check PiWeightedColon.Regression.log_pade_second_polynomials
+#print axioms PiWeightedColon.Regression.log_pade_second_polynomials
+
+#check PiWeightedColon.Regression.log_pade_first_rational_pairs
+#print axioms PiWeightedColon.Regression.log_pade_first_rational_pairs
+
+#check PiWeightedColon.Regression.log_pade_first_normalized_determinant
+#print axioms PiWeightedColon.Regression.log_pade_first_normalized_determinant
+
+#check PiWeightedColon.Regression.log_pade_second_normalized_determinant
+#print axioms PiWeightedColon.Regression.log_pade_second_normalized_determinant
+
+#check PiWeightedColon.Regression.log_pade_normalized_rational_all_orders
+#print axioms PiWeightedColon.Regression.log_pade_normalized_rational_all_orders
+
+#check PiWeightedColon.Regression.log_pade_normalized_identity_all_orders
+#print axioms PiWeightedColon.Regression.log_pade_normalized_identity_all_orders
+
+#check PiWeightedColon.Regression.log_pade_normalized_independence_all_orders
+#print axioms PiWeightedColon.Regression.log_pade_normalized_independence_all_orders
+
+#check PiWeightedColon.Regression.log_pade_real_identity_all_orders
+#print axioms PiWeightedColon.Regression.log_pade_real_identity_all_orders

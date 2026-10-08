@@ -1,0 +1,6 @@
+/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/ExpectedFailureLogPadeNormalizedFactor.lean:7:2: error: Type mismatch
+  Regression.log_pade_first_normalized_determinant
+has type
+  logPadeRationalQ 0 * logPadeRationalP 1 - logPadeRationalQ 1 * logPadeRationalP 0 = 2
+but is expected to have type
+  logPadeRationalQ 0 * logPadeRationalP 1 - logPadeRationalQ 1 * logPadeRationalP 0 = 1

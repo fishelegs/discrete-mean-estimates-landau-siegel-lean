@@ -28,6 +28,10 @@
       "olean_sha256": "55c6221677796083c3778aa49c80953b6178828d5be5e52ef5858688becf6242",
       "source_sha256": "fde9c29246bef3c9dc781e879bd44fe2e23b80b35556d09c888b8da3755de33b"
     },
+    "Mathlib.Algebra.Polynomial.Basic": {
+      "olean_sha256": "0adba7402f5000589ac62d64bc2fca30d64dfd20a83545d0c095ca5cc7c3dc9f",
+      "source_sha256": "c852a4820d4f55464a7b5c54837d21f1377f56ae860695e9a944fd48a38f440a"
+    },
     "Mathlib.Algebra.Polynomial.Coeff": {
       "olean_sha256": "60b32c06691b32ddb648fb4ed66268168549f1c1e47a45e907578cd384a39089",
       "source_sha256": "c017f0aec36fcea7f9c09e0b77bf5e02c27fd7bf4e714187611d9296adf4d6cf"
@@ -64,6 +68,10 @@
       "olean_sha256": "1f67f3bedaf9c8b2c594eb90f072963f43bb180a395b3f8a6e269b6822ede421",
       "source_sha256": "a3be8f542dd2bc7c94a484d8023f0c5927ffc8f06ef5a84abf33ea58e0ba58d9"
     },
+    "Mathlib.Data.Complex.Basic": {
+      "olean_sha256": "1c41e7637681a1904187fb5928fa265f41297363653f0ccff7bf30dfc4fe00a6",
+      "source_sha256": "bd27d70208d95a6e0ac050cc46b43795bad9b32c68ea2809be900e78a15cc5ec"
+    },
     "Mathlib.Data.Matrix.Basic": {
       "olean_sha256": "2ab57392aa6f966468d75562d109e0dcf29c17265cefdb93e29e5de29491a35c",
       "source_sha256": "fee0a2b95796c84709e51646b2725c39adb38b453000ce9df0ea97a95ddddeaf"
@@ -71,6 +79,10 @@
     "Mathlib.Data.Nat.Choose.Cast": {
       "olean_sha256": "2b1988199e459939f669ed02f20f0dfcb92f760657bd1705ab041594ea5cf84b",
       "source_sha256": "bb2345595880ff28fff3cdd8219bcb5bf28659eb4d39de65d3bd1df1476c15bc"
+    },
+    "Mathlib.Data.Nat.Factorial.Basic": {
+      "olean_sha256": "4dd7610431f355179f781adbc4dc76f92b59e1bac254b68105abb3279e534e9f",
+      "source_sha256": "617aee41fa6bda68185bffa7d7b3908cec110e66e529b0a5f923378f6127384a"
     },
     "Mathlib.Data.ZMod.Basic": {
       "olean_sha256": "155961f7978f57eceec594debe5cc9550a07b0c2ed061aaa9cf3a4bc90fbd175",
@@ -87,6 +99,10 @@
     "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv": {
       "olean_sha256": "a7b307f420cbef578f4e7345964fc81df0e4d39923ec65982f6a721df2873473",
       "source_sha256": "2caa7ed8644fa3e224178eb8f7283ff7d6bf216b21ec82fe4b5d173f6acef124"
+    },
+    "Mathlib.NumberTheory.Harmonic.Defs": {
+      "olean_sha256": "61ab2e2ded310e0f21203e6d449f5585b8ba1e7353a12d5b61e37e35942cefef",
+      "source_sha256": "7f51e807c25be865d66ff82a292b24c3dcfc51d694f7aa2797e07663c083f83e"
     },
     "Mathlib.NumberTheory.Real.Irrational": {
       "olean_sha256": "28fdc0de3bef8297f53ed27939481c809de1401a073fb47f9b48ba6dd1ae6174",

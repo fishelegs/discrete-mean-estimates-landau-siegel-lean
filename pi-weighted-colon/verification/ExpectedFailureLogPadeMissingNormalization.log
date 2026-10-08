@@ -1,0 +1,7 @@
+/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/ExpectedFailureLogPadeMissingNormalization.lean:5:2: error: Type mismatch
+  PiWeightedColon.logPade_normalized_P_rational 1
+has type
+  Polynomial.eval₂ (algebraMap ℚ ℂ) (1 - Complex.I) (PiWeightedColon.logPadeP 1) / (1 + Complex.I) ^ 1 =
+    ↑(PiWeightedColon.logPadeRationalQ 1)
+but is expected to have type
+  Polynomial.eval₂ (algebraMap ℚ ℂ) (1 - Complex.I) (PiWeightedColon.logPadeP 1) = ↑(PiWeightedColon.logPadeRationalQ 1)
