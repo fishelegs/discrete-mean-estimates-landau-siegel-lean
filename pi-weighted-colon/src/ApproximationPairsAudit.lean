@@ -1,0 +1,133 @@
+import ApproximationPairsRegression
+
+set_option pp.universes true
+set_option pp.proofs false
+
+#check PiWeightedColon.ApproximationLowerBound
+#print axioms PiWeightedColon.ApproximationLowerBound
+
+#check PiWeightedColon.HasApproximationPairs
+#print axioms PiWeightedColon.HasApproximationPairs
+
+#check PiWeightedColon.integer_abs_gap
+#print axioms PiWeightedColon.integer_abs_gap
+
+#check PiWeightedColon.independent_pair_cross_nonzero
+#print axioms PiWeightedColon.independent_pair_cross_nonzero
+
+#check PiWeightedColon.one_approximant_lower_bound
+#print axioms PiWeightedColon.one_approximant_lower_bound
+
+#check PiWeightedColon.approximation_pairs_lower_bound
+#print axioms PiWeightedColon.approximation_pairs_lower_bound
+
+#check PiWeightedColon.approximation_pairs_constant_positive
+#print axioms PiWeightedColon.approximation_pairs_constant_positive
+
+#check PiWeightedColon.approximation_pairs_positive_lower_bound
+#print axioms PiWeightedColon.approximation_pairs_positive_lower_bound
+
+#check PiWeightedColon.sqrt_two_bounds
+#print axioms PiWeightedColon.sqrt_two_bounds
+
+#check PiWeightedColon.sqrt_two_integer_norm_ne_zero
+#print axioms PiWeightedColon.sqrt_two_integer_norm_ne_zero
+
+#check PiWeightedColon.sqrt_two_quarter_lower_bound
+#print axioms PiWeightedColon.sqrt_two_quarter_lower_bound
+
+#check PiWeightedColon.sqrt_two_integer_rational_bound
+#print axioms PiWeightedColon.sqrt_two_integer_rational_bound
+
+#check PiWeightedColon.sqrtTwoPellPair
+#print axioms PiWeightedColon.sqrtTwoPellPair
+
+#check PiWeightedColon.sqrtTwoPellP
+#print axioms PiWeightedColon.sqrtTwoPellP
+
+#check PiWeightedColon.sqrtTwoPellQ
+#print axioms PiWeightedColon.sqrtTwoPellQ
+
+#check PiWeightedColon.sqrtTwoPellP_zero
+#print axioms PiWeightedColon.sqrtTwoPellP_zero
+
+#check PiWeightedColon.sqrtTwoPellQ_zero
+#print axioms PiWeightedColon.sqrtTwoPellQ_zero
+
+#check PiWeightedColon.sqrtTwoPellP_succ
+#print axioms PiWeightedColon.sqrtTwoPellP_succ
+
+#check PiWeightedColon.sqrtTwoPellQ_succ
+#print axioms PiWeightedColon.sqrtTwoPellQ_succ
+
+#check PiWeightedColon.sqrtTwoPell_bounds
+#print axioms PiWeightedColon.sqrtTwoPell_bounds
+
+#check PiWeightedColon.sqrtTwoPell_growth
+#print axioms PiWeightedColon.sqrtTwoPell_growth
+
+#check PiWeightedColon.sqrtTwoPell_norm
+#print axioms PiWeightedColon.sqrtTwoPell_norm
+
+#check PiWeightedColon.sqrtTwoPell_norm_abs
+#print axioms PiWeightedColon.sqrtTwoPell_norm_abs
+
+#check PiWeightedColon.sqrtTwoPell_independent
+#print axioms PiWeightedColon.sqrtTwoPell_independent
+
+#check PiWeightedColon.sqrtTwoPell_error
+#print axioms PiWeightedColon.sqrtTwoPell_error
+
+#check PiWeightedColon.sqrtTwoPell_scale
+#print axioms PiWeightedColon.sqrtTwoPell_scale
+
+#check PiWeightedColon.sqrtTwoPell_error_at_scale
+#print axioms PiWeightedColon.sqrtTwoPell_error_at_scale
+
+#check PiWeightedColon.sqrt_two_has_approximation_pairs
+#print axioms PiWeightedColon.sqrt_two_has_approximation_pairs
+
+#check PiWeightedColon.sqrt_two_pair_lower_bound
+#print axioms PiWeightedColon.sqrt_two_pair_lower_bound
+
+#check PiWeightedColon.Regression.approximation_pairs_exact_type
+#print axioms PiWeightedColon.Regression.approximation_pairs_exact_type
+
+#check PiWeightedColon.Regression.pair_constant_positive
+#print axioms PiWeightedColon.Regression.pair_constant_positive
+
+#check PiWeightedColon.Regression.direct_sqrt_two_exact_type
+#print axioms PiWeightedColon.Regression.direct_sqrt_two_exact_type
+
+#check PiWeightedColon.Regression.direct_sqrt_two_nonprimitive
+#print axioms PiWeightedColon.Regression.direct_sqrt_two_nonprimitive
+
+#check PiWeightedColon.Regression.direct_sqrt_two_negative_numerator
+#print axioms PiWeightedColon.Regression.direct_sqrt_two_negative_numerator
+
+#check PiWeightedColon.Regression.pell_first_pairs
+#print axioms PiWeightedColon.Regression.pell_first_pairs
+
+#check PiWeightedColon.Regression.pell_first_determinant
+#print axioms PiWeightedColon.Regression.pell_first_determinant
+
+#check PiWeightedColon.Regression.pell_all_positive_integer_scales
+#print axioms PiWeightedColon.Regression.pell_all_positive_integer_scales
+
+#check PiWeightedColon.Regression.pell_derived_exact_type
+#print axioms PiWeightedColon.Regression.pell_derived_exact_type
+
+#check PiWeightedColon.Regression.DependentApproximationPairs
+#print axioms PiWeightedColon.Regression.DependentApproximationPairs
+
+#check PiWeightedColon.Regression.rational_zero_dependent_pairs
+#print axioms PiWeightedColon.Regression.rational_zero_dependent_pairs
+
+#check PiWeightedColon.Regression.rational_zero_no_positive_bound
+#print axioms PiWeightedColon.Regression.rational_zero_no_positive_bound
+
+#check PiWeightedColon.Regression.independence_is_necessary
+#print axioms PiWeightedColon.Regression.independence_is_necessary
+
+#check PiWeightedColon.Regression.eta_one_constant_zero
+#print axioms PiWeightedColon.Regression.eta_one_constant_zero

@@ -24,6 +24,11 @@ It proves that transcendence of 2*r*i is equivalent to transcendence of real r.
 [PI.md](PI.md) supplies that input through the six separately attributed A7
 proof modules and proves unconditional actual Hermite nonvanishing at 2*pi*i
 for every N and original-column ordering. No assumed pi theorem is introduced.
+[APPROXIMATION.md](APPROXIMATION.md) adds a separate √2 benchmark: the explicit
+bound `1/(4q²)` for every integer numerator and positive integer denominator,
+an all-scale approximation-pair criterion with constant `(1-η)/C`, and an actual
+Pell construction with `C=9, η=1/2`, giving `1/(18q²)`. These tools do not provide
+the required pair construction or a badly-approximability bound for π.
 
 The arithmetic application is the fixed weight-2 family. This does not assert
 coverage of arbitrary arithmetic weights, define or prove a residual-polynomial
@@ -101,8 +106,8 @@ threshold still increases by exactly two, not three. A further regression proves
 that the colon ideal at scale zero is not the original ideal. The two negative
 tests must fail on the false hypotheses `1 ≤ 0` and `5=1 ∨ 5=3`.
 
-The combined reproducible check compiles twenty local proof modules, six attributed upstream proof modules,
-eleven regression modules, twelve type/definition/axiom audits, and twenty-two expected failures. All 492
+The combined reproducible check compiles twenty-three local proof modules, six attributed upstream proof modules,
+twelve regression modules, thirteen type/definition/axiom audits, and twenty-seven expected failures. All 535
 declarations, including definitions and regression theorems, are audited.
 Only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` are
 permitted. The proof sources contain no `sorry`, `admit`, `native_decide`,
@@ -148,7 +153,7 @@ From the repository root, on KEYISHEN-MC6 the checked command is:
 python3 pi-weighted-colon/scripts/replay.py \
   --lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean \
   --existing-mathlib-project /Users/keyishen/Documents/Codex/2026-10-08/task/pi-a7-mathlib-project \
-  --out /tmp/pi-a7-replay
+  --out /tmp/pi-sqrt-two-replay
 ```
 
 For another machine, substitute the compiler and existing project paths with
@@ -162,5 +167,7 @@ Binary Lean outputs remain outside the source tree and are not committed.
 
 The older π checkpoints and the separate isolated W2 verification are preserved
 without rerunning or incorporating them here; this receipt covers the cumulative
-4.30.0 checkpoint and the A7 import only. No full containing-repository build is
+4.30.0 checkpoint, the A7 import and the separate √2/approximation-pair additions.
+The original A7 cumulative receipt is retained as `verification/a7-replay-receipt.json`.
+No full containing-repository build is
 claimed.

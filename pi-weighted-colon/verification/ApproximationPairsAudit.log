@@ -1,0 +1,220 @@
+PiWeightedColon.ApproximationLowerBound (α κ : Real) : Prop
+'PiWeightedColon.ApproximationLowerBound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.HasApproximationPairs (α C η : Real) : Prop
+'PiWeightedColon.HasApproximationPairs' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.integer_abs_gap (z : Int) (hz : Ne.{1} z 0) : LE.le.{0} 1 (abs.{0} ↑z)
+'PiWeightedColon.integer_abs_gap' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.independent_pair_cross_nonzero (p q a b c d : Int) (hq : Ne.{1} q 0)
+  (hind : Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} a d) (HMul.hMul.{0, 0, 0} b c)) 0) :
+  Or (Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} b p) (HMul.hMul.{0, 0, 0} a q)) 0)
+    (Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} d p) (HMul.hMul.{0, 0, 0} c q)) 0)
+'PiWeightedColon.independent_pair_cross_nonzero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.one_approximant_lower_bound (α C η : Real) (hC : LT.lt.{0} 0 C) (p q a b : Int) (hq : LT.lt.{0} 0 q)
+  (hb : LE.le.{0} 1 b) (hb_size : LE.le.{0} (↑b) (HMul.hMul.{0, 0, 0} C ↑q))
+  (herror : LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑b) α) ↑a)) (HDiv.hDiv.{0, 0, 0} η ↑q))
+  (hcross : Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} b p) (HMul.hMul.{0, 0, 0} a q)) 0) :
+  LE.le.{0} (HDiv.hDiv.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 η) C) (HPow.hPow.{0, 0, 0} (↑q) 2))
+    (abs.{0} (HSub.hSub.{0, 0, 0} α (HDiv.hDiv.{0, 0, 0} ↑p ↑q)))
+'PiWeightedColon.one_approximant_lower_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.approximation_pairs_lower_bound (α C η : Real) (hC : LT.lt.{0} 0 C) (_hη0 : LE.le.{0} 0 η)
+  (_hη1 : LT.lt.{0} η 1) (hpairs : PiWeightedColon.HasApproximationPairs α C η) :
+  PiWeightedColon.ApproximationLowerBound α (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 η) C)
+'PiWeightedColon.approximation_pairs_lower_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.approximation_pairs_constant_positive (C η : Real) (hC : LT.lt.{0} 0 C) (hη1 : LT.lt.{0} η 1) :
+  LT.lt.{0} 0 (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 η) C)
+'PiWeightedColon.approximation_pairs_constant_positive' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.approximation_pairs_positive_lower_bound (α C η : Real) (hC : LT.lt.{0} 0 C) (hη0 : LE.le.{0} 0 η)
+  (hη1 : LT.lt.{0} η 1) (hpairs : PiWeightedColon.HasApproximationPairs α C η) :
+  And (LT.lt.{0} 0 (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 η) C))
+    (PiWeightedColon.ApproximationLowerBound α (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 η) C))
+'PiWeightedColon.approximation_pairs_positive_lower_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.sqrt_two_bounds : And (LE.le.{0} 1 (Real.sqrt 2)) (LE.le.{0} (Real.sqrt 2) (3 / 2))
+'PiWeightedColon.sqrt_two_bounds' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrt_two_integer_norm_ne_zero (p q : Int) (hq : LT.lt.{0} 0 q) :
+  Ne.{1} (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} p 2) (HMul.hMul.{0, 0, 0} 2 (HPow.hPow.{0, 0, 0} q 2))) 0
+'PiWeightedColon.sqrt_two_integer_norm_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrt_two_quarter_lower_bound : PiWeightedColon.ApproximationLowerBound (Real.sqrt 2) (1 / 4)
+'PiWeightedColon.sqrt_two_quarter_lower_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrt_two_integer_rational_bound (p q : Int) (hq : LT.lt.{0} 0 q) :
+  LE.le.{0} (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (↑q) 2)))
+    (abs.{0} (HSub.hSub.{0, 0, 0} (Real.sqrt 2) (HDiv.hDiv.{0, 0, 0} ↑p ↑q)))
+'PiWeightedColon.sqrt_two_integer_rational_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrtTwoPellPair : Nat → Prod.{0, 0} Nat Nat
+'PiWeightedColon.sqrtTwoPellPair' does not depend on any axioms
+PiWeightedColon.sqrtTwoPellP (n : Nat) : Nat
+'PiWeightedColon.sqrtTwoPellP' does not depend on any axioms
+PiWeightedColon.sqrtTwoPellQ (n : Nat) : Nat
+'PiWeightedColon.sqrtTwoPellQ' does not depend on any axioms
+PiWeightedColon.sqrtTwoPellP_zero : Eq.{1} (PiWeightedColon.sqrtTwoPellP 0) 1
+'PiWeightedColon.sqrtTwoPellP_zero' does not depend on any axioms
+PiWeightedColon.sqrtTwoPellQ_zero : Eq.{1} (PiWeightedColon.sqrtTwoPellQ 0) 1
+'PiWeightedColon.sqrtTwoPellQ_zero' does not depend on any axioms
+PiWeightedColon.sqrtTwoPellP_succ (n : Nat) :
+  Eq.{1} (PiWeightedColon.sqrtTwoPellP (HAdd.hAdd.{0, 0, 0} n 1))
+    (HAdd.hAdd.{0, 0, 0} (PiWeightedColon.sqrtTwoPellP n) (HMul.hMul.{0, 0, 0} 2 (PiWeightedColon.sqrtTwoPellQ n)))
+'PiWeightedColon.sqrtTwoPellP_succ' does not depend on any axioms
+PiWeightedColon.sqrtTwoPellQ_succ (n : Nat) :
+  Eq.{1} (PiWeightedColon.sqrtTwoPellQ (HAdd.hAdd.{0, 0, 0} n 1))
+    (HAdd.hAdd.{0, 0, 0} (PiWeightedColon.sqrtTwoPellP n) (PiWeightedColon.sqrtTwoPellQ n))
+'PiWeightedColon.sqrtTwoPellQ_succ' does not depend on any axioms
+PiWeightedColon.sqrtTwoPell_bounds (n : Nat) :
+  And (LE.le.{0} 1 (PiWeightedColon.sqrtTwoPellQ n))
+    (And (LE.le.{0} (PiWeightedColon.sqrtTwoPellQ n) (PiWeightedColon.sqrtTwoPellP n))
+      (And (LE.le.{0} (PiWeightedColon.sqrtTwoPellP n) (HMul.hMul.{0, 0, 0} 2 (PiWeightedColon.sqrtTwoPellQ n)))
+        (LE.le.{0} (HAdd.hAdd.{0, 0, 0} n 1) (PiWeightedColon.sqrtTwoPellQ n))))
+'PiWeightedColon.sqrtTwoPell_bounds' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrtTwoPell_growth (n : Nat) :
+  And (LT.lt.{0} (PiWeightedColon.sqrtTwoPellQ n) (PiWeightedColon.sqrtTwoPellQ (HAdd.hAdd.{0, 0, 0} n 1)))
+    (LE.le.{0} (PiWeightedColon.sqrtTwoPellQ (HAdd.hAdd.{0, 0, 0} n 1))
+      (HMul.hMul.{0, 0, 0} 3 (PiWeightedColon.sqrtTwoPellQ n)))
+'PiWeightedColon.sqrtTwoPell_growth' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrtTwoPell_norm (n : Nat) :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} (↑(PiWeightedColon.sqrtTwoPellP n)) 2)
+      (HMul.hMul.{0, 0, 0} 2 (HPow.hPow.{0, 0, 0} (↑(PiWeightedColon.sqrtTwoPellQ n)) 2)))
+    (HPow.hPow.{0, 0, 0} (-1) (HAdd.hAdd.{0, 0, 0} n 1))
+'PiWeightedColon.sqrtTwoPell_norm' depends on axioms: [propext, Quot.sound.{u}]
+PiWeightedColon.sqrtTwoPell_norm_abs (n : Nat) :
+  Eq.{1}
+    (abs.{0}
+      (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} (↑(PiWeightedColon.sqrtTwoPellP n)) 2)
+        (HMul.hMul.{0, 0, 0} 2 (HPow.hPow.{0, 0, 0} (↑(PiWeightedColon.sqrtTwoPellQ n)) 2))))
+    1
+'PiWeightedColon.sqrtTwoPell_norm_abs' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrtTwoPell_independent (n : Nat) :
+  Ne.{1}
+    (HSub.hSub.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} ↑(PiWeightedColon.sqrtTwoPellP n) ↑(PiWeightedColon.sqrtTwoPellQ (HAdd.hAdd.{0, 0, 0} n 1)))
+      (HMul.hMul.{0, 0, 0} ↑(PiWeightedColon.sqrtTwoPellQ n) ↑(PiWeightedColon.sqrtTwoPellP (HAdd.hAdd.{0, 0, 0} n 1))))
+    0
+'PiWeightedColon.sqrtTwoPell_independent' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrtTwoPell_error (n : Nat) :
+  LE.le.{0}
+    (abs.{0}
+      (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑(PiWeightedColon.sqrtTwoPellQ n)) (Real.sqrt 2))
+        ↑(PiWeightedColon.sqrtTwoPellP n)))
+    (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 2 ↑(PiWeightedColon.sqrtTwoPellQ n)))
+'PiWeightedColon.sqrtTwoPell_error' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrtTwoPell_scale (M : Nat) (hM : LT.lt.{0} 0 M) :
+  ∃ n,
+    And (LE.le.{0} M (PiWeightedColon.sqrtTwoPellQ n))
+      (And (LE.le.{0} M (PiWeightedColon.sqrtTwoPellQ (HAdd.hAdd.{0, 0, 0} n 1)))
+        (And (LE.le.{0} (PiWeightedColon.sqrtTwoPellQ n) (HMul.hMul.{0, 0, 0} 9 M))
+          (LE.le.{0} (PiWeightedColon.sqrtTwoPellQ (HAdd.hAdd.{0, 0, 0} n 1)) (HMul.hMul.{0, 0, 0} 9 M))))
+'PiWeightedColon.sqrtTwoPell_scale' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrtTwoPell_error_at_scale (n : Nat) (Q : Int) (hQ : LT.lt.{0} 0 Q)
+  (hscale : LE.le.{0} ↑Q ↑(PiWeightedColon.sqrtTwoPellQ n)) :
+  LE.le.{0}
+    (abs.{0}
+      (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑(PiWeightedColon.sqrtTwoPellQ n)) (Real.sqrt 2))
+        ↑(PiWeightedColon.sqrtTwoPellP n)))
+    (HDiv.hDiv.{0, 0, 0} (1 / 2) ↑Q)
+'PiWeightedColon.sqrtTwoPell_error_at_scale' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrt_two_has_approximation_pairs : PiWeightedColon.HasApproximationPairs (Real.sqrt 2) 9 (1 / 2)
+'PiWeightedColon.sqrt_two_has_approximation_pairs' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.sqrt_two_pair_lower_bound : PiWeightedColon.ApproximationLowerBound (Real.sqrt 2) (1 / 18)
+'PiWeightedColon.sqrt_two_pair_lower_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.approximation_pairs_exact_type (α C η : Real) :
+  LT.lt.{0} 0 C →
+    LE.le.{0} 0 η →
+      LT.lt.{0} η 1 →
+        (∀ (Q : Int),
+            LT.lt.{0} 0 Q →
+              ∃ a b c d,
+                And (LE.le.{0} 1 b)
+                  (And (LE.le.{0} 1 d)
+                    (And (LE.le.{0} (↑b) (HMul.hMul.{0, 0, 0} C ↑Q))
+                      (And (LE.le.{0} (↑d) (HMul.hMul.{0, 0, 0} C ↑Q))
+                        (And (Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} a d) (HMul.hMul.{0, 0, 0} b c)) 0)
+                          (And
+                            (LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑b) α) ↑a))
+                              (HDiv.hDiv.{0, 0, 0} η ↑Q))
+                            (LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑d) α) ↑c))
+                              (HDiv.hDiv.{0, 0, 0} η ↑Q)))))))) →
+          ∀ (p q : Int),
+            LT.lt.{0} 0 q →
+              LE.le.{0}
+                (HDiv.hDiv.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 η) C) (HPow.hPow.{0, 0, 0} (↑q) 2))
+                (abs.{0} (HSub.hSub.{0, 0, 0} α (HDiv.hDiv.{0, 0, 0} ↑p ↑q)))
+'PiWeightedColon.Regression.approximation_pairs_exact_type' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.pair_constant_positive : LT.lt.{0} 0 (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 (1 / 2)) 9)
+'PiWeightedColon.Regression.pair_constant_positive' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.direct_sqrt_two_exact_type (p q : Int) :
+  LT.lt.{0} 0 q →
+    LE.le.{0} (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (↑q) 2)))
+      (abs.{0} (HSub.hSub.{0, 0, 0} (Real.sqrt 2) (HDiv.hDiv.{0, 0, 0} ↑p ↑q)))
+'PiWeightedColon.Regression.direct_sqrt_two_exact_type' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.direct_sqrt_two_nonprimitive :
+  LE.le.{0} (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} 2 2)))
+    (abs.{0} (HSub.hSub.{0, 0, 0} (Real.sqrt 2) (2 / 2)))
+'PiWeightedColon.Regression.direct_sqrt_two_nonprimitive' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.direct_sqrt_two_negative_numerator :
+  LE.le.{0} (HDiv.hDiv.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} 3 2)))
+    (abs.{0} (HSub.hSub.{0, 0, 0} (Real.sqrt 2) (-7 / 3)))
+'PiWeightedColon.Regression.direct_sqrt_two_negative_numerator' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.pell_first_pairs :
+  And (Eq.{1} (PiWeightedColon.sqrtTwoPellPair 0) (Prod.mk.{0, 0} 1 1))
+    (And (Eq.{1} (PiWeightedColon.sqrtTwoPellPair 1) (Prod.mk.{0, 0} 3 2))
+      (And (Eq.{1} (PiWeightedColon.sqrtTwoPellPair 2) (Prod.mk.{0, 0} 7 5))
+        (Eq.{1} (PiWeightedColon.sqrtTwoPellPair 3) (Prod.mk.{0, 0} 17 12))))
+'PiWeightedColon.Regression.pell_first_pairs' depends on axioms: [propext]
+PiWeightedColon.Regression.pell_first_determinant :
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} ↑(PiWeightedColon.sqrtTwoPellP 0) ↑(PiWeightedColon.sqrtTwoPellQ 1))
+      (HMul.hMul.{0, 0, 0} ↑(PiWeightedColon.sqrtTwoPellQ 0) ↑(PiWeightedColon.sqrtTwoPellP 1)))
+    (-1)
+'PiWeightedColon.Regression.pell_first_determinant' depends on axioms: [propext]
+PiWeightedColon.Regression.pell_all_positive_integer_scales (Q : Int) :
+  LT.lt.{0} 0 Q →
+    ∃ a b c d,
+      And (LE.le.{0} 1 b)
+        (And (LE.le.{0} 1 d)
+          (And (LE.le.{0} (↑b) (HMul.hMul.{0, 0, 0} 9 ↑Q))
+            (And (LE.le.{0} (↑d) (HMul.hMul.{0, 0, 0} 9 ↑Q))
+              (And (Ne.{1} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} a d) (HMul.hMul.{0, 0, 0} b c)) 0)
+                (And
+                  (LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑b) (Real.sqrt 2)) ↑a))
+                    (HDiv.hDiv.{0, 0, 0} (1 / 2) ↑Q))
+                  (LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑d) (Real.sqrt 2)) ↑c))
+                    (HDiv.hDiv.{0, 0, 0} (1 / 2) ↑Q)))))))
+'PiWeightedColon.Regression.pell_all_positive_integer_scales' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.pell_derived_exact_type (p q : Int) :
+  LT.lt.{0} 0 q →
+    LE.le.{0} (HDiv.hDiv.{0, 0, 0} (1 / 18) (HPow.hPow.{0, 0, 0} (↑q) 2))
+      (abs.{0} (HSub.hSub.{0, 0, 0} (Real.sqrt 2) (HDiv.hDiv.{0, 0, 0} ↑p ↑q)))
+'PiWeightedColon.Regression.pell_derived_exact_type' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.DependentApproximationPairs (α C η : Real) : Prop
+'PiWeightedColon.Regression.DependentApproximationPairs' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.rational_zero_dependent_pairs : PiWeightedColon.Regression.DependentApproximationPairs 0 1 0
+'PiWeightedColon.Regression.rational_zero_dependent_pairs' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.rational_zero_no_positive_bound (κ : Real) (hκ : LT.lt.{0} 0 κ) :
+  Not (PiWeightedColon.ApproximationLowerBound 0 κ)
+'PiWeightedColon.Regression.rational_zero_no_positive_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.independence_is_necessary :
+  And (PiWeightedColon.Regression.DependentApproximationPairs 0 1 0)
+    (Not (PiWeightedColon.ApproximationLowerBound 0 (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 0) 1)))
+'PiWeightedColon.Regression.independence_is_necessary' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.eta_one_constant_zero (C : Real) : Eq.{1} (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 1) C) 0
+'PiWeightedColon.Regression.eta_one_constant_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

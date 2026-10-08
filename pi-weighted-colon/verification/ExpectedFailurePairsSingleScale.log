@@ -1,0 +1,11 @@
+/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/ExpectedFailurePairsSingleScale.lean:6:4: error: Application type mismatch: The argument
+  PiWeightedColon.sqrt_two_has_approximation_pairs 1 ?m.40
+has type
+  ∃ a b c d,
+    1 ≤ b ∧
+      1 ≤ d ∧ ↑b ≤ 9 * ↑1 ∧ ↑d ≤ 9 * ↑1 ∧ a * d - b * c ≠ 0 ∧ |↑b * √2 - ↑a| ≤ 1 / 2 / ↑1 ∧ |↑d * √2 - ↑c| ≤ 1 / 2 / ↑1
+but is expected to have type
+  PiWeightedColon.HasApproximationPairs (√2) 9 (1 / 2)
+in the application
+  PiWeightedColon.approximation_pairs_lower_bound (√2) 9 (1 / 2) ?m.35 ?m.36 ?m.37
+    (PiWeightedColon.sqrt_two_has_approximation_pairs 1 ?m.40)

@@ -1,0 +1,9 @@
+/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/ExpectedFailurePairsWithoutIndependence.lean:6:4: error: Application type mismatch: The argument
+  PiWeightedColon.Regression.rational_zero_dependent_pairs
+has type
+  PiWeightedColon.Regression.DependentApproximationPairs 0 1 0
+but is expected to have type
+  PiWeightedColon.HasApproximationPairs 0 1 0
+in the application
+  PiWeightedColon.approximation_pairs_lower_bound 0 1 0 ?m.23 ?m.24 ?m.25
+    PiWeightedColon.Regression.rational_zero_dependent_pairs

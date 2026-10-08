@@ -19,14 +19,19 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ['WeightedColon', 'DataIdealPresentation', 'EndpointColon']
-EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile', 'IntegerOriginNonvanishing', 'RationalOriginNonvanishing', 'HermitePolynomialNonvanishing', 'HermiteComplexSpecialization', 'PiHermiteNonvanishing']
-REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression', 'OriginRegression', 'RationalRegression', 'HermiteRegression', 'SpecializationRegression', 'PiSpecializationRegression']
+EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile', 'IntegerOriginNonvanishing', 'RationalOriginNonvanishing', 'HermitePolynomialNonvanishing', 'HermiteComplexSpecialization', 'PiHermiteNonvanishing', 'ApproximationPairs', 'SqrtTwoBenchmark', 'SqrtTwoPellPairs']
+REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression', 'OriginRegression', 'RationalRegression', 'HermiteRegression', 'SpecializationRegression', 'PiSpecializationRegression', 'ApproximationPairsRegression']
 VENDOR_PREFIX = 'LeanFormalizations.NumberTheory.Transcendence.'
 VENDOR = [VENDOR_PREFIX + name for name in ['ETranscendental', 'PiLindemann', 'HermiteLindemann', 'MonicRootSums', 'SubsetSumEsymm', 'PiTranscendental']]
-AUDITS = ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit', 'SpecializationAudit', 'A7ImportedAudit', 'PiSpecializationAudit']
+AUDITS = ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit', 'SpecializationAudit', 'A7ImportedAudit', 'PiSpecializationAudit', 'ApproximationPairsAudit']
 POSITIVE = VENDOR + CORE + EXTRA_CORE + REGRESSIONS + AUDITS
 LARGE_IMPORTS = set(VENDOR + ['PiHermiteNonvanishing', 'PiSpecializationRegression', 'A7ImportedAudit', 'PiSpecializationAudit', 'ExpectedFailurePiMatrixEntry', 'ExpectedFailurePiParameterSubstitution'])
 NEGATIVE = {
+    'ExpectedFailurePairsWithoutIndependence': ('Application type mismatch', 'PiWeightedColon.HasApproximationPairs 0 1 0'),
+    'ExpectedFailureSqrtTwoZeroDenominator': ('unsolved goals', '⊢ False'),
+    'ExpectedFailurePairsEtaOne': ('unsolved goals', '⊢ False'),
+    'ExpectedFailurePairsMissingGrowth': ('Application type mismatch', '↑b ≤ C * ↑q'),
+    'ExpectedFailurePairsSingleScale': ('Application type mismatch', 'PiWeightedColon.HasApproximationPairs (√2) 9 (1 / 2)'),
     'ExpectedFailurePiMatrixEntry': ('Type mismatch', 'piHermiteParameter + 3'),
     'ExpectedFailurePiParameterSubstitution': ('Type mismatch', '4 * Complex.I'),
     'ExpectedFailureComplexEntry': ('Type mismatch', 'Complex.I + 3'),
@@ -286,7 +291,15 @@ def main():
                         'factor, Schur-compressed '
                         'residual identity, integer collision-quotient and '
                         'residual-polynomial/analytic bridges are not proved; arbitrary '
-                        'arithmetic weights and pi badly approximability are not covered.'}
+                        'arithmetic weights and pi badly approximability are not covered. '
+                        'Separately, every integer p and positive integer q satisfy the explicit '
+                        'sqrt(2) lower bound 1/(4*q^2). An all-positive-integer-scale pair criterion '
+                        'with positive denominators bounded by C*Q, nonzero integer determinant '
+                        'and linear errors at most eta/Q supplies the positive constant (1-eta)/C '
+                        'when C>0 and 0<=eta<1. The explicit Pell recurrence constructs this '
+                        'interface for sqrt(2) with C=9 and eta=1/2, giving 1/(18*q^2). '
+                        'These benchmarks and the reusable criterion supply no such pair '
+                        'construction or uniform lower bound for pi.'}
     (out / 'replay-receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
     print(f'All {len(declarations)} declaration audits and {len(checks)} compilation checks passed.', flush=True)
     return 0

@@ -1,0 +1,8 @@
+/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/ExpectedFailurePairsMissingGrowth.lean:7:69: error: Application type mismatch: The argument
+  herror
+has type
+  |↑b * α - ↑a| ≤ η / ↑q
+but is expected to have type
+  ↑b ≤ C * ↑q
+in the application
+  PiWeightedColon.one_approximant_lower_bound α C η hC p q a b hq hb herror
