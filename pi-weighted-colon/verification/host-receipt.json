@@ -1,0 +1,11 @@
+{
+  "host": "KEYISHEN-MC6",
+  "base_commit": "d45ce78882dfc9cee8fb8ea78d2aa75d191ee31d",
+  "base_branch": "cloud/pi-endpoint-obstruction-20261007",
+  "inspected_remote_master": "1b1bdae9503bf45acc091381e5574b86930f55ae",
+  "branch": "codex/pi-weighted-colon-20261008",
+  "legacy_pi_toolchain": "leanprover/lean4:v4.34.1",
+  "legacy_pi_regressions_rerun": false,
+  "legacy_pi_regressions_note": "The 4.34.1 toolchain is not installed. Existing checkpoints and all pins are preserved. This receipt covers only the new standalone 4.30.0 modules.",
+  "full_repository_build_run": false
+}

@@ -1,0 +1,44 @@
+{
+  "direct_imports": {
+    "Lean.Elab.Tactic.Omega": {
+      "source_sha256": "7a81cef2ff724f9f690993d01aef906b200ca11c36f72fb57f9e6e5eaf4ec45e",
+      "olean_sha256": "55669c6e55f73b80bc5c9071411089e827a740f95dba8c6d0840cd9cd4c9162d"
+    },
+    "Mathlib.Algebra.CharP.Two": {
+      "source_sha256": "93d24de7802b11b6179783bee42543f5131173ed0ddbddaad05a35203ec6d6c0",
+      "olean_sha256": "a889ddc916247f8f88e52084b3c9204138df43a040ee33165e0c6165bd5f27c0"
+    },
+    "Mathlib.Algebra.Polynomial.AlgebraMap": {
+      "source_sha256": "fde9c29246bef3c9dc781e879bd44fe2e23b80b35556d09c888b8da3755de33b",
+      "olean_sha256": "55c6221677796083c3778aa49c80953b6178828d5be5e52ef5858688becf6242"
+    },
+    "Mathlib.Algebra.Polynomial.Coeff": {
+      "source_sha256": "c017f0aec36fcea7f9c09e0b77bf5e02c27fd7bf4e714187611d9296adf4d6cf",
+      "olean_sha256": "60b32c06691b32ddb648fb4ed66268168549f1c1e47a45e907578cd384a39089"
+    },
+    "Mathlib.Algebra.Polynomial.Degree.Operations": {
+      "source_sha256": "6cf6ab951454822af7f2e4a926dc326078ef2431ed579b8b02ac7442c82b84a3",
+      "olean_sha256": "37cb8edda97ee38843ee5213428e46c3c39eff2d7cb65a059efb0f52820282e2"
+    },
+    "Mathlib.Data.ZMod.Basic": {
+      "source_sha256": "6e076742a9be15cb038502a6634155ae5a402899577f85e3c2941beedc0e1abd",
+      "olean_sha256": "155961f7978f57eceec594debe5cc9550a07b0c2ed061aaa9cf3a4bc90fbd175"
+    },
+    "Mathlib.RingTheory.Ideal.Colon": {
+      "source_sha256": "8e990dab2228bf33a9b06a6a2bf829d276221dcd3ff505ce50968b6faba838f1",
+      "olean_sha256": "4aa2c0970fc215002035e44d4a73d792a4b059046abb6f194ca28af823bec972"
+    },
+    "Mathlib.RingTheory.Ideal.Maps": {
+      "source_sha256": "5ce512fb2d66209d7c981d9183546d4be4b9b425b11755b431901f657d5c2c42",
+      "olean_sha256": "06ad2e8c1833a253686f543bc3aa7aa4ddca2b0de557f6d58a55bd52f1fd7fb1"
+    },
+    "Mathlib.Tactic.NormNum": {
+      "source_sha256": "e8518656033db0bf6ad08bcde2b251dcfbb6a0c77f6e51ba67ef93232f29b51c",
+      "olean_sha256": "1bc4fff31b18aaf9f7dea9ddf9c9b9e81e1f5760dbbe49d1014cd12f73c8c171"
+    },
+    "Mathlib.Tactic.Ring": {
+      "source_sha256": "1e849bf79141f242dd92d5a39c69b715b6db24737b88c1c8bf139d28c5c56457",
+      "olean_sha256": "4a0ce3adaa9f964dfed2dfbb13639a61616fd33c94485e567183850a2cf77c6c"
+    }
+  }
+}

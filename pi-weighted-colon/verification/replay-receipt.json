@@ -1,0 +1,573 @@
+{
+  "status": "passed",
+  "lean_version": "Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+  "lean_executable_sha256": "b48bc5ab229bd8b320a224b87e20fc428dba6fa8a1c054bd4fa6def846e19997",
+  "dependency_pins": {
+    "toolchain": "leanprover/lean4:v4.30.0",
+    "packages": [
+      {
+        "name": "mathlib",
+        "url": "https://github.com/leanprover-community/mathlib4.git",
+        "rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+      },
+      {
+        "name": "plausible",
+        "url": "https://github.com/leanprover-community/plausible",
+        "rev": "a456461b368b71d2accd95234832cd9c174b5437"
+      },
+      {
+        "name": "LeanSearchClient",
+        "url": "https://github.com/leanprover-community/LeanSearchClient",
+        "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843"
+      },
+      {
+        "name": "importGraph",
+        "url": "https://github.com/leanprover-community/import-graph",
+        "rev": "515cf9d0c00ece5e661f6de4326a53dedc1e8ea1"
+      },
+      {
+        "name": "proofwidgets",
+        "url": "https://github.com/leanprover-community/ProofWidgets4",
+        "rev": "a84b3e2475d5c5ab979567b1ad8aea21b764bcf8"
+      },
+      {
+        "name": "aesop",
+        "url": "https://github.com/leanprover-community/aesop",
+        "rev": "558915ae105bfd8074e22d597613d1961822adc2"
+      },
+      {
+        "name": "Qq",
+        "url": "https://github.com/leanprover-community/quote4",
+        "rev": "a6e6c34c4ef182f83b219a3a5a385f51f44bdc4c"
+      },
+      {
+        "name": "batteries",
+        "url": "https://github.com/leanprover-community/batteries",
+        "rev": "32dc18cde3684679f3c003de608743b57498c56f"
+      },
+      {
+        "name": "Cli",
+        "url": "https://github.com/leanprover/lean4-cli",
+        "rev": "6b907cf12b2e445ccb7c24bc208ef04a1f39e84c"
+      }
+    ]
+  },
+  "direct_imports": {
+    "Lean.Elab.Tactic.Omega": {
+      "source_sha256": "7a81cef2ff724f9f690993d01aef906b200ca11c36f72fb57f9e6e5eaf4ec45e",
+      "olean_sha256": "55669c6e55f73b80bc5c9071411089e827a740f95dba8c6d0840cd9cd4c9162d"
+    },
+    "Mathlib.Algebra.CharP.Two": {
+      "source_sha256": "93d24de7802b11b6179783bee42543f5131173ed0ddbddaad05a35203ec6d6c0",
+      "olean_sha256": "a889ddc916247f8f88e52084b3c9204138df43a040ee33165e0c6165bd5f27c0"
+    },
+    "Mathlib.Algebra.Polynomial.AlgebraMap": {
+      "source_sha256": "fde9c29246bef3c9dc781e879bd44fe2e23b80b35556d09c888b8da3755de33b",
+      "olean_sha256": "55c6221677796083c3778aa49c80953b6178828d5be5e52ef5858688becf6242"
+    },
+    "Mathlib.Algebra.Polynomial.Coeff": {
+      "source_sha256": "c017f0aec36fcea7f9c09e0b77bf5e02c27fd7bf4e714187611d9296adf4d6cf",
+      "olean_sha256": "60b32c06691b32ddb648fb4ed66268168549f1c1e47a45e907578cd384a39089"
+    },
+    "Mathlib.Algebra.Polynomial.Degree.Operations": {
+      "source_sha256": "6cf6ab951454822af7f2e4a926dc326078ef2431ed579b8b02ac7442c82b84a3",
+      "olean_sha256": "37cb8edda97ee38843ee5213428e46c3c39eff2d7cb65a059efb0f52820282e2"
+    },
+    "Mathlib.Data.ZMod.Basic": {
+      "source_sha256": "6e076742a9be15cb038502a6634155ae5a402899577f85e3c2941beedc0e1abd",
+      "olean_sha256": "155961f7978f57eceec594debe5cc9550a07b0c2ed061aaa9cf3a4bc90fbd175"
+    },
+    "Mathlib.RingTheory.Ideal.Colon": {
+      "source_sha256": "8e990dab2228bf33a9b06a6a2bf829d276221dcd3ff505ce50968b6faba838f1",
+      "olean_sha256": "4aa2c0970fc215002035e44d4a73d792a4b059046abb6f194ca28af823bec972"
+    },
+    "Mathlib.RingTheory.Ideal.Maps": {
+      "source_sha256": "5ce512fb2d66209d7c981d9183546d4be4b9b425b11755b431901f657d5c2c42",
+      "olean_sha256": "06ad2e8c1833a253686f543bc3aa7aa4ddca2b0de557f6d58a55bd52f1fd7fb1"
+    },
+    "Mathlib.Tactic.NormNum": {
+      "source_sha256": "e8518656033db0bf6ad08bcde2b251dcfbb6a0c77f6e51ba67ef93232f29b51c",
+      "olean_sha256": "1bc4fff31b18aaf9f7dea9ddf9c9b9e81e1f5760dbbe49d1014cd12f73c8c171"
+    },
+    "Mathlib.Tactic.Ring": {
+      "source_sha256": "1e849bf79141f242dd92d5a39c69b715b6db24737b88c1c8bf139d28c5c56457",
+      "olean_sha256": "4a0ce3adaa9f964dfed2dfbb13639a61616fd33c94485e567183850a2cf77c6c"
+    }
+  },
+  "checks": [
+    {
+      "module": "WeightedColon",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-weighted-colon-replay/build/WeightedColon.olean",
+        "WeightedColon.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "f699c5b592f8d3588ef5bc4c353b1bcfa6df2c17ef490e9c80d6646a76bcd996",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 1.736,
+      "olean_sha256": "4010213d5a84ded17c28280c1219f440049fe31b6051393f9a100a667b6ee06e"
+    },
+    {
+      "module": "DataIdealPresentation",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-weighted-colon-replay/build/DataIdealPresentation.olean",
+        "DataIdealPresentation.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "61560d51501af1513ec900697bb7f6c9bac77d2365d41aad1b4121ade9c81954",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 1.746,
+      "olean_sha256": "1bcc3adc07ba5fceccf1393593d206dea99d5f4d37430d54f6d5fcb90ccb059d"
+    },
+    {
+      "module": "EndpointColon",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-weighted-colon-replay/build/EndpointColon.olean",
+        "EndpointColon.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "8605b149ffb9f90c5c19b42f4561adb4cbb6192c281c016a1d6272f904cdc2c2",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 2.177,
+      "olean_sha256": "db6264b722c5ea9248fde1db837d913acac0612ce21816d7e768f7a67e8be635"
+    },
+    {
+      "module": "WeightedColonRegression",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-weighted-colon-replay/build/WeightedColonRegression.olean",
+        "WeightedColonRegression.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "d76169f18bedf2d00adfea9173524384e40ae8550af2c7e7ef66ba4c3fbf3152",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 1.647,
+      "olean_sha256": "a0ff04ac53cba312bde757c790d51a7b4435c9b16cb3f452d552cfc20dc22954"
+    },
+    {
+      "module": "WeightedColonAudit",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-weighted-colon-replay/build/WeightedColonAudit.olean",
+        "WeightedColonAudit.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "37d1221e53ce25639d91eb962bbf1050fa8b46ad2283d2838b2bac4ed19b6aca",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "c082f7f69d5faf3a24c7b049c2ba83be70ab602f71ba363541de1345e4537af8",
+      "elapsed_seconds": 1.269,
+      "olean_sha256": "8c605b1fa9904aab2b89f0c053a874aed274ac9281d8b345496f5f1129fdbad8"
+    },
+    {
+      "module": "ExpectedFailureZeroScale",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-weighted-colon-replay/build/ExpectedFailureZeroScale.olean",
+        "ExpectedFailureZeroScale.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "4c20f7d6c0479349d09010213579a111a9b9d066f5ba58cf1a61244e94157d36",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "log_sha256": "41ed7c71d81052802ef202d4bcfeb5d562d06174985ed8e617343b86064bad40",
+      "elapsed_seconds": 1.202
+    },
+    {
+      "module": "ExpectedFailureWrongWeight",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-weighted-colon-replay/build/ExpectedFailureWrongWeight.olean",
+        "ExpectedFailureWrongWeight.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "14ba3e2271b82bffac6289e5b9ab953afbeb1436001b02f0279dc6103da31f9e",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "log_sha256": "19d357e0202da8148bd63ebacb60afb9ac41e785ee9670c5784351d3e276d6a5",
+      "elapsed_seconds": 1.196
+    }
+  ],
+  "declaration_kinds": {
+    "PiWeightedColon.weight": "def",
+    "PiWeightedColon.Data": "def",
+    "PiWeightedColon.action": "def",
+    "PiWeightedColon.action_data": "theorem",
+    "PiWeightedColon.data_of_action": "theorem",
+    "PiWeightedColon.Bivariate": "abbrev",
+    "PiWeightedColon.coeff": "def",
+    "PiWeightedColon.localQ": "def",
+    "PiWeightedColon.coeff_if": "theorem",
+    "PiWeightedColon.coeff_localQ_mul": "theorem",
+    "PiWeightedColon.coeff_x_bound": "theorem",
+    "PiWeightedColon.weighted_colon": "theorem",
+    "PiWeightedColon.weighted_colon_step": "theorem",
+    "PiWeightedColon.data_mul": "theorem",
+    "PiWeightedColon.dataIdeal": "def",
+    "PiWeightedColon.mem_dataIdeal": "theorem",
+    "PiWeightedColon.dataIdeal_colon": "theorem",
+    "PiWeightedColon.mono": "def",
+    "PiWeightedColon.mono_mul": "theorem",
+    "PiWeightedColon.data_mono": "theorem",
+    "PiWeightedColon.data_product": "theorem",
+    "PiWeightedColon.dataIdeal_mul_le": "theorem",
+    "PiWeightedColon.dataIdeal_le_of_mono": "theorem",
+    "PiWeightedColon.localJ": "def",
+    "PiWeightedColon.localK": "def",
+    "PiWeightedColon.mono_mem_localJK": "theorem",
+    "PiWeightedColon.localJ_le_dataIdeal": "theorem",
+    "PiWeightedColon.localK_le_dataIdeal": "theorem",
+    "PiWeightedColon.localJK_eq_dataIdeal": "theorem",
+    "PiWeightedColon.localJK_colon": "theorem",
+    "PiWeightedColon.F2": "abbrev",
+    "PiWeightedColon.Plane": "abbrev",
+    "PiWeightedColon.endpoint": "def",
+    "PiWeightedColon.endpointD": "def",
+    "PiWeightedColon.coordinate": "def",
+    "PiWeightedColon.coordinate_C": "theorem",
+    "PiWeightedColon.coordinate_X": "theorem",
+    "PiWeightedColon.globalQ": "def",
+    "PiWeightedColon.globalQ_expanded": "theorem",
+    "PiWeightedColon.charTwo_local_identity": "theorem",
+    "PiWeightedColon.coordinate_globalQ": "theorem",
+    "PiWeightedColon.endpointX": "def",
+    "PiWeightedColon.endpointJ": "def",
+    "PiWeightedColon.endpointK": "def",
+    "PiWeightedColon.coordinate_endpointX": "theorem",
+    "PiWeightedColon.coordinate_endpointJ": "theorem",
+    "PiWeightedColon.coordinate_endpointK": "theorem",
+    "PiWeightedColon.endpoint_membership": "theorem",
+    "PiWeightedColon.endpoint_colon": "theorem",
+    "PiWeightedColon.dataIntersection": "def",
+    "PiWeightedColon.intersection_colon": "theorem",
+    "PiWeightedColon.intersection_colon_pred": "theorem",
+    "PiWeightedColon.Regression.cancellingExample": "def",
+    "PiWeightedColon.Regression.input_boundary": "theorem",
+    "PiWeightedColon.Regression.mixed_term_cancels": "theorem",
+    "PiWeightedColon.Regression.output_boundary": "theorem",
+    "PiWeightedColon.Regression.endpoint_zero_membership": "theorem",
+    "PiWeightedColon.Regression.zero_scale_colon_not_self": "theorem"
+  },
+  "axiom_audit": {
+    "PiWeightedColon.action_data": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.data_of_action": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Bivariate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coeff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.localQ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coeff_if": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coeff_localQ_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coeff_x_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.weighted_colon": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.weighted_colon_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.data_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.dataIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.mem_dataIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.dataIdeal_colon": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.mono_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.data_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.data_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.dataIdeal_mul_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.dataIdeal_le_of_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.localJ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.localK": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.mono_mem_localJK": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.localJ_le_dataIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.localK_le_dataIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.localJK_eq_dataIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.localJK_colon": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Plane": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.endpoint": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coordinate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coordinate_C": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coordinate_X": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.globalQ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.globalQ_expanded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.charTwo_local_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coordinate_globalQ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.endpointX": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.endpointJ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.endpointK": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coordinate_endpointX": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coordinate_endpointJ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coordinate_endpointK": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.endpoint_membership": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.endpoint_colon": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.dataIntersection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.intersection_colon": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.intersection_colon_pred": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.cancellingExample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.input_boundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.mixed_term_cancels": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.output_boundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.endpoint_zero_membership": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.zero_scale_colon_not_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.weight": [],
+    "PiWeightedColon.Data": [],
+    "PiWeightedColon.action": [],
+    "PiWeightedColon.F2": [],
+    "PiWeightedColon.endpointD": []
+  },
+  "scope": "Weighted colon lemma for the actual F2 endpoint ideals only; the V_N intersection theorem and determinant/analytic bridges are not proved."
+}
