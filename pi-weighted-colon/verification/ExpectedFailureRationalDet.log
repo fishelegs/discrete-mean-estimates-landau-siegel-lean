@@ -1,0 +1,6 @@
+ExpectedFailureRationalDet.lean:6:2: error: Type mismatch
+  actual_rational_scale_zero_det
+has type
+  (squareRationalOriginMatrix 0 rationalScaleZeroOrdering).det = 2
+but is expected to have type
+  (squareRationalOriginMatrix 0 rationalScaleZeroOrdering).det = 1

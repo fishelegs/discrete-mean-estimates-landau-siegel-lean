@@ -139,7 +139,8 @@ the exceptional odd first length 3 by 1 and replacing the integer coefficient
 under verification/; compiled files stay outside the repository.
 
 No full containing-repository build is claimed. The old Lean 4.34.1 checkpoints
-are preserved but were not rerun. The integer collision-quotient, rational
-factorial normalization, residual-polynomial and analytic bridges remain
-outside the proved scope. No arbitrary-weight result or π badly-approximability
+are preserved but were not rerun. The later [RATIONAL.md](RATIONAL.md) milestone
+formalizes the actual rational origin matrix via factorial scaling. The integer
+collision-quotient, residual-polynomial and analytic bridges remain outside the
+proved scope. No arbitrary-weight result or π badly-approximability
 theorem follows from the formalized declarations.

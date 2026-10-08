@@ -1,0 +1,6 @@
+ExpectedFailureRationalEntry.lean:6:2: error: Type mismatch
+  rational_entry_values.left
+has type
+  rationalOriginEntry 3 0 0 3 = 9 / 2
+but is expected to have type
+  rationalOriginEntry 3 0 0 3 = 27

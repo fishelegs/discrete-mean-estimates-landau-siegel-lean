@@ -40,6 +40,10 @@
       "source_sha256": "fee0a2b95796c84709e51646b2725c39adb38b453000ce9df0ea97a95ddddeaf",
       "olean_sha256": "2ab57392aa6f966468d75562d109e0dcf29c17265cefdb93e29e5de29491a35c"
     },
+    "Mathlib.Data.Nat.Choose.Cast": {
+      "source_sha256": "bb2345595880ff28fff3cdd8219bcb5bf28659eb4d39de65d3bd1df1476c15bc",
+      "olean_sha256": "2b1988199e459939f669ed02f20f0dfcb92f760657bd1705ab041594ea5cf84b"
+    },
     "Mathlib.Data.ZMod.Basic": {
       "source_sha256": "6e076742a9be15cb038502a6634155ae5a402899577f85e3c2941beedc0e1abd",
       "olean_sha256": "155961f7978f57eceec594debe5cc9550a07b0c2ed061aaa9cf3a4bc90fbd175"
@@ -67,6 +71,14 @@
     "Mathlib.RingTheory.Ideal.Maps": {
       "source_sha256": "5ce512fb2d66209d7c981d9183546d4be4b9b425b11755b431901f657d5c2c42",
       "olean_sha256": "06ad2e8c1833a253686f543bc3aa7aa4ddca2b0de557f6d58a55bd52f1fd7fb1"
+    },
+    "Mathlib.Tactic.FieldSimp": {
+      "source_sha256": "db507d44ad70bd08aad09c14be9ebea7265785420144f2381d87dfd926919c7d",
+      "olean_sha256": "dc851710c2009acb2d550c1489d40164671d7eb39a517447a699aa0a7e9ad3ae"
+    },
+    "Mathlib.Tactic.FinCases": {
+      "source_sha256": "a7ecb037ebbeb09cb9d5460012119e2ce37d3db65361353f50ea200a26bf4d97",
+      "olean_sha256": "8afa9765f63dea5ccf60d58b5c2e48cce1555e1cdff6974c5f6bdb24d37db8f7"
     },
     "Mathlib.Tactic.NormNum": {
       "source_sha256": "e8518656033db0bf6ad08bcde2b251dcfbb6a0c77f6e51ba67ef93232f29b51c",

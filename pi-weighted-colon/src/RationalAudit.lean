@@ -1,0 +1,106 @@
+import RationalRegression
+
+set_option pp.universes true
+set_option pp.proofs false
+
+#print PiWeightedColon.rationalOriginLabelDecidableEq
+#print axioms PiWeightedColon.rationalOriginLabelDecidableEq
+
+#print PiWeightedColon.rationalOriginEntry
+#print axioms PiWeightedColon.rationalOriginEntry
+
+#print PiWeightedColon.rationalRowScale
+#print axioms PiWeightedColon.rationalRowScale
+
+#print PiWeightedColon.rationalColScale
+#print axioms PiWeightedColon.rationalColScale
+
+#check PiWeightedColon.rational_factorial_ne_zero
+#print axioms PiWeightedColon.rational_factorial_ne_zero
+
+#check PiWeightedColon.rationalRowScale_ne_zero
+#print axioms PiWeightedColon.rationalRowScale_ne_zero
+
+#check PiWeightedColon.rationalColScale_ne_zero
+#print axioms PiWeightedColon.rationalColScale_ne_zero
+
+#check PiWeightedColon.rational_origin_guard
+#print axioms PiWeightedColon.rational_origin_guard
+
+#check PiWeightedColon.rational_origin_exponent
+#print axioms PiWeightedColon.rational_origin_exponent
+
+#check PiWeightedColon.rationalOriginEntry_scaled
+#print axioms PiWeightedColon.rationalOriginEntry_scaled
+
+#print PiWeightedColon.rationalOriginMatrix
+#print axioms PiWeightedColon.rationalOriginMatrix
+
+#check PiWeightedColon.rationalOriginMatrix_scaled
+#print axioms PiWeightedColon.rationalOriginMatrix_scaled
+
+#print PiWeightedColon.squareRationalOriginMatrix
+#print axioms PiWeightedColon.squareRationalOriginMatrix
+
+#check PiWeightedColon.squareRationalOriginMatrix_scaled
+#print axioms PiWeightedColon.squareRationalOriginMatrix_scaled
+
+#check PiWeightedColon.rational_origin_row_product_ne_zero
+#print axioms PiWeightedColon.rational_origin_row_product_ne_zero
+
+#check PiWeightedColon.rational_origin_col_product_ne_zero
+#print axioms PiWeightedColon.rational_origin_col_product_ne_zero
+
+#check PiWeightedColon.rationalOriginMatrix_det_scaling
+#print axioms PiWeightedColon.rationalOriginMatrix_det_scaling
+
+#check PiWeightedColon.rationalOriginMatrix_det_ne_zero
+#print axioms PiWeightedColon.rationalOriginMatrix_det_ne_zero
+
+#print PiWeightedColon.canonicalRationalOriginMatrix
+#print axioms PiWeightedColon.canonicalRationalOriginMatrix
+
+#check PiWeightedColon.canonicalRationalOriginMatrix_det_ne_zero
+#print axioms PiWeightedColon.canonicalRationalOriginMatrix_det_ne_zero
+
+#check PiWeightedColon.Regression.rational_entry_values
+#print axioms PiWeightedColon.Regression.rational_entry_values
+
+#check PiWeightedColon.Regression.rational_entry_guards
+#print axioms PiWeightedColon.Regression.rational_entry_guards
+
+#check PiWeightedColon.Regression.rational_entry_scale_example
+#print axioms PiWeightedColon.Regression.rational_entry_scale_example
+
+#print PiWeightedColon.Regression.rationalSmallRowMap
+#print axioms PiWeightedColon.Regression.rationalSmallRowMap
+
+#print PiWeightedColon.Regression.rationalSmallColMap
+#print axioms PiWeightedColon.Regression.rationalSmallColMap
+
+#print PiWeightedColon.Regression.rationalSmallRowEquiv
+#print axioms PiWeightedColon.Regression.rationalSmallRowEquiv
+
+#print PiWeightedColon.Regression.rationalSmallOriginEquiv
+#print axioms PiWeightedColon.Regression.rationalSmallOriginEquiv
+
+#print PiWeightedColon.Regression.rationalScaleZeroOrdering
+#print axioms PiWeightedColon.Regression.rationalScaleZeroOrdering
+
+#print PiWeightedColon.Regression.rationalSmallMatrix
+#print axioms PiWeightedColon.Regression.rationalSmallMatrix
+
+#print PiWeightedColon.Regression.rationalSmallExpectedMatrix
+#print axioms PiWeightedColon.Regression.rationalSmallExpectedMatrix
+
+#check PiWeightedColon.Regression.rationalSmallMatrix_entries
+#print axioms PiWeightedColon.Regression.rationalSmallMatrix_entries
+
+#check PiWeightedColon.Regression.rationalSmallMatrix_det
+#print axioms PiWeightedColon.Regression.rationalSmallMatrix_det
+
+#check PiWeightedColon.Regression.rationalSmallMatrix_original
+#print axioms PiWeightedColon.Regression.rationalSmallMatrix_original
+
+#check PiWeightedColon.Regression.actual_rational_scale_zero_det
+#print axioms PiWeightedColon.Regression.actual_rational_scale_zero_det

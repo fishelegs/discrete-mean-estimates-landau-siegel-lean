@@ -1,6 +1,8 @@
 # Original integer evaluation determinant: all N
 
-The global bridge is now Lean-proved. The actual original integer evaluation
+The global integer bridge is Lean-proved. The later [RATIONAL.md](RATIONAL.md)
+milestone supplies exact factorial scaling and proves nonvanishing of the actual
+rational origin determinant using these unchanged integer Lean sources. The actual original integer evaluation
 matrix for the fixed weight-2 frequency profile has nonzero determinant for
 every N≥0 and every proved original-column reindexing. The proof uses an
 explicit integer matrix multiplication and determinant factorization.
@@ -99,8 +101,9 @@ integer determinant nor its factor U is claimed to be a unit over Z.
 
 ## Cumulative verification and reproducibility
 
-The current replay compiles 30 positive modules and checks thirteen expected
-failures (43 compilation checks), auditing exactly 354 declarations. The new
+The integer-origin milestone compiled 30 positive modules and checked thirteen expected
+failures (43 compilation checks), auditing exactly 354 declarations. See
+[RATIONAL.md](RATIONAL.md) for the current cumulative counts. The new
 regressions check a real original matrix entry 27 at N=1, its global matrix
 product entry, the even diagonal factor 2, a below-diagonal zero and a zero
 between different endpoint blocks. They prove the entire U matrix is the
@@ -124,6 +127,7 @@ build is claimed; old Lean 4.34.1 checkpoints are preserved but were not rerun.
 
 This completes the actual unnormalized integer-origin determinant nonvanishing
 bridge for the fixed weight-2 profile. It does not formalize a multivariate
-integer collision-quotient, factorial/rational determinant normalization,
-residual-polynomial bridge, uniform archimedean estimate, arbitrary arithmetic
-weights or a π badly-approximability theorem.
+integer collision-quotient, residual-polynomial bridge, uniform archimedean
+estimate, arbitrary arithmetic weights or a π badly-approximability theorem.
+The later [RATIONAL.md](RATIONAL.md) milestone separately formalizes the requested
+factorial scaling and actual rational origin matrix.

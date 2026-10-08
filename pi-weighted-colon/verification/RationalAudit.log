@@ -1,0 +1,196 @@
+@[implicit_reducible] def PiWeightedColon.rationalOriginLabelDecidableEq : (N : Nat) →
+  DecidableEq.{1} (PiWeightedColon.OriginLabel N) :=
+fun N => PiWeightedColon.rationalOriginLabelDecidableEq._aux_1 N
+'PiWeightedColon.rationalOriginLabelDecidableEq' does not depend on any axioms
+def PiWeightedColon.rationalOriginEntry : Nat → Nat → Nat → Rat → Rat :=
+fun s a c h =>
+  ite.{1} (And (LE.le.{0} a c) (LE.le.{0} c (HAdd.hAdd.{0, 0, 0} s a)))
+    (HDiv.hDiv.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (↑(Nat.choose c a))
+        (HPow.hPow.{0, 0, 0} h (HSub.hSub.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} s a) c)))
+      ↑(Nat.factorial (HSub.hSub.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} s a) c)))
+    0
+'PiWeightedColon.rationalOriginEntry' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.rationalRowScale : Nat → Nat → Rat :=
+fun s a => HMul.hMul.{0, 0, 0} ↑(Nat.factorial a) ↑(Nat.factorial s)
+'PiWeightedColon.rationalRowScale' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.rationalColScale : Nat → Rat :=
+fun c => HDiv.hDiv.{0, 0, 0} 1 ↑(Nat.factorial c)
+'PiWeightedColon.rationalColScale' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rational_factorial_ne_zero (n : Nat) : Ne.{1} (↑(Nat.factorial n)) 0
+'PiWeightedColon.rational_factorial_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rationalRowScale_ne_zero (s a : Nat) : Ne.{1} (PiWeightedColon.rationalRowScale s a) 0
+'PiWeightedColon.rationalRowScale_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rationalColScale_ne_zero (c : Nat) : Ne.{1} (PiWeightedColon.rationalColScale c) 0
+'PiWeightedColon.rationalColScale_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rational_origin_guard (s a c : Nat) :
+  Iff (And (LE.le.{0} a c) (LE.le.{0} c (HAdd.hAdd.{0, 0, 0} s a)))
+    (And (LE.le.{0} a c) (LE.le.{0} (HSub.hSub.{0, 0, 0} c a) s))
+'PiWeightedColon.rational_origin_guard' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rational_origin_exponent (s a c : Nat) (ha : LE.le.{0} a c)
+  (hc : LE.le.{0} c (HAdd.hAdd.{0, 0, 0} s a)) :
+  Eq.{1} (HSub.hSub.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} s a) c) (HSub.hSub.{0, 0, 0} s (HSub.hSub.{0, 0, 0} c a))
+'PiWeightedColon.rational_origin_exponent' depends on axioms: [propext, Quot.sound.{u}]
+PiWeightedColon.rationalOriginEntry_scaled (s a c : Nat) (h : Int) :
+  Eq.{1}
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.rationalRowScale s a) (PiWeightedColon.rationalOriginEntry s a c ↑h))
+      (PiWeightedColon.rationalColScale c))
+    ↑(PiWeightedColon.originEntry s a c h)
+'PiWeightedColon.rationalOriginEntry_scaled' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.rationalOriginMatrix : (N : Nat) →
+  Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N) Rat :=
+fun N r c => PiWeightedColon.rationalOriginEntry (PiWeightedColon.rowS r) (PiWeightedColon.rowA r) (↑c).2 ↑(↑c).1
+'PiWeightedColon.rationalOriginMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rationalOriginMatrix_scaled (N : Nat) :
+  Eq.{1}
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0}
+        (Matrix.diagonal.{0, 0} fun r =>
+          PiWeightedColon.rationalRowScale (PiWeightedColon.rowS r) (PiWeightedColon.rowA r))
+        (PiWeightedColon.rationalOriginMatrix N))
+      (Matrix.diagonal.{0, 0} fun c => PiWeightedColon.rationalColScale (↑c).2))
+    (Matrix.map.{0, 0, 0, 0} (PiWeightedColon.originalIntegerMatrix N) ⇑(Int.castRingHom.{0} Rat))
+'PiWeightedColon.rationalOriginMatrix_scaled' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.squareRationalOriginMatrix : (N : Nat) →
+  Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N) →
+    Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.RowIndex N) Rat :=
+fun N e => Matrix.submatrix.{0, 0, 0, 0, 0} (PiWeightedColon.rationalOriginMatrix N) id.{1} ⇑e
+'PiWeightedColon.squareRationalOriginMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.squareRationalOriginMatrix_scaled (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) :
+  Eq.{1}
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0}
+        (Matrix.diagonal.{0, 0} fun r =>
+          PiWeightedColon.rationalRowScale (PiWeightedColon.rowS r) (PiWeightedColon.rowA r))
+        (PiWeightedColon.squareRationalOriginMatrix N e))
+      (Matrix.diagonal.{0, 0} fun c => PiWeightedColon.rationalColScale (↑(e c)).2))
+    (Matrix.map.{0, 0, 0, 0} (PiWeightedColon.squareOriginalIntegerMatrix N e) ⇑(Int.castRingHom.{0} Rat))
+'PiWeightedColon.squareRationalOriginMatrix_scaled' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rational_origin_row_product_ne_zero (N : Nat) :
+  Ne.{1} (∏ r, PiWeightedColon.rationalRowScale (PiWeightedColon.rowS r) (PiWeightedColon.rowA r)) 0
+'PiWeightedColon.rational_origin_row_product_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rational_origin_col_product_ne_zero (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) :
+  Ne.{1} (∏ c, PiWeightedColon.rationalColScale (↑(e c)).2) 0
+'PiWeightedColon.rational_origin_col_product_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rationalOriginMatrix_det_scaling (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) :
+  Eq.{1}
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (∏ r, PiWeightedColon.rationalRowScale (PiWeightedColon.rowS r) (PiWeightedColon.rowA r))
+        (Matrix.det.{0, 0} (PiWeightedColon.squareRationalOriginMatrix N e)))
+      (∏ c, PiWeightedColon.rationalColScale (↑(e c)).2))
+    ↑(Matrix.det.{0, 0} (PiWeightedColon.squareOriginalIntegerMatrix N e))
+'PiWeightedColon.rationalOriginMatrix_det_scaling' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rationalOriginMatrix_det_ne_zero (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) :
+  Ne.{1} (Matrix.det.{0, 0} (PiWeightedColon.squareRationalOriginMatrix N e)) 0
+'PiWeightedColon.rationalOriginMatrix_det_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.canonicalRationalOriginMatrix : (N : Nat) →
+  Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.RowIndex N) Rat :=
+fun N =>
+  PiWeightedColon.squareRationalOriginMatrix N
+    (Equiv.trans.{1, 1, 1} (PiWeightedColon.matrixIndexEquiv N) (PiWeightedColon.originalIndexEquiv N))
+'PiWeightedColon.canonicalRationalOriginMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.canonicalRationalOriginMatrix_det_ne_zero (N : Nat) :
+  Ne.{1} (Matrix.det.{0, 0} (PiWeightedColon.canonicalRationalOriginMatrix N)) 0
+'PiWeightedColon.canonicalRationalOriginMatrix_det_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.rational_entry_values :
+  And (Eq.{1} (PiWeightedColon.rationalOriginEntry 3 0 0 3) (9 / 2))
+    (And (Eq.{1} (PiWeightedColon.rationalOriginEntry 3 1 2 3) 9)
+      (And (Eq.{1} (PiWeightedColon.rationalOriginEntry 1 1 2 1) 2)
+        (Eq.{1} (PiWeightedColon.rationalOriginEntry 0 1 1 0) 1)))
+'PiWeightedColon.Regression.rational_entry_values' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.rational_entry_guards :
+  And (Eq.{1} (PiWeightedColon.rationalOriginEntry 1 1 0 2) 0)
+    (And (Eq.{1} (PiWeightedColon.rationalOriginEntry 1 0 3 2) 0)
+      (Eq.{1} (PiWeightedColon.rationalOriginEntry 0 0 1 0) 0))
+'PiWeightedColon.Regression.rational_entry_guards' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.rational_entry_scale_example :
+  Eq.{1}
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.rationalRowScale 3 1) (PiWeightedColon.rationalOriginEntry 3 1 2 3))
+      (PiWeightedColon.rationalColScale 2))
+    27
+'PiWeightedColon.Regression.rational_entry_scale_example' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def PiWeightedColon.Regression.rationalSmallRowMap : Fin 4 → PiWeightedColon.RowIndex 0 :=
+fun i =>
+  Sigma.mk.{0, 0} ⟨0, PiWeightedColon.Regression.rationalSmallRowMap._proof_2⟩
+    (Prod.mk.{0, 0} ⟨HDiv.hDiv.{0, 0, 0} (↑i) 2, ⋯⟩ ⟨HMod.hMod.{0, 0, 0} (↑i) 2, ⋯⟩)
+'PiWeightedColon.Regression.rationalSmallRowMap' depends on axioms: [propext, Quot.sound.{u}]
+def PiWeightedColon.Regression.rationalSmallColMap : Fin 4 → PiWeightedColon.ColIndex 0 :=
+fun i =>
+  ite.{1} (Eq.{1} (↑i) 0)
+    (Sigma.mk.{0, 0} false
+      (Sigma.mk.{0, 0} ⟨0, PiWeightedColon.Regression.rationalSmallRowMap._proof_2⟩
+        (Prod.mk.{0, 0} ⟨0, PiWeightedColon.Regression.rationalSmallColMap._proof_2⟩
+          ⟨0, PiWeightedColon.Regression.rationalSmallColMap._proof_3⟩)))
+    (Sigma.mk.{0, 0} true
+      (Sigma.mk.{0, 0} ⟨0, PiWeightedColon.Regression.rationalSmallRowMap._proof_2⟩
+        (Prod.mk.{0, 0} ⟨HSub.hSub.{0, 0, 0} (↑i) 1, ⋯⟩ ⟨0, PiWeightedColon.Regression.rationalSmallColMap._proof_3⟩)))
+'PiWeightedColon.Regression.rationalSmallColMap' depends on axioms: [propext, Quot.sound.{u}]
+def PiWeightedColon.Regression.rationalSmallRowEquiv : Equiv.{1, 1} (Fin 4) (PiWeightedColon.RowIndex 0) :=
+Equiv.ofBijective.{1, 1} PiWeightedColon.Regression.rationalSmallRowMap
+  PiWeightedColon.Regression.rationalSmallRowEquiv._proof_1
+'PiWeightedColon.Regression.rationalSmallRowEquiv' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.Regression.rationalSmallOriginEquiv : Equiv.{1, 1} (Fin 4) (PiWeightedColon.OriginLabel 0) :=
+Equiv.trans.{1, 1, 1}
+  (Equiv.ofBijective.{1, 1} PiWeightedColon.Regression.rationalSmallColMap
+    PiWeightedColon.Regression.rationalSmallOriginEquiv._proof_1)
+  (PiWeightedColon.originalIndexEquiv 0)
+'PiWeightedColon.Regression.rationalSmallOriginEquiv' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.Regression.rationalScaleZeroOrdering : Equiv.{1, 1} (PiWeightedColon.RowIndex 0)
+  (PiWeightedColon.OriginLabel 0) :=
+Equiv.trans.{1, 1, 1} (Equiv.symm.{1, 1} PiWeightedColon.Regression.rationalSmallRowEquiv)
+  PiWeightedColon.Regression.rationalSmallOriginEquiv
+'PiWeightedColon.Regression.rationalScaleZeroOrdering' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def PiWeightedColon.Regression.rationalSmallMatrix : Matrix.{0, 0, 0} (Fin 4) (Fin 4) Rat :=
+fun i j =>
+  PiWeightedColon.rationalOriginMatrix 0 (PiWeightedColon.Regression.rationalSmallRowMap i)
+    ((PiWeightedColon.originalIndexEquiv 0) (PiWeightedColon.Regression.rationalSmallColMap j))
+'PiWeightedColon.Regression.rationalSmallMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.Regression.rationalSmallExpectedMatrix : Matrix.{0, 0, 0} (Fin 4) (Fin 4) Rat :=
+fun i j =>
+  match ↑i, ↑j with
+  | 0, 0 => 1
+  | 0, 1 => 1
+  | 1, 1 => 1
+  | 1, 2 => 1
+  | 2, 2 => 1
+  | 3, 2 => 1
+  | 3, 3 => 2
+  | x, x_1 => 0
+'PiWeightedColon.Regression.rationalSmallExpectedMatrix' depends on axioms: [propext, Quot.sound.{u}]
+PiWeightedColon.Regression.rationalSmallMatrix_entries :
+  Eq.{1} PiWeightedColon.Regression.rationalSmallMatrix PiWeightedColon.Regression.rationalSmallExpectedMatrix
+'PiWeightedColon.Regression.rationalSmallMatrix_entries' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.rationalSmallMatrix_det :
+  Eq.{1} (Matrix.det.{0, 0} PiWeightedColon.Regression.rationalSmallMatrix) 2
+'PiWeightedColon.Regression.rationalSmallMatrix_det' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.rationalSmallMatrix_original :
+  Eq.{1}
+    (Matrix.submatrix.{0, 0, 0, 0, 0}
+      (PiWeightedColon.squareRationalOriginMatrix 0 PiWeightedColon.Regression.rationalScaleZeroOrdering)
+      ⇑PiWeightedColon.Regression.rationalSmallRowEquiv ⇑PiWeightedColon.Regression.rationalSmallRowEquiv)
+    PiWeightedColon.Regression.rationalSmallMatrix
+'PiWeightedColon.Regression.rationalSmallMatrix_original' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.actual_rational_scale_zero_det :
+  Eq.{1}
+    (Matrix.det.{0, 0}
+      (PiWeightedColon.squareRationalOriginMatrix 0 PiWeightedColon.Regression.rationalScaleZeroOrdering))
+    2
+'PiWeightedColon.Regression.actual_rational_scale_zero_det' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

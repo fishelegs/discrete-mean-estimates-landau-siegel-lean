@@ -1,4 +1,4 @@
-# Original integer determinant nonvanishing for the fixed π algebraic family
+# Rational origin determinant nonvanishing for the fixed π algebraic family
 
 This checkpoint proves the full algebraic theorem `V_N ∩ I_N = {0}` for
 all natural N in the fixed F₂ endpoint family below. It includes the weighted
@@ -11,10 +11,13 @@ application bridges; [ALL_SCALE.md](ALL_SCALE.md) records the polynomial core.
 frequency profile. [ORIGIN.md](ORIGIN.md) completes the explicit global integer
 matrix factorization and proves that the original integer evaluation determinant
 is nonzero for every N, with every proved original-column ordering.
+[RATIONAL.md](RATIONAL.md) now proves the actual guarded rational origin
+entry scales by row a!s! and column 1/c! to that integer entry, and proves
+the rational origin determinant nonzero for every N and every proved ordering.
 
 The arithmetic application is the fixed weight-2 family. This does not assert
-coverage of arbitrary arithmetic weights, formalize factorial/rational determinant
-normalization, give an archimedean bound, or prove that π is
+coverage of arbitrary arithmetic weights, define or prove a residual-polynomial
+identity or π specialization, give an archimedean bound, or prove that π is
 badly approximable.
 
 ## Exact proved statement
@@ -88,8 +91,8 @@ threshold still increases by exactly two, not three. A further regression proves
 that the colon ideal at scale zero is not the original ideal. The two negative
 tests must fail on the false hypotheses `1 ≤ 0` and `5=1 ∨ 5=3`.
 
-The combined reproducible check compiles sixteen proof modules, seven positive
-regression modules, seven type/definition/axiom audits, and thirteen expected failures. All 354
+The combined reproducible check compiles seventeen proof modules, eight positive
+regression modules, eight type/definition/axiom audits, and fifteen expected failures. All 388
 declarations, including definitions and regression theorems, are audited.
 Only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` are
 permitted. The proof sources contain no `sorry`, `admit`, `native_decide`,
@@ -101,9 +104,10 @@ for every column reindexing. The integral Newton matrix now also has nonzero
 determinant, with nonzero reduction modulo two. The exact original-frequency
 profile and entrywise integer evaluation factorization are formalized. The global
 original evaluation matrix and determinant factorization are now proved over Z,
-and the original determinant is nonzero for every N. The integer collision-quotient,
-factorial/rational determinant normalization and residual-polynomial bridges
-remain unformalized. The theorem
+and the original determinant is nonzero for every N. Exact factorial row/column
+scaling now proves that the actual rational origin determinant is nonzero for
+every N. The integer collision-quotient, residual-polynomial identity and π
+specialization remain unformalized. The theorem
 does not extend the arithmetic result to arbitrary weights. No uniform
 archimedean estimate or π badly-approximability theorem is claimed.
 
@@ -128,7 +132,7 @@ From the repository root, on KEYISHEN-MC6 the checked command is:
 python3 pi-weighted-colon/scripts/replay.py \
   --lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean \
   --existing-mathlib-project /Users/keyishen/Documents/Codex/2026-10-04/task/mc6-proof \
-  --out /tmp/pi-origin-replay
+  --out /tmp/pi-rational-replay
 ```
 
 For another machine, substitute the compiler and existing project paths with
