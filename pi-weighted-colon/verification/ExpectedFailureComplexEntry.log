@@ -1,0 +1,6 @@
+ExpectedFailureComplexEntry.lean:6:2: error: Type mismatch
+  complex_actual_entry_at_I
+has type
+  (Polynomial.aeval Complex.I) (hermiteCoefficientEntry 1 1 1 2 1) = Complex.I + 2
+but is expected to have type
+  (Polynomial.aeval Complex.I) (hermiteCoefficientEntry 1 1 1 2 1) = Complex.I + 3

@@ -1,0 +1,131 @@
+def PiWeightedColon.hermiteComplexEval : Complex → RingHom.{0, 0} PiWeightedColon.HermiteParameter Complex :=
+fun x => AlgHom.toRingHom.{0, 0, 0} (Polynomial.aeval.{0, 0} x)
+'PiWeightedColon.hermiteComplexEval' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.complexHermiteCoefficientMatrix : (N : Nat) →
+  Complex → Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N) Complex :=
+fun N x => Matrix.map.{0, 0, 0, 0} (PiWeightedColon.hermiteCoefficientMatrix N) ⇑(PiWeightedColon.hermiteComplexEval x)
+'PiWeightedColon.complexHermiteCoefficientMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.complexHermiteCoefficientMatrix_entry (N : Nat) (x : Complex) (r : PiWeightedColon.RowIndex N)
+  (c : PiWeightedColon.OriginLabel N) :
+  Eq.{1} (PiWeightedColon.complexHermiteCoefficientMatrix N x r c)
+    ((Polynomial.aeval.{0, 0} x)
+      (PiWeightedColon.hermiteCoefficientEntry (PiWeightedColon.hermiteRowMultiplicity N (PiWeightedColon.rowS r))
+        (PiWeightedColon.rowS r) (PiWeightedColon.rowA r) (↑c).2 ↑(↑c).1))
+'PiWeightedColon.complexHermiteCoefficientMatrix_entry' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def PiWeightedColon.squareComplexHermiteCoefficientMatrix : (N : Nat) →
+  Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N) →
+    Complex → Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.RowIndex N) Complex :=
+fun N e x => Matrix.submatrix.{0, 0, 0, 0, 0} (PiWeightedColon.complexHermiteCoefficientMatrix N x) id.{1} ⇑e
+'PiWeightedColon.squareComplexHermiteCoefficientMatrix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.squareComplexHermiteCoefficientMatrix_map (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) (x : Complex) :
+  Eq.{1}
+    (Matrix.map.{0, 0, 0, 0} (PiWeightedColon.squareHermiteCoefficientMatrix N e)
+      ⇑(PiWeightedColon.hermiteComplexEval x))
+    (PiWeightedColon.squareComplexHermiteCoefficientMatrix N e x)
+'PiWeightedColon.squareComplexHermiteCoefficientMatrix_map' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.complexHermiteCoefficientMatrix_det_aeval (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) (x : Complex) :
+  Eq.{1} ((Polynomial.aeval.{0, 0} x) (Matrix.det.{0, 0} (PiWeightedColon.squareHermiteCoefficientMatrix N e)))
+    (Matrix.det.{0, 0} (PiWeightedColon.squareComplexHermiteCoefficientMatrix N e x))
+'PiWeightedColon.complexHermiteCoefficientMatrix_det_aeval' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.hermite_determinant_aeval_ne_zero (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) (x : Complex)
+  (hx : Transcendental.{0, 0} Rat x) :
+  Ne.{1} ((Polynomial.aeval.{0, 0} x) (Matrix.det.{0, 0} (PiWeightedColon.squareHermiteCoefficientMatrix N e))) 0
+'PiWeightedColon.hermite_determinant_aeval_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) (x : Complex)
+  (hx : Transcendental.{0, 0} Rat x) :
+  Ne.{1} (Matrix.det.{0, 0} (PiWeightedColon.squareComplexHermiteCoefficientMatrix N e x)) 0
+'PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def PiWeightedColon.canonicalComplexHermiteCoefficientMatrix : (N : Nat) →
+  Complex → Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.RowIndex N) Complex :=
+fun N x =>
+  PiWeightedColon.squareComplexHermiteCoefficientMatrix N
+    (Equiv.trans.{1, 1, 1} (PiWeightedColon.matrixIndexEquiv N) (PiWeightedColon.originalIndexEquiv N)) x
+'PiWeightedColon.canonicalComplexHermiteCoefficientMatrix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.canonicalComplexHermiteCoefficientMatrix_det_ne_zero (N : Nat) (x : Complex)
+  (hx : Transcendental.{0, 0} Rat x) :
+  Ne.{1} (Matrix.det.{0, 0} (PiWeightedColon.canonicalComplexHermiteCoefficientMatrix N x)) 0
+'PiWeightedColon.canonicalComplexHermiteCoefficientMatrix_det_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.complex_I_isAlgebraic : IsAlgebraic.{0, 0} Rat Complex.I
+'PiWeightedColon.complex_I_isAlgebraic' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.complex_transcendental_mul_iff (a b : Complex) (ha : IsAlgebraic.{0, 0} Rat a) (hne : Ne.{1} a 0) :
+  Iff (Transcendental.{0, 0} Rat (HMul.hMul.{0, 0, 0} a b)) (Transcendental.{0, 0} Rat b)
+'PiWeightedColon.complex_transcendental_mul_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.imaginaryRealParameter : Real → Complex :=
+fun r => HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 ↑r) Complex.I
+'PiWeightedColon.imaginaryRealParameter' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.imaginaryRealParameter_transcendental_iff (r : Real) :
+  Iff (Transcendental.{0, 0} Rat (PiWeightedColon.imaginaryRealParameter r)) (Transcendental.{0, 0} Rat r)
+'PiWeightedColon.imaginaryRealParameter_transcendental_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero_imaginaryReal (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) (r : Real)
+  (hr : Transcendental.{0, 0} Rat r) :
+  Ne.{1}
+    (Matrix.det.{0, 0}
+      (PiWeightedColon.squareComplexHermiteCoefficientMatrix N e (PiWeightedColon.imaginaryRealParameter r)))
+    0
+'PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero_imaginaryReal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def PiWeightedColon.piHermiteParameter : Complex :=
+PiWeightedColon.imaginaryRealParameter Real.pi
+'PiWeightedColon.piHermiteParameter' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.piHermiteParameter_transcendental_iff :
+  Iff (Transcendental.{0, 0} Rat PiWeightedColon.piHermiteParameter) (Transcendental.{0, 0} Rat Real.pi)
+'PiWeightedColon.piHermiteParameter_transcendental_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.complex_actual_entry_at_I :
+  Eq.{1} ((Polynomial.aeval.{0, 0} Complex.I) (PiWeightedColon.hermiteCoefficientEntry 1 1 1 2 1))
+    (HAdd.hAdd.{0, 0, 0} Complex.I 2)
+'PiWeightedColon.Regression.complex_actual_entry_at_I' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.complex_actual_matrix_entry_at_I :
+  Eq.{1}
+    (PiWeightedColon.complexHermiteCoefficientMatrix 0 Complex.I (PiWeightedColon.Regression.rationalSmallRowMap 3)
+      ((PiWeightedColon.originalIndexEquiv 0) (PiWeightedColon.Regression.rationalSmallColMap 3)))
+    (HAdd.hAdd.{0, 0, 0} Complex.I 2)
+'PiWeightedColon.Regression.complex_actual_matrix_entry_at_I' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.complex_actual_det_at_zero :
+  Eq.{1}
+    (Matrix.det.{0, 0}
+      (PiWeightedColon.squareComplexHermiteCoefficientMatrix 0 PiWeightedColon.Regression.rationalScaleZeroOrdering 0))
+    2
+'PiWeightedColon.Regression.complex_actual_det_at_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.imaginaryRealParameter_one :
+  Eq.{1} (PiWeightedColon.imaginaryRealParameter 1) (HMul.hMul.{0, 0, 0} 2 Complex.I)
+'PiWeightedColon.Regression.imaginaryRealParameter_one' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.imaginaryRealParameter_two_not_transcendental :
+  Not (Transcendental.{0, 0} Rat (PiWeightedColon.imaginaryRealParameter 2))
+'PiWeightedColon.Regression.imaginaryRealParameter_two_not_transcendental' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.piHermiteParameter_exact :
+  Eq.{1} PiWeightedColon.piHermiteParameter (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 ↑Real.pi) Complex.I)
+'PiWeightedColon.Regression.piHermiteParameter_exact' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

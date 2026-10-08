@@ -17,10 +17,13 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ['WeightedColon', 'DataIdealPresentation', 'EndpointColon']
-EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile', 'IntegerOriginNonvanishing', 'RationalOriginNonvanishing', 'HermitePolynomialNonvanishing']
-REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression', 'OriginRegression', 'RationalRegression', 'HermiteRegression']
-POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit']
+EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile', 'IntegerOriginNonvanishing', 'RationalOriginNonvanishing', 'HermitePolynomialNonvanishing', 'HermiteComplexSpecialization']
+REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression', 'OriginRegression', 'RationalRegression', 'HermiteRegression', 'SpecializationRegression']
+POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit', 'SpecializationAudit']
 NEGATIVE = {
+    'ExpectedFailureComplexEntry': ('Type mismatch', 'Complex.I + 3'),
+    'ExpectedFailureRationalParameterTranscendence': ('Type mismatch', 'Transcendental ℚ (imaginaryRealParameter 2)'),
+    'ExpectedFailureUnavailablePiTranscendence': ('Unknown constant `Real.transcendental_pi`', 'error(lean.unknownIdentifier)'),
     'ExpectedFailureHermiteConstant': ('Type mismatch', 'Polynomial.coeff (hermiteCoefficientEntry 1 1 1 2 1) 1 = 0'),
     'ExpectedFailureHermiteEval': ('Type mismatch', 'Polynomial.eval 0 (hermiteCoefficientEntry 1 1 1 2 1) = 1'),
     'ExpectedFailureRationalEntry': ('Type mismatch', 'rationalOriginEntry 3 0 0 3 = 27'),
@@ -101,6 +104,14 @@ def main():
             parser.error(f'Missing cached dependency: {module}; no dependencies are built')
         imports[module] = {'source_sha256': sha(source), 'olean_sha256': sha(cached)}
 
+    gap = json.loads((ROOT / 'verification/pi-transcendence-gap.json').read_text())
+    mathlib_revision = next(p['rev'] for p in pins['packages'] if p['name'] == 'mathlib')
+    if gap['mathlib_revision'] != mathlib_revision:
+        parser.error('Wrong mathlib revision in the pi-transcendence gap record')
+    for relative, digest in gap['source_hashes'].items():
+        if sha(project / '.lake/packages/mathlib' / relative) != digest:
+            parser.error(f'Pi-transcendence source evidence mismatch: {relative}')
+
     build, logs = out / 'build', out / 'logs'
     build.mkdir(parents=True, exist_ok=True)
     logs.mkdir(parents=True, exist_ok=True)
@@ -122,7 +133,7 @@ def main():
         log.write_text(run.stdout)
         expected_failure = name in NEGATIVE
         passed = (run.returncode == 0 and output.is_file()) if not expected_failure else (
-            run.returncode == 1 and run.stdout.count('error:') == 1 and
+            run.returncode == 1 and len(re.findall(r'error(?:\([^\n)]*\))?:', run.stdout)) == 1 and
             all(fragment in run.stdout for fragment in NEGATIVE[name]) and not output.exists())
         check = {'module': name, 'command': command, 'cwd': str(ROOT / 'src'),
                  'source_sha256': sha(source), 'exit_code': run.returncode,
@@ -145,7 +156,7 @@ def main():
         for kind, declaration in re.findall(r'^(theorem|def|abbrev|instance) (\w+)\b', source, re.M):
             declarations[namespace + declaration] = kind
     audit = '\n'.join((logs / (name + '.log')).read_text()
-                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit'])
+                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit', 'SpecializationAudit'])
     reports = dict(re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", audit, re.S))
     reports.update({name: '' for name in re.findall(
         r"'([^']+)' does not depend on any axioms", audit)})
@@ -162,6 +173,7 @@ def main():
                'lean_executable_sha256': sha(lean), 'dependency_pins': pins,
                'direct_imports': imports, 'checks': checks,
                'declaration_kinds': declarations, 'axiom_audit': axioms,
+               'pi_transcendence_gap': gap,
                'scope': 'Weighted colon lemma for the actual F2 endpoint ideals, and '
                         'bounded staircase division and the full V_N intersection theorem '
                         'for the fixed F2 endpoint family d0=1, d1=3, Q=t4+t2+y2. '
@@ -181,7 +193,14 @@ def main():
                         'over Q[x] is defined using monic remainders of z^d modulo z^n(z-x)^n; '
                         'its evaluation at x=0 is proved equal to the rational origin matrix, '
                         'and its determinant polynomial is nonzero for every N and every proved '
-                        'original-column ordering. The derivative-jet x^nu factor, Schur-compressed '
+                        'original-column ordering. Its complex evaluation is proved equal to the '
+                        'determinant of the actual complex matrix with original row and column labels. '
+                        'At every complex point proved transcendental over Q, both are nonzero for '
+                        'all N. For any real r, transcendence of 2*r*i is proved equivalent to '
+                        'transcendence of r. No unconditional pi specialization is proved: the pinned '
+                        'library lacks a theorem proving Transcendental Q Real.pi. The pointwise '
+                        'result supplies no uniform analytic lower bound. The derivative-jet x^nu '
+                        'factor, Schur-compressed '
                         'residual identity, integer collision-quotient and '
                         'residual-polynomial/analytic bridges are not proved; arbitrary '
                         'arithmetic weights and pi badly approximability are not covered.'}

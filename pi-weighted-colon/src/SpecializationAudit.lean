@@ -1,0 +1,73 @@
+import SpecializationRegression
+
+set_option pp.universes true
+set_option pp.proofs false
+
+#print PiWeightedColon.hermiteComplexEval
+#print axioms PiWeightedColon.hermiteComplexEval
+
+#print PiWeightedColon.complexHermiteCoefficientMatrix
+#print axioms PiWeightedColon.complexHermiteCoefficientMatrix
+
+#check PiWeightedColon.complexHermiteCoefficientMatrix_entry
+#print axioms PiWeightedColon.complexHermiteCoefficientMatrix_entry
+
+#print PiWeightedColon.squareComplexHermiteCoefficientMatrix
+#print axioms PiWeightedColon.squareComplexHermiteCoefficientMatrix
+
+#check PiWeightedColon.squareComplexHermiteCoefficientMatrix_map
+#print axioms PiWeightedColon.squareComplexHermiteCoefficientMatrix_map
+
+#check PiWeightedColon.complexHermiteCoefficientMatrix_det_aeval
+#print axioms PiWeightedColon.complexHermiteCoefficientMatrix_det_aeval
+
+#check PiWeightedColon.hermite_determinant_aeval_ne_zero
+#print axioms PiWeightedColon.hermite_determinant_aeval_ne_zero
+
+#check PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero
+#print axioms PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero
+
+#print PiWeightedColon.canonicalComplexHermiteCoefficientMatrix
+#print axioms PiWeightedColon.canonicalComplexHermiteCoefficientMatrix
+
+#check PiWeightedColon.canonicalComplexHermiteCoefficientMatrix_det_ne_zero
+#print axioms PiWeightedColon.canonicalComplexHermiteCoefficientMatrix_det_ne_zero
+
+#check PiWeightedColon.complex_I_isAlgebraic
+#print axioms PiWeightedColon.complex_I_isAlgebraic
+
+#check PiWeightedColon.complex_transcendental_mul_iff
+#print axioms PiWeightedColon.complex_transcendental_mul_iff
+
+#print PiWeightedColon.imaginaryRealParameter
+#print axioms PiWeightedColon.imaginaryRealParameter
+
+#check PiWeightedColon.imaginaryRealParameter_transcendental_iff
+#print axioms PiWeightedColon.imaginaryRealParameter_transcendental_iff
+
+#check PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero_imaginaryReal
+#print axioms PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero_imaginaryReal
+
+#print PiWeightedColon.piHermiteParameter
+#print axioms PiWeightedColon.piHermiteParameter
+
+#check PiWeightedColon.piHermiteParameter_transcendental_iff
+#print axioms PiWeightedColon.piHermiteParameter_transcendental_iff
+
+#check PiWeightedColon.Regression.complex_actual_entry_at_I
+#print axioms PiWeightedColon.Regression.complex_actual_entry_at_I
+
+#check PiWeightedColon.Regression.complex_actual_matrix_entry_at_I
+#print axioms PiWeightedColon.Regression.complex_actual_matrix_entry_at_I
+
+#check PiWeightedColon.Regression.complex_actual_det_at_zero
+#print axioms PiWeightedColon.Regression.complex_actual_det_at_zero
+
+#check PiWeightedColon.Regression.imaginaryRealParameter_one
+#print axioms PiWeightedColon.Regression.imaginaryRealParameter_one
+
+#check PiWeightedColon.Regression.imaginaryRealParameter_two_not_transcendental
+#print axioms PiWeightedColon.Regression.imaginaryRealParameter_two_not_transcendental
+
+#check PiWeightedColon.Regression.piHermiteParameter_exact
+#print axioms PiWeightedColon.Regression.piHermiteParameter_exact

@@ -116,3 +116,7 @@ identity, the integer collision quotient, and the π specialization remain
 separate and unformalized. This stage proves only the specified actual
 Hermite coefficient determinant nonvanishing. It gives no archimedean lower
 bound, no arbitrary-weight theorem, and no badly-approximability theorem for π.
+
+The subsequent [complex specialization stage](COMPLEX.md) proves determinant
+evaluation compatibility and nonvanishing at every proved transcendental complex
+point. It records the exact missing pi-transcendence theorem in the pinned library.
