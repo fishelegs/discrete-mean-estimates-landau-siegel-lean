@@ -1,0 +1,320 @@
+@[reducible] def PiWeightedColon.BlockIndex : Nat → Nat → Nat → Nat → Type :=
+fun N d p q =>
+  (j : Fin (HAdd.hAdd.{0, 0, 0} N 1)) ×
+    Prod.{0, 0} (Fin d) (Fin (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} p (HSub.hSub.{0, 0, 0} N ↑j)) q))
+'PiWeightedColon.BlockIndex' does not depend on any axioms
+def PiWeightedColon.BlockLabel : Nat → Nat → Nat → Nat → Type :=
+fun N d p q =>
+  Subtype.{1} fun ck =>
+    And (LT.lt.{0} ck.1 (HMul.hMul.{0, 0, 0} d (HAdd.hAdd.{0, 0, 0} N 1)))
+      (LT.lt.{0} ck.2
+        (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} p (HSub.hSub.{0, 0, 0} N (HDiv.hDiv.{0, 0, 0} ck.1 d))) q))
+'PiWeightedColon.BlockLabel' does not depend on any axioms
+PiWeightedColon.block_div (d j r : Nat) (hd : LT.lt.{0} 0 d) (hr : LT.lt.{0} r d) :
+  Eq.{1} (HDiv.hDiv.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} d j) r) d) j
+'PiWeightedColon.block_div' depends on axioms: [propext, Quot.sound.{u}]
+def PiWeightedColon.blockEncode : (N d p q : Nat) →
+  LT.lt.{0} 0 d → PiWeightedColon.BlockIndex N d p q → PiWeightedColon.BlockLabel N d p q :=
+fun N d p q hd i =>
+  Subtype.mk.{1}
+    (Prod.mk.{0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} d ↑(Sigma.fst.{0, 0} i)) ↑(Sigma.snd.{0, 0} i).1)
+      ↑(Sigma.snd.{0, 0} i).2)
+    ⋯
+'PiWeightedColon.blockEncode' depends on axioms: [propext, Quot.sound.{u}]
+def PiWeightedColon.blockDecode : (N d p q : Nat) →
+  LT.lt.{0} 0 d → PiWeightedColon.BlockLabel N d p q → PiWeightedColon.BlockIndex N d p q :=
+fun N d p q hd i =>
+  Sigma.mk.{0, 0} ⟨HDiv.hDiv.{0, 0, 0} (↑i).1 d, ⋯⟩ (Prod.mk.{0, 0} ⟨HMod.hMod.{0, 0, 0} (↑i).1 d, ⋯⟩ ⟨(↑i).2, ⋯⟩)
+'PiWeightedColon.blockDecode' depends on axioms: [propext]
+PiWeightedColon.blockEncode_injective (N d p q : Nat) (hd : LT.lt.{0} 0 d) :
+  Function.Injective.{1, 1} (PiWeightedColon.blockEncode N d p q hd)
+'PiWeightedColon.blockEncode_injective' depends on axioms: [propext, Quot.sound.{u}]
+PiWeightedColon.blockEncode_decode (N d p q : Nat) (hd : LT.lt.{0} 0 d) (i : PiWeightedColon.BlockLabel N d p q) :
+  Eq.{1} (PiWeightedColon.blockEncode N d p q hd (PiWeightedColon.blockDecode N d p q hd i)) i
+'PiWeightedColon.blockEncode_decode' depends on axioms: [propext, Quot.sound.{u}]
+def PiWeightedColon.blockEquiv : (N d p q : Nat) →
+  LT.lt.{0} 0 d → Equiv.{1, 1} (PiWeightedColon.BlockIndex N d p q) (PiWeightedColon.BlockLabel N d p q) :=
+fun N d p q hd => Equiv.mk.{1, 1} (PiWeightedColon.blockEncode N d p q hd) (PiWeightedColon.blockDecode N d p q hd) ⋯ ⋯
+'PiWeightedColon.blockEquiv' depends on axioms: [propext, Quot.sound.{u}]
+@[reducible] def PiWeightedColon.RowIndex : Nat → Type :=
+fun N => PiWeightedColon.BlockIndex N 2 4 2
+'PiWeightedColon.RowIndex' does not depend on any axioms
+@[reducible] def PiWeightedColon.ColIndex : Nat → Type :=
+fun N => (e : Bool) × PiWeightedColon.BlockIndex N (PiWeightedColon.endpointD e) 2 1
+'PiWeightedColon.ColIndex' does not depend on any axioms
+def PiWeightedColon.rowS : {N : Nat} → PiWeightedColon.RowIndex N → Nat :=
+fun {N} i => ↑(Sigma.snd.{0, 0} i).2
+'PiWeightedColon.rowS' does not depend on any axioms
+def PiWeightedColon.rowA : {N : Nat} → PiWeightedColon.RowIndex N → Nat :=
+fun {N} i => HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 ↑(Sigma.fst.{0, 0} i)) ↑(Sigma.snd.{0, 0} i).1
+'PiWeightedColon.rowA' does not depend on any axioms
+def PiWeightedColon.colE : {N : Nat} → PiWeightedColon.ColIndex N → Bool :=
+fun {N} i => Sigma.fst.{0, 0} i
+'PiWeightedColon.colE' does not depend on any axioms
+def PiWeightedColon.colC : {N : Nat} → PiWeightedColon.ColIndex N → Nat :=
+fun {N} i =>
+  HAdd.hAdd.{0, 0, 0}
+    (HMul.hMul.{0, 0, 0} (PiWeightedColon.endpointD (Sigma.fst.{0, 0} i)) ↑(Sigma.fst.{0, 0} (Sigma.snd.{0, 0} i)))
+    ↑(Sigma.snd.{0, 0} (Sigma.snd.{0, 0} i)).1
+'PiWeightedColon.colC' does not depend on any axioms
+def PiWeightedColon.colK : {N : Nat} → PiWeightedColon.ColIndex N → Nat :=
+fun {N} i => ↑(Sigma.snd.{0, 0} (Sigma.snd.{0, 0} i)).2
+'PiWeightedColon.colK' does not depend on any axioms
+PiWeightedColon.endpointD_pos (e : Bool) : LT.lt.{0} 0 (PiWeightedColon.endpointD e)
+'PiWeightedColon.endpointD_pos' does not depend on any axioms
+def PiWeightedColon.RowLabel : Nat → Type :=
+fun N =>
+  Subtype.{1} fun sa =>
+    And (LE.le.{0} sa.2 (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 N) 1))
+      (LE.le.{0} sa.1
+        (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 (HSub.hSub.{0, 0, 0} N (HDiv.hDiv.{0, 0, 0} sa.2 2))) 1))
+'PiWeightedColon.RowLabel' does not depend on any axioms
+@[reducible] def PiWeightedColon.ColLabel : Nat → Type :=
+fun N => (e : Bool) × PiWeightedColon.BlockLabel N (PiWeightedColon.endpointD e) 2 1
+'PiWeightedColon.ColLabel' does not depend on any axioms
+def PiWeightedColon.rowLabelEquiv : (N : Nat) →
+  Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.RowLabel N) :=
+fun N =>
+  Equiv.trans.{1, 1, 1} (PiWeightedColon.blockEquiv N 2 4 2 PiWeightedColon.rowLabelEquiv._proof_3)
+    (Equiv.mk.{1, 1} (fun i => Subtype.mk.{1} (Prod.mk.{0, 0} (↑i).2 (↑i).1) ⋯)
+      (fun i => Subtype.mk.{1} (Prod.mk.{0, 0} (↑i).2 (↑i).1) ⋯) ⋯ ⋯)
+'PiWeightedColon.rowLabelEquiv' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.colLabelEquiv : (N : Nat) →
+  Equiv.{1, 1} (PiWeightedColon.ColIndex N) (PiWeightedColon.ColLabel N) :=
+fun N => Equiv.sigmaCongrRight.{0, 0, 0} fun e => PiWeightedColon.blockEquiv N (PiWeightedColon.endpointD e) 2 1 ⋯
+'PiWeightedColon.colLabelEquiv' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.row_index_bounds {N : Nat} (i : PiWeightedColon.RowIndex N) :
+  And (LE.le.{0} (PiWeightedColon.rowA i) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 N) 1))
+    (LE.le.{0} (PiWeightedColon.rowS i)
+      (HAdd.hAdd.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} 4 (HSub.hSub.{0, 0, 0} N (HDiv.hDiv.{0, 0, 0} (PiWeightedColon.rowA i) 2))) 1))
+'PiWeightedColon.row_index_bounds' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.col_index_bounds {N : Nat} (i : PiWeightedColon.ColIndex N) :
+  And
+    (LT.lt.{0} (PiWeightedColon.colC i)
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.endpointD (PiWeightedColon.colE i)) (HAdd.hAdd.{0, 0, 0} N 1)))
+    (LE.le.{0} (PiWeightedColon.colK i)
+      (HMul.hMul.{0, 0, 0} 2
+        (HSub.hSub.{0, 0, 0} N
+          (HDiv.hDiv.{0, 0, 0} (PiWeightedColon.colC i) (PiWeightedColon.endpointD (PiWeightedColon.colE i))))))
+'PiWeightedColon.col_index_bounds' depends on axioms: [propext, Quot.sound.{u}]
+PiWeightedColon.blockIndex_card (N d p q : Nat) :
+  Eq.{1} (Fintype.card.{0} (PiWeightedColon.BlockIndex N d p q))
+    (∑ j, HMul.hMul.{0, 0, 0} d (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} p (HSub.hSub.{0, 0, 0} N ↑j)) q))
+'PiWeightedColon.blockIndex_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.common_index_count (N : Nat) :
+  Eq.{1} (∑ j, HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 8 (HSub.hSub.{0, 0, 0} N ↑j)) 4)
+    (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} N 1) 2))
+'PiWeightedColon.common_index_count' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rowIndex_card (N : Nat) :
+  Eq.{1} (Fintype.card.{0} (PiWeightedColon.RowIndex N))
+    (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} N 1) 2))
+'PiWeightedColon.rowIndex_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.colIndex_card (N : Nat) :
+  Eq.{1} (Fintype.card.{0} (PiWeightedColon.ColIndex N))
+    (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} N 1) 2))
+'PiWeightedColon.colIndex_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@[implicit_reducible] def PiWeightedColon.rowLabelFintype : (N : Nat) → Fintype.{0} (PiWeightedColon.RowLabel N) :=
+fun N => Fintype.ofEquiv.{0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.rowLabelEquiv N)
+'PiWeightedColon.rowLabelFintype' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@[implicit_reducible] def PiWeightedColon.colLabelFintype : (N : Nat) → Fintype.{0} (PiWeightedColon.ColLabel N) :=
+fun N => Fintype.ofEquiv.{0, 0} (PiWeightedColon.ColIndex N) (PiWeightedColon.colLabelEquiv N)
+'PiWeightedColon.colLabelFintype' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rowLabel_card (N : Nat) :
+  Eq.{1} (Fintype.card.{0} (PiWeightedColon.RowLabel N))
+    (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} N 1) 2))
+'PiWeightedColon.rowLabel_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.colLabel_card (N : Nat) :
+  Eq.{1} (Fintype.card.{0} (PiWeightedColon.ColLabel N))
+    (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} N 1) 2))
+'PiWeightedColon.colLabel_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.matrixIndexEquiv : (N : Nat) →
+  Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.ColIndex N) :=
+fun N => Fintype.equivOfCardEq.{0, 0} ⋯
+'PiWeightedColon.matrixIndexEquiv' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.binaryEntry : Nat → Nat → Bool → Nat → Nat → PiWeightedColon.F2 :=
+fun s a e c k =>
+  ite.{1} (And (LE.le.{0} k s) (And (LE.le.{0} a c) (LE.le.{0} (HSub.hSub.{0, 0, 0} c a) (HSub.hSub.{0, 0, 0} s k))))
+    (HMul.hMul.{0, 0, 0}
+      (HMul.hMul.{0, 0, 0} ↑(Nat.choose s k) ↑(Nat.choose (HSub.hSub.{0, 0, 0} s k) (HSub.hSub.{0, 0, 0} c a)))
+      (HPow.hPow.{0, 0, 0} (PiWeightedColon.endpoint e)
+        (HSub.hSub.{0, 0, 0} (HSub.hSub.{0, 0, 0} s k) (HSub.hSub.{0, 0, 0} c a))))
+    0
+'PiWeightedColon.binaryEntry' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.entry_exponent_integer (s a c k : Nat) (hk : LE.le.{0} k s) (ha : LE.le.{0} a c)
+  (hc : LE.le.{0} (HSub.hSub.{0, 0, 0} c a) (HSub.hSub.{0, 0, 0} s k)) :
+  Eq.{1} (↑(HSub.hSub.{0, 0, 0} (HSub.hSub.{0, 0, 0} s k) (HSub.hSub.{0, 0, 0} c a)))
+    (HAdd.hAdd.{0, 0, 0} (HSub.hSub.{0, 0, 0} (HSub.hSub.{0, 0, 0} ↑s ↑k) ↑c) ↑a)
+'PiWeightedColon.entry_exponent_integer' depends on axioms: [propext, Quot.sound.{u}]
+PiWeightedColon.coordinate_bimono_coeff (e : Bool) (s a : Nat) (b : PiWeightedColon.F2) (k c : Nat) :
+  Eq.{1} (PiWeightedColon.coeff.{0} ((PiWeightedColon.coordinate e) (PiWeightedColon.bimono s a b)) k c)
+    (HMul.hMul.{0, 0, 0} b (PiWeightedColon.binaryEntry s a e c k))
+'PiWeightedColon.coordinate_bimono_coeff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.coordinate_mono_coeff (e : Bool) (s a k c : Nat) :
+  Eq.{1} (PiWeightedColon.coeff.{0} ((PiWeightedColon.coordinate e) (PiWeightedColon.mono.{0} s a)) k c)
+    (PiWeightedColon.binaryEntry s a e c k)
+'PiWeightedColon.coordinate_mono_coeff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.binaryMatrix : (N : Nat) →
+  Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.ColIndex N) PiWeightedColon.F2 :=
+fun N r c =>
+  PiWeightedColon.binaryEntry (PiWeightedColon.rowS r) (PiWeightedColon.rowA r) (PiWeightedColon.colE c)
+    (PiWeightedColon.colC c) (PiWeightedColon.colK c)
+'PiWeightedColon.binaryMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.binaryMatrix_coefficient (N : Nat) (r : PiWeightedColon.RowIndex N) (c : PiWeightedColon.ColIndex N) :
+  Eq.{1} (PiWeightedColon.binaryMatrix N r c)
+    (PiWeightedColon.coeff.{0}
+      ((PiWeightedColon.coordinate (PiWeightedColon.colE c))
+        (PiWeightedColon.mono.{0} (PiWeightedColon.rowS r) (PiWeightedColon.rowA r)))
+      (PiWeightedColon.colK c) (PiWeightedColon.colC c))
+'PiWeightedColon.binaryMatrix_coefficient' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.low_weight_iff (N d k c : Nat) (hd : LT.lt.{0} 0 d) :
+  Iff (LT.lt.{0} (PiWeightedColon.weight d k c) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 N) 1))
+    (And (LT.lt.{0} c (HMul.hMul.{0, 0, 0} d (HAdd.hAdd.{0, 0, 0} N 1)))
+      (LT.lt.{0} k (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} N (HDiv.hDiv.{0, 0, 0} c d))) 1)))
+'PiWeightedColon.low_weight_iff' depends on axioms: [propext, Quot.sound.{u}]
+PiWeightedColon.endpoint_data_iff (N : Nat) (e : Bool) (f : PiWeightedColon.Plane) :
+  Iff
+    (Membership.mem.{0, 0}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.endpointJ e) (HPow.hPow.{0, 0, 0} (PiWeightedColon.endpointK e) N)) f)
+    (PiWeightedColon.Data.{0} (PiWeightedColon.endpointD e) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 N) 1)
+      (PiWeightedColon.coeff.{0} ((PiWeightedColon.coordinate e) f)))
+'PiWeightedColon.endpoint_data_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.dataIntersection_iff_columns (N : Nat) (f : PiWeightedColon.Plane) :
+  Iff (Membership.mem.{0, 0} (PiWeightedColon.dataIntersection N) f)
+    (∀ (c : PiWeightedColon.ColIndex N),
+      Eq.{1}
+        (PiWeightedColon.coeff.{0} ((PiWeightedColon.coordinate (PiWeightedColon.colE c)) f) (PiWeightedColon.colK c)
+          (PiWeightedColon.colC c))
+        0)
+'PiWeightedColon.dataIntersection_iff_columns' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.row_coordinates_injective (N : Nat) :
+  Function.Injective.{1, 1} fun r => Prod.mk.{0, 0} (PiWeightedColon.rowS r) (PiWeightedColon.rowA r)
+'PiWeightedColon.row_coordinates_injective' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.coeff_bimono (s a k c : Nat) (b : PiWeightedColon.F2) :
+  Eq.{1} (PiWeightedColon.coeff.{0} (PiWeightedColon.bimono s a b) k c) (ite.{1} (And (Eq.{1} s k) (Eq.{1} a c)) b 0)
+'PiWeightedColon.coeff_bimono' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.rowPolynomial : (N : Nat) →
+  (PiWeightedColon.RowIndex N → PiWeightedColon.F2) → PiWeightedColon.Plane :=
+fun N v => ∑ r, PiWeightedColon.bimono (PiWeightedColon.rowS r) (PiWeightedColon.rowA r) (v r)
+'PiWeightedColon.rowPolynomial' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rowPolynomial_mem (N : Nat) (v : PiWeightedColon.RowIndex N → PiWeightedColon.F2) :
+  Membership.mem.{0, 0} (PiWeightedColon.V_N N) (PiWeightedColon.rowPolynomial N v)
+'PiWeightedColon.rowPolynomial_mem' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rowPolynomial_coeff (N : Nat) (v : PiWeightedColon.RowIndex N → PiWeightedColon.F2)
+  (r : PiWeightedColon.RowIndex N) :
+  Eq.{1}
+    (PiWeightedColon.coeff.{0} (PiWeightedColon.rowPolynomial N v) (PiWeightedColon.rowS r) (PiWeightedColon.rowA r))
+    (v r)
+'PiWeightedColon.rowPolynomial_coeff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.rowPolynomial_columns (N : Nat) (v : PiWeightedColon.RowIndex N → PiWeightedColon.F2)
+  (c : PiWeightedColon.ColIndex N) :
+  Eq.{1}
+    (PiWeightedColon.coeff.{0}
+      ((PiWeightedColon.coordinate (PiWeightedColon.colE c)) (PiWeightedColon.rowPolynomial N v))
+      (PiWeightedColon.colK c) (PiWeightedColon.colC c))
+    (Matrix.vecMul.{0, 0, 0} v (PiWeightedColon.binaryMatrix N) c)
+'PiWeightedColon.rowPolynomial_columns' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.row_vector_dimension (N : Nat) :
+  Eq.{1} (Module.finrank.{0, 0} PiWeightedColon.F2 (PiWeightedColon.RowIndex N → PiWeightedColon.F2))
+    (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} N 1) 2))
+'PiWeightedColon.row_vector_dimension' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.col_vector_dimension (N : Nat) :
+  Eq.{1} (Module.finrank.{0, 0} PiWeightedColon.F2 (PiWeightedColon.ColIndex N → PiWeightedColon.F2))
+    (HMul.hMul.{0, 0, 0} 4 (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} N 1) 2))
+'PiWeightedColon.col_vector_dimension' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.binaryMatrix_vecMul_eq_zero (N : Nat) (v : PiWeightedColon.RowIndex N → PiWeightedColon.F2)
+  (hv : Eq.{1} (Matrix.vecMul.{0, 0, 0} v (PiWeightedColon.binaryMatrix N)) 0) : Eq.{1} v 0
+'PiWeightedColon.binaryMatrix_vecMul_eq_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.squareBinaryMatrix : (N : Nat) →
+  Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.ColIndex N) →
+    Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.RowIndex N) PiWeightedColon.F2 :=
+fun N e r s => PiWeightedColon.binaryMatrix N r (e s)
+'PiWeightedColon.squareBinaryMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.squareBinaryMatrix_vecMul_eq_zero (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.ColIndex N))
+  (v : PiWeightedColon.RowIndex N → PiWeightedColon.F2)
+  (hv : Eq.{1} (Matrix.vecMul.{0, 0, 0} v (PiWeightedColon.squareBinaryMatrix N e)) 0) : Eq.{1} v 0
+'PiWeightedColon.squareBinaryMatrix_vecMul_eq_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.squareBinaryMatrix_det_ne_zero (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.ColIndex N)) :
+  Ne.{1} (Matrix.det.{0, 0} (PiWeightedColon.squareBinaryMatrix N e)) 0
+'PiWeightedColon.squareBinaryMatrix_det_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.squareBinaryMatrix_isUnit (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.ColIndex N)) :
+  IsUnit.{0} (PiWeightedColon.squareBinaryMatrix N e)
+'PiWeightedColon.squareBinaryMatrix_isUnit' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.squareBinaryMatrix_inverse (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.ColIndex N)) :
+  And
+    (Eq.{1}
+      (HMul.hMul.{0, 0, 0} (PiWeightedColon.squareBinaryMatrix N e)
+        (Inv.inv.{0} (PiWeightedColon.squareBinaryMatrix N e)))
+      1)
+    (Eq.{1}
+      (HMul.hMul.{0, 0, 0} (Inv.inv.{0} (PiWeightedColon.squareBinaryMatrix N e))
+        (PiWeightedColon.squareBinaryMatrix N e))
+      1)
+'PiWeightedColon.squareBinaryMatrix_inverse' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.canonicalBinaryMatrix : (N : Nat) →
+  Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.RowIndex N) PiWeightedColon.F2 :=
+fun N => PiWeightedColon.squareBinaryMatrix N (PiWeightedColon.matrixIndexEquiv N)
+'PiWeightedColon.canonicalBinaryMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.canonicalBinaryMatrix_det_ne_zero (N : Nat) :
+  Ne.{1} (Matrix.det.{0, 0} (PiWeightedColon.canonicalBinaryMatrix N)) 0
+'PiWeightedColon.canonicalBinaryMatrix_det_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.canonicalBinaryMatrix_isUnit (N : Nat) : IsUnit.{0} (PiWeightedColon.canonicalBinaryMatrix N)
+'PiWeightedColon.canonicalBinaryMatrix_isUnit' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.small_matrix_index_counts :
+  And (Eq.{1} (Fintype.card.{0} (PiWeightedColon.RowIndex 0)) 4)
+    (And (Eq.{1} (Fintype.card.{0} (PiWeightedColon.ColIndex 0)) 4)
+      (And (Eq.{1} (Fintype.card.{0} (PiWeightedColon.RowIndex 1)) 16)
+        (And (Eq.{1} (Fintype.card.{0} (PiWeightedColon.ColIndex 1)) 16)
+          (And (Eq.{1} (Fintype.card.{0} (PiWeightedColon.RowIndex 2)) 36)
+            (Eq.{1} (Fintype.card.{0} (PiWeightedColon.ColIndex 2)) 36)))))
+'PiWeightedColon.Regression.small_matrix_index_counts' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.binary_entry_boundaries :
+  And (Eq.{1} (PiWeightedColon.binaryEntry 0 0 false 0 0) 1)
+    (And (Eq.{1} (PiWeightedColon.binaryEntry 0 1 false 1 0) 1) (Eq.{1} (PiWeightedColon.binaryEntry 3 0 false 2 1) 1))
+'PiWeightedColon.Regression.binary_entry_boundaries' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.binary_entry_guards_and_parity :
+  And (Eq.{1} (PiWeightedColon.binaryEntry 1 0 false 0 2) 0)
+    (And (Eq.{1} (PiWeightedColon.binaryEntry 1 1 false 0 0) 0)
+      (And (Eq.{1} (PiWeightedColon.binaryEntry 1 0 false 3 0) 0)
+        (Eq.{1} (PiWeightedColon.binaryEntry 4 0 true 0 2) 0)))
+'PiWeightedColon.Regression.binary_entry_guards_and_parity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.actual_coefficient_example :
+  Eq.{1} (PiWeightedColon.coeff.{0} ((PiWeightedColon.coordinate false) (PiWeightedColon.mono.{0} 3 0)) 1 2) 1
+'PiWeightedColon.Regression.actual_coefficient_example' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def PiWeightedColon.Regression.testMatrixRow : PiWeightedColon.RowIndex 0 :=
+Sigma.mk.{0, 0} ⟨0, PiWeightedColon.Regression.testMatrixRow._proof_1⟩
+  (Prod.mk.{0, 0} ⟨1, PiWeightedColon.Regression.testMatrixRow._proof_2⟩
+    ⟨1, PiWeightedColon.Regression.testMatrixRow._proof_3⟩)
+'PiWeightedColon.Regression.testMatrixRow' does not depend on any axioms
+def PiWeightedColon.Regression.testMatrixCol : PiWeightedColon.ColIndex 0 :=
+Sigma.mk.{0, 0} true
+  (Sigma.mk.{0, 0} ⟨0, PiWeightedColon.Regression.testMatrixRow._proof_1⟩
+    (Prod.mk.{0, 0} ⟨2, PiWeightedColon.Regression.testMatrixCol._proof_1⟩
+      ⟨0, PiWeightedColon.Regression.testMatrixCol._proof_2⟩))
+'PiWeightedColon.Regression.testMatrixCol' does not depend on any axioms
+PiWeightedColon.Regression.actual_matrix_entry :
+  Eq.{1}
+    (PiWeightedColon.binaryMatrix 0 PiWeightedColon.Regression.testMatrixRow PiWeightedColon.Regression.testMatrixCol) 1
+'PiWeightedColon.Regression.actual_matrix_entry' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.label_roundtrip_example :
+  And
+    (Eq.{1}
+      ((PiWeightedColon.rowLabelEquiv 1)
+        ((Equiv.symm.{1, 1} (PiWeightedColon.rowLabelEquiv 1)) (Subtype.mk.{1} (Prod.mk.{0, 0} 5 1) ⋯)))
+      (Subtype.mk.{1} (Prod.mk.{0, 0} 5 1) ⋯))
+    (Eq.{1}
+      ((PiWeightedColon.colLabelEquiv 1)
+        ((Equiv.symm.{1, 1} (PiWeightedColon.colLabelEquiv 1))
+          (Sigma.mk.{0, 0} true (Subtype.mk.{1} (Prod.mk.{0, 0} 5 0) ⋯))))
+      (Sigma.mk.{0, 0} true (Subtype.mk.{1} (Prod.mk.{0, 0} 5 0) ⋯)))
+'PiWeightedColon.Regression.label_roundtrip_example' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

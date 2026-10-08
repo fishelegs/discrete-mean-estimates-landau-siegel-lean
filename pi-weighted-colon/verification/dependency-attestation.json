@@ -4,6 +4,10 @@
       "source_sha256": "7a81cef2ff724f9f690993d01aef906b200ca11c36f72fb57f9e6e5eaf4ec45e",
       "olean_sha256": "55669c6e55f73b80bc5c9071411089e827a740f95dba8c6d0840cd9cd4c9162d"
     },
+    "Mathlib.Algebra.BigOperators.Fin": {
+      "source_sha256": "03cef521805766ad46649cc9c5741f3005aa4208f7e40993b3ba5305c2faa628",
+      "olean_sha256": "d22c823f5a75626f6d74340a47fa46d7a9e05968a1d6ba983a8531f37ad759c9"
+    },
     "Mathlib.Algebra.CharP.Two": {
       "source_sha256": "93d24de7802b11b6179783bee42543f5131173ed0ddbddaad05a35203ec6d6c0",
       "olean_sha256": "a889ddc916247f8f88e52084b3c9204138df43a040ee33165e0c6165bd5f27c0"
@@ -32,9 +36,17 @@
       "source_sha256": "1dc337c6a10ba3e7c1d43e325e4a6e5e967f8e6112b01545cf7458b40e6b077e",
       "olean_sha256": "41b3f912a53a83f4e6afce5ca7e386f88cfe264f8c47f732009a07fd637e272a"
     },
+    "Mathlib.Data.Matrix.Basic": {
+      "source_sha256": "fee0a2b95796c84709e51646b2725c39adb38b453000ce9df0ea97a95ddddeaf",
+      "olean_sha256": "2ab57392aa6f966468d75562d109e0dcf29c17265cefdb93e29e5de29491a35c"
+    },
     "Mathlib.Data.ZMod.Basic": {
       "source_sha256": "6e076742a9be15cb038502a6634155ae5a402899577f85e3c2941beedc0e1abd",
       "olean_sha256": "155961f7978f57eceec594debe5cc9550a07b0c2ed061aaa9cf3a4bc90fbd175"
+    },
+    "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv": {
+      "source_sha256": "2caa7ed8644fa3e224178eb8f7283ff7d6bf216b21ec82fe4b5d173f6acef124",
+      "olean_sha256": "a7b307f420cbef578f4e7345964fc81df0e4d39923ec65982f6a721df2873473"
     },
     "Mathlib.RingTheory.AdjoinRoot": {
       "source_sha256": "b6c97311a0cb58223ee87b43c3f2d29087a47f5c2cb0390cabc065f7a2bc002a",

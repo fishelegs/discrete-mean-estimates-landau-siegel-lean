@@ -57,6 +57,10 @@
       "source_sha256": "7a81cef2ff724f9f690993d01aef906b200ca11c36f72fb57f9e6e5eaf4ec45e",
       "olean_sha256": "55669c6e55f73b80bc5c9071411089e827a740f95dba8c6d0840cd9cd4c9162d"
     },
+    "Mathlib.Algebra.BigOperators.Fin": {
+      "source_sha256": "03cef521805766ad46649cc9c5741f3005aa4208f7e40993b3ba5305c2faa628",
+      "olean_sha256": "d22c823f5a75626f6d74340a47fa46d7a9e05968a1d6ba983a8531f37ad759c9"
+    },
     "Mathlib.Algebra.CharP.Two": {
       "source_sha256": "93d24de7802b11b6179783bee42543f5131173ed0ddbddaad05a35203ec6d6c0",
       "olean_sha256": "a889ddc916247f8f88e52084b3c9204138df43a040ee33165e0c6165bd5f27c0"
@@ -85,9 +89,17 @@
       "source_sha256": "1dc337c6a10ba3e7c1d43e325e4a6e5e967f8e6112b01545cf7458b40e6b077e",
       "olean_sha256": "41b3f912a53a83f4e6afce5ca7e386f88cfe264f8c47f732009a07fd637e272a"
     },
+    "Mathlib.Data.Matrix.Basic": {
+      "source_sha256": "fee0a2b95796c84709e51646b2725c39adb38b453000ce9df0ea97a95ddddeaf",
+      "olean_sha256": "2ab57392aa6f966468d75562d109e0dcf29c17265cefdb93e29e5de29491a35c"
+    },
     "Mathlib.Data.ZMod.Basic": {
       "source_sha256": "6e076742a9be15cb038502a6634155ae5a402899577f85e3c2941beedc0e1abd",
       "olean_sha256": "155961f7978f57eceec594debe5cc9550a07b0c2ed061aaa9cf3a4bc90fbd175"
+    },
+    "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv": {
+      "source_sha256": "2caa7ed8644fa3e224178eb8f7283ff7d6bf216b21ec82fe4b5d173f6acef124",
+      "olean_sha256": "a7b307f420cbef578f4e7345964fc81df0e4d39923ec65982f6a721df2873473"
     },
     "Mathlib.RingTheory.AdjoinRoot": {
       "source_sha256": "b6c97311a0cb58223ee87b43c3f2d29087a47f5c2cb0390cabc065f7a2bc002a",
@@ -124,7 +136,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/WeightedColon.olean",
+        "/private/tmp/pi-matrix-replay/build/WeightedColon.olean",
         "WeightedColon.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -133,7 +145,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 2.792,
+      "elapsed_seconds": 9.8,
       "olean_sha256": "4010213d5a84ded17c28280c1219f440049fe31b6051393f9a100a667b6ee06e"
     },
     {
@@ -145,7 +157,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/DataIdealPresentation.olean",
+        "/private/tmp/pi-matrix-replay/build/DataIdealPresentation.olean",
         "DataIdealPresentation.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -154,7 +166,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 2.591,
+      "elapsed_seconds": 1.862,
       "olean_sha256": "1bcc3adc07ba5fceccf1393593d206dea99d5f4d37430d54f6d5fcb90ccb059d"
     },
     {
@@ -166,7 +178,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/EndpointColon.olean",
+        "/private/tmp/pi-matrix-replay/build/EndpointColon.olean",
         "EndpointColon.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -175,7 +187,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 3.054,
+      "elapsed_seconds": 2.063,
       "olean_sha256": "db6264b722c5ea9248fde1db837d913acac0612ce21816d7e768f7a67e8be635"
     },
     {
@@ -187,7 +199,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/RemainderVanish.olean",
+        "/private/tmp/pi-matrix-replay/build/RemainderVanish.olean",
         "RemainderVanish.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -196,7 +208,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 2.379,
+      "elapsed_seconds": 1.628,
       "olean_sha256": "0f41f960bbbdd38992da6229b21155b651d95be7141f9db5b9db72e146495e04"
     },
     {
@@ -208,7 +220,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/QuadraticRemainder.olean",
+        "/private/tmp/pi-matrix-replay/build/QuadraticRemainder.olean",
         "QuadraticRemainder.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -217,7 +229,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 4.948,
+      "elapsed_seconds": 2.485,
       "olean_sha256": "e409c13ebaf7ae8072c405e6cb2c25d624d37a5bda45da48e60f9db153e81671"
     },
     {
@@ -229,7 +241,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/EndpointRemainderBridge.olean",
+        "/private/tmp/pi-matrix-replay/build/EndpointRemainderBridge.olean",
         "EndpointRemainderBridge.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -238,7 +250,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 3.471,
+      "elapsed_seconds": 2.218,
       "olean_sha256": "18067bb4806c5f9e0a601beae2695b0142c40641f7fc80b13489fa20f4ef5829"
     },
     {
@@ -250,7 +262,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/RightRemainderBridge.olean",
+        "/private/tmp/pi-matrix-replay/build/RightRemainderBridge.olean",
         "RightRemainderBridge.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -259,7 +271,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 3.764,
+      "elapsed_seconds": 2.402,
       "olean_sha256": "cadcca992041d4ecd57c8e67de1c241895dedc0c9da5d81b7b61448d6565c46d"
     },
     {
@@ -271,7 +283,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/StaircaseDivision.olean",
+        "/private/tmp/pi-matrix-replay/build/StaircaseDivision.olean",
         "StaircaseDivision.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -280,7 +292,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 2.875,
+      "elapsed_seconds": 1.802,
       "olean_sha256": "27b549f9718093f0641caf653024c58cd54f9e3776fcbd52f44de448705c8120"
     },
     {
@@ -292,7 +304,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/StaircaseNonvanishing.olean",
+        "/private/tmp/pi-matrix-replay/build/StaircaseNonvanishing.olean",
         "StaircaseNonvanishing.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -301,8 +313,71 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 2.522,
+      "elapsed_seconds": 1.575,
       "olean_sha256": "0931b9533d8c791931dcc52104080c9975726913f2d8a7586b157769e9fc7d3a"
+    },
+    {
+      "module": "MatrixIndices",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-matrix-replay/build/MatrixIndices.olean",
+        "MatrixIndices.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "4d1912add85f92b68b641205aeb1522b1857eb2738511e38b385b66bfd8180eb",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 1.893,
+      "olean_sha256": "79397b90b21f6e31cf65aa6403d336b867042e3a0da0f8be1d6895eefcf1113f"
+    },
+    {
+      "module": "MatrixEntries",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-matrix-replay/build/MatrixEntries.olean",
+        "MatrixEntries.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "df7e5aa05f6cbdbde2194868429e235eb02a0404f6ad9e5e1b6e4415c1ac7b9a",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 1.717,
+      "olean_sha256": "2f58e89d1c2643134c9abfaf74e78c06644526ca85c25dbd92e7f0148f041836"
+    },
+    {
+      "module": "BinaryMatrixNonvanishing",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-matrix-replay/build/BinaryMatrixNonvanishing.olean",
+        "BinaryMatrixNonvanishing.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "00634bc5aacc540520edfa637bae3369438fe9c83c52eb4c1f362f47a40a7150",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 1.536,
+      "olean_sha256": "f2807a2ab8893a8087f7e70b1c773c2d36b9d0f0202eae8b01ce6c13fb982fd9"
     },
     {
       "module": "WeightedColonRegression",
@@ -313,7 +388,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/WeightedColonRegression.olean",
+        "/private/tmp/pi-matrix-replay/build/WeightedColonRegression.olean",
         "WeightedColonRegression.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -322,7 +397,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 2.376,
+      "elapsed_seconds": 1.42,
       "olean_sha256": "a0ff04ac53cba312bde757c790d51a7b4435c9b16cb3f452d552cfc20dc22954"
     },
     {
@@ -334,7 +409,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/RemainderRegression.olean",
+        "/private/tmp/pi-matrix-replay/build/RemainderRegression.olean",
         "RemainderRegression.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -343,7 +418,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 2.064,
+      "elapsed_seconds": 1.327,
       "olean_sha256": "bfd607f75966b71b6967ab3bee9ad9eaa59cd1467d9cbd4e2fed481350d73c77"
     },
     {
@@ -355,7 +430,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/BridgeRegression.olean",
+        "/private/tmp/pi-matrix-replay/build/BridgeRegression.olean",
         "BridgeRegression.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -364,7 +439,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 2.738,
+      "elapsed_seconds": 1.706,
       "olean_sha256": "d4683308f16a803ac258f3f1befb6e4a83f3b537e164292f7933cd40c1053357"
     },
     {
@@ -376,7 +451,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/AllScaleRegression.olean",
+        "/private/tmp/pi-matrix-replay/build/AllScaleRegression.olean",
         "AllScaleRegression.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -385,8 +460,29 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "elapsed_seconds": 2.614,
+      "elapsed_seconds": 1.633,
       "olean_sha256": "41f57b9e7240d4e4816e7a1985819a1cb153a69a71b57f42f721b110dd3bf5f4"
+    },
+    {
+      "module": "MatrixRegression",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-matrix-replay/build/MatrixRegression.olean",
+        "MatrixRegression.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "2547d56f5b855ca0ae011e2bf2361ad26b067ba4d3d6724475816162c0363a3a",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed_seconds": 1.398,
+      "olean_sha256": "16716d2ba541cc7dd18ff7a51496d75f63110082cce4bac7968036a9bb0e88eb"
     },
     {
       "module": "WeightedColonAudit",
@@ -397,7 +493,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/WeightedColonAudit.olean",
+        "/private/tmp/pi-matrix-replay/build/WeightedColonAudit.olean",
         "WeightedColonAudit.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -406,7 +502,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "c082f7f69d5faf3a24c7b049c2ba83be70ab602f71ba363541de1345e4537af8",
-      "elapsed_seconds": 2.063,
+      "elapsed_seconds": 1.265,
       "olean_sha256": "8c605b1fa9904aab2b89f0c053a874aed274ac9281d8b345496f5f1129fdbad8"
     },
     {
@@ -418,7 +514,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/RemainderAudit.olean",
+        "/private/tmp/pi-matrix-replay/build/RemainderAudit.olean",
         "RemainderAudit.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -427,7 +523,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "7823760b6f5904a742d38445229496061eb15360377581b939d54fb14e6ec6a7",
-      "elapsed_seconds": 1.753,
+      "elapsed_seconds": 1.198,
       "olean_sha256": "8a4d09c25ae12bf4e4a29d4a07bf5e590c914183054e4a9ace27e2d342498e15"
     },
     {
@@ -439,7 +535,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/BridgeAudit.olean",
+        "/private/tmp/pi-matrix-replay/build/BridgeAudit.olean",
         "BridgeAudit.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -448,7 +544,7 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "4ee0532f4ad9f3444742b8eb09196099df4bb04b8fd4277664f9410a3b5d65e8",
-      "elapsed_seconds": 2.238,
+      "elapsed_seconds": 1.345,
       "olean_sha256": "62daa623fdb6d8ea40d322eb7f91331b5869c846453ff2fbda6a9624f3c4f385"
     },
     {
@@ -460,7 +556,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/AllScaleAudit.olean",
+        "/private/tmp/pi-matrix-replay/build/AllScaleAudit.olean",
         "AllScaleAudit.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -469,8 +565,69 @@
       "expected_failure": false,
       "passed": true,
       "log_sha256": "d4b28191ad130e64228e88bc37ef9a60c3c611b19ef5ad31e0530eda404a89c1",
-      "elapsed_seconds": 2.132,
+      "elapsed_seconds": 1.349,
       "olean_sha256": "699e8af7d2e7e75bd3830df30d9ec7a82100da9824e45ce5ee242320a61c7ec6"
+    },
+    {
+      "module": "MatrixAudit",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-matrix-replay/build/MatrixAudit.olean",
+        "MatrixAudit.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "f6e4b6b4f98de90591bc4dde983598a022118a1290fbb8ced90aecd23bcdf95e",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "log_sha256": "822b89907ff81074007ebc31aa9d4fb60128fbd7998125a5756a8b9c4c62f354",
+      "elapsed_seconds": 1.348,
+      "olean_sha256": "6dbd3e448851f9096343a662e0d381ff5938674b5da3e3edb84bdbb14032083a"
+    },
+    {
+      "module": "ExpectedFailureBinaryZeroPower",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-matrix-replay/build/ExpectedFailureBinaryZeroPower.olean",
+        "ExpectedFailureBinaryZeroPower.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "1a5ff73e92906520c22c58aaf5d6f50c6e61bdf91a616d56bf3403f1096008e7",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "log_sha256": "63af52021835c82d5aa1b27601b9ea123c05a273bb48136a36c86247cc8ddd10",
+      "elapsed_seconds": 1.301
+    },
+    {
+      "module": "ExpectedFailureBinaryParity",
+      "command": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/private/tmp/pi-matrix-replay/build/ExpectedFailureBinaryParity.olean",
+        "ExpectedFailureBinaryParity.lean"
+      ],
+      "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+      "source_sha256": "ebd62342ee6f120ea1aae466d2eba79e9f23720a6a802fb5fed1117e262a6a4e",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "log_sha256": "15bc44d7c3ef485ccf610a1808f9b2ac4e19f4e59b67176505acea012712b2d2",
+      "elapsed_seconds": 1.304
     },
     {
       "module": "ExpectedFailureWithoutStaircase",
@@ -481,7 +638,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/ExpectedFailureWithoutStaircase.olean",
+        "/private/tmp/pi-matrix-replay/build/ExpectedFailureWithoutStaircase.olean",
         "ExpectedFailureWithoutStaircase.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -490,7 +647,7 @@
       "expected_failure": true,
       "passed": true,
       "log_sha256": "0e7e299e1724053b440d27042a989785cacc06e6c8ef150bc8d9cb0bc9639745",
-      "elapsed_seconds": 2.019
+      "elapsed_seconds": 1.299
     },
     {
       "module": "ExpectedFailureExcessQuotientLoss",
@@ -501,7 +658,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/ExpectedFailureExcessQuotientLoss.olean",
+        "/private/tmp/pi-matrix-replay/build/ExpectedFailureExcessQuotientLoss.olean",
         "ExpectedFailureExcessQuotientLoss.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -510,7 +667,7 @@
       "expected_failure": true,
       "passed": true,
       "log_sha256": "98a767636bac71c78e5f8853f9d14f0df13779e198e3f29cec74a519f70061e3",
-      "elapsed_seconds": 2.155
+      "elapsed_seconds": 1.279
     },
     {
       "module": "ExpectedFailureWrongQuotientSquare",
@@ -521,7 +678,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/ExpectedFailureWrongQuotientSquare.olean",
+        "/private/tmp/pi-matrix-replay/build/ExpectedFailureWrongQuotientSquare.olean",
         "ExpectedFailureWrongQuotientSquare.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -530,7 +687,7 @@
       "expected_failure": true,
       "passed": true,
       "log_sha256": "77267051f53573612c807660d524ebe0da7273147a9428be652bc71b71f5b941",
-      "elapsed_seconds": 2.004
+      "elapsed_seconds": 1.289
     },
     {
       "module": "ExpectedFailureZeroScale",
@@ -541,7 +698,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/ExpectedFailureZeroScale.olean",
+        "/private/tmp/pi-matrix-replay/build/ExpectedFailureZeroScale.olean",
         "ExpectedFailureZeroScale.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -550,7 +707,7 @@
       "expected_failure": true,
       "passed": true,
       "log_sha256": "41ed7c71d81052802ef202d4bcfeb5d562d06174985ed8e617343b86064bad40",
-      "elapsed_seconds": 1.993
+      "elapsed_seconds": 1.173
     },
     {
       "module": "ExpectedFailureWrongWeight",
@@ -561,7 +718,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/ExpectedFailureWrongWeight.olean",
+        "/private/tmp/pi-matrix-replay/build/ExpectedFailureWrongWeight.olean",
         "ExpectedFailureWrongWeight.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -570,7 +727,7 @@
       "expected_failure": true,
       "passed": true,
       "log_sha256": "19d357e0202da8148bd63ebacb60afb9ac41e785ee9670c5784351d3e276d6a5",
-      "elapsed_seconds": 2.033
+      "elapsed_seconds": 1.218
     },
     {
       "module": "ExpectedFailureMissingRemainderCoupling",
@@ -581,7 +738,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/ExpectedFailureMissingRemainderCoupling.olean",
+        "/private/tmp/pi-matrix-replay/build/ExpectedFailureMissingRemainderCoupling.olean",
         "ExpectedFailureMissingRemainderCoupling.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -590,7 +747,7 @@
       "expected_failure": true,
       "passed": true,
       "log_sha256": "4403bf980c1a672636c60340b26ca62fcdd8c185236257ae2152b4b00fd9d40d",
-      "elapsed_seconds": 1.85
+      "elapsed_seconds": 1.224
     },
     {
       "module": "ExpectedFailureWeakRemainderDegree",
@@ -601,7 +758,7 @@
         "-DautoImplicit=false",
         "-DwarningAsError=true",
         "-o",
-        "/private/tmp/pi-all-scale-replay/build/ExpectedFailureWeakRemainderDegree.olean",
+        "/private/tmp/pi-matrix-replay/build/ExpectedFailureWeakRemainderDegree.olean",
         "ExpectedFailureWeakRemainderDegree.lean"
       ],
       "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
@@ -610,7 +767,7 @@
       "expected_failure": true,
       "passed": true,
       "log_sha256": "57bfb2698361032138889544450fba55101a2c0a7fb60f1c9b5dee26a8e9164d",
-      "elapsed_seconds": 2.155
+      "elapsed_seconds": 1.22
     }
   ],
   "declaration_kinds": {
@@ -789,6 +946,63 @@
     "PiWeightedColon.staircase_dataIntersection_zero": "theorem",
     "PiWeightedColon.V_N_dataIntersection_zero": "theorem",
     "PiWeightedColon.V_N_inf_dataIntersection": "theorem",
+    "PiWeightedColon.BlockIndex": "abbrev",
+    "PiWeightedColon.BlockLabel": "def",
+    "PiWeightedColon.block_div": "theorem",
+    "PiWeightedColon.blockEncode": "def",
+    "PiWeightedColon.blockDecode": "def",
+    "PiWeightedColon.blockEncode_injective": "theorem",
+    "PiWeightedColon.blockEncode_decode": "theorem",
+    "PiWeightedColon.blockEquiv": "def",
+    "PiWeightedColon.RowIndex": "abbrev",
+    "PiWeightedColon.ColIndex": "abbrev",
+    "PiWeightedColon.rowS": "def",
+    "PiWeightedColon.rowA": "def",
+    "PiWeightedColon.colE": "def",
+    "PiWeightedColon.colC": "def",
+    "PiWeightedColon.colK": "def",
+    "PiWeightedColon.endpointD_pos": "theorem",
+    "PiWeightedColon.RowLabel": "def",
+    "PiWeightedColon.ColLabel": "abbrev",
+    "PiWeightedColon.rowLabelEquiv": "def",
+    "PiWeightedColon.colLabelEquiv": "def",
+    "PiWeightedColon.row_index_bounds": "theorem",
+    "PiWeightedColon.col_index_bounds": "theorem",
+    "PiWeightedColon.blockIndex_card": "theorem",
+    "PiWeightedColon.common_index_count": "theorem",
+    "PiWeightedColon.rowIndex_card": "theorem",
+    "PiWeightedColon.colIndex_card": "theorem",
+    "PiWeightedColon.rowLabelFintype": "instance",
+    "PiWeightedColon.colLabelFintype": "instance",
+    "PiWeightedColon.rowLabel_card": "theorem",
+    "PiWeightedColon.colLabel_card": "theorem",
+    "PiWeightedColon.matrixIndexEquiv": "def",
+    "PiWeightedColon.binaryEntry": "def",
+    "PiWeightedColon.entry_exponent_integer": "theorem",
+    "PiWeightedColon.coordinate_bimono_coeff": "theorem",
+    "PiWeightedColon.coordinate_mono_coeff": "theorem",
+    "PiWeightedColon.binaryMatrix": "def",
+    "PiWeightedColon.binaryMatrix_coefficient": "theorem",
+    "PiWeightedColon.low_weight_iff": "theorem",
+    "PiWeightedColon.endpoint_data_iff": "theorem",
+    "PiWeightedColon.dataIntersection_iff_columns": "theorem",
+    "PiWeightedColon.row_coordinates_injective": "theorem",
+    "PiWeightedColon.coeff_bimono": "theorem",
+    "PiWeightedColon.rowPolynomial": "def",
+    "PiWeightedColon.rowPolynomial_mem": "theorem",
+    "PiWeightedColon.rowPolynomial_coeff": "theorem",
+    "PiWeightedColon.rowPolynomial_columns": "theorem",
+    "PiWeightedColon.row_vector_dimension": "theorem",
+    "PiWeightedColon.col_vector_dimension": "theorem",
+    "PiWeightedColon.binaryMatrix_vecMul_eq_zero": "theorem",
+    "PiWeightedColon.squareBinaryMatrix": "def",
+    "PiWeightedColon.squareBinaryMatrix_vecMul_eq_zero": "theorem",
+    "PiWeightedColon.squareBinaryMatrix_det_ne_zero": "theorem",
+    "PiWeightedColon.squareBinaryMatrix_isUnit": "theorem",
+    "PiWeightedColon.squareBinaryMatrix_inverse": "theorem",
+    "PiWeightedColon.canonicalBinaryMatrix": "def",
+    "PiWeightedColon.canonicalBinaryMatrix_det_ne_zero": "theorem",
+    "PiWeightedColon.canonicalBinaryMatrix_isUnit": "theorem",
     "PiWeightedColon.Regression.cancellingExample": "def",
     "PiWeightedColon.Regression.input_boundary": "theorem",
     "PiWeightedColon.Regression.mixed_term_cancels": "theorem",
@@ -808,7 +1022,15 @@
     "PiWeightedColon.Regression.y_four_division": "theorem",
     "PiWeightedColon.Regression.y_four_quotient_bound": "theorem",
     "PiWeightedColon.Regression.nonzero_intersection_outside_staircase": "theorem",
-    "PiWeightedColon.Regression.dataIntersection_proper": "theorem"
+    "PiWeightedColon.Regression.dataIntersection_proper": "theorem",
+    "PiWeightedColon.Regression.small_matrix_index_counts": "theorem",
+    "PiWeightedColon.Regression.binary_entry_boundaries": "theorem",
+    "PiWeightedColon.Regression.binary_entry_guards_and_parity": "theorem",
+    "PiWeightedColon.Regression.actual_coefficient_example": "theorem",
+    "PiWeightedColon.Regression.testMatrixRow": "def",
+    "PiWeightedColon.Regression.testMatrixCol": "def",
+    "PiWeightedColon.Regression.actual_matrix_entry": "theorem",
+    "PiWeightedColon.Regression.label_roundtrip_example": "theorem"
   },
   "axiom_audit": {
     "PiWeightedColon.action_data": [
@@ -1752,12 +1974,271 @@
       "Quot.sound",
       "propext"
     ],
+    "PiWeightedColon.block_div": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.blockEncode": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.blockDecode": [
+      "propext"
+    ],
+    "PiWeightedColon.blockEncode_injective": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.blockEncode_decode": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.blockEquiv": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.rowLabelEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.colLabelEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.row_index_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.col_index_bounds": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.blockIndex_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.common_index_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.rowIndex_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.colIndex_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.rowLabelFintype": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.colLabelFintype": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.rowLabel_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.colLabel_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.matrixIndexEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.binaryEntry": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.entry_exponent_integer": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coordinate_bimono_coeff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coordinate_mono_coeff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.binaryMatrix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.binaryMatrix_coefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.low_weight_iff": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.endpoint_data_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.dataIntersection_iff_columns": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.row_coordinates_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.coeff_bimono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.rowPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.rowPolynomial_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.rowPolynomial_coeff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.rowPolynomial_columns": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.row_vector_dimension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.col_vector_dimension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.binaryMatrix_vecMul_eq_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.squareBinaryMatrix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.squareBinaryMatrix_vecMul_eq_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.squareBinaryMatrix_det_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.squareBinaryMatrix_isUnit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.squareBinaryMatrix_inverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.canonicalBinaryMatrix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.canonicalBinaryMatrix_det_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.canonicalBinaryMatrix_isUnit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.small_matrix_index_counts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.binary_entry_boundaries": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.binary_entry_guards_and_parity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.actual_coefficient_example": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.actual_matrix_entry": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PiWeightedColon.Regression.label_roundtrip_example": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "PiWeightedColon.weight": [],
     "PiWeightedColon.Data": [],
     "PiWeightedColon.action": [],
     "PiWeightedColon.F2": [],
     "PiWeightedColon.endpointD": [],
-    "PiWeightedColon.stairWeight": []
+    "PiWeightedColon.stairWeight": [],
+    "PiWeightedColon.BlockIndex": [],
+    "PiWeightedColon.BlockLabel": [],
+    "PiWeightedColon.RowIndex": [],
+    "PiWeightedColon.ColIndex": [],
+    "PiWeightedColon.rowS": [],
+    "PiWeightedColon.rowA": [],
+    "PiWeightedColon.colE": [],
+    "PiWeightedColon.colC": [],
+    "PiWeightedColon.colK": [],
+    "PiWeightedColon.endpointD_pos": [],
+    "PiWeightedColon.RowLabel": [],
+    "PiWeightedColon.ColLabel": [],
+    "PiWeightedColon.Regression.testMatrixRow": [],
+    "PiWeightedColon.Regression.testMatrixCol": []
   },
-  "scope": "Weighted colon lemma for the actual F2 endpoint ideals, and bounded staircase division and the full V_N intersection theorem for the fixed F2 endpoint family d0=1, d1=3, Q=t4+t2+y2. The matrix/binomial-entry, rational determinant, residual-polynomial and analytic bridges are not proved; arbitrary arithmetic weights and pi badly approximability are not covered."
+  "scope": "Weighted colon lemma for the actual F2 endpoint ideals, and bounded staircase division and the full V_N intersection theorem for the fixed F2 endpoint family d0=1, d1=3, Q=t4+t2+y2. The actual binomial-entry F2 matrix has the proved finite index sets and dimensions, zero kernel, nonzero square determinant and inverse. Integer collision-quotient, rational/integer determinant and residual-polynomial/analytic bridges are not proved; arbitrary arithmetic weights and pi badly approximability are not covered."
 }

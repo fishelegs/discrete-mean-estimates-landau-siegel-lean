@@ -1,0 +1,3 @@
+ExpectedFailureBinaryZeroPower.lean:5:46: error: Tactic `decide` proved that the proposition
+  binaryEntry 0 1 false 1 0 = 0
+is false

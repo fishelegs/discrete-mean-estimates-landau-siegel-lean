@@ -1,0 +1,3 @@
+ExpectedFailureBinaryParity.lean:5:45: error: Tactic `decide` proved that the proposition
+  binaryEntry 4 0 true 0 2 = 1
+is false

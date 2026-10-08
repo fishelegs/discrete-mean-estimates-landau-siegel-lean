@@ -1,5 +1,9 @@
 # Full fixed-family staircase intersection theorem
 
+This records the polynomial-core milestone. [MATRIX.md](MATRIX.md) now
+completes the explicit binomial-entry binary-matrix bridge and invertibility.
+Every proof and regression source from this milestone is preserved.
+
 The all-scale algebraic theorem is now proved in Lean 4.30.0 for the actual
 F₂ monomial span and explicit endpoint-generated ideals. The result uses
 Q=t⁴+t²+y², d₀=1 and d₁=3, exactly as in the earlier colon and bridge files.
@@ -96,11 +100,11 @@ placing that quotient Q in V₀. Every prior regression and negative test still 
 Use the `README.md` replay command with `--out /tmp/pi-all-scale-replay`.
 The dedicated existing GitHub workflow runs that same expanded script.
 
-This completes the stated fixed-family algebraic intersection theorem. It does
-not formalize the evaluation map or binomial entries of the binary matrix,
-its dimension or invertibility equivalence, the rational/integer determinant
-normalization and parity bridge, or the residual-polynomial bridge. Those
-application steps remain separate. The arithmetic application is limited to
+This completes the stated fixed-family polynomial intersection theorem. The
+subsequent explicit coefficient-map/binomial-entry and dimension/invertibility
+bridge is now proved in `MATRIX.md`. Integer collision-quotient, rational/integer
+determinant normalization and parity, and residual-polynomial bridges remain
+separate and unformalized. The arithmetic application is limited to
 the fixed weight-2 family; this algebraic theorem does not automatically cover
 arbitrary weights. No uniform archimedean lower bound or π badly-approximability
 theorem follows or is claimed. The older Lean 4.34.1 checkpoint suites were not

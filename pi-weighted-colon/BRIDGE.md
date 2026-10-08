@@ -116,7 +116,6 @@ script and uploads its receipt and all logs. The Lean 4.30.0 and mathlib pins,
 existing root workflow and old π checkpoints remain unchanged.
 
 The bridge milestone alone did not prove V_N∩I_N={0}. The staircase-bounded
-division and final induction have since been proved in `ALL_SCALE.md`. The matrix
-invertibility equivalence, determinant parity and residual-polynomial bridge
-are also unformalized. No archimedean bound or π badly-approximability theorem
+division and final induction have since been proved in `ALL_SCALE.md`. The concrete matrix invertibility bridge is now proved in `MATRIX.md`.
+Integer/rational determinant parity and residual-polynomial bridges remain unformalized. No archimedean bound or π badly-approximability theorem
 has been proved. The older Lean 4.34.1 regression suite was not rerun.

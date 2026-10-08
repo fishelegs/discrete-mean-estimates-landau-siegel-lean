@@ -1,14 +1,16 @@
-# All-scale staircase nonvanishing for the fixed π algebraic family
+# Explicit binary-matrix nonvanishing for the fixed π algebraic family
 
 This checkpoint proves the full algebraic theorem `V_N ∩ I_N = {0}` for
 all natural N in the fixed F₂ endpoint family below. It includes the weighted
 colon lemma, the actual ideal-to-remainder bridge, staircase-bounded division,
-and the final induction. [ALL_SCALE.md](ALL_SCALE.md) gives the exact final
-theorem types and remaining application bridges.
+and the final induction. It now also proves the concrete binomial-entry
+matrix bridge, both finite index sets and dimensions, and invertibility over
+F₂. [MATRIX.md](MATRIX.md) gives the exact matrix statements and the remaining
+application bridges; [ALL_SCALE.md](ALL_SCALE.md) records the polynomial core.
 
 The arithmetic application is the fixed weight-2 family. This does not assert
-coverage of arbitrary arithmetic weights, formalize the binomial matrix or
-rational determinant bridge, give an archimedean bound, or prove that π is
+coverage of arbitrary arithmetic weights, formalize the integer collision-quotient
+or rational/integer determinant bridge, give an archimedean bound, or prove that π is
 badly approximable.
 
 ## Exact proved statement
@@ -40,7 +42,7 @@ are exactly the polynomials `f` for which `f*Q` belongs to the data ideal.
 The generators are defined explicitly, and their connection to the weighted
 coefficient model is proved, rather than supplied as a hypothesis.
 
-The final theorem is `PiWeightedColon.V_N_inf_dataIntersection`:
+The polynomial-core theorem is `PiWeightedColon.V_N_inf_dataIntersection`:
 
 ```lean
 theorem V_N_inf_dataIntersection (N : ℕ) :
@@ -82,16 +84,17 @@ threshold still increases by exactly two, not three. A further regression proves
 that the colon ideal at scale zero is not the original ideal. The two negative
 tests must fail on the false hypotheses `1 ≤ 0` and `5=1 ∨ 5=3`.
 
-The combined reproducible check compiles nine proof modules, four positive
-regression modules, four type/definition/axiom audits, and seven expected failures. All 195
+The combined reproducible check compiles twelve proof modules, five positive
+regression modules, five type/definition/axiom audits, and nine expected failures. All 260
 declarations, including definitions and regression theorems, are audited.
 Only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` are
 permitted. The proof sources contain no `sorry`, `admit`, `native_decide`,
 custom axiom or unsafe declaration. Warnings are treated as errors.
 
 The full `V_N ∩ I_N = {0}` theorem is now formalized for this fixed family.
-The binary matrix/binomial-entry equivalence and the rational/integer
-determinant and residual-polynomial bridges remain unformalized. The theorem
+The explicit binary matrix is now proved invertible, with nonzero determinant
+for every column reindexing. The integer collision-quotient, rational/integer
+determinant normalization and residual-polynomial bridges remain unformalized. The theorem
 does not extend the arithmetic result to arbitrary weights. No uniform
 archimedean estimate or π badly-approximability theorem is claimed.
 
@@ -116,7 +119,7 @@ From the repository root, on KEYISHEN-MC6 the checked command is:
 python3 pi-weighted-colon/scripts/replay.py \
   --lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean \
   --existing-mathlib-project /Users/keyishen/Documents/Codex/2026-10-04/task/mc6-proof \
-  --out /tmp/pi-all-scale-replay
+  --out /tmp/pi-matrix-replay
 ```
 
 For another machine, substitute the compiler and existing project paths with

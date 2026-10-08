@@ -72,8 +72,8 @@ The previous two negative tests and all previous axiom checks still run.
 
 The conditional milestone did not include a quotient model or ideal image
 calculation. These are now supplied in `BRIDGE.md`, and `ALL_SCALE.md` completes the
-staircase-bounded division and final V_N induction. The binary matrix and
-determinant/residual-polynomial bridges remain unformalized. The conditional
+staircase-bounded division and final V_N induction. The binary matrix bridge is now proved in `MATRIX.md`; the integer/rational
+determinant and residual-polynomial bridges remain unformalized. The conditional
 remainder theorem alone does not give the full algebraic theorem, and no
 π badly-approximability statement is proved.
 
