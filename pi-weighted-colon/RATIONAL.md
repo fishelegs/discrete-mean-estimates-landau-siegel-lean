@@ -133,3 +133,7 @@ are preserved but were not rerun. This stage ends at the actual rational
 origin matrix. A residual polynomial, its identity and π specialization,
 integer collision-quotient, archimedean estimate, arbitrary arithmetic weights
 and π badly-approximability remain outside the formalized scope.
+
+The subsequent [Hermite stage](HERMITE.md) constructs the actual coefficient
+matrix over Q[x] from monic remainders and proves its evaluation at x=0 is
+this matrix, hence its determinant polynomial is nonzero for every N.

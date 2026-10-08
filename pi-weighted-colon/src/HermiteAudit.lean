@@ -1,0 +1,100 @@
+import HermiteRegression
+
+set_option pp.universes true
+set_option pp.proofs false
+
+#print PiWeightedColon.HermiteParameter
+#print axioms PiWeightedColon.HermiteParameter
+
+#print PiWeightedColon.HermiteBivariate
+#print axioms PiWeightedColon.HermiteBivariate
+
+#print PiWeightedColon.hermiteRowMultiplicity
+#print axioms PiWeightedColon.hermiteRowMultiplicity
+
+#check PiWeightedColon.hermite_row_profile_iff
+#print axioms PiWeightedColon.hermite_row_profile_iff
+
+#check PiWeightedColon.hermite_row_bounds
+#print axioms PiWeightedColon.hermite_row_bounds
+
+#check PiWeightedColon.hermite_row_multiplicity_pos
+#print axioms PiWeightedColon.hermite_row_multiplicity_pos
+
+#print PiWeightedColon.hermiteModulus
+#print axioms PiWeightedColon.hermiteModulus
+
+#check PiWeightedColon.hermiteModulus_monic
+#print axioms PiWeightedColon.hermiteModulus_monic
+
+#print PiWeightedColon.hermiteRemainderCoefficient
+#print axioms PiWeightedColon.hermiteRemainderCoefficient
+
+#check PiWeightedColon.hermiteModulus_map_zero
+#print axioms PiWeightedColon.hermiteModulus_map_zero
+
+#check PiWeightedColon.monomial_mod_X_power
+#print axioms PiWeightedColon.monomial_mod_X_power
+
+#check PiWeightedColon.hermiteRemainderCoefficient_eval_zero
+#print axioms PiWeightedColon.hermiteRemainderCoefficient_eval_zero
+
+#check PiWeightedColon.hermiteRemainderCoefficient_eval_zero_of_row
+#print axioms PiWeightedColon.hermiteRemainderCoefficient_eval_zero_of_row
+
+#print PiWeightedColon.hermiteCoefficientEntry
+#print axioms PiWeightedColon.hermiteCoefficientEntry
+
+#check PiWeightedColon.hermiteCoefficientEntry_eval_zero
+#print axioms PiWeightedColon.hermiteCoefficientEntry_eval_zero
+
+#print PiWeightedColon.hermiteCoefficientMatrix
+#print axioms PiWeightedColon.hermiteCoefficientMatrix
+
+#check PiWeightedColon.hermiteCoefficientMatrix_eval_zero
+#print axioms PiWeightedColon.hermiteCoefficientMatrix_eval_zero
+
+#print PiWeightedColon.squareHermiteCoefficientMatrix
+#print axioms PiWeightedColon.squareHermiteCoefficientMatrix
+
+#check PiWeightedColon.squareHermiteCoefficientMatrix_eval_zero
+#print axioms PiWeightedColon.squareHermiteCoefficientMatrix_eval_zero
+
+#check PiWeightedColon.hermiteCoefficientMatrix_det_eval_zero
+#print axioms PiWeightedColon.hermiteCoefficientMatrix_det_eval_zero
+
+#check PiWeightedColon.hermiteCoefficientMatrix_det_ne_zero
+#print axioms PiWeightedColon.hermiteCoefficientMatrix_det_ne_zero
+
+#print PiWeightedColon.canonicalHermiteCoefficientMatrix
+#print axioms PiWeightedColon.canonicalHermiteCoefficientMatrix
+
+#check PiWeightedColon.canonicalHermiteCoefficientMatrix_det_ne_zero
+#print axioms PiWeightedColon.canonicalHermiteCoefficientMatrix_det_ne_zero
+
+#check PiWeightedColon.Regression.hermite_remainder_square
+#print axioms PiWeightedColon.Regression.hermite_remainder_square
+
+#check PiWeightedColon.Regression.hermite_remainder_linear
+#print axioms PiWeightedColon.Regression.hermite_remainder_linear
+
+#check PiWeightedColon.Regression.hermite_remainder_coefficients
+#print axioms PiWeightedColon.Regression.hermite_remainder_coefficients
+
+#check PiWeightedColon.Regression.hermite_entry_nonconstant
+#print axioms PiWeightedColon.Regression.hermite_entry_nonconstant
+
+#check PiWeightedColon.Regression.hermite_entry_parameter_coefficient
+#print axioms PiWeightedColon.Regression.hermite_entry_parameter_coefficient
+
+#check PiWeightedColon.Regression.hermite_entry_eval_values
+#print axioms PiWeightedColon.Regression.hermite_entry_eval_values
+
+#check PiWeightedColon.Regression.actual_hermite_scale_zero_entry
+#print axioms PiWeightedColon.Regression.actual_hermite_scale_zero_entry
+
+#check PiWeightedColon.Regression.actual_hermite_scale_zero_det_eval
+#print axioms PiWeightedColon.Regression.actual_hermite_scale_zero_det_eval
+
+#check PiWeightedColon.Regression.actual_hermite_scale_zero_det_ne_zero
+#print axioms PiWeightedColon.Regression.actual_hermite_scale_zero_det_ne_zero

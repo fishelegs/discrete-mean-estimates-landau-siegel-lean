@@ -1,0 +1,174 @@
+@[reducible] def PiWeightedColon.HermiteParameter : Type :=
+Polynomial.{0} Rat
+'PiWeightedColon.HermiteParameter' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@[reducible] def PiWeightedColon.HermiteBivariate : Type :=
+Polynomial.{0} PiWeightedColon.HermiteParameter
+'PiWeightedColon.HermiteBivariate' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.hermiteRowMultiplicity : Nat → Nat → Nat :=
+fun N s =>
+  ite.{1} (LT.lt.{0} s 2) (HAdd.hAdd.{0, 0, 0} N 1)
+    (HSub.hSub.{0, 0, 0} N (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} s 2) 4))
+'PiWeightedColon.hermiteRowMultiplicity' does not depend on any axioms
+PiWeightedColon.hermite_row_profile_iff (N s a : Nat) :
+  Iff
+    (And (LE.le.{0} a (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 N) 1))
+      (LE.le.{0} s (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 (HSub.hSub.{0, 0, 0} N (HDiv.hDiv.{0, 0, 0} a 2))) 1)))
+    (And (LE.le.{0} s (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+      (LT.lt.{0} a (HMul.hMul.{0, 0, 0} 2 (PiWeightedColon.hermiteRowMultiplicity N s))))
+'PiWeightedColon.hermite_row_profile_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.hermite_row_bounds {N : Nat} (r : PiWeightedColon.RowIndex N) :
+  And (LE.le.{0} (PiWeightedColon.rowS r) (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 4 N) 1))
+    (LT.lt.{0} (PiWeightedColon.rowA r)
+      (HMul.hMul.{0, 0, 0} 2 (PiWeightedColon.hermiteRowMultiplicity N (PiWeightedColon.rowS r))))
+'PiWeightedColon.hermite_row_bounds' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.hermite_row_multiplicity_pos {N : Nat} (r : PiWeightedColon.RowIndex N) :
+  LT.lt.{0} 0 (PiWeightedColon.hermiteRowMultiplicity N (PiWeightedColon.rowS r))
+'PiWeightedColon.hermite_row_multiplicity_pos' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.hermiteModulus : Nat → PiWeightedColon.HermiteBivariate :=
+fun n =>
+  HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} n)
+    (HPow.hPow.{0, 0, 0} (HSub.hSub.{0, 0, 0} Polynomial.X.{0} (Polynomial.C.{0} Polynomial.X.{0})) n)
+'PiWeightedColon.hermiteModulus' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.hermiteModulus_monic (n : Nat) : Polynomial.Monic.{0} (PiWeightedColon.hermiteModulus n)
+'PiWeightedColon.hermiteModulus_monic' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.hermiteRemainderCoefficient : Nat → Nat → Nat → PiWeightedColon.HermiteParameter :=
+fun n d a =>
+  Polynomial.coeff.{0}
+    (Polynomial.modByMonic.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} d) (PiWeightedColon.hermiteModulus n)) a
+'PiWeightedColon.hermiteRemainderCoefficient' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.hermiteModulus_map_zero (n : Nat) :
+  Eq.{1} (Polynomial.map.{0, 0} (Polynomial.evalRingHom.{0} 0) (PiWeightedColon.hermiteModulus n))
+    (HPow.hPow.{0, 0, 0} Polynomial.X.{0} (HMul.hMul.{0, 0, 0} 2 n))
+'PiWeightedColon.hermiteModulus_map_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.monomial_mod_X_power (d m : Nat) :
+  Eq.{1} (Polynomial.modByMonic.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} d) (HPow.hPow.{0, 0, 0} Polynomial.X.{0} m))
+    (ite.{1} (LT.lt.{0} d m) (HPow.hPow.{0, 0, 0} Polynomial.X.{0} d) 0)
+'PiWeightedColon.monomial_mod_X_power' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.hermiteRemainderCoefficient_eval_zero (n d a : Nat) :
+  Eq.{1} (Polynomial.eval.{0} 0 (PiWeightedColon.hermiteRemainderCoefficient n d a))
+    (ite.{1} (And (LT.lt.{0} d (HMul.hMul.{0, 0, 0} 2 n)) (Eq.{1} a d)) 1 0)
+'PiWeightedColon.hermiteRemainderCoefficient_eval_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.hermiteRemainderCoefficient_eval_zero_of_row (n d a : Nat)
+  (ha : LT.lt.{0} a (HMul.hMul.{0, 0, 0} 2 n)) :
+  Eq.{1} (Polynomial.eval.{0} 0 (PiWeightedColon.hermiteRemainderCoefficient n d a)) (ite.{1} (Eq.{1} a d) 1 0)
+'PiWeightedColon.hermiteRemainderCoefficient_eval_zero_of_row' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def PiWeightedColon.hermiteCoefficientEntry : Nat → Nat → Nat → Nat → Rat → PiWeightedColon.HermiteParameter :=
+fun n s a c h =>
+  ∑ ell ∈ Finset.range (HAdd.hAdd.{0, 0, 0} (min.{0} s c) 1),
+    HMul.hMul.{0, 0, 0}
+      (Polynomial.C.{0}
+        (HDiv.hDiv.{0, 0, 0}
+          (HMul.hMul.{0, 0, 0} (↑(Nat.choose c ell)) (HPow.hPow.{0, 0, 0} h (HSub.hSub.{0, 0, 0} s ell)))
+          ↑(Nat.factorial (HSub.hSub.{0, 0, 0} s ell))))
+      (PiWeightedColon.hermiteRemainderCoefficient n (HSub.hSub.{0, 0, 0} c ell) a)
+'PiWeightedColon.hermiteCoefficientEntry' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.hermiteCoefficientEntry_eval_zero (n s a c : Nat) (h : Rat)
+  (ha : LT.lt.{0} a (HMul.hMul.{0, 0, 0} 2 n)) :
+  Eq.{1} (Polynomial.eval.{0} 0 (PiWeightedColon.hermiteCoefficientEntry n s a c h))
+    (PiWeightedColon.rationalOriginEntry s a c h)
+'PiWeightedColon.hermiteCoefficientEntry_eval_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.hermiteCoefficientMatrix : (N : Nat) →
+  Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N) PiWeightedColon.HermiteParameter :=
+fun N r c =>
+  PiWeightedColon.hermiteCoefficientEntry (PiWeightedColon.hermiteRowMultiplicity N (PiWeightedColon.rowS r))
+    (PiWeightedColon.rowS r) (PiWeightedColon.rowA r) (↑c).2 ↑(↑c).1
+'PiWeightedColon.hermiteCoefficientMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.hermiteCoefficientMatrix_eval_zero (N : Nat) :
+  Eq.{1} (Matrix.map.{0, 0, 0, 0} (PiWeightedColon.hermiteCoefficientMatrix N) ⇑(Polynomial.evalRingHom.{0} 0))
+    (PiWeightedColon.rationalOriginMatrix N)
+'PiWeightedColon.hermiteCoefficientMatrix_eval_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.squareHermiteCoefficientMatrix : (N : Nat) →
+  Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N) →
+    Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.RowIndex N) PiWeightedColon.HermiteParameter :=
+fun N e => Matrix.submatrix.{0, 0, 0, 0, 0} (PiWeightedColon.hermiteCoefficientMatrix N) id.{1} ⇑e
+'PiWeightedColon.squareHermiteCoefficientMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.squareHermiteCoefficientMatrix_eval_zero (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) :
+  Eq.{1} (Matrix.map.{0, 0, 0, 0} (PiWeightedColon.squareHermiteCoefficientMatrix N e) ⇑(Polynomial.evalRingHom.{0} 0))
+    (PiWeightedColon.squareRationalOriginMatrix N e)
+'PiWeightedColon.squareHermiteCoefficientMatrix_eval_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.hermiteCoefficientMatrix_det_eval_zero (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) :
+  Eq.{1} (Polynomial.eval.{0} 0 (Matrix.det.{0, 0} (PiWeightedColon.squareHermiteCoefficientMatrix N e)))
+    (Matrix.det.{0, 0} (PiWeightedColon.squareRationalOriginMatrix N e))
+'PiWeightedColon.hermiteCoefficientMatrix_det_eval_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.hermiteCoefficientMatrix_det_ne_zero (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) :
+  Ne.{1} (Matrix.det.{0, 0} (PiWeightedColon.squareHermiteCoefficientMatrix N e)) 0
+'PiWeightedColon.hermiteCoefficientMatrix_det_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def PiWeightedColon.canonicalHermiteCoefficientMatrix : (N : Nat) →
+  Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.RowIndex N) PiWeightedColon.HermiteParameter :=
+fun N =>
+  PiWeightedColon.squareHermiteCoefficientMatrix N
+    (Equiv.trans.{1, 1, 1} (PiWeightedColon.matrixIndexEquiv N) (PiWeightedColon.originalIndexEquiv N))
+'PiWeightedColon.canonicalHermiteCoefficientMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.canonicalHermiteCoefficientMatrix_det_ne_zero (N : Nat) :
+  Ne.{1} (Matrix.det.{0, 0} (PiWeightedColon.canonicalHermiteCoefficientMatrix N)) 0
+'PiWeightedColon.canonicalHermiteCoefficientMatrix_det_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.hermite_remainder_square :
+  Eq.{1} (Polynomial.modByMonic.{0} (HPow.hPow.{0, 0, 0} Polynomial.X.{0} 2) (PiWeightedColon.hermiteModulus 1))
+    (HMul.hMul.{0, 0, 0} (Polynomial.C.{0} Polynomial.X.{0}) Polynomial.X.{0})
+'PiWeightedColon.Regression.hermite_remainder_square' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.hermite_remainder_linear :
+  Eq.{1} (Polynomial.modByMonic.{0} Polynomial.X.{0} (PiWeightedColon.hermiteModulus 1)) Polynomial.X.{0}
+'PiWeightedColon.Regression.hermite_remainder_linear' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.Regression.hermite_remainder_coefficients :
+  And (Eq.{1} (PiWeightedColon.hermiteRemainderCoefficient 1 2 1) Polynomial.X.{0})
+    (And (Eq.{1} (PiWeightedColon.hermiteRemainderCoefficient 1 1 1) 1)
+      (Eq.{1} (PiWeightedColon.hermiteRemainderCoefficient 1 2 0) 0))
+'PiWeightedColon.Regression.hermite_remainder_coefficients' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.hermite_entry_nonconstant :
+  Eq.{1} (PiWeightedColon.hermiteCoefficientEntry 1 1 1 2 1) (HAdd.hAdd.{0, 0, 0} Polynomial.X.{0} (Polynomial.C.{0} 2))
+'PiWeightedColon.Regression.hermite_entry_nonconstant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.hermite_entry_parameter_coefficient :
+  Eq.{1} (Polynomial.coeff.{0} (PiWeightedColon.hermiteCoefficientEntry 1 1 1 2 1) 1) 1
+'PiWeightedColon.Regression.hermite_entry_parameter_coefficient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.hermite_entry_eval_values :
+  And (Eq.{1} (Polynomial.eval.{0} 0 (PiWeightedColon.hermiteCoefficientEntry 1 1 1 2 1)) 2)
+    (Eq.{1} (Polynomial.eval.{0} 1 (PiWeightedColon.hermiteCoefficientEntry 1 1 1 2 1)) 3)
+'PiWeightedColon.Regression.hermite_entry_eval_values' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.actual_hermite_scale_zero_entry :
+  Eq.{1}
+    (PiWeightedColon.hermiteCoefficientMatrix 0 (PiWeightedColon.Regression.rationalSmallRowMap 3)
+      ((PiWeightedColon.originalIndexEquiv 0) (PiWeightedColon.Regression.rationalSmallColMap 3)))
+    (HAdd.hAdd.{0, 0, 0} Polynomial.X.{0} (Polynomial.C.{0} 2))
+'PiWeightedColon.Regression.actual_hermite_scale_zero_entry' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.actual_hermite_scale_zero_det_eval :
+  Eq.{1}
+    (Polynomial.eval.{0} 0
+      (Matrix.det.{0, 0}
+        (PiWeightedColon.squareHermiteCoefficientMatrix 0 PiWeightedColon.Regression.rationalScaleZeroOrdering)))
+    2
+'PiWeightedColon.Regression.actual_hermite_scale_zero_det_eval' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.actual_hermite_scale_zero_det_ne_zero :
+  Ne.{1}
+    (Matrix.det.{0, 0}
+      (PiWeightedColon.squareHermiteCoefficientMatrix 0 PiWeightedColon.Regression.rationalScaleZeroOrdering))
+    0
+'PiWeightedColon.Regression.actual_hermite_scale_zero_det_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

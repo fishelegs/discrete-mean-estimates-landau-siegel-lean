@@ -1,4 +1,4 @@
-# Rational origin determinant nonvanishing for the fixed π algebraic family
+# Hermite polynomial determinant nonvanishing for the fixed π algebraic family
 
 This checkpoint proves the full algebraic theorem `V_N ∩ I_N = {0}` for
 all natural N in the fixed F₂ endpoint family below. It includes the weighted
@@ -14,6 +14,10 @@ is nonzero for every N, with every proved original-column ordering.
 [RATIONAL.md](RATIONAL.md) now proves the actual guarded rational origin
 entry scales by row a!s! and column 1/c! to that integer entry, and proves
 the rational origin determinant nonzero for every N and every proved ordering.
+[HERMITE.md](HERMITE.md) defines the actual parameter-dependent Hermite
+coefficient matrix using monic remainders, proves its x=0 specialization is
+that rational origin matrix, and proves its determinant polynomial nonzero
+for every N and every proved ordering.
 
 The arithmetic application is the fixed weight-2 family. This does not assert
 coverage of arbitrary arithmetic weights, define or prove a residual-polynomial
@@ -91,8 +95,8 @@ threshold still increases by exactly two, not three. A further regression proves
 that the colon ideal at scale zero is not the original ideal. The two negative
 tests must fail on the false hypotheses `1 ≤ 0` and `5=1 ∨ 5=3`.
 
-The combined reproducible check compiles seventeen proof modules, eight positive
-regression modules, eight type/definition/axiom audits, and fifteen expected failures. All 388
+The combined reproducible check compiles eighteen proof modules, nine positive
+regression modules, nine type/definition/axiom audits, and seventeen expected failures. All 420
 declarations, including definitions and regression theorems, are audited.
 Only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` are
 permitted. The proof sources contain no `sorry`, `admit`, `native_decide`,
@@ -106,8 +110,10 @@ profile and entrywise integer evaluation factorization are formalized. The globa
 original evaluation matrix and determinant factorization are now proved over Z,
 and the original determinant is nonzero for every N. Exact factorial row/column
 scaling now proves that the actual rational origin determinant is nonzero for
-every N. The integer collision-quotient, residual-polynomial identity and π
-specialization remain unformalized. The theorem
+every N. The actual Hermite coefficient matrix over Q[x] now has proved
+evaluation at zero equal to that rational matrix, and a nonzero determinant
+polynomial for every N. The derivative-jet x^ν factor, Schur-compressed residual
+identity, integer collision-quotient and π specialization remain unformalized. The theorem
 does not extend the arithmetic result to arbitrary weights. No uniform
 archimedean estimate or π badly-approximability theorem is claimed.
 
@@ -132,7 +138,7 @@ From the repository root, on KEYISHEN-MC6 the checked command is:
 python3 pi-weighted-colon/scripts/replay.py \
   --lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean \
   --existing-mathlib-project /Users/keyishen/Documents/Codex/2026-10-04/task/mc6-proof \
-  --out /tmp/pi-rational-replay
+  --out /tmp/pi-hermite-replay
 ```
 
 For another machine, substitute the compiler and existing project paths with

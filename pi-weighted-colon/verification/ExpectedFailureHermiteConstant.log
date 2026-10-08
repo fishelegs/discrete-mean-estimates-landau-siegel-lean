@@ -1,0 +1,6 @@
+ExpectedFailureHermiteConstant.lean:6:2: error: Type mismatch
+  hermite_entry_parameter_coefficient
+has type
+  Polynomial.coeff (hermiteCoefficientEntry 1 1 1 2 1) 1 = 1
+but is expected to have type
+  Polynomial.coeff (hermiteCoefficientEntry 1 1 1 2 1) 1 = 0

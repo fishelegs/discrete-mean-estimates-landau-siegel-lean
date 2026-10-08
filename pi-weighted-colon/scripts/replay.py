@@ -17,10 +17,12 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ['WeightedColon', 'DataIdealPresentation', 'EndpointColon']
-EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile', 'IntegerOriginNonvanishing', 'RationalOriginNonvanishing']
-REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression', 'OriginRegression', 'RationalRegression']
-POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit']
+EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile', 'IntegerOriginNonvanishing', 'RationalOriginNonvanishing', 'HermitePolynomialNonvanishing']
+REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression', 'OriginRegression', 'RationalRegression', 'HermiteRegression']
+POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit']
 NEGATIVE = {
+    'ExpectedFailureHermiteConstant': ('Type mismatch', 'Polynomial.coeff (hermiteCoefficientEntry 1 1 1 2 1) 1 = 0'),
+    'ExpectedFailureHermiteEval': ('Type mismatch', 'Polynomial.eval 0 (hermiteCoefficientEntry 1 1 1 2 1) = 1'),
     'ExpectedFailureRationalEntry': ('Type mismatch', 'rationalOriginEntry 3 0 0 3 = 27'),
     'ExpectedFailureRationalDet': ('Type mismatch', 'rationalScaleZeroOrdering).det = 1'),
     'ExpectedFailureOriginFactor': ('proved that the proposition', 'integerEvaluationFactor 1 originTestCol originTestCol = 1'),
@@ -143,7 +145,7 @@ def main():
         for kind, declaration in re.findall(r'^(theorem|def|abbrev|instance) (\w+)\b', source, re.M):
             declarations[namespace + declaration] = kind
     audit = '\n'.join((logs / (name + '.log')).read_text()
-                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit'])
+                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit'])
     reports = dict(re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", audit, re.S))
     reports.update({name: '' for name in re.findall(
         r"'([^']+)' does not depend on any axioms", audit)})
@@ -175,7 +177,12 @@ def main():
                         'ordering. The actual guarded rational origin entry is proved to scale '
                         'by row a!s! and column 1/c! to the integer entry, all scales are nonzero, '
                         'and the actual rational origin determinant is nonzero for every N and '
-                        'every proved original-column ordering. Integer collision-quotient and '
+                        'every proved original-column ordering. The actual Hermite coefficient matrix '
+                        'over Q[x] is defined using monic remainders of z^d modulo z^n(z-x)^n; '
+                        'its evaluation at x=0 is proved equal to the rational origin matrix, '
+                        'and its determinant polynomial is nonzero for every N and every proved '
+                        'original-column ordering. The derivative-jet x^nu factor, Schur-compressed '
+                        'residual identity, integer collision-quotient and '
                         'residual-polynomial/analytic bridges are not proved; arbitrary '
                         'arithmetic weights and pi badly approximability are not covered.'}
     (out / 'replay-receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
