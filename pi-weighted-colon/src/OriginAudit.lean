@@ -1,0 +1,79 @@
+import OriginRegression
+
+set_option pp.universes true
+set_option pp.proofs false
+
+#check PiWeightedColon.col_ext
+#print axioms PiWeightedColon.col_ext
+
+#print PiWeightedColon.integerEvaluationFactor
+#print axioms PiWeightedColon.integerEvaluationFactor
+
+#check PiWeightedColon.integerEvaluationFactor_triangular
+#print axioms PiWeightedColon.integerEvaluationFactor_triangular
+
+#check PiWeightedColon.integerEvaluationFactor_block_diagonal
+#print axioms PiWeightedColon.integerEvaluationFactor_block_diagonal
+
+#check PiWeightedColon.integerEvaluationFactor_block_det_ne_zero
+#print axioms PiWeightedColon.integerEvaluationFactor_block_det_ne_zero
+
+#check PiWeightedColon.integerEvaluationFactor_det_ne_zero
+#print axioms PiWeightedColon.integerEvaluationFactor_det_ne_zero
+
+#check PiWeightedColon.columnPrefix_injective
+#print axioms PiWeightedColon.columnPrefix_injective
+
+#check PiWeightedColon.integerEvaluationFactor_prefix
+#print axioms PiWeightedColon.integerEvaluationFactor_prefix
+
+#check PiWeightedColon.integerEvaluationFactor_outside_prefix
+#print axioms PiWeightedColon.integerEvaluationFactor_outside_prefix
+
+#check PiWeightedColon.originalIntegerMatrix_factorization
+#print axioms PiWeightedColon.originalIntegerMatrix_factorization
+
+#print PiWeightedColon.squareOriginalIntegerMatrix
+#print axioms PiWeightedColon.squareOriginalIntegerMatrix
+
+#check PiWeightedColon.squareOriginalIntegerMatrix_factorization
+#print axioms PiWeightedColon.squareOriginalIntegerMatrix_factorization
+
+#check PiWeightedColon.originalIntegerMatrix_det_factorization
+#print axioms PiWeightedColon.originalIntegerMatrix_det_factorization
+
+#check PiWeightedColon.originalIntegerMatrix_det_ne_zero
+#print axioms PiWeightedColon.originalIntegerMatrix_det_ne_zero
+
+#print PiWeightedColon.canonicalOriginalIntegerMatrix
+#print axioms PiWeightedColon.canonicalOriginalIntegerMatrix
+
+#check PiWeightedColon.canonicalOriginalIntegerMatrix_det_ne_zero
+#print axioms PiWeightedColon.canonicalOriginalIntegerMatrix_det_ne_zero
+
+#print PiWeightedColon.Regression.originTestRow
+#print axioms PiWeightedColon.Regression.originTestRow
+
+#print PiWeightedColon.Regression.originTestCol
+#print axioms PiWeightedColon.Regression.originTestCol
+
+#print PiWeightedColon.Regression.originTestColZero
+#print axioms PiWeightedColon.Regression.originTestColZero
+
+#print PiWeightedColon.Regression.originTestOtherBlock
+#print axioms PiWeightedColon.Regression.originTestOtherBlock
+
+#check PiWeightedColon.Regression.actual_origin_integer_entry
+#print axioms PiWeightedColon.Regression.actual_origin_integer_entry
+
+#check PiWeightedColon.Regression.actual_origin_global_product_entry
+#print axioms PiWeightedColon.Regression.actual_origin_global_product_entry
+
+#check PiWeightedColon.Regression.actual_origin_factor_entries
+#print axioms PiWeightedColon.Regression.actual_origin_factor_entries
+
+#check PiWeightedColon.Regression.actual_origin_factor_scale_zero
+#print axioms PiWeightedColon.Regression.actual_origin_factor_scale_zero
+
+#check PiWeightedColon.Regression.actual_origin_scale_zero_matrix
+#print axioms PiWeightedColon.Regression.actual_origin_scale_zero_matrix

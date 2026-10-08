@@ -1,0 +1,163 @@
+PiWeightedColon.col_ext {N : Nat} (i j : PiWeightedColon.ColIndex N)
+  (he : Eq.{1} (PiWeightedColon.colE i) (PiWeightedColon.colE j))
+  (hc : Eq.{1} (PiWeightedColon.colC i) (PiWeightedColon.colC j))
+  (hk : Eq.{1} (PiWeightedColon.colK i) (PiWeightedColon.colK j)) : Eq.{1} i j
+'PiWeightedColon.col_ext' depends on axioms: [propext, Quot.sound.{u}]
+def PiWeightedColon.integerEvaluationFactor : (N : Nat) →
+  Matrix.{0, 0, 0} (PiWeightedColon.ColIndex N) (PiWeightedColon.ColIndex N) Int :=
+fun N i j =>
+  ite.{1}
+    (And (Eq.{1} (PiWeightedColon.colE i) (PiWeightedColon.colE j))
+      (Eq.{1} (PiWeightedColon.colC i) (PiWeightedColon.colC j)))
+    (PiWeightedColon.newtonEvaluationFactor (PiWeightedColon.colE i) (PiWeightedColon.colK i) (PiWeightedColon.colK j))
+    0
+'PiWeightedColon.integerEvaluationFactor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.integerEvaluationFactor_triangular (N : Nat) :
+  Matrix.BlockTriangular.{0, 0, 0} (PiWeightedColon.integerEvaluationFactor N) fun c => PiWeightedColon.colK c
+'PiWeightedColon.integerEvaluationFactor_triangular' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.integerEvaluationFactor_block_diagonal (N k : Nat) :
+  Eq.{1}
+    (Matrix.toSquareBlock.{0, 0, 0} (PiWeightedColon.integerEvaluationFactor N) (fun c => PiWeightedColon.colK c) k)
+    (Matrix.diagonal.{0, 0} fun i => PiWeightedColon.newtonEvaluationFactor (PiWeightedColon.colE ↑i) k k)
+'PiWeightedColon.integerEvaluationFactor_block_diagonal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.integerEvaluationFactor_block_det_ne_zero (N k : Nat) :
+  Ne.{1}
+    (Matrix.det.{0, 0}
+      (Matrix.toSquareBlock.{0, 0, 0} (PiWeightedColon.integerEvaluationFactor N) (fun c => PiWeightedColon.colK c) k))
+    0
+'PiWeightedColon.integerEvaluationFactor_block_det_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.integerEvaluationFactor_det_ne_zero (N : Nat) :
+  Ne.{1} (Matrix.det.{0, 0} (PiWeightedColon.integerEvaluationFactor N)) 0
+'PiWeightedColon.integerEvaluationFactor_det_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.columnPrefix_injective {N : Nat} (c : PiWeightedColon.ColIndex N) :
+  Function.Injective.{1, 1} fun k => PiWeightedColon.columnPrefix c ↑k ⋯
+'PiWeightedColon.columnPrefix_injective' depends on axioms: [propext, Quot.sound.{u}]
+PiWeightedColon.integerEvaluationFactor_prefix {N : Nat} (c : PiWeightedColon.ColIndex N)
+  (k : Fin (HAdd.hAdd.{0, 0, 0} (PiWeightedColon.colK c) 1)) :
+  Eq.{1} (PiWeightedColon.integerEvaluationFactor N (PiWeightedColon.columnPrefix c ↑k ⋯) c)
+    (PiWeightedColon.newtonEvaluationFactor (PiWeightedColon.colE c) (↑k) (PiWeightedColon.colK c))
+'PiWeightedColon.integerEvaluationFactor_prefix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.integerEvaluationFactor_outside_prefix {N : Nat} (c i : PiWeightedColon.ColIndex N)
+  (hi : i ∉ Finset.image.{0, 0} (fun k => PiWeightedColon.columnPrefix c ↑k ⋯) Finset.univ.{0}) :
+  Eq.{1} (PiWeightedColon.integerEvaluationFactor N i c) 0
+'PiWeightedColon.integerEvaluationFactor_outside_prefix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.originalIntegerMatrix_factorization (N : Nat) :
+  Eq.{1}
+    (Matrix.submatrix.{0, 0, 0, 0, 0} (PiWeightedColon.originalIntegerMatrix N) id.{1}
+      ⇑(PiWeightedColon.originalIndexEquiv N))
+    (HMul.hMul.{0, 0, 0} (PiWeightedColon.integerNewtonMatrix N) (PiWeightedColon.integerEvaluationFactor N))
+'PiWeightedColon.originalIntegerMatrix_factorization' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.squareOriginalIntegerMatrix : (N : Nat) →
+  Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N) →
+    Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.RowIndex N) Int :=
+fun N e => Matrix.submatrix.{0, 0, 0, 0, 0} (PiWeightedColon.originalIntegerMatrix N) id.{1} ⇑e
+'PiWeightedColon.squareOriginalIntegerMatrix' depends on axioms: [propext, Quot.sound.{u}]
+PiWeightedColon.squareOriginalIntegerMatrix_factorization (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.ColIndex N)) :
+  Eq.{1}
+    (PiWeightedColon.squareOriginalIntegerMatrix N (Equiv.trans.{1, 1, 1} e (PiWeightedColon.originalIndexEquiv N)))
+    (HMul.hMul.{0, 0, 0} (PiWeightedColon.squareIntegerNewtonMatrix N e)
+      (Matrix.submatrix.{0, 0, 0, 0, 0} (PiWeightedColon.integerEvaluationFactor N) ⇑e ⇑e))
+'PiWeightedColon.squareOriginalIntegerMatrix_factorization' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.originalIntegerMatrix_det_factorization (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.ColIndex N)) :
+  Eq.{1}
+    (Matrix.det.{0, 0}
+      (PiWeightedColon.squareOriginalIntegerMatrix N (Equiv.trans.{1, 1, 1} e (PiWeightedColon.originalIndexEquiv N))))
+    (HMul.hMul.{0, 0, 0} (Matrix.det.{0, 0} (PiWeightedColon.squareIntegerNewtonMatrix N e))
+      (Matrix.det.{0, 0} (PiWeightedColon.integerEvaluationFactor N)))
+'PiWeightedColon.originalIntegerMatrix_det_factorization' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.originalIntegerMatrix_det_ne_zero (N : Nat)
+  (e : Equiv.{1, 1} (PiWeightedColon.RowIndex N) (PiWeightedColon.OriginLabel N)) :
+  Ne.{1} (Matrix.det.{0, 0} (PiWeightedColon.squareOriginalIntegerMatrix N e)) 0
+'PiWeightedColon.originalIntegerMatrix_det_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+def PiWeightedColon.canonicalOriginalIntegerMatrix : (N : Nat) →
+  Matrix.{0, 0, 0} (PiWeightedColon.RowIndex N) (PiWeightedColon.RowIndex N) Int :=
+fun N =>
+  PiWeightedColon.squareOriginalIntegerMatrix N
+    (Equiv.trans.{1, 1, 1} (PiWeightedColon.matrixIndexEquiv N) (PiWeightedColon.originalIndexEquiv N))
+'PiWeightedColon.canonicalOriginalIntegerMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+PiWeightedColon.canonicalOriginalIntegerMatrix_det_ne_zero (N : Nat) :
+  Ne.{1} (Matrix.det.{0, 0} (PiWeightedColon.canonicalOriginalIntegerMatrix N)) 0
+'PiWeightedColon.canonicalOriginalIntegerMatrix_det_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def PiWeightedColon.Regression.originTestRow : PiWeightedColon.RowIndex 1 :=
+Sigma.mk.{0, 0} ⟨0, PiWeightedColon.Regression.originTestRow._proof_1⟩
+  (Prod.mk.{0, 0} ⟨0, PiWeightedColon.Regression.originTestRow._proof_2⟩
+    ⟨3, PiWeightedColon.Regression.originTestRow._proof_3⟩)
+'PiWeightedColon.Regression.originTestRow' does not depend on any axioms
+def PiWeightedColon.Regression.originTestCol : PiWeightedColon.ColIndex 1 :=
+Sigma.mk.{0, 0} true
+  (Sigma.mk.{0, 0} ⟨0, PiWeightedColon.Regression.originTestRow._proof_1⟩
+    (Prod.mk.{0, 0} ⟨0, PiWeightedColon.Regression.originTestCol._proof_1⟩
+      ⟨1, PiWeightedColon.Regression.originTestCol._proof_2⟩))
+'PiWeightedColon.Regression.originTestCol' does not depend on any axioms
+def PiWeightedColon.Regression.originTestColZero : PiWeightedColon.ColIndex 1 :=
+Sigma.mk.{0, 0} true
+  (Sigma.mk.{0, 0} ⟨0, PiWeightedColon.Regression.originTestRow._proof_1⟩
+    (Prod.mk.{0, 0} ⟨0, PiWeightedColon.Regression.originTestCol._proof_1⟩
+      ⟨0, PiWeightedColon.Regression.originTestColZero._proof_1⟩))
+'PiWeightedColon.Regression.originTestColZero' does not depend on any axioms
+def PiWeightedColon.Regression.originTestOtherBlock : PiWeightedColon.ColIndex 1 :=
+Sigma.mk.{0, 0} false
+  (Sigma.mk.{0, 0} ⟨0, PiWeightedColon.Regression.originTestRow._proof_1⟩
+    (Prod.mk.{0, 0} ⟨0, PiWeightedColon.Regression.originTestOtherBlock._proof_1⟩
+      ⟨1, PiWeightedColon.Regression.originTestCol._proof_2⟩))
+'PiWeightedColon.Regression.originTestOtherBlock' does not depend on any axioms
+PiWeightedColon.Regression.actual_origin_integer_entry :
+  Eq.{1}
+    (PiWeightedColon.originalIntegerMatrix 1 PiWeightedColon.Regression.originTestRow
+      ((PiWeightedColon.originalIndexEquiv 1) PiWeightedColon.Regression.originTestCol))
+    27
+'PiWeightedColon.Regression.actual_origin_integer_entry' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.actual_origin_global_product_entry :
+  Eq.{1}
+    (HMul.hMul.{0, 0, 0} (PiWeightedColon.integerNewtonMatrix 1) (PiWeightedColon.integerEvaluationFactor 1)
+      PiWeightedColon.Regression.originTestRow PiWeightedColon.Regression.originTestCol)
+    27
+'PiWeightedColon.Regression.actual_origin_global_product_entry' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.actual_origin_factor_entries :
+  And
+    (Eq.{1}
+      (PiWeightedColon.integerEvaluationFactor 1 PiWeightedColon.Regression.originTestCol
+        PiWeightedColon.Regression.originTestCol)
+      2)
+    (And
+      (Eq.{1}
+        (PiWeightedColon.integerEvaluationFactor 1 PiWeightedColon.Regression.originTestCol
+          PiWeightedColon.Regression.originTestColZero)
+        0)
+      (Eq.{1}
+        (PiWeightedColon.integerEvaluationFactor 1 PiWeightedColon.Regression.originTestOtherBlock
+          PiWeightedColon.Regression.originTestCol)
+        0))
+'PiWeightedColon.Regression.actual_origin_factor_entries' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.actual_origin_factor_scale_zero : Eq.{1} (PiWeightedColon.integerEvaluationFactor 0) 1
+'PiWeightedColon.Regression.actual_origin_factor_scale_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+PiWeightedColon.Regression.actual_origin_scale_zero_matrix :
+  Eq.{1}
+    (Matrix.submatrix.{0, 0, 0, 0, 0} (PiWeightedColon.originalIntegerMatrix 0) id.{1}
+      ⇑(PiWeightedColon.originalIndexEquiv 0))
+    (PiWeightedColon.integerNewtonMatrix 0)
+'PiWeightedColon.Regression.actual_origin_scale_zero_matrix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

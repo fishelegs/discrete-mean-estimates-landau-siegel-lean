@@ -1,10 +1,12 @@
-# Staged integral Newton bridge
+# Integral Newton helper milestone
 
 This stage uses actual integer polynomials and monic synthetic division.
 It proves integral Newton coefficients, their reduction to the previously
 proved concrete F₂ matrix, the original frequency profile and column reindexing,
-and every entry of the proposed integer evaluation factorization. It does
-**not yet prove nonvanishing of the original integer evaluation determinant**.
+and every entry of the proposed integer evaluation factorization. The helper milestone did
+not yet prove nonvanishing of the original integer evaluation determinant.
+[ORIGIN.md](ORIGIN.md) now completes that global bridge using these unchanged
+Lean sources.
 
 ## Coefficients over the original ring
 
@@ -77,8 +79,9 @@ theorem integerNewton_det_ne_zero (N : ℕ) (e : RowIndex N ≃ ColIndex N) :
     (squareIntegerNewtonMatrix N e).det ≠ 0
 ```
 
-This is the Newton determinant. No claim about the original determinant or
-a factorial-normalized rational/integer determinant is made here.
+This is the Newton determinant. The original determinant is proved in the later
+[ORIGIN.md](ORIGIN.md) milestone. No factorial-normalized rational/integer
+determinant is formalized here.
 
 ## The exact frequency profile and local factorization
 
@@ -111,15 +114,16 @@ U[k,j] = product_{i<k} (frequencyNode(e,j)-frequencyNode(e,i)).
 The D entries in this formula are entries of the actual finite Newton matrix.
 `newtonEvaluationFactor_above` proves U[k,j]=0 for j<k.
 `newtonEvaluationFactor_diagonal_ne_zero` proves every diagonal product is
-nonzero over Z from the distinct integer nodes. The global block matrix
-multiplication and its determinant factorization have not yet been assembled
-as Lean declarations. They are the remaining step for original determinant
-nonvanishing; the local equations alone are not reported as that completed theorem.
+nonzero over Z from the distinct integer nodes. The helper milestone left
+global matrix multiplication and determinant factorization as remaining work.
+The later [ORIGIN.md](ORIGIN.md) milestone now assembles them and proves
+original determinant nonvanishing using these unchanged helpers.
 
 ## Verification
 
-The cumulative replay compiles 27 positive modules and checks eleven expected
-failures (38 compilation checks), auditing exactly 329 declarations. All earlier
+The Newton-helper milestone compiled 27 positive modules and checked eleven expected
+failures (38 compilation checks), auditing exactly 329 declarations. The current
+cumulative counts are documented in [ORIGIN.md](ORIGIN.md). All earlier
 Lean sources and every dependency/toolchain pin remain byte-for-byte unchanged.
 Only propext, Classical.choice and Quot.sound are permitted. Warnings are errors,
 and the replay rejects sorry, admit, native_decide, custom axioms and unsafe

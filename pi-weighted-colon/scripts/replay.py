@@ -17,10 +17,12 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ['WeightedColon', 'DataIdealPresentation', 'EndpointColon']
-EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile']
-REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression']
-POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit']
+EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile', 'IntegerOriginNonvanishing']
+REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression', 'OriginRegression']
+POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit']
 NEGATIVE = {
+    'ExpectedFailureOriginFactor': ('proved that the proposition', 'integerEvaluationFactor 1 originTestCol originTestCol = 1'),
+    'ExpectedFailureOriginDropFactor': ('proved that the proposition', '27 = 13'),
     'ExpectedFailurePairZero': ('proved that the proposition', 'frequencyLength 0 1 = 1'),
     'ExpectedFailureNewtonValue': ('proved that the proposition', '13 = 12'),
     'ExpectedFailureBinaryZeroPower': ('proved that the proposition', 'binaryEntry 0 1 false 1 0 = 0'),
@@ -139,7 +141,7 @@ def main():
         for kind, declaration in re.findall(r'^(theorem|def|abbrev|instance) (\w+)\b', source, re.M):
             declarations[namespace + declaration] = kind
     audit = '\n'.join((logs / (name + '.log')).read_text()
-                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit'])
+                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit'])
     reports = dict(re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", audit, re.S))
     reports.update({name: '' for name in re.findall(
         r"'([^']+)' does not depend on any axioms", audit)})
@@ -165,8 +167,11 @@ def main():
                         'their square determinant has nonzero reduction modulo two. The actual '
                         'frequency profile has proved prefix nodes, original-column bijections '
                         'and counts, and entrywise integral Newton expansion with nonzero diagonal '
-                        'factors. The full original evaluation determinant factorization/nonvanishing, '
-                        'integer collision-quotient, rational/integer determinant normalization and '
+                        'factors. The explicit global Z-matrix multiplication and determinant '
+                        'factorization are proved; the actual original integer evaluation '
+                        'determinant is nonzero for every N and every proved original-column '
+                        'ordering. Integer collision-quotient and rational/integer determinant '
+                        'normalization and '
                         'residual-polynomial/analytic bridges are not proved; arbitrary '
                         'arithmetic weights and pi badly approximability are not covered.'}
     (out / 'replay-receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
