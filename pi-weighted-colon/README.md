@@ -1,4 +1,4 @@
-# Hermite complex specialization for the fixed π algebraic family
+# Hermite nonvanishing at 2πi for the fixed π algebraic family
 
 This checkpoint proves the full algebraic theorem `V_N ∩ I_N = {0}` for
 all natural N in the fixed F₂ endpoint family below. It includes the weighted
@@ -21,12 +21,13 @@ for every N and every proved ordering.
 [COMPLEX.md](COMPLEX.md) proves the actual complex determinant evaluation
 identity and nonvanishing at any point proved transcendental over Q, for all N.
 It proves that transcendence of 2*r*i is equivalent to transcendence of real r.
-The unconditional pi instance is blocked by the absence of pi transcendence
-in the pinned mathlib; no assumed pi theorem is introduced.
+[PI.md](PI.md) supplies that input through the six separately attributed A7
+proof modules and proves unconditional actual Hermite nonvanishing at 2*pi*i
+for every N and original-column ordering. No assumed pi theorem is introduced.
 
 The arithmetic application is the fixed weight-2 family. This does not assert
 coverage of arbitrary arithmetic weights, define or prove a residual-polynomial
-identity or π specialization, give an archimedean bound, or prove that π is
+identity, give an archimedean bound, or prove that π is
 badly approximable.
 
 ## Exact proved statement
@@ -100,8 +101,8 @@ threshold still increases by exactly two, not three. A further regression proves
 that the colon ideal at scale zero is not the original ideal. The two negative
 tests must fail on the false hypotheses `1 ≤ 0` and `5=1 ∨ 5=3`.
 
-The combined reproducible check compiles nineteen proof modules, ten positive
-regression modules, ten type/definition/axiom audits, and twenty expected failures. All 443
+The combined reproducible check compiles twenty local proof modules, six attributed upstream proof modules,
+eleven regression modules, twelve type/definition/axiom audits, and twenty-two expected failures. All 492
 declarations, including definitions and regression theorems, are audited.
 Only the standard axioms `propext`, `Classical.choice`, and `Quot.sound` are
 permitted. The proof sources contain no `sorry`, `admit`, `native_decide`,
@@ -119,10 +120,10 @@ every N. The actual Hermite coefficient matrix over Q[x] now has proved
 evaluation at zero equal to that rational matrix, and a nonzero determinant
 polynomial for every N. Evaluation now maps that determinant to the actual
 complex matrix determinant, nonzero at any complex point proved transcendental
-over Q. The exact 2*r*i transcendence equivalence is proved, but pi transcendence
-is unavailable in the pinned library, so the unconditional pi instance remains
-blocked. Pointwise nonvanishing gives no uniform analytic lower bound. The derivative-jet x^ν factor, Schur-compressed residual
-identity, integer collision-quotient and π specialization remain unformalized. The theorem
+over Q. The exact 2*r*i transcendence equivalence is proved, and the separately audited
+six-file A7 proof supplies real pi transcendence on the unchanged pins. The actual
+Hermite determinant at 2*pi*i is therefore nonzero for every N and original-column ordering. Pointwise nonvanishing gives no uniform analytic lower bound. The derivative-jet x^ν factor, Schur-compressed residual
+identity, integer collision-quotient and residual/analytic bridges remain unformalized. The theorem
 does not extend the arithmetic result to arbitrary weights. No uniform
 archimedean estimate or π badly-approximability theorem is claimed.
 
@@ -146,20 +147,20 @@ From the repository root, on KEYISHEN-MC6 the checked command is:
 ```sh
 python3 pi-weighted-colon/scripts/replay.py \
   --lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean \
-  --existing-mathlib-project /Users/keyishen/Documents/Codex/2026-10-04/task/mc6-proof \
-  --out /tmp/pi-complex-replay
+  --existing-mathlib-project /Users/keyishen/Documents/Codex/2026-10-08/task/pi-a7-mathlib-project \
+  --out /tmp/pi-a7-replay
 ```
 
 For another machine, substitute the compiler and existing project paths with
 matching pins. The script checks actual dependency Git heads and cleanliness,
-not just manifest labels. It runs Lean serially with `-j1 -M4096`,
+not just manifest labels. It runs Lean serially with `-j1`, a 4096 MiB limit for existing modules and an
+8192 MiB limit for modules importing the broad A7 Mathlib environment,
 `-DautoImplicit=false` and `-DwarningAsError=true`. It never invokes Lake, hooks,
 downloads or dependency builds. The existing compiler and dependency cache
 remain trusted inputs; replay records their hashes and does not rebuild them.
 Binary Lean outputs remain outside the source tree and are not committed.
 
-The older π checkpoints use Lean 4.34.1 and another mathlib revision. That
-toolchain is not installed on this computer, so their old regression suites
-were **not rerun**. They are preserved byte-for-byte; the verification receipt
-covers the new 4.30.0 checkpoint only. No full containing-repository build is
+The older π checkpoints and the separate isolated W2 verification are preserved
+without rerunning or incorporating them here; this receipt covers the cumulative
+4.30.0 checkpoint and the A7 import only. No full containing-repository build is
 claimed.

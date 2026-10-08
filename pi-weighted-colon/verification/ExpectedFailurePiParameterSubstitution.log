@@ -1,0 +1,6 @@
+/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/ExpectedFailurePiParameterSubstitution.lean:7:2: error: Type mismatch
+  complexHermiteCoefficientMatrix_det_ne_zero_pi N e
+has type
+  (squareComplexHermiteCoefficientMatrix N e piHermiteParameter).det ≠ 0
+but is expected to have type
+  (squareComplexHermiteCoefficientMatrix N e (4 * Complex.I)).det ≠ 0

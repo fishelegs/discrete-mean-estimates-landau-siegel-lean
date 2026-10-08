@@ -4,9 +4,17 @@
       "source_sha256": "7a81cef2ff724f9f690993d01aef906b200ca11c36f72fb57f9e6e5eaf4ec45e",
       "olean_sha256": "55669c6e55f73b80bc5c9071411089e827a740f95dba8c6d0840cd9cd4c9162d"
     },
+    "Mathlib": {
+      "source_sha256": "3974d80a831ed8d32ee46fcb91be02ed56d803f31edcf110c8a98b262a4cab2c",
+      "olean_sha256": "e5f3fc6db5cdefbbf0f474e24c91e29e80b28d97b5fe647c23fbbc169a047957"
+    },
     "Mathlib.Algebra.BigOperators.Fin": {
       "source_sha256": "03cef521805766ad46649cc9c5741f3005aa4208f7e40993b3ba5305c2faa628",
       "olean_sha256": "d22c823f5a75626f6d74340a47fa46d7a9e05968a1d6ba983a8531f37ad759c9"
+    },
+    "Mathlib.Algebra.BigOperators.Ring.Finset": {
+      "source_sha256": "879ebe001c23396b19d9096faa677b853098b44404a3d37ff28c44f116530f5d",
+      "olean_sha256": "cbe1d7f621cacb9e9fc90643c078b172375370bb2dfade9e42de50120e069dda"
     },
     "Mathlib.Algebra.CharP.Two": {
       "source_sha256": "93d24de7802b11b6179783bee42543f5131173ed0ddbddaad05a35203ec6d6c0",
@@ -36,6 +44,22 @@
       "source_sha256": "1dc337c6a10ba3e7c1d43e325e4a6e5e967f8e6112b01545cf7458b40e6b077e",
       "olean_sha256": "41b3f912a53a83f4e6afce5ca7e386f88cfe264f8c47f732009a07fd637e272a"
     },
+    "Mathlib.Analysis.Complex.IsIntegral": {
+      "source_sha256": "cba978952f92ed1ec6de7254dfe85c1883e0ba65c7b496e74bb6ca3633658a5e",
+      "olean_sha256": "b712e7ff5253aa687dbbc6b2bc1d545be7dccf6086fb721b0f8e0fb974da3357"
+    },
+    "Mathlib.Analysis.Complex.Polynomial.Basic": {
+      "source_sha256": "b7d15fb27d5bc1211be76dba328425bc7a44c40521d8aafb20025c438da9c44d",
+      "olean_sha256": "638ae37dd32f9afc6cc1ac8a73d6a529343f1d6193a79f9b401ac083292b2632"
+    },
+    "Mathlib.Analysis.SpecialFunctions.Complex.Circle": {
+      "source_sha256": "dd7908047f0391a4bb23306218948e2b52596965eb59b11e7fda9a693d9c85db",
+      "olean_sha256": "bb163750fe21a200f1b54d0acfd5e511d5b9996a554984217409ac292f0651bc"
+    },
+    "Mathlib.Analysis.SpecialFunctions.Exponential": {
+      "source_sha256": "dcf692e911602942ae2053343b008a716907ac809e62725b9b299e23b5e41781",
+      "olean_sha256": "0356a254c50e9bb6f068774f36f27955802402712cdbb055df3c8484c88a397f"
+    },
     "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic": {
       "source_sha256": "a3be8f542dd2bc7c94a484d8023f0c5927ffc8f06ef5a84abf33ea58e0ba58d9",
       "olean_sha256": "1f67f3bedaf9c8b2c594eb90f072963f43bb180a395b3f8a6e269b6822ede421"
@@ -52,6 +76,10 @@
       "source_sha256": "6e076742a9be15cb038502a6634155ae5a402899577f85e3c2941beedc0e1abd",
       "olean_sha256": "155961f7978f57eceec594debe5cc9550a07b0c2ed061aaa9cf3a4bc90fbd175"
     },
+    "Mathlib.FieldTheory.IsAlgClosed.Basic": {
+      "source_sha256": "98d1e1f5c6792eeb290eb81f2ba5c43789ca83b746fde078ddc7b89d054e8c05",
+      "olean_sha256": "90438973d0f4b08190b108cd3a3c92694521adb4d68c72608d8638f1fceffea8"
+    },
     "Mathlib.LinearAlgebra.Matrix.Block": {
       "source_sha256": "e1fdbb3ba3bf87e90167c3249887ff7da754e36bb1842400a573a8a22e156390",
       "olean_sha256": "7034267e18ec4d56360b2f4f99d940ad85ddcfd7466854f0046819a8a0ccfe38"
@@ -59,6 +87,10 @@
     "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv": {
       "source_sha256": "2caa7ed8644fa3e224178eb8f7283ff7d6bf216b21ec82fe4b5d173f6acef124",
       "olean_sha256": "a7b307f420cbef578f4e7345964fc81df0e4d39923ec65982f6a721df2873473"
+    },
+    "Mathlib.NumberTheory.Transcendental.Lindemann.AnalyticalPart": {
+      "source_sha256": "2052e62931d13be5dc28440b40dbe9c198530a946ae1f9e272810c709b5f328b",
+      "olean_sha256": "0424a87fbdbb86bfa928f9dc984d873db6027d06ae48302b4c733a8d0b5ff745"
     },
     "Mathlib.RingTheory.AdjoinRoot": {
       "source_sha256": "b6c97311a0cb58223ee87b43c3f2d29087a47f5c2cb0390cabc065f7a2bc002a",
@@ -80,6 +112,22 @@
       "source_sha256": "5ce512fb2d66209d7c981d9183546d4be4b9b425b11755b431901f657d5c2c42",
       "olean_sha256": "06ad2e8c1833a253686f543bc3aa7aa4ddca2b0de557f6d58a55bd52f1fd7fb1"
     },
+    "Mathlib.RingTheory.Localization.Integral": {
+      "source_sha256": "9b7b04fcc7295c9d23a08aadaf3a841c7b60036db3034b4d1f2f6cae22971123",
+      "olean_sha256": "59f0fd5eb4fcf0e5fa0c20f81dbb2a6b4bd96e263874e0647a2ce1182a41db12"
+    },
+    "Mathlib.RingTheory.Polynomial.IntegralNormalization": {
+      "source_sha256": "e087b04f9e92b7c9476ef1c6c84c7c233c9d48765d5308688f1526e87e59e728",
+      "olean_sha256": "9350b0ca116305905dc261f22ab90691e4fe27c023d3ed746aa4349510db7dea"
+    },
+    "Mathlib.RingTheory.Polynomial.ScaleRoots": {
+      "source_sha256": "1faffa3de134588041beca1e14962edb4354e1ac41d42b4b874ed30050534103",
+      "olean_sha256": "0d0f135012cb4fa04ae71acdbbcf1eeb0e864cbc7bc20d6a19b85b80967c725e"
+    },
+    "Mathlib.RingTheory.Polynomial.Vieta": {
+      "source_sha256": "9d753fefa5dfea12fa603acb56f23ec117134de70221648ac5b3c5ff6ecfc630",
+      "olean_sha256": "4963d2be9dba2cfd1bcdd511edb9bc9137bb4977d2d100464e1502e92eaf281b"
+    },
     "Mathlib.Tactic.FieldSimp": {
       "source_sha256": "db507d44ad70bd08aad09c14be9ebea7265785420144f2381d87dfd926919c7d",
       "olean_sha256": "dc851710c2009acb2d550c1489d40164671d7eb39a517447a699aa0a7e9ad3ae"
@@ -95,6 +143,10 @@
     "Mathlib.Tactic.Ring": {
       "source_sha256": "1e849bf79141f242dd92d5a39c69b715b6db24737b88c1c8bf139d28c5c56457",
       "olean_sha256": "4a0ce3adaa9f964dfed2dfbb13639a61616fd33c94485e567183850a2cf77c6c"
+    },
+    "Mathlib.Topology.Algebra.Order.Floor": {
+      "source_sha256": "f7385e20e2e4256d10051577793488485b86d11d3282fcaad0a00eee4afc52a9",
+      "olean_sha256": "904a8ebd845fc5d27a054084dafb0b61220073222758464e5a6478e71dd14291"
     }
   }
 }

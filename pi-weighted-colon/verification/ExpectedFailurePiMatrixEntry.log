@@ -1,0 +1,10 @@
+/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/ExpectedFailurePiMatrixEntry.lean:7:2: error: Type mismatch
+  actual_pi_matrix_entry
+has type
+  complexHermiteCoefficientMatrix 0 piHermiteParameter (rationalSmallRowMap 3)
+      ((originalIndexEquiv 0) (rationalSmallColMap 3)) =
+    piHermiteParameter + 2
+but is expected to have type
+  complexHermiteCoefficientMatrix 0 piHermiteParameter (rationalSmallRowMap 3)
+      ((originalIndexEquiv 0) (rationalSmallColMap 3)) =
+    piHermiteParameter + 3

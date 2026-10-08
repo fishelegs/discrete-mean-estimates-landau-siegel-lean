@@ -1,0 +1,114 @@
+import LeanFormalizations.NumberTheory.Transcendence.PiTranscendental
+
+set_option pp.universes true
+set_option pp.proofs false
+
+#check LeanFormalizations.Transcendence.exists_intPoly_aeval_eq_zero
+#print axioms LeanFormalizations.Transcendence.exists_intPoly_aeval_eq_zero
+
+#check LeanFormalizations.Transcendence.tendsto_const_mul_pow_div_factorial
+#print axioms LeanFormalizations.Transcendence.tendsto_const_mul_pow_div_factorial
+
+#check LeanFormalizations.Transcendence.exists_prime_smallness
+#print axioms LeanFormalizations.Transcendence.exists_prime_smallness
+
+#check LeanFormalizations.Transcendence.hermitePoly_eval_zero_ne
+#print axioms LeanFormalizations.Transcendence.hermitePoly_eval_zero_ne
+
+#check LeanFormalizations.Transcendence.hermitePoly_aroots
+#print axioms LeanFormalizations.Transcendence.hermitePoly_aroots
+
+#check LeanFormalizations.Transcendence.no_intPoly_aeval_eq_zero
+#print axioms LeanFormalizations.Transcendence.no_intPoly_aeval_eq_zero
+
+#check LeanFormalizations.Transcendence.e_transcendental
+#print axioms LeanFormalizations.Transcendence.e_transcendental
+
+#check LeanFormalizations.Transcendence.transcendental_exp_nat
+#print axioms LeanFormalizations.Transcendence.transcendental_exp_nat
+
+#check LeanFormalizations.Transcendence.transcendental_exp_int
+#print axioms LeanFormalizations.Transcendence.transcendental_exp_int
+
+#check LeanFormalizations.Transcendence.transcendental_exp_rat
+#print axioms LeanFormalizations.Transcendence.transcendental_exp_rat
+
+#check LeanFormalizations.Transcendence.prod_one_add_exp_eq_sum_subsetSum
+#print axioms LeanFormalizations.Transcendence.prod_one_add_exp_eq_sum_subsetSum
+
+#check LeanFormalizations.Transcendence.sum_subsetSum_exp_eq_zero_of_factor
+#print axioms LeanFormalizations.Transcendence.sum_subsetSum_exp_eq_zero_of_factor
+
+#check LeanFormalizations.Transcendence.sum_subsetSum_split
+#print axioms LeanFormalizations.Transcendence.sum_subsetSum_split
+
+#check LeanFormalizations.Transcendence.zeroSubsetSum_card_pos
+#print axioms LeanFormalizations.Transcendence.zeroSubsetSum_card_pos
+
+#check LeanFormalizations.Transcendence.pi_exp_relation
+#print axioms LeanFormalizations.Transcendence.pi_exp_relation
+
+#check LeanFormalizations.Transcendence.no_intPoly_exp_relation
+#print axioms LeanFormalizations.Transcendence.no_intPoly_exp_relation
+
+#check LeanFormalizations.Transcendence.aroots_integralNormalization
+#print axioms LeanFormalizations.Transcendence.aroots_integralNormalization
+
+#check LeanFormalizations.Transcendence.hsum_of_monic_rootsum
+#print axioms LeanFormalizations.Transcendence.hsum_of_monic_rootsum
+
+#check LeanFormalizations.Transcendence.subsetSum_relation_impossible
+#print axioms LeanFormalizations.Transcendence.subsetSum_relation_impossible
+
+#check LeanFormalizations.Transcendence.exists_intPoly_aroots_eq
+#print axioms LeanFormalizations.Transcendence.exists_intPoly_aroots_eq
+
+#check LeanFormalizations.Transcendence.esymm_aroots_mem_range
+#print axioms LeanFormalizations.Transcendence.esymm_aroots_mem_range
+
+#check LeanFormalizations.Transcendence.subsetSum_poly_lifts
+#print axioms LeanFormalizations.Transcendence.subsetSum_poly_lifts
+
+#check LeanFormalizations.Transcendence.exists_ratPoly_removeZeroRoots
+#print axioms LeanFormalizations.Transcendence.exists_ratPoly_removeZeroRoots
+
+#check LeanFormalizations.Transcendence.isAlgebraic_pi_complex_of_real
+#print axioms LeanFormalizations.Transcendence.isAlgebraic_pi_complex_of_real
+
+#check LeanFormalizations.Transcendence.roots_esymm_int
+#print axioms LeanFormalizations.Transcendence.roots_esymm_int
+
+#check LeanFormalizations.Transcendence.power_sum_int
+#print axioms LeanFormalizations.Transcendence.power_sum_int
+
+#check LeanFormalizations.Transcendence.sum_aeval_roots_int
+#print axioms LeanFormalizations.Transcendence.sum_aeval_roots_int
+
+#check LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_conjugatePoly
+#print axioms LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_conjugatePoly
+
+#check LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_esymm
+#print axioms LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_esymm
+
+#check LeanFormalizations.Transcendence.transcendental_pi_of_subsetSumEsymm
+#print axioms LeanFormalizations.Transcendence.transcendental_pi_of_subsetSumEsymm
+
+#check LeanFormalizations.Transcendence.SubsetSumEsymm.ringHom_map_multiset_esymm
+#print axioms LeanFormalizations.Transcendence.SubsetSumEsymm.ringHom_map_multiset_esymm
+
+#check LeanFormalizations.Transcendence.SubsetSumEsymm.subsetSum_esymm_isSymmetric
+#print axioms LeanFormalizations.Transcendence.SubsetSumEsymm.subsetSum_esymm_isSymmetric
+
+#check LeanFormalizations.Transcendence.SubsetSumEsymm.esymm_theta_mem_range
+#print axioms LeanFormalizations.Transcendence.SubsetSumEsymm.esymm_theta_mem_range
+
+#check LeanFormalizations.Transcendence.SubsetSumEsymm.aeval_mem_range
+#print axioms LeanFormalizations.Transcendence.SubsetSumEsymm.aeval_mem_range
+
+#check LeanFormalizations.Transcendence.subsetSum_esymm_rational
+#print axioms LeanFormalizations.Transcendence.subsetSum_esymm_rational
+
+#check LeanFormalizations.Transcendence.transcendental_pi_axiomClean
+#print axioms LeanFormalizations.Transcendence.transcendental_pi_axiomClean
+
+example : Transcendental ℚ Real.pi := LeanFormalizations.Transcendence.transcendental_pi_axiomClean

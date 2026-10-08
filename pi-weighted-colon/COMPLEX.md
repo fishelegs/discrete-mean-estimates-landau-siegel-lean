@@ -4,9 +4,9 @@ This stage proves evaluation and determinant compatibility for the actual
 Hermite coefficient matrix, and nonvanishing at **every complex number
 transcendental over Q**, for all natural N and every proved original-column
 ordering. It also proves that, for a real r, 2*r*i is transcendental over Q
-if and only if r is. The requested unconditional specialization at 2*pi*i
-is **blocked by a precise theorem gap in the pinned library** and is not
-asserted by this checkpoint.
+if and only if r is. This module preserves its original conditional statements. The subsequent
+[PI.md](PI.md) stage supplies the real-pi input from the separately audited six-file
+A7 import and proves unconditional actual Hermite nonvanishing at 2*pi*i.
 
 ## Actual complex matrix and determinant identity
 
@@ -70,7 +70,9 @@ theorem piHermiteParameter_transcendental_iff :
   Transcendental ℚ piHermiteParameter ↔ Transcendental ℚ Real.pi
 ```
 
-There is no unconditional pi nonvanishing theorem or an assumed pi axiom.
+This conditional module introduces no assumed pi axiom. The subsequent
+`PiHermiteNonvanishing.lean` module supplies an unconditional pi theorem through
+the separately verified A7 proof, leaving this module's general statements unchanged.
 The missing established theorem is `Transcendental ℚ Real.pi` in mathlib
 revision `c5ea00351c28e24afc9f0f84379aa41082b1188f`:
 
@@ -89,9 +91,9 @@ revision `c5ea00351c28e24afc9f0f84379aa41082b1188f`:
   not treated as evidence that no equivalent theorem exists; the source scan
   and incomplete Lindemann module provide the broader evidence.
 
-Completing the requested pi specialization thus requires a separately verified
-pi-transcendence theorem. This stage preserves the toolchain and dependency
-pins and does not introduce an unproved replacement.
+The subsequent A7 stage now supplies the separately verified pi-transcendence
+theorem on these same pins; see [PI.md](PI.md). The library-only gap evidence
+remains accurate and no unproved replacement is introduced.
 
 ## Regressions, audit and reproduction
 
@@ -102,8 +104,8 @@ parameter 2*i, prove that 4*i is not transcendental, and check the exact
 2*pi*i definition. Expected failures reject an incorrect i+3 entry,
 transcendence of the algebraic parameter 4*i, and the unavailable pi theorem.
 
-The cumulative replay compiles 39 positive modules and requires 20 expected
-failures, with exact source/log hashes. It audits all 443 named declarations;
+The current cumulative replay includes the A7 stage: 49 positive modules and
+22 expected failures, with exact source/log hashes. It audits all 492 named declarations;
 only `propext`, `Classical.choice`, and `Quot.sound` are permitted. Proof sources
 contain no `sorry`, `admit`, `native_decide`, custom axioms or unsafe declarations,
 and warnings are treated as errors.
@@ -113,8 +115,8 @@ From the repository root on KEYISHEN-MC6:
 ```sh
 python3 pi-weighted-colon/scripts/replay.py \
   --lean /Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean \
-  --existing-mathlib-project /Users/keyishen/Documents/Codex/2026-10-04/task/mc6-proof \
-  --out /tmp/pi-complex-replay
+  --existing-mathlib-project /Users/keyishen/Documents/Codex/2026-10-08/task/pi-a7-mathlib-project \
+  --out /tmp/pi-a7-replay
 ```
 
 The exact compiler commands, exit codes, dependency/source/cache/log hashes,
@@ -126,6 +128,6 @@ build or rerun of older Lean 4.34.1 pi checkpoints is claimed.
 
 Pointwise nonvanishing supplies **no uniform analytic lower bound** and no
 badly-approximable conclusion. The derivative-jet x^nu determinant factor,
-Schur-compressed residual identity and the unconditional 2*pi*i specialization
-remain unformalized. These statements concern the actual Hermite coefficient
+Schur-compressed residual identity remain unformalized; the subsequent A7 stage
+proves the unconditional 2*pi*i specialization. These statements concern the actual Hermite coefficient
 matrix only, with its original row and column labels, for all N.

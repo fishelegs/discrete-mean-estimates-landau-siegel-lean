@@ -2,9 +2,11 @@
 """Compile and audit the weighted-colon checkpoint using an existing pinned cache.
 
 No Lake command, installation, network request, hook or dependency build is run.
-All compilers run serially, with one worker and a 4096 MiB memory limit.
+All compilers run serially, with one worker. Existing modules retain a 4096 MiB
+limit; modules importing the attributed broad-Mathlib A7 proof use 8192 MiB.
 """
 import argparse
+import fcntl
 import hashlib
 import json
 import os
@@ -17,10 +19,16 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ['WeightedColon', 'DataIdealPresentation', 'EndpointColon']
-EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile', 'IntegerOriginNonvanishing', 'RationalOriginNonvanishing', 'HermitePolynomialNonvanishing', 'HermiteComplexSpecialization']
-REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression', 'OriginRegression', 'RationalRegression', 'HermiteRegression', 'SpecializationRegression']
-POSITIVE = CORE + EXTRA_CORE + REGRESSIONS + ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit', 'SpecializationAudit']
+EXTRA_CORE = ['RemainderVanish', 'QuadraticRemainder', 'EndpointRemainderBridge', 'RightRemainderBridge', 'StaircaseDivision', 'StaircaseNonvanishing', 'MatrixIndices', 'MatrixEntries', 'BinaryMatrixNonvanishing', 'NewtonIntegral', 'IntegerNewtonMatrix', 'FrequencyProfile', 'IntegerOriginNonvanishing', 'RationalOriginNonvanishing', 'HermitePolynomialNonvanishing', 'HermiteComplexSpecialization', 'PiHermiteNonvanishing']
+REGRESSIONS = ['WeightedColonRegression', 'RemainderRegression', 'BridgeRegression', 'AllScaleRegression', 'MatrixRegression', 'NewtonRegression', 'OriginRegression', 'RationalRegression', 'HermiteRegression', 'SpecializationRegression', 'PiSpecializationRegression']
+VENDOR_PREFIX = 'LeanFormalizations.NumberTheory.Transcendence.'
+VENDOR = [VENDOR_PREFIX + name for name in ['ETranscendental', 'PiLindemann', 'HermiteLindemann', 'MonicRootSums', 'SubsetSumEsymm', 'PiTranscendental']]
+AUDITS = ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit', 'SpecializationAudit', 'A7ImportedAudit', 'PiSpecializationAudit']
+POSITIVE = VENDOR + CORE + EXTRA_CORE + REGRESSIONS + AUDITS
+LARGE_IMPORTS = set(VENDOR + ['PiHermiteNonvanishing', 'PiSpecializationRegression', 'A7ImportedAudit', 'PiSpecializationAudit', 'ExpectedFailurePiMatrixEntry', 'ExpectedFailurePiParameterSubstitution'])
 NEGATIVE = {
+    'ExpectedFailurePiMatrixEntry': ('Type mismatch', 'piHermiteParameter + 3'),
+    'ExpectedFailurePiParameterSubstitution': ('Type mismatch', '4 * Complex.I'),
     'ExpectedFailureComplexEntry': ('Type mismatch', 'Complex.I + 3'),
     'ExpectedFailureRationalParameterTranscendence': ('Type mismatch', 'Transcendental ℚ (imaginaryRealParameter 2)'),
     'ExpectedFailureUnavailablePiTranscendence': ('Unknown constant `Real.transcendental_pi`', 'error(lean.unknownIdentifier)'),
@@ -47,6 +55,32 @@ ALLOWED_AXIOMS = {'propext', 'Classical.choice', 'Quot.sound'}
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def proof_text(source):
+    """Remove nested Lean comments before scanning executable proof syntax."""
+    result, index, depth = [], 0, 0
+    while index < len(source):
+        pair = source[index:index + 2]
+        if pair == '/-':
+            depth += 1
+            index += 2
+        elif depth and pair == '-/':
+            depth -= 1
+            index += 2
+        elif depth:
+            if source[index] == '\n':
+                result.append('\n')
+            index += 1
+        elif pair == '--':
+            end = source.find('\n', index)
+            index = len(source) if end == -1 else end
+        else:
+            result.append(source[index])
+            index += 1
+    if depth:
+        raise RuntimeError('Unclosed Lean comment')
+    return ''.join(result)
 
 
 def main():
@@ -88,11 +122,46 @@ def main():
         if sha(ROOT / relative) != digest:
             parser.error(f'Checkpoint hash mismatch: {relative}')
 
+    vendor_root = ROOT / 'vendor/gotrevor-pi'
+    vendor = json.loads((vendor_root / 'provenance.json').read_text())
+    if vendor['revision'] != 'bad0e21a37874f09f45072dad6225de55742e6c5':
+        parser.error('Wrong A7 upstream commit')
+    if sha(vendor_root / 'LICENSE') != vendor['license_sha256']:
+        parser.error('A7 license hash mismatch')
+    expected_vendor_files = {str(Path(*name.split('.')).with_suffix('.lean')) for name in VENDOR}
+    if set(vendor['files']) != expected_vendor_files:
+        parser.error('A7 scope is not exactly the six approved project modules')
+    vendor_declarations = {}
+    for relative, record in vendor['files'].items():
+        source = vendor_root / 'src' / relative
+        if sha(source) != record['ported_sha256']:
+            parser.error(f'A7 source hash mismatch: {relative}')
+        if record['compatibility_edits'] or record['ported_sha256'] != record['upstream_sha256']:
+            parser.error('This checkpoint requires the original six sources without compatibility edits')
+        code = proof_text(source.read_text())
+        if re.search(r'\b(sorry|admit|native_decide|unsafe|axiom|run_cmd|initialize|implemented_by|extern)\b', code):
+            parser.error(f'Prohibited A7 proof construct: {relative}')
+        for imported in re.findall(r'^import (\S+)\s*$', code, re.M):
+            if not (imported == 'Mathlib' or imported.startswith('Mathlib.') or imported in VENDOR):
+                parser.error(f'Unapproved A7 project import: {imported}')
+        namespace = ''
+        for line in code.splitlines():
+            match = re.match(r'^namespace (\S+)', line)
+            if match:
+                namespace = match.group(1) + '.'
+            elif line.startswith('end LeanFormalizations.Transcendence.SubsetSumEsymm'):
+                namespace = ''
+            match = re.match(r'^(theorem|lemma) (\w+)\b', line)
+            if match:
+                vendor_declarations[namespace + match.group(2)] = match.group(1)
+    if vendor_declarations != vendor['declarations']:
+        parser.error('A7 declaration inventory mismatch')
+
     attestation = json.loads((ROOT / 'verification/dependency-attestation.json').read_text())
     imports = {}
     for module, expected in attestation['direct_imports'].items():
         relative = Path(*module.split('.'))
-        if module.startswith('Mathlib.'):
+        if module == 'Mathlib' or module.startswith('Mathlib.'):
             source = project / '.lake/packages/mathlib' / relative.with_suffix('.lean')
             cached = project / '.lake/packages/mathlib/.lake/build/lib/lean' / relative.with_suffix('.olean')
         else:
@@ -119,23 +188,31 @@ def main():
     env = os.environ.copy()
     env.update(LEAN_PATH=':'.join(map(str, [build] + libraries)), LEAN_NUM_THREADS='1')
     checks = []
+    slot = Path('/tmp/mc6-lean-slots')
+    slot.mkdir(exist_ok=True)
+    lock = (slot / '8gib.lock').open('a')
+    fcntl.flock(lock, fcntl.LOCK_EX)
     for name in POSITIVE + list(NEGATIVE):
-        source = ROOT / 'src' / (name + '.lean')
-        output = build / (name + '.olean')
+        relative = Path(*name.split('.'))
+        source = ((vendor_root / 'src') if name in VENDOR else (ROOT / 'src')) / relative.with_suffix('.lean')
+        output = build / relative.with_suffix('.olean')
+        output.parent.mkdir(parents=True, exist_ok=True)
         if output.exists():
             output.unlink()
-        command = [str(lean), '-j1', '-M4096', '-DautoImplicit=false',
-                   '-DwarningAsError=true', '-o', str(output), source.name]
+        command = [str(lean), '-j1', '-M8192' if name in LARGE_IMPORTS else '-M4096', '-DautoImplicit=false',
+                   '-DwarningAsError=true', '-o', str(output), str(source)]
         started = time.monotonic()
-        run = subprocess.run(command, cwd=ROOT / 'src', env=env, text=True,
+        cwd = vendor_root / 'src' if name in VENDOR else ROOT / 'src'
+        run = subprocess.run(command, cwd=cwd, env=env, text=True,
                              stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        log = logs / (name + '.log')
+        log = logs / relative.with_suffix('.log')
+        log.parent.mkdir(parents=True, exist_ok=True)
         log.write_text(run.stdout)
         expected_failure = name in NEGATIVE
         passed = (run.returncode == 0 and output.is_file()) if not expected_failure else (
             run.returncode == 1 and len(re.findall(r'error(?:\([^\n)]*\))?:', run.stdout)) == 1 and
             all(fragment in run.stdout for fragment in NEGATIVE[name]) and not output.exists())
-        check = {'module': name, 'command': command, 'cwd': str(ROOT / 'src'),
+        check = {'module': name, 'command': command, 'cwd': str(cwd),
                  'source_sha256': sha(source), 'exit_code': run.returncode,
                  'expected_failure': expected_failure, 'passed': passed,
                  'log_sha256': sha(log), 'elapsed_seconds': round(time.monotonic() - started, 3)}
@@ -147,16 +224,16 @@ def main():
             print(run.stdout, file=sys.stderr)
             return 1
 
-    declarations = {}
+    declarations = dict(vendor_declarations)
     for name in CORE + EXTRA_CORE + REGRESSIONS:
-        source = (ROOT / 'src' / (name + '.lean')).read_text()
+        source = proof_text((ROOT / 'src' / (name + '.lean')).read_text())
         if re.search(r'\b(sorry|admit|native_decide|unsafe|axiom)\b', source):
             raise RuntimeError(f'Prohibited proof construct in {name}')
         namespace = 'PiWeightedColon.Regression.' if name.endswith('Regression') else 'PiWeightedColon.'
         for kind, declaration in re.findall(r'^(theorem|def|abbrev|instance) (\w+)\b', source, re.M):
             declarations[namespace + declaration] = kind
     audit = '\n'.join((logs / (name + '.log')).read_text()
-                      for name in ['WeightedColonAudit', 'RemainderAudit', 'BridgeAudit', 'AllScaleAudit', 'MatrixAudit', 'NewtonAudit', 'OriginAudit', 'RationalAudit', 'HermiteAudit', 'SpecializationAudit'])
+                      for name in AUDITS)
     reports = dict(re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", audit, re.S))
     reports.update({name: '' for name in re.findall(
         r"'([^']+)' does not depend on any axioms", audit)})
@@ -173,6 +250,7 @@ def main():
                'lean_executable_sha256': sha(lean), 'dependency_pins': pins,
                'direct_imports': imports, 'checks': checks,
                'declaration_kinds': declarations, 'axiom_audit': axioms,
+               'attributed_pi_transcendence_import': vendor,
                'pi_transcendence_gap': gap,
                'scope': 'Weighted colon lemma for the actual F2 endpoint ideals, and '
                         'bounded staircase division and the full V_N intersection theorem '
@@ -197,8 +275,13 @@ def main():
                         'determinant of the actual complex matrix with original row and column labels. '
                         'At every complex point proved transcendental over Q, both are nonzero for '
                         'all N. For any real r, transcendence of 2*r*i is proved equivalent to '
-                        'transcendence of r. No unconditional pi specialization is proved: the pinned '
-                        'library lacks a theorem proving Transcendental Q Real.pi. The pointwise '
+                        'transcendence of r. The six separately attributed original A7 modules at '
+                        'gotrevor commit bad0e21a37874f09f45072dad6225de55742e6c5 compile on the unchanged '
+                        '4.30 pins without compatibility edits; all their named declarations are '
+                        'recursively axiom-audited. Their ordinary Real.pi transcendence theorem '
+                        'supplies the input, so the actual Hermite determinant at literal 2*pi*i '
+                        'is nonzero for every N and every original-column reindexing, without an '
+                        'unproved transcendence assumption. The pointwise '
                         'result supplies no uniform analytic lower bound. The derivative-jet x^nu '
                         'factor, Schur-compressed '
                         'residual identity, integer collision-quotient and '

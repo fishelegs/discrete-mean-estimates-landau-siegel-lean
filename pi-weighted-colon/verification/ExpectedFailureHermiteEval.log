@@ -1,4 +1,4 @@
-ExpectedFailureHermiteEval.lean:6:2: error: Type mismatch
+/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/ExpectedFailureHermiteEval.lean:6:2: error: Type mismatch
   hermite_entry_eval_values.left
 has type
   Polynomial.eval 0 (hermiteCoefficientEntry 1 1 1 2 1) = 2

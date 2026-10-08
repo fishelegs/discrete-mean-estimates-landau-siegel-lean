@@ -1,0 +1,100 @@
+{
+  "repository": "https://github.com/gotrevor/lean-formalizations",
+  "revision": "bad0e21a37874f09f45072dad6225de55742e6c5",
+  "author": "Trevor Morris",
+  "license": "Apache-2.0",
+  "license_sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+  "upstream_toolchain": "leanprover/lean4:v4.31.0",
+  "upstream_mathlib_revision": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+  "reported_upstream_ci": "https://github.com/gotrevor/lean-formalizations/actions/runs/37548551487",
+  "compiled_order": [
+    "ETranscendental",
+    "PiLindemann",
+    "HermiteLindemann",
+    "MonicRootSums",
+    "SubsetSumEsymm",
+    "PiTranscendental"
+  ],
+  "files": {
+    "LeanFormalizations/NumberTheory/Transcendence/ETranscendental.lean": {
+      "upstream_path": "src/LeanFormalizations/NumberTheory/Transcendence/ETranscendental.lean",
+      "upstream_sha256": "e785bfde97d2a7c4f3cf856ddd1086247d59bdae257f957fbc0fbf08a11d6958",
+      "ported_sha256": "e785bfde97d2a7c4f3cf856ddd1086247d59bdae257f957fbc0fbf08a11d6958",
+      "compatibility_edits": []
+    },
+    "LeanFormalizations/NumberTheory/Transcendence/PiLindemann.lean": {
+      "upstream_path": "src/LeanFormalizations/NumberTheory/Transcendence/PiLindemann.lean",
+      "upstream_sha256": "c0066d60152885c1c98ee974ca0475ee3b5d84a16a5531a7834ecee53c9fbd7b",
+      "ported_sha256": "c0066d60152885c1c98ee974ca0475ee3b5d84a16a5531a7834ecee53c9fbd7b",
+      "compatibility_edits": []
+    },
+    "LeanFormalizations/NumberTheory/Transcendence/HermiteLindemann.lean": {
+      "upstream_path": "src/LeanFormalizations/NumberTheory/Transcendence/HermiteLindemann.lean",
+      "upstream_sha256": "c51766c2f4ec73c8f64c4167865f917c9de7c5142cdb0e22a03a42978914946a",
+      "ported_sha256": "c51766c2f4ec73c8f64c4167865f917c9de7c5142cdb0e22a03a42978914946a",
+      "compatibility_edits": []
+    },
+    "LeanFormalizations/NumberTheory/Transcendence/MonicRootSums.lean": {
+      "upstream_path": "src/LeanFormalizations/NumberTheory/Transcendence/MonicRootSums.lean",
+      "upstream_sha256": "cc7690bebce51652ed0b85d03bd092c21cf6c63a468c3513f4edf3f4a8d5a7c3",
+      "ported_sha256": "cc7690bebce51652ed0b85d03bd092c21cf6c63a468c3513f4edf3f4a8d5a7c3",
+      "compatibility_edits": []
+    },
+    "LeanFormalizations/NumberTheory/Transcendence/SubsetSumEsymm.lean": {
+      "upstream_path": "src/LeanFormalizations/NumberTheory/Transcendence/SubsetSumEsymm.lean",
+      "upstream_sha256": "b5d561b0c355dd596750c35598c3987cdc8932bcdd91e9134e558522520d4896",
+      "ported_sha256": "b5d561b0c355dd596750c35598c3987cdc8932bcdd91e9134e558522520d4896",
+      "compatibility_edits": []
+    },
+    "LeanFormalizations/NumberTheory/Transcendence/PiTranscendental.lean": {
+      "upstream_path": "src/LeanFormalizations/NumberTheory/Transcendence/PiTranscendental.lean",
+      "upstream_sha256": "0c88c5db882ba4a3d8a864e6289016d67276f393a1d294a1ad3796f43aad27ce",
+      "ported_sha256": "0c88c5db882ba4a3d8a864e6289016d67276f393a1d294a1ad3796f43aad27ce",
+      "compatibility_edits": []
+    }
+  },
+  "declarations": {
+    "LeanFormalizations.Transcendence.exists_intPoly_aeval_eq_zero": "theorem",
+    "LeanFormalizations.Transcendence.tendsto_const_mul_pow_div_factorial": "theorem",
+    "LeanFormalizations.Transcendence.exists_prime_smallness": "theorem",
+    "LeanFormalizations.Transcendence.hermitePoly_eval_zero_ne": "theorem",
+    "LeanFormalizations.Transcendence.hermitePoly_aroots": "theorem",
+    "LeanFormalizations.Transcendence.no_intPoly_aeval_eq_zero": "theorem",
+    "LeanFormalizations.Transcendence.e_transcendental": "theorem",
+    "LeanFormalizations.Transcendence.transcendental_exp_nat": "theorem",
+    "LeanFormalizations.Transcendence.transcendental_exp_int": "theorem",
+    "LeanFormalizations.Transcendence.transcendental_exp_rat": "theorem",
+    "LeanFormalizations.Transcendence.prod_one_add_exp_eq_sum_subsetSum": "theorem",
+    "LeanFormalizations.Transcendence.sum_subsetSum_exp_eq_zero_of_factor": "theorem",
+    "LeanFormalizations.Transcendence.sum_subsetSum_split": "theorem",
+    "LeanFormalizations.Transcendence.zeroSubsetSum_card_pos": "theorem",
+    "LeanFormalizations.Transcendence.pi_exp_relation": "theorem",
+    "LeanFormalizations.Transcendence.no_intPoly_exp_relation": "theorem",
+    "LeanFormalizations.Transcendence.aroots_integralNormalization": "theorem",
+    "LeanFormalizations.Transcendence.hsum_of_monic_rootsum": "theorem",
+    "LeanFormalizations.Transcendence.subsetSum_relation_impossible": "theorem",
+    "LeanFormalizations.Transcendence.exists_intPoly_aroots_eq": "theorem",
+    "LeanFormalizations.Transcendence.esymm_aroots_mem_range": "theorem",
+    "LeanFormalizations.Transcendence.subsetSum_poly_lifts": "theorem",
+    "LeanFormalizations.Transcendence.exists_ratPoly_removeZeroRoots": "theorem",
+    "LeanFormalizations.Transcendence.isAlgebraic_pi_complex_of_real": "theorem",
+    "LeanFormalizations.Transcendence.roots_esymm_int": "theorem",
+    "LeanFormalizations.Transcendence.power_sum_int": "theorem",
+    "LeanFormalizations.Transcendence.sum_aeval_roots_int": "theorem",
+    "LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_conjugatePoly": "theorem",
+    "LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_esymm": "theorem",
+    "LeanFormalizations.Transcendence.transcendental_pi_of_subsetSumEsymm": "theorem",
+    "LeanFormalizations.Transcendence.SubsetSumEsymm.ringHom_map_multiset_esymm": "lemma",
+    "LeanFormalizations.Transcendence.SubsetSumEsymm.subsetSum_esymm_isSymmetric": "lemma",
+    "LeanFormalizations.Transcendence.SubsetSumEsymm.esymm_theta_mem_range": "lemma",
+    "LeanFormalizations.Transcendence.SubsetSumEsymm.aeval_mem_range": "lemma",
+    "LeanFormalizations.Transcendence.subsetSum_esymm_rational": "theorem",
+    "LeanFormalizations.Transcendence.transcendental_pi_axiomClean": "theorem"
+  },
+  "verified_upstream_ci": {
+    "head_sha": "bad0e21a37874f09f45072dad6225de55742e6c5",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/gotrevor/lean-formalizations/actions/runs/37548551487"
+  }
+}

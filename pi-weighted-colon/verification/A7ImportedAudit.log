@@ -1,0 +1,304 @@
+LeanFormalizations.Transcendence.exists_intPoly_aeval_eq_zero (h : IsAlgebraic.{0, 0} Rat (Real.exp 1)) :
+  ∃ q, And (Ne.{1} (Polynomial.coeff.{0} q 0) 0) (Eq.{1} ((Polynomial.aeval.{0, 0} (Real.exp 1)) q) 0)
+'LeanFormalizations.Transcendence.exists_intPoly_aeval_eq_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.tendsto_const_mul_pow_div_factorial (c B : Real) :
+  Filter.Tendsto.{0, 0}
+    (fun p =>
+      HMul.hMul.{0, 0, 0} B (HDiv.hDiv.{0, 0, 0} (HPow.hPow.{0, 0, 0} c p) ↑(Nat.factorial (HSub.hSub.{0, 0, 0} p 1))))
+    Filter.atTop.{0} (nhds.{0} 0)
+'LeanFormalizations.Transcendence.tendsto_const_mul_pow_div_factorial' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.exists_prime_smallness (c B : Real) (M : Nat) :
+  ∃ p,
+    And (Nat.Prime p)
+      (And (LT.lt.{0} M p)
+        (LT.lt.{0}
+          (HMul.hMul.{0, 0, 0} B
+            (HDiv.hDiv.{0, 0, 0} (HPow.hPow.{0, 0, 0} c p) ↑(Nat.factorial (HSub.hSub.{0, 0, 0} p 1))))
+          1))
+'LeanFormalizations.Transcendence.exists_prime_smallness' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.hermitePoly_eval_zero_ne (m : Nat) :
+  Ne.{1} (Polynomial.eval.{0} 0 (∏ k ∈ Finset.Icc.{0} 1 m, HSub.hSub.{0, 0, 0} Polynomial.X.{0} (Polynomial.C.{0} ↑k)))
+    0
+'LeanFormalizations.Transcendence.hermitePoly_eval_zero_ne' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.hermitePoly_aroots (m : Nat) :
+  Eq.{1}
+    (Polynomial.aroots.{0, 0} (∏ k ∈ Finset.Icc.{0} 1 m, HSub.hSub.{0, 0, 0} Polynomial.X.{0} (Polynomial.C.{0} ↑k))
+      Complex)
+    (Multiset.map.{0, 0} (fun k => ↑k) (Finset.val.{0} (Finset.Icc.{0} 1 m)))
+'LeanFormalizations.Transcendence.hermitePoly_aroots' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+LeanFormalizations.Transcendence.no_intPoly_aeval_eq_zero (q : Polynomial.{0} Int)
+  (hq0 : Ne.{1} (Polynomial.coeff.{0} q 0) 0) : Ne.{1} ((Polynomial.aeval.{0, 0} (Real.exp 1)) q) 0
+'LeanFormalizations.Transcendence.no_intPoly_aeval_eq_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.e_transcendental : Transcendental.{0, 0} Rat (Real.exp 1)
+'LeanFormalizations.Transcendence.e_transcendental' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+LeanFormalizations.Transcendence.transcendental_exp_nat (n : Nat) (hn : Ne.{1} n 0) :
+  Transcendental.{0, 0} Rat (Real.exp ↑n)
+'LeanFormalizations.Transcendence.transcendental_exp_nat' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.transcendental_exp_int (a : Int) (ha : Ne.{1} a 0) :
+  Transcendental.{0, 0} Rat (Real.exp ↑a)
+'LeanFormalizations.Transcendence.transcendental_exp_int' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.transcendental_exp_rat (q : Rat) (hq : Ne.{1} q 0) :
+  Transcendental.{0, 0} Rat (Real.exp ↑q)
+'LeanFormalizations.Transcendence.transcendental_exp_rat' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.prod_one_add_exp_eq_sum_subsetSum.{u_1} {ι : Type u_1} [DecidableEq.{u_1 + 1} ι]
+  (s : Finset.{u_1} ι) (θ : ι → Complex) :
+  Eq.{1} (∏ k ∈ s, HAdd.hAdd.{0, 0, 0} 1 (Complex.exp (θ k)))
+    (∑ t ∈ Finset.powerset.{u_1} s, Complex.exp (∑ k ∈ t, θ k))
+'LeanFormalizations.Transcendence.prod_one_add_exp_eq_sum_subsetSum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.sum_subsetSum_exp_eq_zero_of_factor.{u_1} {ι : Type u_1} [DecidableEq.{u_1 + 1} ι]
+  (s : Finset.{u_1} ι) (θ : ι → Complex) (k₀ : ι) (hk₀ : Membership.mem.{u_1, u_1} s k₀)
+  (hval : Eq.{1} (Complex.exp (θ k₀)) (-1)) : Eq.{1} (∑ t ∈ Finset.powerset.{u_1} s, Complex.exp (∑ k ∈ t, θ k)) 0
+'LeanFormalizations.Transcendence.sum_subsetSum_exp_eq_zero_of_factor' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.sum_subsetSum_split.{u_1} {ι : Type u_1} [DecidableEq.{u_1 + 1} ι] (s : Finset.{u_1} ι)
+  (θ : ι → Complex) :
+  Eq.{1} (∑ t ∈ Finset.powerset.{u_1} s, Complex.exp (∑ k ∈ t, θ k))
+    (HAdd.hAdd.{0, 0, 0} (↑(Finset.card.{u_1} ({t ∈ Finset.powerset.{u_1} s | Eq.{1} (∑ k ∈ t, θ k) 0})))
+      (∑ t ∈ Finset.powerset.{u_1} s with Ne.{1} (∑ k ∈ t, θ k) 0, Complex.exp (∑ k ∈ t, θ k)))
+'LeanFormalizations.Transcendence.sum_subsetSum_split' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.zeroSubsetSum_card_pos.{u_1} {ι : Type u_1} [DecidableEq.{u_1 + 1} ι]
+  (s : Finset.{u_1} ι) (θ : ι → Complex) :
+  LT.lt.{0} 0 (Finset.card.{u_1} ({t ∈ Finset.powerset.{u_1} s | Eq.{1} (∑ k ∈ t, θ k) 0}))
+'LeanFormalizations.Transcendence.zeroSubsetSum_card_pos' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.pi_exp_relation.{u_1} {ι : Type u_1} [DecidableEq.{u_1 + 1} ι] (s : Finset.{u_1} ι)
+  (θ : ι → Complex) (k₀ : ι) (hk₀ : Membership.mem.{u_1, u_1} s k₀) (hval : Eq.{1} (Complex.exp (θ k₀)) (-1)) :
+  Eq.{1}
+    (HAdd.hAdd.{0, 0, 0} (↑(Finset.card.{u_1} ({t ∈ Finset.powerset.{u_1} s | Eq.{1} (∑ k ∈ t, θ k) 0})))
+      (∑ t ∈ Finset.powerset.{u_1} s with Ne.{1} (∑ k ∈ t, θ k) 0, Complex.exp (∑ k ∈ t, θ k)))
+    0
+'LeanFormalizations.Transcendence.pi_exp_relation' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+LeanFormalizations.Transcendence.no_intPoly_exp_relation (F : Polynomial.{0} Int)
+  (hF0 : Ne.{1} (Polynomial.eval.{0} 0 F) 0)
+  (hsum :
+    ∀ (gp : Polynomial.{0} Int) (m : Nat),
+      LE.le.{0} (Polynomial.natDegree.{0} gp) m →
+        ∃ S,
+          Eq.{1}
+            (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} (↑(Polynomial.leadingCoeff.{0} F)) m)
+              (Multiset.sum.{0}
+                (Multiset.map.{0, 0} (fun r => (Polynomial.aeval.{0, 0} r) gp) (Polynomial.aroots.{0, 0} F Complex))))
+            ↑S)
+  (K : Int) (hK : LT.lt.{0} 0 K)
+  (hrel :
+    Eq.{1}
+      (HAdd.hAdd.{0, 0, 0} (↑K)
+        (Multiset.sum.{0} (Multiset.map.{0, 0} (fun r => Complex.exp r) (Polynomial.aroots.{0, 0} F Complex))))
+      0) :
+  False
+'LeanFormalizations.Transcendence.no_intPoly_exp_relation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.aroots_integralNormalization (F : Polynomial.{0} Int) (hF : Ne.{1} F 0) :
+  Eq.{1} (Polynomial.aroots.{0, 0} (Polynomial.integralNormalization.{0} F) Complex)
+    (Multiset.map.{0, 0} (fun r => HMul.hMul.{0, 0, 0} (↑(Polynomial.leadingCoeff.{0} F)) r)
+      (Polynomial.aroots.{0, 0} F Complex))
+'LeanFormalizations.Transcendence.aroots_integralNormalization' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.hsum_of_monic_rootsum
+  (monic_rootsum :
+    ∀ (G : Polynomial.{0} Int),
+      Polynomial.Monic.{0} G →
+        ∀ (q : Polynomial.{0} Int),
+          ∃ T,
+            Eq.{1}
+              (Multiset.sum.{0}
+                (Multiset.map.{0, 0} (fun s => (Polynomial.aeval.{0, 0} s) q) (Polynomial.aroots.{0, 0} G Complex)))
+              ↑T)
+  (F : Polynomial.{0} Int) (hF0 : Ne.{1} (Polynomial.eval.{0} 0 F) 0) (gp : Polynomial.{0} Int) (m : Nat) :
+  LE.le.{0} (Polynomial.natDegree.{0} gp) m →
+    ∃ S,
+      Eq.{1}
+        (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} (↑(Polynomial.leadingCoeff.{0} F)) m)
+          (Multiset.sum.{0}
+            (Multiset.map.{0, 0} (fun r => (Polynomial.aeval.{0, 0} r) gp) (Polynomial.aroots.{0, 0} F Complex))))
+        ↑S
+'LeanFormalizations.Transcendence.hsum_of_monic_rootsum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.subsetSum_relation_impossible.{u_1} {ι : Type u_1} [DecidableEq.{u_1 + 1} ι]
+  (s : Finset.{u_1} ι) (θ : ι → Complex) (k₀ : ι) (hk₀ : Membership.mem.{u_1, u_1} s k₀)
+  (hval : Eq.{1} (Complex.exp (θ k₀)) (-1))
+  (monic_rootsum :
+    ∀ (G : Polynomial.{0} Int),
+      Polynomial.Monic.{0} G →
+        ∀ (q : Polynomial.{0} Int),
+          ∃ T,
+            Eq.{1}
+              (Multiset.sum.{0}
+                (Multiset.map.{0, 0} (fun r => (Polynomial.aeval.{0, 0} r) q) (Polynomial.aroots.{0, 0} G Complex)))
+              ↑T)
+  (F : Polynomial.{0} Int) (hF0 : Ne.{1} (Polynomial.eval.{0} 0 F) 0)
+  (hFroots :
+    Eq.{1} (Polynomial.aroots.{0, 0} F Complex)
+      (Multiset.map.{0, u_1} (fun t => ∑ k ∈ t, θ k)
+        (Finset.val.{u_1} ({t ∈ Finset.powerset.{u_1} s | Ne.{1} (∑ k ∈ t, θ k) 0})))) :
+  False
+'LeanFormalizations.Transcendence.subsetSum_relation_impossible' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.exists_intPoly_aroots_eq (Q : Polynomial.{0} Rat)
+  (hQ0 : Ne.{1} (Polynomial.eval.{0} 0 Q) 0) :
+  ∃ F,
+    And (Ne.{1} (Polynomial.eval.{0} 0 F) 0)
+      (Eq.{1} (Polynomial.aroots.{0, 0} F Complex) (Polynomial.aroots.{0, 0} Q Complex))
+'LeanFormalizations.Transcendence.exists_intPoly_aroots_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.esymm_aroots_mem_range (G : Polynomial.{0} Rat) (hG : Polynomial.Monic.{0} G)
+  (j : Nat) :
+  Membership.mem.{0, 0} (Set.range.{0, 1} ⇑(algebraMap.{0, 0} Rat Complex))
+    (Multiset.esymm.{0} (Polynomial.aroots.{0, 0} G Complex) j)
+'LeanFormalizations.Transcendence.esymm_aroots_mem_range' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.subsetSum_poly_lifts (σs : Multiset.{0} Complex)
+  (hesymm :
+    ∀ (j : Nat), Membership.mem.{0, 0} (Set.range.{0, 1} ⇑(algebraMap.{0, 0} Rat Complex)) (Multiset.esymm.{0} σs j)) :
+  Membership.mem.{0, 0} (Polynomial.lifts.{0, 0} (algebraMap.{0, 0} Rat Complex))
+    (Multiset.prod.{0} (Multiset.map.{0, 0} (fun a => HSub.hSub.{0, 0, 0} Polynomial.X.{0} (Polynomial.C.{0} a)) σs))
+'LeanFormalizations.Transcendence.subsetSum_poly_lifts' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.exists_ratPoly_removeZeroRoots (Q : Polynomial.{0} Rat) (hQ : Ne.{1} Q 0) :
+  ∃ Q',
+    And (Ne.{1} (Polynomial.eval.{0} 0 Q') 0)
+      (Eq.{1} (Multiset.filter.{0} (fun r => Ne.{1} r 0) (Polynomial.aroots.{0, 0} Q Complex))
+        (Polynomial.aroots.{0, 0} Q' Complex))
+'LeanFormalizations.Transcendence.exists_ratPoly_removeZeroRoots' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.isAlgebraic_pi_complex_of_real (hpi : IsAlgebraic.{0, 0} Rat Real.pi) :
+  IsAlgebraic.{0, 0} Rat ↑Real.pi
+'LeanFormalizations.Transcendence.isAlgebraic_pi_complex_of_real' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.roots_esymm_int (f : Polynomial.{0} Int) (hf : Polynomial.Monic.{0} f) (j : Nat) :
+  ∃ m, Eq.{1} (Multiset.esymm.{0} (Polynomial.aroots.{0, 0} f Complex) j) ↑m
+'LeanFormalizations.Transcendence.roots_esymm_int' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+LeanFormalizations.Transcendence.power_sum_int (f : Polynomial.{0} Int) (hf : Polynomial.Monic.{0} f) (k : Nat) :
+  ∃ m,
+    Eq.{1}
+      (Multiset.sum.{0} (Multiset.map.{0, 0} (fun r => HPow.hPow.{0, 0, 0} r k) (Polynomial.aroots.{0, 0} f Complex)))
+      ↑m
+'LeanFormalizations.Transcendence.power_sum_int' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+LeanFormalizations.Transcendence.sum_aeval_roots_int (f : Polynomial.{0} Int) (hf : Polynomial.Monic.{0} f)
+  (g : Polynomial.{0} Int) :
+  ∃ N,
+    Eq.{1}
+      (Multiset.sum.{0}
+        (Multiset.map.{0, 0} (fun r => (Polynomial.aeval.{0, 0} r) g) (Polynomial.aroots.{0, 0} f Complex)))
+      ↑N
+'LeanFormalizations.Transcendence.sum_aeval_roots_int' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_conjugatePoly.{u_1} {ι : Type u_1}
+  [DecidableEq.{u_1 + 1} ι] (s : Finset.{u_1} ι) (θ : ι → Complex) (k₀ : ι) (hk₀ : Membership.mem.{u_1, u_1} s k₀)
+  (hval : Eq.{1} (Complex.exp (θ k₀)) (-1)) (F : Polynomial.{0} Int) (hF0 : Ne.{1} (Polynomial.eval.{0} 0 F) 0)
+  (hFroots :
+    Eq.{1} (Polynomial.aroots.{0, 0} F Complex)
+      (Multiset.map.{0, u_1} (fun t => ∑ k ∈ t, θ k)
+        (Finset.val.{u_1} ({t ∈ Finset.powerset.{u_1} s | Ne.{1} (∑ k ∈ t, θ k) 0})))) :
+  False
+'LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_conjugatePoly' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_esymm.{u_1} {ι : Type u_1} [DecidableEq.{u_1 + 1} ι]
+  (s : Finset.{u_1} ι) (θ : ι → Complex) (k₀ : ι) (hk₀ : Membership.mem.{u_1, u_1} s k₀)
+  (hval : Eq.{1} (Complex.exp (θ k₀)) (-1))
+  (hesymm :
+    ∀ (j : Nat),
+      Membership.mem.{0, 0} (Set.range.{0, 1} ⇑(algebraMap.{0, 0} Rat Complex))
+        (Multiset.esymm.{0} (Multiset.map.{0, u_1} (fun t => ∑ k ∈ t, θ k) (Finset.val.{u_1} (Finset.powerset.{u_1} s)))
+          j)) :
+  False
+'LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_esymm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.transcendental_pi_of_subsetSumEsymm
+  (hsse :
+    ∀ (n : Nat) (θ : Fin n → Complex) (G : Polynomial.{0} Rat),
+      Polynomial.Monic.{0} G →
+        Eq.{1} (Polynomial.roots.{0} (Polynomial.map.{0, 0} (algebraMap.{0, 0} Rat Complex) G))
+            (Multiset.map.{0, 0} θ (Finset.val.{0} Finset.univ.{0})) →
+          ∀ (j : Nat),
+            Membership.mem.{0, 0} (Set.range.{0, 1} ⇑(algebraMap.{0, 0} Rat Complex))
+              (Multiset.esymm.{0}
+                (Multiset.map.{0, 0} (fun t => ∑ k ∈ t, θ k) (Finset.val.{0} (Finset.powerset.{0} Finset.univ.{0})))
+                j)) :
+  Transcendental.{0, 0} Rat Real.pi
+'LeanFormalizations.Transcendence.transcendental_pi_of_subsetSumEsymm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.SubsetSumEsymm.ringHom_map_multiset_esymm.{u_1, u_2} {R : Type u_1} {S : Type u_2}
+  [CommSemiring.{u_1} R] [CommSemiring.{u_2} S] (f : RingHom.{u_1, u_2} R S) (s : Multiset.{u_1} R) (m : Nat) :
+  Eq.{u_2 + 1} (f (Multiset.esymm.{u_1} s m)) (Multiset.esymm.{u_2} (Multiset.map.{u_2, u_1} (⇑f) s) m)
+'LeanFormalizations.Transcendence.SubsetSumEsymm.ringHom_map_multiset_esymm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.SubsetSumEsymm.subsetSum_esymm_isSymmetric (n m : Nat) :
+  MvPolynomial.IsSymmetric.{0, 0}
+    (Multiset.esymm.{0}
+      (Multiset.map.{0, 0} (fun t => ∑ k ∈ t, MvPolynomial.X.{0, 0} k)
+        (Finset.val.{0} (Finset.powerset.{0} Finset.univ.{0})))
+      m)
+'LeanFormalizations.Transcendence.SubsetSumEsymm.subsetSum_esymm_isSymmetric' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.SubsetSumEsymm.esymm_theta_mem_range (n : Nat) (theta : Fin n → Complex)
+  (G : Polynomial.{0} Rat) (hGmonic : Polynomial.Monic.{0} G)
+  (hroots :
+    Eq.{1} (Polynomial.roots.{0} (Polynomial.map.{0, 0} (algebraMap.{0, 0} Rat Complex) G))
+      (Multiset.map.{0, 0} theta (Finset.val.{0} Finset.univ.{0})))
+  (i : Nat) :
+  Membership.mem.{0, 0} (Set.range.{0, 1} ⇑(algebraMap.{0, 0} Rat Complex))
+    (Multiset.esymm.{0} (Multiset.map.{0, 0} theta (Finset.val.{0} Finset.univ.{0})) i)
+'LeanFormalizations.Transcendence.SubsetSumEsymm.esymm_theta_mem_range' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.SubsetSumEsymm.aeval_mem_range {n : Nat} (g : Fin n → Complex)
+  (q : MvPolynomial.{0, 0} (Fin n) Rat)
+  (hg : ∀ (i : Fin n), Membership.mem.{0, 0} (Set.range.{0, 1} ⇑(algebraMap.{0, 0} Rat Complex)) (g i)) :
+  Membership.mem.{0, 0} (Set.range.{0, 1} ⇑(algebraMap.{0, 0} Rat Complex)) ((MvPolynomial.aeval.{0, 0, 0} g) q)
+'LeanFormalizations.Transcendence.SubsetSumEsymm.aeval_mem_range' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.subsetSum_esymm_rational (n : Nat) (theta : Fin n → Complex) (G : Polynomial.{0} Rat)
+  (hGmonic : Polynomial.Monic.{0} G)
+  (hroots :
+    Eq.{1} (Polynomial.roots.{0} (Polynomial.map.{0, 0} (algebraMap.{0, 0} Rat Complex) G))
+      (Multiset.map.{0, 0} theta (Finset.val.{0} Finset.univ.{0})))
+  (j : Nat) :
+  Membership.mem.{0, 0} (Set.range.{0, 1} ⇑(algebraMap.{0, 0} Rat Complex))
+    (Multiset.esymm.{0}
+      (Multiset.map.{0, 0} (fun t => ∑ k ∈ t, theta k) (Finset.val.{0} (Finset.powerset.{0} Finset.univ.{0}))) j)
+'LeanFormalizations.Transcendence.subsetSum_esymm_rational' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+LeanFormalizations.Transcendence.transcendental_pi_axiomClean : Transcendental.{0, 0} Rat Real.pi
+'LeanFormalizations.Transcendence.transcendental_pi_axiomClean' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

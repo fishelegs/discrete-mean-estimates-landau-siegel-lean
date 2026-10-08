@@ -1,0 +1,43 @@
+import PiSpecializationRegression
+
+set_option pp.universes true
+set_option pp.proofs false
+
+#check PiWeightedColon.real_pi_transcendental
+#print axioms PiWeightedColon.real_pi_transcendental
+
+#check PiWeightedColon.piHermiteParameter_transcendental
+#print axioms PiWeightedColon.piHermiteParameter_transcendental
+
+#check PiWeightedColon.hermite_determinant_aeval_ne_zero_pi
+#print axioms PiWeightedColon.hermite_determinant_aeval_ne_zero_pi
+
+#check PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero_pi
+#print axioms PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero_pi
+
+#check PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero_two_pi_I
+#print axioms PiWeightedColon.complexHermiteCoefficientMatrix_det_ne_zero_two_pi_I
+
+#check PiWeightedColon.canonicalComplexHermiteCoefficientMatrix_det_ne_zero_pi
+#print axioms PiWeightedColon.canonicalComplexHermiteCoefficientMatrix_det_ne_zero_pi
+
+#check PiWeightedColon.Regression.actual_pi_input_exact_type
+#print axioms PiWeightedColon.Regression.actual_pi_input_exact_type
+
+#check PiWeightedColon.Regression.actual_two_pi_I_transcendental
+#print axioms PiWeightedColon.Regression.actual_two_pi_I_transcendental
+
+#check PiWeightedColon.Regression.actual_pi_det_all_N_all_original_orderings
+#print axioms PiWeightedColon.Regression.actual_pi_det_all_N_all_original_orderings
+
+#check PiWeightedColon.Regression.actual_pi_polynomial_eval_all_N_all_original_orderings
+#print axioms PiWeightedColon.Regression.actual_pi_polynomial_eval_all_N_all_original_orderings
+
+#check PiWeightedColon.Regression.actual_pi_canonical_all_N
+#print axioms PiWeightedColon.Regression.actual_pi_canonical_all_N
+
+#check PiWeightedColon.Regression.actual_pi_scale_zero_det_ne_zero
+#print axioms PiWeightedColon.Regression.actual_pi_scale_zero_det_ne_zero
+
+#check PiWeightedColon.Regression.actual_pi_matrix_entry
+#print axioms PiWeightedColon.Regression.actual_pi_matrix_entry

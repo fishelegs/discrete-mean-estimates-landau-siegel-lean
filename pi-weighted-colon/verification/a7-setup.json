@@ -1,0 +1,401 @@
+{
+  "initial_missing_cache": [
+    {
+      "module": "ETranscendental",
+      "argv": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/tmp/pi-a7-port/build/LeanFormalizations/NumberTheory/Transcendence/ETranscendental.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/vendor/gotrevor-pi/src/LeanFormalizations/NumberTheory/Transcendence/ETranscendental.lean"
+      ],
+      "exit_code": 1,
+      "elapsed": 0.8749748329864815,
+      "log": "/tmp/pi-a7-port/logs/ETranscendental.log",
+      "source_sha256": "e785bfde97d2a7c4f3cf856ddd1086247d59bdae257f957fbc0fbf08a11d6958"
+    }
+  ],
+  "raw_4096_attempt": [
+    {
+      "module": "ETranscendental",
+      "argv": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/tmp/pi-a7-port-2/build/LeanFormalizations/NumberTheory/Transcendence/ETranscendental.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/vendor/gotrevor-pi/src/LeanFormalizations/NumberTheory/Transcendence/ETranscendental.lean"
+      ],
+      "exit_code": 0,
+      "elapsed": 15.79604212497361,
+      "log": "/tmp/pi-a7-port-2/logs/ETranscendental.log",
+      "source_sha256": "e785bfde97d2a7c4f3cf856ddd1086247d59bdae257f957fbc0fbf08a11d6958"
+    },
+    {
+      "module": "PiLindemann",
+      "argv": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/tmp/pi-a7-port-2/build/LeanFormalizations/NumberTheory/Transcendence/PiLindemann.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/vendor/gotrevor-pi/src/LeanFormalizations/NumberTheory/Transcendence/PiLindemann.lean"
+      ],
+      "exit_code": 0,
+      "elapsed": 3.843400457990356,
+      "log": "/tmp/pi-a7-port-2/logs/PiLindemann.log",
+      "source_sha256": "c0066d60152885c1c98ee974ca0475ee3b5d84a16a5531a7834ecee53c9fbd7b"
+    },
+    {
+      "module": "HermiteLindemann",
+      "argv": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/tmp/pi-a7-port-2/build/LeanFormalizations/NumberTheory/Transcendence/HermiteLindemann.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/vendor/gotrevor-pi/src/LeanFormalizations/NumberTheory/Transcendence/HermiteLindemann.lean"
+      ],
+      "exit_code": 0,
+      "elapsed": 1.8830702499835752,
+      "log": "/tmp/pi-a7-port-2/logs/HermiteLindemann.log",
+      "source_sha256": "c51766c2f4ec73c8f64c4167865f917c9de7c5142cdb0e22a03a42978914946a"
+    },
+    {
+      "module": "MonicRootSums",
+      "argv": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M4096",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/tmp/pi-a7-port-2/build/LeanFormalizations/NumberTheory/Transcendence/MonicRootSums.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/vendor/gotrevor-pi/src/LeanFormalizations/NumberTheory/Transcendence/MonicRootSums.lean"
+      ],
+      "exit_code": -6,
+      "elapsed": 15.968888624978717,
+      "log": "/tmp/pi-a7-port-2/logs/MonicRootSums.log",
+      "source_sha256": "cc7690bebce51652ed0b85d03bd092c21cf6c63a468c3513f4edf3f4a8d5a7c3"
+    }
+  ],
+  "raw_8192_retry": [
+    {
+      "module": "MonicRootSums",
+      "argv": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/tmp/pi-a7-port-3/build/LeanFormalizations/NumberTheory/Transcendence/MonicRootSums.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/vendor/gotrevor-pi/src/LeanFormalizations/NumberTheory/Transcendence/MonicRootSums.lean"
+      ],
+      "exit_code": 0,
+      "elapsed": 33.59094945900142,
+      "log": "/tmp/pi-a7-port-3/logs/MonicRootSums.log",
+      "source_sha256": "cc7690bebce51652ed0b85d03bd092c21cf6c63a468c3513f4edf3f4a8d5a7c3"
+    },
+    {
+      "module": "SubsetSumEsymm",
+      "argv": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/tmp/pi-a7-port-3/build/LeanFormalizations/NumberTheory/Transcendence/SubsetSumEsymm.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/vendor/gotrevor-pi/src/LeanFormalizations/NumberTheory/Transcendence/SubsetSumEsymm.lean"
+      ],
+      "exit_code": 0,
+      "elapsed": 6.513233166013379,
+      "log": "/tmp/pi-a7-port-3/logs/SubsetSumEsymm.log",
+      "source_sha256": "b5d561b0c355dd596750c35598c3987cdc8932bcdd91e9134e558522520d4896"
+    },
+    {
+      "module": "PiTranscendental",
+      "argv": [
+        "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-DwarningAsError=true",
+        "-o",
+        "/tmp/pi-a7-port-3/build/LeanFormalizations/NumberTheory/Transcendence/PiTranscendental.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/vendor/gotrevor-pi/src/LeanFormalizations/NumberTheory/Transcendence/PiTranscendental.lean"
+      ],
+      "exit_code": 0,
+      "elapsed": 4.006883374997415,
+      "log": "/tmp/pi-a7-port-3/logs/PiTranscendental.log",
+      "source_sha256": "0c88c5db882ba4a3d8a864e6289016d67276f393a1d294a1ad3796f43aad27ce"
+    }
+  ],
+  "raw_imported_declaration_audit": {
+    "argv": [
+      "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+      "-j1",
+      "-M8192",
+      "-DautoImplicit=false",
+      "-DwarningAsError=true",
+      "-o",
+      "/tmp/pi-a7-port-3/build/A7ImportedAudit.olean",
+      "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src/A7ImportedAudit.lean"
+    ],
+    "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/src",
+    "exit_code": 0,
+    "elapsed_seconds": 15.262877915985882,
+    "source_sha256": "d023cf7f0100fe02d198e767b1717b9ee4b85e18e568b04039870ffbf8cd2bea",
+    "log_sha256": "ad4d65f5d717e45d50dd33134aef87878061f9bfebae5b9ab36f44b7dd411e92",
+    "axiom_audit": {
+      "LeanFormalizations.Transcendence.exists_intPoly_aeval_eq_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.tendsto_const_mul_pow_div_factorial": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.exists_prime_smallness": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.hermitePoly_eval_zero_ne": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.hermitePoly_aroots": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.no_intPoly_aeval_eq_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.e_transcendental": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.transcendental_exp_nat": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.transcendental_exp_int": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.transcendental_exp_rat": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.prod_one_add_exp_eq_sum_subsetSum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.sum_subsetSum_exp_eq_zero_of_factor": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.sum_subsetSum_split": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.zeroSubsetSum_card_pos": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.pi_exp_relation": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.no_intPoly_exp_relation": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.aroots_integralNormalization": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.hsum_of_monic_rootsum": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.subsetSum_relation_impossible": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.exists_intPoly_aroots_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.esymm_aroots_mem_range": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.subsetSum_poly_lifts": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.exists_ratPoly_removeZeroRoots": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.isAlgebraic_pi_complex_of_real": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.roots_esymm_int": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.power_sum_int": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.sum_aeval_roots_int": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_conjugatePoly": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.subsetSum_relation_impossible_of_esymm": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.transcendental_pi_of_subsetSumEsymm": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.SubsetSumEsymm.ringHom_map_multiset_esymm": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.SubsetSumEsymm.subsetSum_esymm_isSymmetric": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.SubsetSumEsymm.esymm_theta_mem_range": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.SubsetSumEsymm.aeval_mem_range": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.subsetSum_esymm_rational": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "LeanFormalizations.Transcendence.transcendental_pi_axiomClean": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "status": "passed"
+  },
+  "official_cache": {
+    "argv": [
+      "/Users/keyishen/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lake",
+      "exe",
+      "cache",
+      "get",
+      "Mathlib"
+    ],
+    "cwd": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-a7-mathlib-project",
+    "exit_code": 0,
+    "elapsed_seconds": 70.15921562496806,
+    "log_sha256": "0bc3fb2d0fd4813afbbd1c0b2adca9c890ac4cdecb119307ea386687587d8f4a",
+    "environment_overrides": {
+      "LEAN_NUM_THREADS": "1",
+      "MATHLIB_CACHE_DIR": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-a7-mathlib-project/a7-cache",
+      "XDG_CACHE_HOME": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-a7-mathlib-project/xdg-cache"
+    }
+  },
+  "memory_before_retry": [
+    {
+      "argv": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "exit_code": 0,
+      "output": "51539607552\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/vm_stat"
+      ],
+      "exit_code": 0,
+      "output": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                     5123.\nPages active:                                 638076.\nPages inactive:                               629358.\nPages speculative:                              7658.\nPages throttled:                                   0.\nPages wired down:                             337146.\nPages purgeable:                                1668.\n\"Translation faults\":                     4289464038.\nPages copy-on-write:                       483294136.\nPages zero filled:                        1617409278.\nPages reactivated:                          50952601.\nPages purged:                               28109972.\nFile-backed pages:                            392137.\nAnonymous pages:                              882955.\nPages stored in compressor:                  3492002.\nPages occupied by compressor:                1473036.\nDecompressions:                             27088195.\nCompressions:                               37670604.\nPageins:                                    44123911.\nPageouts:                                     334557.\nSwapins:                                       93761.\nSwapouts:                                     636396.\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/memory_pressure",
+        "-Q"
+      ],
+      "exit_code": 0,
+      "output": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 41%\n"
+    }
+  ],
+  "failed_module_logs": {
+    "/tmp/pi-a7-port/logs/ETranscendental.log": {
+      "text": "/Users/keyishen/Documents/Codex/2026-10-08/task/pi-weighted-colon/pi-weighted-colon/vendor/gotrevor-pi/src/LeanFormalizations/NumberTheory/Transcendence/ETranscendental.lean:58:0: error: object file '/Users/keyishen/Documents/Codex/2026-10-04/task/mc6-proof/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/NumberTheory/Transcendental/Lindemann/AnalyticalPart.olean' of module Mathlib.NumberTheory.Transcendental.Lindemann.AnalyticalPart does not exist\n",
+      "sha256": "b71361baa65d30ddcc2750a688713ab1773bd0795c342ec16cd72923a6e34a29"
+    },
+    "/tmp/pi-a7-port-2/logs/MonicRootSums.log": {
+      "text": "libc++abi: terminating due to uncaught exception of type lean::memory_exception: excessive memory consumption detected at 'interpreter' (potential solution: increase memory consumption threshold)\n",
+      "sha256": "48bc2200174632932b9ea98fd0a0c30e6dc353ce535531045f1c7efc7b79940a"
+    }
+  },
+  "proof_compatibility_edits": [],
+  "existing_pins_changed": false,
+  "raw_source_compilation": "all six unchanged files passed on Lean/mathlib 4.30.0"
+}
