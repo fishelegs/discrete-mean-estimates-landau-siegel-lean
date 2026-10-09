@@ -1,0 +1,6 @@
+/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureFinitenessMissingExponent.lean:5:2: error: Type mismatch
+  fixed_real_quadratic_pi_finite F hF nu
+has type
+  2 < nu → (exceptionalSet F nu).Finite
+but is expected to have type
+  (exceptionalSet F nu).Finite

@@ -1,0 +1,18 @@
+import FixedQuadraticFixedFieldPi
+import checks.FinitenessRegression
+set_option pp.universes true
+set_option pp.proofs false
+#check @FixedQuadratic.FinitenessRegression.sqrt_two_field_pi_finite
+#print axioms FixedQuadratic.FinitenessRegression.sqrt_two_field_pi_finite
+#check @FixedQuadratic.ParameterPort.exceptionalSet
+#print axioms FixedQuadratic.ParameterPort.exceptionalSet
+#check @FixedQuadratic.ParameterPort.exists_normalized_centers
+#print axioms FixedQuadratic.ParameterPort.exists_normalized_centers
+#check @FixedQuadratic.ParameterPort.fixed_real_quadratic_pi_finite
+#print axioms FixedQuadratic.ParameterPort.fixed_real_quadratic_pi_finite
+#check @FixedQuadratic.ParameterPort.fixed_real_quadratic_pi_finite_explicit
+#print axioms FixedQuadratic.ParameterPort.fixed_real_quadratic_pi_finite_explicit
+#check @FixedQuadratic.ParameterPort.separated_products_from_growth
+#print axioms FixedQuadratic.ParameterPort.separated_products_from_growth
+
+#print FixedQuadratic.ParameterPort.fixed_real_quadratic_pi_finite_explicit

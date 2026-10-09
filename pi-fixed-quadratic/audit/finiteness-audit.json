@@ -1,0 +1,195 @@
+{
+  "status": "passed",
+  "scope": "End-to-end fixed real quadratic field finiteness for degree-exactly-two approximants at primitive integer minpoly maximum coefficient height, nu>2. No varying-field theorem, degree-exact lower exponent, BA/non-BA or K1--K3 claim.",
+  "theorem": "FixedQuadratic.ParameterPort.fixed_real_quadratic_pi_finite_explicit",
+  "upstream_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "core_receipt_sha256": "95906b608fae6aa1e8ab976df4351576c9fcbd4ac291cbc34067d7bfffa06917",
+  "geometry_receipt_sha256": "4623d56f9dfa94559eee0cb56bed9d1d5969db6f1e2d6e8afc769148ac2a0ca7",
+  "packet_receipt_sha256": "ef22dd8e4e8d419c8ea6f49b22ce2b4439cd83e5f89fb617d03fb7a484ba76b7",
+  "analysis_receipt_sha256": "1fa3ead1706683579c242b5a0ed427f6cf3eea305d988e0acc8cde6cfe822a3d",
+  "checks": [
+    {
+      "module": "FixedQuadratic.ParameterPort.Selection",
+      "source_sha256": "02fa2c060820d2c54d5f5d4e8d197db25c2577552de8ef56d81fcc654e1be51d",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-real-quadratic-finiteness-verification/lib/lean/FixedQuadratic/ParameterPort/Selection.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/ParameterPort/Selection.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 2.361,
+      "olean_sha256": "a55771f8132a743426d3a74fd0fd4636a46db57ff65ed622dde3586a290465b1"
+    },
+    {
+      "module": "FixedQuadratic.ParameterPort.Separation",
+      "source_sha256": "f1c5cf85660640cdd7962e65ef80e8b5fe76dbbf75c04ccba0e36d686c35f704",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-real-quadratic-finiteness-verification/lib/lean/FixedQuadratic/ParameterPort/Separation.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/ParameterPort/Separation.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 5.155,
+      "olean_sha256": "4fe8120ee50d9b3b49f762380b76b66927afdfc7f9073934de199d7212558fa5"
+    },
+    {
+      "module": "FixedQuadratic.ParameterPort.Finiteness",
+      "source_sha256": "db4613578dfb7743faf5f62a07ce4acf4391793a434bde3504d0015390d28f46",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-real-quadratic-finiteness-verification/lib/lean/FixedQuadratic/ParameterPort/Finiteness.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/ParameterPort/Finiteness.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 5.499,
+      "olean_sha256": "f8ac3eab526e19d47f863be0493070fe59235dd72d4b356c066492cbd11afd06"
+    },
+    {
+      "module": "FixedQuadraticFixedFieldPi",
+      "source_sha256": "cd164d23d18e21cd1b9ee36043fbd5998458a26250647e05268568821410b5c5",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-real-quadratic-finiteness-verification/lib/lean/FixedQuadraticFixedFieldPi.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadraticFixedFieldPi.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.06,
+      "olean_sha256": "b52ac28889244f89252cf3a61ee453da8909cf60801de5ffa90e110fc8f5b1e3"
+    },
+    {
+      "module": "checks.FinitenessRegression",
+      "source_sha256": "f6d1559ee438618f21bb4e4e3a24aadad5c19fd3255e00147ccf7953074beadd",
+      "log_sha256": "8917bc03f41e6a9c1a6e57ec3bd859d1b408c3ea727b0bc4e5a6504f6b987e32",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-real-quadratic-finiteness-verification/lib/lean/checks/FinitenessRegression.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/FinitenessRegression.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.161,
+      "olean_sha256": "1f8869a266fa29147a1300aa0ea5dc07840a04aa48109e48bfa723b563fd98a4"
+    },
+    {
+      "module": "checks.FinitenessAudit",
+      "source_sha256": "b7856a46f144b9c17e46f6b3441a5dfe72a8bdf36a536912a88555fea3d2429a",
+      "log_sha256": "384b4d5ae26036033003ab00c297aeab58ef0f6fb00a1e9c0e0cc2a290ecf609",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-real-quadratic-finiteness-verification/lib/lean/checks/FinitenessAudit.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/FinitenessAudit.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 3.936,
+      "olean_sha256": "195306e877f8258591e2fb3103c51e81c0d41b4c444d747eafe45768635a15f5"
+    },
+    {
+      "module": "checks.ExpectedFailureFinitenessMissingExponent",
+      "source_sha256": "e98a94a4e3a2f27bc2c5ac2dc41ae263ec142b6903a37e3bec423495a255eaa0",
+      "log_sha256": "3659092ad0476ad07c11eb32e01fdbf4b63906e96f6316b002e4009e8b1c16c9",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-real-quadratic-finiteness-verification/lib/lean/checks/ExpectedFailureFinitenessMissingExponent.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureFinitenessMissingExponent.lean"
+      ],
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 3.866
+    },
+    {
+      "module": "checks.ExpectedFailureFinitenessWrongFieldDegree",
+      "source_sha256": "dfa93a89ee0ae5346777035f3a57f008283d7858b98c4a81fb713940c7c8fc3a",
+      "log_sha256": "fe18384d877de81049b0b63ce53973677c6a3c97dce993a18ef9390e3a2fcda9",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-real-quadratic-finiteness-verification/lib/lean/checks/ExpectedFailureFinitenessWrongFieldDegree.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureFinitenessWrongFieldDegree.lean"
+      ],
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 4.465
+    }
+  ],
+  "axiom_audit": {
+    "FixedQuadratic.FinitenessRegression.sqrt_two_field_pi_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.ParameterPort.exceptionalSet": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.ParameterPort.exists_normalized_centers": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.ParameterPort.fixed_real_quadratic_pi_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.ParameterPort.fixed_real_quadratic_pi_finite_explicit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.ParameterPort.separated_products_from_growth": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "ordinary_lean_only": true
+}

@@ -1,10 +1,21 @@
-# Fixed quadratic field: ordinary Lean checkpoint
+# Fixed real quadratic field pi finiteness
 
-**Partial formalization, not a proof of the fixed-field pi finiteness theorem.**
-The paper proof supplied on 2026-10-09 remains the target. No new mathematical
-axiom is declared, and no hypothesis asserting the desired multivariate norm
-integrality has been hidden in a final pi theorem. No such final theorem is
-exported here.
+The upper finiteness theorem is now proved end to end in ordinary Lean 4.34.1:
+for every fixed real intermediate field `F` with `finrank ℚ F = 2` and every
+`nu > 2`, only finitely many degree-exactly-two `beta : F` satisfy
+`abs(pi-beta) <= primitiveMinpolyHeight(beta)^(-nu)`. The height is the maximum
+absolute coefficient of the positive-leading primitive integer minimum
+polynomial. It is not absolute Weil height. The statement includes no assumed
+interpolation, norm integrality, analytic bound, packet or scalar-margin inputs.
+
+Import `FixedQuadraticFixedFieldPi` and use
+`FixedQuadratic.ParameterPort.fixed_real_quadratic_pi_finite_explicit`.
+Its exact elaborated type and transitive axiom report are in
+`audit/finiteness-logs/checks.FinitenessAudit.log`. The only axioms are
+`propext`, `Classical.choice`, `Quot.sound`; no sorry, new axiom, native_decide
+or trust bypass is used. `audit/CHECKPOINT11.md` records the verification scope.
+This is a fixed-field upper theorem and auxiliary tool formalization, with no
+varying-field, degree-exact lower exponent, BA/non-BA, or K1--K3 claim.
 
 This subproject uses **Lean 4.34.1** and Mathlib
 `d13f23b723b8a846827a245b89c10fc7d3f11612`, matching the isolated, previously
@@ -94,7 +105,7 @@ The exact elaborated types and complete axiom reports are printed by
   estimates and margins and concludes `False`; it is **not** named or used as
   a fixed-field pi theorem.
 
-## Remaining dependencies, in implementation order
+## Proof components
 
 1. The actual fixed-field arithmetic construction is now complete in
    `GaussianField.lean`, `Complexification.lean`, `FieldMinpoly.lean` and
@@ -122,11 +133,12 @@ The exact elaborated types and complete axiom reports are printed by
    explicit geometry. CP10 derives literal translation expansion, scalar bounds,
    holomorphic collision bounds, determinant summation, real-degree vanishing
    remainders and two-sided bounds for exactly the same actual minor.
-5. Construct the same packet from an infinite fixed-field exceptional set:
-   discharge the explicit inflated volumes, separated products, tail budget and
-   strict changed total-error/collision margins in `no_geometric_packet`.
-   That theorem currently proves a conditional packet contradiction and is
-   explicitly not the final fixed-field pi finiteness theorem.
+5. CP11 constructs the same packet from an assumed infinite fixed-field
+   exceptional set, discharges inflated volumes, separated products, actual
+   ceiling tail budget and strict changed total-error/collision margins, and
+   applies `no_geometric_packet` to prove the exceptional set finite. The
+   conditional packet helper remains explicitly conditional; the final theorem
+   supplies every one of its inputs internally.
 
 The target fixes the field and `nu>2` before choosing the packet. It does not
 concern varying quadratic fields, pi BA/non-BA, a degree-exactly-two lower
@@ -378,3 +390,31 @@ types and the whole input record are in `audit/analysis-port-logs/checks.Analysi
 Run `scripts/audit_analysis_port.py` with passed core, geometry and packet
 receipts and the exact upstream verification root. This local replay is
 separate from the unchanged 50-check arithmetic Linux CI.
+
+## End-to-end verification (CP11)
+
+`ParameterPort/Selection.lean` selects actual primitive heights satisfying any
+fixed common lower bound and successive multiplicative separation. The Fin/Nat
+transport in `Separation.lean` discharges the exact geometric separated-product
+input. `Finiteness.lean` fixes all constants and a finite dimension, selects the
+same field coordinates and height weights, constructs the actual analytic data,
+proves every geometric/tail/changed-error/collision margin, and concludes the
+finite exceptional set. No extra assumption survives in the final statement.
+
+`scripts/audit_finiteness.py` revalidates the core, geometry, actual-packet and
+complete analytic receipts, rechecks the pinned upstream receipt hashes, and
+freshly compiles three parameter modules, the public aggregate, the concrete
+Q(sqrt(2)) specialization, all final types/axioms and two diagnostic failures.
+The eight new checks and six actual declaration audits passed. The negatives
+reject dropping `nu > 2` and substituting field degree four into this degree-two
+theorem. The older core fixture rejecting the unexported legacy name
+`FixedQuadratic.pi_fixed_field_finite` remains a legacy API test; the actual
+public theorem has the fully qualified name given above.
+
+The new ports and final theorem use the separately hash-audited upstream OAI
+closure. They are verified locally by ordinary Lean, with cached dependencies
+rehash-validated. The focused Linux CI checks the unchanged 50-check arithmetic
+core and preserved 93-check original pi aggregate, not the OAI-dependent ports.
+The original 4.30 whole-kernel CI has also passed through CP5; later full CI runs
+may still be pending. These scopes are recorded separately rather than merged
+into a claim that every checkpoint was remotely rebuilt.
