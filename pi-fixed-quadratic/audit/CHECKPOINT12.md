@@ -97,4 +97,11 @@ This evidence-only commit skips redundant push-triggered jobs: it changes no
 proof source, pin, replay script or workflow. The successful full-target run is
 explicitly tied to the corrected replay commit above. CP6--CP9 root aggregates
 have also completed successfully and their downloaded reports and all 1565
-individual trusted Spec logs were checked. CP10--CP11 are still being monitored.
+individual trusted Spec logs were checked. CP10--CP12 subsequently completed successfully with all aggregate reports
+and 1565 individual logs verified. See `CI_COMPLETION.md` and
+`ci-completion.json` for the final terminal-state ledger.
+
+The original failed attempt is also preserved in the repository as
+`fresh-linux-initial-memory-failure-receipt.json` and
+`fresh-linux-initial-memory-failure.log`. No proof source or replay code changed
+in this final evidence-only closeout. All old-project protection checks pass.

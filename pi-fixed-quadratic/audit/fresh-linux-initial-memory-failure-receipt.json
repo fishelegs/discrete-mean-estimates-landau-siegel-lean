@@ -1,0 +1,240 @@
+{
+  "status": "failed",
+  "compiler": "Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "lean_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "upstream_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "repository_head": "9bd2f696017f49ca0175721525d43b14474c7d07",
+  "closure_manifest_sha256": "ae7f4395ddb2a6e579e63cb34214727a44f079d84c2b00a226aa54add2f3e829",
+  "dependency_pins_sha256": "74ed0b7db29438f5dd11ab5eabb9e827052be25804154937e223bcd625bf4121",
+  "counts": {
+    "total": 908,
+    "upstream": 843,
+    "local": 65,
+    "expected_failures": 2
+  },
+  "dependencies": {
+    "plausible": {
+      "revision": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "source": "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/.lake/packages/plausible",
+      "artifact_policy": "pinned mathlib official cache allowed"
+    },
+    "LeanSearchClient": {
+      "revision": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "source": "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/.lake/packages/LeanSearchClient",
+      "artifact_policy": "pinned mathlib official cache allowed"
+    },
+    "importGraph": {
+      "revision": "e928b72544873815af278d38681b31c0293588e3",
+      "source": "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/.lake/packages/importGraph",
+      "artifact_policy": "pinned mathlib official cache allowed"
+    },
+    "proofwidgets": {
+      "revision": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "source": "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/.lake/packages/proofwidgets",
+      "artifact_policy": "pinned mathlib official cache allowed"
+    },
+    "aesop": {
+      "revision": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "source": "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/.lake/packages/aesop",
+      "artifact_policy": "pinned mathlib official cache allowed"
+    },
+    "Qq": {
+      "revision": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "source": "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/.lake/packages/Qq",
+      "artifact_policy": "pinned mathlib official cache allowed"
+    },
+    "batteries": {
+      "revision": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "source": "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/.lake/packages/batteries",
+      "artifact_policy": "pinned mathlib official cache allowed"
+    },
+    "Cli": {
+      "revision": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+      "source": "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/.lake/packages/Cli",
+      "artifact_policy": "pinned mathlib official cache allowed"
+    },
+    "mathlib": {
+      "revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+      "source": "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/.lake/packages/mathlib",
+      "artifact_policy": "pinned mathlib official cache allowed"
+    }
+  },
+  "ordinary_lean_only": true,
+  "fresh_sources": {
+    "OAI": true,
+    "local": true
+  },
+  "reused_artifacts": "Only official cache artifacts for the exact mathlib dependency pins; no OAI/local oleans or old verification receipts.",
+  "checks": [
+    {
+      "module": "FixedQuadratic.Height",
+      "source_sha256": "6e94c20dffd228bb42766ded2b82f266d3765f9c82827eb48deec12f5fc8414f",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M6144",
+        "-DautoImplicit=false",
+        "-o",
+        "/home/runner/work/_temp/fixed-quadratic-full-replay/lib/lean/FixedQuadratic/Height.olean",
+        "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/FixedQuadratic/Height.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 2.833,
+      "olean_sha256": "7ffc61bec00c30c9c1ae6e41e0838cd3d53700037216217d64eb57c2effd03fd"
+    },
+    {
+      "module": "FixedQuadratic.Mahler",
+      "source_sha256": "e2aff982b250c1cd7f777d827c0b298f5a73c13fc59e84ff6c7a9036aa6bbcb6",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M6144",
+        "-DautoImplicit=false",
+        "-o",
+        "/home/runner/work/_temp/fixed-quadratic-full-replay/lib/lean/FixedQuadratic/Mahler.olean",
+        "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/FixedQuadratic/Mahler.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 3.559,
+      "olean_sha256": "f42c492b75da072ab6f5ea00183c447279cd467e1127bee15c96d4697519f51f"
+    },
+    {
+      "module": "FixedQuadratic.PrimitiveHeight",
+      "source_sha256": "67c88feebc0424beb77bc10586d9ab70c276128491d3815088d3c0a9e894b5e7",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M6144",
+        "-DautoImplicit=false",
+        "-o",
+        "/home/runner/work/_temp/fixed-quadratic-full-replay/lib/lean/FixedQuadratic/PrimitiveHeight.olean",
+        "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/FixedQuadratic/PrimitiveHeight.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 3.021,
+      "olean_sha256": "66a3532d1b6f2ff3453e39195104950d14ca4001b1489b7b6ce45fcb1aa0e13a"
+    },
+    {
+      "module": "FixedQuadratic.Weights",
+      "source_sha256": "1e8341fc34f9493a2c2698fccf2bbb158aa96b2fb0af08c0d288ad4fcd9a1978",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M6144",
+        "-DautoImplicit=false",
+        "-o",
+        "/home/runner/work/_temp/fixed-quadratic-full-replay/lib/lean/FixedQuadratic/Weights.olean",
+        "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/FixedQuadratic/Weights.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 2.074,
+      "olean_sha256": "63ab5a1c0d6c44f9cabb71f58cd433cced3b5861a4733919e139b0b0f719e1e6"
+    },
+    {
+      "module": "FixedQuadratic.Selection",
+      "source_sha256": "4524d406e0e807769a9b207438255f4a2cc80967095fdea432f3a36a738999e0",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M6144",
+        "-DautoImplicit=false",
+        "-o",
+        "/home/runner/work/_temp/fixed-quadratic-full-replay/lib/lean/FixedQuadratic/Selection.olean",
+        "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/FixedQuadratic/Selection.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 1.908,
+      "olean_sha256": "77ea1a03bce213fc4e075631ddb58c11392cbd1db44fa33441f942a10d652f64"
+    },
+    {
+      "module": "OAI.NumberTheory.PiExponent.Approximation.WeightSeparationProducts",
+      "source_sha256": "5f2474c3a91a54bfae4493b7c0d90aff0ad323092168d9b46063c24164b5e74e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M6144",
+        "-DautoImplicit=false",
+        "-o",
+        "/home/runner/work/_temp/fixed-quadratic-full-replay/lib/lean/OAI/NumberTheory/PiExponent/Approximation/WeightSeparationProducts.olean",
+        "/home/runner/work/_temp/pi-upstream-source/lean/OAI/NumberTheory/PiExponent/Approximation/WeightSeparationProducts.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 1.015,
+      "olean_sha256": "ea66808472ef86d94172197a173cd8da129f4d5793d00aebeb46053f2eb4c27a"
+    },
+    {
+      "module": "OAI.NumberTheory.PiExponent.Approximation.WeightSeparation",
+      "source_sha256": "6cb0dbe1d14b3b2f1b4ac564a90a3569516759474e753f0ccb7bb12d44a59f4f",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M6144",
+        "-DautoImplicit=false",
+        "-o",
+        "/home/runner/work/_temp/fixed-quadratic-full-replay/lib/lean/OAI/NumberTheory/PiExponent/Approximation/WeightSeparation.olean",
+        "/home/runner/work/_temp/pi-upstream-source/lean/OAI/NumberTheory/PiExponent/Approximation/WeightSeparation.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 1.166,
+      "olean_sha256": "15b230afd33b20408207a7c1c7a96caf498a95f1f955a27a25e92336fdfb88f9"
+    },
+    {
+      "module": "FixedQuadratic.ParameterPort.Selection",
+      "source_sha256": "02fa2c060820d2c54d5f5d4e8d197db25c2577552de8ef56d81fcc654e1be51d",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M6144",
+        "-DautoImplicit=false",
+        "-o",
+        "/home/runner/work/_temp/fixed-quadratic-full-replay/lib/lean/FixedQuadratic/ParameterPort/Selection.olean",
+        "/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/FixedQuadratic/ParameterPort/Selection.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 1.893,
+      "olean_sha256": "a55771f8132a743426d3a74fd0fd4636a46db57ff65ed622dde3586a290465b1"
+    },
+    {
+      "module": "OAI.NumberTheory.PiExponent.Cohomology.FiniteCoverCohomology",
+      "source_sha256": "c32705bdbd4bcd7b331d025b4edd28d157b83987e6d255326fe5949800fe024a",
+      "log_sha256": "48bc2200174632932b9ea98fd0a0c30e6dc353ce535531045f1c7efc7b79940a",
+      "argv": [
+        "/home/runner/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M6144",
+        "-DautoImplicit=false",
+        "-o",
+        "/home/runner/work/_temp/fixed-quadratic-full-replay/lib/lean/OAI/NumberTheory/PiExponent/Cohomology/FiniteCoverCohomology.olean",
+        "/home/runner/work/_temp/pi-upstream-source/lean/OAI/NumberTheory/PiExponent/Cohomology/FiniteCoverCohomology.lean"
+      ],
+      "exit_code": -6,
+      "expected_failure": false,
+      "passed": false,
+      "elapsed_seconds": 20.389
+    }
+  ]
+}

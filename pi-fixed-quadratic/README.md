@@ -37,7 +37,9 @@ and the distinction between cached dependencies and newly checked proof sources.
 Independent Linux run `37905909230` completed successfully and its complete
 908-entry receipt, uploaded logs, exact final type and six standard-only axiom
 reports have been verified. The ordinary compiler sum was 65.8 minutes. The
-older arithmetic workflow continues to cover the arithmetic core separately.
+older arithmetic workflow continues to cover the arithmetic core separately. CP6--CP12
+root aggregates have also completed successfully; see `audit/CI_COMPLETION.md`
+for all terminal results and preservation checks.
 
 ## Proved statements
 
