@@ -1,0 +1,8 @@
+/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/checks/ExpectedFailureFinitenessWrongFieldDegree.lean:6:35: error: Application type mismatch: The argument
+  hF
+has type
+  Module.finrank ℚ ↥F = 4
+but is expected to have type
+  Module.finrank ℚ ↥F = 2
+in the application
+  fixed_real_quadratic_pi_finite F hF

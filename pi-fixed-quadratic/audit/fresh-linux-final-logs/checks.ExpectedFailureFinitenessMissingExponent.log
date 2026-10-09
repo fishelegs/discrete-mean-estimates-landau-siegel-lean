@@ -1,0 +1,6 @@
+/home/runner/work/discrete-mean-estimates-landau-siegel-lean/discrete-mean-estimates-landau-siegel-lean/pi-fixed-quadratic/checks/ExpectedFailureFinitenessMissingExponent.lean:5:2: error: Type mismatch
+  fixed_real_quadratic_pi_finite F hF nu
+has type
+  2 < nu → (exceptionalSet F nu).Finite
+but is expected to have type
+  (exceptionalSet F nu).Finite

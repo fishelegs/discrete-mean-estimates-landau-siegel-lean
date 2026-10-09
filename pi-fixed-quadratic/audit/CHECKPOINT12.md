@@ -65,3 +65,36 @@ is a failure, not final-theorem evidence. The previous Mac ordinary build used
 8192 MiB successfully for this module and the whole closure. The portable
 script now uses that established 8192 MiB budget, still one compiler worker.
 The corrected workflow will start again with no OAI/local build cache.
+
+## Successful independent Linux result
+
+Corrected replay commit: `d261f45e66f49df4eb4eec8f895cb8855bc484d1`.
+Run: https://github.com/fishelegs/discrete-mean-estimates-landau-siegel-lean/actions/runs/37905909230
+
+The run completed successfully on x86_64 Linux, Lean 4.34.1. All 908 receipt
+entries and uploaded source/log hashes were independently checked against the
+reviewed closure: 843 upstream and 63 local modules compiled successfully from
+source, and two local final-theorem negative tests failed as expected. The
+sqrt(2) positive specialization and final aggregate compiled. All six actual
+type/axiom reports match CP11; their only axioms are `propext`, `Classical.choice`,
+and `Quot.sound`. The exact final theorem type also matches CP11, with no extra
+interpolation, integrality, analytic or parameter-margin hypotheses.
+
+The ordinary compiler elapsed sum is 3945.879 seconds (about 65.8 minutes). The
+runner reported 15 GiB RAM and 3 GiB swap; every compiler call used one worker
+and the established 8192 MiB limit. Only the pinned mathlib official package
+cache was reused. All OAI and local oleans were newly produced in the initially
+empty runner output directory. No old Mac receipt was a replay input.
+
+`fresh-linux-full-target-receipt.json` preserves the complete raw receipt and
+`fresh-linux-full-target-validation.json` records the independent artifact
+validation. `fresh-linux-final-logs/` preserves actual final types, transitive
+axioms and both expected failures; all remaining compiler logs are in the run's
+`fixed-quadratic-full-theorem-verification` artifact.
+
+The initial 6144 MiB failure remains part of the history, not success evidence.
+This evidence-only commit skips redundant push-triggered jobs: it changes no
+proof source, pin, replay script or workflow. The successful full-target run is
+explicitly tied to the corrected replay commit above. CP6--CP9 root aggregates
+have also completed successfully and their downloaded reports and all 1565
+individual trusted Spec logs were checked. CP10--CP11 are still being monitored.

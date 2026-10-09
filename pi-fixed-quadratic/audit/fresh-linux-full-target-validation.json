@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "run_id": 37905909230,
+  "commit": "d261f45e66f49df4eb4eec8f895cb8855bc484d1",
+  "compiler": "Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "source_modules": 908,
+  "upstream_sources_freshly_compiled": 843,
+  "local_sources_freshly_checked": 65,
+  "positive_compilations": 906,
+  "expected_failures": 2,
+  "actual_type_axiom_audits": 6,
+  "standard_axioms_only": true,
+  "actual_theorem_type_matches_checkpoint11": true,
+  "all_source_and_uploaded_log_hashes_verified": true,
+  "receipt_sha256": "2ffe57a2a9ac5c051cd674c325454f79f37b39c8d8cf4804d2be186d0a7c0a2e",
+  "closure_manifest_sha256": "ae7f4395ddb2a6e579e63cb34214727a44f079d84c2b00a226aa54add2f3e829",
+  "elapsed_compiler_seconds": 3945.879,
+  "theorem": "FixedQuadratic.ParameterPort.fixed_real_quadratic_pi_finite_explicit",
+  "actual_theorem_type": "\u2200 (F : IntermediateField.{0, 0} \u211a \u211d)\n  [FiniteDimensional.{0, 0} \u211a \u21a5F],\n  Eq.{1} (Module.finrank.{0, 0} \u211a \u21a5F) 2 \u2192\n    \u2200 (nu : \u211d),\n      LT.lt.{0} 2 nu \u2192\n        Set.Finite.{0}\n          (Set.ofPred.{0} fun b =>\n            Eq.{1} (Polynomial.natDegree.{0} (minpoly.{0, 0} \u211a \u2191b)) 2 \u2227\n              LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} Real.pi \u2191b))\n                (HPow.hPow.{0, 0, 0} (\u2191(FixedQuadratic.primitiveMinpolyHeight \u2191b)) (Neg.neg.{0} nu)))"
+}

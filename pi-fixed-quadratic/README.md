@@ -34,8 +34,10 @@ package cache is permitted; all OAI and local proofs are compiled afresh into
 an empty output directory. It does not depend on old Mac verification receipts.
 See `audit/CHECKPOINT12.md` and `scripts/replay_full_target.py` for reproduction
 and the distinction between cached dependencies and newly checked proof sources.
-Its remote result must be checked independently; the older arithmetic workflow
-covers only the arithmetic core.
+Independent Linux run `37905909230` completed successfully and its complete
+908-entry receipt, uploaded logs, exact final type and six standard-only axiom
+reports have been verified. The ordinary compiler sum was 65.8 minutes. The
+older arithmetic workflow continues to cover the arithmetic core separately.
 
 ## Proved statements
 
