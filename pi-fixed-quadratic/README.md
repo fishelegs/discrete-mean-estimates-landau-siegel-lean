@@ -112,7 +112,7 @@ python3 scripts/replay.py --lean "$(elan which lean)" \
 ```
 
 The script compiles all new sources and the aggregate, positive regressions,
-actual type/axiom prints, and five separately checked expected failures. It
+actual type/axiom prints, and eight separately checked expected failures. It
 rejects `sorry`, `admit`, project `axiom`, `native_decide`, unsafe code and
 external proof hooks. Only `propext`, `Classical.choice`, `Quot.sound` are allowed
 in axiom reports. It records source, compiler, imported cache and output hashes.
@@ -127,3 +127,32 @@ The new CI workflow runs this subproject on Linux; the existing pi-algebraic
 workflow also runs its original 93-check aggregate on changes here. The two
 jobs retain separate toolchains. Passing these checks verifies the listed
 checkpoint only, not the unfinished target theorem.
+
+## Independent parity checkpoint
+
+`Parity.lean` proves the newly supplied algebraic lemma directly:
+
+- if `P.comp (-X)=P`, then `P=(P.contract 2).comp (X^2)`;
+- if `P.comp (-X)=-P`, then `P=X*Q.comp (X^2)` for a Gaussian polynomial `Q`;
+- if either sign identity holds, `alpha^2=d` for a natural `d`, `alpha>=1`, and
+  the complex evaluation is nonzero, then its complex norm is at least 1.
+
+`ParityDeterminant.lean` also proves a generic determinant bridge: if a **given
+Gaussian-polynomial square matrix** transforms entrywise by a **given** index
+permutation under `X -> -X`, its determinant has sign parity. Thus the same
+nonzero evaluation lower bound applies. The row permutation identity is an
+explicit input, not a claim that the actual interpolation matrix has already
+been constructed or verified.
+
+Positive regressions cover both parity branches at sqrt(2). The explicit
+non-parity polynomial `3-2X` evaluates to a number of norm less than 1 there.
+Expected failures prevent removing the sign hypothesis, the odd factor `X`,
+or the nonzero evaluation condition.
+
+This independent algebraic work does not prove `mu(pi/sqrt(d))=2`. Remaining
+work for that proposed paper extension is the actual paired +/-j row packet,
+its entrywise sign-substitution identity after clearing, surjectivity under
+those centers, and analytic/parameter transfer. It also does not discharge
+the original general same-field multivariate norm integrality obligation:
+general elements of Q(sqrt(d)) have rational offsets, and sign substitution
+need not send such a center to its negative. No BA result is asserted.

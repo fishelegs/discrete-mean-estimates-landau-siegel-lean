@@ -4,6 +4,7 @@ import FixedQuadratic.Comparison
 import FixedQuadratic.Conjugation
 import FixedQuadratic.Height
 import FixedQuadratic.Weights
+import FixedQuadratic.ParityDeterminant
 
 open Polynomial
 namespace FixedQuadratic.Regression
@@ -61,5 +62,35 @@ theorem cancellation_degree :
 
 theorem bounded_height_two_finite : (boundedQuadraticRoots 2).Finite :=
   finite_boundedQuadraticRoots 2
+
+theorem even_sqrt_two_norm :
+    1 ≤ ‖((X^2+C 1 : Polynomial GaussianInt).map GaussianInt.toComplex).eval
+      (Real.sqrt 2 : ℂ)‖ := by
+  apply parity_eval_norm_one_le _ (Or.inl (by simp [add_comp, pow_comp])) (Real.sqrt 2) 2
+    (Real.sq_sqrt (by norm_num))
+  · nlinarith [Real.sq_sqrt (by norm_num : (0 : ℝ) ≤ 2), Real.sqrt_nonneg (2 : ℝ)]
+  · have hs : (Real.sqrt 2 : ℂ)^2 = 2 := by
+      exact_mod_cast Real.sq_sqrt (by norm_num : (0 : ℝ) ≤ 2)
+    norm_num [hs]
+
+theorem odd_sqrt_two_norm :
+    1 ≤ ‖((X : Polynomial GaussianInt).map GaussianInt.toComplex).eval (Real.sqrt 2 : ℂ)‖ := by
+  apply parity_eval_norm_one_le _ (Or.inr (by simp)) (Real.sqrt 2) 2
+    (Real.sq_sqrt (by norm_num))
+  · nlinarith [Real.sq_sqrt (by norm_num : (0 : ℝ) ≤ 2), Real.sqrt_nonneg (2 : ℝ)]
+  · simp only [Polynomial.map_X, eval_X]
+    exact_mod_cast (Real.sqrt_pos.mpr (by norm_num : (0 : ℝ) < 2)).ne'
+
+theorem nonparity_eval_below_one :
+    ‖((C 3 - C 2*X : Polynomial GaussianInt).map GaussianInt.toComplex).eval (Real.sqrt 2 : ℂ)‖ < 1 := by
+  have hv : ((C 3 - C 2*X : Polynomial GaussianInt).map GaussianInt.toComplex).eval
+      (Real.sqrt 2 : ℂ) = ((3-2*Real.sqrt 2 : ℝ) : ℂ) := by
+    norm_num [GaussianInt.toComplex_def]
+  have hs := Real.sq_sqrt (by norm_num : (0 : ℝ) ≤ 2)
+  have hp := Real.sqrt_nonneg (2 : ℝ)
+  have hl : 1 < Real.sqrt 2 := by nlinarith
+  have hh : Real.sqrt 2 < 3/2 := by nlinarith
+  rw [hv, Complex.norm_real, Real.norm_eq_abs, abs_of_pos (by linarith)]
+  linarith
 
 end FixedQuadratic.Regression

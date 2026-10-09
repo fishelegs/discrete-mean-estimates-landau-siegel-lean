@@ -6,91 +6,119 @@ import FixedQuadratic.Height
 import FixedQuadratic.Mahler
 import FixedQuadratic.MinorBudget
 import FixedQuadratic.MultiEnvelope
+import FixedQuadratic.Parity
+import FixedQuadratic.ParityDeterminant
 import FixedQuadratic.Resultant
 import FixedQuadratic.Weights
 import checks.Regression
 
-#print FixedQuadratic.determinant_clearing
+#check @FixedQuadratic.determinant_clearing
 #print axioms FixedQuadratic.determinant_clearing
-#print FixedQuadratic.comparison_contradiction
+#check @FixedQuadratic.comparison_contradiction
 #print axioms FixedQuadratic.comparison_contradiction
-#print FixedQuadratic.simultaneous_conjugate_evaluation
+#check @FixedQuadratic.simultaneous_conjugate_evaluation
 #print axioms FixedQuadratic.simultaneous_conjugate_evaluation
-#print FixedQuadratic.simultaneous_conjugate_ne_zero
+#check @FixedQuadratic.simultaneous_conjugate_ne_zero
 #print axioms FixedQuadratic.simultaneous_conjugate_ne_zero
-#print FixedQuadratic.cartesian_trap
+#check @FixedQuadratic.cartesian_trap
 #print axioms FixedQuadratic.cartesian_trap
-#print FixedQuadratic.coefficientL1
+#check @FixedQuadratic.coefficientL1
 #print axioms FixedQuadratic.coefficientL1
-#print FixedQuadratic.eval_norm_le_coefficientL1
+#check @FixedQuadratic.eval_norm_le_coefficientL1
 #print axioms FixedQuadratic.eval_norm_le_coefficientL1
-#print FixedQuadratic.quadratic_coefficient_lower
+#check @FixedQuadratic.quadratic_coefficient_lower
 #print axioms FixedQuadratic.quadratic_coefficient_lower
-#print FixedQuadratic.coefficientL1_pos_of_eval_ne_zero
+#check @FixedQuadratic.coefficientL1_pos_of_eval_ne_zero
 #print axioms FixedQuadratic.coefficientL1_pos_of_eval_ne_zero
-#print FixedQuadratic.quadratic_l1_mahler_lower
+#check @FixedQuadratic.quadratic_l1_mahler_lower
 #print axioms FixedQuadratic.quadratic_l1_mahler_lower
-#print FixedQuadratic.realQuadratic
+#check @FixedQuadratic.realQuadratic
 #print axioms FixedQuadratic.realQuadratic
-#print FixedQuadratic.realQuadratic_ne_zero
+#check @FixedQuadratic.realQuadratic_ne_zero
 #print axioms FixedQuadratic.realQuadratic_ne_zero
-#print FixedQuadratic.finite_realQuadratic_roots
+#check @FixedQuadratic.finite_realQuadratic_roots
 #print axioms FixedQuadratic.finite_realQuadratic_roots
-#print FixedQuadratic.boundedQuadraticRoots
+#check @FixedQuadratic.boundedQuadraticRoots
 #print axioms FixedQuadratic.boundedQuadraticRoots
-#print FixedQuadratic.finite_boundedQuadraticRoots
+#check @FixedQuadratic.finite_boundedQuadraticRoots
 #print axioms FixedQuadratic.finite_boundedQuadraticRoots
-#print FixedQuadratic.mem_boundedQuadraticRoots
+#check @FixedQuadratic.mem_boundedQuadraticRoots
 #print axioms FixedQuadratic.mem_boundedQuadraticRoots
-#print FixedQuadratic.infinite_escape_bounded_height
+#check @FixedQuadratic.infinite_escape_bounded_height
 #print axioms FixedQuadratic.infinite_escape_bounded_height
-#print FixedQuadratic.height_unbounded_of_infinite
+#check @FixedQuadratic.height_unbounded_of_infinite
 #print axioms FixedQuadratic.height_unbounded_of_infinite
-#print FixedQuadratic.quadraticMahler
+#check @FixedQuadratic.quadraticMahler
 #print axioms FixedQuadratic.quadraticMahler
-#print FixedQuadratic.quadraticMahler_sq_le
+#check @FixedQuadratic.quadraticMahler_sq_le
 #print axioms FixedQuadratic.quadraticMahler_sq_le
-#print FixedQuadratic.quadraticMahler_le_l2
+#check @FixedQuadratic.quadraticMahler_le_l2
 #print axioms FixedQuadratic.quadraticMahler_le_l2
-#print FixedQuadratic.quadraticMahler_le_sqrt_three_height
+#check @FixedQuadratic.quadraticMahler_le_sqrt_three_height
 #print axioms FixedQuadratic.quadraticMahler_le_sqrt_three_height
-#print FixedQuadratic.exists_matching_of_det_ne_zero
+#check @FixedQuadratic.exists_matching_of_det_ne_zero
 #print axioms FixedQuadratic.exists_matching_of_det_ne_zero
-#print FixedQuadratic.matched_sum_sub
+#check @FixedQuadratic.matched_sum_sub
 #print axioms FixedQuadratic.matched_sum_sub
-#print FixedQuadratic.det_degreeOf_le
+#check @FixedQuadratic.det_degreeOf_le
 #print axioms FixedQuadratic.det_degreeOf_le
-#print FixedQuadratic.row_total_le_column_total
+#check @FixedQuadratic.row_total_le_column_total
 #print axioms FixedQuadratic.row_total_le_column_total
-#print FixedQuadratic.weighted_rebate
+#check @FixedQuadratic.weighted_rebate
 #print axioms FixedQuadratic.weighted_rebate
-#print FixedQuadratic.multiCoefficientL1
+#check @FixedQuadratic.multiCoefficientL1
 #print axioms FixedQuadratic.multiCoefficientL1
-#print FixedQuadratic.multi_eval_norm_le
+#check @FixedQuadratic.multi_eval_norm_le
 #print axioms FixedQuadratic.multi_eval_norm_le
-#print FixedQuadratic.quadratic_resultant_identity
+#check @FixedQuadratic.coeff_comp_negX
+#print axioms FixedQuadratic.coeff_comp_negX
+#check @FixedQuadratic.even_coeff_odd_zero
+#print axioms FixedQuadratic.even_coeff_odd_zero
+#check @FixedQuadratic.even_factor
+#print axioms FixedQuadratic.even_factor
+#check @FixedQuadratic.odd_factor
+#print axioms FixedQuadratic.odd_factor
+#check @FixedQuadratic.even_eval_gaussian
+#print axioms FixedQuadratic.even_eval_gaussian
+#check @FixedQuadratic.odd_eval_gaussian_factor
+#print axioms FixedQuadratic.odd_eval_gaussian_factor
+#check @FixedQuadratic.parity_eval_norm_one_le
+#print axioms FixedQuadratic.parity_eval_norm_one_le
+#check @FixedQuadratic.determinant_sign_of_row_permutation
+#print axioms FixedQuadratic.determinant_sign_of_row_permutation
+#check @FixedQuadratic.determinant_parity_of_row_permutation
+#print axioms FixedQuadratic.determinant_parity_of_row_permutation
+#check @FixedQuadratic.determinant_parity_eval_norm_one_le
+#print axioms FixedQuadratic.determinant_parity_eval_norm_one_le
+#check @FixedQuadratic.quadratic_resultant_identity
 #print axioms FixedQuadratic.quadratic_resultant_identity
-#print FixedQuadratic.quadratic_product_gaussian
+#check @FixedQuadratic.quadratic_product_gaussian
 #print axioms FixedQuadratic.quadratic_product_gaussian
-#print FixedQuadratic.gaussian_norm_one_le
+#check @FixedQuadratic.gaussian_norm_one_le
 #print axioms FixedQuadratic.gaussian_norm_one_le
-#print FixedQuadratic.quadratic_norm_lower
+#check @FixedQuadratic.quadratic_norm_lower
 #print axioms FixedQuadratic.quadratic_norm_lower
-#print FixedQuadratic.height_rpow_le_rounded_exp
+#check @FixedQuadratic.height_rpow_le_rounded_exp
 #print axioms FixedQuadratic.height_rpow_le_rounded_exp
-#print FixedQuadratic.quadratic_center_period_error
+#check @FixedQuadratic.quadratic_center_period_error
 #print axioms FixedQuadratic.quadratic_center_period_error
-#print FixedQuadratic.quadratic_centers_injective
+#check @FixedQuadratic.quadratic_centers_injective
 #print axioms FixedQuadratic.quadratic_centers_injective
-#print FixedQuadratic.Regression.nonmonic_resultant
+#check @FixedQuadratic.Regression.nonmonic_resultant
 #print axioms FixedQuadratic.Regression.nonmonic_resultant
-#print FixedQuadratic.Regression.omitted_coefficient_cost_is_false
+#check @FixedQuadratic.Regression.omitted_coefficient_cost_is_false
 #print axioms FixedQuadratic.Regression.omitted_coefficient_cost_is_false
-#print FixedQuadratic.Regression.sqrt_two_mahler
+#check @FixedQuadratic.Regression.sqrt_two_mahler
 #print axioms FixedQuadratic.Regression.sqrt_two_mahler
-#print FixedQuadratic.Regression.cancellation_minor
+#check @FixedQuadratic.Regression.cancellation_minor
 #print axioms FixedQuadratic.Regression.cancellation_minor
-#print FixedQuadratic.Regression.cancellation_degree
+#check @FixedQuadratic.Regression.cancellation_degree
 #print axioms FixedQuadratic.Regression.cancellation_degree
-#print FixedQuadratic.Regression.bounded_height_two_finite
+#check @FixedQuadratic.Regression.bounded_height_two_finite
 #print axioms FixedQuadratic.Regression.bounded_height_two_finite
+#check @FixedQuadratic.Regression.even_sqrt_two_norm
+#print axioms FixedQuadratic.Regression.even_sqrt_two_norm
+#check @FixedQuadratic.Regression.odd_sqrt_two_norm
+#print axioms FixedQuadratic.Regression.odd_sqrt_two_norm
+#check @FixedQuadratic.Regression.nonparity_eval_below_one
+#print axioms FixedQuadratic.Regression.nonparity_eval_below_one

@@ -8,3 +8,5 @@ import FixedQuadratic.MultiEnvelope
 import FixedQuadratic.Clearing
 import FixedQuadratic.Height
 import FixedQuadratic.Weights
+import FixedQuadratic.Parity
+import FixedQuadratic.ParityDeterminant
