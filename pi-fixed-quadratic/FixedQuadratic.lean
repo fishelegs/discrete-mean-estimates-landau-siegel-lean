@@ -13,3 +13,4 @@ import FixedQuadratic.ParityDeterminant
 import FixedQuadratic.FinitePlace
 import FixedQuadratic.NumberFieldIntegral
 import FixedQuadratic.QuadraticNorm
+import FixedQuadratic.FormalEntry

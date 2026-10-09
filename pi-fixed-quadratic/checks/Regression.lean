@@ -1,3 +1,4 @@
+import FixedQuadratic.FormalEntry
 import FixedQuadratic.QuadraticNorm
 import FixedQuadratic.FinitePlace
 import FixedQuadratic.Envelope
@@ -162,5 +163,24 @@ theorem repeated_coordinate_gaussian {G K : Type*} [Field G] [Field K]
     (fun _ => a) (fun _ => b) (fun _ => c) (fun _ => β) (fun _ => 1)
     he (fun _ => hprim) (fun _ => hf)
   simpa [P, Fin.prod_univ_two, pow_two] using h
+
+theorem formal_entry_linear :
+    formalEntry (fun _ : Fin 1 => 2*Complex.I) (fun _ => 0)
+      0 0 (fun _ => 1) (fun _ => 2) =
+        MvPolynomial.C (4*Complex.I) * MvPolynomial.X 0 := by
+  rw [formalEntry_split]
+  simp
+  ring_nf
+  norm_num [← map_pow]
+  ring
+
+theorem formal_entry_log_coefficient :
+    formalEntry (fun _ : Fin 1 => 2*Complex.I)
+      (fun _ => Polynomial.X - Polynomial.C (1/2 : ℂ)*Polynomial.X^2)
+      2 0 (fun _ => 1) (fun _ => 2) = MvPolynomial.C (-1) := by
+  rw [formalEntry_split]
+  simp [Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X]
+  rw [← map_mul]
+  norm_num
 
 end FixedQuadratic.Regression

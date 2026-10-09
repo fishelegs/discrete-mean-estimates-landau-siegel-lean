@@ -368,3 +368,53 @@ FixedQuadratic.Regression.dependent_sqrt_two_local : ∀ (v : AbsoluteValue ℂ 
                 Polynomial.C ↑a * ((Polynomial.X - Polynomial.C β) * (Polynomial.X - Polynomial.C (τ β))) →
               ↑a ^ 2 * (β + β) * (τ β + τ β) ∈ (algebraMap GaussianInt K).range
 'FixedQuadratic.Regression.repeated_coordinate_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeLift : {R : Type u_1} → [inst : CommRing R] → {m : ℕ} → Polynomial R → MvPolynomial (Fin (m + 1)) R
+'FixedQuadratic.timeLift' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeLift_split : ∀ {R : Type u_1} [inst : CommRing R] {m : ℕ} (G : Polynomial R),
+  (MvPolynomial.finSuccEquiv R m) (FixedQuadratic.timeLift G) = Polynomial.map MvPolynomial.C G
+'FixedQuadratic.timeLift_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeLift_degree : ∀ {R : Type u_1} [inst : CommRing R] [Nontrivial R] {m : ℕ} (G : Polynomial R)
+  (i : Fin m), MvPolynomial.degreeOf i.succ (FixedQuadratic.timeLift G) = 0
+'FixedQuadratic.timeLift_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formalEntry : {R : Type u_1} →
+  [inst : CommRing R] →
+    {m : ℕ} → (Fin m → R) → (Fin m → Polynomial R) → ℕ → ℕ → (Fin m → ℕ) → (Fin m → ℕ) → MvPolynomial (Fin m) R
+'FixedQuadratic.formalEntry' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formalEntry_split : ∀ {R : Type u_1} [inst : CommRing R] {m : ℕ} (c : Fin m → R)
+  (G : Fin m → Polynomial R) (s h : ℕ) (b a : Fin m → ℕ),
+  FixedQuadratic.formalEntry c G s h b a =
+    MvPolynomial.C (∏ i, ↑((a i).choose (b i))) *
+      ((1 + Polynomial.X) ^ h *
+            ∏ i,
+              (Polynomial.C (MvPolynomial.C (c i) * MvPolynomial.X i) + Polynomial.map MvPolynomial.C (G i)) ^
+                (a i - b i)).coeff
+        s
+'FixedQuadratic.formalEntry_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formalEntry_eval : ∀ {R : Type u_1} [inst : CommRing R] {m : ℕ} (c x : Fin m → R)
+  (G : Fin m → Polynomial R) (s h : ℕ) (b a : Fin m → ℕ),
+  (MvPolynomial.eval x) (FixedQuadratic.formalEntry c G s h b a) =
+    (∏ i, ↑((a i).choose (b i))) *
+      ((1 + Polynomial.X) ^ h * ∏ i, (Polynomial.C (c i * x i) + G i) ^ (a i - b i)).coeff s
+'FixedQuadratic.formalEntry_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formalEntry_zero_of_incompatible : ∀ {R : Type u_1} [inst : CommRing R] {m : ℕ} (c : Fin m → R)
+  (G : Fin m → Polynomial R) (s h : ℕ) (b a : Fin m → ℕ),
+  (¬∀ (i : Fin m), b i ≤ a i) → FixedQuadratic.formalEntry c G s h b a = 0
+'FixedQuadratic.formalEntry_zero_of_incompatible' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formalEntry_degree : ∀ {R : Type u_1} [inst : CommRing R] [Nontrivial R] {m : ℕ} (c : Fin m → R)
+  (G : Fin m → Polynomial R) (s h : ℕ) (b a : Fin m → ℕ) (i : Fin m),
+  MvPolynomial.degreeOf i (FixedQuadratic.formalEntry c G s h b a) ≤ a i - b i
+'FixedQuadratic.formalEntry_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formal_minor_degree : ∀ {R : Type u_1} {ι : Type u_2} [inst : CommRing R] [Nontrivial R]
+  [inst_2 : Fintype ι] [inst_3 : DecidableEq ι] {m : ℕ} (c : ι → Fin m → R) (G : Fin m → Polynomial R) (s h : ι → ℕ)
+  (b a : ι → Fin m → ℕ) (i : Fin m),
+  MvPolynomial.degreeOf i (Matrix.det fun r k => FixedQuadratic.formalEntry (c r) G (s r) (h k) (b r) (a k)) ≤
+    ∑ k, a k i - ∑ r, b r i
+'FixedQuadratic.formal_minor_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.formal_entry_linear : (FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => 0) 0 0
+    (fun x => 1) fun x => 2) =
+  MvPolynomial.C (4 * Complex.I) * MvPolynomial.X 0
+'FixedQuadratic.Regression.formal_entry_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.formal_entry_log_coefficient : (FixedQuadratic.formalEntry (fun x => 2 * Complex.I)
+    (fun x => Polynomial.X - Polynomial.C (1 / 2) * Polynomial.X ^ 2) 2 0 (fun x => 1) fun x => 2) =
+  MvPolynomial.C (-1)
+'FixedQuadratic.Regression.formal_entry_log_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]

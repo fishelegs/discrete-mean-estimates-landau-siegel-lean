@@ -103,9 +103,10 @@ The exact elaborated types and complete axiom reports are printed by
    These are mathematical structure obligations, not an unproved norm-integrality
    hypothesis. Combine its exact `e_i` factors with the multivariate coefficient
    envelope and Mahler bounds. Full Cartesian resultants remain invalid.
-3. Build the actual formal-center truncated-log matrix over multivariate
-   polynomials and prove the entry degree/clearing hypotheses of the generic
-   determinant theorems. Prove the coefficient-l1 Cauchy estimate at radius 1/2,
+3. `FormalEntry.lean` now constructs the actual binomial-product formal entry,
+   proves its complex specialization, incompatible zero rule, coordinate degree
+   bound and determinant rebate. Instantiate the source's weighted row/column
+   packet, and prove clearing for the actual truncated-log polynomials. Prove the coefficient-l1 Cauchy estimate at radius 1/2,
    the determinant factorial envelope, and the normalized errors with two
    denominator costs.
 4. Generalize the upstream **proved Lean** geometric surjectivity and analytic
@@ -133,7 +134,7 @@ python3 scripts/replay.py --lean "$(elan which lean)" \
 ```
 
 The script compiles all new sources and the aggregate, positive regressions,
-actual type/axiom prints, and eleven separately checked expected failures. It
+actual type/axiom prints, and twelve separately checked expected failures. It
 rejects `sorry`, `admit`, project `axiom`, `native_decide`, unsafe code and
 external proof hooks. Only `propext`, `Classical.choice`, `Quot.sound` are allowed
 in axiom reports. It records source, compiler, imported cache and output hashes.
@@ -195,3 +196,25 @@ It is not required for this checkpoint, and is not counted as Lean verified.
 The current theorem's primitive gcd and explicit root-pair factorization
 hypotheses remain in the actual type. A mere quadratic root equation for a
 base-field element does not supply that factorization.
+
+## Formal entry checkpoint
+
+`formalEntry` represents formula (3.1) over a general commutative ring, with
+variable 0 reserved for time before coefficient extraction and successor
+variables for formal centers. `formalEntry_eval` proves its exact specialization;
+`formalEntry_degree` proves degree <= alpha_i-b_i without a degree hypothesis.
+`formal_minor_degree` connects the actual entry construction to the determinant
+budget already proved. The arbitrary logarithm polynomials can be specialized
+to truncated log; no p/q assumption is present in these proofs.
+
+Regressions check the binomial factor at j=1, alpha=2, b=1 and the time-degree-2
+coefficient of t-t^2/2. An expected failure rejects deleting binom(2,1).
+This checkpoint does not yet prove the actual log-polynomial clearing, Cauchy
+coefficient-l1 envelope, weighted-packet nonzero minor or full interpolation
+and analytic transfer.
+
+To kernel-check the exact pinned upstream entry bridge after the standalone
+replay, use `scripts/audit_entry_bridge.py --verification-root <existing-upstream>
+--checkpoint-verification <replay-output> --out <separate-output>`. It revalidates
+both caches and compiles the bridge; the standalone CI does not contain this
+cross-project fixture. See `audit/CHECKPOINT4.md` and `audit/entry-bridge-audit.json`.

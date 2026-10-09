@@ -1,0 +1,5 @@
+@FixedQuadratic.UpstreamBridge.entry_specialization : ∀ {m : ℕ} (β : Fin m → ℂ) (G : Fin m → Polynomial ℂ) (j s h : ℕ)
+  (b a : Fin m → ℕ),
+  (MvPolynomial.eval β) (FixedQuadratic.formalEntry (fun x => 2 * ↑j * Complex.I) G s h b a) =
+    OAI.PiExponent.InterpolationMatrix.entry (fun i => 2 * Complex.I * β i) G j s b h a
+'FixedQuadratic.UpstreamBridge.entry_specialization' depends on axioms: [propext, Classical.choice, Quot.sound]

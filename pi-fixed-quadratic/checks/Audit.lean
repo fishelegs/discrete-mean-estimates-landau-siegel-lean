@@ -13,6 +13,7 @@ import FixedQuadratic.Weights
 import FixedQuadratic.FinitePlace
 import FixedQuadratic.NumberFieldIntegral
 import FixedQuadratic.QuadraticNorm
+import FixedQuadratic.FormalEntry
 import checks.Regression
 
 #check @FixedQuadratic.determinant_clearing
@@ -163,3 +164,26 @@ import checks.Regression
 #print axioms FixedQuadratic.quadratic_cleared_norm_one_le
 #check @FixedQuadratic.Regression.repeated_coordinate_gaussian
 #print axioms FixedQuadratic.Regression.repeated_coordinate_gaussian
+
+#check @FixedQuadratic.timeLift
+#print axioms FixedQuadratic.timeLift
+#check @FixedQuadratic.timeLift_split
+#print axioms FixedQuadratic.timeLift_split
+#check @FixedQuadratic.timeLift_degree
+#print axioms FixedQuadratic.timeLift_degree
+#check @FixedQuadratic.formalEntry
+#print axioms FixedQuadratic.formalEntry
+#check @FixedQuadratic.formalEntry_split
+#print axioms FixedQuadratic.formalEntry_split
+#check @FixedQuadratic.formalEntry_eval
+#print axioms FixedQuadratic.formalEntry_eval
+#check @FixedQuadratic.formalEntry_zero_of_incompatible
+#print axioms FixedQuadratic.formalEntry_zero_of_incompatible
+#check @FixedQuadratic.formalEntry_degree
+#print axioms FixedQuadratic.formalEntry_degree
+#check @FixedQuadratic.formal_minor_degree
+#print axioms FixedQuadratic.formal_minor_degree
+#check @FixedQuadratic.Regression.formal_entry_linear
+#print axioms FixedQuadratic.Regression.formal_entry_linear
+#check @FixedQuadratic.Regression.formal_entry_log_coefficient
+#print axioms FixedQuadratic.Regression.formal_entry_log_coefficient
