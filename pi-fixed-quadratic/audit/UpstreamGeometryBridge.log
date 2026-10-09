@@ -1,0 +1,77 @@
+@FixedQuadratic.UpstreamGeometry.fixedCenters : {m k : ℕ} →
+  (F : IntermediateField ℚ ℝ) → (Fin m → ↥F) → Fin k → Fin m → ℂ
+'FixedQuadratic.UpstreamGeometry.fixedCenters' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.UpstreamGeometry.fixedCenters_injective : ∀ {m k : ℕ} (F : IntermediateField ℚ ℝ) (β : Fin m → ↥F),
+  (∀ (i : Fin m), (minpoly ℚ ↑(β i)).natDegree = 2) →
+    ∀ (i : Fin m), Function.Injective fun j => FixedQuadratic.UpstreamGeometry.fixedCenters F β j i
+'FixedQuadratic.UpstreamGeometry.fixedCenters_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.UpstreamGeometry.fixed_field_weighted_curve_inequality : ∀ {m k : ℕ} (F : IntermediateField ℚ ℝ)
+  (β : Fin m → ↥F),
+  (∀ (i : Fin m), (minpoly ℚ ↑(β i)).natDegree = 2) →
+    ∀ {E : Type u_1} [inst : Field E] [inst_1 : Algebra ℂ E] [inst_2 : Algebra.EssFiniteType ℂ E] (y : E)
+      (x : Fin m → E) (hgen : IntermediateField.adjoin ℂ (Set.range fun i => Fin.cases y x i) = ⊤)
+      (htrdeg : Algebra.trdeg ℂ E = 1) (w v : Fin (m + 1) → ℚ),
+      (∀ (i : Fin (m + 1)), 0 < w i) →
+        (∀ (i : Fin (m + 1)), 0 < v i) →
+          ∀ (sigma : ℚ),
+            0 < sigma →
+              (↑k * (1 + 3 * ↑sigma) ^ (m + 1) * ∏ i, ↑(w i)) / ∏ i, ↑(v i) < 1 →
+                (↑k * (1 + 3 * ↑sigma) ^ m * ∏ i, ↑(w i.succ)) / ∏ i, ↑(v i.succ) < 1 →
+                  (∀ (A B : Finset (Fin (m + 1))),
+                      A.card = B.card →
+                        ∀ (i : Fin (m + 1)),
+                          i ≠ 0 →
+                            i ∈ A →
+                              i ∉ B →
+                                (∀ (j : Fin (m + 1)), i < j → (j ∈ A ↔ j ∈ B)) →
+                                  OAI.PiExponent.PersistentWeightComparison.comparisonConstant m ↑sigma *
+                                      ∏ j ∈ B, ↑(v j) <
+                                    ∏ j ∈ A, ↑(w j)) →
+                    (∀ (i : Fin m), (1 + ↑sigma) * ↑(w i.succ) < ↑(v i.succ)) →
+                      have hres := ⋯;
+                      have hfinite := ⋯;
+                      let z := fun i => Fin.cases y x i;
+                      have hz := ⋯;
+                      (1 + ↑sigma) *
+                          ∑
+                            p ∈
+                              OAI.PiExponent.CurveContactFamily.places hfinite z
+                                (FixedQuadratic.UpstreamGeometry.fixedCenters F β) hz,
+                            ↑(OAI.PiExponent.CurveContactFamily.contact hres hfinite z
+                                (FixedQuadratic.UpstreamGeometry.fixedCenters F β) hz v p) ≤
+                        OAI.PiExponent.CurveContactSum.weightedDegree hfinite z w
+'FixedQuadratic.UpstreamGeometry.fixed_field_weighted_curve_inequality' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@OAI.PiExponent.AdmissibleJetSurjectivity.blowupBundle_ample : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.AdmissibleParameters ν Λ D),
+  OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple
+    (OAI.PiExponentSeshadri.BlowupGluing.scheme (OAI.PiExponent.AdmissibleBlowupGeometry.centerIdeal d))
+    (OAI.PiExponent.BlowupJetSurjectivity.blowupBundle (OAI.PiExponent.AdmissibleBlowupGeometry.centerIdeal d)
+      (OAI.PiExponent.AdmissibleBlowupGeometry.hyperplane d))
+'OAI.PiExponent.AdmissibleJetSurjectivity.blowupBundle_ample' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OAI.PiExponent.AdmissibleJetSurjectivity.eventually_jetRestriction_surjective : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.AdmissibleParameters ν Λ D),
+  ∀ᶠ (n : ℕ) in Filter.atTop,
+    Function.Surjective
+      (OAI.PiExponent.BlowupJetSurjectivity.jetRestriction (OAI.PiExponent.AdmissibleBlowupGeometry.centerIdeal d)
+        (OAI.PiExponent.AdmissibleBlowupGeometry.hyperplane d) n)
+'OAI.PiExponent.AdmissibleJetSurjectivity.eventually_jetRestriction_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@OAI.PiExponent.LiteralAnalytic.actual_minor_analytic_bound : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.DeterminantContradiction.FixedData nu),
+  0 ≤ nu →
+    ∀ {H : ℝ},
+      0 < H →
+        ∀
+          (selection :
+            OAI.PiExponent.DeterminantContradiction.Row d H → OAI.PiExponent.DeterminantContradiction.Column d H),
+          (OAI.PiExponent.DeterminantContradiction.actualMinor d H selection).det ≠ 0 →
+            Real.log ‖(OAI.PiExponent.DeterminantContradiction.actualMinor d H selection).det‖ /
+                (↑(OAI.PiExponent.DeterminantContradiction.actualRowCount d H) * H) ≤
+              OAI.PiExponent.AdmissibleParameters.analyticError d +
+                  OAI.PiExponent.LiteralAnalytic.analyticRemainder d H +
+                max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                  (-nu * (↑d.base.A * (1 - d.base.eta) - OAI.PiExponent.DeterminantContradiction.actualMean d H))
+'OAI.PiExponent.LiteralAnalytic.actual_minor_analytic_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

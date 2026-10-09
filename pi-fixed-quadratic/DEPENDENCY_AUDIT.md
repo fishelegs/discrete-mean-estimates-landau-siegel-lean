@@ -34,8 +34,8 @@ The third checkpoint now proves multivariate Gaussian integrality in an
 abstract degree-two Galois tower over the fraction field of Gaussian integers.
 It combines the primitive finite-place argument with an actual two-embedding
 norm descent and integral closedness. The actual primitive integer minpoly, coefficient maximum height and real
-root-pair identities are now proved; the actual fixed quadratic field/compositum
-tower has not yet been constructed to instantiate it. All remaining hypotheses and construction gaps are listed in
+root-pair identities are now proved. Checkpoint 7 constructs the actual fixed
+quadratic field/compositum tower and instantiates every arithmetic obligation. All remaining hypotheses and construction gaps are listed in
 README.md and visible in `checks/Audit.lean`.
 
 The paper's `Lambda=4 log 2` must also be checked against the available **formal**
@@ -59,3 +59,42 @@ The lcm constant remains the larger proved `log 4+4` until separately improved.
 Checkpoint 6 now proves the changed dimension limits, height selection and
 factorial remainder; generalized geometry, analytic transfer and the final pi
 finiteness theorem remain unproved.
+
+Checkpoint 7 constructs the Gaussian fraction field explicitly with common
+rational denominators, and `F(i)` as `QuadraticAlgebra F (-1) 0`. Tower degrees
+prove `[F(i):Q(i)]=2`; separability/normality and cardinality of the actual
+Galois group give a nonidentity simultaneous conjugation. Its restriction
+matches the other primitive-minpoly root because degree-two elements are not
+fixed. The actual complex embedding fixes Gaussian integers. The normalized
+minor theorem now takes only the actual degree-two field/coordinates, a
+nonzero actual formal minor and explicit geometric budgets; there is no
+arithmetic structure gap.
+
+The generic upstream `CurveInequality.weighted_curve_inequality` already accepts
+arbitrary complex centers and rational degree/jet weights. It requires
+coordinatewise injectivity, positive weights, inflated volume/fibre-volume,
+separated-weight products and coordinate ratios. Its proof is kernel-verified
+upstream; the remaining adaptation is the weighted compactification/blowup
+and jet-surjectivity chain currently parameterized by `AdmissibleParameters`
+with rational approximations, followed by the actual analytic aggregate.
+No missing deep theorem is asserted merely from this interface mismatch.
+
+The executable contact bridge is `checks/UpstreamGeometryBridge.lean`.
+Its complete printed remaining-interface types and allowed-axiom reports are
+in `audit/UpstreamGeometryBridge.log`:
+
+- `AdmissibleJetSurjectivity.blowupBundle_ample`: for
+  `d : AdmissibleParameters ν Λ D`, ampleness of the actual blowupBundle of
+  `centerIdeal d` and `hyperplane d`.
+- `AdmissibleJetSurjectivity.eventually_jetRestriction_surjective`: for that
+  same rational-data `d`, eventually every actual jetRestriction is surjective.
+- `LiteralAnalytic.actual_minor_analytic_bound`: for `d : FixedData ν`,
+  `0<=ν`, `H>0`, an actual selected minor and its nonvanishing, the actual
+  normalized log determinant is bounded by the explicit analytic error,
+  remainder and maximum of collision/displacement savings.
+
+These exact interfaces are verified, but their data cannot yet be replaced
+by the height-linked fixed-field centers. No assumed-surjectivity pi theorem
+is exported as a workaround. The actual contact theorem is a proved geometric
+step; the compactification/blowup port, actual packet budgets/counts, analytic
+transfer and final comparison are the remaining implementation work.

@@ -1,3 +1,5 @@
+import FixedQuadratic.FixedFieldArithmetic
+import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
 import FixedQuadratic.Selection
 import FixedQuadratic.ErrorLimits
 import Mathlib.NumberTheory.Real.Irrational
@@ -293,5 +295,69 @@ theorem polynomial_row_factorial_vanishes : Filter.Tendsto
   constructor
   · positivity
   · simp
+
+theorem actual_gaussian_fraction_field : IsFractionRing GaussianInt GaussianField :=
+  inferInstance
+
+theorem actual_gaussian_degree_two : Module.finrank ℚ GaussianField = 2 := gaussianField_finrank
+
+/-- Constructs the actual real field Q(sqrt(2)), then checks relative degree
+and Galois structure over the actual Gaussian fraction field. -/
+theorem sqrt_two_actual_complexification :
+    let F := IntermediateField.adjoin ℚ {Real.sqrt 2}
+    Module.finrank GaussianField (Complexification F) = 2 ∧
+    IsGalois GaussianField (Complexification F) := by
+  dsimp
+  let F := IntermediateField.adjoin ℚ {Real.sqrt 2}
+  have hi := integral_of_minpoly_degree_two (Real.sqrt 2) sqrt_two_degree_two
+  letI : FiniteDimensional ℚ F := IntermediateField.adjoin.finiteDimensional hi
+  have hF : Module.finrank ℚ F = 2 :=
+    (IntermediateField.adjoin.finrank hi).trans sqrt_two_degree_two
+  exact ⟨complexification_relative_degree F hF, complexification_isGalois F hF⟩
+
+/-- Repeated coordinates are evaluated in the genuine common field, rather
+than four fake Cartesian root pairs. -/
+theorem sqrt_two_actual_repeated_norm (F : IntermediateField ℚ ℝ)
+    [FiniteDimensional ℚ F] (hF : Module.finrank ℚ F = 2)
+    (β : F) (hβ : (β : ℝ) = Real.sqrt 2) :
+    ∃ σ : F ≃ₐ[ℚ] F, σ ≠ 1 ∧
+      complexificationToComplex F
+        ((algebraMap F (Complexification F) β+algebraMap F (Complexification F) β)*
+          complexificationConjugation F σ
+            (algebraMap F (Complexification F) β+algebraMap F (Complexification F) β)) = -8 := by
+  obtain ⟨σ, hσ⟩ := exists_real_quadratic_conjugation F hF
+  have hd : (minpoly ℚ (β : ℝ)).natDegree = 2 := hβ ▸ sqrt_two_degree_two
+  have hmove := real_quadratic_conjugation_moves F hF σ hσ β hd
+  have hsF : β^2 = (2 : F) := by
+    apply Subtype.ext
+    change (β : ℝ)^2 = 2
+    rw [hβ]
+    exact Real.sq_sqrt (by norm_num)
+  have hs := congrArg σ hsF
+  simp only [map_pow, map_ofNat] at hs
+  have hsR : (σ β : ℝ)^2 = 2 := by
+    have hh := congrArg F.val hs
+    simpa only [map_pow, map_ofNat, IntermediateField.coe_val] using hh
+  have hne : (σ β : ℝ) ≠ Real.sqrt 2 := by
+    intro hh
+    apply hmove
+    exact Subtype.ext (hh.trans hβ.symm)
+  have hneg : (σ β : ℝ) = -Real.sqrt 2 := by
+    rcases (sq_eq_sq_iff_eq_or_eq_neg).mp
+      (hsR.trans (Real.sq_sqrt (show 0 ≤ (2 : ℝ) by norm_num)).symm) with he | he
+    · exact (hne he).elim
+    · exact he
+  have ht : complexificationConjugation F σ (algebraMap F (Complexification F) β) =
+      algebraMap F (Complexification F) (σ β) := by
+    ext <;> simp [complexificationConjugation]
+  refine ⟨σ, hσ, ?_⟩
+  rw [map_add, map_mul, map_add, ht, map_add, complexification_real_eval,
+    complexification_real_eval, hβ, hneg]
+  have hsC : (Real.sqrt 2 : ℂ)^2 = 2 := by
+    exact_mod_cast Real.sq_sqrt (show 0 ≤ (2 : ℝ) by norm_num)
+  push_cast
+  calc
+    _ = -4*(Real.sqrt 2 : ℂ)^2 := by ring
+    _ = -8 := by rw [hsC]; norm_num
 
 end FixedQuadratic.Regression

@@ -1,0 +1,15 @@
+{
+  "commit": "b4e006408b8f7582a676f9c9c69d3ab99c2681e5",
+  "run_id": 37887002564,
+  "conclusion": "success",
+  "toolchain": "Lean 4.30.0",
+  "trusted_spec_modules_individually_passed": 1565,
+  "spec_aggregate": "passed",
+  "lake_build": "passed",
+  "audit_regressions": "passed",
+  "gaussian_closure": "passed",
+  "root_tracked_sources_unchanged_since_run": true,
+  "artifact_report_sha256": "b7b26c6a8c1e5a257abdffa637525998ed242a145ef459c945de666a5c9397ea",
+  "artifact_spec_manifest_sha256": "97a41b0fe86212f04735e8447581c18c096774ef39d5749c50a1845817db1b8f",
+  "note": "Independent 4.34.1 subproject checked separately."
+}

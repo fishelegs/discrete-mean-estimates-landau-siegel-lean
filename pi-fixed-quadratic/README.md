@@ -96,17 +96,20 @@ The exact elaborated types and complete axiom reports are printed by
 
 ## Remaining dependencies, in implementation order
 
-1. Construct a fixed real quadratic field and its simultaneous involution.
-   The actual primitive integer minpoly, maximum height, root coefficient
-   identities, finite coefficient box, and successive height selection are proved.
-2. Instantiate the now-proved **multivariate same-field** Gaussian integrality
-   theorem for the actual fixed real quadratic field after adjoining `i`.
-   Construct its compatible fraction-field tower, relative degree two, Galois
-   involution, complex embedding and primitive root-pair factorizations.
-   These are mathematical structure obligations, not an unproved norm-integrality
-   hypothesis. The abstract tower now supplies the actual-minor bound
-   `formal_minor_fixed_field_arithmetic`; constructing it from the fixed real
-   quadratic field remains open. Full Cartesian resultants remain invalid.
+1. The actual fixed-field arithmetic construction is now complete in
+   `GaussianField.lean`, `Complexification.lean`, `FieldMinpoly.lean` and
+   `FixedFieldArithmetic.lean`: for a real intermediate field `F` of degree
+   two, construct `F(i)`, the Gaussian fraction field, relative degree two,
+   Galois structure, simultaneous nonidentity involution, compatible complex
+   embedding and actual primitive root-pair factorizations. No tower, norm
+   integrality, relative degree, root-pair or Mahler-to-weight assumption remains
+   in `fixed_real_field_minor_normalized_lower`.
+2. `fixed_real_field_multi_mahler_lower` and
+   `fixed_real_field_multi_height_lower` prove the actual same-field bounds for
+   arbitrary dependent degree-two coordinates. There is one coefficient-l1
+   factor and the leading-coefficient exponents are the coordinate degree caps.
+   The primitive maximum height is used, not absolute Weil height. Repeated
+   sqrt(2) regression verifies relative degree two and simultaneous product -8.
 3. `FormalEntry.lean` now constructs the actual binomial-product formal entry,
    proves its complex specialization, incompatible zero rule, coordinate degree
    bound and determinant rebate. Actual truncated-log clearing, radius-1/2
@@ -117,8 +120,12 @@ The exact elaborated types and complete axiom reports are printed by
 4. Generalize the upstream **proved Lean** geometric surjectivity and analytic
    aggregate from rational `FixedData` to height-linked fixed-field data. The
    upstream complex-center minor extraction is conditional on surjectivity;
-   it does not itself prove the needed generalized geometric input. Audit the
-   underlying geometry rather than treating the paper statement as an axiom.
+   it does not itself prove the needed generalized geometric input. The actual fixed-field
+   center injectivity and weighted curve contact inequality now compile in
+   `checks/UpstreamGeometryBridge.lean` against the generic proved upstream
+   theorem. Its independent audit also prints the exact still-rational-data
+   ampleness, jet-surjectivity and actual analytic types. The compactification
+   and jet chain still require generalization.
 5. The changed dimension error limits, successive height choices and factorial
    remainder limit under polynomial row growth are proved. Instantiate these
    with the generalized packet, supply the actual analytic estimate and margins to
@@ -140,7 +147,7 @@ python3 scripts/replay.py --lean "$(elan which lean)" \
 ```
 
 The script compiles all new sources and the aggregate, positive regressions,
-actual type/axiom prints, and fifteen separately checked expected failures. It
+actual type/axiom prints, and seventeen separately checked expected failures. It
 rejects `sorry`, `admit`, project `axiom`, `native_decide`, unsafe code and
 external proof hooks. Only `propext`, `Classical.choice`, `Quot.sound` are allowed
 in axiom reports. It records source, compiler, imported cache and output hashes.
@@ -283,3 +290,9 @@ error closure is not a substitute for the outstanding geometric/analytic port.
 The dimension estimates are adapted, with attribution, from the pinned
 upstream elementary dimension files. Their coefficient 100 is generalized
 to a nonnegative constant and all adapted proofs are freshly kernel checked.
+
+For the fixed-field geometric contact bridge, run
+`scripts/audit_geometry_bridge.py` with the same `--verification-root`,
+`--checkpoint-verification` and separate `--out` arguments used for
+`scripts/audit_entry_bridge.py`. Its result is independent of the focused CI,
+which does not provision the upstream OAI closure.

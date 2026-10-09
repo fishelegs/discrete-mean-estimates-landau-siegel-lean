@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "scope": "Actual fixed-field curve contact inequality against pinned upstream; no jet surjectivity or pi finiteness theorem.",
+  "upstream_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "prior_successful_checks_revalidated": 872,
+  "upstream_audit_sha256": "1aef92082c251cf71260469171725ae4edba3cb8f29767171a40a1cec5d6ba81",
+  "checkpoint_receipt_sha256": "95906b608fae6aa1e8ab976df4351576c9fcbd4ac291cbc34067d7bfffa06917",
+  "source_sha256": "b60f069a6bbce099ebc8f99299727f419bd96dea973ec8f9b9131f3bf9f0fb96",
+  "argv": [
+    "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+    "-j1",
+    "-M8192",
+    "-DautoImplicit=false",
+    "-o",
+    "/Users/keyishen/Documents/Codex/2026-10-09/task/concrete-fixed-field-geometry-verification/UpstreamGeometryBridge.olean",
+    "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/UpstreamGeometryBridge.lean"
+  ],
+  "exit_code": 0,
+  "olean_sha256": "6d59510eff12f29161dffe224ccd040c8e182da63ead07bd1623092a4698b209",
+  "log_sha256": "5b17555402aa7635e63b2b605f1a20f0dfeab1878df7ffa56d1bfd6d780e1a4d",
+  "axiom_audit": {
+    "FixedQuadratic.UpstreamGeometry.fixedCenters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamGeometry.fixedCenters_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamGeometry.fixed_field_weighted_curve_inequality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.AdmissibleJetSurjectivity.blowupBundle_ample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.AdmissibleJetSurjectivity.eventually_jetRestriction_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.LiteralAnalytic.actual_minor_analytic_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  }
+}

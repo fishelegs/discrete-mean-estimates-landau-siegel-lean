@@ -383,6 +383,90 @@ import checks.Regression
 #print axioms FixedQuadratic.exists_large_primitive_log_height
 #check @FixedQuadratic.exists_successive_primitive_centers
 #print axioms FixedQuadratic.exists_successive_primitive_centers
+#check @FixedQuadratic.GaussianField
+#print axioms FixedQuadratic.GaussianField
+#check @FixedQuadratic.gaussianFieldCondition
+#print axioms FixedQuadratic.gaussianFieldCondition
+#check @FixedQuadratic.gaussianToField
+#print axioms FixedQuadratic.gaussianToField
+#check @FixedQuadratic.gaussianFieldAlgebra
+#print axioms FixedQuadratic.gaussianFieldAlgebra
+#check @FixedQuadratic.gaussianToField_injective
+#print axioms FixedQuadratic.gaussianToField_injective
+#check @FixedQuadratic.gaussianFieldFaithful
+#print axioms FixedQuadratic.gaussianFieldFaithful
+#check @FixedQuadratic.gaussianField_fraction_surj
+#print axioms FixedQuadratic.gaussianField_fraction_surj
+#check @FixedQuadratic.gaussianFieldFractionRing
+#print axioms FixedQuadratic.gaussianFieldFractionRing
+#check @FixedQuadratic.gaussianField_finrank
+#print axioms FixedQuadratic.gaussianField_finrank
+#check @FixedQuadratic.gaussianFieldToComplex
+#print axioms FixedQuadratic.gaussianFieldToComplex
+#check @FixedQuadratic.gaussianFieldToComplex_compatible
+#print axioms FixedQuadratic.gaussianFieldToComplex_compatible
+#check @FixedQuadratic.Complexification
+#print axioms FixedQuadratic.Complexification
+#check @FixedQuadratic.complexificationCondition
+#print axioms FixedQuadratic.complexificationCondition
+#check @FixedQuadratic.gaussianFieldToComplexification
+#print axioms FixedQuadratic.gaussianFieldToComplexification
+#check @FixedQuadratic.complexificationGaussianAlgebra
+#print axioms FixedQuadratic.complexificationGaussianAlgebra
+#check @FixedQuadratic.complexificationGaussianIntAlgebra
+#print axioms FixedQuadratic.complexificationGaussianIntAlgebra
+#check @FixedQuadratic.complexificationGaussianTower
+#print axioms FixedQuadratic.complexificationGaussianTower
+#check @FixedQuadratic.complexificationRatGaussianTower
+#print axioms FixedQuadratic.complexificationRatGaussianTower
+#check @FixedQuadratic.complexificationRatRealTower
+#print axioms FixedQuadratic.complexificationRatRealTower
+#check @FixedQuadratic.complexificationFinite
+#print axioms FixedQuadratic.complexificationFinite
+#check @FixedQuadratic.complexificationGaussianFinite
+#print axioms FixedQuadratic.complexificationGaussianFinite
+#check @FixedQuadratic.complexificationNumberField
+#print axioms FixedQuadratic.complexificationNumberField
+#check @FixedQuadratic.complexification_relative_degree
+#print axioms FixedQuadratic.complexification_relative_degree
+#check @FixedQuadratic.complexification_isGalois
+#print axioms FixedQuadratic.complexification_isGalois
+#check @FixedQuadratic.real_quadratic_isGalois
+#print axioms FixedQuadratic.real_quadratic_isGalois
+#check @FixedQuadratic.exists_real_quadratic_conjugation
+#print axioms FixedQuadratic.exists_real_quadratic_conjugation
+#check @FixedQuadratic.complexificationConjugation
+#print axioms FixedQuadratic.complexificationConjugation
+#check @FixedQuadratic.complexificationConjugation_ne_one
+#print axioms FixedQuadratic.complexificationConjugation_ne_one
+#check @FixedQuadratic.complexificationToComplex
+#print axioms FixedQuadratic.complexificationToComplex
+#check @FixedQuadratic.complexificationToComplex_apply
+#print axioms FixedQuadratic.complexificationToComplex_apply
+#check @FixedQuadratic.gaussianFieldToComplexification_re
+#print axioms FixedQuadratic.gaussianFieldToComplexification_re
+#check @FixedQuadratic.gaussianFieldToComplexification_im
+#print axioms FixedQuadratic.gaussianFieldToComplexification_im
+#check @FixedQuadratic.complexificationToComplex_compatible
+#print axioms FixedQuadratic.complexificationToComplex_compatible
+#check @FixedQuadratic.real_quadratic_conjugation_moves
+#print axioms FixedQuadratic.real_quadratic_conjugation_moves
+#check @FixedQuadratic.real_quadratic_conjugate_eq
+#print axioms FixedQuadratic.real_quadratic_conjugate_eq
+#check @FixedQuadratic.complexification_primitive_factorization
+#print axioms FixedQuadratic.complexification_primitive_factorization
+#check @FixedQuadratic.complexification_real_eval
+#print axioms FixedQuadratic.complexification_real_eval
+#check @FixedQuadratic.complexification_primitive_mahler
+#print axioms FixedQuadratic.complexification_primitive_mahler
+#check @FixedQuadratic.fixed_real_field_norm_integral
+#print axioms FixedQuadratic.fixed_real_field_norm_integral
+#check @FixedQuadratic.fixed_real_field_multi_mahler_lower
+#print axioms FixedQuadratic.fixed_real_field_multi_mahler_lower
+#check @FixedQuadratic.fixed_real_field_multi_height_lower
+#print axioms FixedQuadratic.fixed_real_field_multi_height_lower
+#check @FixedQuadratic.fixed_real_field_minor_normalized_lower
+#print axioms FixedQuadratic.fixed_real_field_minor_normalized_lower
 #check @FixedQuadratic.Regression.nonmonic_resultant
 #print axioms FixedQuadratic.Regression.nonmonic_resultant
 #check @FixedQuadratic.Regression.omitted_coefficient_cost_is_false
@@ -439,3 +523,11 @@ import checks.Regression
 #print axioms FixedQuadratic.Regression.actual_coefficient_envelope_36
 #check @FixedQuadratic.Regression.polynomial_row_factorial_vanishes
 #print axioms FixedQuadratic.Regression.polynomial_row_factorial_vanishes
+#check @FixedQuadratic.Regression.actual_gaussian_fraction_field
+#print axioms FixedQuadratic.Regression.actual_gaussian_fraction_field
+#check @FixedQuadratic.Regression.actual_gaussian_degree_two
+#print axioms FixedQuadratic.Regression.actual_gaussian_degree_two
+#check @FixedQuadratic.Regression.sqrt_two_actual_complexification
+#print axioms FixedQuadratic.Regression.sqrt_two_actual_complexification
+#check @FixedQuadratic.Regression.sqrt_two_actual_repeated_norm
+#print axioms FixedQuadratic.Regression.sqrt_two_actual_repeated_norm

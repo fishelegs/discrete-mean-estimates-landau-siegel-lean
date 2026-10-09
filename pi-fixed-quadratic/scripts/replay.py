@@ -7,8 +7,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULES = ['Resultant', 'Mahler', 'MinorBudget', 'Comparison', 'Conjugation',
-           'Envelope', 'MultiEnvelope', 'Clearing', 'Height', 'Weights', 'Parity', 'ParityDeterminant', 'FinitePlace', 'NumberFieldIntegral', 'QuadraticNorm', 'FormalEntry', 'LogClearing', 'L1Norm', 'TimeEnvelope', 'MinorEnvelope', 'MultiLower', 'MinorArithmetic', 'ArithmeticErrors', 'PrimitiveHeight', 'ErrorLimits', 'Selection']
+           'Envelope', 'MultiEnvelope', 'Clearing', 'Height', 'Weights', 'Parity', 'ParityDeterminant', 'FinitePlace', 'NumberFieldIntegral', 'QuadraticNorm', 'FormalEntry', 'LogClearing', 'L1Norm', 'TimeEnvelope', 'MinorEnvelope', 'MultiLower', 'MinorArithmetic', 'ArithmeticErrors', 'PrimitiveHeight', 'ErrorLimits', 'Selection', 'GaussianField', 'Complexification', 'FieldMinpoly', 'FixedFieldArithmetic']
 NEGATIVE = {
+    'ExpectedFailureComplexificationWrongDegree': ('Type mismatch', '= 4', '= 2'),
+    'ExpectedFailureComplexificationWrongInvolution': ('unsolved goals', '⊢ False'),
     'ExpectedFailureRationalDegree': ('unsolved goals', '⊢ False'),
     'ExpectedFailureMissingSecondDenominator': ('Type mismatch', '-2 * Real.log q'),
     'ExpectedFailureMissingLogDenominator': ('Type mismatch', 'logDenominator'),
@@ -79,7 +81,7 @@ def main():
                 assert name.startswith(('Mathlib.', 'FixedQuadratic.', 'checks.')) or name=='FixedQuadratic', name
     names = []
     for p in sources[:len(MODULES)]:
-        names.extend('FixedQuadratic.'+n for n in re.findall(r'^(?:noncomputable )?(?:theorem|def) (\w+)',code(p.read_text()),re.M))
+        names.extend('FixedQuadratic.'+n for n in re.findall(r'^(?:noncomputable )?(?:theorem|def|abbrev|instance) (\w+)',code(p.read_text()),re.M))
     names.extend('FixedQuadratic.Regression.'+n for n in re.findall(r'^theorem (\w+)',code((ROOT/'checks/Regression.lean').read_text()),re.M))
     audit_source=(ROOT/'checks/Audit.lean').read_text()
     assert set(re.findall(r'^#print axioms (.+)$',audit_source,re.M))==set(names)

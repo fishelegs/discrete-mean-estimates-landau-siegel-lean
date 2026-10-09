@@ -3,8 +3,8 @@
   "scope": "Exact entry equality against pinned upstream; no pi finiteness theorem.",
   "upstream_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
   "prior_successful_checks_revalidated": 872,
-  "upstream_audit_sha256": "48338905197709a0436ae0c863c8bacf20bacbb86dbec47da006af1f491c06b9",
-  "checkpoint_receipt_sha256": "71216d38311475b58df90da508da6b2cb1ab624d2abb77d8147db240b4e90c42",
+  "upstream_audit_sha256": "4aeaf147834c4ea4fb9923126ad2924800c96d37ee01bfbadeebe1ce53d39061",
+  "checkpoint_receipt_sha256": "95906b608fae6aa1e8ab976df4351576c9fcbd4ac291cbc34067d7bfffa06917",
   "source_sha256": "3f4f2ad1b5c6fe7d8f0cbcf020d944cc685f99fb8e9d025b1a070d78e2c267f1",
   "argv": [
     "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
@@ -12,7 +12,7 @@
     "-M8192",
     "-DautoImplicit=false",
     "-o",
-    "/Users/keyishen/Documents/Codex/2026-10-09/task/normalized-height-upstream-verification/UpstreamFormalEntryBridge.olean",
+    "/Users/keyishen/Documents/Codex/2026-10-09/task/concrete-fixed-field-upstream-verification/UpstreamFormalEntryBridge.olean",
     "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/UpstreamFormalEntryBridge.lean"
   ],
   "exit_code": 0,

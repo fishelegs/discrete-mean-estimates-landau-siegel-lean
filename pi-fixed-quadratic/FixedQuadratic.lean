@@ -24,3 +24,7 @@ import FixedQuadratic.ArithmeticErrors
 import FixedQuadratic.PrimitiveHeight
 import FixedQuadratic.ErrorLimits
 import FixedQuadratic.Selection
+import FixedQuadratic.GaussianField
+import FixedQuadratic.Complexification
+import FixedQuadratic.FieldMinpoly
+import FixedQuadratic.FixedFieldArithmetic

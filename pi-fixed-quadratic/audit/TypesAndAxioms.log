@@ -1015,6 +1015,216 @@ FixedQuadratic.exists_successive_primitive_centers : ∀ (S : Set ℝ),
                           (List.range n).reverse) <
                       ↑⌈Real.log ↑(FixedQuadratic.primitiveMinpolyHeight (β n))⌉₊
 'FixedQuadratic.exists_successive_primitive_centers' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.GaussianField : Type
+'FixedQuadratic.GaussianField' depends on axioms: [propext, Quot.sound]
+FixedQuadratic.gaussianFieldCondition : Fact (∀ (r : ℚ), r ^ 2 ≠ -1 + 0 * r)
+'FixedQuadratic.gaussianFieldCondition' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianToField : GaussianInt →+* FixedQuadratic.GaussianField
+'FixedQuadratic.gaussianToField' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianFieldAlgebra : Algebra GaussianInt FixedQuadratic.GaussianField
+'FixedQuadratic.gaussianFieldAlgebra' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianToField_injective : Function.Injective ⇑FixedQuadratic.gaussianToField
+'FixedQuadratic.gaussianToField_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianFieldFaithful : FaithfulSMul GaussianInt FixedQuadratic.GaussianField
+'FixedQuadratic.gaussianFieldFaithful' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianField_fraction_surj : ∀ (z : FixedQuadratic.GaussianField),
+  ∃ x y,
+    z =
+      (algebraMap GaussianInt FixedQuadratic.GaussianField) x / (algebraMap GaussianInt FixedQuadratic.GaussianField) y
+'FixedQuadratic.gaussianField_fraction_surj' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianFieldFractionRing : IsFractionRing GaussianInt FixedQuadratic.GaussianField
+'FixedQuadratic.gaussianFieldFractionRing' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianField_finrank : Module.finrank ℚ FixedQuadratic.GaussianField = 2
+'FixedQuadratic.gaussianField_finrank' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianFieldToComplex : FixedQuadratic.GaussianField →ₐ[ℚ] ℂ
+'FixedQuadratic.gaussianFieldToComplex' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianFieldToComplex_compatible : FixedQuadratic.gaussianFieldToComplex.comp
+    (algebraMap GaussianInt FixedQuadratic.GaussianField) =
+  GaussianInt.toComplex
+'FixedQuadratic.gaussianFieldToComplex_compatible' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Complexification : IntermediateField ℚ ℝ → Type
+'FixedQuadratic.Complexification' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationCondition : ∀ (F : IntermediateField ℚ ℝ), Fact (∀ (r : ↥F), r ^ 2 ≠ -1 + 0 * r)
+'FixedQuadratic.complexificationCondition' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianFieldToComplexification : (F : IntermediateField ℚ ℝ) →
+  FixedQuadratic.GaussianField →ₐ[ℚ] FixedQuadratic.Complexification F
+'FixedQuadratic.gaussianFieldToComplexification' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationGaussianAlgebra : (F : IntermediateField ℚ ℝ) →
+  Algebra FixedQuadratic.GaussianField (FixedQuadratic.Complexification F)
+'FixedQuadratic.complexificationGaussianAlgebra' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationGaussianIntAlgebra : (F : IntermediateField ℚ ℝ) →
+  Algebra GaussianInt (FixedQuadratic.Complexification F)
+'FixedQuadratic.complexificationGaussianIntAlgebra' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationGaussianTower : ∀ (F : IntermediateField ℚ ℝ),
+  IsScalarTower GaussianInt FixedQuadratic.GaussianField (FixedQuadratic.Complexification F)
+'FixedQuadratic.complexificationGaussianTower' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationRatGaussianTower : ∀ (F : IntermediateField ℚ ℝ),
+  IsScalarTower ℚ FixedQuadratic.GaussianField (FixedQuadratic.Complexification F)
+'FixedQuadratic.complexificationRatGaussianTower' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationRatRealTower : ∀ (F : IntermediateField ℚ ℝ),
+  IsScalarTower ℚ (↥F) (FixedQuadratic.Complexification F)
+'FixedQuadratic.complexificationRatRealTower' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationFinite : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  FiniteDimensional ℚ (FixedQuadratic.Complexification F)
+'FixedQuadratic.complexificationFinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationGaussianFinite : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  FiniteDimensional FixedQuadratic.GaussianField (FixedQuadratic.Complexification F)
+'FixedQuadratic.complexificationGaussianFinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationNumberField : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  NumberField (FixedQuadratic.Complexification F)
+'FixedQuadratic.complexificationNumberField' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexification_relative_degree : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 → Module.finrank FixedQuadratic.GaussianField (FixedQuadratic.Complexification F) = 2
+'FixedQuadratic.complexification_relative_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexification_isGalois : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 → IsGalois FixedQuadratic.GaussianField (FixedQuadratic.Complexification F)
+'FixedQuadratic.complexification_isGalois' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.real_quadratic_isGalois : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 → IsGalois ℚ ↥F
+'FixedQuadratic.real_quadratic_isGalois' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.exists_real_quadratic_conjugation : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 → ∃ σ, σ ≠ 1
+'FixedQuadratic.exists_real_quadratic_conjugation' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationConjugation : (F : IntermediateField ℚ ℝ) →
+  Gal(↥F/ℚ) → Gal(FixedQuadratic.Complexification F/FixedQuadratic.GaussianField)
+'FixedQuadratic.complexificationConjugation' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationConjugation_ne_one : ∀ (F : IntermediateField ℚ ℝ) (σ : Gal(↥F/ℚ)),
+  σ ≠ 1 → FixedQuadratic.complexificationConjugation F σ ≠ 1
+'FixedQuadratic.complexificationConjugation_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationToComplex : (F : IntermediateField ℚ ℝ) → FixedQuadratic.Complexification F →+* ℂ
+'FixedQuadratic.complexificationToComplex' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationToComplex_apply : ∀ (F : IntermediateField ℚ ℝ) (z : FixedQuadratic.Complexification F),
+  (FixedQuadratic.complexificationToComplex F) z = ↑↑z.re + ↑↑z.im * Complex.I
+'FixedQuadratic.complexificationToComplex_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianFieldToComplexification_re : ∀ (F : IntermediateField ℚ ℝ) (g : FixedQuadratic.GaussianField),
+  ((FixedQuadratic.gaussianFieldToComplexification F) g).re = (algebraMap ℚ ↥F) g.re
+'FixedQuadratic.gaussianFieldToComplexification_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussianFieldToComplexification_im : ∀ (F : IntermediateField ℚ ℝ) (g : FixedQuadratic.GaussianField),
+  ((FixedQuadratic.gaussianFieldToComplexification F) g).im = (algebraMap ℚ ↥F) g.im
+'FixedQuadratic.gaussianFieldToComplexification_im' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexificationToComplex_compatible : ∀ (F : IntermediateField ℚ ℝ),
+  (FixedQuadratic.complexificationToComplex F).comp (algebraMap GaussianInt (FixedQuadratic.Complexification F)) =
+    GaussianInt.toComplex
+'FixedQuadratic.complexificationToComplex_compatible' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.real_quadratic_conjugation_moves : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 → ∀ (σ : Gal(↥F/ℚ)), σ ≠ 1 → ∀ (β : ↥F), (minpoly ℚ ↑β).natDegree = 2 → σ β ≠ β
+'FixedQuadratic.real_quadratic_conjugation_moves' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.real_quadratic_conjugate_eq : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 →
+    ∀ (σ : Gal(↥F/ℚ)), σ ≠ 1 → ∀ (β : ↥F), (minpoly ℚ ↑β).natDegree = 2 → ↑(σ β) = FixedQuadratic.primitiveConjugate ↑β
+'FixedQuadratic.real_quadratic_conjugate_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexification_primitive_factorization : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 →
+    ∀ (σ : Gal(↥F/ℚ)),
+      σ ≠ 1 →
+        ∀ (β : ↥F),
+          (minpoly ℚ ↑β).natDegree = 2 →
+            Polynomial.C ↑((FixedQuadratic.primitiveMinpoly ↑β).coeff 2) * Polynomial.X ^ 2 +
+                  Polynomial.C ↑((FixedQuadratic.primitiveMinpoly ↑β).coeff 1) * Polynomial.X +
+                Polynomial.C ↑((FixedQuadratic.primitiveMinpoly ↑β).coeff 0) =
+              Polynomial.C ↑((FixedQuadratic.primitiveMinpoly ↑β).coeff 2) *
+                ((Polynomial.X - Polynomial.C ((algebraMap (↥F) (FixedQuadratic.Complexification F)) β)) *
+                  (Polynomial.X -
+                    Polynomial.C
+                      ((FixedQuadratic.complexificationConjugation F σ)
+                        ((algebraMap (↥F) (FixedQuadratic.Complexification F)) β))))
+'FixedQuadratic.complexification_primitive_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexification_real_eval : ∀ (F : IntermediateField ℚ ℝ) (β : ↥F),
+  (FixedQuadratic.complexificationToComplex F) ((algebraMap (↥F) (FixedQuadratic.Complexification F)) β) = ↑↑β
+'FixedQuadratic.complexification_real_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.complexification_primitive_mahler : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 →
+    ∀ (σ : Gal(↥F/ℚ)),
+      σ ≠ 1 →
+        ∀ (β : ↥F),
+          (minpoly ℚ ↑β).natDegree = 2 →
+            ‖(FixedQuadratic.complexificationToComplex F) ↑((FixedQuadratic.primitiveMinpoly ↑β).coeff 2)‖ *
+                  max 1
+                    ‖(FixedQuadratic.complexificationToComplex F)
+                        ((algebraMap (↥F) (FixedQuadratic.Complexification F)) β)‖ *
+                max 1
+                  ‖(FixedQuadratic.complexificationToComplex F)
+                      ((FixedQuadratic.complexificationConjugation F σ)
+                        ((algebraMap (↥F) (FixedQuadratic.Complexification F)) β))‖ =
+              FixedQuadratic.quadraticMahler (↑((FixedQuadratic.primitiveMinpoly ↑β).coeff 2)) (↑β)
+                (FixedQuadratic.primitiveConjugate ↑β)
+'FixedQuadratic.complexification_primitive_mahler' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.fixed_real_field_norm_integral : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 →
+    ∀ (σ : Gal(↥F/ℚ)),
+      σ ≠ 1 →
+        ∀ {m : ℕ} (β : Fin m → ↥F),
+          (∀ (i : Fin m), (minpoly ℚ ↑(β i)).natDegree = 2) →
+            ∀ (P : MvPolynomial (Fin m) GaussianInt) (e : Fin m → ℕ),
+              (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
+                (∏ i, ↑((FixedQuadratic.primitiveMinpoly ↑(β i)).coeff 2) ^ e i) *
+                      MvPolynomial.eval₂ (algebraMap GaussianInt (FixedQuadratic.Complexification F))
+                        (fun i => (algebraMap (↥F) (FixedQuadratic.Complexification F)) (β i)) P *
+                    MvPolynomial.eval₂ (algebraMap GaussianInt (FixedQuadratic.Complexification F))
+                      (fun i =>
+                        (FixedQuadratic.complexificationConjugation F σ)
+                          ((algebraMap (↥F) (FixedQuadratic.Complexification F)) (β i)))
+                      P ∈
+                  (algebraMap GaussianInt (FixedQuadratic.Complexification F)).range
+'FixedQuadratic.fixed_real_field_norm_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.fixed_real_field_multi_mahler_lower : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 →
+    ∀ {m : ℕ} (β : Fin m → ↥F),
+      (∀ (i : Fin m), (minpoly ℚ ↑(β i)).natDegree = 2) →
+        ∀ (P : MvPolynomial (Fin m) GaussianInt) (e : Fin m → ℕ),
+          (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
+            MvPolynomial.eval₂ GaussianInt.toComplex (fun i => ↑↑(β i)) P ≠ 0 →
+              (∏ i, max 1 |↑(β i)| ^ e i) /
+                  (FixedQuadratic.multiCoefficientL1 ((MvPolynomial.map GaussianInt.toComplex) P) *
+                    ∏ i,
+                      FixedQuadratic.quadraticMahler (↑((FixedQuadratic.primitiveMinpoly ↑(β i)).coeff 2)) (↑(β i))
+                          (FixedQuadratic.primitiveConjugate ↑(β i)) ^
+                        e i) ≤
+                ‖MvPolynomial.eval₂ GaussianInt.toComplex (fun i => ↑↑(β i)) P‖
+'FixedQuadratic.fixed_real_field_multi_mahler_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.fixed_real_field_multi_height_lower : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 →
+    ∀ {m : ℕ} (β : Fin m → ↥F),
+      (∀ (i : Fin m), (minpoly ℚ ↑(β i)).natDegree = 2) →
+        ∀ (P : MvPolynomial (Fin m) GaussianInt) (e : Fin m → ℕ),
+          (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
+            MvPolynomial.eval₂ GaussianInt.toComplex (fun i => ↑↑(β i)) P ≠ 0 →
+              ∏ i, max 1 |↑(β i)| ^ e i ≤
+                (FixedQuadratic.multiCoefficientL1 ((MvPolynomial.map GaussianInt.toComplex) P) *
+                    ∏ i, (√3 * ↑(FixedQuadratic.primitiveMinpolyHeight ↑(β i))) ^ e i) *
+                  ‖MvPolynomial.eval₂ GaussianInt.toComplex (fun i => ↑↑(β i)) P‖
+'FixedQuadratic.fixed_real_field_multi_height_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.fixed_real_field_minor_normalized_lower : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 →
+    ∀ {m : ℕ} {ι : Type u_1} [inst : Fintype ι] [inst_1 : DecidableEq ι] (β : Fin m → ↥F),
+      (∀ (i : Fin m), (minpoly ℚ ↑(β i)).natDegree = 2) →
+        ∀ (T : Fin m → ℕ) (k : ℕ) (j s h : ι → ℕ) (b a : ι → Fin m → ℕ),
+          (∀ (r : ι), j r ≤ k) →
+            (MvPolynomial.eval fun i => ↑↑(β i)) (FixedQuadratic.formalMinor T j s h b a) ≠ 0 →
+              ∀ (scale v w0 wmin D rebate : ℝ),
+                0 ≤ scale →
+                  0 < v →
+                    0 < w0 →
+                      0 < wmin →
+                        0 < D →
+                          (∀ (i : Fin m), wmin ≤ ↑⌈Real.log ↑(FixedQuadratic.primitiveMinpolyHeight ↑(β i))⌉₊) →
+                            (∀ (i : Fin m),
+                                ↑(T i) ≤ scale * ↑⌈Real.log ↑(FixedQuadratic.primitiveMinpolyHeight ↑(β i))⌉₊ / v + 1) →
+                              ∑ i,
+                                    ↑⌈Real.log ↑(FixedQuadratic.primitiveMinpolyHeight ↑(β i))⌉₊ *
+                                      ↑(FixedQuadratic.minorDegrees a b i) ≤
+                                  D * (1 - rebate) →
+                                0 ≤ rebate →
+                                  ↑(∑ r, s r) ≤ D / v →
+                                    ↑(∑ c, h c) ≤ D / w0 →
+                                      ↑(∑ c, ∑ i, a c i) ≤ D / wmin →
+                                        -(1 - rebate) - FixedQuadratic.arithmeticError scale v w0 wmin k -
+                                            Real.log ↑(Fintype.card ι).factorial / D ≤
+                                          Real.log
+                                              ‖(MvPolynomial.eval fun i => ↑↑(β i))
+                                                  (FixedQuadratic.formalMinor T j s h b a)‖ /
+                                            D
+'FixedQuadratic.fixed_real_field_minor_normalized_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
 FixedQuadratic.Regression.nonmonic_resultant : GaussianInt.toComplex
     ((Polynomial.C 2 * (Polynomial.X ^ 2 - Polynomial.C 2)).resultant Polynomial.X 2 1) =
   -4
@@ -1126,3 +1336,25 @@ FixedQuadratic.Regression.actual_coefficient_envelope_36 : (FixedQuadratic.minor
 FixedQuadratic.Regression.polynomial_row_factorial_vanishes : Filter.Tendsto
   (fun N => Real.log ↑(N ^ 2).factorial / (↑(N ^ 2) * ↑N)) Filter.atTop (nhds 0)
 'FixedQuadratic.Regression.polynomial_row_factorial_vanishes' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_gaussian_fraction_field : IsFractionRing GaussianInt FixedQuadratic.GaussianField
+'FixedQuadratic.Regression.actual_gaussian_fraction_field' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_gaussian_degree_two : Module.finrank ℚ FixedQuadratic.GaussianField = 2
+'FixedQuadratic.Regression.actual_gaussian_degree_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.sqrt_two_actual_complexification : let F := ℚ⟮√2⟯;
+Module.finrank FixedQuadratic.GaussianField (FixedQuadratic.Complexification F) = 2 ∧
+  IsGalois FixedQuadratic.GaussianField (FixedQuadratic.Complexification F)
+'FixedQuadratic.Regression.sqrt_two_actual_complexification' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.sqrt_two_actual_repeated_norm : ∀ (F : IntermediateField ℚ ℝ) [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 →
+    ∀ (β : ↥F),
+      ↑β = √2 →
+        ∃ σ,
+          σ ≠ 1 ∧
+            (FixedQuadratic.complexificationToComplex F)
+                (((algebraMap (↥F) (FixedQuadratic.Complexification F)) β +
+                    (algebraMap (↥F) (FixedQuadratic.Complexification F)) β) *
+                  (FixedQuadratic.complexificationConjugation F σ)
+                    ((algebraMap (↥F) (FixedQuadratic.Complexification F)) β +
+                      (algebraMap (↥F) (FixedQuadratic.Complexification F)) β)) =
+              -8
+'FixedQuadratic.Regression.sqrt_two_actual_repeated_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
