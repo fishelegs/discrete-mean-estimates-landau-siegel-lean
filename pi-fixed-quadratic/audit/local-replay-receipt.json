@@ -97,6 +97,26 @@
     "Mathlib.Algebra.Polynomial.Expand": {
       "source_sha256": "bbba38eb532e9ba61f5fc058f3c96dc113e538c087223d641dd9f308be40ec09",
       "olean_sha256": "ccec2743d3bf53c0fb80bdf6b7a5a1ad76ae8703ff7e44bc7d60e33c04b60d5c"
+    },
+    "Mathlib.RingTheory.Polynomial.GaussNorm": {
+      "source_sha256": "464c530dfed29c3909f957c5bea27f5c35bf2567ce848c9de21bea0addadf575",
+      "olean_sha256": "6c6032bd1de60c6b60f45c380b0c2fa6685929a93663920e3f6fb13022464770"
+    },
+    "Mathlib.Data.Int.GCD": {
+      "source_sha256": "3ea1ccc0fdea836908d84bfa5811e34fe9463e41a1925e86da41c2fb08a3c065",
+      "olean_sha256": "d2884b94e9f046ea46d8feb574a040070d67bc8696a231a2e4b2a1d144660235"
+    },
+    "Mathlib.NumberTheory.NumberField.Completion.FinitePlace": {
+      "source_sha256": "81e217d74199d9319deebe5e9047de7093b9c7e3843d5cf19785e2df9eb86e22",
+      "olean_sha256": "d8a0a773df4a6ee0b82585aa6f6fdb13d2c349cb1381f0e295684a448ee64d1d"
+    },
+    "Mathlib.RingTheory.IntegralClosure.IntegrallyClosed": {
+      "source_sha256": "d4818358821cc8b519cd9935148363d905529503a2bad380d9f4f2e915fc0e24",
+      "olean_sha256": "9833d6bf5dfad9c9efee99e05283aab6be6e54fe4a4f9a5c23b0736a094941ee"
+    },
+    "Mathlib.RingTheory.Norm.Transitivity": {
+      "source_sha256": "46b2a44d9c96ee4b387ba636bdb68a6356f0a7c8aeeade176da5181a27d39be2",
+      "olean_sha256": "0329f4ed1693e6f7f08e60ecc364da3eb735f278d79761ed9639274c33c6b23c"
     }
   },
   "checks": [
@@ -108,7 +128,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/Resultant.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/Resultant.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/Resultant.lean"
       ],
       "source_sha256": "44646d12c8d7f53edc37d269dcb669734b682f8b2930afc1bb22b2f0cdced86a",
@@ -116,7 +136,7 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 9.491,
+      "elapsed_seconds": 6.846,
       "olean_sha256": "137b7e0cbd5379aa5bcdc94c571dd1516d59c3d86ef6baf831b6c7795ba6f558"
     },
     {
@@ -127,7 +147,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/Mahler.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/Mahler.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/Mahler.lean"
       ],
       "source_sha256": "e2aff982b250c1cd7f777d827c0b298f5a73c13fc59e84ff6c7a9036aa6bbcb6",
@@ -135,7 +155,7 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 3.288,
+      "elapsed_seconds": 3.081,
       "olean_sha256": "f42c492b75da072ab6f5ea00183c447279cd467e1127bee15c96d4697519f51f"
     },
     {
@@ -146,7 +166,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/MinorBudget.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/MinorBudget.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/MinorBudget.lean"
       ],
       "source_sha256": "61f0b16001cd33f5768d18a7c1e5c30da5e596a0d669f63ad0a3f18545b7f204",
@@ -154,7 +174,7 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 2.064,
+      "elapsed_seconds": 1.839,
       "olean_sha256": "94622f871786d08b285fd63beb117cfb120f86b2a92dd3a26799394d2b9f0b2e"
     },
     {
@@ -165,7 +185,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/Comparison.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/Comparison.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/Comparison.lean"
       ],
       "source_sha256": "a803fdbad0156e14129119c7eb2c0392cb9fbd9085a96cd200ae5a230ce48fcc",
@@ -173,7 +193,7 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 1.89,
+      "elapsed_seconds": 1.785,
       "olean_sha256": "a85c80d42c6d9ef986f32ede101d96ffd941b296f5824015bf0100c0a3a693fa"
     },
     {
@@ -184,7 +204,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/Conjugation.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/Conjugation.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/Conjugation.lean"
       ],
       "source_sha256": "1de76f9438f5066ff2ecf2436cac1d836f0c4fa42151636c2397d452b96eb8f7",
@@ -192,7 +212,7 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 1.88,
+      "elapsed_seconds": 1.752,
       "olean_sha256": "8511fe6258ecdd900094194485009b8649228db8a22bacdc256768c6eecddc64"
     },
     {
@@ -203,7 +223,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/Envelope.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/Envelope.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/Envelope.lean"
       ],
       "source_sha256": "7c96c8b0da01b004b5fca175172d800a4e39b3acc702b8e45cab4f5d0b532195",
@@ -211,7 +231,7 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 2.395,
+      "elapsed_seconds": 1.867,
       "olean_sha256": "a9353099f7f0006897ebdce112f35e7eafe0e1954b2943b3921186117cb586d6"
     },
     {
@@ -222,7 +242,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/MultiEnvelope.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/MultiEnvelope.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/MultiEnvelope.lean"
       ],
       "source_sha256": "bdb678bf410e8d800d7f56034b4f2e4523546027c711fddcbbd219fe42ff2ee8",
@@ -230,7 +250,7 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 2.336,
+      "elapsed_seconds": 1.804,
       "olean_sha256": "7490a43694b1ee90ec5c887536d6df1c4932f4f4fd29f408ac1ace183053c299"
     },
     {
@@ -241,7 +261,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/Clearing.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/Clearing.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/Clearing.lean"
       ],
       "source_sha256": "2cc733be62d0113e23990584ab4c0fd70ac42b314a08b1eeeb84e837759c4c9e",
@@ -249,7 +269,7 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 2.137,
+      "elapsed_seconds": 1.827,
       "olean_sha256": "5f461355331361d23765662f82b325ef2c26a7050a4d4e9ee496495ec6f20cb5"
     },
     {
@@ -260,7 +280,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/Height.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/Height.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/Height.lean"
       ],
       "source_sha256": "6e94c20dffd228bb42766ded2b82f266d3765f9c82827eb48deec12f5fc8414f",
@@ -268,7 +288,7 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 1.988,
+      "elapsed_seconds": 1.795,
       "olean_sha256": "7ffc61bec00c30c9c1ae6e41e0838cd3d53700037216217d64eb57c2effd03fd"
     },
     {
@@ -279,7 +299,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/Weights.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/Weights.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/Weights.lean"
       ],
       "source_sha256": "1e8341fc34f9493a2c2698fccf2bbb158aa96b2fb0af08c0d288ad4fcd9a1978",
@@ -287,7 +307,7 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 2.172,
+      "elapsed_seconds": 1.902,
       "olean_sha256": "63ab5a1c0d6c44f9cabb71f58cd433cced3b5861a4733919e139b0b0f719e1e6"
     },
     {
@@ -298,7 +318,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/Parity.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/Parity.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/Parity.lean"
       ],
       "source_sha256": "fc42325b4428d1eade2c2275be660950dd26f890d8f2300cd4aa82fe3bbe994f",
@@ -306,7 +326,7 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 2.286,
+      "elapsed_seconds": 2.168,
       "olean_sha256": "3f11fbe7ae141fd8054e303d96cfcb88c4d5340209b42b232aabc7e8ca54a117"
     },
     {
@@ -317,7 +337,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic/ParityDeterminant.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/ParityDeterminant.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/ParityDeterminant.lean"
       ],
       "source_sha256": "c83e92ae69d8e54ab09188ff0b216c3bebac32580ff292dc9c8a1cc50bd3dcfc",
@@ -325,8 +345,65 @@
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 1.933,
+      "elapsed_seconds": 1.908,
       "olean_sha256": "6d2bc1caf97536fec2b15858d99a1714f6bc120c71d42fed5e788bc5f4f570dd"
+    },
+    {
+      "module": "FixedQuadratic.FinitePlace",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/FinitePlace.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/FinitePlace.lean"
+      ],
+      "source_sha256": "6f444a978a9b0ea219ab04cc0f05497aec8f7566c0e537c2fd71873b1ec45ed9",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 2.668,
+      "olean_sha256": "49fbdb31244d35b70af26447baeb954b828847b8a8f9b076713b55734d4bfe2b"
+    },
+    {
+      "module": "FixedQuadratic.NumberFieldIntegral",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/NumberFieldIntegral.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/NumberFieldIntegral.lean"
+      ],
+      "source_sha256": "a3cc88dd2428b1c1c3b4a4733ca3201bb66dacc67607b26e8c50dd2e675f26d3",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 3.341,
+      "olean_sha256": "7488cb70359453eb3c661c5d2d86ac721f2b67863ad1dc0c59b850f5ad0f294b"
+    },
+    {
+      "module": "FixedQuadratic.QuadraticNorm",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic/QuadraticNorm.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/QuadraticNorm.lean"
+      ],
+      "source_sha256": "0669799ea233797e74cabffbf03a42c3b81c76b91674415bb6d7d2fb5b43c88a",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 2.141,
+      "olean_sha256": "6f93592035b432dae6ad56f2f49bfb9bc1375d8b2bf19328d471aea9ebbf9719"
     },
     {
       "module": "FixedQuadratic",
@@ -336,16 +413,16 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/FixedQuadratic.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/FixedQuadratic.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic.lean"
       ],
-      "source_sha256": "21c367371f83fd0ba0992639556bfbca9cfca4817e43115a2de70e03b874c413",
+      "source_sha256": "e0e27bfeb8c642c841db2fbfdb3c0d7ea9b4d7398146b9bb30eca87ccaa27bc0",
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 1.914,
-      "olean_sha256": "7bed825646e46aefea4fa73320d3f4aa491ffb64301607c31dcfbb6878c31582"
+      "elapsed_seconds": 1.85,
+      "olean_sha256": "aae3c7634a7d8b4d860280cd9fea7dae13cfd9a33d92cf9bbacb141615480492"
     },
     {
       "module": "checks.Regression",
@@ -355,16 +432,16 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/checks/Regression.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/Regression.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/Regression.lean"
       ],
-      "source_sha256": "9915f1fc2d4c0f45aa0a3b591ac390637ef6c1ac669f7a698337a5ecae5deed9",
+      "source_sha256": "c04d875c5e950ac43f2b2f0b492ff4800c47d9af10d7217319ee3ce77a319e39",
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 2.581,
-      "olean_sha256": "4b66d3f29e3f6d6b34026f4e9731e801a84887bf69756aba37889f92b8861c7e"
+      "elapsed_seconds": 3.104,
+      "olean_sha256": "7ddfd44d122979384a4f538b7868773922458eeba9efc214fa4ae9c1c3b69010"
     },
     {
       "module": "checks.Audit",
@@ -374,16 +451,70 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/checks/Audit.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/Audit.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/Audit.lean"
       ],
-      "source_sha256": "3495a4be7b0fea4b6fb38e1a35ef8507b6dcad290caea87b1447d2eb6cea8e5c",
-      "log_sha256": "2db7478b332eb118ff842c9d4036615b076b3d1806be605f77b1695747f9bf7b",
+      "source_sha256": "879fb553944ddf86a7adfa295c7d708e179befc505c748a9c0edad8de333fca9",
+      "log_sha256": "01ecf457b3666e2c43de5520b4b2767e4e478405f7a2ad2050265b5bdcc36fde",
       "exit_code": 0,
       "expected_failure": false,
       "passed": true,
-      "elapsed_seconds": 2.034,
-      "olean_sha256": "69092d166fdc77173fd3ca2f9cfbed3f84decea538f69540217802c8b88a3c1f"
+      "elapsed_seconds": 2.094,
+      "olean_sha256": "2d43674fdb2a031e3d8d7d9a7fcd552d0a6b42a51492655a6685527a6d5fd4c3"
+    },
+    {
+      "module": "checks.ExpectedFailureWrongConjugateRoot",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/ExpectedFailureWrongConjugateRoot.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureWrongConjugateRoot.lean"
+      ],
+      "source_sha256": "56f30e2221adadff2539b575db7540ae167d80f1836d960072017960e094bb9d",
+      "log_sha256": "393ca2412b5744ea852861512f47f757fcf8b68fd368dc2b381145d90153aa1b",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 1.999
+    },
+    {
+      "module": "checks.ExpectedFailureWrongRelativeDegree",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/ExpectedFailureWrongRelativeDegree.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureWrongRelativeDegree.lean"
+      ],
+      "source_sha256": "4ad27faee535b1e7e1a56b4943e841925d4b2cafe4aa5c7dfcea1332626b710e",
+      "log_sha256": "bee02b029f2cef1887c10a0c8d73bb9dc3731019e4a6d50285fdd110fc3ccd15",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 1.848
+    },
+    {
+      "module": "checks.ExpectedFailureMissingPrimitivity",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/ExpectedFailureMissingPrimitivity.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureMissingPrimitivity.lean"
+      ],
+      "source_sha256": "5c9319baf2420c2b9368c354890d5583834e9ac0bab0b3ecf5eb6a765f3506a0",
+      "log_sha256": "d571b57842c09ae2872d5d6f6565a8be29012536a87dd22251ed68b776acd2a4",
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 1.726
     },
     {
       "module": "checks.ExpectedFailureWithoutParity",
@@ -393,7 +524,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/checks/ExpectedFailureWithoutParity.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/ExpectedFailureWithoutParity.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureWithoutParity.lean"
       ],
       "source_sha256": "dea3dc31d82e3b07df148d671923a8cf9c112c6e658ab916152bd70f2e1555ee",
@@ -401,7 +532,7 @@
       "exit_code": 1,
       "expected_failure": true,
       "passed": true,
-      "elapsed_seconds": 1.88
+      "elapsed_seconds": 1.901
     },
     {
       "module": "checks.ExpectedFailureParityZero",
@@ -411,7 +542,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/checks/ExpectedFailureParityZero.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/ExpectedFailureParityZero.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureParityZero.lean"
       ],
       "source_sha256": "5ceb208183667deb5965ec477ad795230e80ef011ba3dfe7c4911689079e7012",
@@ -419,7 +550,7 @@
       "exit_code": 1,
       "expected_failure": true,
       "passed": true,
-      "elapsed_seconds": 1.792
+      "elapsed_seconds": 1.739
     },
     {
       "module": "checks.ExpectedFailureOddMissingX",
@@ -429,7 +560,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/checks/ExpectedFailureOddMissingX.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/ExpectedFailureOddMissingX.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureOddMissingX.lean"
       ],
       "source_sha256": "334eb934379932a8dbccae1d11b5657b7570544f2f13989f42bd9a549ef2e0fc",
@@ -437,7 +568,7 @@
       "exit_code": 1,
       "expected_failure": true,
       "passed": true,
-      "elapsed_seconds": 1.902
+      "elapsed_seconds": 1.674
     },
     {
       "module": "checks.ExpectedFailureMissingConjugate",
@@ -447,7 +578,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/checks/ExpectedFailureMissingConjugate.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/ExpectedFailureMissingConjugate.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureMissingConjugate.lean"
       ],
       "source_sha256": "cd98d47391086dc9ce58d6a6bcf176fd25c0606a5df611bf4ce1462098a32cac",
@@ -455,7 +586,7 @@
       "exit_code": 1,
       "expected_failure": true,
       "passed": true,
-      "elapsed_seconds": 1.785
+      "elapsed_seconds": 1.698
     },
     {
       "module": "checks.ExpectedFailureMissingCoefficient",
@@ -465,7 +596,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/checks/ExpectedFailureMissingCoefficient.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/ExpectedFailureMissingCoefficient.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureMissingCoefficient.lean"
       ],
       "source_sha256": "3aff162aab08095f1f144e0415d035a2084602025791b1442ab9514f598df288",
@@ -473,7 +604,7 @@
       "exit_code": 1,
       "expected_failure": true,
       "passed": true,
-      "elapsed_seconds": 1.867
+      "elapsed_seconds": 1.714
     },
     {
       "module": "checks.ExpectedFailureCartesian",
@@ -483,7 +614,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/checks/ExpectedFailureCartesian.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/ExpectedFailureCartesian.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureCartesian.lean"
       ],
       "source_sha256": "1190715a6e23c213deb123576653857f3f1bd3f132f975c69af055323a9c88dc",
@@ -491,7 +622,7 @@
       "exit_code": 1,
       "expected_failure": true,
       "passed": true,
-      "elapsed_seconds": 2.016
+      "elapsed_seconds": 1.673
     },
     {
       "module": "checks.ExpectedFailureDegreeEquality",
@@ -501,7 +632,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/checks/ExpectedFailureDegreeEquality.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/ExpectedFailureDegreeEquality.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureDegreeEquality.lean"
       ],
       "source_sha256": "d6ceb8c65dc7ed5249f8087250114112555d0815bd6f45de7416eb758aaae0d3",
@@ -509,7 +640,7 @@
       "exit_code": 1,
       "expected_failure": true,
       "passed": true,
-      "elapsed_seconds": 1.845
+      "elapsed_seconds": 1.841
     },
     {
       "module": "checks.ExpectedFailurePiFiniteness",
@@ -519,7 +650,7 @@
         "-M8192",
         "-DautoImplicit=false",
         "-o",
-        "/Users/keyishen/Documents/Codex/2026-10-09/task/parity-checkpoint-verification/lib/lean/checks/ExpectedFailurePiFiniteness.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/finite-place-checkpoint-verification/lib/lean/checks/ExpectedFailurePiFiniteness.olean",
         "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailurePiFiniteness.lean"
       ],
       "source_sha256": "7e9967e640d604b14ebe99b3d4196512a007f47b42ed0b770f24bd1dac58f145",
@@ -527,7 +658,7 @@
       "exit_code": 1,
       "expected_failure": true,
       "passed": true,
-      "elapsed_seconds": 1.83
+      "elapsed_seconds": 1.692
     }
   ],
   "axiom_audit": {
@@ -805,6 +936,95 @@
       "Classical.choice",
       "Quot.sound",
       "propext"
+    ],
+    "FixedQuadratic.primitive_quadratic_bezout": [
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.primitive_quadratic_max_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.gaussNorm_linear": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.gaussNorm_quadratic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.primitive_quadratic_root_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.gaussian_nonarch_le_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.multi_eval_nonarch_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.cleared_product_nonarch_le_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.Regression.primitive_three_coefficients": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.Regression.nonmonic_local_root_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.Regression.dependent_sqrt_two_local": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.cleared_product_isIntegral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.cleared_product_gaussian_of_descent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.quadratic_norm_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.quadratic_cleared_product_descent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.quadratic_cleared_product_gaussian": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.quadratic_cleared_norm_one_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.Regression.repeated_coordinate_gaussian": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
     ]
   },
   "source_hashes": {
@@ -820,9 +1040,15 @@
     "FixedQuadratic/Weights.lean": "1e8341fc34f9493a2c2698fccf2bbb158aa96b2fb0af08c0d288ad4fcd9a1978",
     "FixedQuadratic/Parity.lean": "fc42325b4428d1eade2c2275be660950dd26f890d8f2300cd4aa82fe3bbe994f",
     "FixedQuadratic/ParityDeterminant.lean": "c83e92ae69d8e54ab09188ff0b216c3bebac32580ff292dc9c8a1cc50bd3dcfc",
-    "FixedQuadratic.lean": "21c367371f83fd0ba0992639556bfbca9cfca4817e43115a2de70e03b874c413",
-    "checks/Regression.lean": "9915f1fc2d4c0f45aa0a3b591ac390637ef6c1ac669f7a698337a5ecae5deed9",
-    "checks/Audit.lean": "3495a4be7b0fea4b6fb38e1a35ef8507b6dcad290caea87b1447d2eb6cea8e5c",
+    "FixedQuadratic/FinitePlace.lean": "6f444a978a9b0ea219ab04cc0f05497aec8f7566c0e537c2fd71873b1ec45ed9",
+    "FixedQuadratic/NumberFieldIntegral.lean": "a3cc88dd2428b1c1c3b4a4733ca3201bb66dacc67607b26e8c50dd2e675f26d3",
+    "FixedQuadratic/QuadraticNorm.lean": "0669799ea233797e74cabffbf03a42c3b81c76b91674415bb6d7d2fb5b43c88a",
+    "FixedQuadratic.lean": "e0e27bfeb8c642c841db2fbfdb3c0d7ea9b4d7398146b9bb30eca87ccaa27bc0",
+    "checks/Regression.lean": "c04d875c5e950ac43f2b2f0b492ff4800c47d9af10d7217319ee3ce77a319e39",
+    "checks/Audit.lean": "879fb553944ddf86a7adfa295c7d708e179befc505c748a9c0edad8de333fca9",
+    "checks/ExpectedFailureWrongConjugateRoot.lean": "56f30e2221adadff2539b575db7540ae167d80f1836d960072017960e094bb9d",
+    "checks/ExpectedFailureWrongRelativeDegree.lean": "4ad27faee535b1e7e1a56b4943e841925d4b2cafe4aa5c7dfcea1332626b710e",
+    "checks/ExpectedFailureMissingPrimitivity.lean": "5c9319baf2420c2b9368c354890d5583834e9ac0bab0b3ecf5eb6a765f3506a0",
     "checks/ExpectedFailureWithoutParity.lean": "dea3dc31d82e3b07df148d671923a8cf9c112c6e658ab916152bd70f2e1555ee",
     "checks/ExpectedFailureParityZero.lean": "5ceb208183667deb5965ec477ad795230e80ef011ba3dfe7c4911689079e7012",
     "checks/ExpectedFailureOddMissingX.lean": "334eb934379932a8dbccae1d11b5657b7570544f2f13989f42bd9a549ef2e0fc",

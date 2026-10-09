@@ -228,3 +228,143 @@ FixedQuadratic.Regression.nonparity_eval_below_one : ‖Polynomial.eval (↑√2
       (Polynomial.map GaussianInt.toComplex (Polynomial.C 3 - Polynomial.C 2 * Polynomial.X))‖ <
   1
 'FixedQuadratic.Regression.nonparity_eval_below_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitive_quadratic_bezout : ∀ (a b c : ℤ), (↑(a.gcd b)).gcd c = 1 → ∃ u v w, u * a + v * b + w * c = 1
+'FixedQuadratic.primitive_quadratic_bezout' depends on axioms: [propext, Quot.sound]
+@FixedQuadratic.primitive_quadratic_max_one : ∀ {K : Type u_1} [inst : Field K] (v : AbsoluteValue K ℝ),
+  IsNonarchimedean ⇑v → ∀ (a b c : ℤ), (↑(a.gcd b)).gcd c = 1 → max (v ↑a) (max (v ↑b) (v ↑c)) = 1
+'FixedQuadratic.primitive_quadratic_max_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.gaussNorm_linear : ∀ {K : Type u_1} [inst : Field K] (v : AbsoluteValue K ℝ) (x : K),
+  Polynomial.gaussNorm v 1 (Polynomial.X - Polynomial.C x) = max 1 (v x)
+'FixedQuadratic.gaussNorm_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.gaussNorm_quadratic : ∀ {K : Type u_1} [inst : Field K] (v : AbsoluteValue K ℝ) (a b c : K),
+  Polynomial.gaussNorm v 1 (Polynomial.C a * Polynomial.X ^ 2 + Polynomial.C b * Polynomial.X + Polynomial.C c) =
+    max (v a) (max (v b) (v c))
+'FixedQuadratic.gaussNorm_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.primitive_quadratic_root_identity : ∀ {K : Type u_1} [inst : Field K] (v : AbsoluteValue K ℝ),
+  IsNonarchimedean ⇑v →
+    ∀ (a b c : ℤ),
+      (↑(a.gcd b)).gcd c = 1 →
+        ∀ (x y : K),
+          Polynomial.C ↑a * Polynomial.X ^ 2 + Polynomial.C ↑b * Polynomial.X + Polynomial.C ↑c =
+              Polynomial.C ↑a * ((Polynomial.X - Polynomial.C x) * (Polynomial.X - Polynomial.C y)) →
+            v ↑a * max 1 (v x) * max 1 (v y) = 1
+'FixedQuadratic.primitive_quadratic_root_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.gaussian_nonarch_le_one : ∀ {K : Type u_1} [inst : Field K] (v : AbsoluteValue K ℝ),
+  IsNonarchimedean ⇑v → ∀ (g : GaussianInt →+* K) (z : GaussianInt), v (g z) ≤ 1
+'FixedQuadratic.gaussian_nonarch_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multi_eval_nonarch_le : ∀ {K : Type u_1} [inst : Field K] {m : ℕ} (v : AbsoluteValue K ℝ),
+  IsNonarchimedean ⇑v →
+    ∀ (g : GaussianInt →+* K) (P : MvPolynomial (Fin m) GaussianInt) (x : Fin m → K) (e : Fin m → ℕ),
+      (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) → v (MvPolynomial.eval₂ g x P) ≤ ∏ i, max 1 (v (x i)) ^ e i
+'FixedQuadratic.multi_eval_nonarch_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.cleared_product_nonarch_le_one : ∀ {K : Type u_1} [inst : Field K] {m : ℕ} (v : AbsoluteValue K ℝ),
+  IsNonarchimedean ⇑v →
+    ∀ (g : GaussianInt →+* K) (P : MvPolynomial (Fin m) GaussianInt) (a b c : Fin m → ℤ) (x y : Fin m → K)
+      (e : Fin m → ℕ),
+      (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
+        (∀ (i : Fin m), (↑((a i).gcd (b i))).gcd (c i) = 1) →
+          (∀ (i : Fin m),
+              Polynomial.C ↑(a i) * Polynomial.X ^ 2 + Polynomial.C ↑(b i) * Polynomial.X + Polynomial.C ↑(c i) =
+                Polynomial.C ↑(a i) * ((Polynomial.X - Polynomial.C (x i)) * (Polynomial.X - Polynomial.C (y i)))) →
+            v ((∏ i, ↑(a i) ^ e i) * MvPolynomial.eval₂ g x P * MvPolynomial.eval₂ g y P) ≤ 1
+'FixedQuadratic.cleared_product_nonarch_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.primitive_three_coefficients : ∃ u v w, u * 6 + v * 10 + w * 15 = 1
+'FixedQuadratic.Regression.primitive_three_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.nonmonic_local_root_identity : ∀ (v : AbsoluteValue ℚ ℝ),
+  IsNonarchimedean ⇑v → v 2 * max 1 (v 1) * max 1 (v (1 / 2)) = 1
+'FixedQuadratic.Regression.nonmonic_local_root_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.dependent_sqrt_two_local : ∀ (v : AbsoluteValue ℂ ℝ), IsNonarchimedean ⇑v → v (-8) ≤ 1
+'FixedQuadratic.Regression.dependent_sqrt_two_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.cleared_product_isIntegral : ∀ {K : Type u_1} [inst : Field K] [NumberField K] {m : ℕ}
+  (g : GaussianInt →+* K) (P : MvPolynomial (Fin m) GaussianInt) (a b c : Fin m → ℤ) (x y : Fin m → K) (e : Fin m → ℕ),
+  (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
+    (∀ (i : Fin m), (↑((a i).gcd (b i))).gcd (c i) = 1) →
+      (∀ (i : Fin m),
+          Polynomial.C ↑(a i) * Polynomial.X ^ 2 + Polynomial.C ↑(b i) * Polynomial.X + Polynomial.C ↑(c i) =
+            Polynomial.C ↑(a i) * ((Polynomial.X - Polynomial.C (x i)) * (Polynomial.X - Polynomial.C (y i)))) →
+        IsIntegral ℤ ((∏ i, ↑(a i) ^ e i) * MvPolynomial.eval₂ g x P * MvPolynomial.eval₂ g y P)
+'FixedQuadratic.cleared_product_isIntegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.cleared_product_gaussian_of_descent : ∀ {G : Type u_1} {K : Type u_2} [inst : Field G]
+  [inst_1 : Field K] [NumberField K] [inst_3 : Algebra GaussianInt G] [IsFractionRing GaussianInt G]
+  [inst_5 : Algebra G K] [inst_6 : Algebra GaussianInt K] [IsScalarTower GaussianInt G K] {m : ℕ}
+  (P : MvPolynomial (Fin m) GaussianInt) (a b c : Fin m → ℤ) (x y : Fin m → K) (e : Fin m → ℕ),
+  (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
+    (∀ (i : Fin m), (↑((a i).gcd (b i))).gcd (c i) = 1) →
+      (∀ (i : Fin m),
+          Polynomial.C ↑(a i) * Polynomial.X ^ 2 + Polynomial.C ↑(b i) * Polynomial.X + Polynomial.C ↑(c i) =
+            Polynomial.C ↑(a i) * ((Polynomial.X - Polynomial.C (x i)) * (Polynomial.X - Polynomial.C (y i)))) →
+        ∀ (z : G),
+          (algebraMap G K) z =
+              (∏ i, ↑(a i) ^ e i) * MvPolynomial.eval₂ (algebraMap GaussianInt K) x P *
+                MvPolynomial.eval₂ (algebraMap GaussianInt K) y P →
+            (∏ i, ↑(a i) ^ e i) * MvPolynomial.eval₂ (algebraMap GaussianInt K) x P *
+                MvPolynomial.eval₂ (algebraMap GaussianInt K) y P ∈
+              (algebraMap GaussianInt K).range
+'FixedQuadratic.cleared_product_gaussian_of_descent' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.quadratic_norm_identity : ∀ {G : Type u_1} {K : Type u_2} [inst : Field G] [inst_1 : Field K]
+  [inst_2 : Algebra G K] [FiniteDimensional G K] [IsGalois G K],
+  Module.finrank G K = 2 → ∀ (τ : Gal(K/G)), τ ≠ 1 → ∀ (q : K), (algebraMap G K) ((Algebra.norm G) q) = q * τ q
+'FixedQuadratic.quadratic_norm_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.quadratic_cleared_product_descent : ∀ {G : Type u_1} {K : Type u_2} [inst : Field G] [inst_1 : Field K]
+  [inst_2 : Algebra GaussianInt G] [inst_3 : Algebra G K] [inst_4 : Algebra GaussianInt K]
+  [IsScalarTower GaussianInt G K] [FiniteDimensional G K] [IsGalois G K] {m : ℕ},
+  Module.finrank G K = 2 →
+    ∀ (τ : Gal(K/G)),
+      τ ≠ 1 →
+        ∀ (P : MvPolynomial (Fin m) GaussianInt) (a : Fin m → ℤ) (x : Fin m → K) (e : Fin m → ℕ),
+          (algebraMap G K)
+              ((∏ i, ↑(a i) ^ e i) * (Algebra.norm G) (MvPolynomial.eval₂ (algebraMap GaussianInt K) x P)) =
+            (∏ i, ↑(a i) ^ e i) * MvPolynomial.eval₂ (algebraMap GaussianInt K) x P *
+              MvPolynomial.eval₂ (algebraMap GaussianInt K) (fun i => τ (x i)) P
+'FixedQuadratic.quadratic_cleared_product_descent' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.quadratic_cleared_product_gaussian : ∀ {G : Type u_1} {K : Type u_2} [inst : Field G] [inst_1 : Field K]
+  [NumberField K] [inst_3 : Algebra GaussianInt G] [IsFractionRing GaussianInt G] [inst_5 : Algebra G K]
+  [inst_6 : Algebra GaussianInt K] [IsScalarTower GaussianInt G K] [FiniteDimensional G K] [IsGalois G K] {m : ℕ},
+  Module.finrank G K = 2 →
+    ∀ (τ : Gal(K/G)),
+      τ ≠ 1 →
+        ∀ (P : MvPolynomial (Fin m) GaussianInt) (a b c : Fin m → ℤ) (x : Fin m → K) (e : Fin m → ℕ),
+          (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
+            (∀ (i : Fin m), (↑((a i).gcd (b i))).gcd (c i) = 1) →
+              (∀ (i : Fin m),
+                  Polynomial.C ↑(a i) * Polynomial.X ^ 2 + Polynomial.C ↑(b i) * Polynomial.X + Polynomial.C ↑(c i) =
+                    Polynomial.C ↑(a i) *
+                      ((Polynomial.X - Polynomial.C (x i)) * (Polynomial.X - Polynomial.C (τ (x i))))) →
+                (∏ i, ↑(a i) ^ e i) * MvPolynomial.eval₂ (algebraMap GaussianInt K) x P *
+                    MvPolynomial.eval₂ (algebraMap GaussianInt K) (fun i => τ (x i)) P ∈
+                  (algebraMap GaussianInt K).range
+'FixedQuadratic.quadratic_cleared_product_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.quadratic_cleared_norm_one_le : ∀ {G : Type u_1} {K : Type u_2} [inst : Field G] [inst_1 : Field K]
+  [NumberField K] [inst_3 : Algebra GaussianInt G] [IsFractionRing GaussianInt G] [inst_5 : Algebra G K]
+  [inst_6 : Algebra GaussianInt K] [IsScalarTower GaussianInt G K] [FiniteDimensional G K] [IsGalois G K] {m : ℕ},
+  Module.finrank G K = 2 →
+    ∀ (τ : Gal(K/G)),
+      τ ≠ 1 →
+        ∀ (P : MvPolynomial (Fin m) GaussianInt) (a b c : Fin m → ℤ) (x : Fin m → K) (e : Fin m → ℕ),
+          (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
+            (∀ (i : Fin m), (↑((a i).gcd (b i))).gcd (c i) = 1) →
+              (∀ (i : Fin m),
+                  Polynomial.C ↑(a i) * Polynomial.X ^ 2 + Polynomial.C ↑(b i) * Polynomial.X + Polynomial.C ↑(c i) =
+                    Polynomial.C ↑(a i) *
+                      ((Polynomial.X - Polynomial.C (x i)) * (Polynomial.X - Polynomial.C (τ (x i))))) →
+                (∀ (i : Fin m), a i ≠ 0) →
+                  MvPolynomial.eval₂ (algebraMap GaussianInt K) x P ≠ 0 →
+                    ∀ (φ : K →+* ℂ),
+                      φ.comp (algebraMap GaussianInt K) = GaussianInt.toComplex →
+                        1 ≤
+                          (∏ i, ‖φ ↑(a i)‖ ^ e i) * ‖φ (MvPolynomial.eval₂ (algebraMap GaussianInt K) x P)‖ *
+                            ‖φ (MvPolynomial.eval₂ (algebraMap GaussianInt K) (fun i => τ (x i)) P)‖
+'FixedQuadratic.quadratic_cleared_norm_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.Regression.repeated_coordinate_gaussian : ∀ {G : Type u_1} {K : Type u_2} [inst : Field G]
+  [inst_1 : Field K] [NumberField K] [inst_3 : Algebra GaussianInt G] [IsFractionRing GaussianInt G]
+  [inst_5 : Algebra G K] [inst_6 : Algebra GaussianInt K] [IsScalarTower GaussianInt G K] [FiniteDimensional G K]
+  [IsGalois G K],
+  Module.finrank G K = 2 →
+    ∀ (τ : Gal(K/G)),
+      τ ≠ 1 →
+        ∀ (a b c : ℤ) (β : K),
+          (↑(a.gcd b)).gcd c = 1 →
+            Polynomial.C ↑a * Polynomial.X ^ 2 + Polynomial.C ↑b * Polynomial.X + Polynomial.C ↑c =
+                Polynomial.C ↑a * ((Polynomial.X - Polynomial.C β) * (Polynomial.X - Polynomial.C (τ β))) →
+              ↑a ^ 2 * (β + β) * (τ β + τ β) ∈ (algebraMap GaussianInt K).range
+'FixedQuadratic.Regression.repeated_coordinate_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]

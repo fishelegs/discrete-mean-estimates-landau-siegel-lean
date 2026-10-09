@@ -30,8 +30,11 @@ The changed norm step is not discharged by upstream nonzero Gaussian-integer
 modulus >=1: first the exact cleared simultaneous norm must actually be shown
 Gaussian integral. The new `Resultant.lean` proves this for one split quadratic
 and one-variable `P`, while `Conjugation.lean` handles simultaneous nonvanishing.
-Their conjunction does not yet prove the multivariate primitive-minimal-polynomial
-norm statement. All remaining hypotheses and construction gaps are listed in
+The third checkpoint now proves multivariate Gaussian integrality in an
+abstract degree-two Galois tower over the fraction field of Gaussian integers.
+It combines the primitive finite-place argument with an actual two-embedding
+norm descent and integral closedness. The actual fixed real quadratic field
+and its minpoly/height tower have not yet been constructed to instantiate it. All remaining hypotheses and construction gaps are listed in
 README.md and visible in `checks/Audit.lean`.
 
 The paper's `Lambda=4 log 2` must also be checked against the available **formal**

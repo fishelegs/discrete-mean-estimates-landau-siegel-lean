@@ -66,6 +66,26 @@ The exact elaborated types and complete axiom reports are printed by
   `abs(pi-beta)<=H^(-nu)` transfers to the period-center error bound
   `2*k*exp(nu)*exp(-nu*ceil(log H))`, and each nonzero center gives distinct
   multiples. These use `H>=1`, `nu>=0`, and `j<=k`.
+- `primitive_quadratic_root_identity`: a primitive integer quadratic factored
+  over a field satisfies `v(a)*max(1,v(x))*max(1,v(y))=1` for **every**
+  nonarchimedean real absolute value. Three-coefficient Bezout proves the unit
+  Gauss norm; no finite-place exception, including above 2, is assumed.
+- `cleared_product_nonarch_le_one` and `cleared_product_isIntegral`: with
+  coordinate degrees `<=e_i` and the root-pair factorizations, the product
+  `(product a_i^e_i)*P(x)*P(y)` is locally bounded by 1 and is an algebraic
+  integer in an ambient number field. Integrality is a conclusion.
+- `quadratic_cleared_product_gaussian`: if `G` is the fraction field of
+  Gaussian integers, `K/G` is a degree-two Galois number-field extension, and
+  `tau` is a nonidentity `G`-automorphism, the factorizations with pairs
+  `(x_i,tau(x_i))` imply that the exactly cleared product belongs to the image
+  of Gaussian integers in `K`. It assumes no integrality or descent conclusion.
+  Descent is proved using the actual two-automorphism norm, followed by
+  integrality reflection and Gaussian integral closedness. The number of
+  coordinates may be arbitrary and they may coincide or depend on each other.
+- `quadratic_cleared_norm_one_le`: additionally, nonzero leading coefficients,
+  a nonzero target value and a compatible complex embedding imply the product
+  of the target/conjugate norms and the exact leading-coefficient factors is
+  at least 1. Simultaneous nonvanishing is proved, not separately assumed.
 - `comparison_contradiction`: the explicitly stated normalized lower/upper
   scalar estimates contradict the two strict margins. It assumes those
   estimates and margins and concludes `False`; it is **not** named or used as
@@ -76,12 +96,13 @@ The exact elaborated types and complete axiom reports are printed by
 1. Construct a fixed real quadratic field, its simultaneous involution and the
    primitive integer minimal polynomials of all selected elements. Connect the
    exact polynomial maximum height and root coefficient identities.
-2. Prove the changed **multivariate same-field** integrality statement
-   `(product a_i^e_i)*P(beta)*P(tau beta) in Z[i]`, with exponent `e_i`, not `2e_i`.
-   The one-variable resultant proof does not prove this: full Cartesian
-   resultants can vanish on dependent tuples. The paper's finite-place/Gauss
-   norm argument, including primes above 2 and Gaussian rational intersection,
-   is the intended route. No axiom or stub replaces it here.
+2. Instantiate the now-proved **multivariate same-field** Gaussian integrality
+   theorem for the actual fixed real quadratic field after adjoining `i`.
+   Construct its compatible fraction-field tower, relative degree two, Galois
+   involution, complex embedding and primitive root-pair factorizations.
+   These are mathematical structure obligations, not an unproved norm-integrality
+   hypothesis. Combine its exact `e_i` factors with the multivariate coefficient
+   envelope and Mahler bounds. Full Cartesian resultants remain invalid.
 3. Build the actual formal-center truncated-log matrix over multivariate
    polynomials and prove the entry degree/clearing hypotheses of the generic
    determinant theorems. Prove the coefficient-l1 Cauchy estimate at radius 1/2,
@@ -112,7 +133,7 @@ python3 scripts/replay.py --lean "$(elan which lean)" \
 ```
 
 The script compiles all new sources and the aggregate, positive regressions,
-actual type/axiom prints, and eight separately checked expected failures. It
+actual type/axiom prints, and eleven separately checked expected failures. It
 rejects `sorry`, `admit`, project `axiom`, `native_decide`, unsafe code and
 external proof hooks. Only `propext`, `Classical.choice`, `Quot.sound` are allowed
 in axiom reports. It records source, compiler, imported cache and output hashes.
@@ -153,6 +174,24 @@ This independent algebraic work does not prove `mu(pi/sqrt(d))=2`. Remaining
 work for that proposed paper extension is the actual paired +/-j row packet,
 its entrywise sign-substitution identity after clearing, surjectivity under
 those centers, and analytic/parameter transfer. It also does not discharge
-the original general same-field multivariate norm integrality obligation:
+the actual fixed-field instantiation and packet obligations:
 general elements of Q(sqrt(d)) have rational offsets, and sign substitution
 need not send such a center to its negative. No BA result is asserted.
+
+## Same-field norm checkpoint
+
+The third checkpoint follows the original finite-place proof, now closed at the
+abstract arithmetic interface. In particular, the exact exponent is `e_i`,
+not `2*e_i`, and no independent Cartesian conjugates are introduced.
+`quadratic_norm_identity` proves that the true relative norm is `q*tau(q)`
+using relative degree two. A degree-four substitution and the false repeated-root factorization of the
+base-field root 1/2 are expected failures.
+Positive regressions include nonmonic local roots, three-coefficient Bezout,
+and two repeated coordinates cleared by `a^2`.
+
+The independently reviewed elementary monomial-pairing alternative could
+remove primitivity and finite-place dependencies from a later proof variant.
+It is not required for this checkpoint, and is not counted as Lean verified.
+The current theorem's primitive gcd and explicit root-pair factorization
+hypotheses remain in the actual type. A mere quadratic root equation for a
+base-field element does not supply that factorization.

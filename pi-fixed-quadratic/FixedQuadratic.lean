@@ -10,3 +10,6 @@ import FixedQuadratic.Height
 import FixedQuadratic.Weights
 import FixedQuadratic.Parity
 import FixedQuadratic.ParityDeterminant
+import FixedQuadratic.FinitePlace
+import FixedQuadratic.NumberFieldIntegral
+import FixedQuadratic.QuadraticNorm

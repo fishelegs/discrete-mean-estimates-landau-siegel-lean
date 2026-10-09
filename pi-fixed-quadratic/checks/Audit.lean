@@ -10,6 +10,9 @@ import FixedQuadratic.Parity
 import FixedQuadratic.ParityDeterminant
 import FixedQuadratic.Resultant
 import FixedQuadratic.Weights
+import FixedQuadratic.FinitePlace
+import FixedQuadratic.NumberFieldIntegral
+import FixedQuadratic.QuadraticNorm
 import checks.Regression
 
 #check @FixedQuadratic.determinant_clearing
@@ -122,3 +125,41 @@ import checks.Regression
 #print axioms FixedQuadratic.Regression.odd_sqrt_two_norm
 #check @FixedQuadratic.Regression.nonparity_eval_below_one
 #print axioms FixedQuadratic.Regression.nonparity_eval_below_one
+
+#check @FixedQuadratic.primitive_quadratic_bezout
+#print axioms FixedQuadratic.primitive_quadratic_bezout
+#check @FixedQuadratic.primitive_quadratic_max_one
+#print axioms FixedQuadratic.primitive_quadratic_max_one
+#check @FixedQuadratic.gaussNorm_linear
+#print axioms FixedQuadratic.gaussNorm_linear
+#check @FixedQuadratic.gaussNorm_quadratic
+#print axioms FixedQuadratic.gaussNorm_quadratic
+#check @FixedQuadratic.primitive_quadratic_root_identity
+#print axioms FixedQuadratic.primitive_quadratic_root_identity
+#check @FixedQuadratic.gaussian_nonarch_le_one
+#print axioms FixedQuadratic.gaussian_nonarch_le_one
+#check @FixedQuadratic.multi_eval_nonarch_le
+#print axioms FixedQuadratic.multi_eval_nonarch_le
+#check @FixedQuadratic.cleared_product_nonarch_le_one
+#print axioms FixedQuadratic.cleared_product_nonarch_le_one
+#check @FixedQuadratic.Regression.primitive_three_coefficients
+#print axioms FixedQuadratic.Regression.primitive_three_coefficients
+#check @FixedQuadratic.Regression.nonmonic_local_root_identity
+#print axioms FixedQuadratic.Regression.nonmonic_local_root_identity
+#check @FixedQuadratic.Regression.dependent_sqrt_two_local
+#print axioms FixedQuadratic.Regression.dependent_sqrt_two_local
+
+#check @FixedQuadratic.cleared_product_isIntegral
+#print axioms FixedQuadratic.cleared_product_isIntegral
+#check @FixedQuadratic.cleared_product_gaussian_of_descent
+#print axioms FixedQuadratic.cleared_product_gaussian_of_descent
+#check @FixedQuadratic.quadratic_norm_identity
+#print axioms FixedQuadratic.quadratic_norm_identity
+#check @FixedQuadratic.quadratic_cleared_product_descent
+#print axioms FixedQuadratic.quadratic_cleared_product_descent
+#check @FixedQuadratic.quadratic_cleared_product_gaussian
+#print axioms FixedQuadratic.quadratic_cleared_product_gaussian
+#check @FixedQuadratic.quadratic_cleared_norm_one_le
+#print axioms FixedQuadratic.quadratic_cleared_norm_one_le
+#check @FixedQuadratic.Regression.repeated_coordinate_gaussian
+#print axioms FixedQuadratic.Regression.repeated_coordinate_gaussian
