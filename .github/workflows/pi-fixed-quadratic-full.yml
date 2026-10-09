@@ -1,0 +1,62 @@
+name: Pi fixed quadratic full theorem fresh Linux
+on:
+  push:
+    paths:
+      - 'pi-fixed-quadratic/**'
+      - '.github/workflows/pi-fixed-quadratic-full.yml'
+  pull_request:
+    paths:
+      - 'pi-fixed-quadratic/**'
+      - '.github/workflows/pi-fixed-quadratic-full.yml'
+  workflow_dispatch:
+jobs:
+  fresh-final-target:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    defaults:
+      run:
+        working-directory: pi-fixed-quadratic
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install isolated pinned Lean 4.34.1
+        run: |
+          set -euo pipefail
+          curl --retry 5 --retry-all-errors --retry-delay 2 -fsSL \
+            https://elan.lean-lang.org/elan-init.sh -o "$RUNNER_TEMP/elan-init.sh"
+          sh "$RUNNER_TEMP/elan-init.sh" -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Provision exact mathlib dependencies and official cache only
+        run: |
+          set -euo pipefail
+          source "$HOME/.elan/env"
+          lake exe cache get
+          git diff --exit-code -- lean-toolchain lakefile.lean lake-manifest.json
+      - name: Fetch clean pinned upstream source without its Lake hooks
+        run: |
+          set -euo pipefail
+          upstream_pin=$(python3 -c 'import json; print(json.load(open("dependency-pins.json"))["upstream_math"])')
+          git init "$RUNNER_TEMP/pi-upstream-source"
+          git -C "$RUNNER_TEMP/pi-upstream-source" remote add origin https://github.com/openai/math.git
+          git -C "$RUNNER_TEMP/pi-upstream-source" fetch --depth=1 origin "$upstream_pin"
+          git -C "$RUNNER_TEMP/pi-upstream-source" checkout --detach FETCH_HEAD
+          test "$(git -C "$RUNNER_TEMP/pi-upstream-source" rev-parse HEAD)" = "$upstream_pin"
+      - name: Fresh ordinary Lean full target, exact types, axioms, positive and negative tests
+        run: |
+          set -euo pipefail
+          source "$HOME/.elan/env"
+          python3 scripts/replay_full_target.py --lean "$(elan which lean)" \
+            --mathlib "$PWD/.lake/packages/mathlib" \
+            --packages-dir "$PWD/.lake/packages" \
+            --upstream "$RUNNER_TEMP/pi-upstream-source" \
+            --out "$RUNNER_TEMP/fixed-quadratic-full-replay"
+      - name: Upload full-target source and kernel evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fixed-quadratic-full-theorem-verification
+          path: |
+            ${{ runner.temp }}/fixed-quadratic-full-replay/full-target-receipt.json
+            ${{ runner.temp }}/fixed-quadratic-full-replay/logs/
+            pi-fixed-quadratic/scripts/full-target-closure.json
+            pi-fixed-quadratic/dependency-pins.json
+          if-no-files-found: warn

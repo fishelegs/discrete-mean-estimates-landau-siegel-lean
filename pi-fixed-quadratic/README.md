@@ -25,6 +25,18 @@ The enclosing repository's Lean/Mathlib 4.30.0 files and its A7, W2, sqrt(2),
 weighted-colon, and Log-Pade checkpoints are preserved. The arithmetic core does not import upstream PiExponent. The separately replayed
 geometry and analysis ports reuse its hash-audited Lean closure and exact APIs.
 
+## Fresh independent Linux replay
+
+The dedicated `Pi fixed quadratic full theorem fresh Linux` workflow rebuilds
+all 843 upstream and 65 local modules needed by the final public aggregate and
+its final positive/type/axiom/negative regressions. Only the exact mathlib
+package cache is permitted; all OAI and local proofs are compiled afresh into
+an empty output directory. It does not depend on old Mac verification receipts.
+See `audit/CHECKPOINT12.md` and `scripts/replay_full_target.py` for reproduction
+and the distinction between cached dependencies and newly checked proof sources.
+Its remote result must be checked independently; the older arithmetic workflow
+covers only the arithmetic core.
+
 ## Proved statements
 
 The exact elaborated types and complete axiom reports are printed by
