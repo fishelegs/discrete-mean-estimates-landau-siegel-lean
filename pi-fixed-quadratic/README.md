@@ -117,19 +117,16 @@ The exact elaborated types and complete axiom reports are printed by
    source's weighted row/column packet. The normalized actual-minor estimate
    is now `formal_minor_fixed_field_normalized_lower`, with both denominator
    costs and explicit geometric and Mahler-to-weight budgets.
-4. Generalize the upstream **proved Lean** geometric surjectivity and analytic
-   aggregate from rational `FixedData` to height-linked fixed-field data. The
-   upstream complex-center minor extraction is conditional on surjectivity;
-   it does not itself prove the needed generalized geometric input. The actual fixed-field
-   center injectivity and weighted curve contact inequality now compile in
-   `checks/UpstreamGeometryBridge.lean` against the generic proved upstream
-   theorem. Its independent audit also prints the exact still-rational-data
-   ampleness, jet-surjectivity and actual analytic types. The compactification
-   and jet chain still require generalization.
-5. The changed dimension error limits, successive height choices and factorial
-   remainder limit under polynomial row growth are proved. Instantiate these
-   with the generalized packet, supply the actual analytic estimate and margins to
-   `comparison_contradiction` and conclude exceptional-set finiteness.
+4. The geometry and complete analytic transfers are now proved in the separate
+   upstream-dependent ports. CP9 derives cofinal nonzero actual minors from
+   explicit geometry. CP10 derives literal translation expansion, scalar bounds,
+   holomorphic collision bounds, determinant summation, real-degree vanishing
+   remainders and two-sided bounds for exactly the same actual minor.
+5. Construct the same packet from an infinite fixed-field exceptional set:
+   discharge the explicit inflated volumes, separated products, tail budget and
+   strict changed total-error/collision margins in `no_geometric_packet`.
+   That theorem currently proves a conditional packet contradiction and is
+   explicitly not the final fixed-field pi finiteness theorem.
 
 The target fixes the field and `nu>2` before choosing the packet. It does not
 concern varying quadratic fields, pi BA/non-BA, a degree-exactly-two lower
@@ -358,3 +355,26 @@ primitive height of sqrt(2). Negative fixtures reject a missing tail budget and
 an attempted assumed-surjectivity record field. Run `scripts/audit_geometry_port.py`
 with the exact upstream verification root and a passed core replay receipt.
 This separate replay is not included in the 50-check arithmetic Linux CI.
+
+## Complete analytic transfer (CP10)
+
+`FixedQuadratic/AnalysisPort` contains actual fixed-field primitive-height data,
+complete translation expansion and determinant summation, collision bounds,
+vanishing analytic and factorial remainders for real auxiliary degrees, and
+the collision-rate limit. It retains the exact ceiling `exp(nu)` approximation
+cost and the joint row rebate. `actual_minor_two_sided` proves both bounds for
+one common nonzero determinant using the actual degree-two field norm theorem.
+`cofinal_nonzero_actual_minor` connects CP9 geometry to exactly this matrix.
+`no_geometric_packet` obtains its minors from the proved geometric chain and
+concludes False under explicitly displayed elementary geometric conditions and
+strict total-error/collision margins. These margins are not claimed to follow
+from every infinite exceptional set yet.
+
+Separate ordinary Lean replay: six proof modules, aggregate, positive changed
+budget regression, 61-type/axiom audit and two diagnostic failures = 11 checks.
+All axioms are among `propext`, `Classical.choice`, `Quot.sound`. Source, logs,
+compiler exits and olean hashes are in `audit/analysis-port-audit.json`; exact
+types and the whole input record are in `audit/analysis-port-logs/checks.AnalysisAudit.log`.
+Run `scripts/audit_analysis_port.py` with passed core, geometry and packet
+receipts and the exact upstream verification root. This local replay is
+separate from the unchanged 50-check arithmetic Linux CI.

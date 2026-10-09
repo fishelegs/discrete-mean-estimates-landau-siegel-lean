@@ -1,0 +1,525 @@
+{
+  "status": "passed",
+  "scope": "Complete literal analytic expansion, scalar transfer, collision, determinant summation, vanishing real-degree remainders, same-minor arithmetic and geometry connection. Explicit geometry/strict scalar margins still remain in no_geometric_packet; final exceptional-set finiteness is not proved.",
+  "upstream_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "core_receipt_sha256": "95906b608fae6aa1e8ab976df4351576c9fcbd4ac291cbc34067d7bfffa06917",
+  "geometry_receipt_sha256": "4623d56f9dfa94559eee0cb56bed9d1d5969db6f1e2d6e8afc769148ac2a0ca7",
+  "packet_receipt_sha256": "ef22dd8e4e8d419c8ea6f49b22ce2b4439cd83e5f89fb617d03fb7a484ba76b7",
+  "checks": [
+    {
+      "module": "FixedQuadratic.AnalysisPort.Data",
+      "source_sha256": "80d0e0cb5238cf386dbc3786a67dc6beb08f62bbb88ed3f35af031d92701adaa",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-analysis-port-verification/lib/lean/FixedQuadratic/AnalysisPort/Data.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/AnalysisPort/Data.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.553,
+      "olean_sha256": "7043ed24b3ef80897db7a9ae3b0139350f6fd832192895457495f48da2e93cb0"
+    },
+    {
+      "module": "FixedQuadratic.AnalysisPort.LiteralAnalyticSummand",
+      "source_sha256": "250a64389bd857ed5a998108e030a84bb5a08de6255a54f32c8e5fe25fd6662c",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-analysis-port-verification/lib/lean/FixedQuadratic/AnalysisPort/LiteralAnalyticSummand.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/AnalysisPort/LiteralAnalyticSummand.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 5.242,
+      "olean_sha256": "c6e6f17ae8121a4b930f24df0e27aa076df5f274de663285e588b2fb2488ceda"
+    },
+    {
+      "module": "FixedQuadratic.AnalysisPort.AnalyticAggregate",
+      "source_sha256": "92483ea3003c3074b39cca426b95023094810b43eeede8a6993e6824ad0fcacb",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-analysis-port-verification/lib/lean/FixedQuadratic/AnalysisPort/AnalyticAggregate.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/AnalysisPort/AnalyticAggregate.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.03,
+      "olean_sha256": "2bc494ccb68be391251b3c5745d9c5275acd86fd6715919392ecb7b79f13d201"
+    },
+    {
+      "module": "FixedQuadratic.AnalysisPort.BothBounds",
+      "source_sha256": "20642b2effa77da31633cad0c302dd92e97bba8327adbd80410589a113852511",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-analysis-port-verification/lib/lean/FixedQuadratic/AnalysisPort/BothBounds.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/AnalysisPort/BothBounds.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.135,
+      "olean_sha256": "4ca970cb9ace554a28823901f68f4dbfbf98fa7ce271d25909f997ab58c914da"
+    },
+    {
+      "module": "FixedQuadratic.AnalysisPort.Remainders",
+      "source_sha256": "fd1a9ced18c262f1bee4f878ba4bfedd15b6f5ca3f7c1eef6676322f5c923cc0",
+      "log_sha256": "e345f8a3612ed06a1c3c49ade2cfb8ecbe9f17dc58767324d4c98e499bf6d164",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-analysis-port-verification/lib/lean/FixedQuadratic/AnalysisPort/Remainders.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/AnalysisPort/Remainders.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 3.981,
+      "olean_sha256": "7b386faa596ec030848edd6dd7723ffc547966f00f14459c74106e6b4cf09b9d"
+    },
+    {
+      "module": "FixedQuadratic.AnalysisPort.Packet",
+      "source_sha256": "fd92ec5c767248ceba47aae6508f640d338f7eb8d241f7ce59d287d1e18a9f2a",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-analysis-port-verification/lib/lean/FixedQuadratic/AnalysisPort/Packet.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/AnalysisPort/Packet.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.624,
+      "olean_sha256": "2d15d302314305ad1d3b655a35ec8d7d88d63daee4dd925ca3fae2590c85a9be"
+    },
+    {
+      "module": "checks.AnalysisAggregate",
+      "source_sha256": "cf96a050ecbea9e7f81da96d0c7e7154bd843f8f38118e1359bef015c1435e0e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-analysis-port-verification/lib/lean/checks/AnalysisAggregate.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/AnalysisAggregate.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 3.945,
+      "olean_sha256": "59e5ebe2c53b77a475444c4b8b946c321944ae11f478ebb98e15c81f394cdc34"
+    },
+    {
+      "module": "checks.AnalysisRegression",
+      "source_sha256": "9ebca6289c8574926cb0a0d4b57ee8d033494c3dfa0ad8fba8fa8c83f98f3801",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-analysis-port-verification/lib/lean/checks/AnalysisRegression.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/AnalysisRegression.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.063,
+      "olean_sha256": "895ccd093cd282b5f8559427d6563f85ff1cadbee6ccc5c8d30ed371d01cd952"
+    },
+    {
+      "module": "checks.AnalysisAudit",
+      "source_sha256": "f59fd9ba87a1e844673ee9b16e9b27933ec8fd6d5e62814378b50a4e294f0113",
+      "log_sha256": "9ba0792775a10c93e57602240c8ac77dccde970119acf796d78e8b5e0148c763",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-analysis-port-verification/lib/lean/checks/AnalysisAudit.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/AnalysisAudit.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.654,
+      "olean_sha256": "778e746c5198f066017c696a3eda7abd30f2ee47cc9f2d4e1369a0a54cfa65bf"
+    },
+    {
+      "module": "checks.ExpectedFailureAnalysisMissingMargins",
+      "source_sha256": "2eb308ecc7276b8bb4302a741683a632cc1606b597c50e45f5369b73f58d6e30",
+      "log_sha256": "bbe898f98c29063ca3fbac5d04da0158e110a2a06f8fc8dbe23ceb2fc99404f3",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-analysis-port-verification/lib/lean/checks/ExpectedFailureAnalysisMissingMargins.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureAnalysisMissingMargins.lean"
+      ],
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 3.782
+    },
+    {
+      "module": "checks.ExpectedFailureAnalysisConclusionField",
+      "source_sha256": "377eceb0a77d9894e25525e145b0bc2d7a3cde2cc7f5a1f2f59f34d3dfdfa050",
+      "log_sha256": "7a670d6111b58cfbebba4c733c6b7b967811d9ed01444b16e3eb98b34a78f5cd",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-analysis-port-verification/lib/lean/checks/ExpectedFailureAnalysisConclusionField.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureAnalysisConclusionField.lean"
+      ],
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 3.907
+    }
+  ],
+  "axiom_audit": {
+    "OAI.PiExponent.FixedFieldAnalyticData": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.finiteHeights": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.finiteHeights_two_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.weights": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.weights_one_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.Row": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.Column": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.centers": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.tailOrders": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.actualMatrix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.actualMinor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.actualMean": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.actualRowCount": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.lowIndexCount": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.collisionRate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.translationError": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.holomorphicError": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.analyticError": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.actual_error_exp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.fixedWeights": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.Transverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.beta": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.RowChoice": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.ChoiceFamily": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.rowWeight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.choiceScalar": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.choiceMatrix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.fixedWeights_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.fixedWeights_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.rowOrder_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.norm_choiceScalar_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.rowWeight_le_indexWeight_of_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.actualRowCount_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.sum_rowWeight_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.low_transverse_capacity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.lowIndexCount_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.norm_scalar_product_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.norm_choiceMatrix_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.norm_actual_summand_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_expansion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.card_choiceFamily_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.analyticRemainder": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_analytic_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_analyticRemainder": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_arithmetic_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_two_sided": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.rowCountLeading": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.rowCountLeading_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_rowCount_normalized": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.arithmeticRemainder": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_arithmeticRemainder": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.collisionLimit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_collisionRate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.cofinal_nonzero_actual_minor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.no_compatible_packet": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldLiteralAnalytic.no_geometric_packet": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldAnalyticData.mk": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.AnalysisRegression.exact_changed_total_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "ordinary_lean_only": true
+}

@@ -1,0 +1,18 @@
+{
+  "upstream_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "license": "Apache-2.0",
+  "ported_wrappers": [
+    {
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Analysis/LiteralAnalyticSummand.lean",
+      "upstream_sha256": "7a7802f8dcebc033778afd2c53aca7c4bc1828697d6a4795a2b0fb23cac40fc0",
+      "ported": "FixedQuadratic/AnalysisPort/LiteralAnalyticSummand.lean",
+      "ported_sha256": "250a64389bd857ed5a998108e030a84bb5a08de6255a54f32c8e5fe25fd6662c"
+    },
+    {
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Analysis/AnalyticAggregate.lean",
+      "upstream_sha256": "00a1fb18624fad7a32074fb8a5f5c1e725abcb5bf53db110736efcb589d6474c",
+      "ported": "FixedQuadratic/AnalysisPort/AnalyticAggregate.lean",
+      "ported_sha256": "92483ea3003c3074b39cca426b95023094810b43eeede8a6993e6824ad0fcacb"
+    }
+  ]
+}

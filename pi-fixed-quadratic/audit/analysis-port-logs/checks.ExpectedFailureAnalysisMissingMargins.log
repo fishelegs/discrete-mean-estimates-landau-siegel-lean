@@ -1,0 +1,8 @@
+/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureAnalysisMissingMargins.lean:8:2: error: Type mismatch
+  no_compatible_packet d hF hnu hminor
+has type
+  FixedQuadratic.arithmeticError d.F0 (↑d.v0) (↑d.w0) d.wstar d.K + d.analyticError <
+      nu * (↑d.A * (1 - d.eta) - ↑d.theta) - (1 - ↑d.theta) →
+    1 + FixedQuadratic.arithmeticError d.F0 (↑d.v0) (↑d.w0) d.wstar d.K + d.analyticError < collisionLimit d → False
+but is expected to have type
+  False

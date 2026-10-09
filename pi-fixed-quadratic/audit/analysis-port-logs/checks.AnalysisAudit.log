@@ -1,0 +1,578 @@
+OAI.PiExponent.FixedFieldAnalyticData : ℝ → Type
+'OAI.PiExponent.FixedFieldAnalyticData' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.finiteHeights : {nu : ℝ} →
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) → Fin d.m → ℕ
+'OAI.PiExponent.FixedFieldAnalyticData.finiteHeights' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.finiteHeights_two_le : ∀ {nu : ℝ} (d : OAI.PiExponent.FixedFieldAnalyticData nu)
+  (i : Fin d.m), LE.le.{0} 2 (d.finiteHeights i)
+'OAI.PiExponent.FixedFieldAnalyticData.finiteHeights_two_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.weights : {nu : ℝ} → (d : OAI.PiExponent.FixedFieldAnalyticData nu) → Fin d.m → ℝ
+'OAI.PiExponent.FixedFieldAnalyticData.weights' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.weights_one_le : ∀ {nu : ℝ} (d : OAI.PiExponent.FixedFieldAnalyticData nu)
+  (i : Fin d.m), LE.le.{0} 1 (d.weights i)
+'OAI.PiExponent.FixedFieldAnalyticData.weights_one_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.Row : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ → Type
+'OAI.PiExponent.FixedFieldAnalyticData.Row' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.Column : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ → Type
+'OAI.PiExponent.FixedFieldAnalyticData.Column' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.centers : {nu : ℝ} → (d : OAI.PiExponent.FixedFieldAnalyticData nu) → Fin d.m → ℂ
+'OAI.PiExponent.FixedFieldAnalyticData.centers' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.tailOrders : {nu : ℝ} →
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) → Fin d.m → ℕ
+'OAI.PiExponent.FixedFieldAnalyticData.tailOrders' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.actualMatrix : {nu : ℝ} →
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) → (H : ℝ) → Matrix.{0, 0, 0} (d.Row H) (d.Column H) ℂ
+'OAI.PiExponent.FixedFieldAnalyticData.actualMatrix' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.actualMinor : {nu : ℝ} →
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) →
+    (H : ℝ) → (d.Row H → d.Column H) → Matrix.{0, 0, 0} (d.Row H) (d.Row H) ℂ
+'OAI.PiExponent.FixedFieldAnalyticData.actualMinor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.actualMean : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ → ℝ
+'OAI.PiExponent.FixedFieldAnalyticData.actualMean' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.actualRowCount : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ → ℕ
+'OAI.PiExponent.FixedFieldAnalyticData.actualRowCount' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.lowIndexCount : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ → ℕ
+'OAI.PiExponent.FixedFieldAnalyticData.lowIndexCount' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.collisionRate : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ → ℝ
+'OAI.PiExponent.FixedFieldAnalyticData.collisionRate' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.translationError : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ
+'OAI.PiExponent.FixedFieldAnalyticData.translationError' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.holomorphicError : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ
+'OAI.PiExponent.FixedFieldAnalyticData.holomorphicError' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.analyticError : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ
+'OAI.PiExponent.FixedFieldAnalyticData.analyticError' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.actual_error_exp : ∀ {nu : ℝ} (d : OAI.PiExponent.FixedFieldAnalyticData nu)
+  (j : ℕ),
+  LE.le.{0} j d.K →
+    LE.le.{0} 0 nu →
+      ∀ (i : Fin d.m),
+        LE.le.{0}
+          (norm.{0} (HMul.hMul.{0, 0, 0} (↑j) (HSub.hSub.{0, 0, 0} (d.centers i) OAI.PiExponent.logarithmicPeriod)))
+          (Real.exp
+            (HSub.hSub.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (Real.log (HMul.hMul.{0, 0, 0} 2 ↑d.K)) nu)
+              (HMul.hMul.{0, 0, 0} nu (d.weights i))))
+'OAI.PiExponent.FixedFieldAnalyticData.actual_error_exp' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.fixedWeights : {nu : ℝ} →
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) → Fin d.m → ℝ
+'OAI.PiExponent.FixedFieldLiteralAnalytic.fixedWeights' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.Transverse : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ → Type
+'OAI.PiExponent.FixedFieldLiteralAnalytic.Transverse' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.beta : {nu : ℝ} →
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) → {H : ℝ} → d.Row H → Finsupp.{0, 0} (Fin d.m) ℕ
+'OAI.PiExponent.FixedFieldLiteralAnalytic.beta' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.RowChoice : {nu : ℝ} →
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) → (H : ℝ) → d.Row H → Type
+'OAI.PiExponent.FixedFieldLiteralAnalytic.RowChoice' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.ChoiceFamily : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ → Type
+'OAI.PiExponent.FixedFieldLiteralAnalytic.ChoiceFamily' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight : {nu : ℝ} →
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) → {H : ℝ} → OAI.PiExponent.FixedFieldLiteralAnalytic.Transverse d H → ℝ
+'OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.rowWeight : {nu : ℝ} →
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) → {H : ℝ} → d.Row H → ℝ
+'OAI.PiExponent.FixedFieldLiteralAnalytic.rowWeight' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.choiceScalar : {nu : ℝ} →
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) →
+    {H : ℝ} → (r : d.Row H) → OAI.PiExponent.FixedFieldLiteralAnalytic.RowChoice d H r → ℂ
+'OAI.PiExponent.FixedFieldLiteralAnalytic.choiceScalar' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.choiceMatrix : {nu : ℝ} →
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) →
+    {H : ℝ} →
+      (d.Row H → d.Column H) →
+        OAI.PiExponent.FixedFieldLiteralAnalytic.ChoiceFamily d H → Matrix.{0, 0, 0} (d.Row H) (d.Row H) ℂ
+'OAI.PiExponent.FixedFieldLiteralAnalytic.choiceMatrix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.fixedWeights_pos : ∀ {nu : ℝ} (d : OAI.PiExponent.FixedFieldAnalyticData nu)
+  (i : Fin d.m), LT.lt.{0} 0 (OAI.PiExponent.FixedFieldLiteralAnalytic.fixedWeights d i)
+'OAI.PiExponent.FixedFieldLiteralAnalytic.fixedWeights_pos' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.fixedWeights_lower : ∀ {nu : ℝ} (d : OAI.PiExponent.FixedFieldAnalyticData nu)
+  (i : Fin d.m), LE.le.{0} d.wstar (OAI.PiExponent.FixedFieldLiteralAnalytic.fixedWeights d i)
+'OAI.PiExponent.FixedFieldLiteralAnalytic.fixedWeights_lower' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.rowOrder_le : ∀ {nu : ℝ} (d : OAI.PiExponent.FixedFieldAnalyticData nu)
+  {H : ℝ} (r : d.Row H), LE.le.{0} (↑(↑r.2 0)) (HDiv.hDiv.{0, 0, 0} H ↑d.v0)
+'OAI.PiExponent.FixedFieldLiteralAnalytic.rowOrder_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight_nonneg : ∀ {nu : ℝ} (d : OAI.PiExponent.FixedFieldAnalyticData nu)
+  {H : ℝ} (a : OAI.PiExponent.FixedFieldLiteralAnalytic.Transverse d H),
+  LE.le.{0} 0 (OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight d a)
+'OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight_nonneg' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight_le : ∀ {nu : ℝ} (d : OAI.PiExponent.FixedFieldAnalyticData nu)
+  {H : ℝ} (a : OAI.PiExponent.FixedFieldLiteralAnalytic.Transverse d H),
+  LE.le.{0} (OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight d a) H
+'OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.norm_choiceScalar_le : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu),
+  LE.le.{0} 0 nu →
+    ∀ {H : ℝ} (r : d.Row H) (t : OAI.PiExponent.FixedFieldLiteralAnalytic.RowChoice d H r),
+      LE.le.{0} (norm.{0} (OAI.PiExponent.FixedFieldLiteralAnalytic.choiceScalar d r t))
+        (Real.exp
+          (HAdd.hAdd.{0, 0, 0}
+            (HMul.hMul.{0, 0, 0} (Neg.neg.{0} nu)
+              (HSub.hSub.{0, 0, 0} (OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight d (Sigma.fst.{0, 0} t))
+                (OAI.PiExponent.FixedFieldLiteralAnalytic.rowWeight d r)))
+            (HMul.hMul.{0, 0, 0} H d.translationError)))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.norm_choiceScalar_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.rowWeight_le_indexWeight_of_ne_zero : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) {H : ℝ} (r : d.Row H)
+  (t : OAI.PiExponent.FixedFieldLiteralAnalytic.RowChoice d H r),
+  Ne.{1} (OAI.PiExponent.FixedFieldLiteralAnalytic.choiceScalar d r t) 0 →
+    LE.le.{0} (OAI.PiExponent.FixedFieldLiteralAnalytic.rowWeight d r)
+      (OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight d (Sigma.fst.{0, 0} t))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.rowWeight_le_indexWeight_of_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.actualRowCount_pos : ∀ {nu : ℝ} (d : OAI.PiExponent.FixedFieldAnalyticData nu)
+  {H : ℝ}, LT.lt.{0} 0 H → LT.lt.{0} 0 (d.actualRowCount H)
+'OAI.PiExponent.FixedFieldLiteralAnalytic.actualRowCount_pos' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.sum_rowWeight_eq : ∀ {nu : ℝ} (d : OAI.PiExponent.FixedFieldAnalyticData nu)
+  {H : ℝ},
+  LT.lt.{0} 0 H →
+    Eq.{1} (∑ r, OAI.PiExponent.FixedFieldLiteralAnalytic.rowWeight d r)
+      (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑(d.actualRowCount H)) H) (d.actualMean H))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.sum_rowWeight_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.low_transverse_capacity : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) (H : ℝ),
+  LE.le.{0}
+    ↑(Finset.card.{0}
+        {A | LE.le.{0} (OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight d A) (HMul.hMul.{0, 0, 0} (↑d.A) H)})
+    ↑(d.lowIndexCount H)
+'OAI.PiExponent.FixedFieldLiteralAnalytic.low_transverse_capacity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.lowIndexCount_pos : ∀ {nu : ℝ} (d : OAI.PiExponent.FixedFieldAnalyticData nu)
+  {H : ℝ}, LT.lt.{0} 0 H → LT.lt.{0} 0 (d.lowIndexCount H)
+'OAI.PiExponent.FixedFieldLiteralAnalytic.lowIndexCount_pos' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.norm_scalar_product_le : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu),
+  LE.le.{0} 0 nu →
+    ∀ {H : ℝ},
+      LT.lt.{0} 0 H →
+        ∀ (f : OAI.PiExponent.FixedFieldLiteralAnalytic.ChoiceFamily d H),
+          LE.le.{0} (norm.{0} (∏ r, OAI.PiExponent.FixedFieldLiteralAnalytic.choiceScalar d r (f r)))
+            (Real.exp
+              (HAdd.hAdd.{0, 0, 0}
+                (HMul.hMul.{0, 0, 0} (Neg.neg.{0} nu)
+                  (HSub.hSub.{0, 0, 0}
+                    (∑ r, OAI.PiExponent.FixedFieldLiteralAnalytic.indexWeight d (Sigma.fst.{0, 0} (f r)))
+                    (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑(d.actualRowCount H)) H) (d.actualMean H))))
+                (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑(d.actualRowCount H)) H) d.translationError)))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.norm_scalar_product_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.norm_choiceMatrix_le : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) {H : ℝ},
+  LT.lt.{0} 0 H →
+    ∀ (selection : d.Row H → d.Column H) (f : OAI.PiExponent.FixedFieldLiteralAnalytic.ChoiceFamily d H),
+      LE.le.{0} (norm.{0} (Matrix.det.{0, 0} (OAI.PiExponent.FixedFieldLiteralAnalytic.choiceMatrix d selection f)))
+        (Real.exp
+          (HAdd.hAdd.{0, 0, 0}
+            (HMul.hMul.{0, 0, 0} (Neg.neg.{0} (HDiv.hDiv.{0, 0, 0} (Real.log 2) 4))
+              (∑ A,
+                HPow.hPow.{0, 0, 0}
+                  (↑(OAI.PiExponent.Collision.multiplicity.{0, 0} Finset.univ.{0} (fun r => Sigma.fst.{0, 0} (f r)) A))
+                  2))
+            (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑(d.actualRowCount H)) H)
+              (HAdd.hAdd.{0, 0, 0} d.holomorphicError
+                (OAI.PiExponent.Collision.collisionRemainder (d.actualRowCount H) H)))))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.norm_choiceMatrix_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.norm_actual_summand_le : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu),
+  LE.le.{0} 0 nu →
+    ∀ {H : ℝ},
+      LT.lt.{0} 0 H →
+        ∀ (selection : d.Row H → d.Column H) (f : OAI.PiExponent.FixedFieldLiteralAnalytic.ChoiceFamily d H),
+          LE.le.{0}
+            (norm.{0}
+              (HMul.hMul.{0, 0, 0} (∏ r, OAI.PiExponent.FixedFieldLiteralAnalytic.choiceScalar d r (f r))
+                (Matrix.det.{0, 0} (OAI.PiExponent.FixedFieldLiteralAnalytic.choiceMatrix d selection f))))
+            (Real.exp
+              (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑(d.actualRowCount H)) H)
+                (HAdd.hAdd.{0, 0, 0}
+                  (HAdd.hAdd.{0, 0, 0} d.analyticError
+                    (OAI.PiExponent.Collision.collisionRemainder (d.actualRowCount H) H))
+                  (max.{0} (Neg.neg.{0} (d.collisionRate H))
+                    (HMul.hMul.{0, 0, 0} (Neg.neg.{0} nu)
+                      (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑d.A) (HSub.hSub.{0, 0, 0} 1 d.eta))
+                        (d.actualMean H)))))))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.norm_actual_summand_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_expansion : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) {H : ℝ} (selection : d.Row H → d.Column H),
+  Eq.{1} (Matrix.det.{0, 0} (d.actualMinor H selection))
+    (∑ f,
+      HMul.hMul.{0, 0, 0} (∏ r, OAI.PiExponent.FixedFieldLiteralAnalytic.choiceScalar d r (f r))
+        (Matrix.det.{0, 0} (OAI.PiExponent.FixedFieldLiteralAnalytic.choiceMatrix d selection f)))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_expansion' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.card_choiceFamily_le : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) (H : ℝ),
+  LE.le.{0} (Fintype.card.{0} (OAI.PiExponent.FixedFieldLiteralAnalytic.ChoiceFamily d H))
+    (HPow.hPow.{0, 0, 0} (OAI.PiExponent.translationTermCount d.m (↑d.v0) H) (d.actualRowCount H))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.card_choiceFamily_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.analyticRemainder : {nu : ℝ} →
+  OAI.PiExponent.FixedFieldAnalyticData nu → ℝ → ℝ
+'OAI.PiExponent.FixedFieldLiteralAnalytic.analyticRemainder' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_analytic_bound : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu),
+  LE.le.{0} 0 nu →
+    ∀ {H : ℝ},
+      LT.lt.{0} 0 H →
+        ∀ (selection : d.Row H → d.Column H),
+          Ne.{1} (Matrix.det.{0, 0} (d.actualMinor H selection)) 0 →
+            LE.le.{0}
+              (HDiv.hDiv.{0, 0, 0} (Real.log (norm.{0} (Matrix.det.{0, 0} (d.actualMinor H selection))))
+                (HMul.hMul.{0, 0, 0} (↑(d.actualRowCount H)) H))
+              (HAdd.hAdd.{0, 0, 0}
+                (HAdd.hAdd.{0, 0, 0} d.analyticError (OAI.PiExponent.FixedFieldLiteralAnalytic.analyticRemainder d H))
+                (max.{0} (Neg.neg.{0} (d.collisionRate H))
+                  (HMul.hMul.{0, 0, 0} (Neg.neg.{0} nu)
+                    (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑d.A) (HSub.hSub.{0, 0, 0} 1 d.eta)) (d.actualMean H)))))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_analytic_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_analyticRemainder : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu),
+  Filter.Tendsto.{0, 0} (OAI.PiExponent.FixedFieldLiteralAnalytic.analyticRemainder d) Filter.atTop.{0} (nhds.{0} 0)
+'OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_analyticRemainder' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_arithmetic_bound : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) [FiniteDimensional.{0, 0} ℚ ↥d.F],
+  Eq.{1} (Module.finrank.{0, 0} ℚ ↥d.F) 2 →
+    ∀ {H : ℝ},
+      LT.lt.{0} 0 H →
+        ∀ (selection : d.Row H → d.Column H),
+          Ne.{1} (Matrix.det.{0, 0} (d.actualMinor H selection)) 0 →
+            LE.le.{0}
+              (HSub.hSub.{0, 0, 0}
+                (HSub.hSub.{0, 0, 0} (Neg.neg.{0} (HSub.hSub.{0, 0, 0} 1 (d.actualMean H)))
+                  (FixedQuadratic.arithmeticError d.F0 (↑d.v0) (↑d.w0) d.wstar d.K))
+                (HDiv.hDiv.{0, 0, 0} (Real.log ↑(d.actualRowCount H).factorial)
+                  (HMul.hMul.{0, 0, 0} (↑(d.actualRowCount H)) H)))
+              (HDiv.hDiv.{0, 0, 0} (Real.log (norm.{0} (Matrix.det.{0, 0} (d.actualMinor H selection))))
+                (HMul.hMul.{0, 0, 0} (↑(d.actualRowCount H)) H))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_arithmetic_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_two_sided : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) [FiniteDimensional.{0, 0} ℚ ↥d.F],
+  Eq.{1} (Module.finrank.{0, 0} ℚ ↥d.F) 2 →
+    LE.le.{0} 0 nu →
+      ∀ {H : ℝ},
+        LT.lt.{0} 0 H →
+          ∀ (selection : d.Row H → d.Column H),
+            Ne.{1} (Matrix.det.{0, 0} (d.actualMinor H selection)) 0 →
+              LE.le.{0}
+                  (HSub.hSub.{0, 0, 0}
+                    (HSub.hSub.{0, 0, 0} (Neg.neg.{0} (HSub.hSub.{0, 0, 0} 1 (d.actualMean H)))
+                      (FixedQuadratic.arithmeticError d.F0 (↑d.v0) (↑d.w0) d.wstar d.K))
+                    (HDiv.hDiv.{0, 0, 0} (Real.log ↑(d.actualRowCount H).factorial)
+                      (HMul.hMul.{0, 0, 0} (↑(d.actualRowCount H)) H)))
+                  (HDiv.hDiv.{0, 0, 0} (Real.log (norm.{0} (Matrix.det.{0, 0} (d.actualMinor H selection))))
+                    (HMul.hMul.{0, 0, 0} (↑(d.actualRowCount H)) H)) ∧
+                LE.le.{0}
+                  (HDiv.hDiv.{0, 0, 0} (Real.log (norm.{0} (Matrix.det.{0, 0} (d.actualMinor H selection))))
+                    (HMul.hMul.{0, 0, 0} (↑(d.actualRowCount H)) H))
+                  (HAdd.hAdd.{0, 0, 0}
+                    (HAdd.hAdd.{0, 0, 0} d.analyticError
+                      (OAI.PiExponent.FixedFieldLiteralAnalytic.analyticRemainder d H))
+                    (max.{0} (Neg.neg.{0} (d.collisionRate H))
+                      (HMul.hMul.{0, 0, 0} (Neg.neg.{0} nu)
+                        (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑d.A) (HSub.hSub.{0, 0, 0} 1 d.eta))
+                          (d.actualMean H)))))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.actual_minor_two_sided' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.rowCountLeading : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ
+'OAI.PiExponent.FixedFieldLiteralAnalytic.rowCountLeading' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.rowCountLeading_pos : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu),
+  LT.lt.{0} 0 (OAI.PiExponent.FixedFieldLiteralAnalytic.rowCountLeading d)
+'OAI.PiExponent.FixedFieldLiteralAnalytic.rowCountLeading_pos' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_rowCount_normalized : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu),
+  Filter.Tendsto.{0, 0}
+    (fun H => HDiv.hDiv.{0, 0, 0} (↑(d.actualRowCount H)) (HPow.hPow.{0, 0, 0} H (HAdd.hAdd.{0, 0, 0} d.m 1)))
+    Filter.atTop.{0} (nhds.{0} (OAI.PiExponent.FixedFieldLiteralAnalytic.rowCountLeading d))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_rowCount_normalized' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.arithmeticRemainder : {nu : ℝ} →
+  OAI.PiExponent.FixedFieldAnalyticData nu → ℝ → ℝ
+'OAI.PiExponent.FixedFieldLiteralAnalytic.arithmeticRemainder' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_arithmeticRemainder : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu),
+  Filter.Tendsto.{0, 0} (OAI.PiExponent.FixedFieldLiteralAnalytic.arithmeticRemainder d) Filter.atTop.{0} (nhds.{0} 0)
+'OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_arithmeticRemainder' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.collisionLimit : {nu : ℝ} → OAI.PiExponent.FixedFieldAnalyticData nu → ℝ
+'OAI.PiExponent.FixedFieldLiteralAnalytic.collisionLimit' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_collisionRate : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu),
+  Filter.Tendsto.{0, 0} d.collisionRate Filter.atTop.{0}
+    (nhds.{0} (OAI.PiExponent.FixedFieldLiteralAnalytic.collisionLimit d))
+'OAI.PiExponent.FixedFieldLiteralAnalytic.tendsto_collisionRate' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.cofinal_nonzero_actual_minor : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu),
+  LE.le.{0} 1 d.m →
+    ∀ (sigma : ℚ),
+      LT.lt.{0} 0 ↑sigma →
+        LT.lt.{0}
+            (HMul.hMul.{0, 0, 0}
+              (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma)) (HAdd.hAdd.{0, 0, 0} d.m 1))
+              (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑d.K) (HDiv.hDiv.{0, 0, 0} ↑d.w0 ↑d.v0))
+                (HPow.hPow.{0, 0, 0} (↑d.theta) d.m)))
+            1 →
+          LT.lt.{0}
+              (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma)) d.m)
+                (HMul.hMul.{0, 0, 0} (↑d.K) (HPow.hPow.{0, 0, 0} (↑d.theta) d.m)))
+              1 →
+            LT.lt.{0} (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 ↑sigma) ↑d.theta) 1 →
+              (∀ (A B : Finset.{0} (Fin (HAdd.hAdd.{0, 0, 0} d.m 1))),
+                  Eq.{1} (Finset.card.{0} A) (Finset.card.{0} B) →
+                    ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} d.m 1)),
+                      Ne.{1} i 0 →
+                        Membership.mem.{0, 0} A i →
+                          i ∉ B →
+                            (∀ (j : Fin (HAdd.hAdd.{0, 0, 0} d.m 1)),
+                                LT.lt.{0} i j → (Membership.mem.{0, 0} A j ↔ Membership.mem.{0, 0} B j)) →
+                              LT.lt.{0}
+                                (HMul.hMul.{0, 0, 0}
+                                  (OAI.PiExponent.PersistentWeightComparison.comparisonConstant d.m ↑sigma)
+                                  (∏ j ∈ B,
+                                    ↑(FixedQuadratic.geometricJetWeights d.v0 d.theta
+                                        (FixedQuadratic.heightWeightsQ d.F d.approximants) j)))
+                                (∏ j ∈ A,
+                                  ↑(FixedQuadratic.geometricDegreeWeights d.w0
+                                      (FixedQuadratic.heightWeightsQ d.F d.approximants) j))) →
+                LE.le.{0} 1 (HMul.hMul.{0, 0, 0} d.F0 ↑d.theta) →
+                  ∀ (L : ℝ),
+                    ∃ H,
+                      LE.le.{0} L H ∧
+                        ∃ selection,
+                          Function.Injective.{1, 1} selection ∧ Ne.{1} (Matrix.det.{0, 0} (d.actualMinor H selection)) 0
+'OAI.PiExponent.FixedFieldLiteralAnalytic.cofinal_nonzero_actual_minor' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.no_compatible_packet : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) [FiniteDimensional.{0, 0} ℚ ↥d.F],
+  Eq.{1} (Module.finrank.{0, 0} ℚ ↥d.F) 2 →
+    LT.lt.{0} 2 nu →
+      (∀ (L : ℝ),
+          ∃ H,
+            LE.le.{0} L H ∧
+              ∃ selection,
+                Function.Injective.{1, 1} selection ∧ Ne.{1} (Matrix.det.{0, 0} (d.actualMinor H selection)) 0) →
+        LT.lt.{0}
+            (HAdd.hAdd.{0, 0, 0} (FixedQuadratic.arithmeticError d.F0 (↑d.v0) (↑d.w0) d.wstar d.K) d.analyticError)
+            (HSub.hSub.{0, 0, 0}
+              (HMul.hMul.{0, 0, 0} nu
+                (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑d.A) (HSub.hSub.{0, 0, 0} 1 d.eta)) ↑d.theta))
+              (HSub.hSub.{0, 0, 0} 1 ↑d.theta)) →
+          LT.lt.{0}
+              (HAdd.hAdd.{0, 0, 0}
+                (HAdd.hAdd.{0, 0, 0} 1 (FixedQuadratic.arithmeticError d.F0 (↑d.v0) (↑d.w0) d.wstar d.K))
+                d.analyticError)
+              (OAI.PiExponent.FixedFieldLiteralAnalytic.collisionLimit d) →
+            False
+'OAI.PiExponent.FixedFieldLiteralAnalytic.no_compatible_packet' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldLiteralAnalytic.no_geometric_packet : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu) [FiniteDimensional.{0, 0} ℚ ↥d.F],
+  Eq.{1} (Module.finrank.{0, 0} ℚ ↥d.F) 2 →
+    LT.lt.{0} 2 nu →
+      LE.le.{0} 1 d.m →
+        ∀ (sigma : ℚ),
+          LT.lt.{0} 0 ↑sigma →
+            LT.lt.{0}
+                (HMul.hMul.{0, 0, 0}
+                  (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma))
+                    (HAdd.hAdd.{0, 0, 0} d.m 1))
+                  (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑d.K) (HDiv.hDiv.{0, 0, 0} ↑d.w0 ↑d.v0))
+                    (HPow.hPow.{0, 0, 0} (↑d.theta) d.m)))
+                1 →
+              LT.lt.{0}
+                  (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma)) d.m)
+                    (HMul.hMul.{0, 0, 0} (↑d.K) (HPow.hPow.{0, 0, 0} (↑d.theta) d.m)))
+                  1 →
+                LT.lt.{0} (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 ↑sigma) ↑d.theta) 1 →
+                  (∀ (A B : Finset.{0} (Fin (HAdd.hAdd.{0, 0, 0} d.m 1))),
+                      Eq.{1} (Finset.card.{0} A) (Finset.card.{0} B) →
+                        ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} d.m 1)),
+                          Ne.{1} i 0 →
+                            Membership.mem.{0, 0} A i →
+                              i ∉ B →
+                                (∀ (j : Fin (HAdd.hAdd.{0, 0, 0} d.m 1)),
+                                    LT.lt.{0} i j → (Membership.mem.{0, 0} A j ↔ Membership.mem.{0, 0} B j)) →
+                                  LT.lt.{0}
+                                    (HMul.hMul.{0, 0, 0}
+                                      (OAI.PiExponent.PersistentWeightComparison.comparisonConstant d.m ↑sigma)
+                                      (∏ j ∈ B,
+                                        ↑(FixedQuadratic.geometricJetWeights d.v0 d.theta
+                                            (FixedQuadratic.heightWeightsQ d.F d.approximants) j)))
+                                    (∏ j ∈ A,
+                                      ↑(FixedQuadratic.geometricDegreeWeights d.w0
+                                          (FixedQuadratic.heightWeightsQ d.F d.approximants) j))) →
+                    LE.le.{0} 1 (HMul.hMul.{0, 0, 0} d.F0 ↑d.theta) →
+                      LT.lt.{0}
+                          (HAdd.hAdd.{0, 0, 0} (FixedQuadratic.arithmeticError d.F0 (↑d.v0) (↑d.w0) d.wstar d.K)
+                            d.analyticError)
+                          (HSub.hSub.{0, 0, 0}
+                            (HMul.hMul.{0, 0, 0} nu
+                              (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑d.A) (HSub.hSub.{0, 0, 0} 1 d.eta)) ↑d.theta))
+                            (HSub.hSub.{0, 0, 0} 1 ↑d.theta)) →
+                        LT.lt.{0}
+                            (HAdd.hAdd.{0, 0, 0}
+                              (HAdd.hAdd.{0, 0, 0} 1 (FixedQuadratic.arithmeticError d.F0 (↑d.v0) (↑d.w0) d.wstar d.K))
+                              d.analyticError)
+                            (OAI.PiExponent.FixedFieldLiteralAnalytic.collisionLimit d) →
+                          False
+'OAI.PiExponent.FixedFieldLiteralAnalytic.no_geometric_packet' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldAnalyticData.mk : {nu : ℝ} →
+  (m K : ℕ) →
+    LE.le.{0} 1 K →
+      (F : IntermediateField.{0, 0} ℚ ℝ) →
+        (approximants : Fin m → ↥F) →
+          (∀ (i : Fin m), Eq.{1} (Polynomial.natDegree.{0} (minpoly.{0, 0} ℚ ↑(approximants i))) 2) →
+            (∀ (i : Fin m), LE.le.{0} 2 (FixedQuadratic.primitiveMinpolyHeight ↑(approximants i))) →
+              (∀ (i : Fin m),
+                  LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} Real.pi ↑(approximants i)))
+                    (HPow.hPow.{0, 0, 0} (↑(FixedQuadratic.primitiveMinpolyHeight ↑(approximants i)))
+                      (Neg.neg.{0} nu))) →
+                (w0 v0 theta A : ℚ) →
+                  (eta F0 wstar : ℝ) →
+                    LT.lt.{0} 0 ↑w0 →
+                      LT.lt.{0} 0 ↑v0 →
+                        LT.lt.{0} 0 ↑theta →
+                          LT.lt.{0} 0 ↑A →
+                            LT.lt.{0} 0 eta →
+                              LT.lt.{0} 0 F0 →
+                                LT.lt.{0} 0 wstar →
+                                  (∀ (i : Fin m),
+                                      LE.le.{0} wstar
+                                        ↑(Nat.ceil.{0}
+                                            (Real.log ↑(FixedQuadratic.primitiveMinpolyHeight ↑(approximants i))))) →
+                                    OAI.PiExponent.FixedFieldAnalyticData nu
+'OAI.PiExponent.FixedFieldAnalyticData.mk' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@FixedQuadratic.AnalysisRegression.exact_changed_total_budget : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.FixedFieldAnalyticData nu),
+  Eq.{1} (HAdd.hAdd.{0, 0, 0} (FixedQuadratic.arithmeticError d.F0 (↑d.v0) (↑d.w0) d.wstar d.K) d.analyticError)
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0}
+        (HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} nu d.F0)
+          (HDiv.hDiv.{0, 0, 0}
+            (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 FixedQuadratic.formalLcmConstant) d.F0)
+              (HMul.hMul.{0, 0, 0} 3 (Real.log 2)))
+            ↑d.v0))
+        (HDiv.hDiv.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 100 ↑d.K) (Real.log (3 / 2))) ↑d.w0))
+      (HDiv.hDiv.{0, 0, 0} (FixedQuadratic.heightErrorCoefficient nu d.K) d.wstar))
+'FixedQuadratic.AnalysisRegression.exact_changed_total_budget' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+structure OAI.PiExponent.FixedFieldAnalyticData (nu : ℝ) : Type
+number of parameters: 1
+fields:
+  OAI.PiExponent.FixedFieldAnalyticData.m : ℕ
+  OAI.PiExponent.FixedFieldAnalyticData.K : ℕ
+  OAI.PiExponent.FixedFieldAnalyticData.K_pos : LE.le.{0} 1 self.K
+  OAI.PiExponent.FixedFieldAnalyticData.F : IntermediateField.{0, 0} ℚ ℝ
+  OAI.PiExponent.FixedFieldAnalyticData.approximants : Fin self.m → ↥self.F
+  OAI.PiExponent.FixedFieldAnalyticData.degree_two : ∀ (i : Fin self.m),
+      Eq.{1} (Polynomial.natDegree.{0} (minpoly.{0, 0} ℚ ↑(self.approximants i))) 2
+  OAI.PiExponent.FixedFieldAnalyticData.heights_two_le : ∀ (i : Fin self.m),
+      LE.le.{0} 2 (FixedQuadratic.primitiveMinpolyHeight ↑(self.approximants i))
+  OAI.PiExponent.FixedFieldAnalyticData.approximations : ∀ (i : Fin self.m),
+      LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} Real.pi ↑(self.approximants i)))
+        (HPow.hPow.{0, 0, 0} (↑(FixedQuadratic.primitiveMinpolyHeight ↑(self.approximants i))) (Neg.neg.{0} nu))
+  OAI.PiExponent.FixedFieldAnalyticData.w0 : ℚ
+  OAI.PiExponent.FixedFieldAnalyticData.v0 : ℚ
+  OAI.PiExponent.FixedFieldAnalyticData.theta : ℚ
+  OAI.PiExponent.FixedFieldAnalyticData.A : ℚ
+  OAI.PiExponent.FixedFieldAnalyticData.eta : ℝ
+  OAI.PiExponent.FixedFieldAnalyticData.F0 : ℝ
+  OAI.PiExponent.FixedFieldAnalyticData.wstar : ℝ
+  OAI.PiExponent.FixedFieldAnalyticData.w0_pos : LT.lt.{0} 0 ↑self.w0
+  OAI.PiExponent.FixedFieldAnalyticData.v0_pos : LT.lt.{0} 0 ↑self.v0
+  OAI.PiExponent.FixedFieldAnalyticData.theta_pos : LT.lt.{0} 0 ↑self.theta
+  OAI.PiExponent.FixedFieldAnalyticData.A_pos : LT.lt.{0} 0 ↑self.A
+  OAI.PiExponent.FixedFieldAnalyticData.eta_pos : LT.lt.{0} 0 self.eta
+  OAI.PiExponent.FixedFieldAnalyticData.F0_pos : LT.lt.{0} 0 self.F0
+  OAI.PiExponent.FixedFieldAnalyticData.wstar_pos : LT.lt.{0} 0 self.wstar
+  OAI.PiExponent.FixedFieldAnalyticData.wstar_lower : ∀ (i : Fin self.m),
+      LE.le.{0} self.wstar ↑(Nat.ceil.{0} (Real.log ↑(FixedQuadratic.primitiveMinpolyHeight ↑(self.approximants i))))
+constructor:
+  OAI.PiExponent.FixedFieldAnalyticData.mk {nu : ℝ} (m K : ℕ) (K_pos : LE.le.{0} 1 K) (F : IntermediateField.{0, 0} ℚ ℝ)
+    (approximants : Fin m → ↥F)
+    (degree_two : ∀ (i : Fin m), Eq.{1} (Polynomial.natDegree.{0} (minpoly.{0, 0} ℚ ↑(approximants i))) 2)
+    (heights_two_le : ∀ (i : Fin m), LE.le.{0} 2 (FixedQuadratic.primitiveMinpolyHeight ↑(approximants i)))
+    (approximations :
+      ∀ (i : Fin m),
+        LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} Real.pi ↑(approximants i)))
+          (HPow.hPow.{0, 0, 0} (↑(FixedQuadratic.primitiveMinpolyHeight ↑(approximants i))) (Neg.neg.{0} nu)))
+    (w0 v0 theta A : ℚ) (eta F0 wstar : ℝ) (w0_pos : LT.lt.{0} 0 ↑w0) (v0_pos : LT.lt.{0} 0 ↑v0)
+    (theta_pos : LT.lt.{0} 0 ↑theta) (A_pos : LT.lt.{0} 0 ↑A) (eta_pos : LT.lt.{0} 0 eta) (F0_pos : LT.lt.{0} 0 F0)
+    (wstar_pos : LT.lt.{0} 0 wstar)
+    (wstar_lower :
+      ∀ (i : Fin m),
+        LE.le.{0} wstar ↑(Nat.ceil.{0} (Real.log ↑(FixedQuadratic.primitiveMinpolyHeight ↑(approximants i))))) :
+    OAI.PiExponent.FixedFieldAnalyticData nu
