@@ -296,3 +296,36 @@ For the fixed-field geometric contact bridge, run
 `--checkpoint-verification` and separate `--out` arguments used for
 `scripts/audit_entry_bridge.py`. Its result is independent of the focused CI,
 which does not provision the upstream OAI closure.
+
+## Actual source-packet and row-scalar continuation
+
+`checks/UpstreamPacketArithmetic.lean` instantiates the arithmetic in the actual
+pinned upstream Row/Column packet. Legal membership proves the time, first-column
+and transverse-degree budgets. Nonzero matching proves the joint degree rebate;
+`actual_selected_minor_lower` then concludes the normalized bound for the actual
+selected upstream matrix determinant. The rebate lies in [0,theta]. Its inputs
+are the actual degree-two field/coordinates, positive packet scales, common
+lower weight, displayed truncation upper bound, and an actual nonzero minor.
+It assumes no norm integrality, coefficient envelope, weighted budgets or jet
+surjectivity. Primitive-height row count and row/low-index ratio limits also
+instantiate the purely combinatorial upstream counting theorems.
+
+`checks/UpstreamAnalysisBridge.lean` transfers the actual primitive-height
+approximation to the precise exponential center error and instantiates the
+source row-scalar translation bound with actual ceiling truncation orders.
+The exp(nu) rounding cost is retained; a separately matched expected failure
+prohibits dropping it. This proves row scalars, not the complete determinant
+analytic aggregate or fixed-field pi finiteness.
+
+Replay these using `scripts/audit_packet_analysis.py` with the same three
+arguments as the entry bridge. The script revalidates the fully replayed core,
+all 872 prior upstream receipts and the exact entry/minor bridge, then freshly
+compiles packet arithmetic, row scalars and the expected failure. Nine new
+exact types/axiom reports are checked. These OAI-dependent bridges are separately
+verified locally; the focused Linux CI provisions only the independent Mathlib
+subproject and replays its 50 checks / 265 declarations.
+
+Remaining implementation work is the general compactification/blowup/jet
+surjectivity, exact translated determinant expansion and collision/holomorphic
+summation, and assembling the actual count/remainder limits, parameter selection
+and exceptional-set contradiction. No final pi theorem is exported.

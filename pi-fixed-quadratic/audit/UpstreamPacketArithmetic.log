@@ -1,0 +1,120 @@
+@FixedQuadratic.UpstreamPacketArithmetic.legal_packet_budgets : ∀ {m : ℕ} (k : ℕ) (w0 v θ H wmin : ℝ) (w : Fin m → ℝ),
+  0 < w0 →
+    0 < v →
+      0 < θ →
+        0 < wmin →
+          (∀ (i : Fin m), wmin ≤ w i) →
+            ∀
+              (selection :
+                OAI.PiExponent.InterpolationMatrix.Row k v θ w H → OAI.PiExponent.InterpolationMatrix.Column w0 w H),
+              ↑(∑ r, ↑r.2 0) ≤ ↑(Fintype.card (OAI.PiExponent.InterpolationMatrix.Row k v θ w H)) * H / v ∧
+                ↑(∑ r, ↑(selection r) 0) ≤ ↑(Fintype.card (OAI.PiExponent.InterpolationMatrix.Row k v θ w H)) * H / w0 ∧
+                  ↑(∑ r, ∑ i, ↑(selection r) i.succ) ≤
+                    ↑(Fintype.card (OAI.PiExponent.InterpolationMatrix.Row k v θ w H)) * H / wmin
+'FixedQuadratic.UpstreamPacketArithmetic.legal_packet_budgets' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@FixedQuadratic.UpstreamPacketArithmetic.legal_packet_rebate : ∀ {m : ℕ} (k : ℕ) (v θ H : ℝ) (w : Fin m → ℝ),
+  0 < v →
+    0 < θ →
+      (∀ (i : Fin m), 0 < w i) →
+        0 < ↑(Fintype.card (OAI.PiExponent.InterpolationMatrix.Row k v θ w H)) * H →
+          have rebate :=
+            (∑ r, ∑ i, w i * ↑(↑r.2 i.succ)) / (↑(Fintype.card (OAI.PiExponent.InterpolationMatrix.Row k v θ w H)) * H);
+          0 ≤ rebate ∧ rebate ≤ θ
+'FixedQuadratic.UpstreamPacketArithmetic.legal_packet_rebate' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights : {m : ℕ} →
+  (F : IntermediateField ℚ ℝ) → (Fin m → ↥F) → Fin m → ℝ
+'FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.UpstreamPacketArithmetic.actual_selected_minor_lower : ∀ {m : ℕ} (F : IntermediateField ℚ ℝ)
+  [FiniteDimensional ℚ ↥F],
+  Module.finrank ℚ ↥F = 2 →
+    ∀ (β : Fin m → ↥F),
+      (∀ (i : Fin m), (minpoly ℚ ↑(β i)).natDegree = 2) →
+        ∀ (k : ℕ),
+          0 < k →
+            ∀ (w0 v θ H wmin scale : ℝ) (T : Fin m → ℕ),
+              0 < w0 →
+                0 < v →
+                  0 < θ →
+                    0 < H →
+                      0 < wmin →
+                        0 ≤ scale →
+                          (∀ (i : Fin m), wmin ≤ FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β i) →
+                            (∀ (i : Fin m),
+                                ↑(T i) ≤
+                                  scale * FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β i / v + 1) →
+                              ∀
+                                (selection :
+                                  OAI.PiExponent.InterpolationMatrix.Row k v θ
+                                      (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β) H →
+                                    OAI.PiExponent.InterpolationMatrix.Column w0
+                                      (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β) H),
+                                ((OAI.PiExponent.InterpolationMatrix.truncatedLogMatrix k w0 v θ
+                                            (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β) H
+                                            (fun i => 2 * Complex.I * ↑↑(β i)) T).submatrix
+                                        id selection).det ≠
+                                    0 →
+                                  have D :=
+                                    ↑(Fintype.card
+                                          (OAI.PiExponent.InterpolationMatrix.Row k v θ
+                                            (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β) H)) *
+                                      H;
+                                  have rebate :=
+                                    (∑ r,
+                                        ∑ i,
+                                          FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β i *
+                                            ↑(↑r.2 i.succ)) /
+                                      D;
+                                  -(1 - rebate) - FixedQuadratic.arithmeticError scale v w0 wmin k -
+                                      Real.log
+                                          ↑(Fintype.card
+                                                (OAI.PiExponent.InterpolationMatrix.Row k v θ
+                                                  (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β)
+                                                  H)).factorial /
+                                        D ≤
+                                    Real.log
+                                        ‖((OAI.PiExponent.InterpolationMatrix.truncatedLogMatrix k w0 v θ
+                                                  (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β) H
+                                                  (fun i => 2 * Complex.I * ↑↑(β i)) T).submatrix
+                                              id selection).det‖ /
+                                      D
+'FixedQuadratic.UpstreamPacketArithmetic.actual_selected_minor_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@FixedQuadratic.UpstreamPacketArithmetic.actual_rowCount_normalized : ∀ {m : ℕ} (F : IntermediateField ℚ ℝ)
+  (β : Fin m → ↥F) (k : ℕ) (v θ : ℚ),
+  0 < v →
+    0 < θ →
+      (∀ (i : Fin m), 2 ≤ FixedQuadratic.primitiveMinpolyHeight ↑(β i)) →
+        Filter.Tendsto
+          (fun H =>
+            ↑(Fintype.card
+                  (OAI.PiExponent.InterpolationMatrix.Row k (↑v) (↑θ)
+                    (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β) H)) /
+              H ^ (m + 1))
+          Filter.atTop
+          (nhds
+            (↑k * ↑θ ^ m /
+              (↑(m + 1).factorial * ↑v * ∏ i, FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β i)))
+'FixedQuadratic.UpstreamPacketArithmetic.actual_rowCount_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@FixedQuadratic.UpstreamPacketArithmetic.actual_row_lowIndex_ratio : ∀ {m : ℕ} (F : IntermediateField ℚ ℝ)
+  (β : Fin m → ↥F) (k : ℕ) (v θ A : ℚ),
+  0 < v →
+    0 < θ →
+      0 < A →
+        (∀ (i : Fin m), 2 ≤ FixedQuadratic.primitiveMinpolyHeight ↑(β i)) →
+          Filter.Tendsto
+            (fun H =>
+              ↑(Fintype.card
+                    (OAI.PiExponent.InterpolationMatrix.Row k (↑v) (↑θ)
+                      (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β) H)) /
+                (H *
+                  ↑(OAI.PiExponent.realWeightedSimplex (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β)
+                        (↑A * H)).card))
+            Filter.atTop (nhds (↑k * ↑θ ^ m / ((↑m + 1) * ↑v * ↑A ^ m)))
+'FixedQuadratic.UpstreamPacketArithmetic.actual_row_lowIndex_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

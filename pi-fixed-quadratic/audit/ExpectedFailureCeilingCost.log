@@ -1,0 +1,6 @@
+/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureCeilingCost.lean:9:2: error: Type mismatch
+  actual_center_error_exp F β hβ j k ν hk hj hν happrox i
+has type
+  ‖centerError F β j i‖ ≤ Real.exp (Real.log (2 * ↑k) + ν - ν * primitiveWeights F β i)
+but is expected to have type
+  ‖centerError F β j i‖ ≤ Real.exp (Real.log (2 * ↑k) - ν * primitiveWeights F β i)

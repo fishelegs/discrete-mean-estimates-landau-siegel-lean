@@ -1,0 +1,12 @@
+{
+  "commit": "eab794cb9682580399c88b53a958825b435e9cca",
+  "run_id": 37895704156,
+  "conclusion": "success",
+  "checks": 50,
+  "declaration_audits": 265,
+  "local_ci_sources_axioms_match": true,
+  "logs_match_after_source_path_normalization": true,
+  "receipt_sha256": "cf1d658d06127c720ac48d85eed9c3af0e442b7470b7e51203a8fbb90fe79552",
+  "successful_attempt": 2,
+  "first_attempt_failure": "elan installer download curl 35 connection reset; Lean replay skipped"
+}

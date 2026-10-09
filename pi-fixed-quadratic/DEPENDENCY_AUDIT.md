@@ -98,3 +98,19 @@ by the height-linked fixed-field centers. No assumed-surjectivity pi theorem
 is exported as a workaround. The actual contact theorem is a proved geometric
 step; the compactification/blowup port, actual packet budgets/counts, analytic
 transfer and final comparison are the remaining implementation work.
+
+Checkpoint 8 now discharges the actual legal-packet budgets and connects the
+arithmetic lower bound to the pinned upstream actual matrix determinant.
+`MatrixCounting.tendsto_rowCount_normalized` and `tendsto_row_lowIndex_ratio`
+are safely reused with natural inputs equal to actual primitive heights:
+their proofs use only the positive ceiling weights, not rational approximants.
+The Gaussian norm theorem continues to use the fixed-field construction,
+independently of these purely combinatorial names.
+
+`MatrixTranslationBounds.norm_rowScalar_exp_weight_difference` is generic in
+complex errors, positive weights and tail orders. The new actual-center error
+lemma supplies exactly its exponential hypothesis, including exp(nu), and
+the source's actual ceiling truncation order supplies positivity and tail budget.
+The actual row-scalar transfer is now kernel checked. It does not conclude the
+translated determinant expansion, collision savings or final analytic bound.
+Those remaining ports still bind actual rational FixedData in the aggregate.

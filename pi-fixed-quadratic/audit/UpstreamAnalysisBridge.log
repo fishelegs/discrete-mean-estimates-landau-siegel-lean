@@ -1,0 +1,44 @@
+@FixedQuadratic.UpstreamAnalysis.centerError : {m : ℕ} → (F : IntermediateField ℚ ℝ) → (Fin m → ↥F) → ℕ → Fin m → ℂ
+'FixedQuadratic.UpstreamAnalysis.centerError' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.UpstreamAnalysis.actual_center_error_exp : ∀ {m : ℕ} (F : IntermediateField ℚ ℝ) (β : Fin m → ↥F),
+  (∀ (i : Fin m), (minpoly ℚ ↑(β i)).natDegree = 2) →
+    ∀ (j k : ℕ) (ν : ℝ),
+      1 ≤ k →
+        j ≤ k →
+          0 ≤ ν →
+            (∀ (i : Fin m), |Real.pi - ↑(β i)| ≤ ↑(FixedQuadratic.primitiveMinpolyHeight ↑(β i)) ^ (-ν)) →
+              ∀ (i : Fin m),
+                ‖FixedQuadratic.UpstreamAnalysis.centerError F β j i‖ ≤
+                  Real.exp (Real.log (2 * ↑k) + ν - ν * FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β i)
+'FixedQuadratic.UpstreamAnalysis.actual_center_error_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.UpstreamAnalysis.actual_rowScalar_exp : ∀ {m : ℕ} (F : IntermediateField ℚ ℝ) (β : Fin m → ↥F),
+  (∀ (i : Fin m), (minpoly ℚ ↑(β i)).natDegree = 2) →
+    ∀ (j k : ℕ) (ν N wmin v scale : ℝ),
+      1 ≤ k →
+        j ≤ k →
+          0 ≤ ν →
+            0 < wmin →
+              0 < v →
+                0 < scale →
+                  (∀ (i : Fin m), wmin ≤ FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β i) →
+                    (∀ (i : Fin m), |Real.pi - ↑(β i)| ≤ ↑(FixedQuadratic.primitiveMinpolyHeight ↑(β i)) ^ (-ν)) →
+                      ∀ (b a : Fin m →₀ ℕ) (d : (i : Fin m) → Fin (a i - b i + 1)) (ell : ℕ),
+                        (OAI.PiExponent.MatrixTranslationBounds.weight
+                              (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β) fun i => a i) ≤
+                            N →
+                          ↑ell ≤ N / v →
+                            ‖OAI.PiExponent.RowTranslation.rowScalar (FixedQuadratic.UpstreamAnalysis.centerError F β j)
+                                  (fun i =>
+                                    OAI.PiExponent.RowTranslation.tail
+                                      (OAI.PiExponent.MatrixTranslationBounds.truncationOrder scale v
+                                        (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β i))
+                                      (PowerSeries.log ℂ))
+                                  b a d ell‖ ≤
+                              Real.exp
+                                (-ν *
+                                    ((OAI.PiExponent.MatrixTranslationBounds.weight
+                                        (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β) fun i => a i) -
+                                      OAI.PiExponent.MatrixTranslationBounds.weight
+                                        (FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights F β) fun i => b i) +
+                                  N * (ν / scale + Real.log 2 / v + (Real.log 4 + Real.log (2 * ↑k) + ν) / wmin))
+'FixedQuadratic.UpstreamAnalysis.actual_rowScalar_exp' depends on axioms: [propext, Classical.choice, Quot.sound]

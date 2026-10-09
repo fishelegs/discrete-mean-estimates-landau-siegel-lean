@@ -1,0 +1,110 @@
+{
+  "status": "passed",
+  "scope": "Actual packet arithmetic/counts and row scalar transfer. No global interpolation, analytic aggregate or pi finiteness theorem.",
+  "upstream_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "entry_audit_sha256": "f61a687817e753c121353e42a4da81fb952135060597cc4fad19de3eba1801e2",
+  "core_receipt_sha256": "95906b608fae6aa1e8ab976df4351576c9fcbd4ac291cbc34067d7bfffa06917",
+  "checks": [
+    {
+      "module": "checks.UpstreamPacketArithmetic",
+      "source_sha256": "6aee3c3181602417b8603dba298ce3e9942cbb83a784aba18f6788270169c05c",
+      "log_sha256": "83d8d88d3050b0a46d77c7e924d46337fc08a5cf20c50f3529668da069e2f3c6",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/actual-packet-analysis-verification/lib/lean/checks/UpstreamPacketArithmetic.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/UpstreamPacketArithmetic.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "olean_sha256": "2948d3528969ec7c1d88ba7be56fafcac13558ccdc9801772e7cb7c451182165"
+    },
+    {
+      "module": "checks.UpstreamAnalysisBridge",
+      "source_sha256": "f6a346c6010af42a55f32f9fe50b20cf92418fec70c1a48e00e0a9fbe0659607",
+      "log_sha256": "c3f26d302450f605fa263192a59282c518d228325652963aa04fd41d138a4f7a",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/actual-packet-analysis-verification/lib/lean/checks/UpstreamAnalysisBridge.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/UpstreamAnalysisBridge.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "olean_sha256": "e829bfe84e07d876790b0b1c2cb700586ed5a0e6718587e75502b08971d6f93b"
+    },
+    {
+      "module": "checks.ExpectedFailureCeilingCost",
+      "source_sha256": "fe16abb10c395b8c6b9e2e239c1a5a51a95f949fe5748c5cda956bdf395e6c6a",
+      "log_sha256": "0a63120683fb2a4c796fc72de9be0fbf083131112ca03b9bb8446a93d6a9e0d8",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/actual-packet-analysis-verification/lib/lean/checks/ExpectedFailureCeilingCost.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureCeilingCost.lean"
+      ],
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true
+    }
+  ],
+  "axiom_audit": {
+    "FixedQuadratic.UpstreamPacketArithmetic.legal_packet_budgets": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamPacketArithmetic.legal_packet_rebate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamPacketArithmetic.primitiveWeights": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamPacketArithmetic.actual_selected_minor_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamPacketArithmetic.actual_rowCount_normalized": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamPacketArithmetic.actual_row_lowIndex_ratio": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamAnalysis.centerError": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamAnalysis.actual_center_error_exp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamAnalysis.actual_rowScalar_exp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "ordinary_lean_only": true
+}
