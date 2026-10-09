@@ -1,0 +1,1201 @@
+{
+  "status": "passed",
+  "scope": "Proved geometry/compactification/blowup/ampleness/jet-surjectivity and cofinal actual nonzero minors for explicit geometric inputs. Not final pi finiteness; exceptional-set parameter selection and complete analytic determinant comparison remain.",
+  "upstream_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "entry_audit_sha256": "42fb180bffd654f2e32202b302bf2b3977c26588446c1a723d402310ec0b51c5",
+  "core_receipt_sha256": "95906b608fae6aa1e8ab976df4351576c9fcbd4ac291cbc34067d7bfffa06917",
+  "checks": [
+    {
+      "module": "FixedQuadratic.GeometryPort.Data",
+      "source_sha256": "46200668b2cdeb8ec25a3ce93f0af481180be9debb1b7da573fa2bacb21f120e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/Data.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/Data.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.413,
+      "olean_sha256": "4479d9c564a73741d76ecb15c8c0b51d85fd477cba4e9e0d84bfd81d500a8e08"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleBlowupGeometry",
+      "source_sha256": "38fece1d909b1ce1998304c730ec681e750ca30d641f395d1dda2be017f9118c",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleBlowupGeometry.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleBlowupGeometry.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.703,
+      "olean_sha256": "3c7f9bdac543d20780f3495867063fb3803593b0a63bbc69a5c1dcfb285b8df4"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.BlowupCurveMargin",
+      "source_sha256": "25e9237bc7230940aa497c0ff35193925d906bf06a1d989ab6f5b2e41ed75c84",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/BlowupCurveMargin.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/BlowupCurveMargin.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.698,
+      "olean_sha256": "3a4906dcb61fceb6be95edb5ee64da561a4f7ec9da142ed5750b17bcdf55559f"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleBlowupMargin",
+      "source_sha256": "60362d08c8f55e0d40274d85a46df265f109f5278b45cf1d5527b205336a9614",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleBlowupMargin.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleBlowupMargin.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.296,
+      "olean_sha256": "fb0c5412eaa850614cc9406b7a677adbe42c46ecba27fe6d4d7d7eb2dc3a6e95"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleCurveImage",
+      "source_sha256": "1da992215e0908fc0b593c0aacb16425958846a67e422cb33753ad8ed4d6b8de",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleCurveImage.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleCurveImage.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.146,
+      "olean_sha256": "d300f330d0e265b6bc83f0c6a94395798d2b0ff4216a8b717a94c3e0053668f5"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleJetPackets",
+      "source_sha256": "aa95b5c35270340ad091c69edc490a09e6a7ec2ed16cee6aa5eb19a405f0ae22",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleJetPackets.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleJetPackets.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.359,
+      "olean_sha256": "dfccac12ed39cd19a78b1db7d7bf0a16ed1e4fd4695dc0b13fec6173aafb91e0"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.ExceptionalCurveDegree",
+      "source_sha256": "29893ba5de257a46d9a409eacb2601aec110876a22eba611ec9da9eaef282673",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/ExceptionalCurveDegree.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/ExceptionalCurveDegree.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 7.044,
+      "olean_sha256": "fa62d481534c46a43967fbf10231b6865beae5d204c345ac65450c11b7800641"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleCurveCoordinates",
+      "source_sha256": "4b324dfe7b9c4e7760b65144d81cef0fbe683d7946d4ee18c41d6f46a0c5d1d0",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleCurveCoordinates.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleCurveCoordinates.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.376,
+      "olean_sha256": "55ea3687c4af6421cb2ca309cdec56ec256ff92c05ea0be959d12e5261b1f7e0"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleBlowupPolarization",
+      "source_sha256": "f2c8b455cc8370b0ce9d609d414deb016218b40553941d14e8cf851ac4e733bc",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleBlowupPolarization.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleBlowupPolarization.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.114,
+      "olean_sha256": "47168fd05880a830a110d6e2205a8582cac4704d3602d6cfae6fc970afe693f8"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleCurveModel",
+      "source_sha256": "710da941b88bb2662e65a6ebb71acec7d975e103a703b02b5c41162621ff998a",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleCurveModel.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleCurveModel.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 5.427,
+      "olean_sha256": "64b8a873c0bec3ec312e295af3cd2c3c5a29e55d423bae76b517bd0d11db777c"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleCurveModelDegrees",
+      "source_sha256": "733aaca24d925fde027f89f72c80eb56b860c73c5d616fb983172fe5fab59d25",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleCurveModelDegrees.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleCurveModelDegrees.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.223,
+      "olean_sha256": "175ae394e2bc84dad4bc8d3d07872fd5a1e4922f258d06775a95c1d51d8f4b5b"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleCurveDegreeData",
+      "source_sha256": "d815ace5a93795dd88d24204b309fa05001e998d20c731d81fe45469e69a5c2b",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleCurveDegreeData.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleCurveDegreeData.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 3.947,
+      "olean_sha256": "c506143b53a8c7c59b8cf690c7adaa4e695970007d9c173fb61d4e9975e295db"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleBlowupAmple",
+      "source_sha256": "5da4ab696f383bde3bbf3691a8f512756b41f9f2c49ab687e308cfa626a0d721",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleBlowupAmple.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleBlowupAmple.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.049,
+      "olean_sha256": "22b3d45572e96623d0c5096a877f67b01fb8b6be3801356eccfa6555e100abb7"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleJetAmpleness",
+      "source_sha256": "43eeb8c406aae0b044c6f96d93f2b7c1675c6673018f67b4197ce3b37a036911",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleJetAmpleness.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleJetAmpleness.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.157,
+      "olean_sha256": "3c4f3a379d7996f3be56b648432369ae3692503410fe0ef18b5f8bf7df0076ed"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.AdmissibleJetSurjectivity",
+      "source_sha256": "a3380bb77fc319b4d812cccbc92f7154fc44d579388b834d9d78cbe27a2e6aa4",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/AdmissibleJetSurjectivity.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/AdmissibleJetSurjectivity.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.273,
+      "olean_sha256": "01938e84c2488338c03b2baf2072156bcb1434b5e0261a1c82be102e0dc1d704"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.Interpolation",
+      "source_sha256": "2484e5b9f48f81a9df0c568d28f1102faf42e28e3f26b72c5c8674685de0bc1a",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/Interpolation.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/Interpolation.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.33,
+      "olean_sha256": "1afd39e5e5f99119b34d171f29700a06ad4eb219041e74f5a92f8da62cd9d141"
+    },
+    {
+      "module": "FixedQuadratic.GeometryPort.FixedCenters",
+      "source_sha256": "99cd7fb60a4d2d275bab780df3901131ded7d6953e834e91b9756b6a54080b02",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/FixedQuadratic/GeometryPort/FixedCenters.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/FixedQuadratic/GeometryPort/FixedCenters.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.468,
+      "olean_sha256": "190718df8ec3e2d664308e93321e9c09ecc90d038894fcacdc2c09ba10f65ac9"
+    },
+    {
+      "module": "checks.GeometryAggregate",
+      "source_sha256": "e42fdfbf9fa7f732ef0d2fa665f87f26456e043e60c31bee459521d77d7bbc39",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/checks/GeometryAggregate.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/GeometryAggregate.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 3.805,
+      "olean_sha256": "4431b4f7790ff84c36d13899418ed419c65b98254adf5c9ce288b7ab673c1975"
+    },
+    {
+      "module": "checks.GeometryRegression",
+      "source_sha256": "b35c018a0d0b2408ba62e76f1f250e56e3a592d907b4b17610bc06b61c5403aa",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/checks/GeometryRegression.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/GeometryRegression.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 5.274,
+      "olean_sha256": "446301a95c0e69453570e71caf7d50729a7f87e45b7104c074f7fe2800696c02"
+    },
+    {
+      "module": "checks.GeometryAudit",
+      "source_sha256": "2c2be74a1d56fb6595727c410474c2fb1091106aa2cbbc9fb5cc10c463e061bd",
+      "log_sha256": "bb9eab0be3ad41b0c6ccfe1227fdedd8643187d948f8e1b3986241698b600b63",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/checks/GeometryAudit.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/GeometryAudit.lean"
+      ],
+      "exit_code": 0,
+      "expected_failure": false,
+      "passed": true,
+      "elapsed_seconds": 4.507,
+      "olean_sha256": "79d9ea733a9239e956f7d132f71169c6edcbd6857aa19e337224edcb81ca6f01"
+    },
+    {
+      "module": "checks.ExpectedFailureGeometryTail",
+      "source_sha256": "5179f373796d9cbca5892365e4da6fff1afedbf248f858e5a062622c6899e583",
+      "log_sha256": "5a8173ecca6e7143bb96cf20a441472adc592a3e1d167c8f295643d17483ba89",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/checks/ExpectedFailureGeometryTail.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureGeometryTail.lean"
+      ],
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 3.903
+    },
+    {
+      "module": "checks.ExpectedFailureGeometryConclusionField",
+      "source_sha256": "228d988844f91221bc2dd60e9e1d514b4cd8685aa8a30c0b48c15892c5873e5f",
+      "log_sha256": "351a706e523daa5be89b14eba8374f2db7da6fefccd292c990b4c513330606ff",
+      "argv": [
+        "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+        "-j1",
+        "-M8192",
+        "-DautoImplicit=false",
+        "-o",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/fixed-field-geometry-port-verification/lib/lean/checks/ExpectedFailureGeometryConclusionField.olean",
+        "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/ExpectedFailureGeometryConclusionField.lean"
+      ],
+      "exit_code": 1,
+      "expected_failure": true,
+      "passed": true,
+      "elapsed_seconds": 4.111
+    }
+  ],
+  "axiom_audit": {
+    "OAI.PiExponent.FixedFieldGeometryData": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldGeometryData.exact_weighted_curve_inequality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.scale": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.Index": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.exponents": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.constantIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.coordinateIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.pureIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.index_nonempty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.compactification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap_proper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.affineChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_isOpenImmersion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.origin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.compactification_nonempty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isIntegral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isLocallyNoetherian": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.compactification_compact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isNoetherian": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_quasiCompact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_over": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane_ample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff_strict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_restrict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_subset_chart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_coherent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.origin_ne_center": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.origin_avoids_center": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_ne_top": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.blowup": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.projection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.structureMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.projection_proper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.structureMap_proper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isIntegral": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isLocallyNoetherian": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.blowup_compact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isNoetherian": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.A": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.J": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.exceptionalInclusion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.exceptional_presents": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.isBlowup": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.affinePolynomialIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.formalJet_packet_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.curve_degree_laws": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_nonnegative_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.curveDegree_zero_of_frame": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_exceptional_frame": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_avoids_center": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_image_outside_chart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_contracted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.contactSum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.poleDegree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.actual_contact_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_actual_contact_degrees": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupMargin.AffineCurveDegreeData": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupMargin.uniform_margin_of_affine_curve_data": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupMargin.exists_positive_uniform_margin_of_affine_curve_data": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveImage.center_point_isClosed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveImage.meets_center_complement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveImage.projection_restrict_isIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveImage.imageCurve": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveImage.functionFieldIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveImage.functionFieldIso_generic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveImage.image_meets_chart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldJetPackets.affineOpen": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldJetPackets.sectionPolynomial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldJetPackets.formalPackets_surjective_of_jetRestriction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection_zeroIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection_zeroIdeal_eq_comap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_pullback": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.pullback_inverseSection_zeroIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.pullback_inverseSection_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_spec_top": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_specIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_compactIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_eq_top_of_not_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.map_powerIdeal_eq_top_of_transcendental": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.compactIdeal_comap_ne_bot_of_generic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.centerMorphism_eq_centeredLift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_length_eq_logContact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.divisor_eq_localIdeal_length": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.degree_eq_neg_idealDivisor_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.compactIdeal_degree_eq_neg_contact_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldExceptionalCurveDegree.admissible_degree_eq_neg_contactSum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.sourceStructure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.imageStructure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.sourceAlgebra": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.imageAlgebra": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.fieldEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.chart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.chartPresentation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.chart_nonempty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.imageCoordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.coordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.y": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.x": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.full_coordinates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.field_properties": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveCoordinates.coordinates_generic_map": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.exists_ampleExponent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.ampleExponent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.ampleExponent_gt_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.H": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.H_ample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.uniform_curve_margin_of_affine_curve_data": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveModel.ModelData": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveModel.existsModelData": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldCurveModel.degreeData": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupMargin.affineCurveDegreeData": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.uniform_curve_margin": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle_ample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldJetSurjectivity.blowupBundle_ample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldJetSurjectivity.eventual_jetRestriction_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldJetSurjectivity.eventually_jetRestriction_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldInterpolation.exponent_budget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldInterpolation.eventual_supportBound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldInterpolation.actualFrame_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldInterpolation.WeightedPolynomials": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldInterpolation.packetMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldInterpolation.packetMap_surjective_of_family": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldInterpolation.eventually_packetMap_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldInterpolation.actualMatrix_surjective_of_packetMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldInterpolation.cofinal_actualMatrix_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldInterpolation.cofinal_nonzero_full_row_minor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.heightWeightsQ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.heightWeightsQ_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.geometricDegreeWeights": [
+      "propext"
+    ],
+    "FixedQuadratic.geometricJetWeights": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.geometric_fibre_product_ratio": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.geometric_product_ratio": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.realQuadraticGeometryData": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.fixed_field_cofinal_nonzero_minor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.GeometryRegression.concreteGeometry": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.GeometryRegression.concrete_jet_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.GeometryRegression.concrete_nonzero_minor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.FixedFieldGeometryData.mk": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "ordinary_lean_only": true
+}

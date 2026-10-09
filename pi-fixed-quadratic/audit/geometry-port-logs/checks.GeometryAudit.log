@@ -1,0 +1,2054 @@
+OAI.PiExponent.FixedFieldGeometryData : ℝ → ℝ → ℝ → Type
+'OAI.PiExponent.FixedFieldGeometryData' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldGeometryData.exact_weighted_curve_inequality.{u_1} : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) {E : Type u_1} [inst : Field.{u_1} E]
+  [inst_1 : Algebra.{0, u_1} ℂ E] [inst_2 : Algebra.EssFiniteType.{0, u_1} ℂ E] (y : E) (x : Fin d.m → E)
+  (hgen :
+    Eq.{u_1 + 1} (IntermediateField.adjoin.{0, u_1} ℂ (Set.range.{u_1, 1} fun i => Fin.cases.{u_1 + 1} y x i))
+      Top.top.{u_1})
+  (htrdeg : Eq.{u_1 + 2} (Algebra.trdeg.{u_1, 0} ℂ E) 1),
+  have hres := ⋯;
+  have hfinite := ⋯;
+  let z := fun i => Fin.cases.{u_1 + 1} y x i;
+  have hz := ⋯;
+  LE.le.{0}
+    (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 ↑d.sigma)
+      (∑ p ∈ OAI.PiExponent.CurveContactFamily.places.{u_1} hfinite z d.curveCenters hz,
+        ↑(OAI.PiExponent.CurveContactFamily.contact.{u_1} hres hfinite z d.curveCenters hz d.curveJetWeights p)))
+    (OAI.PiExponent.CurveContactSum.weightedDegree.{u_1, 0} hfinite z d.curveDegreeWeights)
+'OAI.PiExponent.FixedFieldGeometryData.exact_weighted_curve_inequality' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.scale : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    OAI.PiExponent.WeightedGeometryScale.Scale d.curveDegreeWeights d.curveJetWeights
+'OAI.PiExponent.FixedFieldBlowupGeometry.scale' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.Index : {ν Λ D : ℝ} → OAI.PiExponent.FixedFieldGeometryData ν Λ D → Type
+'OAI.PiExponent.FixedFieldBlowupGeometry.Index' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.exponents : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    OAI.PiExponent.FixedFieldBlowupGeometry.Index d → Finsupp.{0, 0} (Fin (HAdd.hAdd.{0, 0, 0} d.m 1)) ℕ
+'OAI.PiExponent.FixedFieldBlowupGeometry.exponents' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.constantIndex : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) → OAI.PiExponent.FixedFieldBlowupGeometry.Index d
+'OAI.PiExponent.FixedFieldBlowupGeometry.constantIndex' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.coordinateIndex : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    Fin (HAdd.hAdd.{0, 0, 0} d.m 1) → OAI.PiExponent.FixedFieldBlowupGeometry.Index d
+'OAI.PiExponent.FixedFieldBlowupGeometry.coordinateIndex' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.pureIndex : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    Fin (HAdd.hAdd.{0, 0, 0} d.m 1) → OAI.PiExponent.FixedFieldBlowupGeometry.Index d
+'OAI.PiExponent.FixedFieldBlowupGeometry.pureIndex' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.index_nonempty : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D), Nonempty.{1} (OAI.PiExponent.FixedFieldBlowupGeometry.Index d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.index_nonempty' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.compactification : {ν Λ D : ℝ} →
+  OAI.PiExponent.FixedFieldGeometryData ν Λ D → AlgebraicGeometry.Scheme.{0}
+'OAI.PiExponent.FixedFieldBlowupGeometry.compactification' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    Quiver.Hom.{0, 1} (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d) (AlgebraicGeometry.Spec.{0} ↧ℂ)
+'OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap_proper : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  AlgebraicGeometry.IsProper.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap_proper' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.affineChart : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    Quiver.Hom.{0, 1} (OAI.PiExponent.CompactLogJetIdeal.affineSpace d.m)
+      (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.affineChart' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_isOpenImmersion : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  AlgebraicGeometry.IsOpenImmersion.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_isOpenImmersion' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.origin : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) → ↥(OAI.PiExponent.CompactLogJetIdeal.affineSpace d.m)
+'OAI.PiExponent.FixedFieldBlowupGeometry.origin' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.compactification_nonempty : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  Nonempty.{1} ↥(OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.compactification_nonempty' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isIntegral : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  AlgebraicGeometry.IsIntegral.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isIntegral' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isLocallyNoetherian : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  AlgebraicGeometry.IsLocallyNoetherian.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isLocallyNoetherian' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.compactification_compact : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  CompactSpace.{0} ↥(OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.compactification_compact' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isNoetherian : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  AlgebraicGeometry.IsNoetherian.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isNoetherian' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_quasiCompact : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  AlgebraicGeometry.QuasiCompact.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_quasiCompact' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_over : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  Eq.{1}
+    (CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d)
+      (OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap d))
+    (OAI.PiExponent.CompactLogJetIdeal.structureMap d.m)
+'OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_over' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    OAI.PiExponentSeshadri.Geometry.LineBundle.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane_ample : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+    (OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane_ample' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) → Fin d.m → ℕ
+'OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff_strict : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) (i : Fin d.m),
+  LT.lt.{0} (d.curveJetWeights i.succ)
+    (HMul.hMul.{0, 0, 0} (↑(OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff d i)) (d.curveJetWeights 0))
+'OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff_strict' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    AlgebraicGeometry.Scheme.IdealSheafData.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_restrict : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  Eq.{1}
+    (AlgebraicGeometry.Scheme.IdealSheafData.comap.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)
+      (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+    (OAI.PiExponent.CompactLogJetIdeal.affineIdeal.{0} d.curveCenters
+      (OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff d) (OAI.PiExponent.FixedFieldBlowupGeometry.scale d).jetPowers)
+'OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_restrict' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  Eq.{1}
+    (↑(AlgebraicGeometry.Scheme.IdealSheafData.support.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)))
+    (⋃ j,
+      Set.range.{0, 1}
+        ⇑(CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.CompactLogJetIdeal.point (d.curveCenters j))
+            (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d)))
+'OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_finite : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  Set.Finite.{0}
+    ↑(AlgebraicGeometry.Scheme.IdealSheafData.support.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d))
+'OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_finite' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_subset_chart : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  ↑(AlgebraicGeometry.Scheme.IdealSheafData.support.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)) ⊆
+    ↑(AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+'OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_subset_chart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_coherent : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  SheafOfModules.IsFinitePresentation.{0, 0, 0}
+    (OAI.PiExponentSeshadri.IdealModule.closedModule.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d))
+'OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_coherent' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.origin_ne_center : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) (c : Fin d.m → ℂ),
+  Ne.{1} (OAI.PiExponent.FixedFieldBlowupGeometry.origin d) (OAI.PiExponent.CompactJetPolynomial.centerPoint.{0} c)
+'OAI.PiExponent.FixedFieldBlowupGeometry.origin_ne_center' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.origin_avoids_center : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d) (OAI.PiExponent.FixedFieldBlowupGeometry.origin d) ∉
+    AlgebraicGeometry.Scheme.IdealSheafData.support.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.origin_avoids_center' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_ne_top : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  Ne.{1} (AlgebraicGeometry.Scheme.IdealSheafData.support.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d))
+    Top.top.{0}
+'OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_ne_top' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.blowup : {ν Λ D : ℝ} →
+  OAI.PiExponent.FixedFieldGeometryData ν Λ D → AlgebraicGeometry.Scheme.{0}
+'OAI.PiExponent.FixedFieldBlowupGeometry.blowup' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.projection : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    Quiver.Hom.{0, 1} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+      (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.projection' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.structureMap : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    Quiver.Hom.{0, 1} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d) (AlgebraicGeometry.Spec.{0} ↧ℂ)
+'OAI.PiExponent.FixedFieldBlowupGeometry.structureMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.projection_proper : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  AlgebraicGeometry.IsProper.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.projection_proper' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.structureMap_proper : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  AlgebraicGeometry.IsProper.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.structureMap d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.structureMap_proper' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isIntegral : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  AlgebraicGeometry.IsIntegral.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isIntegral' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isLocallyNoetherian : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  AlgebraicGeometry.IsLocallyNoetherian.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isLocallyNoetherian' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.blowup_compact : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  CompactSpace.{0} ↥(OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.blowup_compact' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isNoetherian : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  AlgebraicGeometry.IsNoetherian.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isNoetherian' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.A : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    OAI.PiExponentSeshadri.Geometry.LineBundle.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.A' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.J : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    OAI.PiExponentSeshadri.Geometry.LineBundle.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.J' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.exceptionalInclusion : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    Quiver.Hom.{0, 1}
+      (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.J d))
+      (OAI.PiExponentSeshadri.Geometry.structureSheaf.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d))
+'OAI.PiExponent.FixedFieldBlowupGeometry.exceptionalInclusion' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.exceptional_presents : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  OAI.PiExponentSeshadri.Geometry.PresentsPullbackIdeal.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)
+    (OAI.PiExponent.FixedFieldBlowupGeometry.projection d) (OAI.PiExponent.FixedFieldBlowupGeometry.J d)
+    (OAI.PiExponent.FixedFieldBlowupGeometry.exceptionalInclusion d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.exceptional_presents' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.isBlowup : ∀ {ν Λ D : ℝ} (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  OAI.PiExponentSeshadri.Geometry.IsBlowup.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)
+    (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.isBlowup' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.affinePolynomialIdeal : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) → Ideal.{0} (OAI.PiExponent.CompactLogJetIdeal.coordinateRing d.m)
+'OAI.PiExponent.FixedFieldBlowupGeometry.affinePolynomialIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.formalJet_packet_zero : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) (n : ℕ) (P : OAI.PiExponent.CompactLogJetIdeal.coordinateRing d.m),
+  Membership.mem.{0, 0} (HPow.hPow.{0, 0, 0} (OAI.PiExponent.FixedFieldBlowupGeometry.affinePolynomialIdeal d) n) P →
+    ∀ (j : Fin d.K),
+      Eq.{1}
+        (OAI.PiExponent.JetGeometry.rationalCoefficientPacket.{0, 0} d.curveJetWeights
+          (HMul.hMul.{0, 0, 0} ↑n ↑(OAI.PiExponent.FixedFieldBlowupGeometry.scale d).radius)
+          ((OAI.PiExponent.FormalLogJet.formalJet (d.curveCenters j)) P))
+        fun x => 0
+'OAI.PiExponent.FixedFieldBlowupGeometry.formalJet_packet_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.curve_degree_laws : ∀ {B : AlgebraicGeometry.Scheme.{0}}
+  (p : Quiver.Hom.{0, 1} B (AlgebraicGeometry.Spec.{0} ↧ℂ)) [AlgebraicGeometry.IsProper.{0} p]
+  (H : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} B),
+  OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple B H →
+    ∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} B),
+      (∀ (L M : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} B),
+          Eq.{1} (OAI.PiExponent.NumericalAmpleness.curveDegree p (L.tensor M) C)
+            (HAdd.hAdd.{0, 0, 0} (OAI.PiExponent.NumericalAmpleness.curveDegree p L C)
+              (OAI.PiExponent.NumericalAmpleness.curveDegree p M C))) ∧
+        ∀ (L : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} B) (n : ℕ),
+          Eq.{1} (OAI.PiExponent.NumericalAmpleness.curveDegree p (L.pow n) C)
+            (HMul.hMul.{0, 0, 0} (↑n) (OAI.PiExponent.NumericalAmpleness.curveDegree p L C))
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.curve_degree_laws' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient : ℕ → ℝ → ℝ
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient_pos : ∀ {a : ℕ},
+  LT.lt.{0} 1 a →
+    ∀ {σ : ℝ}, LT.lt.{0} 0 σ → LT.lt.{0} 0 (OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient a σ)
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient_pos' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_nonnegative_degree : ∀ {B : AlgebraicGeometry.Scheme.{0}}
+  (p : Quiver.Hom.{0, 1} B (AlgebraicGeometry.Spec.{0} ↧ℂ)) [AlgebraicGeometry.IsProper.{0} p]
+  (A J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} B) (a : ℕ),
+  LT.lt.{0} 1 a →
+    OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple B ((A.pow a).tensor J) →
+      ∀ (σ : ℝ),
+        LT.lt.{0} 0 σ →
+          ∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} B),
+            LE.le.{0} 0
+                (HAdd.hAdd.{0, 0, 0} (↑(OAI.PiExponent.NumericalAmpleness.curveDegree p A C))
+                  (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 σ)
+                    ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p J C))) →
+              LE.le.{0}
+                (HMul.hMul.{0, 0, 0} (OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient a σ)
+                  ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p ((A.pow a).tensor J) C))
+                ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p (A.tensor J) C)
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_nonnegative_degree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.curveDegree_zero_of_frame : ∀ {B : AlgebraicGeometry.Scheme.{0}}
+  (p : Quiver.Hom.{0, 1} B (AlgebraicGeometry.Spec.{0} ↧ℂ)) (J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} B)
+  (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} B)
+  (e :
+    CategoryTheory.Iso.{0, 1}
+      (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0}
+        (J.pullback (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)))
+      (OAI.PiExponentSeshadri.Geometry.structureSheaf.{0}
+        (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C))),
+  Eq.{1} (OAI.PiExponent.NumericalAmpleness.curveDegree p J C) 0
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.curveDegree_zero_of_frame' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_exceptional_frame : ∀ {B : AlgebraicGeometry.Scheme.{0}}
+  (p : Quiver.Hom.{0, 1} B (AlgebraicGeometry.Spec.{0} ↧ℂ)) [AlgebraicGeometry.IsProper.{0} p]
+  (A J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} B) (a : ℕ),
+  LT.lt.{0} 1 a →
+    OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple B ((A.pow a).tensor J) →
+      ∀ (σ : ℝ),
+        LT.lt.{0} 0 σ →
+          ∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} B)
+            (e :
+              CategoryTheory.Iso.{0, 1}
+                (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0}
+                  (J.pullback (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)))
+                (OAI.PiExponentSeshadri.Geometry.structureSheaf.{0}
+                  (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C))),
+            LE.le.{0}
+              (HMul.hMul.{0, 0, 0} (OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient a σ)
+                ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p ((A.pow a).tensor J) C))
+              ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p (A.tensor J) C)
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_exceptional_frame' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_avoids_center : ∀ {B X : AlgebraicGeometry.Scheme.{0}}
+  (p : Quiver.Hom.{0, 1} B (AlgebraicGeometry.Spec.{0} ↧ℂ)) [AlgebraicGeometry.IsProper.{0} p]
+  (I : AlgebraicGeometry.Scheme.IdealSheafData.{0} X) (π : Quiver.Hom.{0, 1} B X)
+  (A J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} B)
+  (ι :
+    Quiver.Hom.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J)
+      (OAI.PiExponentSeshadri.Geometry.structureSheaf.{0} B)),
+  OAI.PiExponentSeshadri.Geometry.PresentsPullbackIdeal.{0} I π J ι →
+    ∀ (a : ℕ),
+      LT.lt.{0} 1 a →
+        OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple B ((A.pow a).tensor J) →
+          ∀ (σ : ℝ),
+            LT.lt.{0} 0 σ →
+              ∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} B),
+                (∀ (c : ↥(OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C)),
+                    (CategoryTheory.CategoryStruct.comp.{0, 1}
+                          (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C) π)
+                        c ∉
+                      AlgebraicGeometry.Scheme.IdealSheafData.support.{0} I) →
+                  LE.le.{0}
+                    (HMul.hMul.{0, 0, 0} (OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient a σ)
+                      ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p ((A.pow a).tensor J) C))
+                    ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p (A.tensor J) C)
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_avoids_center' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_image_outside_chart : ∀ {B X : AlgebraicGeometry.Scheme.{0}}
+  (p : Quiver.Hom.{0, 1} B (AlgebraicGeometry.Spec.{0} ↧ℂ)) [AlgebraicGeometry.IsProper.{0} p]
+  (I : AlgebraicGeometry.Scheme.IdealSheafData.{0} X) (π : Quiver.Hom.{0, 1} B X)
+  (A J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} B)
+  (ι :
+    Quiver.Hom.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J)
+      (OAI.PiExponentSeshadri.Geometry.structureSheaf.{0} B)),
+  OAI.PiExponentSeshadri.Geometry.PresentsPullbackIdeal.{0} I π J ι →
+    ∀ (a : ℕ),
+      LT.lt.{0} 1 a →
+        OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple B ((A.pow a).tensor J) →
+          ∀ (σ : ℝ),
+            LT.lt.{0} 0 σ →
+              ∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} B) (U : AlgebraicGeometry.Scheme.Opens.{0} X),
+                ↑(AlgebraicGeometry.Scheme.IdealSheafData.support.{0} I) ⊆ ↑U →
+                  (∀ (c : ↥(OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C)),
+                      (CategoryTheory.CategoryStruct.comp.{0, 1}
+                            (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C) π)
+                          c ∉
+                        U) →
+                    LE.le.{0}
+                      (HMul.hMul.{0, 0, 0} (OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient a σ)
+                        ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p ((A.pow a).tensor J) C))
+                      ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p (A.tensor J) C)
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_image_outside_chart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_contracted : ∀ {B X : AlgebraicGeometry.Scheme.{0}}
+  (p : Quiver.Hom.{0, 1} B (AlgebraicGeometry.Spec.{0} ↧ℂ)) [AlgebraicGeometry.IsProper.{0} p]
+  (π : Quiver.Hom.{0, 1} B X) (L : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} X)
+  (J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} B) (a : ℕ),
+  LT.lt.{0} 1 a →
+    OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple B (((L.pullback π).pow a).tensor J) →
+      ∀ (σ : ℝ),
+        LT.lt.{0} 0 σ →
+          ∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} B) (x : ↥X),
+            Set.range.{0, 1}
+                  ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C) π) ⊆
+                singleton.{0, 0} x →
+              LE.le.{0}
+                (HMul.hMul.{0, 0, 0} (OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient a σ)
+                  ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p (((L.pullback π).pow a).tensor J) C))
+                ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p ((L.pullback π).tensor J) C)
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_contracted' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.contactSum.{u_1} : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    {E : Type u_1} →
+      [inst : Field.{u_1} E] →
+        [inst_1 : Algebra.{0, u_1} ℂ E] →
+          [Algebra.EssFiniteType.{0, u_1} ℂ E] →
+            (y : E) →
+              (x : Fin d.m → E) →
+                Eq.{u_1 + 1}
+                    (IntermediateField.adjoin.{0, u_1} ℂ (Set.range.{u_1, 1} fun i => Fin.cases.{u_1 + 1} y x i))
+                    Top.top.{u_1} →
+                  Eq.{u_1 + 2} (Algebra.trdeg.{u_1, 0} ℂ E) 1 → ℝ
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.contactSum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.poleDegree.{u_1} : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    {E : Type u_1} →
+      [inst : Field.{u_1} E] →
+        [inst_1 : Algebra.{0, u_1} ℂ E] →
+          [Algebra.EssFiniteType.{0, u_1} ℂ E] → E → (Fin d.m → E) → Eq.{u_1 + 2} (Algebra.trdeg.{u_1, 0} ℂ E) 1 → ℝ
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.poleDegree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.actual_contact_bound.{u_1} : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) {E : Type u_1} [inst : Field.{u_1} E]
+  [inst_1 : Algebra.{0, u_1} ℂ E] [inst_2 : Algebra.EssFiniteType.{0, u_1} ℂ E] (y : E) (x : Fin d.m → E)
+  (hgen :
+    Eq.{u_1 + 1} (IntermediateField.adjoin.{0, u_1} ℂ (Set.range.{u_1, 1} fun i => Fin.cases.{u_1 + 1} y x i))
+      Top.top.{u_1})
+  (htrdeg : Eq.{u_1 + 2} (Algebra.trdeg.{u_1, 0} ℂ E) 1),
+  LE.le.{0}
+    (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 ↑d.sigma)
+      (OAI.PiExponent.FixedFieldBlowupCurveMargin.contactSum.{u_1} d y x hgen htrdeg))
+    (OAI.PiExponent.FixedFieldBlowupCurveMargin.poleDegree.{u_1} d y x htrdeg)
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.actual_contact_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_actual_contact_degrees.{u_1} : ∀
+  {B : AlgebraicGeometry.Scheme.{0}} {ν Λ D : ℝ} (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) {E : Type u_1}
+  [inst : Field.{u_1} E] [inst_1 : Algebra.{0, u_1} ℂ E] [inst_2 : Algebra.EssFiniteType.{0, u_1} ℂ E]
+  (p : Quiver.Hom.{0, 1} B (AlgebraicGeometry.Spec.{0} ↧ℂ)) [AlgebraicGeometry.IsProper.{0} p]
+  (A J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} B) (a : ℕ),
+  LT.lt.{0} 1 a →
+    OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple B ((A.pow a).tensor J) →
+      ∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} B) (y : E) (x : Fin d.m → E)
+        (hgen :
+          Eq.{u_1 + 1} (IntermediateField.adjoin.{0, u_1} ℂ (Set.range.{u_1, 1} fun i => Fin.cases.{u_1 + 1} y x i))
+            Top.top.{u_1})
+        (htrdeg : Eq.{u_1 + 2} (Algebra.trdeg.{u_1, 0} ℂ E) 1) (R : ℚ),
+        LT.lt.{0} 0 R →
+          Eq.{1} (↑(OAI.PiExponent.NumericalAmpleness.curveDegree p A C))
+              (HMul.hMul.{0, 0, 0} (↑R) (OAI.PiExponent.FixedFieldBlowupCurveMargin.poleDegree.{u_1} d y x htrdeg)) →
+            Eq.{1} (↑(OAI.PiExponent.NumericalAmpleness.curveDegree p J C))
+                (HMul.hMul.{0, 0, 0} (Neg.neg.{0} ↑R)
+                  (OAI.PiExponent.FixedFieldBlowupCurveMargin.contactSum.{u_1} d y x hgen htrdeg)) →
+              LE.le.{0}
+                (HMul.hMul.{0, 0, 0} (OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient a ↑d.sigma)
+                  ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p ((A.pow a).tensor J) C))
+                ↑(OAI.PiExponent.NumericalAmpleness.curveDegree p (A.tensor J) C)
+'OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_actual_contact_degrees' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupMargin.AffineCurveDegreeData : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d) → Type 1
+'OAI.PiExponent.FixedFieldBlowupMargin.AffineCurveDegreeData' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupMargin.uniform_margin_of_affine_curve_data : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) (a : ℕ),
+  LT.lt.{0} 1 a →
+    OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+        (((OAI.PiExponent.FixedFieldBlowupGeometry.A d).pow a).tensor (OAI.PiExponent.FixedFieldBlowupGeometry.J d)) →
+      (∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)),
+          (¬∃ x,
+                Set.range.{0, 1}
+                    ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                        (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                        (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+                  singleton.{0, 0} x) →
+            (∃ c,
+                Membership.mem.{0, 0}
+                  (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+                  ((CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                      (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+                    c)) →
+              Nonempty.{2} (OAI.PiExponent.FixedFieldBlowupMargin.AffineCurveDegreeData d C)) →
+        ∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)),
+          LE.le.{0}
+            (HMul.hMul.{0, 0, 0} (OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient a ↑d.sigma)
+              ↑(OAI.PiExponent.NumericalAmpleness.curveDegree (OAI.PiExponent.FixedFieldBlowupGeometry.structureMap d)
+                  (((OAI.PiExponent.FixedFieldBlowupGeometry.A d).pow a).tensor
+                    (OAI.PiExponent.FixedFieldBlowupGeometry.J d))
+                  C))
+            ↑(OAI.PiExponent.NumericalAmpleness.curveDegree (OAI.PiExponent.FixedFieldBlowupGeometry.structureMap d)
+                ((OAI.PiExponent.FixedFieldBlowupGeometry.A d).tensor (OAI.PiExponent.FixedFieldBlowupGeometry.J d)) C)
+'OAI.PiExponent.FixedFieldBlowupMargin.uniform_margin_of_affine_curve_data' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupMargin.exists_positive_uniform_margin_of_affine_curve_data : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) (a : ℕ),
+  LT.lt.{0} 1 a →
+    OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+        (((OAI.PiExponent.FixedFieldBlowupGeometry.A d).pow a).tensor (OAI.PiExponent.FixedFieldBlowupGeometry.J d)) →
+      (∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)),
+          (¬∃ x,
+                Set.range.{0, 1}
+                    ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                        (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                        (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+                  singleton.{0, 0} x) →
+            (∃ c,
+                Membership.mem.{0, 0}
+                  (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+                  ((CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                      (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+                    c)) →
+              Nonempty.{2} (OAI.PiExponent.FixedFieldBlowupMargin.AffineCurveDegreeData d C)) →
+        ∃ ε,
+          LT.lt.{0} 0 ε ∧
+            ∀
+              (C :
+                OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)),
+              LE.le.{0}
+                (HMul.hMul.{0, 0, 0} ε
+                  ↑(OAI.PiExponent.NumericalAmpleness.curveDegree
+                      (OAI.PiExponent.FixedFieldBlowupGeometry.structureMap d)
+                      (((OAI.PiExponent.FixedFieldBlowupGeometry.A d).pow a).tensor
+                        (OAI.PiExponent.FixedFieldBlowupGeometry.J d))
+                      C))
+                ↑(OAI.PiExponent.NumericalAmpleness.curveDegree (OAI.PiExponent.FixedFieldBlowupGeometry.structureMap d)
+                    ((OAI.PiExponent.FixedFieldBlowupGeometry.A d).tensor (OAI.PiExponent.FixedFieldBlowupGeometry.J d))
+                    C)
+'OAI.PiExponent.FixedFieldBlowupMargin.exists_positive_uniform_margin_of_affine_curve_data' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveImage.center_point_isClosed : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) (x : ↥(OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)),
+  Membership.mem.{0, 0}
+      (AlgebraicGeometry.Scheme.IdealSheafData.support.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)) x →
+    IsClosed.{0} (singleton.{0, 0} x)
+'OAI.PiExponent.FixedFieldCurveImage.center_point_isClosed' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveImage.meets_center_complement : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D)
+  (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)),
+  (¬∃ x,
+        Set.range.{0, 1}
+            ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+          singleton.{0, 0} x) →
+    ∃ c,
+      Membership.mem.{0, 0}
+        (TopologicalSpace.Closeds.compl.{0}
+          (AlgebraicGeometry.Scheme.IdealSheafData.support.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)))
+        ((CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+            (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+          c)
+'OAI.PiExponent.FixedFieldCurveImage.meets_center_complement' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveImage.projection_restrict_isIso : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  CategoryTheory.IsIso.{0, 1}
+    (AlgebraicGeometry.morphismRestrict.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)
+      (TopologicalSpace.Closeds.compl.{0}
+        (AlgebraicGeometry.Scheme.IdealSheafData.support.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d))))
+'OAI.PiExponent.FixedFieldCurveImage.projection_restrict_isIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveImage.imageCurve : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (¬∃ x,
+            Set.range.{0, 1}
+                ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                    (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                    (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+              singleton.{0, 0} x) →
+        OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+'OAI.PiExponent.FixedFieldCurveImage.imageCurve' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveImage.functionFieldIso : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (hn :
+          ¬∃ x,
+              Set.range.{0, 1}
+                  ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                      (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+                singleton.{0, 0} x) →
+        CategoryTheory.Iso.{0, 1}
+          (AlgebraicGeometry.Scheme.functionField.{0}
+            (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0}
+              (OAI.PiExponent.FixedFieldCurveImage.imageCurve d C hn)))
+          (AlgebraicGeometry.Scheme.functionField.{0} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C))
+'OAI.PiExponent.FixedFieldCurveImage.functionFieldIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveImage.functionFieldIso_generic : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D)
+  (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d))
+  (hn :
+    ¬∃ x,
+        Set.range.{0, 1}
+            ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+          singleton.{0, 0} x),
+  Eq.{1}
+    (CategoryTheory.CategoryStruct.comp.{0, 1}
+      (AlgebraicGeometry.Spec.map.{0}
+        (CategoryTheory.Iso.hom.{0, 1} (OAI.PiExponent.FixedFieldCurveImage.functionFieldIso d C hn)))
+      (CategoryTheory.CategoryStruct.comp.{0, 1}
+        (AlgebraicGeometry.Scheme.fromSpecStalk.{0}
+          (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0}
+            (OAI.PiExponent.FixedFieldCurveImage.imageCurve d C hn))
+          (genericPoint.{0}
+            ↥(OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0}
+                (OAI.PiExponent.FixedFieldCurveImage.imageCurve d C hn))))
+        (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0}
+          (OAI.PiExponent.FixedFieldCurveImage.imageCurve d C hn))))
+    (CategoryTheory.CategoryStruct.comp.{0, 1}
+      (AlgebraicGeometry.Scheme.fromSpecStalk.{0} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C)
+        (genericPoint.{0} ↥(OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C)))
+      (CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+        (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)))
+'OAI.PiExponent.FixedFieldCurveImage.functionFieldIso_generic' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveImage.image_meets_chart : ∀ {ν Λ D : ℝ} (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D)
+  (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d))
+  (hn :
+    ¬∃ x,
+        Set.range.{0, 1}
+            ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+          singleton.{0, 0} x),
+  (∃ c,
+      Membership.mem.{0, 0}
+        (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+        ((CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+            (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+          c)) →
+    ∃ c,
+      Membership.mem.{0, 0}
+        (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+        ((OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0}
+            (OAI.PiExponent.FixedFieldCurveImage.imageCurve d C hn))
+          c)
+'OAI.PiExponent.FixedFieldCurveImage.image_meets_chart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldJetPackets.affineOpen : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    ↑(AlgebraicGeometry.Scheme.affineOpens.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d))
+'OAI.PiExponent.FixedFieldJetPackets.affineOpen' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldJetPackets.sectionPolynomial : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (n : ℕ) →
+      OAI.PiExponent.AffineJetCoefficientInterface.Frame (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d)
+          (OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane d) →
+        OAI.PiExponent.AffineJetCoefficientInterface.Sections (OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane d) n →
+          OAI.PiExponentApprox.FramePolynomial d.m
+'OAI.PiExponent.FixedFieldJetPackets.sectionPolynomial' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldJetPackets.formalPackets_surjective_of_jetRestriction : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) (n : ℕ)
+  (e :
+    OAI.PiExponent.AffineJetCoefficientInterface.Frame (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d)
+      (OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane d)),
+  Function.Surjective.{1, 1}
+      (OAI.PiExponent.BlowupJetSurjectivity.jetRestriction (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)
+        (OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane d) n) →
+    Function.Surjective.{1, 1} fun s j =>
+      OAI.PiExponent.JetGeometry.rationalCoefficientPacket.{0, 0} d.curveJetWeights
+        (HMul.hMul.{0, 0, 0} ↑n ↑(OAI.PiExponent.FixedFieldBlowupGeometry.scale d).radius)
+        ((OAI.PiExponent.FormalLogJet.formalJet (d.curveCenters j))
+          (OAI.PiExponent.FixedFieldJetPackets.sectionPolynomial d n e s))
+'OAI.PiExponent.FixedFieldJetPackets.formalPackets_surjective_of_jetRestriction' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection : {Y : AlgebraicGeometry.Scheme.{0}} →
+  (J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} Y) →
+    Quiver.Hom.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J) (OAI.PiExponentSeshadri.Frames.O.{0} Y) →
+      OAI.PiExponentSeshadri.Geometry.GlobalSections.{0} Y
+        (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J.inverse)
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection_zeroIdeal : ∀ {Y : AlgebraicGeometry.Scheme.{0}}
+  (J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} Y)
+  (ι :
+    Quiver.Hom.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J) (OAI.PiExponentSeshadri.Frames.O.{0} Y))
+  [inst : SheafOfModules.IsQuasicoherent.{0, 0, 0} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J)],
+  Eq.{1}
+    (OAI.PiExponent.SectionZeroIdeal.zeroIdeal J.inverse
+      (OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection J ι))
+    (OAI.PiExponent.SectionImageIdeal.imageIdealSheaf ι)
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection_zeroIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection_zeroIdeal_eq_comap : ∀
+  {X Y : AlgebraicGeometry.Scheme.{0}} (I : AlgebraicGeometry.Scheme.IdealSheafData.{0} X) (π : Quiver.Hom.{0, 1} Y X)
+  (J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} Y)
+  (ι :
+    Quiver.Hom.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J) (OAI.PiExponentSeshadri.Frames.O.{0} Y)),
+  OAI.PiExponentSeshadri.Geometry.PresentsPullbackIdeal.{0} I π J ι →
+    Eq.{1}
+      (OAI.PiExponent.SectionZeroIdeal.zeroIdeal J.inverse
+        (OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection J ι))
+      (AlgebraicGeometry.Scheme.IdealSheafData.comap.{0} I π)
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection_zeroIdeal_eq_comap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_pullback : ∀ {X Y : AlgebraicGeometry.Scheme.{0}}
+  (L : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} X)
+  (s : OAI.PiExponentSeshadri.Geometry.GlobalSections.{0} X (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} L))
+  (f : Quiver.Hom.{0, 1} Y X),
+  Eq.{1}
+    (OAI.PiExponent.SectionZeroIdeal.zeroIdeal (L.pullback f) (OAI.PiExponentSeshadri.Geometry.pullbackSection f s))
+    (AlgebraicGeometry.Scheme.IdealSheafData.comap.{0} (OAI.PiExponent.SectionZeroIdeal.zeroIdeal L s) f)
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_pullback' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_zero : ∀ {X : AlgebraicGeometry.Scheme.{0}}
+  (L : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} X),
+  Eq.{1} (OAI.PiExponent.SectionZeroIdeal.zeroIdeal L 0) Bot.bot.{0}
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.pullback_inverseSection_zeroIdeal : ∀
+  {X Y : AlgebraicGeometry.Scheme.{0}} (I : AlgebraicGeometry.Scheme.IdealSheafData.{0} X) (π : Quiver.Hom.{0, 1} Y X)
+  (J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} Y)
+  (ι :
+    Quiver.Hom.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J) (OAI.PiExponentSeshadri.Frames.O.{0} Y)),
+  OAI.PiExponentSeshadri.Geometry.PresentsPullbackIdeal.{0} I π J ι →
+    ∀ {Z : AlgebraicGeometry.Scheme.{0}} (g : Quiver.Hom.{0, 1} Z Y),
+      Eq.{1}
+        (OAI.PiExponent.SectionZeroIdeal.zeroIdeal (J.inverse.pullback g)
+          (OAI.PiExponentSeshadri.Geometry.pullbackSection g
+            (OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection J ι)))
+        (AlgebraicGeometry.Scheme.IdealSheafData.comap.{0} I (CategoryTheory.CategoryStruct.comp.{0, 1} g π))
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.pullback_inverseSection_zeroIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.pullback_inverseSection_ne_zero : ∀
+  {X Y : AlgebraicGeometry.Scheme.{0}} (I : AlgebraicGeometry.Scheme.IdealSheafData.{0} X) (π : Quiver.Hom.{0, 1} Y X)
+  (J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} Y)
+  (ι :
+    Quiver.Hom.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J) (OAI.PiExponentSeshadri.Frames.O.{0} Y)),
+  OAI.PiExponentSeshadri.Geometry.PresentsPullbackIdeal.{0} I π J ι →
+    ∀ {Z : AlgebraicGeometry.Scheme.{0}} (g : Quiver.Hom.{0, 1} Z Y),
+      Ne.{1} (AlgebraicGeometry.Scheme.IdealSheafData.comap.{0} I (CategoryTheory.CategoryStruct.comp.{0, 1} g π))
+          Bot.bot.{0} →
+        Ne.{1}
+          (OAI.PiExponentSeshadri.Geometry.pullbackSection g
+            (OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection J ι))
+          0
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.pullback_inverseSection_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_spec_top : ∀ {A : Type} [inst : CommRing.{0} A]
+  (L : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} (AlgebraicGeometry.Spec.{0} ↧A))
+  (s :
+    OAI.PiExponentSeshadri.Geometry.GlobalSections.{0} (AlgebraicGeometry.Spec.{0} ↧A)
+      (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} L))
+  (e :
+    CategoryTheory.Iso.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} L)
+      (OAI.PiExponentSeshadri.Frames.O.{0} (AlgebraicGeometry.Spec.{0} ↧A))),
+  Eq.{1}
+    (Ideal.map.{0, 0, 0}
+      (CommRingCat.Hom.hom.{0} (CategoryTheory.Iso.hom.{0, 1} (AlgebraicGeometry.Scheme.ΓSpecIso.{0} ↧A)))
+      (AlgebraicGeometry.Scheme.IdealSheafData.ideal.{0} (OAI.PiExponent.SectionZeroIdeal.zeroIdeal L s)
+        (Subtype.mk.{1} Top.top.{0} ⋯)))
+    (Ideal.span.{0} (singleton.{0, 0} (OAI.PiExponent.LocalSectionOrder.localCoefficient.{0} e s)))
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_spec_top' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal : {X : AlgebraicGeometry.Scheme.{0}} →
+  {A : Type} →
+    [inst : CommRing.{0} A] →
+      AlgebraicGeometry.Scheme.IdealSheafData.{0} X → Quiver.Hom.{0, 1} (AlgebraicGeometry.Spec.{0} ↧A) X → Ideal.{0} A
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_specIdeal : ∀ {A B : Type} [inst : CommRing.{0} A]
+  [inst_1 : CommRing.{0} B] (I : Ideal.{0} B) (φ : RingHom.{0, 0} B A),
+  Eq.{1}
+    (OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal (OAI.PiExponentSeshadri.IdealPullback.specIdeal.{0} I)
+      (AlgebraicGeometry.Spec.map.{0} (CommRingCat.ofHom.{0} φ)))
+    (Ideal.map.{0, 0, 0} φ I)
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_specIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_compactIdeal : ∀ {X : AlgebraicGeometry.Scheme.{0}}
+  {A : Type} [inst : CommRing.{0} A] {m : ℕ} {K : Type} [inst_1 : Fintype.{0} K] (c : K → Fin m → ℂ) (T : Fin m → ℕ)
+  (e : Fin (HAdd.hAdd.{0, 0, 0} m 1) → ℕ) (j : Quiver.Hom.{0, 1} (OAI.PiExponent.CompactLogJetIdeal.affineSpace m) X)
+  [AlgebraicGeometry.IsOpenImmersion.{0} j] [AlgebraicGeometry.QuasiCompact.{0} j]
+  (φ : RingHom.{0, 0} (OAI.PiExponent.CompactLogJetIdeal.coordinateRing m) A),
+  Eq.{1}
+    (OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal
+      (OAI.PiExponent.CompactLogJetIdeal.compactIdeal.{0} c T e j)
+      (CategoryTheory.CategoryStruct.comp.{0, 1} (AlgebraicGeometry.Spec.map.{0} (CommRingCat.ofHom.{0} φ)) j))
+    (Ideal.map.{0, 0, 0} φ (OAI.PiExponent.CompactLogJetIdeal.polynomialIdeal.{0} c T e))
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_compactIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_eq_top_of_not_mem : ∀ {X : AlgebraicGeometry.Scheme.{0}}
+  {A : Type} [inst : CommRing.{0} A] [inst_1 : IsLocalRing.{0} A] (I : AlgebraicGeometry.Scheme.IdealSheafData.{0} X)
+  (q : Quiver.Hom.{0, 1} (AlgebraicGeometry.Spec.{0} ↧A) X),
+  q (IsLocalRing.closedPoint.{0} A) ∉ AlgebraicGeometry.Scheme.IdealSheafData.support.{0} I →
+    Eq.{1} (OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal I q) Top.top.{0}
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_eq_top_of_not_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.map_powerIdeal_eq_top_of_transcendental : ∀ {E : Type}
+  [inst : Field.{0} E] [inst_1 : Algebra.{0, 0} ℂ E] {m : ℕ} (z : Fin (HAdd.hAdd.{0, 0, 0} m 1) → E),
+  (∃ i, Transcendental.{0, 0} ℂ (z i)) →
+    ∀ (c : Fin m → ℂ) (T : Fin m → ℕ) (e : Fin (HAdd.hAdd.{0, 0, 0} m 1) → ℕ),
+      Eq.{1}
+        (Ideal.map.{0, 0, 0} (AlgHom.toRingHom.{0, 0, 0} (MvPolynomial.aeval.{0, 0, 0} z))
+          (OAI.PiExponent.CompactJetPolynomial.powerIdeal.{0} c (OAI.PiExponent.CompactJetPolynomial.logPolynomials T)
+            e))
+        Top.top.{0}
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.map_powerIdeal_eq_top_of_transcendental' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.compactIdeal_comap_ne_bot_of_generic : ∀
+  {X : AlgebraicGeometry.Scheme.{0}} {E : Type} [inst : Field.{0} E] [inst_1 : Algebra.{0, 0} ℂ E] (f : E)
+  (hf : Transcendental.{0, 0} ℂ f) [inst_2 : FiniteDimensional.{0, 0} (↥ℂ⟮f⟯) E] {m : ℕ} {K : Type}
+  [inst_3 : Fintype.{0} K] (c : K → Fin m → ℂ) (T : Fin m → ℕ) (e : Fin (HAdd.hAdd.{0, 0, 0} m 1) → ℕ)
+  (j : Quiver.Hom.{0, 1} (OAI.PiExponent.CompactLogJetIdeal.affineSpace m) X) [AlgebraicGeometry.IsOpenImmersion.{0} j]
+  [AlgebraicGeometry.QuasiCompact.{0} j]
+  (g : Quiver.Hom.{0, 1} (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf) X)
+  (z : Fin (HAdd.hAdd.{0, 0, 0} m 1) → E),
+  (∃ i, Transcendental.{0, 0} ℂ (z i)) →
+    Eq.{1}
+        (CategoryTheory.CategoryStruct.comp.{0, 1}
+          (OAI.PiExponent.CurveNormalizationModel.parameterCurveGenericPoint.{0} f hf) g)
+        (CategoryTheory.CategoryStruct.comp.{0, 1}
+          (AlgebraicGeometry.Spec.map.{0}
+            (CommRingCat.ofHom.{0} (AlgHom.toRingHom.{0, 0, 0} (MvPolynomial.aeval.{0, 0, 0} z))))
+          j) →
+      Ne.{1}
+        (AlgebraicGeometry.Scheme.IdealSheafData.comap.{0} (OAI.PiExponent.CompactLogJetIdeal.compactIdeal.{0} c T e j)
+          g)
+        Bot.bot.{0}
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.compactIdeal_comap_ne_bot_of_generic' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.centerMorphism_eq_centeredLift : ∀ {X : AlgebraicGeometry.Scheme.{0}}
+  {E : Type} [inst : Field.{0} E] [inst_1 : Algebra.{0, 0} ℂ E] (f : E) (hf : Transcendental.{0, 0} ℂ f)
+  [inst_2 : FiniteDimensional.{0, 0} (↥ℂ⟮f⟯) E] [AlgebraicGeometry.Scheme.IsSeparated.{0} X] {m : ℕ}
+  (j : Quiver.Hom.{0, 1} (OAI.PiExponent.CompactLogJetIdeal.affineSpace m) X)
+  (g : Quiver.Hom.{0, 1} (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf) X)
+  (z : Fin (HAdd.hAdd.{0, 0, 0} m 1) → E),
+  Eq.{1}
+      (CategoryTheory.CategoryStruct.comp.{0, 1}
+        (OAI.PiExponent.CurveNormalizationModel.parameterCurveGenericPoint.{0} f hf) g)
+      (CategoryTheory.CategoryStruct.comp.{0, 1}
+        (AlgebraicGeometry.Spec.map.{0}
+          (CommRingCat.ofHom.{0} (AlgHom.toRingHom.{0, 0, 0} (MvPolynomial.aeval.{0, 0, 0} z))))
+        j) →
+    ∀ (p : OAI.PiExponent.CurveValuationCenter.NormalizedPlace.{0, 0} ℂ E) (c : Fin m → ℂ)
+      (hc : OAI.PiExponent.CurveCenters.Centered.{0, 0} z (fun i => Fin.cases.{1} 1 c i) p),
+      Eq.{1} (CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.CurvePlaceCenter.centerMorphism.{0} f hf p) g)
+        (CategoryTheory.CategoryStruct.comp.{0, 1}
+          (AlgebraicGeometry.Spec.map.{0}
+            (CommRingCat.ofHom.{0}
+              (AlgHom.toRingHom.{0, 0, 0}
+                (MvPolynomial.aeval.{0, 0, 0}
+                  (OAI.PiExponent.PlaceCenteredBranch.lift.{0, 0} p z (fun i => Fin.cases.{1} 1 c i) hc)))))
+          j)
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.centerMorphism_eq_centeredLift' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_length_eq_logContact : ∀ {X : AlgebraicGeometry.Scheme.{0}}
+  {E : Type} [inst : Field.{0} E] [inst_1 : Algebra.{0, 0} ℂ E] (f : E) (hf : Transcendental.{0, 0} ℂ f)
+  [inst_2 : FiniteDimensional.{0, 0} (↥ℂ⟮f⟯) E] [AlgebraicGeometry.Scheme.IsSeparated.{0} X] {m K : ℕ}
+  (c : Fin K → Fin m → ℂ),
+  Function.Injective.{1, 1} c →
+    ∀ (T : Fin m → ℕ) (e : Fin (HAdd.hAdd.{0, 0, 0} m 1) → ℕ) (v : Fin (HAdd.hAdd.{0, 0, 0} m 1) → ℚ),
+      (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)), LT.lt.{0} 0 (v i)) →
+        ∀ (R : ℚ),
+          (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)), Eq.{1} (HMul.hMul.{0, 0, 0} (v i) ↑(e i)) R) →
+            (∀ (i : Fin m), LT.lt.{0} (v i.succ) (HMul.hMul.{0, 0, 0} (↑(T i)) (v 0))) →
+              ∀ (j : Quiver.Hom.{0, 1} (OAI.PiExponent.CompactLogJetIdeal.affineSpace m) X)
+                [AlgebraicGeometry.IsOpenImmersion.{0} j] [AlgebraicGeometry.QuasiCompact.{0} j]
+                (g : Quiver.Hom.{0, 1} (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf) X)
+                (z : Fin (HAdd.hAdd.{0, 0, 0} m 1) → E) (hz : ∃ i, Transcendental.{0, 0} ℂ (z i)),
+                Eq.{1}
+                    (CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (OAI.PiExponent.CurveNormalizationModel.parameterCurveGenericPoint.{0} f hf) g)
+                    (CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (AlgebraicGeometry.Spec.map.{0}
+                        (CommRingCat.ofHom.{0} (AlgHom.toRingHom.{0, 0, 0} (MvPolynomial.aeval.{0, 0, 0} z))))
+                      j) →
+                  ∀ (p : OAI.PiExponent.CurveValuationCenter.NormalizedPlace.{0, 0} ℂ E)
+                    [inst_6 :
+                      Algebra.IsIntegral.{0, 0} ℂ
+                        (IsLocalRing.ResidueField.{0} ↥(OAI.PiExponent.PlaceValuationRing.ring.{0, 0} p))]
+                    (k : Fin K)
+                    (hcenter : OAI.PiExponent.CurveCenters.Centered.{0, 0} z (fun i => Fin.cases.{1} 1 (c k) i) p),
+                    Eq.{1}
+                      (↑(Module.length.{0, 0} (↥(OAI.PiExponent.PlaceValuationRing.ring.{0, 0} p))
+                            (HasQuotient.Quotient.{0, 0} (↥(OAI.PiExponent.PlaceValuationRing.ring.{0, 0} p))
+                              (OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal
+                                (OAI.PiExponent.CompactLogJetIdeal.compactIdeal.{0} c T e j)
+                                (CategoryTheory.CategoryStruct.comp.{0, 1}
+                                  (OAI.PiExponent.CurvePlaceCenter.centerMorphism.{0} f hf p) g)))).toNat)
+                      (HMul.hMul.{0, 0, 0} R (OAI.PiExponent.PlaceCenteredBranch.logContact.{0} p z (c k) hcenter ⋯ v))
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_length_eq_logContact' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.divisor_eq_localIdeal_length : ∀ {E : Type} [inst : Field.{0} E]
+  [inst_1 : Algebra.{0, 0} ℂ E] (f : E) (hf : Transcendental.{0, 0} ℂ f) [inst_2 : FiniteDimensional.{0, 0} (↥ℂ⟮f⟯) E]
+  (L :
+    OAI.PiExponentSeshadri.Geometry.LineBundle.{0} (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf))
+  (s :
+    OAI.PiExponentSeshadri.Geometry.GlobalSections.{0}
+      (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf)
+      (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} L))
+  (hs : Ne.{1} s 0) (p : OAI.PiExponent.CurveValuationCenter.NormalizedPlace.{0, 0} ℂ E),
+  Eq.{1} ((OAI.PiExponent.CurvePlaceSectionDivisor.divisor f hf L s hs) p)
+    (Module.length.{0, 0} (↥(OAI.PiExponent.PlaceValuationRing.ring.{0, 0} p))
+        (HasQuotient.Quotient.{0, 0} (↥(OAI.PiExponent.PlaceValuationRing.ring.{0, 0} p))
+          (OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal (OAI.PiExponent.SectionZeroIdeal.zeroIdeal L s)
+            (OAI.PiExponent.CurvePlaceCenter.centerMorphism.{0} f hf p)))).toNat
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.divisor_eq_localIdeal_length' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor : {X Y : AlgebraicGeometry.Scheme.{0}} →
+  {E : Type} →
+    [inst : Field.{0} E] →
+      [inst_1 : Algebra.{0, 0} ℂ E] →
+        (f : E) →
+          (hf : Transcendental.{0, 0} ℂ f) →
+            [FiniteDimensional.{0, 0} (↥ℂ⟮f⟯) E] →
+              (I : AlgebraicGeometry.Scheme.IdealSheafData.{0} X) →
+                (π : Quiver.Hom.{0, 1} Y X) →
+                  (J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} Y) →
+                    (ι :
+                        Quiver.Hom.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J)
+                          (OAI.PiExponentSeshadri.Frames.O.{0} Y)) →
+                      OAI.PiExponentSeshadri.Geometry.PresentsPullbackIdeal.{0} I π J ι →
+                        (g : Quiver.Hom.{0, 1} (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf) Y) →
+                          Ne.{1}
+                              (AlgebraicGeometry.Scheme.IdealSheafData.comap.{0} I
+                                (CategoryTheory.CategoryStruct.comp.{0, 1} g π))
+                              Bot.bot.{0} →
+                            Finsupp.{0, 0} (OAI.PiExponent.CurveValuationCenter.NormalizedPlace.{0, 0} ℂ E) ℕ
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor_apply : ∀ {X Y : AlgebraicGeometry.Scheme.{0}} {E : Type}
+  [inst : Field.{0} E] [inst_1 : Algebra.{0, 0} ℂ E] (f : E) (hf : Transcendental.{0, 0} ℂ f)
+  [inst_2 : FiniteDimensional.{0, 0} (↥ℂ⟮f⟯) E] (I : AlgebraicGeometry.Scheme.IdealSheafData.{0} X)
+  (π : Quiver.Hom.{0, 1} Y X) (J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} Y)
+  (ι :
+    Quiver.Hom.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J) (OAI.PiExponentSeshadri.Frames.O.{0} Y))
+  (hJ : OAI.PiExponentSeshadri.Geometry.PresentsPullbackIdeal.{0} I π J ι)
+  (g : Quiver.Hom.{0, 1} (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf) Y)
+  (hg :
+    Ne.{1} (AlgebraicGeometry.Scheme.IdealSheafData.comap.{0} I (CategoryTheory.CategoryStruct.comp.{0, 1} g π))
+      Bot.bot.{0})
+  (p : OAI.PiExponent.CurveValuationCenter.NormalizedPlace.{0, 0} ℂ E),
+  Eq.{1} ((OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor f hf I π J ι hJ g hg) p)
+    (Module.length.{0, 0} (↥(OAI.PiExponent.PlaceValuationRing.ring.{0, 0} p))
+        (HasQuotient.Quotient.{0, 0} (↥(OAI.PiExponent.PlaceValuationRing.ring.{0, 0} p))
+          (OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal I
+            (CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.CurvePlaceCenter.centerMorphism.{0} f hf p)
+              (CategoryTheory.CategoryStruct.comp.{0, 1} g π))))).toNat
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor_apply' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.degree_eq_neg_idealDivisor_sum : ∀ {X Y : AlgebraicGeometry.Scheme.{0}}
+  {E : Type} [inst : Field.{0} E] [inst_1 : Algebra.{0, 0} ℂ E] (f : E) (hf : Transcendental.{0, 0} ℂ f)
+  [inst_2 : FiniteDimensional.{0, 0} (↥ℂ⟮f⟯) E] (I : AlgebraicGeometry.Scheme.IdealSheafData.{0} X)
+  (π : Quiver.Hom.{0, 1} Y X) (J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} Y)
+  (ι :
+    Quiver.Hom.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J) (OAI.PiExponentSeshadri.Frames.O.{0} Y))
+  (hJ : OAI.PiExponentSeshadri.Geometry.PresentsPullbackIdeal.{0} I π J ι)
+  (g : Quiver.Hom.{0, 1} (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf) Y)
+  (hg :
+    Ne.{1} (AlgebraicGeometry.Scheme.IdealSheafData.comap.{0} I (CategoryTheory.CategoryStruct.comp.{0, 1} g π))
+      Bot.bot.{0}),
+  Eq.{1}
+    (HSub.hSub.{0, 0, 0}
+      (OAI.PiExponentSeshadri.Geometry.eulerCharacteristic
+        (OAI.PiExponent.CurveNormalizationModel.parameterCurveStructureMap.{0} f hf) 1
+        (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} (J.pullback g)))
+      (OAI.PiExponentSeshadri.Geometry.eulerCharacteristic
+        (OAI.PiExponent.CurveNormalizationModel.parameterCurveStructureMap.{0} f hf) 1
+        (OAI.PiExponentSeshadri.Geometry.structureSheaf.{0}
+          (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf))))
+    (Neg.neg.{0}
+      (Finsupp.sum.{0, 0, 0} (OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor f hf I π J ι hJ g hg)
+        fun x n => ↑n))
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.degree_eq_neg_idealDivisor_sum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.compactIdeal_degree_eq_neg_contact_sum : ∀
+  {X Y : AlgebraicGeometry.Scheme.{0}} {E : Type} [inst : Field.{0} E] [inst_1 : Algebra.{0, 0} ℂ E] (f : E)
+  (hf : Transcendental.{0, 0} ℂ f) [inst_2 : FiniteDimensional.{0, 0} (↥ℂ⟮f⟯) E]
+  [AlgebraicGeometry.Scheme.IsSeparated.{0} X] {m K : ℕ} (c : Fin K → Fin m → ℂ),
+  Function.Injective.{1, 1} c →
+    ∀ (T : Fin m → ℕ) (e : Fin (HAdd.hAdd.{0, 0, 0} m 1) → ℕ),
+      (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)), LT.lt.{0} 0 (e i)) →
+        ∀ (v : Fin (HAdd.hAdd.{0, 0, 0} m 1) → ℚ),
+          (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)), LT.lt.{0} 0 (v i)) →
+            ∀ (R : ℚ),
+              (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)), Eq.{1} (HMul.hMul.{0, 0, 0} (v i) ↑(e i)) R) →
+                (∀ (i : Fin m), LT.lt.{0} (v i.succ) (HMul.hMul.{0, 0, 0} (↑(T i)) (v 0))) →
+                  ∀ (j : Quiver.Hom.{0, 1} (OAI.PiExponent.CompactLogJetIdeal.affineSpace m) X)
+                    [AlgebraicGeometry.IsOpenImmersion.{0} j] [AlgebraicGeometry.QuasiCompact.{0} j]
+                    (pX : Quiver.Hom.{0, 1} X (AlgebraicGeometry.Spec.{0} ↧ℂ)) [AlgebraicGeometry.IsSeparated.{0} pX],
+                    Eq.{1} (CategoryTheory.CategoryStruct.comp.{0, 1} j pX)
+                        (OAI.PiExponent.CompactLogJetIdeal.structureMap m) →
+                      ∀ (π : Quiver.Hom.{0, 1} Y X) (J : OAI.PiExponentSeshadri.Geometry.LineBundle.{0} Y)
+                        (ι :
+                          Quiver.Hom.{0, 1} (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} J)
+                            (OAI.PiExponentSeshadri.Frames.O.{0} Y)),
+                        OAI.PiExponentSeshadri.Geometry.PresentsPullbackIdeal.{0}
+                            (OAI.PiExponent.CompactLogJetIdeal.compactIdeal.{0} c T e j) π J ι →
+                          ∀
+                            (g :
+                              Quiver.Hom.{0, 1} (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf) Y)
+                            (z : Fin (HAdd.hAdd.{0, 0, 0} m 1) → E) (hz : ∃ i, Transcendental.{0, 0} ℂ (z i)),
+                            Eq.{1}
+                                (CategoryTheory.CategoryStruct.comp.{0, 1}
+                                  (OAI.PiExponent.CurveNormalizationModel.parameterCurveGenericPoint.{0} f hf)
+                                  (CategoryTheory.CategoryStruct.comp.{0, 1} g π))
+                                (CategoryTheory.CategoryStruct.comp.{0, 1}
+                                  (AlgebraicGeometry.Spec.map.{0}
+                                    (CommRingCat.ofHom.{0}
+                                      (AlgHom.toRingHom.{0, 0, 0} (MvPolynomial.aeval.{0, 0, 0} z))))
+                                  j) →
+                              ∀
+                                (hres :
+                                  ∀ (p : OAI.PiExponent.CurveValuationCenter.NormalizedPlace.{0, 0} ℂ E),
+                                    Algebra.IsIntegral.{0, 0} ℂ
+                                      (IsLocalRing.ResidueField.{0} ↥(OAI.PiExponent.PlaceValuationRing.ring.{0, 0} p)))
+                                (hfinite : ∀ (t : E), Transcendental.{0, 0} ℂ t → FiniteDimensional.{0, 0} (↥ℂ⟮t⟯) E),
+                                Eq.{1}
+                                  (↑(HSub.hSub.{0, 0, 0}
+                                      (OAI.PiExponentSeshadri.Geometry.eulerCharacteristic
+                                        (OAI.PiExponent.CurveNormalizationModel.parameterCurveStructureMap.{0} f hf) 1
+                                        (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0} (J.pullback g)))
+                                      (OAI.PiExponentSeshadri.Geometry.eulerCharacteristic
+                                        (OAI.PiExponent.CurveNormalizationModel.parameterCurveStructureMap.{0} f hf) 1
+                                        (OAI.PiExponentSeshadri.Geometry.structureSheaf.{0}
+                                          (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf)))))
+                                  (HMul.hMul.{0, 0, 0} (Neg.neg.{0} R)
+                                    (∑ p ∈ OAI.PiExponent.CurveContactFamily.places.{0} hfinite z c hz,
+                                      OAI.PiExponent.CurveContactFamily.contact.{0} hres hfinite z c hz v p))
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.compactIdeal_degree_eq_neg_contact_sum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldExceptionalCurveDegree.admissible_degree_eq_neg_contactSum : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) {E : Type} [inst : Field.{0} E] [inst_1 : Algebra.{0, 0} ℂ E]
+  [inst_2 : Algebra.EssFiniteType.{0, 0} ℂ E] (y : E) (x : Fin d.m → E)
+  (hgen : Eq.{1} (IntermediateField.adjoin.{0, 0} ℂ (Set.range.{0, 1} fun i => Fin.cases.{1} y x i)) Top.top.{0})
+  (htrdeg : Eq.{2} (Algebra.trdeg.{0, 0} ℂ E) 1) (f : E) (hf : Transcendental.{0, 0} ℂ f)
+  (g :
+    Quiver.Hom.{0, 1} (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf)
+      (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)),
+  Eq.{1}
+      (CategoryTheory.CategoryStruct.comp.{0, 1}
+        (OAI.PiExponent.CurveNormalizationModel.parameterCurveGenericPoint.{0} f hf)
+        (CategoryTheory.CategoryStruct.comp.{0, 1} g (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)))
+      (CategoryTheory.CategoryStruct.comp.{0, 1}
+        (AlgebraicGeometry.Spec.map.{0}
+          (CommRingCat.ofHom.{0}
+            (AlgHom.toRingHom.{0, 0, 0} (MvPolynomial.aeval.{0, 0, 0} fun i => Fin.cases.{1} y x i))))
+        (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d)) →
+    Eq.{1}
+      (↑(HSub.hSub.{0, 0, 0}
+          (OAI.PiExponentSeshadri.Geometry.eulerCharacteristic
+            (OAI.PiExponent.CurveNormalizationModel.parameterCurveStructureMap.{0} f hf) 1
+            (OAI.PiExponentSeshadri.Geometry.LineBundle.sheaf.{0}
+              ((OAI.PiExponent.FixedFieldBlowupGeometry.J d).pullback g)))
+          (OAI.PiExponentSeshadri.Geometry.eulerCharacteristic
+            (OAI.PiExponent.CurveNormalizationModel.parameterCurveStructureMap.{0} f hf) 1
+            (OAI.PiExponentSeshadri.Geometry.structureSheaf.{0}
+              (OAI.PiExponent.CurveNormalizationModel.parameterCurve.{0, 0} f hf)))))
+      (HMul.hMul.{0, 0, 0} (Neg.neg.{0} ↑(OAI.PiExponent.FixedFieldBlowupGeometry.scale d).radius)
+        (OAI.PiExponent.FixedFieldBlowupCurveMargin.contactSum.{0} d y x hgen htrdeg))
+'OAI.PiExponent.FixedFieldExceptionalCurveDegree.admissible_degree_eq_neg_contactSum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (¬∃ x,
+            Set.range.{0, 1}
+                ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                    (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                    (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+              singleton.{0, 0} x) →
+        OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.compactification d)
+'OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.sourceStructure : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      Quiver.Hom.{0, 1} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C) (AlgebraicGeometry.Spec.{0} ↧ℂ)
+'OAI.PiExponent.FixedFieldCurveCoordinates.sourceStructure' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.imageStructure : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (hn :
+          ¬∃ x,
+              Set.range.{0, 1}
+                  ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                      (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+                singleton.{0, 0} x) →
+        Quiver.Hom.{0, 1}
+          (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0}
+            (OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve d C hn))
+          (AlgebraicGeometry.Spec.{0} ↧ℂ)
+'OAI.PiExponent.FixedFieldCurveCoordinates.imageStructure' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.sourceAlgebra : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      Algebra.{0, 0} ℂ
+        ↑(AlgebraicGeometry.Scheme.functionField.{0} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C))
+'OAI.PiExponent.FixedFieldCurveCoordinates.sourceAlgebra' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.imageAlgebra : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (hn :
+          ¬∃ x,
+              Set.range.{0, 1}
+                  ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                      (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+                singleton.{0, 0} x) →
+        Algebra.{0, 0} ℂ
+          ↑(AlgebraicGeometry.Scheme.functionField.{0}
+              (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0}
+                (OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve d C hn)))
+'OAI.PiExponent.FixedFieldCurveCoordinates.imageAlgebra' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.fieldEquiv : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (hn :
+          ¬∃ x,
+              Set.range.{0, 1}
+                  ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                      (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+                singleton.{0, 0} x) →
+        AlgEquiv.{0, 0, 0} ℂ
+          ↑(AlgebraicGeometry.Scheme.functionField.{0}
+              (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0}
+                (OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve d C hn)))
+          ↑(AlgebraicGeometry.Scheme.functionField.{0} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C))
+'OAI.PiExponent.FixedFieldCurveCoordinates.fieldEquiv' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.chart : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (hn :
+          ¬∃ x,
+              Set.range.{0, 1}
+                  ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                      (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+                singleton.{0, 0} x) →
+        ↑(AlgebraicGeometry.Scheme.affineOpens.{0}
+            (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0}
+              (OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve d C hn)))
+'OAI.PiExponent.FixedFieldCurveCoordinates.chart' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.chartPresentation : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (hn :
+          ¬∃ x,
+              Set.range.{0, 1}
+                  ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                      (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+                singleton.{0, 0} x) →
+        Quiver.Hom.{0, 1}
+          (AlgebraicGeometry.Spec.{0}
+            (CategoryTheory.Functor.obj.{0, 0, 0, 1}
+              (AlgebraicGeometry.PresheafedSpace.presheaf.{0, 1, 0}
+                (AlgebraicGeometry.SheafedSpace.toPresheafedSpace.{1, 0, 0}
+                  (AlgebraicGeometry.LocallyRingedSpace.toSheafedSpace.{0}
+                    (AlgebraicGeometry.Scheme.toLocallyRingedSpace.{0}
+                      (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0}
+                        (OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve d C hn))))))
+              (Opposite.op.{1}
+                ↑(OAI.PiExponent.CurveImageAffineCoordinates.affinePart
+                    (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0}
+                      (OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve d C hn))
+                    (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d)))))
+          (AlgebraicGeometry.Spec.{0} ↧(MvPolynomial.{0, 0} (Fin (HAdd.hAdd.{0, 0, 0} d.m 1)) ℂ))
+'OAI.PiExponent.FixedFieldCurveCoordinates.chartPresentation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.chart_nonempty : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D)
+  (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d))
+  (hn :
+    ¬∃ x,
+        Set.range.{0, 1}
+            ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+          singleton.{0, 0} x),
+  (∃ c,
+      Membership.mem.{0, 0}
+        (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+        ((CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+            (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+          c)) →
+    Nonempty.{1} ↥↑↑(OAI.PiExponent.FixedFieldCurveCoordinates.chart d C hn)
+'OAI.PiExponent.FixedFieldCurveCoordinates.chart_nonempty' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.imageCoordinates : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (hn :
+          ¬∃ x,
+              Set.range.{0, 1}
+                  ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                      (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                      (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+                singleton.{0, 0} x) →
+        (∃ c,
+            Membership.mem.{0, 0}
+              (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+              ((CategoryTheory.CategoryStruct.comp.{0, 1}
+                  (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                  (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+                c)) →
+          Fin (HAdd.hAdd.{0, 0, 0} d.m 1) →
+            ↑(AlgebraicGeometry.Scheme.functionField.{0}
+                (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0}
+                  (OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve d C hn)))
+'OAI.PiExponent.FixedFieldCurveCoordinates.imageCoordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.coordinates : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (¬∃ x,
+            Set.range.{0, 1}
+                ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                    (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                    (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+              singleton.{0, 0} x) →
+        (∃ c,
+            Membership.mem.{0, 0}
+              (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+              ((CategoryTheory.CategoryStruct.comp.{0, 1}
+                  (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                  (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+                c)) →
+          Fin (HAdd.hAdd.{0, 0, 0} d.m 1) →
+            ↑(AlgebraicGeometry.Scheme.functionField.{0} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C))
+'OAI.PiExponent.FixedFieldCurveCoordinates.coordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.y : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (¬∃ x,
+            Set.range.{0, 1}
+                ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                    (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                    (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+              singleton.{0, 0} x) →
+        (∃ c,
+            Membership.mem.{0, 0}
+              (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+              ((CategoryTheory.CategoryStruct.comp.{0, 1}
+                  (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                  (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+                c)) →
+          ↑(AlgebraicGeometry.Scheme.functionField.{0} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C))
+'OAI.PiExponent.FixedFieldCurveCoordinates.y' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.x : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      (¬∃ x,
+            Set.range.{0, 1}
+                ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                    (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                    (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+              singleton.{0, 0} x) →
+        (∃ c,
+            Membership.mem.{0, 0}
+              (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+              ((CategoryTheory.CategoryStruct.comp.{0, 1}
+                  (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                  (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+                c)) →
+          Fin d.m →
+            ↑(AlgebraicGeometry.Scheme.functionField.{0} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C))
+'OAI.PiExponent.FixedFieldCurveCoordinates.x' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.full_coordinates : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D)
+  (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d))
+  (hn :
+    ¬∃ x,
+        Set.range.{0, 1}
+            ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+          singleton.{0, 0} x)
+  (hm :
+    ∃ c,
+      Membership.mem.{0, 0}
+        (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+        ((CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+            (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+          c)),
+  Eq.{1}
+    (fun i =>
+      Fin.cases.{1} (OAI.PiExponent.FixedFieldCurveCoordinates.y d C hn hm)
+        (OAI.PiExponent.FixedFieldCurveCoordinates.x d C hn hm) i)
+    (OAI.PiExponent.FixedFieldCurveCoordinates.coordinates d C hn hm)
+'OAI.PiExponent.FixedFieldCurveCoordinates.full_coordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.field_properties : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D)
+  (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d))
+  (hn :
+    ¬∃ x,
+        Set.range.{0, 1}
+            ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+          singleton.{0, 0} x)
+  (hm :
+    ∃ c,
+      Membership.mem.{0, 0}
+        (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+        ((CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+            (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+          c)),
+  Algebra.EssFiniteType.{0, 0} ℂ
+      ↑(AlgebraicGeometry.Scheme.functionField.{0} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C)) ∧
+    Eq.{2}
+        (Algebra.trdeg.{0, 0} ℂ
+          ↑(AlgebraicGeometry.Scheme.functionField.{0} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C)))
+        1 ∧
+      Eq.{1}
+        (IntermediateField.adjoin.{0, 0} ℂ
+          (Set.range.{0, 1} (OAI.PiExponent.FixedFieldCurveCoordinates.coordinates d C hn hm)))
+        Top.top.{0}
+'OAI.PiExponent.FixedFieldCurveCoordinates.field_properties' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveCoordinates.coordinates_generic_map : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D)
+  (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d))
+  (hn :
+    ¬∃ x,
+        Set.range.{0, 1}
+            ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+          singleton.{0, 0} x)
+  (hm :
+    ∃ c,
+      Membership.mem.{0, 0}
+        (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+        ((CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+            (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+          c)),
+  Eq.{1}
+    (CategoryTheory.CategoryStruct.comp.{0, 1}
+      (AlgebraicGeometry.Spec.map.{0}
+        (CommRingCat.ofHom.{0}
+          (AlgHom.toRingHom.{0, 0, 0}
+            (MvPolynomial.aeval.{0, 0, 0} (OAI.PiExponent.FixedFieldCurveCoordinates.coordinates d C hn hm)))))
+      (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+    (CategoryTheory.CategoryStruct.comp.{0, 1}
+      (AlgebraicGeometry.Scheme.fromSpecStalk.{0} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C)
+        (genericPoint.{0} ↥(OAI.PiExponent.NumericalAmpleness.IntegralCurve.scheme.{0} C)))
+      (CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+        (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)))
+'OAI.PiExponent.FixedFieldCurveCoordinates.coordinates_generic_map' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.exists_ampleExponent : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  ∃ a,
+    LT.lt.{0} 1 a ∧
+      OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+        (((OAI.PiExponent.FixedFieldBlowupGeometry.A d).pow a).tensor (OAI.PiExponent.FixedFieldBlowupGeometry.J d))
+'OAI.PiExponent.FixedFieldBlowupGeometry.exists_ampleExponent' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.ampleExponent : {ν Λ D : ℝ} → OAI.PiExponent.FixedFieldGeometryData ν Λ D → ℕ
+'OAI.PiExponent.FixedFieldBlowupGeometry.ampleExponent' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.ampleExponent_gt_one : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  LT.lt.{0} 1 (OAI.PiExponent.FixedFieldBlowupGeometry.ampleExponent d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.ampleExponent_gt_one' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.H : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    OAI.PiExponentSeshadri.Geometry.LineBundle.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.H' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.H_ample : ∀ {ν Λ D : ℝ} (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+    (OAI.PiExponent.FixedFieldBlowupGeometry.H d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.H_ample' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    OAI.PiExponentSeshadri.Geometry.LineBundle.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin : {ν Λ D : ℝ} → OAI.PiExponent.FixedFieldGeometryData ν Λ D → ℝ
+'OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin_pos : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  LT.lt.{0} 0 (OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin_pos' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.uniform_curve_margin_of_affine_curve_data : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  (∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)),
+      (¬∃ x,
+            Set.range.{0, 1}
+                ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                    (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                    (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+              singleton.{0, 0} x) →
+        (∃ c,
+            Membership.mem.{0, 0}
+              (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+              ((CategoryTheory.CategoryStruct.comp.{0, 1}
+                  (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                  (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+                c)) →
+          Nonempty.{2} (OAI.PiExponent.FixedFieldBlowupMargin.AffineCurveDegreeData d C)) →
+    ∀ (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)),
+      LE.le.{0}
+        (HMul.hMul.{0, 0, 0} (OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin d)
+          ↑(OAI.PiExponent.NumericalAmpleness.curveDegree (OAI.PiExponent.FixedFieldBlowupGeometry.structureMap d)
+              (OAI.PiExponent.FixedFieldBlowupGeometry.H d) C))
+        ↑(OAI.PiExponent.NumericalAmpleness.curveDegree (OAI.PiExponent.FixedFieldBlowupGeometry.structureMap d)
+            (OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle d) C)
+'OAI.PiExponent.FixedFieldBlowupGeometry.uniform_curve_margin_of_affine_curve_data' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveModel.ModelData : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d) → Type 1
+'OAI.PiExponent.FixedFieldCurveModel.ModelData' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveModel.existsModelData : ∀ {ν Λ D : ℝ} (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D)
+  (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)),
+  (¬∃ t,
+        Set.range.{0, 1}
+            ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+          singleton.{0, 0} t) →
+    (∃ c,
+        Membership.mem.{0, 0}
+          (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+          ((CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+              (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+            c)) →
+      Nonempty.{2} (OAI.PiExponent.FixedFieldCurveModel.ModelData d C)
+'OAI.PiExponent.FixedFieldCurveModel.existsModelData' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldCurveModel.degreeData : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)) →
+      OAI.PiExponent.FixedFieldCurveModel.ModelData d C →
+        OAI.PiExponent.FixedFieldBlowupMargin.AffineCurveDegreeData d C
+'OAI.PiExponent.FixedFieldCurveModel.degreeData' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupMargin.affineCurveDegreeData : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D)
+  (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)),
+  (¬∃ x,
+        Set.range.{0, 1}
+            ⇑(CategoryTheory.CategoryStruct.comp.{0, 1}
+                (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+                (OAI.PiExponent.FixedFieldBlowupGeometry.projection d)) ⊆
+          singleton.{0, 0} x) →
+    (∃ c,
+        Membership.mem.{0, 0}
+          (AlgebraicGeometry.Scheme.Hom.opensRange.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d))
+          ((CategoryTheory.CategoryStruct.comp.{0, 1} (OAI.PiExponent.NumericalAmpleness.IntegralCurve.embedding.{0} C)
+              (OAI.PiExponent.FixedFieldBlowupGeometry.projection d))
+            c)) →
+      Nonempty.{2} (OAI.PiExponent.FixedFieldBlowupMargin.AffineCurveDegreeData d C)
+'OAI.PiExponent.FixedFieldBlowupMargin.affineCurveDegreeData' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.uniform_curve_margin : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D)
+  (C : OAI.PiExponent.NumericalAmpleness.IntegralCurve.{0} (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)),
+  LE.le.{0}
+    (HMul.hMul.{0, 0, 0} (OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin d)
+      ↑(OAI.PiExponent.NumericalAmpleness.curveDegree (OAI.PiExponent.FixedFieldBlowupGeometry.structureMap d)
+          (OAI.PiExponent.FixedFieldBlowupGeometry.H d) C))
+    ↑(OAI.PiExponent.NumericalAmpleness.curveDegree (OAI.PiExponent.FixedFieldBlowupGeometry.structureMap d)
+        (OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle d) C)
+'OAI.PiExponent.FixedFieldBlowupGeometry.uniform_curve_margin' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle_ample : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple (OAI.PiExponent.FixedFieldBlowupGeometry.blowup d)
+    (OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle d)
+'OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle_ample' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldJetSurjectivity.blowupBundle_ample : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  OAI.PiExponentSeshadri.Geometry.LineBundle.IsAmple
+    (OAI.PiExponentSeshadri.BlowupGluing.scheme (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d))
+    (OAI.PiExponent.BlowupJetSurjectivity.blowupBundle (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)
+      (OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane d))
+'OAI.PiExponent.FixedFieldJetSurjectivity.blowupBundle_ample' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldJetSurjectivity.eventual_jetRestriction_surjective : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  ∃ N,
+    ∀ (n : ℕ),
+      LE.le.{0} N n →
+        Function.Surjective.{1, 1}
+          (OAI.PiExponent.BlowupJetSurjectivity.jetRestriction (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)
+            (OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane d) n)
+'OAI.PiExponent.FixedFieldJetSurjectivity.eventual_jetRestriction_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldJetSurjectivity.eventually_jetRestriction_surjective : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  ∀ᶠ (n : ℕ) in Filter.atTop.{0},
+    Function.Surjective.{1, 1}
+      (OAI.PiExponent.BlowupJetSurjectivity.jetRestriction (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal d)
+        (OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane d) n)
+'OAI.PiExponent.FixedFieldJetSurjectivity.eventually_jetRestriction_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldInterpolation.exponent_budget : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) (j : OAI.PiExponent.FixedFieldBlowupGeometry.Index d),
+  LE.le.{0}
+    ((Finsupp.weight.{0, 0, 0} fun i => ↑(d.curveDegreeWeights i))
+      (OAI.PiExponent.FixedFieldBlowupGeometry.exponents d j))
+    ↑(OAI.PiExponent.FixedFieldBlowupGeometry.scale d).radius
+'OAI.PiExponent.FixedFieldInterpolation.exponent_budget' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldInterpolation.eventual_supportBound : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  OAI.PiExponent.ProjectiveCoefficientBound.EventualBound (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d)
+    (OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane d) (fun i => ↑(d.curveDegreeWeights i))
+    ↑(OAI.PiExponent.FixedFieldBlowupGeometry.scale d).radius
+'OAI.PiExponent.FixedFieldInterpolation.eventual_supportBound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldInterpolation.actualFrame_exists : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  Nonempty.{1}
+    (OAI.PiExponent.AffineJetCoefficientInterface.Frame (OAI.PiExponent.FixedFieldBlowupGeometry.affineChart d)
+      (OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane d))
+'OAI.PiExponent.FixedFieldInterpolation.actualFrame_exists' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldInterpolation.WeightedPolynomials : {ν Λ D : ℝ} →
+  OAI.PiExponent.FixedFieldGeometryData ν Λ D → ℕ → Type
+'OAI.PiExponent.FixedFieldInterpolation.WeightedPolynomials' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldInterpolation.packetMap : {ν Λ D : ℝ} →
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) →
+    (n : ℕ) →
+      OAI.PiExponent.FixedFieldInterpolation.WeightedPolynomials d n →
+        Fin d.K →
+          OAI.PiExponent.JetGeometry.RationalCoefficientPacket.{0, 0} d.curveJetWeights
+            (HMul.hMul.{0, 0, 0} ↑n ↑(OAI.PiExponent.FixedFieldBlowupGeometry.scale d).radius)
+'OAI.PiExponent.FixedFieldInterpolation.packetMap' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldInterpolation.packetMap_surjective_of_family.{u_1} : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) {α : Type u_1} (n : ℕ)
+  (P : α → OAI.PiExponentApprox.FramePolynomial d.m),
+  (∀ (a : α),
+      OAI.PiExponent.WeightedSliceDegree.SupportBound.{0, 0} (fun i => ↑(d.curveDegreeWeights i))
+        (HMul.hMul.{0, 0, 0} ↑n ↑(OAI.PiExponent.FixedFieldBlowupGeometry.scale d).radius) (P a)) →
+    (Function.Surjective.{u_1 + 1, 1} fun a j =>
+        OAI.PiExponent.JetGeometry.rationalCoefficientPacket.{0, 0} d.curveJetWeights
+          (HMul.hMul.{0, 0, 0} ↑n ↑(OAI.PiExponent.FixedFieldBlowupGeometry.scale d).radius)
+          ((OAI.PiExponent.FormalLogJet.formalJet (d.curveCenters j)) (P a))) →
+      Function.Surjective.{1, 1} (OAI.PiExponent.FixedFieldInterpolation.packetMap d n)
+'OAI.PiExponent.FixedFieldInterpolation.packetMap_surjective_of_family' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldInterpolation.eventually_packetMap_surjective : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D),
+  ∀ᶠ (n : ℕ) in Filter.atTop.{0}, Function.Surjective.{1, 1} (OAI.PiExponent.FixedFieldInterpolation.packetMap d n)
+'OAI.PiExponent.FixedFieldInterpolation.eventually_packetMap_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldInterpolation.actualMatrix_surjective_of_packetMap : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) (n : ℕ) (w0 v θ : ℝ) (w : Fin d.m → ℝ),
+  LT.lt.{0} 0 w0 →
+    (∀ (i : Fin d.m), LT.lt.{0} 0 (w i)) →
+      (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} d.m 1)),
+          Eq.{1} (↑(d.curveDegreeWeights i)) (OAI.PiExponent.InterpolationMatrix.columnWeights w0 w i)) →
+        (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} d.m 1)),
+            Eq.{1} (↑(d.curveJetWeights i)) (OAI.PiExponent.InterpolationMatrix.rowWeights v θ w i)) →
+          ∀ (r : Fin d.m → ℂ),
+            (∀ (j : Fin d.K) (i : Fin d.m), Eq.{1} (d.curveCenters j i) (HMul.hMul.{0, 0, 0} (↑↑j) (r i))) →
+              ∀ (T : Fin d.m → ℕ),
+                (∀ (i : Fin d.m),
+                    LE.le.{0} (d.curveJetWeights i.succ) (HMul.hMul.{0, 0, 0} (↑(T i)) (d.curveJetWeights 0))) →
+                  Function.Surjective.{1, 1} (OAI.PiExponent.FixedFieldInterpolation.packetMap d n) →
+                    Function.Surjective.{1, 1}
+                      ⇑(Matrix.mulVecLin.{0, 0, 0}
+                          (OAI.PiExponent.InterpolationMatrix.truncatedLogMatrix d.K w0 v θ w
+                            (HMul.hMul.{0, 0, 0} ↑n ↑(OAI.PiExponent.FixedFieldBlowupGeometry.scale d).radius) r T))
+'OAI.PiExponent.FixedFieldInterpolation.actualMatrix_surjective_of_packetMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldInterpolation.cofinal_actualMatrix_surjective : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) (w0 v θ : ℝ) (w : Fin d.m → ℝ),
+  LT.lt.{0} 0 w0 →
+    (∀ (i : Fin d.m), LT.lt.{0} 0 (w i)) →
+      (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} d.m 1)),
+          Eq.{1} (↑(d.curveDegreeWeights i)) (OAI.PiExponent.InterpolationMatrix.columnWeights w0 w i)) →
+        (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} d.m 1)),
+            Eq.{1} (↑(d.curveJetWeights i)) (OAI.PiExponent.InterpolationMatrix.rowWeights v θ w i)) →
+          ∀ (r : Fin d.m → ℂ),
+            (∀ (j : Fin d.K) (i : Fin d.m), Eq.{1} (d.curveCenters j i) (HMul.hMul.{0, 0, 0} (↑↑j) (r i))) →
+              ∀ (T : Fin d.m → ℕ),
+                (∀ (i : Fin d.m),
+                    LE.le.{0} (d.curveJetWeights i.succ) (HMul.hMul.{0, 0, 0} (↑(T i)) (d.curveJetWeights 0))) →
+                  ∀ (L : ℝ),
+                    ∃ H,
+                      LE.le.{0} L H ∧
+                        Function.Surjective.{1, 1}
+                          ⇑(Matrix.mulVecLin.{0, 0, 0}
+                              (OAI.PiExponent.InterpolationMatrix.truncatedLogMatrix d.K w0 v θ w H r T))
+'OAI.PiExponent.FixedFieldInterpolation.cofinal_actualMatrix_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldInterpolation.cofinal_nonzero_full_row_minor : ∀ {ν Λ D : ℝ}
+  (d : OAI.PiExponent.FixedFieldGeometryData ν Λ D) (w0 v θ : ℝ) (w : Fin d.m → ℝ),
+  LT.lt.{0} 0 w0 →
+    (∀ (i : Fin d.m), LT.lt.{0} 0 (w i)) →
+      (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} d.m 1)),
+          Eq.{1} (↑(d.curveDegreeWeights i)) (OAI.PiExponent.InterpolationMatrix.columnWeights w0 w i)) →
+        (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} d.m 1)),
+            Eq.{1} (↑(d.curveJetWeights i)) (OAI.PiExponent.InterpolationMatrix.rowWeights v θ w i)) →
+          ∀ (r : Fin d.m → ℂ),
+            (∀ (j : Fin d.K) (i : Fin d.m), Eq.{1} (d.curveCenters j i) (HMul.hMul.{0, 0, 0} (↑↑j) (r i))) →
+              ∀ (T : Fin d.m → ℕ),
+                (∀ (i : Fin d.m),
+                    LE.le.{0} (d.curveJetWeights i.succ) (HMul.hMul.{0, 0, 0} (↑(T i)) (d.curveJetWeights 0))) →
+                  ∀ (L : ℝ),
+                    ∃ H,
+                      LE.le.{0} L H ∧
+                        ∃ selection,
+                          Function.Injective.{1, 1} selection ∧
+                            Ne.{1}
+                              (Matrix.det.{0, 0}
+                                (Matrix.submatrix.{0, 0, 0, 0, 0}
+                                  (OAI.PiExponent.InterpolationMatrix.truncatedLogMatrix d.K w0 v θ w H r T) id.{1}
+                                  selection))
+                              0
+'OAI.PiExponent.FixedFieldInterpolation.cofinal_nonzero_full_row_minor' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@FixedQuadratic.heightWeightsQ : {m : ℕ} → (F : IntermediateField.{0, 0} ℚ ℝ) → (Fin m → ↥F) → Fin m → ℚ
+'FixedQuadratic.heightWeightsQ' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@FixedQuadratic.heightWeightsQ_pos : ∀ {m : ℕ} (F : IntermediateField.{0, 0} ℚ ℝ) (β : Fin m → ↥F),
+  (∀ (i : Fin m), LE.le.{0} 2 (FixedQuadratic.primitiveMinpolyHeight ↑(β i))) →
+    ∀ (i : Fin m), LT.lt.{0} 0 (FixedQuadratic.heightWeightsQ F β i)
+'FixedQuadratic.heightWeightsQ_pos' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@FixedQuadratic.geometricDegreeWeights : {m : ℕ} → ℚ → (Fin m → ℚ) → Fin (HAdd.hAdd.{0, 0, 0} m 1) → ℚ
+'FixedQuadratic.geometricDegreeWeights' depends on axioms: [propext]
+@FixedQuadratic.geometricJetWeights : {m : ℕ} → ℚ → ℚ → (Fin m → ℚ) → Fin (HAdd.hAdd.{0, 0, 0} m 1) → ℚ
+'FixedQuadratic.geometricJetWeights' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@FixedQuadratic.geometric_fibre_product_ratio : ∀ {m : ℕ} (v θ : ℚ) (w : Fin m → ℚ),
+  (∀ (i : Fin m), LT.lt.{0} 0 (w i)) →
+    Eq.{1}
+      (HDiv.hDiv.{0, 0, 0} (∏ i, ↑(FixedQuadratic.geometricDegreeWeights 1 w i.succ))
+        (∏ i, ↑(FixedQuadratic.geometricJetWeights v θ w i.succ)))
+      (HPow.hPow.{0, 0, 0} (↑θ) m)
+'FixedQuadratic.geometric_fibre_product_ratio' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@FixedQuadratic.geometric_product_ratio : ∀ {m : ℕ} (w0 v θ : ℚ) (w : Fin m → ℚ),
+  (∀ (i : Fin m), LT.lt.{0} 0 (w i)) →
+    Eq.{1}
+      (HDiv.hDiv.{0, 0, 0} (∏ i, ↑(FixedQuadratic.geometricDegreeWeights w0 w i))
+        (∏ i, ↑(FixedQuadratic.geometricJetWeights v θ w i)))
+      (HMul.hMul.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} ↑w0 ↑v) (HPow.hPow.{0, 0, 0} (↑θ) m))
+'FixedQuadratic.geometric_product_ratio' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+FixedQuadratic.realQuadraticGeometryData : (ν Λ D : ℝ) →
+  {m : ℕ} →
+    (F : IntermediateField.{0, 0} ℚ ℝ) →
+      (β : Fin m → ↥F) →
+        (∀ (i : Fin m), Eq.{1} (Polynomial.natDegree.{0} (minpoly.{0, 0} ℚ ↑(β i))) 2) →
+          (∀ (i : Fin m), LE.le.{0} 2 (FixedQuadratic.primitiveMinpolyHeight ↑(β i))) →
+            LE.le.{0} 1 m →
+              (k : ℕ) →
+                (w0 v θ sigma : ℚ) →
+                  LT.lt.{0} 0 w0 →
+                    LT.lt.{0} 0 v →
+                      LT.lt.{0} 0 θ →
+                        LT.lt.{0} 0 ↑sigma →
+                          LT.lt.{0}
+                              (HMul.hMul.{0, 0, 0}
+                                (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma))
+                                  (HAdd.hAdd.{0, 0, 0} m 1))
+                                (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑k) (HDiv.hDiv.{0, 0, 0} ↑w0 ↑v))
+                                  (HPow.hPow.{0, 0, 0} (↑θ) m)))
+                              1 →
+                            LT.lt.{0}
+                                (HMul.hMul.{0, 0, 0}
+                                  (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma)) m)
+                                  (HMul.hMul.{0, 0, 0} (↑k) (HPow.hPow.{0, 0, 0} (↑θ) m)))
+                                1 →
+                              LT.lt.{0} (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 ↑sigma) ↑θ) 1 →
+                                (∀ (A B : Finset.{0} (Fin (HAdd.hAdd.{0, 0, 0} m 1))),
+                                    Eq.{1} (Finset.card.{0} A) (Finset.card.{0} B) →
+                                      ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)),
+                                        Ne.{1} i 0 →
+                                          Membership.mem.{0, 0} A i →
+                                            i ∉ B →
+                                              (∀ (j : Fin (HAdd.hAdd.{0, 0, 0} m 1)),
+                                                  LT.lt.{0} i j →
+                                                    (Membership.mem.{0, 0} A j ↔ Membership.mem.{0, 0} B j)) →
+                                                LT.lt.{0}
+                                                  (HMul.hMul.{0, 0, 0}
+                                                    (OAI.PiExponent.PersistentWeightComparison.comparisonConstant m
+                                                      ↑sigma)
+                                                    (∏ j ∈ B,
+                                                      ↑(FixedQuadratic.geometricJetWeights v θ
+                                                          (FixedQuadratic.heightWeightsQ F β) j)))
+                                                  (∏ j ∈ A,
+                                                    ↑(FixedQuadratic.geometricDegreeWeights w0
+                                                        (FixedQuadratic.heightWeightsQ F β) j))) →
+                                  OAI.PiExponent.FixedFieldGeometryData ν Λ D
+'FixedQuadratic.realQuadraticGeometryData' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+FixedQuadratic.fixed_field_cofinal_nonzero_minor : ∀ (ν Λ D : ℝ) {m : ℕ} (F : IntermediateField.{0, 0} ℚ ℝ)
+  (β : Fin m → ↥F),
+  (∀ (i : Fin m), Eq.{1} (Polynomial.natDegree.{0} (minpoly.{0, 0} ℚ ↑(β i))) 2) →
+    (∀ (i : Fin m), LE.le.{0} 2 (FixedQuadratic.primitiveMinpolyHeight ↑(β i))) →
+      LE.le.{0} 1 m →
+        ∀ (k : ℕ) (w0 v θ sigma : ℚ),
+          LT.lt.{0} 0 w0 →
+            LT.lt.{0} 0 v →
+              LT.lt.{0} 0 θ →
+                LT.lt.{0} 0 ↑sigma →
+                  LT.lt.{0}
+                      (HMul.hMul.{0, 0, 0}
+                        (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma))
+                          (HAdd.hAdd.{0, 0, 0} m 1))
+                        (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (↑k) (HDiv.hDiv.{0, 0, 0} ↑w0 ↑v))
+                          (HPow.hPow.{0, 0, 0} (↑θ) m)))
+                      1 →
+                    LT.lt.{0}
+                        (HMul.hMul.{0, 0, 0}
+                          (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma)) m)
+                          (HMul.hMul.{0, 0, 0} (↑k) (HPow.hPow.{0, 0, 0} (↑θ) m)))
+                        1 →
+                      LT.lt.{0} (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 ↑sigma) ↑θ) 1 →
+                        (∀ (A B : Finset.{0} (Fin (HAdd.hAdd.{0, 0, 0} m 1))),
+                            Eq.{1} (Finset.card.{0} A) (Finset.card.{0} B) →
+                              ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)),
+                                Ne.{1} i 0 →
+                                  Membership.mem.{0, 0} A i →
+                                    i ∉ B →
+                                      (∀ (j : Fin (HAdd.hAdd.{0, 0, 0} m 1)),
+                                          LT.lt.{0} i j → (Membership.mem.{0, 0} A j ↔ Membership.mem.{0, 0} B j)) →
+                                        LT.lt.{0}
+                                          (HMul.hMul.{0, 0, 0}
+                                            (OAI.PiExponent.PersistentWeightComparison.comparisonConstant m ↑sigma)
+                                            (∏ j ∈ B,
+                                              ↑(FixedQuadratic.geometricJetWeights v θ
+                                                  (FixedQuadratic.heightWeightsQ F β) j)))
+                                          (∏ j ∈ A,
+                                            ↑(FixedQuadratic.geometricDegreeWeights w0
+                                                (FixedQuadratic.heightWeightsQ F β) j))) →
+                          ∀ (T : Fin m → ℕ),
+                            (∀ (i : Fin m),
+                                LE.le.{0} (HDiv.hDiv.{0, 0, 0} (FixedQuadratic.heightWeightsQ F β i) θ)
+                                  (HMul.hMul.{0, 0, 0} (↑(T i)) v)) →
+                              ∀ (L : ℝ),
+                                ∃ H,
+                                  LE.le.{0} L H ∧
+                                    ∃ selection,
+                                      Function.Injective.{1, 1} selection ∧
+                                        Ne.{1}
+                                          (Matrix.det.{0, 0}
+                                            (Matrix.submatrix.{0, 0, 0, 0, 0}
+                                              (OAI.PiExponent.InterpolationMatrix.truncatedLogMatrix k (↑w0) (↑v) (↑θ)
+                                                (fun i => ↑(FixedQuadratic.heightWeightsQ F β i)) H
+                                                (fun i => HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 Complex.I) ↑↑(β i))
+                                                T)
+                                              id.{1} selection))
+                                          0
+'FixedQuadratic.fixed_field_cofinal_nonzero_minor' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+FixedQuadratic.GeometryRegression.concreteGeometry : OAI.PiExponent.FixedFieldGeometryData 3 1 1
+'FixedQuadratic.GeometryRegression.concreteGeometry' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+FixedQuadratic.GeometryRegression.concrete_jet_surjective : ∀ᶠ (n : ℕ) in Filter.atTop.{0},
+  Function.Surjective.{1, 1}
+    (OAI.PiExponent.BlowupJetSurjectivity.jetRestriction
+      (OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal FixedQuadratic.GeometryRegression.concreteGeometry)
+      (OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane FixedQuadratic.GeometryRegression.concreteGeometry) n)
+'FixedQuadratic.GeometryRegression.concrete_jet_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+FixedQuadratic.GeometryRegression.concrete_nonzero_minor : ∀ (L : ℝ),
+  ∃ H,
+    LE.le.{0} L H ∧
+      ∃ selection,
+        Function.Injective.{1, 1} selection ∧
+          Ne.{1}
+            (Matrix.det.{0, 0}
+              (Matrix.submatrix.{0, 0, 0, 0, 0}
+                (OAI.PiExponent.InterpolationMatrix.truncatedLogMatrix 1 1 16 (1 / 8) (fun x => 100000) H (fun x => 1)
+                  fun x => 50000)
+                id.{1} selection))
+            0
+'FixedQuadratic.GeometryRegression.concrete_nonzero_minor' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@OAI.PiExponent.FixedFieldGeometryData.mk : {ν Λ D : ℝ} →
+  (m K : ℕ) →
+    LE.le.{0} 1 m →
+      (sigma : ℚ) →
+        LT.lt.{0} 0 ↑sigma →
+          (curveDegreeWeights curveJetWeights : Fin (HAdd.hAdd.{0, 0, 0} m 1) → ℚ) →
+            (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)), LT.lt.{0} 0 (curveDegreeWeights i)) →
+              (∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)), LT.lt.{0} 0 (curveJetWeights i)) →
+                (curveCenters : Fin K → Fin m → ℂ) →
+                  (∀ (i : Fin m), Function.Injective.{1, 1} fun j => curveCenters j i) →
+                    LT.lt.{0}
+                        (HDiv.hDiv.{0, 0, 0}
+                          (HMul.hMul.{0, 0, 0}
+                            (HMul.hMul.{0, 0, 0} (↑K)
+                              (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma))
+                                (HAdd.hAdd.{0, 0, 0} m 1)))
+                            (∏ i, ↑(curveDegreeWeights i)))
+                          (∏ i, ↑(curveJetWeights i)))
+                        1 →
+                      LT.lt.{0}
+                          (HDiv.hDiv.{0, 0, 0}
+                            (HMul.hMul.{0, 0, 0}
+                              (HMul.hMul.{0, 0, 0} (↑K)
+                                (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma)) m))
+                              (∏ i, ↑(curveDegreeWeights i.succ)))
+                            (∏ i, ↑(curveJetWeights i.succ)))
+                          1 →
+                        (∀ (A B : Finset.{0} (Fin (HAdd.hAdd.{0, 0, 0} m 1))),
+                            Eq.{1} (Finset.card.{0} A) (Finset.card.{0} B) →
+                              ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)),
+                                Ne.{1} i 0 →
+                                  Membership.mem.{0, 0} A i →
+                                    i ∉ B →
+                                      (∀ (j : Fin (HAdd.hAdd.{0, 0, 0} m 1)),
+                                          LT.lt.{0} i j → (Membership.mem.{0, 0} A j ↔ Membership.mem.{0, 0} B j)) →
+                                        LT.lt.{0}
+                                          (HMul.hMul.{0, 0, 0}
+                                            (OAI.PiExponent.PersistentWeightComparison.comparisonConstant m ↑sigma)
+                                            (∏ j ∈ B, ↑(curveJetWeights j)))
+                                          (∏ j ∈ A, ↑(curveDegreeWeights j))) →
+                          (∀ (i : Fin m),
+                              LT.lt.{0}
+                                (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 ↑sigma) ↑(curveDegreeWeights i.succ))
+                                ↑(curveJetWeights i.succ)) →
+                            OAI.PiExponent.FixedFieldGeometryData ν Λ D
+'OAI.PiExponent.FixedFieldGeometryData.mk' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+structure OAI.PiExponent.FixedFieldGeometryData (ν Λ D : ℝ) : Type
+number of parameters: 3
+fields:
+  OAI.PiExponent.FixedFieldGeometryData.m : ℕ
+  OAI.PiExponent.FixedFieldGeometryData.K : ℕ
+  OAI.PiExponent.FixedFieldGeometryData.m_pos : LE.le.{0} 1 self.m
+  OAI.PiExponent.FixedFieldGeometryData.sigma : ℚ
+  OAI.PiExponent.FixedFieldGeometryData.sigma_pos : LT.lt.{0} 0 ↑self.sigma
+  OAI.PiExponent.FixedFieldGeometryData.curveDegreeWeights : Fin (HAdd.hAdd.{0, 0, 0} self.m 1) → ℚ
+  OAI.PiExponent.FixedFieldGeometryData.curveJetWeights : Fin (HAdd.hAdd.{0, 0, 0} self.m 1) → ℚ
+  OAI.PiExponent.FixedFieldGeometryData.curveDegreeWeights_pos : ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} self.m 1)),
+      LT.lt.{0} 0 (self.curveDegreeWeights i)
+  OAI.PiExponent.FixedFieldGeometryData.curveJetWeights_pos : ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} self.m 1)),
+      LT.lt.{0} 0 (self.curveJetWeights i)
+  OAI.PiExponent.FixedFieldGeometryData.curveCenters : Fin self.K → Fin self.m → ℂ
+  OAI.PiExponent.FixedFieldGeometryData.curveCenters_injective : ∀ (i : Fin self.m),
+      Function.Injective.{1, 1} fun j => self.curveCenters j i
+  OAI.PiExponent.FixedFieldGeometryData.curve_volume : LT.lt.{0}
+      (HDiv.hDiv.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0}
+          (HMul.hMul.{0, 0, 0} (↑self.K)
+            (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑self.sigma))
+              (HAdd.hAdd.{0, 0, 0} self.m 1)))
+          (∏ i, ↑(self.curveDegreeWeights i)))
+        (∏ i, ↑(self.curveJetWeights i)))
+      1
+  OAI.PiExponent.FixedFieldGeometryData.curve_fibre_volume : LT.lt.{0}
+      (HDiv.hDiv.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0}
+          (HMul.hMul.{0, 0, 0} (↑self.K)
+            (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑self.sigma)) self.m))
+          (∏ i, ↑(self.curveDegreeWeights i.succ)))
+        (∏ i, ↑(self.curveJetWeights i.succ)))
+      1
+  OAI.PiExponent.FixedFieldGeometryData.curve_separated_weight_products : ∀
+      (A B : Finset.{0} (Fin (HAdd.hAdd.{0, 0, 0} self.m 1))),
+      Eq.{1} (Finset.card.{0} A) (Finset.card.{0} B) →
+        ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} self.m 1)),
+          Ne.{1} i 0 →
+            Membership.mem.{0, 0} A i →
+              i ∉ B →
+                (∀ (j : Fin (HAdd.hAdd.{0, 0, 0} self.m 1)),
+                    LT.lt.{0} i j → (Membership.mem.{0, 0} A j ↔ Membership.mem.{0, 0} B j)) →
+                  LT.lt.{0}
+                    (HMul.hMul.{0, 0, 0}
+                      (OAI.PiExponent.PersistentWeightComparison.comparisonConstant self.m ↑self.sigma)
+                      (∏ j ∈ B, ↑(self.curveJetWeights j)))
+                    (∏ j ∈ A, ↑(self.curveDegreeWeights j))
+  OAI.PiExponent.FixedFieldGeometryData.curve_coordinate_ratio : ∀ (i : Fin self.m),
+      LT.lt.{0} (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 ↑self.sigma) ↑(self.curveDegreeWeights i.succ))
+        ↑(self.curveJetWeights i.succ)
+constructor:
+  OAI.PiExponent.FixedFieldGeometryData.mk {ν Λ D : ℝ} (m K : ℕ) (m_pos : LE.le.{0} 1 m) (sigma : ℚ)
+    (sigma_pos : LT.lt.{0} 0 ↑sigma) (curveDegreeWeights curveJetWeights : Fin (HAdd.hAdd.{0, 0, 0} m 1) → ℚ)
+    (curveDegreeWeights_pos : ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)), LT.lt.{0} 0 (curveDegreeWeights i))
+    (curveJetWeights_pos : ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)), LT.lt.{0} 0 (curveJetWeights i))
+    (curveCenters : Fin K → Fin m → ℂ)
+    (curveCenters_injective : ∀ (i : Fin m), Function.Injective.{1, 1} fun j => curveCenters j i)
+    (curve_volume :
+      LT.lt.{0}
+        (HDiv.hDiv.{0, 0, 0}
+          (HMul.hMul.{0, 0, 0}
+            (HMul.hMul.{0, 0, 0} (↑K)
+              (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma)) (HAdd.hAdd.{0, 0, 0} m 1)))
+            (∏ i, ↑(curveDegreeWeights i)))
+          (∏ i, ↑(curveJetWeights i)))
+        1)
+    (curve_fibre_volume :
+      LT.lt.{0}
+        (HDiv.hDiv.{0, 0, 0}
+          (HMul.hMul.{0, 0, 0}
+            (HMul.hMul.{0, 0, 0} (↑K) (HPow.hPow.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HMul.hMul.{0, 0, 0} 3 ↑sigma)) m))
+            (∏ i, ↑(curveDegreeWeights i.succ)))
+          (∏ i, ↑(curveJetWeights i.succ)))
+        1)
+    (curve_separated_weight_products :
+      ∀ (A B : Finset.{0} (Fin (HAdd.hAdd.{0, 0, 0} m 1))),
+        Eq.{1} (Finset.card.{0} A) (Finset.card.{0} B) →
+          ∀ (i : Fin (HAdd.hAdd.{0, 0, 0} m 1)),
+            Ne.{1} i 0 →
+              Membership.mem.{0, 0} A i →
+                i ∉ B →
+                  (∀ (j : Fin (HAdd.hAdd.{0, 0, 0} m 1)),
+                      LT.lt.{0} i j → (Membership.mem.{0, 0} A j ↔ Membership.mem.{0, 0} B j)) →
+                    LT.lt.{0}
+                      (HMul.hMul.{0, 0, 0} (OAI.PiExponent.PersistentWeightComparison.comparisonConstant m ↑sigma)
+                        (∏ j ∈ B, ↑(curveJetWeights j)))
+                      (∏ j ∈ A, ↑(curveDegreeWeights j)))
+    (curve_coordinate_ratio :
+      ∀ (i : Fin m),
+        LT.lt.{0} (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 ↑sigma) ↑(curveDegreeWeights i.succ))
+          ↑(curveJetWeights i.succ)) :
+    OAI.PiExponent.FixedFieldGeometryData ν Λ D

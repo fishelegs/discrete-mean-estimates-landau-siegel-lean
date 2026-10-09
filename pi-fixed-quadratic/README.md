@@ -11,8 +11,8 @@ This subproject uses **Lean 4.34.1** and Mathlib
 verified openai/math PiExponent project at
 `adc7f1241b42e322a6451854ab7e4b4c146bf78a`.
 The enclosing repository's Lean/Mathlib 4.30.0 files and its A7, W2, sqrt(2),
-weighted-colon, and Log-Pade checkpoints are preserved. This subproject does not
-import the upstream PiExponent proof; a separate audit reads its actual APIs.
+weighted-colon, and Log-Pade checkpoints are preserved. The arithmetic core does not import upstream PiExponent. The separately replayed
+geometry and analysis ports reuse its hash-audited Lean closure and exact APIs.
 
 ## Proved statements
 
@@ -329,3 +329,32 @@ Remaining implementation work is the general compactification/blowup/jet
 surjectivity, exact translated determinant expansion and collision/holomorphic
 summation, and assembling the actual count/remainder limits, parameter selection
 and exceptional-set contradiction. No final pi theorem is exported.
+
+## Geometry checkpoint (CP9)
+
+`FixedQuadratic/GeometryPort` extracts the upstream geometry wrappers from the
+rational-only admissible-data type. `FixedFieldGeometryData` contains explicit
+positive rational weights, injective complex centers, inflated total/fibre
+volumes, separated product inequalities and the coordinate ratio. It contains
+no assumed curve bound, ampleness, jet surjectivity or nonzero minor. The actual
+arbitrary-center curve theorem implies the curve inequality; the port then
+constructs weighted projective compactification, the center ideal and blowup,
+proves the uniform curve margin and ampleness, and obtains jet surjectivity.
+
+`FixedFieldInterpolation.cofinal_nonzero_full_row_minor` derives arbitrarily
+large auxiliary degrees with an injectively selected, nonzero full-row minor
+of the literal truncated-log matrix. `fixed_field_cofinal_nonzero_minor`
+instantiates its centers with `2*I*beta_i` and weights with the ceilings of the
+logs of the actual primitive-minimal-polynomial heights. Explicit geometric
+volume/separation/tail-budget inputs remain in that theorem's type. Selecting
+and pricing a packet from the infinite exceptional set is still required; this
+is not the final pi finiteness theorem.
+
+`checks/GeometryAudit.lean` prints all new declaration types/axioms and the full
+geometry record. `checks/GeometryRegression.lean` proves a numerically
+consistent geometry packet, its jet surjectivity and its cofinal actual minor
+existence. Its weight 100000 is a geometry regression, not an asserted
+primitive height of sqrt(2). Negative fixtures reject a missing tail budget and
+an attempted assumed-surjectivity record field. Run `scripts/audit_geometry_port.py`
+with the exact upstream verification root and a passed core replay receipt.
+This separate replay is not included in the 50-check arithmetic Linux CI.

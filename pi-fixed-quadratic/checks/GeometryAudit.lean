@@ -1,0 +1,319 @@
+import FixedQuadratic.GeometryPort.FixedCenters
+import checks.GeometryRegression
+
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.maxSteps 2000000
+
+#check @OAI.PiExponent.FixedFieldGeometryData
+#print axioms OAI.PiExponent.FixedFieldGeometryData
+#check @OAI.PiExponent.FixedFieldGeometryData.exact_weighted_curve_inequality
+#print axioms OAI.PiExponent.FixedFieldGeometryData.exact_weighted_curve_inequality
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.scale
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.scale
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.Index
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.Index
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.exponents
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.exponents
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.constantIndex
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.constantIndex
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.coordinateIndex
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.coordinateIndex
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.pureIndex
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.pureIndex
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.index_nonempty
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.index_nonempty
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.compactification
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.compactification
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap_proper
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.compactificationStructureMap_proper
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.affineChart
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.affineChart
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_isOpenImmersion
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_isOpenImmersion
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.origin
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.origin
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.compactification_nonempty
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.compactification_nonempty
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isIntegral
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isIntegral
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isLocallyNoetherian
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isLocallyNoetherian
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.compactification_compact
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.compactification_compact
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isNoetherian
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.compactification_isNoetherian
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_quasiCompact
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_quasiCompact
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_over
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.affineChart_over
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane_ample
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.hyperplane_ample
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff_strict
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.logCutoff_strict
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_restrict
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_restrict
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_finite
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_finite
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_subset_chart
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_subset_chart
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_coherent
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_coherent
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.origin_ne_center
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.origin_ne_center
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.origin_avoids_center
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.origin_avoids_center
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_ne_top
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.centerIdeal_support_ne_top
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.blowup
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.blowup
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.projection
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.projection
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.structureMap
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.structureMap
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.projection_proper
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.projection_proper
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.structureMap_proper
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.structureMap_proper
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isIntegral
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isIntegral
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isLocallyNoetherian
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isLocallyNoetherian
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.blowup_compact
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.blowup_compact
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isNoetherian
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.blowup_isNoetherian
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.A
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.A
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.J
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.J
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.exceptionalInclusion
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.exceptionalInclusion
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.exceptional_presents
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.exceptional_presents
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.isBlowup
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.isBlowup
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.affinePolynomialIdeal
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.affinePolynomialIdeal
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.formalJet_packet_zero
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.formalJet_packet_zero
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.curve_degree_laws
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.curve_degree_laws
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient_pos
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.marginCoefficient_pos
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_nonnegative_degree
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_nonnegative_degree
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.curveDegree_zero_of_frame
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.curveDegree_zero_of_frame
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_exceptional_frame
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_exceptional_frame
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_avoids_center
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_avoids_center
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_image_outside_chart
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_image_outside_chart
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_contracted
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_contracted
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.contactSum
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.contactSum
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.poleDegree
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.poleDegree
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.actual_contact_bound
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.actual_contact_bound
+#check @OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_actual_contact_degrees
+#print axioms OAI.PiExponent.FixedFieldBlowupCurveMargin.margin_of_actual_contact_degrees
+#check @OAI.PiExponent.FixedFieldBlowupMargin.AffineCurveDegreeData
+#print axioms OAI.PiExponent.FixedFieldBlowupMargin.AffineCurveDegreeData
+#check @OAI.PiExponent.FixedFieldBlowupMargin.uniform_margin_of_affine_curve_data
+#print axioms OAI.PiExponent.FixedFieldBlowupMargin.uniform_margin_of_affine_curve_data
+#check @OAI.PiExponent.FixedFieldBlowupMargin.exists_positive_uniform_margin_of_affine_curve_data
+#print axioms OAI.PiExponent.FixedFieldBlowupMargin.exists_positive_uniform_margin_of_affine_curve_data
+#check @OAI.PiExponent.FixedFieldCurveImage.center_point_isClosed
+#print axioms OAI.PiExponent.FixedFieldCurveImage.center_point_isClosed
+#check @OAI.PiExponent.FixedFieldCurveImage.meets_center_complement
+#print axioms OAI.PiExponent.FixedFieldCurveImage.meets_center_complement
+#check @OAI.PiExponent.FixedFieldCurveImage.projection_restrict_isIso
+#print axioms OAI.PiExponent.FixedFieldCurveImage.projection_restrict_isIso
+#check @OAI.PiExponent.FixedFieldCurveImage.imageCurve
+#print axioms OAI.PiExponent.FixedFieldCurveImage.imageCurve
+#check @OAI.PiExponent.FixedFieldCurveImage.functionFieldIso
+#print axioms OAI.PiExponent.FixedFieldCurveImage.functionFieldIso
+#check @OAI.PiExponent.FixedFieldCurveImage.functionFieldIso_generic
+#print axioms OAI.PiExponent.FixedFieldCurveImage.functionFieldIso_generic
+#check @OAI.PiExponent.FixedFieldCurveImage.image_meets_chart
+#print axioms OAI.PiExponent.FixedFieldCurveImage.image_meets_chart
+#check @OAI.PiExponent.FixedFieldJetPackets.affineOpen
+#print axioms OAI.PiExponent.FixedFieldJetPackets.affineOpen
+#check @OAI.PiExponent.FixedFieldJetPackets.sectionPolynomial
+#print axioms OAI.PiExponent.FixedFieldJetPackets.sectionPolynomial
+#check @OAI.PiExponent.FixedFieldJetPackets.formalPackets_surjective_of_jetRestriction
+#print axioms OAI.PiExponent.FixedFieldJetPackets.formalPackets_surjective_of_jetRestriction
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection_zeroIdeal
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection_zeroIdeal
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection_zeroIdeal_eq_comap
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.inverseSection_zeroIdeal_eq_comap
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_pullback
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_pullback
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_zero
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_zero
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.pullback_inverseSection_zeroIdeal
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.pullback_inverseSection_zeroIdeal
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.pullback_inverseSection_ne_zero
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.pullback_inverseSection_ne_zero
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_spec_top
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.zeroIdeal_spec_top
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_specIdeal
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_specIdeal
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_compactIdeal
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_compactIdeal
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_eq_top_of_not_mem
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_eq_top_of_not_mem
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.map_powerIdeal_eq_top_of_transcendental
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.map_powerIdeal_eq_top_of_transcendental
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.compactIdeal_comap_ne_bot_of_generic
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.compactIdeal_comap_ne_bot_of_generic
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.centerMorphism_eq_centeredLift
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.centerMorphism_eq_centeredLift
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_length_eq_logContact
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.localIdeal_length_eq_logContact
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.divisor_eq_localIdeal_length
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.divisor_eq_localIdeal_length
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor_apply
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.idealDivisor_apply
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.degree_eq_neg_idealDivisor_sum
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.degree_eq_neg_idealDivisor_sum
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.compactIdeal_degree_eq_neg_contact_sum
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.compactIdeal_degree_eq_neg_contact_sum
+#check @OAI.PiExponent.FixedFieldExceptionalCurveDegree.admissible_degree_eq_neg_contactSum
+#print axioms OAI.PiExponent.FixedFieldExceptionalCurveDegree.admissible_degree_eq_neg_contactSum
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.imageCurve
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.sourceStructure
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.sourceStructure
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.imageStructure
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.imageStructure
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.sourceAlgebra
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.sourceAlgebra
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.imageAlgebra
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.imageAlgebra
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.fieldEquiv
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.fieldEquiv
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.chart
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.chart
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.chartPresentation
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.chartPresentation
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.chart_nonempty
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.chart_nonempty
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.imageCoordinates
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.imageCoordinates
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.coordinates
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.coordinates
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.y
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.y
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.x
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.x
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.full_coordinates
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.full_coordinates
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.field_properties
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.field_properties
+#check @OAI.PiExponent.FixedFieldCurveCoordinates.coordinates_generic_map
+#print axioms OAI.PiExponent.FixedFieldCurveCoordinates.coordinates_generic_map
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.exists_ampleExponent
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.exists_ampleExponent
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.ampleExponent
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.ampleExponent
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.ampleExponent_gt_one
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.ampleExponent_gt_one
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.H
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.H
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.H_ample
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.H_ample
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin_pos
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.uniformMargin_pos
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.uniform_curve_margin_of_affine_curve_data
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.uniform_curve_margin_of_affine_curve_data
+#check @OAI.PiExponent.FixedFieldCurveModel.ModelData
+#print axioms OAI.PiExponent.FixedFieldCurveModel.ModelData
+#check @OAI.PiExponent.FixedFieldCurveModel.existsModelData
+#print axioms OAI.PiExponent.FixedFieldCurveModel.existsModelData
+#check @OAI.PiExponent.FixedFieldCurveModel.degreeData
+#print axioms OAI.PiExponent.FixedFieldCurveModel.degreeData
+#check @OAI.PiExponent.FixedFieldBlowupMargin.affineCurveDegreeData
+#print axioms OAI.PiExponent.FixedFieldBlowupMargin.affineCurveDegreeData
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.uniform_curve_margin
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.uniform_curve_margin
+#check @OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle_ample
+#print axioms OAI.PiExponent.FixedFieldBlowupGeometry.interpolationBundle_ample
+#check @OAI.PiExponent.FixedFieldJetSurjectivity.blowupBundle_ample
+#print axioms OAI.PiExponent.FixedFieldJetSurjectivity.blowupBundle_ample
+#check @OAI.PiExponent.FixedFieldJetSurjectivity.eventual_jetRestriction_surjective
+#print axioms OAI.PiExponent.FixedFieldJetSurjectivity.eventual_jetRestriction_surjective
+#check @OAI.PiExponent.FixedFieldJetSurjectivity.eventually_jetRestriction_surjective
+#print axioms OAI.PiExponent.FixedFieldJetSurjectivity.eventually_jetRestriction_surjective
+#check @OAI.PiExponent.FixedFieldInterpolation.exponent_budget
+#print axioms OAI.PiExponent.FixedFieldInterpolation.exponent_budget
+#check @OAI.PiExponent.FixedFieldInterpolation.eventual_supportBound
+#print axioms OAI.PiExponent.FixedFieldInterpolation.eventual_supportBound
+#check @OAI.PiExponent.FixedFieldInterpolation.actualFrame_exists
+#print axioms OAI.PiExponent.FixedFieldInterpolation.actualFrame_exists
+#check @OAI.PiExponent.FixedFieldInterpolation.WeightedPolynomials
+#print axioms OAI.PiExponent.FixedFieldInterpolation.WeightedPolynomials
+#check @OAI.PiExponent.FixedFieldInterpolation.packetMap
+#print axioms OAI.PiExponent.FixedFieldInterpolation.packetMap
+#check @OAI.PiExponent.FixedFieldInterpolation.packetMap_surjective_of_family
+#print axioms OAI.PiExponent.FixedFieldInterpolation.packetMap_surjective_of_family
+#check @OAI.PiExponent.FixedFieldInterpolation.eventually_packetMap_surjective
+#print axioms OAI.PiExponent.FixedFieldInterpolation.eventually_packetMap_surjective
+#check @OAI.PiExponent.FixedFieldInterpolation.actualMatrix_surjective_of_packetMap
+#print axioms OAI.PiExponent.FixedFieldInterpolation.actualMatrix_surjective_of_packetMap
+#check @OAI.PiExponent.FixedFieldInterpolation.cofinal_actualMatrix_surjective
+#print axioms OAI.PiExponent.FixedFieldInterpolation.cofinal_actualMatrix_surjective
+#check @OAI.PiExponent.FixedFieldInterpolation.cofinal_nonzero_full_row_minor
+#print axioms OAI.PiExponent.FixedFieldInterpolation.cofinal_nonzero_full_row_minor
+#check @FixedQuadratic.heightWeightsQ
+#print axioms FixedQuadratic.heightWeightsQ
+#check @FixedQuadratic.heightWeightsQ_pos
+#print axioms FixedQuadratic.heightWeightsQ_pos
+#check @FixedQuadratic.geometricDegreeWeights
+#print axioms FixedQuadratic.geometricDegreeWeights
+#check @FixedQuadratic.geometricJetWeights
+#print axioms FixedQuadratic.geometricJetWeights
+#check @FixedQuadratic.geometric_fibre_product_ratio
+#print axioms FixedQuadratic.geometric_fibre_product_ratio
+#check @FixedQuadratic.geometric_product_ratio
+#print axioms FixedQuadratic.geometric_product_ratio
+#check @FixedQuadratic.realQuadraticGeometryData
+#print axioms FixedQuadratic.realQuadraticGeometryData
+#check @FixedQuadratic.fixed_field_cofinal_nonzero_minor
+#print axioms FixedQuadratic.fixed_field_cofinal_nonzero_minor
+#check @FixedQuadratic.GeometryRegression.concreteGeometry
+#print axioms FixedQuadratic.GeometryRegression.concreteGeometry
+#check @FixedQuadratic.GeometryRegression.concrete_jet_surjective
+#print axioms FixedQuadratic.GeometryRegression.concrete_jet_surjective
+#check @FixedQuadratic.GeometryRegression.concrete_nonzero_minor
+#print axioms FixedQuadratic.GeometryRegression.concrete_nonzero_minor
+#check @OAI.PiExponent.FixedFieldGeometryData.mk
+#print axioms OAI.PiExponent.FixedFieldGeometryData.mk
+
+#print OAI.PiExponent.FixedFieldGeometryData

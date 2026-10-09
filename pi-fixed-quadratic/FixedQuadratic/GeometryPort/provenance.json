@@ -1,0 +1,91 @@
+{
+  "upstream_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "license": "Apache-2.0",
+  "scope": "Geometry wrappers adapted by replacing rational-only AdmissibleParameters with explicit geometry inputs. Generic deep proofs reused from the separately audited upstream closure.",
+  "ported_wrappers": [
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleBlowupMargin.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Ampleness/AdmissibleBlowupMargin.lean",
+      "upstream_sha256": "de17f83543d1aed5432af6a3590dd6759a629c6fd56813595fd26070e3f49fb8",
+      "ported_sha256": "60362d08c8f55e0d40274d85a46df265f109f5278b45cf1d5527b205336a9614"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleCurveImage.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Geometry/AdmissibleCurveImage.lean",
+      "upstream_sha256": "c9235bb754bc4def1b5e087467ab5c0d0103d21a4b0d8dcdbc36a28261ad34f0",
+      "ported_sha256": "1da992215e0908fc0b593c0aacb16425958846a67e422cb33753ad8ed4d6b8de"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleJetPackets.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Jets/AdmissibleJetPackets.lean",
+      "upstream_sha256": "bdf4b08b460e1ffbeab424cc748726f58a3c078352295b28a690fae43902b796",
+      "ported_sha256": "aa95b5c35270340ad091c69edc490a09e6a7ec2ed16cee6aa5eb19a405f0ae22"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleCurveDegreeData.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Geometry/AdmissibleCurveDegreeData.lean",
+      "upstream_sha256": "d7f8e1ddc1a7f081eae85f10554b55e2130144ee136485bd3953150bc80fe894",
+      "ported_sha256": "d815ace5a93795dd88d24204b309fa05001e998d20c731d81fe45469e69a5c2b"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleJetAmpleness.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Ampleness/AdmissibleJetAmpleness.lean",
+      "upstream_sha256": "dddf8a133642c98b874e3ecb9e9dd640592b0a7f7d194a3a1b589bea298a2689",
+      "ported_sha256": "43eeb8c406aae0b044c6f96d93f2b7c1675c6673018f67b4197ce3b37a036911"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleBlowupGeometry.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Ampleness/AdmissibleBlowupGeometry.lean",
+      "upstream_sha256": "0d27b0c2c906bd0f25eb46f6d94144976579b126f8f93106ec065007ab12c2d5",
+      "ported_sha256": "38fece1d909b1ce1998304c730ec681e750ca30d641f395d1dda2be017f9118c"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleCurveModelDegrees.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Ampleness/AdmissibleCurveModelDegrees.lean",
+      "upstream_sha256": "396aeee9239cce0de5337c7b5f6300d719d6e8a56bfd58f25c95d5326f8efc9f",
+      "ported_sha256": "733aaca24d925fde027f89f72c80eb56b860c73c5d616fb983172fe5fab59d25"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/ExceptionalCurveDegree.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Ampleness/ExceptionalCurveDegree.lean",
+      "upstream_sha256": "78a078dd2560f82d566ed0350355823600c2b0b50f4f5509332f3712c7b46eda",
+      "ported_sha256": "29893ba5de257a46d9a409eacb2601aec110876a22eba611ec9da9eaef282673"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/BlowupCurveMargin.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Ampleness/BlowupCurveMargin.lean",
+      "upstream_sha256": "461e0271bef8365ac5cd2ca7fbba8c88fe81c2908abc6e2006b0ac4481334dd0",
+      "ported_sha256": "25e9237bc7230940aa497c0ff35193925d906bf06a1d989ab6f5b2e41ed75c84"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleJetSurjectivity.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Jets/AdmissibleJetSurjectivity.lean",
+      "upstream_sha256": "8a34bcb4730c6897d887d78b4c59e7588db8f7c67c0100440e434673ed56345b",
+      "ported_sha256": "a3380bb77fc319b4d812cccbc92f7154fc44d579388b834d9d78cbe27a2e6aa4"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleCurveModel.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Geometry/AdmissibleCurveModel.lean",
+      "upstream_sha256": "e2664ec62362b465a883d50dc1d51633f3158bf198f77368aeb99115d438e35a",
+      "ported_sha256": "710da941b88bb2662e65a6ebb71acec7d975e103a703b02b5c41162621ff998a"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleBlowupAmple.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Ampleness/AdmissibleBlowupAmple.lean",
+      "upstream_sha256": "fc1dc1831b0ce37df152d2035507f3c378aed6a833ac0951dc372eb699e83d8e",
+      "ported_sha256": "5da4ab696f383bde3bbf3691a8f512756b41f9f2c49ab687e308cfa626a0d721"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleCurveCoordinates.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Geometry/AdmissibleCurveCoordinates.lean",
+      "upstream_sha256": "4ae15bb80c67b98a2c844e4f3ec5a10088db11794cb1cfced562162e0ad7ea9e",
+      "ported_sha256": "4b324dfe7b9c4e7760b65144d81cef0fbe683d7946d4ee18c41d6f46a0c5d1d0"
+    },
+    {
+      "ported": "FixedQuadratic/GeometryPort/AdmissibleBlowupPolarization.lean",
+      "upstream": "lean/OAI/NumberTheory/PiExponent/Ampleness/AdmissibleBlowupPolarization.lean",
+      "upstream_sha256": "33066f3e5412a9f741974e30c692922690563ac6414d3bab8521c2e0676a8200",
+      "ported_sha256": "f2c8b455cc8370b0ce9d609d414deb016218b40553941d14e8cf851ac4e733bc"
+    }
+  ]
+}
