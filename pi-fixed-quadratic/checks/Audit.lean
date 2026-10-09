@@ -1,0 +1,96 @@
+import FixedQuadratic.Clearing
+import FixedQuadratic.Comparison
+import FixedQuadratic.Conjugation
+import FixedQuadratic.Envelope
+import FixedQuadratic.Height
+import FixedQuadratic.Mahler
+import FixedQuadratic.MinorBudget
+import FixedQuadratic.MultiEnvelope
+import FixedQuadratic.Resultant
+import FixedQuadratic.Weights
+import checks.Regression
+
+#print FixedQuadratic.determinant_clearing
+#print axioms FixedQuadratic.determinant_clearing
+#print FixedQuadratic.comparison_contradiction
+#print axioms FixedQuadratic.comparison_contradiction
+#print FixedQuadratic.simultaneous_conjugate_evaluation
+#print axioms FixedQuadratic.simultaneous_conjugate_evaluation
+#print FixedQuadratic.simultaneous_conjugate_ne_zero
+#print axioms FixedQuadratic.simultaneous_conjugate_ne_zero
+#print FixedQuadratic.cartesian_trap
+#print axioms FixedQuadratic.cartesian_trap
+#print FixedQuadratic.coefficientL1
+#print axioms FixedQuadratic.coefficientL1
+#print FixedQuadratic.eval_norm_le_coefficientL1
+#print axioms FixedQuadratic.eval_norm_le_coefficientL1
+#print FixedQuadratic.quadratic_coefficient_lower
+#print axioms FixedQuadratic.quadratic_coefficient_lower
+#print FixedQuadratic.coefficientL1_pos_of_eval_ne_zero
+#print axioms FixedQuadratic.coefficientL1_pos_of_eval_ne_zero
+#print FixedQuadratic.quadratic_l1_mahler_lower
+#print axioms FixedQuadratic.quadratic_l1_mahler_lower
+#print FixedQuadratic.realQuadratic
+#print axioms FixedQuadratic.realQuadratic
+#print FixedQuadratic.realQuadratic_ne_zero
+#print axioms FixedQuadratic.realQuadratic_ne_zero
+#print FixedQuadratic.finite_realQuadratic_roots
+#print axioms FixedQuadratic.finite_realQuadratic_roots
+#print FixedQuadratic.boundedQuadraticRoots
+#print axioms FixedQuadratic.boundedQuadraticRoots
+#print FixedQuadratic.finite_boundedQuadraticRoots
+#print axioms FixedQuadratic.finite_boundedQuadraticRoots
+#print FixedQuadratic.mem_boundedQuadraticRoots
+#print axioms FixedQuadratic.mem_boundedQuadraticRoots
+#print FixedQuadratic.infinite_escape_bounded_height
+#print axioms FixedQuadratic.infinite_escape_bounded_height
+#print FixedQuadratic.height_unbounded_of_infinite
+#print axioms FixedQuadratic.height_unbounded_of_infinite
+#print FixedQuadratic.quadraticMahler
+#print axioms FixedQuadratic.quadraticMahler
+#print FixedQuadratic.quadraticMahler_sq_le
+#print axioms FixedQuadratic.quadraticMahler_sq_le
+#print FixedQuadratic.quadraticMahler_le_l2
+#print axioms FixedQuadratic.quadraticMahler_le_l2
+#print FixedQuadratic.quadraticMahler_le_sqrt_three_height
+#print axioms FixedQuadratic.quadraticMahler_le_sqrt_three_height
+#print FixedQuadratic.exists_matching_of_det_ne_zero
+#print axioms FixedQuadratic.exists_matching_of_det_ne_zero
+#print FixedQuadratic.matched_sum_sub
+#print axioms FixedQuadratic.matched_sum_sub
+#print FixedQuadratic.det_degreeOf_le
+#print axioms FixedQuadratic.det_degreeOf_le
+#print FixedQuadratic.row_total_le_column_total
+#print axioms FixedQuadratic.row_total_le_column_total
+#print FixedQuadratic.weighted_rebate
+#print axioms FixedQuadratic.weighted_rebate
+#print FixedQuadratic.multiCoefficientL1
+#print axioms FixedQuadratic.multiCoefficientL1
+#print FixedQuadratic.multi_eval_norm_le
+#print axioms FixedQuadratic.multi_eval_norm_le
+#print FixedQuadratic.quadratic_resultant_identity
+#print axioms FixedQuadratic.quadratic_resultant_identity
+#print FixedQuadratic.quadratic_product_gaussian
+#print axioms FixedQuadratic.quadratic_product_gaussian
+#print FixedQuadratic.gaussian_norm_one_le
+#print axioms FixedQuadratic.gaussian_norm_one_le
+#print FixedQuadratic.quadratic_norm_lower
+#print axioms FixedQuadratic.quadratic_norm_lower
+#print FixedQuadratic.height_rpow_le_rounded_exp
+#print axioms FixedQuadratic.height_rpow_le_rounded_exp
+#print FixedQuadratic.quadratic_center_period_error
+#print axioms FixedQuadratic.quadratic_center_period_error
+#print FixedQuadratic.quadratic_centers_injective
+#print axioms FixedQuadratic.quadratic_centers_injective
+#print FixedQuadratic.Regression.nonmonic_resultant
+#print axioms FixedQuadratic.Regression.nonmonic_resultant
+#print FixedQuadratic.Regression.omitted_coefficient_cost_is_false
+#print axioms FixedQuadratic.Regression.omitted_coefficient_cost_is_false
+#print FixedQuadratic.Regression.sqrt_two_mahler
+#print axioms FixedQuadratic.Regression.sqrt_two_mahler
+#print FixedQuadratic.Regression.cancellation_minor
+#print axioms FixedQuadratic.Regression.cancellation_minor
+#print FixedQuadratic.Regression.cancellation_degree
+#print axioms FixedQuadratic.Regression.cancellation_degree
+#print FixedQuadratic.Regression.bounded_height_two_finite
+#print axioms FixedQuadratic.Regression.bounded_height_two_finite

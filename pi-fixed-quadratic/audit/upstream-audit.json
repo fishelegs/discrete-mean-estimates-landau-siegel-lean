@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "upstream_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+  "prior_successful_checks_revalidated": 872,
+  "new_compiler_invocations": 1,
+  "scope": "Reused prior ordinary Lean closure with all source, output and log hashes checked; exact upstream API and six axiom audits freshly printed. Not a fixed-field theorem.",
+  "previous_receipt_hashes": {
+    "receipts/ordinary-verification-result.json": "98db1a8cdc7d2e2dc7dcc2f2167d6ae755e693d155923fcad6249e13d3d11e03",
+    "receipts/trusted-statement-result.json": "c542994a930ca0e7436f16572a5c03a7c6fe52c51f253cf70317d7ffe7964131",
+    "receipts/final-result.json": "e94dbda598f91825ce5e4011307e40caa4ed20dfd35d814dc9c2d4cec4294d11"
+  },
+  "source_sha256": "4047a103f6c8bfa0ef29024f42f631e49d504d81f5b55b281f86ef65f62ae7bc",
+  "argv": [
+    "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+    "-j1",
+    "-M8192",
+    "-DautoImplicit=false",
+    "-o",
+    "/Users/keyishen/Documents/Codex/2026-10-09/task/upstream-dependency-audit/UpstreamAudit.olean",
+    "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/UpstreamAudit.lean"
+  ],
+  "exit_code": 0,
+  "olean_sha256": "49712499eb5cffc2531ca3e5ba4e66b4c427de2183a3fd6c527274ca4aba719d",
+  "log_sha256": "2cfd340263229c40321464faff98fa5bedf5952d89e5e5554636d6c57f114ee0",
+  "axiom_audit": {
+    "OAI.PiExponent.InterpolationMatrix.truncatedLog_full_row_minor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.MatrixArithmetic.selectedMinor_arithmetic_lower_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.LiteralAnalytic.actual_minor_analytic_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.AdmissibleMatrixInterpolation.globalInterpolation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.LiteralAnalytic.analyticAggregate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OAI.PiExponent.main": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "elapsed_seconds": 25.018
+}

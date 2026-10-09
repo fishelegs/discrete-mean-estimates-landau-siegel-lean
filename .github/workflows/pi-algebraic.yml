@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'pi-weighted-colon/**'
+      - 'pi-fixed-quadratic/**'
       - '.github/workflows/pi-algebraic.yml'
       - 'lean-toolchain'
       - 'lake-manifest.json'
@@ -11,6 +12,7 @@ on:
   pull_request:
     paths:
       - 'pi-weighted-colon/**'
+      - 'pi-fixed-quadratic/**'
       - '.github/workflows/pi-algebraic.yml'
       - 'lean-toolchain'
       - 'lake-manifest.json'

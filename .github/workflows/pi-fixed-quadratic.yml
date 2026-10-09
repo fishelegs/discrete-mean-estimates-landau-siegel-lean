@@ -1,0 +1,46 @@
+name: Pi fixed quadratic arithmetic checkpoint
+on:
+  push:
+    paths:
+      - 'pi-fixed-quadratic/**'
+      - '.github/workflows/pi-fixed-quadratic.yml'
+  pull_request:
+    paths:
+      - 'pi-fixed-quadratic/**'
+      - '.github/workflows/pi-fixed-quadratic.yml'
+  workflow_dispatch:
+jobs:
+  verify-fixed-quadratic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: pi-fixed-quadratic
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install isolated pinned Lean 4.34.1
+        run: |
+          curl -fsSL https://elan.lean-lang.org/elan-init.sh | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Provision only the new subproject dependencies
+        run: |
+          source "$HOME/.elan/env"
+          lake exe cache get
+          git diff --exit-code -- lean-toolchain lakefile.lean lake-manifest.json
+      - name: Replay proofs, exact types, axioms, and expected failures
+        run: |
+          source "$HOME/.elan/env"
+          python3 scripts/replay.py --lean "$(elan which lean)" \
+            --mathlib "$PWD/.lake/packages/mathlib" \
+            --packages-dir "$PWD/.lake/packages" \
+            --out "$RUNNER_TEMP/fixed-quadratic-replay"
+      - name: Upload verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fixed-quadratic-verification
+          path: |
+            ${{ runner.temp }}/fixed-quadratic-replay/replay-receipt.json
+            ${{ runner.temp }}/fixed-quadratic-replay/checks.json
+            ${{ runner.temp }}/fixed-quadratic-replay/logs/
+          if-no-files-found: warn

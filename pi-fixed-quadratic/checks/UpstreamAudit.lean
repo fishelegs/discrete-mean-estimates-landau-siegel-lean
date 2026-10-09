@@ -1,0 +1,17 @@
+import OAI.NumberTheory.PiExponent.Main
+import OAI.NumberTheory.PiExponent.Approximation.AdmissibleMatrixGeometry
+import OAI.NumberTheory.PiExponent.Analysis.AnalyticAggregate
+
+#print OAI.PiExponent.AdmissibleParameters
+#print OAI.PiExponent.DeterminantContradiction.FixedData
+#print OAI.PiExponent.DeterminantContradiction.GlobalInterpolationStatement
+#print OAI.PiExponent.DeterminantContradiction.AnalyticAggregateStatement
+#print OAI.PiExponent.InterpolationMatrix.truncatedLog_full_row_minor
+#print OAI.PiExponent.MatrixArithmetic.selectedMinor_arithmetic_lower_bound
+#print OAI.PiExponent.LiteralAnalytic.actual_minor_analytic_bound
+#print axioms OAI.PiExponent.InterpolationMatrix.truncatedLog_full_row_minor
+#print axioms OAI.PiExponent.MatrixArithmetic.selectedMinor_arithmetic_lower_bound
+#print axioms OAI.PiExponent.LiteralAnalytic.actual_minor_analytic_bound
+#print axioms OAI.PiExponent.AdmissibleMatrixInterpolation.globalInterpolation
+#print axioms OAI.PiExponent.LiteralAnalytic.analyticAggregate
+#print axioms OAI.PiExponent.main

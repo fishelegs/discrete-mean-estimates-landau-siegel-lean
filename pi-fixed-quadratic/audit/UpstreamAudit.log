@@ -1,0 +1,735 @@
+structure OAI.PiExponent.AdmissibleParameters (nu Lambda c : ℝ) : Type
+number of parameters: 3
+fields:
+  OAI.PiExponent.AdmissibleParameters.base : OAI.PiExponent.Parameters nu
+  OAI.PiExponent.AdmissibleParameters.epsilon : ℝ
+  OAI.PiExponent.AdmissibleParameters.F0 : ℝ
+  OAI.PiExponent.AdmissibleParameters.m : ℕ
+  OAI.PiExponent.AdmissibleParameters.K : ℕ
+  OAI.PiExponent.AdmissibleParameters.w0 : ℚ
+  OAI.PiExponent.AdmissibleParameters.v0 : ℚ
+  OAI.PiExponent.AdmissibleParameters.sigma : ℚ
+  OAI.PiExponent.AdmissibleParameters.p : ℕ → ℤ
+  OAI.PiExponent.AdmissibleParameters.q : ℕ → ℕ
+  OAI.PiExponent.AdmissibleParameters.x : ℕ → ℝ
+  OAI.PiExponent.AdmissibleParameters.wstar : ℝ
+  OAI.PiExponent.AdmissibleParameters.epsilon_pos : 0 < self.epsilon
+  OAI.PiExponent.AdmissibleParameters.epsilon_lt_gap : self.epsilon <
+      nu * (↑self.base.A * (1 - self.base.eta) - ↑self.base.theta) - (1 - ↑self.base.theta)
+  OAI.PiExponent.AdmissibleParameters.epsilon_le_half : self.epsilon ≤ 1 / 2
+  OAI.PiExponent.AdmissibleParameters.F0_pos : 0 < self.F0
+  OAI.PiExponent.AdmissibleParameters.F0_large : 2 / ↑self.base.theta < self.F0
+  OAI.PiExponent.AdmissibleParameters.initial_margin : nu / self.F0 < self.epsilon / 3
+  OAI.PiExponent.AdmissibleParameters.m_pos : 1 ≤ self.m
+  OAI.PiExponent.AdmissibleParameters.K_eq : self.K = OAI.PiExponent.dimensionK (↑self.base.C) self.m
+  OAI.PiExponent.AdmissibleParameters.K_pos : 1 ≤ self.K
+  OAI.PiExponent.AdmissibleParameters.w0_eq : ↑self.w0 = OAI.PiExponent.dimensionW (↑self.base.B) self.m
+  OAI.PiExponent.AdmissibleParameters.v0_eq : ↑self.v0 =
+      OAI.PiExponent.dimensionV (↑self.base.theta) (↑self.base.B) (↑self.base.C) self.m
+  OAI.PiExponent.AdmissibleParameters.w0_pos : 0 < ↑self.w0
+  OAI.PiExponent.AdmissibleParameters.v0_pos : 0 < ↑self.v0
+  OAI.PiExponent.AdmissibleParameters.volume_eq : ↑self.K * (↑self.w0 / ↑self.v0) * ↑self.base.theta ^ self.m = 1 / 2
+  OAI.PiExponent.AdmissibleParameters.volume_lt_one : ↑self.K * ↑self.base.theta ^ self.m < 1
+  OAI.PiExponent.AdmissibleParameters.dimension_margin : (Lambda * self.F0 * ↑self.m + 2 * Real.log 2) / ↑self.v0 +
+        100 * ↑self.K / ↑self.w0 <
+      self.epsilon / 3
+  OAI.PiExponent.AdmissibleParameters.collision_margin : 2 <
+      c * (self.base.eta ^ 2 * ↑self.K * ↑self.base.theta ^ self.m / ((↑self.m + 1) * ↑self.v0 * ↑self.base.A ^ self.m))
+  OAI.PiExponent.AdmissibleParameters.sigma_pos : 0 < ↑self.sigma
+  OAI.PiExponent.AdmissibleParameters.sigma_volume : (1 + 3 * ↑self.sigma) ^ (self.m + 1) *
+        (↑self.K * (↑self.w0 / ↑self.v0) * ↑self.base.theta ^ self.m) <
+      1
+  OAI.PiExponent.AdmissibleParameters.sigma_centers : (1 + 3 * ↑self.sigma) ^ self.m *
+        (↑self.K * ↑self.base.theta ^ self.m) <
+      1
+  OAI.PiExponent.AdmissibleParameters.sigma_theta : (1 + ↑self.sigma) * ↑self.base.theta < 1
+  OAI.PiExponent.AdmissibleParameters.x_zero : self.x 0 = 1
+  OAI.PiExponent.AdmissibleParameters.x_log : ∀ (n : ℕ), self.x (n + 1) = ↑⌈Real.log ↑(self.q n)⌉₊
+  OAI.PiExponent.AdmissibleParameters.approximations : ∀ (n : ℕ),
+      2 ≤ self.q n ∧ self.p n ≠ 0 ∧ |Real.pi - ↑(self.p n) / ↑(self.q n)| ≤ ↑(self.q n) ^ (-nu)
+  OAI.PiExponent.AdmissibleParameters.x_one_le : ∀ (i : ℕ), 1 ≤ self.x i
+  OAI.PiExponent.AdmissibleParameters.weight_growth : OAI.PiExponentApprox.SeparatedWeightGrowth self.m
+      (OAI.PiExponentApprox.weightSeparationFactor self.m
+        (OAI.PiExponent.interpolationSeparationConstant self.m self.sigma) ↑self.w0 ↑self.v0 ↑self.base.theta)
+      self.x
+  OAI.PiExponent.AdmissibleParameters.wstar_pos : 0 < self.wstar
+  OAI.PiExponent.AdmissibleParameters.wstar_lower : ∀ (i : Fin self.m), self.wstar ≤ self.x (↑i + 1)
+  OAI.PiExponent.AdmissibleParameters.wstar_attained : ∃ i, self.wstar = self.x (↑i + 1)
+  OAI.PiExponent.AdmissibleParameters.weight_margin : Lambda * ∑ i, 1 / self.x (↑i + 1) +
+        OAI.PiExponent.weightErrorCoefficient nu (↑self.base.theta) self.K / self.wstar <
+      self.epsilon / 3
+constructor:
+  OAI.PiExponent.AdmissibleParameters.mk {nu Lambda c : ℝ} (base : OAI.PiExponent.Parameters nu) (epsilon F0 : ℝ)
+    (m K : ℕ) (w0 v0 sigma : ℚ) (p : ℕ → ℤ) (q : ℕ → ℕ) (x : ℕ → ℝ) (wstar : ℝ) (epsilon_pos : 0 < epsilon)
+    (epsilon_lt_gap : epsilon < nu * (↑base.A * (1 - base.eta) - ↑base.theta) - (1 - ↑base.theta))
+    (epsilon_le_half : epsilon ≤ 1 / 2) (F0_pos : 0 < F0) (F0_large : 2 / ↑base.theta < F0)
+    (initial_margin : nu / F0 < epsilon / 3) (m_pos : 1 ≤ m) (K_eq : K = OAI.PiExponent.dimensionK (↑base.C) m)
+    (K_pos : 1 ≤ K) (w0_eq : ↑w0 = OAI.PiExponent.dimensionW (↑base.B) m)
+    (v0_eq : ↑v0 = OAI.PiExponent.dimensionV (↑base.theta) (↑base.B) (↑base.C) m) (w0_pos : 0 < ↑w0) (v0_pos : 0 < ↑v0)
+    (volume_eq : ↑K * (↑w0 / ↑v0) * ↑base.theta ^ m = 1 / 2) (volume_lt_one : ↑K * ↑base.theta ^ m < 1)
+    (dimension_margin : (Lambda * F0 * ↑m + 2 * Real.log 2) / ↑v0 + 100 * ↑K / ↑w0 < epsilon / 3)
+    (collision_margin : 2 < c * (base.eta ^ 2 * ↑K * ↑base.theta ^ m / ((↑m + 1) * ↑v0 * ↑base.A ^ m)))
+    (sigma_pos : 0 < ↑sigma) (sigma_volume : (1 + 3 * ↑sigma) ^ (m + 1) * (↑K * (↑w0 / ↑v0) * ↑base.theta ^ m) < 1)
+    (sigma_centers : (1 + 3 * ↑sigma) ^ m * (↑K * ↑base.theta ^ m) < 1) (sigma_theta : (1 + ↑sigma) * ↑base.theta < 1)
+    (x_zero : x 0 = 1) (x_log : ∀ (n : ℕ), x (n + 1) = ↑⌈Real.log ↑(q n)⌉₊)
+    (approximations : ∀ (n : ℕ), 2 ≤ q n ∧ p n ≠ 0 ∧ |Real.pi - ↑(p n) / ↑(q n)| ≤ ↑(q n) ^ (-nu))
+    (x_one_le : ∀ (i : ℕ), 1 ≤ x i)
+    (weight_growth :
+      OAI.PiExponentApprox.SeparatedWeightGrowth m
+        (OAI.PiExponentApprox.weightSeparationFactor m (OAI.PiExponent.interpolationSeparationConstant m sigma) ↑w0 ↑v0
+          ↑base.theta)
+        x)
+    (wstar_pos : 0 < wstar) (wstar_lower : ∀ (i : Fin m), wstar ≤ x (↑i + 1)) (wstar_attained : ∃ i, wstar = x (↑i + 1))
+    (weight_margin :
+      Lambda * ∑ i, 1 / x (↑i + 1) + OAI.PiExponent.weightErrorCoefficient nu (↑base.theta) K / wstar < epsilon / 3) :
+    OAI.PiExponent.AdmissibleParameters nu Lambda c
+@[reducible] def OAI.PiExponent.DeterminantContradiction.FixedData : ℝ → Type :=
+fun nu =>
+  OAI.PiExponent.AdmissibleParameters nu OAI.PiExponent.Arithmetic.lcmConstant
+    OAI.PiExponent.DeterminantContradiction.collisionConstant
+def OAI.PiExponent.DeterminantContradiction.GlobalInterpolationStatement : Prop :=
+∀ (nu : ℝ),
+  2 < nu →
+    ∀ (d : OAI.PiExponent.DeterminantContradiction.FixedData nu) (L : ℝ),
+      ∃ H, L ≤ H ∧ Function.Surjective ⇑(OAI.PiExponent.DeterminantContradiction.actualMatrix d H).mulVecLin
+def OAI.PiExponent.DeterminantContradiction.AnalyticAggregateStatement : Prop :=
+∀ (nu : ℝ),
+  2 < nu →
+    ∀ (d : OAI.PiExponent.DeterminantContradiction.FixedData nu),
+      ∃ error,
+        Filter.Tendsto error Filter.atTop (nhds 0) ∧
+          ∀ᶠ (H : ℝ) in Filter.atTop,
+            ∀
+              (selection :
+                OAI.PiExponent.DeterminantContradiction.Row d H → OAI.PiExponent.DeterminantContradiction.Column d H),
+              (OAI.PiExponent.DeterminantContradiction.actualMinor d H selection).det ≠ 0 →
+                Real.log ‖(OAI.PiExponent.DeterminantContradiction.actualMinor d H selection).det‖ /
+                    (↑(OAI.PiExponent.DeterminantContradiction.actualRowCount d H) * H) ≤
+                  OAI.PiExponent.AdmissibleParameters.analyticError d + error H +
+                    max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                      (-nu * (↑d.base.A * (1 - d.base.eta) - OAI.PiExponent.DeterminantContradiction.actualMean d H))
+theorem OAI.PiExponent.InterpolationMatrix.truncatedLog_full_row_minor : ∀ {m : ℕ} (K : ℕ) (w0 v0 θ : ℝ) (w : Fin m → ℝ)
+  (H : ℝ) (r : Fin m → ℂ) (T : Fin m → ℕ),
+  Function.Surjective
+      ⇑(OAI.PiExponent.InterpolationMatrix.linearEvaluation K w0 v0 θ w H r fun i =>
+          OAI.PiExponent.InterpolationMatrix.truncatedLog (T i)) →
+    ∃ selection,
+      Function.Injective selection ∧
+        ((OAI.PiExponent.InterpolationMatrix.truncatedLogMatrix K w0 v0 θ w H r T).submatrix id selection).det ≠ 0 :=
+fun {m} K w0 v0 θ w H r T hsurj =>
+  OAI.PiExponent.InterpolationMatrix.interpolation_full_row_minor K w0 v0 θ w H r
+    (fun i => OAI.PiExponent.InterpolationMatrix.truncatedLog (T i)) hsurj
+theorem OAI.PiExponent.MatrixArithmetic.selectedMinor_arithmetic_lower_bound : ∀ {m K : ℕ} {w0 v0 θ F H wmin : ℝ}
+  (p : Fin m → ℤ) (q : Fin m → ℕ),
+  (∀ (i : Fin m), 2 ≤ q i) →
+    0 < K →
+      0 < w0 →
+        0 < v0 →
+          0 < θ →
+            0 ≤ F →
+              0 < H →
+                0 < wmin →
+                  (∀ (i : Fin m), wmin ≤ OAI.PiExponent.MatrixArithmetic.logWeights q i) →
+                    ∀
+                      (selection :
+                        OAI.PiExponent.InterpolationMatrix.Row K v0 θ (OAI.PiExponent.MatrixArithmetic.logWeights q) H →
+                          OAI.PiExponent.InterpolationMatrix.Column w0 (OAI.PiExponent.MatrixArithmetic.logWeights q)
+                            H),
+                      (OAI.PiExponent.MatrixArithmetic.selectedMinor K w0 v0 θ F H p q selection).det ≠ 0 →
+                        -(1 - OAI.PiExponent.MatrixArithmetic.meanRowWeight K v0 θ q H) -
+                            (OAI.PiExponent.Arithmetic.lcmConstant * F * ↑m / v0 +
+                                OAI.PiExponent.Arithmetic.lcmConstant *
+                                  ∑ i, 1 / OAI.PiExponent.MatrixArithmetic.logWeights q i +
+                              θ / wmin) ≤
+                          Real.log ‖(OAI.PiExponent.MatrixArithmetic.selectedMinor K w0 v0 θ F H p q selection).det‖ /
+                            (↑(Fintype.card
+                                  (OAI.PiExponent.InterpolationMatrix.Row K v0 θ
+                                    (OAI.PiExponent.MatrixArithmetic.logWeights q) H)) *
+                              H) :=
+fun {m K} {w0 v0 θ F H wmin} p q hq hK hw0 hv0 hθ hF hH hmin hwmin selection hdet =>
+  have hw := fun i => OAI.PiExponent.MatrixArithmetic.ceil_log_weight_pos (hq i);
+  have hM :=
+    cast
+      (Eq.symm
+        (Eq.trans
+          (congrFun' (congrArg LT.lt (Eq.symm Nat.cast_zero))
+            ↑(Fintype.card
+                (OAI.PiExponent.InterpolationMatrix.Row K v0 θ (OAI.PiExponent.MatrixArithmetic.logWeights q) H)))
+          Nat.cast_lt._simp_1))
+      (OAI.PiExponent.MatrixArithmetic.actual_row_card_pos hK hv0 hθ hH hw);
+  OAI.PiExponent.Arithmetic.normalized_arithmetic_bound
+    (↑(Fintype.card (OAI.PiExponent.InterpolationMatrix.Row K v0 θ (OAI.PiExponent.MatrixArithmetic.logWeights q) H))) H
+    (OAI.PiExponent.MatrixArithmetic.meanRowWeight K v0 θ q H)
+    (OAI.PiExponent.Arithmetic.lcmConstant * F * ↑m / v0 +
+      OAI.PiExponent.Arithmetic.lcmConstant * ∑ i, 1 / OAI.PiExponent.MatrixArithmetic.logWeights q i)
+    (θ / wmin)
+    (Real.log
+      (OAI.PiExponent.MatrixArithmetic.denominator q (OAI.PiExponent.MatrixArithmetic.truncationOrders q F v0) H))
+    (OAI.PiExponent.MatrixArithmetic.columnCost q selection) (OAI.PiExponent.MatrixArithmetic.rowCost K v0 θ q H)
+    (Real.log ‖(OAI.PiExponent.MatrixArithmetic.selectedMinor K w0 v0 θ F H p q selection).det‖) hM hH
+    (OAI.PiExponent.MatrixArithmetic.selectedMinor_clearing_bound p q hq hw0 selection hdet)
+    (OAI.PiExponent.MatrixArithmetic.log_denominator_le F v0 H hF hv0 hH hw)
+    (OAI.PiExponent.MatrixArithmetic.selected_column_log_cost_le q hq hw0 selection)
+    (have hrow := fun ρ =>
+      OAI.PiExponent.Arithmetic.row_log_cost_lower Finset.univ (fun i => ↑ρ.2 i.succ) q wmin (H * θ) hmin
+        (fun i x => hwmin i) (OAI.PiExponent.MatrixArithmetic.row_weighted_cost_le hv0 hθ hw ρ);
+    have hr := Finset.sum_le_sum fun ρ x => hrow ρ;
+    have hb :=
+      id
+        (of_eq_true
+          (Eq.trans
+            (Mathlib.Tactic.FieldSimp.eq_eq_cancel_eq
+              (Mathlib.Tactic.FieldSimp.eq_mul_of_eq_eq_eq_mul
+                (Eq.trans
+                  (congr_arg₂ HMul.hMul (Eq.trans (congr_arg₂ HMul.hMul rfl rfl) rfl)
+                    (Eq.trans (congr_arg₂ HDiv.hDiv rfl (Eq.trans (congr_arg₂ HMul.hMul rfl rfl) rfl)) rfl))
+                  rfl)
+                (Eq.trans
+                  (Mathlib.Tactic.FieldSimp.NF.mul_eq_eval
+                    (Mathlib.Tactic.FieldSimp.NF.mul_eq_eval
+                      (Eq.trans
+                        (Eq.refl
+                          ↑(Fintype.card
+                              (OAI.PiExponent.InterpolationMatrix.Row K v0 θ
+                                (OAI.PiExponent.MatrixArithmetic.logWeights q) H)))
+                        (Mathlib.Tactic.FieldSimp.NF.atom_eq_eval
+                          ↑(Fintype.card
+                              (OAI.PiExponent.InterpolationMatrix.Row K v0 θ
+                                (OAI.PiExponent.MatrixArithmetic.logWeights q) H))))
+                      (Eq.trans (Eq.refl H) (Mathlib.Tactic.FieldSimp.NF.atom_eq_eval H))
+                      (Mathlib.Tactic.FieldSimp.NF.mul_eq_eval₃ (1, H)
+                        (mul_one
+                          ((1,
+                                ↑(Fintype.card
+                                    (OAI.PiExponent.InterpolationMatrix.Row K v0 θ
+                                      (OAI.PiExponent.MatrixArithmetic.logWeights q) H))) ::ᵣ
+                              []).eval)))
+                    (Mathlib.Tactic.FieldSimp.NF.div_eq_eval
+                      (Eq.trans (Eq.refl (OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H))
+                        (Mathlib.Tactic.FieldSimp.NF.atom_eq_eval
+                          (OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H)))
+                      (Mathlib.Tactic.FieldSimp.NF.mul_eq_eval
+                        (Eq.trans
+                          (Eq.refl
+                            ↑(Fintype.card
+                                (OAI.PiExponent.InterpolationMatrix.Row K v0 θ
+                                  (OAI.PiExponent.MatrixArithmetic.logWeights q) H)))
+                          (Mathlib.Tactic.FieldSimp.NF.atom_eq_eval
+                            ↑(Fintype.card
+                                (OAI.PiExponent.InterpolationMatrix.Row K v0 θ
+                                  (OAI.PiExponent.MatrixArithmetic.logWeights q) H))))
+                        (Eq.trans (Eq.refl H) (Mathlib.Tactic.FieldSimp.NF.atom_eq_eval H))
+                        (Mathlib.Tactic.FieldSimp.NF.mul_eq_eval₃ (1, H)
+                          (mul_one
+                            ((1,
+                                  ↑(Fintype.card
+                                      (OAI.PiExponent.InterpolationMatrix.Row K v0 θ
+                                        (OAI.PiExponent.MatrixArithmetic.logWeights q) H))) ::ᵣ
+                                []).eval)))
+                      (Mathlib.Tactic.FieldSimp.NF.div_eq_eval₁
+                        (1, OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H)
+                        (Mathlib.Tactic.FieldSimp.NF.one_div_eq_eval
+                          ((1, H) ::ᵣ
+                            ((1,
+                                ↑(Fintype.card
+                                    (OAI.PiExponent.InterpolationMatrix.Row K v0 θ
+                                      (OAI.PiExponent.MatrixArithmetic.logWeights q) H))) ::ᵣ
+                              [])))))
+                    (Mathlib.Tactic.FieldSimp.NF.mul_eq_eval₃
+                      (1, OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H)
+                      (Mathlib.Tactic.FieldSimp.NF.mul_eq_eval₂ 1 (-1) H
+                        (Mathlib.Tactic.FieldSimp.NF.mul_eq_eval₂ 1 (-1)
+                          (↑(Fintype.card
+                              (OAI.PiExponent.InterpolationMatrix.Row K v0 θ
+                                (OAI.PiExponent.MatrixArithmetic.logWeights q) H)))
+                          (one_mul (Mathlib.Tactic.FieldSimp.NF.eval []))))))
+                  (Eq.symm
+                    (Mathlib.Tactic.FieldSimp.NF.eval_mul_eval_cons 1
+                      (OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H)
+                      (Mathlib.Tactic.FieldSimp.NF.eval_mul_eval_cons_zero
+                        (Mathlib.Tactic.FieldSimp.NF.eval_mul_eval_cons_zero
+                          (one_mul (Mathlib.Tactic.FieldSimp.NF.eval []))
+                          (Mathlib.Tactic.FieldSimp.NF.eval_cons_of_pow_eq_zero (of_decide_eq_true (id (Eq.refl true)))
+                            (ne_of_gt hM) []))
+                        (Mathlib.Tactic.FieldSimp.NF.eval_cons_of_pow_eq_zero (of_decide_eq_true (id (Eq.refl true)))
+                          (ne_of_gt hH) [])))))
+                rfl
+                (Mathlib.Tactic.FieldSimp.eq_div_of_eq_one_of_subst
+                  (Mathlib.Tactic.FieldSimp.NF.cons_eq_div_of_eq_div 1
+                    (OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H) (Eq.symm (div_one 1)))
+                  (Eq.mpr
+                    (id
+                      (congrArg (fun _a => _a = OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H)
+                        (Mathlib.Tactic.FieldSimp.NF.eval_cons
+                          (1, OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H) [])))
+                    (Eq.trans
+                      (one_mul
+                        (Mathlib.Tactic.FieldSimp.zpow' (1, OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H).2
+                          (1, OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H).1))
+                      (Mathlib.Tactic.FieldSimp.zpow'_one
+                        (OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H))))))
+              (Mathlib.Tactic.FieldSimp.eq_mul_of_eq_eq_eq_mul rfl
+                (Eq.trans
+                  (Eq.trans (Eq.refl (OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H))
+                    (Mathlib.Tactic.FieldSimp.NF.atom_eq_eval
+                      (OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H)))
+                  (Eq.symm
+                    (Mathlib.Tactic.FieldSimp.NF.eval_mul_eval_cons 1
+                      (OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H)
+                      (one_mul (Mathlib.Tactic.FieldSimp.NF.eval [])))))
+                rfl
+                (Mathlib.Tactic.FieldSimp.eq_div_of_eq_one_of_subst
+                  (Mathlib.Tactic.FieldSimp.NF.cons_eq_div_of_eq_div 1
+                    (OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H) (Eq.symm (div_one 1)))
+                  (Eq.mpr
+                    (id
+                      (congrArg (fun _a => _a = OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H)
+                        (Mathlib.Tactic.FieldSimp.NF.eval_cons
+                          (1, OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H) [])))
+                    (Eq.trans
+                      (one_mul
+                        (Mathlib.Tactic.FieldSimp.zpow' (1, OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H).2
+                          (1, OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H).1))
+                      (Mathlib.Tactic.FieldSimp.zpow'_one
+                        (OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H))))))
+              one_ne_zero)
+            (eq_self (OAI.PiExponent.MatrixArithmetic.rowWeightedSum K v0 θ q H))));
+    Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            _a -
+                ↑(Fintype.card
+                        (OAI.PiExponent.InterpolationMatrix.Row K v0 θ (OAI.PiExponent.MatrixArithmetic.logWeights q)
+                          H)) *
+                    H *
+                  (θ / wmin) ≤
+              OAI.PiExponent.MatrixArithmetic.rowCost K v0 θ q H)
+          hb))
+      (Eq.mpr
+        (id
+          (congrFun'
+            (congrArg LE.le
+              (congrArg (HSub.hSub (∑ ρ, ∑ i, ↑(↑ρ.2 i.succ) * ↑⌈Real.log ↑(q i)⌉₊))
+                (mul_assoc
+                  (↑(Fintype.card
+                      (OAI.PiExponent.InterpolationMatrix.Row K v0 θ (OAI.PiExponent.MatrixArithmetic.logWeights q) H)))
+                  H (θ / wmin))))
+            (∑ ρ, ∑ i, ↑(↑ρ.2 i.succ) * Real.log ↑(q i))))
+        (Eq.mp
+          (congrFun'
+            (congrArg LE.le
+              (congrArg (HSub.hSub (∑ x, ∑ i, ↑(↑x.2 i.succ) * ↑⌈Real.log ↑(q i)⌉₊))
+                (congrArg
+                  (HMul.hMul
+                    ↑(Fintype.card
+                        (OAI.PiExponent.InterpolationMatrix.Row K v0 θ (OAI.PiExponent.MatrixArithmetic.logWeights q)
+                          H)))
+                  (mul_div_assoc H θ wmin))))
+            (∑ i, ∑ i_1, ↑(↑i.2 i_1.succ) * Real.log ↑(q i_1)))
+          (Eq.mp
+            (congrFun'
+              (congrArg LE.le
+                (Eq.trans
+                  (Finset.sum_sub_distrib (fun x => ∑ i, ↑(↑x.2 i.succ) * ↑⌈Real.log ↑(q i)⌉₊) fun x => H * θ / wmin)
+                  (congrArg (HSub.hSub (∑ x, ∑ i, ↑(↑x.2 i.succ) * ↑⌈Real.log ↑(q i)⌉₊))
+                    (Eq.trans (Finset.sum_const (H * θ / wmin))
+                      (nsmul_eq_mul
+                        (Fintype.card
+                          (OAI.PiExponent.InterpolationMatrix.Row K v0 θ (OAI.PiExponent.MatrixArithmetic.logWeights q)
+                            H))
+                        (H * θ / wmin))))))
+              (∑ i, ∑ i_1, ↑(↑i.2 i_1.succ) * Real.log ↑(q i_1)))
+            hr))))
+theorem OAI.PiExponent.LiteralAnalytic.actual_minor_analytic_bound : ∀ {nu : ℝ}
+  (d : OAI.PiExponent.DeterminantContradiction.FixedData nu),
+  0 ≤ nu →
+    ∀ {H : ℝ},
+      0 < H →
+        ∀
+          (selection :
+            OAI.PiExponent.DeterminantContradiction.Row d H → OAI.PiExponent.DeterminantContradiction.Column d H),
+          (OAI.PiExponent.DeterminantContradiction.actualMinor d H selection).det ≠ 0 →
+            Real.log ‖(OAI.PiExponent.DeterminantContradiction.actualMinor d H selection).det‖ /
+                (↑(OAI.PiExponent.DeterminantContradiction.actualRowCount d H) * H) ≤
+              OAI.PiExponent.AdmissibleParameters.analyticError d +
+                  OAI.PiExponent.LiteralAnalytic.analyticRemainder d H +
+                max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                  (-nu * (↑d.base.A * (1 - d.base.eta) - OAI.PiExponent.DeterminantContradiction.actualMean d H)) :=
+fun {nu} d hnu {H} hH selection hne =>
+  have hQ :=
+    id
+      (Nat.cast_pos'.mpr
+        (mul_pos
+          (pow_pos
+            (Right.add_pos_of_nonneg_of_pos zero_le
+              (Mathlib.Meta.Positivity.pos_of_isNat (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 1))
+                (Eq.refl (Nat.ble 1 1))))
+            (2 * d.m))
+          (Right.add_pos_of_nonneg_of_pos zero_le
+            (Mathlib.Meta.Positivity.pos_of_isNat (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 1))
+              (Eq.refl (Nat.ble 1 1))))));
+  have hc :=
+    cast
+      (Eq.symm
+        (Eq.trans
+          (congrArg (LE.le ↑(Fintype.card (OAI.PiExponent.LiteralAnalytic.ChoiceFamily d H)))
+            (Nat.cast_pow._simp_1 (OAI.PiExponent.translationTermCount d.m (↑d.v0) H)
+              (OAI.PiExponent.DeterminantContradiction.actualRowCount d H)))
+          Nat.cast_le._simp_1))
+      (OAI.PiExponent.LiteralAnalytic.card_choiceFamily_le d H);
+  have hb :=
+    OAI.PiExponent.DeterminantAnalyticBound.log_norm_sum_le
+      (fun f =>
+        (∏ r, OAI.PiExponent.LiteralAnalytic.choiceScalar d r (f r)) *
+          (OAI.PiExponent.LiteralAnalytic.choiceMatrix d selection f).det)
+      (OAI.PiExponent.DeterminantContradiction.actualMinor d H selection).det
+      (OAI.PiExponent.LiteralAnalytic.actualRowCount_pos d hH) hH hQ hc
+      (OAI.PiExponent.LiteralAnalytic.actual_minor_expansion d selection) hne
+      (OAI.PiExponent.LiteralAnalytic.norm_actual_summand_le d hnu hH selection);
+  Eq.mpr
+    (eq_of_heq
+      ((fun α self a a_1 a' e'_4 =>
+          Eq.casesOn (motive := fun a_2 x => a' = a_2 → e'_4 ≍ x → (a ≤ a_1) ≍ (a ≤ a')) e'_4
+            (fun h =>
+              Eq.ndrec (motive := fun a' => ∀ (e_4 : a_1 = a'), e_4 ≍ Eq.refl a_1 → (a ≤ a_1) ≍ (a ≤ a'))
+                (fun e_4 h => HEq.refl (a ≤ a_1)) (Eq.symm h) e'_4)
+            (Eq.refl a') (HEq.refl e'_4))
+        ℝ Real.instLE
+        (Real.log ‖(OAI.PiExponent.DeterminantContradiction.actualMinor d H selection).det‖ /
+          (↑(OAI.PiExponent.DeterminantContradiction.actualRowCount d H) * H))
+        (OAI.PiExponent.AdmissibleParameters.analyticError d + OAI.PiExponent.LiteralAnalytic.analyticRemainder d H +
+          max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+            (-nu * (↑d.base.A * (1 - d.base.eta) - OAI.PiExponent.DeterminantContradiction.actualMean d H)))
+        (OAI.PiExponent.AdmissibleParameters.analyticError d +
+              OAI.PiExponent.Collision.collisionRemainder (OAI.PiExponent.DeterminantContradiction.actualRowCount d H)
+                H +
+            max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+              (-nu * (↑d.base.A * (1 - d.base.eta) - OAI.PiExponent.DeterminantContradiction.actualMean d H)) +
+          Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) / H)
+        (id
+          (Mathlib.Tactic.Ring.of_eq
+            (Mathlib.Tactic.Ring.Common.add_congr
+              (Mathlib.Tactic.Ring.Common.add_congr
+                (Mathlib.Tactic.Ring.Common.atom_pf (OAI.PiExponent.AdmissibleParameters.analyticError d) rfl
+                  (Eq.mpr
+                    (id
+                      (congrArg
+                        (fun _a =>
+                          OAI.PiExponent.AdmissibleParameters.analyticError d ^ Nat.rawCast 1 * Nat.rawCast 1 =
+                            OAI.PiExponent.AdmissibleParameters.analyticError d ^ Nat.rawCast 1 * _a)
+                        (Eq.symm rfl)))
+                    (Eq.refl (OAI.PiExponent.AdmissibleParameters.analyticError d ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                (Mathlib.Tactic.Ring.Common.add_congr
+                  (Mathlib.Tactic.Ring.Common.atom_pf
+                    (OAI.PiExponent.Collision.collisionRemainder
+                      (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H)
+                    rfl
+                    (Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a =>
+                            OAI.PiExponent.Collision.collisionRemainder
+                                    (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                                  Nat.rawCast 1 *
+                                Nat.rawCast 1 =
+                              OAI.PiExponent.Collision.collisionRemainder
+                                    (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                                  Nat.rawCast 1 *
+                                _a)
+                          (Eq.symm rfl)))
+                      (Eq.refl
+                        (OAI.PiExponent.Collision.collisionRemainder
+                              (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                            Nat.rawCast 1 *
+                          Nat.rawCast 1))))
+                  (Mathlib.Tactic.Ring.Common.div_congr
+                    (Mathlib.Tactic.Ring.Common.atom_pf (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H))
+                      rfl
+                      (Eq.mpr
+                        (id
+                          (congrArg
+                            (fun _a =>
+                              Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                                  Nat.rawCast 1 =
+                                Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 * _a)
+                            (Eq.symm rfl)))
+                        (Eq.refl
+                          (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                            Nat.rawCast 1))))
+                    (Mathlib.Tactic.Ring.Common.atom_pf H rfl
+                      (Eq.mpr
+                        (id
+                          (congrArg (fun _a => H ^ Nat.rawCast 1 * Nat.rawCast 1 = H ^ Nat.rawCast 1 * _a)
+                            (Eq.symm rfl)))
+                        (Eq.refl (H ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                    (Mathlib.Tactic.Ring.Common.div_pf
+                      (Mathlib.Tactic.Ring.Common.inv_single
+                        (Mathlib.Tactic.Ring.Common.inv_mul (Eq.refl H⁻¹)
+                          (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                            (Mathlib.Meta.NormNum.IsNNRat.to_isNat
+                              (Mathlib.Meta.NormNum.isNNRat_inv_pos
+                                (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1)))))
+                          (Eq.symm
+                              (Eq.mpr
+                                (id
+                                  (congrArg (fun _a => H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1 = H⁻¹ ^ Nat.rawCast 1 * _a)
+                                    (Eq.symm rfl)))
+                                (Eq.refl (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))) ▸
+                            Mathlib.Tactic.Ring.Common.mul_pf_right H⁻¹ (Nat.rawCast 1)
+                              (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                  (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1)
+                                  (Eq.refl 1))))))
+                      (Mathlib.Tactic.Ring.Common.add_mul
+                        (Mathlib.Tactic.Ring.Common.mul_add
+                          (Mathlib.Tactic.Ring.Common.mul_pf_left
+                            (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H)) (Nat.rawCast 1)
+                            (Mathlib.Tactic.Ring.Common.mul_pf_right H⁻¹ (Nat.rawCast 1)
+                              (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                                (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul)
+                                  (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1) (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1)
+                                  (Eq.refl 1)))))
+                          (Mathlib.Tactic.Ring.Common.mul_zero
+                            (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                              Nat.rawCast 1))
+                          (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                            (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                                (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1) +
+                              0)))
+                        (Mathlib.Tactic.Ring.Common.zero_mul (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1 + 0))
+                        (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                          (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                              (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1) +
+                            0)))))
+                  (Mathlib.Tactic.Ring.Common.add_pf_add_lt
+                    (OAI.PiExponent.Collision.collisionRemainder
+                          (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                        Nat.rawCast 1 *
+                      Nat.rawCast 1)
+                    (Mathlib.Tactic.Ring.Common.add_pf_zero_add
+                      (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                          (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1) +
+                        0))))
+                (Mathlib.Tactic.Ring.Common.add_pf_add_lt
+                  (OAI.PiExponent.AdmissibleParameters.analyticError d ^ Nat.rawCast 1 * Nat.rawCast 1)
+                  (Mathlib.Tactic.Ring.Common.add_pf_zero_add
+                    (OAI.PiExponent.Collision.collisionRemainder
+                            (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                          Nat.rawCast 1 *
+                        Nat.rawCast 1 +
+                      (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                          (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1) +
+                        0)))))
+              (Mathlib.Tactic.Ring.Common.atom_pf
+                (max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                  (-nu * (↑d.base.A * (1 - d.base.eta) - OAI.PiExponent.DeterminantContradiction.actualMean d H)))
+                rfl
+                (Eq.mpr
+                  (id
+                    (congrArg
+                      (fun _a =>
+                        max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                                (-nu *
+                                  (↑d.base.A * (1 - d.base.eta) -
+                                    OAI.PiExponent.DeterminantContradiction.actualMean d H)) ^
+                              Nat.rawCast 1 *
+                            Nat.rawCast 1 =
+                          max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                                (-nu *
+                                  (↑d.base.A * (1 - d.base.eta) -
+                                    OAI.PiExponent.DeterminantContradiction.actualMean d H)) ^
+                              Nat.rawCast 1 *
+                            _a)
+                      (Eq.symm rfl)))
+                  (Eq.refl
+                    (max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                          (-nu *
+                            (↑d.base.A * (1 - d.base.eta) - OAI.PiExponent.DeterminantContradiction.actualMean d H)) ^
+                        Nat.rawCast 1 *
+                      Nat.rawCast 1))))
+              (Mathlib.Tactic.Ring.Common.add_pf_add_lt
+                (OAI.PiExponent.AdmissibleParameters.analyticError d ^ Nat.rawCast 1 * Nat.rawCast 1)
+                (Mathlib.Tactic.Ring.Common.add_pf_add_lt
+                  (OAI.PiExponent.Collision.collisionRemainder
+                        (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                      Nat.rawCast 1 *
+                    Nat.rawCast 1)
+                  (Mathlib.Tactic.Ring.Common.add_pf_add_lt
+                    (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                      (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))
+                    (Mathlib.Tactic.Ring.Common.add_pf_zero_add
+                      (max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                              (-nu *
+                                (↑d.base.A * (1 - d.base.eta) -
+                                  OAI.PiExponent.DeterminantContradiction.actualMean d H)) ^
+                            Nat.rawCast 1 *
+                          Nat.rawCast 1 +
+                        0))))))
+            (Mathlib.Tactic.Ring.Common.add_congr
+              (Mathlib.Tactic.Ring.Common.add_congr
+                (Mathlib.Tactic.Ring.Common.add_congr
+                  (Mathlib.Tactic.Ring.Common.atom_pf (OAI.PiExponent.AdmissibleParameters.analyticError d) rfl
+                    (Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a =>
+                            OAI.PiExponent.AdmissibleParameters.analyticError d ^ Nat.rawCast 1 * Nat.rawCast 1 =
+                              OAI.PiExponent.AdmissibleParameters.analyticError d ^ Nat.rawCast 1 * _a)
+                          (Eq.symm rfl)))
+                      (Eq.refl (OAI.PiExponent.AdmissibleParameters.analyticError d ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                  (Mathlib.Tactic.Ring.Common.atom_pf
+                    (OAI.PiExponent.Collision.collisionRemainder
+                      (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H)
+                    rfl
+                    (Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a =>
+                            OAI.PiExponent.Collision.collisionRemainder
+                                    (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                                  Nat.rawCast 1 *
+                                Nat.rawCast 1 =
+                              OAI.PiExponent.Collision.collisionRemainder
+                                    (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                                  Nat.rawCast 1 *
+                                _a)
+                          (Eq.symm rfl)))
+                      (Eq.refl
+                        (OAI.PiExponent.Collision.collisionRemainder
+                              (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                            Nat.rawCast 1 *
+                          Nat.rawCast 1))))
+                  (Mathlib.Tactic.Ring.Common.add_pf_add_lt
+                    (OAI.PiExponent.AdmissibleParameters.analyticError d ^ Nat.rawCast 1 * Nat.rawCast 1)
+                    (Mathlib.Tactic.Ring.Common.add_pf_zero_add
+                      (OAI.PiExponent.Collision.collisionRemainder
+                              (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                            Nat.rawCast 1 *
+                          Nat.rawCast 1 +
+                        0))))
+                (Mathlib.Tactic.Ring.Common.atom_pf
+                  (max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                    (-nu * (↑d.base.A * (1 - d.base.eta) - OAI.PiExponent.DeterminantContradiction.actualMean d H)))
+                  rfl
+                  (Eq.mpr
+                    (id
+                      (congrArg
+                        (fun _a =>
+                          max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                                  (-nu *
+                                    (↑d.base.A * (1 - d.base.eta) -
+                                      OAI.PiExponent.DeterminantContradiction.actualMean d H)) ^
+                                Nat.rawCast 1 *
+                              Nat.rawCast 1 =
+                            max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                                  (-nu *
+                                    (↑d.base.A * (1 - d.base.eta) -
+                                      OAI.PiExponent.DeterminantContradiction.actualMean d H)) ^
+                                Nat.rawCast 1 *
+                              _a)
+                        (Eq.symm rfl)))
+                    (Eq.refl
+                      (max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                            (-nu *
+                              (↑d.base.A * (1 - d.base.eta) - OAI.PiExponent.DeterminantContradiction.actualMean d H)) ^
+                          Nat.rawCast 1 *
+                        Nat.rawCast 1))))
+                (Mathlib.Tactic.Ring.Common.add_pf_add_lt
+                  (OAI.PiExponent.AdmissibleParameters.analyticError d ^ Nat.rawCast 1 * Nat.rawCast 1)
+                  (Mathlib.Tactic.Ring.Common.add_pf_add_lt
+                    (OAI.PiExponent.Collision.collisionRemainder
+                          (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                        Nat.rawCast 1 *
+                      Nat.rawCast 1)
+                    (Mathlib.Tactic.Ring.Common.add_pf_zero_add
+                      (max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                              (-nu *
+                                (↑d.base.A * (1 - d.base.eta) -
+                                  OAI.PiExponent.DeterminantContradiction.actualMean d H)) ^
+                            Nat.rawCast 1 *
+                          Nat.rawCast 1 +
+                        0)))))
+              (Mathlib.Tactic.Ring.Common.div_congr
+                (Mathlib.Tactic.Ring.Common.atom_pf (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H)) rfl
+                  (Eq.mpr
+                    (id
+                      (congrArg
+                        (fun _a =>
+                          Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                              Nat.rawCast 1 =
+                            Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 * _a)
+                        (Eq.symm rfl)))
+                    (Eq.refl
+                      (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                (Mathlib.Tactic.Ring.Common.atom_pf H rfl
+                  (Eq.mpr
+                    (id (congrArg (fun _a => H ^ Nat.rawCast 1 * Nat.rawCast 1 = H ^ Nat.rawCast 1 * _a) (Eq.symm rfl)))
+                    (Eq.refl (H ^ Nat.rawCast 1 * Nat.rawCast 1))))
+                (Mathlib.Tactic.Ring.Common.div_pf
+                  (Mathlib.Tactic.Ring.Common.inv_single
+                    (Mathlib.Tactic.Ring.Common.inv_mul (Eq.refl H⁻¹)
+                      (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                        (Mathlib.Meta.NormNum.IsNNRat.to_isNat
+                          (Mathlib.Meta.NormNum.isNNRat_inv_pos
+                            (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1)))))
+                      (Eq.symm
+                          (Eq.mpr
+                            (id
+                              (congrArg (fun _a => H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1 = H⁻¹ ^ Nat.rawCast 1 * _a)
+                                (Eq.symm rfl)))
+                            (Eq.refl (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))) ▸
+                        Mathlib.Tactic.Ring.Common.mul_pf_right H⁻¹ (Nat.rawCast 1)
+                          (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                            (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul) (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1)
+                              (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1) (Eq.refl 1))))))
+                  (Mathlib.Tactic.Ring.Common.add_mul
+                    (Mathlib.Tactic.Ring.Common.mul_add
+                      (Mathlib.Tactic.Ring.Common.mul_pf_left
+                        (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H)) (Nat.rawCast 1)
+                        (Mathlib.Tactic.Ring.Common.mul_pf_right H⁻¹ (Nat.rawCast 1)
+                          (Mathlib.Meta.NormNum.IsNat.to_raw_eq
+                            (Mathlib.Meta.NormNum.isNat_mul (Eq.refl HMul.hMul) (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1)
+                              (Mathlib.Meta.NormNum.IsNat.of_raw ℝ 1) (Eq.refl 1)))))
+                      (Mathlib.Tactic.Ring.Common.mul_zero
+                        (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 * Nat.rawCast 1))
+                      (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                        (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                            (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1) +
+                          0)))
+                    (Mathlib.Tactic.Ring.Common.zero_mul (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1 + 0))
+                    (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                      (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                          (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1) +
+                        0)))))
+              (Mathlib.Tactic.Ring.Common.add_pf_add_lt
+                (OAI.PiExponent.AdmissibleParameters.analyticError d ^ Nat.rawCast 1 * Nat.rawCast 1)
+                (Mathlib.Tactic.Ring.Common.add_pf_add_lt
+                  (OAI.PiExponent.Collision.collisionRemainder
+                        (OAI.PiExponent.DeterminantContradiction.actualRowCount d H) H ^
+                      Nat.rawCast 1 *
+                    Nat.rawCast 1)
+                  (Mathlib.Tactic.Ring.Common.add_pf_add_gt
+                    (Real.log ↑(OAI.PiExponent.translationTermCount d.m (↑d.v0) H) ^ Nat.rawCast 1 *
+                      (H⁻¹ ^ Nat.rawCast 1 * Nat.rawCast 1))
+                    (Mathlib.Tactic.Ring.Common.add_pf_add_zero
+                      (max (-OAI.PiExponent.DeterminantContradiction.collisionRate d H)
+                              (-nu *
+                                (↑d.base.A * (1 - d.base.eta) -
+                                  OAI.PiExponent.DeterminantContradiction.actualMean d H)) ^
+                            Nat.rawCast 1 *
+                          Nat.rawCast 1 +
+                        0))))))))))
+    hb
+'OAI.PiExponent.InterpolationMatrix.truncatedLog_full_row_minor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.PiExponent.MatrixArithmetic.selectedMinor_arithmetic_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.PiExponent.LiteralAnalytic.actual_minor_analytic_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.PiExponent.AdmissibleMatrixInterpolation.globalInterpolation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.PiExponent.LiteralAnalytic.analyticAggregate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.PiExponent.main' depends on axioms: [propext, Classical.choice, Quot.sound]
