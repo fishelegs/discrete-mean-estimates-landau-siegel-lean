@@ -44,6 +44,7 @@ jobs:
         run: |
           set -euo pipefail
           source "$HOME/.elan/env"
+          free -h
           python3 scripts/replay_full_target.py --lean "$(elan which lean)" \
             --mathlib "$PWD/.lake/packages/mathlib" \
             --packages-dir "$PWD/.lake/packages" \

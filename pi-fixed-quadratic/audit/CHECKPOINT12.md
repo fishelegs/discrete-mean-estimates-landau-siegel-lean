@@ -22,7 +22,7 @@ that closure, pins, compiler version, clean dependency sources, proof-token
 scan, audit declaration coverage, every compiler result, final elaborated type
 and the standard-only transitive axiom reports. It refuses an existing output
 directory. Every OAI and local module is compiled from source into one initially
-empty library directory using ordinary Lean, one worker and a 6144 MiB limit.
+empty library directory using ordinary Lean, one worker and a 8192 MiB limit.
 
 Only official mathlib cache artifacts at the exact package pins may be reused.
 There is no OAI/local artifact cache, no copying of old Mac receipts or oleans,
@@ -54,3 +54,14 @@ logs, incremental receipt, exact actual theorem type, final axiom audit, closure
 manifest and dependency pins. Remote completion and artifact validation will
 be recorded separately after an actual successful run. The existing arithmetic
 workflow continues to cover its own 50 checks and 265 type/axiom reports.
+
+## First Linux run and resource correction
+
+Run `37905342242` at commit `9bd2f696017f49ca0175721525d43b14474c7d07`
+passed preflight and the first eight freshly compiled modules. The ninth,
+`OAI.NumberTheory.PiExponent.Cohomology.FiniteCoverCohomology`, stopped with
+Lean's `memory_exception` at the initial 6144 MiB interpreter limit. This run
+is a failure, not final-theorem evidence. The previous Mac ordinary build used
+8192 MiB successfully for this module and the whole closure. The portable
+script now uses that established 8192 MiB budget, still one compiler worker.
+The corrected workflow will start again with no OAI/local build cache.

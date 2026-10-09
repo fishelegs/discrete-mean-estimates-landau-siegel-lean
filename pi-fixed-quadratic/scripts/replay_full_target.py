@@ -32,7 +32,7 @@ def main():
     for name in ['lean', 'mathlib', 'packages-dir', 'upstream', 'out']:
         ap.add_argument('--' + name, required=True, type=Path)
     ap.add_argument('--plan-only', action='store_true')
-    ap.add_argument('--memory-mb', type=int, default=6144)
+    ap.add_argument('--memory-mb', type=int, default=8192)
     a = ap.parse_args()
     lean, mathlib, packages, upstream, out = [getattr(a, n).resolve() for n in ['lean', 'mathlib', 'packages_dir', 'upstream', 'out']]
     pins = json.loads((ROOT/'dependency-pins.json').read_text())
