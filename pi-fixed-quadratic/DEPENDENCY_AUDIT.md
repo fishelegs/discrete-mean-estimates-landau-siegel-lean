@@ -33,15 +33,17 @@ and one-variable `P`, while `Conjugation.lean` handles simultaneous nonvanishing
 The third checkpoint now proves multivariate Gaussian integrality in an
 abstract degree-two Galois tower over the fraction field of Gaussian integers.
 It combines the primitive finite-place argument with an actual two-embedding
-norm descent and integral closedness. The actual fixed real quadratic field
-and its minpoly/height tower have not yet been constructed to instantiate it. All remaining hypotheses and construction gaps are listed in
+norm descent and integral closedness. The actual primitive integer minpoly, coefficient maximum height and real
+root-pair identities are now proved; the actual fixed quadratic field/compositum
+tower has not yet been constructed to instantiate it. All remaining hypotheses and construction gaps are listed in
 README.md and visible in `checks/Audit.lean`.
 
 The paper's `Lambda=4 log 2` must also be checked against the available **formal**
 lcm bound. Upstream `Arithmetic.log_lcmUpto_le` uses the larger proved constant
 `Real.log 4 + 4`. A later parameter port can retain this constant: the required
-limits still have a fixed positive coefficient. This checkpoint claims neither
-the paper's sharper numeric lcm constant nor the full enlarged error closure.
+limits still have a fixed positive coefficient. Checkpoint 6 proves the enlarged arithmetic error and its dimension/height
+limits with this actual formal constant; it does not claim the sharper numeric
+lcm constant or a generalized analytic bound.
 
 The root 4.30 project, six A7 vendor modules, sqrt(2)/Log-Pade sources and old
 receipts remain byte-identical to the base commit. Old aggregate verification
@@ -54,4 +56,6 @@ coarser uniform log bound 2 (center constant `2k+2`), valid for all truncations.
 The required later parameter limits are unchanged in kind because the
 additional logarithmic constants are fixed before approximation weights.
 The lcm constant remains the larger proved `log 4+4` until separately improved.
-No dimension limits, generalized geometry, or final pi theorem are claimed.
+Checkpoint 6 now proves the changed dimension limits, height selection and
+factorial remainder; generalized geometry, analytic transfer and the final pi
+finiteness theorem remain unproved.

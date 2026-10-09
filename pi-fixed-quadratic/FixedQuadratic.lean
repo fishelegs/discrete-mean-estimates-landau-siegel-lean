@@ -20,3 +20,7 @@ import FixedQuadratic.TimeEnvelope
 import FixedQuadratic.MinorEnvelope
 import FixedQuadratic.MultiLower
 import FixedQuadratic.MinorArithmetic
+import FixedQuadratic.ArithmeticErrors
+import FixedQuadratic.PrimitiveHeight
+import FixedQuadratic.ErrorLimits
+import FixedQuadratic.Selection

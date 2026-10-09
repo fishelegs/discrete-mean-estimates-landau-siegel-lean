@@ -58,8 +58,12 @@ The exact elaborated types and complete axiom reports are printed by
   with all coefficient magnitudes bounded by a fixed natural `H` form a finite
   set, even without primitivity or irreducibility. `height_unbounded_of_infinite`
   explicitly takes the coefficient-box property for a height function and
-  derives unbounded heights. The canonical primitive-minimal-polynomial height
-  has not yet been constructed and connected to that property.
+  derives unbounded heights. The canonical primitive-minimal-polynomial height is now constructed and
+  connected to that property by `PrimitiveHeight.lean`. Its irreducibility,
+  primitivity, positive leading coefficient, three-coefficient gcd, actual
+  real factorization, Mahler bound, and height-linked ceiling log bound are proved.
+  `Selection.lean` proves successive selection from an infinite degree-two set
+  for every center-independent threshold depending on previous weights.
 - `height_rpow_le_rounded_exp`, `quadratic_center_period_error`, and
   `quadratic_centers_injective`: the actual input
   `abs(pi-beta)<=H^(-nu)` transfers to the period-center error bound
@@ -92,9 +96,9 @@ The exact elaborated types and complete axiom reports are printed by
 
 ## Remaining dependencies, in implementation order
 
-1. Construct a fixed real quadratic field, its simultaneous involution and the
-   primitive integer minimal polynomials of all selected elements. Connect the
-   exact polynomial maximum height and root coefficient identities.
+1. Construct a fixed real quadratic field and its simultaneous involution.
+   The actual primitive integer minpoly, maximum height, root coefficient
+   identities, finite coefficient box, and successive height selection are proved.
 2. Instantiate the now-proved **multivariate same-field** Gaussian integrality
    theorem for the actual fixed real quadratic field after adjoining `i`.
    Construct its compatible fraction-field tower, relative degree two, Galois
@@ -107,15 +111,17 @@ The exact elaborated types and complete axiom reports are printed by
    proves its complex specialization, incompatible zero rule, coordinate degree
    bound and determinant rebate. Actual truncated-log clearing, radius-1/2
    coefficient envelope and factorial envelope are now proved. Instantiate the
-   source's weighted row/column packet and derive the normalized errors from
-   the actual-minor arithmetic theorem, with its two denominator costs.
+   source's weighted row/column packet. The normalized actual-minor estimate
+   is now `formal_minor_fixed_field_normalized_lower`, with both denominator
+   costs and explicit geometric and Mahler-to-weight budgets.
 4. Generalize the upstream **proved Lean** geometric surjectivity and analytic
    aggregate from rational `FixedData` to height-linked fixed-field data. The
    upstream complex-center minor extraction is conditional on surjectivity;
    it does not itself prove the needed generalized geometric input. Audit the
    underlying geometry rather than treating the paper statement as an axiom.
-5. Prove the enlarged dimension error limits, successive height choices and
-   factorial remainder limit, then supply the estimates and margins to
+5. The changed dimension error limits, successive height choices and factorial
+   remainder limit under polynomial row growth are proved. Instantiate these
+   with the generalized packet, supply the actual analytic estimate and margins to
    `comparison_contradiction` and conclude exceptional-set finiteness.
 
 The target fixes the field and `nu>2` before choosing the packet. It does not
@@ -134,7 +140,7 @@ python3 scripts/replay.py --lean "$(elan which lean)" \
 ```
 
 The script compiles all new sources and the aggregate, positive regressions,
-actual type/axiom prints, and twelve separately checked expected failures. It
+actual type/axiom prints, and fifteen separately checked expected failures. It
 rejects `sorry`, `admit`, project `axiom`, `native_decide`, unsafe code and
 external proof hooks. Only `propext`, `Classical.choice`, `Quot.sound` are allowed
 in axiom reports. It records source, compiler, imported cache and output hashes.
@@ -247,3 +253,33 @@ is not the final pi theorem. See `audit/CHECKPOINT5.md` and the exact type audit
 The cross-project bridge now also proves exact actual selected-minor equality,
 nonvanishing transport and the legal selected columns' joint weighted budget.
 Its five declaration audits are separate from the 38/148 standalone replay.
+
+## Normalized arithmetic and changed error closure
+
+Checkpoint 6 checks 44 compiler invocations and 219 actual declaration
+type/axiom reports. `ArithmeticErrors.lean` proves the actual minor log estimate
+and its normalized bound. With `D=M*N`, it is
+
+```text
+log ||Delta|| / D >= -(1-rebate) - E_F - log(M!)/D
+E_F = 2 Lambda F/v + log(2)/v + log(3/2)/w0
+      + [2 Lambda + log(2(2k+2)) + log(sqrt(3))]/wmin
+Lambda = log(4)+4
+```
+
+The stronger denominator estimate uses the same joint degree budget before
+summing truncation costs: `log Q <= Lambda*(F*D/v + D/wmin)`. This legitimately
+improves the paper's coarser coordinatewise `m/v` and reciprocal-sum costs; it
+does not omit either copy of `log Q`. The coefficient bound is still the actual
+constant `2k+2`, uniformly in every truncation degree.
+
+`ErrorLimits.lean` proves the changed total error identity, dimension margin
+selection for actual `floor(C^m)` data, and subsequent common-height margin.
+It also proves `log(M!)/(M*N) -> 0` for positive polynomially growing `M(N)`.
+The analytic expression in its error identity is the intended transfer cost;
+its bound for generalized quadratic packets remains unproved. Hence this
+error closure is not a substitute for the outstanding geometric/analytic port.
+
+The dimension estimates are adapted, with attribution, from the pinned
+upstream elementary dimension files. Their coefficient 100 is generalized
+to a nonnegative constant and all adapted proofs are freshly kernel checked.

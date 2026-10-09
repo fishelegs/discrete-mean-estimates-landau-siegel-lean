@@ -1,0 +1,15 @@
+{
+  "commit": "4dfd4ecf9fa325346e3ec47b99367d37bceff6fe",
+  "run_id": 37883746053,
+  "conclusion": "success",
+  "toolchain": "Lean 4.30.0",
+  "trusted_spec_modules_individually_passed": 1565,
+  "spec_aggregate": "passed",
+  "lake_build": "passed",
+  "audit_regressions": "passed",
+  "gaussian_closure": "passed",
+  "root_tracked_sources_unchanged_since_run": true,
+  "artifact_report_sha256": "3e05015606203cb3f0d8ce814b2891e8892629785cc2097de42e2698aba25aa6",
+  "artifact_spec_manifest_sha256": "97a41b0fe86212f04735e8447581c18c096774ef39d5749c50a1845817db1b8f",
+  "note": "The new independent 4.34.1 subproject is checked by its separate workflow, not by the old root lake build."
+}

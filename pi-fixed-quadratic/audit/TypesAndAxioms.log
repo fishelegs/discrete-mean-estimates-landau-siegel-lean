@@ -1,9 +1,64 @@
-@FixedQuadratic.determinant_clearing : ∀ {ι : Type u_1} {σ : Type u_2} {R : Type u_3} [inst : Fintype ι]
-  [inst_1 : DecidableEq ι] [inst_2 : Fintype σ] [inst_3 : CommRing R] (S : Subring R) (A : Matrix ι ι R) (L : σ → R)
-  (α b : ι → σ → ℕ),
+FixedQuadratic.quadratic_resultant_identity : ∀ (f P : Polynomial GaussianInt) (a : GaussianInt) (x y : ℂ) (d : ℕ),
+  P.natDegree ≤ d →
+    Polynomial.map GaussianInt.toComplex f =
+        Polynomial.C (GaussianInt.toComplex a) * ((Polynomial.X - Polynomial.C x) * (Polynomial.X - Polynomial.C y)) →
+      GaussianInt.toComplex (f.resultant P 2 d) =
+        GaussianInt.toComplex a ^ d * Polynomial.eval x (Polynomial.map GaussianInt.toComplex P) *
+          Polynomial.eval y (Polynomial.map GaussianInt.toComplex P)
+'FixedQuadratic.quadratic_resultant_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.quadratic_product_gaussian : ∀ (f P : Polynomial GaussianInt) (a : GaussianInt) (x y : ℂ) (d : ℕ),
+  P.natDegree ≤ d →
+    Polynomial.map GaussianInt.toComplex f =
+        Polynomial.C (GaussianInt.toComplex a) * ((Polynomial.X - Polynomial.C x) * (Polynomial.X - Polynomial.C y)) →
+      GaussianInt.toComplex a ^ d * Polynomial.eval x (Polynomial.map GaussianInt.toComplex P) *
+          Polynomial.eval y (Polynomial.map GaussianInt.toComplex P) ∈
+        GaussianInt.toComplex.range
+'FixedQuadratic.quadratic_product_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.gaussian_norm_one_le : ∀ (z : GaussianInt), z ≠ 0 → 1 ≤ ‖GaussianInt.toComplex z‖
+'FixedQuadratic.gaussian_norm_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.quadratic_norm_lower : ∀ (f P : Polynomial GaussianInt) (a : GaussianInt) (x y : ℂ) (d : ℕ),
+  P.natDegree ≤ d →
+    Polynomial.map GaussianInt.toComplex f =
+        Polynomial.C (GaussianInt.toComplex a) * ((Polynomial.X - Polynomial.C x) * (Polynomial.X - Polynomial.C y)) →
+      a ≠ 0 →
+        Polynomial.eval x (Polynomial.map GaussianInt.toComplex P) ≠ 0 →
+          Polynomial.eval y (Polynomial.map GaussianInt.toComplex P) ≠ 0 →
+            1 ≤
+              ‖GaussianInt.toComplex a‖ ^ d * ‖Polynomial.eval x (Polynomial.map GaussianInt.toComplex P)‖ *
+                ‖Polynomial.eval y (Polynomial.map GaussianInt.toComplex P)‖
+'FixedQuadratic.quadratic_norm_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.quadraticMahler : ℝ → ℝ → ℝ → ℝ
+'FixedQuadratic.quadraticMahler' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.quadraticMahler_sq_le : ∀ (a b c x y : ℝ),
+  0 ≤ a → b = -a * (x + y) → c = a * x * y → FixedQuadratic.quadraticMahler a x y ^ 2 ≤ a ^ 2 + b ^ 2 + c ^ 2
+'FixedQuadratic.quadraticMahler_sq_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.quadraticMahler_le_l2 : ∀ (a b c x y : ℝ),
+  0 ≤ a → b = -a * (x + y) → c = a * x * y → FixedQuadratic.quadraticMahler a x y ≤ √(a ^ 2 + b ^ 2 + c ^ 2)
+'FixedQuadratic.quadraticMahler_le_l2' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.quadraticMahler_le_sqrt_three_height : ∀ (a b c x y H : ℝ),
+  0 ≤ a →
+    0 ≤ H → a ≤ H → |b| ≤ H → |c| ≤ H → b = -a * (x + y) → c = a * x * y → FixedQuadratic.quadraticMahler a x y ≤ √3 * H
+'FixedQuadratic.quadraticMahler_le_sqrt_three_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.exists_matching_of_det_ne_zero : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : CommRing R] (A : Matrix ι ι R), A.det ≠ 0 → ∃ p, ∀ (j : ι), A (p j) j ≠ 0
+'FixedQuadratic.exists_matching_of_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.matched_sum_sub : ∀ {ι : Type u_1} [inst : Fintype ι] (α b : ι → ℕ) (p : Equiv.Perm ι),
+  (∀ (j : ι), b (p j) ≤ α j) → ∑ j, (α j - b (p j)) = ∑ j, α j - ∑ j, b j
+'FixedQuadratic.matched_sum_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.det_degreeOf_le : ∀ {ι : Type u_1} {σ : Type u_2} {R : Type u_3} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : CommRing R] (A : Matrix ι ι (MvPolynomial σ R)) (α b : ι → σ → ℕ),
   (∀ (r c : ι), (¬∀ (i : σ), b r i ≤ α c i) → A r c = 0) →
-    (∀ (r c : ι), (∏ i, L i ^ (α c i - b r i)) * A r c ∈ S) → (∏ i, L i ^ (∑ c, α c i - ∑ r, b r i)) * A.det ∈ S
-'FixedQuadratic.determinant_clearing' depends on axioms: [propext, Classical.choice, Quot.sound]
+    (∀ (r c : ι) (i : σ), MvPolynomial.degreeOf i (A r c) ≤ α c i - b r i) →
+      ∀ (i : σ), MvPolynomial.degreeOf i A.det ≤ ∑ c, α c i - ∑ r, b r i
+'FixedQuadratic.det_degreeOf_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.row_total_le_column_total : ∀ {ι : Type u_1} {σ : Type u_2} {R : Type u_3} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : CommRing R] (A : Matrix ι ι R) (α b : ι → σ → ℕ),
+  A.det ≠ 0 → (∀ (r c : ι), (¬∀ (i : σ), b r i ≤ α c i) → A r c = 0) → ∀ (i : σ), ∑ r, b r i ≤ ∑ c, α c i
+'FixedQuadratic.row_total_le_column_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.weighted_rebate : ∀ {ι : Type u_1} [inst : Fintype ι] {m : ℕ} (α b : ι → Fin m → ℕ) (w : Fin m → ℝ),
+  (∀ (i : Fin m), ∑ r, b r i ≤ ∑ c, α c i) →
+    ∑ i, w i * ↑(∑ c, α c i - ∑ r, b r i) = ∑ c, ∑ i, w i * ↑(α c i) - ∑ r, ∑ i, w i * ↑(b r i)
+'FixedQuadratic.weighted_rebate' depends on axioms: [propext, Classical.choice, Quot.sound]
 FixedQuadratic.comparison_contradiction : ∀ (ν θ A η b cL Ea En δ ε t : ℝ),
   1 ≤ ν →
     b ≤ θ →
@@ -52,6 +107,18 @@ FixedQuadratic.quadratic_l1_mahler_lower : ∀ (f P : Polynomial GaussianInt) (a
                   (‖GaussianInt.toComplex a‖ * max 1 ‖x‖ * max 1 ‖y‖) ^ d) ≤
               ‖Polynomial.eval x (Polynomial.map GaussianInt.toComplex P)‖
 'FixedQuadratic.quadratic_l1_mahler_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1 : {m : ℕ} → MvPolynomial (Fin m) ℂ → ℝ
+'FixedQuadratic.multiCoefficientL1' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multi_eval_norm_le : ∀ {m : ℕ} (P : MvPolynomial (Fin m) ℂ) (β : Fin m → ℂ) (e : Fin m → ℕ),
+  (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
+    ‖(MvPolynomial.eval β) P‖ ≤ FixedQuadratic.multiCoefficientL1 P * ∏ i, max 1 ‖β i‖ ^ e i
+'FixedQuadratic.multi_eval_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.determinant_clearing : ∀ {ι : Type u_1} {σ : Type u_2} {R : Type u_3} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : Fintype σ] [inst_3 : CommRing R] (S : Subring R) (A : Matrix ι ι R) (L : σ → R)
+  (α b : ι → σ → ℕ),
+  (∀ (r c : ι), (¬∀ (i : σ), b r i ≤ α c i) → A r c = 0) →
+    (∀ (r c : ι), (∏ i, L i ^ (α c i - b r i)) * A r c ∈ S) → (∏ i, L i ^ (∑ c, α c i - ∑ r, b r i)) * A.det ∈ S
+'FixedQuadratic.determinant_clearing' depends on axioms: [propext, Classical.choice, Quot.sound]
 FixedQuadratic.realQuadratic : ℤ → ℤ → ℤ → Polynomial ℝ
 'FixedQuadratic.realQuadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
 FixedQuadratic.realQuadratic_ne_zero : ∀ (a b c : ℤ), a ≠ 0 → FixedQuadratic.realQuadratic a b c ≠ 0
@@ -72,44 +139,19 @@ FixedQuadratic.height_unbounded_of_infinite : ∀ (S : Set ℝ) (height : ℝ �
   S.Infinite →
     (∀ x ∈ S, ∀ (H : ℕ), height x ≤ H → x ∈ FixedQuadratic.boundedQuadraticRoots H) → ∀ (H : ℕ), ∃ x ∈ S, H < height x
 'FixedQuadratic.height_unbounded_of_infinite' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.quadraticMahler : ℝ → ℝ → ℝ → ℝ
-'FixedQuadratic.quadraticMahler' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.quadraticMahler_sq_le : ∀ (a b c x y : ℝ),
-  0 ≤ a → b = -a * (x + y) → c = a * x * y → FixedQuadratic.quadraticMahler a x y ^ 2 ≤ a ^ 2 + b ^ 2 + c ^ 2
-'FixedQuadratic.quadraticMahler_sq_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.quadraticMahler_le_l2 : ∀ (a b c x y : ℝ),
-  0 ≤ a → b = -a * (x + y) → c = a * x * y → FixedQuadratic.quadraticMahler a x y ≤ √(a ^ 2 + b ^ 2 + c ^ 2)
-'FixedQuadratic.quadraticMahler_le_l2' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.quadraticMahler_le_sqrt_three_height : ∀ (a b c x y H : ℝ),
-  0 ≤ a →
-    0 ≤ H → a ≤ H → |b| ≤ H → |c| ≤ H → b = -a * (x + y) → c = a * x * y → FixedQuadratic.quadraticMahler a x y ≤ √3 * H
-'FixedQuadratic.quadraticMahler_le_sqrt_three_height' depends on axioms: [propext, Classical.choice, Quot.sound]
-@FixedQuadratic.exists_matching_of_det_ne_zero : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι]
-  [inst_1 : DecidableEq ι] [inst_2 : CommRing R] (A : Matrix ι ι R), A.det ≠ 0 → ∃ p, ∀ (j : ι), A (p j) j ≠ 0
-'FixedQuadratic.exists_matching_of_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
-@FixedQuadratic.matched_sum_sub : ∀ {ι : Type u_1} [inst : Fintype ι] (α b : ι → ℕ) (p : Equiv.Perm ι),
-  (∀ (j : ι), b (p j) ≤ α j) → ∑ j, (α j - b (p j)) = ∑ j, α j - ∑ j, b j
-'FixedQuadratic.matched_sum_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
-@FixedQuadratic.det_degreeOf_le : ∀ {ι : Type u_1} {σ : Type u_2} {R : Type u_3} [inst : Fintype ι]
-  [inst_1 : DecidableEq ι] [inst_2 : CommRing R] (A : Matrix ι ι (MvPolynomial σ R)) (α b : ι → σ → ℕ),
-  (∀ (r c : ι), (¬∀ (i : σ), b r i ≤ α c i) → A r c = 0) →
-    (∀ (r c : ι) (i : σ), MvPolynomial.degreeOf i (A r c) ≤ α c i - b r i) →
-      ∀ (i : σ), MvPolynomial.degreeOf i A.det ≤ ∑ c, α c i - ∑ r, b r i
-'FixedQuadratic.det_degreeOf_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-@FixedQuadratic.row_total_le_column_total : ∀ {ι : Type u_1} {σ : Type u_2} {R : Type u_3} [inst : Fintype ι]
-  [inst_1 : DecidableEq ι] [inst_2 : CommRing R] (A : Matrix ι ι R) (α b : ι → σ → ℕ),
-  A.det ≠ 0 → (∀ (r c : ι), (¬∀ (i : σ), b r i ≤ α c i) → A r c = 0) → ∀ (i : σ), ∑ r, b r i ≤ ∑ c, α c i
-'FixedQuadratic.row_total_le_column_total' depends on axioms: [propext, Classical.choice, Quot.sound]
-@FixedQuadratic.weighted_rebate : ∀ {ι : Type u_1} [inst : Fintype ι] {m : ℕ} (α b : ι → Fin m → ℕ) (w : Fin m → ℝ),
-  (∀ (i : Fin m), ∑ r, b r i ≤ ∑ c, α c i) →
-    ∑ i, w i * ↑(∑ c, α c i - ∑ r, b r i) = ∑ c, ∑ i, w i * ↑(α c i) - ∑ r, ∑ i, w i * ↑(b r i)
-'FixedQuadratic.weighted_rebate' depends on axioms: [propext, Classical.choice, Quot.sound]
-@FixedQuadratic.multiCoefficientL1 : {m : ℕ} → MvPolynomial (Fin m) ℂ → ℝ
-'FixedQuadratic.multiCoefficientL1' depends on axioms: [propext, Classical.choice, Quot.sound]
-@FixedQuadratic.multi_eval_norm_le : ∀ {m : ℕ} (P : MvPolynomial (Fin m) ℂ) (β : Fin m → ℂ) (e : Fin m → ℕ),
-  (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
-    ‖(MvPolynomial.eval β) P‖ ≤ FixedQuadratic.multiCoefficientL1 P * ∏ i, max 1 ‖β i‖ ^ e i
-'FixedQuadratic.multi_eval_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.height_rpow_le_rounded_exp : ∀ (H ν : ℝ),
+  1 ≤ H → 0 ≤ ν → H ^ (-ν) ≤ Real.exp ν * Real.exp (-ν * ↑⌈Real.log H⌉₊)
+'FixedQuadratic.height_rpow_le_rounded_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.quadratic_center_period_error : ∀ (β H ν : ℝ) (j k : ℕ),
+  1 ≤ H →
+    0 ≤ ν →
+      j ≤ k →
+        |Real.pi - β| ≤ H ^ (-ν) →
+          ‖↑j * (2 * Complex.I * ↑β - 2 * ↑Real.pi * Complex.I)‖ ≤ 2 * ↑k * Real.exp ν * Real.exp (-ν * ↑⌈Real.log H⌉₊)
+'FixedQuadratic.quadratic_center_period_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.quadratic_centers_injective : ∀ (β : ℝ),
+  β ≠ 0 → ∀ (k : ℕ), Function.Injective fun j => ↑↑j * (2 * Complex.I * ↑β)
+'FixedQuadratic.quadratic_centers_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
 FixedQuadratic.coeff_comp_negX : ∀ (P : Polynomial GaussianInt) (n : ℕ),
   (P.comp (-Polynomial.X)).coeff n = (-1) ^ n * P.coeff n
 'FixedQuadratic.coeff_comp_negX' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -158,76 +200,6 @@ FixedQuadratic.parity_eval_norm_one_le : ∀ (P : Polynomial GaussianInt),
           Polynomial.eval (↑α) (Polynomial.map GaussianInt.toComplex A.det) ≠ 0 →
             1 ≤ ‖Polynomial.eval (↑α) (Polynomial.map GaussianInt.toComplex A.det)‖
 'FixedQuadratic.determinant_parity_eval_norm_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.quadratic_resultant_identity : ∀ (f P : Polynomial GaussianInt) (a : GaussianInt) (x y : ℂ) (d : ℕ),
-  P.natDegree ≤ d →
-    Polynomial.map GaussianInt.toComplex f =
-        Polynomial.C (GaussianInt.toComplex a) * ((Polynomial.X - Polynomial.C x) * (Polynomial.X - Polynomial.C y)) →
-      GaussianInt.toComplex (f.resultant P 2 d) =
-        GaussianInt.toComplex a ^ d * Polynomial.eval x (Polynomial.map GaussianInt.toComplex P) *
-          Polynomial.eval y (Polynomial.map GaussianInt.toComplex P)
-'FixedQuadratic.quadratic_resultant_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.quadratic_product_gaussian : ∀ (f P : Polynomial GaussianInt) (a : GaussianInt) (x y : ℂ) (d : ℕ),
-  P.natDegree ≤ d →
-    Polynomial.map GaussianInt.toComplex f =
-        Polynomial.C (GaussianInt.toComplex a) * ((Polynomial.X - Polynomial.C x) * (Polynomial.X - Polynomial.C y)) →
-      GaussianInt.toComplex a ^ d * Polynomial.eval x (Polynomial.map GaussianInt.toComplex P) *
-          Polynomial.eval y (Polynomial.map GaussianInt.toComplex P) ∈
-        GaussianInt.toComplex.range
-'FixedQuadratic.quadratic_product_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.gaussian_norm_one_le : ∀ (z : GaussianInt), z ≠ 0 → 1 ≤ ‖GaussianInt.toComplex z‖
-'FixedQuadratic.gaussian_norm_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.quadratic_norm_lower : ∀ (f P : Polynomial GaussianInt) (a : GaussianInt) (x y : ℂ) (d : ℕ),
-  P.natDegree ≤ d →
-    Polynomial.map GaussianInt.toComplex f =
-        Polynomial.C (GaussianInt.toComplex a) * ((Polynomial.X - Polynomial.C x) * (Polynomial.X - Polynomial.C y)) →
-      a ≠ 0 →
-        Polynomial.eval x (Polynomial.map GaussianInt.toComplex P) ≠ 0 →
-          Polynomial.eval y (Polynomial.map GaussianInt.toComplex P) ≠ 0 →
-            1 ≤
-              ‖GaussianInt.toComplex a‖ ^ d * ‖Polynomial.eval x (Polynomial.map GaussianInt.toComplex P)‖ *
-                ‖Polynomial.eval y (Polynomial.map GaussianInt.toComplex P)‖
-'FixedQuadratic.quadratic_norm_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.height_rpow_le_rounded_exp : ∀ (H ν : ℝ),
-  1 ≤ H → 0 ≤ ν → H ^ (-ν) ≤ Real.exp ν * Real.exp (-ν * ↑⌈Real.log H⌉₊)
-'FixedQuadratic.height_rpow_le_rounded_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.quadratic_center_period_error : ∀ (β H ν : ℝ) (j k : ℕ),
-  1 ≤ H →
-    0 ≤ ν →
-      j ≤ k →
-        |Real.pi - β| ≤ H ^ (-ν) →
-          ‖↑j * (2 * Complex.I * ↑β - 2 * ↑Real.pi * Complex.I)‖ ≤ 2 * ↑k * Real.exp ν * Real.exp (-ν * ↑⌈Real.log H⌉₊)
-'FixedQuadratic.quadratic_center_period_error' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.quadratic_centers_injective : ∀ (β : ℝ),
-  β ≠ 0 → ∀ (k : ℕ), Function.Injective fun j => ↑↑j * (2 * Complex.I * ↑β)
-'FixedQuadratic.quadratic_centers_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.nonmonic_resultant : GaussianInt.toComplex
-    ((Polynomial.C 2 * (Polynomial.X ^ 2 - Polynomial.C 2)).resultant Polynomial.X 2 1) =
-  -4
-'FixedQuadratic.Regression.nonmonic_resultant' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.omitted_coefficient_cost_is_false : ¬1 ≤ |3 - 2 * √2| * √2
-'FixedQuadratic.Regression.omitted_coefficient_cost_is_false' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.sqrt_two_mahler : FixedQuadratic.quadraticMahler 1 (√2) (-√2) = 2
-'FixedQuadratic.Regression.sqrt_two_mahler' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.cancellation_minor : !![MvPolynomial.X 0, MvPolynomial.X 0 + 1;
-      MvPolynomial.X 0 - 1, MvPolynomial.X 0].det =
-  1
-'FixedQuadratic.Regression.cancellation_minor' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.cancellation_degree : MvPolynomial.degreeOf 0
-    !![MvPolynomial.X 0, MvPolynomial.X 0 + 1; MvPolynomial.X 0 - 1, MvPolynomial.X 0].det =
-  0
-'FixedQuadratic.Regression.cancellation_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.bounded_height_two_finite : (FixedQuadratic.boundedQuadraticRoots 2).Finite
-'FixedQuadratic.Regression.bounded_height_two_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.even_sqrt_two_norm : 1 ≤
-  ‖Polynomial.eval (↑√2) (Polynomial.map GaussianInt.toComplex (Polynomial.X ^ 2 + Polynomial.C 1))‖
-'FixedQuadratic.Regression.even_sqrt_two_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.odd_sqrt_two_norm : 1 ≤
-  ‖Polynomial.eval (↑√2) (Polynomial.map GaussianInt.toComplex Polynomial.X)‖
-'FixedQuadratic.Regression.odd_sqrt_two_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.nonparity_eval_below_one : ‖Polynomial.eval (↑√2)
-      (Polynomial.map GaussianInt.toComplex (Polynomial.C 3 - Polynomial.C 2 * Polynomial.X))‖ <
-  1
-'FixedQuadratic.Regression.nonparity_eval_below_one' depends on axioms: [propext, Classical.choice, Quot.sound]
 FixedQuadratic.primitive_quadratic_bezout : ∀ (a b c : ℤ), (↑(a.gcd b)).gcd c = 1 → ∃ u v w, u * a + v * b + w * c = 1
 'FixedQuadratic.primitive_quadratic_bezout' depends on axioms: [propext, Quot.sound]
 @FixedQuadratic.primitive_quadratic_max_one : ∀ {K : Type u_1} [inst : Field K] (v : AbsoluteValue K ℝ),
@@ -268,13 +240,6 @@ FixedQuadratic.primitive_quadratic_bezout : ∀ (a b c : ℤ), (↑(a.gcd b)).gc
                 Polynomial.C ↑(a i) * ((Polynomial.X - Polynomial.C (x i)) * (Polynomial.X - Polynomial.C (y i)))) →
             v ((∏ i, ↑(a i) ^ e i) * MvPolynomial.eval₂ g x P * MvPolynomial.eval₂ g y P) ≤ 1
 'FixedQuadratic.cleared_product_nonarch_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.primitive_three_coefficients : ∃ u v w, u * 6 + v * 10 + w * 15 = 1
-'FixedQuadratic.Regression.primitive_three_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.nonmonic_local_root_identity : ∀ (v : AbsoluteValue ℚ ℝ),
-  IsNonarchimedean ⇑v → v 2 * max 1 (v 1) * max 1 (v (1 / 2)) = 1
-'FixedQuadratic.Regression.nonmonic_local_root_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.dependent_sqrt_two_local : ∀ (v : AbsoluteValue ℂ ℝ), IsNonarchimedean ⇑v → v (-8) ≤ 1
-'FixedQuadratic.Regression.dependent_sqrt_two_local' depends on axioms: [propext, Classical.choice, Quot.sound]
 @FixedQuadratic.cleared_product_isIntegral : ∀ {K : Type u_1} [inst : Field K] [NumberField K] {m : ℕ}
   (g : GaussianInt →+* K) (P : MvPolynomial (Fin m) GaussianInt) (a b c : Fin m → ℤ) (x y : Fin m → K) (e : Fin m → ℕ),
   (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
@@ -355,19 +320,6 @@ FixedQuadratic.Regression.dependent_sqrt_two_local : ∀ (v : AbsoluteValue ℂ 
                           (∏ i, ‖φ ↑(a i)‖ ^ e i) * ‖φ (MvPolynomial.eval₂ (algebraMap GaussianInt K) x P)‖ *
                             ‖φ (MvPolynomial.eval₂ (algebraMap GaussianInt K) (fun i => τ (x i)) P)‖
 'FixedQuadratic.quadratic_cleared_norm_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-@FixedQuadratic.Regression.repeated_coordinate_gaussian : ∀ {G : Type u_1} {K : Type u_2} [inst : Field G]
-  [inst_1 : Field K] [NumberField K] [inst_3 : Algebra GaussianInt G] [IsFractionRing GaussianInt G]
-  [inst_5 : Algebra G K] [inst_6 : Algebra GaussianInt K] [IsScalarTower GaussianInt G K] [FiniteDimensional G K]
-  [IsGalois G K],
-  Module.finrank G K = 2 →
-    ∀ (τ : Gal(K/G)),
-      τ ≠ 1 →
-        ∀ (a b c : ℤ) (β : K),
-          (↑(a.gcd b)).gcd c = 1 →
-            Polynomial.C ↑a * Polynomial.X ^ 2 + Polynomial.C ↑b * Polynomial.X + Polynomial.C ↑c =
-                Polynomial.C ↑a * ((Polynomial.X - Polynomial.C β) * (Polynomial.X - Polynomial.C (τ β))) →
-              ↑a ^ 2 * (β + β) * (τ β + τ β) ∈ (algebraMap GaussianInt K).range
-'FixedQuadratic.Regression.repeated_coordinate_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
 @FixedQuadratic.timeLift : {R : Type u_1} → [inst : CommRing R] → {m : ℕ} → Polynomial R → MvPolynomial (Fin (m + 1)) R
 'FixedQuadratic.timeLift' depends on axioms: [propext, Classical.choice, Quot.sound]
 @FixedQuadratic.timeLift_split : ∀ {R : Type u_1} [inst : CommRing R] {m : ℕ} (G : Polynomial R),
@@ -410,14 +362,6 @@ FixedQuadratic.Regression.dependent_sqrt_two_local : ∀ (v : AbsoluteValue ℂ 
   MvPolynomial.degreeOf i (Matrix.det fun r k => FixedQuadratic.formalEntry (c r) G (s r) (h k) (b r) (a k)) ≤
     ∑ k, a k i - ∑ r, b r i
 'FixedQuadratic.formal_minor_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.formal_entry_linear : (FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => 0) 0 0
-    (fun x => 1) fun x => 2) =
-  MvPolynomial.C (4 * Complex.I) * MvPolynomial.X 0
-'FixedQuadratic.Regression.formal_entry_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.formal_entry_log_coefficient : (FixedQuadratic.formalEntry (fun x => 2 * Complex.I)
-    (fun x => Polynomial.X - Polynomial.C (1 / 2) * Polynomial.X ^ 2) 2 0 (fun x => 1) fun x => 2) =
-  MvPolynomial.C (-1)
-'FixedQuadratic.Regression.formal_entry_log_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
 FixedQuadratic.truncatedLog : ℕ → Polynomial ℂ
 'FixedQuadratic.truncatedLog' depends on axioms: [propext, Classical.choice, Quot.sound]
 FixedQuadratic.logDenominator : ℕ → ℕ
@@ -506,22 +450,6 @@ FixedQuadratic.cleared_truncatedLog_gaussian : ∀ (T : ℕ),
   (∀ (σ : Equiv.Perm ι), ∏ i, FixedQuadratic.multiCoefficientL1 (A (σ i) i) ≤ B) →
     FixedQuadratic.multiCoefficientL1 A.det ≤ ↑(Fintype.card ι).factorial * B
 'FixedQuadratic.determinant_l1_factorial_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.actual_log_three : FixedQuadratic.truncatedLog 3 =
-  Polynomial.X - Polynomial.C (1 / 2) * Polynomial.X ^ 2
-'FixedQuadratic.Regression.actual_log_three' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.actual_log_entry_cleared : (MvPolynomial.C 2 *
-    FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 3) 2 0 (fun x => 0)
-      fun x => 1) =
-  MvPolynomial.C (-1)
-'FixedQuadratic.Regression.actual_log_entry_cleared' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.empty_log_denominator : FixedQuadratic.logDenominator 0 = 1 ∧
-  FixedQuadratic.logDenominator 1 = 1
-'FixedQuadratic.Regression.empty_log_denominator' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.actual_log_entry_integral : (MvPolynomial.C 2 *
-    FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 3) 2 0 (fun x => 0)
-      fun x => 1) ∈
-  (MvPolynomial.map GaussianInt.toComplex).range
-'FixedQuadratic.Regression.actual_log_entry_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
 @FixedQuadratic.timeCoefficientL1 : {m : ℕ} → Polynomial (MvPolynomial (Fin m) ℂ) → ℝ → ℝ
 'FixedQuadratic.timeCoefficientL1' depends on axioms: [propext, Classical.choice, Quot.sound]
 @FixedQuadratic.timeCoefficientL1_nonneg : ∀ {m : ℕ} (P : Polynomial (MvPolynomial (Fin m) ℂ)) {r : ℝ},
@@ -672,21 +600,6 @@ FixedQuadratic.log_coeff_norm_le_one : ∀ (n : ℕ), ‖(PowerSeries.coeff n) (
         MvPolynomial.C ↑(FixedQuadratic.minorDenominator T a b) * FixedQuadratic.formalMinor T j s h b a ∧
       ∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ FixedQuadratic.minorDegrees a b i
 'FixedQuadratic.exists_gaussian_cleared_minor' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.long_truncation_uniform : FixedQuadratic.timeCoefficientL1
-    (Polynomial.map MvPolynomial.C (FixedQuadratic.truncatedLog 100)) (1 / 2) ≤
-  2
-'FixedQuadratic.Regression.long_truncation_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.actual_log_entry_l1 : FixedQuadratic.multiCoefficientL1
-    (MvPolynomial.C 2 *
-      FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 3) 2 0 (fun x => 0)
-        fun x => 1) =
-  1
-'FixedQuadratic.Regression.actual_log_entry_l1' depends on axioms: [propext, Classical.choice, Quot.sound]
-FixedQuadratic.Regression.actual_empty_log_entry_envelope : FixedQuadratic.multiCoefficientL1
-    (FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 1) 0 0 (fun x => 0)
-      fun x => 2) ≤
-  64
-'FixedQuadratic.Regression.actual_empty_log_entry_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
 @FixedQuadratic.formal_minor_fixed_field_arithmetic : ∀ {G : Type u_1} {K : Type u_2} {ι : Type u_3} [inst : Field G]
   [inst_1 : Field K] [NumberField K] [inst_3 : Algebra GaussianInt G] [IsFractionRing GaussianInt G]
   [inst_5 : Algebra G K] [inst_6 : Algebra GaussianInt K] [IsScalarTower GaussianInt G K] [FiniteDimensional G K]
@@ -717,3 +630,499 @@ FixedQuadratic.Regression.actual_empty_log_entry_envelope : FixedQuadratic.multi
                                     FixedQuadratic.minorDegrees a b i) *
                               ‖(MvPolynomial.eval fun i => φ (x i)) (FixedQuadratic.formalMinor T j s h b a)‖
 'FixedQuadratic.formal_minor_fixed_field_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.formalLcmConstant : ℝ
+'FixedQuadratic.formalLcmConstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.formalLcmConstant_pos : 0 < FixedQuadratic.formalLcmConstant
+'FixedQuadratic.formalLcmConstant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.log_logDenominator_le : ∀ (T : ℕ),
+  Real.log ↑(FixedQuadratic.logDenominator T) ≤ FixedQuadratic.formalLcmConstant * ↑T
+'FixedQuadratic.log_logDenominator_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.log_minorDenominator_le : ∀ {ι : Type u_1} [inst : Fintype ι] {m : ℕ} (T : Fin m → ℕ)
+  (a b : ι → Fin m → ℕ),
+  Real.log ↑(FixedQuadratic.minorDenominator T a b) ≤
+    FixedQuadratic.formalLcmConstant * ∑ i, ↑(FixedQuadratic.minorDegrees a b i) * ↑(T i)
+'FixedQuadratic.log_minorDenominator_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.logarithmic_norm_product_lower : ∀ {m : ℕ} (q C : ℝ) (R M : Fin m → ℝ) (e : Fin m → ℕ) (z : ℂ),
+  0 < q →
+    0 < C →
+      (∀ (i : Fin m), 0 < R i) →
+        (∀ (i : Fin m), 0 < M i) →
+          z ≠ 0 →
+            ∏ i, R i ^ e i ≤ (q ^ 2 * C * ∏ i, M i ^ e i) * ‖z‖ →
+              -2 * Real.log q - Real.log C - ∑ i, ↑(e i) * Real.log (M i) + ∑ i, ↑(e i) * Real.log (R i) ≤ Real.log ‖z‖
+'FixedQuadratic.logarithmic_norm_product_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.joint_height_log_cost : ∀ {m : ℕ} (e : Fin m → ℕ) (w M : Fin m → ℝ) (c budget : ℝ),
+  (∀ (i : Fin m), Real.log (M i) ≤ w i + c) →
+    ∑ i, w i * ↑(e i) ≤ budget → ∑ i, ↑(e i) * Real.log (M i) ≤ budget + c * ∑ i, ↑(e i)
+'FixedQuadratic.joint_height_log_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.sum_degrees_le_of_joint_budget : ∀ {m : ℕ} (e : Fin m → ℕ) (w : Fin m → ℝ) (wmin budget : ℝ),
+  0 < wmin → (∀ (i : Fin m), wmin ≤ w i) → ∑ i, w i * ↑(e i) ≤ budget → ∑ i, ↑(e i) ≤ budget / wmin
+'FixedQuadratic.sum_degrees_le_of_joint_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.minorCoefficientEnvelope : {ι : Type u_1} →
+  [Fintype ι] → {m : ℕ} → ℕ → (ι → ℕ) → (ι → ℕ) → (ι → Fin m → ℕ) → (ι → Fin m → ℕ) → ℝ
+'FixedQuadratic.minorCoefficientEnvelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.minorCoefficientEnvelope_pos : ∀ {ι : Type u_1} [inst : Fintype ι] {m : ℕ} (k : ℕ) (s h : ι → ℕ)
+  (a b : ι → Fin m → ℕ), 0 < FixedQuadratic.minorCoefficientEnvelope k s h a b
+'FixedQuadratic.minorCoefficientEnvelope_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formal_minor_fixed_field_log_lower : ∀ {G : Type u_1} {K : Type u_2} {ι : Type u_3} [inst : Field G]
+  [inst_1 : Field K] [NumberField K] [inst_3 : Algebra GaussianInt G] [IsFractionRing GaussianInt G]
+  [inst_5 : Algebra G K] [inst_6 : Algebra GaussianInt K] [IsScalarTower GaussianInt G K] [FiniteDimensional G K]
+  [IsGalois G K] [inst_10 : Fintype ι] [inst_11 : DecidableEq ι] {m : ℕ},
+  Module.finrank G K = 2 →
+    ∀ (τ : Gal(K/G)),
+      τ ≠ 1 →
+        ∀ (T : Fin m → ℕ) (k : ℕ) (j s h : ι → ℕ) (b a : ι → Fin m → ℕ),
+          (∀ (r : ι), j r ≤ k) →
+            ∀ (la lb lc : Fin m → ℤ) (x : Fin m → K),
+              (∀ (i : Fin m), (↑((la i).gcd (lb i))).gcd (lc i) = 1) →
+                (∀ (i : Fin m),
+                    Polynomial.C ↑(la i) * Polynomial.X ^ 2 + Polynomial.C ↑(lb i) * Polynomial.X +
+                        Polynomial.C ↑(lc i) =
+                      Polynomial.C ↑(la i) *
+                        ((Polynomial.X - Polynomial.C (x i)) * (Polynomial.X - Polynomial.C (τ (x i))))) →
+                  (∀ (i : Fin m), la i ≠ 0) →
+                    ∀ (φ : K →+* ℂ),
+                      φ.comp (algebraMap GaussianInt K) = GaussianInt.toComplex →
+                        (MvPolynomial.eval fun i => φ (x i)) (FixedQuadratic.formalMinor T j s h b a) ≠ 0 →
+                          -2 * Real.log ↑(FixedQuadratic.minorDenominator T a b) -
+                                  Real.log (FixedQuadratic.minorCoefficientEnvelope k s h a b) -
+                                ∑ i,
+                                  ↑(FixedQuadratic.minorDegrees a b i) *
+                                    Real.log (‖φ ↑(la i)‖ * max 1 ‖φ (x i)‖ * max 1 ‖φ (τ (x i))‖) +
+                              ∑ i, ↑(FixedQuadratic.minorDegrees a b i) * Real.log (max 1 ‖φ (x i)‖) ≤
+                            Real.log ‖(MvPolynomial.eval fun i => φ (x i)) (FixedQuadratic.formalMinor T j s h b a)‖
+'FixedQuadratic.formal_minor_fixed_field_log_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.log_minorCoefficientEnvelope : ∀ {ι : Type u_1} [inst : Fintype ι] {m : ℕ} (k : ℕ) (s h : ι → ℕ)
+  (a b : ι → Fin m → ℕ),
+  Real.log (FixedQuadratic.minorCoefficientEnvelope k s h a b) =
+    Real.log ↑(Fintype.card ι).factorial + ↑(∑ r, s r) * Real.log 2 + ↑(∑ c, h c) * Real.log (3 / 2) +
+        ↑(∑ c, ∑ i, a c i) * Real.log 2 +
+      ↑(∑ i, FixedQuadratic.minorDegrees a b i) * Real.log (2 * ↑k + 2)
+'FixedQuadratic.log_minorCoefficientEnvelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.log_minorDenominator_le_joint : ∀ {ι : Type u_1} [inst : Fintype ι] {m : ℕ} (T : Fin m → ℕ)
+  (a b : ι → Fin m → ℕ) (w : Fin m → ℝ) (F v wmin D : ℝ),
+  0 ≤ F →
+    0 < v →
+      0 < wmin →
+        (∀ (i : Fin m), wmin ≤ w i) →
+          (∀ (i : Fin m), ↑(T i) ≤ F * w i / v + 1) →
+            ∑ i, w i * ↑(FixedQuadratic.minorDegrees a b i) ≤ D →
+              Real.log ↑(FixedQuadratic.minorDenominator T a b) ≤
+                FixedQuadratic.formalLcmConstant * (F / v * D + D / wmin)
+'FixedQuadratic.log_minorDenominator_le_joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.arithmeticError : ℝ → ℝ → ℝ → ℝ → ℕ → ℝ
+'FixedQuadratic.arithmeticError' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.normalize_minor_log_lower : ∀ {ι : Type u_1} [inst : Fintype ι] {m : ℕ} (T : Fin m → ℕ)
+  (a b : ι → Fin m → ℕ) (s h : ι → ℕ) (k : ℕ) (w R M : Fin m → ℝ) (F v w0 wmin D rebate : ℝ) (z : ℂ),
+  0 ≤ F →
+    0 < v →
+      0 < w0 →
+        0 < wmin →
+          0 < D →
+            (∀ (i : Fin m), wmin ≤ w i) →
+              (∀ (i : Fin m), ↑(T i) ≤ F * w i / v + 1) →
+                ∑ i, w i * ↑(FixedQuadratic.minorDegrees a b i) ≤ D * (1 - rebate) →
+                  0 ≤ rebate →
+                    ↑(∑ r, s r) ≤ D / v →
+                      ↑(∑ c, h c) ≤ D / w0 →
+                        ↑(∑ c, ∑ i, a c i) ≤ D / wmin →
+                          (∀ (i : Fin m), Real.log (M i) ≤ w i + Real.log √3) →
+                            (∀ (i : Fin m), 1 ≤ R i) →
+                              -2 * Real.log ↑(FixedQuadratic.minorDenominator T a b) -
+                                        Real.log (FixedQuadratic.minorCoefficientEnvelope k s h a b) -
+                                      ∑ i, ↑(FixedQuadratic.minorDegrees a b i) * Real.log (M i) +
+                                    ∑ i, ↑(FixedQuadratic.minorDegrees a b i) * Real.log (R i) ≤
+                                  Real.log ‖z‖ →
+                                -(1 - rebate) - FixedQuadratic.arithmeticError F v w0 wmin k -
+                                    Real.log ↑(Fintype.card ι).factorial / D ≤
+                                  Real.log ‖z‖ / D
+'FixedQuadratic.normalize_minor_log_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formal_minor_fixed_field_normalized_lower : ∀ {G : Type u_1} {K : Type u_2} {ι : Type u_3}
+  [inst : Field G] [inst_1 : Field K] [NumberField K] [inst_3 : Algebra GaussianInt G] [IsFractionRing GaussianInt G]
+  [inst_5 : Algebra G K] [inst_6 : Algebra GaussianInt K] [IsScalarTower GaussianInt G K] [FiniteDimensional G K]
+  [IsGalois G K] [inst_10 : Fintype ι] [inst_11 : DecidableEq ι] {m : ℕ},
+  Module.finrank G K = 2 →
+    ∀ (τ : Gal(K/G)),
+      τ ≠ 1 →
+        ∀ (T : Fin m → ℕ) (k : ℕ) (j s h : ι → ℕ) (b a : ι → Fin m → ℕ),
+          (∀ (r : ι), j r ≤ k) →
+            ∀ (la lb lc : Fin m → ℤ) (x : Fin m → K),
+              (∀ (i : Fin m), (↑((la i).gcd (lb i))).gcd (lc i) = 1) →
+                (∀ (i : Fin m),
+                    Polynomial.C ↑(la i) * Polynomial.X ^ 2 + Polynomial.C ↑(lb i) * Polynomial.X +
+                        Polynomial.C ↑(lc i) =
+                      Polynomial.C ↑(la i) *
+                        ((Polynomial.X - Polynomial.C (x i)) * (Polynomial.X - Polynomial.C (τ (x i))))) →
+                  (∀ (i : Fin m), la i ≠ 0) →
+                    ∀ (φ : K →+* ℂ),
+                      φ.comp (algebraMap GaussianInt K) = GaussianInt.toComplex →
+                        (MvPolynomial.eval fun i => φ (x i)) (FixedQuadratic.formalMinor T j s h b a) ≠ 0 →
+                          ∀ (w : Fin m → ℝ) (F v w0 wmin D rebate : ℝ),
+                            0 ≤ F →
+                              0 < v →
+                                0 < w0 →
+                                  0 < wmin →
+                                    0 < D →
+                                      (∀ (i : Fin m), wmin ≤ w i) →
+                                        (∀ (i : Fin m), ↑(T i) ≤ F * w i / v + 1) →
+                                          ∑ i, w i * ↑(FixedQuadratic.minorDegrees a b i) ≤ D * (1 - rebate) →
+                                            0 ≤ rebate →
+                                              ↑(∑ r, s r) ≤ D / v →
+                                                ↑(∑ c, h c) ≤ D / w0 →
+                                                  ↑(∑ c, ∑ i, a c i) ≤ D / wmin →
+                                                    (∀ (i : Fin m), Real.log (⋯ * ⋯) ≤ w i + Real.log √3) →
+                                                      -(1 - rebate) - FixedQuadratic.arithmeticError F v w0 wmin k -
+                                                          Real.log ↑(Fintype.card ι).factorial / D ≤
+                                                        Real.log ‖⋯‖ / D
+'FixedQuadratic.formal_minor_fixed_field_normalized_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.integerMinpoly : ℝ → Polynomial ℤ
+'FixedQuadratic.integerMinpoly' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly : ℝ → Polynomial ℤ
+'FixedQuadratic.primitiveMinpoly' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpolyHeight : ℝ → ℕ
+'FixedQuadratic.primitiveMinpolyHeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.integerMinpoly_natDegree : ∀ (x : ℝ),
+  (FixedQuadratic.integerMinpoly x).natDegree = (minpoly ℚ x).natDegree
+'FixedQuadratic.integerMinpoly_natDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_natDegree : ∀ (x : ℝ),
+  (FixedQuadratic.primitiveMinpoly x).natDegree = (minpoly ℚ x).natDegree
+'FixedQuadratic.primitiveMinpoly_natDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_primitive : ∀ (x : ℝ), (FixedQuadratic.primitiveMinpoly x).IsPrimitive
+'FixedQuadratic.primitiveMinpoly_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_leadingCoeff_pos : ∀ (x : ℝ), 0 < (FixedQuadratic.primitiveMinpoly x).leadingCoeff
+'FixedQuadratic.primitiveMinpoly_leadingCoeff_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.integral_of_minpoly_degree_two : ∀ (x : ℝ), (minpoly ℚ x).natDegree = 2 → IsIntegral ℚ x
+'FixedQuadratic.integral_of_minpoly_degree_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_aeval : ∀ (x : ℝ),
+  (minpoly ℚ x).natDegree = 2 → (Polynomial.aeval x) (FixedQuadratic.primitiveMinpoly x) = 0
+'FixedQuadratic.primitiveMinpoly_aeval' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.quadratic_eq_coefficients : ∀ (p : Polynomial ℤ),
+  p.natDegree = 2 →
+    p = Polynomial.C (p.coeff 2) * Polynomial.X ^ 2 + Polynomial.C (p.coeff 1) * Polynomial.X + Polynomial.C (p.coeff 0)
+'FixedQuadratic.quadratic_eq_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_coeff_two_pos : ∀ (x : ℝ),
+  (minpoly ℚ x).natDegree = 2 → 0 < (FixedQuadratic.primitiveMinpoly x).coeff 2
+'FixedQuadratic.primitiveMinpoly_coeff_two_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_map_associated : ∀ (x : ℝ),
+  (minpoly ℚ x).natDegree = 2 →
+    Associated (minpoly ℚ x) (Polynomial.map (algebraMap ℤ ℚ) (FixedQuadratic.primitiveMinpoly x))
+'FixedQuadratic.primitiveMinpoly_map_associated' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_irreducible : ∀ (x : ℝ),
+  (minpoly ℚ x).natDegree = 2 → Irreducible (FixedQuadratic.primitiveMinpoly x)
+'FixedQuadratic.primitiveMinpoly_irreducible' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_three_gcd : ∀ (x : ℝ),
+  (minpoly ℚ x).natDegree = 2 →
+    (↑(((FixedQuadratic.primitiveMinpoly x).coeff 2).gcd ((FixedQuadratic.primitiveMinpoly x).coeff 1))).gcd
+        ((FixedQuadratic.primitiveMinpoly x).coeff 0) =
+      1
+'FixedQuadratic.primitiveMinpoly_three_gcd' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpolyHeight_box : ∀ (x : ℝ),
+  (minpoly ℚ x).natDegree = 2 →
+    ∀ (H : ℕ), FixedQuadratic.primitiveMinpolyHeight x ≤ H → x ∈ FixedQuadratic.boundedQuadraticRoots H
+'FixedQuadratic.primitiveMinpolyHeight_box' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpolyHeight_unbounded : ∀ (S : Set ℝ),
+  S.Infinite → (∀ x ∈ S, (minpoly ℚ x).natDegree = 2) → ∀ (H : ℕ), ∃ x ∈ S, H < FixedQuadratic.primitiveMinpolyHeight x
+'FixedQuadratic.primitiveMinpolyHeight_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveConjugate : ℝ → ℝ
+'FixedQuadratic.primitiveConjugate' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_root_relations : ∀ (x : ℝ),
+  (minpoly ℚ x).natDegree = 2 →
+    ↑((FixedQuadratic.primitiveMinpoly x).coeff 1) =
+        -↑((FixedQuadratic.primitiveMinpoly x).coeff 2) * (x + FixedQuadratic.primitiveConjugate x) ∧
+      ↑((FixedQuadratic.primitiveMinpoly x).coeff 0) =
+        ↑((FixedQuadratic.primitiveMinpoly x).coeff 2) * x * FixedQuadratic.primitiveConjugate x
+'FixedQuadratic.primitiveMinpoly_root_relations' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_mahler_le : ∀ (x : ℝ),
+  (minpoly ℚ x).natDegree = 2 →
+    FixedQuadratic.quadraticMahler (↑((FixedQuadratic.primitiveMinpoly x).coeff 2)) x
+        (FixedQuadratic.primitiveConjugate x) ≤
+      √3 * ↑(FixedQuadratic.primitiveMinpolyHeight x)
+'FixedQuadratic.primitiveMinpoly_mahler_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpolyHeight_pos : ∀ (x : ℝ),
+  (minpoly ℚ x).natDegree = 2 → 0 < FixedQuadratic.primitiveMinpolyHeight x
+'FixedQuadratic.primitiveMinpolyHeight_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_real_factorization : ∀ (x : ℝ),
+  (minpoly ℚ x).natDegree = 2 →
+    Polynomial.map (algebraMap ℤ ℝ) (FixedQuadratic.primitiveMinpoly x) =
+      Polynomial.C ↑((FixedQuadratic.primitiveMinpoly x).coeff 2) *
+        ((Polynomial.X - Polynomial.C x) * (Polynomial.X - Polynomial.C (FixedQuadratic.primitiveConjugate x)))
+'FixedQuadratic.primitiveMinpoly_real_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.primitiveMinpoly_mahler_log_le : ∀ (x : ℝ),
+  (minpoly ℚ x).natDegree = 2 →
+    Real.log
+        (FixedQuadratic.quadraticMahler (↑((FixedQuadratic.primitiveMinpoly x).coeff 2)) x
+          (FixedQuadratic.primitiveConjugate x)) ≤
+      ↑⌈Real.log ↑(FixedQuadratic.primitiveMinpolyHeight x)⌉₊ + Real.log √3
+'FixedQuadratic.primitiveMinpoly_mahler_log_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimensionK : ℝ → ℕ → ℕ
+'FixedQuadratic.dimensionK' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimensionW : ℝ → ℕ → ℝ
+'FixedQuadratic.dimensionW' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimensionV : ℝ → ℝ → ℝ → ℕ → ℝ
+'FixedQuadratic.dimensionV' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimensionK_le : ∀ (C : ℝ), 0 ≤ C → ∀ (m : ℕ), ↑(FixedQuadratic.dimensionK C m) ≤ C ^ m
+'FixedQuadratic.dimensionK_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimensionK_one_le : ∀ (C : ℝ), 1 ≤ C → ∀ (m : ℕ), 1 ≤ FixedQuadratic.dimensionK C m
+'FixedQuadratic.dimensionK_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimensionW_pos : ∀ (B : ℝ), 0 < B → ∀ (m : ℕ), 0 < FixedQuadratic.dimensionW B m
+'FixedQuadratic.dimensionW_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimensionV_pos : ∀ (theta B C : ℝ),
+  0 < theta → 0 < B → 1 ≤ C → ∀ (m : ℕ), 0 < FixedQuadratic.dimensionV theta B C m
+'FixedQuadratic.dimensionV_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimension_volume : ∀ (theta B C : ℝ),
+  0 < theta →
+    0 < B →
+      1 ≤ C →
+        ∀ (m : ℕ),
+          ↑(FixedQuadratic.dimensionK C m) * (FixedQuadratic.dimensionW B m / FixedQuadratic.dimensionV theta B C m) *
+              theta ^ m =
+            1 / 2
+'FixedQuadratic.dimension_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimensionK_div_W_le : ∀ (B C : ℝ),
+  0 < B → 0 ≤ C → ∀ (m : ℕ), ↑(FixedQuadratic.dimensionK C m) / FixedQuadratic.dimensionW B m ≤ (C * B) ^ m
+'FixedQuadratic.dimensionK_div_W_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimensionV_geometric_lower : ∀ (theta B C : ℝ),
+  0 < theta → 0 < B → ∀ (m : ℕ), 2 ≤ C ^ m → (C * theta / B) ^ m ≤ FixedQuadratic.dimensionV theta B C m
+'FixedQuadratic.dimensionV_geometric_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimension_volume_lt_one : ∀ (theta C : ℝ),
+  0 < theta → 0 ≤ C → C * theta < 1 → ∀ (m : ℕ), 1 ≤ m → ↑(FixedQuadratic.dimensionK C m) * theta ^ m < 1
+'FixedQuadratic.dimension_volume_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimension_error_le : ∀ (theta B C a b d : ℝ),
+  0 < theta →
+    0 < B →
+      0 ≤ C →
+        0 ≤ a →
+          0 ≤ b →
+            0 ≤ d →
+              ∀ (m : ℕ),
+                2 ≤ C ^ m →
+                  (a * ↑m + b) / FixedQuadratic.dimensionV theta B C m +
+                      d * ↑(FixedQuadratic.dimensionK C m) / FixedQuadratic.dimensionW B m ≤
+                    (a * ↑m + b) / (C * theta / B) ^ m + d * (C * B) ^ m
+'FixedQuadratic.dimension_error_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.dimension_collision_identity : ∀ (theta A B C eta : ℝ),
+  0 < theta →
+    0 < A →
+      0 < B →
+        1 ≤ C →
+          ∀ (m : ℕ),
+            eta ^ 2 * ↑(FixedQuadratic.dimensionK C m) * theta ^ m /
+                ((↑m + 1) * FixedQuadratic.dimensionV theta B C m * A ^ m) =
+              eta ^ 2 * (B / A) ^ m / (2 * (↑m + 1))
+'FixedQuadratic.dimension_collision_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.tendsto_dimension_error_majorant : ∀ (theta B C a b d : ℝ),
+  0 < B →
+    0 < C →
+      C * B < 1 →
+        1 < C * theta / B →
+          Filter.Tendsto (fun m => (a * ↑m + b) / (C * theta / B) ^ m + d * (C * B) ^ m) Filter.atTop (nhds 0)
+'FixedQuadratic.tendsto_dimension_error_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.tendsto_dimension_collision : ∀ (A B eta : ℝ),
+  1 < B / A → 0 < eta → Filter.Tendsto (fun m => eta ^ 2 * (B / A) ^ m / (2 * (↑m + 1))) Filter.atTop Filter.atTop
+'FixedQuadratic.tendsto_dimension_collision' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.exists_dimension_margin : ∀ (theta A B C eta a b d epsilon target : ℝ),
+  0 < theta →
+    0 < B →
+      1 < C →
+        C * B < 1 →
+          1 < C * theta / B →
+            1 < B / A →
+              0 < eta →
+                0 ≤ a →
+                  0 ≤ b →
+                    0 ≤ d →
+                      0 < epsilon →
+                        ∃ m,
+                          1 ≤ m ∧
+                            (a * ↑m + b) / FixedQuadratic.dimensionV theta B C m +
+                                  d * ↑(FixedQuadratic.dimensionK C m) / FixedQuadratic.dimensionW B m <
+                                epsilon ∧
+                              target < eta ^ 2 * (B / A) ^ m / (2 * (↑m + 1))
+'FixedQuadratic.exists_dimension_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.analyticError : ℝ → ℝ → ℝ → ℝ → ℝ → ℕ → ℝ
+'FixedQuadratic.analyticError' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.heightErrorCoefficient : ℝ → ℕ → ℝ
+'FixedQuadratic.heightErrorCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.changed_error_sum : ∀ (nu F v w0 wmin : ℝ) (k : ℕ),
+  FixedQuadratic.arithmeticError F v w0 wmin k + FixedQuadratic.analyticError nu F v w0 wmin k =
+    nu / F + (2 * FixedQuadratic.formalLcmConstant * F + 3 * Real.log 2) / v + (100 * ↑k + Real.log (3 / 2)) / w0 +
+      FixedQuadratic.heightErrorCoefficient nu k / wmin
+'FixedQuadratic.changed_error_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.changed_error_lt : ∀ (nu F v w0 wmin epsilon : ℝ) (k : ℕ),
+  nu / F < epsilon / 3 →
+    (2 * FixedQuadratic.formalLcmConstant * F + 3 * Real.log 2) / v + (100 * ↑k + Real.log (3 / 2)) / w0 < epsilon / 3 →
+      FixedQuadratic.heightErrorCoefficient nu k / wmin < epsilon / 3 →
+        FixedQuadratic.arithmeticError F v w0 wmin k + FixedQuadratic.analyticError nu F v w0 wmin k < epsilon
+'FixedQuadratic.changed_error_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.changed_collision_margin : ∀ (nu F v w0 wmin epsilon saving : ℝ) (k : ℕ),
+  nu / F < epsilon / 3 →
+    (2 * FixedQuadratic.formalLcmConstant * F + 3 * Real.log 2) / v + (100 * ↑k + Real.log (3 / 2)) / w0 < epsilon / 3 →
+      FixedQuadratic.heightErrorCoefficient nu k / wmin < epsilon / 3 →
+        epsilon ≤ 1 / 2 →
+          2 < saving →
+            1 + FixedQuadratic.arithmeticError F v w0 wmin k + FixedQuadratic.analyticError nu F v w0 wmin k < saving
+'FixedQuadratic.changed_collision_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.exists_changed_dimension_margin : ∀ (theta A B C eta F epsilon target : ℝ),
+  0 < theta →
+    0 < B →
+      1 < C →
+        C * B < 1 →
+          1 < C * theta / B →
+            1 < B / A →
+              0 < eta →
+                0 ≤ F →
+                  0 < epsilon →
+                    ∃ m,
+                      1 ≤ m ∧
+                        (2 * FixedQuadratic.formalLcmConstant * F + 3 * Real.log 2) /
+                                FixedQuadratic.dimensionV theta B C m +
+                              (100 * ↑(FixedQuadratic.dimensionK C m) + Real.log (3 / 2)) /
+                                FixedQuadratic.dimensionW B m <
+                            epsilon ∧
+                          target < eta ^ 2 * (B / A) ^ m / (2 * (↑m + 1))
+'FixedQuadratic.exists_changed_dimension_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.exists_changed_height_margin : ∀ (nu : ℝ) (k : ℕ) (epsilon : ℝ),
+  0 < epsilon → ∃ X, 1 ≤ X ∧ ∀ (wmin : ℝ), X ≤ wmin → FixedQuadratic.heightErrorCoefficient nu k / wmin < epsilon
+'FixedQuadratic.exists_changed_height_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.log_factorial_le : ∀ (n : ℕ), Real.log ↑n.factorial ≤ ↑n * Real.log ↑n
+'FixedQuadratic.log_factorial_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.factorial_remainder_tendsto : ∀ (M : ℕ → ℕ) (C : ℝ) (d : ℕ),
+  0 < C →
+    (∀ᶠ (N : ℕ) in Filter.atTop, 0 < M N ∧ ↑(M N) ≤ C * ↑N ^ d) →
+      Filter.Tendsto (fun N => Real.log ↑(M N).factorial / (↑(M N) * ↑N)) Filter.atTop (nhds 0)
+'FixedQuadratic.factorial_remainder_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.degree_two_ne_zero : ∀ (x : ℝ), (minpoly ℚ x).natDegree = 2 → x ≠ 0
+'FixedQuadratic.degree_two_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.exists_large_primitive_log_height : ∀ (S : Set ℝ),
+  S.Infinite →
+    (∀ x ∈ S, (minpoly ℚ x).natDegree = 2) →
+      ∀ (T : ℝ),
+        ∃ x ∈ S,
+          x ≠ 0 ∧ 2 ≤ FixedQuadratic.primitiveMinpolyHeight x ∧ T < Real.log ↑(FixedQuadratic.primitiveMinpolyHeight x)
+'FixedQuadratic.exists_large_primitive_log_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.exists_successive_primitive_centers : ∀ (S : Set ℝ),
+  S.Infinite →
+    (∀ x ∈ S, (minpoly ℚ x).natDegree = 2) →
+      ∀ (T : List ℝ → ℝ),
+        ∃ β,
+          ∀ (n : ℕ),
+            β n ∈ S ∧
+              β n ≠ 0 ∧
+                2 ≤ FixedQuadratic.primitiveMinpolyHeight (β n) ∧
+                  1 ≤ ⌈Real.log ↑(FixedQuadratic.primitiveMinpolyHeight (β n))⌉₊ ∧
+                    T
+                        (List.map (fun i => ↑⌈Real.log ↑(FixedQuadratic.primitiveMinpolyHeight (β i))⌉₊)
+                          (List.range n).reverse) <
+                      ↑⌈Real.log ↑(FixedQuadratic.primitiveMinpolyHeight (β n))⌉₊
+'FixedQuadratic.exists_successive_primitive_centers' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.nonmonic_resultant : GaussianInt.toComplex
+    ((Polynomial.C 2 * (Polynomial.X ^ 2 - Polynomial.C 2)).resultant Polynomial.X 2 1) =
+  -4
+'FixedQuadratic.Regression.nonmonic_resultant' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.omitted_coefficient_cost_is_false : ¬1 ≤ |3 - 2 * √2| * √2
+'FixedQuadratic.Regression.omitted_coefficient_cost_is_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.sqrt_two_mahler : FixedQuadratic.quadraticMahler 1 (√2) (-√2) = 2
+'FixedQuadratic.Regression.sqrt_two_mahler' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.cancellation_minor : !![MvPolynomial.X 0, MvPolynomial.X 0 + 1;
+      MvPolynomial.X 0 - 1, MvPolynomial.X 0].det =
+  1
+'FixedQuadratic.Regression.cancellation_minor' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.cancellation_degree : MvPolynomial.degreeOf 0
+    !![MvPolynomial.X 0, MvPolynomial.X 0 + 1; MvPolynomial.X 0 - 1, MvPolynomial.X 0].det =
+  0
+'FixedQuadratic.Regression.cancellation_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.bounded_height_two_finite : (FixedQuadratic.boundedQuadraticRoots 2).Finite
+'FixedQuadratic.Regression.bounded_height_two_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.even_sqrt_two_norm : 1 ≤
+  ‖Polynomial.eval (↑√2) (Polynomial.map GaussianInt.toComplex (Polynomial.X ^ 2 + Polynomial.C 1))‖
+'FixedQuadratic.Regression.even_sqrt_two_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.odd_sqrt_two_norm : 1 ≤
+  ‖Polynomial.eval (↑√2) (Polynomial.map GaussianInt.toComplex Polynomial.X)‖
+'FixedQuadratic.Regression.odd_sqrt_two_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.nonparity_eval_below_one : ‖Polynomial.eval (↑√2)
+      (Polynomial.map GaussianInt.toComplex (Polynomial.C 3 - Polynomial.C 2 * Polynomial.X))‖ <
+  1
+'FixedQuadratic.Regression.nonparity_eval_below_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.primitive_three_coefficients : ∃ u v w, u * 6 + v * 10 + w * 15 = 1
+'FixedQuadratic.Regression.primitive_three_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.nonmonic_local_root_identity : ∀ (v : AbsoluteValue ℚ ℝ),
+  IsNonarchimedean ⇑v → v 2 * max 1 (v 1) * max 1 (v (1 / 2)) = 1
+'FixedQuadratic.Regression.nonmonic_local_root_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.dependent_sqrt_two_local : ∀ (v : AbsoluteValue ℂ ℝ), IsNonarchimedean ⇑v → v (-8) ≤ 1
+'FixedQuadratic.Regression.dependent_sqrt_two_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.Regression.repeated_coordinate_gaussian : ∀ {G : Type u_1} {K : Type u_2} [inst : Field G]
+  [inst_1 : Field K] [NumberField K] [inst_3 : Algebra GaussianInt G] [IsFractionRing GaussianInt G]
+  [inst_5 : Algebra G K] [inst_6 : Algebra GaussianInt K] [IsScalarTower GaussianInt G K] [FiniteDimensional G K]
+  [IsGalois G K],
+  Module.finrank G K = 2 →
+    ∀ (τ : Gal(K/G)),
+      τ ≠ 1 →
+        ∀ (a b c : ℤ) (β : K),
+          (↑(a.gcd b)).gcd c = 1 →
+            Polynomial.C ↑a * Polynomial.X ^ 2 + Polynomial.C ↑b * Polynomial.X + Polynomial.C ↑c =
+                Polynomial.C ↑a * ((Polynomial.X - Polynomial.C β) * (Polynomial.X - Polynomial.C (τ β))) →
+              ↑a ^ 2 * (β + β) * (τ β + τ β) ∈ (algebraMap GaussianInt K).range
+'FixedQuadratic.Regression.repeated_coordinate_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.formal_entry_linear : (FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => 0) 0 0
+    (fun x => 1) fun x => 2) =
+  MvPolynomial.C (4 * Complex.I) * MvPolynomial.X 0
+'FixedQuadratic.Regression.formal_entry_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.formal_entry_log_coefficient : (FixedQuadratic.formalEntry (fun x => 2 * Complex.I)
+    (fun x => Polynomial.X - Polynomial.C (1 / 2) * Polynomial.X ^ 2) 2 0 (fun x => 1) fun x => 2) =
+  MvPolynomial.C (-1)
+'FixedQuadratic.Regression.formal_entry_log_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_log_three : FixedQuadratic.truncatedLog 3 =
+  Polynomial.X - Polynomial.C (1 / 2) * Polynomial.X ^ 2
+'FixedQuadratic.Regression.actual_log_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_log_entry_cleared : (MvPolynomial.C 2 *
+    FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 3) 2 0 (fun x => 0)
+      fun x => 1) =
+  MvPolynomial.C (-1)
+'FixedQuadratic.Regression.actual_log_entry_cleared' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.empty_log_denominator : FixedQuadratic.logDenominator 0 = 1 ∧
+  FixedQuadratic.logDenominator 1 = 1
+'FixedQuadratic.Regression.empty_log_denominator' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_log_entry_integral : (MvPolynomial.C 2 *
+    FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 3) 2 0 (fun x => 0)
+      fun x => 1) ∈
+  (MvPolynomial.map GaussianInt.toComplex).range
+'FixedQuadratic.Regression.actual_log_entry_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.long_truncation_uniform : FixedQuadratic.timeCoefficientL1
+    (Polynomial.map MvPolynomial.C (FixedQuadratic.truncatedLog 100)) (1 / 2) ≤
+  2
+'FixedQuadratic.Regression.long_truncation_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_log_entry_l1 : FixedQuadratic.multiCoefficientL1
+    (MvPolynomial.C 2 *
+      FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 3) 2 0 (fun x => 0)
+        fun x => 1) =
+  1
+'FixedQuadratic.Regression.actual_log_entry_l1' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_empty_log_entry_envelope : FixedQuadratic.multiCoefficientL1
+    (FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 1) 0 0 (fun x => 0)
+      fun x => 2) ≤
+  64
+'FixedQuadratic.Regression.actual_empty_log_entry_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.sqrt_two_degree_two : (minpoly ℚ √2).natDegree = 2
+'FixedQuadratic.Regression.sqrt_two_degree_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.sqrt_two_actual_primitive_data : (FixedQuadratic.primitiveMinpoly √2).IsPrimitive ∧
+  Irreducible (FixedQuadratic.primitiveMinpoly √2) ∧
+    0 < (FixedQuadratic.primitiveMinpoly √2).coeff 2 ∧
+      (↑(((FixedQuadratic.primitiveMinpoly √2).coeff 2).gcd ((FixedQuadratic.primitiveMinpoly √2).coeff 1))).gcd
+          ((FixedQuadratic.primitiveMinpoly √2).coeff 0) =
+        1
+'FixedQuadratic.Regression.sqrt_two_actual_primitive_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.sqrt_two_actual_height_mahler : Real.log
+    (FixedQuadratic.quadraticMahler (↑((FixedQuadratic.primitiveMinpoly √2).coeff 2)) (√2)
+      (FixedQuadratic.primitiveConjugate √2)) ≤
+  ↑⌈Real.log ↑(FixedQuadratic.primitiveMinpolyHeight √2)⌉₊ + Real.log √3
+'FixedQuadratic.Regression.sqrt_two_actual_height_mahler' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_height_two_finite : {x |
+    (minpoly ℚ x).natDegree = 2 ∧ FixedQuadratic.primitiveMinpolyHeight x ≤ 2}.Finite
+'FixedQuadratic.Regression.actual_height_two_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_coefficient_envelope_36 : (FixedQuadratic.minorCoefficientEnvelope 1 (fun x => 1)
+    (fun x => 2) (fun x x_1 => 1) fun x x_1 => 0) =
+  36
+'FixedQuadratic.Regression.actual_coefficient_envelope_36' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.polynomial_row_factorial_vanishes : Filter.Tendsto
+  (fun N => Real.log ↑(N ^ 2).factorial / (↑(N ^ 2) * ↑N)) Filter.atTop (nhds 0)
+'FixedQuadratic.Regression.polynomial_row_factorial_vanishes' depends on axioms: [propext, Classical.choice, Quot.sound]

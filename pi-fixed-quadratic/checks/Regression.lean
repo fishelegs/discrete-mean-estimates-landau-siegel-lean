@@ -1,3 +1,6 @@
+import FixedQuadratic.Selection
+import FixedQuadratic.ErrorLimits
+import Mathlib.NumberTheory.Real.Irrational
 import FixedQuadratic.FormalEntry
 import FixedQuadratic.LogClearing
 import FixedQuadratic.MinorEnvelope
@@ -238,5 +241,57 @@ theorem actual_empty_log_entry_envelope :
     1 1 0 0 (fun _ => 0) (fun _ => 2) le_rfl
   norm_num at hh
   exact hh
+
+theorem sqrt_two_degree_two : (minpoly ℚ (Real.sqrt 2)).natDegree = 2 := by
+  have hp : Polynomial.aeval (Real.sqrt 2) (X^2-C 2 : Polynomial ℚ) = 0 := by
+    simp only [map_sub, map_pow, aeval_X, aeval_C]
+    norm_num [Real.sq_sqrt (show 0 ≤ (2 : ℝ) by norm_num)]
+  have hi : IsIntegral ℚ (Real.sqrt 2) :=
+    ⟨X^2-C 2, monic_X_pow_sub_C (2 : ℚ) (by norm_num : 2 ≠ 0), hp⟩
+  have hlow := (minpoly.two_le_natDegree_iff hi).mpr irrational_sqrt_two
+  have hdiv := minpoly.dvd ℚ (Real.sqrt 2) hp
+  have hnonzero : (X^2-C 2 : Polynomial ℚ) ≠ 0 := by
+    exact (monic_X_pow_sub_C (2 : ℚ) (by norm_num : 2 ≠ 0)).ne_zero
+  have hupper := Polynomial.natDegree_le_of_dvd hdiv hnonzero
+  norm_num [natDegree_X_pow_sub_C] at hupper
+  omega
+
+theorem sqrt_two_actual_primitive_data :
+    (primitiveMinpoly (Real.sqrt 2)).IsPrimitive ∧
+    Irreducible (primitiveMinpoly (Real.sqrt 2)) ∧
+    0 < (primitiveMinpoly (Real.sqrt 2)).coeff 2 ∧
+    Int.gcd (Int.gcd ((primitiveMinpoly (Real.sqrt 2)).coeff 2)
+      ((primitiveMinpoly (Real.sqrt 2)).coeff 1) : ℤ)
+      ((primitiveMinpoly (Real.sqrt 2)).coeff 0) = 1 :=
+  ⟨primitiveMinpoly_primitive _, primitiveMinpoly_irreducible _ sqrt_two_degree_two,
+    primitiveMinpoly_coeff_two_pos _ sqrt_two_degree_two,
+    primitiveMinpoly_three_gcd _ sqrt_two_degree_two⟩
+
+theorem sqrt_two_actual_height_mahler :
+    Real.log (quadraticMahler ((primitiveMinpoly (Real.sqrt 2)).coeff 2 : ℝ)
+      (Real.sqrt 2) (primitiveConjugate (Real.sqrt 2))) ≤
+      (Nat.ceil (Real.log (primitiveMinpolyHeight (Real.sqrt 2) : ℝ)) : ℝ)+
+      Real.log (Real.sqrt 3) :=
+  primitiveMinpoly_mahler_log_le _ sqrt_two_degree_two
+
+theorem actual_height_two_finite :
+    {x : ℝ | (minpoly ℚ x).natDegree = 2 ∧ primitiveMinpolyHeight x ≤ 2}.Finite := by
+  apply (finite_boundedQuadraticRoots 2).subset
+  intro x hx
+  exact primitiveMinpolyHeight_box x hx.1 2 hx.2
+
+theorem actual_coefficient_envelope_36 :
+    minorCoefficientEnvelope (ι := Fin 1) 1 (fun _ => 1) (fun _ => 2)
+      (fun _ _ => 1) (fun _ _ => 0 : Fin 1 → Fin 1 → ℕ) = 36 := by
+  norm_num [minorCoefficientEnvelope, minorDegrees]
+
+theorem polynomial_row_factorial_vanishes : Filter.Tendsto
+    (fun N : ℕ => Real.log ((N^2).factorial : ℝ)/((N^2 : ℕ)*N : ℝ))
+    Filter.atTop (nhds 0) := by
+  apply factorial_remainder_tendsto (fun N => N^2) 1 2 (by norm_num)
+  filter_upwards [Filter.eventually_ge_atTop 1] with N hN
+  constructor
+  · positivity
+  · simp
 
 end FixedQuadratic.Regression
