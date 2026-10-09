@@ -1,3 +1,4 @@
+import FixedQuadratic
 import FixedQuadratic.Clearing
 import FixedQuadratic.Comparison
 import FixedQuadratic.Conjugation
@@ -187,3 +188,195 @@ import checks.Regression
 #print axioms FixedQuadratic.Regression.formal_entry_linear
 #check @FixedQuadratic.Regression.formal_entry_log_coefficient
 #print axioms FixedQuadratic.Regression.formal_entry_log_coefficient
+
+#check @FixedQuadratic.truncatedLog
+#print axioms FixedQuadratic.truncatedLog
+
+#check @FixedQuadratic.logDenominator
+#print axioms FixedQuadratic.logDenominator
+
+#check @FixedQuadratic.logDenominator_pos
+#print axioms FixedQuadratic.logDenominator_pos
+
+#check @FixedQuadratic.logDenominator_log_coeff
+#print axioms FixedQuadratic.logDenominator_log_coeff
+
+#check @FixedQuadratic.cleared_truncatedLog_gaussian
+#print axioms FixedQuadratic.cleared_truncatedLog_gaussian
+
+#check @FixedQuadratic.scalar_product_mul_coeff
+#print axioms FixedQuadratic.scalar_product_mul_coeff
+
+#check @FixedQuadratic.cleared_lifted_truncatedLog_gaussian
+#print axioms FixedQuadratic.cleared_lifted_truncatedLog_gaussian
+
+#check @FixedQuadratic.cleared_center_gaussian
+#print axioms FixedQuadratic.cleared_center_gaussian
+
+#check @FixedQuadratic.cleared_shifted_truncatedLog_gaussian
+#print axioms FixedQuadratic.cleared_shifted_truncatedLog_gaussian
+
+#check @FixedQuadratic.formalEntry_truncatedLog_cleared_gaussian
+#print axioms FixedQuadratic.formalEntry_truncatedLog_cleared_gaussian
+
+#check @FixedQuadratic.formal_minor_truncatedLog_cleared_gaussian
+#print axioms FixedQuadratic.formal_minor_truncatedLog_cleared_gaussian
+
+#check @FixedQuadratic.multiCoefficientL1_nonneg
+#print axioms FixedQuadratic.multiCoefficientL1_nonneg
+
+#check @FixedQuadratic.multiCoefficientL1_on_superset
+#print axioms FixedQuadratic.multiCoefficientL1_on_superset
+
+#check @FixedQuadratic.multiCoefficientL1_add_le
+#print axioms FixedQuadratic.multiCoefficientL1_add_le
+
+#check @FixedQuadratic.multiCoefficientL1_zero
+#print axioms FixedQuadratic.multiCoefficientL1_zero
+
+#check @FixedQuadratic.multiCoefficientL1_monomial
+#print axioms FixedQuadratic.multiCoefficientL1_monomial
+
+#check @FixedQuadratic.multiCoefficientL1_sum_le
+#print axioms FixedQuadratic.multiCoefficientL1_sum_le
+
+#check @FixedQuadratic.multiCoefficientL1_mul_le
+#print axioms FixedQuadratic.multiCoefficientL1_mul_le
+
+#check @FixedQuadratic.multiCoefficientL1_C
+#print axioms FixedQuadratic.multiCoefficientL1_C
+
+#check @FixedQuadratic.multiCoefficientL1_one
+#print axioms FixedQuadratic.multiCoefficientL1_one
+
+#check @FixedQuadratic.multiCoefficientL1_prod_le
+#print axioms FixedQuadratic.multiCoefficientL1_prod_le
+
+#check @FixedQuadratic.multiCoefficientL1_pow_le
+#print axioms FixedQuadratic.multiCoefficientL1_pow_le
+
+#check @FixedQuadratic.multiCoefficientL1_neg
+#print axioms FixedQuadratic.multiCoefficientL1_neg
+
+#check @FixedQuadratic.determinant_l1_le
+#print axioms FixedQuadratic.determinant_l1_le
+
+#check @FixedQuadratic.determinant_l1_factorial_le
+#print axioms FixedQuadratic.determinant_l1_factorial_le
+
+#check @FixedQuadratic.Regression.actual_log_three
+#print axioms FixedQuadratic.Regression.actual_log_three
+
+#check @FixedQuadratic.Regression.actual_log_entry_cleared
+#print axioms FixedQuadratic.Regression.actual_log_entry_cleared
+
+#check @FixedQuadratic.Regression.empty_log_denominator
+#print axioms FixedQuadratic.Regression.empty_log_denominator
+
+#check @FixedQuadratic.Regression.actual_log_entry_integral
+#print axioms FixedQuadratic.Regression.actual_log_entry_integral
+
+#check @FixedQuadratic.timeCoefficientL1
+#print axioms FixedQuadratic.timeCoefficientL1
+
+#check @FixedQuadratic.timeCoefficientL1_nonneg
+#print axioms FixedQuadratic.timeCoefficientL1_nonneg
+
+#check @FixedQuadratic.timeCoefficientL1_on_superset
+#print axioms FixedQuadratic.timeCoefficientL1_on_superset
+
+#check @FixedQuadratic.timeCoefficientL1_zero
+#print axioms FixedQuadratic.timeCoefficientL1_zero
+
+#check @FixedQuadratic.timeCoefficientL1_add_le
+#print axioms FixedQuadratic.timeCoefficientL1_add_le
+
+#check @FixedQuadratic.timeCoefficientL1_monomial
+#print axioms FixedQuadratic.timeCoefficientL1_monomial
+
+#check @FixedQuadratic.timeCoefficientL1_sum_le
+#print axioms FixedQuadratic.timeCoefficientL1_sum_le
+
+#check @FixedQuadratic.timeCoefficientL1_mul_le
+#print axioms FixedQuadratic.timeCoefficientL1_mul_le
+
+#check @FixedQuadratic.timeCoefficientL1_C
+#print axioms FixedQuadratic.timeCoefficientL1_C
+
+#check @FixedQuadratic.timeCoefficientL1_one
+#print axioms FixedQuadratic.timeCoefficientL1_one
+
+#check @FixedQuadratic.timeCoefficientL1_X
+#print axioms FixedQuadratic.timeCoefficientL1_X
+
+#check @FixedQuadratic.timeCoefficientL1_pow_le
+#print axioms FixedQuadratic.timeCoefficientL1_pow_le
+
+#check @FixedQuadratic.timeCoefficientL1_prod_le
+#print axioms FixedQuadratic.timeCoefficientL1_prod_le
+
+#check @FixedQuadratic.time_coefficient_bound
+#print axioms FixedQuadratic.time_coefficient_bound
+
+#check @FixedQuadratic.log_coeff_norm_le_one
+#print axioms FixedQuadratic.log_coeff_norm_le_one
+
+#check @FixedQuadratic.truncatedLog_time_l1_le_two
+#print axioms FixedQuadratic.truncatedLog_time_l1_le_two
+
+#check @FixedQuadratic.shifted_truncatedLog_time_l1_le
+#print axioms FixedQuadratic.shifted_truncatedLog_time_l1_le
+
+#check @FixedQuadratic.time_coefficient_half_bound
+#print axioms FixedQuadratic.time_coefficient_half_bound
+
+#check @FixedQuadratic.formalEntry_truncatedLog_l1_le
+#print axioms FixedQuadratic.formalEntry_truncatedLog_l1_le
+
+#check @FixedQuadratic.formalEntry_truncatedLog_l1_coarse
+#print axioms FixedQuadratic.formalEntry_truncatedLog_l1_coarse
+
+#check @FixedQuadratic.formal_minor_truncatedLog_l1_le
+#print axioms FixedQuadratic.formal_minor_truncatedLog_l1_le
+
+#check @FixedQuadratic.cleared_formal_minor_truncatedLog_l1_le
+#print axioms FixedQuadratic.cleared_formal_minor_truncatedLog_l1_le
+
+#check @FixedQuadratic.multiCoefficientL1_pos_of_eval_ne_zero
+#print axioms FixedQuadratic.multiCoefficientL1_pos_of_eval_ne_zero
+
+#check @FixedQuadratic.mapped_degreeOf_le
+#print axioms FixedQuadratic.mapped_degreeOf_le
+
+#check @FixedQuadratic.quadratic_multi_l1_mahler_lower
+#print axioms FixedQuadratic.quadratic_multi_l1_mahler_lower
+
+#check @FixedQuadratic.formalMinor
+#print axioms FixedQuadratic.formalMinor
+
+#check @FixedQuadratic.minorDegrees
+#print axioms FixedQuadratic.minorDegrees
+
+#check @FixedQuadratic.minorDenominator
+#print axioms FixedQuadratic.minorDenominator
+
+#check @FixedQuadratic.minorDenominator_pos
+#print axioms FixedQuadratic.minorDenominator_pos
+
+#check @FixedQuadratic.gaussian_degreeOf_of_map
+#print axioms FixedQuadratic.gaussian_degreeOf_of_map
+
+#check @FixedQuadratic.exists_gaussian_cleared_minor
+#print axioms FixedQuadratic.exists_gaussian_cleared_minor
+
+#check @FixedQuadratic.Regression.long_truncation_uniform
+#print axioms FixedQuadratic.Regression.long_truncation_uniform
+
+#check @FixedQuadratic.Regression.actual_log_entry_l1
+#print axioms FixedQuadratic.Regression.actual_log_entry_l1
+
+#check @FixedQuadratic.Regression.actual_empty_log_entry_envelope
+#print axioms FixedQuadratic.Regression.actual_empty_log_entry_envelope
+
+#check @FixedQuadratic.formal_minor_fixed_field_arithmetic
+#print axioms FixedQuadratic.formal_minor_fixed_field_arithmetic

@@ -3,3 +3,38 @@
   (MvPolynomial.eval β) (FixedQuadratic.formalEntry (fun x => 2 * ↑j * Complex.I) G s h b a) =
     OAI.PiExponent.InterpolationMatrix.entry (fun i => 2 * Complex.I * β i) G j s b h a
 'FixedQuadratic.UpstreamBridge.entry_specialization' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.UpstreamBridge.selectedFormalMinor : {m : ℕ} →
+  (K : ℕ) →
+    (w0 v0 θ : ℝ) →
+      (w : Fin m → ℝ) →
+        (H : ℝ) →
+          (Fin m → ℕ) →
+            (OAI.PiExponent.InterpolationMatrix.Row K v0 θ w H → OAI.PiExponent.InterpolationMatrix.Column w0 w H) →
+              MvPolynomial (Fin m) ℂ
+'FixedQuadratic.UpstreamBridge.selectedFormalMinor' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.UpstreamBridge.minor_specialization : ∀ {m : ℕ} (K : ℕ) (w0 v0 θ : ℝ) (w : Fin m → ℝ) (H : ℝ)
+  (T : Fin m → ℕ) (β : Fin m → ℂ)
+  (selection : OAI.PiExponent.InterpolationMatrix.Row K v0 θ w H → OAI.PiExponent.InterpolationMatrix.Column w0 w H),
+  (MvPolynomial.eval β) (FixedQuadratic.UpstreamBridge.selectedFormalMinor K w0 v0 θ w H T selection) =
+    ((OAI.PiExponent.InterpolationMatrix.truncatedLogMatrix K w0 v0 θ w H (fun i => 2 * Complex.I * β i) T).submatrix id
+        selection).det
+'FixedQuadratic.UpstreamBridge.minor_specialization' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.UpstreamBridge.selectedFormalMinor_ne_zero : ∀ {m : ℕ} (K : ℕ) (w0 v0 θ : ℝ) (w : Fin m → ℝ) (H : ℝ)
+  (T : Fin m → ℕ) (β : Fin m → ℂ)
+  (selection : OAI.PiExponent.InterpolationMatrix.Row K v0 θ w H → OAI.PiExponent.InterpolationMatrix.Column w0 w H),
+  ((OAI.PiExponent.InterpolationMatrix.truncatedLogMatrix K w0 v0 θ w H (fun i => 2 * Complex.I * β i) T).submatrix id
+          selection).det ≠
+      0 →
+    FixedQuadratic.UpstreamBridge.selectedFormalMinor K w0 v0 θ w H T selection ≠ 0
+'FixedQuadratic.UpstreamBridge.selectedFormalMinor_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.UpstreamBridge.selected_weighted_rebate_budget : ∀ {m : ℕ} (K : ℕ) (w0 v0 θ : ℝ) (w : Fin m → ℝ) (H : ℝ)
+  (T : Fin m → ℕ)
+  (selection : OAI.PiExponent.InterpolationMatrix.Row K v0 θ w H → OAI.PiExponent.InterpolationMatrix.Column w0 w H),
+  0 < w0 →
+    (∀ (i : Fin m), 0 < w i) →
+      FixedQuadratic.UpstreamBridge.selectedFormalMinor K w0 v0 θ w H T selection ≠ 0 →
+        ∑ i, w i * ↑(FixedQuadratic.minorDegrees (fun ρ i => ↑(selection ρ) i.succ) (fun ρ i => ↑ρ.2 i.succ) i) ≤
+          ↑(Fintype.card (OAI.PiExponent.InterpolationMatrix.Row K v0 θ w H)) * H - ∑ ρ, ∑ i, w i * ↑(↑ρ.2 i.succ)
+'FixedQuadratic.UpstreamBridge.selected_weighted_rebate_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

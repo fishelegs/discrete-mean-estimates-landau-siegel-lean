@@ -1,4 +1,6 @@
 import FixedQuadratic.FormalEntry
+import FixedQuadratic.LogClearing
+import FixedQuadratic.MinorEnvelope
 import FixedQuadratic.QuadraticNorm
 import FixedQuadratic.FinitePlace
 import FixedQuadratic.Envelope
@@ -182,5 +184,59 @@ theorem formal_entry_log_coefficient :
   simp [Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X]
   rw [← map_mul]
   norm_num
+
+theorem actual_log_three :
+    truncatedLog 3 = Polynomial.X - Polynomial.C (1/2 : ℂ)*Polynomial.X^2 := by
+  ext n
+  rw [truncatedLog, PowerSeries.coeff_trunc]
+  by_cases hn : n < 3
+  · rw [ite_eq_left hn, PowerSeries.coeff_log]
+    interval_cases n <;> norm_num [Polynomial.coeff_sub, Polynomial.coeff_X,
+      Polynomial.coeff_C_mul, Polynomial.coeff_X_pow]
+  · rw [ite_eq_right hn]
+    simp [Polynomial.coeff_sub, Polynomial.coeff_X, Polynomial.coeff_C_mul,
+      Polynomial.coeff_X_pow, show 1 ≠ n by omega, show n ≠ 2 by omega]
+
+theorem actual_log_entry_cleared :
+    MvPolynomial.C (2 : ℂ) *
+      formalEntry (fun _ : Fin 1 => 2*Complex.I) (fun _ => truncatedLog 3)
+        2 0 (fun _ => 0) (fun _ => 1) = MvPolynomial.C (-1) := by
+  rw [actual_log_three, formalEntry_split]
+  simp [Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X]
+  rw [← map_mul]
+  norm_num
+
+theorem empty_log_denominator : logDenominator 0 = 1 ∧ logDenominator 1 = 1 := by
+  norm_num [logDenominator, Nat.lcmUpto]
+
+theorem actual_log_entry_integral :
+    MvPolynomial.C (2 : ℂ) *
+      formalEntry (fun _ : Fin 1 => 2*Complex.I) (fun _ => truncatedLog 3)
+        2 0 (fun _ => 0) (fun _ => 1) ∈
+      (MvPolynomial.map GaussianInt.toComplex :
+        MvPolynomial (Fin 1) GaussianInt →+* MvPolynomial (Fin 1) ℂ).range := by
+  have h := formalEntry_truncatedLog_cleared_gaussian
+    (fun _ : Fin 1 => 3) 1 2 0 (fun _ => 0) (fun _ => 1)
+  norm_num [logDenominator, Nat.lcmUpto, Finset.lcm_insert] at h
+  exact h
+
+theorem long_truncation_uniform :
+    timeCoefficientL1 ((truncatedLog 100).map (MvPolynomial.C : ℂ →+*
+      MvPolynomial (Fin 2) ℂ)) (1/2) ≤ 2 := truncatedLog_time_l1_le_two 100
+
+theorem actual_log_entry_l1 :
+    multiCoefficientL1 (MvPolynomial.C (2 : ℂ) *
+      formalEntry (fun _ : Fin 1 => 2*Complex.I) (fun _ => truncatedLog 3)
+        2 0 (fun _ => 0) (fun _ => 1)) = 1 := by
+  rw [actual_log_entry_cleared, multiCoefficientL1_C]
+  simp
+
+theorem actual_empty_log_entry_envelope :
+    multiCoefficientL1 (formalEntry (fun _ : Fin 1 => 2*Complex.I)
+      (fun _ => truncatedLog 1) 0 0 (fun _ => 0) (fun _ => 2)) ≤ 64 := by
+  have hh := formalEntry_truncatedLog_l1_coarse (fun _ : Fin 1 => 1)
+    1 1 0 0 (fun _ => 0) (fun _ => 2) le_rfl
+  norm_num at hh
+  exact hh
 
 end FixedQuadratic.Regression

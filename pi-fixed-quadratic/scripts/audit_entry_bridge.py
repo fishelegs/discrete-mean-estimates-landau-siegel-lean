@@ -42,7 +42,10 @@ def main():
     with log.open('wb') as f:proc=subprocess.run(argv,cwd=ROOT,env=env,stdout=f,stderr=subprocess.STDOUT)
     assert proc.returncode==0 and dest.is_file(),log.read_text()
     reports=dict(re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]",log.read_text(),re.S))
-    assert set(reports)=={'FixedQuadratic.UpstreamBridge.entry_specialization'}
+    expected={'FixedQuadratic.UpstreamBridge.'+n for n in
+        ['entry_specialization','selectedFormalMinor','minor_specialization',
+         'selectedFormalMinor_ne_zero','selected_weighted_rebate_budget']}
+    assert set(reports)==expected
     axioms={}
     for name,s in reports.items():
         used={re.sub(r'\.\{[^}]*\}','',x.strip()) for x in s.split(',') if x.strip()}
@@ -53,6 +56,6 @@ def main():
         checkpoint_receipt_sha256=sha(cp/'replay-receipt.json'),source_sha256=sha(source),
         argv=argv,exit_code=proc.returncode,olean_sha256=sha(dest),log_sha256=sha(log),axiom_audit=axioms)
     (out/'entry-bridge-audit.json').write_text(json.dumps(result,indent=2)+'\n')
-    print('PASS: exact pinned upstream entry bridge; one additional type/axiom audit.')
+    print('PASS: exact pinned upstream entry/minor/weighted-budget bridge; five type/axiom audits.')
 
 if __name__=='__main__':main()

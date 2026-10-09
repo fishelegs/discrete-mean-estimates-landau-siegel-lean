@@ -14,3 +14,9 @@ import FixedQuadratic.FinitePlace
 import FixedQuadratic.NumberFieldIntegral
 import FixedQuadratic.QuadraticNorm
 import FixedQuadratic.FormalEntry
+import FixedQuadratic.LogClearing
+import FixedQuadratic.L1Norm
+import FixedQuadratic.TimeEnvelope
+import FixedQuadratic.MinorEnvelope
+import FixedQuadratic.MultiLower
+import FixedQuadratic.MinorArithmetic

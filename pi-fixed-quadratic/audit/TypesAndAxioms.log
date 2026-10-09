@@ -418,3 +418,302 @@ FixedQuadratic.Regression.formal_entry_log_coefficient : (FixedQuadratic.formalE
     (fun x => Polynomial.X - Polynomial.C (1 / 2) * Polynomial.X ^ 2) 2 0 (fun x => 1) fun x => 2) =
   MvPolynomial.C (-1)
 'FixedQuadratic.Regression.formal_entry_log_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.truncatedLog : ℕ → Polynomial ℂ
+'FixedQuadratic.truncatedLog' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.logDenominator : ℕ → ℕ
+'FixedQuadratic.logDenominator' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.logDenominator_pos : ∀ (T : ℕ), 0 < FixedQuadratic.logDenominator T
+'FixedQuadratic.logDenominator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.logDenominator_log_coeff : ∀ (T k : ℕ),
+  k < T → ↑(FixedQuadratic.logDenominator T) * (PowerSeries.coeff k) (PowerSeries.log ℂ) ∈ GaussianInt.toComplex.range
+'FixedQuadratic.logDenominator_log_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.cleared_truncatedLog_gaussian : ∀ (T : ℕ),
+  Polynomial.C ↑(FixedQuadratic.logDenominator T) * FixedQuadratic.truncatedLog T ∈
+    (Polynomial.mapRingHom GaussianInt.toComplex).range
+'FixedQuadratic.cleared_truncatedLog_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.scalar_product_mul_coeff : ∀ {R : Type u_1} [inst : CommRing R] {m : ℕ} (q : Fin m → R) (d : Fin m → ℕ)
+  (P : Polynomial R) (F : Fin m → Polynomial R) (s : ℕ),
+  (∏ i, q i ^ d i) * (P * ∏ i, F i ^ d i).coeff s = (P * ∏ i, (Polynomial.C (q i) * F i) ^ d i).coeff s
+'FixedQuadratic.scalar_product_mul_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.cleared_lifted_truncatedLog_gaussian : ∀ {m : ℕ} (T : ℕ),
+  Polynomial.C (MvPolynomial.C ↑(FixedQuadratic.logDenominator T)) *
+      Polynomial.map MvPolynomial.C (FixedQuadratic.truncatedLog T) ∈
+    (Polynomial.mapRingHom (MvPolynomial.map GaussianInt.toComplex)).range
+'FixedQuadratic.cleared_lifted_truncatedLog_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.cleared_center_gaussian : ∀ {m : ℕ} (T j : ℕ) (i : Fin m),
+  Polynomial.C (MvPolynomial.C ↑(FixedQuadratic.logDenominator T)) *
+      Polynomial.C (MvPolynomial.C (2 * ↑j * Complex.I) * MvPolynomial.X i) ∈
+    (Polynomial.mapRingHom (MvPolynomial.map GaussianInt.toComplex)).range
+'FixedQuadratic.cleared_center_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.cleared_shifted_truncatedLog_gaussian : ∀ {m : ℕ} (T j : ℕ) (i : Fin m),
+  Polynomial.C (MvPolynomial.C ↑(FixedQuadratic.logDenominator T)) *
+      (Polynomial.C (MvPolynomial.C (2 * ↑j * Complex.I) * MvPolynomial.X i) +
+        Polynomial.map MvPolynomial.C (FixedQuadratic.truncatedLog T)) ∈
+    (Polynomial.mapRingHom (MvPolynomial.map GaussianInt.toComplex)).range
+'FixedQuadratic.cleared_shifted_truncatedLog_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formalEntry_truncatedLog_cleared_gaussian : ∀ {m : ℕ} (T : Fin m → ℕ) (j s h : ℕ) (b a : Fin m → ℕ),
+  (∏ i, MvPolynomial.C ↑(FixedQuadratic.logDenominator (T i)) ^ (a i - b i)) *
+      FixedQuadratic.formalEntry (fun x => 2 * ↑j * Complex.I) (fun i => FixedQuadratic.truncatedLog (T i)) s h b a ∈
+    (MvPolynomial.map GaussianInt.toComplex).range
+'FixedQuadratic.formalEntry_truncatedLog_cleared_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formal_minor_truncatedLog_cleared_gaussian : ∀ {ι : Type u_1} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] {m : ℕ} (T : Fin m → ℕ) (j s h : ι → ℕ) (b a : ι → Fin m → ℕ),
+  ((∏ i, MvPolynomial.C ↑(FixedQuadratic.logDenominator (T i)) ^ (∑ k, a k i - ∑ r, b r i)) *
+      Matrix.det fun r k =>
+        FixedQuadratic.formalEntry (fun x => 2 * ↑(j r) * Complex.I) (fun i => FixedQuadratic.truncatedLog (T i)) (s r)
+          (h k) (b r) (a k)) ∈
+    (MvPolynomial.map GaussianInt.toComplex).range
+'FixedQuadratic.formal_minor_truncatedLog_cleared_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_nonneg : ∀ {m : ℕ} (P : MvPolynomial (Fin m) ℂ),
+  0 ≤ FixedQuadratic.multiCoefficientL1 P
+'FixedQuadratic.multiCoefficientL1_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_on_superset : ∀ {m : ℕ} (P : MvPolynomial (Fin m) ℂ) (s : Finset (Fin m →₀ ℕ)),
+  P.support ⊆ s → FixedQuadratic.multiCoefficientL1 P = ∑ a ∈ s, ‖P.coeff a‖
+'FixedQuadratic.multiCoefficientL1_on_superset' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_add_le : ∀ {m : ℕ} (P Q : MvPolynomial (Fin m) ℂ),
+  FixedQuadratic.multiCoefficientL1 (P + Q) ≤ FixedQuadratic.multiCoefficientL1 P + FixedQuadratic.multiCoefficientL1 Q
+'FixedQuadratic.multiCoefficientL1_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_zero : ∀ {m : ℕ}, FixedQuadratic.multiCoefficientL1 0 = 0
+'FixedQuadratic.multiCoefficientL1_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_monomial : ∀ {m : ℕ} (a : Fin m →₀ ℕ) (z : ℂ),
+  FixedQuadratic.multiCoefficientL1 ((MvPolynomial.monomial a) z) = ‖z‖
+'FixedQuadratic.multiCoefficientL1_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_sum_le : ∀ {ι : Type u_1} {m : ℕ} (s : Finset ι) (P : ι → MvPolynomial (Fin m) ℂ),
+  FixedQuadratic.multiCoefficientL1 (∑ i ∈ s, P i) ≤ ∑ i ∈ s, FixedQuadratic.multiCoefficientL1 (P i)
+'FixedQuadratic.multiCoefficientL1_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_mul_le : ∀ {m : ℕ} (P Q : MvPolynomial (Fin m) ℂ),
+  FixedQuadratic.multiCoefficientL1 (P * Q) ≤ FixedQuadratic.multiCoefficientL1 P * FixedQuadratic.multiCoefficientL1 Q
+'FixedQuadratic.multiCoefficientL1_mul_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_C : ∀ {m : ℕ} (z : ℂ), FixedQuadratic.multiCoefficientL1 (MvPolynomial.C z) = ‖z‖
+'FixedQuadratic.multiCoefficientL1_C' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_one : ∀ {m : ℕ}, FixedQuadratic.multiCoefficientL1 1 = 1
+'FixedQuadratic.multiCoefficientL1_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_prod_le : ∀ {ι : Type u_1} {m : ℕ} (s : Finset ι) (P : ι → MvPolynomial (Fin m) ℂ),
+  FixedQuadratic.multiCoefficientL1 (∏ i ∈ s, P i) ≤ ∏ i ∈ s, FixedQuadratic.multiCoefficientL1 (P i)
+'FixedQuadratic.multiCoefficientL1_prod_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_pow_le : ∀ {m : ℕ} (P : MvPolynomial (Fin m) ℂ) (n : ℕ),
+  FixedQuadratic.multiCoefficientL1 (P ^ n) ≤ FixedQuadratic.multiCoefficientL1 P ^ n
+'FixedQuadratic.multiCoefficientL1_pow_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_neg : ∀ {m : ℕ} (P : MvPolynomial (Fin m) ℂ),
+  FixedQuadratic.multiCoefficientL1 (-P) = FixedQuadratic.multiCoefficientL1 P
+'FixedQuadratic.multiCoefficientL1_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.determinant_l1_le : ∀ {ι : Type u_1} [inst : Fintype ι] [inst_1 : DecidableEq ι] {m : ℕ}
+  (A : Matrix ι ι (MvPolynomial (Fin m) ℂ)),
+  FixedQuadratic.multiCoefficientL1 A.det ≤ ∑ σ, ∏ i, FixedQuadratic.multiCoefficientL1 (A (σ i) i)
+'FixedQuadratic.determinant_l1_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.determinant_l1_factorial_le : ∀ {ι : Type u_1} [inst : Fintype ι] [inst_1 : DecidableEq ι] {m : ℕ}
+  (A : Matrix ι ι (MvPolynomial (Fin m) ℂ)) (B : ℝ),
+  (∀ (σ : Equiv.Perm ι), ∏ i, FixedQuadratic.multiCoefficientL1 (A (σ i) i) ≤ B) →
+    FixedQuadratic.multiCoefficientL1 A.det ≤ ↑(Fintype.card ι).factorial * B
+'FixedQuadratic.determinant_l1_factorial_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_log_three : FixedQuadratic.truncatedLog 3 =
+  Polynomial.X - Polynomial.C (1 / 2) * Polynomial.X ^ 2
+'FixedQuadratic.Regression.actual_log_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_log_entry_cleared : (MvPolynomial.C 2 *
+    FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 3) 2 0 (fun x => 0)
+      fun x => 1) =
+  MvPolynomial.C (-1)
+'FixedQuadratic.Regression.actual_log_entry_cleared' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.empty_log_denominator : FixedQuadratic.logDenominator 0 = 1 ∧
+  FixedQuadratic.logDenominator 1 = 1
+'FixedQuadratic.Regression.empty_log_denominator' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_log_entry_integral : (MvPolynomial.C 2 *
+    FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 3) 2 0 (fun x => 0)
+      fun x => 1) ∈
+  (MvPolynomial.map GaussianInt.toComplex).range
+'FixedQuadratic.Regression.actual_log_entry_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1 : {m : ℕ} → Polynomial (MvPolynomial (Fin m) ℂ) → ℝ → ℝ
+'FixedQuadratic.timeCoefficientL1' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_nonneg : ∀ {m : ℕ} (P : Polynomial (MvPolynomial (Fin m) ℂ)) {r : ℝ},
+  0 ≤ r → 0 ≤ FixedQuadratic.timeCoefficientL1 P r
+'FixedQuadratic.timeCoefficientL1_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_on_superset : ∀ {m : ℕ} (P : Polynomial (MvPolynomial (Fin m) ℂ)) (r : ℝ)
+  (s : Finset ℕ),
+  P.support ⊆ s → FixedQuadratic.timeCoefficientL1 P r = ∑ n ∈ s, FixedQuadratic.multiCoefficientL1 (P.coeff n) * r ^ n
+'FixedQuadratic.timeCoefficientL1_on_superset' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_zero : ∀ {m : ℕ} (r : ℝ), FixedQuadratic.timeCoefficientL1 0 r = 0
+'FixedQuadratic.timeCoefficientL1_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_add_le : ∀ {m : ℕ} (P Q : Polynomial (MvPolynomial (Fin m) ℂ)) {r : ℝ},
+  0 ≤ r →
+    FixedQuadratic.timeCoefficientL1 (P + Q) r ≤
+      FixedQuadratic.timeCoefficientL1 P r + FixedQuadratic.timeCoefficientL1 Q r
+'FixedQuadratic.timeCoefficientL1_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_monomial : ∀ {m : ℕ} (n : ℕ) (A : MvPolynomial (Fin m) ℂ) (r : ℝ),
+  FixedQuadratic.timeCoefficientL1 ((Polynomial.monomial n) A) r = FixedQuadratic.multiCoefficientL1 A * r ^ n
+'FixedQuadratic.timeCoefficientL1_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_sum_le : ∀ {ι : Type u_1} {m : ℕ} (s : Finset ι)
+  (P : ι → Polynomial (MvPolynomial (Fin m) ℂ)) {r : ℝ},
+  0 ≤ r → FixedQuadratic.timeCoefficientL1 (∑ i ∈ s, P i) r ≤ ∑ i ∈ s, FixedQuadratic.timeCoefficientL1 (P i) r
+'FixedQuadratic.timeCoefficientL1_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_mul_le : ∀ {m : ℕ} (P Q : Polynomial (MvPolynomial (Fin m) ℂ)) {r : ℝ},
+  0 ≤ r →
+    FixedQuadratic.timeCoefficientL1 (P * Q) r ≤
+      FixedQuadratic.timeCoefficientL1 P r * FixedQuadratic.timeCoefficientL1 Q r
+'FixedQuadratic.timeCoefficientL1_mul_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_C : ∀ {m : ℕ} (A : MvPolynomial (Fin m) ℂ) (r : ℝ),
+  FixedQuadratic.timeCoefficientL1 (Polynomial.C A) r = FixedQuadratic.multiCoefficientL1 A
+'FixedQuadratic.timeCoefficientL1_C' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_one : ∀ {m : ℕ} (r : ℝ), FixedQuadratic.timeCoefficientL1 1 r = 1
+'FixedQuadratic.timeCoefficientL1_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_X : ∀ {m : ℕ} (r : ℝ), FixedQuadratic.timeCoefficientL1 Polynomial.X r = r
+'FixedQuadratic.timeCoefficientL1_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_pow_le : ∀ {m : ℕ} (P : Polynomial (MvPolynomial (Fin m) ℂ)) {r : ℝ},
+  0 ≤ r → ∀ (n : ℕ), FixedQuadratic.timeCoefficientL1 (P ^ n) r ≤ FixedQuadratic.timeCoefficientL1 P r ^ n
+'FixedQuadratic.timeCoefficientL1_pow_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.timeCoefficientL1_prod_le : ∀ {ι : Type u_1} {m : ℕ} (s : Finset ι)
+  (P : ι → Polynomial (MvPolynomial (Fin m) ℂ)) {r : ℝ},
+  0 ≤ r → FixedQuadratic.timeCoefficientL1 (∏ i ∈ s, P i) r ≤ ∏ i ∈ s, FixedQuadratic.timeCoefficientL1 (P i) r
+'FixedQuadratic.timeCoefficientL1_prod_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.time_coefficient_bound : ∀ {m : ℕ} (P : Polynomial (MvPolynomial (Fin m) ℂ)) {r : ℝ},
+  0 ≤ r → ∀ (s : ℕ), FixedQuadratic.multiCoefficientL1 (P.coeff s) * r ^ s ≤ FixedQuadratic.timeCoefficientL1 P r
+'FixedQuadratic.time_coefficient_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.log_coeff_norm_le_one : ∀ (n : ℕ), ‖(PowerSeries.coeff n) (PowerSeries.log ℂ)‖ ≤ 1
+'FixedQuadratic.log_coeff_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.truncatedLog_time_l1_le_two : ∀ {m : ℕ} (T : ℕ),
+  FixedQuadratic.timeCoefficientL1 (Polynomial.map MvPolynomial.C (FixedQuadratic.truncatedLog T)) (1 / 2) ≤ 2
+'FixedQuadratic.truncatedLog_time_l1_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.shifted_truncatedLog_time_l1_le : ∀ {m : ℕ} (T j k : ℕ) (i : Fin m),
+  j ≤ k →
+    FixedQuadratic.timeCoefficientL1
+        (Polynomial.C (MvPolynomial.C (2 * ↑j * Complex.I) * MvPolynomial.X i) +
+          Polynomial.map MvPolynomial.C (FixedQuadratic.truncatedLog T))
+        (1 / 2) ≤
+      2 * ↑k + 2
+'FixedQuadratic.shifted_truncatedLog_time_l1_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.time_coefficient_half_bound : ∀ {m : ℕ} (P : Polynomial (MvPolynomial (Fin m) ℂ)) (s : ℕ),
+  FixedQuadratic.multiCoefficientL1 (P.coeff s) ≤ 2 ^ s * FixedQuadratic.timeCoefficientL1 P (1 / 2)
+'FixedQuadratic.time_coefficient_half_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formalEntry_truncatedLog_l1_le : ∀ {m : ℕ} (T : Fin m → ℕ) (j k s h : ℕ) (b a : Fin m → ℕ),
+  j ≤ k →
+    FixedQuadratic.multiCoefficientL1
+        (FixedQuadratic.formalEntry (fun x => 2 * ↑j * Complex.I) (fun i => FixedQuadratic.truncatedLog (T i)) s h b
+          a) ≤
+      (∏ i, ↑((a i).choose (b i))) * 2 ^ s * (3 / 2) ^ h * (2 * ↑k + 2) ^ ∑ i, (a i - b i)
+'FixedQuadratic.formalEntry_truncatedLog_l1_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formalEntry_truncatedLog_l1_coarse : ∀ {m : ℕ} (T : Fin m → ℕ) (j k s h : ℕ) (b a : Fin m → ℕ),
+  j ≤ k →
+    FixedQuadratic.multiCoefficientL1
+        (FixedQuadratic.formalEntry (fun x => 2 * ↑j * Complex.I) (fun i => FixedQuadratic.truncatedLog (T i)) s h b
+          a) ≤
+      (2 ^ s * (3 / 2) ^ h * 2 ^ ∑ i, a i) * (2 * ↑k + 2) ^ ∑ i, (a i - b i)
+'FixedQuadratic.formalEntry_truncatedLog_l1_coarse' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formal_minor_truncatedLog_l1_le : ∀ {ι : Type u_1} [inst : Fintype ι] [inst_1 : DecidableEq ι] {m : ℕ}
+  (T : Fin m → ℕ) (k : ℕ) (j s h : ι → ℕ) (b a : ι → Fin m → ℕ),
+  (∀ (r : ι), j r ≤ k) →
+    FixedQuadratic.multiCoefficientL1
+        (Matrix.det fun r c =>
+          FixedQuadratic.formalEntry (fun x => 2 * ↑(j r) * Complex.I) (fun i => FixedQuadratic.truncatedLog (T i))
+            (s r) (h c) (b r) (a c)) ≤
+      (((↑(Fintype.card ι).factorial * 2 ^ ∑ r, s r) * (3 / 2) ^ ∑ c, h c) * 2 ^ ∑ c, ∑ i, a c i) *
+        (2 * ↑k + 2) ^ ∑ i, (∑ c, a c i - ∑ r, b r i)
+'FixedQuadratic.formal_minor_truncatedLog_l1_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.cleared_formal_minor_truncatedLog_l1_le : ∀ {ι : Type u_1} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  {m : ℕ} (T : Fin m → ℕ) (k : ℕ) (j s h : ι → ℕ) (b a : ι → Fin m → ℕ),
+  (∀ (r : ι), j r ≤ k) →
+    FixedQuadratic.multiCoefficientL1
+        ((∏ i, MvPolynomial.C ↑(FixedQuadratic.logDenominator (T i)) ^ (∑ c, a c i - ∑ r, b r i)) *
+          Matrix.det fun r c =>
+            FixedQuadratic.formalEntry (fun x => 2 * ↑(j r) * Complex.I) (fun i => FixedQuadratic.truncatedLog (T i))
+              (s r) (h c) (b r) (a c)) ≤
+      (∏ i, ↑(FixedQuadratic.logDenominator (T i)) ^ (∑ c, a c i - ∑ r, b r i)) *
+        ((((↑(Fintype.card ι).factorial * 2 ^ ∑ r, s r) * (3 / 2) ^ ∑ c, h c) * 2 ^ ∑ c, ∑ i, a c i) *
+          (2 * ↑k + 2) ^ ∑ i, (∑ c, a c i - ∑ r, b r i))
+'FixedQuadratic.cleared_formal_minor_truncatedLog_l1_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.multiCoefficientL1_pos_of_eval_ne_zero : ∀ {m : ℕ} (P : MvPolynomial (Fin m) ℂ) (x : Fin m → ℂ),
+  (MvPolynomial.eval x) P ≠ 0 → 0 < FixedQuadratic.multiCoefficientL1 P
+'FixedQuadratic.multiCoefficientL1_pos_of_eval_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.mapped_degreeOf_le : ∀ {m : ℕ} (P : MvPolynomial (Fin m) GaussianInt) (e : Fin m → ℕ),
+  (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
+    ∀ (i : Fin m), MvPolynomial.degreeOf i ((MvPolynomial.map GaussianInt.toComplex) P) ≤ e i
+'FixedQuadratic.mapped_degreeOf_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.quadratic_multi_l1_mahler_lower : ∀ {G : Type u_1} {K : Type u_2} [inst : Field G] [inst_1 : Field K]
+  [NumberField K] [inst_3 : Algebra GaussianInt G] [IsFractionRing GaussianInt G] [inst_5 : Algebra G K]
+  [inst_6 : Algebra GaussianInt K] [IsScalarTower GaussianInt G K] [FiniteDimensional G K] [IsGalois G K] {m : ℕ},
+  Module.finrank G K = 2 →
+    ∀ (τ : Gal(K/G)),
+      τ ≠ 1 →
+        ∀ (P : MvPolynomial (Fin m) GaussianInt) (a b c : Fin m → ℤ) (x : Fin m → K) (e : Fin m → ℕ),
+          (∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i) →
+            (∀ (i : Fin m), (↑((a i).gcd (b i))).gcd (c i) = 1) →
+              (∀ (i : Fin m),
+                  Polynomial.C ↑(a i) * Polynomial.X ^ 2 + Polynomial.C ↑(b i) * Polynomial.X + Polynomial.C ↑(c i) =
+                    Polynomial.C ↑(a i) *
+                      ((Polynomial.X - Polynomial.C (x i)) * (Polynomial.X - Polynomial.C (τ (x i))))) →
+                (∀ (i : Fin m), a i ≠ 0) →
+                  MvPolynomial.eval₂ (algebraMap GaussianInt K) x P ≠ 0 →
+                    ∀ (φ : K →+* ℂ),
+                      φ.comp (algebraMap GaussianInt K) = GaussianInt.toComplex →
+                        (∏ i, max 1 ‖φ (x i)‖ ^ e i) /
+                            (FixedQuadratic.multiCoefficientL1 ((MvPolynomial.map GaussianInt.toComplex) P) *
+                              ∏ i, (‖φ ↑(a i)‖ * max 1 ‖φ (x i)‖ * max 1 ‖φ (τ (x i))‖) ^ e i) ≤
+                          ‖φ (MvPolynomial.eval₂ (algebraMap GaussianInt K) x P)‖
+'FixedQuadratic.quadratic_multi_l1_mahler_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formalMinor : {ι : Type u_1} →
+  [Fintype ι] →
+    [DecidableEq ι] →
+      {m : ℕ} → (Fin m → ℕ) → (ι → ℕ) → (ι → ℕ) → (ι → ℕ) → (ι → Fin m → ℕ) → (ι → Fin m → ℕ) → MvPolynomial (Fin m) ℂ
+'FixedQuadratic.formalMinor' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.minorDegrees : {ι : Type u_1} → [Fintype ι] → {m : ℕ} → (ι → Fin m → ℕ) → (ι → Fin m → ℕ) → Fin m → ℕ
+'FixedQuadratic.minorDegrees' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.minorDenominator : {ι : Type u_1} →
+  [Fintype ι] → {m : ℕ} → (Fin m → ℕ) → (ι → Fin m → ℕ) → (ι → Fin m → ℕ) → ℕ
+'FixedQuadratic.minorDenominator' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.minorDenominator_pos : ∀ {ι : Type u_1} [inst : Fintype ι] {m : ℕ} (T : Fin m → ℕ)
+  (a b : ι → Fin m → ℕ), 0 < FixedQuadratic.minorDenominator T a b
+'FixedQuadratic.minorDenominator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.gaussian_degreeOf_of_map : ∀ {m : ℕ} (P : MvPolynomial (Fin m) GaussianInt) (e : Fin m → ℕ),
+  (∀ (i : Fin m), MvPolynomial.degreeOf i ((MvPolynomial.map GaussianInt.toComplex) P) ≤ e i) →
+    ∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ e i
+'FixedQuadratic.gaussian_degreeOf_of_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.exists_gaussian_cleared_minor : ∀ {ι : Type u_1} [inst : Fintype ι] [inst_1 : DecidableEq ι] {m : ℕ}
+  (T : Fin m → ℕ) (j s h : ι → ℕ) (b a : ι → Fin m → ℕ),
+  ∃ P,
+    (MvPolynomial.map GaussianInt.toComplex) P =
+        MvPolynomial.C ↑(FixedQuadratic.minorDenominator T a b) * FixedQuadratic.formalMinor T j s h b a ∧
+      ∀ (i : Fin m), MvPolynomial.degreeOf i P ≤ FixedQuadratic.minorDegrees a b i
+'FixedQuadratic.exists_gaussian_cleared_minor' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.long_truncation_uniform : FixedQuadratic.timeCoefficientL1
+    (Polynomial.map MvPolynomial.C (FixedQuadratic.truncatedLog 100)) (1 / 2) ≤
+  2
+'FixedQuadratic.Regression.long_truncation_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_log_entry_l1 : FixedQuadratic.multiCoefficientL1
+    (MvPolynomial.C 2 *
+      FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 3) 2 0 (fun x => 0)
+        fun x => 1) =
+  1
+'FixedQuadratic.Regression.actual_log_entry_l1' depends on axioms: [propext, Classical.choice, Quot.sound]
+FixedQuadratic.Regression.actual_empty_log_entry_envelope : FixedQuadratic.multiCoefficientL1
+    (FixedQuadratic.formalEntry (fun x => 2 * Complex.I) (fun x => FixedQuadratic.truncatedLog 1) 0 0 (fun x => 0)
+      fun x => 2) ≤
+  64
+'FixedQuadratic.Regression.actual_empty_log_entry_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FixedQuadratic.formal_minor_fixed_field_arithmetic : ∀ {G : Type u_1} {K : Type u_2} {ι : Type u_3} [inst : Field G]
+  [inst_1 : Field K] [NumberField K] [inst_3 : Algebra GaussianInt G] [IsFractionRing GaussianInt G]
+  [inst_5 : Algebra G K] [inst_6 : Algebra GaussianInt K] [IsScalarTower GaussianInt G K] [FiniteDimensional G K]
+  [IsGalois G K] [inst_10 : Fintype ι] [inst_11 : DecidableEq ι] {m : ℕ},
+  Module.finrank G K = 2 →
+    ∀ (τ : Gal(K/G)),
+      τ ≠ 1 →
+        ∀ (T : Fin m → ℕ) (k : ℕ) (j s h : ι → ℕ) (b a : ι → Fin m → ℕ),
+          (∀ (r : ι), j r ≤ k) →
+            ∀ (la lb lc : Fin m → ℤ) (x : Fin m → K),
+              (∀ (i : Fin m), (↑((la i).gcd (lb i))).gcd (lc i) = 1) →
+                (∀ (i : Fin m),
+                    Polynomial.C ↑(la i) * Polynomial.X ^ 2 + Polynomial.C ↑(lb i) * Polynomial.X +
+                        Polynomial.C ↑(lc i) =
+                      Polynomial.C ↑(la i) *
+                        ((Polynomial.X - Polynomial.C (x i)) * (Polynomial.X - Polynomial.C (τ (x i))))) →
+                  (∀ (i : Fin m), la i ≠ 0) →
+                    ∀ (φ : K →+* ℂ),
+                      φ.comp (algebraMap GaussianInt K) = GaussianInt.toComplex →
+                        (MvPolynomial.eval fun i => φ (x i)) (FixedQuadratic.formalMinor T j s h b a) ≠ 0 →
+                          ∏ i, max 1 ‖φ (x i)‖ ^ FixedQuadratic.minorDegrees a b i ≤
+                            (↑(FixedQuadratic.minorDenominator T a b) ^ 2 *
+                                  ((((↑(Fintype.card ι).factorial * 2 ^ ∑ r, s r) * (3 / 2) ^ ∑ c, h c) *
+                                      2 ^ ∑ c, ∑ i, a c i) *
+                                    (2 * ↑k + 2) ^ ∑ i, FixedQuadratic.minorDegrees a b i) *
+                                ∏ i,
+                                  (‖φ ↑(la i)‖ * max 1 ‖φ (x i)‖ * max 1 ‖φ (τ (x i))‖) ^
+                                    FixedQuadratic.minorDegrees a b i) *
+                              ‖(MvPolynomial.eval fun i => φ (x i)) (FixedQuadratic.formalMinor T j s h b a)‖
+'FixedQuadratic.formal_minor_fixed_field_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]

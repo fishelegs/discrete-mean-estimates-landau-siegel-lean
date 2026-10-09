@@ -3,23 +3,43 @@
   "scope": "Exact entry equality against pinned upstream; no pi finiteness theorem.",
   "upstream_pin": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
   "prior_successful_checks_revalidated": 872,
-  "upstream_audit_sha256": "71035f280669e1ccffe5c1264a2616f9e2715014222180330a90977f3d960d8f",
-  "checkpoint_receipt_sha256": "03cc77536d2914588efc09d42fd71d389ca40995ecb69aa71899357ec5cd59af",
-  "source_sha256": "6b8bfe1a2da0a4e9abf048e7a02a3bb29f10868551ce6afd83583990f24c591f",
+  "upstream_audit_sha256": "ce8a57544411a0b3d8a4af320ced311e7f508cae3e6250616b15f0d100047524",
+  "checkpoint_receipt_sha256": "6dac29d6607fda96797516e62255dddb298d8eb71147713842f938dcf0f0426f",
+  "source_sha256": "3f4f2ad1b5c6fe7d8f0cbcf020d944cc685f99fb8e9d025b1a070d78e2c267f1",
   "argv": [
     "/Users/keyishen/Documents/Codex/2026-10-08/task/openai-math-w2-verification/elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
     "-j1",
     "-M8192",
     "-DautoImplicit=false",
     "-o",
-    "/Users/keyishen/Documents/Codex/2026-10-09/task/formal-entry-upstream-bridge-verification/UpstreamFormalEntryBridge.olean",
+    "/Users/keyishen/Documents/Codex/2026-10-09/task/actual-minor-arithmetic-upstream-verification/UpstreamFormalEntryBridge.olean",
     "/Users/keyishen/Documents/Codex/2026-10-09/task/pi-fixed-quadratic/pi-fixed-quadratic/checks/UpstreamFormalEntryBridge.lean"
   ],
   "exit_code": 0,
-  "olean_sha256": "cd50346f9945f477e0832302131f88f5be3156effd45b5c2b3deb11557a51742",
-  "log_sha256": "7aaa04a762e1e18bcebd791fd4c901051c432e1505c75d3fd90123c090110a92",
+  "olean_sha256": "85d8085c977437c922528e147d94882dd8eb763a72cf1b3aa09bb141d40cd3ae",
+  "log_sha256": "fb5270d6c5d1331608c0d3dbebcc6e8af318c929288b4d88cdabd51c993ac148",
   "axiom_audit": {
     "FixedQuadratic.UpstreamBridge.entry_specialization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamBridge.selectedFormalMinor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamBridge.minor_specialization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamBridge.selectedFormalMinor_ne_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FixedQuadratic.UpstreamBridge.selected_weighted_rebate_budget": [
       "Classical.choice",
       "Quot.sound",
       "propext"

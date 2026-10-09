@@ -7,8 +7,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULES = ['Resultant', 'Mahler', 'MinorBudget', 'Comparison', 'Conjugation',
-           'Envelope', 'MultiEnvelope', 'Clearing', 'Height', 'Weights', 'Parity', 'ParityDeterminant', 'FinitePlace', 'NumberFieldIntegral', 'QuadraticNorm', 'FormalEntry']
+           'Envelope', 'MultiEnvelope', 'Clearing', 'Height', 'Weights', 'Parity', 'ParityDeterminant', 'FinitePlace', 'NumberFieldIntegral', 'QuadraticNorm', 'FormalEntry', 'LogClearing', 'L1Norm', 'TimeEnvelope', 'MinorEnvelope', 'MultiLower', 'MinorArithmetic']
 NEGATIVE = {
+    'ExpectedFailureMissingLogDenominator': ('Type mismatch', 'logDenominator'),
     'ExpectedFailureMissingBinomial': ('Type mismatch', 'formalEntry'),
     'ExpectedFailureWrongConjugateRoot': ('unsolved goals', 'C (1 / 2)'),
     'ExpectedFailureWrongRelativeDegree': ('Application type mismatch', '= 4', '= 2'),

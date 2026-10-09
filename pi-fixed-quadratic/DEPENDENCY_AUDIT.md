@@ -47,3 +47,11 @@ The root 4.30 project, six A7 vendor modules, sqrt(2)/Log-Pade sources and old
 receipts remain byte-identical to the base commit. Old aggregate verification
 is run separately against the existing 4.30 cache. No merge, PR, package, or
 website action is part of this task.
+
+Checkpoint 5 supplies the actual log clearing and a uniform coefficient
+envelope, then connects them to the proved same-field norm. It uses the
+coarser uniform log bound 2 (center constant `2k+2`), valid for all truncations.
+The required later parameter limits are unchanged in kind because the
+additional logarithmic constants are fixed before approximation weights.
+The lcm constant remains the larger proved `log 4+4` until separately improved.
+No dimension limits, generalized geometry, or final pi theorem are claimed.

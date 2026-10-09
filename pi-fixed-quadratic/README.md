@@ -52,9 +52,8 @@ The exact elaborated types and complete axiom reports are printed by
   equality is not claimed.
 - `determinant_clearing`: for any subring, if each compatible entry is cleared
   by `product L_i^(alpha_i-b_i)`, the entire determinant is cleared by
-  `product L_i^e_i`. This is a proved generic transport theorem; the actual
-  truncated-log entry polynomial and its clearing membership still need to be
-  constructed. It can specialize to a Gaussian-coefficient polynomial subring.
+  `product L_i^e_i`. This generic transport theorem is now instantiated for the actual
+  truncated-log entries by `formal_minor_truncatedLog_cleared_gaussian`.
 - `finite_boundedQuadraticRoots`: positive-leading integer quadratic roots
   with all coefficient magnitudes bounded by a fixed natural `H` form a finite
   set, even without primitivity or irreducibility. `height_unbounded_of_infinite`
@@ -101,14 +100,15 @@ The exact elaborated types and complete axiom reports are printed by
    Construct its compatible fraction-field tower, relative degree two, Galois
    involution, complex embedding and primitive root-pair factorizations.
    These are mathematical structure obligations, not an unproved norm-integrality
-   hypothesis. Combine its exact `e_i` factors with the multivariate coefficient
-   envelope and Mahler bounds. Full Cartesian resultants remain invalid.
+   hypothesis. The abstract tower now supplies the actual-minor bound
+   `formal_minor_fixed_field_arithmetic`; constructing it from the fixed real
+   quadratic field remains open. Full Cartesian resultants remain invalid.
 3. `FormalEntry.lean` now constructs the actual binomial-product formal entry,
    proves its complex specialization, incompatible zero rule, coordinate degree
-   bound and determinant rebate. Instantiate the source's weighted row/column
-   packet, and prove clearing for the actual truncated-log polynomials. Prove the coefficient-l1 Cauchy estimate at radius 1/2,
-   the determinant factorial envelope, and the normalized errors with two
-   denominator costs.
+   bound and determinant rebate. Actual truncated-log clearing, radius-1/2
+   coefficient envelope and factorial envelope are now proved. Instantiate the
+   source's weighted row/column packet and derive the normalized errors from
+   the actual-minor arithmetic theorem, with its two denominator costs.
 4. Generalize the upstream **proved Lean** geometric surjectivity and analytic
    aggregate from rational `FixedData` to height-linked fixed-field data. The
    upstream complex-center minor extraction is conditional on surjectivity;
@@ -209,12 +209,41 @@ to truncated log; no p/q assumption is present in these proofs.
 
 Regressions check the binomial factor at j=1, alpha=2, b=1 and the time-degree-2
 coefficient of t-t^2/2. An expected failure rejects deleting binom(2,1).
-This checkpoint does not yet prove the actual log-polynomial clearing, Cauchy
-coefficient-l1 envelope, weighted-packet nonzero minor or full interpolation
-and analytic transfer.
+Checkpoint 4 did not yet prove log-polynomial clearing or its coefficient
+envelope. Checkpoint 5 below closes these connections. A weighted-packet
+nonzero minor and full interpolation/analytic transfer still remain open.
 
 To kernel-check the exact pinned upstream entry bridge after the standalone
 replay, use `scripts/audit_entry_bridge.py --verification-root <existing-upstream>
 --checkpoint-verification <replay-output> --out <separate-output>`. It revalidates
 both caches and compiles the bridge; the standalone CI does not contain this
 cross-project fixture. See `audit/CHECKPOINT4.md` and `audit/entry-bridge-audit.json`.
+
+## Actual log-minor arithmetic checkpoint
+
+`LogClearing.lean` uses the actual `PowerSeries.log` truncations and the exact
+`lcmUpto (T-1)` denominators. It proves each entry and the whole polynomial
+minor clear to Gaussian coefficients, without an entry-membership premise.
+`exists_gaussian_cleared_minor` constructs that Gaussian polynomial and proves
+its degree caps are the exact coordinate rebates.
+
+`L1Norm.lean` proves coefficient-l1 subadditivity and submultiplicativity and
+the determinant factorial envelope. `TimeEnvelope.lean` uses absolute time
+coefficients weighted by `(1/2)^s`, finite convolution, and the geometric sum.
+This proves the same `2^s` coefficient control as a radius-1/2 Cauchy estimate
+without constructing a new Banach polynomial space. The uniform truncated-log
+bound is the explicit coarse constant 2, replacing the paper's sharper log 2;
+the center constant is therefore `2k+2`. These constants do not depend on `T`
+and introduce no log-log height remainder.
+
+`formal_minor_fixed_field_arithmetic` combines the actual polynomial with the
+proved degree-two norm theorem and the complete coefficient envelope. In its
+actual type the product of target root factors is at most `Q^2` times the
+factorial/row/column envelope, the Mahler product, and the target minor norm.
+There is one coefficient cost and exactly two denominator costs. Its field
+tower, primitive factorization and nonzero minor inputs remain explicit; it
+is not the final pi theorem. See `audit/CHECKPOINT5.md` and the exact type audit.
+
+The cross-project bridge now also proves exact actual selected-minor equality,
+nonvanishing transport and the legal selected columns' joint weighted budget.
+Its five declaration audits are separate from the 38/148 standalone replay.
